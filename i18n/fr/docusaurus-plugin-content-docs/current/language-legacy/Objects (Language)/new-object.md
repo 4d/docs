@@ -5,61 +5,61 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** ( { ...(*property* : Text ; *value* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** {( *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| property | Text | &#8594;  | Name of property to create |
-| value | any | &#8594;  | Value of property |
-| Function result | Object | &#8592; | New language object |
+| propriété | Text | &#8594;  | Nom de la propriété à créer |
+| valeur | any | &#8594;  | Valeur de la propriété |
+| Résultat | Object | &#8592; | Nouvel objet structuré |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Created|
+|16 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.New object.Summary-->The **New object** command creates a new empty or prefilled object and returns its reference.<!-- END REF-->
+<!--REF #_command_.New object.Summary-->La commande **New object** crée un objet vide ou pré-rempli et retourne sa référence.<!-- END REF-->
 
-If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable or a 4D object field.
+Si vous ne passez aucun paramètre, **New object** crée un objet vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec *C\_OBJECT* ou un champ objet 4D.
 
-**Note:** `var : Object` declares a variable of the [Object type](../Concepts/dt_object.md) but does not create any object.
+**Note :** *C\_OBJECT* déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
 
-Optionnally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
+Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plusieurs paires *propriété*/*valeur* comme paramètres :
 
-* In the *property* parameter, pass the label of the property to be created. Note that the *property* parameter is case sensitive.
-* In the *value* parameter, pass the value you want to set for the property. Values of the following types are supported:  
-   * number (real, integer...) Number values are always stored as reals.  
-   * text  
-   * boolean  
-   * pointer  
+* Dans le paramètre *propriété*, passez le libellé de la propriété à créer. Notez que le libellé du paramètre *propriété* est sensible à la casse.
+* Dans le paramètre *valeur*, passez la valeur que vous souhaitez fixer à la propriété. Les types de données suivants sont acceptés :  
+   * numérique (réel, entier...) - les valeurs numériques sont toujours stockées sous forme de réels .  
+   * texte  
+   * booléen  
+   * pointeur  
    * blob (4D.Blob)  
    * date  
-   * time  
+   * heure  
    * null  
-   * picture  
-   * object  
+   * image  
+   * objet  
    * collection
 
-Note that:
+Notez que :
 
-* if you pass a pointer, it is kept as is; it will evaluated when using commands such as [JSON Stringify](json-stringify.md),
-* dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting (see *Compatibility page*). When converting 4D dates into text prior to storing them in the object, by default the program takes the local time zone into account. You can modify this behavior using the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
-* if you pass a time, it is stored as a number of milliseconds (Real).
+* si vous passez un pointeur, il est récupéré tel quel ; il sera évalué lors de l'utilisation de commandes telles que [JSON Stringify](json-stringify.md),
+* les dates sont stockées sous forme de date "yyyy-mm-dd" ou de chaîne au format "YYYY-MM-DDTHH:mm:ss.SSSZ" en fonction du paramétrage courant relatif au stockage des dates dans les objets (cf. *Page Compatibilité*). Lorsque vous convertissez des dates 4D en texte, avant de les stocker dans l'objet, par défaut, le programme utilise l'heure locale de la zone. Vous pouvez modifier ce comportement en utilisant le sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+* si vous passez une heure, elle est stockée en nombre de millisecondes (réel).
 
-## Example 1 
+## Exemple 1 
 
-This command can create empty of filled objects:
+Cette commande peut créer des objets vides ou des objets remplis :
 
 ```4d
  var $obj1 : Object
@@ -73,37 +73,37 @@ This command can create empty of filled objects:
   // $obj3 = {name:Smith,age:40}
 ```
 
-## Example 2 
+## Exemple 2 
 
-Creating a new object with an object as parameter value: 
+Création d'un nouvel objet avec un objet en paramètre *valeur* : 
 
 ```4d
  var $Children;$Contact : Object
  
-  //Creating an object array
+  //Création d'un tableau objet
  ARRAY TEXT($arrChildren;3)
  $arrChildren{1}:="Richard"
  $arrChildren{2}:="Susan"
  $arrChildren{3}:="James"
  OB SET ARRAY($Children;"Children";$arrChildren)
  
-  //Initializing the object
+  //InitialIsation de l'objet
  $Contact:=New object("FirstName";"Alan";"LastName";"Parker";"age";30;"Children";$Children)
   // $Contact = {FirstName:Alan,LastName:Parker,age:30,Children:{Children:[Richard,Susan,James]}}
 ```
 
-## Example 3 
+## Exemple 3 
 
-This command is useful to pass objects as parameters:
+Cette commande est utile pour passer des objets en paramètres :
 
 ```4d
  var $measures : Object
  $measures:=Database measures(New object("path";"DB.cacheReadBytes";"withHistory";True;"historyLength";120))
 ```
 
-## Example 4 
+## Exemple 4 
 
-With this command, you can easily handle objects in loops:
+Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 
 ```4d
  ARRAY OBJECT($refs;0)
@@ -114,16 +114,16 @@ With this command, you can easily handle objects in loops:
  End for
 ```
 
-## See also 
+## Voir aussi 
 
   
 [New shared object](new-shared-object.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1471 |
+| Numéro de commande | 1471 |
 | Thread safe | yes |
 
 

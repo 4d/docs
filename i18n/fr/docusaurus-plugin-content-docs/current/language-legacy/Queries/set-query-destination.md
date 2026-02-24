@@ -5,257 +5,256 @@ slug: /commands/set-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* : Integer {; *destinationObject* : Text, Variable {; *destinationPtr* : Pointer}} )<!-- END REF-->
+<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* {; *destinationObjet* {; *destinationPtr*}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| destinationType | Integer | &#8594;  | 0 = current selection, 1 = set, 2 = named selection, 3 = variable |
-| destinationObject | Text, Variable | &#8594;  | Name of the set, or Name of the named selection, or Variable |
-| destinationPtr | Pointer | &#8594;  | Pointer to local variable if destinationType=3 |
+| destinationType | Integer | &#8594;  | 0=sélection courante, 1=ensemble, 2=sélection temporaire, 3=variable |
+| destinationObjet | Text, Variable | &#8594;  | Nom de l'ensemble ou Nom de la sélection temporaire ou Variable |
+| destinationPtr | Pointer | &#8594;  | Pointeur vers la variable locale si destinationType=3 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|13|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET QUERY DESTINATION.Summary-->**SET QUERY DESTINATION** enables you to tell 4D where to put the result of any subsequent query for the current process.<!-- END REF-->
+<!--REF #_command_.SET QUERY DESTINATION.Summary-->La commande **SET QUERY DESTINATION** vous permet d'indiquer à 4D où placer les résultats de toutes les recherches qui suivent l'appel de cette commande dans le process courant.<!-- END REF-->
 
-You specify the type of the destination in the parameter *destinationType*. 4D provides the following predefined constants, found in the "*Queries*" theme:
+Vous spécifiez le type de la destination dans le paramètre *destinationType*. 4D fournit les constantes prédéfinies suivantes, placées dans le thème *Recherches* :
 
-| Constant               | Type    | Value |
-| ---------------------- | ------- | ----- |
-| Into current selection | Integer | 0     |
-| Into named selection   | Integer | 2     |
-| Into set               | Integer | 1     |
-| Into variable          | Integer | 3     |
+| Constante              | Type        | Valeur |
+| ---------------------- | ----------- | ------ |
+| Into current selection | Entier long | 0      |
+| Into named selection   | Entier long | 2      |
+| Into set               | Entier long | 1      |
+| Into variable          | Entier long | 3      |
 
-You specify the destination of the query itself in the optional *destinationObject* parameter according to the following table:
+Vous spécifiez le nom de la destination de la recherche dans le paramètre optionnel *destinationObjet* en fonction du tableau suivant :
 
-| **destinationType**   | **destinationObject**                                                                              |
-| --------------------- | -------------------------------------------------------------------------------------------------- |
-| **parameter**         | **parameter**                                                                                      |
-| 0 (current selection) | You omit the parameter                                                                             |
-| 1 (set)               | You pass the name of a set (existing or to be created)                                             |
-| 2 (named selection)   | You pass the name of a named selection (existing or to be created)                                 |
-| 3 (variable)          | You pass a numeric variable (existing) or an empty string "" to use the *destinationPtr* parameter |
+| **Paramètre destinationType** | **Paramètre** **destinationObjet**                                                                                       |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 0 (sélection courante)        | Vous ne passez pas de paramètre.                                                                                         |
+| 1 (ensemble)                  | Vous passez le nom de l'ensemble (existant ou à créer)                                                                   |
+| 2 (sélection temporaire)      | Vous passez le nom de la sélection temporaire (existante ou à créer)                                                     |
+| 3 (variable)                  | Vous passez soit une variable numérique (existante), soit une chaîne vide "" pour utiliser le paramètre *destinationPtr* |
 
- With:  
+Avec
 
 ```4d
  SET QUERY DESTINATION(Into current selection)
 ```
 
-The records found by any subsequent query will end up in a new current selection for the table involved by the query.
+Les enregistrements trouvés par la recherche seront placés dans la sélection courante de la table dans laquelle la recherche est effectuée.
 
- With:  
-
-```4d
- SET QUERY DESTINATION(Into set;"mySet")
-```
-
-The records found by any subsequent query will end up in the set *"mySet"*. The current selection and the current record for the table involved by the query are left unchanged.
-
-With:
+Avec
 
 ```4d
- SET QUERY DESTINATION(Into named selection;"myNamedSel")
+ SET QUERY DESTINATION(Into set;"monEnsem")
 ```
 
-The records found by any subsequent query will end up in the named selection *"myNamedSel"*. The current selection and the current record for the table involved by the query are left unchanged.
+Les enregistrements trouvés par la recherche seront placés dans l'ensemble *monEnsem*. La sélection courante et l'enregistrement courant de la table dans laquelle vous recherchez restent inchangés.
 
-**Notes:** 
-
-* If the named selection does not exist beforehand, it will be created automatically at the end of the query.
-* This command manages named selections like the [CUT NAMED SELECTION](cut-named-selection.md) command: only references are kept. Once the named selection is used, it no longer exists.
-With:  
+Avec
 
 ```4d
- SET QUERY DESTINATION(Into variable;$vlResult)
+ SET QUERY DESTINATION(Into named selection;"maTemp")
 ```
 
-**Note:** With this syntax, the *$vlResult* variable must have been defined, otherwise an error is returned. 
+Les enregistrements trouvés par la recherche seront placés dans la sélection temporaire *maTemp*. La sélection courante et l'enregistrement courant pour la table sur laquelle vous effectuez la recherche restent inchangés.
 
-Or:
+**Notes** : 
+
+* Si la sélection temporaire n'existe pas avant l'appel, elle est automatiquement créée une fois la recherche effectuée.
+* Cette commande gère les sélections temporaires comme la commande \[#cmd id="334"/\] : seules des références sont conservées. Une fois la sélection temporaire utilisée, elle n'existe plus.
+
+Avec
 
 ```4d
- SET QUERY DESTINATION(Into variable;"";->$vlResult)
+ SET QUERY DESTINATION(Into variable;$vlRésultatRech)
 ```
 
-**Note:** This second syntax facilitates the joint use of the command with [GET QUERY DESTINATION](get-query-destination.md). 
+**Note :** Avec cette syntaxe, la variable *$vlRésultatRech* doit avoir été définie préalablement, sinon une erreur est générée. 
 
-The number of records found by any subsequent query will end up in the variable *$vlResult*. The current selection and the current record for the table involved by the query are left unchanged.
+Ou
 
-**Warning:** **SET QUERY DESTINATION** affects all subsequent queries made within the current process. REMEMBER to always counterbalance a call to **SET QUERY DESTINATION** (where *destinationType#0*) with a call to **SET QUERY DESTINATION**(0) in order to restore normal query mode.
+```4d
+ SET QUERY DESTINATION(Into variable;"";->$vlRésultatRech)
+```
 
-**SET QUERY DESTINATION** changes the behavior of the query commands only:
+**Note :** Cette seconde syntaxe facilite l'utilisation conjointe de la commande avec [GET QUERY DESTINATION](get-query-destination.md). 
+
+Le **nombre** d'enregistrements trouvés par la recherche sera placé dans la variable *$vlRésultatRech*. La sélection courante et l'enregistrement courant de la table dans laquelle vous effectuez la recherche restent inchangés.
+
+**Attention :** **SET QUERY DESTINATION** affecte toutes les recherches suivantes dans le process courant. N'oubliez pas d'associer toujours un appel à **SET QUERY DESTINATION** (lorsque *destinationType#0*) à un appel à **SET QUERY DESTINATION**(0) ultérieur pour rétablir le mode standard de recherche.
+
+**SET QUERY DESTINATION** modifie uniquement le comportement des commandes de recherche, c'est-à-dire :
 
 * [QUERY](query.md)
 * [QUERY SELECTION](query-selection.md)
 * [QUERY BY EXAMPLE](query-by-example.md)
 * [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
 * [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
+* [QUERY BY SQL](query-by-sql.md)
 * [QUERY WITH ARRAY](query-with-array.md)
+* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
 * [QUERY BY ATTRIBUTE](query-by-attribute.md)
 * [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
 
-On the other hand, **SET QUERY DESTINATION** does not affect other commands that may change the current selection of a table such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md) and so on.
+En revanche, **SET QUERY DESTINATION** n'affecte pas les autres commandes qui modifient la sélection courante telles que [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md) , etc.
 
-## Example 1 
+## Exemple 1 
 
-You create a form that will display the records from a *\[Phone Book\]* table. You create a Tab Control named *asRolodex* (with the 26 letters of the alphabet) and a subform displaying the *\[Phone Book\]* records. Choosing one Tab from the Tab Control displays the records whose names start with the corresponding letter. 
-
-In your application, the *\[Phone Book\]* table contains a set of quite static data, so you do not want to (or need to) perform a query each time you select a Tab. In this way, you can save precious database engine time. 
-
-To do so, you can redirect your queries into named selections that you reuse as needed. You write the object method of the Tab Control *asRolodex* as follows:
+Vous créez un formulaire qui affiche les enregistrements de la table *\[Annuaire\]*. Vous créez un objet de type onglet nommé *asRolodex* (avec un onglet pour chaque lettre de l'alphabet) et un sous-formulaire qui affiche les enregistrements de la table *\[Annuaire\]*. En choisissant un onglet, vous affichez les enregistrements qui correspondent à cette lettre. Puisque, dans cet exemple, la table *\[Annuaire\]* contient des données statiques, vous ne voulez pas effectuer une recherche chaque fois que vous cliquez sur un onglet et donc vous dépensez moins de temps précieux à exécuter ces recherches. Pour faire ceci, vous pouvez placer vos recherches dans les sélections temporaires pour les réutiliser quand il le faut. Vous écrivez la méthode objet de l'onglet *asRolodex* comme indiquée ci-dessous :
 
 ```4d
-  // asRolodex object method
+  // Méthode objet de l'onglet asRolodex
  Case of
+ 
     :(FORM Event.code=On Load)
-  // Before the form appears on the screen,
-  // initialize the rolodex and an array of Booleans that
-  // will tell us if a query for the corresponding letter
-  // has been performed or not
+  // Avant que le formulaire s'affiche à l'écran,
+  // initialiser l'onglet et le tableau de booléens qui nous indiquent
+  // si une recherche pour la lettre sur laquelle vous avez cliqué
+  // a été exécutée ou pas
        ARRAY STRING(1;asRolodex;26)
-       ARRAY BOOLEAN(abQueryDone;26)
-       For($vlElem;1;26)
-          asRolodex{$vlElem}:=Char(64+$vlElem)
-          abQueryDone{$vlElem}:=False
+       ARRAY BOOLEAN(abRechFini;26)
+       For($vlElém;1;26)
+          asRolodex{$vlElém}:=Char(64+$vlElém)
+          abRechFini{$vlElém}:=False
        End for
  
     :(FORM Event.code=On Clicked)
-  // When a click on the Tab control occurs, check whether the corresponding query
-  // has been performed or not
-       If(Not(abQueryDone{asRolodex}))
-  // If not, redirect the next query(ies) toward a named selection
+  // Lorsque l'utilisateur clique sur un onglet, vérifier si une recherche pour cette lettre
+  // a été exécutée ou pas
+       If(Not(abRechFini{asRolodex}))
+  // Else, fixer la destination de la recherche vers une sélection temporaire
           SET QUERY DESTINATION(Into named selection;"temp")
-  // Perform the query
+  // Effectuer la recherche
           QUERY([Phone Book];[Phone Book]Last name=asRolodex{asRolodex}+"@")
-  // Restore normal query mode
+  // Restituer le mode standard de recherche
           SET QUERY DESTINATION(Into current selection)
-  // Use the records found
+  // Use les enregistrements trouvés
           USE NAMED SELECTION("temp")
-          COPY NAMED SELECTION([Phone book];"Rolodex+asRolodex{asRolodex})
-  // Next time we choose that letter, we won't perform the query again
-          abQueryDone{asRolodex}:=True
+          COPY NAMED SELECTION([Phone Book];"Rolodex"+asRolodex{asRolodex})
+  // La prochaine fois que cette lettre est choisie, la recherche ne sera pas exécutée
+          abRechFini{asRolodex}:=True
        Else
-  // Use the existing named selection for displaying the records corresponding to the chosen letter
-          USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex}
+  // Use la sélection temporaire existante pour l'affichage des enregistrements qui correspondent à cette lettre
+          USE NAMED SELECTION("Rolodex"+asRolodex{asRolodex})
        End if
  
     :(FORM Event.code=On Unload)
-  // After the form disappeared from the screen
-  // Clear the named selections we created
+  // Après que le formulaire disparaît de l 'écran
+  // Effacer les sélections temporaires de la mémoire
        For($vlElem;1;26)
-          If(abQueryDone{$vlElem})
-             CLEAR NAMED SELECTION("Rolodex"+asRolodex{$vlElem})
+          If(abRechFini{$vlElém})
+             CLEAR NAMED SELECTION("Rolodex"+asRolodex{$vlElém})
           End if
        End for
-  // Clear the two arrays we no longer need
+  // Effacer les deux tableaux dont nous n'avons pas besoin
        CLEAR VARIABLE(asRolodex)
-       CLEAR VARIABLE(abQueryDone)
+       CLEAR VARIABLE(abRechFini)
+ 
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-The Unique values project method in this example allows you to verify the uniqueness of the values for any number of fields in a table. The current record can be an existing or a newly created record.
+La méthode ValeursUniques suivante vérifie si les valeurs sont uniques pour des champs dans une table de votre choix. L'enregistrement courant peut déjà exister ou vient d'être créé. 
 
 ```4d
-  //Unique values project method
-  //Unique values ( Pointer ; Pointer { ; Pointer... } ) -> Boolean
-  //Unique values ( ->Table ; ->Field { ; ->Field2... } ) -> Yes or No
+  // Méthode projet ValeursUniques
+  // ValeursUniques ( Pointeur ; Pointeur { ; Pointeur... } ) -> Booléen
+  // ValeursUniques ( ->Table ; ->Champ { ; ->Champ2... } ) -> Oui ou non
  
  var $0 : Boolean
  var ${1} : Pointer
- var $vlField;$vlNbFields;$vlFound;$vlCurrentRecord : Integer
- $vlNbFields:=Count parameters-1
- $vlCurrentRecord:=Record number($1->)
- If($vlNbFields>0)
-    If($vlCurrentRecord#-1)
-       If($vlCurrentRecord<0)
-  //The current record is an unsaved new record (record number is -3);
-  //therefore we can stop the query as soon as at least one record is found
+ var $vlChamp;$vlNmbChamps;$vlTrouvé;$vlEnregCour : Integer
+ $vlNmbChamps:=Count parameters-1
+ $vlEnregCour:=Record number($1->)
+ If($vlNmbChamps>0)
+    If($vlEnregCour#-1)
+       If($vlEnregCour<0)
+  // Il s'agit d'un nouvel enregistrement qui n'a pas été sauvegardé (numéro d'enregistrement est
+  // égal à -3)
+  // donc nous pouvons arrêter la recherche dès que nous avons trouvé un enregistrement
           SET QUERY LIMIT(1)
        Else
-  //The current record is an existing record;
-  //therefore we can stop the query as soon as at least two records are found
+  // Il s'agit d'un enregistrement existant, donc nous pouvons arrêter
+  // la recherche dès que nous avons trouvé au moins deux enregistrements
           SET QUERY LIMIT(2)
        End if
-  //The query will return its result in $vlFound
-  //without changing the current record nor the current selection
-       SET QUERY DESTINATION(Into variable;$vlFound)
-  //Make the query according to the number of fields that are specified
+  // La recherche retournera le résultat dans la variable $vlTrouvé
+  // sans changer l'enregistrement courant ni la sélection courante
+       SET QUERY DESTINATION(Into variable;$vlTrouvé)
+  // Construire la recherche selon le nombre de champs spécifiés
        Case of
-          :($vlNbFields=1)
+          :($vlNmbChamps=1)
              QUERY($1->;$2->=$2->)
-          :($vlNbFields=2)
+          :($vlNmbChamps=2)
              QUERY($1->;$2->=$2->;*)
-             QUERY($1->;&;$3->=$3->)
+             QUERY($1->; & ;$3->=$3->)
           Else
              QUERY($1->;$2->=$2->;*)
-             For($vlField;2;$vlNbFields-1)
-                QUERY($1->;&;${1+$vlField}->=${1+$vlField}->;*)
+             For($vlChamp;2;$vlNmbChamps-1)
+                QUERY($1->; & ;${1+$vlChamp}->=${1+$vlChamp}->;*)
              End for
-             QUERY($1->;&;${1+$vlNbFields}->=${1+$vlNbFields}->)
+             QUERY($1->; & ;${1+$vlNmbChamps}->=${1+$vlNmbChamps}->)
        End case
-       SET QUERY DESTINATION(Into current selection) //Restore normal query mode
-       SET QUERY LIMIT(0) //No longer limit queries
-  //Process query result
+       SET QUERY DESTINATION(0) // Rétablir le mode standard de recherche
+       SET QUERY LIMIT(0) // Enlever la limite sur la recherche
+  // Traiter le résultat de la recherche
        Case of
-          :($vlFound=0)
-             $0:=True //No duplicated values
-          :($vlFound=1)
-             If($vlCurrentRecord<0)
-                $0:=False //Found an existing record with the same values as the unsaved new record
+          :($vlTrouvé=0)
+             $0:=True  // Pas de valeurs dupliquées
+          :($vlTrouvé=1)
+             If($vlEnregCour<0)
+                $0:=False // Trouvé un enregistrement existant avec les mêmes valeurs que le nouveau
              Else
-                $0:=True //No duplicated values; just found the very same record
+                $0:=True  // Pas de valeurs dupliquées, nous avons trouvé le même enregistrement
              End if
-          :($vlFound=2)
-             $0:=False //Whatever the case is, the values are duplicated
+          :($vlTrouvé=2)
+             $0:=False   // Quoi que ce soit, les valeurs sont dupliquées
        End case
     Else
-       If(◊DebugOn) //Does not make sense; signal it if development version
-          TRACE //WARNING! Unique values is called with NO current record
+       If(◊Débogage)   // Cela n'a aucun sens, signalez-le pendant le développement de la base
+          TRACE   // ATTENTION ! Cette méthode a été appelée sans enregistrement courant
        End if
-       $0:=False //Can't guarantee the result
+       $0:=False   // Ne peut pas garantir le résultat
     End if
  Else
-    If(◊DebugOn) //Does not make sense; signal it if development version
-       TRACE //WARNING! Unique values is called with NO query condition
+    If(◊Débogage)   // Cela n'a aucun sens, signalez-le pendant le développement de la base
+       TRACE   // ATTENTION ! Cette méthode a été appelée sans conditions de recherche
     End if
-    $0:=False //Can't guarantee the result
+    $0:=False   // Ne peut pas garantir le résultat
  End if
 ```
 
-After this project method is implemented in your application, you can write:
+Lorsque cette méthode est implémentée dans votre application, vous pouvez écrire le code suivant :
 
 ```4d
-  //...
- If(Unique values(->[Contacts];->[Contacts]Company);->[Contacts]Last name;->[Contacts]First name)
-  //Do appropriate actions for that record which has unique values
+  // ...
+ If(ValeursUniques(->[Contacts];->[Contacts]Société;->[Contacts]Nom;->[Contacts]Prénom))
+  // Traitement de l'enregistrement qui a les valeurs uniques
  Else
-    ALERT("There is already a Contact with this name for this Company.")
+    ALERT("Il existe déjà un contact avec ce nom pour cette société.")
  End if
-  //...
+  // ...
 ```
 
-## See also 
+## Voir aussi 
 
 [GET QUERY DESTINATION](get-query-destination.md)  
 [QUERY](query.md)  
@@ -267,11 +266,11 @@ After this project method is implemented in your application, you can write:
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY LIMIT](set-query-limit.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 396 |
+| Numéro de commande | 396 |
 | Thread safe | yes |
 
 

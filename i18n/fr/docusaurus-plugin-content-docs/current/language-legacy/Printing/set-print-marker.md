@@ -5,200 +5,200 @@ slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *markNum* : Integer ; *position* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *numTaquet* ; *position* {; *} )<!-- END REF-->
 <!--REF #_command_.SET PRINT MARKER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| markNum | Integer | &#8594;  | Marker number |
-| position | Integer | &#8594;  | New position for the marker |
-| * | Operator | &#8594;  | If passed = move subsequent markers If omitted = do not move subsequent markers |
+| numTaquet | Integer | &#8594;  | Numéro de taquet |
+| position | Integer | &#8594;  | Nouvelle position du taquet |
+| * | Opérateur | &#8594;  | Si passé = déplacer les marqueurs suivants Si omis = ne pas déplacer les marqueurs suivants |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Modified|
-|<6|Created|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](./commands/print-form) commands, this command allows you to adjust the size of the print areas. 
+<!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](../commands/print-form.md), cette commande permet d’ajuster la taille des zones d’impression. 
 
-**SET PRINT MARKER** can be used in two contexts:
+**SET PRINT MARKER** peut être appelée dans deux contextes : 
 
-* during the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
-* during the On Printing Detail form event, in the context of the [Print form](./commands/print-form) command. This operation facilitates the printing of customized reports (see example).
-The effect of the command is limited to printing; no modification appears on the screen. The modifications made to the forms are not saved. 
+* lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
+* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md). Ce fonctionnement facilite l’impression d’états personnalisés (voir exemple).
 
-Pass one of the constants of the *Form Area* theme in the *markNum* parameter:
+L’effet de la commande est limité à l’impression, aucune modification n’apparaît à l’écran. Les modifications apportées aux formulaires ne sont pas sauvegardées. 
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Form break0   | Integer | 300   |
-| Form break1   | Integer | 301   |
-| Form break2   | Integer | 302   |
-| Form break3   | Integer | 303   |
-| Form break4   | Integer | 304   |
-| Form break5   | Integer | 305   |
-| Form break6   | Integer | 306   |
-| Form break7   | Integer | 307   |
-| Form break8   | Integer | 308   |
-| Form break9   | Integer | 309   |
-| Form detail   | Integer | 0     |
-| Form footer   | Integer | 100   |
-| Form header   | Integer | 200   |
-| Form header1  | Integer | 201   |
-| Form header10 | Integer | 210   |
-| Form header2  | Integer | 202   |
-| Form header3  | Integer | 203   |
-| Form header4  | Integer | 204   |
-| Form header5  | Integer | 205   |
-| Form header6  | Integer | 206   |
-| Form header7  | Integer | 207   |
-| Form header8  | Integer | 208   |
-| Form header9  | Integer | 209   |
+Passez dans le paramètre *numTaquet* une des constantes du thème “*Zone de formulaire*” :
 
-In *position*, pass the new position desired, expressed in pixels.
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Form break0   | Entier long | 300    |
+| Form break1   | Entier long | 301    |
+| Form break2   | Entier long | 302    |
+| Form break3   | Entier long | 303    |
+| Form break4   | Entier long | 304    |
+| Form break5   | Entier long | 305    |
+| Form break6   | Entier long | 306    |
+| Form break7   | Entier long | 307    |
+| Form break8   | Entier long | 308    |
+| Form break9   | Entier long | 309    |
+| Form detail   | Entier long | 0      |
+| Form footer   | Entier long | 100    |
+| Form header   | Entier long | 200    |
+| Form header1  | Entier long | 201    |
+| Form header10 | Entier long | 210    |
+| Form header2  | Entier long | 202    |
+| Form header3  | Entier long | 203    |
+| Form header4  | Entier long | 204    |
+| Form header5  | Entier long | 205    |
+| Form header6  | Entier long | 206    |
+| Form header7  | Entier long | 207    |
+| Form header8  | Entier long | 208    |
+| Form header9  | Entier long | 209    |
 
-If you pass the optional *\** parameter, all the markers located below the marker specified in *markNum* will be moved the same number of pixels and in the same direction as this marker when the command is executed. **Warning:** in this case, any objects present in the areas located below the marker are also moved. 
+Passez dans *position* la nouvelle position souhaitée du taquet, exprimée en pixels.
 
-When the \* parameter is used, it is possible to position the *markNum* marker beyond the initial position of the markers that follow it — these latter markers will be moved simultaneously.
+Si vous passez le paramètre optionnel *\**, tous les marqueurs situés au-dessous du marqueur désigné par *numTaquet* seront déplacés du même nombre de pixels et dans la même direction que lui lors de l’exécution de la commande. **Attention :** dans ce cas, les objets éventuellement présents dans les zones situées au-dessous du marqueur sont également déplacés.   
+Lorsque le paramètre \* est utilisé, il est donc possible de positionner le marqueur *numTaquet* au-delà de la position initiale des marqueurs qui le suivent — ces derniers étant déplacés simultanément.
 
-![](../assets/en/commands/pict28724.en.png)
+![](../assets/en/commands/pict28724.fr.png)
 
-**Notes:**  
-* This command modifies only the existing marker position. It does not allow the addition of markers. If you designate a marker that does not exist in the form, the command will not do anything.
-* The print marker mechanism in the Design mode is retained: a marker cannot go any higher than the one that precedes it, nor any lower than the one that follows it (when the \* parameter is not used).
+**Notes :**
 
-## Example 
+* Cette commande modifie la position des taquets existants uniquement. Elle ne permet pas d’ajouter des taquets. Si vous désignez un taquet qui n’existe pas dans le formulaire, la commande ne fait rien.
+* Le fonctionnement des taquets d’impression en mode Développement est conservé : un taquet ne peut pas aller plus haut que celui qui le précède ni plus bas que celui qui le suit (lorsque le paramètre \* n’est pas utilisé).
 
-This complete example enables you to generate the printing of a three-column report, the height of each row being calculated on the fly according to the contents of the fields.   
-The output form used for printing is as follows:
+## Exemple 
 
-![](../assets/en/commands/pict28725.en.png)
+Cet exemple complet permet de générer l’impression d’un état sur trois colonnes, la hauteur de chaque ligne étant calculée à la volée en fonction du contenu des champs.   
+Le formulaire de sortie utilisé pour l’impression est le suivant :
 
-The On Printing Detail form event was selected for the form (keep in mind that no matter what area is printed, the [Print form](./commands/print-form) command only generates this type of form event).   
-For each record, the row height must be adapted according to the contents of the "Actors" or "Summary" column (column having the most content). Here is the desired result:
+![](../assets/en/commands/pict28725.fr.png)
 
-![](../assets/en/commands/pict28726.en.png)
+L’événement formulaire On Printing Detail a été sélectionné pour le formulaire (rappelons que la commande [Print form](../commands/print-form.md) ne génère que cet événement, quelle que soit la zone imprimée).   
+Pour chaque enregistrement, la hauteur de la ligne doit être adaptée en fonction du contenu de la colonne “Acteurs” ou “Résumé” (colonne ayant le plus de contenu). Voici le résultat souhaité :
 
-The print project method is as follows:
+![](../assets/en/commands/pict28726.fr.png)
+
+La méthode projet d’impression est la suivante :
 
 ```4d
- var vLprint_height;$vLheight;vLprinted_height : Integer
- C_STRING(31;vSprint_area)
+ var vLhauteur_imp;$vLhauteur;vLhauteur_imprimee : Integer
+ C_STRING(31;vSimpr_zone)
  PAGE SETUP([Film];"Print_List3")
- GET PRINTABLE AREA(vLprint_height)
- vLprinted_height:=0
+ GET PRINTABLE AREA(vLhauteur_imp)
+ vLhauteur_imprimee:=0
  ALL RECORDS([Film])
  
- vSprint_area:="Header" //Printing of header area
- $vLheight:=Print form([Film];"Print_List3";Form header)
- $vLheight:=21 //Fixed height
- vLprinted_height:=vLprinted_height+$vLheight
+ vSimpr_zone:="Entete" //Impression de la zone d’en-tête
+ $vLhauteur:=Print form([Film];"Print_List3";Form header)
+ $vLhauteur:=21   //Hauteur fixe
+ vLhauteur_imprimee:=vLhauteur_imprimee+$vLhauteur
  
  While(Not(End selection([Film])))
-    vSprint_area:="Detail" //Printing of detail area
-    $vLheight:=Print form([Film];"Print_List3";Form detail)
-  //Detail calculation is carried out in the form method
-    vLprinted_height:=vLprinted_height+$vLheight
-    If(OK=0) //CANCEL has been carried out in the form method
+    vSimpr_zone:="Corps" //Impression de la zone de corps
+    $vLhauteur:=Print form([Film];"Print_List3";Form detail)
+  //Le calcul du corps est effectué dans la méthode formulaire
+    vLhauteur_imprimee:=vLhauteur_imprimee+$vLhauteur
+    If(OK=0) //NE PAS VALIDER a été exécutée dans la méthode formulaire
        PAGE BREAK
-       vLprinted_height:=0
-       vSprint_area:="Header" //Reprinting of the header area
-       $vLheight:=Print form([Film];"Print_List3";Form header)
-       $vLheight:=21
-       vLprinted_height:=vLprinted_height+$vLheight
-       vSprint_area:="Detail"
-       $vLheight:=Print form([Film];"Print_List3";Form detail)
-       vLprinted_height:=vLprinted_height+$vLheight
+       vLhauteur_imprimee:=0
+       vSimpr_zone:="Entete" //Réimpression de la zone d’en-tête
+       $vLhauteur:=Print form([Film];"Print_List3";Form header)
+       $vLhauteur:=21
+       vLhauteur_imprimee:=vLhauteur_imprimee+$vLhauteur
+       vSimpr_zone:="Corps"
+       $vLhauteur:=Print form([Film];"Print_List3";Form detail)
+       vLhauteur_imprimee:=vLhauteur_imprimee+$vLhauteur
     End if
     NEXT RECORD([Film])
  End while
- PAGE BREAK //Make sure that the last page is printed
+ PAGE BREAK //Assurons-nous que la dernière page est imprimée
 ```
 
-The Print\_List3 form method is as follows:
+La méthode du formulaire Print\_List3 est la suivante :
 
 ```4d
- var $l;$t;$r;$b;$fixed_wdth;$exact_hght;$l1;$t1;$r1;$b1 : Integer
- var $final_pos;$i : Integer
- var $detail_pos;$header_pos;$hght_to_print;$hght_remaining : Integer
+ var $g;$h;$d;$b;$larg_fix;$haut_préc;$g1;$h1;$d1;$b1 : Integer
+ var $pos_finale;$i : Integer
+ var $position_c;$position_e;$hauteur_a_imprimer;$hauteur_restante : Integer
  
  Case of
-    :(vSprint_area="Detail") //Printing of detail underway
-       OBJECT GET COORDINATES([Film]Actors;$l;$t;$r;$b)
-       $fixed_wdth:=$r-$l  //Calculation of the Actors text field size
-       $exact_hght:=$b-$t
-       OBJECT GET BEST SIZE([Film]Actors;$wdth;$hght;$fixed_wdth)
-  //Optimal size of the field according to its contents
-       $movement:=$hght-$exact_hght
+    :(vSimpr_zone="Corps") //Impression du corps en cours
+       OBJECT GET COORDINATES([Film]Acteurs;$g;$h;$d;$b)
+       $larg_fix:=$d-$g  //Calcul de la taille du champ texte Acteurs
+       $haut_préc:=$b-$h
+       OBJECT GET BEST SIZE([Film]Acteurs;$larg;$haut;$larg_fix)
+  //Taille optimale du champ en fonction du contenu
+       $deplacement:=$haut-$haut_préc
  
-       OBJECT GET COORDINATES([Film]Summary;$l1;$t1;$r1;$b1)
-       $fixed_wdth1:=$r1-$l1  //Calculation of the Summary text field size
-       $exact_hght1:=$b1-$t1
-       OBJECT GET BEST SIZE([Film]Summary;$wdth1;$hght1;$fixed_wdth1)
-  //Optimal size of the field according to its contents
-       $movement1:=$hght1-$exact_hght1
-       If($movement1>$movement)
-  //We determine the highest field
-          $movement:=$movement1
+       OBJECT GET COORDINATES([Film]Résumé;$g1;$h1;$d1;$b1)
+       $larg_fix1:=$d1-$g1  //Calcul de la taille du champ texte Résumé
+       $haut_préc1:=$b1-$h1
+       OBJECT GET BEST SIZE([Film]Résumé;$larg1;$haut1;$larg_fix1)
+  //Taille optimale du champ en fonction du contenu
+       $deplacement1:=$haut1-$haut_préc1
+       If($deplacement1>$deplacement)
+  //On détermine le champ le plus haut
+          $deplacement:=$deplacement1
        End if
  
-       If($movement>0)
+       If($deplacement>0)
           $position:=Get print marker(Form detail)
-          $final_pos:=$position+$movement
-  //We move the Detail marker and those that follow it
-          SET PRINT MARKER(Form detail;$final_pos;*)
-  //Resizing of text areas
-          OBJECT MOVE([Film]Actors;$l;$t;$r;$hght+$t;*)
-          OBJECT MOVE([Film]Summary;$l1;$t1;$r1;$hght1+$t1;*)
+          $pos_finale:=$position+$deplacement
+  //On déplace le taquet Corps et ceux qui le suivent
+          SET PRINT MARKER(Form detail;$pos_finale;*)
+  //Redimensionnement des zones de texte
+          OBJECT MOVE([Film]Acteurs;$g;$h;$d;$haut+$h;*)
+          OBJECT MOVE([Film]Résumé;$g1;$h1;$d1;$haut1+$h1;*)
  
-  //Resizing of dividing lines
-          OBJECT GET COORDINATES(*;"H1Line";$l;$t;$r;$b)
-          OBJECT MOVE(*;"H1Line";$l;$final_pos-1;$r;$final_pos;*)
+  //Redimensionnement des lignes de séparation
+          OBJECT GET COORDINATES(*;"LigneH1";$g;$h;$d;$b)
+          OBJECT MOVE(*;"LigneH1";$g;$pos_finale-1;$d;$pos_finale;*)
           For($i;1;4;1)
-             OBJECT GET COORDINATES(*;"VLine"+String($i);$l;$t;$r;$b)
-             OBJECT MOVE(*;"VLine"+String($i);$l;$t;$r;$final_pos;*)
+             OBJECT GET COORDINATES(*;"LigneV"+String($i);$g;$h;$d;$b)
+             OBJECT MOVE(*;"LigneV"+String($i);$g;$h;$d;$pos_finale;*)
           End for
        End if
  
-  //Calculation of available space
-       $detail_pos:=Get print marker(Form detail)
-       $header_pos:=Get print marker(Form header)
-       $hght_to_print:=$detail_pos-$header_pos
-       $hght_remaining:=printing_height-vLprinted_height
-       If($hght_remaining<$hght_to_print) //Insufficient height
-          CANCEL //Move form to the next page
+  //Calcul de la place disponible
+       $position_c:=Get print marker(Form detail)
+       $position_e:=Get print marker(Form header)
+       $hauteur_a_imprimer:=$position_c-$position_e
+       $hauteur_restante:=hauteur_impression-vLhauteur_imprimee
+       If($hauteur_restante<$hauteur_a_imprimer) //Hauteur insuffisante
+          CANCEL //Passer la ligne sur la page suivante
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Get print marker](get-print-marker.md)  
 [OBJECT GET BEST SIZE](object-get-best-size.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 [PRINT RECORD](print-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 709 |
+| Numéro de commande | 709 |
 | Thread safe | no |
-
 
 

@@ -9,54 +9,54 @@ displayed_sidebar: docs
 <!--REF #_command_.Current method name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Calling method name |
+| Résultat | Text | &#8592; | Nom de la méthode d’appel |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Modified|
-|6.7|Created|
+|18 R3|Modifié|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current method name.Summary-->The Current method name command returns the method name where it has been invoked.<!-- END REF--> This command is useful for debugging generic methods.
+<!--REF #_command_.Current method name.Summary-->La commande **Current method name** retourne le nom de la méthode dans laquelle elle est appelée.<!-- END REF--> Cette commande est utile dans le cadre du débogage de méthodes génériques.
 
-According to the calling method type, the returned string can be as follows:
+En fonction du type de méthode d’appel, la chaîne retournée peut prendre l’une des formes suivantes :
 
-| **Calling Method**                   | **Returned string**                               |
-| ------------------------------------ | ------------------------------------------------- |
-| Database Method                      | MethodName                                        |
-| Trigger                              | Trigger on \[TableName\]                          |
-| Project Method                       | MethodName                                        |
-| Table Form Method                    | \[TableName\].FormName                            |
-| Project Form Method                  | FormName                                          |
-| Table Form Object Method             | \[TableName\].FormName.ObjectName                 |
-| Project Form Object Method           | FormName.ObjectName                               |
-| Class constructor                    | ClassName:constructor                             |
-| Class Function                       | ClassName.FunctionName                            |
-| Component Project Method             | MethodName                                        |
-| Component Project Form Method        | FormName(ComponentName)                           |
-| Component Project Form Object Method | FormName(ComponentName).ObjectName(ComponentName) |
+| **Méthode d’appel**                          | **Chaîne retournée**                                 |
+| -------------------------------------------- | ---------------------------------------------------- |
+| Méthode base                                 | NomMéthode                                           |
+| Trigger                                      | Trigger sur \[NomTable\]                             |
+| Méthode projet                               | NomMéthode                                           |
+| Méthode formulaire table                     | \[NomTable\].NomFormulaire                           |
+| Méthode formulaire projet                    | NomFormulaire                                        |
+| Méthode objet formulaire table               | \[NomTable\].NomFormulaire.NomObjet                  |
+| Méthode objet formulaire projet              | NomFormulaire.NomObjet                               |
+| Classe constructeur                          | NomClasse:Constructor                                |
+| Classe fonction                              | NomClasse.NomFonction                                |
+| Méthode projet de composant                  | NomMéthode                                           |
+| Méthode formulaire projet de composant       | NomFormulaire (NomComposant)                         |
+| Méthode objet formulaire projet de composant | NomFormulaire (NomComposant).NomObjet (NomComposant) |
 
-This command cannot be called from within a 4D formula.
+Cette commande ne doit pas être appelée depuis une formule 4D.
 
-**Note:** For this command to be able to operate in compiled mode, it must not be included in code for which range checking has been disabled. See *Range checking*.
+**Note :** Pour que cette commande fonctionne en mode compilé, elle ne doit pas figurer dans le code dont le contrôle d'exécution a été désactivé. Voir *Contrôle d’exécution*.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 684 |
+| Numéro de commande | 684 |
 | Thread safe | yes |
 
 

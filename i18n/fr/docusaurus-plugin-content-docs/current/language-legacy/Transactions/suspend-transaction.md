@@ -9,38 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.SUSPEND TRANSACTION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Created|
+|15 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SUSPEND TRANSACTION.Summary-->The **SUSPEND TRANSACTION** command pauses the current transaction in the current process.<!-- END REF--> You can then handle data in other parts of the database, for example, without it being included in the transaction, and while preserving the transaction context untouched. Any records that have been updated or added in the transaction are locked until the transaction is resumed using the [RESUME TRANSACTION](resume-transaction.md) command.
+<!--REF #_command_.SUSPEND TRANSACTION.Summary-->La commande **SUSPEND TRANSACTION** suspend les mécanismes de la transaction courante dans le process courant.<!-- END REF--> Vous pouvez alors manipuler des données dans d'autres parties de la base, sans qu'elles soient contrôlées par la transaction, tout en préservant le contexte courant de la transaction. Tout enregistrement qui a été mis à jour ou ajouté durant la transaction est verrouillé jusqu'à ce que la transaction soit réactivée à l'aide de la commande [RESUME TRANSACTION](resume-transaction.md).
 
-For more information, please refer to the [Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions) section. 
+Pour plus d'informations, veuillez vous référer à la section [Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions). 
 
-## See also 
+## Voir aussi 
 
 [Active transaction](active-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
-[Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions)
+[Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
 
-## Properties
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1385 |
+| Numéro de commande | 1385 |
 | Thread safe | yes |
 
 

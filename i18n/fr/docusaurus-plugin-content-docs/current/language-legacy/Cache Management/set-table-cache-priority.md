@@ -5,68 +5,68 @@ slug: /commands/set-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
+<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *laTable* ; *priorité* )<!-- END REF-->
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table whose scalar data priority value has to be set for the session |
-| priority | Integer | &#8594;  | Cache priority value for scalar values in the table |
+| laTable | Table | &#8594;  | Table dont vous souhaitez modifier la priorité des données scalaires pour toute la session |
+| priorité | Integer | &#8594;  | Priorité des valeurs scalaires de la table dans le cache |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
-## Expert mode 
+## Mode expert 
 
-<!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
+<!--REF #_command_.SET TABLE CACHE PRIORITY.Summary-->Cette commande est réservée pour des besoins spécifiques.<!-- END REF--> Elle doit être utilisée avec précaution car elle peut affecter les performances de la base. 
 
 ## Description 
 
-The **SET TABLE CACHE PRIORITY** command sets a specific *priority* to the data related to *aTable* in cache for all processes in the current session. This command should be called in the **On Startup** or **On Server Startup** database method.
+La commande **SET TABLE CACHE PRIORITY** applique une *priorité* spécifique aux données de *laTable* chargées dans le cache pour tous les process dans la session courante. Elle doit être appelée dans la méthode base **Sur ouverture** ou **Sur démarrage serveur**.
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
- This command handles priority for data in scalar fields only (date, number, or string types). Priority for fields of binary type (Blobs, texts, pictures, and objects) is handled by the [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md) command. 
+ Cette commande définit uniquement la priorité des champs scalaires de la table (types date, numériques ou alpha). La priorité des types de champs binaires (Blob, texte, images et objets) est gérée via la commande [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md). 
 
-In the *priority* parameter, pass one of the following constants from the "*Cache Management*" theme:
+Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du cache*" :
 
-| Constant                 | Comment                                      |
-| ------------------------ | -------------------------------------------- |
-| Cache priority low       |                                              |
-| Cache priority very low  |                                              |
-| Cache priority normal    | Sets the cache priority to its default value |
-| Cache priority high      |                                              |
-| Cache priority very high |                                              |
+| Constante                | Comment                                              |
+| ------------------------ | ---------------------------------------------------- |
+| Cache priority low       |                                                      |
+| Cache priority very low  |                                                      |
+| Cache priority normal    | Rétablit la priorité de cache à sa valeur par défaut |
+| Cache priority high      |                                                      |
+| Cache priority very high |                                                      |
 
-## Example 
+## Exemple 
 
-In the , you want to set a high priority for the \[Customer\] scalar data:
+Dans la , vous souhaitez fixer une priorité très haute pour les données scalaires de la table \[Client\] :
 
 ```4d
- SET TABLE CACHE PRIORITY([Customer];Cache priority very high)
+ SET TABLE CACHE PRIORITY([Client];Cache priority very high)
 ```
 
-## See also 
+## Voir aussi 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
 [Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1400 |
+| Numéro de commande | 1400 |
 | Thread safe | yes |
 
 

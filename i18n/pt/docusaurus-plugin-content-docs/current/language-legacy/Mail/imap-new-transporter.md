@@ -1,6 +1,7 @@
 ---
 id: imap-new-transporter
 title: IMAP New transporter
+slug: /commands/imap-new-transporter
 displayed_sidebar: docs
 ---
 

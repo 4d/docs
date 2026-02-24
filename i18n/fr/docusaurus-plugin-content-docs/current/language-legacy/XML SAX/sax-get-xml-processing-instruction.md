@@ -5,59 +5,59 @@ slug: /commands/sax-get-xml-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* : Time ; *name* : Text ; *value* : Text )<!-- END REF-->
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* ; *nom* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| name | Text | &#8592; | Instruction name |
-| value | Text | &#8592; | Instruction value |
+| document | Time | &#8594;  | Référence du document ouvert |
+| nom | Text | &#8592; | Nom de l’instruction |
+| valeur | Text | &#8592; | Valeur de l’instruction |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->The **SAX GET XML PROCESSING INSTRUCTION** command returns the *name* and *value* of the XML instruction processed in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML Processing Instruction event. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->La commande **SAX GET XML PROCESSING INSTRUCTION** retourne le *nom* et la *valeur* de l’instruction de traitement XML analysée dans le document XML référencé par *document*.<!-- END REF--> Cette commande doit être appelée dans le contexte d’un événement XML processing instruction. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-## Example 
+## Exemple 
 
-Let's look at the following piece of XML code:
+Considérons l’extrait de code XML suivant :
 
 ```XML
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Edited with XML Spy v3.0.7 NT (http://www.xmlspy.com) by Myself (4D SA)-->
-<?PI TextProcess?>
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- Edited with XML Spy v3.0.7 NT (http://www.xmlspy.com) by Myself (4D SA)--> 
+<?PI TextProcess?> 
 <!DOCTYPE RootElement SYSTEM "ParseTest.dtd">
 ```
 
-The following instruction will return “PI” in *vName* and “TextProcess” in *vValue*: 
+L’instruction suivante retournera “PI” dans *vNom* et “TextProcess” dans *vValeur* : 
 
 ```4d
- SAX GET XML PROCESSING INSTRUCTION($DocRef;vName;vValue)
+ SAX GET XML PROCESSING INSTRUCTION($RefDoc;vNom;vValeur)
 ```
 
-## See also 
+## Voir aussi 
 
 [SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 875 |
+| Numéro de commande | 875 |
 | Thread safe | yes |
 
 

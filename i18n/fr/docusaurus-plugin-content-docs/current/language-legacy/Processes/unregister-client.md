@@ -9,49 +9,49 @@ displayed_sidebar: docs
 <!--REF #_command_.UNREGISTER CLIENT.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.UNREGISTER CLIENT.Summary-->The **UNREGISTER CLIENT** command “unregisters” a 4D client station.<!-- END REF--> The client must have already been registered by the [REGISTER CLIENT](register-client.md) command. 
+<!--REF #_command_.UNREGISTER CLIENT.Summary-->La commande **UNREGISTER CLIENT** “désinscrit” le client 4D de 4D Server.<!-- END REF--> Il doit avoir été préalablement inscrit à l’aide de la commande [REGISTER CLIENT](register-client.md). 
 
-**Note:** A 4D client is automatically unregistered when the user quits the application. 
+Si le poste client n’était pas inscrit ou si la commande est exécutée sur 4D en mode local, la commande ne fait rien. 
 
-If the client workstation was not previously registered or if the command was executed on 4D in local mode, the command has no effect. 
+**Note :** Un client 4D est automatiquement désinscrit lorsque l’application quitte. 
 
-## Example 
+## Exemple 
 
-Refer to the example for the [REGISTER CLIENT](register-client.md) command.
+Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the client is correctly unregistered, the OK system variable is set to 1\. If the client was not registered, OK is set to 0.
+Si le client est correctement désinscrit, la variable système OK prend la valeur 1\. Si le client n’était pas inscrit, OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 649 |
+| Numéro de commande | 649 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,73 +5,72 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* : Boolean {; *messageText* : Text} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressionBool* {; *texteMessage*} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &#8594;  | Boolean expression |
-| messageText | Text | &#8594;  | Text of error message |
+| expressionBool | Boolean | &#8594;  | Expression booléenne |
+| texteMessage | Text | &#8594;  | Texte du message d’erreur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ASSERT.Summary-->The **ASSERT** command evaluates the *boolExpression* assertion passed in parameter and, if it returns false, stops the code execution with an error message.<!-- END REF--> The command works in interpreted and compiled mode. 
+<!--REF #_command_.ASSERT.Summary-->La commande **ASSERT** évalue l'assertion *expressionBool* passée en paramètre et, si elle retourne faux, interrompt l'exécution du code en affichant une erreur.<!-- END REF--> La commande fonctionne en mode interprété et en mode compilé. 
 
-If *boolExpression* is true, nothing happens. If it is false, the command triggers the error -10518 and displays by default the text of the assertion preceded by the message "Assert failed:". You can intercept this error via a method installed using the [ON ERR CALL](on-err-call.md) command, in order, for example, to provide info for a log file. 
+Si l’expression est vraie, il ne se passe rien. Si l’expression est fausse, la commande déclenche l’erreur -10518 et affiche par défaut le texte de l’assertion précédé du message "Fausse assertion :". Vous pouvez intercepter cette erreur via une méthode installée par la commande [ON ERR CALL](on-err-call.md), afin par exemple d’alimenter un fichier d’historique. 
 
-Optionally, you can pass a *messageText* parameter to display a custom error message instead of the text of the assertion. 
+Optionnellement, vous pouvez passer un paramètre *texteMessage* afin d'afficher un message d'erreur personnalisé au lieu du texte de l'assertion. 
 
-An assertion is an instruction inserted in the code that is responsible for detecting any anomalies during its execution. The principle consists in verifying that an expression is true at a given moment and, should the opposite occur, to cause an exception. Assertions are above all used to detect cases that should usually not ever occur. They are mainly used to detect programming bugs. It is possible to globally enable or disable all the assertions of an application (for example according to the type of version) via the [SET ASSERT ENABLED](set-assert-enabled.md) command. For more information about assertions in programming, please refer to the article concerning them on Wikipedia: [http://en.wikipedia.org/wiki/Assertion\_(computing)](http://en.wikipedia.org/wiki/Assertion%5F%28computing%29)
+Une assertion est une instruction insérée dans le code d'une méthode et chargée de détecter des éventuelles anomalies au cours de son exécution. Le principe consiste à vérifier qu’une expression est vraie à un instant donné et, dans le cas contraire, produire une exception. Les assertions sont surtout utilisées pour détecter des cas qui ne devraient jamais arriver en temps normal. Elles servent donc essentiellement à détecter des bogues de programmation. Il est possible d’activer ou de désactiver globalement toutes les assertions d’une application (par exemple en fonction du type de version) via la commande [SET ASSERT ENABLED](set-assert-enabled.md). Pour plus d’informations sur les assertions en programmation, reportez-vous à l’article (en anglais) qui leur est consacré sur Wikipedia : [http://en.wikipedia.org/wiki/Assertion\_(computing)](http://en.wikipedia.org/wiki/Assertion%5F%28computing%29)
 
-## Example 1 
+## Exemple 1 
 
-Before carrying out operations on a record, the developer wants to make sure that it is actually loaded in read/write mode:
+Avant d’effectuer des opérations sur un enregistrement, le développeur souhaite s’assurer qu’il est bien chargé en lecture écriture :
 
 ```4d
  READ WRITE([Table 1])
  LOAD RECORD([Table 1])
- ASSERT(Not(Locked([Table 1])))
-  // triggers error -10518 if record is locked
+ ASSERT(Not(Locked([Table 1])))  //déclenche l'erreur  -10518  si l'enregistrement est verrouillé
 ```
 
-## Example 2 
+## Exemple 2 
 
-An assertion can allow parameters passed to a project method to be tested in order to detect aberrant values. In this example, a custom warning message is used.
+Une assertion peut permettre de tester les paramètres passés à une méthode projet pour détecter des valeurs aberrantes. Dans cet exemple, un message d’alerte personnalisé est utilisé.
 
 ```4d
-  // Method that returns the number of a client according to its name passed in $name
- var $name : Text // Name of client
- ASSERT($name#"";"Search for a blank client name")
-  // A blank name in this case is an aberrant value
-  // If the assertion is false, the following will be displayed in the error dialog box:
-  // "Assert failed: Search for a blank client name"
+  // Méthode qui retourne le numéro d'un client en fonction de son nom passé dans  $name
+ var $name : Text // Nom du client
+ ASSERT($name#"";"Recherche d’un nom de client vide")
+     // Un nom vide dans ce cas est une valeur aberrante
+     // Si assertion fausse, affichera dans la boîte de dialogue d'erreur :
+     // "Fausse assertion : Recherche d’un nom de client vide"
 ```
 
-## See also 
+## Voir aussi 
 
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1129 |
+| Numéro de commande | 1129 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

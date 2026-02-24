@@ -5,73 +5,72 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *objet* ; *tabNomsCols* ; *tabNomsEntêtes* ; *tabVarCols* ; *tabVarEntêtes* ; *tabColsVisibles* ; *tabStyles* {; *tabNomsPieds* ; *tabVarPieds*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| arrColNames | Text array | &#8592; | Column object names |
-| arrHeaderNames | Text array | &#8592; | Header object names |
-| arrColVars | Pointer array | &#8592; | Pointers to column variables or Pointers to column fields or Nil |
-| arrHeaderVars | Pointer array | &#8592; | Pointers to header variables |
-| arrColsVisible | Boolean array | &#8592; | Visibility of each column |
-| arrStyles | Pointer array | &#8592; | Pointers to arrays, or style, color and row control variables, or Nil |
-| arrFooterNames | Text array | &#8592; | Column footer object names |
-| arrFooterVars | Pointer array | &#8592; | Pointers to column footer variables |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| tabNomsCols | Text array | &#8592; | Noms d’objet des colonnes |
+| tabNomsEntêtes | Text array | &#8592; | Noms d’objet des en-têtes |
+| tabVarCols | Pointer array | &#8592; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
+| tabVarEntêtes | Pointer array | &#8592; | Pointeurs vers les variables des en-têtes |
+| tabColsVisibles | Boolean array | &#8592; | Visibilité de chaque colonne |
+| tabStyles | Pointer array | &#8592; | Pointeurs vers les tableaux ou les variables de styles de couleurs et de contrôle des lignes ou Nil |
+| tabNomsPieds | Text array | &#8592; | Noms d’objet des pieds de colonnes |
+| tabVarPieds | Pointer array | &#8592; | Pointeurs vers les variables des pieds de colonnes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|13|Modified|
-|12|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|15 R4|Modifié|
+|13|Modifié|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Summary-->The **LISTBOX GET ARRAYS** command returns a set of synchronized arrays providing information on each column (visible or invisible) in the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Summary-->La commande **LISTBOX GET ARRAYS** retourne un ensemble de tableaux synchronisés fournissant diverses informations sur chaque colonne (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Once the command is executed: 
+A l’issue de l’exécution de la commande :
 
-* The *arrColNames* array contains the list of object names for each column in the list box.
-* The *arrHeaderNames* array contains the list of object names for each column header in the list box.
-* The *arrColVars* array contains, for an array type list box, pointers toward variables (arrays) associated with each column of the list box. For a selection type list box, *arrColVars* contains:  
-   * For a column associated with a field, a pointer to the associated field,  
-   * For a column associated with a variable, a pointer to the variable,  
-   * For a column associated with an expression, a Nil pointer.
-* The *arrHeaderVars* array contains pointers toward variables associated with each column header of the list box.
-* The *arrColsVisible* array contains a Boolean value for each column, indicating whether the column is visible ([True](true.md "True")) or hidden ([False](false.md "False")) in the list box.
-* The *arrStyles* array contains, for an array type list box, four pointers to four arrays that allow the applying of a specific style, font color, background color and custom display control to each row of the list box. These arrays are associated with the list box in the Property List of the Design environment or using the [LISTBOX SET ARRAY](listbox-set-array.md) command. If an array is not specified for the list box, the corresponding item in *arrStyles* will contain a Nil pointer.  
-The fourth pointer corresponds either to a Boolean array (Hidden Rows Array), or to a longint array (array used to set hidden, disabled and non-selectable rows) based on the implementation used for the row control array (see *List box specific properties*).  
-For record selection, collection or entity selection type list boxes, *arrStyles* contains:  
-   * For each configuration set via a variable, a pointer to the variable,  
-   * For each configuration set via an expression, a Nil pointer.
+* Le tableau *tabNomsCols* contient la liste des noms d’objet de chaque colonne de la list box.
+* Le tableau *tabNomsEntêtes* contient la liste des noms d’objet de chaque en-tête de colonne de la list box.
+* Le tableau *tabVarCols* contient, pour une list box de type tableau, des pointeurs vers les variables (c’est-à-dire les tableaux) associées à chaque colonne de la list box. Pour une list box de type sélection ou collection, *tabVarCols* contient :  
+   * pour une colonne associée à un champ, un pointeur vers le champ associé,  
+   * pour une colonne associée à une variable, un pointeur vers la variable,  
+   * pour une colonne associée à une expression, un pointeur Nil.
+* Le tableau *tabVarEntêtes* contient des pointeurs vers les variables associées à chaque en-tête de colonne de la list box.
+* Le tableau *tabColsVisibles* contient une valeur booléenne pour chaque colonne, indiquant si la colonne est visible (valeur Vrai) ou masquée (valeur Faux) dans la list box.
+* Le tableau *tabStyles* contient, pour une list box de type tableau, quatre pointeurs vers les quatre tableaux permettant d’appliquer individuellement un style, une couleur de police, une couleur de fond et un contrôle d'affichage personnalisés à chaque ligne de la list box. Ces tableaux sont associés à la list box dans la Liste des propriétés en mode Développement ou via la commande [LISTBOX SET ARRAY](listbox-set-array.md). Si un tableau n’est pas spécifié pour la list box, l’élément correspondant de *tabStyles* contient un pointeur Nil.  
+Le quatrième pointeur correspond soit à un tableau booléen (tableau de lignes masquées), soit à un tableau d'entiers longs (tableau permettant de définir les lignes masquées, désactivées et non sélectionnables) en fonction de l'implémentation utilisée pour le tableau de contrôle des lignes (cf. section *Propriétés spécifiques des List box*).  
+Pour une list box de type sélection, collection ou entity selection, *tabStyles* contient :  
+   * pour chaque paramétrage défini via une variable, un pointeur vers la variable,  
+   * pour chaque paramétrage défini via une expression, un pointeur Nil.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX Get property](./commands/listbox-get-property)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 832 |
+| Numéro de commande | 832 |
 | Thread safe | no |
-
 
 

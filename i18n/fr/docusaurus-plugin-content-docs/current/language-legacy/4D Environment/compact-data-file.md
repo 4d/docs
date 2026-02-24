@@ -5,90 +5,90 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* : Text ; *dataPath* : Text {; *archiveFolder* : Text {; *option* : Integer {; *method* : Text}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *cheminStructure* ; *cheminDonnées* {; *dossierArchive* {; *options* {; *méthode*}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | Pathname of structure file |
-| dataPath | Text | &#8594;  | Pathname of data file to be compacted |
-| archiveFolder | Text | &#8594;  | Pathname of folder where original data file will be put |
-| option | Integer | &#8594;  | Compacting options |
-| method | Text | &#8594;  | Name of 4D callback method |
-| Function result | Text | &#8592; | Complete pathname of folder containing original data file |
+| cheminStructure | Text | &#8594;  | Chemin d’accès du fichier de structure |
+| cheminDonnées | Text | &#8594;  | Chemin d’accès du fichier de données |
+| dossierArchive | Text | &#8594;  | Chemin d’accès du dossier dans lequel placer le fichier de données original |
+| options | Integer | &#8594;  | Options de compactage |
+| méthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
+| Résultat | Text | &#8592; | Chemin d’accès complet du dossier contenant le fichier de données original |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Modified|
-|13|Modified|
-|11 SQL|Created|
+|15 R3|Modifié|
+|13|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Compact data file.Summary-->The **Compact data file** command compacts the data file designated by the *dataPath* parameter associated with the *structurePath* structure file.<!-- END REF--> For more information about compacting, refer to the Design Reference manual.
+<!--REF #_command_.Compact data file.Summary-->La commande **Compact data file** effectue un compactage du fichier de données désigné par le paramètre *cheminDonnées* associé au fichier de structure *cheminStructure*.<!-- END REF--> Pour plus d’informations sur le compactage, reportez-vous au manuel Mode Développement.
 
-To ensure the continuity of the database operation, the new compacted data file automatically replaces the original file. For security, the original file is not modified and is moved into a special folder named “Replaced files (compacting) YYYY-MM-DD HH-MM-SS” where YYYY-MM-DD HH-MM-SS represents the date and time of the backup. For example: “Replaced files (compacting) 2007-09-27 15-20-35”.
+Pour assurer la continuité du fonctionnement de la base, le nouveau fichier de données compacté remplace automatiquement le fichier original. Par sécurité, le fichier original n’est pas modifié et est déplacé dans un dossier spécial nommé “Replaced files (compacting) AAAA-MM-JJ HH-MM-SS” où AAAA-MM-JJ HH-MM-SS représente la date et l’heure de la sauvegarde. Par exemple : “Replaced files (compacting) 2015-09-27 15-20-35”.
 
-The command returns the complete pathname of the folder actually created to store the original data file. This command can only be executed from 4D (local mode) or 4D Server (stored procedure). The data file to be compacted must correspond to the structure file designated by *structurePath*. In addition, the data file must not be open when the command is executed; otherwise an error is generated.  
-If an error occurs during the compacting process, the original files are kept in their initial location. If an index file (.4DIndx file) is associated with the data file, it is also compacted. As with the data file, the original file is saved and the new compacted version replaces the previous one.
+La commande retourne le chemin d’accès complet du dossier effectivement créé pour stocker le fichier de données original. Cette commande peut être exécutée depuis 4D (mode local) ou 4D Server uniquement (procédure stockée). Le fichier de données à compacter doit correspondre au fichier de structure désigné par *cheminStructure*. En outre, il ne doit PAS être ouvert au moment de l’exécution de la commande, sinon une erreur est générée.  
+Si une erreur se produit durant le processus de compactage, les fichiers originaux sont conservés à leur emplacement initial. Si un fichier d’index (fichier .4DIndx) est associé au fichier de données, il est également compacté. Comme pour le fichier de données, le fichier original est sauvegardé et la nouvelle version compactée remplace la précédente. 
 
-* In the *structurePath* parameter, pass the complete pathname of the structure file associated with the data file that you want to compact. This information is needed for the compacting procedure. The pathname must be expressed in the syntax of the operating system. You can also pass an empty string; in this case, the standard Open file dialog box appears so that you can designate the structure file to be used.
-* In the *dataPath* parameter, you can pass an empty string, a file name or a complete pathname, expressed in the syntax of the operating system. If you pass an empty string, the standard Open file dialog box appears so that the user can designate the data file to be compacted. This file must correspond to the structure file defined in the *structurePath* parameter. If you only pass the name of the data file, 4D will look for it at the same level as the structure file.
-* The optional *archiveFolder* parameter can be used to specify the location of the “Replaced files (compacting) DateTime” folder intended to receive the original versions of the data files as well as any index files.  
-The command returns the complete pathname of the folder actually created.  
-\- If you omit this parameter, the original files are automatically put in a “Replaced files (compacting) DateTime” folder that is created next to the structure file.  
-\- If you pass an empty string, a standard Open folder dialog box will appear so that the user can specify the location of the folder to be created.  
-\- If you pass a pathname (expressed in the syntax of the operating system), the command will create a “Replaced files (compacting) DateTime” folder at this location.
-* The optional *options* parameter is used to set various compacting options. To do so, use the following constants, found in the “*Data File Maintenance*” theme. You can pass several options by combining them:
-  
-| Constant                | Type    | Value  | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                           |  
-| ----------------------- | ------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| Compact address table   | Integer | 131072 | Force the address table of the records to be rewritten (slows down compacting). Note that in this case, record numbers are rewritten. If you only pass this option, 4D automatically enables the ’Update records’ option.                                                                                                                                                                                                                                         |  
-| Create process          | Integer | 32768  | When this option is passed, compacting will be asynchronous and you will need to manage the results using the callback method (see below). 4D will not display the progress bar (it is possible to do so using the callback method). The OK system variable is set to 1 if the process has been launched correctly and 0 in all other cases. When this option is not passed, the OK variable is set to 1 if the compacting takes place correctly and 0 otherwise. |  
-| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.                                                                                                                                                                                                                                                                                                            |  
-| Timestamp log file name | Integer | 262144 | When this option is passed, the name of the log file generated will contain the date and time of its creation; as a result, it will not replace any log file already generated previously. By default, if this option is not passed, log file names are not timestamped and each new file generated replaces the previous one.                                                                                                                                    |  
-| Update records          | Integer | 65536  | Force all records to be rewritten according to current definition of the fields in the structure                                                                                                                                                                                                                                                                                                                                                                  |
-* The *method* parameter is used to set a callback method which will be called regularly during the compacting if the Create process option has been passed. Otherwise, the callback method is never called. For more information about this method, please refer to the description of the [VERIFY DATA FILE](verify-data-file.md) command.
+* Passez dans *cheminStructure* le chemin d’accès complet du fichier de structure associé au fichier de données que vous souhaitez compacter. Cette information est nécessaire à la procédure de compactage. Le chemin d’accès doit être exprimé dans la syntaxe du système d’exploitation. Vous pouvez également passer une chaîne vide, dans ce cas une boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner le fichier de structure à utiliser.
+* Vous pouvez passer dans *cheminDonnées* une chaîne vide, un nom de fichier ou un chemin d’accès complet, exprimé dans la syntaxe du système d’exploitation. Si vous passez une chaîne vide, la boîte de dialogue standard d’ouverture de fichier apparaît, permettant à l’utilisateur de désigner le fichier de données à compacter. Ce fichier doit correspondre au fichier de structure défini dans le paramètre *cheminStructure*. Si vous passez uniquement un nom de fichier de données, 4D le recherchera au même niveau que le fichier de structure.
+* Le paramètre facultatif *dossierArchive* permet de désigner l’emplacement du dossier “Replaced files (compacting) Dateheure” destiné à recueillir les versions originales des fichiers de données ainsi que des éventuels fichiers d’index.  
+La commande retourne le chemin d’accès complet du dossier effectivement créé.  
+\- Si vous omettez ce paramètre, les fichiers d’origine sont automatiquement déplacés dans un dossier “Replaced files (compacting) Dateheure” créé à côté du fichier de structure.  
+\- Si vous passez une chaîne vide, une boîte de dialogue standard d’ouverture de dossier apparaît, permettant à l’utilisateur de désigner l’emplacement du dossier à créer.  
+\- Si vous passez un chemin d’accès (exprimé dans la syntaxe du système d’exploitation), la commande créera le dossier “Replaced files (compacting) Dateheure” à cet emplacement.
+* Le paramètre facultatif *options* permet de définir diverses options liées au compactage. Pour cela, utilisez les constantes suivantes, placées dans le thème *Maintenance fichier de données*. Vous pouvez passer plusieurs options en les cumulant :  
 
-By default, the **Compact data file** command creates a log file in XML format (if you have not passed the Do not create log file option, see the *options* parameter). This file is placed in the **Logs** folder of the database and its name is based on the structure file of the current database. For example, for a structure file named “myDB.4db,” the log file will be named “myDB\_Compact\_Log.xml.”  
-If you have passed the Timestamp log file name option, the name of the log file includes the date and time of its creation in the form "YYYY-MM-DD HH-MM-SS", which gives us, for example: “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. This means that each new log file does not replace the previous one, but it might require subsequent manual action to remove unnecessary files.   
-Regardless of the option selected, as soon as a log file is generated, its path is returned in the *Document* system variable after execution of the command.
+| Constante               | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |  
+| ----------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Compact address table   | Entier long | 131072 | Forcer la réécriture de la table d’adresses des enregistrements (ralentit le compactage). A noter que dans ce cas, les numéros des enregistrements sont réécrits. Si vous passez uniquement cette option, 4D active automatiquement l’option ’Mettre à jour enregistrements’.                                                                                                                                                                                                                                    |  
+| Create process          | Entier long | 32768  | Lorsque cette option est passée, le compactage sera asynchrone et vous devrez gérer les résultats à l’aide de la méthode de rétro-appel (voir ci-dessous). 4D n’affichera pas de barre de progression (il est possible de le faire via la méthode de rétro-appel). La variable système OK prendra la valeur 1 si le process a été correctement lancé et 0 dans les autres cas. Lorsque cette option n’est pas passée, la variable OK prendra la valeur 1 si le compactage s’est correctement déroulé et sinon 0. |  
+| Do not create log file  | Entier long | 16384  | En principe, la commande crée un fichier d’historique au format xml (reportez-vous à la fin de la description de la commande). Vous pouvez annuler ce fonctionnement en passant cette option.                                                                                                                                                                                                                                                                                                                    |  
+| Timestamp log file name | Entier long | 262144 | Lorsque cette option est passée, le nom du fichier d'historique généré contiendra la date et l'heure de sa création, par conséquent il ne remplacera aucun fichier d'historique éventuellement déjà généré. Par défaut, si cette option n'est pas passée, le nom du fichier n'est pas horodaté, et chaque nouveau fichier généré remplace le précédent.                                                                                                                                                          |  
+| Update records          | Entier long | 65536  | Forcer la réécriture de tous les enregistrements suivant la définition courante des champs dans la structure                                                                                                                                                                                                                                                                                                                                                                                                     |
+* Le paramètre *méthode* permet de désigner une méthode de rétro-appel qui sera régulièrement appelée durant le compactage si l’option Create process a été passée. Dans le cas contraire, la méthode de rétro-appel n’est jamais appelée. Pour plus d’informations sur cette méthode, reportez-vous à la description de la commande [VERIFY DATA FILE](verify-data-file.md).
 
-## Example 
+Par défaut, la commande **Compact data file** crée un fichier d'historique au format xml (si vous n'avez pas passé l'option Do not create log file, cf. paramètre *options*). Son nom est basé sur celui du fichier de structure de la base et il est placé dans le dossier **Logs** de cette base. Par exemple, pour un fichier de structure nommé “myDB.4db”, le fichier d’historique sera nommé “myDB\_Compact\_Log.xml”.   
+Si vous avez passé l'option Timestamp log file name, le nom du fichier d'historique inclut la date et l'heure de sa création sous la forme "AAAA-MM-JJ HH-MM-SS", ce qui donne par exemple : “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. Ce principe permet d'éviter que chaque nouveau fichier d'historique écrase le précédent, mais pourra nécessiter ultérieurement une action manuelle afin de supprimer les fichiers superflus.   
+Quelle que soit l'option sélectionnée, dès lors qu'un fichier d'historique est généré, son chemin est retourné dans la variable système *Document* à l'issue de l'exécution de la commande.
 
-The following example (Windows) carries out the compacting of a data file:
+## Exemple 
+
+L’exemple suivant (Windows) effectue le compactage d’un fichier de données :
 
 ```4d
- $structFile:=Structure file
- $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
- $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
- $archFolder:=Compact data file($structFile;$dataFile;$origFile)
+ $ficStruc:=Structure file
+ $ficDonnées:="C:\\Bases\\Factures\\Janvier\\Factures.4dd"
+ $ficOrig:="C:\\Bases\\Factures\\Archives\\Janvier\"
+ $dossierArch:=Compact data file($ficStruc;$ficDonnées;$ficOrig)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the compacting operation is carried out correctly, the OK system variable is set to 1; otherwise, it is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
+Si l’opération de compactage s’est déroulée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
 
-## See also 
+## Voir aussi 
 
 [Table fragmentation](table-fragmentation.md)  
 [VERIFY DATA FILE](verify-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 937 |
+| Numéro de commande | 937 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

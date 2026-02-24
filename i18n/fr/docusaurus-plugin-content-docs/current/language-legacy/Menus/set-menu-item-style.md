@@ -5,63 +5,57 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemStyle* : Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *ligneMenu* ; *styleLigne* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
-| itemStyle | Integer | &#8594;  | New menu item style |
-| process | Integer | &#8594;  | Process reference number |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| styleLigne | Integer | &#8594;  | Nouveau style de la ligne de menu |
+| process | Integer | &#8594;  | Numéro de référence du process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU ITEM STYLE.Summary-->The **SET MENU ITEM STYLE** command changes the font style of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem* according to the font style passed in *itemStyle*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
+<!--REF #_command_.SET MENU ITEM STYLE.Summary-->La commande **SET MENU ITEM STYLE** remplace le style de police de la ligne de menu, dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*, par le style de police que vous avez passé dans *styleLigne*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-If you omit the *process* parameter, **SET MENU ITEM STYLE** applies to the menu bar for the current process. Otherwise, **SET MENU ITEM STYLE** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **SET MENU ITEM STYLE** s'applique à la barre de menus du process courant. Sinon, **SET MENU ITEM STYLE** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-You specify the font style of the item in the *itemStyle* parameter. You pass a combination (one or a sum) of the following predefined constants, found in the *Font Styles* theme:
+Vous pouvez définir le style de l'élément dans le paramètre *styleLigne*. Vous passez une ou une combinaison des constantes prédéfinies suivantes, placées dans le thème *Styles de caractères* :
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| Bold      | Integer | 1     |
-| Italic    | Integer | 2     |
-| Plain     | Integer | 0     |
-| Underline | Integer | 4     |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
+| Underline | Entier long | 4      |
 
-:::note
-
-The `Underline` style is not supported on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) theme enabled. If used in this rendering context, it is ignored. 
-
-:::
-
-## See also 
+## Voir aussi 
 
 [Get menu item style](get-menu-item-style.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 425 |
+| Numéro de commande | 425 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

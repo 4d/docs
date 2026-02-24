@@ -1,6 +1,7 @@
 ---
 id: listbox-set-property
 title: LISTBOX SET PROPERTY
+slug: /commands/listbox-set-property
 displayed_sidebar: docs
 ---
 

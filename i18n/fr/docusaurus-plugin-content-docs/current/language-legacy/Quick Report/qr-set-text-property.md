@@ -5,105 +5,105 @@ slug: /commands/qr-set-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* : Integer ; *colNum* : Integer ; *rowNum* : Integer ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *zone* ; *numColonne* ; *numLigne* ; *propriété* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNum | Integer | &#8594;  | Column number |
-| rowNum | Integer | &#8594;  | Row number |
-| property | Integer | &#8594;  | Property number |
-| value | Integer, Text | &#8594;  | Value for the selected property |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| numLigne | Integer | &#8594;  | Numéro de ligne |
+| propriété | Integer | &#8594;  | Numéro de propriété |
+| valeur | Integer, Text | &#8594;  | Valeur de la propriété définie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R3|Modified|
-|2003|Created|
+|14 R3|Modifié|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET TEXT PROPERTY.Summary-->The **QR SET TEXT PROPERTY** command sets the text attributes for the cell determined by *colNum* and *rowNum*.<!-- END REF-->
+<!--REF #_command_.QR SET TEXT PROPERTY.Summary-->La commande **QR SET TEXT PROPERTY** permet de définir les propriétés de texte de la cellule désignée par les paramètres *numColonne* et *numLigne*.<!-- END REF--> 
 
-*area* is the reference of the Quick Report area. 
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*colNum* is the number of the cell column.
+Passez dans *numColonne* le numéro de colonne de la cellule.
 
-*rowNum* is the reference of the cell row. You can pass either:
+Passez dans *numLigne* la référence de la ligne de la cellule. Vous pouvez passer soit :
 
-* a positive value designating the corresponding subtotal (break) level,
-* one of the constants from the *QR Rows for Properties* theme:
-  
-| Constant       | Type    | Value | Comment               |  
-| -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Integer | \-2   | Detail area of report |  
-| qr footer      | Integer | \-5   | Page footer           |  
-| qr grand total | Integer | \-3   | Grand total area      |  
-| qr header      | Integer | \-4   | Page header           |  
-| qr title       | Integer | \-1   | Title of report       |
+* une valeur positive désignant la ligne de sous-total correspondante,
+* une des constantes du thème *QR Lignes pour Propriétés* :  
 
-**Note:** When passing -4 or -5 as *rowNum*, you still need to pass a column number in *colNum*, even if it is not used.
+| Constante      | Type        | Valeur | Comment               |  
+| -------------- | ----------- | ------ | --------------------- |  
+| qr detail      | Entier long | \-2    | Zone Détail de l'état |  
+| qr footer      | Entier long | \-5    | Pied de page          |  
+| qr grand total | Entier long | \-3    | Zone Total général    |  
+| qr header      | Entier long | \-4    | En-tête de page       |  
+| qr title       | Entier long | \-1    | Intitulé de l'état    |
 
-**Note:** In cross-table mode, the principle is similar except for the row values, which are always positive.
+**Note :** Vous devez passer une valeur dans *numColonne* même lorsque vous passez -4 ou -5 dans le paramètre *numLigne* (dans ce cas la valeur de *numColonne* est inutilisée). 
 
-*property* is the value of the text attribute to assign. You can use the constants of the *QR Text Properties* theme, and the following values can be set:
+**Note :** Dans les tableaux croisés, le principe est similaire sauf pour les valeurs des lignes, qui sont toujours positives. 
 
-| Constant                      | Type    | Value | Comment                                                                          |
-| ----------------------------- | ------- | ----- | -------------------------------------------------------------------------------- |
-| \_o\_qr font                  | Integer | 1     | Obsolete since 4D v14R3 (use qr font name)                                       |
-| qr alternate background color | Integer | 9     | Alternate background color number                                                |
-| qr background color           | Integer | 8     | Background color number                                                          |
-| qr bold                       | Integer | 3     | Bold style attribute (0 or 1)                                                    |
-| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](font-list.md) command    |
-| qr font size                  | Integer | 2     | Font size expressed in points (9 to 255)                                         |
-| qr italic                     | Integer | 4     | Italic style attribute (0 or 1)                                                  |
-| qr justification              | Integer | 7     | Justification attribute (0 for default, 1 for left, 2 for center or 3 for right) |
-| qr text color                 | Integer | 6     | Color number attribute (Longint)                                                 |
-| qr underline                  | Integer | 5     | Underline style attribute (0 or 1)                                               |
+Passez dans *propriété* la valeur de la propriété de texte à modifier. Vous pouvez utiliser les constantes du thème *QR Propriétés de texte*. Dans le tableau ci-dessous, la colonne Commentaire indique les valeurs associées (paramètre *valeur*) :
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *colNum* number, the error -9852 will be generated.  
-If you pass an invalid *rowNum* number, the error -9853 will be generated.  
-If you pass an invalid *property* number, the error -9854 will be generated.
+| Constante                     | Type        | Valeur | Comment                                                                               |
+| ----------------------------- | ----------- | ------ | ------------------------------------------------------------------------------------- |
+| \_o\_qr font                  | Entier long | 1      | Obsolète depuis 4D v14R3 (utiliser qr font name)                                      |
+| qr alternate background color | Entier long | 9      | Numéro de couleur de fond alternée                                                    |
+| qr background color           | Entier long | 8      | Numéro de couleur de fond                                                             |
+| qr bold                       | Entier long | 3      | Attribut gras (0 ou 1)                                                                |
+| qr font name                  | Entier long | 10     | Nom de police tel que retourné par exemple par la commande [FONT LIST](font-list.md). |
+| qr font size                  | Entier long | 2      | Taille de police en points (9 à 255)                                                  |
+| qr italic                     | Entier long | 4      | Attribut italique (0 ou 1)                                                            |
+| qr justification              | Entier long | 7      | Attribut de justification (0 = par défaut, 1 = gauche, 2 = centre et 3 = droite)      |
+| qr text color                 | Entier long | 6      | Numéro de couleur (Entier long)                                                       |
+| qr underline                  | Entier long | 5      | Attribut souligné (0 ou 1)                                                            |
 
-## Example 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
+Si le paramètre *numLigne* est incorrect, l’erreur -9853 est générée.  
+Si le paramètre *propriété* est incorrect, l’erreur -9854 est générée.
 
-This method defines several attributes of the first column’s title:
+## Exemple 
+
+Cette méthode définit plusieurs attributs pour l'intitulé de la première colonne :
 
 ```4d
-  //Assigns the Times font:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr font name;"Times")
-  //Assigns 10-point font size:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr font size;10)
-  //Assigns the bold attribute:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr bold;1)
-  //Assigns the italic attribute:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr italic;1)
-  //Assigns the underline attribute:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr underline;1)
-  //Assigns the light green color:
- QR SET TEXT PROPERTY(qr_area;1;-1;qr text color;0x0000FF00)
+  //Affecte la police Times :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr font name;"Times")
+  //Affecte la taille de police 10 points :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr font size;10)
+  //Affecte l'attribut gras :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr bold;1)
+  //Affecte l'attribut italique :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr italic;1)
+  //Affecte l'attribut souligné :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr underline;1)
+  //Affecte la couleur vert clair :
+ QR SET TEXT PROPERTY(qr_zone;1;-1;qr text color;0x0000FF00)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR Get text property](qr-get-text-property.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 759 |
+| Numéro de commande | 759 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

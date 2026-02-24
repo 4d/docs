@@ -9,47 +9,48 @@ displayed_sidebar: docs
 <!--REF #_command_.VALIDATE TRANSACTION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the [transaction](../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.
+<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepte la transaction ouverte par la commande [START TRANSACTION](start-transaction.md) de niveau correspondant dans le process courant.<!-- END REF-->sauvegarde toutes les modifications effectuées sur les données de la base pendant la transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all the sub-transactions are cancelled, even if they have been validated individually using this command.
+A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transaction principale est annulée, toutes les sous-transactions sont annulées, même si elles ont été validées individuellement à l'aide de cette commande.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The system variable OK is set to 1 if the transaction has been validated correctly; otherwise, it is set to 0.
+La variable système OK prend la valeur 1 si la transaction a été correctement validée, sinon elle prend la valeur 0\. 
 
-Note that when OK is set to 0, the transaction is automatically cancelled internally (equivalent to [CANCEL TRANSACTION](cancel-transaction.md)). Consequently, you must not explicitly call [CANCEL TRANSACTION](cancel-transaction.md) if OK=0, particularly in the context of nested transactions, because the cancellation will then be applied to the higher level transaction. 
+A noter que lorsque OK vaut 0, la transaction est automatiquement annulée en interne (équivaut à un [CANCEL TRANSACTION](cancel-transaction.md)). Par conséquent, notamment dans le contexte de transactions imbriquées, il ne faut pas appeler explicitement [CANCEL TRANSACTION](cancel-transaction.md) si OK=0 car l'annulation sera alors appliquée à la transaction du niveau supérieur. 
 
-## See also 
+## Voir aussi 
 
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 [Transactions](../Develop-legacy/transactions.md)
 
-## Properties
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 240 |
+| Numéro de commande | 240 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

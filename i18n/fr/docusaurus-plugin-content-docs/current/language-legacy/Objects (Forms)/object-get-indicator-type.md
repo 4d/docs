@@ -5,53 +5,53 @@ slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get indicator type** ( *object* : Variable, Field ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Integer | &#8592; | Indicator type |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Type d’indicateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get indicator type.Summary-->The **OBJECT Get indicator type** command returns the current indicator type assigned to the thermometer(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Summary-->La commande **OBJECT Get indicator type** retourne le type d’indicateur courant affecté au(x) thermomètre(s) désigné(s) par le(s) paramètre(s) *objet* et *\**.<!-- END REF-->
 
-You can set the indicator type using the Property List in Design mode, or using the [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md) command.
+Le type d’indicateur peut être défini via la Liste des propriétés en mode Développement ou via la commande [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-You can compare the value returned by the command with the following constants, found in the "*Form Objects (Properties)*" theme:
+Vous pouvez comparer la valeur retournée par la commande aux constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant                  | Type    | Value | Comment                                            |
-| ------------------------- | ------- | ----- | -------------------------------------------------- |
-| Asynchronous progress bar | Integer | 3     | Circular indicator displaying continuous animation |
-| Barber shop               | Integer | 2     | Bar displaying continuous animation                |
-| Progress bar              | Integer | 1     | Standard progress bar                              |
+| Constante                 | Type        | Valeur | Comment                                                |
+| ------------------------- | ----------- | ------ | ------------------------------------------------------ |
+| Asynchronous progress bar | Entier long | 3      | Indicateur circulaire affichant une animation continue |
+| Barber shop               | Entier long | 2      | Barre affichant une animation continue                 |
+| Progress bar              | Entier long | 1      | Barre de progression standard                          |
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1247 |
+| Numéro de commande | 1247 |
 | Thread safe | no |
 
 

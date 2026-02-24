@@ -5,55 +5,55 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *charCode* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *codeCaractère* ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| charCode | Integer | &#8594;  | Character code |
-| Function result | Text | &#8592; | Character represented by the charCode |
+| codeCaractère | Integer | &#8594;  | Code de caractère |
+| Résultat | Text | &#8592; | Caractère représenté par codeCaractère |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Char.Summary-->The **Char** command returns the character whose code is *charCode*.<!-- END REF-->
+<!--REF #_command_.Char.Summary-->La fonction **Char** retourne le caractère dont le code est *codeCaractère*.<!-- END REF-->
 
-Pass a UTF-16 value (included between 1 and 65535) in *charCode*.
+Passez une valeur UTF-16 (comprise entre 1 et 65535) dans *codeCaractère*.
 
-**Tip:** In editing a method, the command **Char** is commonly used to specify characters that cannot be entered from the keyboard or that would be interpreted as an editing command in the Method editor.
+**Astuce :** La fonction **Char** est généralement utilisée pour insérer dans l'éditeur de méthodes des caractères qui ne peuvent être saisis au clavier ou des caractères de contrôle.
 
-## Example 
+## Exemple 
 
-The following example uses **Char** to insert a carriage return within the text of an alert message:
+L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot dans une boîte de dialogue d'alerte afin de séparer deux lignes d'information :
 
 ```4d
- ALERT("Employees: "+String(Records in table([Employees]))+Char(Carriage return)+"Press OK to continue.")
+ ALERT("Employés : "+String(Enregistrements dans table([Employés]))+Caractere(Retour chariot)+"Cliquez sur OK pour continuer.")
 ```
 
-## See also 
+## Voir aussi 
 
 [Character code](character-code.md)  
-*Character Reference Symbols*  
-*Unicode Codes*  
+*Codes Unicode*  
+*Symboles d'indice de chaîne*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 90 |
+| Numéro de commande | 90 |
 | Thread safe | yes |
 
 

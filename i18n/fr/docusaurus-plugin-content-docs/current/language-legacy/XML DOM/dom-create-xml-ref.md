@@ -5,118 +5,117 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; ...(*nameSpaceName* : Text ; *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *racine* {; *nameSpace*} {; *nSNom* ; *nSValeur*} {; *nSNom2* ; *nSValeur2* ; ... ; *nSNomN* ; *nSValeurN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| root | Text | &#8594;  | Name of root element |
-| nameSpace | Text | &#8594;  | Value of namespace |
-| nameSpaceName | Text | &#8594;  | Namespace name |
-| nameSpaceValue | Text | &#8594;  | Namespace value |
-| Function result | Text | &#8592; | Root XML element reference |
+| racine | Text | &#8594;  | Nom de l’élément racine |
+| nameSpace | Text | &#8594;  | Valeur de l’espace de nommage (Namespace) |
+| nSNom | Text | &#8594;  | Nom d’espace de nommage |
+| nSValeur | Text | &#8594;  | Valeur d’espace de nommage |
+| Résultat | Text | &#8592; | Référence de l’élément XML racine |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Create XML Ref.Summary-->The **DOM Create XML Ref** command creates an empty XML tree in memory and returns its reference.<!-- END REF-->  
-  
-Pass the name of the XML tree root element in the *root* parameter. 
+<!--REF #_command_.DOM Create XML Ref.Summary-->La commande **DOM Create XML Ref** crée un arbre XML vide en mémoire et retourne sa référence.<!-- END REF-->
 
-Pass the declaration of the namespace value of the tree in the optional *nameSpace* parameter (for example, “http://www.4d.com”).   
-Note that you can prefix the *root* parameter with the namespace name followed by a colon *:* (for example “MyNameSpace:MyRoot”). In this case, the *nameSpace* parameter specifying the namespace value is mandatory.
+Passez dans le paramètre *racine* le nom de l’élément racine de l’arbre XML. 
 
-**Note:** The namespace is a string that allows you to make sure the XML variable names are unique. In general, a URL like http://www.mysite.com/myurl is used. The URL does not necessarily have to be valid, but it does have to be unique. 
+Passez dans le paramètre facultatif *nameSpace* la déclaration de la valeur de l’espace de nommage (namespace) de l’arbre (par exemple “http://www.4d.com”).   
+A noter qu'il est possible de préfixer le paramètre *racine* avec le nom de l’espace de nommage, suivi de *:* (par exemple “MonNameSpace:MaRacine”). Dans ce cas, le paramètre *nameSpace* précisant la valeur de l’espace de nommage est obligatoire.
 
-You can declare one or more additional namespaces in the generated XML tree using *nameSpaceName/nameSpaceValue* pairs. You can pass as many namespace name/value pairs as you want. 
+**Note :** L’espace de nommage (namespace) est une chaîne de caractères permettant de garantir l’unicité des noms de variables XML. En général, un URL du type http://www.monsite.com/monurl est utilisé. Il n’est pas nécessaire que l’URL soit valide sur le site, il faut juste qu’il soit unique. 
 
-**Important:** Remember to call the [DOM CLOSE XML](dom-close-xml.md) command in order to free up the memory when you have finished using the XML tree.
+Vous pouvez déclarer un ou plusieurs espace(s) de nommage supplémentaire(s) dans l’arbre XML généré, à l’aide de couples *nSNom / nSValeur*. Vous pouvez passer autant de couples nom / valeur d’espace de nommage que vous voulez. 
 
-## Example 1 
+**Important :** N'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) afin de libérer la mémoire lorsque vous avez terminé d'utiliser l'arbre XML.
 
-Creating a single XML tree: 
+## Exemple 1 
+
+Création d’un arbre XML simple : 
 
 ```4d
- var vElemRef : Text
- vElemRef:=DOM Create XML Ref("MyRoot")
+ var vRefElem : Text
+ vRefElem:=DOM Create XML Ref("MaRacine")
 ```
 
-This code produces the following result:
+Ce code produit le résultat suivant :
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?> 
-<MyRoot/>
+<MaRacine/>
 ```
 
-## Example 2 
+## Exemple 2 
 
-Creating an XML tree with a single namespace:   
+Création d’un arbre XML avec un espace de nommage : 
 
 ```4d
- var vElemRef : Text
- $Root:="MyNameSpace:MyRoot"
+ var vRefElem : Text
+ $Racine:="MonNameSpace:MaRacine"
  $Namespace:="http://www.4D.com/tech/namespace"
- vElemRef:=DOM Create XML Ref($Root;$Namespace)
+ vRefElem:=DOM Create XML Ref($Racine;$Namespace)
 ```
 
-This code produces the following result:
+Ce code produit le résultat suivant :
 
 ```XML
-<MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/namespace"/>
+<MonNameSpace:MaRacine xmlns:MonNameSpace="http://www.4D.com/tech/namespace"/>
 ```
 
-## Example 3 
+## Exemple 3 
 
-  
-Creating an XML tree with several namespaces: 
+Création d’un arbre XML avec plusieurs espaces de nommage : 
 
 ```4d
- var vElemRef : Text
- var $aNSName1;$aNSName2;$aNSValue1;$aNSValue2 : Text
- $Root:="MyNameSpace:MyRoot"
+ var vRefElem : Text
+ var $aNSNom1;$aNSNom2;$aNSValeur1;$aNSValeur2 : Text
+ $Racine:="MonNameSpace:MaRacine"
  $Namespace:="http://www.4D.com/tech/namespace"
- $aNSName1:="NSName1"
- $aNSName2:="NSName2"
- $aNSValue1:="http://www.4D.com/Prod/namespace"
- $aNSValue2:="http://www.4D.com/Mkt/namespace"
- vElemRef:=DOM Create XML Ref($Root;$Namespace;$aNSName1;$aNSValue1;$aNSName2;$aNSValue2)
+ $aNSNom1:="NSNom1"
+ $aNSNom2:="NSNom2"
+ $aNSValeur1:="http://www.4D.com/Prod/namespace"
+ $aNSValeur2:="http://www.4D.com/Mkt/namespace"
+ vRefElem:=DOM Create XML Ref($Racine;$Namespace;$aNSNom1;$aNSValeur1;$aNSNom2;$aNSValeur2)
 ```
 
-This code produces the following result:
+Ce code produit le résultat suivant :
 
 ```XML
-<MyNameSpace:MyRoot xmlns:MyNameSpace="http://www.4D.com/tech/nameSpace"
-NSName1="http://www.4D.com/Prod/namespace"
-NSName2="http://www.4D.com/Mkt/namespace"/>
+<MonNameSpace:MaRacine xmlns:MonNameSpace="http://www.4D.com/tech/nameSpace"
+NSNom1="http://www.4D.com/Prod/namespace"
+NSNom2="http://www.4D.com/Mkt/namespace"/>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 861 |
+| Numéro de commande | 861 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

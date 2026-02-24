@@ -5,39 +5,39 @@ slug: /commands/int
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Int.Syntax-->**Int** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Int.Syntax-->**Int** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number whose integer portion is returned |
-| Function result | Real | &#8592; | Integer portion of number |
+| nombre | Real | &#8594;  | Valeur dont vous voulez obtenir la partie entière |
+| Résultat | Real | &#8592; | Partie entière de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Int.Summary-->Int returns the integer portion of *number*.<!-- END REF--> Int truncates a negative *number* away from zero.
+<!--REF #_command_.Int.Summary-->**Int** retourne la partie entière de *nombre* en l'arrondissant à l'entier inférieur.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The following example illustrates how Int works for both positive and negative numbers. Note that the decimal portion of the number is removed:
+L'exemple suivant illustre le fonctionnement de **Int** pour les nombres positifs et négatifs. Notez que la partie décimale du nombre est supprimée :
 
 ```4d
- vlResult:=Int(123.4) // vlResult gets 123
- vlResult:=Int(-123.4) // vlResult gets –124
+ x:=Int(123,4) // x vaut 123
+ y:=Int(-123,4) // y vaut –124
 ```
 
-## See also 
+## Voir aussi 
 
 [Dec](dec.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 8 |
+| Numéro de commande | 8 |
 | Thread safe | yes |
 
 

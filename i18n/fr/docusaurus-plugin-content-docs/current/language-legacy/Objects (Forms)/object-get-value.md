@@ -5,57 +5,57 @@ slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *objectName* : Text ) : any<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjet* ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | Text | &#8594;  | Object name |
-| Function result | any | &#8592; | Current value of the form object's data source |
+| nomObjet | Text | &#8594;  | Nom de l'objet |
+| Résultat | any | &#8592; | Valeur courante des sources de données de l'objet de formulaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Created|
+|18 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get value.Summary-->The **OBJECT Get value** command returns the current value of the data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Summary-->La commande **OBJECT Get value** retourne la valeur courante des sources de données des objets formulaire désignés par le paramètre nomObjet.<!-- END REF-->
 
-In the *objectName* parameter, pass the name of a form object (string). If you use the wildcard character (“@”) for multiple objects, only the value of the data source from the first form object is returned.
+Dans le paramètre *nomObjet*, passez le nom d'un objet formulaire (chaine). Si vous utilisez un caractère générique (“@”) pour de multiples objets, seule la valeur des sources de données du premier objet de formulaire est retourné.
 
-**Note**: **OBJECT Get value** is not available on list box column objects.
+**Note**: **OBJECT Get value** n'est pas disponible dans les objets colonnes de list box..
 
-**Returned value**
+**Valeur retournée**
 
-Current value of the form object's data source. 
+Valeur courante des sources de données de l'objet de formulaire.
 
-**Notes**:
+**Notes** :
 
-* If the data source is an array, the command returns the index of the array
-* If the data source is an expression, the command returns the value evaluated value since the last execution cycle
+* Si les sources de données sont un tableau, la commande retourne l'index du tableau.
+* Si les sources de données sont une expression, la commande retoure la valeur évaluée à partir du dernier cycle d'exécution
 
-## Example 
+## Exemple 
 
-See the example for the [OBJECT SET VALUE](object-set-value.md) command. 
+Voir l'exemple de la commande [OBJECT SET VALUE](object-set-value.md). 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET VALUE](object-set-value.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1743 |
+| Numéro de commande | 1743 |
 | Thread safe | no |
 
 

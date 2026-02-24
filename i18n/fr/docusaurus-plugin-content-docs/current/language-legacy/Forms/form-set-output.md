@@ -5,68 +5,84 @@ slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text} )<!-- END REF-->
+<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*laTable* ;} *formulaire* {; *formUtilisateur*} )<!-- END REF-->
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to set the output form, or Default table, if omitted |
-| form | Text, Object | &#8594;  | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | Text | &#8594;  | Name of user form to use |
+| laTable | Table | &#8594;  | Table pour laquelle définir le formulaire sortie ou Table par défaut si ce paramètre est omis |
+| formulaire | Text, Object | &#8594;  | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formUtilisateur | Text | &#8594;  | Nom du formulaire utilisateur à utiliser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|12|Renamed|
-|2004|Modified|
-|<6|Created|
+|16 R6|Modifié|
+|12|Renommé|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM SET OUTPUT.Summary-->The **FORM SET OUTPUT**  command sets the current output form for *table* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
+<!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** vous permet de définir *formulaire* ou *formUtilisateur* comme formulaire sortie courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.
 
-The *form* parameter is the form which will be displayed. Pass the:
+Dans le paramètre *formulaire*, vous pouvez passer :
 
-* the name of a form;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
-* an object containing a description of the form.
+* le nom d'un formulaire (table) à utiliser,
+* le chemin (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser (voir *Chemin d'accès du formulaire*),
+* un objet contenant la description du formulaire à utiliser.
 
-The scope of this command is the current process. Each table has its own output form in each process.
+La portée de cette commande est le process courant. Chaque table dispose de son propre formulaire sortie dans chaque process. 
 
-**Note:** For structural reasons, this command is not compatible with project forms.
+**Note :** Pour des raisons structurelles, cette commande n'est pas compatible avec les formulaires projets. 
 
-**FORM SET OUTPUT** does not display the form; it just designates which form is printed, displayed, or used by another command. For information about creating forms, see the 4D *Design Reference* manual.
+La commande **FORM SET OUTPUT** ne provoque pas l'affichage du formulaire ; elle désigne simplement le formulaire devant être imprimé, affiché, ou utilisé par d'autres commandes. Pour plus d'informations sur la création de formulaires, reportez-vous au manuel *Mode Développement* de 4D.
 
-The default output form is defined in the Explorer window for each table. This default output form is used if the **FORM SET OUTPUT**  command is not used to specify an output form, or if you specify a form that does not exist.
+Le formulaire sortie par défaut est défini dans la fenêtre de l'Explorateur pour chaque table. Il est identifié par la lettre S placée près de son nom dans l'Explorateur et dans les boîtes de dialogue listant les formulaires. Ce formulaire par défaut sera utilisé si vous n'appelez pas la commande **FORM SET OUTPUT** ou si vous passez à cette commande un nom de formulaire erroné ou inexistant.
 
-The optional *userForm* parameter lets you specify a user form (coming from *form*) as the default output form. If you pass a valid user form name, this form will be used by default instead of the output form in the current process. This allows you to have several different custom user forms simultaneously (generated using the *\_o\_CREATE USER FORM* command) and to use the one that suits according to the context. 
+Le paramètre facultatif *formUtilisateur* permet de désigner un formulaire utilisateur (issu du *formulaire*) comme formulaire sortie par défaut. Si vous passez un nom de formulaire utilisateur valide, ce formulaire sera utilisé par défaut en lieu et place du formulaire sortie dans le process courant. Ce principe permet de disposer simultanément de différents formulaires utilisateurs personnalisés (générés à l’aide de la commande *\_o\_CREATE USER FORM*) et d’utiliser celui qui convient en fonction du contexte. 
 
-For more information about user forms, refer to the *Overview of user forms* section. 
+Pour plus d’informations sur les formulaires utilisateurs, reportez-vous à la section *Présentation des formulaires utilisateurs*. 
 
-Output forms are used by three groups of commands. One group displays a list of records on screen, another group generates reports, and the third group exports data. The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-selection.md) commands display a list of records using an output form. You use the output form when creating reports with the [PRINT LABEL](print-label.md) and [PRINT SELECTION](print-selection.md) commands. Each of the export commands ([EXPORT DIF](export-dif.md), [EXPORT SYLK](export-sylk.md) and [EXPORT TEXT](export-text.md)) also uses the output form.
+Les formulaires sortie sont exploités par trois groupes de commandes. Le premier groupe gère l'affichage des enregistrements à l'écran, le deuxième gère la génération d'états et le troisième gère l'export de données. 
 
-## Example 1 
+Chacune des commandes suivantes affiche une liste d'enregistrements dans un formulaire sortie :
 
-The following example shows a typical use of **FORM SET OUTPUT**. Note that although the **FORM SET OUTPUT** command appears immediately before the output form is used, this is not required. In fact, the command may be executed in a completely different method, as long as it is executed prior to this method:
+* [DISPLAY SELECTION](display-selection.md)
+* [MODIFY SELECTION](modify-selection.md)
+
+Vous utilisez le formulaire sortie lorsque vous créez des états à l'aide des commandes suivantes : 
+
+* [PRINT LABEL](print-label.md)
+* [PRINT SELECTION](print-selection.md)
+
+ Chacune des commandes d'export suivantes utilise également le formulaire sortie : 
+
+* [EXPORT DIF](export-dif.md)
+* [EXPORT SYLK](export-sylk.md)
+* [EXPORT TEXT](export-text.md)
+
+## Exemple 1 
+
+L'exemple suivant illustre une utilisation typique **FORM SET OUTPUT**. Notez que, bien que dans cet exemple la commande **FORM SET OUTPUT** soit placée juste avant que le formulaire soit utilisé, cela n'est pas obligatoire. En fait, la commande pourrait se trouver dans n'importe quelle autre méthode, dans la mesure où elle est exécutée avant celle-ci : 
 
 ```4d
- FORM SET INPUT([Parts];"Parts In") //Select the input form
- FORM SET OUTPUT([Parts];"Parts List") //Select the output form
- MODIFY SELECTION([Parts]) //This command uses both forms
+ FORM SET INPUT([Parties];"Saisie Parties") //Sélection du formulaire entrée
+ FORM SET OUTPUT([Parties];"Liste Parties") //Sélection du formulaire sortie
+ MODIFY SELECTION([Parties]) //Cette commande utilise les deux formulaires
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example uses the path to a .json form to print the records in an employee list: 
+L'exemple suivant utilise un formulaire décrit dans un fichier .json : 
 
 ```4d
  FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
@@ -74,7 +90,7 @@ The following example uses the path to a .json form to print the records in an e
  PRINT SELECTION([Personnel])
 ```
 
-## See also 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
 [EXPORT DIF](export-dif.md)  
@@ -85,11 +101,11 @@ The following example uses the path to a .json form to print the records in an e
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 54 |
+| Numéro de commande | 54 |
 | Thread safe | no |
 
 

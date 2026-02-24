@@ -5,102 +5,101 @@ slug: /commands/method-resolve-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *path* : Text ; *methodType* : Integer ; *ptrTable* : Pointer ; *objectName* : Text ; *formObjectName* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *chemin* ; *typeMéthode* ; *ptrTable* ; *nomObjet* ; *nomObjetForm* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | Path to resolve |
-| methodType | Integer | &#8592; | Object type selector |
-| ptrTable | Pointer | &#8592; | Table reference |
-| objectName | Text | &#8592; | Name of form or database method |
-| formObjectName | Text | &#8592; | Name of form object |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text | &#8594;  | Chemin à résoudre |
+| typeMéthode | Integer | &#8592; | Sélecteur de type d’objet |
+| ptrTable | Pointer | &#8592; | Référence de table |
+| nomObjet | Text | &#8592; | Nom de formulaire ou de méthode base |
+| nomObjetForm | Text | &#8592; | Nom d’objet du formulaire |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD RESOLVE PATH.Summary-->The **METHOD RESOLVE PATH** command parses the internal path name passed in the *path* parameter and returns its different components in the *methodType*, *ptrTable*, *objectName*, and *formObjectName* parameters.<!-- END REF-->
+<!--REF #_command_.METHOD RESOLVE PATH.Summary-->La commande **METHOD RESOLVE PATH** analyse le chemin d’accès interne passé dans le paramètre *chemin* et retourne ses différentes composantes dans les paramètres *typeMéthode*, *ptrTable*, *nomObjet* et *nomObjetForm*.<!-- END REF-->
 
-The *methodType* parameter receives a value indicating the type of the method. You can compare this value with the following constants of the *Design Object Access* theme:
+Le paramètre *typeMéthode* retourne une valeur indiquant le type de la méthode. Vous pouvez comparer cette valeur aux constantes suivantes du thème *Accès objets développement* :
 
-| Constant             | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| -------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Path class           | Integer | 32    | Path of class definition. Example:<br/>*\[class\]/Person*<br/>*\[class\]/Student*|
-| Path database method | Integer | 2     | Path of database methods specified. List of these methods:<br/>*\[databaseMethod\]/onStartup<br/>\[databaseMethod\]/onExit<br/>\[databaseMethod\]/onDrop<br/>\[databaseMethod\]/onBackupStartup<br/>\[databaseMethod\]/onBackupShutdown<br/>\[databaseMethod\]/onWebConnection<br/>\[databaseMethod\]/onWebAuthentication<br/>\[databaseMethod\]/onWebSessionSuspend<br/>\[databaseMethod\]/onServerStartup<br/>\[databaseMethod\]/onServerShutdown<br/>\[databaseMethod\]/onServerOpenConnection<br/>\[databaseMethod\]/onServerCloseConnection<br/>\[databaseMethod\]/onSystemEvent<br/>\[databaseMethod\]/onSqlAuthentication<br/>* *\[databaseMethod\]/* *onHostDatabaseEvent<br/>* *\[databaseMethod\]/* *onRESTAuthentication<br/>* *\[databaseMethod\]/* *onMobileAppAuthentication<br/>* *\[databaseMethod\]/* *onMobileAppAction* *<br/>* |
-| Path project form    | Integer | 4     | Path of project form methods and all their object methods. Examples:<br/>*\[projectForm\]/myForm/{formMethod}<br/>\[projectForm\]/myForm/button1<br/>\[projectForm\]/myForm/mylist<br/>\[projectForm\]/myForm/button1*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Path project method  | Integer | 1     | Name of method. <br/>Example: *MyProjectMethod*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Path table form      | Integer | 16    | Path of table form methods and all their object methods. Example:<br/>*\[tableForm\]/table\_1/Form1/{formMethod}<br/>\[tableForm\]/table\_1/Form1/button1<br/>\[tableForm\]/table\_1/Form1/mylist<br/>\[tableForm\]/table\_2/Form1/mylist*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Path trigger         | Integer | 8     | Path of database triggers. Example:<br/>*\[trigger\]/table\_1<br/>\[trigger\]/table\_2*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Constante            | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Path database method | Entier long | 2      | Chemin des méthodes base définies (nom anglais). Liste de ces méthodes :<br/>*\[databaseMethod\]/onStartup<br/>\[databaseMethod\]/onExit<br/>\[databaseMethod\]/onDrop<br/>\[databaseMethod\]/onBackupStartup<br/>\[databaseMethod\]/onBackupShutdown<br/>\[databaseMethod\]/onWebConnection<br/>\[databaseMethod\]/onWebAuthentication<br/>\[databaseMethod\]/onWebSessionSuspend<br/>\[databaseMethod\]/onServerStartup<br/>\[databaseMethod\]/onServerShutdown<br/>\[databaseMethod\]/onServerOpenConnection<br/>\[databaseMethod\]/onServerCloseConnection<br/>\[databaseMethod\]/onSystemEvent<br/>\[databaseMethod\]/onSqlAuthentication<br/>* *\[databaseMethod\]/* *onHostDatabaseEvent<br/>* *\[databaseMethod\]/* *onRESTAuthentication<br/>* *\[databaseMethod\]/* *onMobileAppAuthentication<br/>* *\[databaseMethod\]/* *onMobileAppAction* *<br/>* |
+| Path project form    | Entier long | 4      | Chemin des méthodes formulaire projet et de toutes leurs méthodes objet. Exemples :<br/>*\[projectForm\]/monForm/{formMethod}<br/>\[projectForm\]/monForm/bouton1<br/>\[projectForm\]/monForm/maliste<br/>\[projectForm\]/monForm2/bouton1*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Path project method  | Entier long | 1      | Nom de la méthode. <br/>Exemple : *MaMethodeProjet*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Path table form      | Entier long | 16     | Chemin des méthodes formulaire table et de toutes leurs méthodes objet. Exemples :<br/>*\[tableForm\]/table\_1/Form1/{formMethod}<br/>\[tableForm\]/table\_1/Form1/bouton1<br/>\[tableForm\]/table\_1/Form1/maliste<br/>\[tableForm\]/table\_2/Form1/maliste*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Path trigger         | Entier long | 8      | Chemin des triggers de la base. Exemples :<br/>*\[trigger\]/table\_1<br/>\[trigger\]/table\_2*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-**Note:** The command does not check if the method actually exists in the database/project. An error is generated only when an invalid table name is passed. 
+**Note :** La commande ne vérifie pas si la méthode existe vraiment dans la base de données/le projet. Une erreur n'est générée que si un nom de table non valide est passé.
 
-The *ptrTable* parameter contains a pointer to a database table when the path references a table form method or a trigger. 
+Le paramètre *ptrTable* contient un pointeur sur une table de la base si le chemin référence une méthode formulaire table ou un trigger. 
 
-The *objectName* parameter contains either:
+Le paramètre *nomObjet* contient soit :
 
-* a form name when the path references a table form or project form
-* a database method name when the path references a database method.
+* un nom de formulaire si le chemin référence un formulaire table ou projet
+* un nom de méthode base si le chemin référence une méthode base.
 
-The *formObjectName* parameter contains a form object name when the path references an object method.
+Le paramètre *nomObjetForm* contient un nom d’objet de formulaire si le chemin référence une méthode objet. 
 
-If the command is executed from a component, it considers by default that *path* designates a component method. If you pass the *\** parameter, then it considers that *path* designates a host database method.
+Si la commande est exécutée depuis un composant, elle considère par défaut que *chemin* désigne une méthode du composant. Si vous passez le paramètre *\**, elle considère que *chemin* désigne une méthode de la base hôte.
 
-## Example 1 
+## Exemple 1 
 
-Resolution of a database method path:
+Résolution d’un chemin de méthode base :
 
 ```4d
  var $methodType : Integer
  var $tablePtr : Pointer
  var $objectName : Text
- var $formObjectName : Text
+ var $objectFormName : Text
  
- METHOD RESOLVE PATH("[databaseMethod]/onStartup";$methodType;$tablePtr;$objectName;$formObjectName)
+ METHOD RESOLVE PATH("[databaseMethod]/onStartup";$methodType;$tablePtr;$objectName;$objectFormName)
   // $methodType: 2
-  // $tablePtr: Nil pointer
+  // $tablePtr: pointeur Nil
   // $objectName: "onStartup"
-  // $formObjectName: ""
+  // $objectFormName: ""
 ```
 
-## Example 2 
+## Exemple 2 
 
-Resolution of a path for an object of a table form method:
+Résolution d’un chemin d’objet de méthode formulaire table :
 
 ```4d
  var $methodType : Integer
  var $tablePtr : Pointer
  var $objectName : Text
- var $formObjectName : Text
+ var $objectFormName : Text
  
- METHOD RESOLVE PATH("[tableForm]/Table1/output1/myVar1";$methodType;$tablePtr;$objectName;$formObjectName)
+ METHOD RESOLVE PATH("[tableForm]/Table1/output1/myVar1";$methodType;$tablePtr;$objectName;$objectFormName)
   // $methodType: 16
   // $tablePtr: -> [Table1]
   // $objectName: "output1"
-  // $formObjectName: "Btn1"
+  // $objectFormName: "Btn1"
 ```
 
-## See also 
+## Voir aussi 
 
 [METHOD Get path](method-get-path.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1165 |
+| Numéro de commande | 1165 |
 | Thread safe | no |
 
 

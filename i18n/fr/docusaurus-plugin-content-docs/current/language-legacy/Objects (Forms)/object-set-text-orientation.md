@@ -5,67 +5,67 @@ slug: /commands/object-set-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *object* : Text ; *orientation* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *object* : Variable, Field ; *orientation* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( {* ;} *objet* ; *orientation* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| orientation | Integer | &#8594;  | Value of object orientation |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| orientation | Integer | &#8594;  | Valeur d’orientation de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->The **OBJECT SET TEXT ORIENTATION** command modifies the orientation of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Summary-->La commande **OBJECT SET TEXT ORIENTATION** vous permet de modifier l’orientation du contenu de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
 
-The "Orientation" property, available in the Form editor, performs permanent rotations of text areas in your forms. Unlike this property, the **OBJECT SET TEXT ORIENTATION** command applies the rotation to the contents of the object, but not to the object itself. For more information, refer to the *Design Reference* manual.
+La propriété "Orientation", accessible dans l’éditeur de formulaires, permet d’effectuer des rotations de zones de texte de façon permanente. A la différence de cette propriété, la commande **OBJECT SET TEXT ORIENTATION** applique la rotation au contenu de l’objet mais pas à l'objet lui-même. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
- Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).   
-Only static text as well as non-enterable variables and fields can be rotated. If you apply this command to an object that does not support text orientation, the command does nothing. 
+ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).   
+Seuls les textes statiques ainsi que les variables et les champs non saisissables peuvent subir une rotation. Si vous appliquez la commande à un objet ne prenant pas en charge l’orientation de texte, la commande ne fait rien. 
 
-In the *orientation* parameter, you pass the absolute orientation that you want to assign to the object. You must use one of the following constants, found in the "*Form Objects (Properties)*" theme:
+Passez dans le paramètre *orientation* l’orientation absolue que vous souhaitez affecter à l’objet. Vous devez passer une des constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant              | Type    | Value | Comment                                      |
-| --------------------- | ------- | ----- | -------------------------------------------- |
-| Orientation 0°        | Integer | 0     | No rotation (default value)                  |
-| Orientation 180°      | Integer | 180   | Orientation of text to 180° clockwise        |
-| Orientation 90° left  | Integer | 270   | Orientation of text to 90° counter-clockwise |
-| Orientation 90° right | Integer | 90    | Orientation of text to 90° clockwise         |
+| Constante             | Type        | Valeur | Comment                                              |
+| --------------------- | ----------- | ------ | ---------------------------------------------------- |
+| Orientation 0°        | Entier long | 0      | Pas de rotation (valeur par défaut)                  |
+| Orientation 180°      | Entier long | 180    | Orientation du texte à 180° dans le sens horaire     |
+| Orientation 90° left  | Entier long | 270    | Orientation du texte à 90° dans le sens anti-horaire |
+| Orientation 90° right | Entier long | 90     | Orientation du texte à 90° dans le sens horaire      |
 
-**Note:** Only angles corresponding to these values are supported. If you pass any other value, it will be ignored. 
+**Note :** Seuls les angles correspondant à ces valeurs sont pris en charge. Si vous passez une autre valeur, elle sera ignorée. 
 
-## Example 
+## Exemple 
 
-You want to apply an orientation of 270° to a variable in your form: 
+Vous souhaitez appliquer une orientation de 270° à une variable de votre formulaire : 
 
 ```4d
- OBJECT SET ENTERABLE(*;"myVar";False)
-  // mandatory if variable is enterable
- OBJECT SET TEXT ORIENTATION(*;"myVar";Orientation 90° left)
+ OBJECT SET ENTERABLE(*;"maVar";False)    
+   //obligatoire si la variable est saisissable
+  OBJECT SET TEXT ORIENTATION(*;"maVar";Orientation 90° gauche)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get text orientation](object-get-text-orientation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1284 |
+| Numéro de commande | 1284 |
 | Thread safe | no |
 
 

@@ -1,6 +1,7 @@
 ---
 id: form-theme
 title: FORM theme
+slug: /commands/form-theme
 displayed_sidebar: docs
 ---
 

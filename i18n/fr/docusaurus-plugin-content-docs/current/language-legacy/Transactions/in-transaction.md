@@ -9,45 +9,45 @@ displayed_sidebar: docs
 <!--REF #_command_.In transaction.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns TRUE if current process is in transaction |
+| Résultat | Boolean | &#8592; | VRAI si le process courant est en transaction, FAUX sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.In transaction.Summary-->The `In transaction` command returns **TRUE** if the current process is in a [transaction](../Develop-legacy/transactions.md), otherwise it returns **FALSE**.<!-- END REF-->
+<!--REF #_command_.In transaction.Summary-->La commande **In transaction** retourne Vrai si le process courant est en transaction, sinon elle retourne Faux.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-If you perform a multi-record operation (adding, modifying, or deleting records), you may encounter locked records. In this case, if you have to maintain data integrity, you must be in transaction so you can “roll-back” the whole operation and leave the database untouched.
+Si vous effectuez des opérations (ajout, modification ou suppression) sur de multiples enregistrements, vous pouvez rencontrer des enregistrements verrouillés. Dans ce cas, pour préserver l'intégrité des données, vous devez avoir ouvert une transaction, de manière à ce que vous puissiez faire “marche arrière” et annuler l'ensemble de l'opération depuis le début, sans que les données de la base soient modifiées.
 
-If you perform the operation from within a trigger or from a subroutine (that can be called while in transaction or not), you can use In transaction to check whether or not the current process method or the caller method started a transaction. If a transaction was not started, you do not even start the operation, because you already know that you will not be able to roll it back if it fails. 
+Si vous effectuez l'opération depuis un trigger ou une sous-routine pouvant être appelé(e) dans une transaction ou hors transaction, l'utilisation de la commande **In transaction** vous permet de vérifier que la méthode du process courant ou la méthode appelante a bien ouvert une transaction. Si ce n'est pas le cas, vous ne commencez même pas l'opération, car, en cas d'échec au cours du processus, vous ne pourriez pas revenir sur les opérations déjà effectuées.
 
-## See also 
+## Voir aussi 
 
 [Active transaction](active-transaction.md)  
 [CANCEL TRANSACTION](cancel-transaction.md)  
+*Présentation des triggers*  
 [START TRANSACTION](start-transaction.md)  
-*Triggers*  
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 397 |
+| Numéro de commande | 397 |
 | Thread safe | yes |
 
 

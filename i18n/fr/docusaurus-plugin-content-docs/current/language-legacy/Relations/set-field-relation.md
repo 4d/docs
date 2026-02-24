@@ -5,75 +5,74 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* : Table ; *one* : Integer ; *many* : Integer )<br/>**SET FIELD RELATION** ( *manyField* : Field ; *one* : Integer ; *many* : Integer )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* ; *aller* ; *retour* )<br/>**SET FIELD RELATION** ( *champN* ; *aller* ; *retour* )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable | Table | &#8594;  | Starting table of relations |
-| manyField | Field | &#8594;  | Starting field of a relation |
-| one | Integer | &#8594;  | Status of the Many-to-One relation starting from the field or the Many-to-One relations of the table |
-| many | Integer | &#8594;  | Status of the One-to-Many relation starting from the field or the One-to-Many relations of the table |
+| tableN &#124; champN | Table, Champ | &#8594;  | Table de départ des liens ou Champ de départ du lien |
+| aller | Integer | &#8594;  | Statut du lien aller partant du champ ou des liens aller partant de la table |
+| retour | Integer | &#8594;  | Statut du lien retour partant du champ ou des liens retour partant de la table |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET FIELD RELATION.Summary-->The **SET FIELD RELATION** command sets the automatic/manual status of each relation of the database separately for the current process, regardless of its initial status as specified in the Relation properties window in the Design environment.<!-- END REF--> 
+<!--REF #_command_.SET FIELD RELATION.Summary-->La commande **SET FIELD RELATION** permet de définir séparément le statut automatique/manuel de chaque lien de la base pour le process courant, quel que soit son statut initial défini en mode Développement dans la fenêtre de paramétrage des liens.<!-- END REF--> 
 
-In the first parameter, pass a table or field name:
+Passez dans le premier paramètre un nom de table ou de champ :
 
-* If you pass a field name (*manyField*), the command only applies to the relation starting from the specified Many field.
-* If you pass a table name (*manyTable*), the command applies to all the relations starting from the specified Many table.
-* If there is no relation starting from the *manyField* field or *manyTable* table, the syntax error No. 16 (“The field has no relation”) is generated and the system variable OK is set to 0\.
+* si vous passez un nom de champ (*champN*), la commande s’appliquera uniquement au lien partant du champ N désigné.
+* si vous passez un nom de table (*tableN*), la commande s’appliquera à tous les liens partant de la table N désignée.
+* si aucun lien ne part du champ *champN* ou de la table *tableN*, l’erreur de syntaxe n°16 (“Ce champ ne possède pas de lien”) est générée et la variable système OK prend la valeur 0\.
 
-In the *one* and *many* parameters, pass the values indicating the changing of the automatic/manual status to be applied respectively to the specified Many-to-One and One-to-Many relation(s). You can use the constants of the “*Relations*” theme:
+Passez dans les paramètres *aller* et *retour* des valeurs indiquant la modification du statut automatique/manuel à appliquer respectivement au(x) lien(s) de type N vers 1 — c’est-à-dire au(x) lien(s) aller — et au(x) lien(s) de type 1 vers N — c’est-à-dire au(x) lien(s) retour — désigné(s). Vous pouvez utiliser les constantes du thème “*Liens*” :
 
-* Do not modify (0) = Do not modify the current status of the relation(s).
-* Structure configuration (1) = Use the configuration set for the relation(s) in the Structure window of the application.
-* Manual (2) = Makes the relation(s) manual for the current process.
-* Automatic (3) = Makes the relation(s) automatic for the current process.
+* Do not modify (0) = ne pas modifier le statut courant du ou des lien(s).
+* Structure configuration (1) = utiliser le paramétrage défini pour le(s) lien(s) dans la fenêtre de Structure de l’application.
+* Manual (2) = rendre manuel(s) le(s) lien(s) pour le process courant.
+* Automatic (3) = rendre automatique(s) le(s) lien(s) pour le process courant.
 
-**Note:** Changes made using this command only apply to the current process. The configuration of the relations set using the options in the Relation properties window is not modified. 
+**Note :** Les modifications effectuées à l’aide de cette commande s’appliquent au process courant uniquement. Le paramétrage des liens défini à l’aide des options de la fenêtre Inspecteur n’est pas modifié. 
 
-**Note:** If you passed [True](true.md "True") to the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command during the same session, calls to **SET FIELD RELATION** are ignored, regardless of whether they are placed before or after [SET AUTOMATIC RELATIONS](set-automatic-relations.md). To "lock" the automatic mode and take calls to **SET FIELD RELATION** into account, pass [False](false.md "False") to [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
+**Note :** Si vous avez passé la valeur Vrai à la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) durant la même session, les appels à la commande **SET FIELD RELATION** sont ignorés, qu'ils soient placés avant ou après [SET AUTOMATIC RELATIONS](set-automatic-relations.md). Pour "déverrouiller" le mode automatique et prendre en compte les appels à **SET FIELD RELATION**, passez Faux à [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
 
-## Example 
+## Exemple 
 
-The following code allows setting only useful relations as automatic in the Quick Report editor:
+Le code suivant vous permet uniquement de configurer ls liens utiles comme automatiques dans l'éditeur d'états rapides :
 
 ```4d
- SET AUTOMATIC RELATIONS(False;False) //Reset of the relations
-  //Only the following relations will be used
- SET FIELD RELATION([Invoices]Cust_IDt;Automatic;Automatic)
- SET FIELD RELATION([Invoice_Row]Invoice_ID;Automatic;Automatic)
- QR REPORT([Invoices];Char(1))
+ SET AUTOMATIC RELATIONS(False;False) // Initialisation des liens
+  //Seuls les liens suivants seront utilisés
+ SET FIELD RELATION([Factures]ID_Client;Automatic;Automatic)
+ SET FIELD RELATION([Ligne_Factures]ID_Factures;Automatic;Automatic)
+ QR REPORT([Factures];Char(1))
 ```
 
-## See also 
+## Voir aussi 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 919 |
+| Numéro de commande | 919 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

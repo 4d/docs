@@ -6,93 +6,86 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.Last errors.Syntax-->**Last errors** : Collection<!-- END REF-->
-<!--REF #_command_.Last errors.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| Function result | Collection | &#8592; | Collection of error objects |
-</div>
+<!--REF #_command_.Last errors.Params-->
+
+| Paramètres | Type       |                             | Description                |
+| ---------- | ---------- | --------------------------- | -------------------------- |
+| Résultat   | Collection | &#8592; | Collection d'objets erreur |
+
 <!-- END REF-->
 
-## Description 
+## Description
 
-<!--REF #_command_.Last errors.Summary-->The **Last errors** command returns the current stack of errors of the 4D application as a collection of error objects, or **null** if no error occurred.<!-- END REF--> The stack of errors includes objects sent by the [throw](./commands/throw) command, if any. 
+<!--REF #_command_.Last errors.Summary-->La commande **Last errors** renvoie la pile d'erreurs courante de l'application 4D sous la forme d'une collection d'objets erreur, ou **null** si aucune erreur ne s'est produite.<!-- END REF--> La pile d'erreurs inclut les objets envoyés par la commande [throw](../commands-legacy/throw.md), le cas échéant. 
 
-This command must be called from an on error call method installed by the [ON ERR CALL](./commands/on-err-call) command or within a [Try or Try/Catch](../Concepts/error-handling.md#tryexpression) context.
+Cette commande doit être appelée à partir d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](../commands-legacy/on-err-call.md) ou dans un contexte [Try ou Try/Catch](../Concepts/error-handling.md#tryexpression).
 
-Each error object contains the following properties:
+Chaque objet erreur contient les propriétés suivantes :
 
-| **Property**       | **Type** | **Description**                                              |
-| ------------------ | -------- | ------------------------------------------------------------ |
-| errCode            | number   | Error code                                                   |
-| message            | text     | Description of the error                                     |
-| componentSignature | text     | Signature of the internal component which returned the error (see below) |
+| **Propriété**      | **Type** | **Description**                                                                            |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------ |
+| errCode            | number   | Code d'erreur                                                                              |
+| message            | text     | Description de l'erreur                                                                    |
+| componentSignature | text     | Signature du composant interne qui a renvoyé l'erreur (voir ci-dessous) |
 
+#### Signatures des composants internes (4D)
 
-#### Internal component signatures (4D)
+| Signature du composant    | Composant                                                           |
+| ------------------------- | ------------------------------------------------------------------- |
+| 4DCM                      | 4D Compiler runtime                                                 |
+| 4DRT                      | 4D runtime                                                          |
+| bkrs                      | 4D backup & restore manager                     |
+| brdg                      | SQL 4D bridge                                                       |
+| cecm                      | 4D code Editor                                                      |
+| CZip                      | zip 4D apis                                                         |
+| dbmg                      | 4D database manager                                                 |
+| FCGI                      | fast cgi 4D bridge                                                  |
+| FiFo                      | 4D file objects                                                     |
+| HTCL                      | http client 4D apis                                                 |
+| HTTP                      | 4D http server                                                      |
+| IMAP                      | IMAP 4D apis                                                        |
+| JFEM                      | Form Macro apis                                                     |
+| LD4D                      | LDAP 4D apis                                                        |
+| lscm                      | 4D language syntax manager                                          |
+| MIME                      | MIME 4D apis                                                        |
+| mobi                      | 4D Mobile                                                           |
+| pdf1                      | 4D pdf apis                                                         |
+| PHP_ | php 4D bridge                                                       |
+| POP3                      | POP3 4D apis                                                        |
+| SMTP                      | SMTP 4D apis                                                        |
+| SQLS                      | 4D SQL server                                                       |
+| srvr                      | 4D network layer apis                                               |
+| svg1                      | SVG 4D apis                                                         |
+| ugmg                      | 4D users and groups manager                                         |
+| UP4D                      | 4D updater                                                          |
+| VSS                       | 4D VSS support (Windows Volume Snapshot Service) |
+| webc                      | 4D Web view                                                         |
+| xmlc                      | XML 4D apis                                                         |
+| wri1                      | 4D Write Pro                                                        |
 
-|Component Signature|Component|
-|--|---|
-|4DCM|4D Compiler runtime|
-|4DRT|4D runtime|
-|bkrs|4D backup & restore manager|
-|brdg|SQL 4D bridge|
-|cecm|4D code Editor|
-|CZip|zip 4D apis|
-|dbmg|4D database manager|
-|FCGI|fast cgi 4D bridge|
-|FiFo|4D file objects|
-|HTCL|http client 4D apis|
-|HTTP|4D http server|
-|IMAP|IMAP 4D apis|
-|JFEM|Form Macro apis|
-|LD4D|LDAP 4D apis|
-|lscm|4D language syntax manager|
-|MIME|MIME 4D apis|
-|mobi|4D Mobile|
-|pdf1|4D pdf apis|
-|PHP_|php 4D bridge|
-|POP3|POP3 4D apis|
-|SMTP|SMTP 4D apis|
-|SQLS|4D SQL server|
-|srvr|4D network layer apis|
-|svg1|SVG 4D apis|
-|ugmg|4D users and groups manager|
-|UP4D|4D updater|
-|VSS |4D VSS support (Windows Volume Snapshot Service) |
-|webc|4D Web view|
-|xmlc|XML 4D apis|
-|wri1|4D Write Pro|
+#### Signatures des composants internes (système)
 
+| Signature du composant | Composant                                                |
+| ---------------------- | -------------------------------------------------------- |
+| CARB                   | Carbon subsystem                                         |
+| COCO                   | Cocoa subsystem                                          |
+| MACH                   | macOS Mach subsystem                                     |
+| POSX                   | posix/bsd subsystem (mac, linux, win) |
+| PW32                   | Pre-Win32 subsystem                                      |
+| WI32                   | Win32 subsystem                                          |
 
-#### Internal component signatures (System)
+## Voir également
 
-|Component Signature|Component|
-|--|---|
-|CARB|Carbon subsystem|
-|COCO|Cocoa subsystem|
-|MACH|macOS Mach subsystem|
-|POSX|posix/bsd subsystem (mac, linux, win)|
-|PW32|Pre-Win32 subsystem|
-|WI32|Win32 subsystem|
-
-
-
-
-
-## See also 
-
-[ON ERR CALL](./commands/on-err-call)
-[throw](./commands/throw)  
+[ON ERR CALL](../commands-legacy/on-err-call.md)
+[throw](../commands-legacy/throw.md)\
 [Error handling](../Concepts/error-handling.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1799 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1799 |
+| Thread safe        | oui  |
 
 

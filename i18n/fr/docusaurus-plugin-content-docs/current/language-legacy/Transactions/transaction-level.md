@@ -9,37 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Transaction level.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Current transaction level (0 if no transaction has been started) |
+| Résultat | Integer | &#8592; | Niveau de transaction courant (0 si aucune transaction n’a été démarrée) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Transaction level.Summary-->The Transaction level command returns the current transaction level for the process.<!-- END REF--> This command takes all the transactions of the current process into account, regardless of whether they were started via the 4D language or via SQL.
+<!--REF #_command_.Transaction level.Summary-->La commande **Transaction level** retourne le niveau de transaction courant pour le process.<!-- END REF--> Cette commande prend en compte toutes les transactions du process courant, qu’elles aient été démarrées via le langage de 4D ou via le SQL.
 
-## See also 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
 [Transactions](../Develop-legacy/transactions.md)
 
-## Properties
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 961 |
+| Numéro de commande | 961 |
 | Thread safe | yes |
 
 

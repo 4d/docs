@@ -5,42 +5,42 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *ensemble* ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | Name of the set to test |
-| Function result | Integer | &#8592; | Number of records in set |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à tester |
+| Résultat | Integer | &#8592; | Nombre d'enregistrements dans l'ensemble |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Records in set.Summary-->Records in set returns the number of records in *set*.<!-- END REF--> If *set* does not exist, or if there are no records in *set*, the command returns 0.
+<!--REF #_command_.Records in set.Summary-->**Records in set** retourne le nombre d'enregistrements présents dans *ensemble*.<!-- END REF--> Si *ensemble* n'existe pas ou s'il n'y a pas d'enregistrements dans *ensemble*, **Records in set** retourne 0.
 
-## Example 
+## Exemple 
 
-The following example displays an alert telling what percentage of the customers are rated as the best:
+L'exemple suivant affiche une boîte de dialogue d'alerte qui indique le pourcentage des clients qui sont considérés comme les meillleurs :
 
 ```4d
-  // First calculate the percentage
- $Percent :=(Records in set("Best")/Records in table([Customers]))*100
-  // Display an alert with the percentage
- ALERT(String($Percent;"##0%")+" of our customers are the best.")
+  // Calculer d'abord le pourcentage
+ $Pourcent :=(Records in set("Meilleurs")/Records in table([Clients]))*100
+  // Afficher une alerte avec le pourcentage
+ ALERT(String($Pourcent;"##0%")+" de nos clients sont nos meilleurs clients.")
 ```
 
-## See also 
+## Voir aussi 
 
 [Records in selection](records-in-selection.md)  
 [Records in table](records-in-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 195 |
+| Numéro de commande | 195 |
 | Thread safe | yes |
 
 

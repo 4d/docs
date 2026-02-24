@@ -5,44 +5,44 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* : Integer, Text ; *menuItem* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *ligneMenu* ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| Function result | Text | &#8592; | Custom parameter of the menu item |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| Résultat | Text | &#8592; | Paramètre personnalisé de la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu item parameter.Summary-->The **Get menu item parameter** command returns the custom character string associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This string must have been set beforehand using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command.
+<!--REF #_command_.Get menu item parameter.Summary-->La commande **Get menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette chaîne doit avoir été préalablement définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md).
 
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1003 |
+| Numéro de commande | 1003 |
 | Thread safe | no |
 
 

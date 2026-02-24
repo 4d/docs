@@ -5,134 +5,134 @@ slug: /commands/document-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *pathname* : Text ; *documents* : Text array {; *options* : Integer} )<!-- END REF-->
+<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *cheminAccès* ; *documents* {; *options*} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | Pathname to volume, directory or folder |
-| documents | Text array | &#8592; | Names of the documents present at this location |
-| options | Integer | &#8594;  | Options for building list |
+| cheminAccès | Text | &#8594;  | Chemin d'accès de volume ou de dossier |
+| documents | Text array | &#8592; | Nom des documents situés à cet endroit |
+| options | Integer | &#8594;  | Options de construction de la liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|6|Created|
+|13|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOCUMENT LIST.Summary-->The **DOCUMENT LIST** command populates the Text array *documents* with the names of the documents located at the location you pass in *pathname*.<!-- END REF-->You must pass an absolute pathname in the *pathname* parameter. 
+<!--REF #_command_.DOCUMENT LIST.Summary-->La commande **DOCUMENT LIST** remplit le tableau de type Texte *documents* avec les noms des documents situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
 
-By default, if you omit the *options* parameter, only the names of documents are returned in the *documents* array. You can modify this by passing, in the *options* parameter, one or more of the following constants, found in the *System Documents* theme:
+Par défaut, si vous omettez le paramètre *options*, seuls les noms des documents sont retournés dans le tableau *documents*. Vous pouvez modifier ce fonctionnement en passant dans le paramètre *options* une ou plusieurs des constantes suivantes, placées dans le thème *Documents système* :
 
-| Constant          | Type    | Value | Comment                                                                         |
-| ----------------- | ------- | ----- | ------------------------------------------------------------------------------- |
-| Absolute path     | Integer | 2     | The *documents* array contains absolute pathnames                               |
-| Ignore invisible  | Integer | 8     | Invisible documents are not listed                                              |
-| Posix path        | Integer | 4     | The *documents* array contains Posix format pathnames                           |
-| Recursive parsing | Integer | 1     | The *documents* array contains all files and subfolders of the specified folder |
+| Constante         | Type        | Valeur | Comment                                                                                    |
+| ----------------- | ----------- | ------ | ------------------------------------------------------------------------------------------ |
+| Absolute path     | Entier long | 2      | Le tableau *documents* contient des chemins d’accès absolus                                |
+| Ignore invisible  | Entier long | 8      | Les documents invisibles ne sont pas listés                                                |
+| Posix path        | Entier long | 4      | Le tableau *documents* contient des chemins d’accès au format POSIX                        |
+| Recursive parsing | Entier long | 1      | Le tableau *documents* contient les fichiers et tous les sous-dossiers du dossier spécifié |
 
-**Notes:**
+**Notes :**
 
-* With the Recursive parsing option in relative mode (option 1 only), the paths of documents located in subfolders begin with the ":" or "\\" characters depending on the platform.
-* With the Posix path option in relative mode (option 4 only), paths do not start with "/".
-* With the Posix path option in absolute mode (option 4 + 2), paths always begin with "/".
+* Avec l’option Recursive parsing en mode relatif (option 1 seule), les chemins des documents situés dans des sous-dossiers débutent par les caractères ":" ou "\\" en fonction de la plate-forme.
+* Avec l’option Posix path en mode relatif (option 4 seule), les chemins ne débutent pas par "/"
+* Avec l’option Posix path en mode absolu (option 4 + 2), les chemins débutent toujours par "/"
 
-If there are no documents at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **DOCUMENT LIST** generates a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
+S'il n'y pas de document à l'endroit défini, la commande retourne un tableau vide. Si le chemin d'accès que vous avez passé dans *cheminAccès* est invalide, **DOCUMENT LIST** génère une erreur de gestionnaire de fichier que vous pouvez intercepter à l'aide d'une méthode installée par [ON ERR CALL](on-err-call.md).
 
-## Example 1 
+## Exemple 1 
 
-List of all documents in a folder (default syntax):
+Liste de tous les documents dans un dossier (syntaxe par défaut) :
 
 ```4d
- DOCUMENT LIST("C:\\";arrFiles)
+ DOCUMENT LIST("C:\\";tabFichiers)
 ```
 
-\-> arrFiles:  
- Text1.txt  
- Text2.txt
+\-> tabFichiers :  
+ Texte1.txt  
+ Texte2.txt
 
-## Example 2 
+## Exemple 2 
 
-List of all documents in a folder in absolute mode:
+Liste de tous les documents dans un dossier en mode absolu : 
 
 ```4d
- DOCUMENT LIST("C:\\";arrFiles; Absolute path)
+ DOCUMENT LIST("C:\\";tabFichiers; Chemin absolu)
 ```
 
-\-> arrFiles:  
- C:\\Text1.txt  
- C:\\Text2.txt
+\-> tabFichiers :  
+ C:\\Texte1.txt  
+ C:\\Texte2.txt
 
-## Example 3 
+## Exemple 3 
 
-List of all documents in recursive (relative) mode:
+Liste de tous les documents en mode récursif (relatif) : 
 
 ```4d
- DOCUMENT LIST("C:\\";arrFiles;Recursive parsing)
+ DOCUMENT LIST("C:\\";tabFichiers;Chemin récursif)
 ```
 
   
-\-> arrFiles:  
- Text1.txt  
- Text2.txt  
- \\Folder1\\Text3.txt  
- \\Folder1\\Text4.txt  
- \\Folder2\\Text5.txt  
- \\Folder2\\Folder3\\Picture1.png
+\-> tabFichiers :  
+ Texte1.txt  
+ Texte2.txt  
+ \\Dossier1\\Texte3.txt  
+ \\Dossier1\\Texte4.txt  
+ \\Dossier2\\Texte5.txt  
+ \\Dossier2\\Dossier3\\Image1.png
 
-## Example 4 
+## Exemple 4 
 
-List of all documents in recursive absolute mode:
-
-```4d
- DOCUMENT LIST("C:\\MyFolder\\";arrFiles;Recursive parsing+Absolute path)
-```
-
-\-> arrFiles:  
- C:\\MyFolder\\MyText1.txt  
- C:\\MyFolder\\MyText2.txt  
- C:\\MyFolder\\Folder1\\MyText3.txt  
- C:\\MyFolder\\Folder1\\MyText4.txt  
- C:\\MyFolder\\Folder2\\MyText5.txt  
- C:\\MyFolder\\Folder2\\Folder3\\MyPicture1.png
-
-## Example 5 
-
-List of all documents in recursive Posix (relative) mode:
+Liste de tous les documents en mode récursif absolu : 
 
 ```4d
- DOCUMENT LIST("C:\\MyFolder\\";arrFiles;Recursive parsing+Posix path)
+ DOCUMENT LIST("C:\\MonDossier\\";tabFichiers;Chemin récursif+Chemin absolu)
 ```
 
-\-> arrFiles:  
- MyText1.txt  
- MyText2.txt  
- Folder1/MyText3.txt  
- Folder1/MyText4.txt  
- Folder2/MyText5.txt  
- Folder2/Folder3/MyPicture1.png
+\-> tabFichiers :  
+ C:\\MonDossier\\MonTexte1.txt  
+ C:\\MonDossier\\MonTexte2.txt  
+ C:\\MonDossier\\Dossier1\\MonTexte3.txt  
+ C:\\MonDossier\\Dossier1\\MonTexte4.txt  
+ C:\\MonDossier\\Dossier2\\MonTexte5.txt  
+ C:\\MonDossier\\Dossier2\\Dossier3\\MonImage1.png
 
-## See also 
+## Exemple 5 
+
+Liste de tous les documents en mode récursif POSIX (relatif) :
+
+```4d
+ DOCUMENT LIST("C:\\MonDossier\\";tabFichiers;Chemin récursif+Chemin POSIX)
+```
+
+\-> tabFichiers :  
+ MonTexte1.txt  
+ MonTexte2.txt  
+ Dossier1/MonTexte3.txt  
+ Dossier1/MonTexte4.txt  
+ Dossier2/MonTexte5.txt  
+ Dossier2/Dossier3/MonImage1.png
+
+## Voir aussi 
 
 [FOLDER LIST](folder-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 474 |
+| Numéro de commande | 474 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

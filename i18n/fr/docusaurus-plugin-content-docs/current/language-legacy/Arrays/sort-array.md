@@ -5,89 +5,89 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *order* : >, < } )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *tableau* {; *tableau2* ; ... ; *tableauN*}{; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Arrays to sort |
-| order | >, < | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
+| tableau | Array | &#8594;  | Tableau(x) à trier |
+| > ou < | Opérateur | &#8594;  | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SORT ARRAY.Summary-->The SORT ARRAY command sorts one or more arrays into ascending or descending order.<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Summary-->La commande **SORT ARRAY** trie un ou plusieurs tableau(x) par ordre croissant ou décroissant.<!-- END REF-->
 
-* You cannot sort [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") or [Picture](# "Can be any Windows or Macintosh picture") arrays. You can sort the elements of a two-dimensional array (i.e., *a2DArray{$vlThisElem}*) but you cannot sort the two-dimensional array itself (i.e., *a2DArray*).
-* You can sort [Object](# "Data structured as a native 4D object") arrays. Null elements are grouped and array elements are sorted with an internal order.
+* Vous ne pouvez pas trier de tableaux de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") ou [Image](# "Can be any Windows or Macintosh picture"). Vous pouvez trier un élément d'un tableau à deux dimensions (c'est-à-dire *t2DTableau{$vlCetElément}*), mais vous ne pouvez pas trier le tableau 2D lui-même (c'est-à-dire *t2DTableau*).
+* Vous pouvez trier les tableaux de type Object. Les éléments Null sont regroupés et les éléments du tableau sont triés selon un ordre interne.
 
-The last parameter specifies whether to sort *array* in ascending or descending *order*. The “greater than” symbol (>) indicates an ascending sort; the “less than” symbol (<) indicates a descending sort. If you do not specify the sorting order, then the sort is ascending.
+Le second paramètre spécifie l'ordre du tri : croissant ou décroissant. Si ce paramètre est égal au symbole “supérieur à” (>), l'ordre du tri est croissant. S'il est égal au symbole “inférieur à” (<), l'ordre du tri est décroissant. S'il est omis, l'ordre du tri est croissant.
 
-If more than one array is specified, the arrays are sorted following the sort order of the first array; no multi-level sorting is performed here. Instead you can use the [MULTI SORT ARRAY](multi-sort-array.md) command when you want to sort synchronized arrays.
+Si plus d'un tableau est spécifié, les tableaux sont triés en fonction de l'ordre défini pour le premier tableau (les tris multi-niveaux ne sont pas possibles dans ce cas). Utilisez plutôt la commande [MULTI SORT ARRAY](multi-sort-array.md) si vous souhaitez effectuer des tris de tableaux synchronisés.
 
-## Example 1 
+## Exemple 1 
 
-The following example creates two arrays and then sorts them by company:
+L'exemple suivant crée deux tableaux et les trie en fonction du nom de la société :
 
 ```4d
- ALL RECORDS([People])
- SELECTION TO ARRAY([People]Name;asNames;[People]Company;asCompanies)
- SORT ARRAY(asCompanies;asNames;>)
+ ALL RECORDS([Personnes])
+ SELECTION TO ARRAY([Personnes]Noms;tabNoms;[Personnes]Sociétés;tabSociétés)
+ SORT ARRAY(tabSociétés;tabNoms;>)
 ```
 
-However, because SORT ARRAY does not perform multi-level sorts, you will end up with people‘s names in random order within each company. To sort people by name within each company, you would write:
+Cependant, comme **SORT ARRAY** n'effectue pas de tris multi-niveaux, les noms des personnes apparaîtront en désordre à l'intérieur de chaque société. Pour que les noms des personnes soient triés pour chaque société, vous devrez plutôt écrire :
 
 ```4d
- ALL RECORDS([People])
- ORDER BY([People];[People]Company;>;[People]Name;>)
- SELECTION TO ARRAY([People]Name;asNames;[People]Company;asCompanies)
+ ALL RECORDS([Personnes])
+ ORDER BY([Personnes];[Personnes]Sociétés;>;[Personnes]Noms;>)
+ SELECTION TO ARRAY([Personnes]Noms;tabNoms;[Personnes]Sociétés;tabSociétés)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You display the names from a *\[People\]* table in a floating window. When you click on buttons present in the window, you can sort this list of names from A to Z or from Z to A. As several people may have the same name, you also can use a *\[People\]ID number* field, which is indexed unique. When you click in the list of names, you will retrieve the record for the name you clicked. By maintaing a synchronized and hidden array of ID numbers, you are sure to access the record corresponding to the name you clicked: 
+Vous affichez les noms d'une table \[Personnes\] dans une fenêtre flottante. Cette liste de noms peut être triée de A vers Z ou de Z vers A en fonction du bouton sur lequel vous cliquez, dans la fenêtre. Comme il se peut que certaines personnes portent le même nom, vous avez également créé un champ *\[Personnes\]Numéro ID* qui est un champ indexé unique. Lorsque vous cliquez sur un nom dans la liste, vous voulez récupérer l'enregistrement correspondant. En utilisant un tableau synchronisé et caché des numéros d'ID, vous êtes certain d'accéder à l'enregistrement correspondant au nom sélectionné :
 
 ```4d
-  // asNames array object method
+  // Méthode objet du tableau tabNoms
  Case of
     :(Form event code=On Load)
-       ALL RECORDS([People])
-       SELECTION TO ARRAY([People]Name;asNames;[People]ID number;alIDs)
-       SORT ARRAY(asNames;alIDs;>)
-    :(Form event code=On Unload)
-       CLEAR VARIABLE(asNames)
-       CLEAR VARIABLE(alIDs)
+       ALL RECORDS([Personnes])
+       SELECTION TO ARRAY([Personnes]Noms;tabNoms;[Personnes]Numéro ID;tabIDs)
+       SORT ARRAY(tabNoms;tabIDs;>)
+    :(Form event code=Sur libération)
+       CLEAR VARIABLE(tabNoms)
+       CLEAR VARIABLE(tabIDs)
     :(Form event code=On Clicked)
-       If(asNames#0)
-  // Use the array alIDs to get the right record
-          QUERY([People];[People]ID Number=alIDs{asNames})
-  // Do something with the record
+       If(tabNoms#0)
+  // Use le tableau tabIDs pour récupérer le bon enregistrement
+          QUERY([Personnes];[Personnes]Numéro IDr=tabIDs{tabNoms})
+  // Traiter ici l'enregistrement
        End if
  End case
  
-  // bA2Z button object method
-  // Sort the arrays in ascending order and keep them synchronized
- SORT ARRAY(asNames;alIDs;>)
+  // Méthode objet du bouton bAversZ
+  // Tri croissant des tableaux en conservant la synchronisation
+ SORT ARRAY(tabNoms;tabIDs;>)
  
-  // bZ2A button object method
-  // Sort the arrays in descending order and keep them synchronized
- SORT ARRAY(asNames;alIDs;<)
+  // Méthode objet du bouton bZversA
+  // Tri décroissant des tableaux en conservant la synchronisation
+ SORT ARRAY(tabNoms;tabIDs;<)
 ```
 
-## See also 
+## Voir aussi 
 
 [Find in sorted array](find-in-sorted-array.md)  
 [MULTI SORT ARRAY](multi-sort-array.md)  
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 229 |
+| Numéro de commande | 229 |
 | Thread safe | yes |
 
 

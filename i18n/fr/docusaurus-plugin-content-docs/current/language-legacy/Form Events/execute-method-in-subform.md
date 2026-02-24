@@ -5,94 +5,94 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text {; *return* : Variable {; *...param* : Expression}} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text {; * {; *...param* : Expression}} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *objetSousForm* ; *nomMéthode* {; *retour* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| subformObject | Text | &#8594;  | Name of subform object |
-| formula | Object, Text | &#8594;  | Formula object or Name of project method |
-| return | Variable | &#8592;  | Value returned by formula (if any) |
-| \* | Operator | &#8594;  | Formula does not return a value |
-| param | Expression | &#8594;  | Parameter(s) passed to formula |
+| objetSousForm | Text | &#8594;  | Nom de l’objet sous-formulaire |
+| nomMéthode | Object, Text | &#8594;  | Nom de la méthode projet à exécuter |
+| retour | *, Variable | &#8594;  | * si la méthode ne retourne pas de valeur |
+| &#8592; | Valeur retournée par la méthode |
+| param | Expression | &#8594;  | Paramètre(s) à passer à la méthode |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R6|Modified|
-|12|Created|
+|19 R6|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->The EXECUTE METHOD IN SUBFORM command can be used to execute the code designated by *formula* in the context of the *subformObject* subform object.<!-- END REF--> 
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->La commande **EXECUTE METHOD IN SUBFORM** permet d’exécuter le code désigné dans *formule* dans le contexte de l’objet de sous-formulaire *objetSousForm*.<!-- END REF--> 
 
-The called code can receive from 1 to X parameters in *param* and return a value in *return*. Pass *\** in the *return* parameter if the code does not return parameters. 
+Le code appelé peut recevoir de 1 à N paramètres dans *param* et retourner une valeur dans *retour*. Passez \* dans le paramètre *retour* si le code ne retourne pas de paramètres. 
 
-In *formula*, you designate the 4D code to be executed in the context of *subformObject*. You can pass either:
+Dans *formule*, le code 4D à exécuter dans le contexte de *subformObject* doit être désigné. Vous pouvez passer soit :
 
-* a **formula object** (see *Formula Objects*). Formula objects can encapsulate any executable expressions, including functions and project methods;
-* a **string** containing the name of a project method.
+* un objet **formula** (voir *Objets Formula*). Les objets formula peuvent encapsuler toute expression exécutable, y compris les fonctions et les méthodes projet ;
+* une **chaîne** contenant le nom d'une méthode projet.
 
-The execution context is preserved in the called code, which means that the current form and current form event remain specified. If the subform comes from a component, a called method or function must belong to the component and have the "Shared by components and host database" property.
+Le contexte d’exécution est préservé dans le code appelé, ce qui signifie que le formulaire courant et l’événement formulaire courant restent définis. Si le sous-formulaire provient d’un composant, une méthode ou fonction appelée doit appartenir au composant et disposer de la propriété "Partagée entre les composants et la base hôte".
 
-This command must be called in the context of the parent form (containing the *subformObject* object), for example via the form method.
+Cette commande doit être appelée dans le contexte du formulaire parent (contenant l’objet *objetSousForm*), par exemple via sa méthode formulaire.
 
-**Note:** The formula is not executed if the *subformObject* is not found in the current page or is not yet instantiated.
+**Note :** Le code n'est pas exécuté si *objetSousForm* ne se trouve pas dans la page courante ou n'est pas encore instancié.
 
-## Example 1 
+## Exemple 1 
 
-Given the "ContactDetail" form used as subform in the parent form "Company". The subform object that contains the ContactDetail form is named "ContactSubform". Imagine that we want to modify the appearance of certain elements of the subform according to the value of the field(s) of the company (for example, "contactname" must switch to red when \[Company\]City="New York" and to blue when \[Company\]City="San Diego"). This mechanism is implemented via the SetToColor method. To be able to get this result, the SetToColor method cannot be called directly from the process of the "On Load" form event of the Company parent form because the "contactname" object does not belong to the current form, but to the form displayed in the "ContactSubform" subform object. The method must therefore be executed using the EXECUTE METHOD IN SUBFORM command in order to function correctly.
+Soit le formulaire "ContactDétail" utilisé comme sous-formulaire dans le formulaire parent "Société". L’objet sous-formulaire qui contient le formulaire ContactDétail est nommé "ContactSousForm". Imaginons que nous souhaitions modifier l’apparence de certains éléments du sous-formulaire en fonction de la valeur de champ(s) de la société (par exemple, "nomcontact" doit passer en rouge lorsque \[Société\]Ville="New York" et en bleu lorsque \[Société\]Ville="San Diego"). Ce mécanisme est mis en oeuvre via la méthode SetToColor. Pour pouvoir obtenir ce résultat, la méthode SetToColor ne peut pas être appelée directement depuis le process de l’événement formulaire "Sur chargement" du formulaire parent Société car l’objet "nomcontact" n’appartient pas au formulaire courant, mais au formulaire affiché dans l’objet sous-formulaire "ContactSousForm". La méthode doit donc être exécutée à l’aide de **EXECUTE METHOD IN SUBFORM** pour pouvoir fonctionner correctement.
 
 ```4d
  Case of
     :(Form event code=On Load)
        Case of
-          :([Company]City="New York")
+          :([Société]Ville="New York")
              $Color:=$Red
-          :([Company]City="San Diego")
+          :([Société]Ville="San Diego")
              $Color:=$Blue
           Else
              $Color:=$Black
        End case
-       EXECUTE METHOD IN SUBFORM("ContactSubform";Formula(SetToColor);*;$Color)
+       EXECUTE METHOD IN SUBFORM("ContactSousForm";Formula(SetToColor);*;$Color)
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-You are developing a database that will be used as a component. It includes a shared project form (named, for instance, Calendar) that contains *dynamic variables* as well as a public project method that is used to adjust the calendar: SetCalendarDate(varDate).   
-If this method was used directly in the Calendar form method, you could call it directly in the "On Load" event: 
+Vous développez une base de données qui sera utilisée comme composant. Elle comporte un formulaire projet partagé (nommé par exemple Calendrier) contenant des *variables dynamiques* ainsi qu’une méthode projet publique permettant de régler le calendrier : SetCalendarDate(varDate).   
+Si cette méthode était utilisée directement dans la méthode du formulaire Calendrier, vous pourriez l’appeler directement dans l’événement "Sur chargement" : 
 
 ```4d
  SetCalendarDate(Current date)
 ```
 
- But, in the context of the host database, imagine that a project form contains two "Calendar" subforms, in subform objects called "Cal1" and "Cal2". You must set the date of Cal1 to 01/01/10 and the date of Cal2 to 05/05/10\. You cannot call SetCalendarDate directly because the method will not "know" which forms and variables it should apply. Therefore, you must call it via the following code: 
+ Mais, dans le contexte de la base hôte, imaginons qu’un formulaire projet contienne deux sous-formulaires "Calendrier", dans des objets sous-formulaire appelés "Cal1" et "Cal2". Vous devez régler la date de Cal1 au 01/01/10 et celle de Cal2 au 05/05/10\. Vous ne pouvez pas appeler directement SetCalendarDate car la méthode ne "saura" pas à quels formulaire et variables elle devra s’appliquer. Vous devez donc l’appeler via le code suivant : 
 
 ```4d
  EXECUTE METHOD IN SUBFORM("Cal1";Formula(SetCalendarDate);*;!01/01/20!)
- EXECUTE METHOD IN SUBFORM("Cal2";Formula(SetCalendarDate);*;!05/05/20!)
+ EXECUTE METHOD IN SUBFORM(SetCalendarDate);*;!05/05/20!)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If this command is executed correctly, the system variable OK is set to 1; otherwise, it is set to 0.
+Si cette commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1085 |
+| Numéro de commande | 1085 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,106 +5,105 @@ slug: /commands/dom-parse-xml-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : Text }} ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schema* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* {; *validation* {; *dtd* } ) : Text<br/>**DOM Parse XML variable** ( *variable* {; *validation* {; *schéma* }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML variable.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Blob, Text | &#8594;  | Name of the variable |
-| validation | Boolean | &#8594;  | True = Validation by the DTD, False = No validation |
-| dtd | Text | &#8594;  | Location of the DTD |
-| schema | Text | &#8594;  | Location of the XML schema |
-| Function result | Text | &#8592; | Reference of XML element |
+| variable | Blob, Text | &#8594;  | Nom de la variable |
+| validation | Boolean | &#8594;  | Vrai = Validation, Faux = Pas de validation |
+| dtd &#124; schéma | Chaîne | &#8594;  | Emplacement de la DTD ou du schéma XML |
+| Résultat | Text | &#8592; | Référence de l’élément XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|2004|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Parse XML variable.Summary-->The DOM Parse XML variable command parses a BLOB or Text type variable containing an XML structure and returns a reference for this variable.<!-- END REF--> The command can validate (or not) the structure via a DTD or an XML schema (XML Schema Definition (XSD) document). 
+<!--REF #_command_.DOM Parse XML variable.Summary-->La commande **DOM Parse XML variable** analyse une variable de type BLOB ou Texte contenant une structure XML et retourne une référence pour cette variable.<!-- END REF--> La commande peut valider ou non la structure via une DTD ou un schéma XML (document XSD, XML Schema Definition). le document. 
 
-Pass the name of the BLOB or Text variable containing the XML object in the *variable* parameter. 
+Passez dans le paramètre *variable* le nom de la variable BLOB ou Texte contenant l’objet XML. 
 
-The Boolean parameter *validation* indicates whether or not to validate the structure.
+Le paramètre booléen *validation* vous permet d’indiquer si vous souhaitez que la structure soit validée ou non.
 
-* If *validation* equals True, the structure is validated. In this case, the parser attempts to validate the XML structure of the document based either on the DTD or XSD reference included in the document, or via the DTD or XML schema designated by the third parameter when it is passed.
-* If *validation* equals False, the structure is not validated.
+* Si *validation* vaut Vrai, la structure sera validée. Dans ce cas, l’analyseur tentera de valider la structure XML du document sur la base de la référence DTD ou XSD incluse dans le document, ou via la DTD ou le schéma XML désigné(e) par le troisième paramètre s'il est passé.
+* Si *validation* vaut Faux, la structure ne sera pas validée.
 
-If you pass True in *validation* and omit the third parameter, the command attempts to validate the XML structure via a DTD or XSD reference found in the structure itself. Validation can be indirect: if the structure contains a reference to a DTD file that itself contains a reference to an XSD file, the command attempts to carry out both validations.
+Si vous passez Vrai dans *validation* et omettez le troisième paramètre, la commande tentera de valider la structure XML via une référence DTD ou XSD trouvée dans la structure elle-même. La validation peut être indirecte : si la structure contient une référence vers une fichier DTD qui lui-même contient une référence vers un fichier XSD, la commande tentera d’effectuer les deux validations.
 
-The third parameter indicates a specific DTD or an XML schema for document parsing. If you use this parameter, the command does not take the DTD referred to in the XML document into account. 
+Le troisième paramètre vous permet de désigner une DTD spécifique ou un schéma XML pour l’analyse du document. Si vous utilisez ce paramètre, la commande ne tient pas compte de la DTD référencée dans le document XML. 
 
-**Validation by DTD**  
-There are two ways to specify a DTD:
+**Validation par DTD**  
+Il existe deux moyens pour désigner une DTD :
 
-* As a reference. To do this, pass the complete pathname of the new DTD (“dtd” extension) in the *dtd* parameter. If the document indicated does not contain a valid DTD, the *dtd* parameter is ignored and an error is generated.
-* Directly in a text. In this case, if the contents of the parameter begin with “<?xml”, 4D will consider that it is the DTD; otherwise, 4D will consider it as a pathname.
+* en tant que référence. Il vous suffit pour cela de passer le chemin d’accès complet de la nouvelle DTD (extension “dtd”) dans le paramètre *dtd*. Si le document désigné ne contient pas de DTD valide, le paramètre *dtd* est ignoré et une erreur est générée.
+* directement dans un texte. Dans ce cas, si le contenu du paramètre débute par “<?xml”, 4D considérera qu’il s’agit de la DTD ; dans le cas contraire, 4D considérera qu’il s’agit d’un chemin d’accès.
 
-**Validation by schema**  
-To validate the document via an XML schema, you just need to pass a file or URL with an “xsd” extension instead of a “dtd” one in the third parameter. Validation by XML schema is considered to be more flexible and more powerful than validation by DTD. The language of XSD documents is based on XML language. More particularly, XML schemas support data types. For more information about XML schemas, please refer to the following address: *http://www.w3.org/XML/Schema*.
+**Validation par schema**  
+Pour valider le document via un schéma XML, il suffit de passer dans le troisième paramètre un fichier ou un URL d’extension“xsd” au lieu de “dtd”. La validation par schéma XML est considérée comme plus souple et plus puissante que la validation par DTD. Le langage des documents XSD est basé sur le langage XML. Les schémas XML prennent notamment en charge des types de données. Pour plus d’informations sur les schémas XML, reportez-vous à l’adresse *http://www.w3.org/XML/Schema*.
 
-If validation cannot be performed (no DTD or XSD, incorrect URL, etc.), an error is generated. The Error system variable indicates the error number. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
+Si la validation ne peut être effectuée (pas de DTD ou d'XSD, URL incorrect, etc.), une erreur est générée. La variable système Error indique le numéro de l’erreur. Vous pouvez intercepter cette erreur à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md). 
 
-The command returns a character string (ElementRef) making up the reference in the memory of the document virtual structure. This reference should be used with other XML parsing commands. 
+La commande retourne une chaîne de caractères (RefElément) constituant la référence en mémoire de la structure virtuelle de la variable. Cette référence devra être utilisée avec les autres commandes d’analyse XML. 
 
-**Important:** Once you no longer have any need for it, remember to call the [DOM CLOSE XML](dom-close-xml.md) command with this reference in order to free up the memory.
+**Important :** Une fois que vous n'en avez plus besoin, n'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) avec cette référence afin de libérer la mémoire.
 
-## Example 1 
+## Exemple 1 
 
-Opening an XML object located in a 4D Text variable, without validation:
+Ouverture sans validation d’un objet XML situé dans une variable Texte 4D :
 
 ```4d
- var myTextVar : Text
+ var maVarTexte : Text
  var vDoc : Time
- var $xml_Struct_Ref : Text
+ var $ref_XML_Struct : Text
  
  vDoc:=Open document("Document.xml")
  If(OK=1)
-    RECEIVE PACKET(vDoc;myTextVar;32000)
+    RECEIVE PACKET(vDoc;maVarTexte;32000)
     CLOSE DOCUMENT(vDoc)
-    $xml_Struct_Ref:=DOM Parse XML variable(myTextVar)
+    $ref_XML_Struct:=DOM Parse XML variable(maVarTexte)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Opening an XML document located in a 4D BLOB, without validation:
+Ouverture sans validation d’un document XML situé dans un BLOB 4D :
 
 ```4d
- var myBlobVar : Blob
+ var maVarBlob : Blob
  var $ref_XML_Struct : Text
  
- DOCUMENT TO BLOB(“c:\\import.xml”;myBlobVar)
- $xml_Struct_Ref:=DOM Parse XML variable(myBlobVar)
+ DOCUMENT TO BLOB("c:\\import.xml";maVarBlob)
+ $ref_XML_Struct:=DOM Parse XML variable(maVarBlob)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [DOM CLOSE XML](dom-close-xml.md)  
 [DOM Parse XML source](dom-parse-xml-source.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 720 |
+| Numéro de commande | 720 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

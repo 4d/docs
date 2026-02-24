@@ -5,68 +5,68 @@ slug: /commands/sax-get-xml-entity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ENTITY.Syntax-->**SAX GET XML ENTITY** ( *document* : Time ; *name* : Text ; *value* : Text )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ENTITY.Syntax-->**SAX GET XML ENTITY** ( *document* ; *nom* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ENTITY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| name | Text | &#8592; | Entity name |
-| value | Text | &#8592; | Entity value |
+| document | Time | &#8594;  | Référence du document ouvert |
+| nom | Text | &#8592; | Nom de l’entité |
+| valeur | Text | &#8592; | Valeur de l’entité |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML ENTITY.Summary-->The **SAX GET XML ENTITY** command allows you to get the *name* and *value* of an XML entity that exists in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML Entity SAX event. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML ENTITY.Summary-->La commande **SAX GET XML ENTITY** permet de récupérer le *nom* et la *valeur* d’une entité XML présente dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML entity. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-## Example 
+## Exemple 
 
-Let's look at the following piece of XML code:
+Considérons l’extrait de code XML suivant :
 
 ```XML
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE body [
-   <!ELEMENT body (element*)>
-   <!ELEMENT element (#PCDATA)>
-   <!ENTITY name "Replacement">
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE body [ <
+<!ELEMENT body (element*)> 
+<!ELEMENT element (#PCDATA)> 
+<!ENTITY nom "Le remplacement">
 ]>
-<body>
-   <element>Entity updated by &name;</element>
+<body> 
+<element>L’entité est mise à jour par &nom; 
 </body>
 ```
 
-The following instruction will return “name” in *vName* and “Replacement” in *vValue*. 
+L’instruction suivante retournera “nom” dans *vNom* et “Le remplacement” dans *vValeur*. 
 
 ```4d
- SAX GET XML ENTITY(DocRef;vName;vValue)
+ SAX GET XML ENTITY(RefDoc;vNom;vValeur)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 879 |
+| Numéro de commande | 879 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

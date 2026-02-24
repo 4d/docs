@@ -5,43 +5,43 @@ slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *aString* : Text {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *laChaîne* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | Text | &#8594;  | String to convert to lowercase |
-| * | Operator | &#8594;  | If passed: keep accents |
-| Function result | Text | &#8592; | String in lowercase |
+| laText | Text | &#8594;  | Chaîne à convertir en minuscules |
+| * | Opérateur | &#8594;  | Si passé : conserver les accents Si omis : supprimer les accents |
+| Résultat | Text | &#8592; | chaîne en minuscules |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Lowercase.Summary-->**Lowercase** takes *aString* and returns the string with all alphabetic characters in lowercase.<!-- END REF-->
+<!--REF #_command_.Lowercase.Summary-->**Lowercase** retourne une chaîne de caractères égale à *laChaîne* dont tous les caractères alphabétiques ont été convertis en minuscules.<!-- END REF-->
 
-The optional *\** parameter, if passed, indicates that any accented characters present in *aString* must be returned as accented lowercase characters. By default, when this parameter is omitted, accented characters “lose” their accents after the conversion is carried out. 
+Le paramètre facultatif *\**, s'il est passé, indique que les éventuels caractères accentués présents dans *laChaîne* doivent être retournés sous forme de minuscules accentuées. Par défaut, lorsque ce paramètre est omis, les caractères accentués “perdent” leur accent une fois la conversion effectuée. 
 
-## Example 1 
+## Exemple 1 
 
-The following project method capitalizes the string or text received as parameter. For instance, Caps ("john") would return "John".
+L'exemple suivant est une méthode projet qui met en majuscule (capitale) le premier caractère de la chaîne ou du texte qui lui est passé(e). Par exemple, Nom := Capitale ("jean") donnerait à Nom la valeur "Jean" :
 
 ```4d
-  //Caps project method
-  //Caps ( String ) -> String
-  //Caps ( Any text or string ) -> Capitalized text
+  // Méthode projet Capitale
+  // Capitale ( Chaîne ) -> Chaîne
+  // Capitale ( Tout texte ou chaîne ) -> texte avec une lettre capitale
  
  $0:=Lowercase($1)
  If(Length($0)>0)
@@ -49,24 +49,24 @@ The following project method capitalizes the string or text received as paramete
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example compares the results obtained according to whether or not the *\** parameter has been passed:
+Cet exemple compare les résultats obtenus suivant que le paramètre *\** a été passé ou non :
 
 ```4d
- $thestring:=Lowercase("DÉJÀ VU") // $thestring is "deja vu"
- $thestring:=Lowercase("DÉJÀ VU";*) // $thestring is "déjà vu"
+ $lachaine:=Lowercase("DÉJÀ VU") // $lachaine vaut « deja vu »
+ $lachaine:=Lowercase("DÉJÀ VU";*) // $lachaine vaut « déjà vu »
 ```
 
-## See also 
+## Voir aussi 
 
 [Uppercase](uppercase.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 14 |
+| Numéro de commande | 14 |
 | Thread safe | yes |
 
 

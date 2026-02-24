@@ -5,42 +5,48 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *list* : Integer ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | ListRef value to be tested |
-| Function result | Boolean | &#8592; | TRUE if list is a hierarchical list FALSE if list is not a hierarchical list |
+| liste | Integer | &#8594;  | Référence de la liste à tester |
+| Résultat | Boolean | &#8592; | Vrai si liste est une liste hiérarchique Faux si liste n'est pas une liste hiérarchique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is a list.Summary-->The Is a list command returns TRUE if the value you pass in *list* is a valid reference to a hierarchical list.<!-- END REF--> Otherwise, it returns FALSE.
+<!--REF #_command_.Is a list.Summary-->La fonction **Is a list** retourne VRAI si la valeur passée dans le paramètre *liste* est une référence valide à une liste hiérarchique.<!-- END REF--> Dans les autres cas, elle retourne FAUX.
 
-## Example
+## Exemple 1 
 
-See example for the [CLEAR LIST](clear-list.md) command.
+Reportez-vous à l'exemple de la commande [CLEAR LIST](clear-list.md).
+
+## Exemple 2 
+
+Reportez-vous aux exemples de la commande *\_o\_DRAG AND DROP PROPERTIES*.
+
+## Voir aussi 
 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 621 |
+| Numéro de commande | 621 |
 | Thread safe | no |
 
 

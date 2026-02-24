@@ -5,49 +5,48 @@ slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *event* : Integer )<!-- END REF-->
+<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( événement )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| event | Integer | &#8594;  | Event to be sent |
+| événement | Integer | &#8594;  | Evénement à transmettre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->The CALL SUBFORM CONTAINER command lets a subform instance send the *event* to the subform object that contains it.<!-- END REF--> The subform object can then process the *event* in the context of the parent form. 
+<!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->La commande **CALL SUBFORM CONTAINER** permet à une instance de sous-formulaire d’envoyer l’*événement* à l’objet sous-formulaire qui la contient.<!-- END REF--> L’objet sous-formulaire peut alors traiter l’*événement* dans le contexte du formulaire parent. 
 
-This command must be placed in the form method of the subform or in the object method of one of the subform objects. The event will only be received in the object method of the subform container. 
+Cette commande doit être placée dans la méthode formulaire du sous-formulaire ou dans la méthode objet d’un des objets du sous-formulaire. L’événement sera reçu uniquement dans la méthode objet du conteneur du sous-formulaire. 
 
-In *event*, you can pass one of the [4D form events that are supported by subforms](../FormObjects/subform_overview.md#call-subform-container-command) or any value corresponding to a custom event. In the first case, the event must be checked for the subform. In the case of a custom event, it is recommended to pass a negative value in *event* in order to avoid the risk of interfering with existing or future 4D event numbers.
+Vous pouvez passer dans *événement* un des [événements formulaire 4D pris en charge par les sous-formulaires](../FormObjects/subform_overview.md#call-subform-container-command) ou toute valeur correspondant à un événement personnalisé. Dans le premier cas, l’événement doit être coché pour le sous-formulaire. Dans le cas d’un événement personnalisé, il est conseillé de passer une valeur négative dans *événement* afin de ne pas risquer d’interférer avec des numéros d’événements existants ou à venir de 4D.
 
-*Example of execution of the* CALL SUBFORM CONTAINER *command:*
+*Principe d’exécution de la commande* **CALL SUBFORM CONTAINER** *:*
 
-![](../assets/en/commands/pict166755.en.png)
+![](../assets/en/commands/pict166755.fr.png)
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [GOTO OBJECT](goto-object.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1086 |
+| Numéro de commande | 1086 |
 | Thread safe | no |
-
 
 

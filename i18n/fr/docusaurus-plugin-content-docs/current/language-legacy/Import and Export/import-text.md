@@ -5,74 +5,74 @@ slug: /commands/import-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
+<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
 <!--REF #_command_.IMPORT TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table into which to import data, or Default table, if omitted |
-| document | Text | &#8594;  | Text document from which to import data |
+| laTable | Table | &#8594;  | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594;  | Document texte à importer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.IMPORT TEXT.Summary-->The **IMPORT TEXT** command reads data from *document*, a Windows or Macintosh text document, into the table *aTable* by creating new records for that table.<!-- END REF-->
+<!--REF #_command_.IMPORT TEXT.Summary-->La commande **IMPORT TEXT** lit les données de *document* (document texte Windows ou Mac OS) et les écrit dans la table *laTable* en créant de nouveaux enregistrements.<!-- END REF-->
 
-The import operation is performed through the current input form. The import operation reads fields and variables based on the layering of objects in the input form. For this reason, you should be very careful about the front-to-back order of text objects (fields and variables) in the form. The first object into which data will be imported should be in the back of the form, and so on. If the number of fields or variables in the form does not match the number of fields being imported, the extra ones are ignored. An input form used for importing cannot contain any buttons. Subform objects are ignored.
+L'opération d'import s'effectue par l'intermédiaire du formulaire entrée courant. Les champs et les variables sont lus en fonction du plan où ils se trouvent dans le formulaire entrée. Soyez donc attentif à ce qui se trouve au premier ou au deuxième plan en matière d'objets (champs et variables) dans le formulaire. Le premier objet dans lequel des données sont importées doit être à l'arrière-plan du formulaire. Si le nombre de champs et de variables dans le formulaire ne correspond pas au nombre de champs à importer, les champs supplémentaires sont ignorés. Un formulaire entrée utilisé pour l'import ne peut contenir de boutons. Les objets de sous-formulaire sont ignorés.
 
-**Note:** One way to ensure that the data is imported into the correct objects is to select the object into which the first field should be imported and move it to the front. Continue to move fields and variables to the front in order, making sure that you have one field or variable for each field being imported.
+**Note :** Un moyen de s'assurer que les données sont importées dans les bons objets est de sélectionner l'objet dans lequel sera importé le premier champ. Cet objet doit être au premier plan. Pour l'import dans le deuxième champ, placer ce champ devant le premier et ainsi de suite, pour tous les champs et variables. Le champ qui se trouve au premier plan est donc celui dans lequel sont placées les dernières données du document à importer.
 
-An On Validate event is sent to the form method for each record that is imported. If you use variables in the import form, use this event to copy data from variables to fields.
+L'événement On Validate est envoyé à la méthode du formulaire pour chaque enregistrement importé. Utilisez cet événement pour copier les données des variables vers les champs, si vous utilisez des variables dans le formulaire d'import.
 
-The *document* parameter can include a path that contains volume and folder names. If you pass an empty string, the standard Open File dialog box is displayed. If the user cancels this dialog, the import operation is canceled, and the OK system variable is set to 0.
+Le paramètre *document* peut contenir un chemin d'accès aux noms de volumes et de dossiers. Si vous passez une chaîne vide, la boîte de dialogue standard d'ouverture de fichiers est affichée. Si l'utilisateur annule le dialogue, l'opération d'import est annulée et la variable système OK est mise à 0\. 
 
-A progress thermometer is displayed during import. The user can cancel the operation by clicking a button labeled Stop. Records that have already been imported will not be removed if the user presses the Stop button. If the import is successfully completed, the OK system variable is set to 1\. If an error occurs or the operation was interrupted, the OK variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md) command.
+Un thermomètre de progression est affiché pendant l'import. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Les enregistrements déjà importés le resteront. Si l'import s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](messages-off.md).
 
-By default, the command uses the UTF-8 character set. You can use the [USE CHARACTER SET](use-character-set.md) command to change this character set. 
+La commande utilise par défaut le jeu de caractères UTF-8\. Vous pouvez utiliser la commande [USE CHARACTER SET](use-character-set.md) pour modifier ce jeu de caractères. 
 
-Using **IMPORT TEXT**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter *System Variables*: *FldDelimit* and *RecDelimit*. The user can change the defaults in the Design environment’s Import Data dialog box. Text fields may contain carriage returns, therefore, be careful when using a carriage return as a delimiter if you are importing text fields.
+Lors de l'utilisation de **IMPORT TEXT**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrements par défaut est le retour chariot (code 13). Vous pouvez modifier ces valeurs par défaut en assignant de nouvelles valeurs aux variables système FldDelimit et RecDelimit. L'utilisateur peut modifier ces valeurs par défaut dans la boîte de dialogue d'import du mode Développement. Comme les champs Texte peuvent contenir des Retours chariot, soyez prudent si vous utilisez le Retour chariot comme délimiteur entre les champs à importer.
 
-## Example 
+## Exemple 
 
-The following example imports data from a text document. The method first sets the input form so that the data will be imported through the correct form, changes the 4D delimiter variables, then performs the import:
+Cet exemple importe des données d'un document texte. Cette méthode commence par le choix du formulaire. Ici, vous changez les délimiteurs, et vous faites l'import :
 
 ```4d
- FORM SET INPUT([People];"Import")
- FldDelimit:=27 // Set field delimiter to Escape character
- RecDelimit:=10 // Set record delimiter to Line Feed character
- IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
+ FORM SET INPUT([Personnes];"Import")
+ FldDelimit:=27 // caractère de délimitation : Escape
+ RecDelimit:=10 // caractère de délimitation : Line Feed
+ IMPORT TEXT([Personnes];"Nouvelles Personnes.txt") // Import du document “Nouvelles Personnes.txt”
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-OK is set to 1 if the import is successfully completed; otherwise, it is set to 0.
+OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [EXPORT TEXT](export-text.md)  
 [IMPORT DIF](import-dif.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 168 |
+| Numéro de commande | 168 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

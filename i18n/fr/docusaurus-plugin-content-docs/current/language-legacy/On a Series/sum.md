@@ -5,79 +5,79 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* : Field, Array {; *attributePath* : Text} ) : Real<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the sum |
-| attributePath | Text | &#8594;  | Path of attribute for which to return the sum |
-| Function result | Real | &#8592; | Sum for series |
+| séries | Field, Array | &#8594;  | Valeurs dont vous souhaitez calculer la somme |
+| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la somme |
+| Résultat | Real | &#8592; | Somme de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|13|Modified|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Sum.Summary-->The **Sum** command returns the sum (total of all values) for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to total the values.
+<!--REF #_command_.Sum.Summary-->**Sum** retourne la somme (c'est-à-dire le total de toutes les valeurs) de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul.
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-This command accepts an optional *attributePath* parameter of the Text type, that you can use if *series* is an object field. It allows you to define the path of the attribute to compute. Use the standard dot notation to define paths to nested attributes, for example "company.address.number". Keep in mind that object attribute names are case-sensitive.   
-Only numeric attribute values are computed. If there are values in the attribute path which are not of a numeric type, they are ignored.
+La commande accepte un paramètre optionnel de type texte, *cheminAttribut*, que vous pouvez utiliser si *séries* est un champ de type Objet. Il vous permet de définir le chemin de l'attribut dont le contenu doit être utilisé pour le calcul de la somme des valeurs. Utilisez la notation à points standard pour définir le chemin dans l'objet jusqu'à l'attribut, par exemple "Clients.enfants.age". Attention, gardez à l'esprit que les noms d'attributs d'objets tiennent compte de la casse des caractères.  
+Seules les valeurs numériques des attributs sont utilisées pour le calcul. Si l'attribut contient des valeurs non numériques, elles sont ignorées. 
 
-If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
+Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Si elle est interrompue (par exemple si l'utilisateur clique sur le bouton **Arrêt** dans le thermomètre de progression), la variable OK prend la valeur 0.
 
-## Example 1 
+## Exemple 1 
 
-The following example is an object method for a *vTotal* variable placed in a form. The object method assigns the sum of all salaries to *vTotal*:
+L'exemple ci-dessous est la méthode objet d'une variable, *vTotal*, placée dans un formulaire. La méthode assigne à la variable la somme de tous les salaires :
 
 ```4d
- vTotal:=Sum([Employees]Salary)
+ vTotal:=Sum([Employés]Salaire)
 ```
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection courante et activer le traitement des ruptures :
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]LastNm;>)
+ ALL RECORDS([Employés])
+ ORDER BY([Employés];[Employés]Nom;>)
  BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- OUTPUT FORM([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ACCUMULATE([Employés]Salaire)
+ OUTPUT FORM([Employés];"FormImpression")
+ PRINT SELECTION([Employés])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md "BREAK LEVEL") command should be equal to the number of breaks in your report. For more information about break processing, refer to the printing commands.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the sum of all the values placed in an array:
+Cet exemple vous permet d’obtenir la somme de toutes les valeurs placées dans un tableau : 
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vSum:=Sum($ArrGrades)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ vSomme:=Sum($TabNote)
 ```
 
-## Example 3 
+## Exemple 3 
 
-For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
+Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous reporter à l'exemple 3 de la commande [Average](average.md).
 
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [Average](average.md)  
@@ -88,12 +88,12 @@ For an example of computing an object field attribute, please refer to the examp
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1 |
+| Numéro de commande | 1 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

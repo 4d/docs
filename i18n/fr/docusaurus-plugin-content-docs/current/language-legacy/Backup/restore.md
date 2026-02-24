@@ -5,54 +5,54 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *archivePath* : Text {; *destFolderPath* : Text} })<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *cheminArchive* {; *cheminDossierDest*} )}<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| archivePath | Text | &#8594;  | Pathname of archive to restore |
-| destFolderPath | Text | &#8594;  | Pathname of destination folder |
+| cheminArchive | Text | &#8594;  | Chemin d’accès de l’archive à restituer |
+| cheminDossierDest | Text | &#8594;  | Chemin d’accès du dossier de destination |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|2004|Created|
+|12|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESTORE.Summary-->The RESTORE command can be used to restore the file(s) included in a 4D archive.<!-- END REF--> This command is useful as part of custom interfaces for managing backups. 
+<!--REF #_command_.RESTORE.Summary-->La commande **RESTORE** permet restituer le ou les fichier(s) inclus dans une archive 4D.<!-- END REF--> Cette commande est utile dans le cadre d’interfaces personnalisées pour la gestion des sauvegardes. 
 
-If you do not pass the *archivePath* parameter, the command displays an open file dialog box so that the user can select the archive to restore.
+Si vous ne passez pas le paramètre *cheminArchive*, la commande affiche une boîte de dialogue d’ouverture permettant à l’utilisateur de sélectionner l'archive à restituer.
 
-The *archivePath* parameter lets you indicate the pathname of the archive file to be restored. This pathname must be expressed with the system syntax. You can pass an absolute pathname or a pathname relative to the database structure file.   
-In this case (if the *destFolderPath* parameter is omitted), the standard restore dialog box appears with the archive pre-selected, so that the user can designate the destination folder. When the procedure is completed, a warning dialog box appears and the folder containing the restored elements is displayed. 
+Le paramètre *cheminArchive* vous permet d’indiquer le chemin d’accès du fichier d’archive à restituer. Ce chemin doit être exprimé avec la syntaxe système. Vous pouvez passer un chemin d’accès absolu ou relatif au fichier de structure de la base.   
+Dans ce cas (si le paramètre *cheminDossierDest* est omis), la boîte de dialogue de restitution standard apparaît avec l’archive pré-sélectionnée, permettant à l’utilisateur de désigner le dossier de destination. A l’issue de la procédure, une boîte de dialogue d’alerte apparaît et le dossier contenant les éléments restitués est affiché. 
 
-You can also pass the *destFolderPath* parameter with the pathname of the destination folder of the restored elements. This pathname must be expressed with the system syntax. You can pass an absolute pathname or a pathname relative to the database structure file. If you pass this parameter, a preconfigured restore dialog box appears so that only the user can launch or cancel the restore procedure. When the procedure is completed, the window is simply reclosed without displaying any additional information. 
+Vous pouvez également passer le paramètre *cheminDossierDest* avec le chemin d’accès du dossier de destination des éléments restitués. Ce chemin doit être exprimé avec la syntaxe système. Vous pouvez passer un chemin d’accès absolu ou relatif au fichier de structure de la base. Si vous passez ce paramètre, une boîte de dialogue de restitution préconfigurée apparaît, permettant uniquement à l’utilisateur de lancer ou d’annuler la restitution. A l’issue de la procédure, la fenêtre est simplement refermée sans affichage d’information supplémentaire. 
 
-The RESTORE command modifies the value of the *OK* and *Document* variables: if the restore was carried out correctly, *OK* is set to 1 and *Document* contains the path of the restoration folder. If the user cancels the restoration dialog box, interrupts the restoration or if an error occurs, *OK* is set to 0 and *Document* contains an empty string. You can intercept the error using a method installed via the [ON ERR CALL](on-err-call.md) command.
+La commande **RESTORE** modifie la valeur des variables *OK* et *Document* : si la restitution s’est déroulée correctement, *OK* prend la valeur 1 et *Document* contient le chemin du dossier de restitution. Si l’utilisateur a annulé la boîte de dialogue de restitution, interrompu la restitution ou si une erreur s’est produite, *OK* prend la valeur 0 et *Document* contient une chaîne vide. Vous pouvez intercepter l’erreur à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md).
 
-**Note:** In a 4D application that is compiled and merged with 4D Volume Desktop, the RESTORE command causes the display of a standard open file dialog box that lists by default any files having the “4BK” extension. 
+**Note :** Dans le cadre d'une application 4D compilée et fusionnée avec 4D Volume Desktop, la commande **RESTORE** provoque l’affichage d'une boîte de dialogue système standard d'ouverture de fichiers, proposant par défaut les fichiers d'extension “4BK”.
 
-## See also 
+## Voir aussi 
 
 [BACKUP](backup.md)  
 [RESTORE INFO](restore-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 918 |
+| Numéro de commande | 918 |
 | Thread safe | no |
-| Modifies variables | OK, Document, error |
+| Modifie les variables | OK, Document, error |
 
 

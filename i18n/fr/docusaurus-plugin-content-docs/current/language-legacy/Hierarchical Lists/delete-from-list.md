@@ -5,62 +5,61 @@ slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( * ; *list* : Text ; *itemRef* : Integer, Operator {; *} )<br/>**DELETE FROM LIST** ( *list* : Integer ; *itemRef* : Integer, Operator {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *liste* ; réfElément {; *} )<br/>**DELETE FROM LIST** ( * ; *liste* ; * {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for the last item added to the list or * for the currently selected list item |
-| * | Operator |  &#8594;  | If specified, erases sublists (if any) from memory If omitted, sublists (if any) are not erased |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| réfElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
+| * | Operator |  &#8594;  | Si spécifié, effacer les sous-listes de la mémoire (le cas échéant) Si omis, ne pas effacer les sous-listes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE FROM LIST.Summary-->The **DELETE FROM LIST** command deletes the item designated by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Summary-->La commande **DELETE FROM LIST** supprime l'élément désigné par le paramètre *réfElément* de la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-If you pass *\** in *itemRef*, you delete the currently selected item in the list. You can also pass 0 in this parameter in order to request the deletion of the last item added to the list.
+Si vous passez *\** dans *réfElément*, vous supprimez l'élément actuellement sélectionné de la liste. Vous pouvez également passer 0 dans ce paramètre afin de demander la suppression du dernier élément ajouté à la liste.   
+Sinon, vous spécifiez le numéro de référence de l'élément à supprimer. Si le numéro ne correspond à aucun élément de la *liste*, la commande ne fait rien. 
 
-Otherwise, you specify the item reference number of the item you want to delete. If there is no item with the item reference number you passed, the command does nothing.
+Si vous travaillez avec les numéros de référence des éléments, veillez à construire une liste dans laquelle les éléments ont des numéros de référence uniques, sinon vous ne pourrez les différencier. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
 
-If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
+Quel que soit l'élément que vous supprimez, vous pouvez passer un troisième paramètre optionnel, *\**, pour indiquer à 4D de supprimer automatiquement de la mémoire la sous-liste rattachée à l'élément, s'il en existe. Si vous ne passez pas ce paramètre, il est préférable de récupérer au préalable le numéro de référence de la sous-liste (éventuelle) rattachée à l'élément, de manière à pouvoir si besoin est supprimer cette sous-liste à l'aide de la commande [CLEAR LIST](clear-list.md).
 
-No matter which item you delete, you should specify the optional *\** parameter to let 4D automatically delete the sublist attached to the item, if any. If you do not specify the *\** parameter, it is a good idea to have previously obtained the list reference number of the sublist (if any) attached to the item, so that you can delete it, if necessary, using the [CLEAR LIST](clear-list.md) command.
+## Exemple 
 
-## Example 
-
-The following code deletes the currently selected item of the list *hList*. If the item has an attached sublist, the sublist (as well as any sub-sublist) is deleted:
+L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une sous-liste est rattachée à l'élément, elle est supprimée (ainsi que toute sous-sous-liste) :
 
 ```4d
  DELETE FROM LIST(hList;*;*)
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR LIST](clear-list.md)  
 [GET LIST ITEM](get-list-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 624 |
+| Numéro de commande | 624 |
 | Thread safe | no |
 
 

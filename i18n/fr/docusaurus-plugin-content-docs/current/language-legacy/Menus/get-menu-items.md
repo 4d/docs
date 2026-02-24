@@ -5,53 +5,53 @@ slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *menuTitlesArray* : Text array ; *menuRefsArray* : Text array )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *tabTitresMenus* ; *tabRefsMenus* )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuTitlesArray | Text array | &#8592; | Array of menu titles |
-| menuRefsArray | Text array | &#8592; | Array of menu references |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| tabTitresMenus | Text array | &#8592; | Tableau des libellés du menu |
+| tabRefsMenus | Text array | &#8592; | Tableau des références du menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET MENU ITEMS.Summary-->The **GET MENU ITEMS** command returns, in the *menuTitlesArray* and *menuRefsArray* arrays, the titles and IDs of all the items of the menu or menu bar designated by the *menu* parameter.<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Summary-->La commande **GET MENU ITEMS** retourne dans les tableaux *tabTitresMenu* et *tabRefsMenu* les libellés et les identifiants de toutes les lignes du menu ou de la barre de menus désigné(e) par le paramètre *menu*.<!-- END REF-->
 
-In the *menu* parameter, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")), a menu bar number or a menu bar reference obtained using the [Get menu bar reference](get-menu-bar-reference.md) command.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")), un numéro de barre de menus ou une référence de barre de menus obtenue via la commande [Get menu bar reference](get-menu-bar-reference.md).
 
-If no menu reference is associated with an item, an empty string is returned in the corresponding array element.
+Lorsqu'aucune référence de menu n’est rattachée à une ligne, une chaîne vide est retournée dans l’élément de tableau correspondant.
 
-## Example 
+## Exemple 
 
-You want to find out the contents of the menu bar of the current process: 
+Vous souhaitez connaître le contenu de la barre de menus du process courant : 
 
 ```4d
- ARRAY TEXT(menuTitlesArray;0)
- ARRAY TEXT(menuRefsArray;0)
- MenuBarRef:=Get menu bar reference(Frontmost process)
- GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
+ ARRAY TEXT(tabTitresMenu;0)
+ ARRAY TEXT(tabRefsMenu;0)
+ RefBarreMenu:=Get menu bar reference(Frontmost process)
+ GET MENU ITEMS(RefBarreMenu;tabTitresMenu;tabRefsMenu)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 977 |
+| Numéro de commande | 977 |
 | Thread safe | no |
 
 

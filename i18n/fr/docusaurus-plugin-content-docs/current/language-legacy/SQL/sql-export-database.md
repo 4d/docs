@@ -5,76 +5,76 @@ slug: /commands/sql-export-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *cheminDossier* {; *nbFichiers* {; *tailleLimiteFichiers* {; *tailleLimiteChamps*}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Integer | &#8594;  | Maximum number of files per folder |
-| fileLimitSize | Integer | &#8594;  | Size limit value of export files (in KB) |
-| fieldLimitSize | Integer | &#8594;  | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field is embedded into the main file |
+| cheminDossier | Text | &#8594;  | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
+| nbFichiers | Integer | &#8594;  | Nombre maximum de fichiers par dossier |
+| tailleLimiteFichiers | Integer | &#8594;  | Valeur de limite de taille des fichiers d'exportation (en Ko) |
+| tailleLimiteChamps | Integer | &#8594;  | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12.1|Modified|
-|12|Created|
+|12.1|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL EXPORT DATABASE.Summary-->The SQL EXPORT DATABASE command exports in SQL format all the records of all the tables in the database.<!-- END REF--> In SQL, this global export operation is called "Dump".
+<!--REF #_command_.SQL EXPORT DATABASE.Summary-->La commande **SQL EXPORT DATABASE** exporte au format SQL tous les enregistrements de toutes les tables de la base.<!-- END REF--> En SQL, cette opération d’exportation globale est appelée "Dump". 
 
-**Note:** This command cannot be used with an external connection that has been opened directly or via ODBC. 
+**Note :** Cette commande ne peut pas être utilisée avec une connexion externe ouverte directement ou via ODBC. 
 
-For each table, the command generates a text file containing the SQL statements necessary for importing data into another database. This file can be used directly by the [SQL EXECUTE SCRIPT](sql-execute-script.md) command in order to import data into another 4D database. 
+Pour chaque table, la commande génère un fichier texte contenant les instructions SQL nécessaires à l’importation des données dans une autre base. Ce fichier peut être utilisé directement par la commande [SQL EXECUTE SCRIPT](sql-execute-script.md) afin d’importer les données dans une autre base 4D. 
 
-The export files will be placed in a folder named "SQLExport" that is created in the destination folder designated by the *folderPath* parameter. Please note that if an "SQLExport" folder already exists at the location specified, the command will replace it without any warning message being displayed.   
-If you pass an empty string in this parameter, 4D displays a standard dialog box which lets the user designate the destination folder. By default, the dialog box displays the current folder of the user that opened the session ("My Documents" under Windows or "Documents" under Mac OS).
+Les fichiers d’export seront placés dans un dossier nommé "SQLExport" créé dans le dossier de destination désigné par le paramètre *cheminDossier*. A noter que si un dossier "SQLExport" existe déjà à l’emplacement défini, la commande le remplace sans qu’aucun message d’alerte n’apparaisse.   
+Si vous passez une chaîne vide dans ce paramètre, 4D affiche une boîte de dialogue standard permettant à l’utilisateur de désigner le dossier de destination. Par défaut, la boîte de dialogue affiche le dossier courant de l’utilisateur ayant ouvert la session ("Mes Documents" sous Windows ou "Documents" sous Mac OS).
 
-For each exported table, the command carries out the following actions:
+Pour chaque table exportée, la commande effectue les actions suivantes :
 
-* a subfolder with the table name is created in the destination folder.
-* a text file named "Export.sql" is created in the subfolder. This file is encoded in UTF-8 with a BOM (byte-order mark). It contains SQL *INSERT* orders corresponding to the exported data. The field values are separated by colons. There may be fewer values than there are fields in the table. In this case, the remaining fields will be considered NULL.
-* if the table contains BLOB, picture or text fields (texts stored externally, in other words, outside of records), by default the command creates an additional subfolder named "BLOBS" next to the "Export.sql" file and creates as many subfolders named "BlobsX" as necessary. These subfolders will store as separate files the contents of all the BLOB, picture or external text fields of the table records. The BLOB files are named "BlobXXXXX.BLOB", the text files are named "TEXTXXXXX.TXT"(where XXXXX is a unique number generated by the application). The picture files are named PICTXXXXX.ZZZZ (where XXXXX is a unique number generated by the application and ZZZZ is the extension). When possible, pictures are exported in their original native format with the extension corresponding to the picture type (.jpg, .png, etc.). If the export is not possible in the native format, the pictures are exported in the internal 4D format 4D with the .4PCT extension.  
-This default behavior can be adjusted according to the size of the data contained in the field using the optional *fieldLimitSize* parameter (see below).  
-**Note:** This behavior differs when you execute **SQL EXPORT DATABASE** from a 4D in remote mode. In this context, the data to be stored externally are included automatically in the "Export.sql" file.
+* un sous-dossier du nom de la table est créé dans le dossier de destination.
+* un fichier texte nommé "Export.sql" est créé dans le sous-dossier. Ce fichier est encodé en UTF-8 avec BOM (marque d'ordre des octets). Il contient des ordres SQL *INSERT* correspondant aux données exportées. Les valeurs des champs sont séparées par des caractères deux-points. Il peut y avoir moins de valeurs que de champs dans la table. Dans ce cas, les champs restants seront considérés NULL.
+* si la table contient des champs BLOB, image ou texte (textes à stockage externe, c'est-à-dire stockés en-dehors des enregistrements), par défaut la commande crée un sous-dossier supplémentaire nommé "BLOBS" à côté du fichier "Export.sql" et y crée autant de sous-dossiers que nécessaire nommés "BlobsN”. Ces sous-dossiers stockeront sous forme de fichiers séparés le contenu de tous les champs BLOB, image ou texte externe des enregistrements de la table. Les fichiers BLOB sont nommés "BlobNNNNN.BLOB", les fichiers texte sont nommés "TEXTNNNNN.TXT" (où NNNNN est un nombre unique généré par l’application). Les fichiers image sont nommés PICTNNNNN.ZZZZ (où NNNNN est un nombre unique généré par l’application et ZZZZ est l’extension). Lorsque c’est possible, les images sont exportées dans leur format natif d’origine avec l’extension correspondant au type d’image (.jpg, .png, etc.). Si l’export au format natif n’est pas possible, les images sont exportées dans le format 4D interne avec l’extension .4PCT.  
+Ce fonctionnement par défaut peut être modulé en fonction de la taille des données contenues dans le champ à l'aide du paramètre optionnel *tailleLimiteChamps* (cf. ci-dessous).  
+**Note :** Ce fonctionnement diffère lorsque vous exécutez **SQL EXPORT DATABASE** depuis un 4D en mode distant. Dans ce contexte, les données à stockage externe sont automatiquement incluses dans le fichier "Export.sql".
 
-If you pass the *numFiles* parameter, the command will create as many "BlobsX" subfolders as necessary so that each one of them does not contain more than *numFiles* BLOB, picture or external text files. By default, if the *numFiles* parameter is omitted, the command limits the number of files to 200\. If you pass 0, each subfolder will contain at least one file.
+Si vous passez le paramètre *nbFichiers*, la commande créera autant de sous-dossiers "BlobsN" que nécessaire afin que chacun d’eux ne contienne pas plus de *nbFichiers* fichiers BLOBs, images ou textes externes. Par défaut, si le paramètre *nbFichiers* est omis, la commande limite le nombre de fichiers à 200\. Si vous passez 0, chaque sous-dossier contiendra au plus un seul fichier. 
 
-The *fileLimitSize* parameter lets you set a size limit (in KB) for each "Export.sql" created on disk. Once the size of the export file being created reaches the value set in *fileLimitSize*, 4D stops writing records, closes the file and creates a new file named "ExportX.sql" (where X represents the sequence number) next to the previous one. Note that this is a theoretical limit: the actual size of the "ExportX.sql" files exceeds the value set by *fileLimitSize* because the file is only closed after the record that was being exported when the limit was reached has been completely written (the contents of the records is not divided). The minimum value accepted is 100 and the maximum value (default value) is 100,000 (100 MB).
+Le paramètre *tailleLimiteFichiers* vous permet de définir une limite de taille (en ko) pour chaque fichier "Export.sql" créé sur le disque. Lorsque la taille du fichier d’export en cours de création atteint la valeur définie dans *tailleLimiteFichiers*, 4D stoppe l’écriture des enregistrements, referme le fichier et en crée un nouveau nommé "ExportN.sql" (où N représente le numéro de séquence) à côté du précédent. A noter qu'il s'agit d'une limite théorique : la taille effective des fichiers "ExportN.sql" dépasse la valeur définie dans *tailleLimiteFichiers* car le fichier n’est refermé qu’à l’issue de l’écriture complète de l’enregistrement en cours d’exportation (le contenu des enregistrements n'est pas fractionné). La valeur minimale acceptée est de 100 et la valeur maximale (valeur par défaut) est de 100 000 (100 Mo). 
 
-The optional *fieldLimitSize* parameter sets a size limit below which the contents of an external BLOB, Picture or Text field will be embedded in the main "Export.sql" file rather than saved as a separate file. This purpose of this parameter is to optimize export operations by limiting the number of subfolders and files created on disk.   
-This parameter must be expressed in bytes. For example, if you pass 1000, any external BLOB, Picture or Text fields that contain data with a size less than or equal to 1000 bytes are embedded into the main export file.   
-Note that binary field data (BLOB and Picture) that are embedded into the export file are written in hexadecimal format, in the form of X'0f20' (standard SQL hexadecimal notation, see *literal*). This format is automatically supported by the 4D SQL engine.   
-By default, if the *fieldLimitSize* parameter is omitted, external BLOB, Picture and Text fields are always exported as external files regardless of their size. 
+Le paramètre optionnel *tailleLimiteChamps* vous permet de définir une taille pivot au-dessous de laquelle le contenu d'un champ BLOB, image ou texte externe sera intégré au fichier principal "Export.sql" et non sauvegardé en tant que fichier séparé. Ce paramètre a pour but d'optimiser l'opération d'export en limitant le nombre de sous-dossiers et de fichiers créés sur le disque.   
+Le paramètre doit être exprimé en octets. Par exemple, si vous passez 1000, tous les champs BLOB, image ou texte externe contenant des données d'une taille inférieure ou égale à 1000 octets seront intégrés au fichier d'export principal.   
+A noter que les données des champs binaires (BLOB et image) intégrées au fichier d'export sont écrites au format hexadécimal, sous la forme X'0f20' (notation hexadécimale SQL standard, cf. *literal*). Ce format est automatiquement pris en charge par le moteur SQL de 4D.   
+Par défaut, si le paramètre *tailleLimiteChamps* est omis, les champs BLOB, image et texte externe sont toujours exportés sous forme de fichiers externes, quelle que soit leur taille. 
 
-In the export file, there may be fewer values than there are fields in the table. In this case, the empty fields will be considered as NULL. You can also pass the NULL value in a field.
+Dans le fichier d’export, il peut y avoir moins de valeurs que de champs dans la table. Dans ce cas, les champs vides seront considérés comme NULL. Vous pouvez également passer la valeur NULL dans un champ.
 
-If the export has been carried out correctly, the OK variable is set to 1\. Otherwise, it is set to 0\. 
+Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0\. 
 
 ### 
 
-**Note:** This command does not support Object type fields.
+**Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-## See also 
+## Voir aussi 
 
 [SQL EXPORT SELECTION](sql-export-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1065 |
+| Numéro de commande | 1065 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

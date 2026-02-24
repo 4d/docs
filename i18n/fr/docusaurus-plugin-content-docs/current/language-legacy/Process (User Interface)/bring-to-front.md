@@ -5,45 +5,45 @@ slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* : Integer )<!-- END REF-->
+<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number of the process to pass to the frontmost level |
+| process | Integer | &#8594;  | Numéro du process à passer au premier plan |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** brings all the windows belonging to *process* to the front.<!-- END REF--> If the process is already the frontmost process, the command does nothing. If the process is hidden, you must use [SHOW PROCESS](show-process.md) to display the process, otherwise **BRING TO FRONT** has no effect.
+<!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** passe les fenêtres du process de numéro *process* au premier plan.<!-- END REF--> Toutes les fenêtres appartenant à *process* passent au premier plan. Si le process est déjà au premier plan, la commande ne fait rien. Si le process est caché, il faut utiliser la commande [SHOW PROCESS](show-process.md) pour faire d'abord apparaître le process, sinon **BRING TO FRONT** ne fait rien.
 
-The Main and Design processes can be brought to the front using this command.
+Le Process principal et le Process de structure peuvent être passés au premier plan à l'aide de cette commande.
 
-**Note:** When the process contains several windows and you want to pass a specific one to the front, it is preferable to use, for example, the [SET WINDOW RECT](set-window-rect.md) command. 
+**Note :** Si le process contient plusieurs fenêtres et que vous souhaitez passer au premier plan une fenêtre spécifique, il est préférable d'utiliser par exemple la commande [SET WINDOW RECT](set-window-rect.md). 
 
-## Example 
+## Exemple 
 
-The following example is a method that can be executed from a menu. It checks to see if *◊vlAddCust\_PID* is the frontmost process. If not, the method brings it to the front:
+L'exemple suivant est une méthode qui peut être exécutée à partir d'une commande de menu. Elle vérifie si le process au premier plan est le process <>Clients. Sinon, ce process passe au premier plan :
 
 ```4d
- If(Frontmost process#◊vlAddCust_PID)
-    BRING TO FRONT(◊vlAddCust_PID)
+ If(Frontmost process#<>Clients) // Si la liste des clients n'est pas affichée
+    BRING TO FRONT(<>Clients) // Passer cette liste au premier plan
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 [SHOW PROCESS](show-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 326 |
+| Numéro de commande | 326 |
 | Thread safe | no |
 
 

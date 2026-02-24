@@ -5,51 +5,50 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *keyObject* : Object ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *passPhrase* : Text ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToEncrypt | Blob | &#8594;  | BLOB to encrypt |
-| keyObject | Object | &#8594;  | JSON object containing the encryption key |
-| passPhrase | Text | &#8594;  | Passphrase for direct encryption key generation |
+| blobToEncrypt | Blob | &#8594;  | BLOB à encrypter |
+| keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour une génération directe de clé de chiffrement (texte) |
 | salt | Integer | &#8594;  | Additional salt for algorithm |
-| encryptedBlob | Blob | &#8592; | Encrypted BLOB |
-| Function result | Boolean | &#8592; | True if encryption has been correctly performed, False otherwise |
+| encryptedBlob | Blob | &#8592; | BLOB encrypté |
+| Résultat | Boolean | &#8592; | True si le chiffrement a été effectué correctement. Sinon False |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Created|
+|19|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Encrypt data BLOB.Summary-->The **Encrypt data BLOB** command encrypts the *blobToEncrypt* parameter with the same algorithm as 4D uses to encrypt data (AES-256) and returns the result in *encryptedBlob*.<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB**encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans encryptedBlob.<!-- END REF-->.
 
-You can use either a *keyObject* or a *passPhrase* to encrypt the BLOB: 
+Vous pouvez utiliser un paramètre *keyObject* ou un *passPhrase* pour encrypter le BLOB :
 
-* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](new-data-key.md) command
-* *passPhrase*: a string used to generate the encryption key
+* keyObject : un objet JSON contenant la clé de chiffrement, avec la même structure que l'objet retourné par la commande [New data key](new-data-key.md)
+* passPhrase : une chaîne utilisée pour générer la clé de chiffrement
 
-Pass in *salt* a number that will be used to make the encryption more robust.
+Passez dans *salt* le nombre qui sera utilisé pour renforcer le chiffrement.
 
-If the encryption is successful, the encrypted data is returned in the *encryptedBlob* parameter and the command returns True.
+Si le chiffrement est réussi, les données chiffrées sont retournées dans le paramètre *encryptedBlob* et la commande retourne True.
 
-In case of error, the BLOB is returned empty and the command returns False.
+En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
-**Note:** When you encrypt a blob using **Encrypt data BLOB**, the resulting *encryptedBlob* is a multiple of 16 bytes because of the encryption algorithm. As a consequence, if *blobToEncrypt* is not a multiple of 16 bytes, the command automatically turns it into a multiple of 16 bytes by adding null bytes at the end. To avoid errors when decrypting the blob with [Decrypt data BLOB](decrypt-data-blob.md), you need to handle the size of *blobToEncrypt* when working with files other than text files. For a detailed example on how to do this, see [this blog article](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/ "test").
+**Note** : Lorsque vous cryptez un objet blob à l'aide de **Encrypt data BLOB**, l'*encryptedBlob* résultant est un multiple de 16 octets en raison de l'algorithme d'encription. Par conséquent, si *blobToEncrypt* n'est pas un multiple de 16 octets, la commande le transforme automatiquement en un multiple de 16 octets en ajoutant des octets nuls à la fin. Pour éviter les erreurs lors du déchiffrement du blob avec [Decrypt data BLOB](decrypt-data-blob.md), vous devez gérer la taille de *blobToEncrypt* lorsque vous travaillez avec des fichiers autres que des fichiers texte. Pour un exemple détaillé sur la façon de procéder, consultez [cet article de blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/). 
 
-## Example 
+## Exemple 
 
-Encrypt a text file located in the RESOURCES folder of the database:
+Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de données :
 
 ```4d
  var $fileToEncrypt;$encryptedFile : 4D.File
@@ -61,23 +60,23 @@ Encrypt a text file located in the RESOURCES folder of the database:
  
  $blobToencrypt:=$fileToEncrypt.getContent()
  
- $result:=Encrypt data BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
+ $result:=Encrypter donnees BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
  $encryptedFile.setContent($encryptedBlob)
 ```
 
-## See also 
+## Voir aussi 
 
+  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
-[Encrypt your own data with the 4D algorithm (blog post)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1773 |
+| Numéro de commande | 1773 |
 | Thread safe | yes |
 
 

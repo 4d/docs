@@ -5,68 +5,68 @@ slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *document* : Text )<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *nomFichier* )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document name or Full document pathname |
+| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès complet au document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7.1|Modified|
-|<6|Created|
+|6.7.1|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE DOCUMENT.Summary-->The **DELETE DOCUMENT** command deletes the document whose name you pass in *document*.<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Summary-->**DELETE DOCUMENT** supprime le document dont vous avez passé le nom dans *document*.<!-- END REF-->
 
-If the document name or the entered path name is incorrect, an error is generated. 
+Si le nom du document ou le chemin d'accès saisi est incorrect, une erreur est générée.
 
-If the document is open when the command is called, the result depends on the OS:
+Si le document est ouvert lorsque la commande est appelée, le résultat dépend du système d'exploitation :
 
-* on Windows, an error is generated,
-* on macOS, no error is generated and the document is deleted.
+* sur Windows, une erreur est générée,
+* sur macOS, aucune erreur n'est générée et le document est supprimé.
 
-**DELETE DOCUMENT** doesn’t accept an empty string argument for *document*. If an empty string is used, the Open File dialog box is not displayed and an error is generated.
+**DELETE DOCUMENT** n'accepte pas de chaîne vide dans le paramètre *document*. Si vous passez une chaîne vide, la boîte de dialogue standard d'ouverture de fichiers ne s'affiche pas et une erreur est générée.
 
-**WARNING:** **DELETE DOCUMENT** can delete any file on a disk. This includes documents created with other applications as well as the applications themselves. **DELETE DOCUMENT** should be used with extreme caution. Deleting a document is a permanent operation and cannot be undone.
+**Attention :** **DELETE DOCUMENT** peut supprimer tout fichier disque, y compris des fichiers créés par d'autres applications ou les applications elles-mêmes. La commande **DELETE DOCUMENT** doit donc être utilisée avec précaution. La suppression d'un document est une opération définitive et irréversible.
 
-## Example 1 
+## Exemple 1 
 
-The following example deletes the document named Note:
+L'exemple suivant supprime le document appelé Note :
 
 ```4d
- DELETE DOCUMENT("Note") // Delete the document
+ DELETE DOCUMENT("Note") // Suppression du document
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-Deleting a document sets the OK system variable to 1\. If **DELETE DOCUMENT** can’t delete the document, the OK system variable is set to 0.
+La suppression d'un document met la variable système OK à 1\. Si **DELETE DOCUMENT** ne peut pas supprimer le document, la variable système OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [Test path name](test-path-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 159 |
+| Numéro de commande | 159 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

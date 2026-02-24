@@ -5,56 +5,56 @@ slug: /commands/create-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to create a new record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table dans laquelle créer un enregistrement ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** creates a new empty record for *aTable*, but does not display the new record.<!-- END REF--> Use [ADD RECORD](add-record.md) to create a new record and display it for data entry. 
+<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crée un nouvel enregistrement vide pour *laTable*, mais ne l'affiche pas à l'écran.<!-- END REF--> Vous devez utiliser la commande [ADD RECORD](add-record.md) pour créer un nouvel enregistrement et l'afficher dans un formulaire entrée. 
 
-**CREATE RECORD** is used instead of [ADD RECORD](add-record.md) when data for the record is assigned with the language. The new record becomes the current record but the current selection is left untouched.
+Utilisez **CREATE RECORD** plutôt que [ADD RECORD](add-record.md) lorsque les valeurs de l'enregistrement sont entrées par programmation. Le nouvel enregistrement devient l'enregistrement courant mais la sélection courante n'est pas modifiée.
 
-The record exists in memory only until a [SAVE RECORD](save-record.md) command is executed for the table. If the current record is changed (for example, by a query) before the record is saved, the new record is lost.
+L'enregistrement est créé uniquement en mémoire et doit être sauvegardé à l'aide de [SAVE RECORD](save-record.md). Si vous changez d'enregistrement courant (par exemple à la suite d'une recherche) avant la sauvegarde, l'enregistrement créé est perdu.
 
-**Note:** This command does not require *aTable* to be in read/write mode. It can be used even when the table is in read-only mode (see *Record Locking*). 
+**Note :** Cette commande ne nécessite pas que *laTable* soit en mode lecture/écriture. Elle peut être utilisée même lorsque la table est en mode lecture seulement (cf. section *Verrouillage d'enregistrements*). 
 
-## Example 
+## Exemple 
 
-The following example archives records that are over 30 days old. It does does this by creating new records in an archival table. When the archiving is finished, the records that were archived are deleted from the \[Accounts\] table:
+L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette opération est réalisée par la création d'enregistrements dans une table d'archive. Une fois l'opération terminée, les enregistrements archivés sont supprimés de la table *\[Comptes\]* :
 
 ```4d
-  // Find records more than 30 days old
- QUERY([Accounts];[Accounts]Entered<(Current date 30))
- For($vlRecord;1;Records in selection([Accounts])) // Loop once for each record
-    CREATE RECORD([Archive]) // Create a new archive record
-    [Archive]Number:=[Account]Number // Copy fields to the archive record
-    [Archive]Entered:=[Account]Entered
-    [Archive]Amount:=[Account]Amount
-    SAVE RECORD([Archive]) // Save the archive record
-    NEXT RECORD([Accounts]) // Move to the next account record
+  // Recherche des enregistrements datant de plus de 30 jours
+ QUERY([Comptes];[Comptes]Saisie <(Date du jour 30))
+ For($vlRecord;1;Records in selection([Comptes])) // Boucle une fois par enregistrement
+    CREATE RECORD([Archives]) // Création d'un nouvel enregistrement d'archive
+    [Archive]Numéro:=[Comptes]Number // Copie des champs dans l'archive
+    [Archive]Saisie :=[Comptes]Saisie
+    [Archive]Montant:=[Comptes]Montant
+    SAVE RECORD([Archive]) // Sauvegarde de l'enregistrement d'archive
+    NEXT RECORD([Comptes]) // Passage à l'enregistrement de compte suivant
  End for
- DELETE SELECTION([Accounts]) // Delete the account records
+ DELETE SELECTION([Comptes]) // Suppression des enregistrements
 ```
 
-## See also 
+## Voir aussi 
 
 [ADD RECORD](add-record.md)  
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 68 |
+| Numéro de commande | 68 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

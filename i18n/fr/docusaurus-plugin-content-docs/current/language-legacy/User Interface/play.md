@@ -5,76 +5,76 @@ slug: /commands/play
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* : Text {; *async* : Integer} )<!-- END REF-->
+<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjet* {; *asynchrone*} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | Text | &#8594;  | Name or path of sound file or system soundEmpty string for stopping asynchronous play |
-| async | Integer | &#8594;  | (Windows) If specified, asynchronous execution; If omitted, synchronous execution |
+| nomObjet | Text | &#8594;  | Nom ou chemin de fichier son ou son systèmeChaîne vide pour stopper un son asynchrone |
+| asynchrone | Integer | &#8594;  | (Windows) Si passé : exécution asynchrone, si omis : exécution synchrone |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PLAY.Summary-->The **PLAY** command plays sound or multimedia files.<!-- END REF--> You pass the full pathname of the file you want to play in *objectName*. On macOS, the command can also be used to play a system sound. 
+<!--REF #_command_.PLAY.Summary-->La commande **PLAY** vous permet de jouer des fichiers de son ou multimedia.<!-- END REF--> Sous macOS, la commande permet également de jouer un son système. 
 
-* To play a file, pass its name and pathname in *objectName*. You can pass a full pathname or a pathname relative to the database structure file.  
-The main sound and multimedia file formats are supported: .WAV, .MP3, .AIFF (macOS), etc. Under macOS, the command supports more particularly the Core Audio formats.
-* (macOS only) To play a system sound, pass its name directly in the *objectName* parameter.
+* Pour jouer un fichier, passez son nom et son chemin d'accès dans *nomObjet*. Vous pouvez passer un chemin d'accès complet ou relatif au fichier de structure de la base.  
+ Les principaux formats de fichiers son et multimedia sont pris en charge : .WAV, .MP3, .AIFF (macOS)... Sous macOS, la commande prend notamment en charge les formats Core Audio.
+* (macOS uniquement) Pour jouer un son système, passez directement son nom dans le paramètre *nomObjet*.
 
-**Note:** 'snd' resources, as used on Mac OS 9 and older, are no longer supported.
+**Note :** Les ressources ‘snd’, utilisées dans Mac OS 9 et les systèmes plus anciens, ne sont plus prises en charge.
 
-The *async* parameter specifies that the sound will play asynchronously on Windows. Synchronous play means that all processing stops until the sound has finished playing; asynchronous means that processing does not stop and the sound plays in the background. If *async* is passed and contains 0 (or any longint value), the sound is played asynchronously. If omitted, the sound is played synchronously.  
-**Note:** On macOS, the sound is always played asynchronously, with or without the *async* parameter.
+Le paramètre *asynchrone* permet de jouer le son en synchrone ou en asynchrone sous Windows. Synchrone signifie que tous les traitements s'arrêtent jusqu'à ce que le son soit entièrement joué, asynchrone signifie que le traitement ne s'arrête pas et que le son est joué en tâche de fond. Si *asynchrone* est passé et vaut 0 (ou toute valeur numérique), le son est joué en asynchrone. S'il est omis, le son est joué en synchrone.  
+**Note :** Sous macOS, le son est toujours asynchrone, que *asynchrone* soit passé ou non.
 
-To stop playing an asynchronous sound, use the following statement:
+Pour stopper un son asynchrone, il faut exécuter l'instruction suivante :
 
 ```4d
  PLAY("";0)
 ```
 
-## Example 1 
+## Exemple 1 
 
-The following example shows how to play a WAV file on Windows:
+L'exemple suivant montre comment jouer un fichier WAV de votre choix sous Windows :
 
 ```4d
- $DocRef :=Open document("";"WAV";Read Mode)
+ $DocRéf :=Open document("";"WAV";Read Mode) //ou MP3...
  If(OK=1)
-    CLOSE DOCUMENT($DocRef)
-    PLAY(Document;0) //play asynchronously
+    CLOSE DOCUMENT($DocRéf)
+    PLAY(Document;0) //exécution asynchrone
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example code plays a system sound on macOS:
+Exemple de son système sous macOS :
 
 ```4d
- PLAY("Submarine.aiff")
+ PLAY("Submarine.aiff") //Jouer le son système
 ```
 
-## See also 
+## Voir aussi 
 
 [BEEP](beep.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 290 |
+| Numéro de commande | 290 |
 | Thread safe | no |
 
 

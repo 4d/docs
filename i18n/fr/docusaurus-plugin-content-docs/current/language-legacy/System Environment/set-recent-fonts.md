@@ -5,60 +5,60 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *fontsArray* : Text array )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fontsArray | Text array | &#8594;  | Array of font names |
+| tabPolices | Text array | &#8594;  | Tableau de noms de polices |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET RECENT FONTS.Summary-->The **SET RECENT FONTS** command modifies the list of fonts displayed in the context menu of the "recent fonts".<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Summary-->La commande **SET RECENT FONTS** permet de modifier la liste des polices récentes affichées dans le menu contextuel des "polices récentes".<!-- END REF--> 
 
-This menu contains the names of the last fonts selected during the session. It is used in particular by *Programming Notes* areas. 
+Ce menu contient les noms des dernières polices sélectionnées durant la session. Il est notamment utilisé par les zones de *Notes de programmation*. 
 
-## Example 
+## Exemple 
 
-You want to add a font to the menu of recent fonts:
+Vous souhaitez ajouter une police au menu des polices récentes :
 
-![](../assets/en/commands/pict1202029.en.png)
+![](../assets/en/commands/pict1202029.fr.png)
 
-You execute the following code:
+Vous exécutez le code suivant :
 
 ```4d
- ARRAY TEXT($arrRecent;0)
- FONT LIST($arrRecent;2)
- APPEND TO ARRAY($arrRecent;"Segoe Script")
- APPEND TO ARRAY($arrRecent)
+ ARRAY TEXT($tTRecentes;0)
+ FONT LIST($tTRecentes;2)
+ APPEND TO ARRAY($tTRecentes;"Segoe Script")
+ SET RECENT FONTS($tTRecentes)
 ```
 
-Then the menu contains:
+Le menu contient alors :
 
-![](../assets/en/commands/pict1202031.en.png)
+![](../assets/en/commands/pict1202031.fr.png)
 
-## See also 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1305 |
+| Numéro de commande | 1305 |
 | Thread safe | no |
 
 

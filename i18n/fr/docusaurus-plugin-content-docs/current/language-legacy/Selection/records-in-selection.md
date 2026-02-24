@@ -5,42 +5,42 @@ slug: /commands/records-in-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in selection.Syntax-->**Records in selection** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return number of selected records, or Default table, if omitted |
-| Function result | Integer | &#8592; | Records in selection of table |
+| laTable | Table | &#8594;  | Table dont vous souhaitez connaître le nombre d'enregistrements de la sélection courante ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &#8592; | Nombre d'enregistrements dans la sélection courante de table |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Records in selection.Summary-->**Records in selection** returns the number of records in the current selection of *aTable*.<!-- END REF--> In contrast, [Records in table](records-in-table.md) returns the total number of records in the table.
+<!--REF #_command_.Records in selection.Summary-->**Records in selection** retourne le nombre d'enregistrements constituant la sélection courante de *laTable* (par opposition, [Records in table](records-in-table.md) retourne le nombre total d'enregistrements d'une table).<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The following example shows a loop technique commonly used to move through all the records in a selection. The same action can also be accomplished with the [APPLY TO SELECTION](apply-to-selection.md) command:
+L'exemple suivant propose une technique de boucle couramment utilisée pour se déplacer parmi les enregistrements de la sélection courante. La même opération peut être réalisée à l'aide de la commande [APPLY TO SELECTION](apply-to-selection.md) :
 
 ```4d
- FIRST RECORD([People]) // Start at first record in the selection
- For($vlRecord;1;Records in selection([People])) // Loop once for each record
-    Do Something // Do something with the record
-    NEXT RECORD([People]) // Move to the next record
+ FIRST RECORD([Personnes]) // Départ sur le premier enregistrement de la sélection
+ For($VElEnreg;1;Records in selection([Personnes])) // Boucle une fois par enregistrement
+    Faire quelque chose // Réaliser une opération avec l'enregistrement
+    NEXT RECORD([Personnes]) // Passage à l'enregistrement suivant
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [Records in table](records-in-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 76 |
+| Numéro de commande | 76 |
 | Thread safe | yes |
 
 

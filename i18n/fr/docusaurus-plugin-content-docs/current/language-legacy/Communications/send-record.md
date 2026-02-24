@@ -5,54 +5,54 @@ slug: /commands/send-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to send the current record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle envoyer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SEND RECORD.Summary-->**SEND RECORD** sends the current record of *aTable* to the serial port or document opened by the [SET CHANNEL](set-channel.md) command.<!-- END REF--> The record is sent with a special internal format that can be read only by [RECEIVE RECORD](receive-record.md). If no current record exists, SEND RECORD has no effect.
+<!--REF #_command_.SEND RECORD.Summary-->**SEND RECORD** envoie l'enregistrement courant de *laTable* vers le port série ou vers un document ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> L'enregistrement est envoyé dans un format interne particulier ne pouvant être interprété que par la commande [RECEIVE RECORD](receive-record.md). S'il n'y a pas d'enregistrement courant, **SEND RECORD** ne fait rien.
 
-The complete record is sent. This means that pictures and BLOBs stored in or with the record are also sent.
+L'enregistrement est envoyé en totalité, ce qui signifie que les images et les BLOBs stockés dans ou avec l'enregistrement sont également envoyés.
 
-**Important:** When records are being sent and received using SEND RECORD and [RECEIVE RECORD](receive-record.md), the source table structure and the destination table structure must be compatible. If they are not, 4D will convert values according to the table definitions when [RECEIVE RECORD](receive-record.md) is executed.
+**Important :** Lorsque des enregistrements sont envoyés et reçus par **SEND RECORD** et [RECEIVE RECORD](receive-record.md), la structure de la table source et celle de la table de destination doivent être compatibles. Si ce n'est pas le cas, 4D convertira les valeurs en fonction des définitions des tables lorsque [RECEIVE RECORD](receive-record.md) sera exécutée.
 
-**Note:** If you send a record to a document using this command, the document must have been opened using the [SET CHANNEL](set-channel.md) command. You cannot use SEND RECORD with a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md).
+**Note :** Si vous envoyez un enregistrement à un document avec cette commande, le document doit avoir été ouvert par la commande [SET CHANNEL](set-channel.md). Vous ne pouvez pas utiliser **SEND RECORD** avec un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md).
 
-**Compatibility note:** Beginning with version 11 of 4D, this command no longer supports subtables.
+**Note de compatibilité :** A compter de la version 11 de 4D, cette commande ne prend plus en charge les sous-tables. 
 
-## Example 
+## Exemple 
 
-See example for the [RECEIVE RECORD](receive-record.md) command.
+Reportez-vous à l'exemple de la commande [RECEIVE RECORD](receive-record.md).
 
-## See also 
+## Voir aussi 
 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND VARIABLE](send-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 78 |
+| Numéro de commande | 78 |
 | Thread safe | yes |
 
 

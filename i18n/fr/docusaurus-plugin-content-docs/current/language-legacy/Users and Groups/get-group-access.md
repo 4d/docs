@@ -9,50 +9,50 @@ displayed_sidebar: docs
 <!--REF #_command_.Get group access.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &#8592; | Collection of group name(s) to which the user belongs |
+| Résultat | Collection | &#8592; | Collection de nom(s) de groupe(s) au(x)quel(s) l'utilisateur appartient |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Created|
+|18 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get group access.Summary-->The **Get group access** command returns the memberships of the 4D user account for the current session.<!-- END REF--> If the user does not belong to any group in the session, an empty collection is returned. 
+<!--REF #_command_.Get group access.Summary-->La commande **Get group access** retourne l'adhésion du compte utilisateur 4D à la session courante.<!-- END REF--> Si l'utilisateur n'appartient à aucun groupe de la session, une collection vide est retournée.
 
-**Returned value**
+**Valeur retournée**
 
-Collection of strings: group names to which the 4D user account belongs. 
+Collection de chaines : nom de groupe auxquels le compte utilisateur 4D appartient. 
 
-## Example 
+## Exemple 
 
-You want to check if the current user belongs to the "plugins" group:
+Vous souhaitez vérifier si l'utilisateur courant appartient au groupe "plugins" :
 
 ```4d
  $groups:=Get group access
- If($groups.countValues("plugins")#0) //the user belongs to the group
+ If($groups.countValues("plugins")#0) //l'utilisateur appartient au groupe
     ... //
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [SET GROUP ACCESS](set-group-access.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1738 |
+| Numéro de commande | 1738 |
 | Thread safe | yes |
 
 

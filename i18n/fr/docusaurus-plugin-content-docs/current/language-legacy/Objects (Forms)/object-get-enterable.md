@@ -5,43 +5,43 @@ slug: /commands/object-get-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get enterable** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enterable.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = object(s) enterable; Otherwise, false |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai = objet(s) saisissable(s), Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get enterable.Summary-->The OBJECT Get enterable command returns True if the object or group of objects designated by *object* has the **enterable** attribute; otherwise, it returns False.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get enterable.Summary-->La commande **OBJECT Get enterable** retourne Vrai si l'objet ou le groupe d'objets désigné par *objet* dispose de l’attribut **saisissable** et Faux sinon.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1067 |
+| Numéro de commande | 1067 |
 | Thread safe | no |
 
 

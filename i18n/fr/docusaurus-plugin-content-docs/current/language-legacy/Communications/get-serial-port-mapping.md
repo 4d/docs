@@ -5,68 +5,68 @@ slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
+<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *tabNums* ; *tabLibellés* )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numArray | Integer array | &#8592; | Array of port numbers |
-| nameArray | Text array | &#8592; | Array of port names |
+| tabNums | Integer array | &#8592; | Tableau de numéros de ports série |
+| tabLibellés | Text array | &#8592; | Tableau de noms de ports série |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->The **GET SERIAL PORT MAPPING** command returns two arrays, *numArray* and *nameArray*, containing the serial port numbers and the serial port names of the current machine.<!-- END REF--> 
+<!--REF #_command_.GET SERIAL PORT MAPPING.Summary-->La commande **GET SERIAL PORT MAPPING** retourne deux tableaux *tabNums* et *tabLibellés* contenant respectivement la liste des numéros et des noms des ports série de la machine courante.<!-- END REF--> 
 
-This command is useful under macOS, where the operating system dynamically allocates the port number when using a USB serial adapter. You can address any extended serial port using its name (static), regardless of its actual number.
+Cette commande est utile sous macOS car le système alloue dynamiquement les numéros des ports série lorsque vous utilisez un adaptateur série USB. A l’aide de cette commande, vous pouvez adresser les ports série étendus via leur nom (invariable), quel que soit leur numéro.
 
-**Note:** This command does not return meaningful values with standard ports. If you want to address a standard port, you must pass its value (0 or 1) directly using the [SET CHANNEL](set-channel.md) command (former operation of 4D). 
+**Note :** Cette commande ne retourne pas de valeurs significatives avec les ports standard. Si vous souhaitez adresser un port standard, vous devez passer directement sa valeur (0 ou 1) à la commande [SET CHANNEL](set-channel.md) (ancien mode de fonctionnement de 4D). 
 
-## Example 
+## Exemple 
 
-This project method can be used to address the same serial port (without protocol), regardless of the number that has been assigned to it: 
+Cette méthode projet permet d'adresser le même port série (sans protocole), quel que soit le numéro qui lui a été attribué : 
 
 ```4d
- ARRAY TEXT($arrPortNames;0)
- ARRAY LONGINT($arrPortNums;0)
- var $vPortNum;$vFinalPortNum : Integer
+ ARRAY TEXT($tNomPorts;0)
+ ARRAY LONGINT($tNumPorts;0)
+ var $vNumport;$vNumportFinal : Integer
  
-  //Find out the current numbers of the serial ports
- GET SERIAL PORT MAPPING($arrPortNums;$arrPortNames)
- $vPortNum:=Find in array($arrPortNames;vPortName)
-  // vPortName contains the name of the port to be used; it may come from a dialog box,
-  // a value stored in a field, etc.
- If(arrPortNums{$vPortNum}=0)
-    $vFinalPortNum:=0 //special case under macOS
+  //Connaître les numéros actuels des ports série
+ GET SERIAL PORT MAPPING($tNumPorts;$tNomPorts)
+ $vNumport:=Find in array($tNomPorts;vNomport)
+  // vNomport contient le nom du port à utiliser, il peut provenir d'une boîte de dialogue,
+  // d'une valeur stockée dans un champ, etc.
+ If(tNumPorts{$vNumport}=0)
+    $vNumportFinal:=0 //cas particulier sous macOS
  Else
-    $vFinalPortNum:=arrPortNums{$vPortNum}+100
+    $vNumportFinal:=tNumPorts{$vNumport}+100
  End if
- SET CHANNEL($vFinalPortNum;params) //params contains the communication parameters
- ... //Carry out the desired operations
- SET CHANNEL(11) //Closing of port
+ SET CHANNEL($vNumportFinal;params) //params contient les paramètres de communication
+ ... //Effectuer ici les opérations souhaitées
+ SET CHANNEL(11) //Fermeture du port
 ```
 
-## See also 
+## Voir aussi 
 
 [SET CHANNEL](set-channel.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 909 |
+| Numéro de commande | 909 |
 | Thread safe | yes |
 
 

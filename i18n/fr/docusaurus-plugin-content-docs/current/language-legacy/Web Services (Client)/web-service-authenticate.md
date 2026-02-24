@@ -5,73 +5,73 @@ slug: /commands/web-service-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE AUTHENTICATE.Syntax-->**WEB SERVICE AUTHENTICATE** ( *name* : Text ; *password* : Text {; *authMethod* : Integer} {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE AUTHENTICATE.Syntax-->**WEB SERVICE AUTHENTICATE** ( *nom* ; *motDePasse* {; *méthodeAuth*} {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | User name |
-| password | Text | &#8594;  | User password |
-| authMethod | Integer | &#8594;  | Authentication method 0 or omitted = not specified, 1 = BASIC, 2 = DIGEST |
-| * | Operator | &#8594;  | If passed: authentication by proxy |
+| nom | Text | &#8594;  | Nom de l’utilisateur |
+| motDePasse | Text | &#8594;  | Mot de passe de l’utilisateur |
+| méthodeAuth | Integer | &#8594;  | Méthode d’authentification : 0 ou omis=non définie, 1=BASIC, 2=DIGEST |
+| * | Opérateur | &#8594;  | Si passé : authentification par proxy |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|13|Renommé|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->The **WEB SERVICE AUTHENTICATE** command enables the use of Web Services requiring authentication of the client application (simple authentication).<!-- END REF--> The BASIC and DIGEST methods are supported, as well as the presence of a proxy.
+<!--REF #_command_.WEB SERVICE AUTHENTICATE.Summary-->La commande **WEB SERVICE AUTHENTICATE** vous permet d’utiliser des Web Services nécessitant l’authentification de l’application cliente.<!-- END REF--> Les méthodes BASIC et DIGEST sont prises en charge ainsi que la présence d'un proxy.
 
-**Note:** For more information about the BASIC and DIGEST authentication methods, refer to the *Connection Security* section. 
+**Note :** Pour plus d’informations sur les méthodes d’authentification BASIC et DIGEST, reportez-vous à la section *Sécurité des connexions*.
 
-In the *name* and *password* parameters, pass the required identification information (user name and password). This information will be encoded and added to the HTTP request sent to the Web Service using the [WEB SERVICE CALL](web-service-call.md) command. It is thus necessary to call the **WEB SERVICE AUTHENTICATE** command before calling the [WEB SERVICE CALL](web-service-call.md) command.  
+Passez dans les paramètres *nom* et *motDePasse* les informations d’identification requises (nom d’utilisateur et mot de passe). Ces informations seront encodées et ajoutées à la requête HTTP envoyée au Web Service via la commande [WEB SERVICE CALL](web-service-call.md). Il est donc nécessaire d’appeler la commande **WEB SERVICE AUTHENTICATE** avant la commande [WEB SERVICE CALL](web-service-call.md). 
 
-The optional *authMethod* parameter indicate the authentication method to be used for the next call to the [WEB SERVICE CALL](web-service-call.md) command. You can pass one of the following values:
+Le paramètre facultatif *méthodeAuth* permet d’indiquer la méthode d’authentification à utiliser pour le prochain appel de la commande [WEB SERVICE CALL](web-service-call.md). Vous pouvez passer l’une des valeurs suivantes :
 
-* 2 = use the DIGEST authentication method
-* 1 = use the BASIC authentication method
-* 0 (or parameter omitted) = use the appropriate method. In this case, 4D sends an additional request in order to negotiate the authentication method.
+* 2 = utiliser la méthode d’authentification DIGEST
+* 1 = utiliser la méthode d’authentification BASIC
+* 0 (ou paramètre omis) = utiliser la méthode appropriée. Dans ce cas, 4D envoie une requête supplémentaire afin de négocier la méthode d'authentification.
 
-If you pass the *\** parameter, you indicate that the authentication information is to be sent to an HTTP proxy. This configuration must be implemented when there is a proxy that requires authentication between the Web Service client and the Web Service itself. If the Web Service is itself authenticated, a double authentication is required (see the example). 
+Si vous passez le paramètre *\**, vous indiquez que les informations d’authentification s’adressent à un proxy HTTP. Ce paramétrage doit être mis en oeuvre lorsqu’il existe un proxy nécessitant une authentification entre le client du Web Service et le Web Service lui-même. Si le Web Service est lui-même authentifié, une double authentification est requise (cf. exemple). 
 
-By default, the authentication information is reset to zero after each request. Therefore, you must use the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](web-service-call.md) command. It is nevertheless possible to keep this information temporarily using an option of the [WEB SERVICE SET OPTION](web-service-set-option.md) command. In this case, it is not necessary to execute the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](web-service-call.md) command.
+Par défaut, les informations d’authentification sont réinitialisées après chaque requête. Vous devez donc utiliser la commande [WEB SERVICE AUTHENTICATE](web-service-authenticate.md) avant chaque [WEB SERVICE CALL](web-service-call.md). Il est toutefois possible de conserver temporairement ces informations à l'aide d'une option de la commande [WEB SERVICE SET OPTION](web-service-set-option.md). Dans ce cas, il n'est pas nécessaire d'exécuter la commande **WEB SERVICE AUTHENTICATE** avant chaque [WEB SERVICE CALL](web-service-call.md).
 
-If authentication fails, the SOAP server returns an error that you can identify using the [WEB SERVICE Get info](web-service-get-info.md) command.
+En cas d’échec de l’authentification, le serveur SOAP retourne une erreur que vous pouvez identifier à l’aide de la commande [WEB SERVICE Get info](web-service-get-info.md).
 
-## Example 
+## Exemple 
 
-Authentication with a Web Service located behind a proxy:
+Authentification auprès d’un Web Service situé derrière un proxy :
 
 ```4d
-  // Authentication to Web Service in DIGEST mode
+  //Authentification au Web Service en mode DIGEST
  WEB SERVICE AUTHENTICATE("SoapUser";"123";2)
-  // Authentication to proxy in default mode
+  //Authentification au proxy en mode par défaut
  WEB SERVICE AUTHENTICATE("ProxyUser";"456";*)
  WEB SERVICE CALL(...)
 ```
 
-## See also 
+## Voir aussi 
 
 [WEB SERVICE CALL](web-service-call.md)  
 [WEB SERVICE Get info](web-service-get-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 786 |
+| Numéro de commande | 786 |
 | Thread safe | yes |
 
 

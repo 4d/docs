@@ -9,35 +9,35 @@ displayed_sidebar: docs
 <!--REF #_command_.MESSAGES ON.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R4|Modified|
-|<6|Created|
+|17 R4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MESSAGES ON.Summary-->See the description of the [MESSAGES OFF](messages-off.md) command.<!-- END REF-->
+<!--REF #_command_.MESSAGES ON.Summary-->Reportez-vous à la description de la commande [MESSAGES OFF](messages-off.md).<!-- END REF--> 
 
-## See also 
+## Voir aussi 
 
 [MESSAGES OFF](messages-off.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 181 |
+| Numéro de commande | 181 |
 | Thread safe | yes |
 
 

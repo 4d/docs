@@ -5,76 +5,76 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* : Time ) : Integer<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| Function result | Integer | &#8592; | Event returned by function |
+| document | Time | &#8594;  | Référence du document ouvert |
+| Résultat | Integer | &#8592; | Evénement retourné par la fonction |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX Get XML node.Summary-->The **SAX Get XML node** command returns a long integer that indicates the type of SAX event returned while the XML document referenced in *document* is parsed.<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Summary-->La commande **SAX Get XML node** retourne un entier long indiquant le type d’événement SAX retourné durant l’analyse du document XML référencé par *document*.<!-- END REF--> 
 
-Events that can be returned are available as “*XML*” theme constants:
+Les événements pouvant être retournés sont fournis sous forme de constantes dans le thème “*XML*” :
 
-| Constant                   | Type    | Value |
-| -------------------------- | ------- | ----- |
-| XML CDATA                  | Integer | 7     |
-| XML Comment                | Integer | 2     |
-| XML DATA                   | Integer | 6     |
-| XML End Document           | Integer | 9     |
-| XML End Element            | Integer | 5     |
-| XML Entity                 | Integer | 8     |
-| XML Processing Instruction | Integer | 3     |
-| XML Start Document         | Integer | 1     |
-| XML Start Element          | Integer | 4     |
+| Constante                  | Type        | Valeur |
+| -------------------------- | ----------- | ------ |
+| XML CDATA                  | Entier long | 7      |
+| XML comment                | Entier long | 2      |
+| XML DATA                   | Entier long | 6      |
+| XML end document           | Entier long | 9      |
+| XML end element            | Entier long | 5      |
+| XML entity                 | Entier long | 8      |
+| XML processing instruction | Entier long | 3      |
+| XML start document         | Entier long | 1      |
+| XML start element          | Entier long | 4      |
 
-## Example 
+## Exemple 
 
-The following example processes an event: 
+Exemple de traitement des événements : 
 
 ```4d
- DocRef:=Open document("";"xml";Read Mode)
+ RefDoc:=Open document("";"xml";Read Mode) //Ouverture en lecture seule obligatoire
  If(OK=1)
     Repeat
-       MyEvent:=SAX Get XML node(DocRef)
+       MonEvénement:=SAX Get XML node(RefDoc)
        Case of
-          :(MyEvent=XML Start Document)
-             DoSomething
-          :(MyEvent=XML Comment)
-             DoSomethingElse
+          :(MonEvénement=XML Start Document)
+             FaireQuelqueChose
+          :(MonEvénement=XML Comment)
+             FaireAutreChose
        End case
-    Until(MyEvent=XML End Document)
-    CLOSE DOCUMENT(DocRef)
+    Until(MonEvénement=XML End Document)
+    CLOSE DOCUMENT(RefDoc)
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 860 |
+| Numéro de commande | 860 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

@@ -5,42 +5,42 @@ slug: /commands/frontmost-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** ( * ) : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Process number for first non-floating window |
-| Function result | Integer | &#8592; | Number of the process whose windows are in the front |
+| * | Opérateur | &#8594;  | Numéro du process de la première fenêtre non-flottante |
+| Résultat | Integer | &#8592; | Numéro du process dont la ou les fenêtre(s) est (sont) au premier plan |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Frontmost process.Summary-->**Frontmost process** returns the number of the process whose window (or windows) are in the front.<!-- END REF--> 
+<!--REF #_command_.Frontmost process.Summary-->**Frontmost process** retourne le numéro du process dont la ou les fenêtre(s) est (sont) au premier plan.<!-- END REF--> 
 
-When you have one or more floating windows open, there are two window layers:
+Lorsqu'une ou plusieurs fenêtres flottantes sont ouvertes, deux niveaux différents de fenêtres sont distingués :
 
-* Regular windows
-* Floating windows
+* les fenêtres standard
+* les fenêtres flottantes
 
-If the **Frontmost process** function is used from within a floating window form method or object method, the function returns the process reference number of the frontmost floating window in the floating window layer. If you specify the optional *\** parameter, the function returns the process reference number of the frontmost active window in the regular window layer.
+Si la fonction **Frontmost process** est utilisée dans la méthode formulaire ou dans une méthode objet d'une fenêtre flottante, la fonction retourne le numéro du process de la fenêtre flottante au premier plan parmi les fenêtres flottantes. Si vous passez le paramètre optionnel astérisque, la fonction retourne le numéro du process dont la fenêtre est au premier plan, **exception faite du niveau des fenêtres flottantes**.
 
-## Example 
+## Exemple 
 
-See the example for [BRING TO FRONT](bring-to-front.md).
+Référez-vous à l'exemple de [BRING TO FRONT](bring-to-front.md).
 
-## See also 
+## Voir aussi 
 
 [BRING TO FRONT](bring-to-front.md)  
 [WINDOW LIST](window-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 327 |
+| Numéro de commande | 327 |
 | Thread safe | no |
 
 

@@ -5,146 +5,149 @@ slug: /commands/register-client
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Release|Modifications|
 |---|---|
-|21|\* parameter ignored|
-|11.3|*period* parameter ignored |
+|21|Paramètre \* ignoré|
+|11.3|Paramètre *période* ignoré |
 
 </details>
 
-
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| clientName | Text | &#8594;  | Name of the 4D client session |
+| nomClient | Text | &#8594;  | Nom de la session cliente 4D |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command "registers" a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
+<!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [`EXECUTE ON CLIENT`](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
 
-**Notes:**
+**Notes :** 
 
-* You can also automatically register each client station that connects to 4D Server by using the “Register Clients at Startup...” option in the Properties dialog box.
-* If this command is used with 4D in local mode, it has no effect.
-* More than one 4D client station can have the same registered name.
+* Vous pouvez également inscrire automatiquement chaque poste client qui se connecte à 4D Server via l'option “Inscrire les clients au démarrage pour Exécuter sur client” dans la boîte de dialogue des Propriétés.
+* Lorsqu’elle est utilisée avec 4D en mode local, cette commande ne fait rien.
+* Plusieurs postes clients 4D peuvent avoir le même nom d’inscription.
 
-When this command is executed, a process, named *clientName*, is created on the client station. This process can only be aborted by the [`UNREGISTER CLIENT`](unregister-client.md) command.   
+A l’issue de l’exécution de la commande, un process, nommé *nomClient*, est créé sur le poste client. Ce process ne peut être détruit que par la commande [`UNREGISTER CLIENT`](unregister-client.md).   
 
-Once the command is executed, it is not possible to modify a 4D client’s name on the fly. To do so, you must call the [`UNREGISTER CLIENT`](unregister-client.md) command, then the **REGISTER CLIENT** command.
+Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [`UNREGISTER CLIENT`](unregister-client.md) puis d’exécuter à nouveau **REGISTER CLIENT**.
 
-## Example 
+## Exemple 
 
-In the following example, we are going to create a small messaging system that allows the client workstations to communicate between themselves.
+Les méthodes suivantes permettent de réaliser une petite messagerie entre les postes clients inscrits. 
 
-1) This method, Registration, allows you to register a 4D client and to keep it ready to receive a message from another 4D client:
+1\. La méthode INSCRIPTION permet d’inscrire un client 4D et de le tenir prêt à recevoir un message de la part d’un autre client 4D :
 
 ```4d
-  //You must unregister before registering under another name
-var vPseudoName : Text
+  //Méthode INSCRIPTION
+  //Il faut se désinscrire avant de s’inscrire sous un autre nom
  UNREGISTER CLIENT
+ var vNomPseudo : Text
  Repeat
-    vPseudoName:=Request("Enter your name:";"User";"OK";"Cancel")
- Until((OK=0)|(vPseudoName#""))
+    vNomPseudo:=Request("Entrez votre nom :";"Utilisateur";"OK";"Annuler")
+ Until((OK=0)|(vNomPseudo#""))
  If(OK=0)
-    ... // Don’t do anything
+    ... // Ne rien faire
  Else
-    REGISTER CLIENT(vPseudoName)
+    REGISTER CLIENT(vNomPseudo;*)
  End if
 ```
 
-2) The following instruction allows you to get a list of the registered clients. It can be placed in the :
+2\. L’instruction suivante permet de connaître les clients inscrits. Elle peut être placée dans la :
 
 ```4d
-var PrClientList : Integer
- PrClientList:=New process("4D Client List";32000;"List of registered clients")
+  // Méthode base Sur ouverture
+var PrListeClient : Integer
+PrListeClient:=New process("Liste_4DClients";32000;"Liste d'inscrits")
 ```
 
-3) The 4D Client List method allows you to get all the registered 4D clients and those that can receive messages:
+3\. La méthode Liste\_4DClients permet de récupérer tous les clients 4D inscrits et les personnes acceptant de recevoir des messages :
 
 ```4d
+  // Méthode Liste_4DClients
 var $Ref; $p : Integer
-ARRAY TEXT($ClientList;0)
+ARRAY TEXT($ListeClient;0)
 ARRAY LONGINT($ListeCharge;0)
-
- If(Application type=4D Remote Mode)
-  // the code below is only valid in client-server mode
-    $Ref:=Open window(100;100;300;400;-(Palette window+Has window title);"List of registered clients")
+ If(Application type=4D mode distant)
+  // Le code ci-dessous n’est valable qu’en mode client-serveur
+    $Ref:=Open window(100;100;300;400;-(Palette window+Has window title);"Liste d'inscrits")
     Repeat
-       GET REGISTERED CLIENTS($ClientList;$ListeCharge)
-  //Retrieve the registered clients in $ClientList
+       GET REGISTERED CLIENTS($ListeClient;$ListeCharge)
+  //Récupération des clients inscrits dans $ListeClient
        ERASE WINDOW($Ref)
        GOTO XY(0;0)
-       For($p;1;Size of array($ClientList))
-          MESSAGE($ClientList{$p}+Char(Carriage return))
+       For($p;1;Size of array($ListeClient))
+          MESSAGE($ListeClient{$p}+Char(Carriage return))
        End for
-  //Display each second
+  //Afficher chaque seconde
        DELAY PROCESS(Current process;60)
-    Until(False) // Infinite loop
+    Until(False) // Boucle infinie
  End if
 ```
 
-4) The following method allows you to send a message to another registered 4D client. It calls the Display\_Message method (see below).
+4\. La méthode Envoyer\_Message permet d’envoyer un message à un autre client 4D inscrit. 
 
 ```4d
-var $Addressee; $Message : Text
- $Addressee:=Request("Addressee of the message:";"")
-  // Enter the name of the people visible in the window generated by the
-  // On Startup database method
+  // Méthode Envoyer_Message
+var $Destinataire; $Message : Text
+ $Destinataire:=Request("Destinataire du message :";"")
+  // Saisir le nom d'une des personnes visibles dans la fenêtre générée par la méthode base Sur ouverture
  If(OK#0)
-    $Message:=Request("Message:") // message
+    $Message:=Request("Message :") // Contenu du message
     If(OK#0)
-       EXECUTE ON CLIENT($Addressee;"Display_Message";$Message) // Send message
+       EXECUTE ON CLIENT($Destinataire;"Afficher_Message";$Message) // Envoi du message
     End if
  End if
 ```
 
-5) Here is the Display\_Message method:
+5\. La méthode Afficher\_Message affiche le message sur le poste client :
 
 ```4d
+  // Méthode Afficher_Message
  #DECLARE($message : Text)
  ALERT($message)
 ```
 
-6) Finally, this method allows a client station to no longer be visible by the other 4D clients and to no longer receive messages:
+6\. Enfin, cette méthode permet à un poste client de n’être plus visible par les autres clients 4D et ne plus recevoir de message :
 
 ```4d
+  // Méthode DÉSINSCRIPTION :
  UNREGISTER CLIENT
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the 4D client is correctly registered, the OK system variable is equal to 1\. If the 4D client was already registered, the command doesn’t do anything and OK is equal to 0.
+Si le poste client est correctement inscrit, la variable système OK prend la valeur 1\. Si le poste était déjà inscrit, la commande ne fait rien et OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 648 |
+| Numéro de commande | 648 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

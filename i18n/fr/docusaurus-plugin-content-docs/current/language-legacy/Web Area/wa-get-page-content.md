@@ -5,43 +5,43 @@ slug: /commands/wa-get-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( * ; *object* : Text ) : Text<br/>**WA Get page content** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page content.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | HTML source code |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &#8592; | Code HTML source |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Get page content.Summary-->The WA Get page content command returns the HTML code of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA Get page content.Summary-->La commande **WA Get page content** retourne le code HTML de la page courante ou en cours d’affichage dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
-This command returns an empty string if the contents of the current page is not available.
+Cette commande retourne une chaîne vide si le contenu de la page courante n’est pas disponible.
 
-## See also 
+## Voir aussi 
 
 [WA SET PAGE CONTENT](wa-set-page-content.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1038 |
+| Numéro de commande | 1038 |
 | Thread safe | no |
 
 

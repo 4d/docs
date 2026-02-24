@@ -5,43 +5,43 @@ slug: /commands/wa-open-back-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *object* : Text )<br/>**WA OPEN BACK URL** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( {* ;} *objet* )<!-- END REF-->
 <!--REF #_command_.WA OPEN BACK URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA OPEN BACK URL.Summary-->The **WA OPEN BACK URL** command loads the previous URL in the sequence of URLs opened into the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA OPEN BACK URL.Summary-->La commande **WA OPEN BACK URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL précédent dans la séquence d’URLs ouverts.<!-- END REF--> 
 
-If there is no previous URL, the command does nothing. You can test whether a previous URL is available using the [WA Back URL available](wa-back-url-available.md) command.
+S’il n’y a pas d’URL précédent, la commande ne fait rien. Vous pouvez tester la disponibilité d’un URL précédent à l’aide de la commande [WA Back URL available](wa-back-url-available.md). 
 
-## See also 
+## Voir aussi 
 
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1021 |
+| Numéro de commande | 1021 |
 | Thread safe | no |
 
 

@@ -5,92 +5,92 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *domain* : Text ; *protocol* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domaine* ; *protocole* )} : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| domain | Text | &#8592; | Domain name |
-| protocol | Text | &#8592; | "Kerberos", "NTLM", or empty string |
-| Function result | Text | &#8592; | Session user login returned by Windows |
+| domaine | Text | &#8592; | Nom du domaine |
+| protocole | Text | &#8592; | "Kerberos", "NTLM" ou chaîne vide |
+| Résultat | Text | &#8592; | Nom d'utilisateur de session retourné par Windows |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Created|
+|15 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current client authentication.Summary-->The **Current client authentication** command asks the Windows Active Directory server to authenticate the current client and, if successful, returns the Windows login name for this client (session identifier).<!-- END REF--> If the authentication failed, an empty string is returned. 
+<!--REF #_command_.Current client authentication.Summary-->La commande **Current client authentication** envoie au serveur Active Directory de Windows une requête d'authentification du client courant et, en cas de succès, retourne le nom d'utilisateur Windows de ce client (identifiant de session).<!-- END REF--> Si l'authentification échoue, une chaîne vide est retournée. 
 
-This command can only be used in the context of an SSO implementation on Windows with 4D Server. For more information, please refer to the *Single Sign On (SSO) on Windows* section.
+Cette commande peut être utilisée uniquement dans le contexte d'une implémentation SSO sous Windows avec 4D Server. Pour plus d'informations, veuillez vous reporter à la section *Authentification unique (SSO) sous Windows*.
 
-Usually, both the client and the server must be managed by the same Active Directory. However, different configurations can be supported, as described in the *Requirements for SSO* section. 
+Généralement, le client et le serveur doivent être gérés par le même serveur Active Directory. Cependant, des configurations spécifiques peuvent être prises en charge, comme décrit dans le paragraphe *Configuration requise pour le SSO*. 
 
-The returned login string must be passed to your 4D identification module to grant access rights to the client based upon the Windows session login; if you managed to remove the 4D Server login dialog by setting a "Default user", you can implement an interface where the user does not need to reenter any IDs (see example). 
+La chaîne retournée par la commande doit être passée à votre module d'identification 4D. Vous pouvez ainsi déterminer automatiquement les droits d'accès du client en fonction de son identifiant de session Windows. Si vous définissez un "Utilisateur par défaut", vous pouvez implémenter une interface dans laquelle l'utilisateur n'a pas de ressaisir son identifiant -- la boîte de dialogue d'identification de l'utilisateur de 4D Server n'apparaît pas (voir exemple). 
 
-Optionally, the command can return two text parameters:
+Optionnellement, la commande peut retourner deux paramètres de type texte :
 
-* *domain*: name of domain to which the client belongs.
-* *protocol*: name of protocol used by Windows to authenticate the user. It can be "Kerberos" or "NTLM", depending on available resources. If the authentication failed, an empty string ("") is returned.
+* *domaine* : nom du domaine auquel appartient le client.
+* *protocole* : nom du protocole utilisé par Windows pour authentifier l'utilisateur. Il peut contenir "Kerberos" ou "NTLM", en fonction des ressources disponibles. Si l'authentification a échoué, une chaîne vide ("") est retournée.
 
- These parameters can be used to accept or reject connections if you want to filter access with regard to the domain or protocol. 
+ Ces paramètres peuvent être utilisés pour accepter ou rejeter les connexions si vous souhaitez filtrer les accès en fonction du domaine du client ou du protocole utilisé. 
 
-### Authentication security level 
+### Niveau de sécurité de l'authentification 
 
-The security level of the authentication (i.e., how much you can trust the user login) depends on how the user has actually been identified. The value(s) returned in the **Current client authentication** command parameters will allow you to find out what the login (if any) is based on, and thus the security level: 
+Le niveau de sécurité de l'authentification (c'est-à-dire le degré de confiance que vous pouvez avoir dans le nom d'utilisateur récupéré par la commande) dépend de la manière dont l'utilisateur a été identifié. Les valeurs retournées dans les différents paramètres de la commande **Current client authentication** vous permettent de savoir quelles informations ont été utilisées pour l'identification et donc, le niveau de sécurité :
 
-| **Login** | **Domain** | **Protocol** | **Comments**                                                                                                                                                                                                                                                                                                                     |
-| --------- | ---------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty     | Empty      | Empty        | Command was unable to get authentication information about the logged user                                                                                                                                                                                                                                                       |
-| Filled    | Empty      | NTLM         | ID returned is the local one, which has been defined on the local computer                                                                                                                                                                                                                                                       |
-| Filled    | Filled     | NTLM         | ID returned has been authenticated using the NTLM protocol in the Domain returned in the *domain* parameter. In this case, you must check the Domain to increase the security level. Since some architectures have a Domain forest, you need to make sure that the Domain where the user was authenticated was the expected one. |
-| Filled    | Filled     | Kerberos     | ID returned has been authenticated with the Kerberos protocol in the expected Domain. This configuration provides the highest level of security.                                                                                                                                                                                 |
+| **Nom d'utilisateur** | **domaine**  | **protocole** | **Commentaire**                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------- | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vide                  | Vide         | Vide          | La commande n'a pas pu récupérer d'information d'authentification relatives à l'utilisateur connecté.                                                                                                                                                                                                                                                                                                     |
+| Valeur reçue          | Vide         | NTLM          | La valeur reçue est le nom d'utilisateur local, défini sur la machine locale.                                                                                                                                                                                                                                                                                                                             |
+| Valeur reçue          | Valeur reçue | NTLM          | Le nom d'utilisateur retourné a été authentifié via le protocole NTLM dans le domaine retourné par le paramètre *domaine*. Dans ce cas, vous devez contrôler le domaine afin d'augmenter le niveau de sécurité. Comme certaines architectures comportent une forêt de domaines, vous devez en particulier vérifier que le domaine dans lequel l'utilisateur a été identifié est bien le domaine souhaité. |
+| Valeur reçue          | Valeur reçue | Kerberos      | Le nom d'utilisateur retourné a été authentifié avec le protocole Kerberos dans le domaine souhaité. Cette configuration constitue le niveau de sécurité le plus élevé.                                                                                                                                                                                                                                   |
 
-For more information on these requirements, please refer to the paragraph.
+Pour plus d'informations sur les configurations, veuillez vous reporter au paragraphe *Configuration requise pour le SSO*.
 
-## Example 
+## Exemple 
 
-In your 4D Server database, you have designed an access control system based on 4D's users and groups feature. You want to configure your application so that 4D remote users on Windows connect directly to 4D Server (no password dialog box is displayed), but while being logged with their actual rights:
+Dans votre base 4D Server, vous avez conçu un système de contrôle d'accès basé sur la fonctionnalité des utilisateurs et des groupes de 4D. Vous souhaitez configurer votre application de manière à ce que les utilisateurs 4D distants sous Windows puissent se connecter directement à 4D Server (sans qu'aucune boîte de dialogue de mot de passe ne s'affiche), tout en étant connectés avec leurs propres droits d'accès.
 
-1. In the "Security" page of the Database Settings dialog box, designate a user as the "default user":  
-![](../assets/en/commands/pict2909681.en.png)  
-With this setting, no password dialog will be displayed for a remote 4D that connects to the server; all clients being logged as "Bob".
-2. In the On Server Open Connection database method, add the following code to check user authentication from the Active Directory:
+1. Dans la page "Sécurité" de la boîte de dialogue des Propriétés de la base, désignez un "Utilisateur par défaut" :  
+![](../assets/en/commands/pict2909681.fr.png)  
+Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée pour les utilisateurs 4D distants qui se connectent au serveur -- tous les clients sont connectés par défaut en tant que "Bob".
+2. Dans la [On Server Open Connection database method](on-server-open-connection-database-method.md), ajoutez le code suivant afin d'authentifier l'utilisateur auprès de l'Active Directory:
 
 ```4d
-  //On Server Open Connection database method
+  //Méthode base Sur ouverture connexion serveur
  var $0;$1;$2;$3 : Integer
  $login:=Current client authentication($domain;$protocol)
- If($login #"") //a login was returned
-  //call your custom authentication method
+ If($login #"") //un nom d'utilisateur a bien été retourné
+  //appelez votre méthode d'identification personnalisée
     $0:=CheckCredentials($login)
-  //should return 0 in case of success or -1 for error
+  //elle doit retourner 0 en cas de succès, -1 en cas d'erreur
  Else
-    $0:=-1 //reject the connection
+    $0:=-1 //rejeter la connexion
  End if
 ```
 
-**Note:** This example shows a basic scenario that must be adapted to your solutions. The 4D user custom authentication method (CheckCredentials in the above example) could be based on one of the following implementations:
+**Note :** Cet exemple constitue un scénario de base, qui doit être adapté à vos solutions. La méthode d'identification personnalisée de l'utilisateur 4D (CheckCredentials dans l'exemple ci-dessus) peut être basée sur l'une des implémentations suivantes :
 
-* replicate the Active directory names in the 4D user and group names, for an automatic mapping,
-* map returned information to a custom \[users\] table,
-* use LDAP features to get user credentials.
+* réplication de l'Active Directory dans les noms d'utilisateurs et groupes de 4D, permettant une correspondance automatique,
+* utilisation d'une table \[Utilisateurs\] personnalisée,
+* utilisation des fonctions LDAP afin de récupérer les droits d'accès de l'utilisateur.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1355 |
+| Numéro de commande | 1355 |
 | Thread safe | yes |
 
 

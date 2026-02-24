@@ -5,53 +5,53 @@ slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* : Integer )<!-- END REF-->
+<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *réfUtilisateur* )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &#8594;  | ID number of user to delete |
+| réfUtilisateur | Integer | &#8594;  | Numéro d'identification de l'utilisateur à supprimer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE USER.Summary-->The **DELETE USER** command deletes the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command. 
+<!--REF #_command_.DELETE USER.Summary-->La commande **DELETE USER** supprime l'utilisateur dont le numéro est passé dans *réfUtilisateur*.<!-- END REF--> Vous devez passer un numéro valide d'utilisateur, retourné par la commande [GET USER LIST](get-user-list.md). 
 
-If the user account does not exist or has already been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si le compte de l'utilisateur n'existe pas ou a déjà été supprimé, une erreur -9979 est genérée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-Only the Designer and Administrator can delete users. It is not possible for the Administrator to delete a user created by the Designer. 
+Seuls le Super\_Utilisateur et l'Administrateur peuvent supprimer des utilisateurs. Il n'est pas possible à l'Administrateur de supprimer un utilisateur créé par le Super\_Utilisateur. 
 
-Deleted user names no longer appear in the Users editor displayed when you call [EDIT ACCESS](edit-access.md), nor in the Design mode. Note that the numbers for deleted users can be reassigned when new user accounts are created.
+Les utilisateurs supprimés n'apparaissent plus dans l'éditeur d'utilisateurs affiché lorsque vous appelez [EDIT ACCESS](edit-access.md) ni en mode Développement. A noter que les numéros des utilisateurs supprimés peuvent être réattribués lors de la création de nouveaux comptes. 
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling DELETE USER or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler **DELETE USER** ou si un autre process accède déjà au système de mots de passe, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md). 
 
-## See also 
+## Voir aussi 
 
 [GET USER LIST](get-user-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Is user deleted](is-user-deleted.md)  
 [Set user properties](set-user-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 615 |
+| Numéro de commande | 615 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

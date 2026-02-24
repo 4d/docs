@@ -5,63 +5,63 @@ slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* : Array ; *value* : Expression )<!-- END REF-->
+<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *tableau* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array to which an element will be appended |
-| value | Expression | &#8594;  | Value to append |
+| tableau | Array | &#8594;  | Tableau auquel ajouter une valeur |
+| valeur | Expression | &#8594;  | Valeur à ajouter au tableau |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.APPEND TO ARRAY.Summary-->The APPEND TO ARRAY command adds a new element at the end of *array* and assigns *value* to the element.<!-- END REF--> In interpreted mode, if *array* does not exist, the command creates it with regard to the type of *value*. 
+<!--REF #_command_.APPEND TO ARRAY.Summary-->La commande **APPEND TO ARRAY** ajoute une nouvelle ligne à la fin du *tableau* et lui affecte la valeur passée dans le paramètre *valeur*.<!-- END REF--> En mode interprété, si le *tableau* n’a pas été défini au préalable, la commande le crée et lui attribue un type en fonction de celui de *valeur*. 
 
-This command works with all kind of arrays: string, number, Boolean, date, pointer and picture. 
+Cette commande fonctionne avec tous les types de tableaux : chaîne, numérique, booléen, date, pointeur et image. 
 
-The type of *value* must match the array type, otherwise the syntax error 54 “Argument types are incompatible” is generated. The following values will, however, be accepted: 
+Le type de *valeur* doit correspondre au type du tableau, sinon l’erreur de syntaxe 54 “Les arguments sont incompatibles” est générée. Les combinaisons suivantes sont toutefois possibles : 
 
-* A string *array* (Text or String) accepts any *value* of the Text or String type.
-* A number *array* (Integer, Longint or Real) accepts any *value* of the Integer, Longint, Real or Time type.
+* un *tableau* de type chaîne (Texte ou Alpha) accepte toute *valeur* de type Texte ou Alpha.
+* un *tableau* de type numérique (Entier, Entier long ou Réel) accepte toute *valeur* de type Entier, Entier long, Numérique ou Heure.
 
-## Example 
+## Exemple 
 
-The following code:
-
-```4d
- INSERT IN ARRAY($myarray;Size of array($myarray)+1)
- $myarray{Size of array($myarray)}:=$myvalue
-```
-
-... can be replaced with:
+Le code suivant :
 
 ```4d
- APPEND TO ARRAY($myarray;$myvalue)
+ INSERT IN ARRAY($montableau;Size of array($montableau)+1)
+ $montableau{Size of array($montableau)}:=$mavaleur
 ```
 
-## See also 
+... peut être remplacé par :
+
+```4d
+ APPEND TO ARRAY($montableau;$mavaleur)
+```
+
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 911 |
+| Numéro de commande | 911 |
 | Thread safe | yes |
 
 

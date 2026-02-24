@@ -5,68 +5,68 @@ slug: /commands/list-of-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *arrStyleSheets* : Text array )<!-- END REF-->
+<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrStyleSheets | Text array | &#8592; | Names of style sheets defined in the application |
+| tabFeuillesStyle | Text array | &#8592; | Noms des feuilles de style définies dans l’application |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LIST OF STYLE SHEETS.Summary-->The **LIST OF STYLE SHEETS** command returns the list of application style sheets in the *arrStyleSheets* array.<!-- END REF-->
+<!--REF #_command_.LIST OF STYLE SHEETS.Summary-->La commande **LIST OF STYLE SHEETS** retourne la liste des feuilles de style de l’application dans le tableau *tabFeuillesStyle*.<!-- END REF--> 
 
-If it was not already defined previously, the *arrStyleSheets* text array is created by the command. It is automatically sized according to the number of style sheets defined. 
+S’il n’a pas été défini auparavant, le tableau texte *tabFeuillesStyle* est créé par la commande. Il est automatiquement dimensionné en fonction du nombre de feuilles de style définies. 
 
-After executing the command, each element of the array contains the name of a style sheet. These names are sorted alphabetically, as in the style sheet editor. The first array element always contains "\_\_automatic\_\_", which represents the "Automatic" style sheet.
+A l’issue de l’exécution de la commande, chaque élément du tableau contient un nom de feuille de style. Les noms sont triés par ordre alphabétique, comme dans l’éditeur de feuilles de style. Le premier élément du tableau contient systématiquement "\_\_automatic\_\_", qui représente la feuille de style "Automatique". 
 
-**Note:** For compatibility reasons, the automatic style sheets "\_\_automatic\_main\_text\_\_" and "\_\_automatic\_additional\_text\_\_" are not returned by this command. However, they are still available in the forms. 
+**Note :** Pour des raisons de compatibilité, les feuilles de style automatiques "\_\_automatic\_main\_text\_\_" et "\_\_automatic\_additional\_text\_\_" ne sont pas retournées par cette commande. Cependant, elles sont toujours disponibles dans les formulaires. 
 
-### Compatibility Note 
+### Note de compatibilité 
 
-This command can only be used in **binary databases**. In **project architecture**, the array is not filled. 
+Cette commande ne peut être utilisée que dans les **bases de données binaires**. Dans **l'architecture projet**, le tableau n'est pas rempli.
 
-## Example 
+#### Exemple 
 
-In your application, the following style sheets are defined:
+Dans votre application, les feuilles de style suivantes sont définies :
 
-![](../assets/en/commands/pict1206954.en.png)
+![](../assets/en/commands/pict1206954.fr.png)
 
-If you execute the following code:
+Si vous exécutez le code suivant :
 
 ```4d
- LIST OF STYLE SHEETS($arrStyles)
-  // $arrStyles{1} contains "__automatic__"
-  // $arrStyles{2} contains "Buttons"
-  // $arrStyles{3} contains "default"
-  // $arrStyles{4} contains "Input_fields"
-  // $arrStyles{5} contains "Labels"
-  // $arrStyles{6} contains "Variables"
+ LIST OF STYLE SHEETS($tTtabstyles)
+     //$tTtabstyles{1} contient "__automatic__"
+     //$tTtabstyles{2} contient "Boutons"
+     //$tTtabstyles{3} contient "Champs_saisie"
+     //$tTtabstyles{4} contient "default"
+     //$tTtabstyles{5} contient "Libellés"
+     //$tTtabstyles{6} contient "Variables"
 ```
 
-## See also 
+#### Voir aussi 
 
 [GET STYLE SHEET INFO](get-style-sheet-info.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1255 |
+| Numéro de commande | 1255 |
 | Thread safe | no |
 
 

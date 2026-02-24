@@ -9,34 +9,34 @@ displayed_sidebar: docs
 <!--REF #_command_.LDAP LOGOUT.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Created|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LDAP LOGOUT.Summary-->The **LDAP LOGOUT** command closes the connection with an LDAP server in the current process (if applicable).<!-- END REF--> If there is no connection, an error 1003 stating that you are not logged in is returned.
+<!--REF #_command_.LDAP LOGOUT.Summary-->La commande **LDAP LOGOUT** referme la connexion LDAP active dans le process courant (le cas échéant).<!-- END REF--> S'il n'y a pas de connexion avec un server LDAP, l'erreur 1003 indiquant que vous n'êtes pas connecté est retournée. 
 
-## See also 
+## Voir aussi 
 
 [LDAP LOGIN](ldap-login.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1327 |
+| Numéro de commande | 1327 |
 | Thread safe | no |
 
 

@@ -5,25 +5,24 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef* : Integer ; *picture* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *picName* : Text ; *picture* : Picture )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *refImage * ; *image* )<br/>**GET PICTURE FROM LIBRARY** ( *nomImage* ; *image* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef | Integer | &#8594;  | Reference number of Picture Library graphic |
-| picName | Text | &#8594;  | Name of Picture Library graphic |
-| picture | Picture | &#8592; | Picture from the Picture Library |
+| refImage &#124; nomImage | Entier long, Chaîne | &#8594;  | Numéro de référence ou Nom d'une image de la bibliothèque d’images |
+| image | Picture | &#8592; | Image de la bibliothèque d'images |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
@@ -32,56 +31,56 @@ displayed_sidebar: docs
 
 :::warning
 
-This command cannot be used in projects because the Picture library is only available in binary databases. 
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
 
 :::
 
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->La commande **GET PICTURE FROM LIBRARY** retourne dans *image* l'image de la bibliothèque dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->The **GET PICTURE FROM LIBRARY** command returns in the *picture* parameter the Picture Library graphic whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF-->
 
 
-If there is no picture with that reference number or name, **GET PICTURE FROM LIBRARY** leaves *picture* unchanged. 
+S'il n'existe pas d'image de ce numéro ou de ce nom dans la bibliothèque d'images, **GET PICTURE FROM LIBRARY** ne modifie pas le paramètre *image*. 
 
-## Example 1 
+## Exemple 1 
 
-The following example returns in *vgMyPicture* the picture whose reference number is stored in the local variable *$vlPicRef*:
-
-```4d
- GET PICTURE FROM LIBRARY($vlPicRef;vgMyPicture)
-```
-
-## Example 2 
-
-The following example returns in *$DDcom\_Prot\_MyPicture* the picture with the name "DDcom\_Prot\_Button1" stored in the Picture Library:
+L’exemple suivant retourne dans la variable *vgMonImage* l’image dont la référence est stockée dans la variable locale *$vlRefImage* :
 
 ```4d
- GET PICTURE FROM LIBRARY("DDcom_Prot_Button1";$DDcom_Prot_MyPicture)
+ GET PICTURE FROM LIBRARY($vlRefImage;vgMonImage)
 ```
 
-## Example 3 
+## Exemple 2 
 
-See the third example for the [PICTURE LIBRARY LIST](picture-library-list.md) command.
+L’exemple suivant retourne dans la variable *$DDcom\_Prot\_MonImage* l’image nommée "DDcom\_Prot\_Bouton1" stockée dans la Bibliothèque d’images :
 
-## System variables and sets 
+```4d
+ GET PICTURE FROM LIBRARY("DDcom_Prot_Bouton1";$DDcom_Prot_MonImage)
+```
 
-If the Picture Library exists, the OK variable is set to 1\. Otherwise, OK is set to zero.
+## Exemple 3 
 
-## Error management 
+Reportez-vous au troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md).
 
-If there is not enough memory to return the picture, an error -108 is generated. You can catch this error using an error-handling method.
+## Variables et ensembles système 
 
-## See also 
+La variable système OK prend la valeur 1 si l’image existe dans la bibliothèque d’images. Sinon, elle prend la valeur zéro.
+
+## Gestion des erreurs 
+
+S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs.
+
+## Voir aussi 
 
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 565 |
+| Numéro de commande | 565 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

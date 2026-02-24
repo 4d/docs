@@ -5,55 +5,54 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *tablePtr* : Pointer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *tableNum* : Integer ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *ptrTable* ; *invisible* {; *trigSvgdeNouv* {; *trigSvgdeEnr* {; *trigSupprEnr* {; *trigChargEnr*}}}} )<br/>**GET TABLE PROPERTIES** ( *numTable* ; *invisible* {; *trigSvgdeNouv* {; *trigSvgdeEnr* {; *trigSupprEnr* {; *trigChargEnr*}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tablePtr | Pointer | &#8594;  | Table pointer |
-| tableNum | Integer | &#8594;  | Table number |
-| invisible | Boolean | &#8592; | True = Invisible, False = Visible |
-| trigSaveNew | Boolean | &#8592; | True = Trigger “On saving new record” activated; otherwise, False |
-| trigSaveRec | Boolean | &#8592; | True = Trigger “On saving an existing record” activated; otherwise, False |
-| trigDelRec | Boolean | &#8592; | True = Trigger “On deleting a record” activated; otherwise, False |
-| trigLoadRec | Boolean | &#8592; | *** Do not use (obsolete) *** |
+| ptrTable &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de table ou Numéro de table |
+| invisible | Boolean | &#8592; | Vrai = Invisible, Faux = Visible |
+| trigSvgdeNouv | Boolean | &#8592; | Vrai = Trigger “Sur sauvegarde nouvel enreg” activé, sinon Faux |
+| trigSvgdeEnr | Boolean | &#8592; | Vrai = Trigger “Sur sauvegarde enregistrement” activé, sinon Faux |
+| trigSupprEnr | Boolean | &#8592; | Vrai = Trigger “Sur suppression enreg” activé, sinon Faux |
+| trigChargEnr | Boolean | &#8592; | *** Ne pas utiliser (obsolète) *** |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET TABLE PROPERTIES.Summary-->The GET TABLE PROPERTIES command returns the properties for the table passed in *tablePtr* or *tableNum*.<!-- END REF--> The table number or a pointer to the table can be passed as first parameter.
+<!--REF #_command_.GET TABLE PROPERTIES.Summary-->La commande **GET TABLE PROPERTIES** retourne les propriétés de la table désignée par *ptrTable* ou *numTable*.<!-- END REF--> Vous pouvez passer dans le premier paramètre soit un pointeur vers la table, soit le numéro de la table. 
 
-Once the command has been executed:
+Après l’exécution de la commande :
 
-* The *invisible* parameter returns True if the “Invisible” attribute has been set for the table, else False. The Invisible attribute allows to hide the table when using 4D standard editors (label, charts...).
-* The *trigSaveNew* parameter returns True if the “On saving new record” trigger has been set for the table, else False.
-* The *trigSaveRec* parameter returns True if the “On saving an existing record” trigger has been set for the table, else False.
-* The *trigDelRec* parameter returns True if the “On deleting a record” trigger has been set for this table, else false.
+* Le paramètre *invisible* retourne Vrai si la table dispose de l’attribut “Invisible”, Faux sinon. L’attribut “Invisible” permet de masquer la table dans les éditeurs standard de 4D (étiquettes, graphes...).
+* Le paramètre *trigSvgdeNouv* retourne Vrai si le trigger “Sur sauvegarde nouvel enreg” a été activé pour la table, Faux sinon.
+* Le paramètre *trigSvgdeEnr* retourne Vrai si le trigger “Sur sauvegarde enregistrement” a été activé pour la table, Faux sinon.
+* Le paramètre *trigSupprEnr* retourne Vrai si le trigger “Sur suppression enreg” a été activé pour la table, Faux sinon.
 
-## See also 
+## Voir aussi 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 687 |
+| Numéro de commande | 687 |
 | Thread safe | yes |
 
 

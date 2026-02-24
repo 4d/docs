@@ -5,46 +5,46 @@ slug: /commands/qr-set-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* : Integer ; *aTable* : Integer )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *zone* ; *numTable* )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| aTable | Integer | &#8594;  | Table number |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numTable | Integer | &#8594;  | Numéro de table |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET REPORT TABLE.Summary-->The QR SET REPORT TABLE command sets the current table for the report area whose reference was passed in *area* to the table whose number was passed in *aTable*.<!-- END REF-->
+<!--REF #_command_.QR SET REPORT TABLE.Summary-->La commande **QR SET REPORT TABLE** désigne via le paramètre *numTable* le numéro de la table courante de l'état rapide dont la référence est passée dans le paramètre *zone*.<!-- END REF--> 
 
-It is necessary for a table to be assigned to the report since the report editor will be using the current selection for that table to display the data, perform computations and propagate relations, if needed.
+Il est impératif qu'une table soit associée à un état car l'éditeur d'états utilisera la sélection courante de cette table pour afficher les données, effectuer les calculs et propager les liens si nécessaire. 
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *table* value, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numTable* est incorrect, l’erreur -9852 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR Get report table](qr-get-report-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 757 |
+| Numéro de commande | 757 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

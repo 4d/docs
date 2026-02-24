@@ -5,53 +5,53 @@ slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *zone* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Function result | Integer | &#8592; | Number of columns in area |
+| zone | Integer | &#8594;  | Référence de la zone |
+| Résultat | Integer | &#8592; | Nombre de colonnes dans la zone |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Count columns.Summary-->The QR Count columns command returns the number of columns present in the Quick Report *area*.<!-- END REF-->
+<!--REF #_command_.QR Count columns.Summary-->La commande **QR Count columns** retourne le nombre de colonnes présentes dans l'état rapide désigné par le paramètre *zone*.<!-- END REF-->
 
-If you pass an invalid area number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## Example 
+## Exemple 
 
-The following code retrieves the column count and inserts a column to the right of the rightmost existing column:
+L'exemple suivant permet d'ajouter une colonne supplémentaire à droite de la dernière colonne de la zone :
 
 ```4d
- $ColNb:=QR Count columns(MyArea)
- QR INSERT COLUMN(MyArea;$ColNb+1;->[Table 1]Field2)
+ $NbCol:=QR Count columns(MaZone)
+ QR INSERT COLUMN(MaZone;$NbCol+1;->[Table 1]Noms)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 764 |
+| Numéro de commande | 764 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

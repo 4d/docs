@@ -5,63 +5,63 @@ slug: /commands/object-set-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *object* : Text ; *placeholderText* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *object* : Variable, Field ; *placeholderText* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( {* ;} *objet* ; *texteExemple* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| placeholderText | Text | &#8594;  | Placeholder text associated with object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| texteExemple | Text | &#8594;  | Texte d’exemple associé à l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->The **OBJECT SET PLACEHOLDER** command associates placeholder text with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET PLACEHOLDER.Summary-->La commande **OBJECT SET PLACEHOLDER** vous permet d’associer un texte d’exemple à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-For more information about placeholder text, refer to the *Design Reference* manual. 
+Pour plus d’informations sur les textes d’exemple, reportez-vous au manuel *Mode Développement*. 
 
-If placeholder text is already associated with the object through the Property List, this text is replaced in the current process by the contents of the *placeholderText* parameter. 
+Si un texte d’exemple avait déjà été associé à l’objet via la Liste des propriétés, il est remplacé dans le process courant par le contenu du paramètre *texteExemple*. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In *placeholderText*, pass the help text or indication that must appear when the object is empty. 
+Passez dans *texteExemple* le texte d’aide ou l’indication devant apparaître lorsque l’objet est vide. 
 
-**Note:** The **OBJECT SET PLACEHOLDER** command does not support the insertion of xliff references into the placeholder text. This is only possible for placeholder text that is defined using the Property List. 
+**Note :** L’insertion de références xliff dans les textes d’exemple n’est pas prise en charge par la commande **OBJECT SET PLACEHOLDER**. Cette possibilité n’existe que pour les textes d’exemple définis via la Liste des propriétés. 
 
-This command can only be used with form objects of the variable, field or combo box type. You can associate placeholder text with Alpha and Text type values. You can also associate it with Date or Time type data if the form object is given the "Blank if null" property.
+Cette commande peut être utilisée uniquement avec les objets de formulaire de type variable, champ et combo box. Un texte d’exemple peut être associé à des valeurs de type texte et alpha. Il peut également être associé à des données de type date ou heure si l’objet de formulaire comporte la propriété "Vide si null".
 
-## Example 
+## Exemple 
 
-You want to display "Search" as placeholder text in a combo box:
+Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
 
 ```4d
- OBJECT SET PLACEHOLDER(*;"search_combo";"Search")
+ OBJECT SET PLACEHOLDER(*;"comb_rech";"Recherche")
 ```
 
-![](../assets/en/commands/pict1208449.en.png)
+![](../assets/en/commands/pict1208449.fr.png)
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get placeholder](object-get-placeholder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1295 |
+| Numéro de commande | 1295 |
 | Thread safe | no |
 
 

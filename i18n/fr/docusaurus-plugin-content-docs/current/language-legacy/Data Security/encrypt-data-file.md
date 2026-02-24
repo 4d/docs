@@ -5,153 +5,155 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curPassPhrase* : Text {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : Object {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : Text {; *archiveFolder* : Text, 4D.Folder {; *curDataKey* : Object {; *methodName* : Text}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvellePhraseSecrète* {; *dossierArchive* {; *phraseSecrèteCour* {; *nomMéthode*}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvelleCléDonnées* {; *dossierArchive* {; *cléDonnéesCour* {; *nomMéthode*}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | Pathname of structure file |
-| dataPath | Text | &#8594;  | Pathname of data file to encrypt |
-| newPassPhrase | Text | &#8594;  | In case of replacement: new passPhrase |
-| newDataKey | Object | &#8594;  | In case of replacement: new encryption key (object) |
-| archiveFolder | Text, 4D.Folder | &#8594;  | Pathname or object of folder where original files will be stored |
-| curPassPhrase | Text | &#8594;  | Current passPhrase |
-| curDataKey | Object | &#8594;  | Current encryption key |
-| methodName | Text | &#8594;  | Name of 4D callback method |
-| Function result | Text | &#8592; | Full pathname of folder where original files have been stored |
+| cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure |
+| cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données |
+| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &#8594;  | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
+| dossierArchive | Text | &#8594;  | Chemin d'accès du dossier dans lequel placer le fichier de données original |
+| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594;  | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
+| nomMéthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
+| Résultat | Text | &#8592; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R5|Created|
+|17 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Encrypt data file.Summary-->The **Encrypt data file** command is used to encrypt or re-encrypt the data file designated by the *dataPath* parameter associated to the *structurePath* parameter.<!-- END REF--> It can also be used to remove encryption from the database. The command does not modify the original files, it returns the full path name of the folder created to backup the original data file.
+<!--REF #_command_.Encrypt data file.Summary-->La commande **Encrypt data file** est utilisée pour chiffrer ou déchiffrer le fichier de données indiqué par le paramètre *cheminDonnées* associé au paramètre *cheminStructure*.<!-- END REF--> Elle peut également être utilisée pour enlever le chiffrement de la base. La commande ne modifie pas les fichiers originaux, elle retourne le nom du chemin d'accès complet au dossier qui a été créé pour la sauvegarde du fichier de données original.
 
-**Notes:**
+**Notes :**
 
-* This command cannot be used with the currently opened data file.
-* This command can only be executed from 4D (local mode) or 4D Server (stored procedure). The data file to be encrypted must correspond to the structure file designated by *structurePath*.
+* Cette commande ne peut pas être utilisée avec le fichier de données courant (ouvert).
+* Cette commande peut être exécutée uniquement depuis un poste 4D (mode local) ou un 4D Server (procédure enregistrée). Le fichier de données à chiffrer doit correspondre au fichier de structure indiqué par *cheminStructure*.
 
-Executing this command will encrypt or modify the encryption of all tables of the database that have been set as "encryptable". For more information, please refer to the *Encryptable* section.
+L'exécution de cette commande chiffrera ou modifiera le chiffrement de toutes les tables de la base qui ont été identifiées comme "chiffrables". Pour plus d'informations, veuillez consulter la section *Chiffrable*.
 
-**Warning:** Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that database encryption sequence includes a compacting step.
+**Attention :** Le chiffrement d'une base est une longue opération. Un indicateur de progression (qui peut être interrompu par l'utilisateur) s'affiche. Notez également que la séquence de chiffrement de la base inclut une étape de compactage.
 
-In the *structurePath* parameter, you can pass an empty string or the full pathname of the structure file associated with the data file that you want to encrypt. This information is needed for the encrypting procedure. If you pass an empty string, a standard **Open file** dialog appears so that the user can designate the structure file to be used. Otherwise, you can pass a full pathname, expressed in the syntax of the operating system.
+Dans le paramètre *cheminStructure*, vous pouvez passer une chaine vide ou le chemin d'accès du fichier de structure associé au fichier de données que vous souhaitez chiffrer. Ces informations sont nécessaires à la procédure de chiffrement. Si vous passez une chaine vide, une boite de dialogue standard **Open file** s'affiche pour que l'utilisateur puisse indiquer le fichier de structure à utiliser. Sinon, vous pouvez passer un nom de chemin d'accès complet, exprimé dans la syntaxe du système d'exploitation.
 
-In the *dataPath* parameter, you can pass an empty string, a file name, or a full pathname (must expressed in the syntax of the operating system). If you pass an empty string, a standard **Open file** dialog appears so that the user can designate the data file to be encrypted. This file must correspond to the structure file defined in the *structurePath* parameter. If you only pass the name of the data file, 4D will look for it at the same level as the structure file.
+Dans le paramètre *cheminDonnées*, vous pouvez passer une chaine vide, un nom de fichier, ou un nom de chemin complet (devant être exprimé dans la syntaxe du système d'exploitation). Si vous passez une chaine vide, une boite de dialogue standard **Open file** s'affiche pour que l'utilisateur puisse indiquer le fichier de données à chiffrer. Ce fichier doit correspondre au fichier de structure défini dans le paramètre *cheminStructure*. Si vous passez uniquement le nom du fichier de données, 4D le recherchera au même niveau que le fichier de structure.
 
-* **To encrypt the database for the first time**, you only need to pass the *newPassPhrase* or *newDataKey* parameter (The *curPassPhrase* or *curDataKey* parameters must not be provided):  
-   * *newPassPhrase*: String used to generate the encryption key (SHA 256-bit)  
-   * *newDataKey*: Object (with *encodedKey* property) that contains a new data encryption key. This key should have been generated with the [New data key](new-data-key.md) command.  
+* **Pour chiffrer la base pour la première fois,** il vous suffit de passer le paramètre*nouvellePhraseSecrète* ou *nouvelleCléDonnées*  
+ (Les paramètres *nouvellePhraseSecrète* ou *nouvelleCléDonnées* ne doivent pas être fournis) :  
+   * *nouvellePhraseSecrète* : Chaine utilisée pour générer la clé de chiffrement (SHA 256 bits)  
+   * *nouvelleCléDonnées* : Objet (avec la propriété *encodedKey*) qui contient une nouvelle clé de chiffrement des données. Cette clé devrait avoir été générée à l'aide de la commande [New data key](new-data-key.md).  
     
-**Note:** The *newPassPhrase* (or *newDataKey*) is not added to the 4D keychain.
-* **To re-encrypt a database** (*i.e.* the database has already been encrypted), you must pass both the *newPassPhrase* (or *newDataKey*) parameter, as well as the current passphrase (or current data key). This is necessary to decrypt the database before re-encrypting it. This information can be provided in the following ways:  
-   * by passing valid *curPassPhrase* (or *curDataKey*) parameters to the command,  
-   * in the 4D keychain.
-* **To remove encryption from all tables**, pass an empty passphrase or a *null* data key as *newPassPhrase* (or *newDataKey*). The current passphrase or data key must have already been provided. Decrypted files will be generated/copied in folders named “Replaced files (Decrypting) YYYY-MM-DD HH-MM-SS”/"Decrypted files YYYY-MM-DD HH-MM-SS".
+**Note :** Le paramètre *nouvellePhraseSecrète* (ou *nouvelleCléDonnées*) n'est pas ajouté au trousseau 4D.
+* **Pour rechiffrer une base** (*i.e.* la base a déjà été chiffrée), vous devez passer le paramètre *nouvellePhraseSecrète* (ou *nouvelleCléDonnées*) et la phrase secrète courante (ou la clé de données courante). Ceci est nécessaire au déchiffrement de la base avant de la re-chiffrer. Ces informations peuvent être fournies comme suit :  
+   * en passant à la commande un paramètre *phraseSecrèteCour* (ou *cléSecrèteCour*) valide,  
+   * dans un trousseau 4D.
+* **Pour enlever le chiffrement de toutes les tables**, saisissez une phrase secrète vide ou une chaine de données *null* comme *nouvellePhraseSecrète* (ou *nouvelleCléDonnées*). La phrase secrète ou clé de données actuelle doit déjà avoir été fournie. Les fichiers déchiffrés seront générés/copiés dans des dossiers nommés “Replaced files (Decrypting) YYYY-MM-DD HH-MM-SS”/"Decrypted files YYYY-MM-DD HH-MM-SS".
 
-The command does not modifiy the original files. They are moved in the *archiveFolder* folder (if passed) into a special folder named *Replaced files (Encrypting) YYYY-MM-DD HH-MM-SS* or *Replaced files (Decrypting) YYYY-MM-DD HH-MM-SS* where YYYY-MM-DD HH-MM-SS represents the date and time of the operation. For example: "Replaced files (Encrypting) 2018-09-29 13-00-35". New encrypted or decrypted data file automatically replaces the original file.   
-If you passed "" in *archiveFolder*, a standard **Open folder** dialog will appear so that the user can specify the location of the folder to be created. If *archiveFolder* is omitted, the original files are automatically stored in a timestamped folder created next to the structure file.
+La commande ne modifie pas les fichiers originaux. Ils sont déplacés du dossier *dossierArchive* (s'il est passé) vers un dossier spécifique nommé *Replaced files (Encrypting) YYYY-MM-DD HH-MM-SS* ou *Replaced files (Decrypting) YYYY-MM-DD HH-MM-SS* où YYYY-MM-DD HH-MM-SS correspond à la la date et à l'heure auxquelles a été réalisée l'opération. Par exemple : "Replaced files (Encrypting) 2018-09-29 13-00-35". Le nouveau fichier de données chiffré ou déchiffré remplace automatiquement le fichier original.   
+Si vous passez "" dans *dossierArchive*, une boite de dialogue standard **Open file** s'affiche pour que l'utilisateur puisse indiquer l'emplacement du dossier à créer. Si *dossierArchive* est omis, les fichiers originaux sont automatiquement stockés dans un dossier horodaté créé à côté du fichier de structure.
 
-The *method* parameter is used to set a callback method that will be called regularly during the encryption process. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When it is called, this method receives up to 5 parameters depending on the event type originating the call (see below). It is imperative to declare these parameters in the method:
+Le paramètre *nomMéthode* est utilisé pour fixer une méthode de rétro-appel qui sera appelée régulièrement durant le chiffrement. Si vous passez une chaine vide ou un nom de méthode non valide, ce paramètre est ignoré (aucune méthode n'est appelée). Lorsqu'elle est appelée, cette méthode reçoit jusqu'à 5 paramères, en fonction du type d'événement qui est à l'origine de l'appel (voir ci-dessous). Il est essentiel de déclarer ces paramètres dans la méthode :
 
-| **Event**    | **$messageType (Integer)** | **$objectType (Integer)** | **$messageText (Text)**      | **$table (Integer)**    | **$reserved (Integer)** |
-| ------------- | --------- | ---------------- | ------------------- | --------------------------- | ---------------- |
-| Message        | 1      | 0     | Progress message (*e.g.* "Encrypting BLOBs in table Documents")   | Percentage done (*e.g.* 50) | Reserved     |
-| Encryption finished | 2    | 0      | OK message (*e.g.* "Done")    | 0      | Reserved         |
-| Error              | 3     | 0    | Error message (*e.g.* "Problem on the XX data table: Encryption key has not been provided") | 0  | Reserved      |
-| End of execution   | 4  | 0   | "Done"    | 0         | Reserved         |
-| Warning(\*)    | 5  | Object type   | Text of error   | Table or index number       | Reserved         |
+| **Evénement**       | **$1 (Entier long)** | **$2 (** **Entier long** **)** | **$3 (Texte)**                                                                                  | **$4 (** **Entier long** **)**  | **$5 (** **Entier long** **)** |
+| ------------------- | -------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------ |
+| Message             | 1                    | 0                              | Message de progression (*ex :* "Chiffrement des BLOBs dans la table Documents")                 | Pourcentage atteint (*ex :* 50) | Réservé                        |
+| Encryption finished | 2                    | 0                              | message OK (*ex :* "Ok")                                                                        | 0                               | Réservé                        |
+| Error               | 3                    | 0                              | Message d'erreur (*ex :* "Problème dans la table XX : La clé d'encryptage n'a pas été fournie") | 0                               | Réservé                        |
+| End of execution    | 4                    | 0                              | "Ok"                                                                                            | 0                               | Réservé                        |
+| Warning(\*)         | 5                    | Type d'objet                   | Texte d'erreur                                                                                  | Numéro de table ou d'indice     | Réservé                        |
 
-(\*) Warning returned at the verification step (see [VERIFY DATA FILE](verify-data-file.md) command).
+(\*) Avertissement renvoyé lors de l'étape de vérification (voir la commande [VERIFY DATA FILE](verify-data-file.md)).
 
-**Returned value**
+**Valeur retournée**
 
-Actual path of the destination folder of the original files.
+Chemin d'accès du dossier de destination des fichiers originaux.
 
-## Example 1 
+## Exemple 1 
 
-Encrypt a data file for the first time:
+Chiffrez un fichier de données pour la première fois :
 
 ```4d
  var $folder;$passphrase : Text
- $passphrase:=Request("Enter the passphrase")
+ $passphrase:=Request("Saisissez la phrase secrète")
  If(OK=1)
-  //Because the data file is not encrypted, no current encryption key is provided
+  //Parce que le fichier de données n'est pas chiffré, aucune clé de chiffrement courante n'est fournie 
     $folder:=Encrypt data file(Structure file;"myData.4DD";$passphrase)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Re-encrypt an encrypted data file (change the passphrase):
+Re-chiffrez un fichier de données chiffré (modifiez la phrase secrète) :
 
 ```4d
  var $folder;$targetFolder;$passphrase;$newPassphrase : Text
- $passphrase:=Request("Enter the current passphrase")
+ $passphrase:=Request("Saisissez la phrase secrète actuelle") 
  If(OK=1)
-    $newPassphrase:=Request("Enter the new passphrase")
+    $newPassphrase:=Request("Saisissez la nouvelle phrase secrète") 
     If(OK=1)
-       $targetFolder:=Get 4D folder(Database folder)+"Save"+Folder separator
-  //As the data file is encrypted, the current encryption key must be provided
+       $targetFolder:=Get 4D folder(Database folder)+"Enregistrer"+Folder separator 
+  //Le fichier de données étant chiffré, la clé de chiffrement courante doit être fournie
        $folder:=Encrypt data file(Structure file;"myData.4DD";$newPassphrase;$targetFolder;$passphrase)
     End if
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-Remove encryption from an encrypted data file:
+Retirez le chiffrement d'un fichier de données chiffré :
 
 ```4d
  var $folder;$targetFolder;$passphrase : Text
- $passphrase:=Request("Enter the passphrase")
+ $passphrase:=Request("Saisissez la phrase secrète")
  If(OK=1)
     $targetFolder:=Get 4D folder(Database folder)+"DecryptedData"+Folder separator
-  //The new passphrase is set to an empty string to decrypt all data
-  //The current passphrase must be provided
+  //La nouvelle phrase secrète est fixée sur une chaine vide pour déchiffrer toutes les données
+  //La phrase secrète actuelle doit être fournie
     $folder:=Encrypt data file(Structure file;"myData.4DD";"";$targetFolder;$passphrase)
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-Re-encrypt an encrypted data file with the current key (for example, when the encryptable status has been changed for some tables).
+Re-chiffrez un fichier de données chiffré avec la clé de chiffrement (par exemple, lorsque le statut chiffrable a été modifié pour certaines tables).
 
 ```4d
  var $folder;$passPhrase : Text
  var $added : Boolean
  
- $passphrase:=Request("Enter the passphrase")
+ $passphrase:=Request("Saisissez la phrase secrète")
  If(OK=1)
-    $added:=Register data key($passphrase) //The data key is now in the 4D keychain
-    $folder:=Encrypt data file(Structure file;"myData.4DD")
+    $added:=Register data key($passphrase) //La clé des données est maintenant dans le trousseau 4D 
+
+$folder:=Encrypt data file(Structure file;"myData.4DD")
  End if
+
+
 ```
 
-## See also 
+## Voir aussi 
 
-[4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
+  
 [Data file encryption status](data-file-encryption-status.md)  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [New data key](new-data-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1610 |
+| Numéro de commande | 1610 |
 | Thread safe | no |
 
 

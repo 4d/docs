@@ -9,35 +9,35 @@ displayed_sidebar: docs
 <!--REF #_command_.Current default table.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &#8592; | Pointer to the default table |
+| Résultat | Pointer | &#8592; | Pointeur vers la table par défaut |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Current default table.Summary-->**Current default table** returns a pointer to the table that has been passed to the last call to [DEFAULT TABLE](default-table.md) for the current process.<!-- END REF-->
+<!--REF #_command_.Current default table.Summary-->**Current default table** retourne un pointeur vers la table qui a été passée au dernier appel de la commande [DEFAULT TABLE](default-table.md) pour le process courant.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-Provided a default table has been set, the following line of code sets the window title to the name of the current default table:
+La ligne de code suivante inscrit le nom de la table courante par défaut dans le titre de la fenêtre :
 
 ```4d
  SET WINDOW TITLE(Table name(Current default table))
 ```
 
-## See also 
+## Voir aussi 
 
 [DEFAULT TABLE](default-table.md)  
 [Table](table.md)  
 [Table name](table-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 363 |
+| Numéro de commande | 363 |
 | Thread safe | yes |
 
 

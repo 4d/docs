@@ -5,65 +5,65 @@ slug: /commands/dom-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* : Text ; *elementValue* : Variable {; *cDATA* : Variable} )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *refElément* ; *valeurElément* {; *cDATA*} )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| elementValue | Variable | &#8592; | Value of the element |
-| cDATA | Variable | &#8592; | Contents of the CDATA section |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| valeurElément | Variable | &#8592; | Valeur de l’élément |
+| cDATA | Variable | &#8592; | Contenu de la section CDATA |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|2004|Modified|
-|<6|Created|
+|12|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->The **DOM GET XML ELEMENT VALUE** command returns, in the *elementValue* parameter, the value of the XML element designated by *elementRef*.<!-- END REF--> 4D will attempt to convert the value obtained into the same type as that of the variable passed as parameter. If the variable type is not defined, the value is returned in text type by default. 
+<!--REF #_command_.DOM GET XML ELEMENT VALUE.Summary-->La commande **DOM GET XML ELEMENT VALUE** retourne dans le paramètre *valeurElément* la valeur de l’élément XML désigné par *refElément*.<!-- END REF--> 4D tentera de convertir la valeur obtenue dans le type de la variable passée en paramètre. Si le type de la variable n'est pas défini, la valeur est retournée en type texte par défaut.
 
-The optional *cDATA* parameter is used to retrieve the contents of the CDATA section(s) of the *elementRef* XML element. Like with the *elementValue* parameter, 4D will attempt to convert the value obtained into the same type as that of the variable passed as parameter, and if the variable type is not defined, the text type is used by default. 
+Le paramètre facultatif *cDATA* permet de récupérer le contenu de la ou des section(s) CDATA de l’élément XML *refElément* le cas échéant. Comme pour le paramètre *valeurElément*, 4D tentera de convertir la valeur obtenue dans le type de la variable passée en paramètre, et si le type de la variable n'est pas défini, le type texte sera utilisé par défaut.
 
-**Note:** If the element designated by *elementRef* is a BLOB processed by the [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md) command, it has been automatically encoded in base64\. Therefore the command will automatically attempt to decode it in base64.
+**Note :** Si l’élément désigné par *refElément* est un BLOB traité par la commande [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md), il a été automatiquement encodé en base64\. Par conséquent, la commande tentera automatiquement de le décoder en base64.
 
-## Example 
+## Exemple 
 
-This method returns the value of the $xml\_Element\_Ref element:
+Cette méthode retourne la valeur de l’élément $ref\_XML\_Elément :
 
 ```4d
- var $xml_Element_Ref : Text
- var $value : Real
+ var $ref_XML_Elément : Text
+ var $valeur : Real
  
- DOM GET XML ELEMENT VALUE($xml_Element_Ref;$value)
+ DOM GET XML ELEMENT VALUE($ref_XML_Elément;$valeur)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 731 |
+| Numéro de commande | 731 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

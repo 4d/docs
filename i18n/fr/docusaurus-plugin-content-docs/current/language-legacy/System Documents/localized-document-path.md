@@ -5,75 +5,75 @@ slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *relativePath* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *cheminRelatif* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| relativePath | Text | &#8594;  | Relative pathname of document for which we want to obtain localized version |
-| Function result | Text | &#8592; | Absolute pathname of localized document |
+| cheminRelatif | Text | &#8594;  | Chemin d’accès relatif du document dont on veut obtenir la version localisée |
+| Résultat | Text | &#8592; | Chemin d’accès absolu du document localisé |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Localized document path.Summary-->The **Localized document path** command returns the complete (absolute) pathname of a document designated by *relativePath* and located in a xxx.<!-- END REF-->lproj folder.
+<!--REF #_command_.Localized document path.Summary-->La commande **Localized document path** retourne le chemin d’accès complet (absolu) d’un document désigné par *cheminRelatif* et situé dans un dossier xxx.<!-- END REF-->lproj.
 
-This command must be used within a multi-language application architecture based on the presence of a **Resources** folder and *xxx.lproj* subfolders (where xxx represents a language). With this architecture, 4D automatically supports localized files of the .xliff type as well as pictures, but you may need to use the same mechanism for other types of files. 
+Cette commande doit être utilisée dans le cadre d’une architecture d’application multi-langue basée sur la présence d’un dossier **Resources** et de sous-dossiers *xxx.lproj* (xxx représentant une langue). Avec cette architecture, 4D prend automatiquement en charge les fichiers localisés de type .xliff ainsi que les images, mais vous pouvez avoir besoin d’utiliser le même mécanisme pour d’autres types de fichiers. 
 
-Pass the relative pathname of the document to be searched for in *relativePath*. The path entered must be relative to the first level of the "xxx.lproj" folder of the database. The command will return a complete pathname using the "xxx.lproj" folder corresponding to the current language of the database. 
+Passez dans *cheminRelatif* le chemin d’accès relatif du document recherché. Le chemin saisi doit être relatif au premier niveau d’un dossier "xxx.lproj" de la base. La commande retournera un chemin d’accès complet en utilisant le dossier "xxx.lproj" correspondant à la langue courante de la base. 
 
-**Note:** The current language is either set automatically by 4D according to the contents of the **Resources** folder (see the [Get database localization](get-database-localization.md) command), or via the [SET DATABASE LOCALIZATION](set-database-localization.md) command).
+**Note :** La langue courante est définie soit automatiquement par 4D en fonction du contenu du dossier **Resources** (cf. commande [Get database localization](get-database-localization.md)), soit via la commande [SET DATABASE LOCALIZATION](set-database-localization.md). 
 
-You can express the contents of the *relativePath* parameter using a system or a POSIX syntax. For example:
+Vous pouvez exprimer le contenu du paramètre *cheminRelatif* à l’aide d’une syntaxe posix ou système. Par exemple :
 
-* xsl/log.xsl (POSIX syntax: can be used under Mac OS or Windows)
-* xsllog.xsl (Windows only)
-* xsl:log.xsl (Mac OS only)
+* xsl/log.xsl (syntaxe posix : utilisable sous Mac OS ou Windows)
+* xsl\\log.xsl (Windows uniquement)
+* xsl:log.xsl (Mac OS uniquement)
 
-The absolute pathname returned by the command is always expressed in the system syntax. 
+Le chemin d’accès absolu retourné par la commande est toujours exprimé en syntaxe système. 
 
-**4D Server:** In remote mode, the command returns the path of the **Resources** folder on the client machine if the command is called from a client process. 
+**4D Server :** En mode distant, la commande retourne le chemin du dossier **Resources** sur le poste client si la commande est appelée depuis un process client. 
 
-4D looks for the file while respecting a sequence that allows all the cases of multi-language applications to be processed. At each step, 4D checks for the presence of *relativePath* in the folder corresponding to the language and returns the complete path when it succeeds. If *relativePath* is not found or if the folder does not exist, 4D passes to the next step. Here are the folders for each of the different search stages:
+4D recherche le fichier en respectant une séquence permettant de traiter tous les cas d’applications multi-langues. A chaque étape, 4D teste la présence de *cheminRelatif* dans le dossier correspondant à la langue et retourne le chemin complet en cas de succès. Si *cheminRelatif* n’est pas trouvé ou si le dossier n’existe pas, 4D passe à l’étape suivante. Voici les dossiers des étapes de recherche :
 
-*Current language (e.g.: fr-ca)* 
- *Current language without region (e.g.: fr)* 
- *Language loaded by default on startup (e.g.: es-ga)* 
- *Language loaded by default on startup without region (e.g.: es)* 
- *First .lproj folder found (e.g.: en.lproj)* 
- *First level of Resources folder*
+*Langue courante (ex : fr-ca)* 
+ *Langue courante sans la région (ex : fr)* 
+ *Langue chargée par défaut au démarrage (ex : es-ga)* 
+ *Langue chargée par défaut au démarrage sans la région (ex : es)* 
+ *Premier dossier .lproj trouvé (ex : it.lproj)* 
+ *Premier niveau du dossier Resources*
 
-If *relativePath* is not found in any of these locations, the command returns an empty string. 
+Si *cheminRelatif* n’est trouvé à aucun de ces emplacements, la commande retourne une chaîne vide. 
 
-## Example 
+## Exemple 
 
-For the purpose of transforming an XML or HTML file, you want to use a "log.xsl" transformation file. This file differs depending on the current language. You therefore want to know which "log.xsl" file path to use.   
-Here are the contents of the Resources folder:
+Dans le but de transformer un fichier xml en html, vous souhaitez utiliser un fichier de transformation "log.xsl". Ce fichier diffère suivant la langue courante. Vous souhaitez donc connaître le chemin du fichier "log.xsl" à utiliser.   
+Voici le contenu du dossier Resources :
 
-![](../assets/en/commands/pict162129.en.png)
+![](../assets/en/commands/pict162129.fr.png)
 
-To use a .xsl file adapted to the current language, you simply need to pass:
+Pour utiliser un fichier .xsl adapté à la langue courante, il vous suffit de passer :
 
 ```4d
- $myxsl:=Localized document path("xsl/log.xsl")
+ $monxsl:=Localized document path("xsl/log.xsl")
 ```
 
-If the current language is, for example, French Canadian (fr-ca), the command returns:
+Si la langue courante est, par exemple, le français canadien (fr-ca), la commande retourne :
 
-* under Windows: C:\\users\\…\\…\\…\\resources\\fr\_ca.lproj\\xsl\\log.xsl
-* under Mac OS: "HardDisk:users:…:…:…:resources:fr\_ca.lproj:xsl:log.xsl"
+* sous Windows : C:\\users\\…\\…\\…\\resources\\fr\_ca.lproj\\xsl\\log.xsl"
+* sous Mac OS : "HardDisk:users:…:…:…:resources:fr\_ca.lproj:xsl:log.xsl"
 
-## See also 
+## Voir aussi 
 
 [Get database localization](get-database-localization.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1105 |
+| Numéro de commande | 1105 |
 | Thread safe | yes |
 
 

@@ -5,58 +5,58 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* : Text ; *value* : any )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjet* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectName | Text | &#8594;  | Object name |
-| value | any | &#8594;  | New value for the form object's data source |
+| nomObjet | Text | &#8594;  | Nom de l'objet |
+| valeur | any | &#8594;  | Nouvelle valeur des sources de données de l'objet de formulaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Created|
+|18 R4|Créé|
 
 </details>
 </div>
 
-## Description
+## Exemple 1 
 
-<!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** sets the *value* of the current data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** fixe la *valeur* des sources de données courantes pour le ou les objet(s) de formulaire désigné(s) par le paramètre *nomObjet*.<!-- END REF-->
 
-In the *objectName* parameter, pass the name of a form object (a string). You can set the value of multiple form objects by using the wildcard character (“@”).
+Dans le paramètre *nomObjet*, passez le nom d'un objet de formulaire (une chaine). Vous pouvez définir la valeur de plusieurs objets du formulaire à l'aide du caractère joker (“@”).
 
-The *value* parameter allows you pass a new value (any type) for the form object's data source.
+Le paramètre *valeur* vous permet de passer une nouvelle valeur (de tout type) pour les sources de données de l'objet formulaire.
 
-**Note**: If the data source is a non-assignable expression, **OBJECT SET VALUE** does nothing. For more information, see *assignable vs non-assignable expressions*.
+**Note** : Si les sources de données sont une expression non assignable, **OBJECT SET VALUE** ne fait rien. Pour plus d'informations, consultez *expressions assignables vs non-assignables* .
 
-## Example 
+## Exemple
 
-You want to get the data source value for a form object, get its name, and set a new value:
+Vous souhaitez lire la valeur des sources de données d'un objet formulaire, lire son nom et définir une nouvelle valeur :
 
 ```4d
  var $value : Variant
  
- $value:=OBJECT Get value(OBJECT Get name(Object current)) //verify the set value
+ $value:=OBJECT Get value(OBJECT Get name(Object current)) //vérifier la valeur définie 
  
- OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //find the form object name and set the value to 50
+ OBJECT SET VALUE(OBJECT Get name(Object current);$value+10) //trouver le nom de l'objet formulaire et définir la valeur à 50
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get value](object-get-value.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1742 |
+| Numéro de commande | 1742 |
 | Thread safe | no |
 
 

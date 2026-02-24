@@ -5,62 +5,65 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* : Integer ; *fieldNum* : Integer ) : Pointer<br/>**Field** ( *fieldPtr* : Pointer ) : Integer<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTable* ; *numChamp* ) -> ptrChamp <br/>
+**Field** ( *ptrChamp* ) -> numChamp<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &#8594;  | Table number |
-| fieldNum | Integer | &#8594;  | Field number |
-| fieldPtr | Pointer | &#8594; | Field pointer |
-| Function result | Pointer, Integer | &#8592; | Field pointer or Field number |
+| numTable | Integer | &#8594;  | Numéro de table |
+| numChamp | Integer | &#8594;  | Numéro de champ |
+| ptrChamp | Pointer | &#8592; | Pointeur de champ |
+| Field ( ptrChamp ) -> numChamp |
+| Paramètre | Type | Description |
+| ptrChamp | Pointer | &#8594;  | Pointeur de champ |
+| numChamp | Integer | &#8592; | Numéro de champ |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-The **Field** command has two forms:
+<!--REF #_command_.Field.Summary-->La commande **Field** a deux syntaxes :
 
-<!--REF #_command_.Field.Summary-->* If you pass a table number in *tableNum* and a field number in *fieldNum*, **Field** returns a pointer to the field.
-* If you pass a field pointer in *fieldPtr*, **Field** returns the field number of the field<!-- END REF-->.
+* Si vous passez un numéro de table dans *numTable* et un numéro de champ dans *numChamp*, **Field** retourne un pointeur vers le champ.<!-- END REF-->retourne le numéro du champ.
 
-## Example 1 
+## Exemple 1 
 
-The following example sets the *fieldPtr* variable to a pointer to the second field in the third table:
-
-```4d
- FieldPtr:=Field(3;2)
-```
-
-## Example 2 
-
-Passing *fieldPtr* (a pointer to the second field of a table) to **Field** returns the number 2\. The following line sets *FieldNum* to 2:
+L'exemple suivant assigne la variable ChampPtr à un pointeur vers le deuxième champ de la troisième table : 
 
 ```4d
- FieldNum:=Field(FieldPtr)
+ ChampPtr:=Field(3;2)
 ```
 
-## Example 3 
+## Exemple 2 
 
-The following example sets the *FieldNum* variable to the field number of \[Table3\]Field2:
+Si vous passez *champPtr* (un pointeur vers le 2e champ de la table) à **Field**, la valeur 2 est retournée. La ligne suivante assigne la valeur 2 à *champNum* :
 
 ```4d
- FieldNum:=Field(->[Table3]Field2)
+ champNum:=Field(champPtr)
 ```
 
-## See also 
+## Exemple 3 
+
+Dans l'exemple, la variable *champNum* est égale au numéro de champ de \[Table3\]Champ2 :
+
+```4d
+ champNum:=Field(->[Table3]Champ2)
+```
+
+## Voir aussi 
 
 [Field name](field-name.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
 [Last field number](last-field-number.md)  
 [Table](table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 253 |
+| Numéro de commande | 253 |
 | Thread safe | yes |
 
 

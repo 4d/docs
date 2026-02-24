@@ -5,53 +5,53 @@ slug: /commands/object-get-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get enabled** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get enabled.Syntax-->**OBJECT Get enabled** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enabled.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = object(s) enabled; Otherwise, false |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| Résultat | Boolean | &#8592; | Vrai = objet(s) activé(s), Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get enabled.Summary-->The OBJECT Get enabled command returns True if the object or group of objects designated by *object* is enabled in the form and False if it is not enabled.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get enabled.Summary-->La commande **OBJECT Get enabled** retourne Vrai si l'objet ou le groupe d'objets désigné par *objet* est activé dans le formulaire et Faux s’il est inactivé.<!-- END REF--> 
 
-An enabled object reacts to mouse clicks and to keyboard shortcuts.
+Un objet activé réagit aux clics souris et aux raccourcis clavier.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference (object variable only) instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable (variable objet uniquement). 
 
-This command can be applied to the following types of objects:
+Cette commande peut être appliquée aux types d'objets suivants :
 
-* Button, Default button, 3D button, Invisible button, Highlight button
-* Radio button, 3D radio button, Picture button
-* Check Box, 3D Check Box
-* Pop-up menu, Drop-down List, Combo Box, Menu/Drop-down List
-* Thermometer, Ruler
+* Bouton, Bouton par défaut, Bouton 3D, Bouton invisible, Bouton inversé
+* Bouton radio, Bouton radio 3D, Bouton image
+* Case à cocher, Case à cocher 3D
+* Pop-up menu, Liste déroulante, Combo Box, Menu/Liste déroulante
+* Thermomètre, Règle
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET ENABLED](object-set-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1079 |
+| Numéro de commande | 1079 |
 | Thread safe | no |
 
 

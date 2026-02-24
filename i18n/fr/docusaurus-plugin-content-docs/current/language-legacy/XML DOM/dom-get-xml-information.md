@@ -5,53 +5,53 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* : Text ; *xmlInfo* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *refElément* ; *infoXML* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML root element reference |
-| xmlInfo | Integer | &#8594;  | Type of information to get |
-| Function result | Text | &#8592; | Value of the XML information |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| infoXML | Integer | &#8594;  | Type d’information à lire |
+| Résultat | Text | &#8592; | Valeur de l’information XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get XML information.Summary-->The DOM Get XML information command retrieves diverse information about the XML element designated by *elementRef*.<!-- END REF--> 
+<!--REF #_command_.DOM Get XML information.Summary-->La commande **DOM Get XML information** permet de récupérer diverses informations sur l’élément XML désigné par *refElément*.<!-- END REF--> 
 
-In *xmlInfo*, pass a code indicating the type of information to be retrieved. You can use the following predefined constants, located in the *XML* theme:
+Passez dans *infoXML* un code indiquant le type d’information à récupérer. Vous pouvez utiliser les constantes prédéfinies suivantes, placées dans le thème “*XML*” :
 
-| Constant     | Type    | Value | Comment                                                                                                       |
-| ------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------- |
-| DOCTYPE Name | Integer | 3     | Name of the root element as defined in the DOCTYPE marker                                                     |
-| Document URI | Integer | 6     | URI of the DTD                                                                                                |
-| Encoding     | Integer | 4     | Encoding used (UTF-8, ISO...)                                                                                 |
-| PUBLIC ID    | Integer | 1     | Public identifier (FPI) of the DTD to which the document conforms (if the DOCTYPE xxx PUBLIC tag is present). |
-| SYSTEM ID    | Integer | 2     | System identifier                                                                                             |
-| Version      | Integer | 5     | Accepted XML version                                                                                          |
+| Constante    | Type        | Valeur | Comment                                                                                                                 |
+| ------------ | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| DOCTYPE Name | Entier long | 3      | Nom de l’élément racine tel que défini dans la balise DOCTYPE                                                           |
+| Document URI | Entier long | 6      | URI de la DTD                                                                                                           |
+| Encoding     | Entier long | 4      | Encodage utilisé (UTF-8, ISO...)                                                                                        |
+| PUBLIC ID    | Entier long | 1      | Identificateur public (FPI) de la DTD à laquelle le document se conforme (si la balise DOCTYPE xxx PUBLIC est présente) |
+| SYSTEM ID    | Entier long | 2      | Identificateur système                                                                                                  |
+| Version      | Entier long | 5      | Version de XML accepté                                                                                                  |
 
-## See also 
+## Voir aussi 
 
 [XML GET ERROR](xml-get-error.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 721 |
+| Numéro de commande | 721 |
 | Thread safe | yes |
 
 

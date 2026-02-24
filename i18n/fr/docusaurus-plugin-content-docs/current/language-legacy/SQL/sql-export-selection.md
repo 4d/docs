@@ -5,57 +5,57 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* : Table ; *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *laTable* ; *cheminDossier* {; *nbFichiers* {; *tailleLimiteFichiers* {; *tailleLimiteChamps*}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to export selection |
-| folderPath | Text | &#8594;  | Pathname of export folder or "" to display folder selection dialog box |
-| numFiles | Integer | &#8594;  | Maximum number of files per folder |
-| fileLimitSize | Integer | &#8594;  | Maximum size of Export.sql file (in KB) |
-| fieldLimitSize | Integer | &#8594;  | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
+| laTable | Table | &#8594;  | Table de laquelle exporter la sélection |
+| cheminDossier | Text | &#8594;  | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
+| nbFichiers | Integer | &#8594;  | Nombre maximum de fichiers par dossier |
+| tailleLimiteFichiers | Integer | &#8594;  | Valeur de limite de taille des fichiers d’export (en Ko) |
+| tailleLimiteChamps | Integer | &#8594;  | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12.1|Modified|
-|12|Created|
+|12.1|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL EXPORT SELECTION.Summary-->The **SQL EXPORT SELECTION** command exports in SQL format the records of the current selection of the 4D table designated by the *aTable* parameter.<!-- END REF--> 
+<!--REF #_command_.SQL EXPORT SELECTION.Summary-->La commande **SQL EXPORT SELECTION** exporte au format SQL les enregistrements de la sélection courante de la table 4D désignée par le paramètre *laTable*.<!-- END REF--> 
 
-This command is nearly identical to the [SQL EXPORT DATABASE](sql-export-database.md) command. The file generated can be used directly by the [SQL EXECUTE SCRIPT](sql-execute-script.md) command in order to import data into another 4D database. The main difference between these two commands is that **SQL EXPORT SELECTION** only exports the current selection of *aTable* whereas [SQL EXPORT DATABASE](sql-export-database.md) exports the entire database. Also, unlike the [SQL EXPORT DATABASE](sql-export-database.md) command, this command does not work with external SQL databases. It can only be used with the main database.
+Cette commande est quasiment identique à la commande [SQL EXPORT DATABASE](sql-export-database.md). Le fichier généré peut être utilisé directement par la commande [SQL EXECUTE SCRIPT](sql-execute-script.md) afin d’importer les données dans une autre base 4D. La seule différence entre ces deux commandes est le fait que **SQL EXPORT SELECTION** exporte uniquement la sélection courante de *laTable* alors que [SQL EXPORT DATABASE](sql-export-database.md) exporte la totalité des données de la base. De même, à la différence de [SQL EXPORT DATABASE](sql-export-database.md), la commande **SQL EXPORT SELECTION** ne fonctionne pas avec les bases SQL externes. Elle ne peut être utilisée qu’avec la base principale. 
 
-Refer to the description of the [SQL EXPORT DATABASE](sql-export-database.md) command for a detailed description of the functioning and parameters of these commands.
+Reportez-vous à la description de la commande [SQL EXPORT DATABASE](sql-export-database.md) pour le détail du fonctionnement et des paramètres de ces commandes.
 
-If the current selection is empty, the command does nothing. Note that in this case, the destination folder is not emptied. 
+Si la sélection courante est vide, la commande ne fait rien. A noter que dans ce cas, le dossier de destination n’est pas vidé. 
 
-If the export is carried out correctly, the *OK* variable is set to 1\. Otherwise, it is set to 0\. 
+Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0\. 
 
 ### 
 
-**Note:** This command does not support Object type fields.
+**Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-## See also 
+## Voir aussi 
 
 [SQL EXPORT DATABASE](sql-export-database.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1064 |
+| Numéro de commande | 1064 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,38 +5,38 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return the number of records, or Default table, if omitted |
-| Function result | Integer | &#8592; | Total number of records in the table |
+| laTable | Table | &#8594;  | Table de laquelle retourner le nombre total d'enregistrements ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &#8592; | Nombre total d'enregistrements dans table |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Records in table.Summary-->**Records in table** returns the total number of records in aTable.<!-- END REF--> [Records in selection](records-in-selection.md) returns the number of records in the current selection only. If **Records in table** is used within a transaction, records created during the transaction will be taken into account.
+<!--REF #_command_.Records in table.Summary-->**Records in table** retourne le nombre total d'enregistrements que contient *laTable*.<!-- END REF--> Par opposition, [Records in selection](records-in-selection.md) retourne le nombre d'enregistrements de la sélection courante uniquement. Lorsque cette commande est utilisée dans une transaction, les enregistrements éventuellement créés pendant la transaction sont comptabilisés.
 
-## Example 
+## Exemple 
 
-The following example displays an alert that shows the number of records in a table:
+L'exemple suivant affiche une alerte indiquant le nombre d'enregistrements de la table :
 
 ```4d
- ALERT("There are "+String(Records in table([People]))+" records in the table.")
+ ALERT("Il y a "+String(Enregistrements dans table([Personnes]))+" enregistrements dans la table.")
 ```
 
-## See also 
+## Voir aussi 
 
 [Records in selection](records-in-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 83 |
+| Numéro de commande | 83 |
 | Thread safe | yes |
 
 

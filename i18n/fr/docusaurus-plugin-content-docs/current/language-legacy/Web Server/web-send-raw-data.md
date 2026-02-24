@@ -5,103 +5,99 @@ slug: /commands/web-send-raw-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *data* : Blob {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *données* {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Blob | &#8594;  | HTTP data to send |
-| * | Operator | &#8594;  | Send chunked |
+| données | Blob | &#8594;  | Données HTTP à envoyer |
+| * | Opérateur | &#8594;  | Envoi morcelé (chunked) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2004|Created|
+|13|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SEND RAW DATA.Summary-->The **WEB SEND RAW DATA** command lets the 4D Web server send “raw” HTTP data, which can be chunked.<!-- END REF--> . 
+<!--REF #_command_.WEB SEND RAW DATA.Summary-->La commande **WEB SEND RAW DATA** permet au serveur Web 4D d’envoyer des données HTTP “brutes”, pouvant être morcelées.<!-- END REF-->
 
-The *data* parameter contains the two standard parts of an HTTP response, i.e. Header and Body. The data are sent without prior formatting by the server. However, 4D carries out a basic check of the response header and body in order to make sure that they are valid: 
+Le paramètre *données* contient les deux parties standard d’une réponse HTTP, c’est-à-dire l’en-tête et le corps (header et body). Les données sont envoyées sans formatage préalable par le serveur. Toutefois, 4D effectue un contrôle élémentaire sur l’en-tête et le corps de la réponse afin qu’elle soit valide : 
 
-* If the header is incomplete or does not comply with the HTTP protocol specifications, 4D will change it accordingly.
-* If the HTTP request is incomplete, 4D adds the missing information. If, for instance, you want to redirect the request, you must write:
-
-```HTML
-   HTTP/1.1 302
-   Location: http://...
-```
-
-If you only pass:
+* Si l’en-tête est incomplet ou non conforme aux spécifications du protocole HTTP, 4D le modifie en conséquence.
+* Si la réponse HTTP est incomplète, 4D ajoute les informations manquantes. Si, par exemple, vous souhaitez effectuer une redirection, vous devez écrire :
 
 ```HTML
-   Location: http://...
+HTTP/1.1 302 
+Location : http://...
 ```
 
-4D will complete the request by adding HTTP/1.1 302. 
+Si vous passez uniquement :
 
-The optional *\** parameter lets you specify that the response will be sent “chunked”. The cutting up of responses into chunks can be useful when the server sends a response without knowing its total length (if, for instance, the response has not yet been generated). All HTTP/1.1-compatible browsers accept chunked responses.
+```HTML
+Location : http://...
+```
 
-If you pass the *\** parameter, the Web server will automatically include the *transfer-encoding: chunked* field in the header of the response, if necessary (you can handle the response header manually if you so desire). 
+4D complétera la réponse en ajoutant HTTP/1.1 302. 
 
-The remainder of the response will also be formatted in order to respect the syntax of the chunked option. Chunked responses contain a single header and an undefined number of body “chunks”. 
+Le paramètre optionnel *\** permet de déclarer que la réponse sera envoyée sous forme “morcelée” (chunked). Le découpage des réponses peut être utile lorsque le serveur envoie une réponse sans connaître sa longueur totale (par exemple si la réponse n’a pas encore été générée). Tous les navigateurs compatibles HTTP/1.1 acceptent les réponses “morcelées”.  
+Si vous passez le paramètre *\**, le serveur Web inclura automatiquement le champ *transfer-encoding: chunked* dans l’en-tête de la réponse, si nécessaire (vous pouvez gérer manuellement l’en-tête de la réponse si vous le souhaitez). Le reste de la réponse sera également formaté en respectant la syntaxe de l’option chunked. Les réponses morcelées comportent un seul en-tête et un nombre indéfini de corps.   
+Toutes les instructions **WEB SEND RAW DATA** suivant l’exécution de **WEB SEND RAW DATA**(données;\*) au sein de la même méthode seront considérées comme partie de la réponse (qu’elles contiennent ou non le paramètre *\**). Le serveur met un terme à l’envoi morcelé à la fin de l’exécution de la méthode.
 
-All the **WEB SEND RAW DATA** statements that follow the execution of **WEB SEND RAW DATA**(data;\*) within the same method will be considered as part of the response (regardless of whether they contain the *\** parameter). The server puts an end to the chunked send when the method execution is terminated.
-
-**Note:** If the Web client does not support HTTP/1.1, 4D will automatically convert the response into an HTTP/1.0-compatible format (the data sent will not be chunked). However, in this case, the result may not correspond to your wishes. It is therefore recommended to check whether the Web browser supports HTTP/1.1 and to send an appropriate response. To do so, you can use a method such as: 
+**Note :** Si le client Web ne prend pas en charge le protocole HTTP/1.1, 4D convertira automatiquement la réponse au format compatible HTTP/1.0 (l’envoi ne sera pas morcelé). Dans ce cas toutefois, il est possible que le résultat ne corresponde pas à vos attentes. Il est donc recommandé de tester si le navigateur est compatible HTTP/1.1 et d’envoyer une réponse adaptée. Pour cela, vous pouvez utiliser une méthode de ce type : 
 
 ```4d
  var $0 : Boolean
- ARRAY TEXT(arFields;0)
- ARRAY TEXT(arValues;0)
- WEB GET HTTP HEADER(arFields;arValues)
+ ARRAY TEXT(tabChamps;0)
+ ARRAY TEXT(tabValeurs;0)
+ WEB GET HTTP HEADER(tabChamps;tabValeurs)
  $0:=False
- If(Size of array(arValues)>=3)
-    If(Position("HTTP/1.1";arValues{3})>0)
-       $0:=True //The browser supports HTTP/1.1; $0 returns True
+ If(Size of array(tabValeurs)>=3)
+    If(Position("HTTP/1.1";tabValeurs{3})>0)
+       $0:=True //Le navigateur est compatible HTTP/1.1, on retourne Vrai dans $0
     End if
  End if
 ```
 
-Combined with the [WEB GET HTTP BODY](web-get-http-body.md) command and other commands of the “Web Server” theme, this command completes the range of tools available to 4D developers in order to entirely customize the processing of incoming and outgoing HTTP connections. These different tools are shown in the following diagram: 
+Combinée à la commande [WEB GET HTTP BODY](web-get-http-body.md) et aux autres commandes du thème “Serveur Web”, cette commande complète la gamme d’outils mis à la disposition des développeurs 4D pour traiter de manière entièrement personnalisée les connexions HTTP entrantes et sortantes. Ces différents outils sont présentés dans le schéma suivant : 
 
-![](../assets/en/commands/pict856016.en.png)
+![](../assets/en/commands/pict856016.fr.png)
 
-## Example 
+## Exemple 
 
-This example illustrates the use of the chunked option with the **WEB SEND RAW DATA** command. The data (a sequence of numbers) are sent in 100 chunks generated on the fly in a loop. Keep in mind that the header of the response is not explicitly set: the command will send it automatically and insert the *transfer-encoding: chunked* field into it since the *\** parameter is used.
+Cet exemple illustre l’emploi de l’option chunked avec la commande **WEB SEND RAW DATA**. Les données (une suite de chiffres) sont envoyées en 100 morceaux générés à la volée dans une boucle. A noter que l’en-tête de la réponse n’est pas explicitement défini : la commande **WEB SEND RAW DATA** l’enverra automatiquement et y insérera le champ *transfer-encoding: chunked* car le paramètre *\** est utilisé.
 
 ```4d
  var $cpt : Integer
- var $my_blob : Blob
+ var $mon_blob : Blob
  var $output : Text
  
  For($cpt;1;100)
     $output:="["+String($cpt)+"]"
-    TEXT TO BLOB($output;$my_blob;UTF8 text without length)
-    WEB SEND RAW DATA($my_blob;*)
+    TEXT TO BLOB($output;$mon_blob;UTF8 text without length)
+    WEB SEND RAW DATA($mon_blob;*)
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 815 |
+| Numéro de commande | 815 |
 | Thread safe | yes |
 
 

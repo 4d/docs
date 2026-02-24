@@ -9,49 +9,46 @@ displayed_sidebar: docs
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->The NOTIFY RESOURCES FOLDER MODIFICATION command "forces" 4D Server to send a notification to all the connected 4D machines indicating that the Resources folder of the database has been modified so that they can synchronize their local Resources folder.<!-- END REF--> 
+<!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->La commande **NOTIFY RESOURCES FOLDER MODIFICATION** permet de "forcer" l’envoi par 4D Server d’une notification indiquant à tous les postes 4D connectés que le contenu du dossier **Resources** de la base a été modifié, afin de leur permettre de synchroniser leur dossier **Resources** local.<!-- END REF--> Cette commande permet en particulier de gérer la synchronisation des dossiers **Resources** téléchargés sur les postes distants lorsque le dossier **Resources** de la base est modifié via une procédure stockée sur le serveur.  
+Pour plus d’informations sur la gestion du dossier **Resources** en mode distant, reportez-vous au *Guide de référence de 4D Server*.
 
-This command can be used more particularly to manage the synchronization of the Resources folders of remote machines after this folder has been modified by a stored procedure on the server.
+Seule l’information de modification est envoyée par cette commande. Les postes distants réagiront en fonction du paramétrage courant. Les options sont :
 
-For more information about managing the Resources folder in remote mode, please refer to the 4D Server Reference Guide.
+* pas de synchronisation du dossier **Resources** local en cours de session,
+* synchronisation automatique du dossier **Resources** local en cours de session,
+* affichage d’une alerte afin que l'utilisateur effectue une synchronisation s'il le souhaite.
 
-Only the information that modification has occurred is sent. Remote machines react according to current settings. The options are the following:
+Le paramétrage courant peut être défini soit :
 
-* No synchronization of the local Resources local folder during the session,
-* Automatic synchronization of the local Resources folder during the session,
-* Display of a warning so that the user may carry out a synchronization if desired.
+* au niveau global de la base via le paramètre des Propriétés de la base. Dans ce cas, il s'applique à tous les postes distants ;
+* localement, à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) exécutée sur le poste distant (sélecteur Auto synchro resources folder). Dans ce cas, il "surcharge" celui de la base et s'applique uniquement au poste distant pour la session.
 
-Current settings are set either:
-
-* at the overall database level using the parameter of the Database settings. In this case, it applies to all the remote machines;
-* locally, using the [SET DATABASE PARAMETER](set-database-parameter.md) command executed on the remote machine (Auto synchro resources folder selector). In this case, it "overrides" the database setting and applies only to the remote machine for the duration of the session.
-
-## See also 
+## Voir aussi 
 
 [Get 4D folder](get-4d-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1052 |
+| Numéro de commande | 1052 |
 | Thread safe | no |
 
 

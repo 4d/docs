@@ -5,41 +5,41 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* : Array )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *chaîneJSON* ; *tab* )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonString | Text | &#8594;  | JSON string to parse |
-| array | Array | &#8592; | Array containing result from parsing of JSON string |
+| chaîneJSON | Text | &#8594;  | Chaîne en JSON à analyser |
+| tab | Array | &#8592; | Tableau contenant le résultat de l’analyse de la chaîne JSON |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Created|
+|16 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON PARSE ARRAY.Summary-->The **JSON PARSE ARRAY** command parses the contents of a JSON-formatted string and puts the data extracted into the *array* parameter.<!-- END REF--> This command deserializes the JSON data; it performs the opposite action of the [JSON Stringify array](json-stringify-array.md) command.
+<!--REF #_command_.JSON PARSE ARRAY.Summary-->La commande **JSON PARSE ARRAY** analyse (*parse*) le contenu d’une chaîne formatée en JSON et place les données extraites dans le tableau *tab*.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify array](json-stringify-array.md).
 
-In *jsonString*, pass the JSON-formatted string whose contents you want to parse. This string must be formatted correctly, otherwise a parsing error is generated. 
+Passez dans *chaîneJSON* la chaîne au format JSON dont vous souhaitez analyser le contenu. Cette chaîne doit être correctement formatée, sinon une erreur d'analyse est générée. 
 
-In *array*, pass an array of the desired type to receive the parsing results. 
+Passez dans *tab* le tableau du type souhaité devant recevoir le résultat de l’analyse.
 
-**Note:** Starting with 4D v16 R4, **JSON PARSE ARRAY** can usually be replaced by a call to [JSON Parse](json-parse.md) that returns a **collection**. Collections are based on JSON arrays and allow to store data of mixed types, which provides more flexibility than arrays. 
+**Note :** A compter de 4D v16 R4, la commande **JSON PARSE ARRAY** pourra généralement être remplacée par un appel à la commande [JSON Parse](json-parse.md) qui retourne une **collection**. Les collections sont basées sur les tableaux JSON et permettent de stocker des données de types variés, ce qui procure plus de souplesse que les tableaux. 
 
-## Example 
+## Exemple 
 
-In this example, data from fields of the records in a table are extracted and then placed in object arrays:
+Dans cet exemple, les données des champs des enregistrements d’une table sont extraites puis placées dans des tableaux d’objets :
 
 ```4d
  var $ref : Object
@@ -51,32 +51,32 @@ In this example, data from fields of the records in a table are extracted and th
  OB SET($ref;"city";->[Company]City)
  
  While(Not(End selection([Company])))
-    $ref_company:=OB Copy($ref;True)
-    APPEND TO ARRAY($sel;$ref_company)
-  // $sel{1}={"name":"4D SAS","city":"Clichy"}
-  // $sel{2}={"name":"MyComp","city":"Lyon"}
-  // ...
-    NEXT RECORD([Company])
+       $ref_company:=OB Copy($ref;True)
+       APPEND TO ARRAY($sel;$ref_company)
+              // $sel{1}={"name":"4D SAS","city":"Clichy"}
+              // $sel{2}={"name":"MyComp","city":"Lyon"}
+              // ...
+       NEXT RECORD([Company])
  End while
  
  v_String:=JSON Stringify array($sel)
-  // v_String= [{"name":"4D SAS","city":"Clichy"},{"name":"MyComp","city":"Lyon"}...]
+     // v_String= [{"name":"4D SAS","city":"Clichy"},{"name":"MyComp","city":"Lyon"}...]
  JSON PARSE ARRAY(v_String;$sel2)
-  // $sel2{1}={"name":"4D SAS","city":"Clichy"}
-  // $sel2{2}={"name":"MyComp","city":"Lyon"}
-  //...
+           // $sel2{1}={"name":"4D SAS","city":"Clichy"}
+           // $sel2{2}={"name":"MyComp","city":"Lyon"}
+           //...
 ```
 
-## See also 
+## Voir aussi 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1219 |
+| Numéro de commande | 1219 |
 | Thread safe | yes |
 
 

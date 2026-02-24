@@ -5,57 +5,58 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *size* : Real {; *minFreeSize* : Real} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *taille* {; *libereMini*} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| size | Real | &#8594;  | Size of database cache in bytes |
-| minFreeSize | Real | &#8594;  | Minimum number of bytes to release when cache is full |
+| taille | Real | &#8594;  | Taille du cache du la base de données en octets |
+| libereMini | Real | &#8594;  | Nombre minimum d'octets à libérer lorsque le cache est plein |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET CACHE SIZE.Summary-->The **SET CACHE SIZE** command sets the database cache size dynamically and, optionally, sets the mininum byte size at which to start to free memory.<!-- END REF-->This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+<!--REF #_command_.SET CACHE SIZE.Summary-->La commande **SET CACHE SIZE** fixe dynamiquement la taille du cache de la base de données et, optionnellement, permet de fixer la taille minimum en octets à partir de laquelle on commence à libérer la mémoire.<!-- END REF-->.
 
-In *size*, pass the new size for the database cache in bytes. This new size is applied dynamically when the command is executed.
+**Note :** cette commande fonctionne uniquement en mode local (4D Server et 4D); elle ne doit pas être utilisée à partir d'un 4D en accès distant. 
 
-In *minFreeSize*, pass the minimum size of memory to release from the database cache when the engine needs to make space in order to allocate an object to it (value in bytes). The purpose of this option is to reduce the number of times that data is released from the cache in order to obtain better performance.   
-By default, if this option is not used, 4D unloads at least 10% of the cache when space is needed. If your database works with a large cache, it could be advantageous to use a fixed size that does not depend on the cache size. You can adjust this setting according to the size of the blocks of data being handled in your database.
+Dans *taille*, passez la nouvelle taille du cache de la base en octets. Cette nouvelle taille s'applique dynamiquement, dès que la commande est exécutée.
 
-## Example 
+Dans *libereMini*, passez la taille minimum de mémoire à libérer dans le cache de la base de données, lorsque le moteur a besoin de plus d'espace pour allouer un objet en mémoire (valeur en octets). L'intérêt de cette option est de réduire le nombre de fois où les données sont libérées à partir de la mémoire cache afin d'obtenir de meilleures performances. Par défaut, si cette option n'est pas utilisée, 4D décharge au moins 10 % de la mémoire cache lorsqu'il a besoin de place. Si votre base de données fonctionne avec un grand cache, il peut être avantageux d'utiliser une taille fixe, qui ne dépend pas de la taille du cache. Vous pouvez régler ce paramètre en fonction de la taille des blocs de données traitées dans votre base de données.
 
-You want to add 100 MB to the current database cache size. You can write:
+## Exemple 
+
+Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écrire :
 
 ```4d
  var $currentCache : Real
  $currentCache:=Get cache size
-  // current cache size is, for example, 419430400
+  // la taille actuelle du cache est par exemple, 419430400
  SET CACHE SIZE($currentCache+100000000)
-  // current cache size is now 519430400
+  // la taille courante du cache est maintenant de 519430400
 ```
 
-## See also 
+## Voir aussi 
 
 [Get cache size](get-cache-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1399 |
+| Numéro de commande | 1399 |
 | Thread safe | yes |
 
 

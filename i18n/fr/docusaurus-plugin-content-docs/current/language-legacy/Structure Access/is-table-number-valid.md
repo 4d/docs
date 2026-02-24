@@ -5,43 +5,43 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* : Integer ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTable* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &#8594;  | Table number |
-| Function result | Boolean | &#8592; | True = table exists in database, False = table does not exist in database |
+| numTable | Integer | &#8594;  | Numéro de table |
+| Résultat | Boolean | &#8592; | Vrai = la table existe dans la base, Faux = la table n’existe pas dans la base |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is table number valid.Summary-->The Is table number valid command returns True if the table whose number is passed in the *tableNum* parameter exists in the database and False otherwise.<!-- END REF--> Keep in mind that the command returns False if the table is in the Trash of the Explorer.
+<!--REF #_command_.Is table number valid.Summary-->La commande **Is table number valid** retourne Vrai si la table dont le numéro est passé dans *numTable* existe dans la base et Faux sinon.<!-- END REF--> A noter que la commande retourne Faux si la table se trouve dans la Corbeille de l’Explorateur.
 
-This command can be used to detect any table deletions, which create gaps in the sequence of table numbers.
+Cette commande permet de détecter d’éventuelles suppressions de tables, ce qui crée des ruptures dans la séquence des numéros de tables.
 
-## See also 
+## Voir aussi 
 
 [Last table number](last-table-number.md)  
 [Is field number valid](is-field-number-valid.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 999 |
+| Numéro de commande | 999 |
 | Thread safe | yes |
 
 

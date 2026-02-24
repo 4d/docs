@@ -9,42 +9,41 @@ displayed_sidebar: docs
 <!--REF #_command_.ACCEPT.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-The **ACCEPT** command is used in form or object methods (or in subroutines) to:
+La commande **ACCEPT** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour :
 
-* accept a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
-* accept a form displayed with the [DIALOG](./commands/dialog) command.
-* exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
+* valider un enregistrement ou un sous-enregistrement créé ou modifié — dont les données ont été saisies à l'aide de [ADD RECORD](add-record.md) ou de [MODIFY RECORD](modify-record.md).
+* valider un formulaire affiché par l'intermédiaire de la commande [DIALOG](../commands/dialog.md).
+* quitter un formulaire affichant une sélection d'enregistrements — à l'aide de [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
 
-<!--REF #_command_.ACCEPT.Summary-->**ACCEPT** performs the same action as if a user had pressed the Enter key. After the form is accepted, the OK system variable is set to 1.<!-- END REF-->
+<!--REF #_command_.ACCEPT.Summary-->**ACCEPT** effectue la même action que lorsque l'utilisateur appuie sur la touche **Entrée**. <!-- END REF-->Une fois que le formulaire a été validé, la variable système OK prend la valeur 1.
 
-**ACCEPT** is commonly executed as a result of choosing a menu command. **ACCEPT** is also commonly used in the object method of a “no action” button.
+**ACCEPT** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **ACCEPT** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
-It is also often used in the optional close box method for the [Open window](./commands/open-window) command. If there is a Control-menu box on a window, **ACCEPT** or [CANCEL](cancel.md) can be called, in the method to be executed, when the Control-menu box is double-clicked or the Close menu command is chosen.
+Enfin, cette commande peut être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **ACCEPT** et [CANCEL](cancel.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.
 
-**ACCEPT** cannot be queued up. In response to an event, executing two **ACCEPT** commands in a row from within a method would have the same effect as executing one.
+Il n'est pas possible d'enchaîner plusieurs **ACCEPT**. En d'autres termes, l'exécution consécutive de deux commandes **ACCEPT** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule.
 
-### Headless mode 
+### Mode headless 
 
-The **ACCEPT** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
+La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-## See also 
+## Voir aussi 
 
 [CANCEL](cancel.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 269 |
+| Numéro de commande | 269 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

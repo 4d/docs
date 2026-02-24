@@ -5,68 +5,67 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* : Integer ; *name* : Text ; *startup* : Text ; *password* : Text, Operator ; *nbLogin* : Integer ; *lastLogin* : Date {; *memberships* : Integer array {; *groupOwner* : Integer}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *réfUtilisateur* ; *nom* ; *démarrage* ; *motDePasse* ; *nbUtilisations* ; *dernièreUtilisation* {; *adhésions* {; *groupePropriétaire*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &#8596;  |*in:* Unique ID number of user account, -1 for adding a user <br/>*out:* Unique ID number of added user account (if any) |
-| name | Text | &#8594;  | New user name |
-| startup | Text | &#8594;  | Name of new user startup method |
-| password | Text, Operator | &#8594;  | New (unencrypted) password, or * to leave the password unchanged |
-| nbLogin | Integer | &#8594;  | New number of logins to the database (Binary databases only) |
-| lastLogin | Date | &#8594;  | New date of last login to the database (Binary databases only) |
-| memberships | Integer array | &#8594;  | ID numbers of groups to which the user belongs |
-| groupOwner | Integer | &#8594;  | Reference number of user group owner (Binary databases only) |
-| Function result | Integer | &#8592; | Unique ID number of new user |
+| réfUtilisateur | Integer | &#8594;  | Numéro de référence unique du compte de l'utilisateur ou -1 pour l'ajout d'un utilisateur affilié au Super_Utilisateur ou -2 pour l'ajout d'un utilisateur affilié à l'Administrateur |
+| &#8592; | Unique ID number of added user account (if any) |
+| nom | Text | &#8594;  | Nouveau nom de l'utilisateur |
+| démarrage | Text | &#8594;  | Nom de la nouvelle méthode de démarrage |
+| motDePasse | Text | &#8594;  | Nouveau mot de passe (non crypté) ou * pour ne pas modifier le mot de passe |
+| nbUtilisations | Integer | &#8594;  | Nouveau nombre d'utilisations de la base |
+| dernièreUtilisation | Date | &#8594;  | Nouvelle date de dernière utilisation de la base |
+| adhésions | Integer array | &#8594;  | Numéros de référence des groupes auxquels l'utilisateur appartient |
+| groupePropriétaire | Integer | &#8594;  | Numéro de référence du groupe propriétaire de l’utilisateur |
+| Résultat | Integer | &#8592; | Numéro de référence unique du nouvel utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Set user properties.Summary-->Set user properties lets you change and update the properties of an existing user account whose unique user ID number you pass in *userID*, or add a new user.<!-- END REF-->
+<!--REF #_command_.Set user properties.Summary-->**Set user properties** vous permet de modifier et de mettre à jour les propriétés d'un compte actif d'utilisateur existant dont le numéro de référence est passé dans le paramètre *réfUtilisateur*, ou d'ajouter un nouvel utilisateur.<!-- END REF-->
 
-If you are changing the properties of an existing user account, you must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command. If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md). Otherwise, you can call [Is user deleted](is-user-deleted.md) to test the user account before calling Set user properties.
+Si vous modifiez les propriétés d'un utilisateur existant, vous devez passer le numéro de référence qui vous est renvoyé par la commande [GET USER LIST](get-user-list.md).
 
-To add a new user, pass -1 in userID (see also notes below for binary databases).
+Pour ajouter un nouvel utilisateur, il faut passer -1 à *réfUtilisateur* (voir les notes ci-dessous pour les bases binaires).
 
-After the call, if the user is successfully added or modified, its unique ID number is returned in *userID*.
+Si l'utilisateur a bien été créé ou modifié, **Set user properties** retourne son numéro de référence unique d'utilisateur.  
+Si vous ne passez pas un numéro de référence d'utilisateur valide, **Set user properties** ne fait rien et retourne 0.
 
-If you do not pass -1, -2 or a valid user ID number, Set user properties does nothing.
+Lorsque vous appelez cette commande, vous passez le nouveau nom, la nouvelle méthode de démarrage, le nouveau mot de passe, le nouveau nombre d'utilisations et la nouvelle date de dernière utilisation pour l'utilisateur dans les paramètres *nom*, *démarrage*, *motDePasse*, *nbUtilisation* et *dernièreUtilisation*. Vous passez un mot de passe non crypté dans le paramètre *motDePasse*. 4D cryptera ce mot de passe avant de le sauvegarder dans le compte de l'utilisateur.   
+Si le nouveau nom d'utilisateur passé dans *nom* n'est pas unique (un utilisateur de même nom existe déjà), la commande ne fait rien et l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-Before the call, you pass the new name, startup method, password, number of logins and date of last login for the user, in the *name*, *startup*, *password*, *nbLogin* and *lastLogin* parameters.You pass an unencrypted password in the *password* parameter. 4D will encrypt it for you before saving it in the user account.   
-If the new user name passed in *name* is not unique (there is already a user with the same name), the command does nothing and the error -9979 is returned. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+**Note :** Les paramètres *nbUtilisation* et *dernièreUtilisation* sont utilisés uniquement dans les bases binaires. lls sont ignorés dans les bases projets.
 
-**Note:** The *nbLogin* and *lastLogin* parameters are used in binary databases only. They are ignored in project databases. 
+Si vous ne voulez pas modifier toutes les propriétés de l'utilisateur (à part son groupe, voir ci-dessous), appelez au préalable [GET USER PROPERTIES](get-user-properties.md) et passez les valeurs retournées dans celles que vous ne voulez pas modifier. Si vous ne voulez pas modifier le mot de passe de l'utilisateur, passez \* dans le paramètre *motDePasse*. Cela vous permet de changer les autres propriétés du compte de l’utilisateur, sans changer le mot de passe de ce compte.
 
-If you do not want to change all the properties of the user (aside from the memberships, see below), first call [GET USER PROPERTIES](get-user-properties.md) and pass the returned values for the properties you want to leave unchanged.
+Si vous ne passez pas le paramètre optionnel *adhésions*, les adhésions de l'utilisateur restent inchangées. Si vous ne passez pas ce paramètre en cas d'ajout d'un utilisateur, il ne fera partie d'aucun groupe.
 
-If you do not want to change the password for an account, pass the \* symbol as a value for the *password* parameter. This allows you to change the other properties of the user account without changing the password for the account.
+Si vous passez le paramètre optionnel *adhésions*, vous modifiez toutes les adhésions pour l'utilisateur. Avant d'appeler cette commande, vous devez remplir le tableau *adhésions* avec les numéros de référence uniques des groupes dont l'utilisateur devra faire partie.
 
-If you do not pass the optional *memberships* parameter, the current memberships of the user are left unchanged. If you do not pass *memberships* when adding a user, the user will not belong to any group.  
-If you pass the optional *memberships* parameter, you change all the memberships for the user. Before the call, you must populate the *memberships* array with the unique ID numbers of the groups to which the user will belong.
+*(Bases binaires uniquement)* Si vous passez le paramètre facultatif *groupePropriétaire*, vous indiquez le numéro de référence du groupe “propriétaire” de l’utilisateur, c’est-à-dire le groupe propriétaire par défaut des objets créés par cet utilisateur. Pour annuler les adhésions d'un utilisateur, passez un tableau vide dans le paramètre *adhésion*.
 
-(*Binary databases only*) If you pass the optional *groupOwner* parameter, you indicate the ID number of the user group “owner”, i.e. the default owner group of the objects created by this user. To revoke all the memberships of a user, pass an empty *memberships* array.
+**Notes pour les bases binaires :** Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*. Si vous voulez ajouter un nouvel utilisateur affilié au Super\_Utilisateur, passez -1 dans réfUtilisateur. Si vous voulez ajouter un nouvel utilisateur affilié à l'Administrateur, passez -2 dans réfUtilisateur. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a user affiliated with the Designer, pass -1 in userID. To create a user affiliated with the Administrator, pass -2 in userID.
+## Gestion des erreurs 
 
-## Error management 
+Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-If you do not have the proper access privileges for calling Set user properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md "ON ERR CALL").
-
-## See also 
+## Voir aussi 
 
 [DELETE USER](delete-user.md)  
 [GET GROUP LIST](get-group-list.md)  
@@ -75,11 +74,11 @@ If you do not have the proper access privileges for calling Set user properties 
 [Is user deleted](is-user-deleted.md)  
 [Validate password](validate-password.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 612 |
+| Numéro de commande | 612 |
 | Thread safe | no |
 
 

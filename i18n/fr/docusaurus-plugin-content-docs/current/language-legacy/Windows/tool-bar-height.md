@@ -9,41 +9,40 @@ displayed_sidebar: docs
 <!--REF #_command_.Tool bar height.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Height (expressed in pixels) of tool bar or 0 if tool bar is hidden |
+| Résultat | Integer | &#8592; | Hauteur (exprimée en pixels) de la barre d’outils ou 0 si la barre d’outils n’est pas affichée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Modified|
-|11 SQL|Created|
+|14 R5|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Tool bar height.Summary-->The Tool bar height command returns the height of the current visible tool bar, expressed in pixels.<!-- END REF--> Depending on the context, it can be either the 4D Design mode toolbar, or a custom toolbar created with [Open form window](./commands/open-form-window) (the Design mode toolbar is automatically hidden when a custom toolbar is displayed).
+<!--REF #_command_.Tool bar height.Summary-->La commande **Tool bar height** retourne la hauteur de la barre d'outils visible courante, exprimée en pixels.<!-- END REF--> Suivant le contexte, il peut s'agir soit de la barre d'outils du mode Développement de 4D, soit d'une barre d'outils personnalisée créée avec [Open form window](open-form-window.md) (la barre d'outils du mode Développement est automatiquement masquée lorsqu'une barre d'outils personnalisée est affichée).
 
-If no tool bar is displayed, the command returns 0.
+ Si aucune barre d'outils n'est affichée, la commande retourne 0.
 
-## See also 
+## Voir aussi 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [Menu bar height](menu-bar-height.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1016 |
+| Numéro de commande | 1016 |
 | Thread safe | no |
-
 
 

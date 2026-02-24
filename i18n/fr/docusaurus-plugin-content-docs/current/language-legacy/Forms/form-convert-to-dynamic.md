@@ -5,81 +5,79 @@ slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*aTable* : Table ;} *formName* : Text ) : Object<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*uneTable* ;} *nomFormulaire* ) : Object<!-- END REF-->
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Form table |
-| formName | Text | &#8594;  | Name of a "classic" project or table form |
-| Function result | Object | &#8592; | formName converted to dynamic form |
+| uneTable | Table | &#8594;  | Table du formulaire |
+| nomFormulaire | Text | &#8594;  | Nom d'un formulaire projet ou d'un formulaire table "classique" |
+| Résultat | Object | &#8592; | formName converti en formulaire dynamique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R3|Created|
+|17 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM Convert to dynamic.Summary-->The **FORM Convert to dynamic** command converts the *formName* (classic form) to a dynamic form and returns it in an object.<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Summary-->La commande **FORM Convert to dynamic** convertit le formulaire classique *nomFormulaire* en formulaire dynamique et le retourne sous forme d'objet.<!-- END REF-->
 
-*Classic forms* are 4D forms stored within the structure file in binary format. *Dynamic forms* are forms whose structures are defined in a 4D object (or a .json file). For more information, please refer to the *Dynamic Forms* section.
+Les *formulaires classiques* sont des formulaires 4D stockés dans le fichier structure en format binaire. Les **formulaires dynamiques* sont des formulaires dont les structures sont définies via un un objet 4D (ou un fichier .json). Pour plus d'informations, veuillez consulter la section *Formulaires dynamiques*.
 
-If you want to convert a table form, pass the form table in the *aTable* parameter and then pass its name as a string in *formName*. For a project form, pass the form name directly in *formName*.
+Si vous souhaitez convertir un formulaire table, passez la table dans le paramètre *uneTable* puis passez son nom dans la chaîne *nomFormulaire*. Pour un formulaire projet, passez directement le nom du formulaire directement dans *nomFormulaire*.
 
-In order to be able to run the form directly by passing the resulting object to the [DIALOG](./commands/dialog) command, **FORM Convert to dynamic** applies specific rules when converting the form:
+Pour pouvoir exécuter directement le formulaire en passant l'objet résultant à la commande [DIALOG](../commands/dialog.md), **FORM Convert to dynamic** applique des règles spécifiques lors de la conversion du formulaire :
 
-* References to lists are exported by name instead of a JSON pointer referencing the lists.json file.
-* References to named filters and named display formats (using the '|' prefix character) are exported by value instead of a JSON pointer referencing the filters.json file.
-* Since pictures from the picture library are not exported by the command, objects referencing a picture from the picture library still reference the library after the conversion. In their "icon" property, they use a special "pictlib:xx" url, where *xx* is the id in the library.
-* Static pictures are converted as picture type object properties.
-* Deprecated objects are ignored. Refer to the paragraph to see the list of objects or properties that are not supported in dynamic forms.
+* Les références aux listes sont exportées par nom, au lieu d'un pointeur JSON référençant le fichier lists.json.
+* Les références aux filtres nommés et aux formats d'affichage nommés (préfixés par le caractère '|') sont exportées par valeur, au lieu d'un pointeur JSON référençant le fichier filters.json.
+* Les images de la bibliothèque d'images n'étant pas exportées par la commande, les objets référençant une image de la bibliothèque d'images continuent de référencer la bibliothèque après la conversion. Dans leur propriété "icon", ils utilisent une URL "pictlib:xx" spécifique, où *xx* correspond à l'identifiant dans la bibliothèque.
+* Les images statiques sont converties en propriétés d'objet de type image.
+* Les objets obsolètes sont ignorés. Veuillez vous reporter au paragraphe pour consulter la liste des objets ou des propriétés qui ne sont pas pris en charge dans les formulaires dynamiques.
 
-**Note:** References to the form method and form object methods are exported with internal IDs, which will be valid only in the current database while *formName* methods are not modified. If you want to use the exported form in another context, you need to assign project method names to the form or form object "method" property (see example).
+**Note :** Les références aux méthodes formulaire et aux méthodes objets sont exportées avec des ID internes, qui seront valides uniquement dans la base courante tant que les méthodes de *nomFormulaire* ne seront pas modifiées. Si vous souhaitez utiliser le formulaire exporté dans un autre contexte, vous devez associer des noms de méthodes projet à la propriété "method" du formulaire ou des objets du formulaire (voir l'exemple).
 
-## Example 
+## Exemple 
 
-You want to convert a classic form, modify it, and display it. 
+Vous souhaitez convertir, modifier et afficher un formulaire classique. 
 
-The original form:
+Le formulaire initial :
 
-  
 ![](../assets/en/commands/pict3977360.en.png)
 
   
 ```4d
  var $dynForm : Object
- $dynForm:=FORM Convert to dynamic("FormToConvert")
- $dynForm.pages[1].objects.TitleArea.stroke:="red"
- $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
+ $dynForm:=FORM Convert to dynamic("FormulaireAconvertir")
+ $dynForm.pages[1].objects.TitleA:="rouge"
+ $dynForm.pages[1].objects.bOK.method:="myMethod"  // associez une méthode projet
  DIALOG($dynForm)
 ```
 
   
-If you execute the code: 
+Si vous exécutez le code : 
 
   
-![](../assets/en/commands/pict3977362.en.png)
+![](../assets/en/commands/pict3977362.fr.png)
 
-## See also 
+## Voir aussi 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 [Export structure file](export-structure-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1570 |
+| Numéro de commande | 1570 |
 | Thread safe | no |
-
 
 

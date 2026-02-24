@@ -5,43 +5,43 @@ slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *object* : Object ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objet* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Object to return contents |
-| Function result | Collection | &#8592; | Collection of objects with key / value properties |
+| objet | Object | &#8594;  | Objet retournant le contenu |
+| Résultat | Collection | &#8592; | Collection d'objets avec les propriétés key/value |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Entries.Summary-->The **OB Entries** command returns a collection of objects containing the contents of the *object* as key / value property pairs.<!-- END REF--> 
+<!--REF #_command_.OB Entries.Summary-->La commande **OB Entries** retourne une collection d'objets dont le contenu correspond à l'*objet* comme une paire de propriétés key/value.<!-- END REF--> 
 
-Each returned object contains the following properties:
+Chaque objet retourné contient les propriétés suivantes :
 
-| **Property** | **Type** | **Description**                         |
-| ------------ | -------- | --------------------------------------- |
-| key          | string   | enumerable property name of the object  |
-| value        | variant  | enumerable property value of the object |
+| **Propriété** | **Type** | **Description**                              |
+| ------------- | -------- | -------------------------------------------- |
+| key           | string   | Nom de la propriété énumérable de l'objet    |
+| value         | variant  | Valeur de la propriété énumerable de l'objet |
 
-Only first-level property names are returned (property names of sub-objects are not returned). The order of properties within the returned collection follows the definition order of the properties.
+Seuls les noms de propriétés de premier niveau sont retournés (les noms des propriétés des sous-objets ne sont pas retournés). L'ordre des propriétés de la collection retournée suit l'ordre de défintion des propriétés.
 
-## Example 
+## Exemple 
 
-Using an object as an hash map (key / value system) provides a quick and direct access to data, just like when using an index (*e.g.*, if we need Mary's age, we can write: $persons\["Mary"\])
+L'utilisation d'un objet comme une hashmap (système clé/valeur) permet d'accéder rapidement et directement aux données, tout comme l'utilisation d'un index (ex : si nous souhaitons connaitre l'âge de Marie, nous écrivons $persons\["Marie"\])
 
 ```4d
  var $individual;$persons : Object
@@ -50,28 +50,28 @@ Using an object as an hash map (key / value system) provides a quick and direct 
  $persons:=New object
  $persons["John"]:=42
  $persons["Andy"]:=24
- $persons["Mary"]:=30
+ $persons["Marie"]:=30
  $persons["Paul"]:=50
  
- ALERT("The average age is "+String(OB Values($persons).average()))
- ALERT("There are "+String(OB Keys($persons).length)+" persons")
+ ALERT("La moyenne d'âge est de "+String(OB Valeurs($persons).average()))
+ ALERT("On compte"+String(OB Cles($persons).length)+" personnes")
  
  $ages:=OB Entries($persons).query("value>:1";25)
- ALERT("There are "+String($ages.length)+" persons who are over 25")
+ ALERT("On compte"+String($ages.length)+" personnes âgées de plus de 25 ans")
  
- ALERT("Their names are: "+$ages.extract("key").join("-"))
+ ALERT("Elles s'appellent : "+$ages.extract("key").join("-"))
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Keys](ob-keys.md)  
 [OB Values](ob-values.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1720 |
+| Numéro de commande | 1720 |
 | Thread safe | no |
 
 

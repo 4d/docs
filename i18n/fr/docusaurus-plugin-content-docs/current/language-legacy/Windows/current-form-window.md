@@ -9,40 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form window.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Current form window reference number |
+| Résultat | Integer | &#8592; | Numéro de référence de la fenêtre du formulaire courant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current form window.Summary-->The **Current form window** command returns the reference of the current form window.<!-- END REF--> If no window has been set for the current form, the command returns 0.
+<!--REF #_command_.Current form window.Summary-->La commande **Current form window** retourne la référence de la fenêtre du formulaire courant.<!-- END REF--> S’il n’y a pas de fenêtre définie pour le formulaire courant, la commande retourne 0.
 
-The current form window can be generated automatically using a command such as [ADD RECORD](add-record.md), following a user action or by using the [Open window](./commands/open-window) or [Open form window](./commands/open-form-window) commands. 
+La fenêtre du formulaire courant peut avoir été générée automatiquement par une commande telle que [ADD RECORD](add-record.md), à la suite d’une action utilisateur ou via les commandes [Open window](open-window.md) ou [Open form window](open-form-window.md). 
 
-## See also 
+## Voir aussi 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](open-form-window.md)  
+[Open window](open-window.md)  
 [RESIZE FORM WINDOW](resize-form-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 827 |
+| Numéro de commande | 827 |
 | Thread safe | no |
-
 
 

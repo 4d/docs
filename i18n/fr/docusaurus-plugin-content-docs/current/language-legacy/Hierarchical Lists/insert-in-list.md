@@ -5,71 +5,71 @@ slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* : Integer, Text ; *beforeItemRef* : Integer, Operator ; *itemText* : Text ; *itemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* ; *avantElément* ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<br/>**INSERT IN LIST** ( * ; *liste* ; * ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| beforeItemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the currently selected list item |
-| itemText | Text | &#8594;  | Text for the new list item |
-| itemRef | Integer | &#8594;  | Unique reference number for the new list item |
-| sublist | Integer | &#8594;  | Optional sublist to attach to the new list item |
-| expanded | Boolean | &#8594;  | Indicates if the sublist will be expanded or collapsed |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| avantElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
+| libelléElément | Text | &#8594;  | Libellé du nouvel élément |
+| réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#8594;  | Sous-liste optionnelle rattachée au nouvel élément |
+| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Summary-->La commande **INSERT IN LIST** insère l'élément désigné par le paramètre *réfElément* dans la liste dont le numéro de référence ou le nom d'objet est passé dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-The *beforeItemRef* parameter can be used to designate the item before which you wish to insert the new item:
+Le paramètre *avantElément* permet de désigner l'élément avant lequel vous souhaitez insérer le nouvel élément :
 
-* You can pass the value 0 in order to designate the last item added to the list. The newly inserted item will then become the selected item.
-* You can pass *\** in order for the new item to be inserted before the currently selected item in the list. In this case, the newly inserted item will also become the selected item.
-* Otherwise, if you want to insert an item before a specific item, you pass the item reference number of that item. In this case, the newly inserted item is not automatically selected. If there is no item with the corresponding item reference number, the command does nothing.
+* Vous pouvez passer la valeur 0 afin de désigner le dernier élément ajouté à la liste. Le nouvel élément devient l'élément sélectionné.
+* Vous pouvez passer *\** afin que le nouvel élément soit inséré avant l'élément actuellement sélectionné dans la liste. Le nouvel élément devient l'élément sélectionné.
+* Si vous souhaitez insérer le nouvel élément avant un élément spécifique, passez le numéro de référence de cet élément comme deuxième paramètre. Dans ce cas, le nouvel élément inséré n'est pas automatiquement sélectionné. Si le numéro que vous passez ne correspond à aucun élément de la *liste*, la commande ne fait rien.
 
-You pass the text of the new item in *itemText*. Starting with 4D v16 R4, if the item is associated with a standard action, you can pass the ak standard action title constant in *itemText* to automatically use the localized action name. For more information, please refer to the *Standard actions* section.
+Vous passez le texte du nouvel élément dans le paramètre *libelléElément*. A compter de 4D v16 R4, si l'élément est associé à une action standard, vous pouvez passer la constante ak standard action title dans *libelléElément* pour utiliser automatiquement le nom de l'action traduit. Pour plus d'informations, veuillez vous reporter à la section *Actions standard*.
 
-You pass the item reference number of the new item in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the *Using item reference numbers (itemRef)* paragraph for more information about the *itemRef* parameter.
+Vous passez le numéro de référence du nouvel élément dans le paramètre *réfElément*. Bien que ce numéro de référence soit qualifié d'unique, vous pouvez passer en réalité la valeur que vous voulez. Reportez-vous au paragraphe *Exploiter les numéros de référence des éléments (réfElément)* pour plus d'informations sur le paramètre *réfElément*. 
 
-If you want for the item to include subitems, pass a valid list reference number in the *sublist* parameter. In this case, you must also pass the *expanded* parameter. Pass either **True** or **False** in this parameter so that this sublist is displayed either expanded or collapsed respectively. 
+Si vous souhaitez que l'élément comporte des sous-éléments, passez un numéro de référence de liste valide dans le paramètre *sous\_Liste*. Dans ce cas, vous devez également passer le paramètre *déployée*. Passez Vrai ou Faux dans ce paramètre pour que cette sous-liste s'affiche respectivement déployée ou contractée. 
 
-## Example 
+## Exemple 
 
-The following code inserts an item (with no attached sublist) just before the currently selected item in the *hList* list:
+L'exemple suivant insère un élément (associé à aucune sous-liste) juste devant l'élément actuellement sélectionné dans la liste *hList*:
 
 ```4d
  vlUniqueRef:=vlUniqueRef+1
- INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
+ INSERT IN LIST(hList;*;"Nouvel élément";vlUniqueRef)
 ```
 
-## See also 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 625 |
+| Numéro de commande | 625 |
 | Thread safe | no |
 
 

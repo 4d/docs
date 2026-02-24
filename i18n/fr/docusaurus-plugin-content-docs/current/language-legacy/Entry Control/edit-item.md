@@ -5,90 +5,91 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *object* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *object* : Table, Variable {; *item* : Integer} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *objet* {; élément} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If set, object is an object name (string) If omitted, object is a table or variable |
-| object | Text, Table, Variable | &#8594;  | Object name (if * set) or Table or variable (if * omitted) |
-| item | Integer | &#8594;  | Item number |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un table ou une variable |
+| objet | any | &#8594;  | Nom d’objet (si * spécifié) ou Table ou variable (si * omis) |
+| élément | Integer | &#8594;  | Numéro d’élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EDIT ITEM.Summary-->The **EDIT ITEM** command allows you to edit the current item or the item number *item* in the array or the list set in the *object* parameter.<!-- END REF-->   
-This means that the selected item can be modified; entering a character entirely replaces the item content.
+<!--REF #_command_.EDIT ITEM.Summary-->La commande **EDIT ITEM** permet de passer en “mode édition” l’élément courant ou l’élément de numéro *élément* du tableau ou de la liste désigné(e) par le paramètre *objet*.<!-- END REF-->   
+Le mode édition signifie que l’élément est sélectionné et prêt à être modifié : la saisie d’un caractère remplacera intégralement le contenu de l’élément.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (in this case, pass a string in *object*). If you do not pass the parameter, you indicate that the *object* parameter is a table or a variable. In this case, you do not pass a string but a table or a variable reference.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (dans ce cas, passez une chaîne dans *objet*). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est une table ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de table ou une variable.
 
-This command applies to the following enterable objects:
+Cette commande s’applique aux objets saisissables suivants :
 
-* Hierarchical lists
-* List box columns
-* Subforms (in this case, only an object name — the subform — can be passed in *object*),
-* List forms displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands.
+* Listes hiérarchiques
+* Colonnes de list box
+* Sous-formulaires (dans ce cas, seul un nom d’objet — le sous-formulaire — peut être passé dans *objet*),
+* Formulaires liste affichés via la commande [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
 
-If the command is used with an enterable object that is not a list, it then acts the same as the [GOTO OBJECT](goto-object.md) command.   
-The command does nothing if the list or the array is empty or invisible. Also, if the list or the array is not enterable, the command only selects the specified item without changing to editing mode. Regarding list boxes, if the column does not allow text entry (entry by check boxes or drop-down lists only), the specified element gets the focus.
+Si la commande est utilisée avec un objet saisissable qui n’est pas une liste, elle équivaut à la commande [GOTO OBJECT](goto-object.md).   
+La commande ne fait rien si la liste ou le tableau désigné(e) est vide ou invisible. Si la liste ou le tableau n’est pas saisissable, la commande sélectionne (sans passer en édition) l’élément spécifié.  
+Dans le cadre d'une list box, si la colonne n'autorise pas la saisie de texte (saisie par case à cocher ou menu déroulant uniquement), l'élément spécifié prend le focus.
 
-The optional *item* parameter allows you to set the position of the item (hierarchical list) or the row number (list box column, list form and subform in “multiple selection” mode) to change to editing mode. If you do not pass this parameter, the command is applied to the current item for *object*. If there is no current item, the first item of *object* changes to editing mode.
+Le paramètre facultatif *élément* vous permet de désigner la position de l’élément (liste hiérarchique) ou le numéro de la ligne (colonnes de list box, formulaire liste et sous-formulaire en mode “multi-sélection”) à passer en édition. Si vous ne passez pas ce paramètre, la commande s’applique à l’élément courant de l'*objet*. S’il n’y a pas d’élément courant, le premier élément de l'*objet* passe en édition.
 
-**Notes:**
+**Notes :**
 
-* In subforms and list forms, the command changes the first field of a specified row to edit mode, in the order of entry.
-* In listboxes displayed in hierarchical mode, if the targeted item belongs to a hierarchical level that is collapsed, this level (as well as any parent levels) will be expanded automatically so that the item is visible.
+* Dans le cadre des sous-formulaires et des formulaires liste, la commande passe en édition le premier champ de la ligne spécifiée, dans l’ordre de saisie.
+* Dans le cadre d'une list box affichée en mode hiérarchique, si l'élément visé appartient à un niveau hiérarchique contracté, le niveau ainsi que les éventuels niveaux parents sont automatiquement déployés afin que la ligne soit visible.
 
-## Example 1 
+## Exemple 1 
 
-This command can be particularly useful when creating a new item in a hierarchical list. When the command is called, the last item added or inserted in the list automatically becomes editable without the user having to do anything.   
-The following code may be the method of a button that allows you to insert a new item in an existing list. The default text “New\_item” is automatically ready to be changed:
+Cette commande peut être utile notamment lors de la création d’un nouvel élément de liste hiérarchique. Au moment de l’appel de la commande, le dernier élément ajouté ou inséré dans la liste devient automatiquement éditable, sans que l’utilisateur n’ait à effectuer d’action spécifique.   
+Le code suivant pourrait être la méthode d’un bouton permettant d’insérer un nouvel élément dans une liste existante. Le libellé “Nouvel\_élément” proposé par défaut est automatiquement placé en mode édition :
 
 ```4d
  vlUniqueRef:=vlUniqueRef+1
- INSERT IN LIST(hList;*;"New_item";vlUniqueRef)
- EDIT ITEM(*;"MyList")
+ INSERT IN LIST(hList;*;"Nouvel_élément";vlUniqueRef)
+ EDIT ITEM(*;"MaListe")
 ```
 
-![](../assets/en/commands/pict21419.en.png)
+![](../assets/en/commands/pict21419.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-Given two columns in a list box whose variable names are “Array1” and “Array2” respectively. The following example inserts a new item in the two arrays and passes the new item of Array2 into editing mode: 
+Soient deux colonnes d’une list box dont les noms de variables associées sont respectivement “Tableau1” et “Tableau2”. L’exemple suivant insère un nouvel élément dans les deux tableaux et passe le nouvel élément du tableau 2 en mode édition : 
 
 ```4d
- $vlRowNum:=Size of array(Array1)+1
- LISTBOX INSERT ROWS(*;"MyListBox";$vlRowNum)
- Array1{$vlRowNum}:="New value 1"
- Array2{$vlRowNum}:="New value 2"
- EDIT ITEM(Array2;$vlRowNum)
+ $vlNumLigne:=Size of array(Tableau1)+1
+ LISTBOX INSERT ROWS(*;"MaListBox";$vlNumLigne)
+ Tableau1{$vlNumLigne}:="Nouvelle valeur 1"
+ Tableau2{$vlNumLigne}:="Nouvelle valeur 2"
+ EDIT ITEM(Tableau2;$vlNumLigne)
 ```
 
-![](../assets/en/commands/pict21420.en.png)
+![](../assets/en/commands/pict21420.fr.png)
 
-## See also 
+## Voir aussi 
 
 [GOTO OBJECT](goto-object.md)  
 [INSERT IN LIST](insert-in-list.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 870 |
+| Numéro de commande | 870 |
 | Thread safe | no |
 
 

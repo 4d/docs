@@ -5,65 +5,65 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* ; *encodage* {; *autonome*} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| encoding | Text | &#8594;  | XML document character set |
-| standalone | Boolean | &#8594;  | True = the document is standalone False (default) = document is not standalone |
+| document | Time | &#8594;  | Référence du document ouvert |
+| encodage | Text | &#8594;  | Jeu de caractères du document XML |
+| autonome | Boolean | &#8594;  | Vrai=le document est autonome, Faux (défaut)=le document n’est pas autonome |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|12|Renamed|
-|2004|Created|
+|12|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX SET XML DECLARATION.Summary-->The **SAX SET XML DECLARATION** command initializes the XML document referenced in *document* using the specified *encoding*.<!-- END REF--> Optionnally, you can set the *standalone* attribute.
+<!--REF #_command_.SAX SET XML DECLARATION.Summary-->La commande **SAX SET XML DECLARATION** initialise le document XML référencé par *document* à l’aide de l'encodage défini.<!-- END REF--> Vous pouvez également déterminer l’attribut autonome (standalone) de manière facultative.
 
-* *encoding*: Indicates the character set used in the document. By default (if the command is not called), the UTF-8 character set (compressed Unicode) is used.  
-**Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to *Character Sets* to see the list of character sets supported (UTF-8 is however recommended in most cases).
-* *standalone*: Indicates whether the document is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the document is not standalone.
+* *encodage* : indique le jeu de caractères employé dans le document. Par défaut (si la commande n’est pas appelée), le jeu de caractères UTF-8 (Unicode compressé) est utilisé.  
+**Note :** Si vous passez un jeu de caractères non pris en charge par les commandes XML de 4D, l'UTF-8 sera utilisé. Reportez-vous au paragraphe *Jeux de caractères* pour connaître la liste des jeux de caractères pris en charge (l'UTF-8 est toutefois recommandé dans la plupart des cas).
+* *autonome* : indique si le document est autonome (Vrai) ou s’il dépend, pour son fonctionnement, d’autres fichiers ou de ressources externes (Faux). Par défaut (si la commande n’est pas appelée ou si le paramètre est omis), le document n’est pas autonome.
 
-**Note:** You can specify the indentation of the document thanks to the [XML SET OPTIONS](xml-set-options.md) command before writing anything.
+**Note :** Vous pouvez définir l’indentation du document à l'aide de la commande [XML SET OPTIONS](xml-set-options.md) avant de commencer votre saisie.
 
-This command must be called one time per document and before the first XML set command in the document; otherwise, an error message will be generated.
+Cette commande doit être appelée une seule fois par document et avant la première commande d’écriture XML dans le document, sinon une erreur est générée.
 
-## Example 
+## Exemple 
 
-The following code: 
+Le code suivant : 
 
 ```4d
- SAX SET XML DECLARATION($DocRef;"UTF-16";True)
+ SAX SET XML DECLARATION($RefDoc;"UTF-16";True)
 ```
 
-... will write this line in the document: 
+... inscrira cette ligne dans le document : 
 
 ```XML
-<<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 ```
 
-## See also 
+## Voir aussi 
 
 [SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 858 |
+| Numéro de commande | 858 |
 | Thread safe | yes |
 
 

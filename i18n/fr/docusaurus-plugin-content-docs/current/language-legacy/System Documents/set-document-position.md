@@ -5,48 +5,48 @@ slug: /commands/set-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* : Time ; *offset* : Real {; *anchor* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* ; *offset* {; *ancre*} )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Document reference number |
-| offset | Real | &#8594;  | File position (expressed in bytes) |
-| anchor | Integer | &#8594;  | 1 = In relation to the beginning of the file 2 = In relation to the end of the file 3 = In relation to current position |
+| docRef | Time | &#8594;  | Numéro de référence de document |
+| offset | Real | &#8594;  | Position dans fichier (exprimée en octets) |
+| ancre | Integer | &#8594;  | 1 = Par rapport au début du fichier 2 = Par rapport à la fin du fichier 3 = Par rapport à la position courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET DOCUMENT POSITION.Summary-->This command operates only on a document currently open whose document reference number you pass in *docRef*.<!-- END REF-->sets the position you pass in *offset* where the next read ([RECEIVE PACKET](receive-packet.md)) or write ([SEND PACKET](send-packet.md)) will occur.
+<!--REF #_command_.SET DOCUMENT POSITION.Summary-->Cette commande ne fonctionne qu'avec un document déjà ouvert, dont vous avez passé le numéro de référence dans le paramètre *docRef*.<!-- END REF-->définit la position que vous passez dans *offset* comme étant celle à laquelle la prochaine lecture ([RECEIVE PACKET](receive-packet.md)) ou écriture ([SEND PACKET](send-packet.md)) aura lieu.
 
-If you omit the optional *anchor* parameter, the position is relative to the beginning of the document. If you do specify the *anchor* parameter, you pass one of the values listed above. 
+Si vous omettez le paramètre optionnel *ancre*, la position est définie par rapport au début du document. Sinon, vous pouvez passer dans le paramètre *ancre* une des valeurs listées ci-dessus. 
 
-Depending on the anchor you can pass positive or negative values in *offset*.
+En fonction de l'*ancre* définie, vous pouvez passer des valeurs positives ou négatives dans le paramètre *offset*.
 
-## See also 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 482 |
+| Numéro de commande | 482 |
 | Thread safe | yes |
 
 

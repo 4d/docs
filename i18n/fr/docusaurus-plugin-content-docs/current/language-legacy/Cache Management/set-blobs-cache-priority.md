@@ -5,67 +5,67 @@ slug: /commands/set-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
+<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *laTable* ; *priorité* )<!-- END REF-->
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table whose "blobs" data priority value has to be set for the session |
-| priority | Integer | &#8594;  | Cache priority value for BLOBs in the table |
+| laTable | Table | &#8594;  | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
+| priorité | Integer | &#8594;  | Priorité des données "blobs" de la table dans le cache |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
-## Expert mode 
+## Mode expert 
 
-<!--REF #_command_.SET BLOBS CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
+<!--REF #_command_.SET BLOBS CACHE PRIORITY.Summary-->Cette commande est réservée pour des besoins spécifiques.<!-- END REF--> Elle doit être utilisée avec précaution car elle peut affecter les performances de la base. 
 
 ## Description 
 
-The **SET BLOBS CACHE PRIORITY** command sets a specific *priority* to the "blobs" data related to *aTable* in cache for all processes in the current session. This command should be called in the **On Startup** or **On Server Startup** database method.
+La commande **SET BLOBS CACHE PRIORITY** applique une *priorité* spécifique aux "blobs" de *laTable* chargées dans le cache pour tous les process dans la session courante. Elle doit être appelée dans la méthode base **Sur ouverture** ou **Sur démarrage serveur**.
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
- "Blobs" data field types include BLOB, text, picture, and object. This command handles priority for such data when they are stored in the data file only.
+ Les champs de données "blobs" incluent les types BLOB, texte, image et objet. La commande modifie la priorité de ces données uniquement lorsqu'elles sont stockées dans le fichier de données. 
 
-In the *priority* parameter, pass one of the following constants from the "*Cache Management*" theme:
+Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du cache*" :
 
-| Constant                 | Comment                                      |
-| ------------------------ | -------------------------------------------- |
-| Cache priority low       |                                              |
-| Cache priority very low  |                                              |
-| Cache priority normal    | Sets the cache priority to its default value |
-| Cache priority high      |                                              |
-| Cache priority very high |                                              |
+| Constante                | Comment                                              |
+| ------------------------ | ---------------------------------------------------- |
+| Cache priority low       |                                                      |
+| Cache priority very low  |                                                      |
+| Cache priority normal    | Rétablit la priorité de cache à sa valeur par défaut |
+| Cache priority high      |                                                      |
+| Cache priority very high |                                                      |
 
-## Example 
+## Exemple 
 
-In the , you want to set a high priority for the \[Customer\] table "blobs" data:
+Dans la , vous souhaitez fixer une priorité très haute pour les "blobs" de la table \[Client\] :
 
 ```4d
- SET BLOBS CACHE PRIORITY([Customer];Cache priority very high)
+ SET BLOBS CACHE PRIORITY([Client];Cache priority very high)
 ```
 
-## See also 
+## Voir aussi 
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
 [Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1425 |
+| Numéro de commande | 1425 |
 | Thread safe | yes |
 
 

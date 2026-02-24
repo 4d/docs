@@ -5,72 +5,71 @@ slug: /commands/send-message-to-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *message* : Text {; *userSession* : Text} )<!-- END REF-->
+<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *message* {; *sessionUtilisateur*} )<!-- END REF-->
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Text sent to user |
-| userSession | Text | &#8594;  | User's session ID |
+| message | Text | &#8594;  | Texte envoyé à l'utilisateur |
+| sessionUtilisateur | Text | &#8594;  | ID de la session de l'utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R4|Created|
+|17 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->The **SEND MESSAGE TO REMOTE USER** command sends a message to all remote users or to a specific remote user.<!-- END REF--> 
+<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Summary-->La commande **SEND MESSAGE TO REMOTE USER** permet d'envoyer un message à tous les utilisateurs distants ou à un utilisateur distant spécifique.<!-- END REF--> 
 
-In *message*, pass the text of the message to be displayed. It will be displayed as an alert or a notification on the screen of the session user(s).
+Dans *message*, passez le texte du message à afficher. Il sera affiché sous forme d'alerte ou de notification sur l'écran du ou des utilisateur(s) de la session.
 
-The optional *userSession* parameter can be used to designate a specific user by passing their session ID. You can retrieve the session ID with the [Process activity](./commands/process-activity) command. If *userSession* is omitted, the message is sent to all users.
+Le paramètre optionnel *sessionUtilisateur* peut être utilisé pour désigner un utilisateur spécifique en passant l'ID de sa session. Vous pouvez récupérer l'ID de la session à l'aide de la commande [Process activity](../commands/process-activity.md). Si *sessionUtilisateur* est omis, le message est envoyé à tous les utilisateurs.
 
-**Note**: This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or on 4D single user, **SEND MESSAGE TO REMOTE USER** does nothing.
+**Note** : Cette commande ne peut être exécutée que sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **SEND MESSAGE TO REMOTE USER** ne fait rien.
 
-## Example 
+## Exemple 
 
-You want to send a message to all users, then send a message to a specific user:
+Vous souhaitez envoyer un message à tous les utilisateurs, puis à un utilisateur spécifique :
 
 ```4d
-  // Method to be executed on server
+  // Méthode à exécuter sur le serveur
  var $message : Text
  var $element : Object
  var $userCol : Collection
  
-  // retrieve session information
+  // récupérez l'information sur la session
  $userCol:=(Get process activity(Sessions only)).sessions
  
-  // send message to all users
- $message:="A maintenance operation is scheduled for 10pm. The server will be restarted. Please log out before 10pm."
+  // envoyez un message à tous les utilisateurs
+ $message:="Une opération de maintenance est prévue à 22h. Le serveur sera redémarré. Veuillez vous déconnecter avant 22h."
  SEND MESSAGE TO REMOTE USER($message)
  
-  // send message to a single user, "Vanessa"
- $message:="Hello Vanessa"
+  // envoyez un message à un seul utilisateur, "Vanessa"
+ $message:="Salut Vanessa"
  $userCol:=Get process activity(Sessions only).sessions.query("systemUserName = :1";"Vanessa")
  For each($element;$userCol)
     SEND MESSAGE TO REMOTE USER($message;$element.ID)
  End for each
 ```
 
-## See also 
+## Voir aussi 
 
 [DROP REMOTE USER](drop-remote-user.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1632 |
+| Numéro de commande | 1632 |
 | Thread safe | yes |
-
 
 

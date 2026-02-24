@@ -5,126 +5,127 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* : Array {; *sort* : >, <}{; *...array* : Array ; *...sort* : >, <} )<br/>**MULTI SORT ARRAY** ( *ptrArrayName* : Pointer array ; *sortArrayName* : Integer array )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *tableau* {; *sensDuTri*}{; *tableau2* ; *sensDuTri2* ; ... ; *tableauN* ; *sensDuTriN*} ) <br/>
+**MULTI SORT ARRAY** ( *tabPointeurs* ; *tabTris* )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array(s) to be sorted |
-| sort | >, < | &#8594;  | `>` to sort by increasing order or  `<` to sort by decreasing order; if omitted no sort |
-| ptrArrayName | Pointer array | &#8594;  | Array of array pointers |
-| sortArrayName | Integer array | &#8594;  | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
+| tableau | Array | &#8594;  | Tableau(x) à trier |
+| sensDuTri | * | &#8594;  | ">" pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant Si omis  = pas de tri |
+| tabPointeurs | Pointer array | &#8594;  | Tableau de pointeurs de tableaux |
+| tabTris | Integer array | &#8594;  | Tableau d’ordres de tri (1 = tri par ordre croissant, -1 = tri par ordre décroissant, 0 = synchronisation avec des tris précédents) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MULTI SORT ARRAY.Summary-->The MULTI SORT ARRAY command enables you to carry out a multi-level sort on a set of arrays.<!-- END REF--> 
+<!--REF #_command_.MULTI SORT ARRAY.Summary-->La commande **MULTI SORT ARRAY** vous permet d’effectuer un tri multi-critères sur un ensemble de tableaux.<!-- END REF-->
 
-This command accepts two different syntaxes.
+Cette commande admet deux syntaxes différentes.
 
-* **First syntax: MULTI SORT ARRAY (array{; sort}{; array2; sort2; ...; arrayN; sortN})**
+* **Première syntaxe : TABLEAU MULTI TRI (tableau{; sensDuTri}{; tableau2; sensDuTri2; ...; tableauN; sensDuTriN})**
 
-This syntax is the simplest; it lets you directly pass the names of the synchronized arrays where you want to apply a multi-criteria sort.
+Cette syntaxe est la plus simple, elle permet de passer directement les noms des tableaux synchronisés auxquels vous souhaitez appliquer un tri multi-critères.
 
-You can pass an unlimited number of pairs (*array;> or <*) and/or only arrays. All the arrays passed as parameters are sorted in a synchronized manner.
+Vous pouvez passer un nombre illimité de couples (*tableau;> ou <*) et/ou de tableaux seuls. Tous les tableaux passés en paramètres sont triés de manière synchronisée.
 
-To use the contents of an array as sort criteria, pass the *sort* parameter. The value of the parameter (*\>* or *<*) determines the order (ascending or descending) in which the array will be sorted. If the *sort* parameter is omitted, the contents of the array are not used as sort criteria.
+Pour utiliser le contenu d’un tableau comme critère de tri, passez le paramètre *sensDuTri*. La valeur du paramètre (*\>* ou *<*) définit l’ordre (croissant ou décroissant) dans lequel le tableau sera trié. Si le paramètre *sensDuTri* est omis, le contenu du tableau n’est pas utilisé comme critère de tri.
 
-**Note:** Keep in mind that at least one sort criterion must be passed in order for the command to work. If no sort criterion is set, an error is generated.
+**Note :** Attention, au moins un critère de tri doit être passé pour que la commande fonctionne. Si aucun critère de tri n’est défini, une erreur est générée.
 
-The sort levels are determined by the order in which the arrays are passed to the command: the position of an array with a sort criterion in the syntax determines its sort level.
+Les niveaux de tris sont déterminés par l’ordre dans lequel les tableaux sont passés à la commande : la position d’un tableau avec critère dans la syntaxe détermine son niveau de tri.
 
-* **Second syntax: MULTI SORT ARRAY (ptrArrayName; sortArrayName)**
+* **Seconde syntaxe : TABLEAU MULTI TRI (tabPointeurs; tabTris)**
 
-This syntax, more complex, is also invaluable for generic developments (for example, you can create a generic method for sorting arrays of all types, or yet again, create the equivalent of a generic [SORT ARRAY](sort-array.md) command).
+Cette syntaxe, plus complexe, est précieuse pour les développements génériques (par exemple, vous pouvez créer une méthode générique de tri des tableaux de tout type, ou encore générer l’équivalent d’un [SORT ARRAY](sort-array.md) générique).
 
-The *ptrArrayName* parameter contains the name of an array of array pointers; each element of this array is a pointer designating an array to be sorted. The sorts are performed in the order of the array pointers defined by *ptrArrayName*. **Warning:** all the arrays pointed to by *ptrArrayName* must have the same number of elements.
+La paramètre *tabPointeurs* contient le nom d’un tableau de pointeurs de tableaux ; chaque élément de ce tableau est un pointeur désignant un tableau à trier. Les tris seront effectués dans l’ordre des pointeurs de tableaux défini par *tabPointeurs*. **Attention**, tous les tableaux pointés par *tabPointeurs* doivent avoir le même nombre d'éléments.
 
-**Note:** *ptrArrayName* can be an array of local ($ptrArrayName), process (ptrArrayName) or inter-process (<>ptrArrayName) pointers. Conversely, the elements of this array must point to process or inter-process arrays only.
+**Note :** *tabPointeurs* peut être un tableau de pointeurs local ($nomTabPtr), process (nomTabPtr) ou interprocess (<>nomTabPtr). En revanche, les éléments de ce tableau doivent pointer sur des tableaux process ou interprocess uniquement.
 
-The *sortArrayName* parameter contains the name of an array in which each element indicates the sorting order (-1, 0 or 1) of the element of the corresponding array of pointers:  
-\-1 = Sort by decreasing order.  
-0 = The array is not used as a sorting criterion but must be sorted according to the other sorts.   
-1 = Sort by increasing order.
+La paramètre *tabTri*s contient le nom d’un tableau dont chaque élément indique l’ordre de tri (-1, 0 ou 1) de l’élément du tableau de pointeurs correspondant :  
+\-1 = Tri par ordre décroissant.  
+0 = Le tableau n’est pas utilisé comme critère de tri mais doit être trié en fonction des autres tris.   
+1 = Tri par ordre croissant.
 
-For each element of the *ptrArrayName* array, there must be a corresponding element of the *sortArrayName* array. Both arrays must therefore have exactly the same number of elements.
+A chaque élément du tableau *tabPointeurs* doit correspondre un élément du tableau *tabTri*s. Les deux tableaux doivent donc avoir exactement le même nombre d’éléments.
 
-**Notes:** 
+**Notes :** 
 
-* You cannot sort [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") or [Picture](# "Can be any Windows or Macintosh picture") arrays. You can sort the elements of a two-dimensional array (i.e., *a2DArray{$vlThisElem}*) but you cannot sort the two-dimensional array itself (i.e., *a2DArray*).
-* You can sort [Object](# "Data structured as a native 4D object") arrays. Null elements are grouped and array elements are sorted with an internal order.
+1. Vous ne pouvez pas trier de tableaux de type Pointeur ou Image. Vous pouvez trier les éléments d’un tableau à deux dimensions (c’est-à-dire t2DTableau{$vlCetElément}), mais vous ne pouvez pas trier le tableau 2D lui-même (c’est-à-dire t2DTableau).
+2. Vous pouvez trier les tableaux de type Objet. Les éléments Null sont regroupés et les éléments du tableau sont triés selon un ordre interne.
 
-## Example 1 
+## Exemple 1 
 
-The following example uses the first syntax: it creates four arrays and sorts them by city (ascending order) then by salary (descending order) with the last two arrays, *names\_array* and *telNum\_array*, being synchronized according to the previous sort criteria:
-
-```4d
- ALL RECORDS([Employees])
- SELECTION TO ARRAY([Employees]City;cities;[Employees]Salary;salaries;[Employees]Name;
- names;[Employees]TelNum;telNums)
- MULTI SORT ARRAY(cities;>;salaries;<;names;telNums)
-```
-
-If you want for the names array to be used as the third sort criteria, just add *\>* or *<* after the *names\_array* parameter.   
-Note that the syntax:
+L’exemple suivant utilise la première syntaxe : il crée quatre tableaux et les trie par ville (ordre croissant) puis par salaire (ordre décroissant), les deux derniers tableaux *tab\_Noms* et *tab\_NumTel* étant synchronisés en fonction des critères de tri précédents :
 
 ```4d
- MULTI SORT ARRAY(cities;>;salaries;names;telNums)
+ ALL RECORDS([Employés])
+ SELECTION TO ARRAY([Employés]Ville;tab_Villes;[Employés]Salaire;tab_Salaire;[Employés]Nom;
+ tab_Noms;[Employés]NumTel;tab_NumTel)
+ MULTI SORT ARRAY(tab_Villes;>;tab_Salaire;<;tab_Noms;tab_NumTel)
 ```
 
-is equivalent to:
+Si vous souhaitez que le tableau des noms soit utilisé comme troisième critère de tri, il vous suffit d’ajouter *\>* ou *<* derrière le paramètre *tab\_Noms*.   
+A noter que la syntaxe :
 
 ```4d
- SORT ARRAY(cities;salaries;names;telNums;>)
+ MULTI SORT ARRAY(tab_Villes;>;tab_Salaire;tab_Noms;tab_NumTel)
 ```
 
-## Example 2 
-
-The following example uses the second syntax: it creates four arrays and sorts them by city (increasing order) and company (decreasing order); the last two arrays, names\_Array and telNum\_Array, being synchronized according to previous sort criteria:
+équivaut strictement à :
 
 ```4d
- ALL RECORDS([Employees])
- SELECTION TO ARRAY([Employees]City;cities;[Employees]Company;companies;[Employees]Name;
- names;[Employees]TelNum;telNums)
- ARRAY POINTER(pointers_Array;4)
- ARRAY LONGINT(sorts_Array;4)
- pointers_Array{1}:=->cities
- sorts_Array{1}:=1
- pointers_Array{2}:=->companies
- sorts_Array{2}:=-1
- pointers_Array{3}:=->names
- sorts_Array{3}:=0
- pointers_Array{4}:=->telNums
- sorts_Array{4}:=0
- MULTI SORT ARRAY(pointers_Array;sorts_Array)
+ SORT ARRAY(tab_Villes;tab_Salaire;tab_Noms;tab_NumTel;>)
 ```
 
-If you want the array of names be used as a third sort criterion, you need to assign the value 1 to the sorts\_Array{3} element. Or else, if you want the arrays to be sorted only by the city criterion, assign the value 0 to the sorts\_Array{2}, sorts\_Array{3} and sorts\_Array{4} elements. In this way, you obtain an identical result to [SORT ARRAY](sort-array.md)(cities;companies;names;telNums;>). 
+## Exemple 2 
 
-## See also 
+L’exemple suivant utilise la seconde syntaxe : il crée quatre tableaux et les trie par ville (ordre croissant) et société (ordre décroissant), les deux derniers tableaux tab\_Noms et tab\_NumTel étant synchronisés en fonction des critères de tri précédents :
+
+```4d
+ ALL RECORDS([Employés])
+ SELECTION TO ARRAY([Employés]Ville;tab_Villes;[Employés]Société;tab_Société;[Employés]Nom;
+ tab_Noms;[Employés]NumTel;tab_NumTel)
+ ARRAY POINTER(tab_Pointeurs;4)
+ ARRAY LONGINT(tab_Tris;4)
+ tab_Pointeurs{1}:=->tab_Villes
+ tab_Tris{1}:=1
+ tab_Pointeurs{2}:=->tab_Société
+ tab_Tris{2}:=-1
+ tab_Pointeurs{3}:=->tab_Noms
+ tab_Tris{3}:=0
+ tab_Pointeurs{4}:=->tab_NumTel
+ tab_Tris{4}:=0
+ MULTI SORT ARRAY(tab_Pointeurs;tab_Tris)
+```
+
+Si vous souhaitez que le tableau des noms soit utilisé comme troisième critère de tri, il vous suffit d’assigner la valeur 1 à l’élément tab\_Tris{3}. Ou bien, si vous souhaitez que les tableaux soient triés uniquement sur le critère des villes, assignez la valeur 0 aux éléments tab\_Tris{2}, tab\_Tris{3} et tab\_Tris{4}. De cette manière, vous obtenez un résultat identique à [SORT ARRAY](sort-array.md)(tab\_Villes;tab\_Société;tab\_Noms;tab\_NumTel;>). 
+
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SORT ARRAY](sort-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 718 |
+| Numéro de commande | 718 |
 | Thread safe | yes |
 
 

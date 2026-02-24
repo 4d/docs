@@ -5,128 +5,130 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *aTable* : Table {; *document* : Text {; * }} )<br/>**PRINT LABEL** ( *aTable* : Table {; *document* : Text {; >}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *laTable* {; *nomFichier* {; * }} )<br/>**PRINT LABEL** ( *laTable*{; *nomFichier* {; >}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to print, or Default table, if omitted |
-| document | Text | &#8594;  | Name of disk label document |
-| * |Operator| &#8594;  | Suppress the printing dialog box |
-| > |> | &#8594;  | Do not reinitialize print settings |
+| laTable | Table | &#8594;  | Table à imprimer ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594;  | Nom de fichier d'étiquettes sur disque |
+| * &#124; > |Operator| &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** enables you to print labels with the data from the selection of *aTable*.<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Summary-->**PRINT LABEL** vous permet d'imprimer des étiquettes à partir des données de la sélection de *laTable*.<!-- END REF-->
 
-If do not specify the *document* parameter, **PRINT LABEL** prints the current selection of *aTable* as labels, using the current output form. You cannot use this command to print subforms. 
+Si vous ne spécifiez pas le paramètre *nomFichier*, **PRINT LABEL** imprime la sélection courante de *laTable* sous forme d'étiquettes, en utilisant le formulaire sortie courant du process. Vous ne pouvez pas imprimer de sous-formulaires lorsque vous utilisez cette commande. Pour plus d'informations sur la création d'étiquettes à l'aide de formulaires, reportez-vous au manuel *Mode Développement* de 4D.
 
-If you specify the *document* parameter, **PRINT LABEL** enables you to access the [Label Wizard](../Desktop/labels.md) (shown below) or to print an existing Label document stored on disk. See the following discussion.
+Si vous spécifiez le paramètre *nomFichier*, **PRINT LABEL** vous permet d'imprimer un document d'étiquettes existant stocké sur disque ou d'ouvrir l'Assistant de création d'étiquettes (affiché ci-dessous). Pour plus d'informations sur ce point, reportez-vous à l'exemple plus bas.
 
-![](../assets/en/commands/pict2980390.en.png)
+![](../assets/en/commands/pict2980390.fr.png)
 
-By default, **PRINT LABEL** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the labels are not printed. You can suppress these dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
+Par défaut, **PRINT LABEL** affiche la boîte de dialogue d'impression. Si l'utilisateur annule cette boîte de dialogue, l'exécution de la commande est stoppée et l'état n'est pas imprimé. 
 
-* The *\** parameter causes a print job using the current print parameters.
-* Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT LABEL** (ex. inside a loop) while maintaining previously set customized print parameters. For an example of use of this parameter, refer to the [PRINT RECORD](print-record.md) command description.
+Vous pouvez supprimer son affichage en utilisant soit le paramètre optionnel astérisque (\*), soit le paramètre optionnel “supérieur à” (>).
 
-Note that this parameter has no effect if the Label Wizard is involved.
+* Le paramètre *\** provoque une impression avec les paramètres d'impression courants.
+* Le paramètre *\>* provoque en outre l’impression sans réinitialisation des paramètres d’impression. Ce paramètre est utile lorsque vous souhaitez exécuter successivement plusieurs appels à **PRINT LABEL** (par exemple à l'intérieur d’une boucle) tout en conservant des paramètres d’impression personnalisés préalablement définis.
 
-If the [Label Wizard](../Desktop/labels.md) is not involved, the OK variable is set to 1 if all labels are printed; otherwise, it is set to 0 (zero) (i.e., if user clicked **Cancel** in the printing dialog box).
+Il est à noter que ces paramètres n'ont pas d'effet si l'assistant de création d'étiquettes est utilisé.
 
-If you specify the *document* parameter, the labels are printed with the label setup defined in *document*. If *document* is an empty string (""), **PRINT LABEL** will present an Open File dialog box so the user can specify the file to use for the label setup. If *document* is the name of a document that does not exist (for example, pass *char(1)* in *document)*, the Label Wizard is displayed and the user can define the label setup.
+Si l'assistant de création d'étiquettes n'est pas utilisé, la variable système OK est mise à 1 si toutes les étiquettes ont été imprimées ; sinon, elle prend la valeur 0 (zéro) (par exemple si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue d'impression).
 
-**Note:** If the *table* has been declared “invisible” in Design mode, the Label Wizard will not be displayed.
+Si vous spécifiez le paramètre *nomFichier*, les étiquettes sont imprimées avec les paramétrages définis dans *nomFichier*. Si *nomFichier* est une chaîne vide (""), **PRINT LABEL** affiche une boîte de dialogue standard d’ouverture de documents, permettant à l'utilisateur de sélectionner le fichier d'étiquettes à utiliser. Si *nomFichier* est le nom d'un fichier qui n'existe pas ou est invalide (si vous passez, par exemple, [Char](char.md)(1) dans *nomFichier*), l'assistant de création d'étiquettes s'affiche, permettant à l'utilisateur de créer son propre format d'étiquettes.
 
-**4D Server:** This command can be executed on 4D Server in a stored procedure. In this context:
+**Note :** Si *laTable* a été déclarée “invisible” en mode Développement, l'assistant de création d'étiquettes n'apparaît pas.
 
-* Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
-* The syntax which makes the label editor appear does not work with 4D Server; in this case, the system variable OK is set to 0.
-* In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+**4D Server :** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
-## Example 1 
+* Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\** ou *\>*.
+* La syntaxe faisant apparaître l‘éditeur d’étiquettes ne fonctionne pas avec 4D Server, dans ce cas, la variable système OK prend la valeur 0.
+* En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-The following example prints labels using the output form of a table. The example uses two methods. The first is a project method that sets the correct output form and then prints labels: 
+## Exemple 1 
+
+L'exemple suivant imprime des étiquettes à l'aide du formulaire de sortie de la table. L'exemple s'appuie sur deux méthodes. La première est une méthode projet qui désigne le formulaire sortie à utiliser puis imprime les étiquettes : 
 
 ```4d
- ALL RECORDS([Addresses]) // Select all records
- FORM SET OUTPUT([Addresses];"Label Out") // Select the output form
- PRINT LABEL([Addresses]) // Print the labels
- FORM SET OUTPUT([Addresses];"Output") // Restore default output form
+ ALL RECORDS([Adresses]) // Sélection de tous les enregistrements
+ FORM SET OUTPUT([Adresses];"ImprimEtiq") // Sélection du formulaire sortie
+ PRINT LABEL([Adresses]) // Impression des étiquettes
+ FORM SET OUTPUT([Adresses];"Sortie") // Rétablissement du formulaire sortie par défaut
 ```
 
-The second method is the form method for the form *"Label Out"*. The form contains one variable named *vLabel*, which is used to hold the concatenated fields. If the second address field (Addr2) is blank, it is removed by the method. Note that this task is performed automatically with the Label Wizard. The form method creates the label for each record:
+La seconde méthode est la méthode du formulaire "ImprimEtiq". Le formulaire contient une variable, nommée *vEtiq*, contenant les champs concaténés. Si le second champ Adresse (Adr2) est vide, il est enlevé par la méthode (notez que cette opération peut être effectuée automatiquement par l'assistant de création d'étiquettes). La méthode formulaire construit l'étiquette pour chaque enregistrement :
 
 ```4d
-  // [Addresses]; "Label Out" form method
+  // Méthode formulaire [Adresses];"Etiquette sortie"
  Case of
     :(FORM Event.code=On Load)
-       vLabel:=[Addresses]Name1+" "+[Addresses]Name2+Char(13)+[Addresses]Addr1+Char(13)
-       If([Addresses]Addr2 #"")
-          vLabel:=vLabel+[Addresses]Addr2+Char(13)
+       vEtiq:=[Adresses]Nom1+" "+[Adresses]Nom2+Char(13)+[Adresses]Adr1
+       +Char(13)
+       If([Adresses]Adr2 #"")
+          vEtiq:=vEtiq+[Adresses]Adr2+Char(13)
        End if
-       vLabel:=vLabel+[Addresses]City+", "+[Addresses]State+" "+[Addresses]ZipCode
+       vEtiq:=vEtiq+[Adresses]Ville+", "+[Adresses]Département+" "+[Adresses]Code Postal
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example lets the user query the \[People\] table, and then automatically prints the labels “My Labels”:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], et d'imprimer automatiquement les étiquettes “Mes Etiquettes” :
 
 ```4d
- QUERY([People])
+ QUERY([Employés])
  If(OK=1)
-    PRINT LABEL([People];"My Labels";*)
+    PRINT LABEL([Employés];"Mes Etiquettes";*)
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example lets the user query the \[People\] table, and then lets the user choose the labels to be printed:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], puis de choisir les étiquettes qui doivent être imprimées :
 
 ```4d
- QUERY([People])
+ QUERY([Employés])
  If(OK=1)
-    PRINT LABEL([People];"")
+    PRINT LABEL([Employés];"")
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following example lets the user query the \[People\] table, and then displays the Label Wizard so the user can design, save, load and print any labels:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table \[Employés\], puis affiche l'assistant de création d'étiquettes afin que l'utilisateur puisse concevoir, sauvegarder, charger et imprimer tout type d'étiquettes :
 
 ```4d
- QUERY([People])
+ QUERY([Employés])
  If(OK=1)
-    PRINT LABEL([People];Char(1))
+    PRINT LABEL([Employés];Char(1))
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [PRINT SELECTION](print-selection.md)  
 [QR REPORT](qr-report.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 39 |
+| Numéro de commande | 39 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

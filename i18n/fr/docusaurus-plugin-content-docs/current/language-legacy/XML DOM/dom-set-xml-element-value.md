@@ -5,63 +5,63 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : any {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *refElément* {; *xPath*}; *valeurElément* {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| xPath | Text | &#8594;  | XPath path of the XML element |
-| elementValue | any | &#8594;  | New value of element |
-| * | Operator | &#8594;  | If passed: set the value in CDATA |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| xPath | Text | &#8594;  | Chemin XPath de l’élément XML |
+| valeurElément | Text, Variable | &#8594;  | Nouvelle valeur de l’élément |
+| * | Opérateur | &#8594;  | Si passé : définir la valeur en CDATA |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|2004.4|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|2004.4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->The **DOM SET XML ELEMENT VALUE** command modifies the value of the element set by *elementRef*.<!-- END REF--> 
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->La commande **DOM SET XML ELEMENT VALUE** permet de modifier la valeur de l’élément désigné par *refElément*.<!-- END REF-->
 
-If you pass the optional *xPath* parameter, you choose to use XPath notation to indicate the element to be modified (for more information see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
+Si vous passez le paramètre facultatif *xPath*, vous choisissez d'utiliser la notation XPath pour désigner l’élément à modifier (pour plus d'informations, reportez-vous à la section*Utilisation de la notation XPath*). Les expressions de chemin suivantes sont prises en charge :
 
-| **Expression** | **Action**                                          |
-| -------------- | --------------------------------------------------- |
-| /              | Designates the root node (absolute path)            |
-| para\[1\]      | Designates the first para child of the context node |
-| para\[last()\] | Designates the last para child of the context node  |
+| **Expression** | **Action**                                         |
+| -------------- | -------------------------------------------------- |
+| /              | Désigne le noeud racine (chemin absolu)            |
+| para\[1\]      | Désigne le premier para enfant du noeud contextuel |
+| para\[last()\] | Désigne le dernier para enfant du noeud contextuel |
 
-In this case, you must pass the reference of a root XML element in *elementRef* and the XPath path of the element to be modified in *xPath*.
+Dans ce cas, vous devez passer la référence d’un élément XML racine dans *refElément* et le chemin XPath de l’élément à modifier dans xPath.
 
-**Compatibility Note:* Starting with v18 R3, the XPath implementation in 4D is more compliant. For compatibility reasons, the previous non-standard implementation is maintained by default in converted databases. If you want to benefit from the extended features in your converted databases, you need to select the *Use standard XPath* compatibility option of the Compatibility page.* 
+**Note de compatibilité :** *A compter de v18 R3, le niveau de conformité de l'implémentation de XPath dans 4D est nettement plus élevé. Pour des raisons de compatibilité, l'implémentation antérieure non standard est maintenue par défaut dans les bases converties. Si vous souhaitez bénéficier des fonctionnalités avancées dans vos bases converties, vous devez cocher l'option de compatibilité *Utiliser XPath standard* de la* **Page Compatibilité.* 
 
-In *elementValue*, pass a string or a variable (or a field) containing the new value of the specified element:
+Passez dans *valeurElément* une chaîne ou une variable (ou un champ) contenant la nouvelle valeur de l’élément :
 
-* If you pass a string, the value is used “as is” in the XML structure.
-* If you pass a variable or a field, 4D processes the value, depending on the type of *elementValue*. All data types can be used, except arrays, pictures and pointers. If elementValue is evaluated to *undefined*, 4D uses an empty string.
+* si vous passez une chaîne, la valeur sera affectée telle quelle dans la structure XML.
+* si vous passez une variable ou un champ, 4D appliquera un traitement approprié à la valeur en fonction du type de *valeurElément*. Tous les types de données peuvent être utilisés, à l’exception des tableaux, images et pointeurs. Si valeurElément prend la valeur *indéfini*, 4D utilise une chaîne vide.
 
-When the optional asterisk (\*) parameter is passed, this indicates that the value of the element must be set in the form of CDATA. The special CDATA form can be used to write raw text as is (see example 2).
+Lorsque le paramètre facultatif astérisque (*\**) est passé, vous indiquez que la valeur de l’élément doit être définie sous la forme CDATA. La forme spéciale CDATA permet d’écrire du texte sous forme brute (cf. exemple 2).
 
-**Note:** If the element designated by *elementRef* is a BLOB processed by this command, it is automatically encoded in base64\. In this case, the [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) command does automatically the reverse operation.
+**Note :** Lorsque l’élément désigné par *refElément* est de type BLOB, **DOM SET XML ELEMENT VALUE** l'encode automatiquement en base64\. Dans ce cas, la commande [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) effectue automatiquement l'opération inverse.
 
-### Note about processing end-of-line characters 
+### Note sur le traitement des caractères de fin de ligne 
 
-To comply with XML processing rules, all CR and CRLF end-of-line characters are replaced by LF characters.
+Par conformité avec les règles de traitement XML, toutes les séquences de caractères de fin de ligne CR et CRLF sont converties en caractères LF.
 
-## Example 1 
+## Exemple 1 
 
-In the following XML source: 
+Soit la source XML suivante : 
 
 ```XML
 <Book>
@@ -69,13 +69,13 @@ In the following XML source:
 </Book>
 ```
 
-If the following code is executed, with *vElemRef* containing the reference to the “Title” element:
+Si le code suivant est exécuté, en admettant que *vRefElem* contienne la référence de l’élément ‘Title’ :
 
 ```4d
- DOM SET XML ELEMENT VALUE(vElemRef;"The Loser")
+ DOM SET XML ELEMENT VALUE(vRefElem;"The Loser")
 ```
 
-We get:
+Nous obtenons :
 
 ```XML
 <Book>
@@ -83,9 +83,9 @@ We get:
 </Book>
 ```
 
-## Example 2 
+## Exemple 2 
 
-In the following XML source: 
+Soit la source XML suivante : 
 
 ```XML
 <Maths>
@@ -93,28 +93,28 @@ In the following XML source:
 </Maths>
 ```
 
-We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “&lt;” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
+Nous souhaitons écrire le texte “12 < 18” dans l’élément *<postulate>*. Cette chaîne ne peut pas être écrite telle quelle en XML car le caractère “<” n’est pas accepté. Ce caractère doit donc être transformé en “&lt;”, ou la forme CDATA doit être utilisée. Si *vElemRef* désigne le noeud XML *<Postulate>* :
 
 ```4d
-  // Normal form
- DOM SET XML ELEMENT VALUE(vElemRef;"12<18")
+  // Forme normale
+ DOM SET XML ELEMENT VALUE(vRefElem;"12 < 18")
 ```
 
-We get:
+Nous obtenons :
 
 ```XML
 <Maths>
    <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
-  
+
   
 ```4d
-  // CDATA form
- DOM SET XML ELEMENT VALUE(vElemRef;"12<18";*)
+  // Forme CDATA
+ DOM SET XML ELEMENT VALUE(vRefElem;"12 < 18";*)
 ```
 
-We get:
+Nous obtenons :
 
 ```XML
 <Maths>
@@ -122,21 +122,21 @@ We get:
 </Maths>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated (for example, if the element reference is invalid).
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée (par exemple, si la référence de l’élément n’est pas valide).
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 868 |
+| Numéro de commande | 868 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

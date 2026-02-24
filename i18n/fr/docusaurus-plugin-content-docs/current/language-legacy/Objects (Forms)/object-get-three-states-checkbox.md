@@ -5,43 +5,43 @@ slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get three states checkbox** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = three-states checkbox, False = standard checkbox |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai = case à cocher à trois états, Faux = case à cocher standard |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get three states checkbox.Summary-->The **OBJECT Get three states checkbox** command returns the current state of the "Three-States" property for the checkbox(es) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get three states checkbox.Summary-->La commande **OBJECT Get three states checkbox** retourne l’état courant de la propriété "Trois états" de la ou des case(s) à cocher désignée(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-You can set the "Three-States" property either using the Property List, or using the [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) command if it was called in the current process.
+La propriété "Trois états" peut avoir été définie soit via la Liste des propriétés, soit via la commande [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) si elle a été appelée dans le process courant.
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1250 |
+| Numéro de commande | 1250 |
 | Thread safe | no |
 
 

@@ -5,45 +5,45 @@ slug: /commands/delete-from-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *blob* : Blob ; *offset* : Integer ; *len* : Integer )<!-- END REF-->
+<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *blob* ; *offset* ; *nombre* )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB from which to delete bytes |
-| offset | Integer | &#8594;  | Starting offset where bytes will be deleted |
-| len | Integer | &#8594;  | Number of bytes to be deleted |
+| blob | Blob | &#8594;  | BLOB duquel supprimer des octets |
+| offset | Integer | &#8594;  | Offset à partir duquel supprimer les octets |
+| nombre | Integer | &#8594;  | Nombre d'octets à supprimer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE FROM BLOB.Summary-->The DELETE FROM BLOB command deletes the number of bytes specified by *len* from the BLOB *blob* at the position specified by *offset* (expressed relative to the beginning of the BLOB).<!-- END REF--> The BLOB then becomes *len* bytes smaller.
+<!--REF #_command_.DELETE FROM BLOB.Summary-->**DELETE FROM BLOB** supprime le nombre d'octets spécifié par *nombre* du BLOB *blob* à partir de la position définie par *offset* (exprimée de manière relative à l'origine du BLOB).<!-- END REF--> La taille du BLOB est réduite de *nombre* d'octets.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## See also 
+## Voir aussi 
 
 [INSERT IN BLOB](insert-in-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 560 |
+| Numéro de commande | 560 |
 | Thread safe | yes |
 
 

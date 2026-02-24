@@ -5,158 +5,163 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *settings* ) <br/>
-**SET CHANNEL** ( *operation* ; *document* )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* ; *param* ) <br/>
+**SET CHANNEL** ( *opération* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| port | Integer | &#8594;  | Serial port number |
-| settings | Integer | &#8594;  | Serial port settings |
-| operation | Integer | &#8594;  | Document operation to perform |
-| document | Text | &#8594;  | Document name |
+| port | Integer | &#8594;  | Numéro de port série |
+| param | Integer | &#8594;  | Paramètres de communication |
+| SET CHANNEL ( opération ; nomFichier ) |
+| Paramètre | Type | Description |
+| opération | Integer | &#8594;  | Opération à effectuer sur document |
+| nomFichier | Text | &#8594;  | Nom du document |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SET CHANNEL.Summary-->The **SET CHANNEL** command opens a serial port or a document.<!-- END REF--> You can open only one serial port or one document at a time with this command. To close an opened serial port, pass SET CHANNEL (11).
+<!--REF #_command_.SET CHANNEL.Summary-->La commande **SET CHANNEL** permet d'ouvrir un port série ou un document.<!-- END REF--> Vous ne pouvez ouvrir qu'un port série ou un document à la fois avec cette commande.
 
-**Historical Note:** This command was originally the first 4D command used for working with serial ports and documents on disks. Since that time, new commands have been added. Today, you will typically work with documents on disk using the commands [Open document](open-document.md), [Create document](create-document.md) and [Append document](append-document.md). With these commands, you can read and write characters to and from documents using [Create document](create-document.md) or [RECEIVE PACKET](receive-packet.md) (these commands work with **SET CHANNEL**, too). However, if you want to use the commands [SEND VARIABLE](send-variable.md), [RECEIVE VARIABLE](receive-variable.md), [SEND RECORD](send-record.md) and [RECEIVE RECORD](receive-record.md), you must use SET CHANNEL to access the document on disk.
+**Note historique :** A l'origine, **SET CHANNEL** a été la première commande 4D permettant de travailler avec les ports série et des documents sur disque. Depuis, de nouvelles commandes ont été ajoutées. Aujourd'hui, vous pouvez généralement travailler avec des documents sur disque à l'aide des commandes [Open document](open-document.md), [Create document](create-document.md) et [Append document](append-document.md), puis lire et écrire des caractères dans les documents avec [Create document](create-document.md) et [RECEIVE PACKET](receive-packet.md) (ces deux commandes fonctionnent aussi avec **SET CHANNEL**). Cependant, si vous souhaitez utiliser les commandes [SEND VARIABLE](send-variable.md), [RECEIVE VARIABLE](receive-variable.md), [SEND RECORD](send-record.md) et [RECEIVE RECORD](receive-record.md), vous devez appeler **SET CHANNEL** pour accéder aux documents sur disque. 
 
-The description of SET CHANNEL is composed of two sections:
+La description de la commande **SET CHANNEL** se compose de deux sections :
 
-* Working with Serial Ports
-* Working with Documents
+* Travailler avec les ports série
+* Travailler avec des documents
 
-## Working with Serial Ports: SET CHANNEL (port;settings) 
+## Travailler avec les ports série : REGLER SERIE(port;param) 
 
-The first form of the **SET CHANNEL** command opens a serial port, setting the protocol and other port information. Data can be sent with [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) or [SEND VARIABLE](send-variable.md), and received with [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) or [RECEIVE RECORD](receive-record.md).
+La première syntaxe de **SET CHANNEL** ouvre un port série et définit le protocole de communication ainsi que des informations supplémentaires. Les données peuvent être envoyées par les commandes [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) ou [SEND VARIABLE](send-variable.md), et reçues par les commandes [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) ou [RECEIVE RECORD](receive-record.md).
 
- The first parameter, *port*, selects the port and the protocol. You can address up to 99 serial ports (one at a time).   
-The following table lists the values for *port*:
+* Le premier paramètre, *port*, définit le port et le protocole utilisés. Vous pouvez adresser jusqu'à 99 ports série (un par un).  
+Le tableau suivant liste les valeurs possibles du paramètre *port* :  
 
-| **Value for port** | **Description**                                                              |
-| ------------------ | ---------------------------------------------------------------------------- |
-| 0                  | Printer port (Macintosh) or COM2 (PC) with no protocol                       |
-| 1                  | Modem port (Macintosh) or COM1 (PC) with no protocol                         |
-| 20                 | Printer port (Macintosh) or COM2 (PC) with sofware protocol such as XON/XOFF |
-| 21                 | Modem port (Macintosh) or COM1 (PC) with sofware protocol such as XON/XOFF   |
-| 30                 | Printer port (Macintosh) or COM2 (PC) with hardware protocol such as RTS/CTS |
-| 31                 | Modem port (Macintosh) or COM1 (PC) with hardware protocol such as RTS/CTS   |
-| 101 to 199         | Serial communication with no protocol                                        |
-| 201 to 299         | Serial communication with software protocol such as XON/XOFF                 |
-| 301 to 399         | Serial communication with hardware protocol such as RTS/CTS                  |
+| **Valeurs port** | **Description**                                                                  |  
+| ---------------- | -------------------------------------------------------------------------------- |  
+| 0                | Port imprimante (Mac) ou COM2 (Windows) sans protocole                           |  
+| 1                | Port modem (Mac) ou COM1 (Windows) sans protocole                                |  
+| 20               | Port imprimante (Mac) ou COM2 (Windows) avec protocole logiciel tel que XON/XOFF |  
+| 21               | Port modem (Mac) ou COM1 (Windows) avec protocole logiciel tel que XON/XOFF      |  
+| 30               | Port imprimante (Mac) ou COM2 (Windows) avec protocole matériel tel que RTS/CTS  |  
+| 31               | Port modem (Mac) ou COM1 (Windows) avec protocole matériel tel que RTS/CTS       |  
+| 101 à 199        | Communication série sans protocole\*                                             |  
+| 201 à 299        | Communication série avec protocole logiciel tel que XON/XOFF\*                   |  
+| 301 à 399        | Communication série avec protocole matériel tel que RTS/CTS\*                    |
 
-**Important:** The value you pass in *port* must refer to an existing serial COM port recognized by the operating system. For example, in order to be able to use the values 101, 103 and 125, the serial ports COM1, COM3 and COM25 must have been set up correctly.
+**Important :** La valeur que vous passez dans *port* doit désigner un port série "logique" reconnu par votre système d'exploitation. Par exemple, pour que vous puissiez utiliser les valeurs 101, 203 et 325, les ports série COM1, COM3 et COM25 doivent avoir été correctement configurés. 
 
-### Note on serial ports 
+### Note sur les ports série 
 
-In a standard configuration Mac OS and Windows support two serial ports: on Mac OS, the modem port and the printer port; on Windows, the COM1 and COM2 ports. However, additional serial ports can be added by the use of extension boards. Originally, 4D only adressed two standard serial ports and it was only later that the support of additional ports was implemented. For compatibility reasons, both addressing systems were kept.  
+En standard, les systèmes Mac OS et Windows reconnaissent deux ports série logiques : sous Mac OS, le port modem et le port imprimante ; sous Windows, les ports COM1 et COM2\. Toutefois, des ports série supplémentaires peuvent être ajoutés, par l'intermédiaire de cartes d'extension. 4D n’adressait à l'origine que les deux ports série standard, et a intégré par la suite la gestion des ports série supplémentaires. Pour des raisons de compatibilité, les deux systèmes d’adressage ont été conservés.  
 
-* If you want to address a standard serial port (printer/COM2 or modem/COM1), you can either pass in the *port* parameter one of the following values 0, 1, 20, 21, 30 and 31 (that corresponds to the old addressing method), or a value greater than 100 (please see the following explanation).
-* If you want to address additional serial ports, you need to pass the value N+100 (where N is the value of the port to address). You may also consider adding 100 or 200 to the value mentioned above (N+100), if you want to select respectively a software or a hardware protocol.
+* Si vous souhaitez adresser uniquement un port série standard (imprimante/COM2 ou modem/COM1), vous pouvez passer dans le paramètre *port* soit une des valeurs 0, 1, 20, 21, 30 et 31 (correspondant à l’ancien mode de fonctionnement de 4D), soit une valeur > 100 (cf. ci-dessous).
+* Si vous souhaitez adresser des ports série "étendus", vous devez passer dans *port* (pour adresser le Nième port série) la valeur N+100, augmentée éventuellement de 100 ou de 200, si vous voulez utiliser respectivement un protocole logiciel ou matériel.
 
-### Example 1 
+### Exemple 1 
 
-If you want to use the printer/COM2 port with no protocol, you can use one of the following syntaxes:
+Vous souhaitez utiliser le port imprimante/COM2 sans protocole, vous pouvez utiliser l'une des syntaxes suivantes :
 
 ```4d
  SET CHANNEL(0;param)
 ```
 
-or
+ou
 
 ```4d
  SET CHANNEL(102;param)
 ```
 
-### Example 2 
+### Exemple 2 
 
-If you want to use the modem/COM1 port with the XON/XOFF protocol, you can use one of the following syntaxes:
+Vous souhaitez utiliser le port modem/COM1 avec le protocole XON/XOFF, vous pouvez utiliser l'une des syntaxes suivantes :
 
 ```4d
  SET CHANNEL(21;param)
 ```
 
-or
+ou
 
 ```4d
  SET CHANNEL(201;param)
 ```
 
-### Example 3 
+### Exemple 3 
 
-If you want to use the COM 25 port with the RTS/CTS protocol, you need to use the following syntax: 
+Vous souhaitez utiliser le port COM25 avec le protocole RTS/CTS, vous devez utiliser la syntaxe suivante : 
 
 ```4d
  SET CHANNEL(325;param)
 ```
-  
-  
-The *settings* parameter sets the speed, number of data bits, number of stop bits, and parity. You determine the value for *settings* by adding the speed, data bits, stop bits, and parity values as listed in the following table. For example, to set 1200 baud, 8 data bits, 1 stop bit, and no parity, you would add 94 + 3072 + 16384 + 0 = 19550\. You would then use 19550 as the value of the *setup* parameter.
 
-| Control |Value to accumulate in settings parameter   | Description | 
-|------------------------ | --------------- | ---- |
-| Speed                     | 380             | 300  |
-| (in baud)                 | 189             | 600  |
-| | 94                      | 1200            |      
-| | 62                      | 1800            |      
-| | 46                      | 2400            |      
-| | 30                      | 3600            |      
-| | 22                      | 4800            |      
-| | 14                      | 7200            |      
-| | 10                      | 9600            |      
-| | 4                       | 19200           |      
-| | 2                       | 28800           |      
-| | 1                       | 38400           |      
-| | 0                       | 57600           |      
-| | 1022                    | 115200          |      
-| | 1021                    | 230400          |      
-| Data bits                 | 0               | 5    |
-| | 2048                    | 6               |      
-| | 1024                      | 7               |      
-| | 3072                      | 8               |      
-| Stop bits                 | 16384           | 1    |
-| | –32768                    | 1.5             |      
-| | –16384                    | 2               |      
-| Parity                    | 0               | None |
-||  4096                      | Odd             |      
-||  12288                     | Even            |      
+* Le second paramètre, *param*, permet de fixer la vitesse, le nombre de bits de données, le nombre de bits de stop et la parité. La valeur de *param* se calcule en additionnant les valeurs de vitesse, de bits de données, de bits de stop et de parité, telles que définies dans le tableau ci-dessous. Par exemple, pour paramétrer la communication à 1200 bauds, 8 bits de données, 1 bit de stop et aucune parité, passez 19550 (soit 94 + 3072 + 16384 + 0) dans le paramètre *param*.  
+| **Contrôle**       | **Valeur** *param* **(à cumuler)** | **Fonction** |  
+| ------------------ | ---------------------------------- | ------------ |  
+| Vitesse (en bauds) | 380                                | 300          |  
+| | 189              | 600                                |              |  
+| | 94               | 1200                               |              |  
+| | 62               | 1800                               |              |  
+| | 46               | 2400                               |              |  
+| | 30               | 3600                               |              |  
+| | 22               | 4800                               |              |  
+| | 14               | 7200                               |              |  
+| | 10               | 9600                               |              |  
+| | 4                | 19200                              |              |  
+| | 2                | 28800                              |              |  
+| | 1                | 38400                              |              |  
+| | 0                | 57600                              |              |  
+| | 1022             | 115200                             |              |  
+| | 1021             | 230400                             |              |  
+| Bits de données    | 0                                  | 5            |  
+| | 2048             | 6                                  |              |  
+| | 1024             | 7                                  |              |  
+| | 3072             | 8                                  |              |  
+| Bits de stop       | 16384                              | 1            |  
+| | –32768           | 1,5                                |              |  
+| | –16384           | 2                                  |              |  
+| Parité             | 0                                  | Aucune       |  
+| | 4096             | Impaire                            |              |  
+| | 12288            | Paire                              |              |
 
-**Tip:** The various numeric values to be accumulated and passed in *port* and *settings* (but not including the values for COM1...COM99) are available as predefined constants in the theme *Communications* within the Design environment Explorer windows. For COM1...COM99, use numeric literals.
+**Astuce :** Les différentes valeurs numérique à cumuler et à passer dans les paramètres *port* et *param* (à l'exception des valeurs de COM1...COM99) sont disponibles en tant que **Constantes** prédéfinies dans le thème *Communications* de l'Explorateur, en mode Développement. Pour les valeurs de COM1...COM99, vous devez utiliser des valeurs numériques littérales.
 
-## Working with Documents on Disk: SET CHANNEL(operation;document) 
+Lorsque vous n'avez plus besoin d'un port série, vous devez le refermer. Pour cela, appelez de nouveau **SET CHANNEL** et passez-lui la valeur 11\. Exemple :
 
-The second form of the **SET CHANNEL** command allows you to create, open, and close a document. Unlike the *System Documents* commands, it can open only one document at a time. The document can be read from or written to.
+```4d
+ SET CHANNEL(11) //Referme un port série préalablement ouvert
+```
 
-The *operation* parameter specifies the operation to be performed on the document specified by *document*. The following table lists the values of *operation* and the resulting operation with different values for *document*. The first column lists the allowed values for *operation*. The second column lists the allowed values for *document*. The third column lists the resulting operation. 
+## Travailler avec des documents : REGLER SERIE(opération;document) 
 
-For example, to display an Open File dialog box to open a text file, you would use the following line:
+La seconde syntaxe de la commande **SET CHANNEL** vous permet de créer, ouvrir ou fermer un document. A la différence des commandes du thème *Documents système*, **SET CHANNEL** ne permet d'ouvrir qu'un document à la fois. Le document peut être "lu à partir de" ou "écrit dans". Reportez-vous à la section *Présentation des documents système* pour plus d'informations sur ce point. 
+
+Le premier paramètre, *opération*, définit l'opération à effectuer avec le document désigné par *document*. Le tableau suivant dresse la liste les valeurs d'*opération* et le résultat obtenu, en fonction de la valeur de *document*.   
+La première colonne fournit les valeurs possibles du paramètre *opération*. La deuxième colonne fournit les valeurs possibles du paramètre *document*. La troisième colonne décrit le résultat obtenu. Par exemple, pour afficher un fichier de type texte dans une boîte de dialogue standard d'ouverture de document, vous pouvez écrire l'instruction suivante :
 
 ```4d
  SET CHANNEL(13;"")
 ```
 
-| **Operation**                                                      | **Document**      | **Result**                                                                            |
-| ------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------------------------- |
-| 10                                                                 | Text            | Opens the document specified by String. If the document doesn’t exist, the document is opened and created. |                   |                                                                                       |
-| 10                                                                 | "" (empty string) | Displays the Open File dialog box to open a file. All file types are displayed.                                      |                   |                                                                                       |
-| 11                                                                 | none              | Closes an open file.                                                                  |
-| 12                                                                 | "" (empty string) | Displays the Save File dialog box to create a new file.                               |
-| 13                                                                 | "" (empty string) | Displays the Open File dialog box to open a file. Only text file types are displayed. |
+| **Opération** | **Document**     | **Résultat**                                                                                               |
+| ------------- | ---------------- | ---------------------------------------------------------------------------------------------------------- |
+| 10            | Chaîne           | Ouvre le document dont le nom est spécifié par Chaîne. Si le document n'existe pas, il est créé et ouvert. |
+| 10            | "" (chaîne vide) | Affiche la boîte de dialogue d'ouverture de fichier. Tous les types de fichiers sont présentés.            |
+| 11            | Aucun            | Referme un fichier ouvert.                                                                                 |
+| 12            | "" (chaîne vide) | Affiche la boîte de dialogue standard d'enregistement de fichier, permettant de créer un nouveau fichier.  |
+| 13            | "" (chaîne vide) | Affiche la boîte de dialogue d'ouverture de fichier. Seuls les fichiers de type Texte sont présentés.      |
 
-All of the operations in this table set the Document system variable if appropriate. They also set the OK system variable to 1 if the operation was successful. Otherwise, the OK system variable is set to 0.
+Toutes les opérations décrites dans ce tableau modifient la variable système Document en conséquence. De plus, la variable système OK prend la valeur 1 si l'opération s'est déroulée correctement, 0 sinon.
 
-### Example 4 
+### Exemple 4 
 
-See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) and [RECEIVE RECORD](receive-record.md) commands.
+Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) et [RECEIVE RECORD](receive-record.md).
 
-## See also 
+## Voir aussi 
 
 [Append document](append-document.md)  
-[Communications](/category/commands/Communications)  
+*Communications*  
 [Create document](create-document.md)  
 [GET SERIAL PORT MAPPING](get-serial-port-mapping.md)  
 [Open document](open-document.md)  
@@ -169,12 +174,12 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 [SEND VARIABLE](send-variable.md)  
 [SET TIMEOUT](set-timeout.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 77 |
+| Numéro de commande | 77 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

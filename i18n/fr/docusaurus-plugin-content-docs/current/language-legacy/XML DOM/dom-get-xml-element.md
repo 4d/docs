@@ -5,61 +5,55 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* : Text ; *elementName* : Text ; *index* : Integer {; *elementValue* : Variable {; *attrNames* : Text array {; *attrValues* : Text array }}}) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* ; *nomElément* ; *indice* ; *valeurElément* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| elementName | Text | &#8594;  | Name of element to get |
-| index | Integer | &#8594;  | Index number of element to get |
-| elementValue | Variable | &#8592; | Value of the element |
-| attrNames | Text array | &#8592; | Attribute names |
-| attrValues | Text array | &#8592; | Attribute values |
-| Function result | Text | &#8592; | XML reference (16 characters) |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElément | Text | &#8594;  | Nom de l’élément à lire |
+| indice | Integer | &#8594;  | Numéro d’indice de l’élément à lire |
+| valeurElément | Variable | &#8592; | Valeur de l’élément |
+| Résultat | Text | &#8592; | Référence de l’élément XML (16 caractères) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|2004|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get XML element.Summary-->The **DOM Get XML element** command returns a reference to the "child" element dependent on the *elementName* and *index* parameters.<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Summary-->La commande **DOM Get XML element** retourne une référence XML vers l’élément “enfant” dépendant des paramètres *nomElément* et *index*.<!-- END REF--> 
 
-The value of the element can be returned in the *elementValue* optional parameter.
+La valeur de l’élément est également retournée dans le paramètre *valeurElément*.
 
-The command fills the *attrNames* array, if passed, with the names of attributes of the element. If necessary, the command creates and sizes the array automatically. 
+**Note :** Par défaut, **DOM Get XML element** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).
 
-The command also fills the *attrValues* array, if passed, with the values of attributes of the target element. If necessary, the command creates and sizes the array automatically. 
+## Variables et ensembles système 
 
-**Note:** By default, **DOM Get XML element** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## System variables and sets 
-
-If the command has been correctly executed, the system variable OK is set to 1. If an error occurs, it is set to 0.
-
-## See also 
+## Voir aussi 
 
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 725 |
+| Numéro de commande | 725 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

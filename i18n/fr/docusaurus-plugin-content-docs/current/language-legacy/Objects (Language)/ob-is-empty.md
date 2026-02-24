@@ -5,61 +5,61 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object, Object ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| Function result | Boolean | &#8592; | True if object is empty or undefined, otherwise False |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| Résultat | Boolean | &#8592; | Vrai si objet est vide ou indéfini, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|14|Created|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Is empty.Summary-->The **OB Is empty** command returns True if *object* is undefined or empty, and False if *object* is defined (initialized) and contains at least one property.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Is empty.Summary-->La commande **OB Is empty** retourne **Vrai** si *objet* est indéfini ou vide, et **Faux** si *objet* est défini (initialisé) et contient au moins une propriété.<!-- END REF-->doit avoir été créé via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-## Example 
+## Exemple 
 
-Here are the different results of this command as well as the [OB Is defined](ob-is-defined.md) command, depending on the context:
+Voici les différents résultats de la commande ainsi que de la commande [OB Is defined](ob-is-defined.md), en fonction du contexte :
 
 ```4d
  var $ref : Object
- $empty:=OB Is empty($ref) // True
- $def:=OB Is defined($ref) // False
+ $vide:=OB Is empty($ref) //Vrai
+ $def:=OB Is defined($ref) //Faux
  
- OB SET($ref;"name";"Susie";"age";4)
-  // $ref="{"name":"Susie","age":4}"
- $empty:=OB Is empty($ref) // False
- $def:=OB Is defined($ref) // True
+ OB SET($ref;"nom";"Susie";"age";4)
+     //$ref="{"nom":"Susie","age":4}"
+ $vide:=OB Is empty($ref) //Faux
+ $def:=OB Is defined($ref) //Vrai
  
- OB REMOVE($ref;"name")
+ OB REMOVE($ref;"nom")
  OB REMOVE($ref;"age")
- $empty:=OB Is empty($ref) // True
- $def:=OB Is defined($ref) // True
+ $vide:=OB Is empty($ref) //Vrai
+ $def:=OB Is defined($ref) //Vrai
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Is defined](ob-is-defined.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1297 |
+| Numéro de commande | 1297 |
 | Thread safe | yes |
 
 

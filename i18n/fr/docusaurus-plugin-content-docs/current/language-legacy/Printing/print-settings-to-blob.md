@@ -5,48 +5,49 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* : Blob ) : Integer<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *paramImpression* ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| printSettings | Blob | &#8592; | Current print settings |
-| Function result | Integer | &#8592; | Status code: 1=Operation successful, 0=No current printer |
+| paramImpression | Blob | &#8592; | Paramètres courants d'impression |
+| Résultat | Integer | &#8592; | Code d'état : 1=Opération réussie, 0=Pas d'imprimante courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Print settings to BLOB.Summary-->The **Print settings to BLOB** command saves the current 4D print settings in the *printSettings* BLOB.<!-- END REF--> The *printSettings* parameter stores all the settings used for printing:
+<!--REF #_command_.Print settings to BLOB.Summary-->La commande **Print settings to BLOB** sauvegarde les paramètres d'impression courants de 4D dans le BLOB *paramImpression*.<!-- END REF--> Le paramètre *paramImpression* stocke tous les paramètres utilisés pour l'impression :
 
-* Layout parameters such as paper, orientation, scale, etc.
-* Print parameters such as number of copies, paper source, etc.
+* Paramètres de mise en page comme le papier, l'orientation, l'échelle...
+* Paramètres d'impression comme le nombre de copies, la source du papier...
 
-This command must be used in conjunction with the [BLOB to print settings](blob-to-print-settings.md) command. These commands allow you to save a user's current print settings and reload them subsequently so that users will not need to specify their parameters each time they start a print job. In addition, it allows you to save "private" printer settings (specific to the printer driver) that are not available as standard printing parameters. 
+Cette commande doit être utilisée conjointement avec la commande [BLOB to print settings](blob-to-print-settings.md). Ces commandes vous permettent de sauvegarder les paramètres d'impression de l'utilisateur courant et de les recharger pour qu'il n'ait pas à préciser ses paramètres chaque fois qu'il imprime. De plus, cela permet de garder des paramètres d'impression "privés" (spécifiques à un pilote d'imprimante) qui ne sont pas disponibles dans les paramètres d'impression standard. 
 
-The BLOB generated must not be modified by programming; it can only be used by the [BLOB to print settings](blob-to-print-settings.md) command.
+Le BLOB généré ne doit pas être modifié par programmation : il ne peut être utilisé qu'avec la commande [BLOB to print settings](blob-to-print-settings.md).
 
-The command returns 1 if the BLOB has been generated correctly, and 0 if no current printer is selected.
+La commande retourne 1 si le BLOB a été correctement généré et 0 si aucune imprimante courante n'est sélectionnée.
 
 ### Windows / macOS 
 
-The *printSettings* BLOB can be saved and read on both platforms. However, even if some print settings are common, some others are platform-specific and depend on the drivers and system versions. If the same *printSettings* BLOB is shared between both platforms, you may lost information parts.   
-When used in an heterogeneous environment, in order to restore the maximum settings available for each platform (and not only the common part), it is recommended that you handle two *printSettings* BLOBs, one for each platform.
+Le BLOB *paramImpression* peut être sauvegardé et lu sur les deux plateformes. Toutefois, même si certains paramètres d'impression sont communs, d'autres sont spécifiques à la plateforme et dépendent du pilote d'impression et des versions de l'OS. Si le même BLOB *paramImpression* est partagé entre les deux plateformes, vous pouvez perdre des informations.  
+  
+Lorsque vous utilisez un environnement hétérogène, pour restaurer le maximum de paramètres d'impression disponibles pour chaque plateforme (et pas seulement la partie commune), il est recommandé de gérer deux BLOBs *paramImpression*, un pour chaque plateforme.
 
-## Example 
+## Exemple 
 
-You want to store the current print settings to disk:
+Vous voulez sauvegarder les paramètres d'impression courants sur disque :
 
 ```4d
  var curSettings : Blob
@@ -56,21 +57,21 @@ You want to store the current print settings to disk:
     If($err=1)
        BLOB TO DOCUMENT(Get 4D folder+"current4Dsettings.blob";curSettings)
     Else
-       ALERT("No selected printer")
+       ALERT("Pas d'imprimante sélectionnée")
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
   
 [BLOB to print settings](blob-to-print-settings.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1433 |
+| Numéro de commande | 1433 |
 | Thread safe | no |
 
 

@@ -9,40 +9,40 @@ displayed_sidebar: docs
 <!--REF #_command_.Current system user.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Network name of the system user |
+| Résultat | Text | &#8592; | Nom de l'utilisateur de la machine sur le réseau |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17|Renamed|
-|6|Created|
+|17|Renommé|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current system user.Summary-->The **Current system user** command returns the owner name of your machine, as set in the current user account on the machine.<!-- END REF-->
+<!--REF #_command_.Current system user.Summary-->La fonction **Current system user** retourne le nom du possesseur de la machine, tel qu'il a été défini dans le compte d'utilisateur courant sur la machine.<!-- END REF--> 
 
-## Example 
+## Exemple 
 
-See example for the [Current machine](current-machine.md) command.
+Reportez-vous à l'exemple de la commande [Current machine](current-machine.md).
 
-## See also 
+## Voir aussi 
 
 [Current machine](current-machine.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 484 |
+| Numéro de commande | 484 |
 | Thread safe | yes |
 
 

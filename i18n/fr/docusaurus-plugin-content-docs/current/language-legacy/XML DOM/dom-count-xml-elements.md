@@ -5,49 +5,49 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* : Text ; *elementName* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *refElément* ; *nomElément* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| elementName | Text | &#8594;  | Name of XML elements to count |
-| Function result | Integer | &#8592; | Number of elements |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElément | Text | &#8594;  | Nom d'éléments XML à compter |
+| Résultat | Integer | &#8592; | Nombre d’éléments |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|2004|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Count XML elements.Summary-->The DOM Count XML elements command returns the number of “child” elements dependent on the *elementRef* parent element and named *elementName*.<!-- END REF-->By default, **DOM Count XML elements** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
+<!--REF #_command_.DOM Count XML elements.Summary-->La commande **DOM Count XML elements** retourne le nombre d’éléments “enfants” dépendants de l’élément parent *refElément* et nommés *nomElément*.<!-- END REF-->Par défaut, **DOM Count XML elements** tient compte de la casse des caractères lors de l'évaluation du paramètre *nomElément* (par conformité avec le xml). Vous pouvez contrôler la sensibilité à la casse de cette commande à l'aide du sélecteur XML DOM case sensitivity de la commande [XML SET OPTIONS](xml-set-options.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 726 |
+| Numéro de commande | 726 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

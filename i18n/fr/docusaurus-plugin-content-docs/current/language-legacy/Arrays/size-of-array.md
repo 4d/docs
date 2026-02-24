@@ -5,55 +5,55 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* : Array ) : Integer<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *tableau* ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array whose size is returned |
-| Function result | Integer | &#8592; | Returns the number of elements in array |
+| tableau | Array | &#8594;  | Tableau dont vous désirez connaître la taille |
+| Résultat | Integer | &#8592; | Nombre d'éléments dans le tableau |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Size of array.Summary-->The Size of array command returns the number of elements in *array*.<!-- END REF-->
+<!--REF #_command_.Size of array.Summary-->**Size of array** retourne le nombre d'éléments de *tableau*.<!-- END REF--> 
 
-## Example 1 
+## Exemple 1 
 
-The following example returns the size of the array *anArray*:
-
-```4d
- vlSize:=Size of array(anArray) // vlSize gets the size of anArray
-```
-
-## Example 2 
-
-The following example returns the number of rows in a two-dimensional array:
+L'exemple suivant retourne la taille du tableau *monTableau* :
 
 ```4d
- vlRows:=Size of array(a2DArray) // vlRows gets the size of a2DArray
+ vTaille:=Size of array(monTableau) // vTaille reçoit la taille de monTableau
 ```
 
-## Example 3 
+## Exemple 2 
 
-The following example returns the number of columns for a row in a two-dimensional array:
+L'exemple suivant retourne le nombre de lignes d'un tableau à deux dimensions :
 
 ```4d
- vlColumns:=Size of array(a2DArray{10}) // vlColumns gets the size of a2DArray{10}
+ vlLignes:=Size of array(t2DTableau) // vlLignes reçoit la taille de t2DTableau
 ```
 
-## See also 
+## Exemple 3 
+
+L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deux dimensions :
+
+```4d
+ vlColonnes:=Size of array(t2DTableau{10}) // vlColonnes reçoit la taille de t2DTableau{10}
+```
+
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [INSERT IN ARRAY](insert-in-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 274 |
+| Numéro de commande | 274 |
 | Thread safe | yes |
 
 

@@ -5,52 +5,52 @@ slug: /commands/old-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *aField* : Field )<!-- END REF-->
+<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.OLD RELATED ONE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Many field |
+| leField | Field | &#8594;  | Champ N |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** operates the same way as [RELATE ONE](relate-one.md) does, except that **OLD RELATED ONE** uses the old value of *aField* to establish the relation.<!-- END REF-->
+<!--REF #_command_.OLD RELATED ONE.Summary-->**OLD RELATED ONE** fonctionne de la même manière que [RELATE ONE](relate-one.md), à la différence près que **OLD RELATED ONE** utilise la valeur précédente de *leChamp* pour établir la relation.<!-- END REF--> 
 
-**Note:** **OLD RELATED ONE** uses the old value of the Many field as returned by the [Old](old.md) function. For more information, see the description of the [Old](old.md) command.
+**Note :** **OLD RELATED ONE** utilise l'ancienne valeur du champ N telle qu'elle est retournée par la fonction [Old](old.md). Reportez-vous à la description de cette fonction pour plus d'informations. 
 
-**OLD RELATED ONE** loads the record previously related to the current record. The fields in that record can then be accessed. If you want to modify this old related record and save it, you must call [SAVE RELATED ONE](save-related-one.md). Note that there is no old related record for a newly created record.
+**OLD RELATED ONE** charge l'enregistrement précédemment lié à l'enregistrement courant. Les champs de cet enregistrement sont alors saisissables. Si vous voulez modifier cet ancien enregistrement lié et le sauvegarder, vous devez appeler la commande [SAVE RELATED ONE](save-related-one.md). Notez que pour un enregistrement venant d'être créé, il n'y pas d'ancien enregistrement lié. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly and if the related records have been loaded, the OK system variable is set to 1\. If the user clicked on **Cancel** in the record selection dialog box (that appears when the related record has been modified), the OK variable is set to 0\. 
+Si la commande a été correctement exécutée et si les enregistrements liés ont bien été chargés, la variable système OK prend la valeur 1\. Si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue de choix d'enregistrement (qui apparaît si l'enregistrement lié avait été modifié), la variable OK prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [Old](old.md)  
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 [SAVE RELATED ONE](save-related-one.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 44 |
+| Numéro de commande | 44 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

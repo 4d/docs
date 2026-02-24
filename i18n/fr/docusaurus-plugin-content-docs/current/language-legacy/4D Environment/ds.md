@@ -4,43 +4,41 @@ title: ds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ds.Syntax-->**ds** ({ *localID* : Text }) : cs.DataStore <!-- END REF -->
+<!--REF #_command_.ds.Syntax-->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!--REF #_command_.ds.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| localID | Text | &#8594;  | Local ID of the remote datastore to return |
-| Result | cs.DataStore | &#8592; | Reference to the datastore |
-</div>
+| Paramètres | Type                         |                             | Description                            |
+| ---------- | ---------------------------- | --------------------------- | -------------------------------------- |
+| localID    | Text                         | &#8594; | Identifiant local du datastore distant |
+| Résultat   | cs.DataStore | &#8592; | Nouvelle référence de datastore        |
+
 <!-- END REF-->
-
 
 ## Description
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+La commande `ds` <!-- REF #_command_.ds.Summary -->retourne une référence vers le datastore correspondant à la base de données 4D courante ou à la base de données désignée par *localID*<!-- END REF -->.
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+Si vous omettez le paramètre *localID* (ou si vous passez une chaîne vide ""), la commande renvoie une référence au datastore correspondant à la base de données 4D locale (ou à la base 4D Server en cas d'ouverture d'une base de données distante sur 4D Server). Le datastore est ouvert automatiquement et est disponible directement via `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](open-datastore.md) command by the current database (host or component). The local id is defined when using this command.
+Vous pouvez également obtenir une référence sur un datastore distant ouvert en passant son identifiant local dans le paramètre *localID*. Le datastore doit avoir été préalablement ouvert avec la commande [`Open datastore`](open-datastore.md) par la base de données courante (hôte ou composant). L'identifiant local est défini lors de l'utilisation de cette commande.
 
->The scope of the local id is the database where the datastore has been opened.
+> La portée de l'identifiant local est la base de données dans laquelle le datastore a été ouvert.
 
-If no *localID* datastore is found, the command returns **Null**.
+Si aucun datastore nommé *localID* n'est trouvé, la commande renvoie **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](../ORDA/dsMapping.md#general-rules).
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales](../ORDA/dsMapping.md#general-rules) de correspondance d'ORDA.
 
-## Example 1
+## Exemple 1
 
-Using the main datastore on the 4D database:
+Utilisation du datastore principal de la base 4D :
 
 ```4d
 var $result : cs.EmployeeSelection
 $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-## Example 2
+## Exemple 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -66,16 +64,15 @@ $result:=ds.Employee.query("firstName = :1";"S@")
  $entity:=ds($localId)[$dataClassName].all().first()
 ```
 
+## Voir également
 
-## See also 
+[Open datastore](open-datastore.md)
 
-[Open datastore](open-datastore.md)  
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1482 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1482 |
+| Thread safe        | oui  |
 
 

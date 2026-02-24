@@ -5,74 +5,74 @@ slug: /commands/get-pasteboard-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *dataType* : Text ; *data* : Blob )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *typeDonnées* ; *données* )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dataType | Text | &#8594;  | Type of data to be extracted from pasteboard |
-| data | Blob | &#8592; | Requested data extracted from the pasteboard |
+| typeDonnées | Text | &#8594;  | Type de données à extraire du conteneur |
+| données | Blob | &#8592; | Données extraites du conteneur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PASTEBOARD DATA.Summary-->The **GET PASTEBOARD DATA** command returns, in the BLOB field or in the *data* variable, the data present in the pasteboard and whose type you pass in *dataType*.<!-- END REF--> (If the pasteboard contains text copied within 4D, then the BLOB’s character set is likely to be UTF-16.)
+<!--REF #_command_.GET PASTEBOARD DATA.Summary-->**GET PASTEBOARD DATA** retourne dans le champ ou la variable de type BLOB *données* les données qui se trouvent dans le conteneur de données et dont le type est passé dans *typeDonnées*.<!-- END REF--> (Si le conteneur de données contient du texte copié depuis 4D, le jeu de caractères du BLOB sera probablement UTF-16.)
 
-**Note:** In the context of copy/paste operations, the pasteboard corresponds to the clipboard. 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-In *dataType*, pass a value specifying the type of data to be retrieved. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+Passez dans *typeDonnées* une valeur définissant le type de données à extraire. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
-**Note:** You cannot read file type data with this command; in order to do this, you have to use the [Get file from pasteboard](get-file-from-pasteboard.md) command. 
+**Note :** Il n'est pas possible de lire les données de type fichier avec cette commande, pour cela vous devez utiliser la commande [Get file from pasteboard](get-file-from-pasteboard.md). 
 
-## Example 
+## Exemple 
 
-The following object methods for two buttons copy from and paste data to the array *asOptions* (pop-up menu, drop-down list,...) located in a form:
+Les méthodes objet suivantes sont celles de deux boutons qui copient et collent des données dans le tableau *taOptions* (pop up menu, liste déroulante...) se trouvant dans le formulaire :
 
 ```4d
-  // bCopyasOptions object method
- If(Size of array(asOptions)>0) // Is there something to copy?
-    VARIABLE TO BLOB(asOptions;$vxClipData) // Accumulate the array elements in a BLOB
-    CLEAR PASTEBOARD // Empty the pasteboard
-    APPEND DATA TO PASTEBOARD("artx";$vxClipData) // Note the data type arbitrarily chosen
+  //Méthode objet bCopiertaOptions
+ If(Size of array(taOptions)>0) //Est-ce qu'il y a quelque chose à copier ?
+    VARIABLE TO BLOB(taOptions;$vxClipData) //Mettre les éléments du tableau dans un BLOB
+    CLEAR PASTEBOARD //Vider le Presse-papiers
+    APPEND DATA TO PASTEBOARD("artx";$vxClipData) //Le type de données est choisi arbitrairement
  End if
  
-  // bPasteasOptions object method
- If(Pasteboard data size("artx")>0) // Is there some "artx" data in the pasteboard?
-    GET PASTEBOARD DATA("artx";$vxClipData) // Extract the data from the pasteboard
-    BLOB TO VARIABLE($vxClipData;asOptions) // Populate the array with the BLOB data
-    asOptions:=0 // Reset the selected element for the array
+  // Méthode objet bCollertaOptions
+ If(Pasteboard data size("artx")>0) //Est-ce qu'il y a les données du type "artx" dans le Presse-papiers?
+    GET PASTEBOARD DATA("artx";$vxClipData) //Extraire les données du Presse-papiers
+    BLOB TO VARIABLE($vxClipData;taOptions) //Remplir le tableau avec les données venant du BLOB
+    taOptions:=0 //Réinitialiser l'élément sélectionné du tableau
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and an error is generated.
+Si les données sont extraites correctement, la variable OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 401 |
+| Numéro de commande | 401 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

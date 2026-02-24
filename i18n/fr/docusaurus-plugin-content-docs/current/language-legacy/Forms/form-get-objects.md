@@ -5,144 +5,140 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : Integer } )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *optionPage* } )<br/>**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectsArray | Text array | &#8592; | Name of form objects |
-| variablesArray | Pointer array | &#8592; | Pointers to variables or fields associated with objects |
-| pagesArray | Integer array | &#8592; | Page number of each object |
-| formPageOption | Integer | &#8594;  | 1=Form current page, 2=Form all pages, 4=Form inherited |
+| tabObjets | Text array | &#8592; | Noms des objets du formulaire |
+| tabVariables | Pointer array | &#8592; | Pointeurs sur les variables ou champs associés aux objets |
+| tabPages | Array integer | &#8592; | Numéro de page de chaque objet |
+| optionPage &#124; * | Entier long, Opérateur | &#8594;  | 1=Page courante du formulaire, 2=Toutes les pages, 4=Pages héritées<br/>Si * passé (obsolète) = page courante avec objets hérités |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R2|Modified|
-|12|Renamed|
-|2004|Created|
+|14 R2|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM GET OBJECTS.Summary-->The FORM GET OBJECTS command returns the list of all objects present in the current form in the form of (an) array(s).<!-- END REF--> This list can be restricted to the current form page and can exclude objects of inherited forms. The command can be used with both input and output forms.
+<!--REF #_command_.FORM GET OBJECTS.Summary-->La commande **FORM GET OBJECTS** retourne sous forme de tableau(x) la liste de tous les objets présents dans le formulaire courant.<!-- END REF--> Cette liste peut être restreinte à la page courante du formulaire et peut exclure les objets des formulaires hérités. La commande peut être utilisée avec les formulaires entrée et sortie. 
 
-**Note:** The command does not include list box parts. To parse a form for the list box objects, [LISTBOX GET OBJECTS](listbox-get-objects.md) or [LISTBOX GET ARRAYS](listbox-get-arrays.md) should be used (see example below for a combination of [FORM GET OBJECTS](form-get-objects.md), [OBJECT Get type](object-get-type.md) and [LISTBOX GET OBJECTS](listbox-get-objects.md)).
+Si un tableau passé en paramètre n’est pas préalablement déclaré, la commande le crée et le dimensionne automatiquement. Toutefois, dans la perspective de la compilation de l’application, il est recommandé de déclarer explicitement chaque tableau. 
 
-If an array passed as a parameter is not previously declared, the command creates it and automatically sets its size. However, in the interest of compiling the application, we recommend that you explicitly declare each array. 
+Passez dans *tabObjets* le nom du tableau texte devant être rempli avec les noms des objets (chaque nom d’objet est unique au sein d’un formulaire). L’ordre dans lequel les objets apparaissent dans le tableau n’est pas significatif.
 
-Pass the name of the string array that will contain object names (each object name is unique within a form) in *objectsArray*. The order in which objects appear in the array is not significant.
+Les autres tableaux remplis facultativement par la commande sont synchronisés avec le premier. 
 
-The other arrays optionally filled by the command are synchronized with the first array. 
+Passez dans le paramètre facultatif *tabVariables* le nom du tableau de pointeurs devant être rempli avec des pointeurs vers les variables ou champs associés aux objets. Si un objet n’a pas de variable associée, le pointeur Nil est retourné. Dans le cas d’un objet de type “sous-formulaire”, un pointeur sur la table du sous-formulaire est retourné.
 
-Pass the name of the pointer array that already contains pointers to variables or fields associated with objects in the optional *variablesArray* parameter. If an object does not have an associated variable, the pointer [Is nil pointer](is-nil-pointer.md) is returned. If there is a “subform” type object, a pointer to the table of the subform is returned.
+Le troisième tableau (facultatif), *tabPages*, est rempli avec les numéros de pages du formulaire. Chaque ligne de ce tableau contient le numéro de la page sur laquelle se trouve l’objet correspondant. 
 
-The third array (optional), *pagesArray*, is filled with the form page numbers. Each line of this array contains the page number of the corresponding object. 
+Le paramètre optionnel *optionPage* vous permet de désigner la ou les partie(s) du formulaire dont vous souhaitez lire les objets. Par défaut, si le paramètre *optionPage* est omis (ainsi que le paramètre *\**), les objets de toutes les pages, y compris les objets hérités, sont retournés. Pour délimiter la portée de la commande, vous pouvez passer une (ou une combinaison) des constantes suivantes du thème "*Objets de formulaire (Accès)*" dans le paramètre *optionPage* : 
 
-The optional *\** parameter allows you to reduce the list of objects returned to the current page of the form. When this parameter is passed, only objects of the current page, page 0 and inherited pages are returned by the command. In other words, all the objects present in the current page of the form (visible or not) are processed by the command.
+| Constante         | Type        | Valeur | Comment                                                                                                   |
+| ----------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| Form all pages    | Entier long | 2      | Retourne tous les objets de toutes les pages, mais exclut les objets hérités                              |
+| Form current page | Entier long | 1      | Retourne tous les objets de la page courante, y compris ceux de la page 0, mais exclut les objets hérités |
+| Form inherited    | Entier long | 4      | Retourne uniquement les objets hérités                                                                    |
 
-The optional *formPageOption* parameter allows you to specify the form part(s) from where you want to get objects. By default, if the *formPageOption* parameter is omitted (as well as the *\** parameter), objects from all pages, including inherited objects, are returned. To reduce the scope of the command, you can pass a value in *formPageOption*. You can pass one (or a combination) of the following constants, found in the "*Form Objects (Access)*" theme: 
+**Note de compatibilité :** Passer le paramètre *\** équivaut à passer Form current page+Form inherited. Cependant, la syntaxe utilisant le paramètre *\** est obsolète et ne doit plus être utilisée.
 
-| Constant          | Type    | Value | Comment                                                                                   |
-| ----------------- | ------- | ----- | ----------------------------------------------------------------------------------------- |
-| Form all pages    | Integer | 2     | Returns all objects of all the pages, excluding inherited objects                         |
-| Form current page | Integer | 1     | Returns all objects of the current page, including page 0 but excluding inherited objects |
-| Form inherited    | Integer | 4     | Returns inherited objects only                                                            |
+## Exemple 1 
 
-**Compatibility note:** Passing the *\** parameter is equivalent to passing Form current page+Form inherited. The syntax using the *\** parameter is now deprecated and should no longer be used.
-
-## Example 1 
-
-You want to get information on all pages including objects from the inherited form (if any):
+Vous souhaitez obtenir les objets de toutes les pages, y compris ceux des formulaires hérités (le cas échéant):
 
 ```4d
-  //open form
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray)
+  //Formulaire ouvert
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages)
 ```
 
-Or:
+Ou :
 
 ```4d
-  //loaded form
- FORM LOAD([Table1];"MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
+  //Formulaire chargé
+ FORM LOAD([Table1];"MonForm")
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form all pages+Form inherited)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to get information on the current page only, with page 0 of the loaded form and inherited form objects (if any):
+Vous souhaitez obtenir les objets de la page courante du formulaire chargé, incluant la page 0 de ce formulaire ainsi que les objets des formulaires hérités (le cas échéant) :
 
 ```4d
- FORM LOAD("MyForm")
+ FORM LOAD("MonForm")
  FORM GOTO PAGE(2)
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page+Form inherited)
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form current page+Form inherited)
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to get information on all objects in the inherited form (if any). If there is no inherited form, arrays will be returned empty.
+Vous souhaitez obtenir les objets des formulaires hérités. S'il n'y a pas de formulaire hérité, les tableaux seront retournés vides. 
 
 ```4d
- FORM LOAD("MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form inherited)
+ FORM LOAD("MonForm")
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form inherited)
 ```
 
-## Example 4 
+## Exemple 4 
 
-You want to get information on page 4 objects, including page 0 objects, but without inherited form objects (if any):
+Vous souhaitez obtenir les objets de la page 4, ainsi que ceux de la page 0, mais pas ceux des formulaires hérités (le cas échéant) :
 
 ```4d
  FORM LOAD([Table1];"MyForm")
  FORM GOTO PAGE(4)
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form current page)
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form current page)
 ```
 
-## Example 5 
+## Exemple 5 
 
-You want to get information on objects on all pages, but without inherited form objects (if any):
+Vous souhaitez obtenir les objets de toutes les pages, mais sans ceux des formulaires hérités :
 
 ```4d
- FORM LOAD([Table1];"MyForm")
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages)
+ FORM LOAD([Table1];"MonForm")
+ FORM GET OBJECTS(tabObjets;tabVariables;tabPages;Form all pages)
 ```
 
-## Example 6 
+## Exemple 6 
 
-You want to load a form and get a list of all the objects of list boxes that it contains.
+Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des list box qu’il contient.
 
 ```4d
- FORM LOAD("MyForm")
- ARRAY TEXT(arrObjects;0)
- FORM GET OBJECTS(arrObjects)
- ARRAY LONGINT(ar_type;Size of array(arrObjects))
- For($i;1;Size of array(arrObjects))
-    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
-    If(ar_type{$i}=Object type listbox)
-       ARRAY TEXT(arrLBObjects;0)
-       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
-    End if
+ FORM LOAD("MonFormulaire")
+ ARRAY TEXT(tabObjets;0)
+ FORM GET OBJECTS(tabObjets)
+ ARRAY LONGINT(ar_type;Taille tableau(tabObjets))
+ For($i;1;Size of array(tabObjets))
+       ar_type{$i}:=OBJECT Get type(*;tabObjets{$i})
+       If(ar_type{$i}=Object type listbox)
+          ARRAY TEXT(tabObjetsLB;0)
+          LISTBOX GET OBJECTS(*;tabObjets{$i};tabObjetsLB)
+       End if
  End for
  FORM UNLOAD
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
-*Form Objects (Access)*  
-*Objects (Forms)*  
+*Objets (Formulaires)*  
+*Objets de formulaire (Accès)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 898 |
+| Numéro de commande | 898 |
 | Thread safe | no |
 
 

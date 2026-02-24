@@ -5,66 +5,66 @@ slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get corner radius** ( *object* : Variable, Field ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Integer | &#8592; | Radius of rounded corners (in pixels) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| Résultat | Integer | &#8592; | Rayon des angles arrondis (en pixels) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R7|Modified|
-|14 R4|Created|
+|19 R7|Modifié|
+|14 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
+<!--REF #_command_.OBJECT Get corner radius.Summary-->La commande **OBJECT Get corner radius** retourne la valeur courante du rayon d'angles pour l'objet désigné par le paramètre *objet*.<!-- END REF--> Cette valeur peut avoir été définie au niveau du formulaire en utilisant la propriété (cf. *Rayon d'arrondi (rectangles)*), ou via la commande [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) pour le process courant.
 
-The **OBJECT Get corner radius** command can be used with the following form objects:
+La commande **OBJECT Get corner radius** peut être utilisée avec les objets formulaires suivants :
 
 * rectangles
-* inputs (4D projects only)
-* text areas (4D projects only)
+* zone de saisie (projets 4D uniquement)
+* zones de texte (projets 4D uniquement)
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-This command returns the radius of rounded corners in pixels.
+Cette commande renvoie le rayon des angles arrondis en pixels.
 
-**Note:** The command returns 0 when applied to an object that does not support the corner radius property.
+Remarque : La commande renvoie 0 lorsqu'elle est appliquée à un objet qui ne prend pas en charge la propriété de rayon arrondis.
 
-## Example 
+## Exemple 
 
-The following code could be added to a button method:
+Le code suivant peut être associé à la méthode d'un bouton :
 
 ```4d
  var $radius : Integer
- $radius:=OBJECT Get corner radius(*;"GreenRect") //get current value
- OBJECT SET CORNER RADIUS(*;"GreenRect";$radius+1) //increase radius
-  // Maximum value will be handled automatically:
-  // when reached, the button no longer has any effect
+ $radius:=OBJECT Get corner radius(*;"GreenRect") //lire la valeur courante
+ OBJECT SET CORNER RADIUS(*;"GreenRect";$radius+1) //augmenter le rayon
+  // La valeur maximale est gérée automatiquement : lorsqu'elle est atteinte,
+  // le bouton n'a plus d'effet
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1324 |
+| Numéro de commande | 1324 |
 | Thread safe | no |
 
 

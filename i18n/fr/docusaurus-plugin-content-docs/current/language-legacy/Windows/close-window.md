@@ -5,48 +5,47 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *fenêtre* )}<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** closes the active window opened by the [Open window](./commands/open-window) or [Open form window](./commands/open-form-window) command in the current process.<!-- END REF--> **CLOSE WINDOW** has no effect if a custom window is not open; it does not close system windows. **CLOSE WINDOW** also has no effect if called while a form is active in the window. You must call **CLOSE WINDOW** when you are done using a window opened by [Open window](./commands/open-window) or [Open form window](./commands/open-form-window).
+<!--REF #_command_.CLOSE WINDOW.Summary-->**CLOSE WINDOW** referme la dernière fenêtre créée à l'aide de la commande [Open window](open-window.md) ou [Open form window](open-form-window.md) dans le process courant.<!-- END REF--> S'il n'y a pas de fenêtre personnalisée ouverte, **CLOSE WINDOW** ne fait rien ; la commande ne ferme pas les fenêtres système. Si **CLOSE WINDOW** est appelée alors qu'un formulaire est actif dans la fenêtre, elle n'a pas d'effet non plus. Vous devez appeler **CLOSE WINDOW** lorsque vous avez fini d'utiliser une fenêtre ouverte avec [Open window](open-window.md) ou [Open form window](open-form-window.md). 
 
-It is useless to pass a number to **CLOSE WINDOW** when closing a window previously opened by the [Open window](./commands/open-window) or [Open form window](./commands/open-form-window) function, since a call to **CLOSE WINDOW** will always close the last window created by one of these commands.
+Il est inutile de passer un numéro à **CLOSE WINDOW** lorsque vous l'utilisez pour refermer des fenêtres ouvertes à l'aide de la fonction [Open window](open-window.md) ou [Open form window](open-form-window.md). En effet, si plusieurs fenêtres ont été ouvertes par une succession d'appels à ces commandes, elles ne pourront être refermées que dans l'ordre inverse de leur création.
 
-If you pass an external window reference number in the *Window* parameter, **CLOSE WINDOW** closes the specified external window. For more information about external windows, refer to the  function.
+Si vous passez en paramètre la référence d'une zone externe créée à l'aide de la fonction , **CLOSE WINDOW** referme la fenêtre externe. Pour plus d'informations sur les fenêtres externes, reportez-vous à la description de la fonction .
 
-## Example 
+## Exemple 
 
-The following example opens a form window and adds new records with the [ADD RECORD](add-record.md) command. When the records have been added, the window is closed with **CLOSE WINDOW**:
+L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à l'aide de la commande [ADD RECORD](add-record.md). Une fois les enregistrements ajoutés, la fenêtre est fermée par la commande **CLOSE WINDOW** :
 
 ```4d
- FORM SET INPUT([Employees];"Entry")
- $winRef:=Open form window([Employees];"Entry")
+ FORM SET INPUT([Employés];"Entrée")
+ $refFen:=Open form window([Employés];"Entrée")
  Repeat
-    ADD RECORD([Employees]) //Add a new employee record
- Until(OK=0) //Loop until the user cancels
- CLOSE WINDOW //Close the window
+    ADD RECORD([Employés]) //Ajout d'un enregistrement d'employé
+ Until(OK=0) //Boucle jusqu'à ce que l'utilisateur annule
+ CLOSE WINDOW //Fermeture de la fenêtre
 ```
 
-## See also 
+## Voir aussi 
 
-[Open form window](./commands/open-form-window)  
-[Open window](./commands/open-window)  
+[Open form window](open-form-window.md)  
+[Open window](open-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 154 |
+| Numéro de commande | 154 |
 | Thread safe | no |
-
 
 

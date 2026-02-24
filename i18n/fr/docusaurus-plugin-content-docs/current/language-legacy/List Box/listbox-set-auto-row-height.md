@@ -5,77 +5,77 @@ slug: /commands/listbox-set-auto-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Syntax-->**LISTBOX SET AUTO ROW HEIGHT** ( * ; *object* : Text ; *selector* : Integer ; *value* : Integer ; *unit* : Integer )<br/>**LISTBOX SET AUTO ROW HEIGHT** ( *object* : Variable ; *selector* : Integer ; *value* : Integer ; *unit* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Syntax-->**LISTBOX SET AUTO ROW HEIGHT** ( {* ;} *objet* ; *sélecteur* ; *valeur* ; *unité* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable. |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| selector | Integer | &#8594;  | Height value to set: lk row min height or lk row max height |
-| value | Integer | &#8594;  | Minimum or maximum row height value |
-| unit | Integer | &#8594;  | Unit of height value: 0 = pixels, 1 = lines |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#8594;  | Limite de hauteur à définir : lk hauteur ligne min ou lk hauteur ligne max |
+| valeur | Integer | &#8594;  | Hauteur de ligne minimum ou maximum |
+| unité | Integer | &#8594;  | Valeur d'unité de hauteur : 0 = pixels, 1 = lignes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R8|Modified|
-|16 R5|Created|
+|19 R8|Modifié|
+|16 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->The **LISTBOX SET AUTO ROW HEIGHT** command allows you to set the minimum or maximum row height *value* in the list box object designated using the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET AUTO ROW HEIGHT.Summary-->La commande **LISTBOX SET AUTO ROW HEIGHT** vous permet de définir une *valeur* de hauteur minimum ou maximum dans l'objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-**Note**: This command is taken into account only if the list box is set to automatic row height mode (see *Automatic Row Height*), which is only available for "collection or entity selection" and "array" list boxes. Otherwise, it has no effect.
+**Note** : Cette commande est prise en compte uniquement si le mode "hauteur de ligne automatique" (disponible uniquement pour les list box de type "collection ou sélection d'entité" et "tableau") est activé (voir *Hauteur de ligne automatique*). Sinon, elle n'a pas d'effet.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*.
 
-In *selector*, pass the type of value to set. You can use one of the following constants from the *List Box* theme:
+Dans *sélecteur*, passez le type de limite à définir. Vous pouvez utiliser l'une des constantes suivantes du thème *List box* :
 
-| Constant          | Type    | Value |
-| ----------------- | ------- | ----- |
-| lk row max height | Integer | 33    |
-| lk row min height | Integer | 32    |
+| Constante         | Type        | Valeur |
+| ----------------- | ----------- | ------ |
+| lk row max height | Entier long | 33     |
+| lk row min height | Entier long | 32     |
 
-In *value*, pass the corresponding value in the appropriate *unit*.
+Dans le paramètre *valeur*, passez la valeur correspondante dans l'*unité* appropriée.
 
-The *unit* parameter can be set using one of the following constants from the *List Box* theme:
+Le paramètre *unité* peut être défini à l'aide des constantes suivantes du thème *List box* :
 
-| Constant  | Type    | Value | Comment                                                                                             |
-| --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
+| Constante | Type        | Valeur | Comment                                                                                             |
+| --------- | ----------- | ------ | --------------------------------------------------------------------------------------------------- |
+| lk lines  | Entier long | 1      | La hauteur désigne un nombre de lignes. 4D calcule la hauteur d’une ligne en fonction de la police. |
+| lk pixels | Entier long | 0      | La hauteur est un nombre de pixels (défaut)                                                         |
 
-**Note:** The command does not check the consistency of the values. However, at runtime, the minimum value will be applied to both values in case of conflict. For example, if the minimum value is 5 lines and the maximum value is 3 lines (which is inconsistent), the maximum height applied to the list box rows will be 5 lines.
+**Note :** La commande ne vérifie pas la cohérence des valeurs. Cependant, à l'exécution, la valeur minimum sera appliquée aux deux valeurs en cas de conflit. Par exemple, si la valeur minimum est 5 lignes et la valeur maximum est 3 lignes (ce qui est incohérent), la hauteur maximum des lignes appliquée dans la list box sera de 5 lignes.
 
-## Example 
+## Exemple 
 
-You want to set the minimum and maximum heights for a list box with an automatic row height:
+Dans une list box où les hauteurs de lignes sont automatiques, vous voulez définir les hauteurs de ligne minimum et maximum :
 
 ```4d
- LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row min height;60;lk pixels) // 60 pixels for min value
- LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row max height;100;lk pixels) //and 100 pixels for max value
+ LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row min height;60;lk pixels) // hauteur minimale 60 pixels
+ LISTBOX SET AUTO ROW HEIGHT(*;"LB";lk row max height;100;lk pixels) //hauteur maximale 100 pixels
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1501 |
+| Numéro de commande | 1501 |
 | Thread safe | no |
 
 

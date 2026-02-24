@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.BEEP.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.BEEP.Summary-->The BEEP command causes the PC or Macintosh to generate a beep.<!-- END REF--> Your computer (on Windows or Macintosh) can emit a sound other than a beep, depending on the sound chosen in the Sound control panel.
+<!--REF #_command_.BEEP.Summary-->La commande **BEEP** provoque l'émission d'un bip sonore.<!-- END REF--> Votre PC ou votre Macintosh peut émettre un autre son qu'un bip en fonction du son sélectionné dans le tableau de bord de contrôle du son.
 
-**Warning:** Do not call BEEP from within a Web connection process, because the beep will be produced on the 4D Web server machine and not on the client Web browser machine.
+**ATTENTION :** N'appelez pas la commande **BEEP** à partir d'un process de connexion Web car le bip sonore se produira sur le poste serveur Web 4D et non sur le poste du navigateur Web. 
 
-## Example 
+## Exemple 
 
-In the following example, if no records are found by the query, a beep is emitted and an alert is displayed:
+Dans l'exemple suivant, un bip est émis et une alerte affichée lorsqu'aucun enregistrement n'est trouvé par une recherche :
 
 ```4d
- QUERY([Customers];[Customers]Name=$vsNameToLookFor)
- If(Records in selection([Customers])=0)
+ QUERY([Clients];[Clients]Nom=$vsNomAChercher)
+ If(Records in selection([Clients])=0)
     BEEP
-    ALERT("There is no Customer with such a name.")
+    ALERT("Il n'y a aucun client de ce nom.")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [PLAY](play.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 151 |
+| Numéro de commande | 151 |
 | Thread safe | yes |
 
 

@@ -5,59 +5,57 @@ slug: /commands/generate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* : Blob, Text ; *algorithm* : Integer {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* ; *algorithme* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate digest.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| param | Blob, Text | &#8594;  | Blob or text for which to get digest key |
-| algorithm | Integer | &#8594;  | Algorithm used to return key: 0 = MD5 Digest, 1 = SHA1 Digest, 2 = 4D digest, 3 = SHA-256 digest, 4 = SHA-512 digest |
-| * | Operator | &#8594;  | Encode digest in Base64URL |
-| Function result | Text | &#8592; | Value of digest key |
+| param | Blob, Text | &#8594;  | Blob ou texte pour lequel obtenir une clé digest |
+| algorithme | Integer | &#8594;  | Algorithme utilisé pour retourner la clé : 0 = Digest MD5, 1 = Digest SHA1, 2 = Digest 4D, 3 = Digest SHA-256, 4 = Digest SHA-512 |
+| * | Opérateur | &#8594;  | Crypter digest en Base64URL |
+| Résultat | Text | &#8592; | Valeur de la clé digest |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Modified|
-|16 R5|Modified|
-|14|Modified|
-|13|Created|
+|18 R4|Modifié|
+|16 R5|Modifié|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Generate digest.Summary-->The **Generate digest** command returns the digest key of a BLOB or text after application of an encryption algorithm.<!-- END REF-->
+<!--REF #_command_.Generate digest.Summary-->La commande **Generate digest** retourne la clé digest d’un BLOB ou d’un texte après application d’un algorithme de cryptage.<!-- END REF-->
 
-Pass a Text or BLOB field or variable in the *param* parameter. The **Generate digest** function returns the digest key as a string.
+Passez dans le paramètre *algorithme* une valeur désignant la fonction de hachage à employer. Vous pouvez utiliser l’une des constantes suivantes, placées dans le thème *Type digest* :
 
-In the *algorithm* parameter, pass a value designating which hash function to use. Use one of the following constants, found in the *Digest Type* theme:
+| Constante           | Type        | Valeur | Comment                                                                                                         |
+| ------------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------- |
+| \_o\_4D REST digest | Entier long | 2      | \*\*\* Constante obsolète \*\*\*                                                                                |
+| MD5 digest          | Entier long | 0      | Algorithme *Message Digest 5*. Séquence de 128 bits retournée en tant que chaîne de 32 caractères hexadécimaux. |
+| SHA1 digest         | Entier long | 1      | Algorithme *Secure Hash 1*. Séquence de 160 bits retournée en tant que chaîne de 40 caractères hexadécimaux.    |
+| SHA256 digest       | Entier long | 3      | Famille *SHA-2.* Séquence de 256 bits retournée en tant que chaîne de 64 caractères hexadécimaux.               |
+| SHA512 digest       | Entier long | 4      | Famille *SHA-2*. Séquence de 512 bits retournée en tant que chaîne de 128 caractères hexadécimaux.              |
 
-| Constant            | Value | Comment                                                                                               |
-| ------------------- | ----- | ----------------------------------------------------------------------------------------------------- |
-| \_o\_4D REST digest | 2     | \*\*\* Obsolete constant \*\*\*                                                                       |
-| MD5 digest          | 0     | *Message Digest 5* algorithm. A series of 128 bits returned as a string of 32 hexadecimal characters. |
-| SHA1 digest         | 1     | *Secure Hash 1* algorithm. A series of 160 bits returned as a string of 40 hexadecimal characters.    |
-| SHA256 digest       | 3     | (SHA-2 family) SHA-256 is a series of 256 bits returned as a string of 64 hexadecimal characters.     |
-| SHA512 digest       | 4     | (SHA-2 family) SHA-512 is a series of 512 bits returned as a string of 128 hexadecimal characters.    |
+**Note :** Il est fortement déconseillé d'utiliser les algorithmes MD5 ou SHA pour gérer les mots de passe ; si vous souhaitez vérifier des mots de passe, nous recommandons l'utilisation des commandes [Generate password hash](generate-password-hash.md) et [Verify password hash](verify-password-hash.md).
 
-**Note:** It is not recommended to use MD5 and SHA algorithms to handle passwords; if you need to check passwords, you are advised to use [Generate password hash](generate-password-hash.md) and [Verify password hash](verify-password-hash.md) commands.
+Par défaut, si le paramètre *\** est omis, la digest retournée est cyptée en hexadécimal. Passez le paramètre *\** si vous souhaitez qu'elle soit chiffrée en Base64URL.
 
-By default if the *\** parameter is omitted, the returned digest is encoded in hexadecimal. Pass the *\** parameter if you want it to be encoded in Base64URL. 
+La valeur retournée pour un même objet sera identique sur toutes les plates-formes (macOS/Windows). Le calcul est effectué à partir de la représentation en UTF8 du texte passé en paramètre.
 
-The value returned for the same object is the same on all the platforms (macOS/Windows). The calculation is performed based on the representation in UTF-8 of the text passed in the parameter. 
+**Note :** Si vous utilisez la commande avec un texte/BLOB vide, elle ne retournera pas *void* mais une chaîne (par exemple "d41d8cd98f00b204e9800998ecf8427e" pour le MD5.
 
-**Note:** If you use the command with an empty text/BLOB, it does not return void but a string value (for example "d41d8cd98f00b204e9800998ecf8427e" for MD5).
+## Exemple 1 
 
-## Example 1 
-
-This example compares two images using the MD5 algorithm: 
+Cet exemple vous permet de comparer deux images à l’aide de l’algorithme MD5 : 
 
 ```4d
  var $vPict1;$vPict2 : Picture
@@ -73,38 +71,38 @@ This example compares two images using the MD5 algorithm:
        $MD5_2:=Generate digest($SecondBlob;MD5 digest)
  
        If($MD5_1#$MD5_2)
-          ALERT("These two images are different.")
+          ALERT("Ces deux images sont différentes.")
        Else
-          ALERT("These two images are identical.")
+          ALERT("Ces deux images sont identiques.")
        End if
     End if
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-These examples illustrate how to retrieve the digest key of a text:
+Ces exemples illustrent comment récupérer la clé digest d’un texte :
 
 ```4d
  $key1:=Generate digest("The quick brown fox jumps over the lazy dog.";MD5 digest)
-  // $key1 is "e4d909c290d0fb1ca068ffaddf22cbd0"
+  // $key1 vaut "e4d909c290d0fb1ca068ffaddf22cbd0"
  $key2:=Generate digest("The quick brown fox jumps over the lazy dog.";SHA1 digest)
-  // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
+  // $key2 vaut "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
-## See also 
+## Voir aussi 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
 [Generate password hash](generate-password-hash.md)  
-*Secured Protocol*  
+*Protocole sécurisé*  
 [WEB Validate digest](web-validate-digest.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1147 |
+| Numéro de commande | 1147 |
 | Thread safe | yes |
 
 

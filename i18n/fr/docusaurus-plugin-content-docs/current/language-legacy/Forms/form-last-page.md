@@ -9,35 +9,35 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM LAST PAGE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|<6|Created|
+|12|Renommé|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM LAST PAGE.Summary-->FORM LAST PAGE changes the currently displayed form page to the last form page.<!-- END REF--> If a form is not being displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if the last form page is already displayed, FORM LAST PAGE does nothing.
+<!--REF #_command_.FORM LAST PAGE.Summary-->La commande **FORM LAST PAGE** change la page courante d'un formulaire pour afficher la dernière page du formulaire.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la dernière page du formulaire est déjà affichée, **FORM LAST PAGE** ne fait rien.
 
-## Example 
+## Exemple 
 
-The following example is a one-line method called from a menu command. It displays the last form page:
+Cet exemple est une méthode appelée par une commande de menu. Elle affiche la dernière page du formulaire courant :
 
 ```4d
  FORM LAST PAGE
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -45,12 +45,11 @@ The following example is a one-line method called from a menu command. It displa
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 251 |
+| Numéro de commande | 251 |
 | Thread safe | no |
-
 
 

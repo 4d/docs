@@ -5,62 +5,62 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ({ * }) : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Returns color scheme of host database |
-| Function result | Text | &#8592; | Current application color scheme |
+| * | Opérateur | &#8594;  | Retourne le schéma couleur de la base hôte |
+| Résultat | Text | &#8592; | Schéma de couleur de l'application courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Created|
+|19|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get Application color scheme.Summary-->The **Get Application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
+<!--REF #_command_.Get Application color scheme.Summary-->La commande **Get Application color scheme** retourne le nom du schéma de couleur utilisé dans l'application.<!-- END REF--> 
 
-**Note:** On Windows, this command always returns "light".
+**Note :** Sous Windows, cette command retourne toujours "light".
 
-The actual color scheme is defined by:
+Le schéma de couleur est défini :
 
-* a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
-* if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) was not called or called with "inherited" parameter value, the [color scheme Settings](../settings/interface.md#color-scheme) (host database Settings in case of a component);
-* if settings set to "inherited", the OS user preferences.
+* via un appel à la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md);
+* si la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) n'a pas été appelé ou si elle a été appelée avec une valeur de paramètre "inherited", les Paramètres (paramètres de la base hôte dans le cas d'un composant);
+* si les paramètres sont définis sur "inherited", les préférences de utilisateur du système d'exploitation.
 
-The *\** parameter is useful when the command is called from a component: when it is passed, the command returns the color scheme of the host database. 
+Le paramètre \* est utile lorsque la commande est appelée à partir d'un composant : lorsqu'elle est passée, la commande retourne le schéma de couleurs de la base hôte.
 
-Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command description for details about color scheme names. 
+Pour plus de détails sur les noms des schémas de couleur, veuillez vous reporter à la description de la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md).
 
-## Example 
+## Exemple 
 
 ```4d
  var $colorScheme : Text
  
-  // Retrieve the colorScheme of the host database
+  // Récupère le schemaCouleur de la base hôte
  $colorScheme:=Get Application color scheme(*)
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1763 |
+| Numéro de commande | 1763 |
 | Thread safe | no |
 
 

@@ -5,40 +5,39 @@ slug: /commands/sax-add-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* : Time ; *data* : Blob, Text )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* ; *données* )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| data | Blob, Text | &#8594;  | Text or BLOB to insert in the document between CData tags |
+| document | Time | &#8594;  | Référence du document ouvert |
+| données | Blob, Text | &#8594;  | Texte ou BLOB à insérer dans le document entre balises CData |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX ADD XML CDATA.Summary-->In the XML document referenced by *document*, the SAX ADD XML CDATA command adds *data* of the text or BLOB type.<!-- END REF--> This *data* will be automatically framed between the *<!\[CDATA\[* and *\]\]> tags.*
+<!--REF #_command_.SAX ADD XML CDATA.Summary-->La commande **SAX ADD XML CDATA** ajoute dans le document XML référencé par *document* des *données* de type texte ou BLOB.<!-- END REF--> Ces données seront automatiquement encadrées par les balises *<!\[CDATA\[* et *\]\]>*.   
+Le texte compris dans une section CData est ignoré par l’interpréteur XML. 
 
-The text included in a CData section is ignored by the XML interpreter. 
+Si vous souhaitez encoder le contenu de *données*, vous devez utiliser la commande [BASE64 ENCODE](base64-encode.md). Dans ce cas bien entendu, vous devez passer un BLOB dans *données*. 
 
-If you want to encode the contents of data, you must use the [BASE64 ENCODE](base64-encode.md) command. In this case, of course, you must pass a BLOB in *data*. 
+Pour que cette commande fonctionne, un élément doit être ouvert. Dans le cas contraire, une erreur est générée. 
 
-In order for this command to operate correctly, an element must be open. Otherwise, an error will be generated. 
+## Exemple 
 
-## Example 
-
-You want to insert the following lines in your XML document:
+Vous souhaitez insérer les lignes suivantes dans votre document XML :
 
 ```XML
 function matchwo(a,b)
@@ -54,15 +53,15 @@ else
 }
 ```
 
-To do this, you just need to execute the following code:
+Pour cela, il vous suffit d’exécuter le code suivant :
 
 ```4d
- var vtMytext : Text
- ... // place the text in the vtMytext variable here
- SAX ADD XML CDATA($DocRef;vtMytext)
+ var vtMontexte : Text
+ ... // placez ici le texte dans la variable vtMontexte
+ SAX ADD XML CDATA($RefDoc;vtMontexte)
 ```
 
-The result will thus be:
+Le résultat sera alors :
 
 ```XML
 <![CDATA[
@@ -80,20 +79,20 @@ else
 ]]>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [SAX GET XML CDATA](sax-get-xml-cdata.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 856 |
+| Numéro de commande | 856 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

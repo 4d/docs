@@ -5,92 +5,90 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** ( { *columnNumber* : Integer } ) : Integer<br/>**Drop position** ( { *pictPosY* : Integer } ) : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *numColonne* )} : Integer<br/>**Drop position** {( *posYImage* )} : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| columnNumber | Integer | &#8592; | List box column number (-1 if the drop occurs beyond the last column) |
-| pictPosY | Integer | &#8592; | Position of Y coordinate in picture |
-| Function result | Integer | &#8592; | • Number (list box) or • Position (hierarchical list) or • Position in string (text/combo box/4D Write Pro area) of destination item or • -1 if drop occurred beyond the last list item • Position of X coordinate in picture |
+| numColonne &#124; posYImage | Integer | &#8592; | Numéro de colonne de list box (-1 si le déposer a lieu après la dernière colonne) ouPosition coordonnée Y dans l'image |
+| Résultat | Integer | &#8592; | • Numéro (tableau/list box) ou• Position (liste hiérarchique) ou• Position dans la chaîne (texte/combo box) de l'élément de destination ou• -1 si le déposer a lieu après le dernier élément de tableau ou de liste ou• Position coordonnée X dans l’image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Drop position.Summary-->The Drop position command can be used to find out the location, in a “complex” destination object, where an object has been (dragged and) dropped.<!-- END REF-->
+<!--REF #_command_.Drop position.Summary-->**Drop position** permet de connaître l'emplacement, dans un objet de destination “complexe”, auquel un objet a été (glissé et) déposé.<!-- END REF--> Généralement, vous utiliserez **Drop position** pendant le traitement d'un événement glisser-déposer qui s'est produit dans un tableau, une list box, une liste hiérarchique, un champ texte ou une image.
 
-Typically, you will use Drop position when handling a drag and drop event that occurred over a list box, a hierarchical list, a text or picture field, or a 4D Write Pro area.
+* Si l'objet de destination est un tableau, la fonction retourne un numéro d'élément.
+* Si l'objet de destination est une list box, la fonction retourne un numéro de ligne. Dans ce cas, la fonction retourne également dans le paramètre facultatif *numColonne* le numéro de la colonne sur laquelle le déposer a eu lieu.
+* Si l'objet de destination est une liste hiérarchique, la fonction retourne une position d'élément.
+* Si l'objet de destination est une variable ou un champ de type texte ou encore une combo box, la fonction retourne une position de caractère à l'intérieur de la chaîne.  
+Dans tous les cas ci-dessus, la fonction retourne -1 si l'objet source a été déposé après le dernier élément de l'objet de destination.
+* Si l'objet de destination est une variable ou un champ de type image, la fonction retourne l’emplacement horizontal du clic et, dans le paramètre facultatif *posYImage*, l’emplacement vertical du clic. Les valeurs retournées sont exprimées en pixels et relativement au système de coordonnées locales.
 
-* If the destination object is a list box, the command returns a row number. In this case, the command also returns the column number where the drop took place in the optional *columnNumber* parameter.
-* If the destination object is a hierarchical list, the command returns an item position.
-* If the destination object is a text type variable or field, or a combo box, the command returns a character position within the string.  
-In all the above cases, the command may return -1 if the source object has been dropped beyond the last element or the last item of the destination object.
-* If the destination object is a picture type variable or field, the command returns the horizontal location of the click and, in the optional *pictPosY* parameter, the vertical location of the click. The values returned are expressed in pixels and in relation to the local coordinate system.
+Si vous appelez **Drop position** pendant le traitement d'un événement qui n'est pas de type glisser-déposer dans un tableau, une list box, une combo box, une liste hiérarchique, un texte ou une image, la fonction retourne également -1.
 
-If you call Drop position when handling an event that is not a drag-and-drop event and that occurred over a list box, a combo box, a hierarchical list, a text, a picture, or a 4D Write Pro area, the command returns -1.
+**Rappel :** Pour qu'un objet de formulaire accepte des données déposées, la propriété **Déposable** doit lui avoir été assignée. De plus, sa méthode objet doit être appelée par l'événement On Drag Over et/ou On Drop si vous voulez pouvoir gérer ce type d'événement. 
 
-**Important:** A form object accepts dropped data if its **Droppable** property has been selected. Also, its object method must be activated for On Drag Over and/or On Drop, in order to process these events.
+## Exemple 
 
-## Example 
-
-In the following example, a list of amounts paid must be broken down per month and per person. This is carried out by drag and drop between two list boxes:
+Dans l’exemple suivant, une liste de sommes doit être ventilée par mois et par personne. L’opération s’effectue par glisser-déposer entre deux list box :
 
 ![](../assets/en/commands/pict4091260.en.png)
 
-The right (source) list box object method contains the following code:
+La méthode objet de la list box de droite (source) contient le code suivant :
 
 ```4d
- If(Form event code=On Begin Drag Over) //event must be selected for the list box
+ If(Form event code=Sur début glisser) // l'événement doit être coché pour la list box
     var $tomove : Blob
     var $val : Text
     LISTBOX GET CELL POSITION(*;"LBPaid";$col;$row)
     $val:=PaidCol{$row}
     VARIABLE TO BLOB($val;$tomove)
-    APPEND DATA TO PASTEBOARD("mydrag";$tomove) //use a custom key
+    APPEND DATA TO PASTEBOARD("mydrag";$tomove) //utilise une clé personnalisée
  End if
 ```
 
-The left (destination) list box object method contains the following code:
+La méthode objet de la list box de gauche (destination) contient le code suivant :
 
 ```4d
  Case of
  
-    :(Form event code=On Drag Over) //event must be selected for the list box
+    :(Form event code=On Drag Over) //l'événement doit être coché pour la list box
        var $toGet : Blob
        var $rownum : Integer
        $rownum:=Drop position($colnum)
-       GET PASTEBOARD DATA("mydrag";$toGet) //get data
-       If(Pasteboard data size("mydrag")>0)&($colnum#1)) //If data are in the pasteboard
-          $0:=0 //we would accept the drop
+       GET PASTEBOARD DATA("mydrag";$toGet) //lire les données
+       If(Pasteboard data size("mydrag")>0)&($colnum#1)) //Si les données se trouvent dans le conteneur
+          $0:=0 //Le "déposer" est accepté
        Else
-          $0:=-1 //The drop is refused
+          $0:=-1 //Le "déposer" est refusé
        End if
  
-    :(Form event code=On Drop) //event must be selected for the list box
+    :(Form event code=Sur déposer) //l'événement doit être coché pour la list box
        var $toGet : Blob
        var $rownum;$val : Integer
        $rownum:=Drop position($colnum)
        GET PASTEBOARD DATA("mydrag";$toGet)
-       BLOB TO VARIABLE($toGet;$val) //get the value
+       BLOB TO VARIABLE($toGet;$val) //lire la valeur
        If(Pasteboard data size("mydrag")>0))
           If($colnum=1)
              BEEP
           Else
-             Case of //Adding of dropped values
+             Case of //Ajouter des valeurs déposées
                 :($colnum=2)
                    John{$rownum}:=John{$rownum}+$val
                 :($colnum=3)
@@ -98,21 +96,21 @@ The left (destination) list box object method contains the following code:
                 :($colnum=4)
                    Peter{$rownum}:=Peter{$rownum}+$val
              End case
-             DELETE FROM ARRAY(PaidCol;Find in array(PaidCol;$val)) //Update source listbox
+             DELETE FROM ARRAY(PaidCol;Find in array(PaidCol;$val)) //Mettre à jour la list box source
           End if
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
-*Drag and Drop*  
+*Présentation du Glisser-Déposer*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 608 |
+| Numéro de commande | 608 |
 | Thread safe | no |
 
 

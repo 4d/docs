@@ -5,67 +5,67 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* : Integer )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| limit | Integer | &#8594;  | Number of records, or 0 for no limit |
+| limite | Integer | &#8594;  | Nombre limite d'enregistrements ou 0 pour nombre illimité |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET QUERY LIMIT.Summary-->**SET QUERY LIMIT** allows you to tell 4D to stop any subsequent query for the current process as soon as at least the number of records you pass in *limit* has been found.<!-- END REF--> 
+<!--REF #_command_.SET QUERY LIMIT.Summary-->La commande **SET QUERY LIMIT** vous permet d'indiquer à 4D d'arrêter toutes les recherches suivant l'appel de cette commande dans le process courant dès que le nombre d'enregistrements défini dans *limite* a été atteint.<!-- END REF--> 
 
-For example, if you pass *limit* equal to 1, any subsequent query will stop browsing an index or the data file as soon as one record that matches the query conditions has been found.
+Si, par exemple, *limite* est égal à 1, les recherches s'arrêteront dès qu'un enregistrement sera trouvé selon les conditions de la recherche. 
 
-To restore queries with no limit, call **SET QUERY LIMIT** again with *limit* equal to 0.
+Pour que les recherches soient de nouveau sans limite, appelez **SET QUERY LIMIT** en fixant le paramètre *limite* à 0.
 
-**Warning:** **SET QUERY LIMIT** affects all the subsequent queries made within the current process. REMEMBER to always counterbalance a call to **SET QUERY LIMIT**(limit) (where *limit>0*) with a call to **SET QUERY LIMIT**(0) in order to restore queries with no limit.
+**Attention :** **SET QUERY LIMIT** affecte toutes les recherches dans le process courant. N'oubliez pas d'associer toujours un appel à **SET QUERY LIMIT**(limite) (lorsque *limite>0*) à un appel à **SET QUERY LIMIT**(0) ultérieur pour rétablir les recherches sans limite.
 
-**SET QUERY LIMIT** changes the behavior of the query commands:
+**SET QUERY LIMIT** modifie uniquement le comportement des commandes de recherche, c'est-à-dire :
 
 * [QUERY](query.md)
 * [QUERY SELECTION](query-selection.md)
 * [QUERY BY EXAMPLE](query-by-example.md)
 * [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
 * [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
+* [QUERY BY SQL](query-by-sql.md)
 * [QUERY WITH ARRAY](query-with-array.md)
+* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
 * [QUERY BY ATTRIBUTE](query-by-attribute.md)
 * [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
 
-On the other hand, **SET QUERY LIMIT** does not affect the other commands that may change the current selection of a table, such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), and so on.
+En revanche, **SET QUERY LIMIT** n'affecte pas les autres commandes qui modifient la sélection courante d'une table telles que [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
 
-## Example 1 
+## Exemple 1 
 
-To perform a query corresponding to the request “...give me any ten customers whose gross sales are greater than $1 M...”, you would write:
+Pour effectuer une recherche qui correspond à la formule “...trouver dix clients avec lesquels les ventes sont supérieures à 1MF...”, écrivez le code suivant :
 
 ```4d
  SET QUERY LIMIT(10)
- QUERY([Customers];[Customers]Gross sales>1000000)
+ QUERY([Clients];[Clients]Ventes>1000000)
  SET QUERY LIMIT(0)
 ```
 
-## Example 2 
+## Exemple 2 
 
-See the second example for the [SET QUERY DESTINATION](set-query-destination.md) command.
+Référez-vous au deuxième exemple de la commande [SET QUERY DESTINATION](set-query-destination.md).
 
-## See also 
+## Voir aussi 
 
 [Get query limit](get-query-limit.md)  
 [QUERY](query.md)  
@@ -77,11 +77,11 @@ See the second example for the [SET QUERY DESTINATION](set-query-destination.md)
 [QUERY WITH ARRAY](query-with-array.md)  
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 395 |
+| Numéro de commande | 395 |
 | Thread safe | yes |
 
 

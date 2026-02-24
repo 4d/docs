@@ -5,61 +5,61 @@ slug: /commands/listbox-select-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( * ; *object* : Text ; *rowPosition* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT ROW** ( *object* : Variable ; *rowPosition* : Integer {; *action* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW** ( {* ;} *objet* ; *positionLigne* {; *action*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Integer | &#8594;  | Number of the row to select |
-| action | Integer | &#8594;  | Selection action |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#8594;  | Numéro de la ligne à sélectionner |
+| action | Integer | &#8594;  | Action de sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Modified|
-|12|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|16 R2|Modifié|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SELECT ROW.Summary-->The LISTBOX SELECT ROW command selects the row whose number is passed in *position* in the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROW.Summary-->La commande **LISTBOX SELECT ROW** provoque la sélection de la ligne de numéro *positionLigne* dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-The optional *action* parameter, if passed, is used to define the selection action to execute when a selection of rows already exists in the list box. You can pass a value or one of the following constants (located in the “*List Box*” theme):
+Le paramètre *action*, s’il est passé, permet de définir l’action de sélection à effectuer lorsqu’une sélection de lignes existe déjà dans la list box. Vous pouvez passer une valeur ou l’une des constantes suivantes, placées dans le thème *List box* : 
 
-| Constant                 | Type    | Value | Comment                                                                                                                                                                                                                                                       |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk add to selection      | Integer | 1     | The row selected is added to the existing selection. If the row specified already belongs to the existing selection, the command does nothing.                                                                                                                |
-| lk remove from selection | Integer | 2     | The row selected is removed from the existing selection. If the row specified does not belong to the existing selection, the command does nothing.                                                                                                            |
-| lk replace selection     | Integer | 0     | The row selected becomes the new selection and replaces the existing selection. The command has the same effect as a user click on a row (however, the On Clicked event is not generated). This is the default action (if the *action* parameter is omitted). |
+| Constante                | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk add to selection      | Entier long | 1      | La ligne sélectionnée est ajoutée à la sélection existante. Si la ligne désignée appartient déjà à la sélection existante, la commande ne fait rien.                                                                                                                                                                         |
+| lk remove from selection | Entier long | 2      | La ligne sélectionnée est supprimée de la sélection existante. Si la ligne désignée n’appartient pas à la sélection existante, la commande ne fait rien.                                                                                                                                                                     |
+| lk replace selection     | Entier long | 0      | La ligne sélectionnée devient la nouvelle sélection et remplace la sélection existante. La commande produit le même effet qu’un clic de l’utilisateur sur une ligne de la list box (l'événement Sur clic n'est toutefois pas généré). Cette action est effectuée par défaut (lorsque le paramètre *action* n’est pas passé). |
 
-When the *position* parameter does not correspond exactly to an existing row number, the command works as follows:
+Lorsque le paramètre *positionLigne* ne correspond pas strictement à un numéro de ligne existante, la commande agit de la manière suivante :
 
-* If *position* is <0, the command does nothing, regardless of the *action* parameter value.
-* If *position* is 0 and if the *action* parameter contains lk replace selection or is omitted, all the rows of the listbox are selected. If the *action* parameter contains lk remove from selection, all the listbox rows are deselected.
-* If the *position* value is greater than the total number of rows contained in the listbox (only in the case of an array type listbox), the Boolean array associated with the listbox is automatically resized and the selection action is carried out. This mechanism means that you can use LISTBOX SELECT ROW with “standard” array management commands (such as [APPEND TO ARRAY](append-to-array.md)) that do not cause immediate synchronization of the listbox.  
-After execution of the method, the arrays are synchronized: if the source array of the listbox has indeed been resized, the selection action is carried out. Otherwise, the Boolean array associated with the listbox returns to its initial size and the command does nothing.
+* Si *positionLigne* est <0, la commande ne fait rien, quelle que soit la valeur du paramètre *action*.
+* Si *positionLigne* vaut 0 et si le paramètre *action* contient lk replace selection ou est omis, toutes les lignes de la listbox sont sélectionnées. Si le paramètre *action* contient lk remove from selection, toutes les lignes de la listbox sont désélectionnées.
+* Si la valeur de *positionLigne* est supérieure au nombre total de lignes contenues dans la listbox (dans le cas d'une listbox de type tableau uniquement), le tableau booléen associé à la listbox est automatiquement redimensionné et l’action de sélection est effectuée. Ce mécanisme permet d’utiliser **LISTBOX SELECT ROW** avec des commandes “standard” de gestion de tableaux (telles que [APPEND TO ARRAY](append-to-array.md)) n’entraînant pas de synchronisation immédiate de la listbox.  
+A l’issue de l’exécution de la méthode, les tableaux sont synchronisés : si le tableau source de la listbox a effectivement été redimensionné, l’action de sélection est effectuée. Sinon, le tableau booléen associé à la listbox reprend sa taille initiale et la commande ne fait rien.
 
-**Notes:** 
+**Notes :** 
 
-* If you want the list box to scroll automatically in order to display the row selected, use the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command.
-* To switch a row into editing mode (to allow data entry), use the [EDIT ITEM](edit-item.md) command.
-* If the number passed in *position* corresponds to a hidden row in the list box, the row is selected but not displayed.
-* If you have checked the **Hide selection highlight** option for a list box, you will need to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
+* Si vous souhaitez que la list box défile de manière à afficher la ligne nouvellement sélectionnée, utilisez la commande [OBJECT SET SCROLL POSITION](object-set-scroll-position.md).
+* Pour passer une ligne en mode édition (saisie), utilisez la commande [EDIT ITEM](edit-item.md).
+* Si le numéro passé dans *positionLigne* correspond à une ligne masquée dans la list box, la ligne est sélectionnée mais n'est pas affichée.
+* Si vous avez coché l'option **Cacher surlignage sélection** pour la list box, vous devrez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Pour plus d'informations sur ce point, veuillez vous reporter au paragraphe *Personnaliser la représentation des sélections*.
 
-## See also 
+## Voir aussi 
 
 [EDIT ITEM](edit-item.md)  
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
@@ -68,11 +68,11 @@ After execution of the method, the arrays are synchronized: if the source array 
 [LISTBOX SELECT ROWS](listbox-select-rows.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 912 |
+| Numéro de commande | 912 |
 | Thread safe | no |
 
 

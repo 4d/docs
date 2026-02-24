@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Get query limit.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Limit number of records,0 = unlimited number |
+| Résultat | Integer | &#8592; | Nombre limite d’enregistrements, 0 = nombre illimité |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get query limit.Summary-->The **Get query limit** command returns the limit for the number of records that a query may find in the current process.<!-- END REF-->
+<!--REF #_command_.Get query limit.Summary-->La commande **Get query limit** retourne la limite du nombre d’enregistrements qu’une recherche pourra trouver dans le process courant.<!-- END REF--> 
 
-You set this limit using the [SET QUERY LIMIT](set-query-limit.md) command. 
+Vous fixez cette limite à l’aide de la commande [SET QUERY LIMIT](set-query-limit.md). 
 
-By default, if no limit is set, the command returns 0.
+Par défaut, si aucune limite n’a été définie, la commande retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SET QUERY LIMIT](set-query-limit.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1156 |
+| Numéro de commande | 1156 |
 | Thread safe | yes |
 
 

@@ -5,86 +5,86 @@ slug: /commands/variance
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* : Field, Array ) : Real<!-- END REF-->
+<!--REF #_command_.Variance.Syntax-->**Variance** ( *séries* ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the variance |
-| Function result | Real | &#8592; | Variance of series |
+| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir la variance |
+| Résultat | Real | &#8592; | Variance de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|<6|Created|
+|13|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Variance.Summary-->**Variance** returns the variance for *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the variance.
+<!--REF #_command_.Variance.Summary-->**Variance** retourne la variance de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul.
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-The variance of a set of values is their average squared deviation from the mean. Its measures the dispersion of values around the mean. 4D uses the following variance formula: 
+La variance d'un ensemble de valeurs est la moyenne des carrés des écarts par rapport à la moyenne. C'est une valeur de dispersion autour de la moyenne. 4D utilise la formule de variance suivante : 
 
-**Variance(x) = Sum (x-m)\*(x-m)/(n-1)**  
-*m = Mean*  
-*n = Number of values* 
+**Variance(x) = Somme (x-m)\*(x-m)/(n-1)**  
+*m = Moyenne*  
+*n = Nombre de valeurs*
 
-If the values considered are not a sample, multiple the value returned by **Variance** by (n-1)/n.
+Si les valeurs considérées ne constituent pas un échantillon, multipliez la valeur retournée par **Variance** par (n-1)/n.
 
-## Example 1 
+## Exemple 1 
 
-The following example is an object method for the variable *var*. The object method assigns the sum of squares for a data series to *var*:
+L'exemple suivant est la méthode objet d'une variable appelée Var. La méthode assigne la variance de la série à Var:
 
 ```4d
- var:=Variance(Students]Grades)
+ Var:=Variance([Etudiants]Notes)
 ```
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection et activer la phase de rupture : 
 
 ```4d
- ALL RECORDS([Students])
- ORDER BY([Students];[Students]Class;>)
+ ALL RECORDS([Etudiants])
+ ORDER BY([Etudiants];[Etudiants]Classe;>)
  BREAK LEVEL(1)
- ACCUMULATE([Students]Grades)
- OUTPUT FORM([Students];"PrintForm")
- PRINT SELECTION([Students])
+ ACCUMULATE([Etudiants]Notes)
+ OUTPUT FORM([Etudiants];"FormImpression")
+ PRINT SELECTION([Etudiants])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the variance of the values placed in an array:
+Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tableau : 
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vVariance:=Variance($ArrGrades)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ vVariance:=Variance($TabNote)
 ```
 
-## See also 
+## Voir aussi 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 27 |
+| Numéro de commande | 27 |
 | Thread safe | yes |
 
 

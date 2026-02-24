@@ -5,65 +5,64 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* : Integer )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tickCount | Integer | &#8594;  | Tickcount or -1=Trigger as soon as possible |
+| tickCount | Integer | &#8594;  | Nombre de ticks ou -1 = Déclenchement dès que possible |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET TIMER.Summary-->The **SET TIMER** command activates the On Timer form event and sets, for the current form and process, the number of ticks elapsed between each On Timer form event.<!-- END REF--> 
+<!--REF #_command_.SET TIMER.Summary-->La commande **SET TIMER** permet d’activer l’événement formulaire On Timer et de fixer, pour le process et le formulaire courants, le nombre de ticks (1 tick = 1/60ème de seconde) entre chaque événement formulaire On Timer.<!-- END REF--> 
 
-**Note:** For more information about this form event, please refer to the description of the command [Form event code](./commands/form-event-code).
+**Note :** Pour plus d’informations sur cet événement formulaire, reportez-vous à la description de la commande [Form event code](../commands/form-event-code.md).
 
-If this command is called in a context in which it is not displaying a form, it will have no effect. 
+Si elle est appelée dans un contexte autre que l’affichage d’un formulaire, cette commande ne fait rien.
 
-**Note:** When the **SET TIMER** command is executed in the context of a subform (form method of the subform), the On Timer event is generated in the subform and not at the parent form level. 
+**Note :** Lorsque la commande **SET TIMER** est exécutée dans le contexte d’un sous-formulaire (méthode formulaire du sous-formulaire), l’événement On Timer est généré dans le sous-formulaire et non au niveau du formulaire parent. 
 
-If you pass -1 in the *tickCount* parameter, the command will activate the On Timer form event "as soon as possible", in other words, as soon as the 4D application hands over control to the event manager. More particularly, this means that you can make sure that a form is completely displayed before beginning processing (application fluidity). 
+Si vous passez -1 dans le paramètre *tickCount*, la commande activera l'événement formulaire On Timer "dès que possible", autrement dit dès que l'application 4D rendra la main au gestionnaire d'événements. Ce principe permet notamment de s'assurer qu'un formulaire soit entièrement affiché avant de démarrer un traitement (fluidité de l'application). 
 
-To procedurally disable the triggering of the On Timer form event, call **SET TIMER** again and pass 0 in *tickCount*.
+Pour inactiver par programmation le déclenchement de l’événement formulaire On Timer, appelez de nouveau la commande **SET TIMER** en passant 0 dans le paramètre *nbTicks*.
 
-## Example 
+## Exemple 
 
-Let’s imagine that you want, when a form is displayed on screen, the computer to beep every three seconds. To do so, write the following form method: 
+Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip soit émis toutes les trois secondes. Pour cela, écrivez dans la méthode du formulaire : 
 
 ```4d
  If(Form event code=On Load)
     SET TIMER(60*3)
  End if
- 
+ ...
  If(Form event code=On Timer)
     BEEP
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [REDRAW](redraw.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 645 |
+| Numéro de commande | 645 |
 | Thread safe | no |
-
 
 

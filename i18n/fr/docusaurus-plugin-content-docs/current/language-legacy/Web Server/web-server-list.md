@@ -5,41 +5,41 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.WEB Server list.Syntax-->**WEB Server list** : Collection<!-- END REF-->
-<!--REF #_command_.WEB Server list.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| Function result | Collection | &#8592; | Collection of the available Web Server objects |
-</div>
+<!--REF #_command_.WEB Server list.Params-->
+
+| Paramètres | Type       |                             | Description                                  |
+| ---------- | ---------- | --------------------------- | -------------------------------------------- |
+| Résultat   | Collection | &#8592; | Collection des objets Web Server disponibles |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|18 R3|Added
+| Release | Modifications |
+| ------- | ------------- |
+| 18 R3   | Ajout         |
+
 </details>
 
+## Description
 
-## Description 
+La commande `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->renvoie une collection de tous les objets serveur Web disponibles dans l'application 4D<!-- END REF -->.
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+Une application 4D peut contenir de un à plusieurs serveurs Web :
 
-A 4D application can contain anywhere from one to several Web servers:
+- un serveur Web pour la base de données hôte (serveur Web par défaut)
+- un serveur Web pour chaque composant.
 
-- one Web server for the host database (default Web server)
-- one Web server for each component.
+Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server list` , qu'ils soient en cours d'exécution ou non.
 
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
+> L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. D'un autre côté, chaque serveur Web composant que vous voulez utiliser doit être instancié en utilisant la commande [`WEB Server`](web-server.md).
 
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
+Vous pouvez utiliser la propriété [.name](../API/WebServerClass.md#name) de l'objet serveur Web pour identifier le projet ou le composant auquel chaque objet serveur Web de la liste est attaché.
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+## Exemple
 
-## Example  
-
-We want to know how many running web servers are available:
+Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 
 ```4d
  var $wSList : Collection
@@ -50,16 +50,16 @@ We want to know how many running web servers are available:
  ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
 ```
 
-## See also 
+## Voir également
 
-[WEB Server](web-server.md)  
-[webServer.stop()](../API/WebServerClass.md#stop)  
+[WEB Server](web-server.md)\
+[webServer.stop()](../API/WebServerClass.md#stop)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1716 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1716 |
+| Thread safe        | oui  |
 
 

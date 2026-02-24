@@ -5,54 +5,54 @@ slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| epsilon | Real | &#8594;  | Epsilon value for real equality comparisons |
+| epsilon | Real | &#8594;  | Valeur epsilon pour les comparaisons d'égalité des réels |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->The **SET REAL COMPARISON LEVEL** command sets the epsilon value used by 4D to compare real values and expressions for equality.<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->La commande **SET REAL COMPARISON LEVEL** définit la valeur *epsilon* utilisée par 4D lors d'une comparaison d'égalité des valeurs et expressions de type Réel.<!-- END REF-->
 
-A computer always performs approximative real computations; therefore, testing real numbers for equality should take this approximation into account. 4D does this when comparing real numbers by testing whether or not the difference between the two numbers exceeds a certain value. This value is called the **epsilon** and works this way: 
+Comme un ordinateur effectue des calculs approximatifs sur les réels, les tests sur l'égalité de valeurs réelles doivent tenir compte de cette approximation. Pour cela, 4D, lorsqu'il compare des valeurs réelles, teste en fait si la différence entre les deux valeurs est supérieure ou non à une certaine valeur. Cette valeur s'appelle l'**epsilon** et fonctionne de la manière suivante :   
+Soient deux valeurs réelles *a* et *b*. Si [Abs](abs.md)(a-b) est supérieur à l'epsilon, les valeurs sont considérées comme différentes ; sinon, elles sont déclarées égales.  
+Par défaut, 4D fixe la valeur epsilon à 10 à la puissance moins 6 (10^-6). Exemples :
 
-Given two real numbers *a* and *b*, if [Abs](abs.md)(a-b) is greater than the epsilon, the numbers are considered not equal; otherwise, the numbers are considered equal.
+* *0,00001=0,00002* retourne Faux car la différence *0,00001* est supérieure à *10^-6*.
+* *0,000001=0,000002* retourne Vrai car la différence *0,000001* n'est pas supérieure à *10^-6*.
+* *0,000001=0,000003* retourne Faux car la différence *0,000002* est supérieure à *10^-6*.
 
-By default, 4D, sets the epsilon value to 10 power minus 6 (10^-6). Please note that the *epsilon* value should always be positive. Examples:
+A l'aide de **SET REAL COMPARISON LEVEL**, vous pouvez augmenter ou réduire la valeur epsilon, en fonction de vos besoins. 
 
-* *0.00001=0.00002* returns False, because the difference *0.00001* is greater than *10^-6*.
-* *0.000001=0.000002* returns True, because the difference *0.000001* is not greater than *10^-6*.
-* *0.000001=0.000003* returns False, because the difference *0.000002* is greater than *10^-6*.
+**Note :** La commande n'aura pas d'effet si *epsilon* \> 10^-3 ou si *epsilon* < 0.
 
-Using **SET REAL COMPARISON LEVEL**, you can increase or decrease the epsilon value as you require.
+Modifier l'epsilon affecte seulement la comparaison d'égalité des réels. Cela n'a pas d'effet sur les calculs et l'affichage des valeurs réelles.
 
-**WARNING:** Typically, you will not need to use this command to change the default epsilon value.
+**ATTENTION :** Cette commande doit être utilisée dans des cas spécifiques, comme par exemple un tri sur un champ dont les valeurs sont inférieures à 10^-6\. En général, vous n'avez pas besoin de modifier la valeur par défaut d'epsilon.
 
-**IMPORTANT:** Changing the epsilon only affects real comparison for equality. It has no effect on other real computations nor on the display of real values.
-
-**Note:** The **SET REAL COMPARISON LEVEL** command has no effect on queries and sorts performed with fields of the Real type. It only applies the 4D language.
+**Note :** La commande **SET REAL COMPARISON LEVEL** n'a pas d'effet sur les recherches et les tris effectués avec les champs de type réel. Elle s'applique uniquement au langage de 4D.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 623 |
+| Numéro de commande | 623 |
 | Thread safe | no |
 
 

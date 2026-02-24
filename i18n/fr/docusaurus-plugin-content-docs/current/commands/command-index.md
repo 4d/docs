@@ -11,10 +11,10 @@ title: Commandes par nom
 
 <a id="A"><b>A</b></a>
 
-[`ABORT`](../commands-legacy/abort.md)<br/>
-[`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md)<br/>
-[`Abs`](../commands-legacy/abs.md)<br/>
-[`ACCEPT`](../commands-legacy/accept.md)<br/>
+[`ABORT`](./commands/abort)<br/>
+[`ABORT PROCESS BY ID`](commands/abort-process-by-id)<br/>
+[`Abs`](../commands/abs)<br/>
+[`ACCEPT`](../language-legacy/accept.md)<br/>
 [`ACCUMULATE`](../commands-legacy/accumulate.md)<br/>
 [`Action info`](../commands-legacy/action-info.md)<br/>
 [`Activated`](../commands-legacy/activated.md)<br/>

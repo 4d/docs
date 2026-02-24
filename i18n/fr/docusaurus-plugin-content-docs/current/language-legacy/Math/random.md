@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Random.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Random number |
+| Résultat | Integer | &#8592; | Nombre aléatoire |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Random.Summary-->Random returns a random integer value between 0 and 32,767 (inclusive).<!-- END REF-->
+<!--REF #_command_.Random.Summary-->**Random** retourne une valeur entière aléatoire comprise entre 0 et 32 767 (inclus).<!-- END REF-->
 
-To define a range of integers from which the random value will be chosen, use this formula:
-
-```4d
- (Random%(vEnd-vStart+1))+vStart
-```
-
-The value *vStart* is the first number in the range, and the value *vEnd* is the last.
-
-## Example 
-
-The following example assigns a random integer between 10 and 30 to the *vlResult* variable:
+Pour que la valeur aléatoire soit située dans un intervalle donné, utilisez la formule suivante :
 
 ```4d
- vlResult:=(Random%21)+10
+ (Random%(fin-début+1))+début
+```
+
+La valeur *début* est le premier nombre de l'intervalle, *fin* est le dernier. 
+
+## Exemple 
+
+L'exemple suivant assigne une valeur entière aléatoire entre 10 et 30 à la variable *vRésultat* :
+
+```4d
+ vRésultat:=(Random% 21)+10
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 100 |
+| Numéro de commande | 100 |
 | Thread safe | yes |
 
 

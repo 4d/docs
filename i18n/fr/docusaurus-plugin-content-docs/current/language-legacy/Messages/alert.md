@@ -5,87 +5,87 @@ slug: /commands/alert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* : Text {; *okButtonTitle* : Text} )<!-- END REF-->
+<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* {; *libelléBoutonOK*} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message to display in the alert dialog box |
-| okButtonTitle | Text | &#8594;  | OK button title |
+| message | Text | &#8594;  | Message à afficher dans la boîte de dialogue d'alerte |
+| libelléBoutonOK | Text | &#8594;  | Libellé du bouton OK |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ALERT.Summary-->The **ALERT** command displays an alert dialog box composed of a note icon, a message, and an OK button.<!-- END REF--> 
+<!--REF #_command_.ALERT.Summary-->La commande **ALERT** affiche une boîte de dialogue d'alerte composée d'une icône, d'un message et d'un bouton OK.<!-- END REF-->
 
-You pass the message to be displayed in the parameter *message*. 
+Vous passez le message à afficher dans le paramètre *message*. Ce message peut contenir jusqu'à 255 caractères. Si la longueur ou la largeur des caractères est trop importante par rapport à la zone du message, il sera tronqué.
 
-By default, the title of the OK button is “OK.” To change the title of the OK button, pass the new custom title into the optional parameter *okButtonTitle*. If necessary, the OK button width is resized toward the left, according to the width of the custom title you pass.
+Par défaut, le libellé du bouton OK est “OK”. Si vous voulez changer ce libellé, passez le nouveau libellé dans le paramètre optionnel *libelléBoutonOK*. Si nécessaire, la largeur du bouton OK est augmentée vers la gauche pour contenir ce nouveau libellé.
 
-**Tip:** Do not call the **ALERT** command from the section of a form or object method that handles the On Activate or On Deactivate form events; this will cause an endless loop.
+**Note :** N'appelez pas la commande **ALERT** dans une méthode formulaire ou une méthode objet qui gère l'événement formulaire On Activate ou On Deactivate , car cela provoquerait une boucle sans fin.
 
-## Example 1 
+## Exemple 1 
 
-This example displays an alert showing information about a company. Note that the displayed string contains carriage returns, which cause the string to wrap to the next line:
-
-```4d
- ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "+\
- String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+\
- String(Records in selection([Parts])))
-```
-
-This line of code displays the following alert box (on Windows):
-
-![](../assets/en/commands/pict4224938.en.png)
-
-## Example 2 
-
-The line:
+L'exemple suivant appelle une boîte de dialogue d'alerte qui affiche des informations sur une société. Notez que le message contient des retours chariot ([Char](char.md)(13)) qui forcent le texte à passer sur la ligne suivante :
 
 ```4d
- ALERT("I'm sorry Dave, I can't do that.";"Alas!")
+ ALERT("Société: "+[Société]Nom+Char(13)+"Personnes dans la société: "+\
+ String(Enregistrements trouves([Personnes ]))+Caractere(13)+"Nombre d'éléments fournis: "+\
+ String(Enregistrements trouves([Elements])))
 ```
 
-displays the alert dialog box (on Windows) shown:
+Voici la boîte de dialogue d'alerte affichée (sous Windows) par notre exemple :
 
-![](../assets/en/commands/pict4224959.en.png)
+![](../assets/en/commands/pict4224938.fr.png)
 
-## Example 3 
+## Exemple 2 
 
-The line:
+Voici un autre exemple :
 
 ```4d
- ALERT("You no longer have the access privileges for deleting these records.";"Well, I swear I did not know that")
+ ALERT("Excusez-moi Pierre, je ne peux pas faire cela.";"Dommage !")
 ```
 
-displays the alert dialog box (on Windows) shown:
+Cette instruction affichera (sous Windows) la boîte de dialogue d'alerte suivante :
 
-![](../assets/en/commands/pict4224968.en.png)
+![](../assets/en/commands/pict4224959.fr.png)
 
-## See also 
+## Exemple 3 
+
+Voici un autre exemple :
+
+```4d
+ ALERT("Vous n'avez plus le droit de supprimer des enregistrements.";"Je ne le savais pas !")
+```
+
+Ce code affiche la boîte de dialogue d'alerte suivante :
+
+![](../assets/en/commands/pict4224968.fr.png)
+
+## Voir aussi 
 
 [CONFIRM](confirm.md)  
 [DISPLAY NOTIFICATION](display-notification.md)  
 [Request](request.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 41 |
+| Numéro de commande | 41 |
 | Thread safe | yes |
 
 

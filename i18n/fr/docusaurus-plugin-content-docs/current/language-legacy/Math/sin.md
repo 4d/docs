@@ -5,32 +5,34 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number, in radians, whose sine is returned |
-| Function result | Real | &#8592; | Sine of number |
+| nombre | Real | &#8594;  | Nombre, exprimé en radians, dont vous voulez connaître le sinus |
+| Résultat | Real | &#8592; | Sinus de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Sin.Summary-->**Sin** returns the sine of *number*, where *number* is expressed in radians.<!-- END REF-->4D provides the predefined constants Pi, Degree, and Radian. Pi returns the Pi number (3.14159...), Degree returns one degree expressed in radians (0.01745...), and Radian returns one radian expressed in degrees (57.29577...).
+<!--REF #_command_.Sin.Summary-->**Sin** retourne le sinus de *nombre*.<!-- END REF--> La valeur *nombre* est exprimée en radians.
 
-## See also 
+**Note :** 4D fournit les constantes prédéfinies Pi, Degree et Radian. Pi retourne le nombre Pi (3,14159...), Degree retourne la valeur en radians d'un degré (0,01745...) et Radian retourne la valeur en degrés d'un radian (57,29577...).
+
+## Voir aussi 
 
 [Arctan](arctan.md)  
 [Cos](cos.md)  
 [Tan](tan.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 17 |
+| Numéro de commande | 17 |
 | Thread safe | yes |
 
 

@@ -5,81 +5,81 @@ slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in list.Syntax-->**Find in list** ( * ; *list* : Text ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<br/>**Find in list** ( *list* : Integer ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *liste* ; *valeur* ; *portée* {; *tabEléments* {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) Name of list type object (if * passed) |
-| value | Text | &#8594;  | Value to be searched for |
-| scope | Integer | &#8594;  | 0=Main list, 1=Sublist |
-| itemsArray | Integer array | &#8592; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
-| * | Operator | &#8594;  | - If omitted: use position of items - If passed: use reference number of items |
-| Function result | Integer | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| valeur | Text | &#8594;  | Valeur à rechercher |
+| portée | Integer | &#8594;  | 0=Liste principale, 1=Sous-listes |
+| tabEléments | Integer array | &#8592; | - Si 2e * omis : tableau des positions des éléments trouvés - Si 2e * passé : tableau des numéros de référence des éléments trouvés |
+| * | Opérateur | &#8594;  | - Si omis : utiliser la position des éléments - Si passé : utiliser le numéro de référence des éléments |
+| Résultat | Integer | &#8592; | - Si 2e * omis : position de l’élément trouvé - Si 2e * passé : numéro de référence de l’élément trouvé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Find in list.Summary-->The **Find in list** command returns the position or reference of the first item of the *list* that is equivalent to the string passed in *value*.<!-- END REF--> If several items are found, the function can also fill an *itemsArray* array with the position or reference of each item.
+<!--REF #_command_.Find in list.Summary-->La commande **Find in list** retourne la position ou la référence du premier élément de *liste* qui équivaut à la chaîne passée dans *valeur*.<!-- END REF--> Si plusieurs éléments sont trouvés, la fonction peut également remplir le tableau *tabEléments* avec la position ou la référence de chaque élément.
 
-If you pass the first optional \* parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with item reference numbers (the second \* is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with item positions (the second \* is passed), the syntax based on the object name is required since the position of items can vary from one representation to another. 
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les numéros de référence des éléments (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec les positions des éléments (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car la position des éléments peut varier d'une représentation à l'autre.
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists that match this name, the **Find in list** command will be applied to the first object whose name corresponds.
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **Find in list** s'appliquera au premier objet dont le nom correspond. 
 
-The second \* parameter can be used to indicate whether you want to work with the current positions of the items (in which case, this parameter is omitted) or with the absolute references of the items (in which case, it must be passed).
+Le second paramètre *\** vous permet d’indiquer si vous souhaitez travailler avec des positions courantes d’éléments (dans ce cas, ce paramètre doit être omis) ou des références absolues d’éléments (dans ce cas, il doit être passé).
 
-Pass the character strings to be searched for in *value*. The search will be of the “is exactly” type; in other words, searching for “wood” will not find “wooden.” However, you can use the wildcard character (@ ) to set up searches of the “begins with,” “ends with” or “contains” types.
+Passez dans *valeur* la chaîne de caractères à rechercher. La recherche sera du type “est exactement”, c’est-à-dire que la recherche de “bois”ne trouvera pas “boissons”. Toutefois, vous pouvez utiliser le caractère @ pour définir des recherches du type “commence par”, “se termine par” ou “contient”.
 
-The *scope* parameter is used to set whether the search must only be carried out at the first level of the *list* or whether it should include all the sublists. Pass 0 to limit the search to the first level of the list and 1 to extend it to all the sublists. 
+Le paramètre *portée* vous permet de définir si la recherche doit porter uniquement sur le premier niveau de la *liste* ou si elle doit inclure toutes ses sous-listes. Passez 0 pour concentrer la recherche sur le premier niveau de la liste et 1 pour l’étendre à toutes les sous-listes.
 
-If you want to find out the position or number of all the items corresponding to *value*, pass a longint array in the optional *itemsArray* parameter. If necessary, the array will be created and resized by the command. The command will fill in the array with the positions (if the second \* is omitted) or the reference numbers (if the second \* is passed) of the items found.
+Si vous souhaitez connaître la position ou le numéro de tous les éléments correspondant à *valeur*, passez un tableau d’entiers longs dans le paramètre facultatif *tabEléments*. Si nécessaire, le tableau sera créé et redimensionné par la commande. La commande remplira le tableau avec les positions (si le second *\** est omis) ou les numéros de référence (si le second *\** est passé) des éléments trouvés.
 
-Positions are expressed in relation to the top item of the main list, while taking into account the current expanded/collapsed state of the list and sublists.
+Les positions sont exprimées relativement à l’élément supérieur de la liste principale, en tenant compte de l’état courant déployé/contracté de la liste et de ses sous-listes. 
 
-If no item corresponds to the *value* searched for, the function returns 0 and the *itemsArray* array is returned empty.
+Si aucun élément ne correspond à la *valeur* recherchée, la fonction retourne 0 et le tableau *tabEléments* est retourné vide.
 
-## Example 
+## Exemple 
 
-Given the following hierarchical list:
+Soit la liste hiérarchique suivante :
 
-![](../assets/en/commands/pict22420.en.png)
+![](../assets/en/commands/pict22420.fr.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"P@";1;$arrPos)
-  //$vlItemPos equals 6
-  //$arrPos{1} equals 6 and $arrPos{2} equals 11
+  //$vlItemPos vaut 5
+  //$arrPos{1} vaut 5, $arrPos{2} vaut 17 et $arrPos{3} vaut 19
  $vlItemRef:=Find in list(hList;"P@";1;$arrRefs;*)
-  //$vlItemRef equals 7
-  //$arrRefs{1} equals 7 and $arrRefs{2} equals 18
+  //$vlItemRef vaut 7
+  //$arrRefs{1} vaut 7, $arrRefs{2} vaut 18 et $arrRefs{3} vaut 23
  $vlItemPos:=Find in list(hList;"Date";1;$arrPos)
-  //$vlItemPos equals 9
-  //$arrPos{1} equals 9 and $arrPos{2} equals 16
- $vlItemRefFind in list(hList;"Date";1;$arrRefs;*)
-  //$vlItemRef equals 11
-  //$arrRefs{1} equals 11 and $arrRefs{2} equals 23
- $vlItemPos:=(hList;"Date";0;*)
-  //$vlItemPos equals 0
+  //$vlItemPos vaut 9
+  //$arrPos{1} vaut 9
+ $vlItemRef:=Find in list(hList;"Date";1;$arrRefs;*)
+  //$vlItemRef vaut 11
+  //$arrRefs{1} vaut 11
+ $vlItemPos:=Find in list(hList;"Date";0;*)
+  //$vlItemPos vaut 0`
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 952 |
+| Numéro de commande | 952 |
 | Thread safe | no |
 
 

@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Temporary folder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Pathname to temporary folder |
+| Résultat | Text | &#8592; | Chemin d'accès au dossier temporaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Temporary folder.Summary-->The Temporary folder command returns the pathname to the current temporary folder set by your system.<!-- END REF-->
+<!--REF #_command_.Temporary folder.Summary-->La fonction **Temporary folder** retourne le chemin d'accès au dossier temporaire courant tel que défini par votre système d'exploitation.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-## See also 
+## Voir aussi 
 
 [System folder](system-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 486 |
+| Numéro de commande | 486 |
 | Thread safe | yes |
 
 

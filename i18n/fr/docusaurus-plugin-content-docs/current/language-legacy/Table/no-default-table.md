@@ -9,58 +9,56 @@ displayed_sidebar: docs
 <!--REF #_command_.NO DEFAULT TABLE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.NO DEFAULT TABLE.Summary-->The **NO DEFAULT TABLE** command is used to cancel the effect of the [DEFAULT TABLE](default-table.md) command.<!-- END REF--> After this command is executed, there is no longer any default table defined for the process.   
-This command will have no effect if the [DEFAULT TABLE](default-table.md) command has not been called beforehand.
+<!--REF #_command_.NO DEFAULT TABLE.Summary-->La commande **NO DEFAULT TABLE** permet d’annuler l’effet de la commande [DEFAULT TABLE](default-table.md).<!-- END REF--> Après l’exécution de cette commande, il n’y a plus de table par défaut définie pour le process.   
+Si la commande [DEFAULT TABLE](default-table.md) n’avait pas été appelée au préalable, cette commande ne fait rien.
 
-This command concerns the use of project forms (forms not linked with tables): most of the commands related to forms (apart from user forms) accept an optional *aTable* parameter as their first parameter. For example, this is the case with the *\_o\_FORM GET PARAMETER*, [Open form window](./commands/open-form-window) or [DIALOG](./commands/dialog) commands. Since a project form and table form can have the same name, this parameter can be used to determine the form to be used: pass the *aTable* parameter when you want to target the table form and omit it in the case of a project form.
-
-In a database containing a project form named “TheForm” and a table form with the same name for the \[Table1\] table:
+Cette commande est liée à l'utilisation de formulaires projets (formulaires non liés à des tables) : la plupart des commandes relatives aux formulaires (hors formulaires utilisateurs) acceptent un paramètre facultatif de type table comme premier paramètre. C’est par exemple le cas des commandes *\_o\_FORM GET PARAMETER*, [Open form window](open-form-window.md) ou [DIALOG](../commands/dialog.md). Comme un formulaire projet et un formulaire table peuvent avoir le même nom, ce paramètre permet de déterminer le formulaire à utiliser : passez le paramètre lorsque vous souhaitez adresser un formulaire table et ne le passez pas dans le cas d’un formulaire projet.  
+Dans une base contenant un formulaire projet nommé “LeForm” et un formulaire table du même nom pour la table \[Table1\] :
 
 ```4d
- DIALOG([Table1];"TheForm") //4D uses the table form
- DIALOG("TheForm") //4D uses the project form
+ DIALOG([Table1];"LeForm") //4D utilise le formulaire table
+ DIALOG("LeForm") //4D utilise le formulaire projet
 ```
 
-However, this principle is null and void if the [DEFAULT TABLE](default-table.md) command is executed when the database contains a project form and a table form with the same name. In fact, in this case 4D will use the table form by default, even if the *aTable* parameter is not passed. In order to guarantee the use of project forms, simply use the **NO DEFAULT TABLE** command. 
+Ce principe est toutefois caduc lorsque la commande [DEFAULT TABLE](default-table.md) a été exécutée et que la base contient un formulaire projet et un formulaire table du même nom. En effet, dans ce cas 4D utilisera le formulaire table de la table par défaut, même si le paramètre *laTable* n’est pas passé. Dans ce cas, pour permettre l’utilisation de formulaires projet, il suffit d’exécuter la commande **NO DEFAULT TABLE**. 
 
-## Example 
+## Exemple 
 
-In a database containing a project form named “TheForm” and a table form with the same name for the \[Table1\] table: 
+Dans une base contenant un formulaire projet nommé “LeForm” et un formulaire table du même nom pour la table \[Table1\] : 
 
 ```4d
  DEFAULT TABLE([Table1])
- DIALOG("TheForm") //4D uses the table form
+ DIALOG("LeForm") //4D utilise le formulaire table
  NO DEFAULT TABLE
- DIALOG("TheForm") //4D uses the project form
+ DIALOG("LeForm") //4D utilise le formulaire projet
 ```
 
-## See also 
+## Voir aussi 
 
 [DEFAULT TABLE](default-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 993 |
+| Numéro de commande | 993 |
 | Thread safe | yes |
-
 
 

@@ -5,41 +5,42 @@ slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to pop record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle dépiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.POP RECORD.Summary-->**POP RECORD** pops a record belonging to *aTable* from the table’s record stack, and makes the record the current record.<!-- END REF-->
+<!--REF #_command_.POP RECORD.Summary-->**POP RECORD** charge le premier enregistrement de la pile d'enregistrements de *laTable*, et en fait l'enregistrement courant.<!-- END REF-->
 
-If you push a record, change the selection to not include the pushed record, and then pop the record, the current record is not in the current selection. To designate the popped record as the current selection, use [ONE RECORD SELECT](one-record-select.md). If you use any commands that move the record pointer before saving the record, you will lose the copy in memory.
+Si vous empilez un enregistrement puis créez une nouvelle sélection courante ne contenant plus l'enregistrement empilé, et enfin dépilez l'enregistrement, vous obtenez la situation dans laquelle l'enregistrement courant ne se trouve pas dans la sélection courante. Si vous souhaitez faire de l'enregistrement empilé la sélection courante, utilisez la commande [ONE RECORD SELECT](one-record-select.md).   
+Si vous utilisez une routine qui déplace le pointeur d'enregistrement courant avant de sauvegarder l'enregistrement, vous perdrez la copie empilée en mémoire.
 
-## Example 
+## Exemple 
 
-The following example pops the record for the customer off the record stack:
+L'exemple suivant récupère l'enregistrement d'un client dans la pile :
 
 ```4d
- POP RECORD([Customers]) // Pop customer’s record onto stack
+ POP RECORD([Clients]) // Dépiler l'enregistrement
 ```
 
-## See also 
+## Voir aussi 
 
 [PUSH RECORD](push-record.md)  
-*Using the Record Stack*  
+*Utiliser la pile d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 177 |
+| Numéro de commande | 177 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

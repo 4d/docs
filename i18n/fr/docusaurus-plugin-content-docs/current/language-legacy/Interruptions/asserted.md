@@ -5,61 +5,61 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* : Boolean {; *messageText* : Text} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expressionBool* {; *texteMessage*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &#8594;  | Boolean expression |
-| messageText | Text | &#8594;  | Text of error message |
-| Function result | Boolean | &#8592; | Result of evaluation of boolExpression |
+| expressionBool | Boolean | &#8594;  | Expression booléenne |
+| texteMessage | Text | &#8594;  | Texte du message d’erreur |
+| Résultat | Boolean | &#8592; | Résultat de l’évaluation d’expressionBool |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Asserted.Summary-->The **Asserted** command has an operation similar to that of the [ASSERT](assert.md) command, with one difference in that it returns a value which is the result of the evaluation of the *boolExpression* parameter.<!-- END REF--> It therefore allows the use of an assertion during the evaluation of a condition (see the example). For more information about the operation of assertions and the parameters of this command, please refer to the description of the [ASSERT](assert.md) command.
+<!--REF #_command_.Asserted.Summary-->La commande **Asserted** a un fonctionnement semblable à celui de la commande [ASSERT](assert.md), à la différence près qu’elle retourne une valeur issue de l’évaluation du paramètre *expressionBool*.<!-- END REF--> Elle permet donc d’utiliser une assertion lors de l’évaluation d’une condition (cf. exemple). Pour plus d’informations sur le fonctionnement des assertions et sur les paramètres de cette commande, reportez-vous à la description de la commande [ASSERT](assert.md).
 
-**Asserted** accept a Boolean expression as a parameter and returns the result of the evaluation of this expression. If the expression is false and if the assertions are enabled (see the [SET ASSERT ENABLED](set-assert-enabled.md) command), the error -10518 is generated, exactly as for the [ASSERT](assert.md) command. If the assertions are disabled, **Asserted** returns the result of the expression that was passed without triggering an error.
+**Asserted** accepte une expression booléenne en paramètre et retourne le résultat de l’évaluation de cette expression. Si l’expression est fausse et si les assertions sont activées (cf. commande [SET ASSERT ENABLED](set-assert-enabled.md)), l’erreur -10518 est générée, exactement comme pour la commande [ASSERT](assert.md). Si les assertions sont inactivées, **Asserted** retourne simplement le résultat de l’expression qui lui est passée sans déclencher d’erreur.
 
-**Note:** Like the [ASSERT](assert.md) command, **Asserted** works in interpreted and compiled mode. 
+**Note :** Comme la commande [ASSERT](assert.md), **Asserted** fonctionne en mode interprété et en mode compilé. 
 
-## Example 
+## Exemple 
 
-Insertion of an assertion in the evaluation of an expression:
+Insertion d’une assertion dans l’évaluation d’une expression :
 
 ```4d
  READ WRITE([Table 1])
  LOAD RECORD([Table 1])
- If(Asserted(Not(Locked([Table 1]))))
-  // This code triggers the error -10518 if the record is locked
-    ...
+ If(Asserted(Not(Locked([Table 1])))) 
+        // Ce code déclenche l'erreur  -10518  si l'enregistrement est verrouillé
+       ...
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [ASSERT](assert.md)  
 [Get assert enabled](get-assert-enabled.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1132 |
+| Numéro de commande | 1132 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

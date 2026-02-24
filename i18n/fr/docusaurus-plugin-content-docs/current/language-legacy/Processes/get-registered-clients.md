@@ -5,64 +5,64 @@ slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* : Text array ; *methods* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listeClients* ; *nbMéthodes* )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| clientList | Text array | &#8592; | List of the saved 4D Clients |
-| methods | Integer array | &#8592; | List of the methods to be executed |
+| listeClients | Text array | &#8592; | Liste des 4D Client enregistrés |
+| nbMéthodes | Integer array | &#8592; | Liste des méthodes restant à exécuter |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->The **GET REGISTERED CLIENTS** command fills two arrays<!-- END REF-->:
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->La commande **GET REGISTERED CLIENTS** remplit deux tableaux <!-- END REF-->:
 
-* *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](register-client.md) command.
-* *methods* supplies the list of each client’s “workload”. The workload is the number of methods that a 4D Client must still execute by calling the [EXECUTE ON CLIENT](execute-on-client.md) command (for more information, please refer to the description of the [EXECUTE ON CLIENT](execute-on-client.md) command).
+* *listeClients*, qui contient la liste des clients “inscrits” à l’aide de la commande [REGISTER CLIENT](register-client.md).
+* *nbMéthodes*, qui fournit liste des “charges de travail” de chaque client. La charge de travail est le nombre de méthodes qu’un 4D Client doit encore exécuter, à la demande de la commande [EXECUTE ON CLIENT](execute-on-client.md).
 
-## Example 1 
+## Exemple 1 
 
-Let’s assume that you want to obtain a list of all the registered clients and the methods that remain to be executed: 
+Vous souhaitez obtenir la liste des clients inscrits et des méthodes restant à exécuter :
 
 ```4d
  ARRAY TEXT($clients;0)
- ARRAY LONGINT($methods;0)
- GET REGISTERED CLIENTS($clients;$methods)
+ ARRAY LONGINT($nprocs;0)
+ GET REGISTERED CLIENTS($clients;$nprocs)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Refer to the example of the [REGISTER CLIENT](register-client.md) command.
+Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the operation was successful, the OK system variable is equal to 1.
+Si l’opération se déroule correctement, la variable système OK prend la valeur 1.
 
-## See also 
+## Voir aussi 
 
 [EXECUTE ON CLIENT](execute-on-client.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 650 |
+| Numéro de commande | 650 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

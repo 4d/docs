@@ -5,89 +5,89 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* : Boolean )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| lock | Boolean | &#8594;  | True = Lock the records found by queries False = Do not lock records |
+| verrou | Boolean | &#8594;  | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET QUERY AND LOCK.Summary-->The **SET QUERY AND LOCK** command can be used to request the automatic locking of records found by all queries that follow the calling of this command in the current transaction.<!-- END REF--> This means that the records cannot be modified by a process other than the current process between a query and the handling of results.
+<!--REF #_command_.SET QUERY AND LOCK.Summary-->La commande **SET QUERY AND LOCK** vous permet de demander le verrouillage automatique des enregistrements trouvés par toutes les recherches qui suivent son appel dans la transaction courante.<!-- END REF--> Ce mécanisme permet de s’assurer que les enregistrements ne puissent pas être modifiés par un process autre que le process courant entre une recherche et la manipulation des résultats.
 
-By default, the records found by queries are not locked. Pass **True** in the *lock* parameter to activate locking.
+Par défaut, les enregistrements trouvés par les recherches ne sont pas verrouillés. Passez **Vrai** dans le paramètre *verrou* pour activer le verrouillage.
 
-It is imperative for this command to be used within a transaction. If it is called outside of this context, an error is generated. This allows for better control of record locking. The records found will stay locked as long as the transaction has not been terminated (whether validated or cancelled). After the transaction is completed, all the records are unlocked, except the current record. 
+Cette commande doit impérativement être utilisée à l’intérieur d’une transaction. Si elle est appelée hors du contexte d’une transaction, une erreur est générée. Ce principe permet un meilleur contrôle du verrouillage des enregistrements. Les enregistrements trouvés restent verrouillés tant que la transaction n’a pas été terminée (qu’elle ait été validée ou annulée). A l’issue de la transaction, tous les enregistrements sont déverrouillés, excepté l'enregistrement courant.
 
-The records are locked for all the tables in the current transaction.
+Le verrouillage des enregistrements est effectif pour toutes les tables dans la transaction courante.
 
-When a **SET QUERY AND LOCK**(True) statement has been executed, the query commands (for example [QUERY](query.md)) adopt a specific functioning if a record that is already locked is found:
+Lorsqu'une instruction **SET QUERY AND LOCK(Vrai)** a été exécutée, les commandes de recherche (par exemple [QUERY](query.md)) adoptent un fonctionnement spécifique si un enregistrement déjà verrouillé est trouvé :
 
-> * The query is stopped and the system variable OK is set to 0,
-> * The current selection is cleared,
-> * The *LockedSet* system set contains the locked record that caused the query to be stopped.
+* la recherche est stoppée et la variable système OK prend la valeur 0,
+* la sélection courante est vidée,
+* l'ensemble système LockedSet contient l'enregistrement verrouillé à l'origine de l'arrêt de la recherche.
 
-Consequently, in this context it is necessary to test the *LockedSet* set after a fruitless query (current selection empty and/or OK variable set to 0) in order to determine the cause of the failure.
+Par conséquent, dans ce contexte il est nécessaire de tester l'ensemble LockedSet à l'issue d'une recherche infructueuse (sélection courante vide et/ou variable OK à 0) afin de déterminer la cause de l'échec.
 
-Call **SET QUERY AND LOCK**(False) in order to disable this mechanism afterward.
+Appelez **SET QUERY AND LOCK(Faux)** afin de désactiver le mécanisme après usage.
 
-**SET QUERY AND LOCK** only modifies the behavior for query commands, in other words:
+**SET QUERY AND LOCK** modifie uniquement le comportement des commandes de recherche, c'est-à-dire :
 
 * [QUERY](query.md)
 * [QUERY SELECTION](query-selection.md)
 * [QUERY BY EXAMPLE](query-by-example.md)
 * [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
 * [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
+* [QUERY BY SQL](query-by-sql.md)
 * [QUERY WITH ARRAY](query-with-array.md)
+* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
 * [QUERY BY ATTRIBUTE](query-by-attribute.md)
 * [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
 
-However, SET QUERY AND LOCK does not affect other commands that modify the current selection such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
+En revanche, **SET QUERY AND LOCK** n'affecte pas les autres commandes qui modifient la sélection courante telles que [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), etc.
 
-## Example 
+## Exemple 
 
-In this example, it is not possible to delete a client who would have been passed from category “C” to category “A” in another process between the [QUERY](query.md) and [DELETE SELECTION](delete-selection.md) commands:
+Dans cet exemple, il n’est pas possible de supprimer un client qui aurait été passé de la catégorie “C” à la catégorie “A” par un autre process entre le [QUERY](query.md) et le [DELETE SELECTION](delete-selection.md) : 
 
 ```4d
  START TRANSACTION
  SET QUERY AND LOCK(True)
- QUERY([Customers];[Customers]Category=“C”)
-  //At this moment, the records found are automatically locked for all other processes
- DELETE SELECTION([Customers])
+ QUERY([Clients];[Clients]Catégorie=“C”)
+  //A cet instant, les enregistrements trouvés sont automatiquement verrouillés pour tous les autres process
+ DELETE SELECTION([Clients])
  SET QUERY AND LOCK(False)
  VALIDATE TRANSACTION
 ```
 
-## Error management 
+## Gestion des erreurs 
 
-If the command is not called in the context of a transaction, an error is generated. 
+Si la commande est appelée hors du contexte d’une transaction, une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [QUERY](query.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 661 |
+| Numéro de commande | 661 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,80 +5,80 @@ slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* : Text ; *methodName* : Text {; *...param* : any} )<!-- END REF-->
+<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *nomClient* ; *nomMéthode* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| clientName | Text | &#8594;  | 4D Client’s registered name |
-| methodName | Text | &#8594;  | Name of the method to execute |
-| param | any| &#8594;  | Method’s parameter(s) |
+| nomClient | Text | &#8594;  | Nom d’inscription du 4D Client |
+| nomMéthode | Text | &#8594;  | Nom de la méthode à exécuter |
+| param | &#8594;  | Paramètre(s) de la méthode |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXECUTE ON CLIENT.Summary-->The **EXECUTE ON CLIENT** command forces the execution of the *methodName* method, with the parameters *param1.<!-- END REF-->.. paramN*, if necessary, on the registered 4D Client whose name is *clientName*. 4D Client’s registered name is defined by the [REGISTER CLIENT](register-client.md) command. 
+<!--REF #_command_.EXECUTE ON CLIENT.Summary-->La commande **EXECUTE ON CLIENT** provoque l’exécution de la méthode *nomMéthode*, avec, éventuellement, le(s) paramètre(s) *param1.<!-- END REF-->.. paramN*, sur le ou les 4D Client inscrit(s) sous le nom *nomClient*. Le nom d’inscription du ou des 4D Client est défini par la commande [REGISTER CLIENT](register-client.md). 
 
-This command can be called from a 4D Client or a stored method from 4D Server. 
+Cette commande peut être appelée depuis un 4D Client ou une procédure stockée sur 4D Server.   
+Si la méthode admet des paramètres, passez-les après le nom de la méthode.
 
-If the method requires one or more parameters, pass them after the name of the method.   
-The execution of the method on 4D Client is done in a process automatically created on the client workstation, and its name will be the 4D Client’s registered name. 
+L’exécution de la méthode sur le 4D Client s’effectue dans un process créé automatiquement sur le poste client, et portant le nom d’inscription du 4D Client.
 
-If this command is called many times in a row on the same 4D Client, the execution orders will be stacked. Therefore, the methods will be treated one after another in asynchronous mode. The more methods that are stacked, the bigger the workload is for the 4D Client. You can know the state of the workload of each client by using the [GET REGISTERED CLIENTS](get-registered-clients.md) command.
+Si cette commande est appelée plusieurs fois de suite pour un même 4D Client, les ordres d’exécution seront empilés. Par conséquent, les méthodes seront traitées les unes à la suite des autres : les exécutions sont asynchrones. Plus l’empilement est grand, plus la “charge de travail” est grande pour le 4D Client. Vous pouvez connaître l’état de la charge de travail de chaque client à l’aide de la commande [GET REGISTERED CLIENTS](get-registered-clients.md).
 
-**Note:** The stacking of the execution orders cannot be modified or stopped unless 4D Client is unregistered by using the [UNREGISTER CLIENT](unregister-client.md) command.
+**Note :** L’empilement des ordres d’exécutions ne peut être modifié ou stoppé, sauf si le 4D Client est désinscrit à l’aide de la commande [UNREGISTER CLIENT](unregister-client.md).
 
-You can simultaneously execute the same method on many or all of the registered 4D Clients. To do so, use the wildcard character (@) in the *clientName* parameter.
+Il est possible d’exécuter simultanément la même méthode sur plusieurs ou sur la totalité des 4D Clients inscrits : pour cela, passez le caractère joker (@) dans le paramètre *nomClient*.
 
-## Example 1 
+## Exemple 1 
 
-Let’s assume that you want to execute the “GenerateNums” method on the “Client1” client station:
-
-```4d
- EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
-```
-
-## Example 2 
-
-If you want all the clients to execute the “EmptyTemp” method:
+Vous souhaitez exécuter sur le poste client “Client1” la méthode “GénéreNums”, comportant trois paramètres :
 
 ```4d
- EXECUTE ON CLIENT("@";"EmptyTemp")
+ EXECUTE ON CLIENT("Client1";"GénéreNums";12;$a;"Text")
 ```
 
-## Example 3 
+## Exemple 2 
 
-Refer to the example of the [REGISTER CLIENT](register-client.md) command.
+Vous souhaitez que tous les clients inscrits exécutent la méthode “VideTemp” :
 
-## System variables and sets 
+```4d
+ EXECUTE ON CLIENT("@";"VideTemp")
+```
 
-The **OK** system variable is equal to 1 if 4D Server has correctly received the execution request of a method; however, this does not guarantee that the method has been properly executed by 4D Client.
+## Exemple 3 
 
-## See also 
+Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md).
+
+## Variables et ensembles système 
+
+La variable système OK prend la valeur 1 si 4D Server a correctement reçu la requête d’exécution d’une méthode — cela ne garantit pas toutefois la bonne exécution de la méthode sur le 4D Client.
+
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
 [GET REGISTERED CLIENTS](get-registered-clients.md)  
 [REGISTER CLIENT](register-client.md)  
 [UNREGISTER CLIENT](unregister-client.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 651 |
+| Numéro de commande | 651 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,122 +5,128 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer ; *length_found* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer array ; *length_found* : Integer array }{; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *motif* ; *laChaîne* ; *début* {; pos_trouvée ; long_trouvée}{; *} ) -> Résultat <br/>
+**Match regex** ( *motif* ; *laChaîne* ) -> Résultat<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pattern | Text | &#8594;  | Regular expression (complete equality with two-parameters syntax)|
-| aString | Text | &#8594;  | String in which search will be done |
-| start | Integer | &#8594;  | Position in aString where search will start |
-| pos_found | Integer, Integer array | &#8592; | Position of occurrence |
-| length_found | Integer, Integer array | &#8592; | Length of occurrence |
-| * | Operator | &#8594;  | If passed: only searches at position indicated |
-| Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
+| motif | Text | &#8594;  | Expression régulière |
+| laChaîne | Text | &#8594;  | Chaîne dans laquelle s’effectue la recherche |
+| début | Integer | &#8594;  | Position dans laChaîne où doit débuter la recherche |
+| pos_trouvée | Integer array, Integer | &#8592; | Position de l’occurence |
+| long_trouvée | Integer array, Integer | &#8592; | Longueur de l’occurence |
+| * | Opérateur | &#8594;  | Si passé : rechercher uniquement à la position indiquée |
+| Résultat | Boolean | &#8592; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
+| Match regex ( motif ; laChaîne ) -> Résultat |
+| Paramètre | Type | Description |
+| motif | Text | &#8594;  | Expression régulière (égalité complète) |
+| laChaîne | Text | &#8594;  | Chaîne dans laquelle s'effectue la recherche |
+| Résultat | Boolean | &#8592; | Vrai = la recherche a trouvé une occurrence, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Match regex.Summary-->The **Match regex** command checks the conformity of a character string with respect to a set of synthesized rules by means of a meta-language called regular expression" or "rational expression".<!-- END REF--> The **regex** abbreviation is commonly used to indicate these types of notations.
+<!--REF #_command_.Match regex.Summary-->La commande **Match regex** permet de tester la conformité d’une chaîne de caractères par rapport à un ensemble de règles synthétisé au moyen d’un méta-langage appelé “expression régulière” ou “expression rationnelle”.<!-- END REF--> L’abrévation regex est communément employée pour désigner ces familles de notations. 
 
-Pass the regular expression to search for in *pattern*. This consists of a set of characters used for describing a character string, using special characters.
+Passez dans *motif* l’expression régulière à rechercher. Il s’agit d’une suite de caractères chargée de décrire une chaîne de caractères, à l’aide de caractères spéciaux.
 
-Pass the string where you want to search for the regular expression in *aString*.
+Passez dans *laChaîne* la chaîne dans laquelle rechercher l’expression régulière.
 
-In *start*, pass the position at which to start the search in *aString*.
+Passez dans *début* la position dans *laChaîne* où doit débuter la recherche.
 
-If *pos\_found* and *length\_found* are variables, the command returns the position and length of the occurrence in these variables. If you pass arrays, the command returns the position and length of the occurrence in the element zero of the arrays and the positions and lengths of the groups captured by the regular expression in the following elements.
+Si *pos\_trouvée* et *long\_trouvée* sont des variables, la commande retourne la position et la longueur de l’occurrence dans ces variables. Si vous passez des tableaux, la commande retourne la position et la longueur de l’occurrence dans l’élément zéro des tableaux et les positions et longueurs des groupes capturés par l’expression régulière dans les éléments suivants.
 
-The optional *\** parameter indicates, when it is passed, that the search must be carried out at the position specified by *start* without searching any further in the case of failure.
+Le paramètre *\** indique, s’il est passé, que la recherche doit s’effectuer à la position définie par *début* sans chercher plus loin en cas d’échec.
 
-The command returns **True** if the search has found an occurrence.
+La commande retourne **Vrai** si la recherche a trouvé une occurrence.
 
-For more information about regex, refer to the following address:  
-<http://en.wikipedia.org/wiki/Regular%5Fexpression>
+Pour plus d’informations sur les regex, reportez-vous par exemple à l’adresse suivante :  
+<http://fr.wikipedia.org/wiki/Expression%5Frationnelle>
 
-For more information about the syntax of the regular expression passed in the *pattern* parameter, refer to the following address:  
+Pour plus d’informations sur la syntaxe de l’expression régulière passée dans le paramètre *motif*, reportez-vous à l’adresse suivante :  
 *https://unicode-org.github.io/icu/userguide/strings/regexp.html#regular-expressions*
 
-## Example 1 
+## Exemple 1 
 
-Search for complete equality (simple syntax):  
-*vfound:=Match regex(pattern;mytext)*  
+Recherche d’égalité complète (syntaxe simple) :  
+*vtrouvé:=Match regex(motif;montexte)*
 
 ```4d
- QUERY BY FORMULA([Employees];Match regex(".*smith.*";[Employees]name))
+ QUERY BY FORMULA([Employés];Match regex(".*smith.*";[Employés]nom))
 ```
 
-## Example 2 
+## Exemple 2 
 
-Search in text by position:  
-*vfound:=Match regex( pattern;mytext; start; pos\_found; length\_found)*  
-Example to display all the $1 tags:   
+Recherche dans le texte par position :  
+*vtrouvé:=Match regex( motif;montexte; début; pos\_trouvée; long\_trouvée)*  
+Exemple pour afficher tous les tags de $1 :
 
 ```4d
- $start:=1
+ début:=1
  Repeat
-    vfound:=Match regex("<.*>";$1;$start;pos_found;length_found)
-    If(vfound)
-       ALERT(Substring($1;pos_found;length_found))
-       $start:=pos_found+length_found
+    vtrouvé:=Match regex("<.*>";$1;début;pos_trouvée;long_trouvée)
+    If(vtrouvé)
+       ALERT(Substring($1;pos_trouvée;long_trouvée))
+       début:=pos_trouvée+long_trouvée
     End if
- Until(Not(vfound))
+ Until(Not(vtrouvé))
 ```
 
-## Example 3 
+## Exemple 3 
 
-Search with support of “capture groups” via parentheses. ( ) are used to specify groups in the regexes:  
-*vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_array)*  
+Recherche avec prise en charge des “groupes capturés” via des parenthèses. ( ) permet de définir des groupes dans les regex :  
+*vtrouvé:=* *Match regex( motif;montexte; début; tab\_pos\_trouvée; tab\_long\_trouvée)*  
 
 ```4d
- ARRAY LONGINT(pos_found_array;0)
- ARRAY LONGINT(length_found_array;0)
- vfound:=Match regex("(.*)stuff(.*)";$1;1;pos_found_array;length_found_array)
- If(vfound)
-    $group1:=Substring($1;pos_found_array{1};length_found_array{1})
-    $group2:=Substring($1;pos_found_array{2};length_found_array{2})
+ ARRAY LONGINT(tab_pos_trouvée;0)
+ ARRAY LONGINT(tab_long_trouvée;0)
+ vtrouvé:=Match regex("(.*)truc(.*)";$1;1;tab_pos_trouvée;tab_long_trouvée)
+ If(vtrouvé)
+    $group1:=Substring($1;tab_pos_trouvée{1};tab_long_trouvée{1})
+    $group2:=Substring($1;tab_pos_trouvée{2};tab_long_trouvée{2})
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-Search limiting the comparison of the pattern to the position indicated:  
-Add a star to the end of one of the two previous syntaxes. 
+Recherche en limitant la comparaison de motif à la position indiquée :  
+Rajouter une étoile à la fin d’une des deux syntaxes précédentes.
 
 ```4d
- vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found)
-  //returns True
- vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found;*)
-  //returns False
- vfound:=Match regex("a.b";"---a-b---";4;$pos_found;$length_found;*)
-  //returns True
+ vtrouvé:=Match regex("a.b";"---a-b---";1;$pos_trouvée;$long_trouvée)
+  //retourne Vrai
+ vtrouvé:=Match regex("a.b";"---a-b---";1;$pos_trouvée;$long_trouvée;*)
+  //retourne Faux
+ vtrouvé:=Match regex("a.b";"---a-b---";4;$pos_trouvée;$long_trouvée;*)
+  //retourne Vrai
 ```
 
-**Note:** The positions and lengths returned are only meaningful in Unicode mode or if the text being worked with is of the 7-bit ASCII type.
+**Note :** Les positions et longueurs retournées n’ont de sens qu’en mode Unicode ou si le texte manipulé est de type ASCII 7 bits.
 
-## Error management 
+## Gestion des erreurs 
 
-In the event of an error, the command generates an error that you can intercept via a method installed by the [ON ERR CALL](on-err-call.md) command.
+En cas d’erreur, la commande génère une erreur que vous pouvez intercepter via une méthode installée par la commande APPELER SUR ERREUR.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1019 |
+| Numéro de commande | 1019 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,41 +5,41 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* : Text ) : Pointer<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| varName | Text | &#8594;  | Name of a process or interprocess variable |
-| Function result | Pointer | &#8592; | Pointer to process or interprocess variable |
+| nomVar | Text | &#8594;  | Nom d'une variable process ou interprocess |
+| Résultat | Pointer | &#8592; | Pointeur vers une variable process ou interprocess |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|2004|Modified|
-|<6|Created|
+|15|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get pointer.Summary-->The **Get pointer** command returns a pointer to the process or interprocess variable whose name you pass in *varName*.<!-- END REF-->
+<!--REF #_command_.Get pointer.Summary-->**Get pointer** retourne un pointeur vers la variable process ou interprocess dont le nom est passé dans *nomVar*.<!-- END REF-->
 
-To get a pointer to a field, use [Field](field.md). To get a pointer to a table, use [Table](table.md).
+Pour récupérer un pointeur vers un champ, utilisez la fonction [Field](field.md). Pour récupérer un pointeur vers une table, utilisez la fonction [Table](table.md).
 
-**Note:** You can pass expressions such as, for example, *ArrName+"{3}"*, as well as 2D array elements (*ArrName+"{3}{5}"*) to **Get pointer**.  
-However, you cannot pass variable elements (*ArrName+"{myVar}"*). 
+**Note :** Vous pouvez passer à **Get pointer** des expressions telles que, par exemple, *tTabNom+"{3}"* ainsi que des éléments de tableau 2D (*tTabNom+"{3}{5}"*).  
+En revanche, vous ne ne pouvez pas passer d'indices variables (*tTabNom+"{maVar}"*).
 
-## Example 1 
+## Exemple 1 
 
-In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. To initialize all of these variables, you write:
+Dans un formulaire, vous construisez une grille de 5 X 10 variables saisissables dont les noms sont v1, v2... v50\. Pour initialiser toutes ces variables, vous pouvez écrire :
 
 ```4d
   // ...
@@ -49,9 +49,9 @@ In a form, you build a 5 x 10 grid of enterable variables named v1, v2... v50\. 
  End for
 ```
 
-## Example 2 
+## Exemple 2 
 
-Using pointers to elements of two-dimensional arrays:
+Utilisation de pointeurs vers des éléments de tableaux à deux dimensions :
 
 ```4d
  $pt:=Get pointer("a{1}{2}")
@@ -60,16 +60,16 @@ Using pointers to elements of two-dimensional arrays:
   //$pt2=->atCities{2}{6}
 ```
 
-## See also 
+## Voir aussi 
 
 [Field](field.md)  
 [Table](table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 304 |
+| Numéro de commande | 304 |
 | Thread safe | yes |
 
 

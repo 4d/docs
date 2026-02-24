@@ -5,61 +5,61 @@ slug: /commands/square-root
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Square root.Syntax-->**Square root** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Square root.Syntax-->**Square root** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number whose square root is calculated |
-| Function result | Real | &#8592; | Square root of the number |
+| nombre | Real | &#8594;  | Nombre duquel calculer la racine carrée |
+| Résultat | Real | &#8592; | Racine carrée de nombre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Square root.Summary-->Square root returns the square root of *number*.<!-- END REF-->
+<!--REF #_command_.Square root.Summary-->**Square root** retourne la racine carrée de *nombre*.<!-- END REF-->
 
-## Example 1 
+## Exemple 1 
 
-The line:
+La ligne :
 
 ```4d
- $vrSquareRootOfTwo :=Square root(2)
+ $vrRacineDeDeux :=Square root(2)
 ```
 
-assigns the value *1.414213562373* to the variable *$vrSquareRootOfTwo*.
+affecte la valeur *1,414213562373* à la variable *$vrRacineDeDeux*.
 
-## Example 2 
+## Exemple 2 
 
-The following method returns the hypotenuse of the right triangle whose two legs are passed as parameters:
+La méthode listée ci-dessous retourne l'hypoténuse du triangle rectangle dont les deux côtés sont passés en paramètres : 
 
 ```4d
-  // Hypotenuse method
-  // Hypotenuse ( real ; real ) -> real
-  // Hypotenuse ( legA ; legB ) -> Hypotenuse
+  // Méthode Hypoténuse
+  // Hypoténuse ( Réel ; Réel ) -> Réel
+  // Hypoténuse ( côtéA ; côtéB ) -> Hypoténuse
  var $0;$1;$2 : Real
  $0:=Square root(($1^2)+($2^2))
 ```
 
-For instance, Hypotenuse (4;3) returns 5.
+Par exemple, Hypoténuse (4;3) retourne 5.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 539 |
+| Numéro de commande | 539 |
 | Thread safe | yes |
 
 

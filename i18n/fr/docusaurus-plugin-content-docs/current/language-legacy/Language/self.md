@@ -9,55 +9,54 @@ displayed_sidebar: docs
 <!--REF #_command_.Self.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &#8592; | Pointer to form object (if any) whose method is currently being executed. Otherwise Nil (->[]) if outside of context |
+| Résultat | Pointer | &#8592; | Pointeur vers l'objet du formulaire dont la méthode est en cours d'exécution (le cas échéant) Sinon Nil (->[]) si hors contexte |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Compatibility Note 
+## Note de compatibilité 
 
-<!--REF #_command_.Self.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
+<!--REF #_command_.Self.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](object-get-pointer.md).
 
 ## Description 
 
-The **Self**  command returns a pointer to the object whose object method is currently being executed. 
+**Self** retourne un pointeur vers l'objet du formulaire dont la méthode objet est en cours d'exécution. 
 
-**Self** is used to reference a variable within its own object method. It returns a valid pointer when it is called from within an object method or from within a project method that is called directly or indirectly by an object method. 
+La fonction **Self** est utilisée pour référencer une variable dans sa propre méthode objet. Elle retourne un pointeur valide si elle est appelée dans une méthode objet ou dans une méthode projet appelée directement ou indirectement par un méthode objet. 
 
-If **Self** is called out of context, it returns a [Is nil pointer](is-nil-pointer.md) pointer (*\->\[\]*).
+Si **Self** est appelée en-dehors de ce contexte, elle retourne un pointeur [Is nil pointer](is-nil-pointer.md)(*\->\[\]*).
 
-**Tip:** **Self** is useful when several objects on a form need to perform the same task, yet operate on themselves.
+**Conseil :** **Self** est très utile lorsque plusieurs objets d'un formulaire doivent effectuer la même action, opérée sur eux-mêmes.
 
-**Note:** When it is used in the context of a list box, the function returns a pointer to the list box or the column of the list box depending on the context. For more information, please refer to the *Managing List Box Objects* section.
+**Note :** Lorsqu’elle est utilisée avec une list box, la fonction **Self** retourne un pointeur vers la list box ou la colonne de la list box en fonction du contexte. Pour plus d'informations, reportez-vous à la section *Gestion programmée des objets de type List box*.
 
-## Example 
+## Exemple 
 
-See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
+Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md).
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
-[This](./commands/this)  
+[This](../commands/this.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 308 |
+| Numéro de commande | 308 |
 | Thread safe | no |
-
 
 

@@ -9,57 +9,57 @@ displayed_sidebar: docs
 <!--REF #_command_.Clickcount.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of consecutive clicks |
+| Résultat | Integer | &#8592; | Nombre de clics consécutifs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Created|
+|14 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Clickcount.Summary-->The **Clickcount** command returns, in the context of a mouse click event, the number of times the user has clicked in rapid succession with the same mouse button.<!-- END REF--> Typically, this command returns 2 for a double-click. 
+<!--REF #_command_.Clickcount.Summary-->La commande **Clickcount** retourne, dans le contexte d'un événement clic, le nombre de fois que l'utilisateur a cliqué de manière répétée avec le même bouton de la souris.<!-- END REF--> Typiquement, la commande retourne 2 pour un double-clic. 
 
-This command allows you to detect double-clicks in listbox headers or footers, and also to handle sequences of triple-clicks or more.
+Cette commande vous permet notamment de détecter des double-clics dans les en-têtes ou les pieds des list box, et également de gérer des séquences de triple-clics ou plus.
 
-Every mouse button click generates a separate click event. For example, if a user double-clicks, an event is sent for the first click in which **Clickcount** returns 1; then another event is sent for the second click in which **Clickcount** returns 2.
+Chaque clic avec un bouton de la souris génère un événement clic séparé. Par exemple, si un utilisateur effectue un double-clic, un événement est généré pour le premier clic, dans lequel **Clickcount** retourne 1 ; puis un autre événement est généré pour le second clic, dans lequel **Clickcount** retourne 2.
 
-This command must only be used in the context of On Clicked, On Header Click or On Footer Click form events. It is therefore necessary to check in Design mode that the appropriate event has been properly selected in the Form properties and/or for the specific object.
+Cette commande peut uniquement être appelée dans le contexte de l'événement formulaire On Clicked, On Header Click ou On Footer Click . Par conséquent, il est nécessaire de vérifier en mode Développement que l'événement correspondant a bien été sélectionné dans les propriétés du formulaire et/ou pour l'objet concerné. 
 
-When both On Clicked and On Double Clicked form events are enabled, the following sequence will be returned by **Clickcount**:
+Lorsque les deux événements formulaire On Clicked et On Double Clicked sont activés, la séquence suivante est retournée par **Clickcount** :
 
-* 1 in On Clicked event
-* 2 in On Double Clicked event
-* 2+n in On Clicked event
+* 1 dans l'événement On Clicked
+* 2 dans l'événement On Double Clicked
+* 2+n dans l'événement On Clicked
 
-## Example 1 
+## Exemple 1 
 
-The following code structure can be placed in a listbox header to handle single- and double-clicks:
+La structure de code suivante peut être placée dans un en-tête de list box pour gérer les clics simples et les double-clics :
 
 ```4d
  Case of
-    :(Form event code=On Header Click)
+    :(Form event code=Sur clic entête)
        Case of
           :(Clickcount=1)
-             ... //single-click action
+             ... //simple clic
           :(Clickcount=2)
-             ... //double-click action
+             ... //double clic
        End case
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-Labels are not enterable but they become so after a triple-click. If you want to allow users to edit labels, you can write the following in the object method:
+Les libellés ne sont pas saisissables mais ils peuvent le devenir après un triple-clic. Si vous souhaitez permettre aux utilisateurs de modifier les libellés, vous pouvez écrire la méthode objet suivante :
 
 ```4d
  If(Form event code=On Clicked)
@@ -72,11 +72,11 @@ Labels are not enterable but they become so after a triple-click. If you want to
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1332 |
+| Numéro de commande | 1332 |
 | Thread safe | no |
 
 

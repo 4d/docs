@@ -5,40 +5,40 @@ slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *collection* : Collection ; *...array* : Array {; *...propertyName* : Text} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *collection* ; *tableau* {; *nomPropriété*}{; *tableau2* ; *nomPropriété2* ; ... ; *tableauN* ; *nomPropriétéN*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| collection | Collection | &#8592; | Collection to receive the array data |
-| array | Array | &#8594;  | Array to copy to the collection; if *propertyName* passed, array to copy to the values of *propertyName* in the collection |
-| propertyName | Text | &#8594;  | Object property name whose value to fill with array elements |
+| collection | Collection | &#8592; | Collection qui reçoit les données du tableau |
+| tableau | Array | &#8594;  | Tableau à copier vers la collection ; si le paramètre nomPropriété est passé, sont copiées les valeurs correspondantes à la propriété dans la collection |
+| nomPropriété | Text | &#8594;  | Nom de propriété Objet dont les valeurs remplissent les éléments du tableau |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ARRAY TO COLLECTION.Summary-->The **ARRAY TO COLLECTION** command copies one or more *array*(s) into the elements or the *propertyName* values of *collection*.<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Summary-->La commande **ARRAY TO COLLECTION** copie un ou plusieurs *tableau*(x) dans les éléments ou les valeurs *nomPropriété* de *collection*.<!-- END REF-->
 
-This command can work with a *collection* that contains values or a *collection* that contains objects, in which case the *propertyName* parameter(s) are mandatory. 
+Cette commande peut être utilisée avec une *collection* qui contient des valeurs ou une *collection* qui contient des objets, dans ce cas le(s) paramètre(s) *nomPropriété* est (sont) obligatoire(s). 
 
-* If you omit the *propertyName* parameter, the command copies all *array* elements to *collection*. If *collection* was not empty, existing elements are replaced and new elements are added if the size of *array* was larger than the *collection* length. After the command is executed, the *collection* length is identical to the size of *array*.
-* If you pass one or more *propertyName*(s) parameters, the command creates or replaces elements of *collection* as objects. Each object is filled with a property whose name is provided in the *propertyName* parameter, and whose value is the corresponding array element. If *collection* was not empty, existing elements are replaced and new elements are added if the size of *array* was larger than the collection. After the command is executed, the *collection* length is the same as the size of the largest *array*.
+* Si vous omettez le paramètre *nomPropriété*, la commande copie tous les éléments du *tableau* vers la *collection*. Si la *collection* n'était pas vide, les éléments existants sont remplacés et de nouveaux éléments sont ajoutés si la taille du *tableau* est plus grande que la longueur de la *collection*. Après l'exécution de cette commande, la longueur de la *collection* est identique à la taille du *tableau*.
+* Si vous passez un ou plusieurs paramètres *nomPropriété*(s), la commande crée ou remplace les éléments de la *collection* avec des objets. Chaque objet est construit avec une propriété dont le nom est fourni dans le paramètre *nomPropriété*, et dont la valeur est l'élément de tableau correspondant. Si la *collection* n'était pas vide, les éléments existants sont remplacés et de nouveaux éléments sont ajoutés si la taille du *tableau* était plus grande que la collection. Aprés l'exécution de la commande, la longueur de la *collection* est identique à la celle du *tableau* le plus grand.
 
-## Example 1 
+## Exemple 1 
 
-You want to copy a text array in a collection:
+Vous souhaitez copier un tableau texte dans une collection :
 
 ```4d
  var $colFruits : Collection
@@ -54,9 +54,9 @@ You want to copy a text array in a collection:
   //...
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to copy field values in a collection of objects through arrays:
+Vous souhaitez copier les valeurs de champs dans une collection d'objets via des tableaux :
 
 ```4d
  var $col : Collection
@@ -71,9 +71,9 @@ You want to copy field values in a collection of objects through arrays:
   //...
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to copy a text array in a shared collection:
+Vous souhaiter copier un tableau texte dans une collection partagée :
 
 ```4d
  ARRAY TEXT($at;1)
@@ -90,16 +90,16 @@ You want to copy a text array in a shared collection:
  End use
 ```
 
-## See also 
+## Voir aussi 
 
 [COLLECTION TO ARRAY](collection-to-array.md)  
-*Type conversions between collections and 4D arrays*  
+*Conversions de type entre les collections et les tableaux 4D*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1563 |
+| Numéro de commande | 1563 |
 | Thread safe | yes |
 
 

@@ -5,53 +5,52 @@ slug: /commands/execute-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text )<br/>**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; *...param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; *...param* : Expression} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *nomMéthode* {; *résultat* {; *param*}}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| methodName | Text | &#8594;  | Name of project method to be executed |
-| result | Variable | &#8592; | Variable receiving the method result |
-| * | Operator | &#8594; | Method not returning a result |
-| param | Expression | &#8594;  | Parameter(s) of the method |
+| nomMéthode | Text | &#8594;  | Nom de méthode projet à exécuter |
+| résultat | Variable, * | &#8592; | Variable recevant le résultat de la méthode ou * pour une méthode ne retournant pas de résultat |
+| param | Expression | &#8594;  | Paramètre(s) de la méthode |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1...paramN*<!-- END REF-->. You can pass the name of any method that can be called from the database or the component executing the command.
+<!--REF #_command_.EXECUTE METHOD.Summary-->La commande **EXECUTE METHOD** provoque l’exécution de la méthode projet *nomMéthode* en lui passant éventuellement les paramètres *param1.<!-- END REF-->..paramN*. Vous pouvez passer tout nom de méthode appelable depuis la base ou le composant exécutant la commande.
 
-In *result*, you can pass a variable which will receive the result of the execution of *methodName*. If the method does not return a result, pass *\** as the second parameter. If the method does not return a result and does not require any parameters to be passed, pass only the *methodName* parameter.
+Passez dans *résultat* une variable devant recevoir le résultat de l’exécution de *nomMéthode* (valeur placée dans $0 à l’intérieur de *nomMéthode*). Si la méthode ne retourne pas de résultat, passez *\** comme deuxième paramètre. Si la méthode ne retourne pas de résultat et ne nécessite pas non plus le passage de paramètre(s), passez uniquement le paramètre *nomMéthode*.
 
-The execution context is preserved in the called method, which means that the current form and any current form event remain defined. 
+Le contexte d’exécution est préservé dans la méthode appelée, ce qui signifie que le formulaire courant et l’éventuel événement formulaire courant restent définis.
 
-If you call this command from a component and pass a method name belonging to the host database in *methodName* (or vice versa), the method must have been shared (“Shared by components and host database” option, in the [Method properties](../Project/project-method-properties.md)).
+Si vous appelez cette commande depuis un composant et passez dans *nomMéthode* un nom de méthode appartenant à la base hôte (ou inversement), la méthode doit avoir été partagée (option “Partager entre composants et base hôte” dans les propriétés de la méthode).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If this command is executed correctly, the system variable OK is set to 1; otherwise, it is set to 0.
+Si cette commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [EXECUTE FORMULA](execute-formula.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1007 |
+| Numéro de commande | 1007 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

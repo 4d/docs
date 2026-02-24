@@ -5,44 +5,44 @@ slug: /commands/spell-check-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; *arrSuggest* : Text array )<!-- END REF-->
+<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *leTexte* ; *posErr* ; *longErr* ; *posVérif* ; *tabSuggest* )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | Text to check |
-| errPos | Integer | &#8592; | Position of first character of unknown word |
-| errLength | Integer | &#8592; | Length of unknown word |
-| checkPos | Integer | &#8594;  | Start position for check |
-| arrSuggest | Text array | &#8592; | List of suggestions |
+| leText | Text | &#8594;  | Texte à vérifier |
+| posErr | Integer | &#8592; | Position du premier caractère du mot inconnu |
+| longErr | Integer | &#8592; | Longueur du mot inconnu |
+| posVérif | Integer | &#8594;  | Position de départ de la vérification |
+| tabSuggest | Text array | &#8592; | Liste des suggestions |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Created|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL CHECK TEXT.Summary-->The **SPELL CHECK TEXT** command checks the contents of the *text* parameter beginning from the *checkPos* character and returns the position of the first unknown word it finds (if any).<!-- END REF-->
+<!--REF #_command_.SPELL CHECK TEXT.Summary-->La commande **SPELL CHECK TEXT** vérifie le contenu du paramètre *leTexte* à partir du caractère *posVérif* et retourne la position du premier mot inconnu rencontré (le cas échéant).<!-- END REF-->
 
-This command returns the position of the first character of this unknown word in *errPos* and its length in *errLength*. The *arrSuggest* array receives the correction suggestion(s) proposed by the spell checker.
+La commande retourne la position du premier caractère de ce mot dans *posErr* et sa longueur dans *longErr*. Le tableau *tabSuggest* reçoit la ou les suggestion(s) de correction proposée(s) par le correcteur orthographique. 
 
-If the check starts without error and an unknown word is found, the OK system variable is set to 0\. If an initialization error occurs during the check, or if no unknown words are found, OK is set to 1.
+Si la vérification démarre sans erreur et qu’un mot inconnu est rencontré, la variable système OK prend la valeur 0\. Si une erreur d’initialisation se produit lors de la vérification ou si aucun mot n’est inconnu, OK prend la valeur 1\. 
 
-**Note macOS:** Under macOS, when the native spell checker is enabled, this command does not support grammar correction. 
+**Note macOS :** Sous macOS lorsque le correcteur natif est activé, cette commande ne prend pas en charge la correction grammaticale. 
 
-## Example 
+## Exemple 
 
-We want to count the number of possible errors in a text:
+On souhaite compter le nombre de fautes potentielles dans un texte :
 
 ```4d
  $pos:=1
@@ -50,28 +50,29 @@ We want to count the number of possible errors in a text:
  ARRAY TEXT($tErrors;0)
  ARRAY TEXT($tSuggestions;0)
  Repeat
-    SPELL CHECK TEXT($myText;$errPos;$errLength;$pos;$tSuggestions)
+    SPELL CHECK TEXT($myText;$errPos;$errLong;$pos;$tSuggestions)
     If(OK=0)
-       $errCount:=$errCount+1 // count any errors
-       $errorWord:=Substring($myText;$errPos;$errLength)
-       APPEND TO ARRAY($tErrors;$errorWord) // array of errors
-       $pos:=$errPos+$errLength  //continue check
+       $errCount:=$errCount+1 // compteur de fautes
+       $errorWord:=Substring($myText;$errPos;$errLong)
+       APPEND TO ARRAY($tErrors;$errorWord) // tableau des fautes
+       $pos:=$errPos+$errLong  //poursuite de la vérification
     End if
  Until(OK=1)
-  // In the end $errCount=Size of array($tErrors)
+  // Au final $errCount=Size of array($tErrors)
+  // fr: $errCount=Taille tableau($tErrors)
 ```
 
-## See also 
+## Voir aussi 
 
 [SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
 [SPELL CHECKING](spell-checking.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1215 |
+| Numéro de commande | 1215 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

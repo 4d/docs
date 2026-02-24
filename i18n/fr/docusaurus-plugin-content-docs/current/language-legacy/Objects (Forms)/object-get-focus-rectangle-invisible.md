@@ -5,56 +5,47 @@ slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21 R2|Supported with Fluent UI on Windows|
-
-</details>
-
-
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( * ; *object* : Text ) : Boolean**<br/>**OBJECT Get focus rectangle invisible** ( *object* : Variable, Field ) : Boolean**<!-- END REF-->
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable or field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = focus rectangle hidden, False = focus rectangle shown |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai = rectangle focus caché, Faux = rectangle focus visible |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->The **OBJECT Get focus rectangle invisible** command returns the status of the visibility option for the focus rectangle of the object(s) designated by the *object* and *\** parameters for the current process .<!-- END REF--> This setting corresponds to the [**Hide focus rectangle** option](../FormObjects/properties_Appearance.md#hide-focus-rectangle) that is available for enterable objects in the Property List in the Design mode. This command returns the current status of the option, as it is defined in Design mode or using the [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md) command.
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->La commande **OBJECT Get focus rectangle invisible** retourne le statut de l’option d’invisibilité du rectangle de focus de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> Ce paramétrage correspond à l’option **Cacher rectangle de focus** disponible pour les objets saisissables dans la Liste des propriétés en mode Développement. La commande retourne le statut courant de l’option, qu’elle ait été définie en mode Développement ou à l’aide de la commande [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md).
 
-**Note:** This option can only be used on macOS and on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It has no effect on Windows classic UI. 
+**Note :** Cette option est utilisable sous Mac OS uniquement. Elle n’a pas d’effet sous Windows. 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The command returns **True** when the focus rectangle is hidden and **False** when it is shown.
+La commande retourne **Vrai** si le rectangle de focus est masqué et **Faux** s’il est visible.
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1178 |
+| Numéro de commande | 1178 |
 | Thread safe | no |
 
 

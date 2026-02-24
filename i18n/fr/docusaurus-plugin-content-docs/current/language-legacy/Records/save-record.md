@@ -5,59 +5,57 @@ slug: /commands/save-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to save the current record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de l'enregistrement à stocker ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SAVE RECORD.Summary-->**SAVE RECORD** saves the current record of *aTable* in the current process.<!-- END REF--> If there is no current record, then **SAVE RECORD** is ignored.
+<!--REF #_command_.SAVE RECORD.Summary-->**SAVE RECORD** sauvegarde l'enregistrement courant de *laTable* pour le process courant.<!-- END REF--> S'il n'y a pas d'enregistrement courant, la commande est ignorée. 
 
-You use **SAVE RECORD** to save a record that you created or modified with code. A record that has been modified and validated by the user in a form does not need to be saved with **SAVE RECORD**. A record that has been modified by the user in a form, but has been canceled, can still be saved with **SAVE RECORD**.
+Vous pouvez utiliser **SAVE RECORD** pour sauvegarder un enregistrement créé ou modifié par programmation. Lorsqu'un enregistrement a été modifié puis validé par un utilisateur dans un formulaire, il n'est pas nécessaire de le sauvegarder à l'aide de **SAVE RECORD**. En revanche, un enregistrement modifié puis annulé par l'utilisateur peut malgré tout être sauvegardé avec **SAVE RECORD**.
 
-If you call the **SAVE RECORD** command when no field has been modified in the record, the command does nothing (the trigger is not called). 
+Si vous appelez la commande **SAVE RECORD** alors qu'aucun champ n'a été modifié dans l'enregistrement, la commande ne fait rien (le trigger n'est pas appelé). 
 
-Here are some cases where **SAVE RECORD** is required:
+L'utilisation de **SAVE RECORD** est nécessaire dans les cas suivants :
 
-* To save a new record created with [CREATE RECORD](create-record.md) or [DUPLICATE RECORD](duplicate-record.md)
-* To save data from [RECEIVE RECORD](receive-record.md)
-* To save a record modified by a method
-* To save a record that contains new or modified subrecord data following an *\_o\_ADD SUBRECORD*, *\_o\_CREATE SUBRECORD*, or *\_o\_MODIFY SUBRECORD* command
-* During data entry to save the displayed record before using a command that changes the current record
-* During data entry to save the current record
+* Pour sauvegarder un enregistrement créé par les commandes [CREATE RECORD](create-record.md) ou [DUPLICATE RECORD](duplicate-record.md),
+* Pour sauvegarder des données issues de la commande [RECEIVE RECORD](receive-record.md),
+* Pour sauvegarder un enregistrement modifié par une méthode,
+* Pour sauvegarder un enregistrement contenant un sous-enregistrement ayant été créé ou modifié par la commande *\_o\_ADD SUBRECORD*, *\_o\_CREATE SUBRECORD*, ou *\_o\_MODIFY SUBRECORD*,
+* Pendant la saisie de données, pour sauvegarder l'enregistrement affiché avant d'appeler une commande qui change l'enregistrement courant,
+* Pendant la saisie de données, pour sauvegarder l'enregistrement courant.
 
-You should not execute a **SAVE RECORD** during the On Validate event for a form that has been accepted. If you do, the record will be saved twice.
+Vous ne devez pas appeler **SAVE RECORD** dans l'événement formulaire On Validate d'un enregistrement qui a été validé, sinon l'enregistrement est sauvegardé deux fois. 
 
-**Note:** Saving a record that contains edited object field(s) usually requires that you notify explicitely 4D before calling **SAVE RECORD**. For more information, please refer to the *Saving Object fields* section. 
+## Exemple 
 
-## Example 
-
-The following example is part of a method that reads records from a document. The code segment receives a record, and then, if it is received properly, saves it:
+L'exemple suivant est une partie d'une méthode récupérant des enregistrements d'un fichier. Dans cette partie, les enregistrements sont reçus puis, si l'opération s'est correctement déroulée, sauvegardés :
 
 ```4d
- RECEIVE RECORD([Customers]) // Receive record from disk
- If(OK=1) // If the record is received properly…
-    SAVE RECORD([Customers]) // save it
+ RECEIVE RECORD([Clients]) // Réception de l'enregistrement à partir du disque
+ If(OK=1) // Si l'enregistrement a été correctement reçu…
+    SAVE RECORD([Clients]) // Le sauvegarder
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [CREATE RECORD](create-record.md)  
 [Locked](locked.md)  
-*Triggers*  
+*Présentation des triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 53 |
+| Numéro de commande | 53 |
 | Thread safe | yes |
 
 

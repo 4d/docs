@@ -5,81 +5,83 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | URL to which to send the request |
-| response | Text, Blob, Picture, Object | &#8592; | Result of request |
-| headerNames | Text array | &#8596;  | *in:* Header names of the request<br/> *out:* Returned header names |
-| headerValues | Text array | &#8596;  | *in:* Header values of the request<br/> *out:* Returned header values  |
-| * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Integer | &#8592; | HTTP status code |
+| url | Text | &#8594;  | URL auquel envoyer la requête |
+| réponse | Text, Blob, Picture, Object | &#8592; | Résultat de la requête |
+| nomsEnTêtes | Text array | &#8594;  | Noms des en-têtes de la requête |
+| &#8592; | Noms d’en-têtes retournés |
+| valeursEnTêtes | Text array | &#8594;  | Valeurs d’en-têtes de la requête |
+| &#8592; | Valeurs d’en-têtes retournées |
+| * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| Résultat | Integer | &#8592; | Code de statut HTTP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Modified|
-|13|Created|
+|16 R4|Modifié|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
-:::info Compatibility
+:::info Compatibilité
 
-This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
 
 :::
 
 ## Description 
 
-<!--REF #_command_.HTTP Get.Summary-->The **HTTP Get** command sends an HTTP GET request directly to a specific URL and processes the HTTP server response.<!-- END REF-->
+<!--REF #_command_.HTTP Get.Summary-->La commande **HTTP Get** permet d’envoyer directement une requête HTTP GET vers un URL spécifique et de traiter la réponse du serveur HTTP.<!-- END REF-->
 
-Pass the URL where you want the request sent in the *url* parameter. The syntax to use is:
+Passez dans le paramètre *url* l’URL auquel adresser la requête. La syntaxe à utiliser est :
 
 ```RAW
 http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-For example, you can pass the following strings:  
+Par exemple, les chaînes suivantes peuvent être passées :  
 
 ```RAW
     http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
-*(\*)* During HTTPS requests, authority of the certificate is not checked.   
-*(\*\*)* For more information about IPv6 addresses in urls, please refer to the [RFC 2732](https://www.ietf.org/rfc/rfc2732.txt).
+*(\*)* Lors des requêtes https, l’autorité du certificat n’est pas vérifiée.  
+*(\*\*)* Pour plus d'informations sur les adresses IPv6 dans les urls, veuillez vous référer à la [RFC 2732](https://www.ietf.org/rfc/rfc2732.txt).
 
-After command execution, the *response* parameter receives the result of the request returned by the server. This result corresponds to the body of the response, with no headers.   
-You can pass different types of variables in *response*:
+Après exécution de la commande, le paramètre *réponse* récupère le résultat de la requête retourné par le serveur. Ce résultat correspond à la partie corps (*body*) de la réponse, sans les en-têtes (*headers*). Vous pouvez passer des variables de différents types dans *réponse* :
 
-* Text: When the result is expected to be text (see note below).
-* BLOB: When the result is expected to be in binary form.
-* Picture: When the result is expected to be a picture.
-* Object: When the result is expected to be an object.
+* Texte : lorsque le résultat est attendu sous forme de texte (cf. note)
+* BLOB : lorsque le résultat est attendu sous forme binaire
+* Image : lorsque le résultat est attendu sous forme d’image
+* Objet : lorsque le résultat est attendu sous forme d'objet *C\_OBJECT*
 
-**Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](convert-to-text.md).
+**Note :** Lorsqu'une variable texte est passée dans *réponse*, 4D tente de décoder les données retournées par le serveur. Le programme essaie d'abord de récupérer le charset depuis l'en-tête *content-type*, ou à défaut via la BOM de la page ; en dernier lieu 4D recherche tout attribut *http-equiv charset* (dans le contenu html) ou *encoding* (pour le xml). Si aucun charset ne peut être détecté, 4D décode la réponse en ANSI. Si la conversion échoue, le texte résultant est vide. Si vous n'êtes pas sûr que le serveur retourne une information de charset ou une BOM, mais si vous connaissez l'encodage, il est préférable de passer un BLOB dans *réponse* et d'utiliser la commande [Convert to text](convert-to-text.md).
 
-If you pass a BLOB, it contains the text, picture or any type of contents (.wav, .zip, etc.) returned by the server. You must then manage the recovery of these contents (headers are not included in the BLOB). When you pass an object, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object, otherwise a *4D.Blob* object is returned.
+Si vous passez un BLOB, il contiendra le texte, l’image ou tout type de contenu (.wav, .zip...) retourné par le serveur. Vous devrez alors gérer la récupération de ce contenu (les en-têtes ne sont pas inclus dans le BLOB).   
+Si vous passez un objet de type *C\_OBJECT* et si la requête retourne un résultat ayant le content-type text, 4D tentera d’analyser le contenu en tant que JSON et retournera le résultat analysé sous forme d'objet, sinon un objet *4D.Blob* sera retourné.
 
-In *headerNames* and *headerValues*, you pass arrays containing the names and values of the request headers.   
-After this method is executed, these arrays contain the names and values of headers returned by the HTTP server. More specifically, this lets you manage cookies. 
+Vous pouvez passer dans les paramètres *nomsEnTêtes* et *valeursEnTêtes* des tableaux contenant respectivement les noms et les valeurs des en-têtes de la requête.
 
-The *\** parameter enables the keep-alive mechanism for the server connection. By default, if this parameter is omitted, keep-alive is not enabled. 
+A l’issue de l’exécution de la méthode, ces tableaux contiendront les noms et valeurs d’en-têtes retournés par le serveur HTTP. Ce principe permet notamment de gérer des cookies. 
 
-The command returns a standard HTTP status code (200=OK and so on) as returned by the server. The list of HTTP status codes is provided in *RFC 2616*.   
-If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+Le paramètre *\** permet d’activer le mécanisme de *keep-alive* pour la connexion au serveur. Par défaut, si ce paramètre est omis, le *keep-alive* n’est pas activé. 
 
-## Example 1 
+La commande retourne le code de statut HTTP standard (200=OK...) tel que renvoyé par le serveur. La liste des codes de statut HTTP est fournie dans la *RFC 2616*. Si la connexion au serveur est impossible pour une raison liée au réseau (*DNS Failed*, *Server not reachable*...) la commande retourne 0 et une erreur est générée. Vous pouvez intercepter les erreurs à l’aide d’une méthode d’appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
-Retrieval of the 4D logo on the 4D Web site:
+## Exemple 1 
+
+Récupération du logo 4D sur le site Web de 4D :
 
 ```4d
  var URLPic_t : Text
@@ -90,9 +92,9 @@ Retrieval of the 4D logo on the 4D Web site:
  $httpResponse:=HTTP Get(URLPic_t;Pic_i;HeaderNames_at;HeaderValues_at)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Retrieval of an RFC:
+Récupération d’une RFC :
 
 ```4d
  var URLText_t : Text
@@ -103,9 +105,9 @@ Retrieval of an RFC:
  $httpResponse:=HTTP Get(URLText_t;Text_t;HeaderNames_at;HeaderValues_at)
 ```
 
-## Example 3 
+## Exemple 3 
 
-Retrieval of a video:
+Récupération d’une vidéo :
 
 ```4d
  var vBlob : Blob
@@ -113,16 +115,16 @@ Retrieval of a video:
  BLOB TO DOCUMENT("video.flv";vBlob)
 ```
 
-## See also 
+## Voir aussi 
 
 [HTTP Request](http-request.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1157 |
+| Numéro de commande | 1157 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

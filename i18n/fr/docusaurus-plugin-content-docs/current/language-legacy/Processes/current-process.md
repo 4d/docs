@@ -9,32 +9,31 @@ displayed_sidebar: docs
 <!--REF #_command_.Current process.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Process number |
+| Résultat | Integer | &#8592; | Numéro du process en cours d'exécution |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Current process.Summary-->**Current process** returns the process reference number of the process within which this command is called.<!-- END REF-->
+<!--REF #_command_.Current process.Summary-->**Current process** retourne le numéro du process à partir duquel la fonction a été appelée.<!-- END REF-->
 
-## Example 
+## Exemples 
 
-See the examples for [DELAY PROCESS](delay-process.md) and [Process info](./commands/process-info).
+Référez-vous aux exemples de [DELAY PROCESS](delay-process.md) et [Process info](../commands/process-info.md).
 
-## See also 
+## Voir aussi 
 
-[Process number](./commands/process-number)  
-[Process info](./commands/process-info)  
+[Process number](../commands/process-number.md)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 322 |
+| Numéro de commande | 322 |
 | Thread safe | yes |
-
 
 

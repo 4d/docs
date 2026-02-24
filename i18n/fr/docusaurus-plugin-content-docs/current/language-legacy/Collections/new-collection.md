@@ -7,48 +7,45 @@ displayed_sidebar: docs
 <!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New collection.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| value | any | &#8594;  | Collection's value(s) |
-| Function result | Collection | &#8592; | New collection |
-</div>
+| Paramètres | Type                                                                    |                             | Description                                |
+| ---------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valeur(s) de collection |
+| Résultat   | Collection                                                              | &#8592; | New collection                             |
+
 <!-- END REF-->
 
-## Description 
+## Description
 
-The `New collection` command <!--REF #_command_.New collection.Summary-->creates a new empty or prefilled collection and returns its reference.<!-- END REF--> Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md). 
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
-If you do not pass any parameters, `New collection` creates an empty collection and returns its reference. 
+Prise en charge des formules
 
-You must assign the returned reference to a 4D variable of the Collection type.
+Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
->Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
-Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
+Condition Not appliquée à une assertion
 
-Otherwise, you can add or modify elements subsequently through assignment. For example:
+Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affectation. Par exemple :
 
 ```4d
- myCol[10]:="My new element"
+Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 ```
 
-If the new element index is beyond the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
+Si l'indice du nouvel élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires reçoivent la valeur **null**.
 
-You can pass any number of values of any supported type (number, text, date, picture, pointer, object, collection...). Unlike arrays, collections can mix data of different types.
+Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
-You must pay attention to the following conversion issues:
+Vous devez prêter attention aux problèmes de conversion suivants :
 
-*	If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*	Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*	If you pass a time, it is stored as a number of milliseconds (Real).
+- La nouvelle collection partagée
+- Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Indice de fin (non inclus)
+- Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).
 
-## Example 1
+## Exemple 1
 
-
-
-You want to create a new empty collection and assign it to a 4D collection variable:
+Vous souhaitez créer une nouvelle collection vide et l'assigner à une variable collection 4D :
 
 ```4d
  var $myCol : Collection
@@ -56,9 +53,9 @@ You want to create a new empty collection and assign it to a 4D collection varia
   //$myCol=[]
 ```
 
-## Example 2
+## Exemple 2
 
-You want to create a prefilled collection:
+Vous souhaitez créer une collection pré-remplie :
 
 ```4d
  var $filledColl : Collection
@@ -66,30 +63,29 @@ You want to create a prefilled collection:
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-## Example 3
+## Exemple 3
 
-You create a new collection and then add a new element:
+Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 ```4d
  var $coll : Collection
  $coll:=New collection("a";"b";"c")
   //$coll=["a","b","c"]
- $coll[9]:="z" //add a 10th element with value "z"
+ $coll[9]:="z" //ajouter un 10e élément avec la valeur "z"
  $vcolSize:=$coll.length //10
   //$coll=["a","b","c",null,null,null,null,null,null,"z"]
 ```
 
-## See also 
+## Voir également
 
-[New shared collection](new-shared-collection.md)  
-[Type](./commands/type)  
+[New shared collection](new-shared-collection.md)\
+[Type](../commands-legacy/type.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1472 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1472 |
+| Thread safe        | oui  |
 
 

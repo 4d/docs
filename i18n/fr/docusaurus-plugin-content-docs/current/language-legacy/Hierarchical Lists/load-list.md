@@ -5,69 +5,67 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomListe* ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| listName | Text | &#8594;  | Name of a list created in the Design environment List Editor |
-| Function result | Integer | &#8592; | List reference number of newly created list |
+| nomListe | Text | &#8594;  | Nom de liste créée dans l'éditeur d'énumérations |
+| Résultat | Integer | &#8592; | Numéro de référence de la liste nouvellement créée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Load list.Summary-->**Load list** creates a new hierarchical list whose contents are copied from the list and whose name you pass in *listName*.<!-- END REF--> It then returns the list reference number to the newly created list. 
+<!--REF #_command_.Load list.Summary-->La commande **Load list** crée une liste hiérarchique dont le contenu est copié depuis la liste *nomListe* créée en mode Développement, dans l'éditeur d'énumérations.<!-- END REF--> La fonction retourne le numéro de référence de la liste nouvellement créée. 
 
-To find out the lists specified in the database, use the [LIST OF CHOICE LISTS](list-of-choice-lists.md) command. 
+Pour connaître les énumérations définies dans la base, utilisez la commande [LIST OF CHOICE LISTS](list-of-choice-lists.md). Pour savoir si la liste a correctement été chargée, utilisez la fonction [Is a list](is-a-list.md) avec le numéro de référence retourné par **Load list**.
 
-To make sure that the list specified by *listName* exists, use the [Is a list](is-a-list.md) function.
+Notez que la nouvelle liste est une copie de la liste définie en mode Développement. Par conséquent, toute modification apportée à cette nouvelle liste n'affectera pas la liste définie en mode Développement. De même, toute modification ultérieure de l'énumération n'affecte pas la liste que vous venez de créer. 
 
-Note that the new list is a copy of the list defined in the Design environment. Consequently, any modifications made to the new list will not affect the list defined in the Design environment. Conversely, any subsequent modifications made to the list defined in the Design environment will not affect the list that you just created.
+Si vous modifiez la liste nouvellement créée et voulez enregistrer ces modifications, utilisez la commande [SAVE LIST](save-list.md). 
 
-If you modify the newly created list and want to permanently save the changes, call [SAVE LIST](save-list.md). 
+Si vous n'avez plus besoin de la liste, n'oubliez pas d'appeler [CLEAR LIST](clear-list.md) pour la supprimer. Sinon, elle reste en mémoire jusqu'à la fin de la session de travail ou jusqu'à ce que le process dans lequel la liste a été créée soit détruit.
 
-Remember to call [CLEAR LIST](clear-list.md) in order to delete the newly created list when you have finished with it. Otherwise, it will stay in memory until the end of the working session or until the process in which it was created ends or is aborted.
+**Astuce :** Si vous associez une liste à un objet de formulaire (liste hiérarchique, onglet ou menu hiérarchique) à l'aide du menu **Enumération** dans la Liste des propriétés, il est inutile d'appeler **Load list** ou [CLEAR LIST](clear-list.md) dans la méthode de l'objet. 4D charge et efface la liste automatiquement pour vous.
 
-**Tip:** If you associate a list with a form object (hierarchical list, tab control, or hierarchical pop-up menu) using the Choice List property in the Property List window, you do not need to call **Load list** or [CLEAR LIST](clear-list.md) from the method of the object. 4D loads and clears the list automatically for you.
+## Exemple 
 
-## Example 
-
-You create a database for the international market and you need to switch to different languages while using the database. In a form, you present a hierarchical list, named *hlList*, that proposes a list of standard options. In the Design environment, you have prepared various lists, such as “Std Options US” for the English version, “Std Options FR” for the French version, “Std Options SP” for the Spanish version, and so on. In addition, you maintain an interprocess variable, named *◊gsCurrentLanguage*, where you store a 2-character language code, such as “US” for the English version, “FR” for the French version, “SP” for the Spanish version, and so on. To make sure that your list will always be loaded using the current selected language, you can write:
+Imaginons que vous créez une base pour le marché international. Vous voulez pouvoir changer la langue utilisée. Dans un formulaire, vous présentez une liste hiérarchique *listeHL* qui propose les langues disponibles. En mode Développement, vous avez préparé des listes différentes, par exemple “Options US” pour la version anglaise, “Options FR” pour la version française, “Options ES” pour la version espagnole, etc. De plus, vous maintenez la variable interprocess *<>gaLangueCourante* dans laquelle vous stockez un code de langue sur 2 caractères, par exemple “US” pour la version anglaise, “FR” pour la version française, “ES” pour la version espagnole, etc. Pour vous assurer que la liste correcte sera chargée en utilisant la langue choisie, vous pouvez écrire :
 
 ```4d
-  // hlList Hierarchical List Object Method
+  // Méthode objet de la liste hiérarchique listeHL
  Case of
     :(FORM Event.code=On Load)
-       var hlList : Integer
-       hlList:=Load list("Std Options"+◊gsCurrentLanguage)
+       var listeHL : Integer
+       listeHL:=Load list("Options"+<>gaLangueCourante)
     :(FORM Event.code=On Unload)
-       CLEAR LIST(hlList;*)
+       CLEAR LIST(listeHL;*)
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR LIST](clear-list.md)  
 [Is a list](is-a-list.md)  
 [SAVE LIST](save-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 383 |
+| Numéro de commande | 383 |
 | Thread safe | no |
 
 

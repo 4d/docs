@@ -5,94 +5,94 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *object* : Text ; *enterable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *object* : Variable, Field, Table ; *enterable* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *objet* ; *saisissable* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Text, Variable, Field, Table | &#8594;  | Object Name (if * is specified), or<br/>Variable or Field or Table (if * is omitted) |
-| enterable | Boolean, Integer | &#8594;  | Boolean: True=enterable, False=non-enterableLongint: 0=not enterable, 1=enterable, 2=not enterable not focusable |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une table, un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Table ou Champ ou Variable (si * omis) |
+| saisissable | Boolean, Integer | &#8594;  | Booléen : Vrai=saisissable, Faux=non saisissable<br/>Entier long : 0=non saisissable, 1=saisissable, 2=non saisissable non focusable |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R4|Modified|
-|12|Renamed|
-|2004|Modified|
-|<6|Created|
+|19 R4|Modifié|
+|12|Renommé|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Summary-->The **OBJECT SET ENTERABLE** command makes the form objects specified by *object* either enterable or non-enterable and can set the *focusable* attribute.<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** rend saisissable ou non saisissable le ou les objet(s) de formulaire désigné(s) par *objet* et peut fixer l'attribut saisissable.<!-- END REF-->
 
-**Note:** A *focusable* form object can get the focus and triggers the *On Getting focus* / *On Losing focus* form events. In addition, **input** and **4D Write Pro area** focusable objects can have their contents selected and copied, even if they are non-enterable. 
+**Note** : Un objet de formulaire focusable peut lire le focus et déclencher les événements formulaire *On Getting focus* / *On Losing focus*. En outre, le contenu des objets focusables de la **zone se saisie** et de la **zone 4D Write Pro** peut être sélectionné et copié, même s'ils ne sont pas saisissables. 
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a table, field or variable in *object*. In this case, specify a table, field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the *Object Properties* section.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est une table, un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de table, de champ ou de variable (champ ou variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-You can pass either a boolean value or a Longint value in *enterable*:
+Vous pouvez passer une valeur booléenne ou une valeur Longint dans saisissable :
 
-* Boolean - when *enterable* is True, the user can enter data and move the cursor into the area.  
-When *enterable* is False:  
-   * in binary databases, the user cannot enter data and the *focusable* attribute depends on the **Focusable** option set in the Property list.  
-   * in projects, the user cannot enter data and the object is focusable.
-* Longint - passing a longint value in *enterable* allows you to control also the *focusable* property for **Inputs** and **4D Write Pro areas**. You can use one of the following constants:
-  
-| Constant                        | Value | Comment                                                                                                                                                                |  
-| ------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| obk enterable                   | 1     | Users can enter values in the object and the object is focusable.                                                                                                      |  
-| obk not enterable               | 0     | Users cannot enter values in the object but an **input object** or a **4D Write Pro area** is focusable (other not enterable objects are automatically not focusable). |  
-| obk not enterable not focusable | 2     | Users cannot enter values in the object and an **input object** or a **4D Write Pro area** is not focusable.                                                           |
+* Booléen - lorsque saisissable est mis à Vrai, l'utilisateur peut saisir des données et déplacer le curseur dans la zone.  
+Lorsque saisissable est Faux :  
+   * dans les bases de données binaires, l'utilisateur ne peut pas saisir de données et l'attribut focusable dépend de l'option **Focusable** définie dans la liste des propriétés.  
+   * dans les projets, l'utilisateur ne peut pas saisir de données et l'objet est focusable.
+* Entier long - le passage d'une valeur entier long dans saisissable vous permet de contrôler également la propriété *focusable* pour les **zones de saisie** et les **zones 4D Write Pro**. Vous pouvez utiliser l'une des constantes suivantes :  
 
-The **OBJECT SET ENTERABLE** command can also be used to enable the “Enter in List” mode by programming for subforms and list forms displayed using the [MODIFY SELECTION](modify-selection.md) and [DISPLAY SELECTION](display-selection.md) commands:
+| Constante                       | Valeur | Comment                                                                                                                                                                                                               |  
+| ------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| obk enterable                   | 1      | Les utilisateurs peuvent saisir des valeurs dans l'objet et l'objet est focusable.                                                                                                                                    |  
+| obk not enterable               | 0      | Les utilisateurs ne peuvent pas saisir de valeurs dans l'objet, mais un **objet zone de saisie** ou une **zone 4D Write Pro** est focusable (les autres objets non saisissables sont automatiquement non focusables). |  
+| obk not enterable not focusable | 2      | Les utilisateurs ne peuvent pas saisir de valeurs dans l'objet, et un objet **zone de saisie** et **zone 4D Write Pro** n'est pas focusable.                                                                          |
 
-* For subforms, in the *enterable* parameter, pass either the name of the subform table or the name of the subform object itself, for example: **OBJECT SET ENTERABLE**(\*;"Subform";True). The command works in subforms only if it is in the form method of the subform.
-* For list forms, you must pass the name of the form table in the *enterable* parameter, for example: **OBJECT SET ENTERABLE**(\[MyTable\];True).
+La commande **OBJECT SET ENTERABLE** permet également d’activer par programmation le mode “Saisie en liste” pour les sous-formulaires et les formulaires liste affichés par les commandes [MODIFY SELECTION](modify-selection.md) et [DISPLAY SELECTION](display-selection.md) :
 
-Making an object non-enterable does not prevent you from changing its value programmatically.
+* Pour les sous-formulaires, vous pouvez passer dans le paramètre saisissable soit le nom de la table du sous-formulaire, soit le nom de l’objet sous-formulaire lui-même, par exemple : **OBJECT SET ENTERABLE**(\*;"Sousform";Vrai). La commande fonctionne dans les sous-formulaires uniquement si elle se trouve dans la méthode formulaire du sous-formulaire.
+* Pour les formulaires liste, vous devez passer le nom de la table du formulaire dans le paramètre saisissable, par exemple : **OBJECT SET ENTERABLE**(\[MaTable\];Vrai).
 
-**Note:** To make a list box cell non-enterable, you pass the value -1 to $0 in the On Before Data Entry event, see *Managing entry*.
+Rendre un objet non saisissable n'empêche pas sa modification par programmation.
 
-## Example 1 
+**Note :** Vous rendez une cellule de list box non saisissable en passant la valeur -1 à $0 dans l'événement On Before Data Entry, cf. paragraphe *Gestion de la saisie*.
 
-The following example sets a shipping field, depending on the weight of the shipment. If the shipment is 1 ounce or less, then the shipper is set to US Mail and the field is set to be non-enterable. Otherwise, the field is set to be enterable. 
+## Exemple 1 
+
+L'exemple suivant définit un champ de type d'expédition suivant le poids d'un colis expédié. Si le colis pèse un kilo ou moins, l'expéditeur sera La Poste et le champ est rendu non saisissable. Sinon, le champ est rendu saisissable. 
 
 ```4d
- If([Shipments]Weight<=1)
-    [Shipments]Shipper:="US Mail"
-    OBJECT SET ENTERABLE([Shipments]Shipper;False)
+ If([Expédition]Poids<=1)
+    [Expédition]Type:="La Poste"
+    OBJECT SET ENTERABLE([Expédition]Type;False)
  Else
-    OBJECT SET ENTERABLE([Shipments]Shipper;True)
+    OBJECT SET ENTERABLE([Expédition]Type;True)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Here is the object method of a checkbox located in the header of a list in order to control the Enter in List mode: 
+Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une liste pour contrôler le mode Saisie en liste : 
 
 ```4d
- var bEnterable : Boolean
- OBJECT SET ENTERABLE([Table1];bEnterable)
+ var bSaisissable : Boolean
+ OBJECT SET ENTERABLE([Table1];bSaisissable)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get enterable](object-get-enterable.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 238 |
+| Numéro de commande | 238 |
 | Thread safe | no |
 
 

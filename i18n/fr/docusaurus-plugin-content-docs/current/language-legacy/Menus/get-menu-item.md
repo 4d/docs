@@ -5,49 +5,49 @@ slug: /commands/get-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item.Syntax-->**Get menu item** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item.Syntax-->**Get menu item** ( *menu* ; *ligneMenu* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Text | &#8592; | Text of the menu item |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Text | &#8592; | Libellé de la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu item.Summary-->The **Get menu item** command returns the text of the menu item whose menu and item numbers are passed in *menu* and *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
+<!--REF #_command_.Get menu item.Summary-->La commande **Get menu item** retourne le libellé de la commande de menu dont le numéro ou la référence de menu et le numéro de commande ont été passés dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
-If you omit the *process* parameter, **Get menu item** applies to the menu bar for the current process. Otherwise, **Get menu item** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous ne passez pas le paramètre *process*, **Get menu item** est appliquée à la barre de menus du process courant. Sinon **Get menu item** est appliquée à la barre de menus du process dont la référence est passée dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-## See also 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM](set-menu-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 422 |
+| Numéro de commande | 422 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

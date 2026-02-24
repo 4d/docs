@@ -5,166 +5,169 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* : Text {; *inputStream* : Text, Blob {; *outputStream* : Text, Blob {; *errorStream* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomFichier* {; *fluxEntrée* {; *fluxSortie* {; *fluxErreur*}}}{; *pid*} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | File path and arguments of file to launch |
-| inputStream | Text, Blob | &#8594;  | Input stream (stdin) |
-| outputStream | Text, Blob | &#8592; | Output stream (stdout) |
-| errorStream | Text, Blob | &#8592; | Error stream (stderr) |
-| pid | Integer | &#8592; | Unique identifier for external process |
+| nomFichier | Text | &#8594;  | Chemin d’accès et arguments du fichier à lancer |
+| fluxEntrée | Text, Blob | &#8594;  | Flux d’entrée (stdin) |
+| fluxSortie | Text, Blob | &#8592; | Flux de sortie (stdout) |
+| fluxErreur | Text, Blob | &#8592; | Flux d’erreur (stderr) |
+| pid | Integer | &#8592; | Identifiant unique du process externe |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|2004|Created|
+|15 R4|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
-:::info Compatibility
+:::info Compatibilité
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->Starting with 4D v19 R4, we recommend the use of the [`4D.SystemWorker class`](../API/SystemWorkerClass.md) to run and control external processes.<!-- END REF--> However, this command is still supported. 
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->À partir de 4D v19 R4, nous recommandons l'utilisation de la classe [`4D.SystemWorker class`](../API/SystemWorkerClass.md) pour exécuter et contrôler les process externes.<!-- END REF--> Néanmoins, cette commande est toujours prise en charge. 
 
 :::
 
+
 ## Description 
 
-The **LAUNCH EXTERNAL PROCESS** command launches an external process from 4D under macOS and Windows. 
+La commande **LAUNCH EXTERNAL PROCESS** permet de lancer un process externe depuis 4D, sous macOS et Windows.   
+Sous macOS, cette commande donne accès à toutes les applications exécutables pouvant être lancées depuis le Terminal.
 
-Under macOS, this command provides access to any executable application that can be launched from the Terminal.
+Passez dans le paramètre *nomFichier* le chemin d’accès absolu de l’application à exécuter ainsi que les arguments nécessaires, le cas échéant.  
+Sous macOS, vous pouvez également passer uniquement le nom de l’application à exécuter, 4D utilisera alors la variable d’environnement PATH pour localiser l’exécutable.
 
-Pass the fixed file path of the application to execute, as well as any required arguments (if necessary), in the *fileName* parameter.
+**Attention :** Cette commande permet uniquement de lancer des applications exécutables, elle ne peut pas exécuter d'instructions dépendantes du shell (l'interpréteur de commandes). Par exemple, sous macOS il n'est pas possible d'utiliser cette commande pour exécuter l'instruction *echo* ou des indirections.
 
-Under macOS, you can also pass the application name only; 4D will then use the PATH environment variable to locate the executable.
+Le paramètre *fluxEntrée* (facultatif) contient le *stdin* du process externe. Après l’exécution de la commande, les paramètres *fluxSortie* et *fluxErreur* (s’ils sont passés) retournent respectivement le *stdout* et le *stderr* du process externe. Vous pouvez utiliser des paramètres de type BLOBs au lieu de chaînes de caractères si vous traitez des données binaires (telles que des images).
 
-**Warning:** This command can only launch executable applications; it cannot execute instructions that are part of the shell (command interpreter). For example, under macOS it is not possible to use this command to execute the *echo* instruction or indirections.
+XXX
 
-The *inputStream* parameter (optional) contains the *stdin* of the external process. Once the command has been executed, the *outputStream* and *errorStream* parameters (if passed) return respectively the *stdout* and *stderr* of the external process. You can use BLOB parameters instead of strings if you are working with binary data (such as pictures).
+4D fournit trois variables d'environnement spécifiques qui peuvent être définies à l'aide de [SET ENVIRONMENT VARIABLE](set-environment-variable.md) et utilisées dans le contexte de **LAUNCH EXTERNAL PROCESS**:
 
-4D provides three specific environment variables that can be set using [SET ENVIRONMENT VARIABLE](set-environment-variable.md) and are available for use in the context of **LAUNCH EXTERNAL PROCESS**:
+* *\_4D\_OPTION\_CURRENT\_DIRECTORY* : permet de définir le répertoire courant du process externe à lancer. Vous devez passer dans *valeurVar* le chemin d’accès du répertoire (syntaxe type HFS sous Mac OS et DOS sous Windows)
+* *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows uniquement) : permet de masquer la fenêtre de la console DOS. Vous devez passer "true" dans *valeurVar* pour masquer la console ou "false" pour l’afficher.
+* *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* : permet d'exécuter le process externe en mode asynchrone, c'est-à-dire non bloquant pour les autres applications. Vous devez passer "false" dans *valeurVar* pour définir une exécution asynchrone ou "true" pour une exécution synchrone (par défaut). Passer "" dans *valeurVar* ne fera rien.  
+Si vous définissez la variable d'environnement *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* sur "faux" via la commande [SET ENVIRONMENT VARIABLE](set-environment-variable.md) (exécution asynchrone), les paramètres *fluxSortie* et *fluxErreur* ne sont pas retournés.
 
-* *\_4D\_OPTION\_CURRENT\_DIRECTORY*: Used to set the current directory of the external process to be launched. In *varValue*, you must pass the pathname of the directory (HFS type syntax on macOS and DOS on Windows).
-* *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows only): Used to hide the window of the DOS console. You must pass "true" in *varValue* to hide the console or "false" to display it.
-* *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*: Used to execute the external process in asynchronous mode, in other words, non-blocking for other applications. You must pass "false" in varValue to set an asynchronous execution or "true" to set a synchronous execution (default). For this variable, passing "" in *varValue* does nothing.  
-If you set the *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* environment variable to "false" via the [SET ENVIRONMENT VARIABLE](set-environment-variable.md) command (asynchronous execution), the *outputStream* and *errorStream* parameters are not returned.
+Ces variables sont valides dans le process courant pour le prochain appel à **LANCER PROCESS EXTERNE**.
 
-These variables are valid in the current process for the next call to **LAUNCH EXTERNAL PROCESS**.
+Lorsqu'il est passé, le paramètre *pid* (entier long) retourne l'identifiant unique du process (PID) affecté au niveau de l'OS, quel que soit le statut de l'option *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*. Avec cette information, il est plus facile d'interagir avec les process externes créés par la commande, par exemple pour les stopper. Si le lancement du process externe échoue, le paramètre *pid* n'est pas retourné.
 
-When passed, the *pid* parameter (longint) returns the system level ID for the process created to launch the command, regardless of the *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* option status. With this information, it is easier to interact with a created external process thereafter, e.g. to stop it. If the process launch fails, the *pid* parameter is not returned.
+## Exemples sous macOS 
 
-## Examples under macOS 
+Tous les exemples suivants utilisent le Terminal de macOS, accessible dans le dossier Applications/Utilitaires.
 
-The following examples use the macOS Terminal available in the Application/Utilities folder.
-
-1\. To change permissions for a file (*chmod* is the macOS command used to modify file access):
-
-```4d
- LAUNCH EXTERNAL PROCESS("chmod +x /folder/myfile.txt")
-```
-
-2\. To edit a text file (*cat* is the macOS command used to edit files). In this example, the full access path of the command is passed:
+(1) Pour modifier les accès à un fichier (*chmod* est la commande macOS permettant de modifier les accès des fichiers) :
 
 ```4d
- var input;output : Text
- input:=""
- LAUNCH EXTERNAL PROCESS("/bin/cat /folder/myfile.txt";input;output)
+ LAUNCH EXTERNAL PROCESS("chmod +x /dossier/monfichier.txt")
 ```
 
-3\. To get the contents of the "Users" folder (*ls -l* is the macOS equivalent of the *dir* command in DOS):
+(2) Pour éditer un fichier texte (*cat* est la commande macOS permettant d’éditer les fichiers). Dans cet exemple, le chemin d’accès absolu de la commande est passé :
+
+```4d
+ var vtentrée;vtsortie : Text
+ vtentrée:=""
+ LAUNCH EXTERNAL PROCESS("/bin/cat /dossier/monfichier.txt";vtentrée;vtsortie)
+```
+
+(3) Pour récupérer la liste du contenu du dossier “Users” (*ls -l* est semblable à la commande *dir* du DOS) :
 
 ```4d
  var $In;$Out : Text
  LAUNCH EXTERNAL PROCESS("/bin/ls -l /Users";$In;$Out)
 ```
 
-4\. To launch an independent "graphic" application, it is preferable to use the *open* system command (in this case, the **LAUNCH EXTERNAL PROCESS** statement has the same effect as double-clicking the application): 
+(4) Pour lancer une application "graphique" indépendante, il est préférable d'utiliser la commande système *open* (dans ce cas l'instruction **LAUNCH EXTERNAL PROCESS** a le même effet qu'un double-clic sur l'application) : 
 
 ```4d
  LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
 ```
 
-## Examples under Windows 
+## Exemples sous Windows 
 
-5\. To open NotePad:
+(5) Pour lancer l’application NotePad :
 
 ```4d
  LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe")
 ```
 
-6\. To open Notepad and open a specific document: 
+(6) Pour lancer l’application NotePad et ouvrir un document spécifique : 
 
 ```4d
- LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt")
+ LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe C:\\Docs\\nouveau dossier\\res.txt")
 ```
 
-7\. To launch the Microsoft® Word® application and open a specific document (note the use of the two ""):
+(7) Pour lancer l’application Microsoft® Word® et ouvrir un document spécifique (à noter l’emploi de deux "") :
 
 ```4d
- $mydoc:="C:\\Program Files\\Microsoft Office\\Office10\\WINWORD.EXE \"C:\\Documents and
- Settings\\Mark\\Desktop\\MyDocs\\New folder\\test.xml\""
- LAUNCH EXTERNAL PROCESS($mydoc;$tIn;$tOut)
+ $mondoc:="C:\\Program Files\\Microsoft Office\\Office10\\WINWORD.EXE \"C:\\Documents and
+ Settings\\JeanMarc\\Bureau\\MesDocs\\Nouveau dossier\\essai.xml\""
+ LAUNCH EXTERNAL PROCESS($mondoc;$tIn;$tOut)
 ```
 
-8\. To execute a Perl script (requires ActivePerl):
+(8) Pour exécuter un script Perl (requiert l’installation préalable d’ActivePerl) :
 
 ```4d
- var $input;$output : Text
- SET ENVIRONMENT VARIABLE("myvariable";"value")
- LAUNCH EXTERNAL PROCESS("D:\\Perl\\bin\\perl.exe D:\\Perl\\eg\\cgi\\env.pl";$input;$output)
+ var $entrée;$sortie : Text
+ SET ENVIRONMENT VARIABLE("mavariable";"valeur")
+ LAUNCH EXTERNAL PROCESS("D:\\Perl\\bin\\perl.exe D:\\Perl\\eg\\cgi\\env.pl";$entrée;$sortie)
 ```
 
-9\. To launch a command with the current directory and without displaying the console: 
+(9) Pour lancer une commande avec un répertoire courant défini et sans afficher la console : 
 
 ```4d
  SET ENVIRONMENT VARIABLE("_4D_OPTION_CURRENT_DIRECTORY";"C:\\4D_VCS")
  SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
- LAUNCH EXTERNAL PROCESS("mycommand")
+ LAUNCH EXTERNAL PROCESS("C:\\MesApplis\\macommande.exe")
 ```
 
-10\. To allow the user to open an external document on Windows:
+(10) Pour permettre à l'utilisateur d'ouvrir un document externe sous Windows :
 
 ```4d
- $docname:=Select document("";"*.*";"Choose the file to open";0)
+ $nomdoc:=Select document("";"*.*";"Choisissez le fichier à ouvrir";0)
  If(OK=1)
     SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
     LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
  End if
 ```
 
-11\. The following examples request the process list on Windows:
+  
+(11) Les exemples suivants récupèrent la liste des process sous Windows :
 
 ```4d
  var $pid : Integer
  var $stdin;$stdout;$stderr : Text
  
- LAUNCH EXTERNAL PROCESS("tasklist";$pid) //gets PID only
- LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //gets all information
+ LAUNCH EXTERNAL PROCESS("tasklist";$pid) //obtenir uniquement le PID
+ LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //obtenir toutes les informations
 ```
 
-## System variables and sets 
+  
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise (file not found, insufficient memory, etc.), it is set to 0.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1\. Sinon (fichier non trouvé, mémoire insuffisante, etc.), elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [OPEN URL](open-url.md)  
 [SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 811 |
+| Numéro de commande | 811 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

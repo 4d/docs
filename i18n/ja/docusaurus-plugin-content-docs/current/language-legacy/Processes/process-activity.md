@@ -1,6 +1,7 @@
 ---
 id: process-activity
 title: Process activity
+slug: /commands/process-activity
 displayed_sidebar: docs
 ---
 

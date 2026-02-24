@@ -5,49 +5,46 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* : Text {; *} ) : Integer<br/>**Process number** ( *id* : Text {; *} ) : Integer<!-- END REF-->
-<!--REF #_command_.Process number.Params-->
-<div class="no-index">
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| name | Text | &#8594;  | Name of process for which to retrieve the process number |
-| id | Text | &#8594;  | ID of process for which to retrieve the process number |
-| * | Operator |  &#8594;  | Return the process number from the server |
-| Function result | Integer | &#8592; | Process number |
-</div>
+<!--REF #_command_.Process number.Params-->
+
+| Paramètres | Type      |                             | Description                                     |
+| ---------- | --------- | --------------------------- | ----------------------------------------------- |
+| name       | Text      | &#8594; | Nom du process duquel obtenir le numéro         |
+| id         | Text      | &#8594; | ID du process duquel récupérer le numéro        |
+| \*         | Opérateur | &#8594; | Renvoyer le numéro du process depuis le serveur |
+| Résultat   | Integer   | &#8592; | Process number                                  |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R7|Support of id parameter|
+| Release | Modifications                   |
+| ------- | ------------------------------- |
+| 20 R7   | Prise en charge du paramètre id |
 
 </details>
 
+## Description
 
-## Description 
+<!--REF #_command_.Process number.Summary-->La commande `Process number` retourne le numéro du process dont le nom *name* ou l'*id* est passé en premier paramètre<!-- END REF-->. Si aucun process n'est trouvé, `Process number` renvoie 0.
 
-<!--REF #_command_.Process number.Summary-->The `Process number` command returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->. If no process is found, `Process number` returns 0.
+Le paramètre optionnel \* permet de récupérer, à partir d'un 4D distant, le numéro d'un process exécuté sur le serveur. Dans ce cas, la valeur retournée est négative. Cette option est particulièrement utile lors de l'utilisation des commandes [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) et [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
 
-The optional parameter \* allows you to retrieve, from a remote 4D, the number of a process that is executed on the server. In this case, the returned value is negative. This option is especially useful when using the [GET PROCESS VARIABLE](./commands/get-process-variable), [SET PROCESS VARIABLE](./commands/set-process-variable) and [VARIABLE TO VARIABLE](./commands/variable-to-variable) commands. 
+Si la commande est exécutée avec le paramètre \* à partir d'un process sur la machine serveur, la valeur renvoyée est positive.
 
-If the command is executed with the \* parameter from a process on the server machine, the returned value is positive.
+## Voir également
 
+[GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
+[Process state](../commands-legacy/process-state.md)\
+[SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
 
-## See also 
+## Propriétés
 
-[GET PROCESS VARIABLE](./commands/get-process-variable)  
-[Process state](./commands/process-state)  
-[SET PROCESS VARIABLE](./commands/set-process-variable)  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 372 |
-| Thread safe | yes |
-
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 372 |
+| Thread safe        | oui |
 
 

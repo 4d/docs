@@ -5,80 +5,80 @@ slug: /commands/st-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<br/>**ST SET OPTIONS** ( *object* : Variable, Field ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer ; *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( {* ;} *objet* ; *option* ; *valeur* {; *option2* ; *valeur2* ; ... ; *optionN* ; *valeurN*} )<!-- END REF-->
 <!--REF #_command_.ST SET OPTIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| option | Integer | &#8594;  | Option to set |
-| value | Integer | &#8594;  | New value of option |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| option | Integer | &#8594;  | Option à définir |
+| valeur | Integer | &#8594;  | Nouvelle valeur de l’option |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST SET OPTIONS.Summary-->The **ST SET OPTIONS** command modifies one or more operating options for the styled text field or variable designated by the *object* parameter.<!-- END REF-->
+<!--REF #_command_.ST SET OPTIONS.Summary-->La commande **ST SET OPTIONS** vous permet de modifier une ou plusieurs options de fonctionnement du champ ou de la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-Pass the code of the option to modify in *option* and its new value in *value*. 
+Passez dans *option* le code de l’option à modifier et dans *valeur*, sa nouvelle valeur. 
 
-The *option* parameter supports the following constant found in the "*Multistyle Text*" theme: 
+Le paramètre *option* prend en charge la constante suivante du thème "*Texte multistyle*" : 
 
-| Constant                    | Type    | Value | Comment                                                      |
-| --------------------------- | ------- | ----- | ------------------------------------------------------------ |
-| ST Expressions display mode | Integer | 1     | The *value* parameter can contain ST Values or ST References |
+| Constante                   | Type        | Valeur | Comment                                                        |
+| --------------------------- | ----------- | ------ | -------------------------------------------------------------- |
+| ST Expressions display mode | Entier long | 1      | Le paramètre *valeur* peut contenir ST Values or ST References |
 
-In the *value* parameter, you can pass one of the following constants:
+Vous pouvez passer dans le paramètre *valeur* l'une des constantes suivantes :
 
-| Constant      | Type    | Value | Comment                                |
-| ------------- | ------- | ----- | -------------------------------------- |
-| ST References | Integer | 1     | Display source strings of expressions  |
-| ST Values     | Integer | 0     | Display computed values of expressions |
+| Constante     | Type        | Valeur | Comment                                         |
+| ------------- | ----------- | ------ | ----------------------------------------------- |
+| ST References | Entier long | 1      | Affichage des chaînes source des expressions    |
+| ST Values     | Entier long | 0      | Affichage des valeurs calculées des expressions |
 
-Display of values:
+Affichage des valeurs :
 
-![](../assets/en/commands/pict1216069.en.png)
+![](../assets/en/commands/pict1216069.fr.png)
 
-Display of expressions:
+Affichage des expressions :
 
-![](../assets/en/commands/pict1216065.en.png)
+![](../assets/en/commands/pict1216065.fr.png)
 
-## Example 
+## Exemple 
 
-The following code lets you switch the display mode of the area:
+Le code suivant vous permet de basculer le mode d’affichage de la zone : 
 
 ```4d
- ST GET OPTIONS(*;"StyledText_t";ST Expressions display mode;$exprValue)
- If($exprValue=1)
-    ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST Values)
+ ST GET OPTIONS(*;"StyledText_t";ST Expressions display mode;$valueExpr)
+ If($valueExpr=1)
+       ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST Values)
  Else
-    ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST References)
+       ST SET OPTIONS(*;"StyledText_t";ST Expressions display mode;ST References)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [ST GET OPTIONS](st-get-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1289 |
+| Numéro de commande | 1289 |
 | Thread safe | no |
 
 

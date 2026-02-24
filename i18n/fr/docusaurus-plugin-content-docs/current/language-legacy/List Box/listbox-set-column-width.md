@@ -5,55 +5,54 @@ slug: /commands/listbox-set-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *object* : Text ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *object* : Variable ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( {* ;} *objet* ; *largeur* {; *largeurMini* {; *largeurMaxi*}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| width | Integer | &#8594;  | Column width (in pixels) |
-| minWidth | Integer | &#8594;  | Minimum column width (in pixels) |
-| maxWidth | Integer | &#8594;  | Maximum column width (in pixels) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| largeur | Integer | &#8594;  | Largeur de colonne (en pixels) |
+| largeurMini | Integer | &#8594;  | Largeur minimale de colonne (en pixels) |
+| largeurMaxi | Integer | &#8594;  | Largeur maximale de colonne (en pixels) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|12|Renamed|
-|2004|Created|
+|12|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->The **LISTBOX SET COLUMN WIDTH** command allows you to modify through programming the width of one or all column(s) of the object (list box, column or header) set using the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->La commande **LISTBOX SET COLUMN WIDTH** permet de modifier par programmation la largeur d’une ou de toutes les colonne(s) de l’objet (list box, colonne ou en-tête) désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (a string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Pass the new width (in pixels) of the object in the *width* parameter. 
+Passez dans le paramètre *largeur* la nouvelle largeur (en pixels) de l’objet. 
 
-If *object* sets the list box object, all columns of the list box are resized.
+* Si *objet* désigne l’objet list box, toutes les colonnes de la list box sont redimensionnées.
+* Si *objet* désigne une colonne ou un en-tête de colonne, seule la colonne désignée est redimensionnée.
 
-If *object* sets a column or a column header, only the column set is resized. 
+Les paramètres optionnels *largeurMini* et *largeurMaxi* permettent de fixer des limites au redimensionnement manuel de la colonne. Vous pouvez passer dans *largeurMini* et *largeurMaxi* respectivement des valeurs de largeur minimale et maximale, exprimées en pixels. Si vous souhaitez que l’utilisateur ne puisse pas redimensionner la colonne, il suffit de passer la même valeur dans *largeur*, *largeurMini* et *largeurMaxi*.
 
-The optional *minWidth* and *maxWidth* parameters can be used to set limits for the manual resizing of the column You can pass, respectively, the minimum and maximum width expressed in pixels in the *minWidth* and *maxWidth* parameters. If you want users to be unable to resize the column, you can pass the same value in *width*, *minWidth* and *maxWidth*.
-
-## See also 
+## Voir aussi 
 
 [LISTBOX Get column width](listbox-get-column-width.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 833 |
+| Numéro de commande | 833 |
 | Thread safe | no |
 
 

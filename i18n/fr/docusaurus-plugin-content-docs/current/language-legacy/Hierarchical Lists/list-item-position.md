@@ -5,58 +5,58 @@ slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *liste* ; *réfElément* ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef | Integer | &#8594;  | Item reference number |
-| Function result | Integer | &#8592; | Item position in expanded/collapsed lists |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| réfElément | Integer | &#8594;  | Numéro de référence d'élément |
+| Résultat | Integer | &#8592; | Position de l'élément parmi la ou les liste(s) déployée(s)/contractée(s) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.List item position.Summary-->The **List item position** command returns the position of the item whose item reference number is passed in *itemRef*, within the list whose list reference number or object name is passed in *list*.<!-- END REF--> 
+<!--REF #_command_.List item position.Summary-->La commande **List item position** retourne la position de l'élément dont vous avez passé le numéro de référence dans *réfElément* parmi la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list, you can use either syntax. Conversely, if you use several representations of the same list, the syntax based on the object name is required since each representation can have its own expanded/collapsed configuration.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste, vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste, la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de sa propre configuration déployée/contractée.
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists matching this name, the **List item position** command will be applied to the first object whose name corresponds. 
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **List item position** s'appliquera au premier objet dont le nom correspond. 
 
-**Note:** Unlike the other commands of this theme, with this command it is not possible to pass the value 0 in *itemRef* to designate the last item added. 
+**Note :** A la différence des autres commandes de ce thème, cette commande ne permet pas de passer la valeur 0 dans *réfElément* pour désigner le dernier élément ajouté. 
 
-The position is expressed relative to the top item of the main list, using the current expanded/collapsed state of the list and its sublist. 
+La position est exprimée relativement à l'élément supérieur de la liste, en tenant compte de l'état déployé/contracté de la liste et de ses sous-listes. 
 
-The result is therefore a number between 1 and the value returned by [Count list items](count-list-items.md). 
+Le résultat est donc compris entre 1 et la valeur retournée par [Count list items](count-list-items.md). 
 
-If the item is not visible because it is located in a collapsed list, **List item position** expands the appropriate list to make the item visible. 
+Si l'élément n'est pas visible car il est inclus dans une liste contractée, **List item position** déploie la liste correspondante de manière à ce que l'élément devienne visible. 
 
-If the item does not exist, **List item position** returns 0.
+Si l'élément n'existe pas, **List item position** retourne *0*.
 
-## See also 
+## Voir aussi 
 
 [Count list items](count-list-items.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 629 |
+| Numéro de commande | 629 |
 | Thread safe | no |
 
 

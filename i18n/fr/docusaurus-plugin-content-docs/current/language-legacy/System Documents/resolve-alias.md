@@ -5,52 +5,53 @@ slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *aliasPath* : Text ; *targetPath* : Text )<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *cheminAlias* ; *cheminCible* )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aliasPath | Text | &#8594;  | Name or access path of the alias/shortcut |
-| targetPath | Text | &#8592; | Name or access path of the alias/shortcut target |
+| cheminAlias | Text | &#8594;  | Nom ou chemin d’accès complet de l’alias/ du raccourci |
+| cheminCible | Text | &#8592; | Nom ou chemin d’accès complet de la cible de l’alias/du raccourci |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESOLVE ALIAS.Summary-->The RESOLVE ALIAS command returns the full path to the target file or folder of the alias (named shortcut under Windows).<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Summary-->La commande **RESOLVE ALIAS** retourne le chemin d’accès complet du fichier ou dossier cible d’un alias (appelé “raccourci” sous Windows).<!-- END REF--> 
 
-The full path to the alias is passed in *aliasPath*.
+Vous passez dans *cheminAlias* le nom ou le chemin d’accès complet de l’alias. 
 
-Once the command has been executed, the *targetPath* variable contains the full path to the target file or folder of the alias and the OK system variable is set to 1.
+**Note :** Sous Windows, les raccourcis sont des fichiers dont l’extension est “.LNK”. Si vous ne passez pas cette extension, la commande l’ajoute automatiquement. 
 
-If the path passed in *aliasPath* corresponds to a file and not an alias, *targetPath* returns the path of the file and the OK system variable is set to 0.
+Après l’exécution de la commande, la variable *cheminCible* contient le chemin d’accès complet du fichier ou dossier cible de l’alias et la variable système OK prend la valeur 1.  
+Si le chemin passé dans *cheminAlias* correspond à un fichier et non à un alias, *cheminCible* retourne le chemin d’accès du fichier et la variable système OK prend la valeur 0.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If *aliasPath* does specify an alias/shortcut, the OK system variable is set to 1\. If *aliasPath* specifies a standard file, the OK system variable is set to 0.
+Si *cheminAlias* désigne bien un alias/raccourci, la variable système OK prend la valeur 1\. Si *cheminAlias* désigne un fichier standard, la variable système OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [CREATE ALIAS](create-alias.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 695 |
+| Numéro de commande | 695 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

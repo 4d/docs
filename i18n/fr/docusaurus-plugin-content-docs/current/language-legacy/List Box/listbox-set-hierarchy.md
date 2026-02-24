@@ -5,71 +5,72 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *object* : Text ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *object* : Variable ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( {* ;} *objet* ; *hiérarchique* {; *hiérarchie*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| hierarchical | Boolean | &#8594;  | True = hierarchical list box<br/>False = non-hierarchical list box |
-| hierarchy | Pointer array | &#8594;  | Array of pointers |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| hiérarchique | Boolean | &#8594;  | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
+| hiérarchie | Pointer array | &#8594;  | Tableau de pointeurs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->The **LISTBOX SET HIERARCHY** command lets you configure the list box object designated by the *object* and *\** parameters in hierarchical or non-hierarchical mode.<!-- END REF--> 
+<!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->La commande **LISTBOX SET HIERARCHY** vous permet de configurer l'objet list box désigné par les paramètres *objet* et *\** en mode hiérarchique ou non.<!-- END REF--> 
 
-**Note:** This command only functions with list boxes based on arrays. When this command is used with a list box based on selections, it does nothing.
+**Note :** Cette commande fonctionne uniquement avec les list box basées sur des tableaux. Si elle est utilisée avec une list box basée sur des sélections, elle ne fait rien.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The Boolean *hierarchical* parameter lets you specify the list box mode:
+Le paramètre booléen *hiérarchique* vous permet de définir le mode de la list box :
 
-* if you pass True, the list box is displayed in hierarchical mode,
-* if you pass False, the list box is displayed in non-hierarchical mode (standard array mode).
+* si vous passez Vrai, la list box est affichée en mode hiérarchique,
+* si vous passez Faux, la list box est affichée en mode non hiérarchique (mode tableau standard).
 
-When you pass a list box in hierarchical mode, certain properties are automatically restricted. For more information, please refer to the *Managing Hierarchical List Boxes* section. 
+Lorsque vous passez une list box en mode hiérarchique, certaines propriétés sont automatiquement restreintes. Pour plus d’informations, reportez-vous à la section *Gestion des List box hiérarchiques*. 
 
-The *hierarchy* parameter is used to designate the arrays of the list box to be used to construct the hierarchy (see example). If you display the list box in hierarchical mode and omit this parameter:
+Le paramètre *hiérarchie* vous permet de désigner les tableaux de la list box à utiliser pour construire la hiérarchie (cf. exemple).  
+Si vous affichez la list box en mode hiérarchique et omettez ce paramètre :
 
-* if the list box is already in hierarchical mode, the command does nothing.
-* if the list box is in non-hierarchical mode and has never been declared hierarchical, the first array is used as the hierarchy by default.
-* if the list box is in non-hierarchical mode but has previously been declared hierarchical, the last hierarchy is re-established.
+* si la list box est déjà en mode hiérarchique, la commande ne fait rien.
+* si la list box est en mode non hiérarchique et n’a jamais été déclarée hiérarchique, le premier tableau est utilisé comme hiérarchie par défaut.
+* si la list box est en mode non hiérarchique mais avait été déclarée hiérarchique précédemment, la dernière hiérarchie est rétablie.
 
-## Example 
+## Exemple 
 
-Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list box:
+Définition des tableaux tPays, tRegion et tVille comme hiérarchie d’une list box :
 
 ```4d
- ARRAY POINTER($ArrHierarch;3)
- $ArrHierarch{1}:=->aCountry //First break level
- $ArrHierarch{2}:=->aRegion //Second break level
- $ArrHierarch{3}:=->aCity //Third break level
- LISTBOX SET HIERARCHY(*;"mylistbox";True;$ArrHierarch)
+ ARRAY POINTER($TabHierarch;3)
+ $TabHierarch{1}:=->tPays //Premier niveau de rupture
+ $TabHierarch{2}:=->tRegion //Deuxième niveau de rupture
+ $TabHierarch{3}:=->tVille //Troisième niveau de rupture
+ LISTBOX SET HIERARCHY(*;"mylistbox";True;$TabHierarch)
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1098 |
+| Numéro de commande | 1098 |
 | Thread safe | no |
 
 

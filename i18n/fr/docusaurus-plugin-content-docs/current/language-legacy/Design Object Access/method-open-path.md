@@ -5,51 +5,49 @@ slug: /commands/method-open-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *path* : Text {; *line* : Real}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *chemin* {; *line*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | Path of method to open |
-| line | Real | &#8594;  | Line number |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text | &#8594;  | Chemin de la méthode à ouvrir |
+| line | Number | &#8594;  | Line number |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Modified|
-|13|Created|
+|19|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD OPEN PATH.Summary-->The **METHOD OPEN PATH** command opens, in the 4D Method editor, the method whose internal pathname is passed in the *path* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD OPEN PATH.Summary-->La commande **METHOD OPEN PATH** ouvre, dans l’éditeur de méthodes de 4D, la méthode dont vous avez passé le chemin d’accès interne dans le paramètre *chemin*.<!-- END REF-->
 
-The command is asynchronous, it returns immediately to the calling method and does not wait for the method editor to be open. 
+Cette commande est asynchrone : elle retourne immédiatement à la méthode d'appel et n'attend pas l'ouverture de l'éditeur de méthode.
 
-This command can open all method types and class functions. For more details, see *Path syntax*.
+Cette commande peut ouvrir tous les types de méthodes (objet, formulaire, trigger, projet ou base). La méthode doit déjà exister. Si le paramètre *chemin* ne correspond pas à une méthode existante, l’erreur -9801 "Impossible d’ouvrir la méthode" est retournée. 
 
-The method must already exist. If the *path* parameter does not correspond to an existing method, the error -9801 "Cannot open method" is returned.
+Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated
+## Voir aussi 
 
-## See also 
-
-*Design Object Access Commands*  
+*Commandes du thème Accès objets développement*  
 [METHOD Get path](method-get-path.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1213 |
+| Numéro de commande | 1213 |
 | Thread safe | no |
 
 

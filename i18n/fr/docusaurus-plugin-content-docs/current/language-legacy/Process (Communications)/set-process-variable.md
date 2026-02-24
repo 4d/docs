@@ -5,84 +5,85 @@ slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *expr* : Variable {; ...(*dstVar* : Variable ; *expr* : Variable)} )<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* ; *varDestination* ; *exprSource* {; *varDestination2* ; *exprSource2* ; ... ; *varDestinationN* ; *exprSourceN*} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Destination process number |
-| dstVar | Variable | &#8594;  | Destination variable |
-| expr | Variable | &#8594;  | Source expression (or source variable) |
+| process | Integer | &#8594;  | Numéro de process de destination |
+| varDestination | Variable | &#8594;  | Variable de destination |
+| exprSource | Variable | &#8594;  | Expression source (ou variable source) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PROCESS VARIABLE.Summary-->The **SET PROCESS VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values passed in *expr1* (*expr2*, etc.).<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Summary-->La commande **SET PROCESS VARIABLE** écrit la ou les valeur(s) de *exprSource* (*exprSource2*, etc.) dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont le numéro est passé dans *process*.<!-- END REF-->
 
-Each destination variable can be a variable or an array element. However, see the restrictions listed later in this section.
+Chaque variable de destination peut être une variable ou un élément de tableau. Tenez cependant compte des restrictions évoquées ci-dessous.
 
-For each couple of *dstVar;expr* variables, the expression must be of a type compatible with the destination variable, otherwise you may end up with a meaningless value in the variable. In interpreted mode, if a destination variable does not exist, it is created and assigned with the expression.
+Pour chaque association *varDestination;exprSource*, le type de l'expression doit être compatible avec la variable de destination, sinon vous pourrez obtenir des variables avec des valeurs incorrectes. En mode interprété, si la variable de destination n'existe pas, elle est créée et reçoit l'expression. En mode compilé, si aucune variable n'est associée au process de destination, une erreur est retournée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-The current process “pokes” the variables of the destination process—the destination process is not warned in any way that another process is writing the instance of its variables.
+Lorsque le process courant écrit les variables du process de destination, ce dernier n'est averti en aucune manière de l'écriture de l'instance de ses variables par un autre process. 
 
-**4D Server:** Using 4D Client, you can write variables in a destination process executed on the server machine (stored procedure). To do so, put a minus sign before the process ID number in the *process* parameter.  
-“Intermachine” process communication, provided by the commands **SET PROCESS VARIABLE**, [GET PROCESS VARIABLE](get-process-variable.md) and [VARIABLE TO VARIABLE](variable-to-variable.md), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+**4D Server :** A partir d'un 4D Client, vous pouvez écrire des variables dans un process de destination exécuté sur le poste serveur (procédure stockée). Pour cela, passez dans process le numéro du process serveur en négatif, c'est-à-dire précédé du signe - (moins).   
+Attention, la communication process “intermachine” permise par les commandes **SET PROCESS VARIABLE**, [GET PROCESS VARIABLE](get-process-variable.md) et [VARIABLE TO VARIABLE](variable-to-variable.md) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
 
-**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **SET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As client machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
+**Astuce :** Si vous ne connaissez pas le numéro du process serveur de destination, vous pouvez tout de même écrire dans les variables interprocess du serveur. Pour cela, il vous suffit de passer toute valeur négative dans *process*. En d'autres termes, il n'est pas nécessaire de connaître précisément le numéro d'un process exécuté sur le serveur pour utiliser **SET PROCESS VARIABLE** avec des variables interprocess du serveur.   
+Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](on-server-startup-database-method.md). Comme les postes clients ne connaissent pas automatiquement le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
 
 ### Restrictions 
 
-SET PROCESS VARIABLE does not accept local variables as destination variables. 
+**SET PROCESS VARIABLE** n'accepte pas de variables locales comme variables de destination. 
 
-SET PROCESS VARIABLE accepts any type of destination process or interprocess variable, except:
+**SET PROCESS VARIABLE** accepte tout type de variable process ou interprocess de destination, à l'exception :
 
-* Pointers
-* Arrays of any type. To write an array as a whole from one process to another one, use the command [VARIABLE TO VARIABLE](variable-to-variable.md). Note, however, that SET PROCESS VARIABLE allows you to write the element of an array.
-* You cannot write the element of an array of pointers or the element of a two-dimensional array.
+* des variables de type Pointeur.
+* des tableaux de tous types. Pour écrire un tableau entier d'un process vers un autre, utilisez la commande [VARIABLE TO VARIABLE](variable-to-variable.md). Notez cependant que **SET PROCESS VARIABLE** vous permet d'écrire des éléments de tableaux.
+* des éléments de tableaux de pointeurs et des éléments de tableaux à deux dimensions.
 
-The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
+Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, la commande ne fait rien.
 
-## Example 1 
+## Exemple 1 
 
-This line of code sets (to the empty string) the text variable *vtCurStatus* of the process whose number is *$vlProcess*:
+La ligne de code suivante affecte une chaîne vide à la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* :
 
 ```4d
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;"")
 ```
 
-## Example 2 
+## Exemple 2 
 
-This line of code sets the text variable *vtCurStatus* of the process whose number is *$vlProcess* to the value of the variable *$vtInfo* from the executing method in the current process:
+La ligne de code suivante affecte la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* à la valeur de la variable *$vtInfo* depuis la méthode en cours d'exécution du process courant : 
 
 ```4d
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This line of code sets the text variable *vtCurStatus* of the process whose number is *$vlProcess* to the value of the same variable in the current process:
+La ligne de code suivante affecte la variable Texte *vtCurStatus* du process dont le numéro est *$vlProcess* à la valeur de la même variable dans le process courant : 
 
 ```4d
  SET PROCESS VARIABLE($vlProcess;vtCurStatus;vtCurStatus)
 ```
 
-**Note:** The first *vtCurStatus* designates the instance of the variable in the destination process. The second *vtCurStatus* designates the instance of the variable in the current process.
+**Note :** La première *vtCurStatus* désigne l'instance de la variable dans le process de destination, la seconde *vtCurStatus* désigne l'instance de la variable dans le process courant.
 
-## Example 4 
+## Exemple 4 
 
-This example sequentially sets to uppercase all elements of a process array from the process indicated by *$vlProcess*:
+L'exemple suivant place séquentiellement en majuscules les éléments d'un tableau process depuis le process désigné par *$vlProcess*:
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
@@ -92,28 +93,28 @@ This example sequentially sets to uppercase all elements of a process array from
  End for
 ```
 
-**Note:** In this example, the process variable *vl\_IPCom\_Array* contains the size of the array *at\_IPCom\_Array* and must be maintained by the source/destination process.
+**Note :** Dans cet exemple, la variable process *vl\_IPCom\_Array* doit être gérée par les process source/destination et contient la taille du tableau *at\_IPCom\_Array*.
 
-## Example 5 
+## Exemple 5 
 
-This example writes the destination process instance of the variables *v1*, *v2* and *v3* using the instance of the same variables from the current process:
+L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le process de destination à partir de l'instance de ces mêmes variables dans le process courant :
 
 ```4d
  SET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-## See also 
+## Voir aussi 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
+*Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
-[Processes](../Develop/processes.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 370 |
+| Numéro de commande | 370 |
 | Thread safe | no |
 
 

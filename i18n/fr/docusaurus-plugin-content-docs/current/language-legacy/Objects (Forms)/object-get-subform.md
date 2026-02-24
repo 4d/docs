@@ -5,59 +5,59 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *object* : Text ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<br/>**OBJECT GET SUBFORM** ( *object* : Variable, Field ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *objet* ; *ptrTable* ; *sousFormDetail* {; *sousFormListe*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| tablePtr | Table | &#8592; | Pointer to table of form |
-| detailSubform | Text | &#8592; | Name of detail form of subform |
-| listSubform | Text | &#8592; | Name of list form of subform (table form) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| ptrTable | Table | &#8592; | Pointeur vers la table du formulaire |
+| sousFormDetail | Text | &#8592; | Nom du formulaire détail du sous-formulaire |
+| sousFormListe | Text | &#8592; | Nom du formulaire liste du sous-formulaire (formulaire table) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|13|Created|
+|16 R6|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET SUBFORM.Summary-->The **OBJECT GET SUBFORM** command gets the name(s) of the form(s) associated with the subform object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Summary-->La commande **OBJECT GET SUBFORM** vous permet d’obtenir les noms du ou des formulaire(s) associé(s) à l’objet sous-formulaire désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In the *tablePtr* parameter, the command returns a pointer to the table of the form(s) used. If the subform uses a project form, this parameter contains [Is nil pointer](is-nil-pointer.md). 
+La commande retourne dans le paramètre *ptrTable* un pointeur vers la table du ou des formulaire(s) utilisé(s). Si le sous-formulaire utilise un formulaire projet, le paramètre contient [Is nil pointer](is-nil-pointer.md). 
 
-In the *detailSubform* and (optionally) *listSubform* parameters, the command returns:
+Dans les paramètres *sousFormDetail* et (optionnellement) *sousFormListe*, la commande retourne :
 
-* the form name if the subform was created in the 4D form editor.
-* the subform's "name" attribute if the subform was created from a .json file or a 4D object.  
-In both cases, if the "name" attribute is undefined, the command will return:  
-   * for a .json file, the name of the .json file (without extension)  
-   * for an object, "untitled"
+* le nom du formulaire détaillé si le sous-formulaire a été créé dans l'éditeur de formulaires de 4D,
+* la valeur de l'attribut "name" du sous-formulaire s'il a été créé à partir d'un fichier .json ou d'un objet 4D.  
+Dans les deux cas, si l'attribut "name" est indéfini, la commande retourne :  
+   * pour un fichier .json, le nom du fichier .json (sans extension)  
+   * pour un objet, "untitled"
 
-If there is no list form, an empty string is returned in the *listSubform* parameter.
+S’il n’y a pas de formulaire liste, une chaîne vide est retournée dans le paramètre *sousFormListe*. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1139 |
+| Numéro de commande | 1139 |
 | Thread safe | no |
 
 

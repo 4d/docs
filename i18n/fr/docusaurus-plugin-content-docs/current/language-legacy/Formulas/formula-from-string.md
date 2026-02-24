@@ -4,50 +4,46 @@ title: Formula from string
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R3|Support of *context* parameter |
-|17 R6|Renamed New formula from string -> Formula from string|
-|17 R3|Added|
+| Release | Modifications                                                             |
+| ------- | ------------------------------------------------------------------------- |
+| 20 R3   | Prise en charge du paramètre *context*                                    |
+| 17 R6   | Renommée : New formula from string -> Formula from string |
+| 17 R3   | Ajout                                                                     |
 
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
 
-
 <!-- REF #_command_.Formula from string.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|formulaString|Text|&#8594; |Text formula to be returned as object|
-|context|Integer|&#8594; |`sk execute in current database` (default) or `sk execute in host database`|
-|Result|4D.Function|&#8592;|Native object encapsulating the formula|
-</div>
+| Paramètres    | Type                        |                             | Description                                                                                       |
+| ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                        | &#8594; | Formule texte à retourner comme objet                                                             |
+| context       | Integer                     | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
+| Résultat      | 4D.Function | &#8592; | Objet natif encapsulant la formule                                                                |
+
 <!-- END REF -->
-
 
 ## Description
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  *formulaString* can be as simple as a single value or complex, such as a project method with parameters.
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` basé sur *formulaString* et, éventuellement, *context*<!-- END REF -->.  *formulaString* peut être simple comme une valeur unique ou complexe comme une méthode projet avec des paramètres.
 
-This command is similar to [`Formula`](formula.md), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Using syntax with tokens is highly advised with this command.
+Cette commande est similaire à [`Formula`](formula.md), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula`, sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 
->Because local variable contents can not be accessed by name in compiled mode, they can not be used in *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
+> Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
 
-If the formula is created in a component, you might consider using the *context* parameter. By default, since formulas are executed in the context in which they were created, it will not be able to call a variable, function, or a non-shared method of the host database. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. The following constants are available:
+Si la formule est créée dans un composant, vous pouvez envisager d'utiliser le paramètre *context* . Par défaut, les formules étant exécutées dans le contexte dans lequel elles ont été créées, elles ne pourront pas appeler une variable, une fonction ou une méthode non partagée de la base de données hôte. Dans ce cas, vous pouvez passer la constante `sk execute in host database` au paramètre *context* pour exécuter l'objet `4D.Function` dans le contexte de la base de données hôte. Les constantes suivantes sont disponibles :
 
-|Constant|Type|Description|
-|---|---|----
-|`sk execute in current database`|Integer|(default) The formula will be executed in the context it was created|
-|`sk execute in host database`|Integer|The formula will be executed in the host database context|
+| Constante                        | Type    | Description                                                                                   |
+| -------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| `sk execute in current database` | Integer | (par défaut) La formule sera exécutée dans le contexte où elle a été créée |
+| `sk execute in host database`    | Integer | La formule sera exécutée dans le contexte de la base de données de hôte                       |
 
+## Exemple
 
-## Example
-
-The following code will create a dialog accepting a formula in text format:
+Le code suivant permettra de créer un dialogue acceptant une formule dans un format texte :
 
 ```4d
  var $textFormula : Text
@@ -61,29 +57,20 @@ The following code will create a dialog accepting a formula in text format:
 
 ![](../assets/en/API/formulaDialog.png)
 
-
-...and execute the formula:
-
+... et exécute la formule :
 
 ![](../assets/en/API/formulaAlert.png)
 
+## Voir également
 
+[Formula](formula.md)\
+[Parse formula](../commands-legacy/parse-formula.md)
 
+## Propriétés
 
-## See also 
-
-[Formula](formula.md)  
-[Parse formula](./commands/parse-formula)  
-
-
-
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1601 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1601 |
+| Thread safe        | oui  |
 
 

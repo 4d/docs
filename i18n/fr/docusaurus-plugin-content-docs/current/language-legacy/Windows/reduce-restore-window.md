@@ -5,48 +5,48 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* : Integer )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number |
+| window | Integer | &#8594;  | Numéro de référence de la fenêtre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20 R5|Created|
+|20 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->The **REDUCE RESTORE WINDOW** command reduces/expands the window whose reference number was passed in *window* to/from the taskbar on Windows or the dock on macOS.<!-- END REF--> 
+<!--REF #_command_.REDUCE RESTORE WINDOW.Summary-->La commande **REDUCE RESTORE WINDOW** réduit/agrandit la fenêtre dont le numéro de référence a été transmis dans la fenêtre vers/depuis la barre des tâches sous Windows ou le dock sous macOS.<!-- END REF--> 
 
-The command toggles the window state:
+La commande permet de basculer l'état de la fenêtre :
 
-* If the window was displayed, the command reduces the window to the taskbar or dock.
-* If the window was reduced, the command restores the window to its previous state.
+* Si la fenêtre était affichée, la commande réduit la fenêtre à la barre des tâches ou au dock.
+* Si la fenêtre a été réduite, la commande rétablit la fenêtre à son état précédent.
 
-**Note:** On macOS, the command is asynchronous.
+**Note :** Sur macOS, la commande est asynchrone.
 
-## See also 
+## Voir aussi 
 
 [Is window reduced](is-window-reduced.md)  
 [MAXIMIZE WINDOW](maximize-window.md)  
 [MINIMIZE WINDOW](minimize-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1829 |
+| Numéro de commande | 1829 |
 | Thread safe | no |
 
 

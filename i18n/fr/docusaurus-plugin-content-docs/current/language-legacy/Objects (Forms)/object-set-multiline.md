@@ -5,62 +5,62 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Variable, Field ; *multiline* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( {* ;} *objet* ; *multiLigne* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| multiline | Integer | &#8594;  | Status of multiline property |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| multiLigne | Integer | &#8594;  | Statut de la propriété multiligne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET MULTILINE.Summary-->The **OBJECT SET MULTILINE** command modifies the "Multiline" property of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Summary-->La commande **OBJECT SET MULTILINE** vous permet de modifier la propriété "Multilignes" de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-The "Multiline" property controls two parameters related to the display and printing of text areas: display of words located at the end of the line in single-line areas and the automatic insertion of line returns. For more information, refer to *Multiline* in the *Design Reference* manual. If you apply this command to an object that does not support this property, the command does nothing. 
+La propriété "Multilignes" permet de contrôler deux paramètres relatifs à l’affichage et à l’impression des zones de texte : l’affichage des mots situés en fin de ligne dans les zones mono-lignes et l’insertion automatique de retours à la ligne. Pour plus d’informations, reportez-vous au paragraphe *Multilignes* du manuel *Mode Développement*. Si vous appliquez cette commande à un objet ne prenant pas en charge cette propriété, la commande ne fait rien. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *multiline* parameter, pass the new value of the option that you want to set. You can use the following constants, found in the "*Form Objects (Properties)*" theme:
+Passez dans le paramètre *multiLigne* la nouvelle valeur de l’option que vous souhaitez définir. Vous pouvez utiliser les constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant       | Type    | Value | Comment                                                                                                                                                                                                                                                                                                              |
-| -------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Multiline Auto | Integer | 0     | In single-line areas, words located at the end of lines are truncated and there are no line returns. <br/>In multiline areas, 4D carries out automatic line returns.                                                                                                                                         |
-| Multiline No   | Integer | 2     | There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified.                                                                           |
-| Multiline Yes  | Integer | 1     | In single-line areas, the text is displayed up to the first carriage return or until the last word that can be displayed entirely. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.<br/>In multiline areas, 4D carries out automatic line returns. |
+| Constante      | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                            |
+| -------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Multiline Auto | Entier long | 0      | Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne. <br/>Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques                                                                                                                                         |
+| Multiline No   | Entier long | 2      | Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si le champ ou la variable alpha ou texte contient des retour chariots, le texte situé après le premier retour chariot est effacé dès que la zone est modifié                                                                                                |
+| Multiline Yes  | Entier long | 1      | Dans les zones mono-lignes, le texte est affiché jusqu’au premier retour chariot ou au dernier mot affichable en entier. 4D insère des retours à la ligne, il est possible de faire défiler le contenu de la zone en appuyant sur la touche flèche basse.<br/>Dans les zones multi-lignes, 4D effectue des retours à la ligne automatiques |
 
   
-## Example 
+## Exemple 
 
-You want to prohibit multiple lines in an entry area:
+Vous souhaitez interdire le multiligne dans une zone de saisie :
 
 ```4d
- OBJECT SET MULTILINE(*;"vEntry";Multiline No)
+ OBJECT SET MULTILINE(*;"vSaisie";Multiline No)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get multiline](object-get-multiline.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1253 |
+| Numéro de commande | 1253 |
 | Thread safe | no |
 
 

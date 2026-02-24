@@ -5,85 +5,80 @@ slug: /commands/web-get-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nameArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
+<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *tabNoms* ; *tabValeurs* )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nameArray | Text array | &#8592; | Web form variable names |
-| valueArray | Text array | &#8592; | Web form variable values |
+| tabNoms | Text array | &#8592; | Noms des variables du formulaire Web |
+| tabValeurs | Text array | &#8592; | Valeurs des variables du formulaire Web |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2004|Modified|
-|<6|Created|
+|13|Renommé|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB GET VARIABLES.Summary-->The **WEB GET VARIABLES** command fills the text arrays *nameArray* and *valueArray* with the variable names and values contained in the Web form “submitted” (i.e. sent to the Web server).<!-- END REF-->
+<!--REF #_command_.WEB GET VARIABLES.Summary-->La commande **WEB GET VARIABLES** remplit les tableaux texte *tabNoms* et *tabValeurs* avec, respectivement, les noms et les valeurs des variables contenues dans un formulaire Web “soumis” (c’est-à-dire envoyé) au serveur Web.<!-- END REF-->   
+Cette commande récupère la valeur de toutes les variables pouvant être incluses dans des pages HTML : zones de saisie, boutons, cases à cocher, boutons radio, pop up menus, listes d’options... 
 
-This command gets the value for all the variables which can be included in HTML pages: text area, button, check box, radio button, pop up menu, choice list...
+**Note :** Dans le cas des cases à cocher, le nom de la variable et sa valeur ne sont retournés que si la case est effectivement cochée. 
 
-**Note:** Regarding check boxes, the variable name and value are returned only if the check box has been actually checked.
+La commande fonctionne quel que soit le type d’URL ou de formulaire (méthode POST ou GET) envoyé au serveur Web.   
+Cette commande peut être appelée, selon les besoins, dans la [On Web Connection](./on-web-connection-database-method.md) ou toute autre méthode 4D qui résulte de la soumission d’un formulaire.
 
-This command is valid regardless of the type of URL or form (POST or GET method) sent to the Web server.
+### Précisions sur les formulaires Web et les actions associées 
 
-This command can be called, if necessary, in the [On Web Connection](./on-web-connection-database-method.md) database method) or any other 4D method resulting from a form submission.
+Un formulaire est composé de “zones de saisie” (zones de texte, boutons, cases à cocher), chacune ayant un nom. Lorsqu’un formulaire est “soumis” au serveur Web (une requête est envoyée au serveur), la requête comporte, entre autres, la liste des zones de saisie et leurs valeurs respectives.  
+Il y a deux “méthodes” pour soumettre un formulaire (4D accepte indifféremment l’une ou l’autre) : 
 
-### About Web forms and their associated actions 
+* POST, généralement utilisée pour l’insertion de données dans le serveur Web — vers une base de données,
+* GET, généralement utilisée pour l’interrogation du serveur Web — données en provenance d’une base de données.
 
-Each form contains named data entry area (text area, buttons, checkboxes).  
-When a form is submitted (a request is sent to the Web server), the request contains (within others) the list of the data entry areas and their associated values.  
-A form can be submitted through two methods (both can be used with 4D): 
+## Exemple 
 
-* POST, usually used to add data into the Web server - to a database,
-* GET, usually used to request the Web server - data coming from a database.
+Un formulaire contient deux champs, vNOM et vVILLE, qui reçoivent les valeurs “MARTIN” et “PARIS”. L’action associée au formulaire est “*/4DACTION/WEBFORM*”.
 
-## Example 
+* Si la méthode du formulaire est POST (cas le plus souvent utilisé), les données saisies ne seront pas visibles dans l’URL (c’est-à-dire http://127.0.0.1/4DACTION/WEBFORM).
+* Si la méthode du formulaire est GET, les données seront visibles dans l’URL (c’est-à-dire http://127.0.0.1/4DACTION/WEBFORM?vNOM=MARTIN&vVILLE=PARIS).
 
-A form contains two fields, vName and vCity with “ROBERT” and “DALLAS” values. The action associated to the form is “/4DACTION/WEBFORM”.
-
-* If the form method is POST (most frequently used), the data entered will not be visible in the URL (http://127.0.0.1/4DACTION/WEBFORM).
-* If the form method is GET, the data entered will be visible in the URL (http://127.0.0.1/4DACTION/WEBFORM?vNAME=ROBERT&vCITY=DALLAS).
-
-The WEBFORM method can be as follows:
+La méthode WEBFORM peut être de la forme suivante :
 
 ```4d
- ARRAY TEXT($anames;0)
- ARRAY TEXT($avalues;0)
- WEB GET VARIABLES($anames;$avalues)
+ ARRAY TEXT($tnoms;0)
+ ARRAY TEXT($tvaleurs;0)
+ WEB GET VARIABLES($tnoms;$tvaleurs)
 ```
 
-The result will be:
+On obtient alors :
 
 ```4d
- $anames{1}="vNAME"
- $anames{2}="vCITY"
- $avalues{1}="ROBERT"
- $avalues{2}="DALLAS"
+ $tnoms{1}="vNOM"
+ $tnoms{2}="vVILLE"
+ $tvaleurs{1}="MARTIN"
+ $tvaleurs{2}="PARIS"
 ```
 
-The vNAME variable contains ROBERT and the vCITY variable contains DALLAS.
-
-## See also 
+## Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 683 |
+| Numéro de commande | 683 |
 | Thread safe | yes |
 
 

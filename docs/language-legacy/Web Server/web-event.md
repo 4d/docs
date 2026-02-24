@@ -1,6 +1,7 @@
 ---
 id: web-event
 title: Web Event
+slug: /commands/web-event
 displayed_sidebar: docs
 ---
 

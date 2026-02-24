@@ -5,71 +5,69 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : Integer } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomsObjets* {; *numPage* }<br/>*FORM GET ENTRY ORDER** ( *nomsObjets* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectNames | Text array | &#8592; | Object names sorted by entry order |
-| pageNumber | Integer | &#8594;  | Number of the page for which to get the defined entry order (current page if omitted) |
-| * | Operator | &#8594;  | Get the actual entry order of the current page |
+| nomsObjets | Text array | &#8592; | Noms des objets triés par ordre de saisie |
+| numPage &#124; * | Entier long, Opérateur | &#8594;  | Numéro de la page dont vous voulez lire l'ordre de saisie défini (page courante si omis), ou * pour obtenir l'ordre de saisie actuel de la page courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Created|
+|16 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
+<!--REF #_command_.FORM GET ENTRY ORDER.Summary-->La commande **FORM GET ENTRY ORDER** retourne dans *nomsObjets* les noms des objets dans l'ordre de saisie du formulaire courant.<!-- END REF--> 
 
-* If you do not pass the *\** parameter, **FORM GET ENTRY ORDER** returns the entry order as it was previously declared with the [FORM SET ENTRY ORDER](form-set-entry-order.md) command. You can omit or pass the *pageNumber* parameter:  
-   * if you omit the *pageNumber* parameter, the *objectNames* array returns the entry order for the current page,  
-   * if you pass the *pageNumber* parameter, the *objectNames* array returns the entry order for the *pageNumber* page.  
-In both cases, if the [FORM SET ENTRY ORDER](form-set-entry-order.md) command was not previously called for the current form, the *objectNames* array is returned empty.
-* If you pass the *\** as parameter, **FORM GET ENTRY ORDER** returns the actual entry order of the current page, i.e. the *objectNames* array only contains **valid** object names (for more information on valid objects, please refer to the [FORM SET ENTRY ORDER](form-set-entry-order.md) command description). The actual form entry order can be:  
-   * the default form entry order, based upon object layering,  
-   * or the form editor's entry order (see *Modifying data entry order*), if it has been used,  
-   * or the entry order set by a call to the [FORM SET ENTRY ORDER](form-set-entry-order.md) command in the current process, if it has been used.  
-The actual entry order always includes objects from page 0 and from inherited form(s).
+* Si vous ne passez pas le paramètre *\**, **FORM GET ENTRY ORDER** retourne l'ordre de saisie tel qu'il a été précédemment déclaré avec la commande [FORM SET ENTRY ORDER](form-set-entry-order.md). Avec cette syntaxe, vous pouvez omettre ou passer le paramètre *numPage* :  
+   * si vous omettez le paramètre *numPage*, le tableau *nomsObjets* retourne l'ordre de saisie des objets de la page courante.  
+   * si vous passez le paramètre *numPage*, le tableau *nomsObjets* retourne l'ordre de saisie des objets de la page dont le numéro est *numPage*.  
+Dans les deux cas, si la commande [FORM SET ENTRY ORDER](form-set-entry-order.md) n'a pas été précédemment appelée pour le formulaire courant, le tableau *nomsObjets* est retourné vide.
+* Si vous passez le paramètre *\**, **FORM GET ENTRY ORDER** retourne l'ordre de saisie actuel de la page courante, c'est-à-dire que le tableau *nomsObjets* contient seulement les noms d'objets **valides** (pour plus d'informations sur les objets valides, veuillez vous référer à la description de la commande [FORM SET ENTRY ORDER](form-set-entry-order.md)). L'ordre de saisie actuel du formulaire peut être :  
+   * l'ordre de saisie par défaut du formulaire, basé sur le plan des objets,  
+   * ou l'ordre de saisie de l'éditeur de formulaire (voir *Modifier l'ordre de saisie*), s'il a été défini,  
+   * ou l'ordre de saisie fixé par un appel à la commande [FORM SET ENTRY ORDER](form-set-entry-order.md) dans le process courant, si elle a été appelée.  
+L'ordre de saisie actuel inclut toujours les objets de la page 0 et des formulaires hérités.
 
-**Note:** The entry order within a subform is not returned when this command is applied to the parent form. 
+**Note :** L'ordre de saisie dans un sous-formulaire n'est pas retourné lorsque la commande s'applique au formulaire parent. 
 
-## Example 
+## Exemple 
 
-You want to exclude some objects from the current entry order:
+Vous voulez exclure certains objets de l'ordre de saisie :
 
 ```4d
  ARRAY TEXT($arrTabOrderObject;0)
  var $vElem : Integer
- 
- FORM GET ENTRY ORDER($arrTabOrderObject;*) //get the actual entry order
+ FORM GET ENTRY ORDER($arrTabOrderObject;*)  //on lit l'ordre de saisie actuel
  Repeat
-    $vElem:=Find in array($arrTabOrderObject;"vTax@")
-    If($vElem>0) //exclude objects whose name starts with "vTax" from data entry order
+    $vElem:=Find in array($arrTabOrderObject;"Tot@")
+    If($vElem>0)  // On exclut de l'ordre de saisie les objets dont le nom commence par "Tot"
        DELETE FROM ARRAY($arrTabOrderObject;$vElem)
     End if
  Until($vElem<0)
- FORM SET ENTRY ORDER($arrTabOrderObject) //apply the new entry order
+ FORM SET ENTRY ORDER($arrTabOrderObject)  // On applique le nouvel ordre de saisie
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM SET ENTRY ORDER](form-set-entry-order.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1469 |
+| Numéro de commande | 1469 |
 | Thread safe | no |
 
 

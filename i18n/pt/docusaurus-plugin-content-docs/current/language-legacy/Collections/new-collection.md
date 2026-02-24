@@ -1,6 +1,7 @@
 ---
 id: new-collection
 title: Nova coleção
+slug: /commands/new-collection
 displayed_sidebar: docs
 ---
 

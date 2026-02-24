@@ -5,52 +5,52 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* : Picture ; *arrKeywords* : Text array {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *image* ; *tabMotsclés* {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture for which to get associated keywords |
-| arrKeywords | Text array | &#8592; | Array containing extracted keywords |
-| * | Operator | &#8594;  | If passed = use distinct values |
+| image | Picture | &#8594;  | Image dont vous souhaitez lire les mots-clés associés |
+| tabMotsclés | Text array | &#8592; | Tableau contenant les mots-clés extraits |
+| * | Opérateur | &#8594;  | Si passé = utiliser les valeurs distinctes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Summary-->The **GET PICTURE KEYWORDS** command returns, in the *arrKeywords* array, the list of keywords associated with the picture passed as parameter.<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Summary-->La commande **GET PICTURE KEYWORDS** retourne dans le tableau *tabMotsclés* la liste des mots-clés associés à l’image passée en paramètre.<!-- END REF--> 
 
-Only keywords set using **IPTC/Keywords** metadata are taken into account. Other types of metadata are ignored by the command. The command only works with picture types that support this type of metadata (JPEG, TIFF, etc.).
+Seuls les mots-clés définis via les métadonnées **IPTC/Keywords** sont pris en compte. Les autres types de métadonnées sont ignorés par la commande. La commande fonctionne uniquement avec les types d’images qui prennent en charge ce type de métadonnées (JPEG, TIFF...).
 
-**Note:** Metadata of the IPTC/Keywords type are now indexable in 4D (see the *Design Reference* manual). 
+**Note :** Les métadonnées de type IPTC/Keywords sont indexables dans 4D (cf. manuel *Mode Développement*). 
 
-If you pass the *\** parameter, the method only returns "distinct values" of keywords, in other words, a list with no duplicates.
+Si vous passez le paramètre *\**, la méthode ne retourne que les "valeurs disctinctes" de mots-clés, c’est-à-dire une liste sans doublons. 
 
-If the picture does not contain keywords or IPTC/Keywords metadata, the command returns an empty array and no error is generated.
+Si l’image ne contient pas de mots-clés ou de métadonnées IPTC/Keywords, la commande retourne un tableau vide, aucune erreur n’est générée. 
 
-**Note:** Results returned by this command can differ according to the current value of the "Consider only non-alphanumeric chars for keywords" database setting (see the [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
+**Note :** Les résultats retournés par cette commande peuvent différer en fonction de la valeur courante de la propriété de la base "N’utiliser que les caractères non alphanumériques pour les mots clés" (cf. paragraphe [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
 
-## See also 
+## Voir aussi 
 
 [GET PICTURE METADATA](get-picture-metadata.md)  
 [SET PICTURE METADATA](set-picture-metadata.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1142 |
+| Numéro de commande | 1142 |
 | Thread safe | yes |
 
 

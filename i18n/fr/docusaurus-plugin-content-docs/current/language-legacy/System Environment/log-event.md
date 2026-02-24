@@ -5,86 +5,85 @@ slug: /commands/log-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*outputType* : Integer ;} *message* : Text {; *importance* : Integer} )<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*typeSortie* ;} *message* {; *importance*} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| outputType | Integer | &#8594;  | Message output type |
-| message | Text | &#8594;  | Contents of the message |
-| importance | Integer | &#8594;  | Message’s importance level |
+| typeSortie | Integer | &#8594;  | Type de sortie du message |
+| message | Text | &#8594;  | Contenu du message |
+| importance | Integer | &#8594;  | Niveau d’importance du message (Windows uniquement) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|13|Modified|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|17 R6|Modifié|
+|13|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LOG EVENT.Summary-->The **LOG EVENT** command sets up a customized system for recording internal events that occur during the use of your application.<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Summary-->La commande **LOG EVENT** vous permet de mettre en place un système personnalisé d'enregistrement des événements internes qui se produisent au cours de l'utilisation de votre application.<!-- END REF--> Vous pouvez ainsi contrôler le déroulement d’une session de travail.
 
-Pass the custom information to be noted according to the event in *message*.
+Passez dans le paramètre *message* les informations personnalisées à noter en fonction de l'événement. 
 
-The optional *outputType* parameter specifies the output channel taken by the *message*. You can pass one of the following constants, located in the "*Log Events*" theme, in this parameter:
+Le paramètre facultatif *typeSortie* vous permet de préciser le canal de sortie emprunté par le *message*. Vous pouvez passer dans ce paramètre une des constantes suivantes, placées dans le thème *Journal d'événements* :
 
-| Constant                     | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Into 4D commands log         | Integer | 3     | Indicates to 4D to record the *message* in the 4D commands log file, if this file has been activated. The 4D commands log file can be enabled using the [SET DATABASE PARAMETER](set-database-parameter.md) command (selector 34).<br/>**Note:** 4D log files are grouped together in the **Logs** folder (see the [Get 4D folder](get-4d-folder.md) command).                                                                                  |
-| Into 4D debug message        | Integer | 1     | Indicates to 4D to send the *message* to the system debugging environment. The result depends on the platform:<br/>Under Mac OS: the command sends the message to the ConsoleUnder Windows: the command sends the message as a debug message. To be able to read this message, you must have Microsoft Visual Studio or the DebugView utility for Windows (<http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx>)                     |
-| Into 4D diagnostic log       | Integer | 5     | Indicates to 4D to record the *message* in the 4D diagnostic file, if this file has been enabled. <br/>The diagnostic log file can be enabled using the [SET DATABASE PARAMETER](set-database-parameter.md) command (selector 79).                                                                                                                                                                                                              |
-| Into 4D request log          | Integer | 2     | Indicates to 4D to record the *message* in the 4D requests log, if this file has been activated                                                                                                                                                                                                                                                                                                                                                         |
-| Into system standard outputs | Integer | 6     | Indicates to 4D to send the *message* to a standard output stream. The message is sent to: **stdout** if *importance* \= Information message or Warning message **stderr** if *importance* \= Error message                                                                                                                                                                                                                                             |
-| Into Windows log events      | Integer | 0     | Indicates to 4D to send the *message* to the “Log events” of Windows. This log receives and stores messages coming from running applications. In this case, you can attribute a level of importance to *message* via the optional *importance* parameter (see below).**<br/>Notes:** <br/>For this feature to be available, the Windows Log Events service must be running.Under Mac OS, the command does nothing with this output type |
+| Constante               | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ----------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Into 4D commands log    | Entier long | 3      | Indique à 4D d'inscrire le *message* dans le fichier d’historique des commandes de 4D, si ce fichier a été activé. Ce fichier d'historique peut être activé à l’aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) (sélecteur 34).<br/>**Note :** Les fichiers d’historique de 4D sont regroupés dans le dossier **Logs** (cf. commande [Get 4D folder](get-4d-folder.md)).   |
+| Into 4D debug message   | Entier long | 1      | Indique à 4D d'envoyer le *message* dans l'environnement de débogage du système. Le résultat dépend de la plate-forme :<br/>sous Mac OS : la commande envoie le message à la Consolesous Windows : la commande envoie le message en tant que message de débogage. Pour pouvoir lire ce message, vous devez disposer de Microsoft Visual Studio ou de l’utilitaire DebugView pour Windows (<http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx>)  |
+| Into 4D diagnostic log  | Entier long | 5      | Indique à 4D d’inscrire le *message* dans le fichier de diagnostic de 4D, si ce fichier a été activé. <br/>Le fichier de diagnostic peut être activé à l’aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) (sélecteur 79).     |
+| Into 4D request log     | Entier long | 2      | Indique à 4D d'inscrire le *message* dans le fichier d’historique des requêtes de 4D, si ce fichier a été activé  |
+| Into system standard outputs | Entier long | 6     | Indique à 4D d'envoyer le *message* dans un flux de sortie standard. Le message est envoyé à **stdout** si *importance* \= Information message ou Warning message et **stderr** si *importance* \= Error message         |
+| Into Windows log events | Entier long | 0      | Indique à 4D d'envoyer le *message* vers l’“Observateur d’événements” de Windows. Ce journal reçoit et stocke des messages en provenance des applications en cours d’exécution. Dans ce cas, vous pouvez définir le niveau d'importance du *message* via le paramètre *importance* (cf. ci-dessous).**<br/>Notes :** Pour que cette fonctionnalité soit disponible, le service Observateur d’événements de Windows doit être démarré.Sous Mac OS, la commande ne fait rien avec ce type de sortie. |
 
-If you do not pass the *outputType* parameter, the value 0 (Into Windows log events) is used by default.
+Si vous ne passez pas le paramètre *typeSortie*, la valeur 0 (Into Windows log events) est utilisée par défaut.
 
-You can attribute a level of importance to *message*, via the optional *importance* parameter which helps you to read and understand the log events. There are three levels of importance: Information, Warning, and Error.  4D provides you with the following predefined constants:
+Vous pouvez attribuer au *message* un niveau d’importance via le paramètre facultatif *importance* afin de faciliter la lecture du journal d’événements. Il existe trois niveaux d’importance : Information, Avertissement et Erreur. 4D vous propose les constantes prédéfinies suivantes :
 
-| Constant            | Type    | Value |
-| ------------------- | ------- | ----- |
-| Error message       | Integer | 2     |
-| Information message | Integer | 0     |
-| Warning message     | Integer | 1     |
+| Constante           | Type        | Valeur |
+| ------------------- | ----------- | ------ |
+| Error message       | Entier long | 2      |
+| Information message | Entier long | 0      |
+| Warning message     | Entier long | 1      |
 
-If you don’t pass anything in *importance* or pass an incorrect value, the default value (0) is used.
+Si vous ne passez pas le paramètre *importance* ou passez une valeur invalide, la valeur par défaut (0) est utilisée.
 
 :::note
 
-The *importance* parameter is only used with *outputType* `Into Windows log events`, `Into 4D diagnostic log`, and `Into system standard outputs`.
+Le paramètre *importance* est utilisé uniquement avec les paramètres *typeSortie* `Into Windows log events`, `Into 4D diagnostic log` et `Into system standard outputs`.
 
 :::
 
+## Exemple 
 
-## Example 
-
-If you want to have keep track of when your database is opened under Windows, you could write the following line of code in the [On Startup database method](on-startup-database-method.md):
+Afin de conserver une trace des lancements de votre base sous Windows, vous pouvez écrire, dans la [On Startup database method](on-startup-database-method.md) :
 
 ```4d
- LOG EVENT(Into Windows log events;"The Invoice database was opened.")
+ LOG EVENT(Into Windows log events;"Démarrage de la base Facturation")
 ```
 
-Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.
+A chaque ouverture de la base, cette information sera inscrite dans l’Observateur d’événements de Windows, avec le niveau d’importance 0.
 
-## See also 
+## Voir aussi 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 667 |
+| Numéro de commande | 667 |
 | Thread safe | yes |
 
 

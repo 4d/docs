@@ -9,72 +9,71 @@ displayed_sidebar: docs
 <!--REF #_command_.Level.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Current break or header level |
+| Résultat | Integer | &#8592; | Niveau de rupture ou d'en-tête courant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Level.Summary-->Level is used to determine the current header or break level.<!-- END REF--> It returns the level number during the On Header and On Printing Break events.
+<!--REF #_command_.Level.Summary-->La fonction **Level** sert à déterminer le niveau de rupture ou d'en-tête courant.<!-- END REF--> Elle retourne le numéro du niveau de rupture pendant les événements On Header et On Printing Break.
 
-Level 0 is the last level to be printed and is appropriate for printing a grand total. Level returns 1 when 4D prints a break on the first sorted field, 2 when 4D prints a break on the second sorted field, and so on.
+Le niveau 0 est le dernier niveau à être imprimé et convient à l'impression d'un total général. **Level** retourne 1 lorsque 4D imprime une rupture sur le premier champ trié, 2 lorsque 4D imprime une rupture sur le deuxième champ trié, et ainsi de suite.
 
-## Example 
+## Exemple 
 
-This example is a template for a form method. It shows each of the possible events that can occur while a summary report uses a form as an output form. Level is called when a header or a break is printed:
+Cet exemple est une maquette de méthode formulaire. Il traite chaque événement possible lorsqu'un état est imprimé dans un formulaire sortie. **Level** est appelé lorsqu'un en-tête ou une rupture est imprimé(e) :
 
 ```4d
-  // Method of a form being used as output form for a summary report
+  // Méthode formulaire pour un formulaire sortie utilisé pour un état
  $vpFormTable:=Current form table
  Case of
   // ...
     :(FORM Event.code=On Header)
-  // A header area is about to be printed
+  // La zone en-tête va être imprimée
        Case of
           :(Before selection($vpFormTable->))
-  // Code for the first break header goes here
+  // Le code pour la première rupture d'en-tête doit être placé ici
           :(Level=1)
-  // Code for a break header level 1 goes here
+  // Le code pour la rupture d'en-tête niveau 1 doit être placé ici
           :(Level=2)
-  // Code for a break header level 2 goes here
+  // Le code pour la rupture d'en-tête niveau 2 doit être placé ici
   // ...
        End case
     :(FORM Event.code=On Printing Detail)
-  // A record is about to be printed
-  // Code for each record goes here
+  // Un enregistrement va être imprimé
+  // Le code pour chaque enregistrement doit être placé ici
     :(FORM Event.code=On Printing Break)
-  // A break area is about to be printed
+  // Une rupture va être imprimée
        Case of
           :(Level=0)
-  // Code for a break level 0 goes here
+  // Le code pour la rupture 0 doit être placé ici
           :(Level=1)
-  // Code for a break level 1 goes here
+  // Le code pour la rupture 1 doit être placé ici
   // ...
        End case
     :(FORM Event.code=On Printing Footer)
        If(End selection($vpFormTable->))
-  // Code for the last footer goes here
+  // Le code pour le dernier pied de page doit être placé ici
        Else
-  // Code for a footer goes here
+  // Le code pour le pied de page doit être placé ici
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 101 |
+| Numéro de commande | 101 |
 | Thread safe | no |
-
 
 

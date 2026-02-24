@@ -5,85 +5,86 @@ slug: /commands/print-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *aTable* : Table {; *} )<br/>**PRINT RECORD** ( *aTable* : Table {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *laTable* {; * } )<br/>**PRINT RECORD** ( *laTable {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to print the current record or Default table if omitted |
-| *  | Operator | &#8594;  | Suppress the printing dialog box |
-| > | > | &#8594;  | Do not reinitialize print settings |
+| laTable | Table | &#8594;  | Table de laquelle imprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| * &#124; > | Opérateur | &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|2004|Modified|
-|<6|Created|
+|15 R5|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** prints the current record of *aTable*, without modifying the current selection.<!-- END REF--> The current output form is used for printing. If there is no current record for *aTable*, **PRINT RECORD** does nothing.
+<!--REF #_command_.PRINT RECORD.Summary-->Cette commande provoque l'impression de l'enregistrement courant de *laTable*, sans modifier la sélection courante.<!-- END REF--> Le formulaire sortie courant est utilisé pour l'impression. S’il n’y a pas d’enregistrement courant dans *laTable*, **PRINT RECORD** ne fait rien.
 
-You can print subforms with the **PRINT RECORD** command. This is not possible with [Print form](./commands/print-form).
+**PRINT RECORD** permet d'imprimer des sous-formulaires, ce qui n'est pas possible avec la commande [Print form](../commands/print-form.md).
 
-**Note:** If there are modifications to the record that have not been saved, this command prints the modified field values, not the field values located on disk.
+**Note :** Si l'enregistrement a subi des modifications qui n'ont pas encore été sauvegardées sur disque, la commande imprime les valeurs les plus récentes, et non celles stockées sur le disque.
 
-By default, **PRINT RECORD** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the record is not printed. You can suppress this dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
+Par défaut, **PRINT RECORD** affiche la boîte de dialogue d'impression. Si l'utilisateur annule la boîte de dialogue, l'exécution de la commande est stoppée.  
+Vous pouvez supprimer son affichage en utilisant soit le paramètre optionnel astérisque (\*), soit le paramètre optionnel “supérieur à” (>).
 
-* The *\** parameter causes a print job using the current print parameters (default parameters or those defined by the *\_o\_PAGE SETUP* and/or [SET PRINT OPTION](set-print-option.md) commands).
-* Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT RECORD** (e.g. inside a loop) while maintaining previously set customized print parameters.
+* Le paramètre *\** provoque une impression avec les paramètres d’impression courants (paramètres par défaut ou définis par les commandes *\_o\_PAGE SETUP* et/ou [SET PRINT OPTION](set-print-option.md)).
+* Le paramètre *\>* provoque en outre l’impression sans réinitialisation des paramètres d’impression. Ce paramètre est utile lorsque vous souhaitez exécuter successivement plusieurs appels à **PRINT RECORD** (par exemple à l'intérieur d’une boucle) tout en conservant des paramètres d’impression personnalisés préalablement définis.
 
-**4D Server:** This command can be executed on 4D Server in a stored procedure. In this context:
+**4D Server :** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
-* Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
-* In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+* Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\** ou *\>*.
+* En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with **PRINT RECORD**. [PAGE BREAK](page-break.md) is exclusively reserved for use in combination with the [Print form](./commands/print-form) command.
+**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT RECORD**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form.md).
 
-## Example 1 
+## Exemple 1 
 
-The following example prints the current record of the \[Invoices\] table. The code is contained in the object method of a **Print** button on the input form. When the user clicks the button, the record is printed using an output form designed for this purpose. 
+L'exemple suivant imprime l'enregistrement courant de la table *\[Factures\]*. Cette méthode est celle d'un bouton **Imprimer** placé dans le formulaire entrée. Lorsque l'utilisateur clique sur ce bouton, l'enregistrement est imprimé dans un formulaire spécialement créé dans ce but. 
 
 ```4d
- FORM SET OUTPUT([Invoices];"Print One From Data Entry") // Select the right output form for printing
- PRINT RECORD([Invoices];*) // Print Invoices as it is (without showing the printing dialog boxes)
- FORM SET OUTPUT([Invoices];"Standard Output") // Restore the previous output form
+ FORM SET OUTPUT([Factures];"ImpressionEnregistrement") //Sélection du formulaire pour l'impression
+ PRINT RECORD([Factures];*) //Imprimer les factures (sans dialogues d'impression)
+ FORM SET OUTPUT([Factures];"FormListe") //Restauration du formulaire sortie courant
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example prints the same current record in two different forms. The code is contained in the object method of a **Print** button on the input form. You want to set customized print parameters and then use them in the two forms. 
+L'exemple suivant imprime le même enregistrement courant dans deux formulaires différents. Cette méthode est celle d'un bouton **Imprimer** placé dans un formulaire entrée. Vous souhaitez définir des paramètres d’impression personnalisés et les utiliser pour les deux formulaires. 
 
 ```4d
- PRINT SETTINGS //User defines print parameters
+ PRINT SETTINGS //L'utilisateur définit ses paramètres d'impression
  If(OK=1)
-    FORM SET OUTPUT([Employees];"Detailed") //Use the first print form
-    PRINT RECORD([Employees];>) //Print using user-defined parameters
-    FORM SET OUTPUT([Employees];"Simple") //Use the second print form
-    PRINT RECORD([Employees];>) //Print using user-defined parameters
-    FORM SET OUTPUT([Employees];"Output") //Restore default output form
+    FORM SET OUTPUT([Employés];"Détaillé") //Use un premier formulaire d'impression
+    PRINT RECORD([Employés];>)
+  //Imprimer en utilisant les paramètres définis par l'utilisateur
+    FORM SET OUTPUT([Employés];"Simplifié") //Use un second formulaire d'impression
+    PRINT RECORD([Employés];>)
+  //Imprimer en utilisant les paramètres définis par l'utilisateur
+    FORM SET OUTPUT([Employés];"Sortie") //Rétablir le formulaire sortie par défaut
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 71 |
+| Numéro de commande | 71 |
 | Thread safe | no |
-
 
 

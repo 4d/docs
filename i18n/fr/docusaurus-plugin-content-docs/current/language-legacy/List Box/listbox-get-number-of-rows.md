@@ -5,50 +5,50 @@ slug: /commands/listbox-get-number-of-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get number of rows.Syntax-->**LISTBOX Get number of rows** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get number of rows** ( *object* : Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of rows.Syntax-->**LISTBOX Get number of rows** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of rows.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Integer | &#8592; | Number of rows |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Nombre de lignes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX Get number of rows.Summary-->The **LISTBOX Get number of rows** command returns the number of rows in the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of rows.Summary-->La commande **LISTBOX Get number of rows** retourne le nombre de lignes présentes dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
-**Note:** This command does not take the hidden/displayed state of the rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, **LISTBOX Get number of rows** will return 10.
+**Note :** **LISTBOX Get number of rows** ne tient pas compte du statut masqué/affiché des lignes. Par exemple, dans une list box contenant 10 lignes et dont les 9 premières sont masquées, **LISTBOX Get number of rows** retournera 10.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-**Note:** If the arrays associated with the columns of a List box do not all have the same size, only the number of items corresponding to the smallest array will appear in the list box and thus be returned by this command. 
+**Note :** Si les tableaux associés aux colonnes d’un objet List box n'ont pas tous la même taille, seul le nombre d’éléments correspondant au plus petit tableau apparaît dans la list box et est retourné par cette commande. 
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 915 |
+| Numéro de commande | 915 |
 | Thread safe | no |
 
 

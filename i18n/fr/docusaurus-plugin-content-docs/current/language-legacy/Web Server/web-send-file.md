@@ -5,72 +5,71 @@ slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* : Text )<!-- END REF-->
+<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *fichierWeb* )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| htmlFile | Text | &#8594;  | HTML Pathname to HTML file or empty string for terminating SEND HTML FILE |
+| fichierWeb | Text | &#8594;  | Chemin d'accès au fichier Web à envoyer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|12|Modified|
-|6.5|Modified|
-|<6|Created|
+|13|Renommé|
+|12|Modifié|
+|6.5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SEND FILE.Summary-->The **WEB SEND FILE** command sends, to the Web browser, the HTML page or the Web file stored in the document whose pathname you pass in *htmlFile*.<!-- END REF--> 
+<!--REF #_command_.WEB SEND FILE.Summary-->La commande **WEB SEND FILE** envoie au navigateur Web la page HTML ou le fichier Web stocké dans le document dont vous passez le chemin d'accès dans *fichierHTML*.<!-- END REF--> La commande peut envoyer tout type de fichier pris en charge par les navigateurs Web (pages html mais aussi fichiers xml ou txt, images jpeg, tiff...)
 
-By default, 4D looks for the HTML document within the root folder, defined in the Database Settings. 
+Par défaut, 4D recherche le document à l'intérieur du dossier racine HTML, défini dans les Propriétés de la base.   
+Cette commande accepte en paramètre un chemin d’accès exprimé en syntaxe Posix (noms de répertoires ou de dossiers séparés par une barre oblique "/") ou en syntaxe système.  
+Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fichiers de votre système d'exploitation est générée. Vous pouvez intercepter l'erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Si la méthode affiche une boîte de dialogue d'alerte ou de message, celle-ci apparaît sur le poste du navigateur.
 
-This command accepts as a parameter either pathnames in Posix syntax (names of directories or folders are separated with a slash "/") or in the system syntax.  
-Specifying an invalid pathname generates an error related to file management for your operating system. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command. If the method displays a warning or message dialog box, it will appear on the browser machine.
+Une fois que l'instruction **WEB SEND FILE** a été exécutée, la variable système OK est mise à jour : si le fichier à envoyer existe et si le timeout n’est pas dépassé, la variable OK prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0.
 
-Once **WEB SEND FILE** is executed, the OK system variable is updated: if the file to be sent exists and if the timeout has not run out, OK is equal to 1\. Otherwise, it is equal to 0.
+**Note :** Si vous appelez **WEB SEND FILE** depuis un process qui n'est pas un process Web, la commande ne fait rien. Aucune erreur n'est retournée, l'appel est simplement ignoré. 
 
-**Note:** If you call **WEB SEND FILE** from within a process that is not a Web process, the command does nothing and returns no error; the call is simply ignored.
+Les éventuelles références aux variables 4D et aux balises de type *4DSCRIPT* présentes dans la page sont analysées lorsque le type du document le permet (document basé sur du texte). 
 
-The references to 4D variables and *4DSCRIPT* type tags found on the page are parsed when the document type allows for it (document based on text).
+## Exemple 
 
-## Example 
-
-The HTML root folder of the database is the WebDocs folder. It contains the following elements:
-
-```4d
- ..\WebDocs\HTM\MyPage.HTM
-```
-
-Sending the Web page *"MyPage.HTM"* must be carried out in the following manner :
+Le dossier racine HTML de la base est le dossier WebDocs. Il contient les éléments suivants :
 
 ```4d
- WEB SEND FILE("HTM/MyPage.HTM")
+ ..\WebDocs\HTM\MaPage.HTM
 ```
 
-## System variables and sets 
+L'envoi de la page Web *"MaPage.HTM"* doit être effectué de cette manière :
 
-If the file to be sent exists and if the timeout has not run out, OK is set to 1\. Otherwise, it is equal to 0.
+```4d
+ WEB SEND FILE("HTM/MaPage.HTM")
+```
 
-## See also 
+## Variables et ensembles système 
+
+Si le fichier à envoyer existe et si le timeout n’est pas dépassé, la variable OK prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0.
+
+## Voir aussi 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 619 |
+| Numéro de commande | 619 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,53 +5,53 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to push record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle empiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF-->may be executed before a record is saved.
+<!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** "empile" une copie de l'enregistrement courant de *laTable* dans la pile d'enregistrements de la table.<!-- END REF-->peut être exécuté avant qu'un enregistrement soit sauvegardé.
 
-If you push a record that was unlocked, this record stays locked for all the other processes and users until you pop and unload it.
+Si vous empilez un enregistrement non verrouillé, il sera verrouillé pour tous les autres process et utilisateurs jusqu'à ce que vous le "dépiliez" (c'est-à-dire que vous le déchargiez de la pile).
 
-**Compatibility note:** Beginning with version 11 of 4D, this command no longer supports subtables. 
+**Note de compatibilité :** A compter de la version 11 de 4D, cette commande ne prend plus en charge les sous-tables. 
 
-## Example 
+## Exemple 
 
-The following example pushes the record for the customer onto the record stack:
+L'exemple suivant empile l'enregistrement d'un client :
 
 ```4d
- PUSH RECORD([Customer]) // Push customer’s record onto stack
+ PUSH RECORD([Client]) // Placer l'enregistrement du client dans la pile
 ```
 
-## See also 
+## Voir aussi 
 
 [POP RECORD](pop-record.md)  
-*Using the Record Stack*  
+*Utiliser la pile d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 176 |
+| Numéro de commande | 176 |
 | Thread safe | yes |
 
 

@@ -5,68 +5,67 @@ slug: /commands/set-picture-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *picture* : Picture )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *image* )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture to be placed in pasteboard |
+| image | Picture | &#8594;  | Image à placer dans le conteneur de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->SET PICTURE TO PASTEBOARD clears the pasteboard and puts a copy of the picture passed in *picture* into it.<!-- END REF--> 
+<!--REF #_command_.SET PICTURE TO PASTEBOARD.Summary-->**SET PICTURE TO PASTEBOARD** place dans le conteneur de données une copie de l'image que vous avez passée dans *image*.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont préalablement effacées. 
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-The picture is transported in its native format (jpeg, tif, png, etc.). 
+L'image est transportée dans son format natif (jpeg, tif, png, etc.). 
 
-After you have put a picture into the pasteboard, you can retrieve it using the [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) command or for example [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.picture.gif";...).
+Après avoir placé l'image dans le conteneur, vous pouvez la récupérer à l'aide de la commande [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) ou par exemple [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.picture.gif";...).
 
-## Example 
+## Exemple 
 
-Using a floating window, you display a form that contains the array *asEmployeeName*, which lists the names of the employees from an \[Employees\] table. Each time you click on a name, you want to copy the employee's picture to the pasteboard. In the object method for the array, you write:
+Dans une fenêtre flottante, vous affichez un formulaire contenant le tableau *tabNomEmployés* qui liste les noms des employés stockés dans la table \[Employés\]. Chaque fois que vous cliquez sur un nom, vous voulez copier la photographie de l'employé dans le Presse-papiers. Dans la méthode objet du tableau, vous écrivez : 
 
 ```4d
- If(asEmployeeName#0)
-    QUERY([Employees];[Employees]Last name=asEmployeeName{asEmployeeName})
-    If(Picture size([Employees]Photo)>0)
-       SET PICTURE TO PASTEBOARD([Employees]Photo) // Copy the employee's photo
+ If(tabNomEmployés#0)
+    QUERY([Employés];[Employés]Nom=tabNomEmployés{tabNomEmployés})
+    If(Picture size([Employés]Photo)>0)
+       SET PICTURE TO PASTEBOARD([Employés]Photo) // Copier la photo de l'employée
     Else
-       CLEAR PASTEBOARD // No photo or no record found
+       CLEAR PASTEBOARD // Aucune photo trouvée ou aucun enregistrement trouvé
     End if
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If a copy of the picture is correctly put into the pasteboard, the OK variable is set to 1.  
-If there is not enough memory to paste the picture into the pasteboard, the OK variable is set to 0, but no error is generated.
+Si une copie de l'image est correctement collée dans le conteneur, la variable système OK prend la valeur 1\. S'il n'y a pas assez de mémoire pour coller l'image dans le Presse-papiers, la variable système OK prend la valeur 0, mais aucune erreur n'est générée.
 
-## See also 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 521 |
+| Numéro de commande | 521 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

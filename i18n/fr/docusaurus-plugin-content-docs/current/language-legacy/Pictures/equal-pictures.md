@@ -5,62 +5,62 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture ; *picture2* : Picture ; *mask* : Picture ) : Boolean<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *image1* ; *image2* ; *masque* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture1 | Picture | &#8594;  | Original source picture |
-| picture2 | Picture | &#8594;  | Picture to compare |
-| mask | Picture | &#8592; | Resulting mask |
-| Function result | Boolean | &#8592; | True if both pictures are identical; otherwise, False |
+| image1 | Picture | &#8594;  | Image source originale |
+| image2 | Picture | &#8594;  | Image à comparer |
+| masque | Picture | &#8592; | Masque résultant |
+| Résultat | Boolean | &#8592; | Vrai si les deux images sont identiques, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Equal pictures.Summary-->The **Equal pictures** command precisely compares both the dimensions and the contents of two pictures.<!-- END REF-->
+<!--REF #_command_.Equal pictures.Summary-->La commande **Equal pictures** vous permet de comparer précisément deux images, tant au niveau de leurs dimensions que de leur contenu.<!-- END REF--> 
 
-Pass the source picture in *picture1* and the picture you want to compare with it in *picture2*. 
+Passez dans *image1* l’image source et dans *image2* une image à comparer à l’image source. 
 
-* If the pictures are not the same dimension, the command returns **False** and the *mask* parameter contains a blank picture.
-* If the pictures are of the same dimension but with different contents, the command returns **False** and the *mask* parameter contains the resulting picture mask based on a comparison of the two pictures. This comparison is performed pixel by pixel, and each pixel that does not match appears white on a black background.
-* If both pictures are exactly the same, the command returns **True** and the *mask* parameter contains a picture that is completely black.
+* Si les deux images sont de dimensions différentes, la commande retourne **Faux** et le paramètre *masque* contient une image vide.
+* Si les deux images sont de même dimension mais ont des contenus différents, la commande retourne **Faux** et le paramètre *masque* contient l’image masque résultante de la comparaison des deux images. La comparaison est effectuée par pixel. Chaque pixel différent apparaît en blanc sur fond noir.
+* Si les deux images sont identiques, la commande retourne **Vrai** et le paramètre *masque* contient une image noire.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command is executed successfully (the two pictures are compared), the system variable OK is set to 1\. In the case of an anomaly, particularly if one of the pictures is not initialized (blank picture), the OK variable is set to 0.
+La variable système OK prend la valeur 1 si les deux images ont pu être comparées. En cas d'anomalie, notamment si au moins une des deux images n'est pas initialisée (image vide), la variable OK prend la valeur 0.
 
-## Example 
+## Exemple 
 
-In the following example, we compare two pictures (pict1 and pict2) and display the resulting mask:
+Dans l’exemple suivant, on compare deux images (pict1 et pict2) et on affiche le masque résultant : 
 
 ![](../assets/en/commands/pict847365.fr.png)
 
-Here is the code for the **Compare** button:
+Le code du bouton **Compare** est le suivant :
 
 ```4d
  $equal :=Equal pictures($pict1;$pict2;$mask)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1196 |
+| Numéro de commande | 1196 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,75 +5,75 @@ slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *aTable* : Table ; *formula* : Text )<!-- END REF-->
+<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *laTable* ; *formule* )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to display by default in the Formula editor |
-| formula | Text | &#8596;  | *in:* Variable containing the formula to display in the Formula editor or "" to display editor only<br/>*out:* Formula validated by the user|
+| laTable | Table | &#8594;  | Table à afficher par défaut dans l’éditeur de formules |
+| formule | Text | &#8594;  | Variable contenant la formule à afficher dans l’éditeur de formules ou "" pour uniquement afficher l’éditeur |
+| &#8592; | Formule validée par l’utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.4|Modified|
-|<6|Created|
+|2004.4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EDIT FORMULA.Summary-->The **EDIT FORMULA** command displays the Formula editor in order to let the user write or modify a formula.<!-- END REF--> The editor contains the following on opening:
+<!--REF #_command_.EDIT FORMULA.Summary-->La commande **EDIT FORMULA** affiche l’éditeur de formules afin de permettre à l’utilisateur d’écrire ou de modifier une formule.<!-- END REF--> L’éditeur contient à l'ouverture :
 
-* in the left list, the fields of the table passed in the *table* parameter,
-* in the formula area, the formula contained in the *formula* variable. If you passed an empty string in *formula*, the Formula editor is displayed without a formula.
+* dans la liste de gauche, les champs de la table désignée par le paramètre *laTable*,
+* dans la zone de formule, la formule contenue dans la variable *formule*. Si vous avez passé une chaîne vide dans *formule*, l’éditeur est affiché sans formule.
 
-The user can modify the *formula* displayed and save it. It is also possible to write or load a new formula. Regardless, if the user validates the dialog box, the system variable OK is set to 1 and the *formula* variable contains the formula defined by the user. If the user cancels the formula, the system variable OK is set to 0 and the *formula* variable is left untouched. 
+L’utilisateur peut modifier la *formule* affichée et la sauvegarder. Il peut également en écrire ou en charger une nouvelle. Dans tous les cas, lorsque l’utilisateur valide la boîte de dialogue, la variable système OK prend la valeur 1 et la variable *formule* contient la formule définie. Si l’utilisateur annule la boîte de dialogue, la variable système OK prend la valeur 0 et *formule* est inchangée.
 
-**Notes:** 
+**Notes :**
 
-* By default, access to methods and commands is restricted for all users (except for the Designer and Administrator). When this mechanism is enabled, you must explicitly designate the elements that can be accessed by the users using the [SET ALLOWED METHODS](./commands/set-allowed-methods) command. If *formula* calls methods that were not first “authorized” in the Formula editor using the [SET ALLOWED METHODS](./commands/set-allowed-methods) command, a syntax error is generated and you will not be able to validate the dialog box.
-* The formula editor is not associated with any menu bar by default. You need to install a standard **Edit** menu in the calling process if you want users to be able to benefit from cut/copy/paste shortcuts in the formula editor.
-* The virtual structure defined by the [`SET TABLE TITLES`](set-table-titles.md) and [`SET FIELD TITLES`](set-field-titles.md) commands (if any) must not be used in the *formula* variable - nor will it be used by 4D in the returned variable. The virtual structure is only used in the Formula editor dialog box. 
+* Par défaut, l'accès aux méthodes et aux commandes est restreint dans l'éditeur de formules pour tous les utilisateurs (sauf, dans les bases de données créées avec 4D 2004.4 et suivantes, pour le Super\_Utilisateur et l’Administrateur). Lorsque ce mécanisme est actif, vous devez explicitement désigner les éléments accessibles aux utilisateurs à l’aide de la commande [SET ALLOWED METHODS](../commands/set-allowed-methods.md). Si la formule fait appel à des méthodes qui n’ont pas été préalablement autorisées, une erreur de syntaxe est générée et il n’est pas possible de valider la boîte de dialogue.
+* L'éditeur de formules n'est associé à aucune barre de menus par défaut. L'équivalent d'un menu **Edition** standard doit être installé dans le process appelant si vous souhaitez que l'utilisateur bénéficie des raccourcis couper / copier / coller dans l'éditeur de formules.
+* La structure virtuelle éventuellement définie par les commandes [FIXER TITRES TABLES](set-table-titles.md) et FIXER TITRES CHAMPS(set-field-titles.md) ne doit pas être utilisée dans la variable *formule* - elle ne sera pas non plus utilisée par 4D dans la variable retournée. La structure virtuelle n'est utilisée que dans la boîte de dialogue de l'éditeur de formules. 
 
 
-Keep in mind that when the dialog box is validated, the command does not execute the *formula*; it only validates and updates the contents of the variable. If you want to execute the *formula*, you must use the [EXECUTE FORMULA](execute-formula.md) command. 
+A noter qu’au moment de la validation de la boîte de dialogue, la commande n’exécute pas la *formule*, seul le contenu de la variable est validé et mis à jour. Si vous voulez exécuter la *formule*, vous devez utiliser la commande [EXECUTE FORMULA](execute-formula.md).
 
-## Example 
+## Exemple 
 
-Displaying the Formula editor with the \[Employees\] table and without a pre-entered formula: 
+Affichage de l’éditeur avec la table \[Salaires\] et sans formule pré-saisie puis exécution de la formule sur la sélection courante :
 
 ```4d
- $myFormula:=""
- EDIT FORMULA([Employees];$myFormula)
+ $maFormule:=""
+ EDIT FORMULA([Salaires];$maFormule)
  If(OK=1)
-    APPLY TO SELECTION([Employees];EXECUTE FORMULA($myFormula))
+    APPLY TO SELECTION([Salaires];EXECUTE FORMULA($maFormule))
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user validates the dialog box, the system variable OK is set to 1\. If the user cancels the dialog box, the system variable OK is set to 0.
+Si l’utilisateur valide la boîte de dialogue, la variable système OK prend la valeur 1\. Si l’utilisateur annule la boîte de dialogue, la variable système OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [APPLY TO SELECTION](apply-to-selection.md)  
 [EXECUTE FORMULA](execute-formula.md)  
-[SET ALLOWED METHODS](./commands/set-allowed-methods)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 806 |
+| Numéro de commande | 806 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

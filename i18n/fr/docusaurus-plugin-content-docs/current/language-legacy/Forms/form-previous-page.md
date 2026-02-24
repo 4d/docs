@@ -9,35 +9,35 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM PREVIOUS PAGE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|<6|Created|
+|12|Renommé|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->FORM PREVIOUS PAGE changes the currently displayed form page to the previous form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if the first form page is already displayed, FORM PREVIOUS PAGE does nothing.
+<!--REF #_command_.FORM PREVIOUS PAGE.Summary-->**FORM PREVIOUS PAGE** change la page courante d'un formulaire pour afficher la page précédente.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la page affichée est la première page du formulaire, **FORM PREVIOUS PAGE** ne fait rien.
 
-## Example 
+## Exemple 
 
-The following example is a one-line method called from a menu command. It displays the form page that precedes the one currently displayed:
+Cet exemple est une méthode appelée par une commande de menu. Elle provoque l'affichage la page qui précède celle qui est actuellement affichée :
 
 ```4d
  FORM PREVIOUS PAGE
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -45,12 +45,11 @@ The following example is a one-line method called from a menu command. It displa
 [FORM LAST PAGE](form-last-page.md)  
 [FORM NEXT PAGE](form-next-page.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 249 |
+| Numéro de commande | 249 |
 | Thread safe | no |
-
 
 

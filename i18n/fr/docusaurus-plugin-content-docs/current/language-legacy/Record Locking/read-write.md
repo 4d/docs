@@ -5,40 +5,39 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : Table })<br/>**READ WRITE** ({ * })<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** {( laTable )}<br/>**READ WRITE** {( * )}<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to set read-write state, or Default table, if omitted |
-| * | Operator | &#8594;  | All the tables |
+| laTable &#124; * | Table, Opérateur | &#8594;  | Table à définir en mode lecture/écriture ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.READ WRITE.Summary-->READ WRITE changes the state of *aTable* to read/write for the process in which it is called.<!-- END REF--> If the optional \* parameter is specified, all tables are changed to read/write state.
+<!--REF #_command_.READ WRITE.Summary-->**READ WRITE** place *laTable* en mode lecture/écriture pour le process dans lequel la commande a été appelée.<!-- END REF--> Si vous passez le paramètre optionnel *\**, toutes les tables sont placées en mode lecture/écriture.
 
-After a call to READ WRITE, when a record is loaded, the record is unlocked if no other user has locked the record. This command does not change the status of the currently loaded record, only that of subsequently loaded records.
+Après un appel à **READ WRITE**, lorsqu'un enregistrement est chargé, il n'est pas verrouillé — sauf si un autre utilisateur l'a déjà chargé. Cette commande ne modifie pas le statut des enregistrements déjà chargés, seuls les enregistrements chargés par la suite sont affectés.
 
-The default state for all tables is read/write.
+Par défaut, toutes les tables sont en mode lecture/écriture.
 
-Use READ WRITE when you must modify a record and save the changes. Also use READ WRITE when you must lock a record for other users, even if you are not making any changes. Setting a table to read/write mode prevents other users from editing that table. However, other users can create new records.
+Utilisez **READ WRITE** lorsque vous devez modifier un enregistrement et sauvegarder les modifications. Vous pouvez également appeler cette commande lorsque vous voulez qu'un enregistrement soit verrouillé pour les autres utilisateurs, même si vous ne souhaitez pas effectuer de modifications. Placer une table en mode lecture/écriture vous permet d'empêcher les autres utilisateurs d'effectuer des modifications sur cette table. Cependant, ils peuvent continuer à créer des nouveaux enregistrements.
 
-**Note:** This command is not retroactive. A record is loaded according to the table’s read/write status at the time of loading. To load a record from a read-only table in read/write mode, you must first change the table state to read/write.
+**Note :** Cette commande n'est pas rétroactive. Les privilèges de lecture/écriture pour un enregistrement sont définis par ceux de la table au moment où l'enregistrement est chargé. Pour qu'un enregistrement soit chargé en mode lecture/écriture alors que la table est en mode lecture seulement, vous devez placer la table en mode lecture/écriture avant que l'enregistrement soit chargé.
 
-## See also 
+## Voir aussi 
 
 [READ ONLY](read-only.md)  
 [Read only state](read-only-state.md)  
-*Record Locking*  
+*Verrouillage d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 146 |
+| Numéro de commande | 146 |
 | Thread safe | yes |
 
 

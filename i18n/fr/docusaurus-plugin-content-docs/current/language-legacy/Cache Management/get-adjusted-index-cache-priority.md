@@ -5,44 +5,44 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* : Field ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *leChamp* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field for which the priority of the index(es) has to be retrieved |
-| Function result | Integer | &#8592; | Current priority value for index(es) |
+| leField | Field | &#8594;  | Champ pour lequel connaître la valeur de priorité des index |
+| Résultat | Integer | &#8592; | Valeur de priorité courante des index du champ |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get adjusted index cache priority.Summary-->The **Get adjusted index cache priority** command returns the current adjusted cache priority value applied by the cache manager for the *aField* index(es).<!-- END REF--> This command is only needed for debugging purposes. 
+<!--REF #_command_.Get adjusted index cache priority.Summary-->La commande **Get adjusted index cache priority** retourrne la valeur ajustée de priorité de cache appliquée par le gestionnaire de cache à l'index ou aux index du champ *leChamp*.<!-- END REF--> Cette commande est destinée uniquement à la phase de débogage et de mise au point de l'application. 
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
-## See also 
+## Voir aussi 
 
 [ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
-*Managing priorities in database cache*  
+*Gestion des priorités dans le cache de la base*  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1427 |
+| Numéro de commande | 1427 |
 | Thread safe | yes |
 
 

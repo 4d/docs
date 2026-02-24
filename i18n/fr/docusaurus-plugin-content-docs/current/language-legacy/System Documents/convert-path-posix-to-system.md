@@ -5,73 +5,68 @@ slug: /commands/convert-path-posix-to-system
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *posixPath* : Text {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *cheminPosix* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| posixPath | Text | &#8594;  | POSIX pathname |
-| * | Operator | &#8594;  | Encoding option |
-| Function result | Text | &#8592; | Pathname expressed in system syntax |
+| cheminPosix | Text | &#8594;  | Chemin d’accès POSIX |
+| * | Opérateur | &#8594;  | Option d’encodage |
+| Résultat | Text | &#8592; | Chemin d’accès exprimé en syntaxe système |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Convert path POSIX to system.Summary-->The **Convert path POSIX to system** command converts a pathname expressed with the POSIX (Unix) syntax into a pathname expressed with the system syntax.<!-- END REF--> 
+<!--REF #_command_.Convert path POSIX to system.Summary-->La commande **Convert path POSIX to system** convertit un chemin d’accès exprimé avec la syntaxe POSIX (Unix) en chemin d’accès exprimé avec la syntaxe système.<!-- END REF--> 
 
-Pass the complete pathname of a file or folder in the *posixPath* parameter, expressed with the POSIX syntax. This path must be absolute (it must begin with the "/" character). You must pass a disk path; it is not possible to pass a network path (beginning, for example, with ftp://ftp.mysite.fr).
+Passez dans le paramètre *cheminPosix* le chemin d’accès complet à un fichier ou un dossier, exprimé avec la syntaxe POSIX. Ce chemin doit être absolu (il doit débuter par le caractère "/"). Vous devez passer un chemin disque, il n’est pas possible de passer de chemin réseau (débutant par exemple par ftp://ftp.monsite.fr).
 
-The command returns the complete pathname of the file or folder expressed in the current system syntax. 
+La commande retourne le chemin d’accès complet du fichier ou du dossier exprimé dans la syntaxe du système courant. 
 
-The optional *\** parameters can be used to indicate whether the *posixPath* parameter is encoded. If this is the case, you must pass this parameter, otherwise the conversion will not be valid. The command returns the pathname without encoding. 
+Le paramètre optionnel *\** vous permet d’indiquer si le paramètre *cheminPosix* est encodé. Si c’est le cas, vous devez passer ce paramètre sinon la conversion sera invalide. La commande retourne le chemin d’accès sans encodage. 
 
-## Example 1 
+## Exemple 1 
 
-Examples under Mac OS:
-
-```4d
- $path:=Convert path POSIX to system("/Volumes/machd/file 2.txt")
-  //returns "machd:file 2.txt"
- $path:=Convert path POSIX to system("/Volumes/machd/file%202.txt";*)
-  //returns "machd:file 2.txt"
- $path:=Convert path POSIX to system("/file 2.txt")
-  //returns "machd:file 2.txt" if machd is the startup disk
-```
-
-## Example 2 
-
-Examples under Windows:
+Exemple sous Mac OS :
 
 ```4d
- $path:=Convert path POSIX to system("c:/docs/file 2.txt")
-  //returns "c:\\docs\\file 2.txt"
- $path:=Convert path POSIX to system("c:/docs/file%202.txt";*)
-  //returns "c:\\docs\\file 2.txt"
+ $chemin:=Convert path POSIX to system("/Volumes/machd/file 2.txt") //retourne "machd:file 2.txt"
+ $chemin:=Convert path POSIX to system("/Volumes/machd/file%202.txt";*)  //retourne "machd:file 2.txt"
+ $chemin:=Convert path POSIX to system("/file 2.txt") //retourne "machd:file 2.txt" si machd est le disque de démarrage
 ```
 
-## See also 
+## Exemple 2 
+
+Exemples sous Windows :
+
+```4d
+ $chemin:=Convert path POSIX to system("c:/docs/file 2.txt") //retourne "c:\\docs\\file 2.txt"
+ $chemin:=Convert path POSIX to system("c:/docs/file%202.txt";*) //retourne "c:\\docs\\file 2.txt"
+```
+
+## Voir aussi 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1107 |
+| Numéro de commande | 1107 |
 | Thread safe | yes |
 
 

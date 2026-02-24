@@ -5,50 +5,48 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* : Array ; *value* : Expression {; *start* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *tableau* ; *valeur* {; *départ*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array to search |
-| value | Expression | &#8594;  | Value of same type to search in the array |
-| start | Integer | &#8594;  | Element at which to start searching |
-| Function result | Integer | &#8592; | Number of the first element in array that matches value |
+| tableau | Array | &#8594;  | Tableau dans lequel effectuer la recherche |
+| valeur | Expression | &#8594;  | Valeur de même type à rechercher dans le tableau |
+| départ | Integer | &#8594;  | Elément à partir duquel commencer la recherche |
+| Résultat | Integer | &#8592; | Numéro du premier élément trouvé correspondant à valeur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20 R6|Modified|
-|<6|Created|
+|20 R6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Find in array.Summary-->The Find in array command returns the number of the first element in *array* that matches *value*.<!-- END REF--> 
+<!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.
 
-Find in array can be used with Text, Numeric, Date, Pointer, Object, and Boolean arrays. The *array* and *value* parameters must be of the same type.
+*valeur* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont mises en oeuvre, voir [Opérateurs basiques](../Concepts/operators.md#opérateurs-basiques)). Si aucun élément n'est trouvé, **Find in array** renvoie -1.
 
-*value* must match exactly the element to find (the same rules as for the equality operator are applied, see [Basic operators](../Concepts/operators.md#basic-operators)). If no match is found, Find in array returns -1.
+**Note :** Avec les tableaux d'objets, vous ne pouvez utiliser que des références d'objets dans le paramètre valeur. 
 
-**Note:** With Object arrays, you can only use object references in the *value* parameter. 
+Si *départ* est spécifié, **Find in array** commence la recherche à l'élément spécifié par *départ*. Si *départ* n'est pas spécifié, **Find in array** commence la recherche à l'élément 1.
 
-If *start* is specified, the command starts searching at the element number specified by *start*. If *start* is not specified, the command starts searching at element 1.
+## Exemple 1 
 
-## Example 1 
-
-The following project method deletes all empty elements from the string or text array whose pointer is passed as parameter:
+La méthode projet suivante efface tous les éléments vides du tableau alpha ou texte passé en paramètre : 
 
 ```4d
-  // CLEAN UP ARRAY project method
-  // CLEAN UP ARRAY ( Pointer )
-  // CLEAN UP ARRAY ( -> Text or String array )
+  // Méthode projet NETTOYER TABLEAU
+  // NETTOYER TABLEAU ( Pointeur )
+  // NETTOYER TABLEAU ( -> Tableau Texte ou Alpha )
  
  #DECLARE ($arrPtr : Pointer) : Pointer
  Repeat
@@ -59,49 +57,48 @@ The following project method deletes all empty elements from the string or text 
  Until($vlElem<0)
 ```
 
-After this project method is implemented in a database, you can write:
+Une fois que cette méthode projet est implémentée dans votre base, vous pouvez écrire, par exemple :
 
 ```4d
- ARRAY TEXT(atSomeValues;...)
+ ARRAY TEXT(TabValeurs;...)
   // ...
-  // Do plenty of things with the array
+  // Use le tableau comme vous voulez
   // ...
-  // Eliminate empty string elements
- CLEAN UP ARRAY(->atSomeValues)
+  // Eliminer les éléments chaînes vides
+ NETTOYER TABLEAU(->TabValeurs)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following project method selects the first element of an array whose pointer is passed as the first parameter that matches the value of the variable or field whose pointer is passed as parameter:
+La méthode projet suivante sélectionne le premier élément d'un tableau dont le pointeur passé comme premier paramètre correspond à la valeur de la variable ou du champ dont le pointeur est passé en second paramètre :
 
 ```4d
-  // SELECT ELEMENT project method
-  // SELECT ELEMENT ( Pointer ; Pointer)
-  // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
+  // Méthode projet SELECTIONNER ELEMENT
+  // SELECTIONNER ELEMENT ( Pointeur ; Pointeur)
+  // SELECTIONNER ELEMENT ( -> Tableau Texte ou Alpha ; -> Champ ou variable de type Texte ou Alpha )
  
  #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
 $arrPtr->:=Find in array($arrPtr->; $varPtr->)
  If($tabPtr->=-1)
-    $tabPtr->:=0 // If no element was found, set the array to no selected element
+    $tabPtr->:=0 // Si aucun élément n'est trouvé, fixer le tableau à aucun élément sélectionné
  End if
 ```
 
-After this project method is implemented in a database, you can write:
+Une fois que cette méthode projet est implémentée dans la base, vous pouvez écrire, par exemple :
 
 ```4d
-  // asGender pop-up menu object method
+  // Méthode objet du pop-up menu TabTitres
  Case of
     :(Form event code=On Load)
-       SELECT ELEMENT(->asGender;->[People]Gender)
- 
+       SELECTIONNER ELEMENT(->TabTitres;->[Personnes]Titre)
  End case
 ```
 
-**Note:** This example uses the **selected element** of the array. Keep in mind that the selected element is not meaningful if the array contains more than 32,767 elements (see *Arrays and Form Objects*). In this case, you need to use a longint variable to store the result of **Find in array**.
+**Note :** Cet exemple utilise l'**élément sélectionné** du tableau. Gardez à l'esprit que l'élément sélectionné ne sera pas significatif si le tableau comporte plus de 32767 éléments (cf. section *Tableaux et objets de formulaire*). Il est dans ce cas nécessaire d'utiliser une variable entier long pour stocker le résultat de **Find in array**.
 
-## Example 3 
+## Exemple 3 
 
-You want to find an object reference:
+Vous voulez trouver une référence d'objet :
 
 ```4d
  ARRAY OBJECT($objects;100)
@@ -116,7 +113,7 @@ You want to find an object reference:
  $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
-## See also 
+## Voir aussi 
 
 [Count in array](count-in-array.md)  
 [DELETE FROM ARRAY](delete-from-array.md)  
@@ -124,11 +121,11 @@ You want to find an object reference:
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 230 |
+| Numéro de commande | 230 |
 | Thread safe | yes |
 
 

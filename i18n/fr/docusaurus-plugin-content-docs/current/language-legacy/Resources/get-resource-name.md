@@ -5,43 +5,43 @@ slug: /commands/get-resource-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* : Text ; *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
+<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* ; *resNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get resource name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4-character resource type |
-| resID | Integer | &#8594;  | Resource ID number |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Text | &#8592; | Name of the resource |
+| resType | Text | &#8594;  | Type de ressource (4 caractères) |
+| resNum | Integer | &#8594;  | Numéro de référence de ressource (ID) |
+| resFichier | Time | &#8594;  | Numéro de référence du fichier de ressource ou Tous les fichiers de ressources ouverts si omis |
+| Résultat | Text | &#8592; | Nom de la ressource |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get resource name.Summary-->The **Get resource name** command returns the name of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
+<!--REF #_command_.Get resource name.Summary-->**Get resource name** retourne le nom de la ressource dont le type est passé dans *resType* et le numéro de référence (ID) dans *resNum*.<!-- END REF-->
 
-If you pass a valid resource file reference number in the parameter *resFile*, the resource is searched for within that file only. If you do not pass the parameter *resFile*, the resource is searched for within the current open resource files.
+Si vous ne passez pas le paramètre *resFichier*, la ressource est recherchée dans tous les fichiers de ressources ouverts. Si vous passez un numéro de référence de fichier de ressource dans le paramètre *resFichier*, la ressource n'est recherchée que dans ce fichier. 
 
-If the resource does not exist, **Get resource name** returns an empty string.
+Si la ressource n'existe pas, **Get resource name** retourne une chaîne vide.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 513 |
+| Numéro de commande | 513 |
 | Thread safe | no |
 
 

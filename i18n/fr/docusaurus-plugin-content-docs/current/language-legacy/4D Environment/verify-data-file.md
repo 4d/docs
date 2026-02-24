@@ -5,189 +5,190 @@ slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* : Text ; *dataPath* : Text ; *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} )<!-- END REF-->
+<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *cheminStructure* ; *cheminDonnées* ; *objets* ; *options* ; *méthode* {; *tabTables* {; *tabChamps*}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | Pathname of 4D structure file to be checked |
-| dataPath | Text | &#8594;  | Pathname of 4D data file to be checked |
-| objects | Integer | &#8594;  | Objects to be checked |
-| options | Integer | &#8594;  | Checking options |
-| method | Text | &#8594;  | Name of 4D callback method |
-| tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
-| fieldsArray | Integer array | &#8594;  | Numbers of indexes to be checked |
+| cheminStructure | Text | &#8594;  | Chemin d’accès du fichier de structure de la base à vérifier |
+| cheminDonnées | Text | &#8594;  | Chemin d’accès du fichier de données de la base à vérifier |
+| objets | Integer | &#8594;  | Objets à vérifier |
+| options | Integer | &#8594;  | Options de vérification |
+| méthode | Text | &#8594;  | Nom de la méthode 4D de rétroappel |
+| tabTables | Integer array | &#8594;  | Numéros des tables à vérifier |
+| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numéros des index à vérifier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Modified|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|15 R3|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VERIFY DATA FILE.Summary-->The VERIFY DATA FILE command carries out a structural check of the objects contained in the 4D data file designated by *structurePath* and *dataPath*.<!-- END REF-->For more information about checking data, please refer to the Design Reference manual. *structurePath* designates the structure file (compiled or not) associated with the data file to be checked. This can be the open structure file or any other structure file. You must pass a complete pathname, expressed with the syntax of the operating system. You can also pass an empty string, in this case a standard Open file dialog box appears so that the user can specify the structure file to be used.    
-  
-*dataPath* designates a 4D data file (.4DD). It must correspond to the structure file defined by the *structurePath* parameter. Be careful, you can designate the current structure file but the data file must not be the current (open) file. To verify the currently open data file, use the [VERIFY CURRENT DATA FILE](verify-current-data-file.md) command. If you attempt to verify the current data file with the VERIFY DATA FILE command, an error is generated.
+<!--REF #_command_.VERIFY DATA FILE.Summary-->La commande **VERIFY DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données 4D désigné par *cheminStructure* et *cheminDonnées*.<!-- END REF-->Pour plus d’informations sur le processus de vérification des données, reportez-vous au manuel Mode Développement.
 
-The data file designated is opened in read only. You must make sure that no application accesses this file in write mode, otherwise the results of the check may be distorted.   
+*cheminStructure* désigne le fichier de structure (compilé ou non) associé au fichier de données à vérifier. Il peut s’agir du fichier de structure ouvert ou de tout autre fichier de structure. Vous devez passer un chemin d’accès complet, exprimé avec la syntaxe du système d’exploitation. Vous pouvez également passer une chaîne vide, dans ce cas une boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner le fichier de structure à utiliser.   
   
-In the *dataPath* parameter, you can pass an empty string, a file name or a complete pathname, expressed in the syntax of the operating system. If you pass an empty string, the standard Open file dialog box appears so that the user can specify the file to be checked (note that in this case, it is not possible to select the current data file). If you only pass a data file name, 4D will look for it at the same level as the specified structure file.  
+*cheminDonnées* désigne un fichier de données 4D (.4DD). Il doit correspondre au fichier de structure défini par le paramètre *cheminStructure*. Attention, vous pouvez désigner le fichier de structure courant mais le fichier de données ne doit pas être le fichier courant (ouvert). Pour vérifier le fichier de données ouvert, utilisez la commande [VERIFY CURRENT DATA FILE](verify-current-data-file.md). Si vous tentez de vérifier le fichier de données courant avec la commande **VERIFY DATA FILE**, une erreur est générée.  
+Le fichier de données désigné est ouvert en lecture seulement. Vous devez veiller à ce qu’aucune application n’accède à ce fichier en écriture, sinon les résultats de la vérification pourront être faussés.   
+Vous pouvez passer dans le paramètre *cheminDonnées* une chaîne vide, un nom de fichier ou un chemin d’accès complet, exprimé dans la syntaxe du système d’exploitation. Si vous passez une chaîne vide, la boîte de dialogue standard d’ouverture de fichier apparaît, permettant à l’utilisateur de désigner le fichier à vérifier (à noter dans ce cas qu’il n’est pas possible de sélectionner le fichier de données courant). Si vous passez uniquement un nom de fichier de données, 4D le recherchera au même niveau que le fichier de structure défini.  
   
-The *objects* parameter is used to designate which types of objects will be checked. Two types of objects can be checked: records and indexes. You can use the following constants, found in the “*Data File Maintenance*” theme:
+Le paramètre *objets* permet de désigner le(s) type(s) d’objets à vérifier. Deux types d’objets peuvent être vérifiés : les enregistrements et les index. Utilisez les constantes suivantes, placés dans le thème *Maintenance fichier de données* :  
 
-| Constant       | Type    | Value | Comment                                                                                                                                                                                                                                                                                |
-| -------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Verify all     | Integer | 16    |                                                                                                                                                                                                                                                                                        |
-| Verify indexes | Integer | 8     | This option checks the physical consistency of the indexes, without any link with the data. It signals invalid keys but does not permit you to detect duplicated keys (two indexes that point to the same record). This type of error can only be detected with the Verify All option. |
-| Verify records | Integer | 4     |                                                                                                                                                                                                                                                                                        |
-  
-  
-To verify both the records and the indexes, pass the total of Verify Records+Verify Indexes. The value 0 (zero) can also be used to obtain the same result. The Verify All option carries out complete internal verification. This verification is compatible with the creation of a log.  
-  
-The *options* parameter is used to set verification options. The following options are available, found in the “*Data File Maintenance*” theme:  
+| Constante      | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                     |
+| -------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verify all     | Entier long | 16     |                                                                                                                                                                                                                                                                                             |
+| Verify indexes | Entier long | 8      | Cette option contrôle la cohérence physique des index, sans lien avec les données. Elle signale des clés invalides mais ne permet pas de détecter les clés dupliquées (deux index pointant vers le même enregistrement). Ce type d'erreur ne peut être détecté qu'avec l'option Verify all. |
+| Verify records | Entier long | 4      |                                                                                                                                                                                                                                                                                             |
 
-| Constant                | Type    | Value  | Comment                                                                                                                                                                                                                                                                                                                        |
-| ----------------------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.    |
-| Timestamp log file name | Integer | 262144 | When this option is passed, the name of the log file generated will contain the date and time of its creation; as a result, it will not replace any log file already generated previously. By default, if this option is not passed, log file names are not timestamped and each new file generated replaces the previous one. |
   
+Pour vérifier les enregistrements et les index, passez le cumul *Vérifier enregistrements*+*Vérifier index*. La valeur 0 (zéro) permet également d’obtenir le même résultat. L’option Verify all effectue la vérification interne la plus complète. Cette vérification est compatible avec la création d’un historique.  
   
-Generally, the VERIFY DATA FILE command creates a log file in XML format (please refer to the end of the description of this command). You can cancel this operation by passing this option. To create the log file, pass 0 in *options*.  
+Le paramètre *options* permet de définir les options de vérification. Les options suivantes sont disponibles, accessibles via des constantes du thème *Maintenance fichier de données* :   
+
+| Constante               | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Do not create log file  | Entier long | 16384  | En principe, la commande crée un fichier d’historique au format xml (reportez-vous à la fin de la description de la commande). Vous pouvez annuler ce fonctionnement en passant cette option.                                                                                                                                                           |
+| Timestamp log file name | Entier long | 262144 | Lorsque cette option est passée, le nom du fichier d'historique généré contiendra la date et l'heure de sa création, par conséquent il ne remplacera aucun fichier d'historique éventuellement déjà généré. Par défaut, si cette option n'est pas passée, le nom du fichier n'est pas horodaté, et chaque nouveau fichier généré remplace le précédent. |
+
   
-The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
+Pour créer l’historique, passez 0 dans *options*.  
+  
+Le paramètre *méthode* permet de définir une méthode de rétro-appel qui sera régulièrement appelée durant la vérification. Si vous passez une chaîne vide ou un nom de méthode non valide, ce paramètre est ignoré (aucune méthode n’est appelée). Lorsqu’elle est appelée, la méthode reçoit jusqu’à 5 paramètres en fonction des objets vérifiés et du type d’événement à l’origine de l’appel (cf. tableau des appels). Vous devez impérativement déclarer ces paramètres dans la méthode : 
 
-| Parameter | Type | Description |
-| ----- | ------- | ------------------------ |
-| $messageType | Integer | Message type (see table) |
-| $objectType | Integer | Object type              |
-| $messageText | Text    | Message                  |
-| $table | Integer | Table number             |
-| $reserved | Integer | Reserved                 |
+| Paramètre | Type | Description |
+| ------------ | ----------- | ----------------------------- | 
+| $messageType | Entier long | Type de message (cf. tableau) |
+| $objectType  | Entier long | Type d’objet                  |
+| $messageText | Texte       | Message                       |
+| $table       | Entier long | Numéro de table               |
+| $reserved    | Entier long | Réservé                       |
 
-The following table describes the contents of the parameters depending on the event type:
+Le tableau suivant décrit le contenu des paramètres en fonction du type d’événement :
 
-| **Event**       | **$messageType** | **$objectType**   | **$messageText**  | **$table** | **$reserved** |
-| ------- | ---------------- | ------------------ | -------------- | ---------------- | ---------------- |
-| Message   | 1           | 0             | Progression message   | Percentage  done (0-100)     | Reserved         |
-| Verification finished(\*) | 2                | Object type (\*\*) | OK message test    | Table or index number  | Reserved         |
-| Error      | 3                | Object type (\*\*) | Text of error message | Table or index number  | Reserved         |
-| End of execution          | 4                | 0                  | DONE           | 0                | Reserved         |
-| Warning                   | 5                | Object type(\*\*)  | Text of error  | Table or index   | Reserved         |
-|||| message                   | number      |
+| **Evénement**             | **$messageType** | **$objectType**   | **$messageText**      | **$table** | **$reserved** |
+| ------------------------- | ---------------- | ----------------- | --------------------- | ------------------------------- | ------------------------------- |
+| Message                   | 1                | 0                 | Progression message   | Pourcentage  réalisé (0-100)    | Réservé                         |
+| Vérification terminée(\*) | 2                | Type d’objet(\*\*)| Message OK  test      | Table ou index   numéro         | Réservé                         |
+| Erreur                    | 3                | Type d’objet(\*\*)| Texte d’erreur message| Table ou index   numéro         | Réservé                         |
+| Fin d’exécution           | 4                | 0                 | DONE                  | 0                               | Réservé                         |
+| Warning                   | 5                | Type d'objet(\*\*)| Texte d'erreur        | Table ou index                  | Réservé                         |
+| | | | | message                         | numéro                          |
 
-(\*) The *Verification finished* ($messageType=2) event is never returned when the mode is Verify All. It is only used in Verify Records or Verify Indexes mode.  
-(\*\*) *Object type*: When an object is verified, a "finished" message ($messageType=2), error ($messageType=3) or warning ($messageType=5) can be sent. The object type returned in *$objectType* can be one of the following:
+(\*) L'événement *Vérification terminée* ($messageType=2) n'est jamais renvoyé lorsque le mode de vérification est Verify all. Il n'est utilisé qu'en mode Verify records ou Verify indexes.
 
-* 0 = undetermined
-* 4 = record
+(\*\*) *Type d’objet* : Lorsqu’un objet est vérifié, un message "terminé" ($messageType=2), erreur ($messageType=3) ou warning ($messageType=5) peut être envoyé. Le type d’objet retourné dans $objectType peut être l’un des suivants :
+
+* 0 = indéterminé
+* 4 = enregistrement
 * 8 = index
-* 16 = structure object (preliminary check of data file).
+* 16 = objet structure (contrôle préliminaire du fichier de données).
 
-*Special case*: When *$table* = 0 for *$messageType*=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
+*Cas particulier* : lorsque $table = 0 pour $messageType = 2, 3 ou 5, le message ne concerne pas une table mais le fichier de données dans son ensemble.
 
-The callback method must also return an integer value, which is used to check the execution of the operation:
+La méthode de rétro-appel doit également retourner une valeur entière *$result*, permettant de contrôler l’exécution de l’opération :
 
-* If $result = 0, the operation continues normally
-* If $result = -128, the operation is stopped without any error generated
-* If $result = another value, the operation is stopped and the value passed in $result is returned as the error number. This error can be intercepted by an error-handling method.
+* si $result = 0, l’opération continue normalement
+* si $result = -128, l’opération est stoppée sans erreur générée
+* si $result = autre valeur, l’opération est stoppée et la valeur passée dans $result est retournée en tant que numéro d’erreur. Cette erreur peut être interceptée par une méthode d’appel sur erreur.
 
-**Note:** You cannot interrupt execution via $result after the *End of execution* event ($messageType=4) has been generated.
+**Note :** Il n'est pas possible d'interrompre l'exécution via $result après que l'événement *Fin d'exécution* ($1=4) a été généré.
 
-Two optional arrays can also be used by this command:
+Deux tableaux facultatifs peuvent également être utilisés par la commande :
 
-* The *tablesArray* array contains the numbers of the tables whose records are to be checked. It can be used to limit checking to only certain tables. If this parameter is not passed or if the array is empty and the *objects* parameter contains Verify Records, all the tables will be checked.
-* The *fieldsArray* array contains the numbers of the indexed fields whose indexes are to be checked. If this parameter is not passed or if the array is empty and the *objects* parameter contains Verify Indexes, all the indexes will be checked. The command ignores fields that are not indexed. If a field contains several indexes, they are all checked. If a field is part of a composite index, the entire index is checked.  
-You must pass a 2D array in *fieldsArray*. For each row of the array:  
-\- The element {0} contains the table number,  
-\- The other elements {1...x} contain the field numbers.
+* Le tableau *tabTables* contient les numéros des tables dont les enregistrements doivent être vérifiés. Il permet de limiter la vérification à certaines tables. Si ce paramètre n’est pas passé ou si le tableau est vide et que le paramètre *objets* contient Verify records, toutes les tables sont vérifiées.
+* Le tableau *tabChamps* contient les numéros des champs indexés dont les index doivent être vérifiés. Si ce paramètre n’est pas passé ou si le tableau est vide et que le paramètre *objets* contient Verify indexes, tous les index sont vérifiés. La commande ignore les champs non indexés. Si un champ contient plusieurs index, tous les index sont vérifiés. Si un champ fait partie d’un index composite, la totalité de l’index est vérifiée.  
+Vous devez passer un tableau 2D dans *tabChamps*. Pour chaque ligne du tableau :  
+\- l’élément {0} contient le numéro de la table,  
+\- les autres éléments {1...n} contiennent les numéros des champs.
 
-By default, the VERIFY DATA FILE command creates a log file in XML format (if you have not passed the Do not create log file option, see the *options* parameter). This file is placed in the **Logs** folder of the database and its name is based on the structure file of the current database. For example, for a structure file named “myDB.4db,” the log file will be named “myDB\_Verify\_Log.xml.”  
-If you have passed the Timestamp log file name option, the name of the log file includes the date and time of its creation in the form "YYYY-MM-DD HH-MM-SS", which gives us, for example: “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. This means that each new log file does not replace the previous one, but it might require subsequent manual action to remove unnecessary files.   
-Regardless of the option selected, as soon as a log file is generated, its path is returned in the *Document* system variable after execution of the command.
+Par défaut, la commande **VERIFY DATA FILE** crée un fichier d'historique au format xml (si vous n'avez pas passé l'option Do not create log file, cf. paramètre *options*). Son nom est basé sur celui du fichier de structure de la base et il est placé dans le dossier **Logs** de cette base. Par exemple, pour un fichier de structure nommé “myDB.4db”, le fichier d’historique sera nommé “myDB\_Verify\_Log.xml”.   
+Si vous avez passé l'option Timestamp log file name, le nom du fichier d'historique inclut la date et l'heure de sa création sous la forme "AAAA-MM-JJ HH-MM-SS", ce qui donne par exemple : “myDB\_Verify\_Log\_2015-09-27 15-20-35.xml”. Ce principe permet d'éviter que chaque nouveau fichier d'historique écrase le précédent, mais pourra nécessiter ultérieurement une action manuelle afin de supprimer les fichiers superflus.   
+Quelle que soit l'option sélectionnée, dès lors qu'un fichier d'historique est généré, son chemin est retourné dans la variable système *Document* à l'issue de l'exécution de la commande.
 
-## Example 1 
+## Exemple 1 
 
-Simple checking of data and indexes:
-
-```4d
- VERIFY DATA FILE($StructName;$DataName;Verify indexes+Verify records;Do not create log file;"")
-```
-
-## Example 2 
-
-Complete verification with log file:
+Vérification simple des données et des index :
 
 ```4d
- VERIFY DATA FILE($StructName;$DataName;Verify all;0;"")
+ VERIFY DATA FILE($NomStruct;$NomData;Verify indexes+Verify records;Ne pas créer d’historique;"")
 ```
 
-## Example 3 
+## Exemple 2 
 
-Checking of records only:
+Vérification complète avec historique :
 
 ```4d
- VERIFY DATA FILE($StructName;$DataName;Verify records;0;"")
+ VERIFY DATA FILE($NomStruct;$NomData;Verify all;0;"")
 ```
 
-## Example 4 
+## Exemple 3 
 
-Checking of records from tables 3 and 7 only:
+Vérification des enregistrements uniquement :
 
 ```4d
- ARRAY LONGINT($arrTableNums;2)
- $arrTableNums{1}:=3
- $arrTableNums{2}:=7
- VERIFY DATA FILE($StructName;$DataName;Verify records;0;"FollowScan";$arrTableNums)
+ VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"")
 ```
 
-## Example 5 
+## Exemple 4 
 
-Checking of specific indexes (index of field 1 of table 4 and index of fields 2 and 3 of table 5):
+Vérification des enregistrements des tables 3 et 7 uniquement :
 
 ```4d
- ARRAY LONGINT($arrTableNums;0) //not used but mandatory
- ARRAY LONGINT($arrIndex;2;0) //2 rows (columns added later)
- $arrIndex{1}{0}:=4 // table number in element 0
- APPEND TO ARRAY($arrIndex{1};1) //number of 1st field to be checked
- $arrIndex{2}{0}:=5 // table number in element 0
- APPEND TO ARRAY($arrIndex{2};2) // number of 1st field to be checked
- APPEND TO ARRAY($arrIndex{2};3) // number of 2nd field to be checked
- VERIFY DATA FILE($StructName;$DataName;Verify indexes;0;"FollowScan";$arrTableNums;$arrIndex)
+ ARRAY LONGINT($tnumTables;2)
+ $tnumTables{1}:=3
+ $tnumTables{2}:=7
+ VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"FollowScan";$tnumTables)
 ```
 
-## Example 6 
+## Exemple 5 
 
-Verify the data file, create and display the log file:
+Vérification d’index spécifiques (index du champ 1 de la table 4 et index des champs 2 et 3 de la table 5) :
 
 ```4d
- VERIFY DATA FILE(Structure file;Data file;Verify all;0;"")
- SHOW ON DISK(File(Verification log file).platformPath)
+ ARRAY LONGINT($tnumTables;0) //non utilisé mais obligatoire
+ ARRAY LONGINT($tindex;2;0) //2 lignes (colonnes ajoutées ensuite)
+ $tindex{1}{0}:=4 // numéro de table dans l’élément 0
+ APPEND TO ARRAY($tindex{1};1) // numéro du 1er champ à vérifier
+ $tindex{2}{0}:=5 // numéro de table dans l’élément 0
+ APPEND TO ARRAY($tindex{2};2) // numéro du 1er champ à vérifier
+ APPEND TO ARRAY($tindex{2};3) // numéro du 2e champ à vérifier
+ VERIFY DATA FILE($NomStruct;$NomData;Verify indexes;0;"FollowScan";$tnumTables;$tindex)
 ```
 
-## System variables and sets 
+## Exemple 6 
 
-If the callback method does not exist, the verification is not carried out, an error is generated and the system variable OK is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
+Vérification du fichier de données, création et affichage du fichier d'historique :
 
-## See also 
+```4d
+ VERIFY DATA FILE(Structure file;Data file;Verify all;0;"")
+ SHOW ON DISK(File(Verification log file).platformPath)
+```
+
+## Variables et ensembles système 
+
+Si la méthode de rétro-appel passée n’existe pas, la vérification n’est pas effectuée, une erreur est générée et la variable OK prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
+
+## Voir aussi 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 939 |
+| Numéro de commande | 939 |
 | Thread safe | yes |
-| Modifies variables | OK, Document, error |
+| Modifie les variables | OK, Document, error |
 
 

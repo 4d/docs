@@ -5,53 +5,53 @@ slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *iconRef* : Text, Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* ; *ligneMenu* ; *refIcône* {; *process*} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| iconRef | Text, Integer | &#8592; | Name or number of picture associated with menu item |
-| process | Integer | &#8594;  | Process number |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| refIcône | Text, Integer | &#8592; | Nom ou numéro de l’image associée à la ligne de menu |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|11 SQL|Created|
+|17 R6|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET MENU ITEM ICON.Summary-->The GET MENU ITEM ICON command returns, in the *iconRef* variable, the reference of any icon that is associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This reference is the pathname or number of the picture.
+<!--REF #_command_.GET MENU ITEM ICON.Summary-->La commande **GET MENU ITEM ICON** retourne dans la variable *refIcône* la référence de l’icône éventuellement associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette référence est le chemin d'accès ou le numéro de l’image.
 
-You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
+Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
 
-In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) or a menu number. If you pass a menu reference, the *process* parameter is unnecessary and will be ignored if it is passed. If you pass a menu number, the command will take the corresponding menu in the main menu bar of the current process into account. If you want to designate another process, pass its number in the optional *process* parameter.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu. Si vous passez un identifiant unique, le paramètre *process* est inutile et sera ignoré s’il est passé. Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-* If the icon has been specified using a picture file, the command returns in *iconRef* the pathname using the **path:<filesystem path>** pattern.
-* If the icon has been specified using a library picture (binary databases only), the command returns either the number or the name of the picture, depending on the type of variable passed in this parameter. The following pattern is used for a name: **pictlib:<name>**.  
-If you do not attribute a specific type to the *iconRef* variable, by default, the name of the picture is returned (text type).
+* Si l'icône a été définie à l'aide d'un fichier image, la commande retourne dans *refIcône* le chemin d'accès via la syntaxe **path:<chemin filesystem>**.
+* Si l'icône a été définie à l'aide d'une image issue de la bibliothèque (base de données binaires uniquement), la commande retourne soit le numéro soit le nom de l'image, en fonction du type de variable passé dans ce paramètre. La syntaxe suivante est utilisée pour un nom : **pictlib:<nom>.**  
+Si vous n’attribuez pas de type spécifique à la variable *refIcône*, par défaut le nom de l’image est retourné (type texte).
 
-If no icon is associated with the menu item, the command returns a blank value.
+Si aucune icône n’est associée à la ligne, la commande retourne une valeur vide.
 
-## See also 
+## Voir aussi 
 
 [SET MENU ITEM ICON](set-menu-item-icon.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 983 |
+| Numéro de commande | 983 |
 | Thread safe | no |
 
 

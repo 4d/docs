@@ -5,65 +5,65 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *object* : Text ; *jsCode* : Text {; *type* : Integer} ) : any<br/>**WA Evaluate JavaScript** ( *object* : Variable, Field ; *jsCode* : Text {; *type* : Integer} ) : any<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *objet* ; *codeJS* {; *type*} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| jsCode | Text | &#8594;  | JavaScript code |
-| type | Integer | &#8594;  | Type into which to convert result |
-| Function result | any | &#8592; | Result of evaluation |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| codeJS | Text | &#8594;  | Code JavaScript |
+| type | Integer | &#8594;  | Type dans lequel convertir le résultat |
+| Résultat | Date, Time, Object, Pointer, Real, Text | &#8592; | Résultat de l’exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Renamed|
-|14|Modified|
-|11 SQL Release 2|Created|
+|16 R4|Modifié|
+|14|Renommé|
+|14|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Evaluate JavaScript.Summary-->The WA Evaluate JavaScript command executes, in the Web area designated by the *\** and *object* parameters, the JavaScript code passed in *jsCode* and returns the result.<!-- END REF--> This command must be called after the page is loaded (the On End URL Loading form event must have been generated).
+<!--REF #_command_.WA Evaluate JavaScript.Summary-->La commande **WA Evaluate JavaScript** exécute dans la zone Web désignée par les paramètres *\** et *objet* le code JavaScript passé dans *codeJS* et retourne le résultat.<!-- END REF--> Cette commande doit être appelée après le chargement complet de la page (l'événement formulaire On End URL Loading doit avoir été généré).
 
-By default, the command returns values as strings. You can use the optional *type* parameter to specify typing for the value returned. To do this, pass one of the following constants, found in the "*Field and Variable Types*" theme:
+Par défaut, la commande retourne le résultat sous forme de chaîne. Vous pouvez toutefois préciser le typage de la valeur retournée à l’aide du paramètre optionnel *type*. Pour cela, vous pouvez passer dans *type* une des constantes suivantes, placées dans le thème "*Types champs et variables*" :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is date       | Integer | 4     |
-| Is longint    | Integer | 9     |
-| Is object     | Integer | 38    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Is time       | Integer | 11    |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Is Boolean    | Entier long | 6      |
+| Is collection | Entier long | 42     |
+| Is date       | Entier long | 4      |
+| Is longint    | Entier long | 9      |
+| Is object     | Entier long | 38     |
+| Is real       | Entier long | 1      |
+| Is text       | Entier long | 2      |
+| Is time       | Entier long | 11     |
 
-**Warning**: Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print()*...*) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
+**Attention :** L'utilisation de cette commande pour appeler directement une fonction JavaScript qui affiche un dialogue (**alert()**, **print().**..) n'est pas recommandée car l'utilisateur ne peut pas interagir avec la zone Web pendant l'exécution du code 4D. Si vous devez implémenter une telle interface, vous pouvez par exemple appeler **setTimeout(function(){alert();}, 50))** pour laisser l'exécution du code 4D se terminer et permettre l'interaction de l'utilisateur. 
 
-## Example 1 
+## Exemple 1 
 
-This example of JavaScript code causes the previous URL to be displayed: 
+Cet exemple de code JavaScript provoque l'affichage de l'url précédent : 
 
 ```4d
- $result:=WA Evaluate JavaScript(MyWArea;"history.back()")
+ $résultat:=WA Evaluate JavaScript(MaZoneW;"history.back()")
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example shows a few evaluations with conversion of the values received.
+Cet exemple montre quelques évaluations avec conversion des valeurs reçues.
 
-JavaScript functions placed in an HTML file:
+Des fonctions JavaScript sont placées dans un fichier html :
 
 ```HTML
 <!DOCTYPE html>
@@ -73,10 +73,10 @@ JavaScript functions placed in an HTML file:
         function evalLong(){
             return 123;
         }
-        function evalText(){
+        function evalTexte(){
             return "456";
         }
-        function evalObject(){
+        function evalObjet(){
             return {a:1,b:"hello world"};
         }
         function evalDate(){
@@ -90,38 +90,38 @@ JavaScript functions placed in an HTML file:
 </html>
 ```
 
-In the 4D form method, you write:
+Vous écrivez dans la méthode du formulaire 4D :
 
 ```4d
  If(Form event code=On Load)
-    WA OPEN URL(*;"Web Area";"C:\\myDatabase\\index.html")
+    WA OPEN URL(*;"Web Area";"C:\\myBase\\index.html")
  End if
 ```
 
-You can then evaluate the JavaScript code from 4D:
+Vous pouvez alors évaluer le code JavaScript depuis 4D :
 
 ```4d
  $Eval1:=WA Evaluate JavaScript(*;"Web Area";"evalLong()";Is longint)
-  //$Eval1 = 123
-  //$Eval1 = "123" if type is omitted
- $Eval2:=WA Evaluate JavaScript(*;"Web Area";"evalText()";Is text)
-  //$Eval2 = "456"
- $Eval3:=WA Evaluate JavaScript(*;"Web Area";"evalObject()";Is object)
-  //$Eval3 = {"a":1,"b":"hello world"}
+     //$Eval1 = 123
+     //$Eval1 = "123" si le type est omis
+ $Eval2:=WA Evaluate JavaScript(*;"Web Area";"evalTexte()";Is text)
+     //$Eval2 = "456"
+ $Eval3:=WA Evaluate JavaScript(*;"Web Area";"evalObjet()";Is object)
+     //$Eval3 = {"a":1,"b":"hello world"}
  $Eval4:=WA Evaluate JavaScript(*;"Web Area";"evalDate()";Is date)
-  // $Eval4 = 06/21/13
-  // $Eval4 = "2013-06-21T14:45:09.694Z" if type is omitted
+     //$Eval4 = 21/06/13
+     //$Eval4 = "2013-06-21T14:45:09.694Z" si le type est omis
 ```
 
-## See also 
+## Voir aussi 
 
 [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1029 |
+| Numéro de commande | 1029 |
 | Thread safe | no |
 
 

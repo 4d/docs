@@ -5,81 +5,81 @@ slug: /commands/dom-get-xml-child-nodes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elementRef* : Text ; *childTypesArr* : Integer array ; *nodeRefsArr* : Text array )<!-- END REF-->
+<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *refElément* ; *tabTypesEnfants* ; *tabRefsNoeuds* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| childTypesArr | Integer array | &#8592; | Types of child nodes |
-| nodeRefsArr | Text array | &#8592; | References or Values of child nodes |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| tabTypesEnfants | Integer array | &#8592; | Types des noeuds enfants |
+| tabRefsNoeuds | Text array | &#8592; | Références ou Valeurs des noeuds enfants |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM GET XML CHILD NODES.Summary-->The **DOM GET XML CHILD NODES** command returns the types and references or values of all the child nodes of the XML element designated by *elementRef*.<!-- END REF-->
+<!--REF #_command_.DOM GET XML CHILD NODES.Summary-->La commande **DOM GET XML CHILD NODES** retourne les types et les références ou valeurs de tous les noeuds enfants de l’élément XML désigné par *refElément*.<!-- END REF-->
 
-The types of child nodes are returned in the *childTypesArr* array. You can compare the values returned by the command with the following constants, found in the "*XML*" theme:
+Les types des noeuds enfants sont retournés dans le tableau *tabTypesEnfants*. Vous pouvez comparer les valeurs renvoyées par la commande avec les constantes suivantes, placées dans le thème *XML* :
 
-| Constant                   | Type    | Value |
-| -------------------------- | ------- | ----- |
-| XML comment                | Integer | 2     |
-| XML processing instruction | Integer | 3     |
-| XML DATA                   | Integer | 6     |
-| XML CDATA                  | Integer | 7     |
-| XML DOCTYPE                | Integer | 10    |
-| XML ELEMENT                | Integer | 11    |
+| Constante                  | Type        | Valeur |
+| -------------------------- | ----------- | ------ |
+| XML comment                | Entier long | 2      |
+| XML processing instruction | Entier long | 3      |
+| XML DATA                   | Entier long | 6      |
+| XML CDATA                  | Entier long | 7      |
+| XML DOCTYPE                | Entier long | 10     |
+| XML ELEMENT                | Entier long | 11     |
 
-For more information, please refer to the description of the [DOM Append XML child node](dom-append-xml-child-node.md) command.
+Pour plus d’informations, reportez-vous à la description de la commande [DOM Append XML child node](dom-append-xml-child-node.md).
 
-The *nodeRefsArr* array receives the values or references of the elements according to their nature (contents or instructions).
+Le tableau *tabRefsNoeuds* reçoit les valeurs ou les références des éléments en fonction de leur nature (contenus ou instructions).
 
-## Example 
+## Exemple 
 
-Given the following XML structure:  
+Soit la structure XML suivante :  
 
 ```XML
-<myElement>Hello<br/>New<br/>York</myElement>
+<monElement>Bonjour<br/>La<br/>FRANCE</monElement>
 ```
 
-After executing these instructions:  
+Après l’exécution de ces instructions :  
 
 ```4d
- elementRef:=DOM Find XML element($root;"myElement")
- DOM GET XML CHILD NODES(elementRef;$typeArr;$textArr)
+ refElement:=DOM Find XML element($root;"monElement")
+ DOM GET XML CHILD NODES(refElement;$tabtype;$tabtext)
 ```
 
-... the $typeArr and $textArr arrays will contain the following values:  
+... les tableaux $tabtype et $tabtext contiendront les valeurs suivantes :  
 
-| $typeArr{1}=6  | $textArr{1} = "Hello"                                      |
-| -------------- | ---------------------------------------------------------- |
-| $typeArr{2}=11 | $textArr{2} = "AEF1233456878977" (element reference <Br/>) |
-| $typeArr{3}=6  | $textArr{3} = "New"                                        |
-| $typeArr{4}=11 | $textArr{4} = "AEF1237897734568" (element reference <Br/>) |
-| $typeArr{5}=6  | $textArr{5} = "York"                                       |
+| $tabtype{1}=6  | $tabtext{1} = "Bonjour"                                         |
+| -------------- | --------------------------------------------------------------- |
+| $tabtype{2}=11 | $tabtext{2} = "AEF1233456878977" (référence de l’élément <Br/>) |
+| $tabtype{3}=6  | $tabtext{3} = "La"                                              |
+| $tabtype{4}=11 | $tabtext{4} = "AEF1237897734568" (référence de l’élément<Br/>)  |
+| $tabtype{5}=6  | $tabtext{5} = "FRANCE"                                          |
 
-## See also 
+## Voir aussi 
 
 [DOM Append XML child node](dom-append-xml-child-node.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1081 |
+| Numéro de commande | 1081 |
 | Thread safe | yes |
 
 

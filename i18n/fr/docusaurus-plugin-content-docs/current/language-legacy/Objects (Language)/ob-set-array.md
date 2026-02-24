@@ -5,153 +5,141 @@ slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *object* : Object, Object ; *property* : Text ; *array* : Array, Variable )<!-- END REF-->
+<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objet* ; *propriété* ; *tableau* )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Name of property to set |
-| array | Array, Variable | &#8594;  | Array to store in property |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à définir |
+| tableau | Array, Variable | &#8594;  | Tableau à stocker dans la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|15|Modified|
-|14|Created|
+|16 R4|Modifié|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB SET ARRAY.Summary-->The **OB SET ARRAY** command defines the *array* to be associated with the *property* in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB SET ARRAY.Summary-->La commande **OB SET ARRAY** permet de définir le *tableau* à associer à la *propriété* dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
-Note that the *property* parameter is case sensitive. 
+Passez dans le paramètre *propriété* le libellé de la propriété à créer ou à modifier. Si la propriété existe déjà dans *objet*, sa valeur sera mise à jour. Si elle n’existe pas, elle est créée. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-In the *array* parameter, pass the array that must be passed as the property value. Several array types are supported: real, longint, text, boolean, object, pointer, or picture. 
+Passez dans le paramètre *tableau* le tableau devant être passé comme valeur de la propriété. Plusieurs types de tableaux sont pris en charge : réel, entier long, texte, booléen, objet, pointeur ou image. 
 
-**Notes:** 
+**Notes :**
 
-* Simple variables are supported in the *array* parameter, in which case a single-value array is created and associated to the *property*.
-* It is not possible to use two-dimensional arrays.
+* Les variables simples sont prises en charge dans le paramètre *tableau*, auquel cas un tableau à valeur unique est créé et associé à la propriété.
+* Il n’est pas possible d’utiliser de tableaux à deux dimensions.
 
-## Example 1 
+## Exemple 1 
 
-Using a text array:
+Utilisation d’un tableau texte :
 
 ```4d
  var $Children : Object
- ARRAY TEXT($arrChildren;3)
- $arrChildren{1}:="Richard"
- $arrChildren{2}:="Susan"
- $arrChildren{3}:="James"
+ ARRAY TEXT($tabChildren;3)
+ $tabChildren{1}:="Richard"
+ $tabChildren{2}:="Susan"
+ $tabChildren{3}:="James"
  
- OB SET ARRAY($Children;"Children";$arrChildren)
-  // Value of $Children = {"Children":["Richard","Susan","James"]}
+ OB SET ARRAY($Children;"Children";$tabChildren)
+     // Valeur de $Children = {"Children":["Richard","Susan","James"]}
 ```
 
-## Example 2 
+## Exemple 2 
 
-Adding an element to an array:
+Ajout d’un élément dans un tableau :
 
 ```4d
- ARRAY TEXT($arrText;2)
- $arrText{1}:="Smith"
- $arrText{2}:="White"
+ ARRAY TEXT($tabText;2)
+ $tabText{1}:="Smith"
+ $tabText{2}:="White"
  var $Employees : Object
- OB SET ARRAY($Employees;"Employees";$arrText)
- APPEND TO ARRAY($arrText;"Brown") // Add to the 4D array
-  // $Employees = {"Employees":["Smith","White"]}
+ OB SET ARRAY($Employees;"Employés";$tabText)
+ APPEND TO ARRAY($tabText;"Brown") //Ajout dans le tableau 4D
+     // $Employees = {"Employés":["Smith","White"]}
  
- OB SET ARRAY($Employees;"Employees";$arrText)
-  // $Employees = {"Employees":["Smith","White","Brown"]}
+ OB SET ARRAY($Employees;"Employés";$tabText)
+     // $Employees = {"Employés":["Smith","White","Brown"]}
 ```
 
-## Example 3 
+## Exemple 3 
 
-Using a text array with selection of an element:
+Utilisation d’un tableau texte avec sélection d’un élément :
 
 ```4d
-  // $Employees = {"Employees":["Smith","White","Brown"]}
- OB SET ARRAY($Employees ;"Manager";$arrText{1})
-  // $Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
+     //$Employees = {"Employés":["Smith","White","Brown"]}
+ OB SET ARRAY($Employees ;"Manager";$tabText{1})
+     //$Employees = {"Employees":["Smith","White","Brown"],"Manager":["Smith"]}
 ```
 
-## Example 4 
+## Exemple 4 
 
-Using an object array:
+Utilisation d’un tableau objet :
 
 ```4d
- var $Children;$ref_richard;$ref_susan;$ref_james : Object
- ARRAY OBJECT($arrChildren;0)
+ var $Enfants;$ref_richard;$ref_susan;$ref_james : Object
+ ARRAY OBJECT($tabEnfants;0)
  OB SET($ref_richard;"nom";"Richard";"age";7)
- APPEND TO ARRAY($arrChildren;$ref_richard)
- OB SET($ref_susan;"name";"Susan";"age";4)
- APPEND TO ARRAY($arrChildren;$ref_susan)
- OB SET($ref_james;"name";"James";"age";3)
+ APPEND TO ARRAY($tabEnfants;$ref_richard)
+ OB SET($ref_susan;"nom";"Susan";"age";4)
+ APPEND TO ARRAY($tabEnfants;$ref_susan)
+ OB SET($ref_james;"nom";"James";"age";3)
  
- APPEND TO ARRAY($arrChildren;$ref_james)
+ APPEND TO ARRAY($tabEnfants;$ref_james)
  
-  // $arrChildren {1} = {"name":"Richard","age":7}
-  // $arrChildren {2} = {"name":"Susan","age":4}
-  // $arrChildren {3} = {"name":"James","age":3}
+     //$tabEnfants {1} = {"nom":"Richard","age":7}
+     //$tabEnfants {2} = {"nom":"Susan","age":4}
+     //$tabEnfants {3} = {"nom":"James","age":3}
  
- OB SET ARRAY($Children;"Children";$arrChildren)
+ OB SET ARRAY($Enfants;"Enfants";$tabEnfants)
  
-  // $Children = {"Children":[{"name":"Richard","age":7},{"name":"Susan",
-  // "age":4},{"name":"James","age":3}]}
+     // $Enfants = {"Enfants":[{"nom":"Richard","age":7},{"nom":"Susan",
+     // "age":4},{"nom":"James","age":3}]}
 ```
 
-Here is how the object appears in the debugger:
+L’objet est représenté ainsi dans le débogueur :
 
-![](../assets/en/commands/pict1211436.en.png)
+![](../assets/en/commands/pict1211436.fr.png)
 
-## Example 5 
+## Exemple 5 
 
-Using an Object field:
+Utilisation d'un champ objet :
 
 ```4d
  ARRAY TEXT($arrGirls;3)
  $arrGirls{1}:="Emma"
  $arrGirls{2}:="Susan"
  $arrGirls{3}:="Jamie"
- OB SET ARRAY([People]Children;"Girls";$arrGirls)
+ OB SET ARRAY([Personnes]Enfants;"Girls";$arrGirls)
 ```
 
-![](../assets/en/commands/pict1899097.en.png)
+![](../assets/en/commands/pict1899097.fr.png)
 
-## Example 6 
+## Exemple 6 
 
-Using a picture array:
+## Voir aussi 
 
-```4d
- ARRAY PICTURE($arrPhotos;3)
- READ PICTURE FILE("pict1.jpg";$arrPhotos{1})
- READ PICTURE FILE("pict2.jpg";$arrPhotos{2})
- READ PICTURE FILE("pict3.jpg";$arrPhotos{3})
- 
- OB SET ARRAY([Cities]Places;"Photoset";$arrPhotos)
-```
-
-## See also 
-
+*Conversions de type entre les collections et les tableaux 4D*  
 [OB GET ARRAY](ob-get-array.md)  
 [OB SET](ob-set.md)  
-*Type conversions between collections and 4D arrays*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1227 |
+| Numéro de commande | 1227 |
 | Thread safe | yes |
 
 

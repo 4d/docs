@@ -5,53 +5,54 @@ slug: /commands/query-by-example
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( *aTable* : Table {; *} )<br/>**QUERY BY EXAMPLE** ( * )<!-- END REF-->
+<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*laTable*}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
-| * | Operator | &#8594;  | If passed, the scrolling bar will not be displayed |
+| laTable | Table | &#8594;  | Table de laquelle une sélection d'enregistrements doit être retournée ou Table par défaut si ce paramètre est omis |
+| * | Opérateur | &#8594;  | Masquer les barres de défilement |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.QUERY BY EXAMPLE.Summary-->**QUERY BY EXAMPLE** performs the same action as the Query by Example menu command in the Design environment.<!-- END REF--> It displays the current input form as a query window. **QUERY BY EXAMPLE** queries *aTable* for the data that the user enters into the query window. The form must contain the fields that you want the user to be able to query. The query is optimized; indexed fields are automatically used to optimize the query.
+<!--REF #_command_.QUERY BY EXAMPLE.Summary-->La commande **QUERY BY EXAMPLE** effectue la même action que la commande de menu **Recherche par formulaire**.<!-- END REF-->.. en mode Développement. Cette commande affiche le formulaire entrée courant comme fenêtre de recherche. **QUERY BY EXAMPLE** cherche dans *laTable* les données que l'utilisateur a saisies dans cette fenêtre. Le formulaire doit contenir les champs sur lesquels vous voulez que l'utilisateur puisse effectuer la recherche. La recherche est optimisée : les champs indexés sont automatiquement utilisés.  
+Si vous passez le paramètre optionnel *\**, les barres de défilement du formulaire sont masquées.
 
-See the 4D Design Reference manual for information about using the Query by Example menu command in the Design environment.
+Reportez-vous au manuel Mode Développement de 4D pour plus d'informations sur l'utilisation de la commande de menu **Recherche par formulaire...** du mode Développement.
 
-## Example 
+## Exemple 
 
-The method in this example displays the MyQuery form to the user. If the user accepts the form and performs the query (that is, if the OK system variable is set to 1), the records that meet the query criteria are displayed:
+La méthode dans l'exemple suivant affiche le formulaire *maRecherche*. Si l'utilisateur valide le formulaire et exécute la recherche (c'est-à-dire si la variable système OK prend la valeur 1), les enregistrements trouvés sont affichés :
 
 ```4d
- FORM SET INPUT([People];"MyQuery") // Switch to query form
- QUERY BY EXAMPLE([People]) // Display form and perform query
- If(OK=1) // If the user performed the query
-    DISPLAY SELECTION([People]) // Display the records
+ FORM SET INPUT([Personnes];"maRecherche") // Ce formulaire devient le formulaire entrée
+ QUERY BY EXAMPLE([Personnes]) // Afficher le formulaire pour la recherche
+ If(OK=1) // Si l'utilisateur valide la recherche
+    DISPLAY SELECTION([Personnes]) // Visualiser les enregistrements trouvés
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user clicks the Accept button or presses the Enter key, the OK system variable is set to 1 and the query is performed. If the user clicks the Cancel button or presses the “cancel” key combination, the OK system variable is set to 0 and the query is canceled.
+Si l'utilisateur clique sur le bouton Valider ou appuie sur la touche Entrée, la variable système OK prend la valeur 1 et la recherche est effectuée. Si l'utilisateur clique sur le bouton Annuler ou utilise la touche d'annulation, la variable système OK prend la valeur 0 et la recherche est annulée.
 
-## See also 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 292 |
+| Numéro de commande | 292 |
 | Thread safe | no |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
 
 

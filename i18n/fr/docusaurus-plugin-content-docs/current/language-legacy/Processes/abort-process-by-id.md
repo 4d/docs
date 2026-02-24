@@ -5,62 +5,61 @@ slug: /commands/abort-process-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* : Integer )<!-- END REF-->
+<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| uniqueID | Integer | &#8594;  | Unique process ID |
+| uniqueID | Integer | &#8594;  | ID unique du process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R4|Created|
+|17 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ABORT PROCESS BY ID.Summary-->The **ABORT PROCESS BY ID** command stops a specific process on the 4D Server.<!-- END REF-->
+<!--REF #_command_.ABORT PROCESS BY ID.Summary-->La commande **ABORT PROCESS BY ID** stoppe un process spécifique sur 4D Server.<!-- END REF-->
 
-In the *uniqueID* parameter, pass the unique ID of the process running on the server that you want to stop. You can retrieve the process ID with the [Process activity](./commands/process-activity) or the [Process info](./commands/process-info) commands.
+Dans le paramètre *uniqueID*, passez l'ID unique du process que vous souhaitez stopper sur le serveur. Vous pouvez récupérer l'ID du process à l'aide des commandes [Process activity](../commands/process-activity.md) ou [Process info](../commands/process-info.md).
 
-**Notes**: 
+**Notes** : 
 
-* This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **ABORT PROCESS BY ID** does nothing.
-* This command can only be used with the *ServerNet* network layer. See   *New ServerNet Network Layer (compatibility)*.
-* This command should only be used for searching errors or administration purposes, not as a regular procedure.
+* Cette commande ne peut être exécutée que sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **ABORT PROCESS BY ID** ne fait rien.
+* Cette commande ne peut être utilisée qu'avec la couche réseau *ServerNet*. Voir *Nouvelle couche réseau ServerNet (compatibilité)*.
+* Cette commande ne doit être utilisée que pour la recherche d'erreurs ou à des fins d'administration, et non pas comme une procédure ordinaire.
 
-## Example 
+## Exemple 
 
-You want to stop the selected process of the processes collection displayed in a list box:
+Vous souhaitez stopper le process sélectionné parmi la collection de process affichée dans une list box :
 
 ```4d
   //variable =curItemPosition
  
-  // Retrieve the list of process on the server and display in the list box
+  // Récupérez la liste des process sur le serveur et affichez-la dans la list box
  $activity:=Get process activity(Processes only).processes
  ...
-  // The selected process is stopped on the server
+  // Le process sélectionné est stoppé sur le serveur
  ABORT PROCESS BY ID($activity[curItemPosition].ID)
 ```
 
-## See also 
+## Voir aussi 
 
 [PAUSE PROCESS](pause-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1634 |
+| Numéro de commande | 1634 |
 | Thread safe | yes |
-
 
 

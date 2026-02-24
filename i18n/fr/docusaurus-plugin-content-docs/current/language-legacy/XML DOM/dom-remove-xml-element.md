@@ -5,46 +5,46 @@ slug: /commands/dom-remove-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *elementRef* : Text )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *refElément* )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM REMOVE XML ELEMENT.Summary-->The DOM REMOVE XML ELEMENT command removes the element designated by *elementRef*.<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ELEMENT.Summary-->La commande **DOM REMOVE XML ELEMENT** supprime l’élément désigné par *refElément*.<!-- END REF-->
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.   
-An error is generated when the element reference is invalid.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.   
+Une erreur est générée lorsque la référence de l’élément n’est pas valide.
 
-## See also 
+## Voir aussi 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 869 |
+| Numéro de commande | 869 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

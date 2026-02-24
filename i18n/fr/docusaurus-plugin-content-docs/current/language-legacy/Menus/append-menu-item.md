@@ -5,102 +5,98 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer, Text ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer}} {; *} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* ; *libelléLigne* {; *sousMenu* {; *process* {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| itemText | Text | &#8594;  | Text for the new menu items |
-| subMenu | Text | &#8594;  | Reference of submenu associated with item |
-| process | Integer | &#8594;  | Process reference number |
-| * | Operator | &#8594;  | If passed: consider metacharacters as standard characters |
+| menu | Integer | &#8594;  | Numéro de menu ou Référence de menu |
+| libelléLigne | Text | &#8594;  | Libellé du ou des nouvelle(s) ligne(s) de menu |
+| sousMenu | Text | &#8594;  | Référence du sous-menu associé à la ligne |
+| process | Integer | &#8594;  | Numéro de référence du process |
+| * | Opérateur | &#8594;  | Si passé : considérer les métacaractères comme des caractères standard |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Modified|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|16 R3|Modifié|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.APPEND MENU ITEM.Summary-->The **APPEND MENU ITEM** command appends new menu items to the menu whose number or reference is passed in *menu*.<!-- END REF-->
-
-If you omit the *process* parameter, **APPEND MENU ITEM** applies to the menu bar for the current process. Otherwise, **APPEND MENU ITEM** applies to the menu bar for the process whose reference number is passed in *process*. 
-
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purporse and will be ignored.
-
-If you do not pass the *\** parameter, **APPEND MENU ITEM** allows you to append one or several menu items in one call.
-
-You define the items to be appended with the parameter *itemText* as follows:
-
-* Separate each item from the next one with a semi-colon (*;*). For example,  
-*"ItemText1;ItemText2;ItemText3".*
-* To disable an item: Place an opening parenthesis (*(*) in the item text.
-* To specify a separation line: Pass "-" or "(-" as item text.
-* To specify a font style for a line: In the item text, place a less than sign (*<*) followed by one of these characters:
+<!--REF #_command_.APPEND MENU ITEM.Summary-->La commande **APPEND MENU ITEM**  ajoute une ou plusieurs ligne(s) au menu dont vous avez passé le numéro ou la référence dans *menu.<!-- END REF-->*  
   
-| Symbols | Style |  
-| -- | --------- |  
-| <B | Bold      |  
-| <I | Italic    |  
-| <U | Underline |
-* To add a check mark to an item: In the item text, place an exclamation mark (*!*) followed by the character you want as a check mark. On Macintosh, the character is displayed; on Windows, a check mark is displayed no matter what character you passed.
-* To add an icon to an item: In the item text, place a circumflex accent (^) followed by a character whose code plus 208 is the resource ID of a Mac OS-based icon resource.
-* To add a shortcut to an item: In the item text, place a slash (*/*) followed by the shortcut character for the item.
-* If the item is associated with a standard action, pass the `ak standard action title` constant in *itemText* to automatically use the localized action name and context information (if any), for example "Undo <previous action>".
+Si vous omettez le paramètre *process*, **APPEND MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **APPEND MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** Use menus that have a reasonable number of items. For example, if you want to display more than 50 items, consider using a scrollable area in a form instead of a menu.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-If you pass the *\** parameter, the "special" characters (*; ( !*...) included in the item text will be considered as standard characters and not as metacharacters. This means that you can create menu items like "**Copy (special)...**" or "**Find/Replace...**". Note that when the *\** parameter is passed, you cannot create several items in a single call since the ";" character is considered as a standard character. 
+Si vous ne passez pas le paramètre *\**, **APPEND MENU ITEM** vous permet d'ajouter une ou plusieurs lignes de menu en un seul appel. Vous définissez les lignes à ajouter à l'aide du paramètre *libelléLigne*, de la manière suivante :
 
-**Note:** The [GET MENU ITEMS](get-menu-items.md) and [Get menu item](get-menu-item.md) commands will or will not return any metacharacters in the text of a menu item depending on how it was created: if it was created with the *\** option, metacharacters will be returned as standard characters.
+* Chaque ligne est séparée des autres par un point-virgule ";", *"ligne1;ligne2;ligne3".*
+* Pour inactiver une ligne, placez une parenthèse ouvrante "*(*" dans son libellé.
+* Pour définir une ligne de séparation, passez la valeur "-" ou *"*(-*"* en tant que libellé.
+* Pour définir le style de caractères d'une ligne, placez dans son libellé le symbole inférieur à "*<*" suivi d'une lettre. Voici les différents codes :  
 
-The optional *subMenu* parameter can be used to indicate a menu as the added item and thus position a hierarchical submenu. You must pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type string) specifying a menu created, for example, using the [Create menu](create-menu.md) command. If the command adds more than one menu item, the submenu is associated with the first item.
+| <B | Gras     |  
+| -- | -------- |  
+| <I | Italique |  
+| <U | Souligné |
+* Pour associer une coche à une ligne, insérez dans son libellé un point d'exclamation "*!*" suivi du caractère que vous voulez utiliser comme coche. Sous Mac OS, le caractère est affiché ; sous Windows, une coche standard est affichée (quel que soit le caractère passé).
+* Pour associer une icône à une ligne, insérez dans son libellé un accent circonflexe "^" suivi d'un caractère dont le code plus 208 représente un numéro de ressource d'icône Mac OS.
+* Pour ajouter un raccourci clavier à une ligne, insérez dans son libellé une barre oblique "*/*" suivie du caractère de raccourci.
+* (**A compter de 4D v16 R3**) Si l'élément est associé à une action standard, vous pouvez passer la constante ak standard action title dans le paramètre *libelléLigne* afin d'utiliser automatiquement le nom d'action localisé et les informations de contexte (s'il y en a), par exemple "Annuler <action précédente>".
 
-**Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](set-menu-item-property.md) or [SET MENU ITEM METHOD](set-menu-item-method.md) commands, or the items can also be managed from within a form method using the [Menu selected](menu-selected.md) command.
+**Note :** Utilisez les menus avec un nombre "raisonnable" de lignes. Si, par exemple, vous voulez afficher plus de 50 lignes, envisagez plutôt d'employer une zone de défilement dans un formulaire.
 
-## Example 
+Si vous passez le paramètre *\**, les caractères "spéciaux" inclus dans les libellés des lignes (*; ( !*...) seront considérés comme des caractères standard et non comme des métacaractères. Ce principe vous permet de créer des lignes avec un libellé tel que "**Copier (spécial)...**" ou "**Chercher/Remplacer..."**. A noter que lorsque le paramètre *\** est passé, vous ne pouvez pas créer plusieurs lignes en un seul appel, le caractère ";" étant considéré comme un caractère standard. 
 
-This example appends the names of the available fonts to the Font menu, which in this example is the sixth menu of the current menu bar:
+**Note :** Les commandes [GET MENU ITEMS](get-menu-items.md) et [Get menu item](get-menu-item.md) retourneront ou non les métacaractères d’un libellé en fonction de son mode de création : s’il a été créé avec l’option *\**, les métacaractères seront retournés en tant que caractères standard.
+
+Le paramètre facultatif *sousMenu* vous permet de désigner un menu comme ligne ajoutée et donc de définir un sous-menu hiérarchique. Vous devez passer dans ce paramètre une référence de menu (chaîne de type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) désignant un menu créé par exemple à l’aide de la commande [Create menu](create-menu.md). Si la commande ajoute plusieurs lignes de menus, le sous-menu est associé à la première ligne.
+
+**Important :** Les nouvelles lignes n'ont pas de méthodes ou d'actions associées. Vous devez leur associer une action ou une méthode via les commandes [SET MENU ITEM PROPERTY](set-menu-item-property.md) ou [SET MENU ITEM METHOD](set-menu-item-method.md) ou encore les gérer à partir d'une méthode formulaire qui utilise la fonction [Menu selected](menu-selected.md).
+
+## Exemple 
+
+L'exemple suivant ajoute les noms des polices de caractères disponibles dans un menu **Polices** qui, dans cet exemple, est le sixième menu de la barre de menus courante :
 
 ```4d
-  // In the On Startup database method
-  // The font list is loaded and menu item text is built
- FONT LIST(<>asAvailableFont)
- <>atFontMenuItems:=""
- For($vlFont;1;Size of array(<>asAvailableFont))
-    <>atFontMenuItems:=<>atFontMenuItems+";"+<>asAvailableFont{$vlFont}
+  // Dans la méthode base Sur ouverture
+  // La liste des polices est chargée et les libellés construits
+ FONT LIST(<>asPolicesDispo)
+ <>atPoliceCmdMenus:=""
+ For($vlPolice;1;Size of array(<>asPolicesDispo))
+    <>atPoliceCmdMenus:=<>atPoliceCmdMenus+";"+<>asPolicesDispo{$vlPolice}
  End for
 ```
 
-Then, in any form or project method, you can write:
+Ensuite, dans toute méthode formulaire ou projet, vous pouvez écrire :
 
 ```4d
- APPEND MENU ITEM(6;<>atFontMenuItems)
+ APPEND MENU ITEM(6;<>atPoliceCmdMenus)
 ```
 
-## See also 
+## Voir aussi 
 
 [DELETE MENU ITEM](delete-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 411 |
+| Numéro de commande | 411 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

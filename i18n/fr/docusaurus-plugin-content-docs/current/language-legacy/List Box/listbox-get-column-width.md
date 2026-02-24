@@ -5,50 +5,49 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *object* : Text {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *object* : Variable {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *objet* {; *largeurMini* {; *largeurMaxi*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| minWidth | Integer | &#8592; | Minimum column width (in pixels) |
-| maxWidth | Integer | &#8592; | Maximum column width (in pixels) |
-| Function result | Integer | &#8592; | Column width (in pixels) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| largeurMini | Integer | &#8592; | Largeur minimale de la colonne (en pixels) |
+| largeurMaxi | Integer | &#8592; | Largeur maximale de la colonne (en pixels) |
+| Résultat | Integer | &#8592; | Largeur de colonne en pixels |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|12|Modified|
-|2004|Created|
+|12|Renommé|
+|12|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get column width.Summary-->The **LISTBOX Get column width** command returns the width (in pixels) of the column set in the *object* and *\** parameters.<!-- END REF--> You can pass either a list box column or a column header in the *object* parameter. 
+<!--REF #_command_.LISTBOX Get column width.Summary-->La commande **LISTBOX Get column width** retourne la largeur (en pixels) de la colonne de list box désignée par les paramètres *objet* et *\** .<!-- END REF--> Vous pouvez passer indifféremment une colonne ou un en-tête de colonne de list box dans le paramètre *objet*. 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-**LISTBOX Get column width** can return the resizing limits of the column in the *minWidth* and *maxWidth* parameters. These limits can be specified via the [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md) command.   
-If no minimum and/or maximum value has been set for the column, the corresponding parameter returns 0.
+**LISTBOX Get column width** peut retourner dans les paramètres *largeurMini* et *largeurMaxi* les limites de redimensionnement de la colonne. Ces limites peuvent être définies via la commande [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md). Si aucune valeur de largeur minimale et/ou maximale n’a été fixée pour la colonne, le paramètre correspondant retourne 0.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 834 |
+| Numéro de commande | 834 |
 | Thread safe | no |
 
 

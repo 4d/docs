@@ -5,54 +5,53 @@ slug: /commands/delete-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* ; *ligneMenu* {; *process*} )<!-- END REF-->
 <!--REF #_command_.DELETE MENU ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
-| process | Integer | &#8594;  | Process reference number |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594;  | Numéro de référence de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE MENU ITEM.Summary-->The **DELETE MENU ITEM** command deletes the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
+<!--REF #_command_.DELETE MENU ITEM.Summary-->La commande **DELETE MENU ITEM** supprime la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-If the menu item specified by *menu* and *menuItem* is itself a menu managed by reference and created, for example, using the [Create menu](create-menu.md) command, **DELETE MENU ITEM** will only delete the instance of the *menuItem* in *menu*. The submenu referenced by the *menuItem* will continue to exist in memory. You must use the [RELEASE MENU](release-menu.md) command in order to definitively delete a menu that is managed by reference. 
+Si la ligne de menu désignée par *menu* et *ligneMenu* est elle-même un menu géré par référence et créé par exemple à l’aide la commande [Create menu](create-menu.md), **DELETE MENU ITEM** supprimera uniquement l’instance de *ligneMenu* dans *menu*. Le sous-menu référencé par *ligneMenu* continuera d’exister en mémoire. Vous devez utiliser la commande [RELEASE MENU](release-menu.md) afin de supprimer définitevement un menu géré par référence.   
+Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](create-menu.md) et installée avec la commande [SET MENU BAR](set-menu-bar.md).
 
-This command also works with a menu bar created using the [Create menu](create-menu.md) command and installed with the [SET MENU BAR](set-menu-bar.md) command.
+Si vous omettez le paramètre *process*, **DELETE MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **DELETE MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu bar for the current process. Otherwise, **DELETE MENU ITEM** applies to the menu bar for the process whose reference number is passed in *process*. 
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Pour soigner l'ergonomie de votre interface, ne laissez pas accessible un menu ne comportant aucune ligne.
 
-**Note:** For consistency in the user interface, do not keep a menu with no items.
-
-## See also 
+## Voir aussi 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [INSERT MENU ITEM](insert-menu-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 413 |
+| Numéro de commande | 413 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

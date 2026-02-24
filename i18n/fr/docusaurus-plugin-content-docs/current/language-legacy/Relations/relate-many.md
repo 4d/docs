@@ -5,75 +5,70 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* : Table )<br/>**RELATE MANY** ( *oneField* : Field )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( table1 )<br/>**RELATE MANY** ( champ1 )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| oneTable | Table | &#8594;  | Table to establish all one-to-many relations |
-| oneField | Field | &#8594;  | One Field |
+| table1 &#124; champ1 | Table, Champ | &#8594;  | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.RELATE MANY.Summary-->RELATE MANY has two forms.<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Summary-->**RELATE MANY** a deux syntaxes.<!-- END REF-->
 
-The first form, RELATE MANY(oneTable), establishes all One-to-Many relations for *oneTable*. It changes the current selection for each table that has a One-to-Many relation to *oneTable*. The current selections in the Many tables depend on the current value of each related field in the One table. Each time this command is executed, the current selections of the Many tables will be regenerated and the first record of the selection is loaded as the current record..
+La première syntaxe, **RELATE MANY**(table1), active tous les liens 1 vers N pour *table1*. Elle modifie la sélection courante pour chaque table qui a un lien 1 vers N vers *table1*. Les sélections courantes dans les tables N dépendent de la valeur courante de chaque champ lié dans la table 1\. Chaque fois que cette commande est exécutée, les sélections courantes des tables N sont modifiées et le premier enregistrement de la sélection est chargé en tant qu'enregistrement courant.
 
-The second form, RELATE MANY(oneField), establishes the One-to-Many relation for *oneField*. It changes the current selection and the current record for only those tables that have relations with *oneField*. This means that the related records become the current selection for the Many table.
+La seconde syntaxe, **RELATE MANY**(champ1), active le lien 1 vers N pour *champ1*. Elle modifie la sélection courante et l'enregistrement courant pour chaque table qui a un lien avec *champ1*. En conséquence, les enregistrements liés deviennent la sélection courante de la table N.
 
-**Note:** If the current selection in the One table is empty while the RELATE MANY command is executed, it has no effect.
+**Notes :** 
+
+* Si la sélection courante de la table 1 est vide au moment de l'exécution de **RELATE MANY**, la commande ne fait rien.
+* Pour que la commande fonctionne, les champs clé d'appel (champs N) doivent être indexés.
 
 ### 
 
-**Note:** This command does not support Object type fields.
+**Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-## Example 
+## Exemple 
 
-In the following example, three tables are related with automatic relations. Both the \[People\] table and the \[Parts\] table have a Many-to-One relation to the \[Companies\] table.
+Dans l'exemple suivant, trois tables sont liées avec des liens automatiques. Les deux tables \[People\] et \[Parts\] ont un lien N vers 1 vers la table \[Companies\].
 
 ![](../assets/en/commands/pict2286855.fr.png)
 
-This form for the \[Companies\] table will display related records from both the \[People\] and \[Parts\] tables.
+Voici le formulaire pour la table \[Companies\] qui affiche les enregistrements liés venant des tables \[People\] et \[Parts\].
 
 ![](../assets/en/commands/pict2287703.fr.png)
 
-When the People and Parts forms are displayed, the related records for both the \[People\] table and the \[Parts\] table are loaded and become the current selections in those tables. 
+Lorsque les formulaires pour People et Parts s'affichent, les enregistrements liés pour les tables \[People\] et \[Parts\] sont chargés et deviennent les sélections courantes de ces tables. 
 
-On the other hand, the related records are not loaded if a record for the \[Companies\] table is selected programmatically. In this case, you must use the RELATE MANY command.
+En revanche, les enregistrements liés ne sont pas chargés si un enregistrement de la table \[Companies\] est sélectionné par programmation. Dans ce cas, il faut utiliser la commande **RELATE MANY**.
 
-**Notes:**  
-* When the RELATE MANY command is applied to an empty selection, the command is not executed and the selection for the MANY table does not change.
-* For the command to work, the foreign key fields (Many fields) must be indexed.
-
-For example, the following method moves through each record of the \[Companies\] table. An alert box is displayed for each company. The alert box shows the number of people in the company (the number of related \[People\] records), and the number of parts they supply (the number of related \[Parts\] records). In the example, the argument to the [ALERT](alert.md) command is printed on multiple lines for clarity. 
-
-Note that the RELATE MANY command is needed, even though the relations are automatic.
+Par exemple, la méthode suivante effectue une boucle sur chaque enregistrement de la table \[Companies\]. Pour chaque société, une alerte apparaît. Cette alerte affiche le nombre de personnes dans la société (le nombre d'enregistrements liés dans la table \[People\]) ainsi que le nombre de Parts que la société distribue (le nombre d'enregistrements dans la table \[Parts\] qui sont liés). Notez que nous avons besoin d'appeler la commande **RELATE MANY** bien que les liens soient automatiques :
 
 ```4d
- ALL RECORDS([Companies]) // Select all records in the table
- ORDER BY([Companies];[Companies]Name) // Order records in alphabetical order
- For($i;1;Records in table([Companies])) // Loop once for each record
-    RELATE MANY([Companies]Name) // Select the related records
-    ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "
-    +String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+String(Records in selection([Parts])))
-    NEXT RECORD([Companies]) // Move to the next record
+ ALL RECORDS([Companies]) //Sélectionner tous les enregistrements dans la table
+ ORDER BY([Companies];[Companies]Name) //Trier les enregistrements dans l'ordre alphabétique
+ For($i;1;Records in table([Companies])) //Boucler une fois par enregistrement
+    RELATE MANY([Companies]Name) //Sélectionner les enregistrements liés
+    ALERT("Société : "+[Companies]Name+Char(13)+"personnes dans la société : "+String(Enregistrements trouves([People]))+Caractere(13)+"Nombre de Produits qu'ils distribuent : "+Chaine(Enregistrements trouves([Parts])))
+    NEXT RECORD([Companies]) //Aller à l'enregistrement suivant
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [OLD RELATED MANY](old-related-many.md)  
 [RELATE ONE](relate-one.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 262 |
+| Numéro de commande | 262 |
 | Thread safe | yes |
-| Changes current selection ||
+| Change la sélection courante ||
 
 

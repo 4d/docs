@@ -5,63 +5,63 @@ slug: /commands/ob-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Values.Syntax-->**OB Values** ( *object* : Object ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Values.Syntax-->**OB Values** ( *objet* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Values.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Object to return property values |
-| Function result | Collection | &#8592; | Collection of property values (variant) |
+| objet | Object | &#8594;  | Objet retournant les valeurs des propriétés |
+| Résultat | Collection | &#8592; | Collection de valeurs des propriétés (variant) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Values.Summary-->The **OB Values** command returns a collection of variants containing all of the enumerable property values of the *object*.<!-- END REF--> 
+<!--REF #_command_.OB Values.Summary-->La commande **OB Values** retourne une collection de variants contenant toutes les valeurs des propriétés énumérables de l'*objet*.<!-- END REF--> 
 
-The order of values within the returned collection follows the definition order of the properties.
+L'ordre des valeurs de la collection retournée suit l'ordre de définition des propriétés.
 
-## Example 
+## Exemple 
 
-You want a collection with all property values of an object:
+Vous souhaitez une collection avec toutes les valeurs des propriétés d'un objet : 
 
 ```4d
  var $person : Object
  var $col : Collection
  
  $person:=New object
- $person.lastName:="Smith"
- $person.firstName:="Jenny"
- $person.children:=New object("Mary";12;"Mark";8)
+ $person.lastName:="Dupont"
+ $person.firstName:="Jeanne"
+ $person.children:=New object("Marie";12;"Marc";8)
  
  $col:=OB Values($person)
  
-  //$col[0]="Smith"
-  //$col[1]="Jenny"
-  //$col[2]={"Mary":12,"Mark":8}
+  //$col[0]="Dupont"
+  //$col[1]="Jeanne"
+  //$col[2]={"Mariey":12,"Marc":8}
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Entries](ob-entries.md)  
 [OB Keys](ob-keys.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1718 |
+| Numéro de commande | 1718 |
 | Thread safe | no |
 
 

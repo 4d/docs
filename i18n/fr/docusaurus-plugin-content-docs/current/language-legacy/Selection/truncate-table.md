@@ -5,61 +5,61 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table where all records will be deleted or Default table if this parameter is omitted |
+| laTable | Table | &#8594;  | Table de laquelle vous voulez supprimer tous les enregistrements ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.TRUNCATE TABLE.Summary-->The **TRUNCATE TABLE** command quickly deletes all the records of *aTable*.<!-- END REF--> After calling the command, there is no longer any current selection or current record.
+<!--REF #_command_.TRUNCATE TABLE.Summary-->La commande **TRUNCATE TABLE** supprime tous les enregistrements de *laTable* de façon très rapide.<!-- END REF--> Après l’appel de la commande, il n’y a plus de sélection courante ni d’enregistrement courant.
 
-The effect of this command is similar to that of an [ALL RECORDS](all-records.md) / [DELETE SELECTION](delete-selection.md) sequence; however, its functioning differs on the following points:
+L’effet de cette commande est semblable à celui d’une séquence [ALL RECORDS](all-records.md) / [DELETE SELECTION](delete-selection.md), toutefois son fonctionnement diffère sur les points suivants :
 
-* No trigger is called
-* The referential integrity of the data is not checked.
-* No transaction must be underway in the process executing **TRUNCATE TABLE**. If this if the case, the command does nothing and the OK system variable is set to 0
-* If one or more records are locked by another process, the command fails: an error is generated and the OK system variable is set to 0\. The LockedSet system set is not created.
-* If *aTable* is already empty, **TRUNCATE TABLE** does nothing and sets the OK variable to 1.
-* If *aTable* is in read-only, **TRUNCATE TABLE** does nothing and sets the OK variable to 0.
-* The operation is recorded in the log file if there is one.
+* Le trigger éventuel n'est pas appelé.
+* L’intégrité référentielle des données n’est pas contrôlée.
+* Aucune transaction ne doit être en cours dans le process exécutant **TRUNCATE TABLE**. Si c’est le cas, la commande ne fait rien et la variable système OK prend la valeur 0.
+* Si un enregistrement au moins est verrouillé par un autre process, la commande échoue : une erreur est générée et la variable OK prend la valeur 0\. L’ensemble système LockedSet n’est pas créé.
+* Si *laTable* est déjà vide, **TRUNCATE TABLE** ne fait rien et fixe la variable OK à 1.
+* Si *laTable* est en lecture seule, **TRUNCATE TABLE** ne fait rien et fixe la variable OK à 0.
+* L’opération est enregistrée dans le fichier d’historique s’il est présent.
 
-The **TRUNCATE TABLE** command should therefore be used with caution but is very effective in certain cases, for example, such as quickly deleting temporary data
+La commande **TRUNCATE TABLE** est donc à manier avec précaution mais est très efficace pour, par exemple, supprimer rapidement des données temporaires.
 
-**Note:** The concept and functioning of this command is similar to that of the SQL TRUNCATE (TABLE) command.
+**Note :** Le concept et le fonctionnement de cette commande sont proches de ceux de la commande TRUNCATE (TABLE) du SQL.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DELETE SELECTION](delete-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1051 |
+| Numéro de commande | 1051 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

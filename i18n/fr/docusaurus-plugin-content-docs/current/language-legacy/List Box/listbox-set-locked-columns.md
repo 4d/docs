@@ -5,50 +5,50 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *object* : Text ; *numColumns* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *object* : Variable ; *numColumns* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *objet* ; *nbColonnes* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| numColumns | Integer | &#8594;  | Number of columns to lock |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| nbColonnes | Integer | &#8594;  | Nombre de colonnes à verrouiller |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->The **LISTBOX SET LOCKED COLUMNS** command locks *numColumns* columns (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->La commande **LISTBOX SET LOCKED COLUMNS** permet de verrouiller les *nbColonnes* premières colonnes gauches de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Locked columns are shown in the left part of the list box and do not scroll with the rest of the list box columns. For more information, refer to the *Design Reference* manual.
+Les colonnes verrouillées restent affichées dans la partie gauche de la list box, elles ne défilent pas avec le reste de la list box. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-In *numColumns*, you can pass any value included between 1 and the total number of columns in the list box minus 1\. For a list box with X columns, if you pass a value > X-1 in *numColumns*, it will be reduced automatically to the value X-1.
+Vous pouvez passer dans *nbColonnes* toute valeur comprise entre 1 et le nombre total de colonnes de la list box -1\. Pour une list box ayant N colonnes, si vous passez dans *nbColonnes* une valeur > N-1, elle sera automatiquement réduite à la valeur N-1.
 
-To remove the column locking, pass 0 or a negative value in *numColumns*.
+Si vous passez 0 ou une valeur négative dans *nbColonnes*, le verrouillage des colonnes est supprimé. 
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get locked columns](listbox-get-locked-columns.md)  
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1151 |
+| Numéro de commande | 1151 |
 | Thread safe | no |
 
 

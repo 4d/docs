@@ -5,30 +5,30 @@ slug: /commands/picture-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *picture* : Picture ) : Integer<!-- END REF-->
+<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *image* ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture for which to return the size in bytes |
-| Function result | Integer | &#8592; | Size in bytes of the picture |
+| image | Picture | &#8594;  | Image pour laquelle vous voulez connaître la taille en octets |
+| Résultat | Integer | &#8592; | Taille en octets de l'image |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Picture size.Summary-->Picture size returns the size of *picture* in bytes.<!-- END REF-->
+<!--REF #_command_.Picture size.Summary-->**Picture size** retourne la taille de l'image *image* en octets.<!-- END REF-->
 
-## See also 
+## Voir aussi 
 
 [PICTURE PROPERTIES](picture-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 356 |
+| Numéro de commande | 356 |
 | Thread safe | yes |
 
 

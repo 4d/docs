@@ -5,60 +5,61 @@ slug: /commands/get-picture-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resID* : Integer ; *resData* : Field, Variable {; *resFile* : Time} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* ; *resDonnées* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | Resource ID number |
-| resData | Field, Variable | &#8596;  | *in:* Picture field or variable to receive the picture<br/>*out:* Contents of the PICT resource |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
+| resNum | Integer | &#8594;  | Numéro de ressource |
+| resDonnées | Field, Variable | &#8594;  | Champ ou variable image devant recevoir l'image |
+| &#8592; | Contenu de la ressource PICT |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE RESOURCE.Summary-->The **GET PICTURE RESOURCE** command returns in the picture field or variable *resData* the picture stored in the picture (“PICT”) resource whose ID is passed in *resID*.<!-- END REF-->
+<!--REF #_command_.GET PICTURE RESOURCE.Summary-->La commande **GET PICTURE RESOURCE** retourne dans le champ ou la variable image désigné(e) par *resDonnées* l'image stockée dans la ressource image ("PICT") dont vous passé le numéro dans *resNum*.<!-- END REF-->
 
-If the resource is not found, the *resData* parameter is left unchanged, and the OK variable is set to 0 (zero). 
+Si la ressource n'est pas trouvée, *resDonnées* n'est pas modifié et la variable OK prend la valeur 0 (zéro). 
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource est recherchée dans ce fichier uniquement. Si vous ne passez pas le paramètre *resFichier*, c'est la première occurrence de la ressource rencontrée dans la chaîne des fichiers de ressources qui sera retournée. 
 
-**Note:** A picture resource can be at least several megabytes in size.
+**Note :** La taille d'une ressource image peut atteindre plusieurs méga-octets, voire davantage.
 
-## Example 
+## Exemple 
 
-See example for the [RESOURCE LIST](resource-list.md) command.
+Reportez-vous à l'exemple de la commande [RESOURCE LIST](resource-list.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-## Error management 
+## Gestion des erreurs 
 
-If there is not enough memory to load the picture, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 502 |
+| Numéro de commande | 502 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

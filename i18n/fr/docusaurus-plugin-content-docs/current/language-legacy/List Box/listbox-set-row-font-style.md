@@ -5,96 +5,96 @@ slug: /commands/listbox-set-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( * ; *object* : Text ; *row* : Integer ; *style* : Integer )<br/>**LISTBOX SET ROW FONT STYLE** ( *object* : Variable ; *row* : Integer ; *style* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( {* ;} *objet* ; *ligne* ; *style* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &#8594;  | Row number |
-| style | Integer | &#8594;  | Font style |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| style | Integer | &#8594;  | Style de police |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX SET ROW FONT STYLE** command sets a font style for a row or a cell in the array type list box designated by the *object* and *\** parameters. 
+La commande **LISTBOX SET ROW FONT STYLE** vous permet de définir un style de police pour une ligne ou une cellule de la list box tableau désignée par les paramètres *objet* et *\**. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-You can designate a list box or a list box column in the *object* parameter:
+Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box :
 
-* When *object* designates a list box, the command applies to the row.
-* When *object* designates a list box column, the command applies to the cell located at the column/row intersection.
+* si *objet* désigne une list box, la commande s’applique à la ligne
+* si *objet* désigne une colonne, la commande s’applique à la cellule située à l’intersection colonne/ligne
 
-In *row*, pass the number of the row where you want to apply the new style. 
+Passez dans *ligne* le numéro de la ligne à laquelle le nouveau style doit être appliqué. 
 
-**Note:** The command does not take any hidden/shown states of the list box rows into account.
+**Note :** La commande ne tient pas compte de l’éventuel statut masqué/affiché des lignes de la list box.
 
-In *style*, you pass a style value. You must use one (or a combination) of the constants found in the *Font Styles* theme: 
+Passez dans *style* une valeur de style. Vous devez utiliser une ou une combinaison de constante(s) du thème *Styles de caractères* : 
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| Bold      | Integer | 1     |
-| Italic    | Integer | 2     |
-| Plain     | Integer | 0     |
-| Underline | Integer | 4     |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
+| Underline | Entier long | 4      |
 
-If an array of font styles has been associated with the list box or column, only the element matching the row is modified. In other words, executing the command has the same effect, in this case, as modifying an element of the font style array.   
-If there is no font style array associated with the list box or column, one will be created dynamically when this command is called. You can access them using the [LISTBOX Get array](listbox-get-array.md) command.
+Si un tableau de styles de police a été associé à la list box ou à la colonne, seul l’élément correspondant à la ligne sera modifié. Autrement dit, dans ce cas, l’exécution de la commande produit le même effet que la modification d’un élément du tableau de styles de police.   
+Si aucun tableau de styles de police n’a été associé à la list box ou à la colonne, il est créé dynamiquement lors de l’appel de la commande. Vous pourrez y accéder à l’aide de la commande [LISTBOX Get array](listbox-get-array.md).
 
-If conflicting style properties are set for the column or the list box, an order of priority is applied. For more information, refer to the *Design Reference* manual. 
+Si des propriétés de style contradictoires sont définies pour la colonne ou la list box, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
-**Note:** Since style arrays for columns take priority over the ones for list boxes, when this command is applied to a list box, it will only have an effect if no style array has been assigned to the columns.
+**Note :** Comme les tableaux de style des colonnes ont priorité sur le tableau de style de la list box, la commande, si elle est appliquée à une list box, n’aura d’effet que si aucun tableau de style n’a été affecté aux colonnes.
 
-## Example 
+## Exemple 
 
-Given an array type list box with the following characteristics:
+Soit une list box tableau ayant les caractéristiques suivantes :
 
-* a font style array associated with the list box (*ArrGlobalStyle*)
-* a font style array associated with column 5 (*ArrCol5Style*)
-* the other columns do not have any style arrays.
+* un tableau de styles de police est associé à la list box (*ArrGlobalStyle*)
+* un tableau de styles de police est associé à la colonne 5 (*ArrCol5Style*)
+* les autres colonnes n’ont pas de tableau de style
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"Col5";3;Bold)
-  // equivalent to ArrCol5Style{3}:=Bold
+     // équivaut à ArrCol5Style{3}:=Gras
 ```
 
 ![](../assets/en/commands/pict1205512.fr.png)
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
-  // equivalent toArrGlobalStyle{3}:=Italic+Underline
+     // équivaut à ArrGlobalStyle{3}:=Italique+Souligné
 ```
 
 ![](../assets/en/commands/pict1205514.fr.png)
 
-After the second statement, all the cells of the third row change to underlined italic, except for the one in the 5th column which stays in bold only (column style arrays take priority over list box arrays). 
+Après la deuxième instruction, toutes les cellules de la troisième ligne passent en italique et souligné sauf celle de la colonne 5, qui reste en gras uniquement (les tableaux de colonnes sont prioritaires sur les tableaux de list box). 
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get row font style](listbox-get-row-font-style.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1268 |
+| Numéro de commande | 1268 |
 | Thread safe | no |
 
 

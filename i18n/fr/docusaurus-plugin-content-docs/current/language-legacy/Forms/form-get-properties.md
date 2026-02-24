@@ -5,62 +5,61 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*aTable* : Table ;} *formName* : Text ; *width* : Integer ; *height* : Integer {; *numPages* : Integer {; *fixedWidth* : Boolean {; *fixedHeight* : Boolean {; *title* : Text}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* ;} *nomForm* ; *largeur* ; *hauteur* {; *nbPages* {; *largeurFixe* {; *hauteurFixe* {; *titre*}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the form or Default table, if omitted |
-| formName | Text | &#8594;  | Name of the form |
-| width | Integer | &#8592; | Width of the form (in pixels) |
-| height | Integer | &#8592; | Height of the form (in pixels) |
-| numPages | Integer | &#8592; | Number of pages in the form |
-| fixedWidth | Boolean | &#8592; | True = Fixed width, False = Variable width |
-| fixedHeight | Boolean | &#8592; | True = Fixed height, False = Variable height |
-| title | Text | &#8592; | Title of the form’s window |
+| laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| nomForm | Text | &#8594;  | Nom du formulaire |
+| largeur | Integer | &#8592; | Largeur du formulaire (en pixels) |
+| hauteur | Integer | &#8592; | Hauteur du formulaire (en pixels) |
+| nbPages | Integer | &#8592; | Nombre de pages du formulaire |
+| largeurFixe | Boolean | &#8592; | Vrai = Largeur fixe, Faux = Largeur variable |
+| hauteurFixe | Boolean | &#8592; | Vrai = Hauteur fixe, Faux = Hauteur variable |
+| titre | Text | &#8592; | Nom de la fenêtre du formulaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|6.5|Created|
+|12|Renommé|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM GET PROPERTIES.Summary-->The FORM GET PROPERTIES command returns the properties of the form *formName*.<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Summary-->La commande **FORM GET PROPERTIES** retourne des propriétés du formulaire *nomForm*.<!-- END REF--> 
 
-The *width* and *height* parameters return the form’s width and height in pixels. These values are determined from the form’s Default window size properties:
+Les paramètres *largeur* et *hauteur* retournent (en pixels) la largeur et la hauteur du formulaire. Ces valeurs sont déterminées à partir des propriétés de dimensionnement du formulaire :
 
-* If the form’s size is **automatic**, its width and height are calculated so that all the form’s objects are visible, by taking into consideration the horizontal and vertical margins that were defined.
-* If the form’s size is **set**, its width and height are those manually entered in the corresponding areas.
-* If the form’s size is **based on an object**, its width and height are calculated in relation to this object’s position.
+* Si la taille du formulaire est **automatique**, sa largeur et sa hauteur sont calculées de manière à ce qu’il affiche tous les objets qu’il contient, en tenant compte, le cas échéant, des marges horizontale et verticale qui ont été définies.
+* Si la taille du formulaire est **fixe**, sa largeur et sa hauteur sont celles qui ont été saisies manuellement dans les zones correspondantes.
+* Si la taille du formulaire est **basée sur un objet**, sa largeur et sa hauteur sont calculées par rapport à la position de cet objet.
 
-The *numPages* parameter returns the number of pages in the form, excluding page 0 (zero).
+Le paramètre *nbPages* retourne le nombre de pages du formulaire, page 0 (zéro) non comprise.
 
-The *fixedWidth* and *fixedHeight* parameters indicate if the length and width of the form are resizable (the parameter returns **False**) or set (the parameter returns **True**).
+Les paramètres *largeurFixe* et *hauteurFixe* indiquent si la largeur et la hauteur du formulaire sont fixes (le paramètre contient Vrai) ou redimensionnables (le paramètre contient Faux). 
 
-The *title* parameter returns the title of the form's window as it was defined in the Property List of the Form editor. If no name was defined, the *title* parameter returns an empty string.
+Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il a été défini dans la Liste des propriétés en mode Développement. Si aucun nom n’a été défini, le paramètre *titre* contient une chaîne vide. 
 
-## See also 
+## Voir aussi 
 
 [FORM GET OBJECTS](form-get-objects.md)  
 [FORM SET SIZE](form-set-size.md)  
-[Open form window](./commands/open-form-window)  
+[Open form window](open-form-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 674 |
+| Numéro de commande | 674 |
 | Thread safe | no |
-
 
 

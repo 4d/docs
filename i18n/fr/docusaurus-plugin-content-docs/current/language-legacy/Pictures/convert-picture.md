@@ -5,68 +5,69 @@ slug: /commands/convert-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *picture* : Picture ; *codec* : Text {; *compression* : Real} )<!-- END REF-->
+<!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *image* ; *codec* {; *compression*} )<!-- END REF-->
 <!--REF #_command_.CONVERT PICTURE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8596;  | *in:* Picture to be converted<br/>*out:* Converted picture |
-| codec | Text | &#8594;  | Picture Codec ID |
-| compression | Real | &#8594;  | Quality of compression |
+| image | Picture | &#8594;  | Image à convertir |
+| &#8592; | Image convertie |
+| codec | Text | &#8594;  | Identifiant de codec d'image |
+| compression | Real | &#8594;  | Qualité de compression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Created|
+|12|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CONVERT PICTURE.Summary-->The **CONVERT PICTURE** command converts *picture* into a new type.<!-- END REF-->
+<!--REF #_command_.CONVERT PICTURE.Summary-->La commande **CONVERT PICTURE** convertit *image* dans un nouveau type.<!-- END REF-->
 
-The *codec* parameter indicates the type of picture to be generated. A Codec can be an extension (for example, “.gif”) or a Mime type (for example, “image/jpeg”). You can get a list of Codecs that are available using the [PICTURE CODEC LIST](picture-codec-list.md) command.
+Le paramètre *codec* indique le type d’image à générer. Un codec peut être une extension (par exemple “.gif”) ou un type Mime (par exemple “image/jpg”). Vous pouvez obtenir la liste des codecs disponibles via la commande [PICTURE CODEC LIST](picture-codec-list.md).
 
-If the *picture* field or variable is a compound type (if, for example, it is the result of a copy-paste action), only the information corresponding to the codec type are preserved in the resulting picture.
+Si le champ ou la variable *image* est de type composé (si par exemple elle est issue d’un copier-coller), seules les informations correspondant au type *codec* sont conservées dans l’image résultante.
 
-**Note:** If the type of *codec* requested is the same as the original type of the *picture*, no conversion is carried out and the picture is returned "as is" (except when the *compression* parameter is used, see below). 
+**Note :** Si le type de *codec* demandé est égal au type d'origine de l'*image*, aucune conversion n'est effectuée et l'image est retournée telle quelle (sauf si le paramètre *compression* est utilisé, cf. ci-dessous). 
 
-The optional *compression* parameter, if passed, can be used to specify the compression quality to be applied to the resulting picture when a compatible Codec is used. In *compression*, pass a value between 0 and 1 to specify the quality of the compression, where 0 is the most mediocre quality (high compression) and 1 the best quality (low compression). This parameter is only taken into account when the Codec supports compression (for example JPEG or HDPhoto) and is supported by the WIC and ImageIO APIs. For more information about picture management APIs in 4D, please refer to the *Pictures* section. By default, if you omit the *compression* parameter, the best quality is applied (compression =1).
+Le paramètre optionnel *compression*, s'il est passé, permet de définir la qualité de compression à appliquer à l’image résultante lorsqu’un codec compatible est utilisé. Passez dans *compression* une valeur entre 0 et 1 définissant la qualité de compression, 0 étant la qualité la plus médiocre (compression élevée) et 1 la meilleure qualité (compression faible). Ce paramètre est pris en compte uniquement lorsque le codec supporte la compression (par exemple JPEG ou HDPhoto) et est pris en charge par les APIs WIC et ImageIO. Pour plus d’informations sur les APIs de gestion d’image dans 4D, reportez-vous à la section *Introduction aux images*. Par défaut, si vous omettez le paramètre *compression*, la meilleure qualité est appliquée (compression = 1). 
 
-**Note:** If you want to call **CONVERT PICTURE** with a picture type that is not supported in 4D 64-bit versions (such as PICT), make sure the conversion is performed on a 4D 32-bit version, where the original type is supported. For more information, please refer to the *Changing from 32-bit versions to 64-bit versions* page.   
+**Note :** Si vous souhaitez appeler **CONVERT PICTURE** avec un type d'image qui n'est pas pris en charge dans les versions 64 bits de 4D (tel que PICT), assurez-vous d'effectuer la conversion sur une version 32 bits de 4D (où le type d'image original est pris en charge). Pour plus d'informations, reportez-vous à la page *Passer de 32 bits à 64 bits*. 
 
-## Example 1 
+## Exemple 1 
 
-Conversion of the vpPhoto picture to the jpeg format: 
+Conversion de l’image vpPhoto au format jpeg : 
 
 ```4d
  CONVERT PICTURE(vpPhoto;".jpg")
 ```
 
-## Example 2 
+## Exemple 2 
 
-Conversion of a picture with 60% quality:
+Conversion d’une image avec une qualité de 60 % :
 
 ```4d
- CONVERT PICTURE(vPicture;".JPG";0.6)
+ CONVERT PICTURE(vPicture;".JPG";0,6)
 ```
 
-## See also 
+## Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1002 |
+| Numéro de commande | 1002 |
 | Thread safe | yes |
 
 

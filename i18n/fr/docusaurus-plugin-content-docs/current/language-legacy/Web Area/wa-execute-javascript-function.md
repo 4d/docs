@@ -5,113 +5,78 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text {; *result* : Variable} {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text {; *result* : Variable } {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text ; * {; *...param* : any} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; résultat {; *param*}{; *param2* ; ... ; *paramN*} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objet* ; *fonctionJS* ; * {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| jsFunction | Text | &#8594;  | Name of JavaScript function to execute |
-| result | Variable | &#8592; | Function result (if expected) |
-| * | Operator | &#8594;  | Function with no result |
-| param | any | &#8594;  | Parameter(s) to pass to function |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| fonctionJS | Text | &#8594;  | Nom de la fonction JavaScript à exécuter |
+| résultat &#124; * | Variable | &#8594;  | * pour une fonction sans résultat ou |
+| &#8592; | Résultat de la fonction (si attendu) |
+| param | Text, Number, Date, Object, Collection | &#8594;  | Paramètre(s) à passer à la fonction |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Modified|
-|11 SQL Release 2|Created|
+|16 R4|Modifié|
+|14|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->The WA EXECUTE JAVASCRIPT FUNCTION command executes, in the Web area designated by the *\** and *object* parameters, the JavaScript function *jsFunction* and optionally returns its result in the *result* parameter.<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->La commande **WA EXECUTE JAVASCRIPT FUNCTION** exécute dans la zone Web désignée par les paramètres *\** et *objet* la fonction JavaScript *fonctionJS* et retourne facultativement son résultat dans le paramètre *résultat*.<!-- END REF-->
 
-If the function does not return a result, pass *\** in the *result* parameter.
+Si la fonction ne retourne pas de résultat, passez *\** dans le paramètre *résultat*.
 
-You can pass one or more parameters containing the parameters of the function in *param*.
+Vous pouvez passer dans *param* un ou plusieurs paramètre(s) contenant les paramètres de la fonction.
 
-The command supports several types of parameters for both input (*param*) and output (*result*). You can pass and retrieve data of the string, number, date, object and collection types. If the parameter type is not defined, the text type is used by default.
+La commande prend en charge plusieurs types de paramètres aussi bien en entrée (*param*) qu’en sortie (*résultat*). Vous pouvez passer et récupérer des données de type numérique, date, objet, collection et chaîne. Si le type du paramètre n'est pas défini, le type texte est utilisé par défaut.
 
-**Warning:** Using this command to call directly a JavaScript function that displays a dialog (**alert()**, **print().**..) is not recommended since the user cannot interact with the Web area while the 4D code is running. If you need to implement such interface, for example you can call **setTimeout(function(){alert();}, 50))** to let the execution of the 4D code finish and allow user interaction. 
+**Attention :** L'utilisation de cette commande pour appeler directement une fonction JavaScript qui affiche un dialogue (**alert()**, **print().**..) n'est pas recommandée car l'utilisateur ne peut pas interagir avec la zone Web pendant l'exécution du code 4D. Si vous devez implémenter une telle interface, vous pouvez par exemple appeler **setTimeout(function(){alert();}, 50))** pour laisser l'exécution du code 4D se terminer et permettre l'interaction de l'utilisateur. 
 
-## Example 1 
+## Exemple 1 
 
-Calling a JavaScript function with 3 parameters:
+Appel d’une fonction JavaScript avec 3 paramètres :
 
 ```4d
  $JavaScriptFunction:="TheFunctionToBeExecuted"
  $Param1:="10"
  $Param2:="true"
- $Param3:="1,000.2" //note "," as thousands separator and "." as the decimal separator
+ $Param3:="1,000.2" //notez "," comme séparateur de milliers et "." comme séparateur décimal
  
- WA EXECUTE JAVASCRIPT FUNCTION(MyWArea;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
+ WA EXECUTE JAVASCRIPT FUNCTION(MaZoneW;$JavaScriptFunction;$Result;$Param1;$Param2;$Param3)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The "getCustomerInfo" JavaScript function receive a number ID as parameter and returns an object:
+La fonction JavaScript "getCustomerInfos" reçoit un identifiant numérique en paramètre et retourne un objet :
 
 ```4d
  var $Result : Object
  var $ID : Integer
  $ID:=1000
- WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfo";$Result;$ID)
+ WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfos";$Result;$ID)
 ```
 
-## Example 3
+## Voir aussi 
 
-The `WA EXECUTE JAVASCRIPT FUNCTION` command can be used to update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from a [Qodly page embedded in a Web area](../FormObjects/webArea_overview.md#displaying-qodly-pages). 
-
-
-```4d
-    // Set local datasource in a specific page
-var $Source;$Value;$Page;$Result : Text
-$Value:="New Value"
-$Source:="title" // title is the name of string datasource
-$Main:="Main" // Main is name of the Qodly page
-// the namespace is sent as null, as the it's a local source
-WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value;Null;$Page)
-```
-
-```4d
-    //Set shared datasource
-var $Source;$Value;$Namespace;$Result : Text
-$Value:="New Value"
-$Source:="title" // `title` is the name of string datasource,
-$Namespace:="shared" // `shared` is the namespace of the qodly source
-// Since $NameSpace is defined no need to add the $Page arguments
-WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value;$Namespace)
-```
-
-```4d
-    //Set current page local datasource
-var $Source;$Value;$Result : Text
-$Value:="New Value"
-$Source:="title" // `title` is the name of string datasource,
-WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value)
-```
-
-
-## See also 
-
-[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/) (blog post)<br/>
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1043 |
+| Numéro de commande | 1043 |
 | Thread safe | no |
 
 

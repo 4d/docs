@@ -5,74 +5,74 @@ slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionary* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionnaire* )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dictionary | Integer, Text | &#8594;  | ID, Name, or Language code of dictionary to use for spell-check |
+| dictionnaire | Integer, Text | &#8594;  | ID, Nom ou Code de langue du dictionnaire à utiliser pour la correction orthographique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Renamed|
-|13|Modified|
-|2004.5|Modified|
-|<6|Created|
+|14|Modifié|
+|13|Renommé|
+|13|Modifié|
+|2004.5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->The **SPELL SET CURRENT DICTIONARY** command causes the replacement of the current dictionary with the one specified by the *dictionary* parameter.<!-- END REF--> The current dictionary is used for the built-in spell-check feature in 4D (for more information, refer to the 4D *Design Reference* manual) as well as the one in the 4D Write Pro. The modification of the current dictionary is reflected immediately in all the processes of the database for the session, as well as in the 4D Write Pro areas. 
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->La commande **SPELL SET CURRENT DICTIONARY** provoque le remplacement du dictionnaire courant par celui spécifié par le paramètre *dictionnaire*.<!-- END REF--> Le dictionnaire courant est utilisé pour la correction orthographique intégrée de 4D (pour plus d’informations, reportez-vous au manuel *Mode Développement*) ainsi qu'à celle de 4D Write Pro. La modification du dictionnaire courant est immédiatement répercutée dans tous les process de la base pour la session, ainsi que dans les zones 4D Write Pro. 
 
-4D uses:
+4D utilise :
 
-* Windows - the Hunspell dictionary corresponding to the application language,
-* Mac - the native spell checker.
+* sous Windows, le dictionnaire Hunspell correspondant à la langue de l'application,
+* par défaut sous macOS, le correcteur orthographique natif.
 
-**Note:** For Mac, you can use the Hunspell dictionary via the [SET DATABASE PARAMETER](set-database-parameter.md) command. For more information, see the *Spellcheck configuration* section in the *Design Reference* manual. 
+**Note :** Sous macOS, vous pouvez utiliser le dictionnaire Hunspell à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). Pour plus d'informations, reportez-vous à la section *Configuration du correcteur* dans le manuel *Mode Développement*.
 
-You can use the *dictionary* parameter to change the dictionary. You can pass either:
+Vous pouvez changer de dictionnaire à l'aide du paramètre *dictionnaire*. Vous pouvez passer soit :
 
-* a Hunspell dictionary ID number (returned by the [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md) command),
-* a Hunspell dictionary name (corresponding to the file name of the Hunspell dictionary, with or without its extension),
-* a BCP 47, ISO 639-1 or ISO 639-2 language code. For example, with the BCP 47 language code "en-US" indicates American English and "en-GB" specifies British English. These codes are redirected internally to the corresponding current dictionary (Hunspell or native Mac).
+* un numéro d'ID de dictionnaire Hunspell (retourné par la commande [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)),
+* un nom de dictionnaire Hunspell (correspondant au nom du fichier de dictionnaire Hunspell avec ou sans extension),
+* un code de langue BCP 47, ISO 639-1 ou ISO 639-2\. Par exemple, "fr-FR" désigne le français de France et "fr-BE" le français de Belgique avec le code de langue BCP 47\. Ces codes sont redirigés en interne vers le dictionnaire courant correspondant (Hunspell ou natif macOS).
 
-**Compatibility note:** In previous versions of 4D, "Cordial" dictionaries were supported. For compatibility, it is still possible to pass a "Cordial" dictionary number in the *dictionary* parameter (value or constant from the "*Dictionaries*" theme). In this case, however, the dictionary is redirected internally to an equivalent Hunspell dictionary (or the native Mac dictionary). 
+**Note de compatibilité :** Dans les versions précédentes de 4D, les dictionnaires "Cordial" étaient également pris en charge. Par compatibilité, il reste possible de passer un numéro de dictionnaire "Cordial" dans le paramètre *dictionnaire* (valeur ou constante du thème "*Dictionnaires*"). Dans ce cas toutefois, le dictionnaire est redirigé en interne vers un dictionnaire Hunspell équivalent (ou le dictionnaire natif sous macOS). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the *dictionary* is loaded correctly, the system variable OK is set to 1; otherwise, it is set to 0 and an error is returned. 
+Si le *dictionnaire* est correctement chargé, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est retournée. 
 
-## Example 
+## Exemple 
 
-Loading of the "fr-classic" dictionary found in the Hunspell folder:
+Chargement du dictionnaire "fr-classique" présent dans le dossier Hunspell :
 
 ```4d
- SPELL SET CURRENT DICTIONARY("fr-classic")
-  // SPELL SET CURRENT DICTIONARY ("FR-classic.dic") is valid
+ SPELL SET CURRENT DICTIONARY("fr-classique")
+     // SPELL FIXER DICTIONNAIRE COURANT("FR-classique.dic") est valide
 ```
 
-## See also 
+## Voir aussi 
 
 [SPELL CHECKING](spell-checking.md)  
 [SPELL Get current dictionary](spell-get-current-dictionary.md)  
 [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 904 |
+| Numéro de commande | 904 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

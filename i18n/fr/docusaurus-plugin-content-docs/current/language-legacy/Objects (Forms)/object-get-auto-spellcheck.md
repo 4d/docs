@@ -5,50 +5,50 @@ slug: /commands/object-get-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get auto spellcheck** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = automatic spell-checking, False = no automatic spell-checking |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai = correction automatique, <br/>Faux = pas de correction automatique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get auto spellcheck.Summary-->The **OBJECT Get auto spellcheck** command returns the status of the Auto spellcheck option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT Get auto spellcheck.Summary-->La commande **OBJECT Get auto spellcheck** retourne le statut de l’option **Correction orthographique** du ou des objet(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-This command supports objects of the following types:
+Este comando admite objetos de tipo:
 
-- Text-based [inputs](../FormObjects/input_overview.md)
-- [4D Write Pro areas](../FormObjects/writeProArea_overview.md).
+- [input](../FormObjects/input_overview.md) de tipo texto solamente,
+- 4D Write Pro area](../FormObjects/writeProArea_overview.md).
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas une nom mais une référence.
 
-The command returns **True** when automatic spell-checking is enabled for the *object* and **False** when it is not. 
+La commande retourne **Vrai** si la correction automatique est activée pour l’*objet*, et **Faux** sinon. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1174 |
+| Numéro de commande | 1174 |
 | Thread safe | no |
 
 

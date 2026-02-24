@@ -5,61 +5,60 @@ slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the record to examine or Default table if this parameter is omitted |
-| Function result | Boolean | &#8592; | True if the record is loaded Otherwise False |
+| laTable | Table | &#8594;  | Table de l’enregistrement à examiner ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | Vrai si l’enregistrement est chargé, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Is record loaded.Summary-->The Is record loaded command returns True if *aTable*’s current record is loaded in the current process.<!-- END REF-->command will return False in remote mode (it returns True in local mode). 
+<!--REF #_command_.Is record loaded.Summary-->La commande **Is record loaded** retourne Vrai si l’enregistrement courant de *laTable* est chargé dans le process en cours.<!-- END REF-->: En principe, lorsque des tables sont liées par des liens automatiques, les enregistrements courants des tables liées sont automatiquement chargés (cf. *Présentation des liens*). Toutefois, pour des raisons d'optimisation, 4D Server ne charge ces enregistrements qu'au moment où c'est nécessaire, par exemple lors de la lecture ou de l'affectation d'un champ de l'enregistrement lié. Par conséquent, dans ce contexte la commande **Is record loaded** retournera Faux en mode distant (elle retourne Vrai en mode local). 
 
-## Example 
+#### Exemple 
 
-Instead of using the “Next record” or “Previous record” automatic actions, you can write object methods for these buttons to improve their operation. The “Next” button will display the beginning of the selection if the user is at the end of the selection and the “Previous” button will show the end of the selection when the user is at the beginning of the selection.
+Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou “Enregistrement précédent”, vous voulez écrire dans les méthodes de boutons sans action des instructions spécifiant que le bouton “Suivant” affiche le début de la sélection si la fin de la sélection est atteinte et que le bouton “Précédent” affiche la fin de la sélection si le début est atteint.
 
 ```4d
-  // Object method of the “Previous” button (without an automatic action)
+  // Méthode objet du bouton sans action "PRÉCÉDENT"
  If(FORM Event.code=On Clicked)
-    PREVIOUS RECORD([Group])
-    If(Not(Is record loaded([Group])))
-       GOTO SELECTED RECORD([Group];Records in selection([Group]))
-  //Go to the last record in the selection
+    PREVIOUS RECORD([Groupe])
+    If(Not(Is record loaded([Groupe])))
+       GOTO SELECTED RECORD([Groupe];Records in selection([Groupe]))
+  //Aller au dernier enregistrement de la sélection
     End if
  End if
  
-  // Object method of the “Next” button (without an automatic action)
+  // Méthode objet du bouton sans action "SUIVANT"
  If(FORM Event.code=On Clicked)
-    NEXT RECORD([Group])
-    If(Not(Is record loaded([Group])))
-       GOTO SELECTED RECORD([Groups];1)
-  //Go to the first record in the selection
+    NEXT RECORD([Groupe])
+    If(Not(Is record loaded([Groupe])))
+       GOTO SELECTED RECORD([Groupe];1) //Aller au premier enregistrement de la sélection
     End if
  End if
 ```
 
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 669 |
+| Numéro de commande | 669 |
 | Thread safe | yes |
 
 

@@ -5,55 +5,55 @@ slug: /commands/object-get-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( * ; *object* : Text ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<br/>**OBJECT GET PRINT VARIABLE FRAME** ( *object* : Variable, Field ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( {* ;} *objet* ; *tailleVariable* {; *fixeSousForm*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| variableFrame | Boolean | &#8592; | True = Variable frame printing, False = Fixed frame printing |
-| fixedSubform | Integer | &#8592; | Option for printing subforms in fixed size |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tailleVariable | Boolean | &#8592; | Vrai = Impression taille variable, Faux = Impression taille fixe |
+| fixeSousForm | Integer | &#8592; | Option d’impression en taille fixe des sous-formulaires |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->The **OBJECT GET PRINT VARIABLE FRAME** command gets the current configuration of the variable frame print options for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->La commande **OBJECT GET PRINT VARIABLE FRAME** vous permet de d’obtenir la configuration courante des options d’impression en taille variable de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Variable frame printing properties can be defined using the Property List, or using the [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md) command.
+Les propriétés d’impression en taille variable peuvent être définies via la Liste des propriétés ou la commande [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md). 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, this indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *variableFrame* parameter, the command returns a Boolean variable whose value indicates the enabled (**True**) or disabled (**False**) state of variable frame printing.
+La commande retourne dans le paramètre *tailleVariable* une variable booléenne dont la valeur indique le statut activé (**Vrai**) ou inactivé (**Faux**) de l’impression en taille variable.
 
-If the *object* is a subform and if variable frame printing is disabled (**False**), the command also returns, in the *fixedSubform* parameter, the fixed frame print option of the subform. You can compare the value returned with the following constants, found in the "*Form Objects (Properties)*" theme:
+Si l’*objet* est un sous-formulaire et si l’impression en taille variable est à **Faux**, la commande retourne également dans le paramètre *fixeSousForm* l’option d’impression en taille fixe du sous-formulaire. Vous pouvez comparer la valeur retournée aux constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant                                | Type    | Value | Comment                                                                                                                                             |
-| --------------------------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Print Frame fixed with multiple records | Integer | 2     | The frame remains the same size, but 4D prints the form several times to include all the records.<br/>                                      |
-| Print Frame fixed with truncation       | Integer | 1     | 4D prints only the records that fit into the area of the subform. The form is printed only once and those records that are not printed are ignored. |
+| Constante                               | Type        | Valeur | Comment                                                                                                                                                                                      |
+| --------------------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Print Frame fixed with multiple records | Entier long | 2      | La taille initiale de la zone du sous-formulaire est conservée mais 4D imprime le formulaire plusieurs fois pour imprimer tous les enregistrements.                                          |
+| Print Frame fixed with truncation       | Entier long | 1      | 4D n’imprime que les enregistrements qui apparaissent dans la zone du sous-formulaire. Le formulaire n’est imprimé qu’une fois et les enregistrements qui ne sont pas imprimés sont ignorés. |
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1241 |
+| Numéro de commande | 1241 |
 | Thread safe | no |
 
 

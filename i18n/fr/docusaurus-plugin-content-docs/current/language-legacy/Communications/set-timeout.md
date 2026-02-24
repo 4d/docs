@@ -5,46 +5,46 @@ slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *seconds* : Integer )<!-- END REF-->
+<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| seconds | Integer | &#8594;  | Seconds until the timeout |
+| secondes | Integer | &#8594;  | Nombre de secondes jusqu'au timeout |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SET TIMEOUT.Summary-->**SET TIMEOUT** specifies how much time a serial port command has to complete.<!-- END REF--> If the serial port command does not complete within the specified time, *seconds*, the serial port command is canceled, an error -9990 is generated, and the OK system variable is set to 0\. You can catch the error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+<!--REF #_command_.SET TIMEOUT.Summary-->La commande **SET TIMEOUT** vous permet de définir le temps d'attente maximum pour l'exécution d'une commande de communication série.<!-- END REF--> Si la commande ne se termine pas dans le temps *secondes* qui lui est imparti, la communication série est annulée, l'erreur –9990 est générée, et la variable système OK prend la valeur 0\. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-Note that the time is the total time allowed for the command to execute, not the time between characters received. To cancel a previous setting and stop monitoring serial port communication, use a setting of 0 for *seconds*.
+Notez que le délai défini représente la durée totale permise pour que la commande s'exécute, et non le délai d'attente entre chaque caractère reçu. Pour annuler un paramétrage précédent et ne pas spécifier de temps d'attente maximum, passez 0 dans le paramètre *secondes*.
 
-The commands that are affected by the timeout setting are:
+Les commandes de communication série affectées par ce paramétrage sont les suivantes :
 
 * [RECEIVE PACKET](receive-packet.md)
 * [RECEIVE RECORD](receive-record.md)
 * [RECEIVE VARIABLE](receive-variable.md)
 
-## Example 
+## Exemple 
 
-The following example sets the serial port to receive data. It then sets a time-out. The data is read with [RECEIVE PACKET](receive-packet.md). If the data is not received in time, an error occurs:
+L'exemple suivant fixe le port série devant recevoir des données et le timeout. Les données sont lues à l'aide de [RECEIVE PACKET](receive-packet.md). Si les données ne sont pas bien reçues dans le temps défini, une erreur survient :
 
 ```4d
- SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none) // Open Serial Port
- SET TIMEOUT(10) // Set the timeout for 10 seconds
- ON ERR CALL("CATCH COM ERRORS") // Do not let the method being interrupted
- RECEIVE PACKET(vtBuffer;Char(13)) // Read until a carriage return is met
- If(OK=0)
-    ALERT("Error receiving data.")
+  // Ouverture du port série
+ SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none)
+ SET TIMEOUT(10) // Fixer le timeout à 10 secondes
+ ON ERR CALL("INTERCEPTER ERREURS COMMUNICATIONS") // Traiter les interruptions éventuelles
+ RECEIVE PACKET(vBuffer;Char(Carriage return)) // Lire jusqu'au retour chariot
+ If(OK=0) // Si une erreur survient
+    ALERT("Erreur lors de la réception des données.") // Informer l'utilisateur
  Else
-    [People]Name:=vtBuffer // Save received data in a field
+    [Personnes]Nom:=vBuffer // Sauvegarder les données dans un champ
  End if
- ON ERR CALL("")
 ```
 
-## See also 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -52,12 +52,12 @@ The following example sets the serial port to receive data. It then sets a time-
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 268 |
+| Numéro de commande | 268 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

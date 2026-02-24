@@ -5,43 +5,43 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *object* : Text ) : Text<br/>**WA Get page title** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Title of current page |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &#8592; | Titre de la page courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Get page title.Summary-->The WA Get page title command returns the title of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> The title corresponds to the HTML "Title" tag.
+<!--REF #_command_.WA Get page title.Summary-->La commande **WA Get page title** retourne le titre de la page courante ou en cours d’affichage dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Le titre correspond à la balise HTML "Title".
 
-This command returns an empty string if there is no title available for the current URL. 
+Cette commande retourne une chaîne vide s’il n’y a pas de titre disponible à l’URL courant.
 
-## See also 
+## Voir aussi 
 
 [WA Get page content](wa-get-page-content.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1036 |
+| Numéro de commande | 1036 |
 | Thread safe | no |
 
 

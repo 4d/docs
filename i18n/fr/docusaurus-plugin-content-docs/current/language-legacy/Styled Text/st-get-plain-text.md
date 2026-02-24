@@ -5,130 +5,130 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *object* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *object* : Variable, Field {; *refMode* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *objet* {; *modeRéf*} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| refMode | Integer | &#8594;  | Mode for handling references found in the text |
-| Function result | Text | &#8592; | Text without tags |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| modeRéf | Integer | &#8594;  | Mode de prise en charge des références présentes dans le texte |
+| Résultat | Text | &#8592; | Texte sans balises |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Renamed|
-|14|Modified|
-|12.1|Modified|
-|12|Created|
+|14|Renommé|
+|14|Modifié|
+|12.1|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST Get plain text.Summary-->The ST Get plain text command removes any style tags from the text variable or field designated by the *\** and *object* parameters and returns the plain text.<!-- END REF--> 
+<!--REF #_command_.ST Get plain text.Summary-->La commande **ST Get plain text** supprime toute balise de style du champ ou de la variable texte désigné(e) par les paramètres *\** et *objet*, et retourne le texte brut.<!-- END REF--> 
 
 ### 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
-If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande retourne les informations de l'objet en cours d'édition ; si l'objet n'a pas le focus, la commande retourne les informations de la source de données de l'objet (variable ou champ).  
+Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l'exécution, la commande retourne les informations de la variable ou du champ.
 
 ### 
 
-The optional *refMode* parameter indicates the way that references found in *object* must be returned. In *refMode*, pass one of the following constants, found in the "*Multistyle Text*" theme (you can pass a single constant or a combination):
+Le paramètre optionnel *modeRéf* permet d’indiquer la manière dont les références présentes dans *objet* doivent être retournées. Passez dans *modeRéf* une des constantes suivantes, placées dans le thème "*Texte multistyle*" (vous pouvez passer une constante ou une combinaison de constantes) :
 
-| Constant                                     | Type    | Value | Comment                                                                                                                                                                                                 |
-| -------------------------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ST 4D Expressions as sources                 | Integer | 2     | The original string of 4D expression references is returned                                                                                                                                             |
-| ST 4D Expressions as values                  | Integer | 1     | 4D expression references are returned in their evaluated form (default functioning in forms)                                                                                                            |
-| ST References as spaces                      | Integer | 0     | Each reference is returned as a non-breaking space character (default operation, used by other commands)                                                                                                |
-| ST Tags as plain text                        | Integer | 64    | The label of the tag is returned in plain text. For example for the tag '<img src="test.jpg" alt="picture">my picture</img>', the plain text is "my picture" (default functioning in forms)             |
-| ST Tags as XML code                          | Integer | 128   | The XML code of the tag is returned in plain text. For example for the tag '<img src="test.jpg" alt="picture">my picture</img>', the plain text is '<img src="test.jpg" alt="picture">my picture</img>' |
-| ST Text displayed with 4D Expression sources | Integer | 86    | Returns the text as it is shown in the forms with the original string of the 4D expressions.<br/>Corresponds a predefined combination of constants 2+4+16+64.                                   |
-| ST Text displayed with 4D Expression values  | Integer | 85    | Returns the text as it is shown in the forms with the 4D expressions in their evaluated form.<br/>Corresponds to a predefined combination of constants 1+4+16+64.                               |
-| ST URL as labels                             | Integer | 4     | The visible label of URLs is returned, for example "Visit our Web site" (default functioning in forms)                                                                                                  |
-| ST URL as links                              | Integer | 8     | The link is returned, for example "http://www.4d.com"                                                                                                                                                   |
-| ST User links as labels                      | Integer | 16    | The visible label of the user link is returned (default functioning in forms)                                                                                                                           |
-| ST User links as links                       | Integer | 32    | The contents of the user link is returned                                                                                                                                                               |
+| Constante                                    | Type        | Valeur | Comment                                                                                                                                                                                                          |
+| -------------------------------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ST 4D Expressions as sources                 | Entier long | 2      | La chaîne d’origine des références d’expressions 4D est retournée                                                                                                                                                |
+| ST 4D Expressions as values                  | Entier long | 1      | Les références d’expressions 4D sont retournées sous leur forme évaluée (fonctionnement par défaut dans les formulaires)                                                                                         |
+| ST References as spaces                      | Entier long | 0      | Chaque référence est retournée sous forme d’un caractère espace insécable (fonctionnement par défaut, utilisé par les autres commandes)                                                                          |
+| ST Tags as plain text                        | Entier long | 64     | Le libellé de la balise est retourné en texte brut. Par exemple pour la balise '<img src="test.jpg" alt="image">mon image</img>', le texte brut est "mon image" (fonctionnement par défaut dans les formulaires) |
+| ST Tags as XML code                          | Entier long | 128    | Le code XML de la balise est retourné en texte brut. Par exemple pour la balise '<img src="test.jpg" alt="image">mon image</img>', le texte brut est '<img src="test.jpg" alt="image">mon image</img>'           |
+| ST Text displayed with 4D Expression sources | Entier long | 86     | Retourne le texte tel qu’il est visible dans les formulaires avec la chaîne d’origine des expressions 4D.<br/>Correspond à la combinaison prédéfinie des constantes 2+4+16+64.                           |
+| ST Text displayed with 4D Expression values  | Entier long | 85     | Retourne le texte tel qu’il est visible dans les formulaires avec les expressions 4D sous leur forme évaluée.<br/>Correspond à la combinaison prédéfinie de constantes 1+4+16+64.                        |
+| ST URL as labels                             | Entier long | 4      | Le libellé visible des URLs est retourné, par exemple "Visitez notre site Web" (fonctionnement par défaut dans les formulaires)                                                                                  |
+| ST URL as links                              | Entier long | 8      | Le lien est retourné, par exemple "http://www.4d.com"                                                                                                                                                            |
+| ST User links as labels                      | Entier long | 16     | Le libellé visible du lien utilisateur est retourné (fonctionnement par défaut dans les formulaires)                                                                                                             |
+| ST User links as links                       | Entier long | 32     | Le contenu du lien utilisateur est retourné                                                                                                                                                                      |
 
-**Note:** 
+**Notes :**
 
-* Since plain text remains the same regardless of the values passed in the *refMode* parameter, the optional *refMode* parameter is only useful when the text contains references.
-* If a 4D Write Pro document contains tables, the content of each cell is treated as individual paragraphs and returned as text separated by tabs. Rows are separated by carriage returns.
+* Le paramètre optionnel *modeRéf* n’est donc utile que si le texte contient des références, sinon le texte brut est identique quelle que soit la valeur du paramètre *modeRéf*.
+* Si un document 4D Write Pro contient des tableaux, le contenu de chaque cellule est traité en tant que paragraphe individuel et retourné sous forme de texte, séparé par des tabulations. Les lignes sont séparées par des retours chariot.
 
-## Example 1 
+## Exemple 1 
 
-You are looking for the text "very nice" among the values of a multistyle text field. The value was stored in the following form: "The weather is very nice **today**".
-
-```4d
- QUERY BY FORMULA([Comments];ST Get plain text([Comments]Weather)="@very nice@")
-```
-
-**Note:** In this context, the following statement will not give the desired result because the text is saved with style tags:   
+Vous cherchez le texte "très beau" parmi les valeurs d’un champ texte multistyle. La valeur a été stockée sous la forme "Il fait très beau **aujourd’hui**". 
 
 ```4d
- QUERY([Comments];[Comments]Weather="@very nice@")
+ QUERY BY FORMULA([Commentaires];ST Get plain text([Commentaires]Meteo)="@très beau@")
 ```
 
-## Example 2 
+**Note :** Dans ce contexte, l’instruction suivante ne donnera pas le résultat escompté car le texte est enregistré avec des balises de style :   
 
-Given the following text placed in the multi-style area entitled "MyArea":
+```4d
+ QUERY([Commentaires];[Commentaires]Meteo="@très beau@")
+```
+
+## Exemple 2 
+
+Soit le texte suivant placé dans la zone multistyle "mazone" :
 
 ```RAW
-It is now   Go to the 4D site or Open a window
+Il est actuellement   Aller sur le site de 4D ou Ouvrir une fenêtre
 ```
 
-This text is displayed:
+Ce texte est affiché :
 
-![](../assets/en/commands/pict1217332.en.png)
+![](../assets/en/commands/pict1217332.fr.png)
 
-If you execute the following code:
+Si vous exécutez le code suivant :
 
 ```4d
- $txt :=ST Get plain text(*;"myArea";ST References as spaces)
-  // $txt = "It is now    or " (spaces)
- $txt :=ST Get plain text(*;"myArea";ST 4D Expressions as values)
-  // $txt = "It is now 15:48:19  or  "
- $txt :=ST Get plain text(*;"myArea";ST 4D Expressions as sources)
-  // $txt = "It is now Current time  or  "
- $txt :=ST Get plain text(*;"myArea";ST URL as links)
-  //$txt = "It is now   http://www.4d.com or  "
- $txt :=ST Get plain text(*;"myArea";ST Text displayed with 4D Expression values)
-  //$txt = "It is now 15:48:19 Go to the 4D site or Open a window"
- $txt :=ST Get plain text(*;"myArea";ST Text displayed with 4D Expression sources)
-  //$txt = "It is now Current time Go to 4D site or Open a window"
- $txt :=ST Get plain text(*;"myArea";ST User links as labels)
-  //$txt = "It is now    or Open a window"
- $txt :=ST Get plain text(*;"myArea";ST User links as links)
-  //$txt = "It is now    or openW"
+ $txt :=ST Get plain text(*;"mazone";ST References as spaces)
+     //$txt = "Il est actuellement    ou " (espaces)
+ $txt :=ST Get plain text(*;"mazone";ST 4D Expressions as values)
+     //$txt = "Il est actuellement 18:29:55  ou  "
+ $txt :=ST Get plain text(*;"mazone";ST 4D Expressions as sources)
+     //$txt = "Il est actuellement Heure courante  ou  "
+ $txt :=ST Get plain text(*;"mazone";ST URL as links)
+     //$txt = "Il est actuellement  http://www.4d.com ou  "
+ $txt :=ST Get plain text(*;"mazone";ST Text displayed with 4D Expression values)
+     //$txt = "Il est actuellement 17:54:30 Aller sur le site de 4D ou Ouvrir une fenêtre"
+ $txt :=ST Get plain text(*;"mazone";ST Text displayed with 4D Expression sources)
+     //$txt = "Il est actuellement Heure courante Aller sur le site de 4D ou Ouvrir une fenêtre"
+ $txt :=ST Get plain text(*;"mazone";ST User links as labels)
+     //$txt = "Il est actuellement    ou Ouvrir une fenêtre"
+ $txt :=ST Get plain text(*;"mazone";ST User links as links)
+     //$txt = "Il est actuellement    ou openW"
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
+A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
-In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
+A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-## See also 
+## Voir aussi 
 
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 [ST SET TEXT](st-set-text.md)  
 [TEXT TO ARRAY](text-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1092 |
+| Numéro de commande | 1092 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,57 +5,57 @@ slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* : Boolean {; *} )<!-- END REF-->
+<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *asserts* {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| assertions | Boolean | &#8594;  | True = enable assertions<br/>False = disable assertions |
-| * | Operator | &#8594;  | If omitted = command applies to all the processes (existing or created subsequently)<br/>If passed= command applies to current process only |
+| asserts | Boolean | &#8594;  | Vrai = activer les assertions, <br/>Faux = désactiver les assertions |
+| * | Opérateur | &#8594;  | Si omis = la commande s’applique à l’ensemble des process, <br/>Si passé = la commande s’applique au process courant uniquement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET ASSERT ENABLED.Summary-->The **SET ASSERT ENABLED** command can be used to disable or re-enable any assertions inserted into the 4D code of the application.<!-- END REF--> For more information about assertions, please refer to the description of the [ASSERT](assert.md) command. 
+<!--REF #_command_.SET ASSERT ENABLED.Summary-->La commande **SET ASSERT ENABLED** permet de désactiver ou de réactiver les assertions éventuellement insérées dans le code 4D de l’application.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](assert.md). 
 
-By default, assertions added in the program are enabled in interpreted and compiled mode. This command is useful when you want to disable them since their evaluation can sometimes be costly in terms of execution time and you may also want them to be hidden from the final user of the application. Typically, the **SET ASSERT ENABLED** command could be used in the in order to enable or disable assertions according to whether the application is in "Test" mode or in "Production" mode. 
+Par défaut, les assertions ajoutées dans le programme sont actives, en mode interprété et en mode compilé. Cette commande est utile pour les désactiver car leur évaluation peut parfois être coûteuse en temps d’exécution et vous pouvez aussi souhaiter les masquer pour l’utilisateur final de l’application. Typiquement, la commande **SET ASSERT ENABLED** pourra être utilisée dans la [On Startup database method](on-startup-database-method.md) afin d’activer ou non les assertions suivant que l’application est en mode "Test" ou en mode "Production". 
 
-By default, the **SET ASSERT ENABLED** command affects all the processes of the application. To restrict the effect of the command to the current process only, you can pass the *\** parameter.
+Par défaut, la commande **SET ASSERT ENABLED** agit sur tous les process de l’application déjà créés ou créés par la suite. Pour restreindre l’effet de la commande au process courant uniquement, passez le paramètre *\**.
 
-Please note that when assertions are disabled, expressions passed to [ASSERT](assert.md) commands are no longer evaluated. The lines of code that call this command no longer have any effect on the operation of the application, neither in terms of behavior, nor in terms of performance. 
+A noter que lorsque les assertions sont désactivées, les expressions passées aux commandes [ASSERT](assert.md) ne sont plus évaluées. Les lignes de code appelant [ASSERT](assert.md) n’ont alors plus aucun effet sur le fonctionnement de l’application, ni en termes de comportement ni en terme de performances.
 
-## Example 
+## Exemple 
 
-Disabling assertions:
+Désactivation globale des assertions :
 
 ```4d
  SET ASSERT ENABLED(False)
- ASSERT(TestMethod) // TestMethod will not be called since assertions are disabled
+ ASSERT(MéthodeTest) // MéthodeTest ne sera pas appelée car les asserts sont désactivés
 ```
 
-## See also 
+## Voir aussi 
 
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [Get assert enabled](get-assert-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1131 |
+| Numéro de commande | 1131 |
 | Thread safe | yes |
 
 

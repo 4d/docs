@@ -9,40 +9,40 @@ displayed_sidebar: docs
 <!--REF #_command_.Tickcount.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of ticks (60th of a second) elapsed since the machine was started |
+| Résultat | Integer | &#8592; | Nombre de ticks (60ème de seconde) écoulés depuis le démarrage de la machine |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Tickcount.Summary-->Tickcount returns the number of ticks (60th of a second) elapsed since the machine was started.<!-- END REF-->Tickcount returns a value of type Long Integer.
+<!--REF #_command_.Tickcount.Summary-->**Tickcount** retourne le nombre de ticks (1 tick = 1/60ème de seconde) écoulés depuis le démarrage de la machine.<!-- END REF-->**Tickcount** retourne une valeur de type Entier long.
 
-## Example 
+## Exemple 
 
-See example for the command [Milliseconds](milliseconds.md).
+Référez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
 
-## See also 
+## Voir aussi 
 
 [Current time](current-time.md)  
 [Milliseconds](milliseconds.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 458 |
+| Numéro de commande | 458 |
 | Thread safe | yes |
 
 

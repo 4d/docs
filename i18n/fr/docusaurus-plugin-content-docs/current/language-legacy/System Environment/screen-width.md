@@ -5,33 +5,33 @@ slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen width.Syntax-->**Screen width** ({ * }) : Integer<!-- END REF-->
+<!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Windows: width of application window, or width of screen if * is specified Macintosh: width of main screen |
-| Function result | Integer | &#8592; | Width expressed in pixels |
+| * | Opérateur | &#8594;  | Windows : largeur de la fenêtre de l'application ou largeur de l'écran si * est spécifiéMacintosh : largeur de l'écran principal |
+| Résultat | Integer | &#8592; | Largeur exprimée en pixels |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Screen width.Summary-->On Windows, Screen width returns the width of 4D application window (MDI window).<!-- END REF--> If you specify the optional *\** parameter, the function returns the width of the screen.
+<!--REF #_command_.Screen width.Summary-->Sous Windows, **Screen width** retourne la largeur de la fenêtre d'application 4D (fenêtre MDI).<!-- END REF--> Si vous passez le paramètre optionnel \*, **Screen width** retourne la largeur de l'écran.
 
-On Macintosh, Screen width returns the width of the main screen, the screen where the menu bar is located.
+Sous Mac OS, **Screen width** retourne la largeur de l'écran principal, c'est-à-dire celui qui contient la barre de menus.
 
-## See also 
+## Voir aussi 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen height](screen-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 187 |
+| Numéro de commande | 187 |
 | Thread safe | no |
 
 

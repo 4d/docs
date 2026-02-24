@@ -5,71 +5,70 @@ slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *list* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *liste* {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | List reference number |
-| * | Operator |  &#8594;  | If specified, clear sublists from memory, if any. If omitted, sublists (if any) are not cleared. |
+| liste | Integer | &#8594;  | Numéro de référence de liste |
+| * | Operator |  &#8594;  | Si spécifié, effacer les sous-listes de la mémoire (s'il existe des sous-listes) Si omis, ne pas effacer les sous-listes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CLEAR LIST.Summary-->The **CLEAR LIST** command deletes the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Summary-->La commande **CLEAR LIST** efface de la mémoire la liste hiérarchique dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
-Usually you will pass the optional *\** parameter, so all the sublists, if any, attached to items or subitems of the list will be deleted as well.
+Généralement, vous devez passer le paramètre optionnel *\**, afin que les sous-listes et les sous-éléments (s'il y en a) rattachés à la liste soient également effacés.
 
-You do not need to clear a list attached to a form object via the Property List window. 4D loads and clears the list for you. On the other hand, each time you load, copy, extract from a BLOB, or create a list programmatically, call **CLEAR LIST** when you are through with the list.
+Il n'est pas nécessaire de supprimer une liste associée à un objet de formulaire via la Liste des propriétés : 4D charge et efface la liste automatiquement. Sinon, à chaque fois que vous chargez, copiez, extrayez d'un BLOB ou créez une liste par programmation, appelez la commande **CLEAR LIST** lorsque vous n'en avez plus besoin.
 
-To clear a sublist attached to an item (on any level) of another list currently displayed in a form, proceed as follows:
+Si vous voulez supprimer une sous-liste rattachée à un élément (à tout niveau) d'une autre liste affichée dans un formulaire, procédez de la manière suivante :  
+1\. Appelez [GET LIST ITEM](get-list-item.md) avec l'élément parent pour obtenir le numéro de référence de la sous-liste.   
+2\. Appelez [SET LIST ITEM](set-list-item.md) avec l'élément parent pour dissocier la sous-liste de l'élément de liste avant de l'effacer.  
+3\. Appelez **CLEAR LIST** pour effacer la sous-liste dont vous avez obtenu le numéro de référence à l'aide de [GET LIST ITEM](get-list-item.md).
 
-1. Call [GET LIST ITEM](get-list-item.md) on the parent item to get the list reference of the sublist.
-2. Call [SET LIST ITEM](set-list-item.md) on the parent item to detach the sublist from the list item before clearing it.
-3. Call **CLEAR LIST** to clear the sublist whose reference number you obtained with [GET LIST ITEM](get-list-item.md).
+## Exemple 1 
 
-## Example 1 
-
-Within a clean-up routine that clears all objects and data that you no longer need (i.e., when a window is closed and a form unloaded), you may end up clearing a hierarchical list that may have already been cleared, depending on the user actions within the form. Use [Is a list](is-a-list.md) to clear the list only if necessary:
+Vous disposez, dans votre application, d'une routine de "nettoyage" chargée d'effacer tous les objets et données dont vous n'avez plus besoin lorsque, par exemple, une fenêtre ou un formulaire est refermé(e). A un endroit de cette routine, vous supprimez une liste hiérarchique qui peut avoir déjà été supprimée, suivant les actions de l'utilisateur dans le formulaire. Vous utilisez la fonction [Is a list](is-a-list.md) pour effacer la liste uniquement si c'est nécessaire :
 
 ```4d
-  // Extract of clean-up routine
+  // Extrait de la sous-routine de nettoyage
  If(Is a list(hlList))
     CLEAR LIST(hlList;*)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [Load list](load-list.md) command.
+Reportez-vous à l'exemple de la fonction [Load list](load-list.md).
 
-## Example 3 
+## Exemple 3 
 
-See example for the [BLOB to list](blob-to-list.md) command.
+Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
 
-## See also 
+## Voir aussi 
 
 [BLOB to list](blob-to-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 377 |
+| Numéro de commande | 377 |
 | Thread safe | no |
 
 

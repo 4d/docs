@@ -5,47 +5,47 @@ slug: /commands/start-monitoring-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duration* : Real {; *source* : Integer} )<!-- END REF-->
+<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duree* {; *source*} )<!-- END REF-->
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| duration | Real | &#8594;  | Length of time (in seconds) before logging begins |
-| source | Integer | &#8594;  | Origin of an operation |
+| duree | Real | &#8594;  | Durée (en secondes) avant l'ouverture d'une session |
+| source | Integer | &#8594;  | Origine d'une opération |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.START MONITORING ACTIVITY.Summary-->The **START MONITORING ACTIVITY** command records operations exceeding a specified *duration* in memory.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity). Recorded activity can be retrieved using the [Monitored activity](monitored-activity.md) command. Call [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) when you want to stop tracking activity.
+<!--REF #_command_.START MONITORING ACTIVITY.Summary-->La commande **START MONITORING ACTIVITY** enregistre les opérations qui dépassent une certaine *durée* dans la mémoire.<!-- END REF--> Elle peut être appelée et exécutée sur un 4D distant, 4D Server et sur des applications 4D autonomes (si *source* n'est pas issu d'une activité de réseau). Les activités enregistrées peuvent être récupérées à l'aide de la commande [Monitored activity](monitored-activity.md). Appelez [STOP MONITORING ACTIVITY](stop-monitoring-activity.md) lorsque vous souhaitez stopper le suivi.
 
-In the *duration* parameter, pass a number defining a length of time before loggin begins (in seconds, can be expressed as a decimal) for an operation's execution. Once an operation's execution exceeds the *duration*, the operation will be recorded in memory. 
+Dans le paramètre *durée*, passez un nombre définissant la durée d'exécution (en secondes, peut être exprimée sous forme décimale) d'une opération avant l'ouverture d'une session. Une fois que l'exécution d'une opération dépasse cette durée, l'opération est enregistrée dans la mémoire. 
 
-The optional *source* parameter defines the kind of activity to monitor. Possible values: 
+Le paramètre optionnel *source* définit le type d'activité à suivre. Valeurs possibles : 
 
-| Constant            | Value | Comment                                   |
-| ------------------- | ----- | ----------------------------------------- |
-| Activity all        | \-1   | Activity from all sources (default value) |
-| Activity language   | 1     | Language execution operations             |
-| Activity network    | 2     | Network request operations                |
-| Activity operations | 4     | 4D data operations                        |
+| Constante           | Valeur | Comment                                             |
+| ------------------- | ------ | --------------------------------------------------- |
+| Activity all        | \-1    | Activités de toutes les sources (valeur par défaut) |
+| Activity language   | 1      | Opérations d'exécution du langage                   |
+| Activity network    | 2      | Opérations de requêtes réseau.                      |
+| Activity operations | 4      | Opération de données 4D.                            |
 
-**Note**: If the debug logs have been stopped on the 4D Server [Administration window](../ServerWindow/overview.md), **START MONITORING ACTIVITY** with Activity network will restart the logs.
+**Note** : Si le journal de débogage a été stoppé sur la [Administration window](../ServerWindow/overview.md) de 4D Server, la commande **START MONITORING ACTIVITY** relancera le journal avec Activity network.
 
-## Example 
+## Exemple 
 
-You want to start/stop monitoring and review 4D data and debug activities lasting longer than a millisecond:
+Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D et de débogage ayant duré plus d'une milliseconde :
 
 ```4d
  var $activities : Collection
@@ -54,17 +54,17 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
  
  $coll:=ds.Persons.all().toCollection("firstname, lastname, address.*")
  
-  //return all operations over 1 millisecond from the 4D data activity and the debug log
+  //retourne toutes les opérations de plus d'1 milliseconde issues des activités de données 4D et du journal de débogage
  $activities:=Monitored activity
  
  $text:=JSON Stringify($activities.orderBy("startTime");*)
  TEXT TO DOCUMENT("result.txt";$text)
  
-  //end monitoring for 4D data activity and from the debug log
+  //met fin au suivi de l'activité de données 4D et du journal de débogage
  STOP MONITORING ACTIVITY()
 ```
 
-**result.txt:**
+**result.txt :**
 
 \[  
  {  
@@ -100,16 +100,16 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
  }  
 \]
 
-## See also 
+## Voir aussi 
 
 [Monitored activity](monitored-activity.md)  
 [STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1712 |
+| Numéro de commande | 1712 |
 | Thread safe | yes |
 
 

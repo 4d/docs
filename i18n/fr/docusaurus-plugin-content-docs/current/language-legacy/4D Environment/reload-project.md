@@ -9,49 +9,49 @@ displayed_sidebar: docs
 <!--REF #_command_.RELOAD PROJECT.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Created|
+|18 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RELOAD PROJECT.Summary-->The **RELOAD PROJECT** command reloads the source file definitions (methods, forms, etc.) from the disk for the running project in the current 4D environment.<!-- END REF--> It can only be used with 4D projects executed in **interpreted mode**. The command execution is asynchronous. 
+<!--REF #_command_.RELOAD PROJECT.Summary-->La commande **RELOAD PROJECT** recharge les définitions du fichier source (méthodes, formulaires, etc.) à partir du disque, pour exécuter le projet dans l'environnement 4D courant.<!-- END REF--> Elle peut être utilisée uniquement avec des projets 4D exécutés en **mode** **interprété**. L'exécution de la commande est asynchrone. 
 
-Usually, a project is automatically reloaded when the 4D application detects that a source file has been added, modified, or deleted. It is the case when a file was directly edited from the 4D Developer IDE, or after the 4D application window is moved from the background to the foreground of the OS. 
+Généralement, un projet est automatiquement rechargé lorsque l'application 4D détecte qu'un fichier source a été ajouté, modifié ou supprimé. C'est le cas lorsqu'un fichier a été directement édité depuis un IDE 4D Developer, ou après le déplacement d'une fenêtre d'application 4D de l'arrière-plan vers le premier plan du système d'exploitation.
 
-Calling **RELOAD PROJECT** command is necessary when the automatic project reload mechanisms could not apply, i.e. in the following contexts:
+L'appel de la commande **RELOAD PROJECT** est nécessaire lorsque les mécanismes de rechargement automatique du projet ne s'appliquent pas, c'est-à-dire, dans les contextes suivants : 
 
-* the project is run by 4D Server or 4D Developer and source files are modified by an external means, for example by a *pull* action from a source control repository; and you cannot (or you don't want to) manually move the application window, for example because you want to to have an automatic execution.
-* the project is run by 4D Server in headless mode and source files have been modified.
+* Le projet est exécuté par le 4D Server ou 4D Developer et les fichiers source sont modifiés par un moyen externe, tel qu'une action *pull* depuis un répertoire de gestion de version ; et vous ne pouvez pas (ou vous ne souhaitez pas) déplacer manuellement la fenêtre de l'application, car vous souhaitez, par exemple, que l'exécution soit automatique.
+* le projet est exécuté par 4D Server en mode headless et les fichiers source ont été modifiés.
 
-The command does nothing if the Design environnement is not opened.
+La commande ne fait rien si l'environnement de développement (Design) n'est pas ouvert.
 
-When the command is called from:
+Lorsque la commande est appelée depuis :
 
-* a 4D Developer connected to a 4D Server on the same machine, it is executed on 4D Server first, then on the 4D Developer side.
-* a 4D Developer connected remotely to a 4D Server, it is executed on 4D Server only.
-* a 4D single-user or a 4D Server, it is executed locally.
+* un 4D Developer connecté à un 4D Server sur la même machine, elle est d'abord exécutée sur un 4D Server, puis sur 4D Developer.
+* un 4D Developer connecté à distance à un 4D Server, elle est exécutée uniquement sur un 4D Server.
+* un 4D monoposte ou un 4D Server, elle est exécutée localement.
 
-## See also 
+## Voir aussi 
 
-*Developing a project*  
+  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1739 |
+| Numéro de commande | 1739 |
 | Thread safe | no |
 
 

@@ -5,55 +5,55 @@ slug: /commands/set-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* : Text )<!-- END REF-->
+<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *schemaCouleur* )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| colorScheme | Text | &#8594;  | "light", "dark", or "inherited" |
+| schemaCouleur | Text | &#8594;  | "light", "dark", ou "inherited" |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Created|
+|19|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->The **SET APPLICATION COLOR SCHEME** command defines the color scheme to use at the application level for the current session.<!-- END REF--> This scheme will be applied to forms that do not already declare a specific scheme (a color scheme defined at the form level takes priority over the application level).
+<!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->La commande **SET APPLICATION COLOR SCHEME** définit le schéma de couleurs à utiliser au niveau de l'application pour la session courante.<!-- END REF--> Ce schéma sera appliqué aux formulaires qui ne déclarent pas déjà un schéma spécifique (un schéma de couleurs défini au niveau du formulaire est prioritaire sur le niveau de l'application).
 
-**Note:** This command does nothing on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows). In this context, the only available scheme is "light".
+**Note :** Cette commande fonctionne uniquement sur macOS. Sous Windows, le seul schéma disponible est «light».
 
-In the *colorScheme* parameter, pass a color scheme to apply:
+*Dans le paramètre schemaCouleur*, passez un schéma de couleurs à appliquer :
 
-* **"light"** \- the application will use the Default Light Theme
-* **"dark"** \- the application will use the Default Dark Theme
-* **"inherited"** \- the application will inherit from the higher priority level (i.e., in Settings)
+* **"light"** \- l'application utilisera le thème Default Light
+* **"dark"** \- l'application utilisera le thème Default Dark Theme
+* **"inherited"** \- l'application héritera du niveau de priorité le plus élevé (c'est-à-dire dans les Paramètres)
 
-## Example 
+## Exemple 
 
 ```4d
-  // Force the current application in dark
+  // Forcer l'application courante en mode "dark"
  SET APPLICATION COLOR SCHEME("dark")
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM Get color scheme](form-get-color-scheme.md)  
 [Get Application color scheme](get-application-color-scheme.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1762 |
+| Numéro de commande | 1762 |
 | Thread safe | no |
 
 

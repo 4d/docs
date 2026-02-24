@@ -5,62 +5,61 @@ slug: /commands/month-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Month of.Syntax-->**Month of** ( *aDate* : Date ) : Integer<!-- END REF-->
+<!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aDate | Date | &#8594;  | Date for which to return the month |
-| Function result | Integer | &#8592; | Number indicating the month of date |
+| laDate | Date | &#8594;  | Date dont vous voulez extraire le mois |
+| Résultat | Integer | &#8592; | Nombre indiquant le mois de date |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Month of.Summary-->The **Month of** command returns the month of *aDate*.<!-- END REF-->**Month of** returns the number of the month, not the name (see Example 1).
+<!--REF #_command_.Month of.Summary-->**Month of** retourne un nombre représentant le numéro du mois de *laDate*.<!-- END REF-->C'est le numéro du mois est retourné, et non son nom (reportez-vous à l'exemple ci-dessous).
 
-To compare the value returned by this function, 4D provides the following predefined constants, found in the "*Days and Months*" theme:
+Pour comparer la valeur retournée par cette fonction, 4D fournit les constantes prédéfinies suivantes, placées dans le thème "*Jours et mois*" :
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| January   | Integer | 1     |
-| February  | Integer | 2     |
-| March     | Integer | 3     |
-| April     | Integer | 4     |
-| May       | Integer | 5     |
-| June      | Integer | 6     |
-| July      | Integer | 7     |
-| August    | Integer | 8     |
-| September | Integer | 9     |
-| October   | Integer | 10    |
-| November  | Integer | 11    |
-| December  | Integer | 12    |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| January   | Entier long | 1      |
+| February  | Entier long | 2      |
+| March     | Entier long | 3      |
+| April     | Entier long | 4      |
+| May       | Entier long | 5      |
+| June      | Entier long | 6      |
+| July      | Entier long | 7      |
+| August    | Entier long | 8      |
+| September | Entier long | 9      |
+| October   | Entier long | 10     |
+| November  | Entier long | 11     |
+| December  | Entier long | 12     |
 
-  
-## Example 1 
+## Exemple 1 
 
-The following example illustrates the use of **Month of**. The results are assigned to the variable *vResult*. The comments describe what is put in *vResult*:
+L'exemple suivant illustre l'utilisation de **Month of**. Les valeurs retournées sont assignées à la variable Résultat. Les commentaires fournissent les valeurs de Résultat :
 
 ```4d
- vResult:=Month of(!12/25/92!) // vResult gets 12
- vResult:=Month of(Current date) // vResult gets month of current date
+ Résultat:=Month of(!25/12/96!) // Résultat vaut 12
+ Résultat:=Month of(Current date) // Résultat prend la valeur du mois d'aujourd'hui
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [Current date](current-date.md) command.
+Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 
-## See also 
+## Voir aussi 
 
 [Day of](day-of.md)  
 [Year of](year-of.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 24 |
+| Numéro de commande | 24 |
 | Thread safe | yes |
 
 

@@ -5,51 +5,51 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* : Text ; *document* : Text )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *ensemble* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | Name of the set to save |
-| document | Text | &#8594;  | Name of the disk file to which to save the set |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à stocker |
+| nomFichier | Text | &#8594;  | Nom du fichier dans lequel stocker l'ensemble |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SAVE SET.Summary-->**SAVE SET** saves *set* to *document*, a document on disk.<!-- END REF-->
+<!--REF #_command_.SAVE SET.Summary-->**SAVE SET** sauvegarde *ensemble* dans le fichier disque *document*.<!-- END REF-->
 
-The *document* does not need to have the same name as the set. If you supply an empty string for *document*, a Create File dialog box appears so that the user can enter the name of the document. You can load a saved set with the [LOAD SET](load-set.md) command.
+Il n'est pas nécessaire que *document* ait le même nom que l'ensemble. Si vous passez une chaîne vide dans *document*, une boîte de dialogue standard de sauvegarde de fichiers apparaît, permettant à l'utilisateur de saisir un nom de fichier. Vous pourrez utiliser la commande [LOAD SET](load-set.md) pour charger un ensemble stocké sur disque.
 
-If the user clicks Cancel in the Save File dialog box, or if there is an error during the save operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
+Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue de sauvegarde de fichiers, ou si une erreur se produit lors de la sauvegarde, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
-**SAVE SET** is often used to save to disk the results of a time-consuming search.
+La commande **SAVE SET** est souvent utilisée pour stocker sur disque les résultats d'une recherche particulièrement longue.
 
-**WARNING:** Remember that a set is a representation of a selection of records at the moment that the set is created. If the records represented by the set change, the set may no longer be accurate. Therefore, a set saved to disk should represent a group of records that does not change frequently. A number of things can make a set invalid: modifying a record of the set, deleting a record of the set, or changing the criteria that determined the set. Also remember that sets do not save field values.
+**ATTENTION :** Rappelez-vous qu'un ensemble est l'image d'une sélection d'enregistrements au moment précis où l'ensemble est créé. Si les enregistrements représentés par l'ensemble sont modifiés, celui-ci devient obsolète. En conséquence, vous devez créer et sauvegarder des ensembles représentant des enregistrements dont le contenu varie peu. De multiples événements peuvent rendre un ensemble obsolète : modification ou suppression d'un enregistrement de l'ensemble, ou encore modification des critères ayant déterminé la création de l'ensemble. Rappelez-vous également que les ensembles ne stockent pas les valeurs des champs. 
 
-## Example 
+## Exemple 
 
-The following example displays the Save File dialog box, which the user can enter the name of the document that contains the set:
+L'exemple suivant affiche la boîte de dialogue standard d'enregistrement de fichiers afin de permettre à l'utilisateur de saisir le nom du fichier contenant l'ensemble :
 
 ```4d
- SAVE SET("SomeSet";"")
+ SAVE SET("UnEnsemble";"")
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user clicks Cancel in the Save File dialog box, or if there is an error during the load operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
+Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue standard de sauvegarde de documents, ou si une erreur se produit pendant la sauvegarde, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
-## See also 
+## Voir aussi 
 
 [LOAD SET](load-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 184 |
+| Numéro de commande | 184 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -9,35 +9,35 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM FIRST PAGE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|<6|Created|
+|12|Renommé|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE changes the currently displayed form page to the first form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if the first form page is already displayed, FORM FIRST PAGE does nothing.
+<!--REF #_command_.FORM FIRST PAGE.Summary-->La commande **FORM FIRST PAGE** change la page courante d'un formulaire pour afficher la première page du formulaire.<!-- END REF--> Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si la première page du formulaire est déjà affichée, **FORM FIRST PAGE** ne fait rien.
 
-## Example 
+## Exemple 
 
-The following example is a one-line method called from a menu command. It displays the first form page:
+Cet exemple est une méthode appelée par une commande de menu. Elle affiche la première page du formulaire :
 
 ```4d
  FORM FIRST PAGE
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM Get current page](form-get-current-page.md)  
 [FORM GOTO PAGE](form-goto-page.md)  
@@ -45,12 +45,11 @@ The following example is a one-line method called from a menu command. It displa
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 250 |
+| Numéro de commande | 250 |
 | Thread safe | no |
-
 
 

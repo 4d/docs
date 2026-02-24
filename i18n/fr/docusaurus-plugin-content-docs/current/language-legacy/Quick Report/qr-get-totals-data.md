@@ -5,92 +5,88 @@ slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer ; *text* : Text )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *opérateur* ; *texte* )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNum | Integer | &#8594;  | Column number |
-| breakNum | Integer | &#8594;  | Break number |
-| operator | Integer | &#8592; | Operator value for the cell |
-| text | Text | &#8592; | Contents of the cell |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| numRupture | Integer | &#8594;  | Numéro de rupture |
+| opérateur | Integer | &#8592; | Opérateur de la cellule |
+| texte | Text | &#8592; | Contenu de la cellule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET TOTALS DATA.Summary-->### List Mode 
+<!--REF #_command_.QR GET TOTALS DATA.Summary-->### Etat en liste 
 
-The **QR GET TOTALS DATA** command retrieves the details of a specific break.<!-- END REF-->  
+La commande **QR GET TOTALS DATA** permet de récupérer le contenu d'une ligne de rupture spécifique (sous-total ou total général).<!-- END REF--> 
 
-*area* is the reference of the Quick Report area.
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*colNum* is the number of the column whose data will be retrieved.
+Passez dans *numColonne* le numéro de colonne de la cellule que vous souhaitez lire.  
+Passez dans *numRupture* le numéro de la ligne de rupture à lire (sous-total ou total général). Pour une ligne de sous-total, *numRupture* correspond au numéro de la ligne. Pour le total général, *numRupture* vaut -3 (vous pouvez également utiliser la constante *qr total général* du thème *QR Lignes pour Propriétés*). 
 
-*breakNum* is the number of the break whose data will be retrieved (subtotal or grand total). For a subtotal row, *breakNum* corresponds to the row number. For a grand total, *breakNum* is -3 (you can also use the *qr grand total* constant from the *QR Rows for Properties* theme).
+Le paramètre *opérateur* retourne la valeur cumulée de tous les opérateurs éventuellement présents dans la cellule. Vous pouvez utiliser les constantes du thème *QR Opérateurs* pour traiter les valeurs retournées :
 
-*operator* returns the sum of all the operators present in the cell. You can use the constants of the *QR Operators* theme to process the returned value:
+| Constante             | Type        | Valeur |
+| --------------------- | ----------- | ------ |
+| qr average            | Entier long | 2      |
+| qr count              | Entier long | 16     |
+| qr max                | Entier long | 8      |
+| qr min                | Entier long | 4      |
+| qr standard deviation | Entier long | 32     |
+| qr sum                | Entier long | 1      |
 
-| Constant              | Type    | Value |
-| --------------------- | ------- | ----- |
-| qr average            | Integer | 2     |
-| qr count              | Integer | 16    |
-| qr max                | Integer | 8     |
-| qr min                | Integer | 4     |
-| qr standard deviation | Integer | 32    |
-| qr sum                | Integer | 1     |
+Si *opérateur* retourne 0, la cellule ne contient aucun opérateur. 
 
-If the value returned is 0, there is no operator. 
+*texte* retourne le texte de la cellule.
 
-*text* returns the text present in the cell.
+**Note :** Les paramètres *opérateur* et *texte* sont mutuellement exclusifs ; en fonction du contenu de la cellule, seul l'un des deux paramètres retournera une valeur.
 
-**Note:** *operator* and *text* are mutually exclusive, so you either have a result returned through *operator* or through *text*.
+### Etat tableau croisé 
 
-### Cross-table Mode 
+La commande **QR GET TOTALS DATA** vous permet de recupérer le contenu d'une cellule spécifique.
 
-The **QR GET TOTALS DATA** command retrieves the details of a specific cell. 
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*area* is the reference of the Quick Report area.
+Passez dans *numColonne* le numéro de colonne et dans *numRupture* le numéro de ligne de la cellule que vous souhaitez lire.
 
-*colNum* is the column number of the cell whose data is going to be retrieved.
+Le paramètre *opérateur* retourne la valeur cumulée de tous les opérateurs éventuellement présents dans la cellule. Utilisez les constantes du thème *QR Opérateurs* pour évaluer la valeur récupérée (cf. paragraphe précédent). 
 
-*breakNum* is the row number of the cell whose data is going to be retrieved.
+Le paramètre *texte* retourne le contenu de la cellule. 
 
-*operator* returns the sum of all the operators present in the cell. You can use the constants of the *QR Operators* theme to process the returned value (see above). 
+L'illustration suivante précise la manière dont les paramètres *numColonne* et *numRupture* sont combinés dans un tableau croisé :
 
-*text* returns the text in the cell.
+![](../assets/en/commands/pict30726.fr.png)
 
-Here is a depiction of how the parameters *colNum* and *breakNum* have to be combined in cross-table mode:
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
+Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
-![](../assets/en/commands/pict30726.en.png)
-
-  
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *colNum* number, the error -9852 will be generated.  
-If you pass an invalid *breakNum* number, the error -9853 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR SET TOTALS DATA](qr-set-totals-data.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 768 |
+| Numéro de commande | 768 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

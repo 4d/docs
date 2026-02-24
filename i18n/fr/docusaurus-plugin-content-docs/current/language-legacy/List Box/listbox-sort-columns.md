@@ -5,54 +5,52 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : >, < {; ...(*colNum* : Integer ; *order* : >, <)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : >, < {; ...(*colNum* : Integer ; *order* : >, <)} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( {* ;} *objet* ; *numColonne* ; *sensDuTri* {; *numColonne2* ; *sensDuTri2* ; ... ; *numColonneN* ; *sensDuTriN*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| colNum | Integer | &#8594;  | Column number(s) to sort |
-| order | >, < | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numColonne | Integer | &#8594;  | Numéro(s) de colonne(s) à trier |
+| sensDuTri | * | &#8594;  | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->The LISTBOX SORT COLUMNS command applies a standard sort to the rows of the list box defined by the *object* and *\** parameters on the basis of one or more column value(s).<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->La commande **LISTBOX SORT COLUMNS** permet de trier (réordonner) toutes les lignes de la list box définie dans les paramètres *objet* et *\** sur la base des valeurs d’une ou plusieurs colonne(s).<!-- END REF-->
 
-**Note:** A standard sort is applied on the basis of a single column value when the user clicks on the column header (see *Standard sorts*).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Passez dans *numColonne* le numéro de la colonne dont les valeurs seront utilisées comme critère de tri. Vous pouvez utiliser tout type de données, à l’exception des colonnes contenant des images et des pointeurs.
 
-In *colNum*, pass the column number of the column whose values you want to use as the sort criteria. You can use any type of array data, except pictures and pointers.
+Passez dans *sensDuTri* le symbole > ou < indiquant l’ordre du tri : croissant ou décroissant. Si *sensDuTri* est égal au symbole “supérieur à” (>), l’ordre du tri est croissant. Si *sensDuTri* est égal au symbole “inférieur à” (<), l’ordre du tri est décroissant.
 
-In *order*, pass the symbol >_or_< to indicate the sort order. If *order* contains the “greater than” symbol (>), the sort order is ascending. If *order* contains the “less than” symbol (<), the sort oder is descending.
+Vous pouvez définir des tris multi-niveaux : pour cela, passez autant de paires *numColonne;sensDuTri* que nécessaire. Le niveau de tri est défini par la position du paramètre lors de l’appel.
 
-You can define multi-level sorts: to do so, pass as many pairs (*colNum;order*) as necessary. The sorting level is defined by the position of the parameter in the call.
+Conformément au principe de fonctionnement des list box, les colonnes sont synchronisées, ce qui signifie que le tri d’une colonne est automatiquement répercuté sur toutes les colonnes de l’objet.
 
-In conformity with the principle of list box operation, the columns are synchronized which means that the sorting of a column is automatically passed on to all the other columns of the object.
-
-**Note:** The **LISTBOX SORT COLUMNS** command does not take the *Sortable* listbox property into account.
+**Note** : La commande **LISTBOX SORT COLUMNS** ne tient pas compte de la propriété *Sortable* de la listbox.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 916 |
+| Numéro de commande | 916 |
 | Thread safe | no |
 
 

@@ -5,74 +5,74 @@ slug: /commands/sql-get-data-source-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *sourceType* : Integer ; *sourceNamesArr* : Text array ; *driversArr* : Text array )<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* ; *tabNomsSources* ; *tabPilotes* )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sourceType | Integer | &#8594;  | Source type: user or system |
-| sourceNamesArr | Text array | &#8592; | Array of data source names |
-| driversArr | Text array | &#8592; | Array of drivers for sources |
+| typeSource | Integer | &#8594;  | Type de source : utilisateur ou système |
+| tabNomsSources | Text array | &#8592; | Tableau des noms de sources de données |
+| tabPilotes | Text array | &#8592; | Tableau des pilotes des sources |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Renamed|
-|11 SQL|Created|
+|19 R5|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->The **SQL GET DATA SOURCE LIST** command returns, in the *sourceNamesArr* and *driversArr* arrays, the names and drivers of the *sourceType* type data sources defined in the ODBC manager of the operating system.<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->La commande **SQL GET DATA SOURCE LIST** retourne dans les tableaux *tabNomsSources* et *tabPilotes* les noms et les pilotes des sources de données de type *typeSource* définies dans le gestionnaire ODBC du système d’exploitation.<!-- END REF-->
 
-4D allows you to connect to an external ODBC data source directly via the language and execute SQL queries within a **Begin SQL/End SQL** tag structure. This works as follows: the SQL GET DATA SOURCE LIST command can be used to get a list of data sources present on the machine. The [SQL LOGIN](sql-login.md) command can then be used to designate the source to be used. You can then execute SQL queries using a **Begin SQL/End SQL** tag structure in the “current” source. To carry out queries using the 4D internal engine again, simply pass the [SQL LOGOUT](sql-logout.md) command. For more information about SQL commands in the Method editor, please refer to the *4D SQL Reference* manual.
+4D vous permet de vous connecter directement via le langage à une source de données ODBC externe et d’exécuter des requêtes SQL au sein d’une structure [Begin SQL](begin-sql.md)/[End SQL](end-sql.md). Le principe d’utilisation est le suivant : la commande **SQL GET DATA SOURCE LIST** permet d’obtenir la liste des sources de données présentes sur le poste. La commande [SQL LOGIN](sql-login.md) permet alors de désigner la source à utiliser. Vous pouvez ensuite exécuter des requêtes SQL dans une structure [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) sur la source “courante”. Pour effectuer à nouveau des requêtes sur le moteur interne de 4D, il suffit de passer la commande [SQL LOGOUT](sql-logout.md). Pour plus d’informations sur les commandes SQL dans l’éditeur de méthodes, reportez-vous au manuel Guide de référence 4D SQL.
 
-In *sourceType*, pass the type of data source that you want to retrieve. You can use one of the following constants, found in the “*SQL*” theme:
+Passez dans *typeSource* le type de source de données que vous souhaitez obtenir. Vous pouvez utiliser l’une des constantes suivantes, placées dans le thème “*SQL*” :
 
-| Constant           | Type    | Value |
-| ------------------ | ------- | ----- |
-| System data source | Integer | 2     |
-| User data source   | Integer | 1     |
+| Constante          | Type        | Valeur |
+| ------------------ | ----------- | ------ |
+| System data source | Entier long | 2      |
+| User data source   | Entier long | 1      |
 
-**Note:** This command does not take file type data sources into account. 
+**Note :** Cette commande ne prend pas en compte les sources de données de type fichier. 
 
-The command fills and sizes the *sourceNamesArr* and *driversArr* arrays with the corresponding values. 
+La commande remplit et dimensionne les tableaux *tabNomsSources* et *tabPilotes* avec les valeurs correspondantes. 
 
-**Note:** If you want to connect to an external 4D data source via ODBC, you will need to have installed the 4D ODBC Driver on your machine. For more information, please refer to the 4D ODBC Driver Installation manual. 
+**Note :** Si vous souhaitez vous connecter à une source de données 4D externe via ODBC, vous devez au préalable installer le pilote 4D ODBC sur votre poste. Pour plus d'informations, reportez-vous au manuel d'installation de 4D ODBC Driver. 
 
-## Example 
+## Exemple 
 
-Example using a user data source:
+Cet exemple utilise une source de données utilisateur :
 
 ```4d
- ARRAY TEXT(arrDSN;0)
- ARRAY TEXT(arrDSNDrivers;0)
- SQL GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
+ ARRAY TEXT(tdsn;0)
+ ARRAY TEXT(tdsnPilotes;0)
+ GET DATA SOURCE LIST(User data source;tdsn;tdsnPilotes)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command is executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated.
+Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [SQL Get current data source](sql-get-current-data-source.md)  
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 989 |
+| Numéro de commande | 989 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

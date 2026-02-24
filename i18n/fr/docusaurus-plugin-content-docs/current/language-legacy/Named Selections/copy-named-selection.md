@@ -5,59 +5,61 @@ slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
+<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*laTable* ;} *nom* )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to copy selection, or Default table, if omitted |
-| name | Text | &#8594;  | Name of the named selection to create |
+| laTable | Table | &#8594;  | Table de laquelle il faut copier la sélection ou Table par défaut si ce paramètre est omis |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à créer |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.COPY NAMED SELECTION.Summary-->**COPY NAMED SELECTION** copies the current selection of *aTable* to the named selection *name*.<!-- END REF--> The default table for the process is used if the optional *table* parameter is not specified. The parameter *name* contains a copy of the selection. The current selection and the current record of *aTable* for the process are not changed.
+<!--REF #_command_.COPY NAMED SELECTION.Summary-->**COPY NAMED SELECTION** copie la sélection courante de *laTable* dans une sélection temporaire *nom*.<!-- END REF--> La table par défaut du process courant est utilisée si le paramètre optionnel *laTable* n'est pas spécifié. La sélection temporaire *nom* contient une copie de la sélection. La sélection courante et l'enregistrement courant de *laTable* pour le process courant ne sont pas modifiés.
 
-A named selection does not actually contain the records, but only an ordered list of references to records. Each reference to a record takes 4 bytes in memory. This means that when a selection is copied using the **COPY NAMED SELECTION** command, the amount of memory required is 4 bytes multiplied by the number of records in the selection. Since named selections reside in memory, you should have enough memory for the named selection as well as the current selection of the table in the process.
+Une sélection temporaire ne contient pas les enregistrements, mais une liste triée des références aux enregistrements. Chaque référence à un enregistrement prend 4 octets en mémoire. Ceci signifie que lorsqu'une sélection est copiée à l'aide de la commande **COPY NAMED SELECTION**, la mémoire requise est 4 octets multipliés par le nombre d'enregistrements dans la sélection. Comme les sélections temporaires restent en mémoire, il vous faut assez de mémoire pour la sélection temporaire ainsi que la sélection courante de la table pour le process. 
 
-Use the [CLEAR NAMED SELECTION](clear-named-selection.md) command to free the memory used by *name*.
+**4D Server :** La sélection temporaire *nom* ainsi que la sélection courante sont logées dans la mémoire du poste serveur. En conséquence, assurez-vous que le serveur dispose de suffisamment de mémoire.
 
-## Example 
+Utilisez la commande [CLEAR NAMED SELECTION](clear-named-selection.md) pour libérer la mémoire utilisée par *nom*.
 
-The following example allows you to check if there are other overdue invoices in the *\[People*\] table. The selection is sorted and then saved. We search for all records where invoices are due. Then we reuse the selection and clear the named selection in memory. Clearing the named selection in memory is optional, in case the database designer wants to keep the sorted selection for future use:
+## Exemple 
+
+L'exemple suivant permet de vérifier s'il y a des factures impayées dans la table \[Personnes\]. La sélection est triée puis sauvegardée. Nous cherchons toutes les factures qui n'ont pas été payées. Ensuite, nous réutilisons la sélection et effaçons la sélection temporaire en mémoire :
 
 ```4d
- ALL RECORDS([People])
-  //Allow the user to sort the selection
- ORDER BY([People])
-  // Save the sorted selection as a named selection
- COPY NAMED SELECTION([People];"UserSort")
-  // Search for records where invoices are due
- QUERY([People];[People]InvoiceDue=True)
-  // If records are found
- If(Records in selection([People])>0)
-  // Alert the user
-    ALERT("Yes, there are overdue invoices on table.")
+ ALL RECORDS([Personnes])
+  //Permettre à l'utilisateur de trier la sélection
+ ORDER BY([Personnes])
+  // Stocker la sélection dans une sélection temporaire
+ COPY NAMED SELECTION([Personnes];"TriéeUtilisateur")
+  // Rechercher les factures impayées
+ QUERY([Personnes];[Personnes]FactureDue=True)
+  // Si un enregistrement a été trouvé
+ If(Records in selection([Personnes])>0)
+  // Informer l'utilisateur
+    ALERT("Oui, quelques factures n'ont pas été réglées.")
  End if
-  // Reuse the sorted named selection
- USE NAMED SELECTION("UserSort")
-  // Remove the selection from memory
- CLEAR NAMED SELECTION("UserSort")
+  // Réutiliser la sélection temporaire triée
+ USE NAMED SELECTION("TriéeUtilisateur")
+  // Effacer la sélection de la mémoire
+ CLEAR NAMED SELECTION("TriéeUtilisateur")
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 331 |
+| Numéro de commande | 331 |
 | Thread safe | yes |
 
 

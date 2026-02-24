@@ -9,36 +9,36 @@ displayed_sidebar: docs
 <!--REF #_command_.CLOSE PRINTING JOB.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CLOSE PRINTING JOB.Summary-->The **CLOSE PRINTING JOB** command closes the print job previously opened by the [OPEN PRINTING JOB](open-printing-job.md) command and sends any printing document that has been assembled to the current printer.<!-- END REF-->  
-  
-**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](../settings/compatibility.md) documentation in the Compatibility settings.
+<!--REF #_command_.CLOSE PRINTING JOB.Summary-->La commande **CLOSE PRINTING JOB** permet de refermer la tâche d’impression préalablement ouverte par la commande [OPEN PRINTING JOB](open-printing-job.md) et d’envoyer à l’imprimante courante le document d’impression éventuellement construit.<!-- END REF-->
 
-## See also 
+**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](../settings/compatibility.md) dans les paramètres de compatibilité.
+
+## Voir aussi 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 996 |
+| Numéro de commande | 996 |
 | Thread safe | no |
 
 

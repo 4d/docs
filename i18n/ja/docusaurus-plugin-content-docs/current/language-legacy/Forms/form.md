@@ -1,6 +1,7 @@
 ---
 id: form
 title: フォーム
+slug: /commands/form
 displayed_sidebar: docs
 ---
 

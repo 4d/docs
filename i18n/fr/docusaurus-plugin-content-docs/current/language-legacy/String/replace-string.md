@@ -5,91 +5,90 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *oldString* : Text ; *newString* : Text {; *howMany* : Integer}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* ; *obsolète* ; *nouveau* {; *combien*}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Original string |
-| oldString | Text | &#8594;  | Characters to replace |
-| newString | Text | &#8594;  | Replacement string (if empty string, occurrences are deleted) |
-| howMany | Integer | &#8594;  | How many times to replace If omitted, all occurrences are replaced |
-| * | Operator | &#8594;  | If passed: evaluation based on character codes |
-| Function result | Text | &#8592; | Resulting string |
+| source | Text | &#8594;  | Chaîne de départ |
+| obsolète | Text | &#8594;  | Caractère(s) à remplacer |
+| nouveau | Text | &#8594;  | Chaîne de remplacement (si chaîne vide, toutes les occurrences sont effacées) |
+| combien | Integer | &#8594;  | Nombre de remplacements à effectuer |
+| * | Opérateur | &#8594;  | Si passé : évaluation basée sur les codes de caractères |
+| Résultat | Text | &#8592; | Chaîne résultante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Modified|
-|11 SQL Release 1|Modified|
-|<6|Created|
+|15 R3|Modifié|
+|11 SQL Release 1|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Replace string.Summary-->Replace string replaces *howMany* occurrences of *oldString* in *source* with *newString*.<!-- END REF-->
+<!--REF #_command_.Replace string.Summary-->**Replace string** retourne une chaîne de caractères résultant du remplacement dans *source* de *obsolète* par *nouveau*.<!-- END REF-->
 
-If *newString* is an empty string (""), Replace string deletes each occurrence of *oldString* in *source*.
+Si *nouveau* est une chaîne vide (""), **Replace string** supprime chaque occurrence de *obsolète* dans *source*.
 
-If *howMany* is specified, Replace stringwill replace only the number of occurrences of *oldString* specified, starting at the first character of *source*. If *howMany* is not specified, then all occurrences of *oldString* are replaced.
+Si *combien* est spécifié, **Replace string** ne remplace que le nombre d'occurrences de *obsolète* spécifié, à partir du premier caractère de *source*. Si *combien* est omis, toutes les occurrences de *obsolète* sont remplacées.
 
-If *oldString* is an empty string, Replace string returns the unchanged *source*.
+Si *obsolète* est une chaîne vide, **Replace string** retourne *source* inchangé.
 
-By default, the command makes global comparisons that take linguistic particularities and letters that may be written with one or more characters (for example æ = ae) into account. On the other hand, it is not diacritical (a=A, a=à and so on) and does not take "ignorable" characters such as characters whose code < 9 into account (Unicode specification). 
+Par défaut, la commande effectue des comparaisons globales, tenant compte des particularités linguistiques et des lettres pouvant s'écrire avec un ou plusieurs caractères (par exemple æ = ae). En revanche, elle n'est pas diacritique (a=A, a=à...) et ne tient pas compte des caractères "ignorables" tels que les caractères dont le code est < 9 (spécification Unicode).   
+Pour modifier ce fonctionnement, passez l'astérisque *\** en dernier paramètre. Dans ce cas, les comparaisons sont effectuées sur la base des codes des caractères. Vous devez donc passer le paramètre \* :
 
-To modify this functioning, pass the asterisk *\** as the last parameter. In this case, comparisons will be based on character codes. You must pass the *\** parameter:
+* si vous souhaitez remplacer des caractères spéciaux, utilisés par exemple comme délimiteurs (**Caractere**(1)...),
+* si le remplacement des caractères doit tenir compte de la casse et des accents (a#A, a#à...).  
+A noter que dans ce mode, l'évaluation ne gère pas les variations d'écriture des mots.
 
-* If you want to replace special characters, used for example as delimiters (**Char**(1), etc.),
-* If the replacement of characters must be case sensitive and take accented characters into account (a#A, a#à and so on).  
-Note that in this mode, the evaluation does not handle variations in the way words are written.
+**Note :** Dans 4D v15 R3 et suivantes, une optimisation importante a été apportée à l'algorithme utilisé par cette commande lorsque vous remplacez une chaîne par une autre de taille différente, quelle que soit la syntaxe utilisée. Il en résulte une accélération significative des traitements dans ce contexte. 
 
-**Note:** In 4D v15 R3 and higher, a significant optimization was made to the algorithm used by this command when you replace a string by another of a different length, regardless of the syntax used. This results in a considerable acceleration of processing in this context. 
+## Exemple 1 
 
-## Example 1 
-
-The following example illustrates the use of **Replace string**. The results, described in the comments, are assigned to the variable *vtResult*.
-
-```4d
- vtResult:=Replace string("Willow";" ll";"d") // Result gets "Widow"
- vtResult:=Replace string("Shout";"o";"") // Result gets "Shut"
- vtResult:=Replace string(vtOtherVar;Char(Tab);",";*) // Replaces all tabs in vtOtherVar with commas
-```
-
-## Example 2 
-
-The following example eliminates CRs and TABs from the text in *vtResult*:
+L'exemple suivant illustre l'utilisation de **Replace string**. Les résultats sont affectés à la variable *vRésultat*. Les commentaires fournissent la valeur de la variable :
 
 ```4d
- vtResult:=Replace string(Replace string(vtResult;Char(Carriage return);"";*);Char(Tab);"";*)
+ vRésultat:=Replace string("Ville";"ll";"d") // vRésultat est égal à "Vide"
+ vRésultat:=Replace string("Table";"b";"") // vRésultat est égal à "Tale"
+ vRésultat:=Replace string(var;Char(Tab);",";*) // Remplacer toutes les tabulations par des virgules
 ```
 
-## Example 3 
+## Exemple 2 
 
-The following example illustrates the use of the \* parameter in the case of a diacritical evaluation:
+L'exemple suivant élimine les retours chariot et les tabulations du texte contenu dans la variable *vRésultat* :
 
 ```4d
- vtResult:=Replace string("Crème brûlée";"Brulee";"caramel") //Result gets "Crème caramel"
- vtResult:=Replace string("Crème brûlée";"Brulee";"caramel";*) //Result gets "Crème brûlée"
+ vRésultat:=Replace string(Replace string(vRésultat;Char(Carriage return);"";*);Char(Tab);"";*)
 ```
 
-## See also 
+## Exemple 3 
 
-[Change string](change-string.md)  
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
+L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évaluation diacritique :
 
-## Properties
+```4d
+ vRésultat:=Replace string("Crème brûlée";"Brulee";"caramel") //vRésultat est égal à "Crème caramel"
+ vRésultat:=Replace string("Crème brûlée";"Brulee";"caramel";*) //vRésultat est égal à "Crème brûlée"
+```
+
+## Voir aussi 
+
+[Change string](../commands/change-string)  
+[Delete string](../commands/delete-string)  
+[Insert string](../commands/insert-string)  
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 233 |
+| Numéro de commande | 233 |
 | Thread safe | yes |
 
 

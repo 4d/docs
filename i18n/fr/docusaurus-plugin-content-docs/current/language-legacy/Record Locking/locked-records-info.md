@@ -5,97 +5,97 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* : Table ) : Object<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTable* ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table where you want to get locked records |
-| Function result | Object | &#8592; | Description of locked records (if any) |
+| laTable | Table | &#8594;  | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
+| Résultat | Object | &#8592; | Description des enregistrements verrouillés (le cas échéant) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Locked records info.Summary-->The **Locked records info** command returns an [object](# "Data structured as a native 4D object") containing different information about the currently locked record(s) in *aTable*.<!-- END REF-->The command works only with 4D and 4D Server. It returns an invalid object when called from 4D Remote. However, it can be called in this context if the "Execute on server" option is activated for the calling method. In this case, the object returned will contain information about the server. When called from a component, it always applies to the host database.
+<!--REF #_command_.Locked records info.Summary-->La commande **Locked records info** retourne un [objet](# "Données structurées sous forme d'objet natif 4D") décrivant le ou les enregistrement(s) actuellement verrouillé(s) dans *laTable*.<!-- END REF-->Cette commande fonctionne uniquement avec 4D et 4D Server. Elle retourne toujours un objet invalide lorsqu'elle est appelée depuis un 4D distant. Elle peut toutefois être appelée depuis un 4D distant si la méthode d'appel dispose de l'option "Exécuter sur serveur" ; elle retourne dans ce cas les informations relatives au serveur. Lorsqu'elle est appelée depuis un composant, elle s'applique à la base hôte.
 
-The returned object contains a "records" property which is a collection of objects:
+L'objet retourné contient une propriété "records" qui est une collection d'objets :
 
-```RAW
-{    "records": [        description object,        (…)    ]}
+```json
+{    "records": [        objet description,        (…)    ]}
 ```
 
-Each "description object" collection element identifies a locked record in the specified table. It contains different properties depending on the origin of the lock (4D process or REST API).
+Chaque élément de collection "objet description" identifie un enregistrement verrouillé dans la table spécifiée. Il contient les propriétés suivantes en fonction de l'origine du "verrou" (process 4D ou API REST) :
 
-* If the record was locked by a 4D process:
+* Si l'enregistrement a été verrouillé par un process 4D :
 
-| **Property**      | **Type**      | **Description**                                                                                                                                                                                                                                                                         |
-| ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| contextID         | UUID (String) | UUID of the database context responsible for the lock                                                                                                                                                                                                                                   |
-| contextAttributes | Object        | Object containing information similar to the [LOCKED BY](locked-by.md) command but applied to the record, the difference being that **Locked records info** returns the user name defined in the system and not that of the 4D user, as well as additional information (see below). |
-| recordNumber      | Integer       | Record number of the locked record                                                                                                                                                                                                                                                      |
+| **Propriété**     | **Type**      | **Description**                                                                                                                                                                                                                                                                                                                                  |
+| ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| contextID         | UUID (Chaîne) | UUID du contexte de la base à l'origine du verrouillage                                                                                                                                                                                                                                                                                          |
+| contextAttributes | Objet         | Objet contenant des informations semblables à la commande [LOCKED BY](locked-by.md) mais appliquées à l'enregistrement, à la différence près que **Locked records info** retourne uniquement le nom de l'utilisateur défini dans le système (et pas celui de l'utilisateur 4D) ainsi que des informations supplémentaires (voir ci-dessous). |
+| recordNumber      | Entier long   | Numéro de l'enregistrement verrouillé                                                                                                                                                                                                                                                                                                            |
 
-The *contextAttributes* object is made up of the following properties:
+L'objet *contextAttributes* est constitué des propriétés suivantes :
 
-| **Property**                                                                               | **Type**      | **Description**                                                                                               |
-| ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------- |
-| task\_id                                                                                   | Number        | Process reference number                                                                                      |
-| user\_name                                                                                 | Text        | User name defined by operating system                                                                         |
-| user4d\_alias                                                                              | Text        | User alias defined with [SET USER ALIAS](set-user-alias.md), otherwise user name in the 4D database directory |
-| user4d\_id                                                                                 | Number        | 4D user number(\*)                                                                                            |
-| host\_name                                                                                 | Text        | Name of host machine                                                                                          |
-| task\_name                                                                                 | Text        | Process name                                                                                                  |
-| client\_version                                                                            | Number        | Version of client application                                                                                 |
-| *Only when command is executed on 4D Server and if record locking comes from a remote 4D:* |               |                                                                                                               |
-| is\_remote\_context                                                                        | Boolean       | Indicates whether a remote 4D is the origin of the locking (always *true* since otherwise it is not present)  |
-| client\_uid                                                                                | UUID (String) | UUID of 4D remote at the origin of the locking                                                                |
+| **Propriété**                                                                                                                    | **Type**      | **Description**                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| task\_id                                                                                                                         | Numérique     | Numéro de référence du process                                                                                                 |
+| user\_name                                                                                                                       | Chaîne        | Nom de l'utilisateur défini dans le système d'exploitation                                                                     |
+| user4d\_alias                                                                                                                    | texte         | Alias utilisateur défini avec [SET USER ALIAS](set-user-alias.md), sinon le nom d'utilisateur dans le répertoire de la base 4D |
+| user4d\_id                                                                                                                       | Numérique     | Numéro de l'utilisateur 4D(\*)                                                                                                 |
+| host\_name                                                                                                                       | Chaîne        | Nom de la machine hôte                                                                                                         |
+| task\_name                                                                                                                       | Chaîne        | Nom du process                                                                                                                 |
+| client\_version                                                                                                                  | Numérique     | version de l'application cliente                                                                                               |
+| *Uniquement lorsque la commande est exécutée sur 4D Server et si le verrouillage de l'enregistrement provient d'un 4D distant :* |               |                                                                                                                                |
+| is\_remote\_context                                                                                                              | Booléen       | Indique si l'origine du verrouillage est un 4D distant (toujours *true* car non présent dans les autres cas)                   |
+| client\_uid                                                                                                                      | UUID (Chaîne) | Identifiant UUID du 4D distant à l'origine du verrouillage                                                                     |
 
-(\*) *Only returned in binary databases.* You can get the 4D user name from the value of *user4d\_id* by using the following code:  
+(\*) *Retourné uniquement dans les bases binaires.* Vous pouvez obtenir le nom d'utilisateur 4D à partir de la valeur de *user4d\_id* en utilisant le code suivant :  
 
 ```4d
- GET USER LIST($arrNames;$arrIDs)
- $User4DName:=Find in array($arrIDs;user4d_id)
+ GET USER LIST($tabNoms;$tabIDs)
+ $nom4DUser:=Find in array($tabIDs;user4d_id)
 ```
 
-* If the record was locked by the *$lock REST request* (at session level):
+* Si l'enregistrement a été verrouillé par une *requête REST $lock* :
 
-| **Property** | **Type** | **Description**                                                                                                                                     |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host         | Text   | URL with which the entity has been locked, e.g. "127.0.0.1:8044"                                                                                    |
-| IPAddr       | Text   | IP address used in the URL with which the entity has been locked, e.g. "127.0.0.1"                                                                  |
-| recordNumber | Integer  | Record number of the locked record                                                                                                                  |
-| userAgent    | Text   | User agent of the locker, e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
+| **Propriété** | **Type** | **Description**                                                                                                                                                 |
+| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host          | Chaîne   | URL avec laquelle l'entité a été verrouillée, par exemple "127.0.0.1:8044".                                                                                     |
+| IPAddr        | Chaîne   | Adresse IP utilisée dans l'URL avec laquelle l'entité a été verrouillée, par exemple "127.0.0.1".                                                               |
+| recordNumber  | Entier   | Numéro d'enregistrement de l'enregistrement verrouillé                                                                                                          |
+| userAgent     | Chaîne   | Agent utilisateur du verrou, par exemple "Mozilla/5.0 (Windows NT 10.0 ; Win64 ; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" |
 
-## Example 
+## Exemple 
 
-You execute the following code:
+Vous exécutez le code suivant :
 
 ```4d
  $vOlocked :=Locked records info([Table])
 ```
 
-If two records were locked in the \[Table\] table, the following object is returned in $vOlocked:
+Si deux enregistrements sont verrouillés dans la table \[Table\], l'objet suivant est retourné dans $vOlocked :
 
-```RAW
-{    "records": [        {            "contextID": "A9BB84C0E57349E089FA44E04C0F2F25",            "contextAttributes": {                "task_id": 8,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 1        },        {            "contextID": "8916338D1B8A4D86B857D92F593CCAC3",            "contextAttributes": {                "task_id": 9,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 2        }    ]}
+```json
+{    "records": [        {            "contextID": "A9BB84C0E57349E089FA44E04C0F2F25",            "contextAttributes": {                "task_id": 8,                 "user_name": "roland",                 "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                 "client_version": -1342106592            },            "recordNumber": 1        },        {            "contextID": "8916338D1B8A4D86B857D92F593CCAC3",            "contextAttributes": {                "task_id": 9,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 2        }    ]}
 ```
 
-If the code is executed on a 4D Server and the locking is caused by a remote client machine, the following object is returned in $vOlocked:
+Si le code est exécuté sur 4D Server et que le verrouillage est causé par un poste client distant, l'objet suivant est retourné dans $vOlocked :
 
 ```json
 {    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
-## See also 
+## Voir aussi 
 
 [Locked](locked.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1316 |
+| Numéro de commande | 1316 |
 | Thread safe | yes |
 
 

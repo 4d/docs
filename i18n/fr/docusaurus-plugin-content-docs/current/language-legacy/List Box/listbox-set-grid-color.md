@@ -5,55 +5,55 @@ slug: /commands/listbox-set-grid-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( * ; *object* : Text ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID COLOR** ( *object* : Variable ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *objet* ; *couleur* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| color | Text, Integer | &#8594;  | RGB color value |
-| horizontal | Boolean | &#8594;  | Use color for horizontal grid lines |
-| vertical | Boolean | &#8594;  | Use color for vertical grid lines |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| couleur | Text, Integer | &#8594;  | Valeur de couleur RVB |
+| horizontal | Boolean | &#8594;  | Utiliser la couleur pour les traits horizontaux |
+| vertical | Boolean | &#8594;  | Utiliser la couleur pour les traits verticaux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->The **LISTBOX SET GRID COLOR** command allows you to modify the color of the grid in the list box object set using the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->La commande **LISTBOX SET GRID COLOR** permet de modifier la couleur de la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Pass the RGB color value in *color*. For more information on RGB colors, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. 
+Passez dans le paramètre *couleur* une valeur de couleur RVB. Pour plus d’informations sur les couleurs RVB, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). 
 
-The *horizontal* and *vertical* parameters allow you to set the grid lines to which you will apply a color:
+Les paramètres *horizontal* et *vertical* vous permettent de spécifier les traits auxquels la couleur doit être appliquée :
 
-* If you pass **True** in *horizontal*, the color will be applied to horizontal grid lines. If you pass **False**, their color is not changed.
-* If you pass **True** in *vertical*, the color will be applied to vertical grid lines. If you pass **False**, their color is not changed.
+* si vous passez **Vrai** dans *horizontal*, la couleur sera appliquée aux traits horizontaux de la grille. Si vous passez **Faux**, leur couleur ne sera pas modifiée.
+* si vous passez **Vrai** dans *vertical*, la couleur sera appliquée aux traits verticaux de la grille. Si vous passez **Faux**, leur couleur ne sera pas modifiée.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 842 |
+| Numéro de commande | 842 |
 | Thread safe | no |
 
 

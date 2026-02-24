@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB STOP SERVER.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2003|Modified|
-|<6|Created|
+|13|Renommé|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB STOP SERVER.Summary-->The **WEB STOP SERVER** command stops the Web server of the 4D application on which it has been executed (4D ou 4D Server).<!-- END REF--> If the Web server has been started, all Web connections are stopped, and all Web processes terminated. 
+<!--REF #_command_.WEB STOP SERVER.Summary-->La commande **WEB STOP SERVER** stoppe le serveur Web de l'application 4D sur laquelle elle a été exécutée (4D ou 4D Server).<!-- END REF-->  
+Si le serveur Web était lancé, toutes les connexions Web sont interrompues et tous les process Web sont arrêtés.   
+Si le serveur Web n'était pas lancé, la commande ne fait rien.
 
-If the Web server has not been started, the command does nothing.
-
-## See also 
+## Voir aussi 
 
 [WEB START SERVER](web-start-server.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 618 |
+| Numéro de commande | 618 |
 | Thread safe | yes |
 
 

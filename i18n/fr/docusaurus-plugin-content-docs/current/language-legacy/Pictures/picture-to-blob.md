@@ -5,71 +5,70 @@ slug: /commands/picture-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *picture* : Picture ; *pictureBlob* : Blob ; *codec* : Text )<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *image* ; *blobImage* ; *codec* )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture field or variable |
-| pictureBlob | Blob | &#8592; | BLOB to receive the converted picture |
-| codec | Text | &#8594;  | Picture Codec ID |
+| image | Picture | &#8594;  | Champ ou variable image |
+| blobImage | Blob | &#8592; | BLOB devant contenir l’image convertie |
+| codec | Text | &#8594;  | Identifiant de codec d'image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PICTURE TO BLOB.Summary-->The **PICTURE TO BLOB** command converts a picture stored in a 4D variable or field to another format and places the resulting picture in a BLOB.<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Summary-->La commande **PICTURE TO BLOB** convertit une image stockée dans une variable ou un champ 4D dans un autre format, et place l’image résultante dans un BLOB.<!-- END REF-->
 
-A picture 4D field or variable is passed in the *picture* parameter. In the *pictureBlob* parameter is passed a BLOB variable or field which should contain the converted picture. 
+Vous passez dans le paramètre *image* une variable ou un champ 4D de type image et dans le paramètre *blobImage* la variable ou le champ BLOB devant contenir l’image convertie. 
 
-Pass in the *codec* parameter a string setting the conversion format.
+Vous passez dans le paramètre *codec* une chaîne indiquant le format de conversion souhaité.   
+Un codec peut être une extension (par exemple “.gif”) ou un type Mime (par exemple “image/jpg”). Vous pouvez obtenir la liste des codecs disponibles via la commande [PICTURE CODEC LIST](picture-codec-list.md).
 
-A Codec can be an extension (for example, “.gif”) or a Mime type (for example “image/jpeg”). You can get a list of available Codecs via the [PICTURE CODEC LIST](picture-codec-list.md) command.
+Après l’exécution de la commande, *blobImage* contient l’image au format souhaité. 
 
-Once the command has been executed, the *pictureBlob* contains the picture in the specified format.
+Si la conversion s’est déroulée correctement, la variable système OK prend la valeur 1\. Si la conversion échoue (convertisseur non disponible), OK prend la valeur 0 et le BLOB est généré vide (0 octet). 
 
-If the conversion was successful, the system variable OK is set to 1\. If the conversion has failed (converter not available), OK is set to 0 and the generated BLOB is empty (0 byte).
+## Exemple 
 
-## Example 
-
-You want to convert an image from a proprietary format to GIF format and display it on a static web page. You can use a code such as:
+Vous voulez convertir une image depuis un format propriétaire vers le format GIF afin de l'afficher par exemple dans une page HTML. Vous pouvez utiliser un code du type :
 
 ```4d
  var $picture : Picture
  var $BLOB : Blob
  var $path : Text
  
- $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+"Sunrise.psd" //find the picture in the Images folder within the Resources folder
- READ PICTURE FILE($path;$picture) //put the picture in the picture variable
+ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+"Sunrise.psd" //trouver l'image source
+ READ PICTURE FILE($path;$picture) //charger l'image
  
- PICTURE TO BLOB($picture;$BLOB;".gif") //convert the picture to ".gif" format
+ PICTURE TO BLOB($picture;$BLOB;".gif") //conversion au format ".gif"
  WEB SEND BLOB($BLOB;"image/gif")
 ```
 
-## See also 
+## Voir aussi 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
 [PICTURE CODEC LIST](picture-codec-list.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 692 |
+| Numéro de commande | 692 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

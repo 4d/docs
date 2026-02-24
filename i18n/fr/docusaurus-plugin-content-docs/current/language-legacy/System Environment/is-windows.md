@@ -9,48 +9,48 @@ displayed_sidebar: docs
 <!--REF #_command_.Is Windows.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if operating system = Windows, else False |
+| Résultat | Boolean | &#8592; | Vrai si le système d'exploitation est Windows, Sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17|Created|
+|17|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is Windows.Summary-->The **Is Windows** command returns True if the current operating system is Windows.<!-- END REF-->
+<!--REF #_command_.Is Windows.Summary-->La commande **Is Windows** retourne Vrai si le système d'exploitation courant est Windows.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-You want to determine if the current operating system is Windows:
+Vous voulez savoir si le système d'exploitation courant est Windows :
 
 ```4d
  If(Is Windows)
-    ALERT("It's Windows")
+    ALERT("C'est Windows")
  Else
-    ALERT("It's not Windows")
+    ALERT("Ce n'est pas Windows")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [System info](system-info.md)  
 [Is macOS](is-macos.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1573 |
+| Numéro de commande | 1573 |
 | Thread safe | yes |
 
 

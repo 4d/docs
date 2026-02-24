@@ -6,45 +6,45 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.FORM Event.Syntax-->**FORM Event** : Object<!-- END REF-->
-<!--REF #_command_.FORM Event.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| Function result | Object | &#8592; | Event object |
-</div>
+<!--REF #_command_.FORM Event.Params-->
+
+| Paramètres | Type   |                             | Description     |
+| ---------- | ------ | --------------------------- | --------------- |
+| Résultat   | Object | &#8592; | Objet événement |
+
 <!-- END REF-->
 
-## Description 
+## Description
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF--> Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.**FORM Event** retourne un objet contenant des informations sur l'événement formulaire qui vient de se produire.<!-- END REF--> Habituellement, vous utiliserez **FORM Event** à partir d'une méthode formulaire ou objet.
 
-**Returned object**
+**Objet retourné**
 
-Each returned object includes the following main properties:
+Chaque objet retourné contient les principales propriétés suivantes :
 
-| **Property** | **Type** | **Description**     |
-| ------------ | -------- | --------------------------------- |
-| objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form |
-| code         | integer  | Numeric value of the form event.                    |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section.|
+| **Propriété** | **Type** | **Description**                                                                                                                                                                        |
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName    | text     | Nom de l'objet générant l'événement - Non inclus si l'événement est déclenché par le formulaire                                                                                        |
+| code          | integer  | Valeur numérique de l'événement formulaire.                                                                                                                            |
+| Description   | text     | Nom de l'événement de formulaire (par exemple "On After Edit"). Voir la section [**Evénements formulaire**](../Events/overview.md). |
 
-For example, in the case of a click on a button, the object contains the following properties:
+Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriétés suivantes :
 
 ```json
 {"code":4,"description":"On Clicked","objectName":"Button2"}
 ```
 
-The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
+L'objet événement peut contenir des propriétés supplémentaires, en fonction de l'objet pour lequel l'événement se produit. Pour les objets *eventObj* générés sur:
 
-* List box or list box column objects, see [this section](../FormObjects/listbox-object.md#supported-form-events).
-* 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
+- des objets de type list box ou colonne de list box, voir [cette section](../FormObjects/listbox_overview.md#supported-form-events).
+- des zones 4D View Pro, voir événement formumaire [on VP Ready](../Events/onVpReady.md).
 
-**Note:** If there is no current event, **FORM Event** returns a null object.
+**Note:** S'il n'y a pas d'événement courant, **FORM Event** renvoie un objet null.
 
-## Example 1 
+## Exemple 1
 
-You want to handle the On Clicked event on a button:
+Vous souhaitez gérer l'événement On Clicked sur un bouton :
 
 ```4d
  If(FORM Event.code=On Clicked)
@@ -52,13 +52,13 @@ You want to handle the On Clicked event on a button:
  End if
 ```
 
-## Example 2 
+## Exemple 2
 
-If you set the column object name with a real attribute name of a dataclass like this:
+Si vous définissez le nom de l'objet colonne avec un véritable nom d'attribut d'une dataclass comme ceci :
 
 ![](../assets/en/commands/pict4843820.en.png)
 
-You can sort the column using the On Header Click event:
+Vous pouvez trier la colonne à l'aide de l'événement On Header Click :
 
 ```4d
  Form.event:=FORM Event
@@ -70,13 +70,13 @@ You can sort the column using the On Header Click event:
  End case
 ```
 
-## Example 3 
+## Exemple 3
 
-You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
+Vous voulez gérer On Display Details sur un objet list box avec une méthode définie dans la propriété *Meta info expression* :
 
 ![](../assets/en/commands/pict4843812.en.png)
 
-The *setColor* method:
+La méthode *setColor* :
 
 ```4d
  var $event;$0;$meta : Object
@@ -92,20 +92,20 @@ The *setColor* method:
  $0:=$meta
 ```
 
-The resulting list box when rows are selected:
+La zone de liste résultante lorsque des lignes sont sélectionnées :
 
 ![](../assets/en/commands/pict4843808.en.png)
 
-## See also 
+## Voir également
 
 [Form Events](../Events/overview.md)
-[Form event code](form-event-code.md)  
+[Form event code](form-event-code.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1606 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1606 |
+| Thread safe        | oui  |
 
 

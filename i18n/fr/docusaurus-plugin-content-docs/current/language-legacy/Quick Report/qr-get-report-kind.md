@@ -5,53 +5,50 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *zone* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Function result | Integer | &#8592; | Type of the report |
+| zone | Integer | &#8594;  | Référence de la zone |
+| Résultat | Integer | &#8592; | Type d'état |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Get report kind.Summary-->The **QR Get report kind** command retrieves the report type for the area whose reference was passed in *area*.<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Summary-->La commande **QR Get report kind** retourne le *type* d'état présent dans la *zone*.<!-- END REF--> 
 
-* If the command returns 1, the report type is list.
-* If the command returns 2, the report type is cross-table.
+Vous pouvez comparer le résultat avec les constantes du thème *QR Types d'états* :
 
-You can also compare the function result with the constants of the *QR Report Types* theme:
+| Constante       | Type        | Valeur |
+| --------------- | ----------- | ------ |
+| qr cross report | Entier long | 2      |
+| qr list report  | Entier long | 1      |
 
-| Constant        | Type    | Value |
-| --------------- | ------- | ----- |
-| qr cross report | Integer | 2     |
-| qr list report  | Integer | 1     |
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR SET REPORT KIND](qr-set-report-kind.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 755 |
+| Numéro de commande | 755 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,71 +5,71 @@ slug: /commands/qr-set-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *area* : Integer ; *row* : Integer ; *hide* : Integer )<!-- END REF-->
+<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *zone* ; *ligne* ; *cachée* )<!-- END REF-->
 <!--REF #_command_.QR SET INFO ROW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area created |
-| row | Integer | &#8594;  | Row designator |
-| hide | Integer | &#8594;  | 0 = displayed, 1 = hidden |
+| zone | Integer | &#8594;  | Référence de la zone |
+| ligne | Integer | &#8594;  | Ligne |
+| cachée | Integer | &#8594;  | 0 = Visible, 1 = Cachée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET INFO ROW.Summary-->The **QR SET INFO ROW** command shows/hides the row whose reference was passed in *row*.<!-- END REF-->
+<!--REF #_command_.QR SET INFO ROW.Summary-->La commande **QR SET INFO ROW** permet d'afficher ou de masquer la ligne dont la référence est passée dans le paramètre *ligne*.<!-- END REF-->
 
-*row* designates which row is affected. You can pass either: 
+Le paramètre *ligne* désigne la ligne à modifier. Vous pouvez passer soit :
 
-* a positive integer value to designate the corresponding subtotal (break) level,
-* one of the following constants from the *QR Rows for Properties* theme:
-  
-| Constant       | Type    | Value | Comment               |  
-| -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Integer | \-2   | Detail area of report |  
-| qr grand total | Integer | \-3   | Grand total area      |  
-| qr title       | Integer | \-1   | Title of report       |
+* une valeur entière positive pour désigner la ligne de sous-total correspondante,
+* une des constantes suivantes du thème *QR Lignes pour Propriétés* :  
 
-*hide* specifies whether the line is shown or hidden:
+| Constante      | Type        | Valeur | Comment               |  
+| -------------- | ----------- | ------ | --------------------- |  
+| qr detail      | Entier long | \-2    | Zone Détail de l'état |  
+| qr grand total | Entier long | \-3    | Zone Total général    |  
+| qr title       | Entier long | \-1    | Intitulé de l'état    |
 
-* If *hide* is 1, the row is hidden;
-* If *hide* is 0, the row is shown.
+*cachée* permet de spécifier si le contenu de la ligne doit être affiché ou masqué :
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *row* value, the error -9852 will be generated.
+* si *cachée* vaut 1, le contenu de la ligne est masqué ;
+* si *cachée* vaut 0, le contenu de la ligne est affiché.
 
-## Example 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
 
-The following statement hides the detail row:
+## Exemple 
+
+L'instruction suivante masque le contenu de la ligne Détail :
 
 ```4d
- QR SET INFO ROW(area;qr detail;1)
+ QR SET INFO ROW(maZone;qr detail;1)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 763 |
+| Numéro de commande | 763 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

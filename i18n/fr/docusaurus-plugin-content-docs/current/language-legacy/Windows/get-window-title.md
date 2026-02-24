@@ -5,46 +5,46 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** ( *window* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *fenêtre* )} : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
-| Function result | Text | &#8592; | Window title |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| Résultat | Text | &#8592; | Titre de la fenêtre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get window title.Summary-->The **Get window title** command returns the title of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, an empty string is returned.
+<!--REF #_command_.Get window title.Summary-->La commande **Get window title** retourne le titre de la fenêtre dont le numéro de référence est passé dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, une chaîne vide est retournée. 
 
-If you omit the *window* parameter, **Get window title** returns the title of the frontmost window for the current process.
+Si vous omettez le paramètre *fenêtre*, **Get window title** retourne le titre de la fenêtre de premier plan du process courant.
 
-## Example 
+## Exemple 
 
-See example for the [SET WINDOW TITLE](set-window-title.md) command.
+Reportez-vous à l'exemple de la commande [SET WINDOW TITLE](set-window-title.md).
 
-## See also 
+## Voir aussi 
 
 [SET WINDOW TITLE](set-window-title.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 450 |
+| Numéro de commande | 450 |
 | Thread safe | no |
 
 

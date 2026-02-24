@@ -5,71 +5,71 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *aField* : Field })<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *leChamp* )}<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field to reject |
+| leField | Field | &#8594;  | Champ dont la saisie doit être refusée |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.REJECT.Summary-->**REJECT** has two forms.<!-- END REF--> The first form has no parameters. It rejects the entire data entry and forces the user to stay in the form. The second form rejects only *aField* and forces the user to stay in the field. 
+<!--REF #_command_.REJECT.Summary-->**REJECT** accepte deux syntaxes.<!-- END REF--> Dans la première syntaxe, **REJECT** n'a pas de paramètre. Dans ce cas, la commande rejette la totalité de la saisie et force l'utilisateur à rester dans le formulaire. La seconde syntaxe permet de ne refuser que *leChamp* et force l'utilisateur à rester dans le champ. 
 
-**Note:** You should consider the built-in data validation tools before using this command.
+**Note :** Nous vous conseillons d'utiliser en priorité les outils intégrés de validation de saisie de 4D, avant de faire appel à cette commande.
 
-The first form of **REJECT** prevents the user from accepting a record that is not complete. You can achieve the same result without using **REJECT** — you associate the Enter key with a No Action button and use the [ACCEPT](accept.md) and [CANCEL](cancel.md) commands to accept or cancel the record, after the fields have been entered correctly. It is recommended that you use this second technique and do not use the first form of **REJECT**.
+La première syntaxe de **REJECT** est utilisée pour empêcher l'utilisateur de valider un enregistrement incomplet. Vous pouvez parvenir au même résultat sans utiliser **REJECT** : associez la touche **Entrée** à un bouton n'effectuant "Pas d'action" et utilisez les commandes [ACCEPT](accept.md) et [CANCEL](cancel.md) pour valider ou annuler l'enregistrement, une fois que les champs ont été correctement remplis. Il est recommandé d'employer cette seconde technique plutôt que d'utiliser la première syntaxe de **REJECT**.
 
-If you use the first form, you execute **REJECT** to prevent the user from accepting a record, usually because the record is not complete or has inaccurate entries. If the user tries to accept the record, executing **REJECT** prevents the record from being accepted; the record remains displayed in the form. The user must continue with data entry until the record is acceptable, or cancel the record.
+En général, vous employez la première syntaxe de **REJECT** pour empêcher l'utilisateur de valider un enregistrement incomplet ou comportant des valeurs incorrectes. Si l'utilisateur tente de valider l'enregistrement, l'exécution de **REJECT** provoque l'annulation de cette commande et l'enregistrement reste affiché dans le formulaire. L'utilisateur doit alors recommencer la saisie jusqu'à ce que les valeurs soient considérées comme correctes ou annuler l'enregistrement.
 
-The best place to put this form of **REJECT** is in the object method of an Accept button associated with the Enter key. This way, validation occurs only when the record is accepted, and the user cannot bypass the validation by pressing the Enter key.
+Le meilleur emplacement pour la commande **REJECT**, lorsque vous utilisez cette syntaxe, est la méthode objet d'un bouton de type Valider associé à la touche de validation. De cette manière, la validation n'est possible que lorsque l'enregistrement est accepté, et l'utilisateur ne peut pas "forcer" la validation en appuyant sur la touche **Entrée**.
 
-The second form of **REJECT** is executed with the *field* parameter. In this case, the cursor stays in the field area, which forces the user to enter a correct value.   
-With this syntax, it is imperative that you call the **REJECT** command in the On Data Change form event.You need to put this syntax of the **REJECT** command either in the form method, or in the object method of the entry area. If you are using **REJECT** for the subform’s Detail Form for a table, put it in the form method or object method for the Detail Form. This command has no effect on fields in subform areas.
+La seconde syntaxe de **REJECT** utilise le paramètre *leChamp*. Dans ce cas, le curseur reste dans la zone de saisie du champ, ce qui oblige l'utilisateur à saisir une valeur correcte.   
+Avec cette syntaxe, la commande **REJECT** doit impérativement être appelée dans l'événement formulaire On Data Change.Vous devez placer cette syntaxe de **REJECT** soit dans la méthode formulaire, soit dans la méthode objet de la zone de saisie. Si vous utilisez **REJECT** avec le formulaire "pleine page" d'un sous-formulaire, placez-la dans la méthode formulaire ou une méthode objet du formulaire "pleine page". Lorsqu'elle est utilisée avec des champs de sous-formulaires, cette commande ne fait rien.
 
-You can use [HIGHLIGHT TEXT](highlight-text.md) to select the data in the field that is being rejected.
+Vous pouvez utiliser la commande [HIGHLIGHT TEXT](highlight-text.md) pour sélectionner, à l'intérieur du champ, les valeurs qui ont été refusées.
 
-## Example 1 
+## Exemple 1 
 
-The following example is for a bank transaction record. It shows the first form of REJECT being used in an Accept button object method. The Enter key is set as an equivalent for the button. This means that even if the user presses the Enter key to accept the record, the button’s object method will be executed. If the transaction is a check, then there must be a check number. If there is no check number, the validation is rejected: 
+L'exemple suivant illustre la première syntaxe de **REJECT**, placée dans la méthode objet d'un bouton Valider. La touche **Entrée** a été définie comme équivalent clavier pour ce bouton. Cela signifie que même si l'utilisateur appuie sur cette touche pour valider l'enregistrement, la méthode objet du bouton sera exécutée. L'enregistrement est une transaction bancaire. Si la transaction est un chèque, un numéro de chèque doit être saisi. S'il n'y a pas de numéro, la validation est refusée : 
 
 ```4d
  Case of
-    :(([Operation]Transaction="Check") & ([Operation]Check Number="")) // If it is a check with no number...
-       ALERT("Please fill in the check number.") // Alert the user
-       REJECT // Reject the entry
-       GOTO OBJECT([Operation]Check Number) // Go to the check number field
+    :(([Opération]Trans="Chèque") & ([Opération]Numéro="")) // Si c'est un chèque sans numéro...
+       ALERT("Veuillez saisir le numéro du chèque.") // Alerter l'utilisateur
+       REJECT // Refuser la saisie
+       GOTO OBJECT([Opération]Numéro) // Placer le curseur dans le champ "numéro de chèque"
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example is part of an object method for an *\[Employees\]Salary* field. The object method tests the *Employees\]Salary* field and rejects the field if it is less than $10,000\. You could perform the same operation by specifying a minimum value for the field in the form editor:
+L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]Salaire*. La méthode objet teste si la valeur de ce champ est inférieure à 10 000 Euros et la refuse si c'est le cas. Vous pourriez effectuer le même contrôle en spécifiant une valeur minimum pour le champ, dans l'éditeur de formulaires du mode Développement :
 
 ```4d
  Case of
     :(FORM Event.code=On Data Change)
-       If([Employees]Salary<10000)
-          ALERT("Salary must be greater than $10,000")
-          REJECT([Employees]Salary)
+       If([Employés]Salaire<10000)
+          ALERT("Le salaire annuel doit être supérieur à 10 000 Euros.")
+          REJECT([Employés]Salaire)
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
 [GOTO OBJECT](goto-object.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 38 |
+| Numéro de commande | 38 |
 | Thread safe | no |
 
 

@@ -5,63 +5,67 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *blob* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB from which to get the integer value |
-| byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
-| ||| New offset after reading |
-| Function result | Integer | &#8592; | 2-byte Integer value |
+| blob | Blob | &#8594;  | BLOB duquel obtenir la valeur entière |
+| ordreOctet | Integer | &#8594;  | 0 Ordre d'octets mode natif 1 Ordre d'octets Macintosh 2 Ordre d'octets PC |
+| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
+| || | Nouvel offset après la lecture |
+| Résultat | Integer | &#8592; | Valeur entière (2 octets) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB to integer.Summary-->The BLOB to integer command returns a 2-byte Integer value read from the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Summary-->BLOB to integer retourne une valeur entière (2 octets) lue dans le BLOB blob.<!-- END REF-->  
 
-The *byteOrder* parameter fixes the byte ordering of the 2-byte Integer value to be read. You pass one of the following predefined constants provided by 4D:
+Le paramètre ordreOctet fixe l'ordre des octets ("byte ordering") de la valeur entière à lire. Vous pouvez passer une des constantes fournies par 4D :  
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Macintosh byte ordering | Integer | 1     |
-| Native byte ordering    | Integer | 0     |
-| PC byte ordering        | Integer | 2     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Macintosh byte ordering | Entier long | 1      |
+| Native byte ordering    | Entier long | 0      |
+| PC byte ordering        | Entier long | 2      |
 
-**Note regarding Platform Independence:** If you exchange BLOBs between Macintosh and PC platforms, it is up to you to manage byte swapping issues when using this command.
+  
+Note sur l'indépendance de plate-forme : Si vous échangez des BLOBs entre les plates-formes Macintosh et PC, il vous incombe de traiter les conversions d'octets ("byte swapping") lorsque vous utilisez cette fonction.  
 
-If you specify the optional *offset* variable parameter, the 2-byte Integer value is read at the offset (starting from zero) within the BLOB. If you do not specify the optional *offset* variable parameter, the first two bytes of the BLOB are read.
+Si vous ne passez pas de variable dans le paramètre optionnel offset, les deux premiers octets de BLOB sont lus.  
 
-**Note:** You should pass an offset (in bytes) value between *0* (zero) and the size of the BLOB minus 2\. If you do not do so, an error -111 is generated.
+Si vous passez une variable dans le paramètre optionnel offset, la valeur entière sur 2 octets est lue depuis l'offset exprimé en octets (à partir de zéro) du BLOB.  
 
-After the call, the variable is incremented by the number of bytes read, Therefore, you can reuse that same variable with another BLOB reading command to read another value.
+Note : Vous devez passer un offset compris entre 0 (zéro) et la taille du BLOB moins 2\. Sinon, une erreur -111 est générée.  
 
-## Example 
+Après l'exécution de la commande, la variable offset est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-The following example reads 20 Integer values from a BLOB, starting at the offset 0x200:
+## Exemple 
+
+L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200 :
 
 ```4d
  $vlOffset:=0x200
- For($viLoop;0;19)
-    $viValue:=BLOB to integer(vxSomeBlob;PC byte ordering;$vlOffset)
-  // Do something with $viValue
+ For($viBoucle;0;19)
+    $viValeur:=BLOB to integer(vxUnBlob;PC byte ordering;$vlOffset)
+  // Faire quelque chose avec $viValeur
  End for
 ```
-
-## See also 
+  
+  
+ Voir aussi 
 
 [BLOB to longint](blob-to-longint.md)  
 [BLOB to real](blob-to-real.md)  
@@ -71,11 +75,27 @@ The following example reads 20 Integer values from a BLOB, starting at the offse
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-## Properties
+![](../assets/en/commands/comment.png)Ajouter un commentaire 
+
+[Page préc.](blob-to-document.md) 
+
+[Page suiv.](blob-to-list.md) 
+
+## Voir aussi 
+
+[BLOB to longint](blob-to-longint.md)  
+[BLOB to real](blob-to-real.md)  
+[BLOB to text](blob-to-text.md)  
+[INTEGER TO BLOB](integer-to-blob.md)  
+[LONGINT TO BLOB](longint-to-blob.md)  
+[REAL TO BLOB](real-to-blob.md)  
+[TEXT TO BLOB](text-to-blob.md)  
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 549 |
+| Numéro de commande | 549 |
 | Thread safe | yes |
 
 

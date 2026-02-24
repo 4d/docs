@@ -5,45 +5,46 @@ slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *zone* ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Function result | Text | &#8592; | HTML code used as template |
+| zone | Integer | &#8594;  | Référence de la zone |
+| Résultat | Text | &#8592; | Code HTML utilisé comme modèle |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Get HTML template.Summary-->The QR Get HTML template command returns the HTML template currently used for the Quick Report *area*.<!-- END REF--> The returned value is a text value and includes all the contents of the HTML template.
+<!--REF #_command_.QR Get HTML template.Summary-->La commande **QR Get HTML template** retourne le modèle HTML utilisé pour la zone d'état rapide référencée par *zone*.<!-- END REF--> La valeur retournée, de type texte, contient la totalité du code HTML utilisé comme modèle. 
 
-If no specific template was defined, the template that is returned is the default template. Please note that no template will be returned if the output was not set to HTML file, either manually or programmatically.
+Si aucun modèle spécifique n'a été défini, le code du modèle par défaut est retourné.   
+A noter que si le format de destination HTML n'a pas été défini pour l'état (manuellement ou par programmation), aucune valeur n'est retournée. 
 
-If you pass an invalid area number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR SET HTML TEMPLATE](qr-set-html-template.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 751 |
+| Numéro de commande | 751 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

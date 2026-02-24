@@ -5,39 +5,37 @@ slug: /commands/convert-from-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* : Text ; *charSet* : Text, Integer ; *convertedBLOB* : Blob )<!-- END REF-->
+<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *texte4D* ; *jeuCaractères* ; *blobConverti* )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| 4Dtext | Text | &#8594;  | Text expressed in current character set of 4D |
-| charSet | Text, Integer | &#8594;  | Name or Number of character set |
-| convertedBlob | Blob | &#8592; | BLOB containing converted text |
+| texte4D | Text | &#8594;  | Texte exprimé dans le jeu de caractères courant de 4D |
+| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro de jeu de caractères |
+| blobConverti | Blob | &#8592; | BLOB contenant le texte converti |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CONVERT FROM TEXT.Summary-->The CONVERT FROM TEXT command can be used to convert a text expressed in the current character set of 4D to a text expressed in another character set.<!-- END REF-->
+<!--REF #_command_.CONVERT FROM TEXT.Summary-->La commande **CONVERT FROM TEXT** permet de convertir un texte exprimé dans le jeu de caractères courant de 4D en un texte exprimé dans un autre jeu de caractères.<!-- END REF-->
 
-In the *4Dtext* parameter, pass the text to be converted. This text is expressed in the character set of 4D. In version 11, 4D uses the Unicode character set by default.
+Passez dans le paramètre *texte4D* le texte devant être converti. Ce texte est exprimé dans le jeu de caractères de 4D. Dans les bases de données créées à partir de la version 11, 4D utilise le jeu de caractères Unicode par défaut.
 
-In *charSet*, pass the character set to be used for the conversion. You can pass a string containing the standard name of the set (for example “ISO-8859-1” or “UTF-8”), or its MIBEnum identifier.
+Passez dans *jeuCaractères* le jeu de caractères à utiliser pour la conversion. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum. Voici la liste des jeux de caractères pris en charge par les commandes **CONVERT FROM TEXT** et [Convert to text](convert-to-text.md) :
 
-Here is a list of character sets supported by the CONVERT FROM TEXT and [Convert to text](convert-to-text.md) commands:
-
-| **MIBEnum** | **Name(s)**        |
+| **MIBEnum** | **Nom(s)**         |
 | ----------- | ------------------ |
 | 1017        | UTF-32             |
 | 1018        | UTF-32BE           |
@@ -186,26 +184,26 @@ Here is a list of character sets supported by the CONVERT FROM TEXT and [Convert
 | 57          | GB\_2312-80        |
 | 57          | csISO58GB231280    |
 
-**Note:** Several rows have the same MIBEnum identifier because a character set can have more than one name (alias).
+**Note :** Plusieurs lignes ont le même identifiant MIBEnum car un jeu de caractères peut avoir plusieurs noms (alias).
 
-For more information about the names of character sets, please refer to the following address: *http://www.iana.org/assignments/character-sets*
+Pour plus d’informations sur les noms des jeux de caractères, reportez-vous à l’adresse <http://www.iana.org/assignments/character-sets>
 
-After execution of the command, the converted text will be returned in the *convertedBLOB* BLOB. This BLOB can be read by the [Convert to text](convert-to-text.md) command.
+Après l’exécution de la commande, le texte converti est retourné dans le BLOB *blobConverti*. Ce BLOB pourra être relu par la commande [Convert to text](convert-to-text.md). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the OK variable is set to 1\. Otherwise, it is set to 0.
+Si la commande a été correctement exécutée, la variable OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [Convert to text](convert-to-text.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1011 |
+| Numéro de commande | 1011 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

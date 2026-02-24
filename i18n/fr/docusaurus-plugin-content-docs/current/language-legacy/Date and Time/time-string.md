@@ -5,46 +5,45 @@ slug: /commands/time-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time string.Syntax-->**Time string** ( *seconds* : Integer, Time ) : Text<!-- END REF-->
+<!--REF #_command_.Time string.Syntax-->**Time string** ( *secondes* ) : Text<!-- END REF-->
 <!--REF #_command_.Time string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| seconds | Integer, Time | &#8594;  | Seconds from midnight |
-| Function result | Text | &#8592; | Time as a string in 24-hour format |
+| secondes | Integer, Time | &#8594;  | Secondes écoulées depuis minuit |
+| Résultat | Text | &#8592; | Heure sous forme de chaîne au format 24 heures |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Time string.Summary-->The **Time string** command returns the string form of the time expression you pass in *seconds*.<!-- END REF--> 
+<!--REF #_command_.Time string.Summary-->La fonction **Time string** retourne sous forme de chaîne alphanumérique sur 24 heures l'expression de type Heure passée dans *secondes*.<!-- END REF-->
 
-The string is in the HH:MM:SS format.
+Le format appliqué à la chaîne est HH:MM:SS.
 
-If you go beyond the number of seconds in a day (86,400), **Time string** continues to add hours, minutes, and seconds. For example, **Time string** (86401) returns 24:00:01.
+Si vous passez un nombre de secondes supérieur à celui qu'il y a dans un jour (86 400), **Time string** continue d'ajouter les heures, les minutes et les secondes. Par exemple, **Time string**(86401) retourne 24:00:01.
 
-**Note:** If you need the string form of a time expression in a variety of formats, use [String](./commands/string).
+**Note :** Si vous voulez obtenir sous forme de chaîne une expression de type Heure dans des formats plus variés, utilisez la fonction [String](../commands/string.md). 
 
-## Example 
+## Exemple 
 
-The following example displays an alert box with the message, “46800 seconds is 13:00:00.”
+L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “46800 secondes représentent 13:00:00” :
 
 ```4d
- ALERT("46800 seconds is "+Time string(46800))
+ ALERT("46800 secondes représentent "+Time string(46800))
 ```
 
-## See also 
+## Voir aussi 
 
-[String](./commands/string)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 180 |
+| Numéro de commande | 180 |
 | Thread safe | yes |
-
 
 

@@ -5,44 +5,44 @@ slug: /commands/listbox-get-number-of-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get number of columns** ( *object* : Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of columns.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Integer | &#8592; | Number of columns |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Nombre de colonnes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX Get number of columns.Summary-->The **LISTBOX Get number of columns** command returns the total number of columns (visible or invisible) present in the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of columns.Summary-->La commande **LISTBOX Get number of columns** retourne le nombre total de colonnes (visibles ou non) présentes dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information on object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 831 |
+| Numéro de commande | 831 |
 | Thread safe | no |
 
 

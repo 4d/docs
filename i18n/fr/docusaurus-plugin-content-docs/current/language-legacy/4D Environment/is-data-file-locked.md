@@ -9,45 +9,45 @@ displayed_sidebar: docs
 <!--REF #_command_.Is data file locked.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True = file/segment locked False = file/segment not locked |
+| Résultat | Boolean | &#8592; | Vrai = fichier/segment verrouillé Faux = fichier/segment non verrouillé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is data file locked.Summary-->The Is data file locked command returns True if the data file of the open database or at least one of its segments is locked — i.<!-- END REF-->e. write protected. 
+<!--REF #_command_.Is data file locked.Summary-->La commande **Is data file locked** retourne Vrai si le fichier de données de la base ouverte ou l’un de ses segments au moins est verrouillé — c’est-à-dire, protégé en écriture.<!-- END REF--> 
 
-Placed, for instance, in the , this command enables the prevention of any risk of accidental opening of a locked data file. 
+Placée par exemple dans la , cette commande permet de prévenir tout risque d’ouverture fortuite d’un fichier de données verrouillé. 
 
-## Example 
+## Exemple 
 
-This method will prevent the opening of the database if the data file is locked: 
+Cette méthode empêchera l’ouverture de la base si le fichier de données est verrouillé : 
 
 ```4d
  If(Is data file locked)
-    ALERT("The data file is locked. Impossible to open database.")
+    ALERT("Le fichier de données est verrouillé. Impossible d’ouvrir la base.")
     QUIT 4D
  End if
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 716 |
+| Numéro de commande | 716 |
 | Thread safe | yes |
 
 

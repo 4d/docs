@@ -5,48 +5,48 @@ slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *pictureObject* : Picture ; *id* : Text {; *margin* : Integer} )<!-- END REF-->
+<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *objetImage* ; *id* {; *marge*} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
-| id | Text | &#8594;  | ID attribute of element to display |
-| margin | Integer | &#8594;  | Margin of visibility (in pixels by default) |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id | Text | &#8594;  | Attribut id de l’élément à visualiser |
+| marge | Integer | &#8594;  | Marge de visibilité (en pixels par défaut) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG SHOW ELEMENT.Summary-->The SVG SHOW ELEMENT command moves the *pictureObject* SVG document in order to show the element whose "id" attribute is specified by the *id* parameter.<!-- END REF--> 
+<!--REF #_command_.SVG SHOW ELEMENT.Summary-->La commande **SVG SHOW ELEMENT** déplace le document SVG *objetImage* de façon à rendre visible l’élement dont l’attribut "id" est désigné par le paramètre *id*.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). In this case, the command applies to the rendered picture attached to the object. If you do not pass this parameter, you indicate that the *pictureObject* parameter is a field or a variable and you pass a variable (object variable only) or field reference instead of a string. In this case, the command applies to the rendered pictures of all the objects that use the variable (but not the initial rendered picture). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Dans ce cas, la commande s’applique à l’image de rendu attachée à l’objet. Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objetImage* est une variable ou un champ. Vous ne passez alors pas une chaîne mais une référence de variable (variable objet uniquement) ou de champ. Dans ce cas, la commande s’applique aux images de rendu de tous les objets qui utilisent la variable ou le champ (mais pas à l’image de rendu initiale). 
 
-The command moves the SVG document so that all of the object, whose limits are defined by its bounding rectangle, is visible. The *margin* parameter is used to configure the amplitude of the movement by specifying the distance that must separate the object displayed from the borders of the document. In other words, the bounding rectangle will be increased by *margin* pixels in width and in height. By default, the movement value is 4 pixels. 
+La commande déplace le document SVG de manière à ce que la totalité de l’objet, dont les limites sont définies par son rectangle englobant, soit visible. Le paramètre *marge* permet de configurer l’amplitude du déplacement en définissant la distance devant séparer l’objet visualisé des bords du document. Autrement dit, le rectangle englobant sera augmenté de *marge* pixels en largeur et en hauteur. Par défaut, la valeur de déplacement est de 4 pixels. 
 
-This command only takes effect in "top left" display mode (with scrollbars). 
+Cette commande n’a d’effet qu’en mode d’affichage "top left" (avec barres de défilement). 
 
-If this command is not executed in the context of a form or if an invalid *pictureObject* is passed, the *OK* variable is set to 0\. If the command is executed correctly, it is set to 1\. 
+Si la commande est exécutée en-dehors du contexte d'un formulaire ou si un *objetImage* invalide est passé, la variable OK prend la valeur 0\. Si la commande a été exécutée correctement, elle prend la valeur 1\. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1108 |
+| Numéro de commande | 1108 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

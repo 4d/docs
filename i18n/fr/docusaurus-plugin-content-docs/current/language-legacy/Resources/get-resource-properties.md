@@ -5,54 +5,54 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* : Text ; *resID* : Integer {; *resFile* : Time} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resNum* {; *resFichier*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4-character resource type |
-| resID | Integer | &#8594;  | Resource ID number |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Integer | &#8592; | Resource attributes |
+| resType | Text | &#8594;  | Type de ressource (4 caractères) |
+| resNum | Integer | &#8594;  | Numéro de référence de ressource (ID) |
+| resFichier | Time | &#8594;  | Numéro de référence du fichier de ressource ou Tous les fichiers de ressources ouverts si omis |
+| Résultat | Integer | &#8592; | Attributs de la ressource |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get resource properties.Summary-->The **Get resource properties** command returns the attributes of the resource whose type is passed in *resType* and whose ID number is passed in *resID*.<!-- END REF-->
+<!--REF #_command_.Get resource properties.Summary-->**Get resource properties** retourne les attributs de la ressource dont le type est passé dans le paramètre *resType* et le numéro de référence dans *resNum*.<!-- END REF-->
 
-If you pass a valid resource file reference number in the parameter *resFile*, the resource is searched for within that file only. If you do not pass the parameter *resFile*, the resource is searched for within the current open resource files. 
+Si vous ne passez pas le paramètre *resFichier*, la ressource est recherchée dans les fichiers de ressources ouverts. Si vous passez un numéro de référence de fichier de ressource dans le paramètre *resFichier*, la ressource n'est recherchée que dans ce fichier. 
 
-If the resource does not exist, the command returns *0* (zero) and sets the OK variable to *0* (zero).
+Si la ressource n'existe pas, **Get resource properties** retourne *0* (zéro) et la variable OK prend également la valeur *0* (zéro).
 
-The numeric value returned by **Get resource properties** must be seen as a bit field value whose bits have special meaning.
+La valeur numérique retournée par **Get resource properties** doit être considérée comme une valeur binaire dont chaque bit a une signification particulière. Pour une description des attributs des ressources et leurs effets, référez-vous à la commande .
 
-## Example 
+## Exemple 
 
-See example for the [Get resource name](get-resource-name.md) command.
+Référez-vous à l'exemple de la commande [Get resource name](get-resource-name.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK variable is set to 0 if the resource does not exist; otherwise, it is set to 1.
+La variable OK prend la valeur 0 si la ressource n'existe pas, sinon elle prend la valeur 1.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 515 |
+| Numéro de commande | 515 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

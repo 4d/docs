@@ -5,63 +5,63 @@ slug: /commands/wa-get-url-history
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( * ; *object* : Text ; *urlsArr* : Text array {; *direction* : Integer {; *titlesArr* : Text array}} )<br/>**WA GET URL HISTORY** ( *object* : Variable, Field ; *urlsArr* : Text array {; *direction* : Integer {; *titlesArr* : Text array}} )<!-- END REF-->
+<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *objet* ; *tabsUrls* {; *sens* {; *tabTitres*}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| urlsArr | Text array | &#8592; | Array of URLs visited |
-| direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| titlesArr | Text array | &#8592; | Array of window titles |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabsUrls | Text array | &#8592; | Tableau des URLs visités |
+| sens | Integer | &#8594;  | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| tabTitres | Text array | &#8592; | Tableau des titres de fenêtres |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Modified|
-|11 SQL Release 2|Created|
+|19 R5|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA GET URL HISTORY.Summary-->The WA GET URL HISTORY command returns one or two arrays containing the URLs visited during the session in the Web area designated by the *\** and *object* parameters.<!-- END REF--> It can be used to build a custom navigation interface.
+<!--REF #_command_.WA GET URL HISTORY.Summary-->La commande **WA GET URL HISTORY** retourne un ou deux tableaux contenant les URLs visités au cours de la session dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Elle permet de construire une interface de navigation personnalisée.
 
-The information provided concerns the session; in other words, the navigation carried out in the same Web area as long as the form has not been closed.
+Les informations fournies concernent la session, c’est-à-dire la navigation effectuée dans une même zone Web tant que le formulaire n’a pas été refermé.
 
-The *urlsArr* array is filled with the list of URLs visited. Depending on the value of the *direction* parameter (if it is passed), the array recovers the list of previous URLs (default operation), or the list of next URLs. These lists correspond to the content of the standard Back and Forward buttons of browsers.
+Le tableau *tabUrls* est rempli avec la liste des URLs visités. En fonction de la valeur du paramètre *direction* (s’il est passé), le tableau récupère la liste des URLs précédents (fonctionnement par défaut) ou la liste des URLs suivants. Ces listes correspondent au contenu des boutons standard Précédent et Suivant des navigateurs.
 
-The URLs are classed by chronological order.
+Les URLs sont classés par ordre chronologique.
 
-Pass a value indicating the list to recover in *direction*. You can use one of the following constants, found in the *Web Area* theme:
+Passez dans *direction* une valeur indiquant la liste à récupérer. Vous pouvez utiliser l’une des constantes suivantes, placées dans le thème "*Zone Web*" :
 
-| Constant         | Type    | Value |
-| ---------------- | ------- | ----- |
-| WA next URLs     | Integer | 1     |
-| WA previous URLs | Integer | 0     |
+| Constante        | Type        | Valeur |
+| ---------------- | ----------- | ------ |
+| WA next URLs     | Entier long | 1      |
+| WA previous URLs | Entier long | 0      |
 
-If you omit the *direction* parameter, the value 0 is used.
+Si vous omettez le paramètre *direction*, la valeur 0 est utilisée.
 
-If it is passed, the *titlesArr* parameter contains the list of window names associated with the URLs. This array is synchronized with the *urlsArr* array.
+S’il est passé, le paramètre *tabTitres* contient la liste des noms de fenêtres associés aux URLs. Ce tableau est synchronisé avec le tableau *tabUrls*.
 
-**Compatibility Note:* As of 4D 19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the Windows system rendering engine.* 
+**Note de compatibilité :* A partir de 4D v19 R5, cette commande retourne uniquement l'URL courante dans des tableaux urlsArr et titlesArr pour des zones web à l'aide du moteur de rendu du système de Windows.*
 
-## See also 
+## Voir aussi 
 
 [WA Create URL history menu](wa-create-url-history-menu.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1048 |
+| Numéro de commande | 1048 |
 | Thread safe | no |
 
 

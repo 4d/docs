@@ -5,60 +5,75 @@ slug: /commands/web-send-http-redirect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | New URL |
-| * | Operator | &#8594;  | If specified = URL is not translated, If omitted = URL is translated |
+| url | Text | &#8594;  | Nouvel URL |
+| * | Opérateur | &#8594;  | Si spécifié = l’URL n’est pas traduit, Si omis = l’URL est traduit |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|6.5|Created|
+|13|Renommé|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->The **WEB SEND HTTP REDIRECT** command allows you to transform a URL into another one.<!-- END REF--> 
+<!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->La commande **WEB SEND HTTP REDIRECT** permet de transformer un URL en un autre.<!-- END REF--> 
 
-The *url* parameter contains the new URL that allows you to redirect the request. If this parameter is a url to a file, it must contain the reference to this file, for example: **WEB SEND HTTP REDIRECT** ("/MyPage.HTM"). 
+Le paramètre *url* contient le nouvel URL qui permet de rediriger la requête. Si ce paramètre est un url vers un fichier, il doit contenir la référence à ce fichier, par exemple : **WEB SEND HTTP REDIRECT** ("/MaPage.HTM").
 
-This command prevails over commands that send data ([WEB SEND FILE](web-send-file.md), [WEB SEND BLOB](web-send-blob.md), etc.) that may be in the same method. 
+Cette commande prévaut sur les commandes d’envoi de données ([WEB SEND FILE](web-send-file.md), [WEB SEND BLOB](web-send-blob.md), etc.) éventuellement placées dans la même méthode.
 
-This command also allows you to redirect a request to another Web server. 
+Cette commande permet également de rediriger une requête vers un autre serveur Web.
 
-4D automatically encodes the URL’s special characters. If you pass the *\** character, 4D will not translate them.
+4D encode automatiquement les caractères spéciaux de l’URL. Si vous passez le caractère *\**, 4D ne traduira pas les caractères spéciaux de l’URL.
 
-Note that the status of the request sent by this command is **302: Moved Temporarily**. If you need a "moved permanently" status (status 301), you can set a HTTP *X-STATUS: 301* field in the header of the reply. 
+A noter que le statut de la requête envoyée par cette commande est **302 : redirection temporaire**. Si vous avez besoin d'une redirection permanente (statut 301), vous pouvez fixer le champ HTTP *X-STATUS: 301* dans l'en-tête de la réponse. 
 
-## Example 
+## Exemple 
 
+Vous pouvez utiliser cet URL pour effectuer, à l’aide de pages statiques, des recherches personnalisées dans 4D. Imaginez que vous ayez placé dans une page HTML statique les éléments suivants :
+
+![](../assets/en/commands/pict38648.fr.png)
+
+L’action POST “/4dcgi/rech” a été associée à la zone de texte et aux boutons **OK** et **Annuler**.  
+Dans la [On Web Connection](./on-web-connection-database-method.md), placez les instructions suivantes :
 
 ```4d
+ Case of
+    :($1="/4dcgi/rech") //Lorsque 4D reçoit cet URL
+  //Si le bouton OK a été utilisé et le champ ‘nom’ contient une valeur
+       If((bOK="OK") & (nom # ""))
+  //Transformer l’URL afin d’exécuter le code de la recherche, placé plus
+  //loin dans la même méthode
+          WEB SEND HTTP REDIRECT("/4dcgi/rech?"+nom)
+       Else //Else retourner à la page de départ
+          WEB SEND HTTP REDIRECT("/page1.htm")
+       End if
+       ...
  
-var $targetURL : Text
-$targetURL := "https://www.example.com"
-
-WEB SEND HTTP REDIRECT($targetURL)
-
+    :($1="/4dcgi/rech?@") //Si l’URL a été redirigé
+       ... //Placez ici le code de la recherche
+ End case
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 659 |
+| Numéro de commande | 659 |
 | Thread safe | yes |
 
 

@@ -5,49 +5,47 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to display the current record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle afficher l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.DISPLAY RECORD.Summary-->The **DISPLAY RECORD** command displays the current record of *aTable*, using the current input form.<!-- END REF--> The record is displayed only until an event redraws the window. Such an event might be the execution of an [ADD RECORD](add-record.md) command, returning to an input form, or returning to the menu bar. **DISPLAY RECORD** does nothing if there is no current record.
+<!--REF #_command_.DISPLAY RECORD.Summary-->**DISPLAY RECORD** affiche l'enregistrement courant de *laTable* dans le formulaire entrée courant.<!-- END REF--> L'enregistrement reste affiché jusqu'à ce qu'un événement provoque un redessinement de la fenêtre. Cet événement peut être l'exécution d'un [ADD RECORD](add-record.md), le retour au formulaire entrée ou à la barre de menus. **DISPLAY RECORD** ne fait rien s'il n'y a pas d'enregistrement courant.
 
-**DISPLAY RECORD** is often used to display custom progress messages. It can also be used to generate a free-running slide show.
+**DISPLAY RECORD** est souvent utilisé pour afficher des messages de progression personnalisés. Cette commande peut également servir à générer un "slide show" automatique. 
 
-If a form method exists, an On Load event will be generated.
+Si une méthode formulaire existe, un événement On Load est généré.
 
-**WARNING:** Do not call **DISPLAY RECORD** from within a Web connection process, because the command will be executed on the 4D Web server machine and not on the Web browser client machine.
+## Exemple 
 
-## Example 
-
-The following example displays a series of records as a slide show:
+L'exemple suivant affiche une série d'enregistrements sous forme de slide show :
 
 ```4d
- ALL RECORDS([Demo]) // Select all of the records
- FORM SET INPUT([Demo];"Display") // Set the form to use for display
- For($vlRecord;1;Records in selection([Demo])) // Loop through all of the records
-    DISPLAY RECORD([Demo]) // Display a record
-    DELAY PROCESS(Current process;180) // Pause for 3 seconds
-    NEXT RECORD([Demo]) // Move to the next record
+ ALL RECORDS([Démo]) // Sélection de tous les enregistrements
+ FORM SET INPUT([Démo];"Affichage") // Désignation du formulaire à utiliser
+ For($i;1;Records in selection([Démo])) // Boucle sur tous les enregistrements
+    DISPLAY RECORD([Démo]) // Afficher un enregistrement
+    DELAY PROCESS(Current process;180) // 3 secondes de pause
+    NEXT RECORD([Démo]) // Passage à l'enregistrement suivant
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [MESSAGE](message.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 105 |
+| Numéro de commande | 105 |
 | Thread safe | no |
 
 

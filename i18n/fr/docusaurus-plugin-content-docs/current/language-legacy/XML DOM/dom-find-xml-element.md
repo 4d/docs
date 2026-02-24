@@ -5,155 +5,137 @@ slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *elementRef* : Text ; *xPath* : Text {; *arrElementRefs* : Text array} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElément* ; *xPath* {; *tabRefEléments*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| xPath | Text | &#8594;  | XPath path of the element to look for |
-| arrElementRefs | Text array | &#8592; | List of element references found (if applicable) |
-| Function result | Text | &#8592; | Reference of the element found (if applicable) |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| xPath | Text | &#8594;  | Chemin XPath de l’élément à chercher |
+| tabRefEléments | Text array | &#8592; | Liste des références d’éléments trouvés (le cas échéant) |
+| Résultat | Text | &#8592; | Référence de l’élément trouvé (le cas échéant) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Find XML element.Summary-->The DOM Find XML element command looks for specific XML elements in an XML structure.<!-- END REF--> The search starts at the element designated by the *elementRef* parameter. 
+<!--REF #_command_.DOM Find XML element.Summary-->La commande **DOM Find XML element** vous permet de rechercher des éléments XML spécifiques dans une structure XML.<!-- END REF--> La recherche débute à l’élément désigné par le paramètre *refElément*.
 
-The XML node to seek is set expressed in XPath notation using the *xPath* parameter (for more information, see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
+Le noeud XML à chercher est défini et exprimé en notation XPath à l'aide du paramètre *xPath* (pour plus d'informations, reportez-vous à la section *Utilisation de la notation XPath* section). Les expressions de chemin suivantes sont prises en charge :
 
-| **Expression**                  | **Action**                                                                                                                       |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| *nodename*                      | Selects all children nodes of the context node with the name "*nodename*"                                                        |
-| /                               | Selects nodes from the root node (absolute path)                                                                                 |
-| //                              | Selects nodes in the document from the current node that match the selection no matter where they are                            |
-| @                               | Selects attributes                                                                                                               |
-| .                               | Selects the current node                                                                                                         |
-| ..                              | Selects the parent of the current node                                                                                           |
-| \*                              | Selects all element children of the context node                                                                                 |
-| @\*                             | Selects all the attributes of the context node                                                                                   |
-| text()                          | Selects all text node children of the context node                                                                               |
-| node()                          | Selects all the children of the context node, whatever their node type                                                           |
-| local-name()                    | Returns a string representing the local name of the first node of a given set of nodes                                           |
-| para\[1\]                       | Selects the first para child of the context node                                                                                 |
-| para\[last()\]                  | Selects the last para child of the context node                                                                                  |
-| chapter\[title="Introduction"\] | Selects the chapter children of the context node that have one or more title(s) children with string-value equal to Introduction |
-| chapter\[title\]                | Selects the chapter children of the context node that have one or more title children                                            |
-| para\[@type="warning"\]         | Selects all para children of the context node that have a "type" attribute with value "warning"                                  |
-| para\[@type="warning"\]\[5\]    | Selects the fifth para child of the context node that has a "type" attribute with value "warning"                                |
-| para\[5\]\[@type="warning"\]    | Selects the fifth para child of the context node if that child has a "type" attribute with value "warning"                       |
-| para\[contains(@type,'bg')\]    | Selects all para children of the context node that have a "type" attribute containing the "bg" string                            |
-| //title \| //price              | Selects all the title and price elements in the document                                                                         |
+| **Expression**                   | **Action**                                                                                                                                  |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| *nodename*                       | Sélectionne tous les noeuds enfants du noeud contextuel avec le nom "*nodename*"                                                            |
+| /                                | Sélectionne des noeuds à partir du noeud racine (chemin absolu)                                                                             |
+| //                               | Sélectionne les noeuds du document à partir du noeud courant qui correspond à la sélection, quelle que soit leur emplacement                |
+| @                                | Sélectionne les attributs                                                                                                                   |
+| .                                | Sélectionne le noeud courant                                                                                                                |
+| ..                               | Sélectionne le parent du noeud courant                                                                                                      |
+| \*                               | Sélectionne tous les éléments enfants du noeud contextuel                                                                                   |
+| @\*                              | Sélectionne tous les attributs du noeud contextuel                                                                                          |
+| text()                           | Sélectionne tous les enfants du noeud de type texte du noeud contextuel                                                                     |
+| node()                           | Sélectionne tous les enfants de l'élément du noeud contextuel, quel que soit le type de noeud                                               |
+| local-name()                     | Retourne une chaîne représentant le nom local du premier noeud d'un ensemble de noeuds                                                      |
+| para\[1\]                        | Sélectionne le premier para enfant du noeud contextuel                                                                                      |
+| para\[last()\]                   | Sélectionne le dernier para enfant du noeud contextuel                                                                                      |
+| chapitre\[titre="Introduction"\] | Sélectionne les chapitre enfants du noeud contextuel ayant un ou plusieurs titre enfant(s) avec la chaîne-valeur équivalente à Introduction |
+| chapitre\[titre\]                | Sélectionne les chapitre enfants du noeud contextuel ayant un ou plusieurs titre enfant(s)                                                  |
+| para\[@type="attention"\]        | Sélectionne tous les para enfants du noeud contextuel dont l'attribut est "type" et la valeur est "warning"                                 |
+| para\[@type="warning"\]\[5\]     | Sélectionne le cinquième para enfant du noeud contextuel dont l'attribut est "type" et la valeur est "warning"                              |
+| para\[5\]\[@type="warning"\]     | Sélectionne le cinquième para enfant du noeud contextuel si cet enfant a un attribut "type" et une valeur égale à "warning"                 |
+| para\[contains(@type,'bg')\]     | Sélectionne tous les para enfants du noeud contextuel ayant un attribut "type"contenant la chaîne "bg"                                      |
+| //titre \| //prix                | Sélectionne tous les éléments titre et prix du document                                                                                     |
 
-**Compatibility Note:* Starting with v18 R3, the XPath implementation is more compliant and allows the support of the above expressions. For compatibility reasons, the previous non-standard implementation is maintained by default in converted databases. If you want to benefit from the extended features in your converted databases, you need to select the *Use standard XPath* compatibility option of the Compatibility page.* 
+**Note de compatibilité :** *A compter de v18 R3, le niveau de conformité de l'implémentation de XPath dans 4D est nettement plus élevé et permet la prise en charge des expressions ci-dessus. Pour des raisons de compatibilité, l'implémentation antérieure non standard est maintenue par défaut dans les bases converties. Si vous souhaitez obtenir les fonctionnalités avancées dans vos bases converties, vous devez cocher l'option de compatibilité *Utiliser XPath standard* de la* **Page Compatibilité.* 
 
-**Note:** Searches are case sensitive. 
+**Note :** Les requêtes sont sensibles à la casse.
 
-The command returns the XML reference of the element(s) found. When the *arrElementRefs* string array is passed, the command fills it with the list of XML references found. In this case, the command returns the first element of the *arrElementRefs* array as the result. This parameter is useful when several elements with the same name exist at the location specified by the *xPath* parameter.
+La commande retourne la référence XML de(s) élément(s) trouvé(s). Lorsque le tableau chaîne *tabRefEléments* est passé, la commande le remplit avec la liste des références XML trouvées. Dans ce cas, la commande retourne en résultat le premier élément du tableau *tabRefEléments*. Ce paramètre est utile lorsque plusieurs éléments de même nom existent à l’emplacement désigné par le paramètre *xPath*.
 
-## Example 1 
+## Exemple 1 
 
-Give the following XML structure:
+Soit la structure XML suivante :
 
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bookstore>
-<book>
-  <title lang="en">Harry Potter</title>
-  <price>29.99</price>
-</book>
-<book>
-  <title lang="en">Learning XML</title>
-  <price>39.95</price>
-</book>
-</bookstore>
+```RAW
+  Harry Potter  29.99  Apprendre le XML  39.95
 ```
 
-This example lets you quickly look for an XML element and display its value:
+Cet exemple permet de rechercher rapidement un élément XML et d’afficher sa valeur :
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"book[2]/title") //relative path from current node
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vRefElem:=DOM Parse XML source("books.xml")
+ vTrouvé:=DOM Find XML element(vRefElem;"book[2]/title") // chemin relatif du noeud courant
+ DOM GET XML ELEMENT VALUE(vTrouvé;valeur)
+ ALERT("La valeur de l’élément est : \""+valeur+"\"") // Apprendre le XML
 ```
 
-The same search can also be done as follows:
+La même recherche peut également être effectuée ainsi :
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"/bookstore/book[2]") //absolute path from root
- vFound:=DOM Find XML element(vFound;"title")
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vRefElem:=DOM Parse XML source("books.xml")
+ vTrouvé:=DOM Find XML element(vRefElem;"book[2]/title") // chemin relatif du noeud courant
+ DOM GET XML ELEMENT VALUE(vTrouvé;valeur)
+ ALERT("La valeur de l’élément est : \""+valeur+"\"") // Apprendre le XML
 ```
 
-## Example 2 
+## Exemple 2 
 
-Given the following XML structure: 
+Soit la structure XML suivante : 
 
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<Root>
-   <Elem1>
-      <Elem2>aaa</Elem2>
-      <Elem2>bbb</Elem2>
-      <Elem2>ccc</Elem2>
-   </Elem1>
-</Root>
+```RAW
+         aaa      bbb      ccc   
 ```
 
-The following code can be used to retrieve the reference of each Elem2 element in the arrAfound array:
+Le code suivant permet de récupérer la référence de chaque élément Elem2 dans le tableau tAtrouvés :
 
 ```4d
- vElemRef:=DOM Parse XML source("example.xml")
- ARRAY TEXT(arrAfound;0)
- vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
+ vRefElem:=DOM Parse XML source("exemple.xml")
+ ARRAY TEXT(tAtrouves;0)
+ vTrouvé:=DOM Find XML element(vRefElem;"/Racine/Elem1/Elem2";tAtrouvés)
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to select all "rect" elements with a "class" attributes that contains the "bgcontainer" string:
+Vous souhaitez sélectionner tous les éléments "rect" avec des attributs "class" contenant la chaîne "bgcontainer" :
 
 ```4d
  $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## Error management 
+## Gestion des erreurs 
 
-An error is generated when:
+Une erreur est générée lorsque :
 
-* The element reference is invalid
-* The specified xPath path is invalid.
+* la référence de l’élément n’est pas valide
+* le chemin xPath passé n’est pas valide.
 
-## See also 
+## Voir aussi 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 [DOM Create XML element](dom-create-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 864 |
+| Numéro de commande | 864 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

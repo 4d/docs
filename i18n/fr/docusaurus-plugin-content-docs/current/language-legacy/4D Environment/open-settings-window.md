@@ -5,54 +5,54 @@ slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *selector* : Text {; *access* : Boolean {; *settingsType* : Integer}} )<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *sélecteur* {; *accès* {; *typePropriétés*}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Text | &#8594;  | Key designating a theme or a page or a group of parameters in the Preferences or Settings dialog box |
-| access | Boolean | &#8594;  | True=Lock the other pages of the dialog box<br/>False or omitted=Leave the other pages of the dialog box active |
-| settingsType | Integer | &#8594;  | 0 or omitted = Structure settings, 1 = User settings, 2 = User settings for data |
+| sélecteur | Text | &#8594;  | Clé désignant un thème ou une page de la boîte de dialogue des Préférences ou des Propriétés de la base |
+| accès | Boolean | &#8594;  | Vrai=Verrouiller les autres pages de la boîte de dialogue, Faux ou omis=Laisser actives les autres pages de la boîte de dialogue |
+| typePropriétés | Integer | &#8594;  | 0 ou omis = Propriétés structure (mode standard), 1 = Propriétés utilisateur, 2 = Propriétés utilisateur pour données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|13|Renamed|
-|13|Modified|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|16|Modifié|
+|13|Renommé|
+|13|Modifié|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->The **OPEN SETTINGS WINDOW** command opens the Preferences dialog box of 4D or the Database Settings of the current 4D application and displays the parameters or the page corresponding to the key passed in *selector*.<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->La commande **OPEN SETTINGS WINDOW** provoque l’ouverture de la boîte de dialogue des Préférences 4D ou des Propriétés de la base courante et l’affichage des paramètres ou de la page correspondant à la clé passée dans le paramètre *sélecteur*.<!-- END REF--> 
 
-The *selector* parameter must contain a “key” indicating the dialog box and the page to opened. This key is constructed as follows: */Dialog{/Page{/Parameters}}*. *Dialog* indicates the dialog box to be displayed: you can pass "4D" (for the Preferences) or "Database" (for Database Settings). For example, to indicate the Compiler page of the Database Settings, *selector* should contain "*/Database/Compiler*". The list of keys that can be used is provided below. If you just pass a slash ("/") in *selector*, the command displays the first page of the Database Settings dialog box.
+Le paramètre *sélecteur* doit contenir une “clé” désignant la boîte de dialogue et la page à ouvrir. Cette clé est construite de la manière suivante : */Dialogue{/Page{/Paramètres}}*. *Dialogue* indique la boîte de dialogue à afficher : vous pouvez passer "4D" (Préférences) ou "Database" (Propriétés de la base). Par exemple, pour désigner la page Compilateur des Propriétés de la base, *sélecteur* doit contenir "*/Database/Compiler*". La liste des clés est fournie ci-dessous. Si vous passez uniquement une barre oblique ("/") dans *sélecteur*, la commande affiche la première page de la boîte de dialogue des Propriétés de la base.
 
-The *access* parameter lets you control user actions in the Preferences or Database Settings dialog box by locking the other pages. Typically, you may want for the user to be able to customize certain parameters while preventing others from being modified. In this case, passing True in the *access* parameter means that only the page specified by the *selector* parameter will be active and modifiable, while access to all other pages will be locked (clicking on the buttons in the navigation bar will have no effect). If you pass False or omit the *access* parameter, all the pages of the dialog box will be accessible with no restriction. 
+Le paramètre *accès* vous permet de contrôler les actions de l’utilisateur dans la boîte de dialogue des Préférences ou des Propriétés de la base en verrouillant les autres pages. Typiquement, vous pouvez souhaiter laisser l’utilisateur personnaliser certains paramètres, mais éviter que les autres puissent être modifiés. Dans ce cas, passez Vrai dans le paramètre *accès* : seule la page désignée par le paramètre *sélecteur* sera active et modifiable, l’accès à toutes les autres pages sera verrouillé (les clics sur les boutons de la barre de navigation seront sans effet). Si vous passez Faux ou omettez le paramètre *accès*, toutes les pages de la boîte de dialogue seront accessibles sans restriction. 
 
-The *settingsType* parameter is taken into account in databases configured in "User settings" mode only (in this mode, custom "User settings" or "User settings for data file" are generated in an external file and used instead of the standard settings, see the *Using user settings* section in the *Design Reference* manual). In this context, this parameter lets you indicate whether you want to access the "Structure settings", the "User settings", or the "User settings for data file" dialog box. You pass one of the following constants, found in the "*4D Environment*" theme:
+Le paramètre *typePropriétés* est pris en compte dans les bases configurées en mode "Propriétés utilisateur" uniquement (dans ce mode, des "propriétés utilisateur" ou des "propriétés utilisateur pour le fichier de données" personnalisées sont générées dans un fichier externe et utilisées à la place des propriétés standard, cf. section *Utiliser des propriétés utilisateur* dans le manuel *Mode Développement*). Dans ce contexte, ce paramètre vous permet d’indiquer si vous souhaitez accéder à la boîte de dialogue des "propriétés structure", des "propriétés utilisateur" ou des '"propriétés utilisateur pour fichier de données". Vous pouvez passer une des constantes suivantes, placées dans le thème *Environnement 4D* : 
 
-| Constant               | Type    | Value | Comment                                                                                                                                                                               |
-| ---------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Structure settings     | Integer | 0     | Access to "Structure settings" (default value if parameter omitted). In this mode, values used for *selector* are identical to those in standard mode.                                |
-| User settings          | Integer | 1     | Access to "User settings". In this mode, only certain keys can be used in the *selector* parameter                                                                                    |
-| User settings for data | Integer | 2     | Access to "User settings for data file", that is, user settings stored at the same level as the data file. In this mode, only certain keys can be used with the *selector* parameter. |
+| Constante              | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                   |
+| ---------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Structure settings     | Entier long | 0      | Accès aux "propriétés structure" (valeur par défaut si le paramètre est omis). Dans ce mode, les valeurs de *sélecteur* utilisables sont identiques à celles du mode standard.                                                                                                            |
+| User settings          | Entier long | 1      | Accès aux "propriétés utilisateur". Dans ce mode, seules certaines clés sont utilisables dans le paramètre *sélecteur*.                                                                                                                                                                   |
+| User settings for data | Entier long | 2      | Accès aux "propriétés utilisateur pour données", c'est-à-dire les propriétés utilisateur stockées au même niveau que le fichier de données. Dans ce mode, seules certaines clés peuvent être utilisées avec le paramètre *sélecteur* (même sous-ensemble que les propriétés utilisateur). |
 
-If you pass an invalid key, the first page of the Database Settings dialog box is displayed. 
+Si vous passez une clé invalide, la première page de la boîte de dialogue des Propriétés de la base est affichée. 
 
-### Path keys (standard mode) 
+### Clés de chemins (mode standard) 
 
-Here are the keys that can be used in the *selector* parameter in standard mode, in other words with the "Structure settings": 
+Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode standard, c'est-à-dire avec les "propriétés structure" : 
 
 */4D* 
 */4D/General* 
@@ -91,17 +91,17 @@ Here are the keys that can be used in the *selector* parameter in standard mode,
 */Database/Compatibility* 
 */Database/Security* 
 
-**Compatibility note:** You can still use keys defined for 4D versions 11.x or previous using this command; 4D automatically establishes the correspondence. However, we recommend that you replace the former calls with the keys listed above.
+**Note de compatibilité :** La commande continue de fonctionner avec les clés définies pour les versions 11.x et précédentes de 4D, la correspondance est établie automatiquement par le programme 4D. Il est toutefois conseillé de remplacer les anciens appels par les clés décrites ci-dessus.
 
-### Path keys (User settings mode) 
+### Clés de chemins (mode Propriétés utilisateur) 
 
-Here are the keys that can be used in the *selector* parameter in "User settings" and "User settings for data" modes:
+Voici la liste des clés utilisables dans le paramètre *sélecteur* en mode "propriétés utilisateur" :
 
 */Database* 
 */Database/Interface* 
 */Database/Database/Memory and cpu* 
-**/Database/Client-Server* 
-*/Database/Client-Server/Network* 
+*/Database/Client-Server* 
+**/Database/Client-Server/Network* 
 */Database/Client-Server/IP configuration* 
 */Database/Web* 
 */Database/Web/Config* 
@@ -113,56 +113,55 @@ Here are the keys that can be used in the *selector* parameter in "User settings
 */Database/SQL* 
 */Database/php* 
 
-Addtional keys in "User settings for data" mode:
+Clés supplémentaires en mode "Propriétés utilisateur pour fichier de données" :
 
 */Database/Backup* 
 */Database/Backup/Scheduler* */Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
-## Example 1 
+## Exemple 1 
 
-Open the “Methods” page of the 4D Preferences:   
+Ouverture de la page “Méthodes” des Préférences 4D :   
   
 ```4d
  OPEN SETTINGS WINDOW("/4D/Method editor")
 ```
 
-  
-## Example 2 
+## Exemple 2 
 
-Open the “Shortcuts” parameters in the Database Settings while locking the other settings:  
+Accès aux paramétrages des raccourcis clavier dans les Propriétés de la base avec verrouillage des autres propriétés :   
 
 ```4d
  OPEN SETTINGS WINDOW("/Database/Interface/Shortcuts";True)
 ```
 
-## Example 3 
+## Exemple 3 
 
-Open Database Settings on the first page:   
+Ouverture des Propriétés de la base sur la première page des Propriétés de la base :  
 
 ```4d
  OPEN SETTINGS WINDOW("/")
 ```
 
-## Example 4 
+## Exemple 4 
 
-Access to the Interface page of the Database settings in "User settings" mode:
+Accès à la page Interface des Propriétés de la base en mode "Propriétés utilisateur" :
 
 ```4d
  OPEN SETTINGS WINDOW("/Database/Interface";False;1)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the Preferences/Settings dialog box is validated, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la boîte de dialogue des préférences/propriétés est validée, la variable système OK retourne 1 ; si elle est annulée, OK retourne 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 903 |
+| Numéro de commande | 903 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

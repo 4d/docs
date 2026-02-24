@@ -5,58 +5,58 @@ slug: /commands/web-legacy-get-session-expiration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *sessionID* : Text ; *expDate* : Date ; *expTime* : Time )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *idSession* ; *dateExp* ; *heureExp* )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sessionID | Text | &#8594;  | Session UUID |
-| expDate | Date | &#8592; | Date of cookie expiration |
-| expTime | Time | &#8592; | Time of cookie expiration |
+| idSession | Text | &#8594;  | UUID de session |
+| dateExp | Date | &#8592; | Date d’expiration du cookie |
+| heureExp | Time | &#8592; | Heure d’expiration du cookie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R6|Renamed|
-|13|Created|
+|18 R6|Renommé|
+|13|Créé|
 
 </details>
 </div>
 
-## Compatibility Note 
+## Note de compatibilité 
 
-<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->This command can only be used with **legacy web sessions**, available in databases converted from versions prior to 4D v18 R6\.<!-- END REF--> It returns null date and time values when **scalable web sessions** mode is enabled (recommended in 4D v18 R6 and higher). For more information, please refer to the *Web Sessions Management (Legacy)* section.
+<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->Cette commande peut être utilisée uniquement avec les **anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle retourne des valeurs null, date et heure lorsque le mode **sessions Web extensibles** est activé (recommandé sous 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.
 
 ## Description 
 
-The **WEB LEGACY GET SESSION EXPIRATION** command returns the expiration information for the cookie of the session whose UUID you passed in *sessionID*.
+La commande **WEB LEGACY GET SESSION EXPIRATION** retourne les informations relatives à l’expiration du cookie de la session dont vous avez passé l’UUID dans *idSession*. 
 
-The *expDate* parameter receives the expiration date and the *expTime* parameter receives the expiration time of the cookie. 
+Le paramètre *dateExp* reçoit la date d’expiration et le paramètre *heureExp* reçoit l’heure d’expiration du cookie. 
 
-**Note:** Each time a web request is sent, the expiration date and time of the cookie are reset to a value corresponding to the time of the request+the value of the Web Inactive session timeout. For example:   
-*First request, Monday at 1:00*   
- \-> Sends a cookie 4DSID xxxyyy expiration I+24h = Tuesday 01:00  
-*Second request, Monday at 1:10*   
- \-> Sends a cookie 4DSID xxxyyy expiration I+24h = Tuesday 01:10  
-*Third request, Tuesday at 4:00: cookie expired*  
- \-> Sends a cookie 4DSID aaabbb expiration I+24h = Wednesday 01:00
+**Note :** À chaque requête Web, la date et l’heure d’expiration du cookie sont réinitialisées à une valeur correspondant à l’instant de la requête+la valeur de l'option Web inactive session timeout. Par exemple :   
+*Première requête, Lundi à 01h00*   
+ \-> envoi du cookie 4DSID xxxyyy expiration I+24h = Mardi 01:00  
+*Deuxième requête, Lundi à 01h10*   
+ \-> envoi du cookie 4DSID xxxyyy expiration I+24h = Mardi 01:10  
+*Troisième requête, Mardi à 04h00 : cookie expiré*  
+ \-> envoi du cookie 4DSID aaabbb expiration I+24h = Mercredi 01:00
 
-## See also 
+## Voir aussi 
 
+*Gestion des sessions Web*  
 [WEB Get current session ID](web-get-current-session-id.md)  
-*Web Sessions Management (Legacy)*  
 [WEB SET OPTION](web-set-option.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1207 |
+| Numéro de commande | 1207 |
 | Thread safe | yes |
 
 

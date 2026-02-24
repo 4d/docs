@@ -5,43 +5,43 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* : any )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *objet* )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | any | &#8594;  | Table for which to redraw the subform, or Field for which to redraw the area, or Variable for which to redraw the area, or List box to be updated |
+| objet | any | &#8594;  | Table de laquelle redessiner le sous-formulaire ou Champ duquel redessiner la zone ou Variable de laquelle redessiner la zone ou List box à mettre à jour |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 5|Modified|
-|6.5|Modified|
-|<6|Created|
+|11 SQL Release 5|Modifié|
+|6.5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REDRAW.Summary-->When you use a method to change the value of a field displayed in a subform, you must execute REDRAW to ensure that the form is updated.<!-- END REF--> 
+<!--REF #_command_.REDRAW.Summary-->Lorsque vous modifiez par programmation le contenu d'un champ affiché dans un sous-formulaire, vous devez exécuter la commande **REDRAW** pour vous assurer que le formulaire est correctement mis à jour.<!-- END REF--> 
 
-In the context of list boxes in selection mode, when the REDRAW statement is applied to a list box type object it refreshes the data that is displayed in the object. This statement must be called typically after data modification has occurred in the records of the selection. 
+Dans le contexte des list box en mode sélection, l’instruction **REDRAW** appliquée à un objet de type list box provoque la mise à jour des données affichées dans l’objet. Cette instruction doit être appelée typiquement après une modification des données dans les enregistrements de la sélection. 
 
-## See also 
+## Voir aussi 
 
 [SET TIMER](set-timer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 174 |
+| Numéro de commande | 174 |
 | Thread safe | no |
 
 

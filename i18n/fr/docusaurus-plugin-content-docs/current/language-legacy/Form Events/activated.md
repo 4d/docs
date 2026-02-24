@@ -9,33 +9,32 @@ displayed_sidebar: docs
 <!--REF #_command_.Activated.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns TRUE if the execution cycle is an activation |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en activation |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Activated.Summary-->The **Activated** command (obsolete) returns **True** in a form method when the window containing the form becomes the frontmost window of the frontmost process.<!-- END REF--> 
+<!--REF #_command_.Activated.Summary-->**Activated** retourne Vrai dans une méthode formulaire lorsque la fenêtre contenant le formulaire passe au premier plan.<!-- END REF-->
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Activate event.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Activate.
 
-**WARNING:** Do not place a command such as [TRACE](trace.md) or [ALERT](alert.md)in the **Activated** phase of the form, as this will cause an endless loop.
+**ATTENTION :** N'appelez pas de commandes telles que [TRACE](trace.md) ou [ALERT](alert.md) dans la phase **Activated** d'un formulaire, car cela provoquerait une boucle sans fin.
 
-**Note:** In order for the **Activated** execution cycle to be generated, make sure that the On Activate event property of the form has been selected in the Design environment.
+**Note :** Si vous voulez que le cycle d'exécution **Activated** soit généré, assurez-vous que la propriété d'événement On Activate du formulaire et/ou des objet(s) est sélectionnée en mode Développement. 
 
-## See also 
+## Voir aussi 
 
 [Deactivated](deactivated.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 346 |
+| Numéro de commande | 346 |
 | Thread safe | no |
-
 
 

@@ -5,64 +5,63 @@ slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* : Text {; *deleteOption* : Integer} )<!-- END REF-->
+<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* {; *optionSuppression*} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folder | Text | &#8594;  | Name or full path of the folder to be deleted |
-| deleteOption | Integer | &#8594;  | Folder deletion option |
+| dossier | Text | &#8594;  | Nom ou chemin d’accès complet du dossier à supprimer |
+| optionSuppression | Integer | &#8594;  | Option de suppression du dossier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|6.7|Created|
+|15 R5|Modifié|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE FOLDER.Summary-->The **DELETE FOLDER** command deletes the folder whose name or full path has been passed in *folder*.<!-- END REF--> 
+<!--REF #_command_.DELETE FOLDER.Summary-->La commande **DELETE FOLDER** supprime le dossier dont vous avez passé le nom ou le chemin d’accès complet dans *dossier*.<!-- END REF--> 
 
-By default, for security reasons, if you omit the *deleteOption* parameter, **DELETE FOLDER** only allows empty folders to be deleted. If you want the command to be able to delete non-empty folders, you must use the *deleteOption* parameter. In *deleteOption*, you can pass one of the following constants, found in the "*System Documents*" theme:
+Par défaut pour des raisons de sécurité, si vous omettez le paramètre *optionSuppression*, **DELETE FOLDER** permet uniquement la suppression de dossiers vides. Si vous souhaitez que cette commande puisse supprimer des dossiers non vides, vous devez utiliser le paramètre *optionSuppression*. Vous pouvez passer dans ce paramètre l'une des constantes suivantes, placées dans le thème "*Documents système*" :
 
-| Constant             | Type    | Value | Comment                                          |
-| -------------------- | ------- | ----- | ------------------------------------------------ |
-| Delete only if empty | Integer | 0     | Deletes folder only when it is empty             |
-| Delete with contents | Integer | 1     | Deletes folder along with everything it contains |
+| Constante            | Type        | Valeur | Comment                                            |
+| -------------------- | ----------- | ------ | -------------------------------------------------- |
+| Delete only if empty | Entier long | 0      | Supprime le dossier uniquement s'il est vide       |
+| Delete with contents | Entier long | 1      | Supprime le dossier ainsi que son éventuel contenu |
 
-* When Delete only if empty (0) is passed or if you omit the *deleteOption* parameter:  
-   * The folder specified in the *folder* parameter is only deleted if it is empty; otherwise, the command does nothing and an error -47 (The file is already open, or the folder is not empty) is generated.  
-   * If the folder specified does not exist , the error -120 (Tried to access a file by using a pathname that specifies a non existing directory) is generated.
-* When Delete with contents (1) is passed:  
-   * The folder along with all of its contents are deleted.  
-   **Warning:** Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, they are still deleted.  
-   * If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(\*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use [Last errors](./commands/last-errors)  command to retrieve the name and path of the offending file.  
-   * If the folder specified does not exist, the command does nothing and no error is returned.  
-   (\*) under Windows: -54 (Attempt to open locked file for writing)  
-   under macOS: -45 (The file is locked or the pathname is not correct)
+* Si vous passez Delete only if empty ou omettez le paramètre *optionSuppression* :  
+   * Le dossier désigné par le paramètre *dossier* n'est supprimé que s'il est vide ; sinon, la commande ne fait rien et une erreur -47 (Fichier déjà ouvert, ou dossier non vide) est générée.  
+   * Si le dossier désigné n'existe pas, l'erreur -120 (Tentative d'accès à un fichier avec un chemin d'accès spécifiant un répertoire inexistant) est générée.
+* Si vous passez Delete with contents :  
+   * Le dossier ainsi que tout son contenu sont supprimés.  
+   **Attention :** Si le dossier est verrouillé ou en lecture seule, il sera néanmoins supprimé si l'utilisateur courant dispose des droits d’accès nécessaires.  
+   * Si le dossier désigné ou un des fichiers qu'il contient ne peut pas être supprimé, la procédure de suppression est abandonnée dès que le premier élément inaccessible est atteint, et une erreur(\*) est retournée. Dans ce cas, le dossier ne sera que partiellement supprimé. Il est cependant possible d'utiliser la commande [Last errors](../commands/last-errors.md)  pour obtenir le nom et le chemin d’accès du fichier à l'origine de l'erreur.  
+   * Si le dossier désigné n'existe pas, la commande ne fait rien et aucune erreur n'est générée.  
+   (\*) sous Windows : -54 (Tentative d'écriture dans un fichier verrouillé)  
+   sous macOS : -45 (Fichier verrouillé ou chemin d'accès invalide)
 
-You can intercept these errors using a method installed by the [ON ERR CALL](on-err-call.md) command.
+Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md) .
 
-## See also 
+## Voir aussi 
 
   
 [DELETE DOCUMENT](delete-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 693 |
+| Numéro de commande | 693 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
-
+| Modifie les variables | OK, error |
 
 

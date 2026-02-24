@@ -5,47 +5,47 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* : Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field to be evaluated |
-| Function result | Boolean | &#8592; | True = field is NULL, False = field is not NULL |
+| leField | Field | &#8594;  | Champ à évaluer |
+| Résultat | Boolean | &#8592; | Vrai = le champ est NULL, Faux = le champ n'est pas NULL |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is field value Null.Summary-->The Is field value Null command returns **True** if the field designated by the *aField* parameter contains the NULL value, and **False** otherwise.<!-- END REF-->
+<!--REF #_command_.Is field value Null.Summary-->La commande **Is field value Null** retourne Vrai si le champ désigné par le paramètre *leChamp* contient la valeur NULL, et Faux sinon.<!-- END REF-->
 
-The NULL value is used by the SQL kernel of 4D. For more information, refer to the *4D SQL Reference* manual.
+La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’informations, reportez-vous au Manuel de référence SQL 4D.
 
-The value returned by this command is only meaningful if the "*Map NULL values to blank values*" option is not checked in the field definition of the Structure editor. Otherwise, it always returns **False**. 
+La valeur retournée par cette commande n'a de sens que si l'option "*Traduire les NULL en valeurs vides*" n'est pas cochée dans la définition du champ en Structure. Dans le cas contraire, elle retourne toujours **Faux**.
 
-**Note:** This command cannot be used with objects and object properties. Null values in object fields are handled through the [Null](null.md) command. 
+**Note :** Cette commande ne peut pas être utilisée avec des objets et des propriétés d'objets. Les valeurs Null contenues dans les champs objet sont gérées à l'aide de la commande [Null](null.md).
 
-## See also 
+## Voir aussi 
 
 [Null](null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 964 |
+| Numéro de commande | 964 |
 | Thread safe | yes |
 
 

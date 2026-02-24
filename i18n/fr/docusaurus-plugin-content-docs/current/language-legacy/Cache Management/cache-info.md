@@ -5,56 +5,56 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *dbFilter* )} : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dbFilter | Object | &#8594;  | Defines list of attributes to be returned (filtered per DB) |
-| Function result | Object | &#8592; | Information about cache |
+| dbFilter | Object | &#8594;  | définit la liste des attributs à retourner (filtrés par DB) |
+| Résultat | Object | &#8592; | Informations à propos du cache |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Cache info.Summary-->The **Cache info** command returns an object that contains detailed information about the current cache contents (used memory, loaded tables and indexes, etc.)<!-- END REF--> .
+<!--REF #_command_.Cache info.Summary-->La commande **Cache info** retourne un objet contenant des informations détaillées sur le contenu actuel du cache (mémoire utilisée, tables et index chargés, etc.)<!-- END REF-->.
 
-**Note:** This command only works in local mode (4D Server and 4D); it must not be used from 4D in remote mode.
+**Note :** Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.
 
-By default, returned information refers to the running database only. The optional *dbFilter* object parameter allows you to specify the scope of the command:
+Par défaut, l'information retournée se réfère seulement à la base courante en cours d'exécution. Le paramètre objet optionnel *dbFilter* vous permet de spécifier la portée de cette commande :
 
-* pass the "dbFilter" attribute with the "All" value to get cache information about all running databases, including components.
-* pass the "dbFilter" attribute with a "" (empty string) value to get information about the current database only (equivalent to omitting the *dbFilter* parameter).
+* passez l'attribut "dbFilter" avec la valeur "All" pour obtenir les informations sur le cache de toutes les bases lancées, y compris les composants.
+* passez l'attribut "dbFilter" avec la valeur "" (chaîne vide) pour obtenir des informations uniquement sur la base courante (équivalent à l'omission du paramètre *dbFilter*).
 
-The **Cache info** command returns a single object that contains all the relevant information about the cache. The returned object has the following basic structure:
+La commande **Cache info** retourne un objet unique qui contient toutes les informations pertinentes à propos du cache. L'objet retourné a la structure suivante :
 
 ```json
 {    "maxMem": Maximum cache size (real),    "usedMem": Current cache size (real),    "objects": [...] Array of objects currently loaded in cache}
 ```
 
-Elements of the *objects* array are root objects (tables, indexes, Blobs, etc.) which are currently loaded in the cache. Each element contains specific attributes that describe its current status. For more information about advanced interpretation of this data, please contact your local Technical Service department. 
+Les éléments du tableau *objects* sont des objets racine (tables, index, Blobs, etc.) qui sont actuellement chargés dans le cache. Chaque élément contient les attributs spécifiques qui décrivent son statut courant. Pour plus d'informations sur l'interprétation avancée de ces données, veuillez contacter les services techniques de 4D. 
 
-## Example 
+## Exemple 
 
-You want to get cache information for the current database:
+Vous souhaitez obtenir des informations sur la base de données courante : 
 
 ```4d
  var $cache : Object
  $cache:=Cache info
 ```
 
-You want to get cache information for the database and all opened components:
+Vous souhaitez obtenir des informations sur la base courante et tous les composants ouverts :
 
 ```4d
  var $dbFilter : Object
@@ -62,15 +62,15 @@ You want to get cache information for the database and all opened components:
  $cache:=Cache info($dbFilter)
 ```
 
-## See also 
+## Voir aussi 
 
 [MEMORY STATISTICS](memory-statistics.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1402 |
+| Numéro de commande | 1402 |
 | Thread safe | yes |
 
 

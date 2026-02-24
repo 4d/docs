@@ -5,72 +5,73 @@ slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* : Blob {; *compression* : Integer} )<!-- END REF-->
+<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* {; *compression*} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB to compress |
-| compression | Integer | &#8594;  | If not omitted: 1, compress as compact as possible 2, compress as fast as possible |
+| blob | Blob | &#8594;  | BLOB à compresser |
+| compression | Integer | &#8594;  | Si ce paramètre est passé : 1= taux de compression maximum 2 = vitesse de compression maximum |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|6.5.3|Modified|
-|<6|Created|
+|13|Modifié|
+|6.5.3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.COMPRESS BLOB.Summary-->The **COMPRESS BLOB** command compresses the BLOB *blob* using a compression algorithm.<!-- END REF--> This command only compresses BLOB whose size is over 255 bytes.
+<!--REF #_command_.COMPRESS BLOB.Summary-->**COMPRESS BLOB** compresse le BLOB *blob* à l'aide d'un algorithme de compression.<!-- END REF-->
 
-The optional *compression* parameter allows to set the way the BLOB will be compressed. You can pass one of the following constants, placed in the *BLOB* theme: 
+Le paramètre optionnel *compression* vous permet de fixer la façon dont le BLOB sera compressé. Passez dans ce paramètre une des constantes suivantes, placées dans le thème *BLOB* : 
 
-| Constant                   | Type    | Value | Comment                                                                                                                                                      |
-| -------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Compact compression mode   | Integer | 1     | Compressed as much as possible (at the expense of the speed of compression and decompression operations). Default method.                                    |
-| Fast compression mode      | Integer | 2     | Compressed as fast as possible (and will be decompressed as fast as possible), at the expense of the compression ratio (the compressed BLOB will be bigger). |
-| GZIP best compression mode | Integer | \-1   | Most compact GZIP compression                                                                                                                                |
-| GZIP fast compression mode | Integer | \-2   | Fastest GZIP compression                                                                                                                                     |
+| Constante                  | Type        | Valeur | Comment                                                                                                                                              |
+| -------------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compact compression mode   | Entier long | 1      | Compression interne la plus compacte (au détriment de la vitesse à laquelle la compression et la décompression sont effectuées). Méthode par défaut. |
+| Fast compression mode      | Entier long | 2      | Compression/décompression interne la plus rapide au détriment du taux de compression (une fois compressé, le BLOB prend plus de place)               |
+| GZIP best compression mode | Entier long | \-1    | Compression GZIP la plus compacte (au détriment de la vitesse à laquelle la compression et la décompression sont effectuées)                         |
+| GZIP fast compression mode | Entier long | \-2    | Compression/décompression GZIP la plus rapide (au détriment du taux de compression)                                                                  |
 
   
-If you pass another value or if you omit the *compression* parameter, compression mode 1 is used (compact internal compression).
+Si vous passez une autre valeur ou si vous omettez le paramètre *compression*, la méthode de compression 1 est utilisée (algorithme interne compact).
 
-**Note:** This command only compresses BLOBs that are greater than or equal to 255 bytes.
+**Note :** La commande compresse uniquement les BLOBs de taille supérieure ou égale à 255 octets.
 
-After the call, the OK variable is set to 1 if the BLOB has been successfully compressed. If the compression could not be performed, the OK variable is set to 0\. If the compression could not be performed because of a lack of memory or because the actual size of the blob is less than 255 bytes, no error is generated and the method resumes its execution.   
-In any other cases (i.e. the BLOB is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](on-err-call.md) command.
+Après que cette commande ait été appelée, la variable système OK prend la valeur 1 si le BLOB a été correctement compressé.   
+Si la compression n'a pu être effectuée, OK prend la valeur 0\. Dans ce cas, si l'erreur provient du fait que la taille du BLOB est inférieure à 255 octets ou que la mémoire disponible est insuffisante pour effectuer l'opération, aucune erreur n'est générée, la méthode poursuit son exécution.   
+En revanche, si l'erreur est causée par un problème plus important (le BLOB est endommagé), l'erreur -10600 est générée. Cette erreur, relativement rare, peut être interceptée à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-After a BLOB has been compressed, you can expand it using the [EXPAND BLOB](expand-blob.md) command.
+Lorsqu'un BLOB a été compressé, vous pouvez le décompresser à l'aide de la commande [EXPAND BLOB](expand-blob.md).
 
-To detect if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properties.md) command*.*
+Pour savoir si un BLOB a été compressé, utilisez la commande [BLOB PROPERTIES](blob-properties.md).
 
-**WARNING:** A compressed BLOB is still a BLOB, so there is nothing to stop you from modifying its contents. However, if you do so, the [EXPAND BLOB](expand-blob.md) command will not be able to decompress the BLOB properly.
+**ATTENTION :** Un BLOB compressé est toujours un BLOB, rien ne vous empêche donc de modifier son contenu. Cependant, si vous le modifiez, la commande [EXPAND BLOB](expand-blob.md) ne pourra plus décompresser correctement le BLOB.
 
-## Example 1 
+## Exemple 1 
 
-This example tests if the BLOB *vxMyBlob* is compressed, and, if it is not, compresses it:
+L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, sinon, le compresse :
 
 ```4d
- BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
- If($vlCompressed=Is not compressed)
-    COMPRESS BLOB(vxMyBlob)
+ BLOB PROPERTIES(vxMonBlob;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
+ If($vlCompressé=Is not compressed)
+    COMPRESS BLOB(vxMonBlob)
  End if
 ```
 
-Note however, that if you apply COMPRESS BLOB to an already compressed BLOB, the command detects it and does nothing.
+Notez que si vous appliquez **COMPRESS BLOB** à un BLOB déjà compressé, la commande le détecte et ne fait rien.
 
-## Example 2 
+## Exemple 2 
 
-This example allows you to select a document and then compress it:
+L'exemple suivant vous permet de sélectionner un document puis de le compresser :
 
 ```4d
  $vhDocRef :=Open document("")
@@ -86,33 +87,33 @@ This example allows you to select a document and then compress it:
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-Sending of raw HTTP data compressed with GZIP:
+Envoi de données HTTP brutes compressées en GZIP :
 
 ```4d
- COMPRESS BLOB($blob;GZIP Best compression mode)
+ COMPRESS BLOB($blob;GZIP best compression mode )
  var $vEncoding : Text
  $vEncoding:="Content-encoding: gzip"
  WEB SET HTTP HEADER($vEncoding)
  WEB SEND RAW DATA($blob ;*)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK variable is set to 1 if the BLOB has been successfully compressed; otherwise, it is set to 0.
+La variable OK prend la valeur 1 si le BLOB a été correctement compressé, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 534 |
+| Numéro de commande | 534 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

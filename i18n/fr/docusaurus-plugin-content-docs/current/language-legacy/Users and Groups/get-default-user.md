@@ -9,36 +9,36 @@ displayed_sidebar: docs
 <!--REF #_command_.Get default user.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Unique user ID number |
+| Résultat | Integer | &#8592; | Numéro de référence unique de l’utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get default user.Summary-->The Get default user command returns the unique user ID of the user set as “Default user” in the database Settings dialog box<!-- END REF-->:
+<!--REF #_command_.Get default user.Summary-->La commande **Get default user** retourne le numéro de référence unique de l’utilisateur désigné comme “Utilisateur par défaut” dans la boîte de dialogue des Propriétés de la base<!-- END REF--> :
 
-![](../assets/en/commands/pict36789.en.png)
+![](../assets/en/commands/pict36789.fr.png)
 
-If no default user has been set, the command returns 0.
+Si aucun utilisateur par défaut n’est défini, la commande retourne 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 826 |
+| Numéro de commande | 826 |
 | Thread safe | no |
 
 

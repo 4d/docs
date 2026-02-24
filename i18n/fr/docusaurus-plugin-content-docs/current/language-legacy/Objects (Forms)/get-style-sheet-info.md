@@ -5,99 +5,85 @@ slug: /commands/get-style-sheet-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *styleSheetName* : Text ; *font* : Text ; *size* : Integer ; *styles* : Integer )<!-- END REF-->
+<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *nomFeuilleStyle* ; *police* ; *taille* ; *styles* )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| styleSheetName | Text | &#8594;  | Name of style sheet |
-| font | Text | &#8592; | Character font |
-| size | Integer | &#8592; | Font size |
-| styles | Integer | &#8592; | Style value |
+| nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
+| police | Text | &#8592; | Police de caractères |
+| taille | Integer | &#8592; | Taille de police |
+| styles | Integer | &#8592; | Valeur de style |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Modified|
-|14|Created|
+|15 R3|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21 R2|Support for Fluent UI|
-
-</details>
-
 ## Description 
 
-<!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
+<!--REF #_command_.GET STYLE SHEET INFO.Summary-->La commande **GET STYLE SHEET INFO** retourne la configuration courante de la feuille de style *nomFeuilleStyle*.<!-- END REF--> 
 
+Passez dans *nomFeuilleStyle* le nom de la feuille de style tel que défini en mode Développement. Pour désigner une feuille de style automatique, utilisez une des constantes suivantes, placées dans le thème "*Styles de caractères*" : 
 
-On Windows, the style sheet configuration can be different depending if the **Fluent UI** or **Classic** interface is used:
-- if the command is executed in the context of a form, the returned configuration corresponds to the interface actually used for the form,
-- if the command is executed outside the context of a form, the returned configuration corresponds to the interface actually enabled for project (based on the **Fluent UI** setting value and the availability of the [required Windows library](../FormEditor/forms.md#requirements)).
+| Constante                         | Type   | Valeur                              | Comment                                                                                                                                   |
+| --------------------------------- | ------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Automatic style sheet             | Chaîne | \_\_automatic\_\_                   | Utilisée par défaut pour tous les objets                                                                                                  |
+| Automatic style sheet\_additional | Chaîne | \_\_automatic\_additional\_text\_\_ | Prise en charge par les textes statiques, champs et variables uniquement. Utilisée pour du texte additionnel dans les boîtes de dialogue. |
+| Automatic style sheet\_main       | Chaîne | \_\_automatic\_main\_text\_\_       | Prise en charge par les textes statiques, champs et variables uniquement. Utilisée pour le texte principal des boîtes de dialogue.        |
 
+La commande retourne dans *police* le nom de la police de caractères associée à la feuille de style pour la plate-forme courante. 
 
-In *styleSheetName*, you pass the name of the style sheet as defined in the Design mode. To designate an automatic style sheet, you can use one of the following constants, found in the "*Font Styles*" theme: 
+La commande retourne dans *taille* la taille en points de la police de caractères associée à la feuille de style pour la plate-forme courante. 
 
-| Constant                          | Type   | Value                               | Comment                                                                                        |
-| --------------------------------- | ------ | ----------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Automatic style sheet             | Text | \_\_automatic\_\_                   | Used by default for all objects                                                                |
-| Automatic style sheet\_additional | Text | \_\_automatic\_additional\_text\_\_ | Supported by static text, fields and variables only. Used for additional text in dialog boxes. |
-| Automatic style sheet\_main       | Text | \_\_automatic\_main\_text\_\_       | Supported by static text, fields and variables only. Used for main text in dialog boxes.       |
+La commande retourne dans *styles* une valeur correspondant au(x) style(s) associé(s) à la feuille de style pour la plate-forme courante. Vous pouvez comparer la valeur reçue aux constantes suivantes, placées dans le thème "*Styles de caractères*" : 
 
-In *font*, the command returns the name of the font associated with the style sheet for the current platform. 
+| Constante            | Type        | Valeur |
+| -------------------- | ----------- | ------ |
+| Bold                 | Entier long | 1      |
+| Bold and Italic      | Entier long | 3      |
+| Bold and Underline   | Entier long | 5      |
+| Italic               | Entier long | 2      |
+| Italic and Underline | Entier long | 6      |
+| Plain                | Entier long | 0      |
+| Underline            | Entier long | 4      |
 
-In *size*, the command returns the size in points of the font associated with the style sheet for the current platform. 
+Si la commande est exécutée correctement, la variable système *OK* prend la valeur 1\. Dans le cas contraire (par exemple si *nomFeuilleStyle* n’existe pas), elle prend la valeur 0.
 
-In *styles*, the command returns a value corresponding to the style(s) associated with the style sheet for the current platform. You can compare the value received with the following constants, found in the "*Font Styles*" theme: 
+### Note de compatibilité 
 
-| Constant             | Type    | Value |
-| -------------------- | ------- | ----- |
-| Bold                 | Integer | 1     |
-| Bold and Italic      | Integer | 3     |
-| Bold and Underline   | Integer | 5     |
-| Italic               | Integer | 2     |
-| Italic and Underline | Integer | 6     |
-| Plain                | Integer | 0     |
-| Underline            | Integer | 4     |
+Dans **l'architecture Projet**, seules les trois feuilles de style automatiques sont prises en charge par cette commande.
 
-If the command is executed correctly, the *OK* system variable is set to 1. Otherwise (for example, if the *styleSheetName* does not exist), it is set to 0.
+## Exemple 
 
-### Compatibility Note 
-
-In **project architecture**, only the three automatic style sheets are supported by this command. 
-
-## Example 
-
-You want to find out the current configuration of the "Automatic" style sheet:
+Vous souhaitez connaître la configuration actuelle de la feuille de style "Automatique" :
 
 ```4d
- var $size;$style : Integer
- var $font : Text
- GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
+ var $taille;$style : Integer
+ var $pol : Text
+ GET STYLE SHEET INFO(Automatic style sheet;$pol;$taille;$style)
 ```
 
-## See also 
+## Voir aussi 
 
 [LIST OF STYLE SHEETS](list-of-style-sheets.md)  
 [OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1256 |
+| Numéro de commande | 1256 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

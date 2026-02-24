@@ -5,96 +5,96 @@ slug: /commands/set-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *aField* : Field ; *index* : Boolean, Integer {; *} )<!-- END REF-->
+<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *leChamp* ; *index* {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field for which to create or delete the index |
-| index | Boolean, Integer | &#8594;  | True=Create index, False=Delete index, orCreate an index of the type: -1=Keywords, 0=by default, 1=B-Tree standard, 3=B-Tree cluster |
-| * | Operator |  &#8594;  | Asynchronous indexing if * is passed |
+| leField | Field | &#8594;  | Champ duquel créer ou supprimer l’index |
+| index | Boolean, Integer | &#8594;  | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
+| * | Operator |  &#8594;  | Indexation asynchrone si * est passé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Compatibility Note 
+## Note de compatibilité 
 
-<!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, although a legacy command, is still fully supported and can remain in your application -- there is no need to rewrite existing code.<!-- END REF--> However, it would be better to use [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) to manage indexes because they provide more features. 
+<!--REF #_command_.SET INDEX.Summary-->Bien que **SET INDEX** soit une ancienne commande, elle reste entièrement prise en charge et peut être conservée dans votre application -- il n'est pas nécessaire de réécrire le code existant.<!-- END REF--> Toutefois, il est désormais préférable d'utiliser les commandes [CREATE INDEX](create-index.md) et [DELETE INDEX](delete-index.md) pour gérer les index car elles ont des fonctionnalités plus étendues. 
 
 ## Description 
 
-The **SET INDEX** accepts two syntaxes:
+La commande **SET INDEX** admet deux syntaxes :
 
-* If you pass a Boolean in the *index* parameter, the command creates or removes the index for the field you pass in *aField*.
-* If you pass an integer in the *index* parameter, the command creates an index of the type specified.
+* Si vous passez un booléen dans le paramètre *index*, la commande crée ou supprime l'index du champ que vous avez passé dans *leChamp*.
+* Si vous passez un entier dans le paramètre *index*, la commande crée un index du type spécifié.
 
-**index = Boolean**  
-To index the field, pass True in *index*. The command creates an index of the default type. If the index already exists, the call has no effect.   
-If you pass False in *index*, the command will delete all the standard indexes (i.e., non-composite and non-keyword) that are associated with the field. If the index does not exist, the call has no effect.
+**index = booléen**  
+Pour indexer le champ, passez Vrai dans *index*. La commande crée un index du type par défaut. Si l'index existe déjà, la commande ne fait rien.   
+Si vous passez Faux dans *index*, la commande supprimera tous les index standard (c'est-à-dire, non composites et non mots-clés) associés au champ. S'il n'existe pas d'index, la commande ne fait rien.
 
-**index = Integer**  
-In this case, the command creates an index of the type specified for *aField*. You can pass one of the following constants, found in the “*Index Type*” theme:
+**index = entier**  
+Dans ce cas, la commande crée un index du type spécifié pour *leChamp*. Vous pouvez passer une des constantes suivantes, placées dans le thème “*Type index*” :
 
-| Constant             | Type    | Value | Comment                                                                                                                                                         |
-| -------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cluster BTree Index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data. |
-| Default Index Type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                     |
-| Keywords Index       | Integer | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text or Alpha type.                                     |
-| Standard BTree Index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                    |
+| Constante            | Type        | Valeur | Comment                                                                                                                                                                                          |
+| -------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Cluster BTree Index  | Entier long | 3      | Index de type B-Tree utilisant des clusters. Ce type d’index est optimisé lorsque l’index contient peu de clés, c’est-à-dire lorsque les mêmes valeurs reviennent souvent dans les données.      |
+| Default Index Type   | Entier long | 0      | 4D définit le type d’index (hors index de mots-clés) le plus optimisé en fonction du contenu du champ.                                                                                           |
+| Keywords Index       | Entier long | \-1    | Permet l’indexation mot à mot du contenu du champ. Ce type d’index n’est utilisable qu’avec les champs de type Texte ou Alpha. Attention, les index de mots-clés ne peuvent pas être composites. |
+| Standard BTree Index | Entier long | 1      | Index de type B-Tree classique. Ce type d’index polyvalent est utilisé dans les versions précédentes de 4D                                                                                       |
 
-**Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail.
+**Note :** Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir.
 
-SET INDEX will not index locked records; it will wait until the record becomes unlocked.
+**SET INDEX** n'indexera pas les enregistrements verrouillés ; la commande attendra que les enregistrements soient libérés.
 
-The optional *\** parameter indicates an asynchronous (simultaneous) indexing. Asynchronous indexing allows the execution of the calling method to continue immediately, whether or not indexing is completed. However, execution will halt at any command that requires the index.
+Le paramètre optionnel *\** indique une indexation asynchrone (simultanée). Une indexation asynchrone permet à la méthode appelante de poursuivre son exécution immédiatement après l'appel, que l'indexation soit terminée ou non. Cependant, l'exécution sera stoppée si une commande requiert l'index.
 
-**Notes:**
+**Notes :**
 
-* Indexes created by this command do not have names. They cannot be deleted by the [DELETE INDEX](delete-index.md) command using the syntax based on the name.
-* This command cannot be used to create or delete composite indexes.
-* This command cannot be used to delete a keywords index created by the [CREATE INDEX](create-index.md) command.
+* Les index créés par cette commande ne portent pas de nom. Ils ne pourront pas être supprimés par la commande [DELETE INDEX](delete-index.md) via la syntaxe basée sur le nom.
+* Cette commande ne permet pas de créer ou de supprimer des index composites.
+* Cette commande ne permet pas de supprimer un index de mots-clés créé par la commande [CREATE INDEX](create-index.md).
 
-## Note for deployment 
+## Note pour le déploiement 
 
-Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
+Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-## Example 1 
+## Exemple 1 
 
-The following example indexes the field *\[Customers\]ID*:
-
-```4d
- UNLOAD RECORD([Customers])
- SET INDEX([Customers]ID;True)
-```
-
-## Example 2 
-
-You want to index the *\[Customers\]Name* field in asynchronous mode:
+L'exemple suivant indexe le champ *\[Clients\]Num* :
 
 ```4d
- SET INDEX([Customers]Name;True;*)
+ UNLOAD RECORD([Clients])
+ SET INDEX([Clients]Num;True)
 ```
 
-## Example 3 
+## Exemple 2 
 
-Creation of a keywords index:
+Vous souhaitez indexer le champ \[Clients\]Nom, en mode asynchrone :
 
 ```4d
- SET INDEX([Books]Summary;Keywords Index)
+ SET INDEX([Clients]Nom;True;*)
 ```
 
-## See also 
+## Exemple 3 
+
+Création d'un index de mots-clés :
+
+```4d
+ SET INDEX([Livres]Résumé;Keywords Index)
+```
+
+## Voir aussi 
 
 [CREATE INDEX](create-index.md)  
 [DELETE INDEX](delete-index.md)  
@@ -102,11 +102,11 @@ Creation of a keywords index:
 [ORDER BY](order-by.md)  
 [QUERY](query.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 344 |
+| Numéro de commande | 344 |
 | Thread safe | yes |
 
 

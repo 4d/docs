@@ -9,52 +9,52 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Is server running.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if the Web Server is running, otherwise False |
+| Résultat | Boolean | &#8592; | Vrai si le serveur Web est démarré, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R2|Created|
+|14 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB Is server running.Summary-->The new **WEB Is server running** command returns **True** if the 4D built-in Web server is running, and **False** if the Web server is off.<!-- END REF-->
+<!--REF #_command_.WEB Is server running.Summary-->La commande **WEB Is server running** retourne **Vrai** si le serveur Web intégré de 4D est démarré, et **Faux** si le serveur Web est stoppé.<!-- END REF-->
 
-This command returns the running status of the Web Server where it is executed: 
+La commande retourne le statut du serveur Web de la machine sur laquelle elle est exécutée : 
 
-| **Execution context**                             | **Returns the status of** |
-| ------------------------------------------------- | ------------------------- |
-| 4D stand-alone application                        | Local 4D Web server       |
-| 4D Server                                         | 4D Server Web server      |
-| 4D remote mode (local process)                    | Local 4D Web server       |
-| 4D remote mode (4D Server stored procedure)       | 4D Server Web server      |
-| 4D remote mode (other 4D remote stored procedure) | Remote 4D Web server      |
+| **Contexte d'exécution**                                     | **Retourne le statut de** |
+| ------------------------------------------------------------ | ------------------------- |
+| 4D monoposte                                                 | Serveur Web 4D local      |
+| 4D Server                                                    | Serveur Web 4D Server     |
+| 4D mode distant (process local)                              | Serveur Web 4D local      |
+| 4D mode distant (procédure stockée sur 4D Server)            | Serveur Web 4D Server     |
+| 4D mode distant (procédure stockée sur une autre 4D distant) | Serveur Web 4D distant    |
 
-## Example 
+## Exemple 
 
-You want to check that the Web server is running:
+Vous souhaitez tester si le serveur Web de 4D est lancé :
 
 ```4d
  If(WEB Is server running)
-    ... //do appropriate actions
+    ... //effectuer les actions appropriées
  End if
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1313 |
+| Numéro de commande | 1313 |
 | Thread safe | yes |
 
 

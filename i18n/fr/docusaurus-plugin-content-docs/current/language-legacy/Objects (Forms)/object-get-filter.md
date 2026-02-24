@@ -5,43 +5,43 @@ slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *object* : Text ) : Text<br/>**OBJECT Get filter** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Name of filter |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
+| Résultat | Text | &#8592; | Nom du filtre de saisie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get filter.Summary-->The OBJECT Get filter command returns the name of any filter associated with the object or group of objects designated by *object*.<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Summary-->La commande **OBJECT Get filter** retourne le nom du filtre de saisie éventuellement associé à l'objet ou au groupe d'objets désigné par *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string. 
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET FILTER](object-set-filter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1073 |
+| Numéro de commande | 1073 |
 | Thread safe | no |
 
 

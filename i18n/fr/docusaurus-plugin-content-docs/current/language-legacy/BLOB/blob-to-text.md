@@ -5,65 +5,66 @@ slug: /commands/blob-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *blob* : Blob ; *textFormat* : Integer {; *offset* : Variable {; *textLength* : Integer}} )  : Text<!-- END REF-->
+<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *blob* ; *formatTexte* {; *offset* {; *longueurTexte*}} )  : Text<!-- END REF-->
 <!--REF #_command_.BLOB to text.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB from which to get the text |
-| textFormat | Integer | &#8594;  | Format and character set of text |
-| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
-| || | New offset after reading |
-| textLength | Integer | &#8594;  | Number of characters to be read |
-| Function result | Text | &#8592; | Text extracted |
+| blob | Blob | &#8594;  | BLOB duquel extraire le texte |
+| formatTexte | Integer | &#8594;  | Format et jeu de caractères du texte |
+| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
+| ||| Nouvel offset après la lecture |
+| longueurTexte | Integer | &#8594;  | Nombre de caractères à lire |
+| Résultat | Text | &#8592; | Texte extrait |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB to text.Summary-->The BLOB to text command returns a Text value read from the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.BLOB to text.Summary-->La fonction **BLOB to text** retourne une valeur de type Texte lue dans le BLOB *blob*.<!-- END REF-->
 
-The *textFormat* parameter fixes the internal format and character set of the text value to be read. In databases created beginning with version 11, 4D uses the Unicode character set (UTF8) by default for managing text. For the sake of compatibility, this command can be used to “force” conversion using the Mac Roman character set (used in previous versions of 4D). The character set is chosen via the *textFormat* parameter. To do this, pass one of the following constants (found in the *BLOB* theme) in the *textFormat* parameter:
+Le paramètre *formatTexte* définit le format interne et le jeu de caractères de la valeur de type Texte à lire. Dans les bases de données créées à compter de la version 11, 4D utilise par défaut le jeu de caractères Unicode (UTF8) pour la gestion des textes. Par compatibilité, cette commande permet de “forcer” l'utilisation du jeu de caractères Mac Roman (jeu de caractères utilisé dans les versions précédentes de 4D). Le choix du jeu de caractères s’effectue via le paramètre *formatTexte*. Pour cela, passez dans *formatTexte* une des constantes suivantes, placées dans le thème *BLOB* :
 
-| Constant                 | Type    | Value |
-| ------------------------ | ------- | ----- |
-| Mac C string             | Integer | 0     |
-| Mac Pascal string        | Integer | 1     |
-| Mac text with length     | Integer | 2     |
-| Mac text without length  | Integer | 3     |
-| UTF8 C string            | Integer | 4     |
-| UTF8 text with length    | Integer | 5     |
-| UTF8 text without length | Integer | 6     |
+| Constante                | Type        | Valeur |
+| ------------------------ | ----------- | ------ |
+| Mac C string             | Entier long | 0      |
+| Mac Pascal string        | Entier long | 1      |
+| Mac text with length     | Entier long | 2      |
+| Mac text without length  | Entier long | 3      |
+| UTF8 C string            | Entier long | 4      |
+| UTF8 text with length    | Entier long | 5      |
+| UTF8 text without length | Entier long | 6      |
 
-**Notes:**
+  
+**Notes** 
 
-* The “UTF8” constants can only be used when the application runs in Unicode mode.
-* The “Mac” constants cannot work with texts greater than 32 KB.
-* If you want to work with character sets other than UTF8, use the [Convert to text](convert-to-text.md) command.
+* Les constantes “UTF8” sont utilisables uniquement lorsque l’application fonctionne en mode Unicode.
+* Les constantes “Mac” ne permettent pas de traiter des textes de plus de 32 ko.
+* Si vous souhaitez manipuler des jeux de caractères autres que UTF8, utilisez la commande [Convert to text](convert-to-text.md). Pour plus d'informations sur ces constantes et les formats qu'elles représentent, reportez-vous à la description de la commande [TEXT TO BLOB](text-to-blob.md).
 
-For more information about these constants and the formats they represent, please refer to the description of the [TEXT TO BLOB](text-to-blob.md) command. 
+**ATTENTION :** Le nombre de caractères à lire est déterminé par le paramètre *formatTexte*, SAUF dans le cas des formats Mac Text without length et UTF8 Text without length pour lesquels vous devez spécifier le nombre de caractères à lire dans le paramètre *longueurTexte*. Pour les autres formats, *longueurTexte* est ignoré et vous pouvez l'omettre.
 
-**WARNING:** The number of characters to be read is determined by the *textFormat* parameter, EXCEPT for the formats Mac Text without length and UTF8 Text without length, for which you need to specify the number of characters to be read in the *textLength* parameter. For the other formats, *textLength* is ignored and you can omit it.
+Si vous ne passez pas de variable dans le paramètre optionnel *offset*, les premiers octets de BLOB sont lus, en fonction de la valeur passée dans *formatTexte*. Notez que vous devez passer une variable dans le paramètre *offset* lorsque vous lisez une valeur de type Texte sans longueur. 
 
-If you specify the optional *offset* variable parameter, the Text value is read at the offset (starting from zero) within the BLOB. If you do not specify the optional *offset* variable parameter, the beginning of the BLOB is read according to the value you pass in *textFormat*. Note that you must pass the *offset* variable parameter when you are reading text without length.
+Si vous passez une variable dans le paramètre optionnel *offset*, la valeur de type Texte est lue depuis l'offset exprimé en octets (à partir de zéro) du BLOB. 
 
-**Note:** You should pass an offset value between *0* (zero) and the size of the BLOB minus the size of the text to be read. If you do not do so, the function result is unpredictable.
+**Note** **:** Vous devez passer un offset compris entre 0 (zéro) et la taille du BLOB moins la taille du texte à extraire. Sinon, le résultat de la fonction ne sera pas exploitable.
 
-After the call, the variable is incremented by the number of bytes read. Therefore, you can reuse that same variable with another BLOB reading command to read another value.
+Après l'exécution de la commande, la variable *offset* est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-## See also 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -74,11 +75,11 @@ After the call, the variable is incremented by the number of bytes read. Therefo
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 555 |
+| Numéro de commande | 555 |
 | Thread safe | yes |
 
 

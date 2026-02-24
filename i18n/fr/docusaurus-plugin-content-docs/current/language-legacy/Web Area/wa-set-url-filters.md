@@ -5,58 +5,57 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA SET URL FILTERS** ( *object* : Variable, Field ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| filtersArr | Text array | &#8594;  | Filters array |
-| allowDenyArr | Boolean array | &#8594;  | Allow-deny array |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabFiltres | Text array | &#8594;  | Tableau de filtres |
+| tabAutorisRefus | Boolean array | &#8594;  | Tableau autoriser-refuser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA SET URL FILTERS.Summary-->The WA SET URL FILTERS command sets up one or more filters for the Web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Summary-->La commande **WA SET URL FILTERS** permet de mettre en place un ou plusieurs filtre(s) pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-Before loading any page requested, 4D consults the list of filters in order to check whether or not the target URL is allowed. The evaluation of the URL is based on the contents of the *filtersArr* and *allowDenyArr* arrays. 
+Avant le chargement de toute page, 4D consulte la liste des filtres afin de vérifier si l’URL cible est autorisé ou non. L’évaluation de l’URL est basée sur le contenu des tableaux *tabFiltres* et *tabAutorisRefus* s'ils ont été définis. 
 
-If the requested URL is not allowed, it is not loaded and the On URL Filtering form event is generated.
+Si l’URL demandé n’est pas autorisé, il n’est pas chargé et l’événement formulaire On URL Filtering est généré (cf. commande [Form event code](../commands/form-event-code.md)). 
 
-The *filtersArr* and *allowDenyArr* arrays must be synchronized. 
+Les tableaux *tabFiltres* et *tabAutorisRefus* doivent être synchronisés. 
 
-* Each element of the *filtersArr* array must contain a URL to be filtered. You can use the *\** as a wildcard to replace one or more characters.
-* Each corresponding element in the *allowDenyArr* array must contain a Boolean indicating whether the URL must be allowed (**True**) or denied (**False**).
+* Chaque ligne du tableau *tabFiltres* doit contenir un URL devant être filtré. Vous pouvez utiliser le \* comme joker de remplacement pour un ou plusieurs caractère(s).
+* Chaque ligne correspondante dans le tableau *tabAutorisRefus* doit contenur un booléen indiquant si l’URL doit être autorisé (Vrai) ou refusé (Faux).
 
-If there is a contradiction at the configuration level (the same URL is both allowed and denied), the last setting is the one taken into account. 
+En cas de contradiction au niveau des paramétrages (autorisation et refus d’un même URL), le paramétrage pris en compte est le dernier. 
 
-To disable URL filtering, call the command and pass empty arrays or pass, respectively, the values "*\**" and **True** in the last elements of the *filtersArr* and *allowDenyArr* arrays.
+Pour désactiver le filtrage des URLs, appelez la commande en lui passant des tableaux vides ou en passant respectivement les valeurs "*\**" et Vrai dans la dernière ligne des tableaux *tabFiltres* et *tabAutorisRefus*. 
 
-Once the command has been executed, the filters become a property of the Web area. If the *filtersArr* and *allowDenyArr* arrays are deleted or reinitialized, the filters remain active as long as the command has not been executed again. To find out the active filters for an area, you must use the [WA GET URL FILTERS](wa-get-url-filters.md) command. 
+Une fois la commande exécutée, les filtres deviennent une propriété de la zone Web. Si les tableaux *tabFiltres* et *tabAutorisRefus* sont supprimés ou réinitialisés, les filtres restent actifs tant que la commande n’a pas été exécutée à nouveau. Pour connaître les filtres actifs pour une zone, vous devez utiliser la commande [WA GET URL FILTERS](wa-get-url-filters.md). 
 
-**Important:** The URL filtering performed by this command applies to any request to change the primary URL of the page, whether from the user, javascript code or 4D code, except for the [WA OPEN URL](wa-open-url.md) command and URLs starting with "javascript:".
+**Important :** Le filtrage des URLs effectué par cette commande s’applique à toute demande de changement de l'URL principal de la page, qu'elle provienne de l'utilisateur, du code javascript ou du code 4D, à l'exception de la commande [WA OPEN URL](wa-open-url.md) et des URLs commençant par "javascript:".
 
-## Example 1 
+## Exemple 1 
 
-You want to deny access for all the .org, .net and .fr Web sites:
+Vous souhaitez interdire l’accès à tous les sites web .org, .net et .fr :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
  APPEND TO ARRAY($filters;"*.org")
  APPEND TO ARRAY($AllowDeny;False)
  APPEND TO ARRAY($filters;"*.net")
@@ -66,95 +65,89 @@ You want to deny access for all the .org, .net and .fr Web sites:
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to deny access for all Web sites except Russian ones (.ru):
+Vous souhaitez interdire l’accès à tous les sites web sauf les sites russes (.ru) :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
- APPEND TO ARRAY($filters;"*") //Select all
- APPEND TO ARRAY($AllowDeny;False) //Deny all
- APPEND TO ARRAY($filters;"www.*.ru") //Select *.ru
- APPEND TO ARRAY($AllowDeny;True) //Allow
+ APPEND TO ARRAY($filters;"*") //Tout sélectionner
+ APPEND TO ARRAY($AllowDeny;False) //Tout interdire
+ APPEND TO ARRAY($filters;"www.*.ru") //Sélectionner *.ru
+ APPEND TO ARRAY($AllowDeny;True) //Autoriser
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to allow access only to 4D Web sites (.com, .fr, .es, etc.):
+Vous souhaitez donner accès aux sites Web 4D uniquement (.com, .fr, .es, etc.) :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
- APPEND TO ARRAY($filters;"*") //Select all
- APPEND TO ARRAY($AllowDeny;False) //Deny all
- APPEND TO ARRAY($filters;"www.4D.*") //Select 4d.fr, 4d.com...
- APPEND TO ARRAY($AllowDeny;True) //Allow
+ APPEND TO ARRAY($filters;"*") //Tout sélectionner
+ APPEND TO ARRAY($AllowDeny;False) //Tout interdire
+ APPEND TO ARRAY($filters;"www.4D.*") //Sélectionner 4d.fr, 4d.com...
+ APPEND TO ARRAY($AllowDeny;True) //Autoriser
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-## Example 4 
+## Exemple 4 
 
-You want to allow local access to the documentation only (found in the folder C://doc):
+Vous souhaitez autoriser l’accès local à la documentation uniquement (située dans le dossier C://doc) :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
- APPEND TO ARRAY($filters;"*") //Select all
- APPEND TO ARRAY($AllowDeny;False) //Deny all
- APPEND TO ARRAY($filters;"file://C:/doc/*")
-  //Select the path file:// allowed
- APPEND TO ARRAY($AllowDeny;True) //Allow
+ APPEND TO ARRAY($filters;"*") //Tout sélectionner
+ APPEND TO ARRAY($AllowDeny;False) //Tout interdire
+ APPEND TO ARRAY($filters;"file://C:/doc/*") //Sélectionner le chemin file:// autorisé
+ APPEND TO ARRAY($AllowDeny;True)->Autoriser
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-## Example 5 
+## Exemple 5 
 
-You want to allow access for all sites except one, for example the Elcaro site:
+Vous souhaitez autoriser tous les sites sauf un, par exemple celui d’Elcaro :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
  APPEND TO ARRAY($filters;"*")
- APPEND TO ARRAY($AllowDeny;True) //Allow all
- APPEND TO ARRAY($filters;"*elcaro*") //Deny all that contain elcaro
+ APPEND TO ARRAY($AllowDeny;True) //Tout autoriser
+ APPEND TO ARRAY($filters;"*elcaro*") //Interdire tout ce qui contient elcaro
  APPEND TO ARRAY($AllowDeny;False)
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
 ```
 
-## Example 6 
+## Exemple 6 
 
-You want to deny access to specific IP addresses:
+Vous souhaitez interdire des adresses IP spécifiques :
 
 ```4d
  ARRAY TEXT($filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- 
- APPEND TO ARRAY($filters;"*") //Select all
- APPEND TO ARRAY($AllowDeny;True) //Allow all
- APPEND TO ARRAY($filters;86.83.*")  //Select IP addresses beginning with 86.83.
- APPEND TO ARRAY($AllowDeny;False) //Deny
- APPEND TO ARRAY($filters;86.1*")  //Select IP addresses beginning with 86.1 (86.10, 86.135 etc.)
- APPEND TO ARRAY($AllowDeny;False) //Deny
+ APPEND TO ARRAY($filters;"*") //Tout sélectionner
+ APPEND TO ARRAY($AllowDeny;True) //Tout autoriser
+ APPEND TO ARRAY($filters;"86.83.*") //Sélectionner les IP débutant par 86.83.
+ APPEND TO ARRAY($AllowDeny;False) //Interdire
+ APPEND TO ARRAY($filters;"86.1*") //Sélectionner les IP débutant par 86.1 (86.10, 86.135 etc.)
+ APPEND TO ARRAY($AllowDeny;False) //Interdire
+  //A noter que l’adresse IP d’un domaine peut varier
  WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
-  //(Note that the IP address of a domain may vary).
 ```
 
-## See also 
+## Voir aussi 
 
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1030 |
+| Numéro de commande | 1030 |
 | Thread safe | no |
 
 

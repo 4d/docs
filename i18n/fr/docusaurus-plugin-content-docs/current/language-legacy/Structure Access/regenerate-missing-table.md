@@ -5,78 +5,78 @@ slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* : Text )<!-- END REF-->
+<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *nomTable* )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableName | Text | &#8594;  | Name of missing table to be regenerated |
+| nomTable | Text | &#8594;  | Nom de table manquante à regénérer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Summary-->The **REGENERATE MISSING TABLE** command rebuilds the missing table whose name is passed in the *tableName* parameter.<!-- END REF--> When a missing table is rebuilt, it becomes visible in the Structure editor and its data can once again be accessed.
+<!--REF #_command_.REGENERATE MISSING TABLE.Summary-->La commande **REGENERATE MISSING TABLE** reconstruit la table manquante dont vous avez passé le nom dans le paramètre *nomTable*.<!-- END REF--> Lorsqu’une table manquante est reconstruite, elle devient visible dans l’éditeur de Structure et ses données sont de nouveau accessibles.
 
-Missing tables are tables whose data are present in the data file but that do not exist at the structure level. You can identify any missing tables that may be present in the application by using the [GET MISSING TABLE NAMES](get-missing-table-names.md) command.
+Les tables manquantes sont des tables dont les données sont présentes dans le fichier de données mais qui n’existent pas au niveau de la structure. Vous pouvez identifier les tables manquantes éventuellement présentes dans l’application à l’aide de la commande [GET MISSING TABLE NAMES](get-missing-table-names.md). 
 
-If the table designated by the *tableName* parameter is not a missing table of the database, the command does nothing. 
+Si la table désignée par le paramètre *nomTable* n’est pas une table manquante de la base, la commande ne fait rien. 
 
-## Example 
+## Exemple 
 
-This method regenerates all the missing tables that may be present in the database:
+Cette méthode regénère toutes les tables manquantes éventuellement présentes dans la base :
 
 ```4d
- ARRAY TEXT($arrMissingTables;0)
- GET MISSING TABLE NAMES($arrMissingTables)
- $SizeArray:=Size of array($arrMissingTables)
+ ARRAY TEXT($tMissingTables;0)
+ GET MISSING TABLE NAMES($tMissingTables)
+ $SizeArray:=Size of array($tMissingTables)
  If($SizeArray#0)
-  // Fills the array with the names of all the tables in the database
-    ARRAY TEXT(arrTables;Last table number)
-    If(Last table number>0) //If there are actually tables
-       For($vlTables;Size of array(arrTables);1;-1)
+  // Remplir le tableau avec les noms de toutes les tables de la base
+    ARRAY TEXT(tabTables;Lire numero derniere table)
+    If(Last table number>0)    //S’il y a bien des tables
+       For($vlTables;Size of array(tabTables);1;-1)
           If(Is table number valid($vlTables))
-             arrTables{$vlTables}:=Table name($vlTables)
+             tabTables{$vlTables}:=Table name($vlTables)
           Else
-             DELETE FROM ARRAY(arrTables;$vlTables)
+             DELETE FROM ARRAY(tabTables;$vlTables)
           End if
        End for
     End if
     For($i;1;$SizeArray)
-       If(Find in array(arrTables;$arrMissingTables{$i})=-1)
-          CONFIRM("Regenerate the table"+$arrMissingTables{$i}+"?")
+       If(Find in array(tabTables;$tMissingTables{$i})=-1)
+          CONFIRM("Regénérer la table"+$tMissingTables{$i}+" ?")
           If(OK=1)
-             REGENERATE MISSING TABLE($arrMissingTables{$i})
+             REGENERATE MISSING TABLE($tMissingTables{$i})
           End if
        Else
-          ALERT("Impossible to regenerate table "+$arrMissingTables{$i}+" because there is already a table with this name in the database.")
+          ALERT("Impossible de régénérer la table "+$tMissingTables{$i}+" car il y a déjà une table de ce nom dans la base.")
        End if
     End for
  Else
-    ALERT("No tables to regenerate.")
+    ALERT("Pas de tables à regénérer.")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [GET MISSING TABLE NAMES](get-missing-table-names.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1126 |
+| Numéro de commande | 1126 |
 | Thread safe | no |
 
 

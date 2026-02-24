@@ -9,30 +9,29 @@ displayed_sidebar: docs
 <!--REF #_command_.After.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns True if the execution cycle is an after |
+| Résultat | Boolean | &#8592; | Retourne Vrai si le cycle d'exécution est après |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.After.Summary-->**After** returns True for the After execution cycle.<!-- END REF-->
+<!--REF #_command_.After.Summary-->**After** retourne Vrai pour le cycle d'exécution Après.<!-- END REF-->
 
-In order for the **After** execution cycle to be generated, make sure that the On Validate event property for the form and/or the objects has been selected in the Design environment.
+Si vous souhaitez que la phase **After** du cycle d'exécution soit générée, assurez-vous que l'événement On Validate a bien été sélectionné, en mode Développement, dans les propriétés du formulaire et/ou des objets concernés.
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Validate event.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Validate.
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 31 |
+| Numéro de commande | 31 |
 | Thread safe | no |
-
 
 

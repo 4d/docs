@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Get print preview.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True = Print preview, False = No print preview |
+| Résultat | Boolean | &#8592; | Vrai = Impression à l’écran, Faux = Pas d’impression écran |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get print preview.Summary-->The **Get print preview** command returns True if the [SET PRINT PREVIEW](set-print-preview.md) command was called with the **True** value in the current process.<!-- END REF-->
+<!--REF #_command_.Get print preview.Summary-->La commande **Get print preview** retourne Vrai si l’instruction [SET PRINT PREVIEW](set-print-preview.md) a été appelée avec la valeur **Vrai** dans le process courant.<!-- END REF-->
 
-Note that the user can modify this option before validating the dialog box. To get the final printing mode, you must use the [Is in print preview](is-in-print-preview.md) command. 
+A noter que l’utilisateur peut modifier cette option avant de valider la boîte de dialogue. Pour obtenir le mode final d’impression, vous devez utiliser la commande [Is in print preview](is-in-print-preview.md). 
 
-## See also 
+## Voir aussi 
 
 [Is in print preview](is-in-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1197 |
+| Numéro de commande | 1197 |
 | Thread safe | no |
 
 

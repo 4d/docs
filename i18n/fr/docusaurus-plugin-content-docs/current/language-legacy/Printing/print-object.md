@@ -5,87 +5,87 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Variable, Field {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable |
-| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| posX | Integer | &#8594;  | Horizontal location of object |
-| posY | Integer | &#8594;  | Vertical location of object |
-| width | Integer | &#8594;  | Width of object (pixels) |
-| height | Integer | &#8594;  | Height of object (pixels) |
-| Function result | Boolean | &#8592; | True = object entirely printed; otherwise False |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| posX | Integer | &#8594;  | Emplacement horizontal de l'objet |
+| posY | Integer | &#8594;  | Emplacement vertical de l'objet |
+| largeur | Integer | &#8594;  | Largeur de l'objet (pixels) |
+| hauteur | Integer | &#8594;  | Hauteur de l'objet (pixels) |
+| Résultat | Boolean | &#8592; | Vrai = objet entièrement imprimé, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Print object.Summary-->The **Print object** command lets you print the form object(s) designated by the *object* and *\** parameters, at the location set by the *posX* and *posY* parameters.<!-- END REF-->
+<!--REF #_command_.Print object.Summary-->La commande **Print object** vous permet d’imprimer le ou les objet(s) de formulaire désigné(s) par les paramètres *objet* et *\**, à l’emplacement défini par les paramètres *posX* et *posY*.<!-- END REF-->
 
-Before calling the **Print object** command, you must designate the table or project form containing the objects to be printed, using the [FORM LOAD](./commands/form-load) command. 
+Avant d’appeler la commande **Print object**, vous devez désigner le formulaire table ou projet contenant les objets à imprimer, à l’aide de la commande [FORM LOAD](../commands/form-load.md). 
 
-If you pass the optional *\** parameter, you indicate that the object parameter is an object name (character string). If you do not pass the *\** parameter, you indicate that object is a variable. In this case, you pass a variable reference (object type only) instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne de caractères). Si vous ne passez pas le paramètre *\**, vous indiquez que *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable (de type objet uniquement).
 
-The *posX* and *posY* parameters specify the starting point for printing the object(s). These values must be expressed in pixels. If these parameters are omitted, the object will be printed according to its location in the form. 
+Les paramètres *posX* et *posY* définissent le point de départ de l’impression du ou des objet(s). Ces valeurs doivent être exprimées en pixels. Si ces paramètres sont omis, l’objet sera imprimé en fonction de son emplacement dans le formulaire. 
 
-The *width* and *height* parameters are used to specify the width and height of the form object. The **Print object** command does not manage objects of variable size. You must use the [OBJECT GET BEST SIZE](object-get-best-size.md) command to manage the size of objects. You can also use the [OBJECT GET BEST SIZE](object-get-best-size.md) command to find out the most appropriate size for objects containing text. Similarly, **Print object** will not cause automatic page breaks. You must manage them according to your needs. 
+Les paramètres *largeur* et *hauteur* vous permettent de définir la largeur et la hauteur de l’objet de formulaire. La commande **Print object** ne gère pas les objets de taille variable. Vous devez utiliser la commande [OBJECT GET BEST SIZE](object-get-best-size.md) pour prendre en charge la taille des objets. Vous pouvez également utiliser la commande [OBJECT GET BEST SIZE](object-get-best-size.md) pour connaître la taille la plus adéquate pour les objets contenant du texte. De même, **Print object** ne provoque pas de sauts de page automatiques. Vous devez les gérer en fonction de vos besoins. 
 
-You can use 4D commands to modify object properties (color, size, etc.) on the fly.
+Vous pouvez utiliser les commandes de 4D pour modifier à la volée les propriétés des objets (couleur, taille...).
 
-The command returns True if the object has been completely printed and False if this is not the case; in other words, if it was not able to print all the data associated with the object within the set framework. Typically, the command returns False when printing a list box if all the rows of the list box could not be printed. In this case, you can simply call the **Print object** command repeatedly until it returns True: a specific mechanism automatically causes the contents of the object to scroll after each call. If the user cancels the printing operation, a -128 error is generated, that you can intercept using [ON ERR CALL](on-err-call.md).
+La commande retourne Vrai si l’objet a été imprimé entièrement et Faux dans le cas contraire, c’est-à-dire si l’intégralité des données associées à l’objet n’a pas pu être imprimée dans le cadre imposé. Typiquement, la commande retourne Faux lors de l’impression d’une list box, si toutes les lignes de la list box n’ont pas pu être imprimées. Dans ce cas, il suffit d’appeler la commande **Print object** de façon répétée, jusqu’à ce qu’elle retourne Vrai : un mécanisme spécifique provoque automatiquement le défilement du contenu de l’objet après chaque appel. Si l'utilisateur annule l'impression, une erreur -128 est générée et peut être interceptée à l'aide de [ON ERR CALL](on-err-call.md).
 
-**Notes:**  
+**Notes :**  
 
-* In the current version of 4D, only list box type objects have this mechanism (the command always returns True for any other type of object).
-* The [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) command lets you check the status of the printing during the operation.
+* Dans la version actuelle de 4D, seuls les objets de type list box bénéficient de ce mécanisme (la commande retourne toujours Vrai pour tous les autres types d’objets).
+* La commande [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) permet de contrôler le statut de l’impression durant l’opération.
 
-The **Print object** command can only be used in the context of a print job opened beforehand with the [OPEN PRINTING JOB](open-printing-job.md) command. If it is not called in this context, the command does nothing. Several Print object commands can be called in the same print job. 
+La commande **Print object** peut être utilisée uniquement dans le contexte d’une tâche d’impression préalablement ouverte avec la commande [OPEN PRINTING JOB](open-printing-job.md). Si elle n’est pas appelée dans ce contexte, la commande ne fait rien. Plusieurs commandes **Print object** peuvent être appelées dans la même tâche d’impression. 
 
-**Note:** Hierarchical lists, subforms and Web areas cannot be printed.
+**Note :** Les listes hiérarchiques, les sous-formulaires et les zones Web ne sont pas imprimables.
 
-## Example 1 
+## Exemple 1 
 
-Example for printing ten objects in a form:
+Exemple d’impression de dix objets dans un formulaire :
 
 ```4d
  PRINT SETTINGS
  If(OK=1)
-    OPEN PRINTING JOB
-    If(OK=1)
-       FORM LOAD("PrintForm")
-       x:=100
-       y:=50
-       GET PRINTABLE AREA(hpaper;wpaper)
-       For($i;1;10)
-          OBJECT GET BEST SIZE(*;"Obj"+String($i);bestwidth;bestheight)
-          $end:=Print object(*;"Obj"+String($i))
-          y:=y+bestheight+15
-          If(y>hpaper)
-             PAGE BREAK(>)
-             y:=50
-          End if
-       End for
-    End if
-    CLOSE PRINTING JOB
+       OPEN PRINTING JOB
+       If(OK=1)
+          FORM LOAD("PrintForm")
+          x:=100
+          y:=50
+          GET PRINTABLE AREA(hpaper;wpaper)
+          For($i;1;10)
+             OBJECT GET BEST SIZE(*;"Obj"+String($i);bestwidth;bestheight)
+             $fin:=Print object(*;"Obj"+String($i))
+             y:=y+bestheight+15
+             If(y>hpaper)
+                PAGE BREAK(>)
+                y:=50
+             End if
+          End for
+       End if
+       CLOSE PRINTING JOB
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Example of printing a complete list box:
+Exemple d’impression d’une list box complète :
 
 ```4d
  OPEN PRINTING JOB
@@ -97,7 +97,7 @@ Example of printing a complete list box:
     $Total:=Print object(*;"List_Box")
     LISTBOX GET PRINT INFORMATION(*;"List_Box";lk printing is over;$Over)
     PAGE BREAK
-    If(gError=-128) //the user has cancelled the operation
+    If(gError=-128) //l'utilisateur a annulé l'opération
        $Over:=True
     End if
  Until($Over)
@@ -105,16 +105,15 @@ Example of printing a complete list box:
  ON ERR CALL("")
 ```
 
-## See also 
+## Voir aussi 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1095 |
+| Numéro de commande | 1095 |
 | Thread safe | no |
-
 
 

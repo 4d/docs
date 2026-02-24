@@ -5,96 +5,96 @@ slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *fileName* : Text {; *charSet* : Text, Integer {; *breakMode* : Integer}} ) : Text<!-- END REF-->
+<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomFichier* {; *jeuCaractères* {; *modeRetour*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | Document name or Pathname to document |
-| charSet | Text, Integer | &#8594;  | Name or Number of character set |
-| breakMode | Integer | &#8594;  | Processing mode for line breaks |
-| Function result | Text | &#8592; | Text from the document |
+| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès à un document |
+| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro de jeu de caractères |
+| modeRetour | Integer | &#8594;  | Mode de traitement des retours à la ligne |
+| Résultat | Text | &#8592; | Texte issu du document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Document to text.Summary-->The **Document to text** command lets you retrieve the contents of a file directly on disk in a 4D text variable or text field.<!-- END REF-->
+<!--REF #_command_.Document to text.Summary-->La commande **Document to text** permet de récupérer directement le contenu d’un fichier sur disque dans une variable texte ou un champ texte 4D.<!-- END REF-->
 
-In *fileName*, pass the name or pathname of the file to be read. The file must exist on the disk, otherwise an error is generated. You can pass:
+Passez dans *nomFichier* le nom ou le chemin d’accès du fichier à lire. Le fichier doit exister sur le disque, sinon une erreur est générée. Vous pouvez passer :
 
-* just the file name, for example "myFile.txt": in this case, the file must be located next to the structure file of the application.
-* a pathname relative to the structure file of the application, for example "\\\\docs\\\\myFile.txt" under Windows or "/docs/myFile.txt" under macOS.
-* an absolute pathname, for example "c:\\\\app\\\\docs\\\\myFile.txt" under Windows or "MacHD/docs/myFile.txt" under macOS.
+* uniquement le nom du fichier, par exemple "monFichier.txt" : dans ce cas, le fichier doit se trouver à côté du fichier de structure de l’application.
+* un chemin d’accès relatif au fichier de structure de l’application, par exemple "\\\\docs\\\\monFichier.txt" sous Windows ou "/docs/monFichier.txt" sous macOS.
+* un chemin d’accès absolu, par exemple "c:\\\\app\\\\docs\\\\monFichier.txt" sous Windows ou "MacHD/docs/monFichier.txt" sous macOS.
 
-In *charSet*, you pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the [CONVERT FROM TEXT](convert-from-text.md) command.
+Vous pouvez passer dans *jeuCaractères* le jeu de caractères à utiliser pour la lecture. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum (entier long). Pour plus d’informations sur la liste des jeux de caractères pris en charge par 4D, reportez-vous à la description de la commande [CONVERT FROM TEXT](convert-from-text.md).
 
-If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSet* (this parameter is then ignored). 
+Si le document contient une BOM (Byte Order Mark), 4D utilise le jeu de caractères qu’elle définit au lieu du jeu de caractères spécifié dans *jeuCaractères* (ce paramètre est alors ignoré). 
 
-If the document does not contain a BOM and if the *charSet* parameter is omitted, by default 4D uses the following character sets:
+Si le document ne contient pas de BOM et si le paramètre *jeuCaractères* est omis, 4D utilise par défaut les jeux de caractères suivants :
 
-* under Windows: ANSI
-* under macOS: MacRoman
+* sous Windows : ANSI
+* sous macOS : MacRoman
 
-In *breakMode*, you can pass a longint indicating the processing to apply to end-of-line characters in the document. You can pass one of the following constants, found in the "*System Documents*" theme:
+Vous pouvez passer dans *modeRetour* un entier long indiquant le traitement à effectuer sur les caractères de fin de ligne présents dans le document. Vous pouvez utiliser une des constantes suivantes, placées dans le thème "*Documents système*" :
 
-| Constant                    | Type    | Value | Comment                                                                                                                                                        |
-| --------------------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Document unchanged          | Integer | 0     | No processing                                                                                                                                                  |
-| Document with CR            | Integer | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format.                                                                          |
-| Document with CRLF          | Integer | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format.                                                                   |
-| Document with LF            | Integer | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format.                                                                                |
-| Document with native format | Integer | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| Constante                   | Type        | Valeur | Comment                                                                                                                                                                   |
+| --------------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Document unchanged          | Entier long | 0      | Aucun traitement                                                                                                                                                          |
+| Document with CR            | Entier long | 3      | Les sauts de ligne sont convertis en CR (*carriage return*), le format Classic Mac OS par défaut.                                                                         |
+| Document with CRLF          | Entier long | 2      | Les sauts de ligne sont convertis en CRLF (*carriage return + line feed*), au format Windows par défaut.                                                                  |
+| Document with LF            | Entier long | 4      | Les sauts de ligne sont convertis en LF (*line feed*), le format Unix et macOS par défaut.                                                                                |
+| Document with native format | Entier long | 1      | (Défaut) Les sauts de ligne sont convertis au format natif de la plate-forme d’exécution : LF *(line feed)* sous macOS, CRLF (*carriage return + line feed*) sous Windows |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Par défaut, si le paramètre *modeRetour* est omis, les caractères de fin de ligne sont traités en mode natif (1).
 
-**Compatibility Note**: compatibility options are available for EOL and BOM management. See *Compatibility page*.
+**Note de compatibilité** : Les options de compatibilité sont disponibles pour gérer EOL et BOM. Voir la *Page Compatibilité*.
 
-**Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command.
+**Note :** Cette commande ne modifie pas la variable OK. En cas d’échec, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode installées par la commande [ON ERR CALL](on-err-call.md).
 
-## Example 
+## Exemple 
 
-Given the following text document (fields are separated by tabs):
+Soit le document texte suivant (les champs sont séparés par des tabulations) :
 
 ```RAW
-id    name    price    vat3    4D Tags    99    19.6
+id    name    price    vat3    4D Tags    99    19,6
 ```
 
-When you execute this code:
+Si vous exécutez ce code :
 
 ```4d
  $Text:=Document to text("products.txt")
 ```
 
-... you get:
+... vous obtenez :
 
 ```4d
-  // $Text = "id\tname\tprice\tvat\r\n3\t4D Tags\t99 \t19.6"
-  // \t = tab
+  // $Text = "id\tname\tprice\tvat\r\n3\t4D Tags\t99 \t19,6"
+  // \t = tabulation
   // \r = CR
 ```
 
-## See also 
+## Voir aussi 
 
-*System Documents*  
+*Documents système*  
 [TEXT TO DOCUMENT](text-to-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1236 |
+| Numéro de commande | 1236 |
 | Thread safe | yes |
 
 

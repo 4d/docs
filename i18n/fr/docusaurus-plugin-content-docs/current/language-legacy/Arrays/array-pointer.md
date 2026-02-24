@@ -5,64 +5,64 @@ slug: /commands/array-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY POINTER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of the array |
-| size | Integer | &#8594;  | Number of elements in the array, or Number of rows if size2 is specified |
-| size2 | Integer | &#8594;  | Number of columns in a two-dimensional array |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.ARRAY POINTER.Summary-->The **ARRAY POINTER** command creates or resizes an array of [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") elements in memory.<!-- END REF-->parameter is the name of the array.
-* The *size* parameter is the number of elements in the array.
-* The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the firt dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
+<!--REF #_command_.ARRAY POINTER.Summary-->La commande **ARRAY POINTER** crée ou redimensionne un tableau d'éléments de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") en mémoire.<!-- END REF-->est le nom du tableau.
+* Le paramètre *taille* est le nombre d'éléments du tableau.
+* Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
-While applying **ARRAY POINTER** to an existing array:
+Lorsque vous appliquez la commande **ARRAY POINTER** à un tableau existant :
 
-* If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to null *pointer*. This means that [Is nil pointer](is-nil-pointer.md) applied to one of these elements will return True.
-* If you reduce the array size, the last elements deleted from the array are lost.
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un pointeur nul (ce qui signifie que la fonction [Is nil pointer](is-nil-pointer.md) appliquée à l'un de ces éléments retourne Vrai).
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-## Example 1 
+## Exemple 1 
 
-This example creates a process array of 100 [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") elements:
+Cet exemple crée un tableau process contenant 100 éléments de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") :
 
 ```4d
- ARRAY POINTER(apValues;100)
+ ARRAY POINTER(tabPointeurs;100)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example creates a local array of 100 rows of 50 [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") elements:
+Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") : 
 
 ```4d
- ARRAY POINTER($apValues;100;50)
+ ARRAY POINTER($tabPointeurs;100;50)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example creates an interprocess array of [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") elements and sets each element pointing to the table whose number is the same as the element. The size of the array is equal to the number of tables in the database. In the case of a deleted table, the row will return [Is nil pointer](is-nil-pointer.md).
+Cet exemple crée un tableau interprocess d'éléments de type [Pointeur](# "A reference to another variable (including arrays and array elements), table, or field") dont la taille est égale au nombre de tables dans la base et remplit chaque élément pointant vers la table dont le numéro est le même que celui de l'élément. Dans la cas d'une table supprimée, la ligne retournera Nil.
 
 ```4d
- ARRAY POINTER(◊apValues;Last table number)
- For($vlElem;1;Size of array(◊apValues);1;-1)
-    If(Is table number valid($vlElem))
-       ◊apValues{$vlElem}:=Table($vlElem)
+ ARRAY POINTER(<>tabPointeurs;Lire numero derniere table)
+ For($vElem;Size of array(<>tabPointeurs);1;-1)
+    If(Is table number valid($vElem))
+       <>tabPointeurs{$vElem}:=Table($vElem)
     End if
  End for
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 280 |
+| Numéro de commande | 280 |
 | Thread safe | yes |
 
 

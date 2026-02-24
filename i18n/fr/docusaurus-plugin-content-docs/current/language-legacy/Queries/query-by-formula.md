@@ -5,100 +5,102 @@ slug: /commands/query-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
+<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *laTable* {; *formule*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records |
-| queryFormula | Boolean | &#8594;  | Query formula |
+| laTable | Table | &#8594;  | Table dans laquelle effectuer la recherche |
+| formule | Boolean | &#8594;  | Formule de recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** looks for records in *aTable*.<!-- END REF--> It changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
+<!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA** effectue une recherche d'enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
-**QUERY BY FORMULA** and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) work exactly the same way, except that **QUERY BY FORMULA** queries every record in the entire table and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) queries only the records in the current selection.
+**QUERY BY FORMULA** et la commande [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) fonctionnent exactement de la même manière, à la différence près que **QUERY BY FORMULA** effectue sa recherche parmi la totalité des enregistrements de la table alors que [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) se cantonne aux enregistrements de la sélection courante.
 
-Both commands apply *queryFormula* to each record in the table or selection. The *queryFormula* is a Boolean expression that must evaluate to either TRUE or FALSE. If *queryFormula* evaluates as TRUE, the record is included in the new selection.
+Les deux commandes appliquent *formule* à chaque enregistrement de la table ou de la sélection. *formule* est une expression booléenne qui doit retourner **VRAI** ou **FAUX**. Si *formule* retourne **Vrai**, l'enregistrement est inclus dans la nouvelle sélection.
 
-The *queryFormula* may be simple, perhaps comparing a field to a value; or it may be complex, perhaps performing a calculation or even evaluating information in a related table. The *queryFormula* can be a 4D function (command), or a function (method) or expression you have created. You can use wildcards (@) in *queryFormula* when working with Alpha or text fields as well as the "contains" (%) operator for keyword queries. For more information, please refer to the description of the [QUERY](query.md) command.
+*formule* peut être simple (par exemple la comparaison d'un champ à une valeur) ou complexe (réalisation d'un calcul ou même évaluation de valeurs dans une table liée). Ce peut être une fonction 4D, ou une fonction ou une expression que vous avez créée. Lorsque vous travaillez avec des champs de type Alpha ou Texte, vous pouvez utiliser dans *formule* des jokers (@) ainsi que l'opérateur "contient" (%) pour la recherche par mots-clés. Pour plus d'informations, reportez-vous à la description de la commande [QUERY](query.md).
 
-**Warning:** Parameters ($1...$n) are not supported in the *queryFormula*. 
+**Attention :** Les paramètres ($1...$n) ne sont pas pris en charge par formule. 
 
-If *queryFormula* is omitted, 4D displays the query dialog box (the user can add a line of formula by **Alt+clicking** on the **\[+\]** button).
+Si vous omettez le paramètre *formule*, 4D affiche la boîte de dialogue de recherche (l'utilisateur peut ajouter une ligne de formule en effectuant **Alt+clic** sur le bouton **\[+\]**).
 
-When the query is complete, the first record of the new selection is loaded from disk and made the current record.
+Lorsque la recherche est terminée, le premier enregistrement de la nouvelle sélection est chargé depuis le disque et devient l'enregistrement courant.
 
-These commands are optimized and can more particularly take advantage of indexes. When the type of query allows it, these commands execute queries equivalent to the [QUERY](query.md) command. For example, the statement **QUERY BY FORMULA**(\[mytable\]; \[mytable\]myfield=value) will be executed just like [QUERY](query.md)(\[mytable\]; \[mytable\]myfield=value), which will allow the use of indexes. 4D can also optimize queries containing parts that cannot be optimized, by first executing the optimized parts and then combining the results with the rest of the query. For example, the statement **QUERY BY FORMULA**\[mytable\];Length(myfield)=value) will not be optimized. On the other hand, **QUERY BY FORMULA**(\[mytable\];Length(myfield)=value1 | myfield=value2) will be partially optimized.
+Ces commandes sont optimisées et peuvent notamment tirer parti des index. Lorsque le type de requête le permet, ces commandes exécutent des requêtes équivalentes à un [QUERY](query.md). Par exemple, l’instruction **QUERY BY FORMULA(\[matable\]; \[matable\]monchamp=valeur)** sera exécutée comme [QUERY](query.md)**(\[matable\]; \[matable\]monchamp=valeur)**, ce qui permettra d’utiliser l’index. 4D pourra également optimiser les requêtes contenant des parties non optimisables, en exécutant d’abord les parties optimisables puis en combinant les résultats avec le reste de la requête. Par exemple, l’instruction **QUERY BY FORMULA(\[matable\];Longueur(monchamp)=valeur)** ne sera pas optimisée. En revanche, **QUERY BY FORMULA(\[matable\];Longueur(monchamp)=valeur1 | monchamp=valeur2)** sera partiellement optimisée.
 
-These commands carry out "joins" like SQL when you compare fields from different tables. This means that it is not necessary for a structural automatic relation to exist between the tables. For example, you can execute a statement of the type **QUERY BY FORMULA(\[Table\_A\];(\[Table\_A\]field\_X = \[Table\_B\]field\_Y) & (\[Table\_B\]field\_Y = "abc"))** (see example 3). The first part of the formula (*\[Table\_A\]field\_X = \[Table\_B\]field\_Y*) establishes the join between the two fields and the second part (*\[Table\_B\]field\_Y = "abc"*) defines the search criteria. The following rules apply:
+Ces commandes effectuent des "jointures" à la manière du SQL lorsque vous comparez des champs de tables différentes. Avec ce principe, les recherches sont optimisées et il n’est pas nécessaire qu’un lien automatique structurel existe entre les tables. Par exemple, vous pouvez exécuter une instruction du type **QUERY BY FORMULA(\[Table\_A\];(\[Table\_A\]champ\_X = \[Table\_B\]champ\_Y) & (\[Table\_B\]champ\_Y = "abc"))** (cf. exemple 3). La première partie de la formule (*\[Table\_A\]champ\_X = \[Table\_B\]champ\_Y*) établit la jointure entre les deux champs et la seconde partie (*\[Table\_B\]champ\_Y = "abc"*) définit le ou les critère(s) de recherche. Les règles suivantes s'appliquent : 
 
-* at least one search criterion must be set.
-* the *queryFormula* cannot contain more than one field comparison on the same table.
+* au moins un critère de recherche doit être défini
+* *formule* ne peut pas contenir plus d'une comparaison de champ d'une même table.
 
-If they exist, the relations between the tables are not used as a rule. However, these commands will use automatic relations in the following cases:
+S'ils existent, les liens entre les tables ne sont en principe pas utilisés. Toutefois, ces commandes utilisent les liens automatiques dans les cas suivants :
 
-> \- If the formula cannot be broken down into elements of the *{ field ; comparator ; value}* form  
-> \- If two fields of the same table are compared.
+\- si la formule ne peut se décomposer en éléments de la forme *{ champ ; comparateur ; valeur}*  
+\- si deux champs de la même table sont comparés.
 
-> **Compatibility note** **:** For compatibility reasons with databases converted from versions older than v11, it is possible to disable the joins mechanism using a selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+**Note de compatibilité :** Pour des raisons de compatibilité avec des bases converties à partir de versions antérieures à la v11, il est possible de désactiver le mécanisme de jointures via la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 
-**4D Server:** This command is executed on the server, which optimizes its execution. Note that when variables are called directly in *queryFormula*, the query is calculated with the value of the variables on the client machine. For example, the statement **QUERY BY FORMULA**(\[mytable\];\[mytable\]myfield=myvariable) will be executed on the server but with the contents of the client machine's myvariable.
+**4D Server :** Cette commande est exécutée sur le serveur, ce qui optimise son exécution. A noter qu’en cas d’appel direct de variables dans la *formule*, la requête est calculée avec la valeur de la variable sur le poste client. Par exemple, l’instruction **QUERY BY FORMULA(\[matable\];\[matable\]monchamp=mavariable)** sera exécutée sur le serveur mais avec le contenu de la variable *mavariable* du client. 
 
-> **Compatibility note:** Until 4D Server v11, this command was executed on the client machine. For reverse compatibility, this behavior is maintained in converted databases. However, a compatibility property or a selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command enables server-side execution in converted databases.
+**Note de compatibilité :** Jusqu'à 4D Server v11, cette commande était exécutée sur le poste client. Par compatibilité, ce fonctionnement est maintenu dans les bases de données converties. Toutefois, une propriété de compatibilité et un sélecteur de la commande [SET DATABASE PARAMETER](set-database-parameter.md) permettent d'adopter l'exécution sur serveur dans les bases de données converties.
 
-## Example 1 
+## Exemple 1 
 
-This example finds the records for all invoices that were entered in December of any year. It does this by applying the [Month of](month-of.md) function to each record. This query could not be performed any other way without creating a separate field for the month:
-
-```4d
- QUERY BY FORMULA([Invoice];Month of([Invoice]Entered)=12) // Find the invoices entered in December
-```
-
-## Example 2 
-
-This example finds records for all the people who have names with more than ten characters:
+L'exemple suivant recherche les enregistrements de toutes les factures qui ont été saisies au mois de décembre, sans tenir compte de l'année. Le principe est d'appliquer la fonction [Month of](month-of.md) à chaque enregistrement. Cette recherche ne pourrait pas être effectuée d'une autre manière sans créer un champ séparé pour le mois :
 
 ```4d
- QUERY BY FORMULA([People];Length([People]Name)>10) // Find names longer than ten characters
+ QUERY BY FORMULA([Factures];Month of([Factures]Saisie)=12)
+  // Chercher les factures saisies en décembre
 ```
 
-## Example 3 
+## Exemple 2 
 
-This example uses a join to query all the lines of "ACME" client invoices even though the tables are not related:
+L'exemple suivant recherche les enregistrements de toutes les personnes dont le nom comporte plus de dix caractères :
 
 ```4d
- QUERY BY FORMULA([invoice_line];([invoice_line]invoice_id=[invoice]id&[invoice]client="ACME"))
+ QUERY BY FORMULA([Personnes];Length([Personnes]Nom)>10)
+  // Chercher les personnes dont le nom fait plus de dix caractères
 ```
 
-## See also 
+## Exemple 3 
+
+Dans cet exemple, on utilise une jointure pour rechercher toutes les lignes de factures du client "ACME" même si les tables ne sont pas liées :
+
+```4d
+ QUERY BY FORMULA([ligne_factures];([ligne_factures]facture_id=[facture]id&[facture]client="ACME"))
+```
+
+## Voir aussi 
 
 [QUERY](query.md)  
 [QUERY BY SQL](query-by-sql.md)  
 [QUERY SELECTION](query-selection.md)  
 [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 48 |
+| Numéro de commande | 48 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

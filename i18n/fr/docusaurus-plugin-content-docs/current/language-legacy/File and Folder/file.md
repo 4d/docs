@@ -4,98 +4,93 @@ title: File
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|19 R4|New `HTTP Client log file` constant|
-|17 R5|Added|
+| Release | Modifications                             |
+| ------- | ----------------------------------------- |
+| 19 R4   | Nouvelle constante `HTTP Client log file` |
+| 17 R5   | Ajout                                     |
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
-
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|path|Text|&#8594; |File path|
-|fileConstant|Integer|&#8594;|4D file constant|
-|pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|Operator|&#8594; |* to return file of host database|
-|Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
-</div>
+| Paramètres   | Type                                           |                             | Description                                                           |
+| ------------ | ---------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                                           | &#8594; | Chemin de fichier                                                     |
+| fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
+| pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
+| Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
+
 <!-- END REF -->
 
 ## Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the [`4D.File`](../API/FileClass.md) type<!-- END REF -->. The command accepts two syntaxes:
+La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type [`4D.File`](../API/FileClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
-**File ( path { ; pathType } { ; * })**
+**File ( path { ; pathType } { ; \* })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA/myfile.txt").
+Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command.
+> Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre *pathType*. Les constantes suivantes sont disponibles :
 
-|Constant|Value|Comment|
-|---|---|---|
-|fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
-|fk posix path|0|Path expressed with POSIX syntax (default)
+| Constante        | Valeur | Commentaire                                                                                                                  |
+| ---------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1      | Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme) |
+| fk posix path    | 0      | Chemin exprimé avec la syntaxe POSIX (par défaut)                                                         |
 
-**File ( fileConstant { ; * } )**
+**File ( fileConstant { ; \* } )**
 
-In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
+Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier système, à l'aide d'une des constantes suivantes :
 
-|Constant|Value|Comment|
-|---|---|---|
-|Backup history file|19|Backup history file (see Configuration and trace files). Stored in the backup destination folder. |
-|Backup log file|13|Current backup journal file. Stored in the application Logs folder.|
-|Backup settings file|1|Default backup.4DSettings file (xml format), stored in the Settings folder of the project|
-|Backup settings file for data|17|backup.4DSettings file (xml format) for the data file, stored in the Settings folder of the data folder|
-|Build application log file|14|Current log file in xml format of the application builder. Stored in the Logs folder. |
-|Build application settings file|20|Default settings file of the application builder ("buildApp.4DSettings"). Stored in the Settings folder of the project.|
-|Compacting log file|6|Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Stored in the Logs folder.|
-|Current backup settings file|18|backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file|
-|Debug log file|12|Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Stored in the Logs folder. |
-|Diagnostic log file|11|Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Stored in the Logs folder. |
-|Directory file|16|directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file). |
-|HTTP Client log file|24|Log file created by the `HTTP SET OPTION(HTTP client log)` command. Stored in the Logs folder. |
-|HTTP debug log file|9|Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder. |
-|HTTP log file|8|Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.|
-|IMAP Log file|23|Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.|  
-|Last backup file|2|Last backup file, named `\<applicationName>[bkpNum].4BK`, stored at a custom location.|
-|Last journal integration log file|22|Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred|
-|Repair log file|7|Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.|
-|Request log file|10|Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
-|SMTP log file|15|Log file created by the `SET DATABASE PARAMETER(SMTP Log)` command. Stored in the Logs folder. |
-|User settings file|3|settings.4DSettings file for all data files, stored in Preferences folder next to structure file if enabled.|
-|User settings file for data|4|settings.4DSettings file for current data file, stored in Preferences folder next to the data file.|
-|Verification log file|5|Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Stored in the Logs folder. |
+| Constante                         | Valeur | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Backup history file               | 19     | Fichier d'historique des sauvegardes (voir Fichiers de configuration et de suivi). Stocké dans le dossier de destination de sauvegarde.                                                                                                                                                                                                                                                                                                                                                                                               |
+| Backup log file                   | 13     | Fichier journal des sauvegardes courant. Stocké dans le dossier Logs de l'application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Backup settings file              | 1      | Fichier backup.4DSettings par défaut (format xml), stocké dans le dossier Settings du projet                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Backup settings file for data     | 17     | fichier backup.4DSettings du fichier de données (format xml), stocké dans le dossier Settings du dossier data                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Build application log file        | 14     | Fichier d'historique courant au format xml du générateur d'application. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Build application settings file   | 20     | Fichier de configuration par défaut du générateur d'application ("buildApp.4DSettings"). Stocké dans le dossier Settings du projet.                                                                                                                                                                                                                                                                                                                                                                                   |
+| Compacting log file               | 6      | Fichier d'historique du compactage le plus récent de la base, effectué avec la commande Compact data file ou le Centre de sécurité et de maintenance (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                              |
+| Current backup settings file      | 18     | fichier backup.4DSettings utilisé actuellement par l'application. Il peut s'agir du fichier backup.4DSettings par défaut ou d'un fichier de settings de backup utilisateur défini pour le fichier de données                                                                                                                                                                                                                                                                                                                             |
+| Debug log file                    | 12     | Fichier d'enregistrement des événements pour le débogage créé par la commande `SET DATABASE PARAMETER(Debug log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                |
+| Diagnostic log file               | 11     | Fichier de diagnostic de 4D, créé par la commande `SET DATABASE PARAMETER(Diagnostic log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Directory file                    | 16     | fichier directory.json, contenant la description des groupes et utilisateurs (le cas échéant) du projet. Il se situe soit dans le dossier Settings de l'utilisateur (par défaut, s'applique à tout le projet), soit dans le dossier Settings du data (spécifique à un fichier de données).                                                                                                                                                                                      |
+| HTTP Client log file              | 24     | Fichier journal créé par la commande `HTTP SET OPTION(HTTP client log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| HTTP debug log file               | 9      | Fichier d'enregistrement des requêtes Web créé par la commande `WEB SET OPTION(Web log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| HTTP log file                     | 8      | Fichier de débogage des requêtes HTTP, créé par la commande `WEB SET OPTION(Web debug log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| IMAP Log file                     | 23     | Fichier d'historique créé par la commande `SET DATABASE PARAMETER(IMAP Log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Last backup file                  | 2      | Dernier fichier de sauvegarde généré, nommé `\<applicationName>[bkpNum].4BK`, stocké à un emplacement personnalisé.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Last journal integration log file | 22     | Chemin complet du dernier fichier journal d'intégration de l'historique (stocké dans le dossier Logs de l'application restaurée), le cas échéant. Ce fichier est créé en mode auto-repair, dès qu'une intégration de fichier d'historique a lieu                                                                                                                                                                                                                                                                                                      |
+| Repair log file                   | 7      | Fichier d'historique des réparations effectuées sur la base par le Centre de sécurité et de maintenance (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                           |
+| Request log file                  | 10     | Fichier des requêtes client/server standard (hors requêtes Web), créé par `SET DATABASE PARAMETER(4D Server log recording)` ou `SET DATABASE PARAMETER(Client log recording)`. Si la commande est appelée sur le serveur, le chemin du fichier des requêtes du serveur est retourné (stocké dans le dossier Logs du serveur). Si la commande est appelée sur un client, le chemin du fichier des requêtes du client est retourné (stocké dans le dossier Logs local du client). |
+| SMTP log file                     | 15     | Fichier des requêtes SMTP créé par la commande `SET DATABASE PARAMETER(SMTP Log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| User settings file                | 3      | Fichier settings.4DSettings pour tous les fichiers de données (si activé), stocké dans le dossier Preferences à côté du fichier de structure.                                                                                                                                                                                                                                                                                                                                                                                         |
+| User settings file for data       | 4      | Fichier settings.4DSettings file pour le fichier de données courant, stocké dans le dossier Preferences à côté du fichier de données.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Verification log file             | 5      | Fichier d'historique de vérification le plus récent de la base, créé par les commandes `VERIFY CURRENT DATA FILE` et `VERIFY DATA FILE` ou via le Centre de sécurité et de maintenance de la base (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                 |
 
-If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
+Si le fichier *fileConstant* cible n'existe pas, un objet null est retourné. Aucune erreur n'est générée.
 
-If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.  
+Si la commande est appelée à partir d'un composant, passez le paramètre optionnel `*` pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre `*`, un objet null est systématiquement retourné.
 
-## See also 
+## Voir également
 
-[`4D.File` class](../API/FileClass.md)  
-[Folder](folder.md)  
-[Get 4D file](./commands/get-4d-file)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)
+[classe `4D.File`](../API/FileClass.md)\
+[Folder](folder.md)\
+[Get 4D file](../commands-legacy/get-4d-file.md)\
+[Object to path](../commands-legacy/object-to-path.md)\
+[Path to object](../commands-legacy/path-to-object.md)
 
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1566 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1566 |
+| Thread safe        | oui  |
 
 

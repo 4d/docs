@@ -5,66 +5,64 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* : Pointer, Text {; *} )<br/>**DELETE INDEX** ( *indexName* : Pointer, Text {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *ptrChp* {; *} )<br/>**DELETE INDEX** ( *nomIndex* {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr | Pointer, Text | &#8594;  | Pointer to field whose indexes are to be deleted |
-| indexName | Pointer, Text | &#8594;  | Name of index to be deleted |
-| * | Operator | &#8594;  | If passed = asynchronous operation |
+| ptrChp &#124; nomIndex | Pointeur, Chaîne | &#8594;  | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
+| * | Opérateur | &#8594;  | Si passé = opération asynchrone |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE INDEX.Summary-->The DELETE INDEX command deletes one or more existing indexes from the database.<!-- END REF-->  
-You can pass either a pointer to a field or the name of an index in the parameter:
+<!--REF #_command_.DELETE INDEX.Summary-->La commande **DELETE INDEX** permet de supprimer un ou plusieurs index existant dans la base.<!-- END REF--> Vous pouvez passer en paramètre soit un pointeur vers un champ, soit un nom d’index :
 
-* If you pass a pointer to a field (*fieldPtr*), all the indexes associated with the field will be deleted. This can consist of keyword indexes or standard indexes. However, if the field is included in one or more composite indexes, they are not deleted (you must pass an index name).
-* If you pass the name of an index (*indexName*), only the designated index will be deleted. This can consist of keyword indexes, standard indexes or composite indexes.
+* Si vous passez un pointeur vers un champ (*ptrChp*), tous les index associés au champ seront supprimés. Il peut s’agir d’index de mots-clés ou d’index standard. En revanche, si le champ est inclus dans un ou plusieurs index composite(s), ils ne sont pas supprimés (vous devez passer un nom d'index).
+* Si vous passez nom d’index (*nomIndex*), seul l’index désigné sera supprimé. Il peut s’agir d’index de mots-clés, d’index standard ou d'index composites.
 
-The optional *\** parameter, when it is passed, performs deindexing in asynchronous mode. In this mode, the original method continues its execution after the call from the command, regardless of whether or not the index deletion is finished.
+Le paramètre facultatif *\**, lorsqu’il est passé, permet d’effectuer la désindexation en mode asynchrone. Dans ce mode, la méthode d’origine poursuit son exécution après l’appel de la commande, que la suppression d’index soit terminée ou non.
 
-If there is no index corresponding to *fieldPtr* or *indexName*, the command does nothing.
+S’il n’existe pas d’index correspondant à *ptrChp* ou à *nomIndex*, la commande ne fait rien.
 
-## Note for deployment 
+## Note pour le déploiement 
 
-Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
+Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-## Example 
+## Exemple 
 
-This example illustrates both syntaxes of the command: 
+Cet exemple illustre les deux syntaxes de la commande : 
 
 ```4d
-  //Deletion of all indexes related to the LastName field
- DELETE INDEX(->[Customers]LastName)
-  //Deletion of index named “CityZip”
- DELETE INDEX("CityZip")
+  //Suppression de tous les index liés au champ Nom
+ DELETE INDEX(->[Clients]Nom)
+  //Suppression de l’index nommé “CPVille”
+ DELETE INDEX("CPVille")
 ```
 
-## See also 
+## Voir aussi 
 
 [CREATE INDEX](create-index.md)  
 [PAUSE INDEXES](pause-indexes.md)  
 [SET INDEX](set-index.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 967 |
+| Numéro de commande | 967 |
 | Thread safe | yes |
 
 

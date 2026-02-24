@@ -5,65 +5,65 @@ slug: /commands/list-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *list* : Integer ; *blob* : Blob {; *} )<!-- END REF-->
+<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *liste* ; *blob* {; *blob*} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | Hierarchical list to store in the BLOB |
-| Blob | Blob | &#8594;  | BLOB to receive the Hierarchical list |
-| * | Operator | &#8594;  | * to append the value |
+| liste | Integer | &#8594;  | Liste hiérarchique à stocker dans le BLOB |
+| blob | Blob | &#8594;  | BLOB devant recevoir la liste hiérarchique |
+| blob | * | &#8594;  | Ajouter la liste à la fin du BLOB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LIST TO BLOB.Summary-->The LIST TO BLOB command stores the hierarchical list *list* in the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.LIST TO BLOB.Summary-->La commande **LIST TO BLOB** stocke la liste hiérarchique *liste* dans le BLOB *blob*.<!-- END REF-->
 
-If you specify the \* optional parameter, the hierarchical list is appended to the BLOB and the size of the BLOB is extended accordingly. Using the \* optional parameter, you can sequentially store any number of variables or lists (see other BLOB commands) in a BLOB, as long as the BLOB fits into memory. 
+Si vous passez le paramètre optionnel \*, la liste hiérarchique est ajoutée à la fin du BLOB et la taille de *blob* est modifiée en conséquence. Ainsi, à l'aide du paramètre optionnel \*, vous pouvez stocker les unes derrière les autres autant de variables ou de listes (référez-vous aux autres commandes sur les BLOBs) que vous voulez dans un BLOB, la seule limite étant celle de la mémoire disponible. 
 
-If you do not specify the \* optional parameter, the hierarchical list is stored at the beginning of the BLOB, overriding its previous contents; the size of the BLOB is adjusted accordingly.
+Si vous ne passez pas le paramètre optionnel \*, la liste hiérarchique est stockée au début de *blob* en remplaçant son contenu précédent, et la taille du BLOB est modifiée en conséquence.
 
-Wherever the hierarchical list is stored, the size of the BLOB will be increased if necessary according to the specified location (plus up to the size of the list if necessary). Modified bytes (other than the ones you set) are reset to 0 (zero). 
+Quel que soit l'endroit où vous placez la liste, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (plus jusqu'à la taille de la liste le cas échéant). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-**WARNING:** If you use a BLOB for storing lists, you must later use the command [BLOB to list](blob-to-list.md) for reading back the contents of the BLOB, because lists are stored in BLOBs using a 4D internal format.
+**ATTENTION :** Si vous utilisez un BLOB pour stocker des listes, appelez ensuite la commande [BLOB to list](blob-to-list.md) pour relire le contenu du BLOB car les listes sont stockées dans les BLOBs avec un format interne 4D.
 
-After the call, if the list has been successfully stored, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, if there was not enough memory.
+Après l'exécution de la commande, la variable OK prend la valeur 1 si la liste hiérarchique a été correctement stockée. Si l'opération n'a pas pu être effectuée car, par exemple, il n'y avait pas assez de mémoire disponible, la variable OK prend la valeur 0.
 
-**Note regarding Platform Independence:** LIST TO BLOB and [BLOB to list](blob-to-list.md) use a 4D internal format for handling lists stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms when using these two commands. In other words, a BLOB created on Windows using those commands can be reused on Macintosh, and vice-versa.
+**Note pour l'indépendance de plate-forme :** **LIST TO BLOB** et [BLOB to list](blob-to-list.md) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## Example 
+## Exemple 
 
-See example for the command [BLOB to list](blob-to-list.md).
+Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
 
-## See also 
+## Voir aussi 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [SAVE LIST](save-list.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 556 |
+| Numéro de commande | 556 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,103 +5,103 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( * ; *list* : Text {; *itemsArray* : Integer array} {; *} ) : Integer<br/>**Selected list items** ( *list* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *liste* {; *tabEléments* {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemsArray | Integer array | &#8592; | If 2nd * omitted: Array contains the positions of selected items in the list(s) If 2nd * passed: Array contains the selected item references |
-| * | Operator | &#8594;  | If omitted: Item position(s) If passed: Item reference(s) |
-| Function result | Integer | &#8592; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| tabEléments | Integer array | &#8592; | Si 2e * omis : Tableau des positions des éléments sélectionnés dans la ou les liste(s) Si 2e * passé : Tableau des références des éléments sélectionnés dans la ou les liste(s) |
+| * | Opérateur | &#8594;  | Si omis : Position(s) d’élément(s) Si passé : Référence(s) d’élément(s) |
+| Résultat | Integer | &#8592; | Si 2e * omis : Position de l'élément sélectionné parmi la ou les liste(s) déployée(s)/contractée(s) Si 2e * passé : Référence de l'élément sélectionné |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Selected list items.Summary-->The **Selected list items** command returns the position or reference of the selected item in the list whose reference number or object name you pass in *list*.<!-- END REF--> 
+<!--REF #_command_.Selected list items.Summary-->La fonction **Selected list items** retourne la **position** ou la **référence** de l'élément sélectionné dans la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with item references (the second *\** is passed), you can use either syntax. Conversely, if you use several representations of the same list and work with the item positions (the second *\** is omitted), the syntax based on the object name is required since each representation can have its own expanded/collapsed item configuration.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les références d'éléments (le second *\** est passé), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec les positions des éléments (le second *\** est omis), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de sa propre configuration d'éléments déployés/contractés. 
 
-**Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the [Selected list items](selected-list-items.md) command will only apply to the first object whose name corresponds. 
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **Selected list items** s'appliquera au premier objet dont le nom correspond. 
 
-In the case of multiple selection, the command can also return in the *itemsArray* array, the position or reference of each item selected. You apply this command to a list displayed in a form to detect which item(s) the user has selected. 
+En cas de sélection multiple, la fonction peut également retourner dans le tableau *tabEléments* la position ou la référence de chaque élément sélectionné. Cette fonction doit être appliquée à une liste affichée dans un formulaire afin de détecter le ou les élément(s) sélectionné(s) par l'utilisateur. 
 
-The second \* parameter lets you indicate whether you want to work with current item positions (in this case, the \* parameter should be omitted) or with fixed item references (in this case, the \* parameter must be used). 
+Le second paramètre \* permet d’indiquer si vous souhaitez travailler avec des positions courantes d’éléments (dans ce cas, ce paramètre doit être omis) ou des références absolues d’éléments (dans ce cas, il doit être passé). 
 
-You can pass a longint array in the *itemsArray* parameter. If necessary, the array will be created and resized by the command. Once the command has been executed, *itemsArray* will contain:
+Vous pouvez passer dans le paramètre *tabEléments* un tableau d’entiers longs. Si nécessaire, le tableau sera créé et redimensionné par la commande. A l’issue de l’exécution de la commande, *tabEléments* contiendra :
 
-* the position of each item selected relative to the expanded/collapsed state of the list(s) if the \* parameter is omitted.
-* the fixed reference of each item selected if the \* parameter is passed.  
-If no items have been selected, the array is returned empty.
+* la position de chaque élément sélectionné relativement à l'état déployé/contracté de la ou des liste(s) si le paramètre \* est omis.
+* la référence absolue de chaque élément sélectionné si le paramètre \* est passé.  
+Le tableau est retourné vide si aucun élément n’est sélectionné.
 
-**Note:** In the event of multiple selections, the command returns the position or reference of the first item that was selected in *list*, either by the user (manual selections) or by the [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) or [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) commands (programmed selection). 
+**Note :** En cas de sélection multiple, la commande retourne la position ou la référence du premier élément ayant été sélectionné dans *liste*, soit par un clic utilisateur (sélection manuelle) soit par la commande [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) ou [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) (sélection par programmation). 
 
-If the list has sublists, you apply the command to the main list (the one actually defined in the form), not one of its sublists. The positions are expressed relative to the top item of the main list, using the current expanded/collapsed state of the list and its sublist.
+Si la liste comporte des sous-listes, appliquez la fonction à la liste principale (celle qui est associée au formulaire), et non à une de ses sous-listes. Les positions sont exprimées relativement à l'élément supérieur de la liste principale, en tenant compte de l'état courant déployé/contracté de la liste et de ses sous-listes.
 
-In any case, if no items are selected, the function returns 0.
+Dans tous les cas, si aucun élément n'est sélectionné, la fonction retourne 0.
 
-## Example 
+## Exemple 
 
-Here a list named *hList,* shown in the Application environment:
+Voici la liste *hList* telle qu'elle apparaît en mode Application :
 
-![](../assets/en/commands/pict22822.en.png)
-
-```4d
- $vlItemPos:=Selected list items(hList) // at this point $vlItemPos gets 2
-```
-
-![](../assets/en/commands/pict22823.en.png)
+![](../assets/en/commands/pict22822.fr.png)
 
 ```4d
- $vlItemPos:=Selected list items(hList) // at this point $vlItemPos gets 5
- $vlItemRef:=Selected list items(hList;*) // $vlItemRef gets 200 (for instance)
+ $vlItemPos:=Selected list items(hList) // à ce stade, $vlItemPos vaut 2
 ```
 
-![](../assets/en/commands/pict22824.en.png)
+![](../assets/en/commands/pict22823.fr.png)
 
 ```4d
- $vlItemPos:=Selected list items(hList) // at this point $vlItemPos gets 8
- $vlItemRef:=Selected list items(hList;*) // $vlItemRef gets 203 (for instance)
+ $vlItemPos:=Selected list items(hList) // à ce stade, $vlItemPos vaut 5
+ $vlItemRef:=Selected list items(hList;*) // $vlItemRef vaut 200 (par exemple)
 ```
 
-![](../assets/en/commands/pict22825.en.png)
+![](../assets/en/commands/pict22824.fr.png)
 
 ```4d
- $vlItemPos:=Selected list items(hList;$arrPos) // at this point, $vlItemPos gets 3
-  // $arrPos{1} gets 3, $arrPos{2} gets 4 and $arrPos{3} gets 5
+ $vlItemPos:=Selected list items(hList) // à ce stade, $vlItemPos vaut 8
+ $vlItemRef:=Selected list items(hList;*) // $vlItemRef vaut 203 (par exemple)
 ```
 
-![](../assets/en/commands/pict22826.en.png)
+![](../assets/en/commands/pict22825.fr.png)
 
 ```4d
- $vlItemRef:=Selected list items(hList;$arrRefs;*) // $vlItemRef gets 101 (for instance)
-  // $arrRefs{1} gets 101, $arrRefs{2} gets 203 (for instance)
+ $vlItemPos:=Selected list items(hList;$tabPos) // à ce stade, $vlItemPos vaut 3
+  // $tabPos{1} vaut 3, $tabPos{2} vaut 4 et $tabPos{3} vaut 5
 ```
 
-## See also 
+![](../assets/en/commands/pict22826.fr.png)
+
+```4d
+ $vlItemRef:=Selected list items(hList;$tabRefs;*) // $vlItemRef vaut 101 (par exemple)
+  // $tabRefs{1} vaut 101, $tabRefs{2} vaut 203 (par exemple)
+```
+
+## Voir aussi 
 
 [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 379 |
+| Numéro de commande | 379 |
 | Thread safe | no |
 
 

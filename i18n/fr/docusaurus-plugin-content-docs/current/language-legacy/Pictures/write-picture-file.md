@@ -5,68 +5,67 @@ slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *fileName* : Text ; *picture* : Picture {; *codec* : Text} )<!-- END REF-->
+<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomFichier* ; *image* {; *codec*} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | Name or full pathname of the file to write, or empty string |
-| picture | Picture | &#8594;  | Picture field or variable to write |
-| codec | Text | &#8594;  | Picture Codec ID |
+| nomFichier | Text | &#8594;  | Nom ou chemin d’accès complet du fichier à écrire, ou chaîne vide |
+| image | Picture | &#8594;  | Champ ou variable image à écrire |
+| codec | Text | &#8594;  | Identifiant de codec d'image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WRITE PICTURE FILE.Summary-->The **WRITE PICTURE FILE** command saves the picture passed in the *picture* parameter in the defined *codec* to disk.<!-- END REF--> 
+<!--REF #_command_.WRITE PICTURE FILE.Summary-->La commande **WRITE PICTURE FILE** vous permet de sauvegarder dans un fichier sur disque l’image passée dans le paramètre *image*, au format défini par *codec*.<!-- END REF--> 
 
-You can pass in *fileName* the full pathname to the file to create, or a file name only. If you just pass the file name, the file will be located next to the database structure file. The file extension has to be indicated.
+Vous pouvez passer dans *nomFichier* le chemin d’accès complet du fichier à créer, ou uniquement le nom du fichier — auquel cas le fichier sera créé à côté du fichier de structure de la base. Vous devez également passer l’extension du fichier à créer.   
+Si vous passez une chaîne vide ("") dans *nomFichier*, la boîte de dialogue standard d’enregistrement de fichier apparaît, permettant à l’utilisateur de désigner le nom, l’emplacement et le format du fichier à créer. Si un nom par défaut a été associé au champ image, il est proposé dans la boîte de dialogue (cf. commande [SET PICTURE FILE NAME](set-picture-file-name.md)). 
 
-If an empty string ("") is passed in *fileName*, the standard Save file dialog box is displayed and the user can indicate the name, location and format of the file to create. If a default name is associated with the Picture field, it is provided in the dialog box (see the [SET PICTURE FILE NAME](set-picture-file-name.md) command). 
+Passez dans *image* la variable ou le champ image contenant l’image à stocker sur le disque. 
 
-You will pass in *picture* the picture variable or field which contains the picture to save on disk.
+Le paramètre optionnel *codec* vous permet de définir le format dans lequel l’image doit être sauvegardée. Un codec peut être une extension (par exemple “.gif”) ou un type Mime (par exemple “image/jpg”). Vous pouvez obtenir la liste des codecs disponibles via la commande [PICTURE CODEC LIST](picture-codec-list.md).
 
-The optional *codec* parameter can be used to define the format in which the picture will be saved. A Codec can be an extension (for example, “.gif”) or a Mime type (for example “image/jpeg”). You can get a list of available Codecs via the [PICTURE CODEC LIST](picture-codec-list.md) command.
-
-If you omit the *codec* parameter, the command will attempt to determine the codec based on the extension of the file name passed in the *fileName* parameter. For example, if you pass the statement:  
+Si vous omettez le paramètre *codec*, la commande tentera de déterminer le codec sur la base de l’extension du nom de fichier passé dans le paramètre *nomFichier*. Par exemple, si vous passez l’instruction :  
 
 ```4d
- WRITE PICTURE FILE("c:\folder\photo.jpg";myphoto)
+ WRITE PICTURE FILE("c:\dossier\photo.jpg";maphoto)
 ```
 
   
-... the command will use the JPEG codec to store the picture.   
-If the extension used does not correspond to any available codec, the file is not saved and the OK system variable is set to 0\. If you do not pass a *codec* or a file extension, the picture file is saved in PICT format. 
+... la commande utilisera le codec JPEG pour stocker l’image.   
+Si l’extension utilisée ne correspond à aucun codec disponible, le fichier n’est pas enregistré et la variable système OK prend la valeur 0\. Si vous ne passez ni *codec* ni extension de fichier, le fichier image est enregistré au format PICT. 
 
-**Note:** If the write format of the *picture* (indicated via the extension of *fileName* or the *codec* parameter) is the same the as its original type and if no transformation operation has been applied to it, the picture is written "as is", without any modification. 
+**Note :** Si le format d'écriture de l'*image* (indiqué via l'extension de *nomFichier* ou le paramètre *codec*) est égal à son type d'origine et si aucune opération de transformation ne lui a été appliquée, l'image est écrite telle quelle, sans aucune modification. 
 
-If the command is executed successfully, the system variable Document contains the full pathname to the file created and the system variable OK is set to 1\. Otherwise, OK is set to 0.
+Si l’exécution de la commande est correcte, la variable système Document contient le chemin d’accès complet du fichier créé et la variable système OK prend la valeur 1\. En cas d’échec, OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
+*Introduction aux images*  
 [PICTURE TO BLOB](picture-to-blob.md)  
-*Pictures*  
 [READ PICTURE FILE](read-picture-file.md)  
 [SET PICTURE FILE NAME](set-picture-file-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 680 |
+| Numéro de commande | 680 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

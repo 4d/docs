@@ -5,49 +5,49 @@ slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *one* : Boolean ; *many* : Boolean )<!-- END REF-->
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *aller* ; *retour* )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| one | Boolean | &#8592; | Status of all Many-to-One relations |
-| many | Boolean | &#8592; | Status of all One-to-Many relations |
+| aller | Boolean | &#8592; | Statut de tous les liens de N vers 1 |
+| retour | Boolean | &#8592; | Statut de tous les liens de 1 vers N |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->The **GET AUTOMATIC RELATIONS** command lets you know if the automatic/manual status of all manual many-to-one and one-to-many relations of the database have been modified in the current process.<!-- END REF-->if a previous calll from the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command made all manual many-to-one relations automatic — for example, **[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")**(True;False).  
-This parameter returns **False** if the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command has not been called or if its previous execution did not modify manual many-to-one relations — for example, **[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")**(False;False).
-* *many*: This parameter returns **True** if a previous call from the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command made all manual one-to-many relations automatic — for example, **[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")**(True;True).  
-This parameter returns **False** if the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command has not been called or if its previous execution did not modify manual one-to-many relations — for example, **[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")**(True;False).
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->La commande **GET AUTOMATIC RELATIONS** permet de savoir si le statut automatique/manuel de tous les liens manuels N vers 1 et 1 vers N de la base a été modifié dans le process courant.<!-- END REF-->: ce paramètre retourne Vrai si un appel antérieur de la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) a rendu automatiques tous les liens manuels N vers 1 — par exemple [SET AUTOMATIC RELATIONS](set-automatic-relations.md)(Vrai;Faux).  
+Ce paramètre retourne Faux si la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) n’a pas été appelée ou si sa précédente exécution n’a pas modifié les liens manuels N vers 1 — par exemple [SET AUTOMATIC RELATIONS](set-automatic-relations.md)(Faux;Faux).
+* *retour* : ce paramètre retourne Vrai si l’appel précédent de la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) a rendu automatiques tous les liens manuels 1 vers N — par exemple [SET AUTOMATIC RELATIONS](set-automatic-relations.md)(Vrai;Vrai).  
+Ce paramètre retourne Faux si la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) n’a pas été appelée ou si sa précédente exécution n’a pas modifié les liens manuels 1 vers N — par exemple [SET AUTOMATIC RELATIONS](set-automatic-relations.md)(Vrai;Faux).
 
-## Example 
+## Exemple 
 
-Refer to the example of the [GET FIELD RELATION](get-field-relation.md) command. 
+Reportez-vous à l'exemple de la commande [GET FIELD RELATION](get-field-relation.md). 
 
-## See also 
+## Voir aussi 
 
 [GET FIELD RELATION](get-field-relation.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 899 |
+| Numéro de commande | 899 |
 | Thread safe | yes |
 
 

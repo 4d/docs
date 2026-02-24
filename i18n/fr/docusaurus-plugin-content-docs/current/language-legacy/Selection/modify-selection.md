@@ -5,52 +5,52 @@ slug: /commands/modify-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *} )<br/>**MODIFY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}; * {; *} )<!-- END REF-->
+<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*laTable*}{; *modeSélection*}{; *saisieListe*}{; *}{; *} )<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to display and modify, or Default table, if omitted |
-| selectMode | Integer | &#8594;  | Selection mode |
-| enterList | Boolean | &#8594;  | Authorize Enter in list option |
-| * | Operator |  &#8594;  | Use output form for one record selection and hide scroll bars in the input form |
-| * | Operator |  &#8594;  | Show scroll bars in the input form (overrides second option of first optional *) |
+| laTable | Table | &#8594;  | Table à afficher et modifier ou Table par défaut si ce paramètre est omis |
+| modeSélection | Integer | &#8594;  | Mode de sélection |
+| saisieListe | Boolean | &#8594;  | Autoriser saisie en liste |
+| * | Operator |  &#8594;  | Utiliser formulaire sortie pour un seul enregistrement et cacher les barres de défilement dans le formulaire entrée |
+| * | Operator |  &#8594;  | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MODIFY SELECTION.Summary-->**MODIFY SELECTION** does almost the same thing as [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Refer to the description of [DISPLAY SELECTION](display-selection.md) for details. The differences between the two commands are:
+<!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](display-selection.md) pour une description détaillée.  
+Les seules différences entre ces deux commandes sont les suivantes :
 
-1\. [DISPLAY SELECTION](display-selection.md) and **MODIFY SELECTION** enable you to display the current selected records in list mode, or in the input form when you double-click on a record. Using **MODIFY SELECTION**, you can also modify the fields of the record in the input form when you double-click on it, if it is not already in use by another process or user, or in “Enter in List” mode (if it is authorized).
+1\. [DISPLAY SELECTION](display-selection.md) et **MODIFY SELECTION** provoquent l'affichage des enregistrements de la sélection courante de *laTable* dans le formulaire sortie courant, ou dans le formulaire entrée lorsque vous double-cliquez sur un enregistrement. Avec **MODIFY SELECTION**, vous pouvez en plus modifier les champs de l'enregistrement dans le formulaire entrée lorsque vous double-cliquez dessus (s'il n'est pas déjà chargé par un autre utilisateur/process) ou en mode “Saisie en liste” (s'il est autorisé).
 
-2\. [DISPLAY SELECTION](display-selection.md) loads the records in Read-only mode in the current process, which means that they are not locked for writing in the other processes. **MODIFY SELECTION** places all the records of the selection in Read-Write mode, which means that they are automatically locked for writing in other processes. **MODIFY SELECTION** frees the records when its execution is completed.
+2\. [DISPLAY SELECTION](display-selection.md) charge les enregistrements en mode Lecture seulement dans le process courant, ce qui signifie qu'ils ne sont pas verrouillés en écriture pour les autres process. **MODIFY SELECTION** place tous les enregistrements de la sélection en mode Lecture-écriture, ce qui signifie qu'ils sont automatiquement verrouillés en écriture pour les autres process. **MODIFY SELECTION** libère les enregistrements lorsque son exécution est terminée.
 
-## See also 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](./commands/form-event-code)  
-*Sets*  
+[Form event code](../commands/form-event-code.md)  
+*Présentation des ensembles*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 204 |
+| Numéro de commande | 204 |
 | Thread safe | no |
-| Forbidden on the server ||
-
+| Interdite sur le serveur ||
 
 

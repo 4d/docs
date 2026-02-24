@@ -5,49 +5,49 @@ slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *object* : Text ; *threeStates* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *object* : Variable, Field ; *threeStates* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( {* ;} *objet* ; *troisEtats* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| threeStates | Boolean | &#8594;  | True = three-states checkbox, False = standard checkbox |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| troisEtats | Boolean | &#8594;  | Vrai = case à cocher à trois états, Faux = case à cocher standard |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->The **OBJECT SET THREE STATES CHECKBOX** command modifies, for the current process, the "Three-States" property of the checkbox(es) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Summary-->La commande **OBJECT SET THREE STATES CHECKBOX** vous permet de modifier, pour le process courant, la propriété "Trois états" de la ou des case(s) à cocher désignée(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-The "Three-states" option allows the additional "semi-checked" state to be used for checkboxes. For more information, refer to *Three-States check box* in the *Design Reference* manual. 
+L’option "Trois états" permet d’utiliser l’état supplémentaire "semi-coché" pour les cases à cocher. Pour plus d’informations, reportez-vous au paragraphe *Cases à cocher à trois états* dans le manuel *Mode Développement*. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-This command only applies to checkboxes associated with variables, and not to Boolean fields that are represented as checkboxes. 
+Cette commande s’applique uniquement aux case à cocher associées à des variables, et non aux champs booléens représentés sous forme de cases à cocher. 
 
-In the *threeStates* parameter, pass **True** to enable the "three states" mode, or **False** to disable it. 
+Passez **Vrai** dans le paramètre *troisEtat* pour activer le mode "trois états", ou **Faux** pour le désactiver. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1249 |
+| Numéro de commande | 1249 |
 | Thread safe | no |
 
 

@@ -5,64 +5,64 @@ slug: /commands/describe-query-execution
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *status* : Boolean )<!-- END REF-->
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *statut* )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| status | Boolean | &#8594;  | True=Enable internal query analysis, False=Disable internal query analysis |
+| statut | Boolean | &#8594;  | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 1|Created|
+|11 SQL Release 1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->The **DESCRIBE QUERY EXECUTION** command enables or disables the query analysis mode for the current process.<!-- END REF--> The command only works in the context of 4D language query commands such as [QUERY](query.md). 
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->La commande **DESCRIBE QUERY EXECUTION** permet d’activer ou d’inactiver le mode d’analyse de l’exécution des recherches pour le process courant.<!-- END REF--> La commande fonctionne uniquement dans le contexte des commandes de recherche du langage 4D telles que [QUERY](query.md). 
 
-Calling the command with the *status* parameter set to **True** enables the query analysis mode. In this mode, the 4D engine records internally two specific pieces of information for each subsequent query carried out on the data:
+L’appel de la commande avec le paramètre *statut* à **Vrai** active le mode d’analyse des recherches. Dans ce mode, le moteur de 4D enregistrera en interne deux séries d’informations spécifiques lors de chaque requête effectuée par la suite sur les données :
 
-* A detailed internal description of the query just before its execution, in other words, what was planned to be executed (the query plan),
-* A detailed internal description of the query that was actually executed (the query path).
+* la description détaillée de la recherche juste avant son exécution, c’est-à-dire la recherche prévue (le plan de recherche),
+* la description détaillée de la recherche telle qu’elle a réellement été exécutée (le chemin de recherche).
 
-The information recorded includes the type of query (indexed, sequential), the number of records found and the time needed for every query criteria to be executed. Y ou can then read this information using the [Last query plan](last-query-plan.md) and [Last query path](last-query-path.md) commands.
+Les informations enregistrées incluent le type de recherche (indexée, séquentielle), le nombre d’enregistrements trouvés et le temps nécessaire à l’exécution de chaque critère de recherche. Vous pouvez ensuite lire ces informations à l’aide des commandes [Last query plan](last-query-plan.md) et [Last query path](last-query-path.md).
 
-Usually, the description of the query plan and its path are the same, but they may nevertheless differ because 4D might implement dynamic optimizations during the query execution in order to improve performance. For example, an indexed query may be converted dynamically into a sequential query if the 4D engine estimates that this might be faster — this is sometimes the case, more particularly, when the number of records being queries is low.
+En général, la description du plan d’une recherche et celle de son chemin sont identiques, mais elles peuvent toutefois différer car 4D peut mettre en oeuvre des optimisations dynamiques au cours de l’exécution de la recherche, dans le but d’améliorer les performances. Par exemple, une recherche indexée peut être convertie dynamiquement en recherche séquentielle si le moteur de 4D estime qu’elle sera plus rapide — c’est le cas notamment lorsque le nombre d’enregistrements parmi lesquels effectuer la recherche est faible.
 
-Pass **False** in the *status* parameter when you no longer need to analyze queries. The query analysis mode can slow down the application.
+Passez **Faux** dans le paramètre *statut* lorsque vous n’avez plus besoin d’analyser les recherches. Le mode d’analyse de l’exécution des recherches peut ralentir l’application.
 
-## Example 
+## Exemple 
 
-The following example illustrates the type of information obtained using these commands:
+L’exemple suivant illustre le type d’information obtenue via ces commandes :
 
 ```4d
  var $vResultPlan;$vResultPath : Text
- DESCRIBE QUERY EXECUTION(True) //analysis mode
- QUERY([Employees];[Employees]LastName="T@";*) // Search for employees whose last name starts with T...
- QUERY([Employees];&;[Companies]Name="H@";*) // that work for a company whose name starts with H
- QUERY([Employees];&;[Employees]Salary>2500;*) // whose salary is > 2500
- QUERY([Employees];&;[Cities]Pop<50000) // that live in a city with less than 50,000 inhabitants
+ DESCRIBE QUERY EXECUTION(True)  //mode analyse
+ QUERY([Employés];[Employés]Nom="T@";*)  // Chercher les employés dont le nom débute par T...
+ QUERY([Employés];&;[Sociétés]Nom="H@";*) // travaillant pour une société dont le nom débute par H
+ QUERY([Employés];&;[Employés]Salaire>2500;*) // dont le salaire est > 2500
+ QUERY([Employés];&;[Villes]nbHab<50000)  // habitant dans une ville de moins de 50000 habitants
  $vResultPlan:=Last query plan(Description in text format)
  $vResultPath:=Last query path(Description in text format)
- DESCRIBE QUERY EXECUTION(False) //End of analysis mode
+ DESCRIBE QUERY EXECUTION(False)  //Fin du mode analyse
 ```
 
-After executing this code, *$vResultPlan* and *$vResultPath* contain descriptions of the queries performed, for example: 
+A l’issue de l’exécution de ce code, *$vResultPlan* et *$vResultPath* contiennent les descriptions des recherches effectuées, par exemple : 
 
 ```RAW
-$vResultPlan :    Employees.LastName == T@ And  Employees.Salary > 2500 And Join on Table : Companies  :   Employees.Company = Companies.Name [index : Companies.Name ] LIKE H@ And Join  on Table : Cities  :  Employees.City = Cities.Name [index : Cities.Pop  ] < 50000$vResultPath : (Employees.LastName == T@ And Employees.Salary  > 2500) And (Join on Table : Companies  :  Employees.Company  = Companies.Name with filter {[index : Companies.Name ]  LIKE H@}) And (Join on Table : Cities  :  Employees.City = Cities.Name  with filter {[index : Cities.Pop ] < 50000})   (3 records found in 1  ms)
+$vResultPlan :    Employés.Nom == T@ And  Employés.Salaire > 2500 And Join on Table : Sociétés  :   Employés.Société = Sociétés.Nom [index : Sociétés.Nom ] LIKE H@ And Join  on Table : Villes  :  Employés.Ville = Villes.Nom [index : Villes.nbHab  ] < 50000$vResultPath : (Employés.Nom == T@ And  Employés.Salaire > 2500) And (Join on Table : Sociétés  :   Employés.Société = Sociétés.Nom with filter {[index : Sociétés.Nom ]  LIKE H@}) And (Join on Table : Villes  :  Employés.Ville = Villes.Nom  with filter {[index : Villes.nbHab ] < 50000})   (3 records found in 1  ms)
 ```
 
-If the Description in XML Format constant is passed to the [Last query path](last-query-path.md) command, *$vResultPath* contains the description of the query expressed in XML:
+Si la constante Description in XML format est passée à la commande [Last query path](last-query-path.md), *$vResultPath* contient la description de la recherche exprimée en XML :
 
 ```XML
 $vResultPath : 
@@ -75,16 +75,16 @@ $vResultPath :
    </QueryExecution>
 ```
 
-## See also 
+## Voir aussi 
 
 [Last query path](last-query-path.md)  
 [Last query plan](last-query-plan.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1044 |
+| Numéro de commande | 1044 |
 | Thread safe | yes |
 
 

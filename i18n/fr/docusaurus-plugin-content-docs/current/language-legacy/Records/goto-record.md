@@ -5,50 +5,50 @@ slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*aTable* : Table ;} *record* : Integer )<!-- END REF-->
+<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*laTable* ;} *enregistrement* )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table in which to go to the record, or Default table, if omitted |
-| record | Integer | &#8594;  | Number returned by Record number |
+| laTable | Table | &#8594;  | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &#8594;  | Numéro renvoyé par Numero enregistrement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** selects the specified record of *aTable* as the current record.<!-- END REF--> The *record* parameter is the number returned by the [Record number](record-number.md) function. After executing this command, the record is the only record in the selection.
+<!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** sélectionne l'enregistrement courant de *table*.<!-- END REF--> Le paramètre *enregistrement* est le numéro renvoyé par la fonction [Record number](record-number.md). Après l'exécution de cette commande, l'enregistrement est le seul de la sélection courante.
 
-If *record* is less than the smallest record number in the database or greater than the greatest record number in the database, 4D generates an error message stating that the record number is out of range. If *record* is equal to the record number of a deleted record, 4D returns the error -10503 and the selection becomes empty.
+Si *enregistrement* est inférieur au plus petit numéro d'enregistrement ou supérieur au plus grand numéro d'enregistrement de la base, 4D génère un message d'erreur indiquant que le numéro est hors intervalle. Si *enregistrement* est égal au numéro d'un enregistrement supprimé, 4D retourne l'erreur -10503 et la sélection courante devient vide. 
 
-## Example 
+## Exemple 
 
-See the example for [Record number](record-number.md).
+Référez-vous à l'exemple de la commande [Record number](record-number.md).
 
-## See also 
+## Voir aussi 
 
-*About Record Numbers*  
+*A propos des numéros d'enregistrements*  
 [Record number](record-number.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 242 |
+| Numéro de commande | 242 |
 | Thread safe | yes |
-| Modifies variables | error |
-| Changes current selection ||
+| Modifie les variables | error |
+| Change la sélection courante ||
 
 

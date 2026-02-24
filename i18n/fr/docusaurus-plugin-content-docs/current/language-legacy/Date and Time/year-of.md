@@ -5,47 +5,47 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* : Date ) : Integer<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date for which to return the year |
-| Function result | Integer | &#8592; | Number indicating the year of date |
+| date | Date | &#8594;  | Date dont vous voulez extraire l'année |
+| Résultat | Integer | &#8592; | Nombre indiquant l'année de date |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Year of.Summary-->The Year of command returns the year of *aDate*.<!-- END REF-->
+<!--REF #_command_.Year of.Summary-->**Year of** retourne un nombre indiquant l'année de *laDate*.<!-- END REF-->
 
-## Example 1 
+## Exemple 1 
 
-The following example illustrates the use of **Year of**. The results are assigned to the variable *vResult*.
+L'exemple suivant illustre l'utilisation de **Year of**. Les résultats sont assignés à la variable *Résultat* : 
 
 ```4d
- vResult:=Year of(!12/25/92!) // vResult gets 1992
- vResult:=Year of(!12/25/1992!) // vResult gets 1992
- vResult:=Year of(!12/25/1892!) // vResult gets 1892
- vResult:=Year of(!12/25/2092!) // vResult gets 2092
- vResult:=Year of(Current date) // vResult gets year of current date
+ Résultat:=Year of(!25/12/96!) // Résultat prend la valeur 1996
+ Résultat:=Year of(!25/12/1996!) // Résultat prend la valeur 1996
+ Résultat:=Year of(!25/12/1896!) // Résultat prend la valeur 1896
+ Résultat:=Year of(!25/12/2096!) // Résultat prend la valeur 2096
+ Résultat:=Year of(Current date) // Résultat prend comme valeur l'année de la date d'aujourd'hui
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the command [Current date](current-date.md).
+Reportez-vous à l'exemple de la fonction [Current date](current-date.md). 
 
-## See also 
+## Voir aussi 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 25 |
+| Numéro de commande | 25 |
 | Thread safe | yes |
 
 

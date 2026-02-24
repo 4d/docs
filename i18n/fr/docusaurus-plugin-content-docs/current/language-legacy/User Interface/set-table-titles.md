@@ -5,193 +5,183 @@ slug: /commands/set-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** ({ *tableTitles* : Text array ; *tableNumbers* : Integer array {; *}})<!-- END REF-->
+<!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** {( *titresTables* ; *numTables* {; *})}<!-- END REF-->
 <!--REF #_command_.SET TABLE TITLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableTitles | Text array | &#8594;  | Table names as they must appear in dialog boxes |
-| tableNumbers | Integer array | &#8594;  | Actual table numbers |
-| * | Operator | &#8594;  | Use the custom names in the formula editor |
+| titresTables | Text array | &#8594;  | Noms des tables tels qu'ils doivent apparaître |
+| numTables | Integer array | &#8594;  | Numéros des tables |
+| * | Opérateur | &#8594;  | Utiliser les noms personnalisés dans l’éditeur de formules |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** lets you mask, rename, and reorder the tables of your database that appear in standard 4D dialog boxes within the Application environment (i.e. when the startup mode is **Application**, or after you select **Test application** in the **Run** menu).<!-- END REF--> For example, this command can modify the display of tables in the Query editor in Application mode.
+<!--REF #_command_.SET TABLE TITLES.Summary-->**SET TABLE TITLES** vous permet de masquer, renommer et réordonner les tables de votre base qui apparaissent dans les éditeurs standard de 4D en mode Application (lorsque le mode de lancement est le mode **Application**, ou après avoir sélectionné "**Tester l'application**" dans le menu **Exécution**) .<!-- END REF-->
 
-Using this command, you can also rename the table labels in your forms on the fly, if you used dynamic names. For more information about inserting dynamic field and table names in forms, refer to *Using references in static text* in the *4D Design Reference* manual.
+Cette commande vous permet également de modifier à la volée les libellés des tables apparaissant dans vos formulaires, si vous avez utilisé des libellés dynamiques. Pour plus d'informations sur l'insertion de libellés de tables et de champs dynamiques dans les formulaires, reportez-vous à la section *Utiliser des références dans les textes statiques* dans le manuel *Mode Développement*.
 
-The *tableTitles* and *tableNumbers* arrays must be synchronized. In the *tableTitles* array, you pass the names of the tables as you would like them to appear. If you do not want to show a particular table, do not include its name or new title in the array. The tables appear in the order you specify in this array. In each element of the *tableNumbers* array, you pass the actual table number corresponding to the table name or new title passed in the same element number in the *tableTitles* array.
+Les tableaux *titresTables* et *numTables* doivent être synchronisés. Dans le tableau *titresTables*, vous passez les noms des tables tels que vous voulez qu'ils apparaissent. Les tables s'afficheront dans l'ordre défini par ces tableaux. Dans chaque élément du tableau *numTables*, passez le numéro de la table qui correspond au nom, nouveau ou ancien, de la table, et ce dans le même numéro d'élément que dans le tableau *titresTables*.   
+Si vous voulez masquer une table, ne la mettez pas dans les tableaux. Vous avez, par exemple, une base comprenant les tables A, B et C, créées dans cet ordre. Vous voulez que ces tables apparaissent sous les noms X, Y et Z. De plus, vous ne voulez pas faire apparaître la table B. Enfin, vous voulez que les tables soient dans l'ordre Z et X. Pour cela, vous passez dans le paramètre *titresTables* un tableau à deux éléments, Z et X, et vous passez dans le paramètre *numTables* un tableau à deux éléments, 3 et 1.
 
-For example, you have a database composed of the tables A, B, and C, created in that order. You want these tables to appear as X, Y, and Z. In addition you do not want to show table B. Finally, you want to show Z and X, in that order. To do so, you pass Z and X in a two-element *tableTitles* array, and you pass 3 and 1 in a two-element *tableNumbers* array.
+Le paramètre facultatif *\** vous permet d'indiquer si les noms personnalisés définis à l’aide de cette commande ("structure virtuelle") peuvent être ou non utilisés dans les formules de 4D. Par défaut, lorsque ce paramètre est omis, les formules exécutées dans 4D ne peuvent pas utiliser ces noms personnalisés ; il est nécessaire d'utiliser les noms de tables véritables. Vous devez passer ce paramètre si vous souhaitez gérer l'information fournie aux utilisateurs et assurer la cohérence de l'interface lors de l'utilisation de ces formules ou expressions, *i.e* :
 
-The optional *\** parameter indicates whether or not custom names ("virtual" structures) defined using this command can be used in 4D formulas. By default, when this parameter is omitted, formulas executed in 4D cannot use these custom names; it is necessary to use the real table names. You need to pass this parameter if you want to control information provided to users and ensure interface consistency wherever formulas or expressions are used, i.e.:
+* Si votre application fournit un accès à l'éditeur de formules (par exemple via l'éditeur d'états rapides)
+* Si votre application affiche des références d'expressions, comme dans les documents 4D Write Pro.
 
-* if your application provides access to the formula editor (for example via the Quick report editor),
-* if your application displays expression references, such as in 4D Write Pro documents.
+**Note :** Lorsque le paramètre \* est passé, les noms définis par cette commande peuvent être utilisés dans les formules exécutées par 4D. **Attention dans ce cas**, les noms personnalisés ne doivent pas contenir de caractères “interdits” par l’interpréteur du langage de 4D, tels que -?\*! Par exemple, le nom "Rate\_in\_%" ne pourrait pas être utilisé dans une formule (pour plus d'informations, reportez-vous à la section “*Nommer les objets du langage 4D*”). 
 
-**Note:** When the *\** parameter is passed, the names defined by this command are used in the formulas executed by 4D. **Be careful in this case**, the custom names must not contain characters that are “forbidden” by the 4D language interpreter, like -?\*%! For example, the name "Rate\_in\_%" could not be used in a formula (for more information, refer to the *Identifiers* section).
+**SET TABLE TITLES** ne modifie pas la structure de votre base. Cette commande est conçue pour affecter l'utilisation ultérieure des éditeurs de 4D et des formulaires comportant des libellés dynamiques lorsqu'ils sont utilisés dans l'environnement d'Application. L'aire de validité de la commande **SET TABLE TITLES** est la session. L'avantage, en Client/Serveur, est que plusieurs postes 4D Client peuvent “voir” simultanément votre structure d'une manière différente. Vous pouvez appeler **SET TABLE TITLES** autant de fois que vous voulez.
 
-**SET TABLE TITLES** does NOT change the actual structure of your database. It is designed to affect subsequent uses of the standard 4D editors and forms using dynamic names when they are used in Application environment. The scope of the **SET TABLE TITLES** command is the worksession. One benefit in Client/Server is that several 4D Client stations can simultaneously “see” your database in different ways. You can call **SET TABLE TITLES** as many times as you want.
+La commande **SET TABLE TITLES** est utile dans les cas suivants :
 
-Use the **SET TABLE TITLES** command for:
+* Traduction dynamique de votre base.
+* Affichage des tables dans l'ordre et avec les noms que vous voulez, indépendamment de leur définition.
+* Affichage des tables d'une façon qui dépend de l'identité ou des privilèges d'un utilisateur.
 
-* Dynamically localizing a database.
-* Showing tables the way you want, independent from the actual definition of your database.
-* Showing tables in a way that depends on the identity or custom privileges of a user.
+**Notes :**
 
-**WARNING:**
+* **SET TABLE TITLES** n'annule pas l'effet de la propriété Invisible d'une table. Si vous avez défini une table en tant qu'invisible au niveau de la structure, elle n'apparaîtra pas en mode Application, même si elle est spécifiée dans **SET TABLE TITLES**.
+* Les plug-ins accèdent toujours à la structure "virtuelle" telle que définie par cette commande.
+* Exécuter la commande **SET TABLE TITLES** sans paramètres réinitialise l'environnement de langage et supprime la totalité de la structure virtuelle pour la session (incluant les noms personnalisés de tables et de champs).
 
-* **SET TABLE TITLES** does NOT override the Invisible property of a table. When a table is set to be invisible at the structure level of your database, even though it is included in a call to **SET TABLE TITLES**, it will not appear in Application mode.
-* Plug-ins always access the "virtual" structure as specified by this command.
+## Exemple 1 
 
-Executing **SET TABLE TITLES** without any parameters will reset the whole database virtual structure for the session (custom table and field names).
+* Vous développez une application 4D destinée au marché international. Vous avez donc besoin de prendre en compte les nécessités de traduction et de localisation. Pour les éditeurs standard de 4D qui apparaissent en mode Application et vos formulaires utilisant des libellés dynamiques, vous pouvez traiter cette question en utilisant une table *\[Traductions\]* et quelques méthodes pour créer et utiliser les traductions pour chaque langue que vous voulez.
+* Dans votre base, vous créez la table suivante :
 
-## Example 1 
+![](../assets/en/commands/pict36594.fr.png)
 
-You are building a 4D application that you plan to sell internationally. Therefore, you must carefully consider localization issues. Regarding the standard 4D dialog boxes that can appear in the Application environment and your forms that use dynamic names, you can address localization needs by using a \[Translations\] table and a few project methods to create and use fields localized for any number of countries.  
-  
-In your database, add the following table:  
-
-![](../assets/en/commands/pict36594.en.png)
-
- Then, create the TRANSLATE TABLES AND FIELDS project method listed below. This method browses the actual structure of your database and creates all the necessary *\[Translations\]* records for the localization corresponding to the language passed as parameter.  
+* Ensuite, créez la méthode projet *traduire\_TABLES\_ET\_CHAMPS* ci-dessous. Cette méthode analyse la structure de votre base dans la table *\[Traductions\]* et crée les enregistrements correspondant à la langue passée comme paramètre.
 
 ```4d
-  //TRANSLATE TABLES AND FIELDS project method
-  //TRANSLATE TABLES AND FIELDS (Text)
-  //TRANSLATE TABLES AND FIELDS (LanguageCode)
+    // méthode projet traduire_TABLES_ET_CHAMPS
+    // traduire_TABLES_ET_CHAMPS ( Texte)
+    // traduire_TABLES_ET_CHAMPS ( CodeLangue )
  
- #DECLARE($Language : Text) //language code
- var $vlTable;$vlField : Integer
+ #DECLARE($Language : Text) //code de la langue
+ var $vlTable;$vlChamp : Integer
  
- 
- For($vlTable;1;Last table number) //Pass through each table
-    If($vlTable#(Table(->[Translations]))) //Do not translate table of translations
-  //Check if there is a translation of the table name for the specified language
-       QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
-       QUERY([Translations];&;[Translations]TableID=$vlTable;*) //table number
-       QUERY([Translations];&;[Translations]FieldID=0) //field number = 0 means that it is a table name
-       If(Is table number valid($vlTable)) //check that the table still exists
-          If(Records in selection([Translations])=0)
-  //Otherwise, create the record
-             CREATE RECORD([Translations])
-             [Translations]LanguageCode:=$Language
-             [Translations]TableID:=$vlTable
-             [Translations]FieldID:=0
-  //The name of the translated table will need to be entered
-             [Translations]Translation:=Table name($vlTable)+" in "+$Language
-             SAVE RECORD([Translations])
+ For($vlTable;1;Last table number) // Passer sur chaque table
+    If($vlTable#(Table(->[Traductions]))) //Ne pas traduire la table des traductions
+  // Vérifier s'il existe une traduction du nom de la table pour la langue spécifiée
+       QUERY([Traductions];[Traductions]CodeLangage=$Language;*)   //langue souhaitée
+       QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)   //numero de table
+       QUERY([Traductions]; & ;[Traductions]ChampID=0)   //numero de champ = 0 signifie que c'est un nom de table
+       If(Is table number valid($vlTable))   //vérifier que la table existe encore
+          If(Records in selection([Traductions])=0)
+  // Else, créer l'enregistrement
+             CREATE RECORD([Traductions])
+             [Traductions]CodeLangage:=$Language
+             [Traductions]TableID:=$vlTable
+             [Traductions]ChampID:=0
+  // Le nom de la table traduit aura besoin d'être saisi
+             [Traductions]Traduction:=Table name($vlTable)+" en "+$Language
+             SAVE RECORD([Traductions])
           End if
  
-          For($vlField;1;Last field number($vlTable))
-  //Check if there is a translation of the field name for the specified language
-             QUERY([Translations];[Translations]LanguageCode=$Language;*) //desired language
-             QUERY([Translations];&;[Translations]TableID=$vlTable;*) //table number
-             QUERY([Translations];&;[Translations]FieldID=$vlField) //field number
-             If(Is field number valid($vlTable;$vlField))
-                If(Records in selection([Translations])=0)
-  //Otherwise, create the record
-                   CREATE RECORD([Translations])
-                   [Translations]LanguageCode:=$Language
-                   [Translations]TableID:=$vlTable
-                   [Translations]FieldID:=$vlField
-  //The name of the translated field will need to be entered
-                   [Translations]Translation:=Field name($vlTable;$vlField)+" in "+$Language
-                   SAVE RECORD([Translations])
+          For($vlChamp;1;Last field number($vlTable))
+  // Vérifier s'il existe une traduction pour le nom du champ dans la langue spécifiée
+             QUERY([Traductions];[Traductions]CodeLangage=$Language;*)   //langue souhaitée
+             QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)   //numéro de table
+             QUERY([Traductions]; & ;[Traductions]ChampID=$vlChamp)   //numéro de champ
+             If(Is field number valid($vlTable;$vlChamp))
+                If(Records in selection([Traductions])=0)
+  // Else, créer l'enregistrement
+                   CREATE RECORD([Traductions])
+                   [Traductions]CodeLangage:=$Language
+                   [Traductions]TableID:=$vlTable
+                   [Traductions]ChampID:=$vlChamp
+  // Le nom du champ traduit aura besoin d'être saisi
+                   [Traductions]Traduction:=Field name($vlTable;$vlChamp)+" en "+$Language
+                   SAVE RECORD([Traductions])
                 End if
              Else
-                If(Records in selection([Translations])#0)
-  //If the field no longer exists, remove the translation
-                   DELETE RECORD([Translations])
+                If(Records in selection([Traductions])#0)
+  // si le champ n'existe plus, on supprime la traduction
+                   DELETE RECORD([Traductions])
                 End if
              End if
           End for
        Else
-          If(Records in selection([Translations])#0)
-  //If the table no longer exists, remove the translation
-             DELETE RECORD([Translations])
+          If(Records in selection([Traductions])#0)
+  // si la table n'existe plus, on supprime la traduction
+             DELETE RECORD([Traductions])
           End if
        End if
     End if
  End for
 ```
-  
-  
-At this point, if you execute the following line, you create as many records as needed for a Spanish localization of the tables and fields titles.  
+
+* Si maintenant vous exécutez la ligne suivante, vous pouvez créer autant d'enregistrements qu'il vous faut pour la traduction espagnole de vos tables et champs :
 
 ```4d
- TRANSLATE TABLES AND FIELDS("Spanish")
-```
-  
-  
-After this call has been executed, you can then enter the *\[Translations\]Translated Name* for each of the newly created records.  
-  
-Finally, each time you want to show your database’s standard 4D dialog boxes or forms with dynamic titles using the Spanish localization, you execute the following line:  
-
-```4d
- LOCALIZED TABLES AND FIELDS("Spanish")
+ traduire_TABLES_ET_CHAMPS("Espagnol")
 ```
 
-with the project method LOCALIZED TABLES AND FIELDS:
+* Une fois que cette ligne de code est appelée, vous pouvez saisir une traduction dans le champ *\[Traductions\]NomTraduit* pour chacun des nouveaux enregistrements.
+* Enfin, chaque fois que vous voulez afficher en espagnol les éditeurs standard de 4D ou les formulaires avec libellés dynamiques, vous exécutez la ligne suivante :
 
 ```4d
-  //LOCALIZED TABLES AND FIELDS global method
-  //LOCALIZED TABLES AND FIELDS (Text)
-  //LOCALIZED TABLES AND FIELDS (LanguageCode)
+ TABLES_ET_CHAMPS_LOCALISES("Espagnol")
+```
+
+La méthode projet TABLES\_ET\_CHAMPS\_LOCALISES est la suivante :
+
+```4d
+  // Méthode objet TABLES_ET_CHAMPS_LOCALISES
+  // TABLES_ET_CHAMPS_LOCALISES ( Texte)
+  // TABLES_ET_CHAMPS_LOCALISES ( CodeLangue )
  
- #DECLARE($Language : Text) //Language code
- var $vlTable;$vlField : Integer
+ #DECLARE($Language : Text) //Code de la langue
+ var $vlTable;$vlChamp : Integer
+ var $vlNumTable;$vlNumChamp : Integer
  
- var $vlTableNum;$vlFieldNum : Integer
+  //Mise à jour des noms de table
+ ARRAY TEXT($asNoms;0)   // Initialiser les tableaux pour FIXER TITRES TABLES et FIXER TITRES CHAMPS
+ ARRAY INTEGER($aiNuméros;0)
+ QUERY([Traductions];[Traductions]CodeLangage=$Language;*)
+ QUERY([Traductions]; & ;[Traductions]ChampID=0)   //noms de table donc
+ SELECTION TO ARRAY([Traductions]Traduction;$asNoms;[Traductions]TableID;$aiNuméros)
+ SET TABLE TITLES($asNoms;$aiNuméros)
  
- 
-  //Updating table names
- ARRAY TEXT($asNames;0) //Initialize arrays for SET TABLE TITLES and SET FIELD TITLES
- ARRAY INTEGER($aiNumbers;0)
- QUERY([Translations];[Translations]LanguageCode=$Language;*)
- QUERY([Translations];&;[Translations]FieldID=0) //thus table names
- SELECTION TO ARRAY([Translations]Translation;$asNames;[Translations]TableID;$aiNumbers)
- SET TABLE TITLES($asNames;$aiNumbers)
- 
-  //Updating field names
- $vlTableNum:=Last table number //Get number of tables in database
- For($vlTable;1;$vlTableNum) //Pass through each table
+  //Mise à jour des noms de champs
+ $vlNumTable:=Last table number // Obtenir le nombre de tables dans la base
+ For($vlTable;1;$vlNumTable)   // Passer sur chaque table
     If(Is table number valid($vlTable))
-       QUERY([Translations];[Translations]LanguageCode=$Language;*)
-       QUERY([Translations];&;[Translations]TableID=$vlTable;*)
-       QUERY([Translations];&;[Translations]FieldID#0) //avoid the zero that serves as table name
-       SELECTION TO ARRAY([Translations]Translation;$asNames;[Translations]FieldID;$aiNumbers)
-       SET FIELD TITLES(Table($vlTable)->;$asNames;$aiNumbers)
+       QUERY([Traductions];[Traductions]CodeLangage=$Language;*)
+       QUERY([Traductions]; & ;[Traductions]TableID=$vlTable;*)
+       QUERY([Traductions]; & ;[Traductions]ChampID#0)   //évite le zero qui sert au nom de la table
+       SELECTION TO ARRAY([Traductions]Traduction;$asNoms;[Traductions]ChampID;$aiNuméros)
+       SET FIELD TITLES(Table($vlTable)->;$asNoms;$aiNuméros)
     End if
  End for
 ```
-  
-  
-Note that new localizations can be added to the database without modifying or recompiling the code.
 
-## Example 2 
+* Notez que de nouvelles traductions peuvent être effectuées dans la base sans modification de code ni recompilation.
 
-You want to remove all defined custom field and table names:
+## Exemple 2 
+
+Vous voulez supprimer tous les noms de tables et de champs personnalisés définis pour la session :
 
 ```4d
- SET TABLE TITLES //remove all custom names
+ SET TABLE TITLES //supprimer les noms personnalisés
 ```
 
-## See also 
+## Voir aussi 
 
 [Last table number](last-table-number.md)  
 [GET TABLE TITLES](get-table-titles.md)  
@@ -199,11 +189,11 @@ You want to remove all defined custom field and table names:
 [SET FIELD TITLES](set-field-titles.md)  
 [Table name](table-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 601 |
+| Numéro de commande | 601 |
 | Thread safe | no |
 
 

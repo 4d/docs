@@ -5,40 +5,40 @@ slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Time, Text )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
 <!--REF #_command_.BACKUP INFO.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Type of information to get |
-| info1 | Integer, Date | &#8592; | Value 1 of the selector |
-| info2 | Time, Text | &#8592; | Value 2 of the selector |
+| sélecteur | Integer | &#8594;  | Type d’information à récupérer |
+| info1 | Integer, Date | &#8592; | Valeur 1 du sélecteur |
+| info2 | Time, Text | &#8592; | Valeur 2 du sélecteur |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.BACKUP INFO.Summary-->The BACKUP INFO command gets information related to the last backup performed on the database data.<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Summary-->La commande **BACKUP INFO** permet de récupérer des informations relatives à la dernière sauvegarde effectuée sur les données de la base.<!-- END REF-->
 
-Pass the type of information to get in *selector*. The type and content of the *info1* and *info2* parameters depend on the value of *selector*. You can use one of the following constants, placed in the “*Backup and Restore*” theme:
+Passez dans le paramètre *sélecteur* le type d’information à récupérer. Le type et le contenu des paramètres *info1* et *info2* dépendent de la valeur du *sélecteur.* Vous pouvez utiliser une des constantes suivantes, placées dans le thème “*Sauvegarde et restitution*” : 
 
-| Constant                | Type    | Value | Comment                                                                                                                                                                                  |
-| ----------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Last backup date        | Integer | 0     | *info1* returns the date and *info2* the time of the last backup.                                                                                                                        |
-| Last backup information | Integer | 5     | *info1* returns the last backup duration in milliseconds (longint) and *info2* the last backup begin timestamp (string, see formatting details in the [Timestamp](timestamp.md) command) |
-| Last backup status      | Integer | 2     | *info1* returns the number and *info2* the text of the status of the last backup                                                                                                         |
-| Next backup date        | Integer | 4     | *info1* returns the date and *info2* the time of the next scheduled backup                                                                                                               |
+| Constante               | Type        | Valeur | Comment                                                                                                                                                                                                                                   |
+| ----------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Last backup date        | Entier long | 0      | *info1* et info2 retournent respectivement la date et l'heure de la dernière sauvegarde.                                                                                                                                                  |
+| Last backup information | Entier long | 5      | *info1* retourne la durée de la dernière sauvegarde en millisecondes (entier long) et *info2* retourne le timestamp de début de la dernière sauvegarde (chaine, voir les détails de formatage dans la commande [Timestamp](../commands/timestamp)) |
+| Last backup status      | Entier long | 2      | *info1* et info2 retournent respectivement le numéro et le texte du statut de la dernière sauvegarde.                                                                                                                                     |
+| Next backup date        | Entier long | 4      | *info1* et info2 retournent respectivement la date et l'heure de la prochaine sauvegarde prévue.                                                                                                                                          |
 
-## See also 
+## Voir aussi 
 
 [RESTORE](restore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 888 |
+| Numéro de commande | 888 |
 | Thread safe | no |
 
 

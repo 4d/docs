@@ -5,86 +5,86 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ({ *user* : Text, Integer ; *password* : Text })<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *utilisateur* ; *motDePasse* )}<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| user | Text, Integer | &#8594;  | Name or unique user ID |
-| password | Text | &#8594;  | Password (not encrypted) |
+| utilisateur | Text, Integer | &#8594;  | Nom ou Numéro de référence unique de l’utilisateur |
+| motDePasse | Text | &#8594;  | Mot de passe (non crypté) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** changes the identity of the current user in the database, without needing to quit.<!-- END REF--> The user can change their identity themselves either using the database connection dialog box (when the command is called without parameters) or directly via the command. When a user changes their identity, they abandon any former access privileges in favor of those belonging to the chosen user.
+<!--REF #_command_.CHANGE CURRENT USER.Summary-->**CHANGE CURRENT USER** permet de changer l'identité de l'utilisateur courant dans la base, sans devoir la quitter.<!-- END REF--> Le changement d'identité peut être effectué par l'utilisateur lui-même via la boîte de dialogue de connexion à la base (lorsque la commande est appelée sans paramètres) ou directement par la commande. Lorsqu'il change d'identité, l'utilisateur abandonne ses anciens privilèges au profit de ceux de l'utilisateur choisi.
 
-**Notes:** 
+**Notes :**
 
-* This command has no effect in project databases opened in single user mode.
-* If an alias was defined for the current user with the [SET USER ALIAS](set-user-alias.md) command, it is reset by the **CHANGE CURRENT USER** command call.
+* Cette commande ne produit aucun effet dans une base projet ouverte en monoposte.
+* Si un alias a été défini pour l'utilisateur courant avec la commande [SET USER ALIAS](set-user-alias.md), il est réinitialisé en appelant la commande **CHANGE CURRENT USER**.
 
-If the **CHANGE CURRENT USER** command is executed without parameters, the database connection dialog box appears. The user must then enter or select a valid name and password in order to enter the database. The contents of the connection dialog box will depend on the options set on the **Security** page of the Database Settings.
+Si la commande **CHANGE CURRENT USER** est exécutée sans paramètres, la boîte de dialogue de connexion à la base s'affiche. L'utilisateur doit alors saisir ou sélectionner un nom et un mot de passe valides pour entrer dans la base. Le contenu de la boîte de dialogue de connexion dépend des options définies dans la page **Sécurité** des Propriétés de la base.
 
-You can also pass the two optional *user* and *password* parameters to specify by programming the new account to be used. 
+Vous pouvez également passer les deux paramètres facultatifs *utilisateur* et *motDePasse* afin de spécifier par programmation le nouveau compte à utiliser. 
 
-In the *user* parameter, pass the name or unique user ID (*userRef*) of the account to be used. The user names and IDs can be obtained using the [GET USER LIST](get-user-list.md) command.
+Passez dans le paramètre *utilisateur* le nom ou le numéro de référence unique (*réfUtilisateur*) du compte à utiliser. Les noms et les numéros des utilisateurs peuvent être obtenus via la commande [GET USER LIST](get-user-list.md).
 
-If the user account does not exist or was deleted, error -9979 is returned. You can intercept this error with the error-handling method installed by the [ON ERR CALL](on-err-call.md) command. Otherwise, you can call the function [Is user deleted](is-user-deleted.md) to test the user account before calling this command.
+Si le compte d’utilisateur désigné n’existe pas ou a été supprimé, l’erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md). Sinon, vous pouvez appeler la fonction [Is user deleted](is-user-deleted.md) pour tester le compte utilisateur avant d’appeler cette commande.
 
-Pass the non-encrypted user account password in the *password* parameter. If the password does not match the user, the command will return error message -9978 and do nothing.
+Passez dans le paramètre *motDePasse* le mot de passe non crypté du compte de l’utilisateur. Si le mot de passe ne correspond pas à l’utilisateur, la commande ne fait rien et l’erreur -9978 est générée.
 
-The command execution is delayed to prevent flooding (brute force attack), in other words, attempts of multiple user name/password combinations. As a result, after the 4th call to this command, it is run only after a period of 10 seconds. This delay is throughout the entire work station.
+La commande est à présent temporisée afin d’éviter des attaques par “force brute” (essais automatiques de multiples combinaisons de noms d’utilisateurs/mots de passe). Ainsi, au bout du quatrième appel à la commande, elle n’est exécutée qu’après 10 secondes d’attente. Cette temporisation est globale au poste de travail.
 
-**Note:** When the group of the current user provides access to a "serialized" feature (e.g. a plug-in), a corresponding license is used and will remain attached to the 4D user account until the end of the session, even if **CHANGE CURRENT USER** is called and the group of the new user does not provide access to the feature.
+**Note :** Lorsque le groupe de l'utilisateur actuel donne accès à une fonctionnalité "sérialisée" (par exemple, un plug-in), une licence correspondante est utilisée et restera attachée au compte utilisateur 4D jusqu'à la fin de la session, même si **CHANGE CURRENT USER** est appelé et que le groupe du nouvel utilisateur ne fournit pas d'accès à la fonctionnalité.
 
-### Offering a custom access management dialog box 
+### Proposer une boîte de dialogue de gestion d’accès personnalisée 
 
-The **CHANGE CURRENT USER** command can be used to set up custom dialog boxes for entering the name and password (with entry and expiration rules) that benefit from the same advantages as the access control system of 4D.   
-Here is how It works: 
+La commande **CHANGE CURRENT USER** permet de mettre en place des boîtes de dialogue personnalisées pour la saisie du nom et du mot de passe (avec règles de saisie et d'expiration) tout en bénéficiant des avantages du système intégré de contrôle des accès de 4D.   
+Le principe est le suivant : 
 
-**1.** The database is entered directly in the “Default user” mode, without a dialog box. 
+**1.** L’entrée dans la base s’effectue directement en mode “Utilisateur par défaut”, sans boîte de dialogue. 
 
-**2.** The displays a custom dialog box for entering the user name and password. All types of processing are foreseeable in the dialog box:   
-\- You can display the list of database users, as in the standard access dialog box of 4D, using the [GET USER LIST](get-user-list.md) command.   
-\- The password entry field can contain various controls to check the validity of the entered characters (minimum number of characters, uniqueness, etc.).   
-\- If you want the characters of passwords being entered to be masked on screen, you can use the [FILTER KEYSTROKE](filter-keystroke.md) command with the special *%password* font.   
-\- Expiration rules can be applied at the moment when the dialog box is validated: expiration date, forced change to the initial connection, locking of account after several incorrect entries, memorization of passwords already used, etc. 
+**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](../commands/dialog.md) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
+\- Il est possible d’afficher la liste des utilisateurs de la base, comme dans la boîte de dialogue d’accès standard de 4D, à l’aide de la commande [GET USER LIST](get-user-list.md).   
+\- Le champ de saisie du mot de passe peut contenir divers contrôles afin de vérifier la validité des caractères saisis (nombre minimum de caractères, unicité...).   
+\- Pour les caractères du mot de passe saisi soient brouillés à l'écran, vous pouvez utiliser la commande [FILTER KEYSTROKE](filter-keystroke.md).   
+\- Des règles d’expiration peuvent être appliquées au moment de la validation de la boîte de dialogue : date d’expiration, changement forcé à la première connexion, verrouillage du compte après plusieurs saisies erronées, mémorisation des mots de passe déjà utilisés... 
 
-**3.** When the entry is validated, the required information (user name and password) are passed to the **CHANGE CURRENT USER** command in order to open the database with the user account privileges.
+**3.** Lorsque la saisie est validée, les informations requises (nom d’utilisateur et mot de passe) sont passées à la commande **CHANGE CURRENT USER** afin d’ouvrir la base avec les privilèges du compte utilisateur.
 
-## Example 
+## Exemple 
 
-The following example simply displays the connection dialog box:
+L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
 ```4d
  CHANGE CURRENT USER
 ```
 
-**Note:** This code does nothing in a single-user project database. 
+**Note :** Ce code ne fait rien dans une base projet monoposte.
 
-## See also 
+## Voir aussi 
 
 [CHANGE PASSWORD](change-password.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 289 |
+| Numéro de commande | 289 |
 | Thread safe | no |
 
 

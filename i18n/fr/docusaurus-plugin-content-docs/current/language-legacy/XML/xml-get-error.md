@@ -5,50 +5,50 @@ slug: /commands/xml-get-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *elementRef* : Text ; *errorText* : Variable {; *row* : Variable {; *column* : Variable}} )<!-- END REF-->
+<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *refElément* ; *texteErreur* {; *ligne* {; *colonne*}} )<!-- END REF-->
 <!--REF #_command_.XML GET ERROR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| errorText | Variable | &#8592; | Text of the error |
-| row | Variable | &#8592; | Row number |
-| column | Variable | &#8592; | Column number |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| texteErreur | Variable | &#8592; | Texte de l’erreur |
+| ligne | Variable | &#8592; | Numéro de ligne |
+| colonne | Variable | &#8592; | Numéro de colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2003|Created|
+|12|Renommé|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.XML GET ERROR.Summary-->The XML GET ERROR command returns, in the *errorText* parameter, a description of the error encountered when processing the XML element designated by the *elementRef* parameter.<!-- END REF--> The information returned is supplied by the Xerces.DLL library. 
+<!--REF #_command_.XML GET ERROR.Summary-->La commande **XML GET ERROR** retourne dans le paramètre *texteErreur* la description de l’erreur rencontrée lors du traitement de l’élément XML désigné par le paramètre *refElément*.<!-- END REF--> Les informations retournées sont fournies par la librairie Xerces.dll. 
 
-The optional *row* and *column* parameters indicate the location of the error: they retrieve, respectively, the row number and, in this row, the position of the first character of the expression at the origin of the error. 
+Les paramètres optionnels *ligne* et *colonne* désignent précisément l’emplacement de l’erreur : ils récupèrent respectivement le numéro de la ligne et, dans cette ligne, la position du premier caractère de l’expression à l’origine de l’erreur. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get XML information](dom-get-xml-information.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 732 |
+| Numéro de commande | 732 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

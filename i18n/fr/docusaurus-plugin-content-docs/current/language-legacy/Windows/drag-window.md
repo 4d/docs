@@ -9,62 +9,62 @@ displayed_sidebar: docs
 <!--REF #_command_.DRAG WINDOW.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8|Modified|
-|<6|Created|
+|6.8|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DRAG WINDOW.Summary-->The DRAG WINDOW command lets users drag the window on which they clicked following the movements of the mouse.<!-- END REF--> Usually you call this command from within an object method of an object that can respond instantaneously to mouse clicks (i.e., invisible buttons).
+<!--REF #_command_.DRAG WINDOW.Summary-->La commande **DRAG WINDOW** permet de faire glisser la fenêtre dans laquelle l'utilisateur a cliqué puis de la déplacer en fonction des mouvements de la souris.<!-- END REF--> Généralement, cette commande est appelée depuis la méthode d'un objet capable de répondre instantanément aux clics souris (par exemple un bouton invisible).
 
-## Example 
+## Exemple 
 
-The following form, shown here in the Form editor, contains a colored frame, above which are four invisible buttons for each side:
+Le formulaire suivant, présenté ici dans l'éditeur de formulaires, contient un fond coloré au-dessus duquel quatre boutons invisibles ont été placés (un par côté) :
 
-![](../assets/en/commands/pict2762756.en.png)
+![](../assets/en/commands/pict2762756.fr.png)
 
-Each button has the following method:
+Chaque bouton est associé à la méthode suivante :
 
 ```4d
- DRAG WINDOW //Start dragging window when clicked
+ DRAG WINDOW //Commencer à faire glisser la fenêtre au premier clic
 ```
 
-After executing the following project method:
+Après l'exécution de la méthode projet suivante :
 
 ```4d
- $winRef:=Open form window("custom_drag";Modal form dialog box)
- DIALOG("custom_drag")
+ $refFen:=Open form window("Deplacer_Fenetre";Modal form dialog box)
+ DIALOG("Deplacer_Fenetre")
  CLOSE WINDOW
 ```
 
-You obtain a window similar to this:
+... vous obtenez une fenêtre semblable à celle-ci :
 
-![](../assets/en/commands/pict2762759.en.png)
+![](../assets/en/commands/pict2762759.fr.png)
 
-Then you can drag the window by clicking anywhere on the borders.
+Vous pouvez la déplacer en cliquant sur les bordures.
 
-## See also 
+## Voir aussi 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 452 |
+| Numéro de commande | 452 |
 | Thread safe | no |
 
 

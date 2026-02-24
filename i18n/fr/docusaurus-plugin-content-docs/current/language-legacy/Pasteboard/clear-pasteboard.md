@@ -9,55 +9,55 @@ displayed_sidebar: docs
 <!--REF #_command_.CLEAR PASTEBOARD.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CLEAR PASTEBOARD.Summary-->The CLEAR PASTEBOARD command clears the pasteboard of all its contents.<!-- END REF--> If the pasteboard contains multiple instances of the same data, all instances are cleared. After a call to CLEAR PASTEBOARD, the pasteboard is empty.
+<!--REF #_command_.CLEAR PASTEBOARD.Summary-->**CLEAR PASTEBOARD** efface entièrement le conteneur de données.<!-- END REF--> Si le conteneur contient plusieurs instances des mêmes données, toutes les instances sont effacées. Après un appel à **CLEAR PASTEBOARD**, le conteneur de données est vide.
 
-You must call CLEAR PASTEBOARD once before appending new data to the pasteboard using the command [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md), because this latter command does not clear the pasteboard before appending the new data. 
+Vous devez appeler **CLEAR PASTEBOARD** une fois avant de placer des nouvelles données dans le conteneur à l'aide de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md), car cette dernière n'efface pas le conteneur avant d'y coller des données. 
 
-Calling CLEAR PASTEBOARD once and then calling [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) several times enables you to Cut or Copy the same data under different formats.
+Si vous appelez **CLEAR PASTEBOARD** une fois et puis appelez [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) plusieurs fois, vous pouvez couper ou copier les mêmes données sous des formats différents.
 
-On the other hand, the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) and [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) commands automatically clear the pasteboard before appending the data to it.
+En revanche, les commandes [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) et [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) effacent automatiquement le conteneur avant d'y placer des données.
 
-## Example 1 
+## Exemple 1 
 
-The following code clears and then appends data to the pasteboard:
+Le code suivant efface le conteneur puis y ajoute des données : 
 
 ```4d
- CLEAR PASTEBOARD // Make sure the pasteboard is emptied
- APPEND DATA TO PASTEBOARD("com.4d.private.picture.gif";$vxSomeData) // Add some gif pictures
- APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Add some RTF text
+ CLEAR PASTEBOARD // Effacer le conteneur
+ APPEND DATA TO PASTEBOARD("com.4d.private.picture.gif";$vxSomeData) // Ajouter des images gif
+ APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Ajouter du texte RTF
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-## See also 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 402 |
+| Numéro de commande | 402 |
 | Thread safe | no |
 
 

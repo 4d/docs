@@ -5,71 +5,71 @@ slug: /commands/move-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *srcPathname* : Text ; *dstPathname* : Text )<!-- END REF-->
+<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *cheminSource* ; *cheminDest* )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| srcPathname | Text | &#8594;  | Full pathname to existing document |
-| dstPathname | Text | &#8594;  | Destination pathname |
+| cheminSource | Text | &#8594;  | Chemin d'accès complet au document existant |
+| cheminDest | Text | &#8594;  | Chemin d'accès de destination |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MOVE DOCUMENT.Summary-->The **MOVE DOCUMENT** command moves or renames a document.<!-- END REF-->
+<!--REF #_command_.MOVE DOCUMENT.Summary-->La commande **MOVE DOCUMENT** déplace ou renomme un document.<!-- END REF-->
 
-You specify the full pathname to the document in *srcPathname* and the new name and/or new location for the document in *dstPathname*.
+Vous passez le chemin d'accès complet au document existant dans le paramètre *cheminSource* et le nouveau nom et/ou emplacement du document dans *cheminDest*.
 
-**Warning:** Using **MOVE DOCUMENT**, you can move a document from and to any directory on the same volume. If you want to move a document between two distinct volumes, use [COPY DOCUMENT](copy-document.md) to “move” the document then delete the original copy of the document using [DELETE DOCUMENT](delete-document.md).
+**Attention :** Avec **MOVE DOCUMENT**, vous pouvez déplacer un document depuis et vers tous les dossiers du même volume. Si vous souhaitez déplacer un document entre deux volumes différents, utilisez la commande [COPY DOCUMENT](copy-document.md) pour “déplacer” le document puis effacez le document original avec la commande [DELETE DOCUMENT](delete-document.md).
 
-## Example 1 
+## Exemple 1 
 
-The following example renames the document DocName:
-
-```4d
- MOVE DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\NewDocName")
-```
-
-## Example 2 
-
-The following example moves and renames the document DocName:
+L'exemple suivant renomme le document DocNom :
 
 ```4d
- MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\NewDocName")
+ MOVE DOCUMENT("C:\\DOSSIER\\DocNom";"C:\\DOSSIER\\NouveauDocNom")
 ```
 
-## Example 3 
+## Exemple 2 
 
-The following example moves the document DocName:
+L'exemple suivant déplace et renomme le document DocNom :
 
 ```4d
- MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\DocName")
+ MOVE DOCUMENT("C:\\DOSSIER1\\DocNom";"C:\\DOSSIER2\\NouveauDocNom")
 ```
 
-**Note:** In the last two examples, the destination folder *"C:\\\\FOLDER2"* must exist. The MOVE DOCUMENT command only moves a document; it does not create folders.
+## Exemple 3 
 
-## See also 
+L'exemple suivant déplace le document DocNom :
+
+```4d
+ MOVE DOCUMENT("C:\\DOSSIER1\\DocNom";"C:\\DOSSIER2\\DocNom")
+```
+
+**Note :** Dans les deux derniers exemples, le dossier de destination *"C:\\\\DOSSIER2"* doit déjà exister. En effet, la commande **MOVE DOCUMENT** déplace uniquement un document, elle ne peut créer de dossiers. 
+
+## Voir aussi 
 
 [COPY DOCUMENT](copy-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 540 |
+| Numéro de commande | 540 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

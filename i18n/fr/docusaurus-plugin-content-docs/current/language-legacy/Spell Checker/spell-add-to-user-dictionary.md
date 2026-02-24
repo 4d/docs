@@ -5,55 +5,55 @@ slug: /commands/spell-add-to-user-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *words* : Text, Text array )<!-- END REF-->
+<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *mots* )<!-- END REF-->
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| words | Text, Text array | &#8594;  | Word or list of words to add to user dictionary |
+| mots | Text, Text array | &#8594;  | Mot ou liste de mots à ajouter au dictionnaire utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->The **SPELL ADD TO USER DICTIONARY** command adds one or more words to the current user dictionary.<!-- END REF-->
+<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->La commande **SPELL ADD TO USER DICTIONARY** permet d’ajouter un ou plusieurs mot(s) au dictionnaire utilisateur courant.<!-- END REF--> 
 
-A user dictionary is a dictionary containing words added by the user to the current dictionary. This dictionary is a file named *UserDictionaryxxx.dic* (where xxx represents the ID of the current dictionary) that is created automatically in the current 4D folder. There is a user dictionary for each current dictionary used. 
+Le dictionnaire utilisateur est un dictionnaire contenant les mots ajoutés par l’utilisateur au dictionnaire courant. Ce dictionnaire est un fichier nommé *UserDictionaryxxx.dic* (ou xxx représente l’ID du dictionnaire courant) et automatiquement créé dans le dossier 4D courant. Il existe un dictionnaire utilisateur par dictionnaire courant utilisé. 
 
-In *words*, pass a text string or a text array containing the word(s) to be added to the user dictionary. If one of the words is already found in the dictionary, it is ignored by the command.
+Vous pouvez passer dans *mots* une chaîne texte ou un tableau texte contenant le ou les mot(s) à ajouter dans le dictionnaire utilisateur. Si un mot est déjà présent dans le dictionnaire, il est ignoré par la commande. 
 
-## Example 
+## Exemple 
 
-Adding proper nouns to the user dictionary:
+Ajout de noms propres au dictionnaire utilisateur :
 
 ```4d
- ARRAY TEXT($arrTwords;0)
- APPEND TO ARRAY($arrTwords;"4D")
- APPEND TO ARRAY($arrTwords;"Wakanda")
- APPEND TO ARRAY($arrTwords;"Clichy")
- SPELL ADD TO USER DICTIONARY($arrTwords)
+ ARRAY TEXT($tTwords;0)
+ APPEND TO ARRAY($tTwords;"4D")
+ APPEND TO ARRAY($tTwords;"Wakanda")
+ APPEND TO ARRAY($tTwords;"Clichy")
+ SPELL ADD TO USER DICTIONARY($tTwords)
 ```
 
-## See also 
+## Voir aussi 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1214 |
+| Numéro de commande | 1214 |
 | Thread safe | no |
 
 

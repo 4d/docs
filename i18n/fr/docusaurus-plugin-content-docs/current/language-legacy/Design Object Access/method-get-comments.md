@@ -5,72 +5,72 @@ slug: /commands/method-get-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *path* : Text, Text array ; *comments* : Text, Text array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *chemin* ; *commentaires* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
-| comments | Text, Text array | &#8592; | Documentation of designated method(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| commentaires | Text, Text array | &#8592; | Documentation de la ou des méthode(s) désignée(s) |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD GET COMMENTS.Summary-->The **METHOD GET COMMENTS** command returns, in the *comments* parameter, the documentation of the method(s) designated by the *path* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD GET COMMENTS.Summary-->La commande **METHOD GET COMMENTS** retourne dans le paramètre *commentaires* la documentation de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF-->
 
-The documentation retrieved by this command is displayed in the 4D Explorer (not to be confused with lines of comments in the code that are retrieved using [METHOD GET CODE](method-get-code.md)). 
+La documentation lue par cette commande est affichée dans l’Explorateur de 4D (à ne pas confondre avec les lignes de commentaires dans le code, qui peuvent être lues à l’aide de [METHOD GET CODE](method-get-code.md)). 
 
-It contains:
+Elle contient :
 
-* markdown text in project databases
-* styled text in binary databases
+* du texte markdown dans les bases projet
+* du texte stylé dans les bases binaires
 
 ![](../assets/en/commands/pict4968699.en.png)
 
-This documentation can be generated for methods ot type triggers, project methods, form methods, database methods, and classes. 
+Cette documentation peut être générée pour des méthodes de type triggers, méthodes projet, méthodes formulaire, méthodes base ou les classes.
 
-**Note:** Forms and form methods share the same documentation.
+**Note :** Les formulaires et les méthodes formulaire partagent la même documentation.
 
-You can use two types of syntaxes, based either on text arrays, or text variables:  
+Vous pouvez utiliser deux types de syntaxes, basées soit sur des tableaux texte, soit sur des variables texte :  
 
 ```4d
- var tVpath : Text // text variables
- var tVcomments : Text
- METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
+ var vTchemin : Text // variables texte
+ var vTcommentaires : Text
+ METHOD GET COMMENTS(vTchemin;vTcommentaires) // documentation d’une seule méthode
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrComments;0)
- METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
+ ARRAY TEXT(tabChemins;0) // tableaux texte
+ ARRAY TEXT(tabCommentaires;0)
+ METHOD GET COMMENTS(tabChemins;tabCommentaires) // documentation de plusieurs méthodes
 ```
 
-You cannot mix the two syntaxes.
+Il n’est pas possible de mixer les deux syntaxes.
 
-If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
+Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
-## See also 
+## Voir aussi 
 
 [METHOD SET COMMENTS](method-set-comments.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1189 |
+| Numéro de commande | 1189 |
 | Thread safe | no |
 
 

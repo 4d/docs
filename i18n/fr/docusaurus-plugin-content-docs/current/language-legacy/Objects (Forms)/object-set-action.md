@@ -5,58 +5,58 @@ slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *object* : Text ; *action* : Text )<br/>**OBJECT SET ACTION** ( *object* : Variable, Field ; *action* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( {* ;} *objet* ; *action* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| action | Text | &#8594;  | Name of action to associate (including parameters if necessary) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| action | Text | &#8594;  | Nom d'action à associer (avec paramètre si nécessaire) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Modified|
-|14|Created|
+|16 R3|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET ACTION.Summary-->The **OBJECT SET ACTION** command modifies the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET ACTION.Summary-->La commande **OBJECT SET ACTION** vous permet de modifier l’action standard associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-In the *action* parameter, pass a string containing the name of the standard action to associate with the object, or a constant from the *Standard Action* theme. Optionally, the action can have parameters.
+Passez dans le paramètre *action* une chaîne contenant le nom de l’action standard à associer à l’objet, ou une constante du thème "*Action standard*". Optionnellement, l'action peut comporter un paramètre. 
 
-For detailed information on action names, please refer to the *Standard actions* section in the *4D Design Reference* manual. 
+Pour plus d'informations sur les noms d'actions, veuillez vous reporter à la section *Actions standard* dans le manuel *Mode Développement* de 4D.
 
-**Compatibility Note:** Legacy constants (prefixed by \_o\_ in the "*Standard Action*" theme) are deprecated starting with 4D v16 R3\. However, they are still supported for compatibility. 
+**Note de compatibilité :** Les anciennes constantes (préfixées \_o\_ dans le thème "*Action standard*") sont obsolètes depuis 4D v16 R3\. Elles sont toutefois toujours prises en charge par soucis de compatibilité. 
 
-## Example 
+## Exemple 
 
-You want to associate the **Validate** standard action with a button:
+Vous souhaitez associer l’action standard de validation à un bouton : 
 
 ```4d
  OBJECT SET ACTION(*;"bValidate";ak accept)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get action](object-get-action.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1259 |
+| Numéro de commande | 1259 |
 | Thread safe | no |
 
 

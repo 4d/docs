@@ -5,51 +5,50 @@ slug: /commands/get-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* : Text, Time {; *} ) : Real<!-- END REF-->
+<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* {; *} ) : Real<!-- END REF-->
 <!--REF #_command_.Get document size.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text, Time | &#8594;  | Document reference number or Document name |
-| * | Operator | &#8594;  | On Mac OS only: - if omitted, size of data fork - if specified, size of resource fork |
-| Function result | Real | &#8592; | Size (expressed in bytes) of the document |
+| document | Text, Time | &#8594;  | Numéro de référence de document ou Nom de document |
+| * | Opérateur | &#8594;  | (Mac OS uniquement) Si omis : taille de la data fork, si passé : taille de la resource fork |
+| Résultat | Real | &#8592; | Taille (en octets) de document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get document size.Summary-->The Get document size command returns the size, expressed in bytes, of a document.<!-- END REF-->
+<!--REF #_command_.Get document size.Summary-->La commande **Get document size** retourne la taille, exprimée en octets, d'un document.<!-- END REF-->
 
-If the document is open, you pass its document reference number in *document*.
+Si le document est ouvert, passez son numéro de référence dans *document*.  
+Si le document n'est pas ouvert, passez son nom ou son chemin d'accès dans *document*.
 
-If the document is not open, you pass its name or pathname in *document*.
+Sous Mac OS, si vous ne passez pas le paramètre optionnel *\**, la taille de la data fork est retournée. Si vous passez le paramètre optionnel *\**, la taille de la resource fork est retournée.
 
-On Macintosh, if you do not pass the optional *\** parameter, the size of the data fork is returned. If you do pass the *\** parameter, the size of the resource fork is returned.
-
-## See also 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 [SET DOCUMENT SIZE](set-document-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 479 |
+| Numéro de commande | 479 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

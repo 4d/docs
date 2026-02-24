@@ -5,51 +5,49 @@ slug: /commands/object-get-subform-container-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *width* : Integer ; *height* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *largeur* ; *hauteur* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| width | Integer | &#8592; | Width of subform object |
-| height | Integer | &#8592; | Height of subform object |
+| largeur | Integer | &#8592; | Largeur de l’objet sous-formulaire |
+| hauteur | Integer | &#8592; | Hauteur de l’objet sous-formulaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18|Modified|
-|13|Created|
+|18|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->The **OBJECT GET SUBFORM CONTAINER SIZE** command returns the *width* and *height* (in pixels) of a "current" subform object, displayed in the parent form.<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->La commande **OBJECT GET SUBFORM CONTAINER SIZE** retourne la *largeur* et la *hauteur* (en pixels) d’un objet sous-formulaire "courant", affiché dans le formulaire parent.<!-- END REF--> 
 
-This command must be called from the method of a form used as a subform and displayed in a subform object. It returns the *width* and *height* of the object containing the subform.
+Cette commande doit être appelée depuis la méthode d’un formulaire utilisé en sous-formulaire et affiché dans un objet sous-formulaire. Elle retourne la *largeur* et la *hauteur* de l’objet contenant le sous-formulaire.
 
-This command is useful, for example, in the case where subform objects must be resized according to the characteristics of the subform object itself. In the On Load form event, the subform can call this command to calculate the space at its disposal in order to display its contents.
+Cette commande est utile par exemple dans le cas où des objets du sous-formulaire doivent être déplacés et/ou redimensionnés en fonction des caractéristiques de l’objet sous-formulaire lui-même. Dans l’événement formulaire On Load ou On Resize, le sous-formulaire peut appeler cette commande pour calculer la place dont il dispose afin d’afficher son contenu. 
 
-The On Resize event is generated in the subform form method if the subform object is resized in the parent form object (for example if the subform object has a grow horizontally and/or vertically property and the parent form is resized). 
+* Si la commande est appelée depuis un formulaire qui n’est pas en cours d’utilisation en tant que sous-formulaire, elle retourne la taille courante de la fenêtre du formulaire.
+* Si la commande est appelée en-dehors du contexte de l’affichage l’écran (par exemple lors de l’impression du formulaire), elle retourne 0 dans *largeur* et *hauteur*.
 
-* If the command is called from a form that is not being used as a subform, it returns the current size of the form window.
-* If the command is called outside of the context of screen display (for example, during form printing), it returns 0 in *width* and *height*.
-
-## See also 
+## Voir aussi 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT SET SUBFORM](object-set-subform.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1148 |
+| Numéro de commande | 1148 |
 | Thread safe | no |
 
 

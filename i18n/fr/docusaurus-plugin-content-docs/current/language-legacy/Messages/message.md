@@ -5,133 +5,134 @@ slug: /commands/message
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* : Text )<!-- END REF-->
+<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message to display |
+| message | Text | &#8594;  | Message à afficher |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MESSAGE.Summary-->The **MESSAGE** command is usually used to inform the user of some activity.<!-- END REF--> It displays *message* on the screen in a special message window that opens and closes each time you call **MESSAGE**, unless you work with a window you previously opened using [Open window](./commands/open-window) (see the following details). The message is temporary and is erased as soon as a form is displayed or the method stops executing. If another **MESSAGE** is executed, the old message is erased.
+<!--REF #_command_.MESSAGE.Summary-->La commande **MESSAGE** affiche *message* à l'écran dans une fenêtre spéciale de message qui est ouverte et refermée à chaque fois que vous l'appelez (à moins que vous ne travailliez dans une fenêtre préalablement ouverte par la commande [Open window](open-window.md), cf.<!-- END REF--> ci-dessous). Le message est temporaire et est effacé dès qu'un formulaire est affiché ou dès que l'exécution de la méthode est stoppée. Si une autre commande **MESSAGE** est exécutée, le précédent message est effacé. 
 
-If a window is opened with [Open window](./commands/open-window), all subsequent calls to **MESSAGE** display the messages in that window. The window behaves like a terminal:
+**MESSAGE** est généralement utilisée pour informer l'utilisateur du déroulement d'une action. 
 
-* Successive messages do not erase previous messages when displayed in the window. Instead, they are concatenated onto existing messages.
-* If a message is wider than the window, 4D automatically performs text wrap.
-* If a message has more lines than the window, 4D automatically scrolls the message window.
-* To control line breaks, include carriage returns — **Char(13)** — into your message.
-* To display the text at a particular place in the window, call [GOTO XY](goto-xy.md).
-* To erase the contents of the window, call [ERASE WINDOW](erase-window.md).
-* The window is only an output window and does not redraw when other windows overlap it.
-* You can modify the font and size of characters displayed in the window by means of the "Interface" page in the Database Settings.
+Si une fenêtre a été ouverte par la commande [Open window](open-window.md), tous les appels ultérieurs à la commande **MESSAGE** affichent les messages dans cette fenêtre. Cette fenêtre se comporte en quelque sorte comme un terminal :
 
-**Note:** **MESSAGE** is compatible with the [Open form window](./commands/open-form-window) command; however, in this context the second *\** parameter of [Open form window](./commands/open-form-window), which saves the window's size and position, is not supported. 
+* Chaque message successif n'efface pas le précédent, les messages se placent les uns à la suite des autres.
+* Si un message est plus large que la fenêtre, 4D insère automatiquement un retour à la ligne.
+* Si le message contient plus de lignes que ne peut en afficher la fenêtre, 4D fait automatiquement défiler le message dans la fenêtre.
+* Si vous souhaitez contrôler les retours à la ligne, insérez vos propres retours chariot dans votre texte, à l'aide de [Char](char.md)(13).
+* Vous pouvez appeler la commande [GOTO XY](goto-xy.md) pour afficher le texte à un emplacement particulier dans la fenêtre.
+* Vous pouvez appeler la commande [ERASE WINDOW](erase-window.md) pour effacer le contenu de la fenêtre.
+* La fenêtre est une fenêtre d'affichage statique : son contenu n'est pas redessiné lorsque d'autres fenêtres s'affichent par-dessus.
+* La police et la taille des caractères affichés dans la fenêtre peuvent être modifiées via la page "Interface" des Propriétés de la base.
 
-## Example 1 
+**Note :** **MESSAGE** est compatible avec la commande [Open form window](open-form-window.md), toutefois dans ce contexte le second paramètre *\** de [Open form window](open-form-window.md), permettant de conserver la taille et position de la fenêtre, n'est pas pris en charge. 
 
-The following example processes a selection of records and calls MESSAGE to inform the user about the progress of the operation:
+## Exemple 1 
+
+L'exemple suivant traite une sélection d'enregistrements et appelle la commande **MESSAGE** pour informer l'utilisateur de la progression de l'opération :
 
 ```4d
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
+ For($vlEnregistrement;1;Records in selection([touteTable]))
+    MESSAGE("Traitement de l'enregistrement "+String($vlEnregistrement))
+  // Faire quelque chose avec l'enregistrement
+    NEXT RECORD([touteTable])
  End for
 ```
 
-The following window appears and disappears at each MESSAGE call:
+La fenêtre suivante s'affiche puis disparaît à chaque appel de **MESSAGE** :
 
-![](../assets/en/commands/pict25453.en.png)
+![](../assets/en/commands/pict25453.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-In order to avoid this "blinking" window, you can display the messages in a window opened using [Open window](./commands/open-window), as in this example:
-
-```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
- End for
- CLOSE WINDOW
-```
-
-This provides the following result (shown here on Windows):
-
-![](../assets/en/commands/pict25454.en.png)
-
-## Example 3 
-
-Adding a carriage return makes a better presentation:
+Afin d'éliminer le "clignotement" de la fenêtre, il est préférable, comme dans ce deuxième exemple, d'afficher les messages dans une fenêtre ouverte par l'intermédiaire de la commande [Open window](open-window.md) :
 
 ```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
+ Open window(50;50;500;250;5;"Opération en cours")
+ For($vlEnregistrement;1;Records in selection([touteTable]))
+    MESSAGE("Traitement de l'enregistrement "+String($vlEnregistrement))
+  // Faire quelque chose avec l'enregistrement
+    NEXT RECORD([touteTable])
  End for
  CLOSE WINDOW
 ```
 
-This provides the following result (shown here on Windows):
+Le résultat est le suivant (sous Windows) : 
 
-![](../assets/en/commands/pict25455.en.png)
+![](../assets/en/commands/pict25454.fr.png)
 
-## Example 4 
+## Exemple 3 
 
-Using [GOTO XY](goto-xy.md) and writing some additional lines:
+En ajoutant un retour chariot, vous améliorez la présentation :
 
 ```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- $vlNbRecords:=Records in selection([anyTable])
- $vhStartTime:=Current time
- For($vlRecord;1;$vlNbRecords)
+ Open window(50;50;500;250;5;"Opération en cours")
+ For($vlEnregistrement;1;Records in selection([touteTable]))
+    MESSAGE("Traitement de l'enregistrement "+String($vlEnregistrement)+Caractere(Retour chariot))
+  // Faire quelque chose avec l'enregistrement
+    NEXT RECORD([touteTable])
+ End for
+ CLOSE WINDOW
+```
+
+Voici le résultat (Sous Windows) :
+
+![](../assets/en/commands/pict25455.fr.png)
+
+## Exemple 4 
+
+A l'aide de la commande [GOTO XY](goto-xy.md) et de l'écriture de quelques lignes supplémentaires, la présentation s'améliore nettement : 
+
+```4d
+ Open window(50;50;500;250;5;"Opération en cours")
+ $vlNbEnregistrements:=Records in selection([touteTable])
+ $vhHeureDébut:=Current time
+ For($vlEnregistrement;1;$vlNbEnregistrements)
     GOTO XY(5;2)
-    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
+    MESSAGE("Traitement de l'enregistrement "+String($vlEnregistrement)+Caractere(Retour chariot))
+  // Faire quelque chose avec les enregistrements
+    NEXT RECORD([touteTable])
     GOTO XY(5;5)
-    $vlRemaining:=(($vlNbRecords/$vlRecord)-1)*(Current time-$vhStartTime)
-    MESSAGE("Estimated remaining time: "+Time string($vlRemaining))
+    $vlReste:=(($vlNbEnregistrements/$vlEnregistrement)-1)*(Current time-$vhHeureDébut)
+    MESSAGE("Estimation du temps restant : "+Time string($vlReste))
  End for
  CLOSE WINDOW
 ```
 
-This provides the following result (shown here on Windows):
+Voici le résultat (sous Windows) :
 
-![](../assets/en/commands/pict25456.en.png)
+![](../assets/en/commands/pict25456.fr.png)
 
-## See also 
+## Voir aussi 
 
 [CLOSE WINDOW](close-window.md)  
 [ERASE WINDOW](erase-window.md)  
 [GOTO XY](goto-xy.md)  
-[Open window](./commands/open-window)  
+[Open window](open-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 88 |
+| Numéro de commande | 88 |
 | Thread safe | no |
-
 
 

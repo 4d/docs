@@ -5,47 +5,45 @@ slug: /commands/get-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tableTitles* : Text array ; *tableNums* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *titresTables* ; *numTables* )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableTitles | Text array | &#8592; | Current table names |
-| tableNums | Integer array | &#8592; | Table numbers |
+| titresTables | Text array | &#8592; | Noms courants des tables |
+| numTables | Integer array | &#8592; | Numéros des tables |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET TABLE TITLES.Summary-->The **GET TABLE TITLES** command fills the *tableTitles* and *tableNums* arrays with the names and numbers of database tables defined in the Structure window or using the [SET TABLE TITLES](set-table-titles.md) command.<!-- END REF--> The contents of these two arrays are synchronized.
+<!--REF #_command_.GET TABLE TITLES.Summary-->La commande **GET TABLE TITLES** remplit les tableaux *titresTables* et *numTables* avec les noms et les numéros des tables de la base définis dans la fenêtre de Structure ou via la commande [SET TABLE TITLES](set-table-titles.md).<!-- END REF--> Le contenu des deux tableaux est synchronisé.
 
-If the [SET TABLE TITLES](set-table-titles.md) command is called during the session, **GET TABLE TITLES** only returns the “modified” names and table numbers defined using this command. 
+Si la commande [SET TABLE TITLES](set-table-titles.md) a été appelée lors de la session, **GET TABLE TITLES** retourne uniquement les noms “modifiés” et les numéros des tables ayant été définies via cette commande.   
+Sinon, **GET TABLE TITLES** retourne le nom défini dans la fenêtre de Structure de toutes les tables de la base.   
+Dans les deux cas, la commande ne retourne pas les tables déclarées invisibles. 
 
-Otherwise, **GET TABLE TITLES** returns the names of all database tables as defined in the Structure window. 
-
-In both cases, the command does not return invisible tables. 
-
-## See also 
+## Voir aussi 
 
 [GET FIELD TITLES](get-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 803 |
+| Numéro de commande | 803 |
 | Thread safe | no |
 
 

@@ -5,73 +5,73 @@ slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *refElément* ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| Function result | Integer | &#8592; | Number of attributes |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| Résultat | Integer | &#8592; | Nombre d’attributs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Count XML attributes.Summary-->The **DOM Count XML attributes** command returns the number of XML attributes present in the XML element designated by *elementRef*.<!-- END REF--> For more information about XML attributes, refer to the *Overview of XML DOM Commands* section. 
+<!--REF #_command_.DOM Count XML attributes.Summary-->La commande **DOM Count XML attributes** retourne le nombre d’attributs XML présents dans l’élément XML désigné par *refElément*.<!-- END REF--> Pour plus d'informations sur les attributs XML, reportez-vous à la section *Présentation des commandes XML DOM*. 
 
-## Example 
+## Exemple 
 
-Before retrieving the values of elements in an array, you want to know the number of attributes in the following XML element:
+Avant de récupérer les valeurs des éléments dans un tableau, vous souhaitez connaître le nombre d’attributs dans l’élément XML suivant :
 
-![](../assets/en/commands/pict39728.en.png)
+![](../assets/en/commands/pict39728.fr.png)
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var myResult : Text
- var $numAttributes : Integer
+ var maVarBlob : Blob
+ var $ref_XML_Parent;$ref_XML_Enfant : Text
+ var monRésultat : Text
+ var $nbAttributs : Integer
  
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ $ref_XML_Parent:=DOM Parse XML variable(maVarBlob)
+ $ref_XML_Enfant:=DOM Get first child XML element($ref_XML_Parent)
  
- $numAttributes:=DOM Count XML attributes($xml_Child_Ref)
- ARRAY TEXT(tAttrib;$numAttributes)
- ARRAY TEXT(tValAttrib;$numAttributes)
- For($i;1;$numAttributes)
-    DOM GET XML ATTRIBUTE BY INDEX($xml_Child_Ref;$i;tAttrib{$i};tValAttrib{$i})
+ $nbAttributs:=DOM Count XML attributes($ref_XML_Enfant)
+ ARRAY TEXT(tAttrib;$nbAttributs)
+ ARRAY TEXT(tValAttrib;$nbAttributs)
+ For($i;1;$nbAttributs)
+    DOM GET XML ATTRIBUTE BY INDEX($ref_XML_Enfant;$i;tAttrib{$i};tValAttrib{$i})
  End for
 ```
 
-In the above example, $numAttributes equals 3, tAttrib{1} contains “Font”, tAttrib{2} contains “N”, tAttrib{3} contains “size” and tValAttrib contains “Verdana”, “1” and “10”.
+Dans l’exemple ci-dessus, $nbAttributs vaut 3, tAttrib{1} contient “Font”, tAttrib{2} contient “N” et tAttrib{3} contient “size”. tValAttrib contient “Verdana”, “1” et “10”.
 
-**Note:** The index number does not correspond to the location of the attribute in the XML file displayed in text form. In XML, the index of an attribute indicates its position among the attributes arranged in alphabetical order (according to their name).
+**Note :** Le numéro d’indice ne correspond pas à l’emplacement de l’attribut dans le fichier XML affiché sous forme de texte. En XML, l’indice d’un attribut indique sa position parmi les attributs classés par ordre alphabétique (en fonction de leur nom).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Count XML elements](dom-count-xml-elements.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 727 |
+| Numéro de commande | 727 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

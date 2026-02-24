@@ -5,53 +5,53 @@ slug: /commands/qr-set-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *area* : Integer ; *property* : Integer ; *value* : Integer )<!-- END REF-->
+<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *zone* ; *propriété* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| property | Integer | &#8594;  | Interface element designated |
-| value | Integer | &#8594;  | 1 = displayed, 0 = hidden |
+| zone | Integer | &#8594;  | Référence de la zone |
+| propriété | Integer | &#8594;  | Elément d'interface |
+| valeur | Integer | &#8594;  | 1 = affiché, 0 = caché |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET AREA PROPERTY.Summary-->The **QR SET AREA PROPERTY** command shows or hides the interface element whose reference is passed in *property*.<!-- END REF-->
+<!--REF #_command_.QR SET AREA PROPERTY.Summary-->La commande **QR SET AREA PROPERTY** vous permet d'afficher ou de masquer l'élément d'interface dont la référence est passée dans le paramètre *propriété*.<!-- END REF-->
 
-This command can only be used with a Quick report area embedded in a form.
+Cette commande peut être utilisée uniquement avec une zone Etat rapide intégrée dans un formulaire.
 
-You can use the following constant from the *QR Area Properties* theme in *property*:
+Vous pouvez utiliser la constante suivante du thème *QR Propriétés de zone* du thème propriété :
 
-| Constant                 | Value | Comment                                                       |
-| ------------------------ | ----- | ------------------------------------------------------------- |
-| qr view contextual menus | 7     | Display status of the Contextual menu (Displayed=1, Hidden=0) |
+| Constante                | Valeur | Comment                                                |
+| ------------------------ | ------ | ------------------------------------------------------ |
+| qr view contextual menus | 7      | Affichage des menus contextuels (Affichés=1, Cachés=0) |
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *property* parameter, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *propriété* est incorrect, l’erreur -9852 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR Get area property](qr-get-area-property.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 796 |
+| Numéro de commande | 796 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

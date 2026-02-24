@@ -5,70 +5,70 @@ slug: /commands/document-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *document* : Text ; *blob* : Blob )<!-- END REF-->
+<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *document* ; *blob* )<!-- END REF-->
 <!--REF #_command_.DOCUMENT TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Name of the document |
-| Blob | Blob | &#8596;  | BLOB field or variable to receive the document |
-||| | Document contents |
+| document | Text | &#8594;  | Nom du document |
+| blob | Blob | &#8596; | Champ ou variable de type BLOB devant recevoir le document |
+||| | Contenu du document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB loads the whole contents of *document* into *blob*.<!-- END REF--> You must pass the name of an existing document that is not already open, otherwise an error will be generated. To let the user choose the document to be loaded into the BLOB, use the command [Open document](open-document.md) and the process variable *document* (see Example).
+<!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** charge le contenu de *document* dans *blob*.<!-- END REF--> Vous devez passer un nom de document valide, c'est-à-dire qui désigne un document existant qui n'est pas déjà ouvert, sinon une erreur sera générée. Si vous voulez que l'utilisateur choisisse le document, utilisez la routine [Open document](open-document.md) et la variable système Document (cf. l'exemple ci-dessous). 
 
-## Example 
+## Exemple 
 
-You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button that allows you to load a document into a BLOB field. The method for this button could be:
+Notre exemple est une base qui vous permet de stocker et chercher rapidement des documents. Dans un formulaire entrée, vous créez un bouton qui vous permet de charger un document de votre choix dans un champ de type BLOB. La méthode pour ce bouton peut être la suivante :
 
 ```4d
- $vhDocRef:=Open document("") // Select the document of your choice
- If(OK=1) // If a document has been chosen
-    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
-    DOCUMENT TO BLOB(Document;[YourTable]YourBLOBField) // Load the document
+ $vhRefDoc:=Open document("") // Sélectionner un document
+ If(OK=1) // Si un document a été choisi
+    CLOSE DOCUMENT($vhRefDoc) // Nous voulons pas qu'il reste ouvert
+    DOCUMENT TO BLOB(Document;[VotreTable]VotreChampBLOB) // Charger le document
     If(OK=0)
-  // Handle error
+  // Gérer l'erreur
     End if
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-OK is set to 1 if the document is correctly loaded, otherwise OK is set to 0 and an error is generated.
+La variable système OK prend la valeur 1 si le document est correctement lu. Sinon, elle prend la valeur 0 et une erreur est générée.
 
-## Error Handling 
+## Gestion des erreurs 
 
-* If you try to load (into a BLOB) a document that does not exist or that is already open by another process or application, the appropriate File Manager error is generated.
-* An I/O error can occur if the document is locked, located on a locked volume, or if there is problem in reading the document.
-* If there is not enough memory to load the document, an error -108 is generated.
+* Si vous essayez de charger dans un BLOB un document qui n'existe pas ou qui est déjà ouvert par un(e) autre process ou application, une des Erreurs du gestionnaire de fichiers du système sera générée.
+* Une erreur d'Entrée/Sortie peut survenir si le document est verrouillé, s'il se trouve sur un volume verrouillé ou si un problème survient pendant la lecture du document.
+* S'il n'y a pas assez de mémoire pour charger le document, une erreur -108 est générée.
 
-In each case, you can trap the error using an [ON ERR CALL](on-err-call.md) interruption method.
+Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [Open document](open-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 525 |
+| Numéro de commande | 525 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

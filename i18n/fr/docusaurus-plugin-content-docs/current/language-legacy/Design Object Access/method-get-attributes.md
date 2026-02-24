@@ -5,53 +5,53 @@ slug: /commands/method-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *path* : Text, Text array ; *attributes* : Object, Object array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *chemin* ; *attributs* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Method path(s) |
-| attributes | Object, Object array | &#8592; | Attribute(s) for selected method(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Chemin(s) de méthode(s) |
+| attributs | Object, Object array | &#8592; | Attribut(s) de méthode(s) |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|15|Created|
+|15 R5|Modifié|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->The **METHOD GET ATTRIBUTES** command returns, in *attributes*, the current value of all attributes for the method(s) specified in the *path* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->La commande **METHOD GET ATTRIBUTES** retourne, dans le paramètre *attributs*, la valeur courante de tous les attributs de la ou des méthode(s) spécifiée(s) dans le paramètre *chemin*.<!-- END REF-->
 
-This command only works with project methods. If you pass an invalid *path*, an error is generated.
+Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 
 
-In *path*, you can pass either a text containing a method path, or a text array containing an array of paths. You will need to pass the same kind of parameter (variable or array) in *attributes* in order to get the appropriate attributes.
+Dans le paramètre *chemin*, vous pouvez passer soit un texte contenant un chemin de méthode, soit un tableau texte contenant un tableau de chemins. Vous devrez passer le même type de paramètre (variable simple ou tableau) dans le paramètre *attributs* afin de récupérer les valeurs adéquates.
 
-In *attributes*, you pass an object or an array of objects, depending on the kind of parameter passed in *path*. All the attributes for the method(s) are returned as object properties, with "True"/"False" values for Boolean attributes, and text or additional values if necessary (for example, "scope":"table" for the 4D Mobile property).
+Dans le paramètre *attributs*, vous pouvez passer un objet ou un tableau d'objets, selon le type de paramètre passé dans *chemin*. Tous les attributs de méthode(s) sont retournés sous forme de propriétés d'objet, avec des valeurs "True"/"False" pour les attributs Booléens, des valeurs texte ou des valeurs supplémentaires si nécessaire (par exemple, "scope":"table" pour la propriété 4D Mobile).
 
-If the command is executed from a component, by default it applies to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
+Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
-**Compatibility note:** The *published4DMobile* property is deprecated as for 4D v18.
+**Note de compatibilité :** La propriété *published4DMobile* est obsolète à partir de 4D v18.
 
-## Example 
+## Exemple 
 
-You want to get the attributes of the *sendMail* project method. You can write:
+Vous souhaitez connaître les attributs de la méthode projet *sendMail*. Vous pouvez écrire :
 
 ```4d
  var $att : Object
  METHOD GET ATTRIBUTES("sendMail";$att)
 ```
 
-After execution, $att contains, for example:
+A l'issue de l'exécution, $att contient, par exemple :
 
 ```json
 {
@@ -70,15 +70,15 @@ After execution, $att contains, for example:
 }
 ```
 
-## See also 
+## Voir aussi 
 
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1334 |
+| Numéro de commande | 1334 |
 | Thread safe | yes |
 
 

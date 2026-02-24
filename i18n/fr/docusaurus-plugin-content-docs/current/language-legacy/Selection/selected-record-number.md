@@ -5,44 +5,47 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return the selected record number or Default table, if omitted |
-| Function result | Integer | &#8592; | Selected record number of current record |
+| laTable | Table | &#8594;  | Table de laquelle retourner le numéro de l'enregistrement courant dans la sélection |
+| Résultat | Integer | &#8592; | Numéro dans la sélection |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Selected record number.Summary-->**Selected record number** returns the position of the current record within the current selection of *aTable*.<!-- END REF--> 
+<!--REF #_command_.Selected record number.Summary-->**Selected record number** retourne la position de l'enregistrement courant dans la sélection courante de *laTable*.<!-- END REF-->
 
-If the selection is not empty and if the current record is within the selection, **Selected record number** returns a value between *1* and [Records in selection](records-in-selection.md). If the selection is empty, of if there is no current record, it returns *0* (zero).
+Si la sélection est non vide et si l'enregistrement courant en fait partie, **Selected record number** retourne une valeur comprise entre *1* et [Records in selection](records-in-selection.md). Si la sélection est vide ou s'il n'y a pas d'enregistrement courant, **Selected record number** retourne 0.
 
-The selected record number is not the same as the number returned by [Record number](record-number.md), which returns the physical record number in the table. The selected record number depends on the current selection and the current record.
+Le numéro de l'enregistrement dans la sélection est différent du numéro retourné par [Record number](record-number.md) ([Record number](record-number.md) retourne le numéro physique de l'enregistrement dans la table). Le numéro de l'enregistrement dans la sélection dépend de la sélection courante.
 
-## Example 
+Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la section *A propos des numéros d'enregistrements*.
 
-The following example saves the current selected record number in a variable:
+## Exemple 
+
+L'exemple suivant stocke le numéro de l'enregistrement courant de la sélection dans une variable :
 
 ```4d
- CurSelRecNum:=Selected record number([People]) // Get the selected record number
+  // Obtenir le numéro de l'enregistrement dans la sélection
+ NumEnrCourant:=Selected record number([Personnes])
 ```
 
-## See also 
+## Voir aussi 
 
-*About Record Numbers*  
+*A propos des numéros d'enregistrements*  
 [GOTO SELECTED RECORD](goto-selected-record.md)  
 [Records in selection](records-in-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 246 |
+| Numéro de commande | 246 |
 | Thread safe | yes |
 
 

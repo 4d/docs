@@ -5,142 +5,139 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *formula* : Text ; *dataType* : Integer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *formule* ; *typeDonnées* ; *nomEnTête* ; *variableEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name  (if * is specified) or Variable (if * is omitted) |
-| colPosition | Integer | &#8594;  | Location of column to insert |
-| colName | Text | &#8594;  | Name of the column object |
-| formula | Text | &#8594;  | 4D formula associated with column |
-| dataType | Integer | &#8594;  | Type of formula result |
-| headerName | Text | &#8594;  | Name of the column header object |
-| headerVar | Integer, Pointer | &#8594;  | Column header variable |
-| footerName | Text | &#8594;  | Column footer object name |
-| footerVar | Variable, Pointer | &#8594;  | Column footer variable |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
+| nomCol | Text | &#8594;  | Nom d’objet de la colonne |
+| formule | Text | &#8594;  | Formule 4D associée à la colonne |
+| typeDonnées | Integer | &#8594;  | Type de résultat de la formule |
+| nomEnTête | Text | &#8594;  | Nom d'objet de l'en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#8594;  | Variable d'en-tête de la colonne |
+| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17|Modified|
-|14 R3|Modified|
-|13|Modified|
-|12|Renamed|
-|11 SQL|Created|
+|17|Modifié|
+|14 R3|Modifié|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->The **LISTBOX INSERT COLUMN FORMULA** command inserts a column into the list box designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->La commande **LISTBOX INSERT COLUMN FORMULA** insère une colonne dans la list box désignée par les paramètres *objet* et *\** .<!-- END REF-->   
+La commande **LISTBOX INSERT COLUMN FORMULA** est semblable à la commande [LISTBOX INSERT COLUMN](listbox-insert-column.md), à la différence près qu’elle permet la saisie d’une formule comme contenu de la colonne.  
+Ce type de contenu ne peut être utilisé que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection** (pour plus d'informations sur ce point, reportez-vous à la section *Gestion programmée des objets de type List box*).
 
-The **LISTBOX INSERT COLUMN FORMULA** command is similar to the [LISTBOX INSERT COLUMN](listbox-insert-column.md) command except that it can be used to enter a formula as the contents of a column.
+**Note :** Cette commande ne fait rien si elle est appliquée à la première colonne d’une list box affichée en mode hiérarchique. 
 
-This type of contents can only be used when the “Data Source” property of the list box is set to **Current Selection**, **Named Selection**, or **Collection or Entity Selection** (for more information about this, please refer to the *Managing List Box Objects* section).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-**Note:** This command does nothing if it is applied to the first column of a list box displayed in hierarchical mode. 
+La nouvelle colonne est insérée juste avant la colonne désignée par le paramètre *positionCol*. Si le paramètre *positionCol* est supérieur au nombre total de colonnes, la colonne est ajoutée après la dernière colonne. 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, please refer to the *Object Properties* section. 
+Passez dans le paramètre *nomCol* le nom d’objet de la colonne insérée. 
 
-The new column is inserted just before the column designated by the *colPosition* parameter. If the *colPosition* parameter is greater than the total number of columns, the column will be added after the last column. 
+Le paramètre *formule* peut contenir toute expression valide, soit :
 
-Pass the object name of the inserted column in the *colName* parameter. 
+* une instruction,
+* une formule générée à l’aide de l’éditeur de formules,
+* un appel à une commande 4D,
+* un appel à une méthode projet.
 
-The *formula* parameter can contain any valid expression, i.e.:
+Au moment de l’appel de la commande, la *formule* est analysée puis exécutée.
 
-* An instruction,
-* A formula generated using the Formula editor,
-* A call to a 4D command,
-* A call to a project method.
+**Note :** Utilisez la commande [Command name](../commands/command-name.md) afin de définir des formules indépendantes de la langue de l’application (lorsqu’elles font appel à des commandes 4D).
 
-At the moment the command is called, the *formula* is parsed then executed.
+Le paramètre *typeDonnées* permet de désigner le type des données issues de l’exécution de la *formule*. Vous devez passer dans ce paramètre une des constantes du thème *Types champs et variables* suivantes :
 
-**Note:** Use the [Command name](./commands/command-name) command in order to define formulas that are independent from the application language (when they call on 4D commands).
+| Constante  | Type        | Valeur |
+| ---------- | ----------- | ------ |
+| Is Boolean | Entier long | 6      |
+| Is date    | Entier long | 4      |
+| Is picture | Entier long | 3      |
+| Is real    | Entier long | 1      |
+| Is text    | Entier long | 2      |
+| Is time    | Entier long | 11     |
 
-The *dataType* parameter can be used to designate the type of data resulting from the execution of the formula. You must pass one of the following constants of the “*Field and Variable Types*” theme in this parameter:
+Si le résultat de la *formule* ne correspond pas au type de données attendu, une erreur est générée.
 
-| Constant   | Type    | Value |
-| ---------- | ------- | ----- |
-| Is Boolean | Integer | 6     |
-| Is date    | Integer | 4     |
-| Is picture | Integer | 3     |
-| Is real    | Integer | 1     |
-| Is text    | Integer | 2     |
-| Is time    | Integer | 11    |
+Passez dans les paramètres *nomEntête* et *variableEntête* le nom d’objet et la variable de l’en-tête de la colonne insérée.
 
-If the result of the *formula* does not correspond to the expected data type, an error is generated.
+Vous pouvez également passer dans les paramètres *nomPied* et *variablePied* le nom d’objet et la variable du pied de la colonne insérée. Si vous omettez le paramètre *variablePied*, 4D utilisera une variable dynamique. 
 
-In the *headerName* and *headerVar* parameters, pass the object name and variable of the column header inserted.
+**Note :** Les noms d’objets doivent être uniques dans un formulaire. Vous devez veiller à ce que les noms passés dans les paramètres *nomCol*, *nomEntête* et *nomPied* ne soient pas déjà utilisés. Sinon, la colonne n’est pas créée et une erreur est générée.
 
-In the *footerName* and *footerVar* parameters, you can also pass the object name and variable of the footer of the inserted column. If you omit the *footerVar* parameter, 4D uses a dynamic variable.
+### Insertion dynamique 
 
-**Note:** Object names must be unique in a form. You need to make sure that the names passed in the *colName*, *headerName* and *footerName* parameters are not already used. Otherwise, the column is not created and an error is generated.
+A compter de 4D v14 R3, vous pouvez utiliser cette commande pour insérer dynamiquement des colonnes dans les list box à l'exécution du formulaire, 4D prenant automatiquement en charge les définitions de variables nécessaires (pied et en-tête).
 
-### Dynamic insertion 
+Pour cela, **LISTBOX INSERT COLUMN FORMULA** accepte un pointeur **Nil** (**\->\[\]**) comme valeur pour les paramètres *variableEntête* et *variablePied*. Dans ce cas, 4D va créer dynamiquement les variables requises lors de l'exécution de la commande (pour plus d'informations, reportez-vous à la section ). 
 
-Starting with 4D v14 R3, you can use this command to insert columns into list boxes dynamically when the form is executed. 4D will automatically handle the definition of the necessary variables (footer and header).
+A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte).
 
-To do this, **LISTBOX INSERT COLUMN FORMULA** accepts a Nil pointer (**\->\[\]**) as a value for the *headerVar* and *footerVar* parameters. In this case, when the command is executed, 4D creates the required variables dynamically (for more information, refer to the section).
+#### Exemple 1 
 
-Note that header and footer variables are always created with a specific type (longint and text, respectively).
-
-## Example 1 
-
-We want to add a new column to the right of the list box that will contain a formula which calculates an empolyee's age:
+Nous souhaitons ajouter une nouvelle colonne à la droite de la list box qui contiendra une formule calculant l’âge de l’employé :
 
 ```4d
- vAge:="Current Date-[Employees]BirthDate)\365"
- $last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
+ vAge:="Date du jour-[Employés]DateNaissance)\365"
+ $der:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$der;"ColFormule";vAge;Is real;"Age";VarEntete)
 ```
 
-## Example 2 
+#### Exemple 2 
 
-You want to add column to a list box of collection type:
+Vous voulez ajouter une colonne à une list box de type collection :
 
 ```4d
-  //create collection
+  //Créer la collection
  var emps : Collection
  emps:=New collection(New object("Employee";"John Doe";"JobTitle";"CEO");New object("Employee";"Mary Smith";"JobTitle";"CTO");New object("Employee";"Jane Turner";"JobTitle";"CFO"))
 ```
 
-The column contents are evaluated for each element of the collection and referenced with the data source expression, *This.Employee*, as shown below:
+Le contenu de la colonne sera évalué pour chaque élément de la collection et l'expression source *This.Employee* est utilisée :
 
 ![](../assets/en/commands/pict3815223.en.png)
 
-At execution:
+A l'exécution :
 
 ![](../assets/en/commands/pict3814815.en.png)
 
-To add a column showing the job titles:
+Pour ajouter une colonne affichant les titres des postes occupés :
 
 ```4d
  LISTBOX INSERT COLUMN FORMULA(*;"EmpLB";2;"2nd Column";"This.JobTitle";Is text;"JTHeader";header2)
  OBJECT SET TITLE(header2;"Title")
 ```
 
-The column is added to the list box:
+La colonne est ajoutée à la list box :
 
 ![](../assets/en/commands/pict3814850.en.png)
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 970 |
+| Numéro de commande | 970 |
 | Thread safe | no |
-
 
 

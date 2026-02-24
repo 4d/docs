@@ -5,134 +5,133 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *errorMethod* : Text {; *scope* : Integer} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* {; *portée*} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| errorMethod | Text | &#8594;  | Error method to be invoked, or Empty string to stop trapping errors |
-| scope | Integer | &#8594;  | Scope for the error method |
+| méthodErreur | Text | &#8594;  | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
+| portée | Integer | &#8594;  | Portée de la méthode de gestion d'erreur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R8|Modified|
-|15 R5|Modified|
-|12|Modified|
-|<6|Created|
+|19 R8|Modifié|
+|15 R5|Modifié|
+|12|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ON ERR CALL.Summary-->The **ON ERR CALL** command installs the project method, whose name you pass in *errorMethod*, as the method for catching (trapping) errors for the defined execution context in the current project.<!-- END REF--> This method is called the **error-handling method** or **error-catching method**. 
+<!--REF #_command_.ON ERR CALL.Summary-->**ON ERR CALL** installe la méthode projet dont le nom est passé dans *méthodErreur* comme méthode d'interception des erreurs pour le contexte d'exécution défini dans le projet courant.<!-- END REF--> Cette méthode est aussi appelée méthode de gestion des erreurs. 
 
-Error-handling methods are installed per project: components and host projects can define their own error-catching methods, only the method of the project where the error occured will be called. 
+Les méthodes de gestion d'erreurs sont installées par projet : un projet composant et un projet hôte peuvent définir leur propre méthode d'interception d'erreurs, seule la méthode du projet dans lequel s'est produite l'erreur sera appelée. 
 
-Once an error-handling project is installed, 4D calls the method each time an error occurs during the execution of a 4D language command in the defined execution context. 
+Après l'installation, 4D appelle cette méthode lorsqu'une erreur se produit lors de l'exécution d'une commande du langage 4D dans le contexte d'exécution défini. 
 
-The *scope* of the command designates the execution context from where an error will trigger the call of the errorMethod. By default, if the *scope* parameter is omitted, the scope of the command is the local execution context, i.e. the current process. You can pass one of the following constants in the *scope* parameter:
+La *portée* de la commande désigne le contexte d'exécution depuis lequel une erreur déclenchera l'appel de *méthodErreur*. Par défaut, si le paramètre *portée* est omis, la portée de la commande est le contexte d'exécution local, c'est-à-dire le process courant. Vous pouvez passer l'une des constantes suivantes dans le paramètre *portée* :
 
-| Constant                  | Value | Comment                                                                                       |
-| ------------------------- | ----- | --------------------------------------------------------------------------------------------- |
-| ek errors from components | 2     | Errors that occurred in components                                                            |
-| ek global                 | 1     | Errors that occurred in the global execution context of the project                           |
-| ek local                  | 0     | Errors that occurred in the local execution context (default if *scope* parameter is omitted) |
+| Constante                 | Valeur | Comment                                                                                     |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| ek errors from components | 2      | Erreurs générées dans les composants (et non interceptées par les composants)               |
+| ek global                 | 1      | Erreurs générées dans le contexte d'exécution global du projet                              |
+| ek local                  | 0      | Erreurs générées dans le contexte d'exécution local (par défaut si paramètre *portée* omis) |
 
-* if *scope* \= ek local (or if *scope* is omitted), only errors that occurred in the current process will call errorMethod. You can have one error-handling method per process at a time, but you can have different error-handling methods for several processes.
-* if *scope* \= ek global, all errors that occurred in the application, whatever the process (except components), will call errorMethod. Note that, if a ek local error handler is also defined for a process, the ek global error handler is not called. This principle allows you to define a generic error-handling method that will catch all errors, while local error-handling methods can be set for some specific processes.  
-Note also that a global error-handling method is useful on the server, where it can be handle errors in server-side functions.
-* if *scope* \= ek errors from components, only errors generated from the components installed in the application will call errorMethod. Note that, if an error-handling method is defined in a component, it is called in case of error in the component, and the ek errors from components error handler set in the host application is not called.
+* si *portée* \= ek local (ou si *portée* est omis), seules les erreurs qui se sont produites dans le process courant appelleront méthodErreur. Il ne peut y avoir qu'une seule méthode de gestion des erreurs par process, mais il peut exister différentes méthodes de gestions d'erreurs pour plusieurs process.
+* si *portée* \= ek global, toutes les erreurs survenues dans l'application, quel que soit le process (sauf les composants), appelleront méthodErreur. Notez que si un gestionnaire d'erreurs ek local est aussi défini pour un process, le gestionnaire d'erreurs ek global n'est pas appelé. Ce principe vous permet de définir une méthode de gestion des erreurs générique qui interceptera toutes les erreurs, tandis que des méthodes locales de gestion d'erreurs peuvent être définies pour certains process spécifiques.  
+Notez également qu'une méthode globale de gestion des erreurs est utile sur le serveur, où elle permet de gérer les erreurs dans les fonctions côté serveur.
+* si *portée* \= ek errors from components, seules les erreurs générées par les composants installés dans l'application appelleront méthodErreur. Notez que, si une méthode de gestion d'erreurs est définie dans un composant, elle est appelée en cas d'erreur dans le composant et le gestionnaire d'erreurs ek errors from components défini dans l'application hôte n'est pas appelé.
 
-**Note:** If **ON ERR CALL** is called from a process for which you requested preemptive execution (in compiled mode), the compiler checks whether *errorMethod* is thread-safe and returns errors if it is not compatible with the preemptive mode. For more information, refer to the [Preemptive processes](../Develop/preemptive.md) section.
+**Note :** Si **ON ERR CALL** est appelée depuis un process dont vous avez demandé l'exécution en préemptif (en mode compilé), le compilateur vérifiera le caractère thread-safe de *méthodErreur* et retournera des erreurs si elle n'est pas compatible avec le mode préemptif. Pour plus d'informations, reportez-vous à la section *Process 4D préemptifs*.
 
-To stop the trapping of errors, call **ON ERR CALL** again with the desired *scope* parameter (if any) and pass an empty string in *errorMethod*. 
+Pour désinstaller une méthode de gestion des erreurs, appelez de nouveau **ON ERR CALL** avec le paramètre *portée* souhaité (le cas échéant) et passez une chaîne vide dans *méthodErreur*.
 
-You can identify errors by reading the Error system variable, which contains the code number of the error. Error codes are listed in the *Error Codes* theme. For example, you can see the section *Syntax Errors (1 -> 81)*. The Error variable value is significant only within the error-handling method; if you need the error code within the method that provoked the error, copy the Error variable to your own process variable. You can also access the Error method, Error line and Error formula system variables which contain, respectively, the name of the method, the line number and the text of the formula where the error occurred (see [Handling errors within the method](../Concepts/error-handling.md#handling-errors-within-the-method)).
+Vous pouvez identifier les erreurs en lisant la variable système Error, qui contient le code de l'erreur. Les codes d'erreurs retournés par 4D sont traités dans les sections *Codes d'erreurs*. Reportez-vous par exemple à la section *Erreurs de syntaxe (1 -> 81)*. La variable Error n'est définie qu'à l'intérieur de la méthode de gestion des erreurs ; si vous souhaitez que le code soit accessible dans la méthode ayant provoqué l'erreur, copiez la variable Error dans votre propre variable process. Vous pouvez également accéder aux variables système Error method, Error line et Error formula contenant respectivement le nom de la méthode, le numéro de ligne et le texte de la formule à l'origine de l'erreur (cf. [Gérer les erreurs dans une méthode](../Concepts/error-handling.md#gérer-les-erreurs-dans-une-méthode)).
 
-You can use the [Last errors](./commands/last-errors) or [Last errors](./commands/last-errors)  command to obtain the error sequence (i.e., the error "stack") at the origin of the interruption.
+Vous pouvez utiliser la commande [Last errors](../commands/last-errors.md) ou [Last errors](../commands/last-errors.md)  pour obtenir la séquence d'erreurs (c'est-à-dire la "pile" d'erreurs) à l'origine de l'interruption.
 
-The error-handling method should manage the error in an appropriate way or present an error message to the user. Errors can be generated during processing performed by:
+La méthode de gestion des erreurs doit généralement traiter les erreurs de manière appropriée ou afficher un message d'erreur à l'utilisateur. Les erreurs peuvent être générées lors de traitements effectués sur :
 
-* The 4D database engine; for example, when saving a record causes the violation of a trigger rule.
-* The 4D environment; for example, when you do not have enough memory for allocating an array.
-* The operating system on which the database is run; for example, disk full or I/O errors.
+* Le moteur de base de données de 4D ; par exemple, lorsque la sauvegarde d'un enregistrement provoquerait la violation d'une règle de trigger.
+* L'environnement de 4D ; par exemple, lorsque vous n'avez pas assez de mémoire pour remplir un tableau.
+* Le système d'exploitation sur lequel la base est lancée ; par exemple, disque plein ou erreurs d'entrée/sortie.
 
-The [ABORT](abort.md) command can be used to terminate processing. If you don’t call [ABORT](abort.md) in the error-handling method, 4D returns to the interrupted method and continues to execute the method. Use the [ABORT](abort.md) command when an error cannot be recovered.
+La commande [ABORT](abort.md) peut être utilisée pour stopper le traitement. Si vous n'appelez pas [ABORT](abort.md) dans la méthode installée, 4D retourne à la méthode interrompue et reprend son exécution. Utilisez la commande [ABORT](abort.md) lorsque l'exécution ne peut se poursuivre.
 
-If an error occurs in the error-handling method itself, 4D takes over error handling. Therefore, you should make sure that the error-handling method cannot generate an error. Also, you cannot use **ON ERR CALL** inside the error-handling method.
+Si une erreur se produit dans la méthode de gestion d'erreurs elle-même, 4D reprend le contrôle de la gestion des erreurs. En conséquence, assurez-vous que la méthode de gestion des erreurs installée ne puisse pas elle-même générer d'erreur. Aussi, vous ne pouvez pas utiliser la commande **ON ERR CALL** dans une méthode de gestion des erreurs.
 
-## Example 1 
+## Exemple 1 
 
-You want to define a global error handler, for example in the **On Startup** database method:
+Vous souhaitez définir un gestionnaire d'erreur global, par exemple dans la méthode base Sur ouverture :
 
 ```4d
  ON ERR CALL("myGlobalErrorHandler";ek global)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following project method tries to create a document whose name is received as parameter. If the document cannot be created, the project metod returns 0 (zero) or the error code:  
+La méthode projet suivante tente de créer un document dont le nom est reçu en paramètre et retourne 0 (zéro) ou un code d'erreur si le document n'a pas pu être créé : 
 
 ```4d
-  //Create doc project method
-  //Create doc ( String ; Pointer ) -> LongInt
-  //Create doc ( DocName ; ->DocRef ) -> Error code result
+  // Méthode projet Créer doc
+  // Créer doc ( Chaîne ; Pointeur ) -> Entier long
+  // Créer doc ( NomDoc ; ->DocRef ) -> Code d'erreur résultant
  
  gError:=0
- ON ERR CALL("IO ERROR HANDLER")
+ ON ERR CALL("IO TRAITEMENT ERREURS")
  $2->:=Create document($1)
  ON ERR CALL("")
  $0:=gError
 ```
 
-The IO ERROR HANDLER project method is listed here:
+La méthode projet IO TRAITEMENT ERREURS est la suivante :
 
 ```4d
-  //IO ERROR HANDLER project method
- gError:=Error //just copy the error code to the process variable gError
+  // Méthode projet IO TRAITEMENT ERREURS
 ```
 
-Note the use of the *gError* process variable to get the error code result within the current executing method. Once these methods are present in your database, you can write:
+```4d
+ gError:=Error // Simple copie du code d'erreur dans la variable process gError
+```
+
+Notez l'utilisation de la variable process *gError* pour récupérer le code d'erreur dans la méthode en train de s'exécuter. Une fois que ces méthodes sont présentes dans votre base, vous pouvez écrire par exemple :
 
 ```4d
   // ...
  var vhDocRef : Time
- $vlErrCode:=Create doc($vsDocumentName;->vhDocRef)
+ $vlErrCode:=Créer doc($vsDocumentNom;->vhDocRef)
  If($vlErrCode=0)
   //...
     CLOSE DOCUMENT($vlErrCode)
  Else
-    ALERT("The document could not be created, I/O error "+String($vlErrCode))
+    ALERT("Le document n'a pas pu être créé, erreur d'E/S "+String($vlErrCode))
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-While implementing a complex set of operations, you may end up with various subroutines that require different error-handling methods. You can have only one error-handling method per process at a time, so you have two choices:  
- \- Keep track of the current one each time you call **ON ERR CALL**, or   
-\- Use a process array variable (in this case, *asErrorMethod*) to “pile up” the error-handling methods and a project method (in this case, ON ERROR CALL) to install and deinstall the error-handling methods. 
-
-You must initialize the array at the very beginning of the process execution:
+Alors que vous implémentez un ensemble complexe d'opérations, vous pouvez terminer avec de multiples sous-routines qui nécessitent différentes méthodes de gestion des erreurs. Comme ne pouvez avoir qu'une seule méthode à la fois de gestion des erreurs par process, vous devez soit repérer la méthode courante à chaque fois que vous appelez **ON ERR CALL**, soit utiliser une variable tableau process (ici *tabErrorMethod*) pour “empiler” les méthodes de gestion d'erreur ainsi qu'une méthode projet (ici APPEL SUR ERR) pour les installer et les désinstaller. Le tableau doit être initialisé au tout début de l'exécution du process : 
 
 ```4d
-  // Do NOT forget to initialize the array at the beginning
-  // of the process method (the project method that runs the process)
- ARRAY STRING(63;asErrorMethod;0)
+  // N'oubliez pas d'initialiser le tableau au début
+  // de la méthode de gestion du process
+ ARRAY STRING(63;tabErrorMethod;0)
 ```
 
-Here is the custom ON ERROR CALL method:
+Voici la méthode personnalisée APPEL SUR ERR :
 
 ```4d
-  // ON ERROR CALL project method
-  // ON ERROR CALL { ( String ) }
-  // ON ERROR CALL { ( Method Name ) }
+  // Méthode projet APPEL SUR ERR
+  // APPEL SUR ERR { ( Chaîne ) }
+  // APPEL SUR ERR { ( Nom de la méthode ) }
  
  C_STRING(63;$1;$ErrorMethod)
  var $vlElem : Integer
@@ -146,62 +145,61 @@ Here is the custom ON ERROR CALL method:
  If($ErrorMethod#"")
     var gError : Integer
     gError:=0
-    $vlElem:=1+Size of array(asErrorMethod)
-    INSERT IN ARRAY(asErrorMethod;$vlElem)
-    asErrorMethod{$vlElem}:=$1
+    $vlElem:=1+Size of array(tabErrorMethod)
+    INSERT IN ARRAY(tabErrorMethod;$vlElem)
+    tabErrorMethod{$vlElem}:=$1
     ON ERR CALL($1)
  Else
     ON ERR CALL("")
-    $vlElem:=Size of array(asErrorMethod)
+    $vlElem:=Size of array(tabErrorMethod)
     If($vlElem>0)
-       DELETE FROM ARRAY(asErrorMethod;$vlElem)
+       DELETE FROM ARRAY(tabErrorMethod;$vlElem)
        If($vlElem>1)
-          ON ERR CALL(asErrorMethod{$vlElem-1})
+          ON ERR CALL(tabErrorMethod{$vlElem-1})
        End if
     End if
  End if
 ```
 
-Then, you can call it this way:
+Vous pouvez alors l'appeler de la manière suivante :
 
 ```4d
  gError:=0
- ON ERROR CALL("IO ERRORS") // Installs the IO ERRORS error-handling method
+ APPEL SUR ERR("ERREURS ES") //Installe la méthode de gestion d'erreurs ERREURS ES
   // ...
- ON ERROR CALL("ALL ERRORS") // Installs the ALL ERRORS error-handling method
+ APPEL SUR ERR("TOUTES ERREURS") //Installe la méthode de gestion d'erreurs TOUTES ERREURS
   // ...
- ON ERROR CALL // Deinstalls ALL ERRORS error-handling method and reinstalls IO ERRORS
+ APPEL SUR ERR //Désinstalle la méthode de gestion d'erreurs TOUTES ERREURS et réinstalle ERREURS ES
   // ...
- ON ERROR CALL // Deinstalls the IO ERRORS error-handling method
+ APPEL SUR ERR //Désinstalle la méthode de gestion d'erreurs ERREURS ES
   // ...
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following error-handling method ignores the user interruptions and displays the error text:
+La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisateur et affiche le texte de l'erreur :
 
 ```4d
-  //Show_errors_only project method
- If(Error#1006) //this is not a user interruption
-    ALERT("The error "+String(Error)+" occurred. The code in question is: \""+Error formula+"\"")
+  //Méthode projet Montrer_seulement_erreurs
+ If(Error#1006) //ce n'est pas une interruption utilisateur
+    ALERT("L'erreur "+String(Error)+" s'est produite. Le code en cause est : \""+Error formula+"\"")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [ABORT](abort.md)  
-*Error Handler*  
-[Last errors](./commands/last-errors)   
-[Last errors](./commands/last-errors)  
+*Gestionnaire d'erreur*  
+[Last errors](../commands/last-errors.md)   
+[Last errors](../commands/last-errors.md)  
 [Method called on error](method-called-on-error.md)  
-*System Variables*  
+*Variables système*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 155 |
+| Numéro de commande | 155 |
 | Thread safe | yes |
-
 
 

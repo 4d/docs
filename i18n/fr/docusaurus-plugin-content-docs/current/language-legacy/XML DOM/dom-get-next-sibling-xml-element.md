@@ -5,81 +5,82 @@ slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* : Text {; *siblingElemName* : Text {; *siblingElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *refElément* {; *nomElémentFrère* {; *valeurElémentFrère*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| siblingElemName | Text | &#8592; | Name of sibling XML element |
-| siblingElemValue | Text | &#8592; | Value of sibling XML element |
-| Function result | Text | &#8592; | Sibling XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElémentFrère | Text | &#8592; | Nom de l'élément XML frère |
+| valeurElémentFrère | Text | &#8592; | Valeur de l'élément XML frère |
+| Résultat | Text | &#8592; | Référence de l’élément XML frère |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.2|Modified|
-|<6|Created|
+|2004.2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get next sibling XML element.Summary-->The DOM Get next sibling XML element command returns a reference to the next “sibling” of the XML element passed as reference.<!-- END REF--> This reference can be used with other XML parsing commands.
+<!--REF #_command_.DOM Get next sibling XML element.Summary-->La commande **DOM Get next sibling XML element** retourne une référence vers le prochain “frère” de l’élément XML passé en référence.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
-The *siblingElemName* and *siblingElemValue* parameters, if they are passed, receive respectively the name and the value of the “sibling” element. 
+  
+Les paramètres *nomElémentFrère* et *valeurElémentFrère*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément “frère”. 
 
-This command is used to navigate among the “children” of the XML element. 
+Cette commande permet de naviguer parmi les “enfants” d'un élément XML. 
 
-After the last “sibling,” the system variable OK is set to 0\. 
+Après le dernier “frère”, la variable système OK prend la valeur 0\. 
 
-## Example 1 
+## Exemple 1 
 
-Retrieval of the reference of the next sibling XML element following the element passed as parameter:
+Récupération de la référence de l’élément XML frère suivant l’élément passé en paramètre :
 
 ```4d
- var $xml_Parent_Ref;$next_XML_Ref : Text
- $next_XML_Ref:=DOM Get next sibling XML element($xml_Parent_Ref)
+ var $ref_XML_Parent;$ref_XML_Suivant : Text
+ $ref_XML_Suivant:=DOM Get next sibling XML element($ref_XML_Parent)
 ```
 
-![](../assets/en/commands/pict40038.en.png)
+![](../assets/en/commands/pict40038.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-Retrieval in a reference loop of all the child XML elements following the parent element passed as parameter, beginning with the first child:
+Récupération dans une boucle des références de tous les éléments XML enfants de l’élément parent passé en paramètre, à compter du premier enfant : 
 
 ```4d
- var $xml_Parent_Ref;$first_XML_Ref;$next_XML_Ref : Text
+ var $ref_XML_Parent;$ref_XML_Premier;$ref_XML_Suivant : Text
  
- $first_XML_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- $next_XML_Ref:=$first_XML_Ref
+ $ref_XML_Premier:=DOM Get first child XML element($ref_XML_Parent)
+ $ref_XML_Suivant:=$ref_XML_Premier
  While(OK=1)
-    $next_XML_Ref:=DOM Get next sibling XML element($next_XML_Ref)
+    $ref_XML_Suivant:=DOM Get next sibling XML element($ref_XML_Suivant)
  End while
 ```
 
-![](../assets/en/commands/pict40039.en.png)
+![](../assets/en/commands/pict40039.fr.png)
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed and if the parsed element is not the last “sibling” of the referenced element, the system variable OK is set to 1\. If an error occurs or if the parsed element is the last “sibling” of the referenced element, it is set to 0.
+Si la commande a été correctement exécutée et si l’élément analysé n’est pas le dernier “frère” de l’élément référencé, la variable système OK prend la valeur 1\. Si une erreur se produit ou si l’élément analysé est le dernier “frère” de l’élément référencé, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 724 |
+| Numéro de commande | 724 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -9,46 +9,43 @@ displayed_sidebar: docs
 <!--REF #_command_.Get printed height.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Position of the marker |
+| Résultat | Integer | &#8592; | Position du marqueur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get printed height.Summary-->The **Get printed height** command returns the overall height (in pixels) of the section printed using the [Print form](./commands/print-form) command.<!-- END REF-->
+<!--REF #_command_.Get printed height.Summary-->La commande **Get printed height** retourne la hauteur globale (en pixels) de la section imprimée par la commande [Print form](../commands/print-form.md).<!-- END REF-->
 
-The value returned will be included between 0 (the top edge of the page) and the overall height returned by the [GET PRINTABLE AREA](get-printable-area.md) command (the maximum size of the printable area). 
+La valeur retournée sera comprise entre 0 (le bord supérieur de la page) et la hauteur globale retournée par la commande [GET PRINTABLE AREA](get-printable-area.md) (la taille maximum de la zone d’impression).
 
-If you print a new section using the [Print form](./commands/print-form) command, the height of the new section is added to this value. If the printable area available is insufficient to contain this section, a new page is generated and the value returned is 0.
+Si vous imprimez une nouvelle section via la commande [Print form](../commands/print-form.md), la hauteur de cette section est ajoutée à cette valeur. Si la zone d’impression disponible est insuffisante pour contenir cette section, une nouvelle page est générée et la valeur retournée est 0.
 
-The right and left printable margins, unlike the top and bottom margins (which may be defined using the [SET PRINTABLE MARGIN](set-printable-margin.md) command), do not influence the value returned.
+Les marges d’impression gauche et droite n’influent pas sur la valeur retournée, à la différence des marges inférieure et supérieure (définies éventuellement via la commande [SET PRINTABLE MARGIN](set-printable-margin.md)).
 
-**Note:** For more information regarding Printing management and terminology in 4D, refer to the [GET PRINTABLE MARGIN](get-printable-margin.md) command description. 
-
-## See also 
+## Voir aussi 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 702 |
+| Numéro de commande | 702 |
 | Thread safe | no |
-
 
 

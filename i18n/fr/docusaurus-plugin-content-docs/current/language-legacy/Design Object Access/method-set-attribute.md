@@ -5,87 +5,87 @@ slug: /commands/method-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *path* : Text ; *attribType* : Integer ; *attribValue* : Boolean, Text {; ...(*attribType* : Integer ; *attribValue* : Boolean, Text)}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *chemin* ; *typeAttribut* ; *valeurAttribut* {; *typeAttribut2* ; *valeurAttribut2* ; ... ; *typeAttributN* ; *valeurAttributN*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | Path of project method |
-| attribType | Integer | &#8594;  | Type of attribute |
-| attribValue | Boolean, Text | &#8594;  | True = select attribute, False = deselect attributeor Folder name |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text | &#8594;  | Chemin de méthode projet |
+| typeAttribut | Integer | &#8594;  | Type d’attribut |
+| valeurAttribut | Boolean, Text | &#8594;  | Vrai = sélectionner l’attribut, Faux = désélectionner l’attribut ou Nom du dossier |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Created|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->The **METHOD SET ATTRIBUTE** command sets the value(s) of the *attribType* attribute(s) for the project method designated by the *path* parameter.<!-- END REF--> This command only works with project methods. If you pass an invalid *path*, an error is generated. 
+<!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->La commande **METHOD SET ATTRIBUTE** permet de définir la valeur d'un ou plusieurs attribut(s) *typeAttribut* pour la méthode projet désignée par le paramètre *chemin*.<!-- END REF--> Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée. 
 
-In the *attribType* parameter, pass a value indicating the type of attribute to set. You can use the following constants, found in the *Design Object Access* theme:
+Passez dans le paramètre *typeAttribut* une valeur indiquant le type d’attribut à définir. Vous pouvez utiliser les constantes suivantes, placées dans le thème *Accès objets développement* :
 
-| Constant                     | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                              |
-| ---------------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Attribute executed on server | Integer | 8     | Corresponds to the "Execute on server" option                                                                                                                                                                                                                                                                                                                                                        |
-| Attribute folder name        | Integer | 1024  | Name of folder for the method ("folder" attribute). When you pass this constant, you must pass a folder name in *attribValue*:<br/>if this name corresponds to a valid folder, the method is placed in this parent folder,if the folder does not exist, the command does not change anything at the parent folder level,if you pass an empty string, the method is placed at the root level. |
-| Attribute invisible          | Integer | 1     | Corresponds to the "Invisible" option                                                                                                                                                                                                                                                                                                                                                                |
-| Attribute published SOAP     | Integer | 3     | Corresponds to the "Offered as a Web Service" option                                                                                                                                                                                                                                                                                                                                                 |
-| Attribute published SQL      | Integer | 7     | Corresponds to the "Available through SQL" option                                                                                                                                                                                                                                                                                                                                                    |
-| Attribute published Web      | Integer | 2     | Corresponds to the "Available through 4D HTML tags and URLs (4DACTION...)" option                                                                                                                                                                                                                                                                                                                    |
-| Attribute published WSDL     | Integer | 4     | Corresponds to the "Published in WSDL" option                                                                                                                                                                                                                                                                                                                                                        |
-| Attribute shared             | Integer | 5     | Corresponds to the "Shared by components and host database" option                                                                                                                                                                                                                                                                                                                                   |
+| Constante                    | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute executed on server | Entier long | 8      | Correspond à l’option "Exécuter sur serveur"                                                                                                                                                                                                                                                                                                                                                                         |
+| Attribute folder name        | Entier long | 1024   | Nom de dossier pour la méthode (attribut "folder"). Lorsque vous passez cette constante, vous devez passer un nom de dossier dans *valeurAttribut* :<br/>si le nom correspond à un dossier valide, la méthode sera placée dans ce dossier parent,si le dossier n’existe pas, la commande ne change rien au niveau du dossier parent,si vous passez une chaîne vide, la méthode sera placée au niveau racine. |
+| Attribute invisible          | Entier long | 1      | Correspond à l’option "Invisible"                                                                                                                                                                                                                                                                                                                                                                                    |
+| Attribute published SOAP     | Entier long | 3      | Correspond à l’option "Offerte comme Web Service"                                                                                                                                                                                                                                                                                                                                                                    |
+| Attribute published SQL      | Entier long | 7      | Correspond à l’option "Disponible via SQL"                                                                                                                                                                                                                                                                                                                                                                           |
+| Attribute published Web      | Entier long | 2      | Correspond à l’option "Disponible via les balises HTML et les URLs 4D (4DACTION...)"                                                                                                                                                                                                                                                                                                                                 |
+| Attribute published WSDL     | Entier long | 4      | Correspond à l’option "Publiée dans WSDL". N'est prise en compte que si l’option "Offerte comme Web Service" est activée.                                                                                                                                                                                                                                                                                            |
+| Attribute shared             | Entier long | 5      | Correspond à l’option "Partagée entre composants et base hôte"                                                                                                                                                                                                                                                                                                                                                       |
 
-In the *attribValue* parameter, you can pass either:
+Passez dans le paramètre *valeurAttribut* soit :
 
-* **True** to select the corresponding option or **False** to deselect it, or
-* a string (folder name) if you used the Attribute folder name constant in *attribType*.
+* **Vrai** pour sélectionner l’option correspondante et **Faux** pour la désélectionner,
+* une chaîne (nom du dossier) si vous avez utilisé la constante Attribute folder name dans *typeAttribut*.
 
-You can pass multiple *attribType*;*attribValue* pairs in a single call.
+Vous pouvez passer plusieurs paires *typeAttribut*;*valeurAttribut* en un seul appel. 
 
-You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated.
+Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée. 
 
 ### 
 
-This command cannot be executed in compiled mode. When it is called in this mode, it will generate the error -9762\. 
+Cette commande ne peut pas être exécutée en mode compilé. Dans ce mode, son appel génère l'erreur -9762\. 
 
-## Example 1 
+## Exemple 1 
 
-Selection of the "Shared by components and host database" property for the "Choose dialog" project method:
-
-```4d
- METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
-```
-
-## Example 2 
-
-Setting several attribute/value pairs:
+Sélection de la propriété "Partagée entre composants et base hôte" pour la méthode projet "Choix dialogue" :
 
 ```4d
- METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
+ METHOD SET ATTRIBUTE("Choix dialogue";Attribute shared;True)
 ```
 
-## See also 
+## Exemple 2 
 
-*Design Object Access*  
+Définition de plusieurs paires attribut/valeur :
+
+```4d
+ METHOD SET ATTRIBUTE(vChemin;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vDossier;*)
+```
+
+## Voir aussi 
+
+*Accès objets développement*  
 [METHOD Get attribute](method-get-attribute.md)  
 [METHOD SET ATTRIBUTES](method-set-attributes.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1192 |
+| Numéro de commande | 1192 |
 | Thread safe | no |
 
 

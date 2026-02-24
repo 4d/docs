@@ -5,47 +5,47 @@ slug: /commands/set-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* : Time ; *size* : Real )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* ; *taille* )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Document reference number |
-| size | Real | &#8594;  | New size expressed in bytes |
+| docRef | Time | &#8594;  | Numéro de référence de document |
+| taille | Real | &#8594;  | Nouvelle taille (en octets) de document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET DOCUMENT SIZE.Summary-->The **SET DOCUMENT SIZE** command sets the size of a document to the number of bytes you pass in *size*.<!-- END REF--> 
+<!--REF #_command_.SET DOCUMENT SIZE.Summary-->La commande **SET DOCUMENT SIZE** fixe la taille d'un document au nombre d'octets que vous avez passé dans *taille*.<!-- END REF--> 
 
-If the document is open, you pass its document reference number in *docRef*.
+Le document doit avoir été ouvert au préalable. Vous passez son numéro de référence dans *docRef*.
 
-On Macintosh, the size of the document's data fork is changed.
+Sous Mac OS, c'est la taille de la data fork du document qui est modifiée.
 
-## See also 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [Get document size](get-document-size.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 480 |
+| Numéro de commande | 480 |
 | Thread safe | yes |
 
 

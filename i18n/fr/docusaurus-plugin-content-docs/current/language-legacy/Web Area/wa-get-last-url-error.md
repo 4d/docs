@@ -5,55 +5,52 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *object* : Text ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<br/>**WA GET LAST URL ERROR** ( *object* : Variable, Field ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *objet* ; *url* ; *description* ; *codeErreur* )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| url | Text | &#8592; | URL at origin of error |
-| description | Text | &#8592; | Description of error (macOS) |
-| errorCode | Integer | &#8592; | Error code |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| url | Text | &#8592; | URL à l’origine de l’erreur |
+| description | Text | &#8592; | Description de l’erreur (macOS) |
+| codeErreur | Integer | &#8592; | Code d'erreur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA GET LAST URL ERROR.Summary-->The WA GET LAST URL ERROR command recovers several items of information about the last error that occurred in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA GET LAST URL ERROR.Summary-->La commande **WA GET LAST URL ERROR** vous permet de récupérer plusieurs informations relatives à la dernière erreur ayant eu lieu dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->   
+Ces informations sont retournées dans trois variables :
 
-This information is returned in three variables:
+* *url* : l’URL ayant provoqué l’erreur.
+* *description* (Mac OS uniquement) : un texte décrivant l’erreur (si disponible). S’il n’est pas possible d’associer un texte à l’erreur, une chaîne vide est retournée. Sous Windows, ce paramètre est toujours retourné vide.
+* *codeErreur* : code de l’erreur.  
+   * Si le code est >=400, il s’agit d’une erreur liée au protocole HTTP. Pour plus d’informations sur ce type d’erreur, reportez-vous à l’adresse *http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*  
+   * Sinon, il s’agit d’une erreur retournée par le WebKit (macOS) ou ActiveX (Windows).
 
-* *url*: URL causing error.
-* *description* (Mac OS only): A text describing the error (if available). If it is not possible to associate a text with the error, an empty string is returned. Under Windows, this parameter is always returned empty.
-* *errorCode*: The error code.  
-   * If the code is >=400, it is an error related to the HTTP protocol. For more information about this type of error, refer to the following address:  
-   *http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html*  
-   * Otherwise, it is an error returned by the WebKit (macOS) or ActiveX (Windows).
+Il est judicieux d’appeler cette commande dans le cadre de l’événement formulaire On URL Loading Error afin de connaître la cause de l’erreur qui vient de se produire. Pour plus d’informations, reportez-vous à la description de la commande [Form event code](../commands/form-event-code.md). 
 
-It is recommended to call this command within the framework of the On URL Loading Error form event to find out the cause of the error that just occurred. 
+## Voir aussi 
 
-## See also 
+[Form event code](../commands/form-event-code.md)  
 
-[Form event code](./commands/form-event-code)  
-
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1034 |
+| Numéro de commande | 1034 |
 | Thread safe | no |
-
 
 

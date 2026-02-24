@@ -9,49 +9,49 @@ displayed_sidebar: docs
 <!--REF #_command_.Get text from pasteboard.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Returns the text (if any) present in the pasteboard |
+| Résultat | Text | &#8592; | Texte présent dans le conteneur de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get text from pasteboard.Summary-->**Get text from pasteboard** returns the text present in the pasteboard.<!-- END REF--> 
+<!--REF #_command_.Get text from pasteboard.Summary-->**Get text from pasteboard** retourne le texte présent dans le conteneur de données.<!-- END REF--> 
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-If the pasteboard contains enriched text (for example in RTF format), the text will keep its attributes when it is dropped or pasted, if the destination area is compatible. 
+Si le conteneur de données contient du texte enrichi (par exemple au format RTF), le texte conserve ses attributs au moment du déposer ou du coller, si la zone de destination est compatible. 
 
-Note that 4D text fields and variables can contain up to 2 GB of text.
+A noter que les champs et variables de type Texte de 4D peuvent contenir jusqu'à 2 Go de texte.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the text is correctly extracted, OK is set to 1; otherwise OK is set to 0.
+Si le texte est correctement extrait, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 524 |
+| Numéro de commande | 524 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

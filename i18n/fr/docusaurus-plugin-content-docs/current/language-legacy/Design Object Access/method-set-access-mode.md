@@ -5,44 +5,44 @@ slug: /commands/method-set-access-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* : Integer )<!-- END REF-->
+<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mode | Integer | &#8594;  | Access mode for locked objects |
+| mode | Integer | &#8594;  | Mode d’accès aux objets verrouillés |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD SET ACCESS MODE.Summary-->The **METHOD SET ACCESS MODE** command sets the behavior for 4D when you attempt to write access an object already loaded for modification by another user or process.<!-- END REF--> The scope of this command is the current session.
+<!--REF #_command_.METHOD SET ACCESS MODE.Summary-->La commande **METHOD SET ACCESS MODE** vous permet de définir le comportement de 4D lorsque vous tentez d’accéder en écriture à un objet déjà chargé en modification par un autre utilisateur ou process.<!-- END REF-->La portée de cette commande est la session.
 
-In *mode*, you pass one of the following constants of the *Design Object Access* theme:
+Passez dans *mode* une des constantes suivantes du thème *Accès objets développement* :
 
-| Constant                 | Type    | Value | Comment                                                                                                                                     |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| On object locked abort   | Integer | 0     | Loading of object is aborted (default functioning)                                                                                          |
-| On object locked confirm | Integer | 2     | 4D displays a dialog box so that you can choose to try again or to abort. In remote mode, this option is not supported (loading is aborted) |
-| On object locked retry   | Integer | 1     | 4D keeps attempting to load the object until it has been released                                                                           |
+| Constante                | Type        | Valeur | Comment                                                                                                                                                                         |
+| ------------------------ | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| On object locked abort   | Entier long | 0      | Le chargement de l’objet est abandonné (fonctionnement par défaut)                                                                                                              |
+| On object locked confirm | Entier long | 2      | 4D affiche une boîte de dialogue vous permettant de choisir de réessayer ou d’abandonner. En mode distant, cette option n’est pas prise en charge (le chargement est abandonné) |
+| On object locked retry   | Entier long | 1      | 4D tente de charger l’objet jusqu’à ce qu’il soit libéré                                                                                                                        |
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1191 |
+| Numéro de commande | 1191 |
 | Thread safe | no |
 
 

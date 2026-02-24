@@ -5,59 +5,59 @@ slug: /commands/get-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *groupID* : Integer ; *name* : Text ; *owner* : Integer {; *members* : Integer array} )<!-- END REF-->
+<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Integer | &#8594;  | Unique group ID number |
-| name | Text | &#8592; | Name of the group |
-| owner | Integer | &#8592; | User ID number of group owner (Binary databases only) |
-| members | Integer array | &#8592; | Group members |
+| réfGroupe | Integer | &#8594;  | Numéro de référence du groupe |
+| nom | Text | &#8592; | Nom du groupe |
+| propriétaire | Integer | &#8592; | Numéro de référence du propriétaire du groupe |
+| membres | Integer array | &#8592; | Membres du groupe |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES returns the properties of the group whose unique group ID number you pass in *groupID*.<!-- END REF--> You must pass a valid group ID number returned by the command [GET GROUP LIST](get-group-list.md). 
+<!--REF #_command_.GET GROUP PROPERTIES.Summary-->**GET GROUP PROPERTIES** retourne les propriétés du groupe dont le numéro de référence est passé dans *réfGroupe*.<!-- END REF--> Vous passez le numéro de référence du groupe retourné par la commande [GET GROUP LIST](get-group-list.md). 
 
-If you do not pass a valid group ID number, GET GROUP PROPERTIES returns empty parameters.
+Si vous ne passez pas un numéro de référence valide, **GET GROUP PROPERTIES** renvoie des paramètres vides.
 
-After the call, you retrieve the name of the group in the *name* parameter.
+Après l'appel de la commande, vous récupérez le nom du groupe dans le paramètre *nom*.
 
-(*Binary databases only*) The owner of the group is returned in the *owner* parameter. This parameter always returns 0 in project databases. 
+*(Bases binaires uniquement)* Le propriétaire du groupe est retourné dans le paramètre propriétaire. Ce paramètre retourne toujours 0 dans les bases projets.
 
-If you pass the optional *members* parameter, the unique ID numbers of the users and groups belonging to the group are returned. 
+Si vous passez le paramètre optionnel *membres*, ce tableau contiendra les numéros de référence uniques des utilisateurs qui appartiennent au groupe. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
+**Note pour les bases binaires :** Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling GET GROUP PROPERTIES or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 613 |
+| Numéro de commande | 613 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

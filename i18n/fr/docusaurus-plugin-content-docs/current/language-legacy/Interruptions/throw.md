@@ -5,121 +5,125 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *description*} ) <br/>
+*throw* {( *errorObj* )}<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| errorCode | Integer | &#8594;  | A long integer representing the error code. |
-| description | Text | &#8594;  | A text providing a description of the error. |
-| errorObj | Object | &#8594;  | An object containing properties to build the error |
+| errorCode | Integer | &#8594;  | Code d'erreur |
+| description | Text | &#8594;  | Description de l'erreur |
+| throw {( errorObj )} |
+| Paramètre | Type | Description |
+| errorObj | Object | &#8594;  | Propriétés de l'erreur à construire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20 R5|Modified|
-|20 R2|Created|
+|20 R5|Modifié|
+|20 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.throw.Summary-->The **throw** command creates an error that will be thrown either immediately or when the calling method returns to its caller (deferred mode).<!-- END REF--> 
+<!--REF #_command_.throw.Summary-->La commande **throw** crée une erreur qui sera levée soit immédiatement, soit lorsque la méthode appelante retournera à l'appelant (mode différé).<!-- END REF--> 
 
-When you encounter a situation in your 4D code where an error condition arises, you can use the **throw** command to explicitly throw an error and provide a specific error message or error number. This can be useful for signaling exceptional conditions or invalid inputs.
+Lorsque vous rencontrez une situation d'erreur dans votre code 4D, vous pouvez utiliser la commande **throw** pour générer explicitement une erreur et fournir un message d'erreur spécifique ou un numéro d'erreur. Cela peut être utile pour signaler des conditions exceptionnelles ou des entrées non valides.
 
-Errors thrown using the **throw** command are managed by the 4D runtime as any normal error: the standard error dialog is displayed unless an interception method has been installed using the [ON ERR CALL](on-err-call.md) command.
+Les erreurs générées à l'aide de la commande **throw** sont gérées par le moteur 4D comme des erreurs normales : la boîte de dialogue d'erreur standard est affichée, sauf si une méthode d'interception a été installée à l'aide de la commande [ON ERR CALL](on-err-call.md).
 
-The command supports three syntaxes:
+La commande prend en charge trois syntaxes :
 
 ### **throw(errorCode{; description})**
 
-It specifies the error code and an optional description text, the error is thrown immediately.   
-If no description is provided, it is filled with:
+Elle spécifie le code d'erreur et un texte de description facultatif ; l'erreur est immédiatement déclenchée.   
+Si aucune description n'est fournie, elle est remplie par :
 
-* Error code errorCode: (host) in the host application
-* Error code errorCode: (C00x) in a component
+* Code d'erreur errorCode: (hôte) dans l'application hôte
+* Code d'erreur errorCode: (C00x) dans un composant
 
-### **throw(errorObj)**
+### throw(errorObj)
 
-*errorObj* object allows for more detailed error information and control over error handling. It can contain the following properties, as well as any custom property that you can refer to using placeholders within the **message** property. 
+L'objet *errorObj* permet d'obtenir des informations plus détaillées sur les erreurs et de contrôler leur traitement. Il peut contenir les propriétés suivantes, ainsi que toute propriété personnalisée à laquelle vous pouvez faire référence en utilisant des placeholders dans la propriété **message**.
 
-| **property**       | **type** | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| componentSignature | text     | Four latin letters signature to uniquely identify the source of the error. If the **componentSignature** is not provided, the command uses "host" for the host database, and "C001", "C002", ... for the components.                                                                                                                                                                                                                                                     |
-| errCode            | number   | Error code. If the **errCode** is not provided, the command uses -1.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| message            | text     | Description of the error.<br/> The **message** may contain placeholders that will be replaced by custom properties added to the errorObj object. Each placeholder must be specified using braces {} enclosing the name of the property to be used. If the **message** is not provided or is an empty string, the command will look for a description in the current database xliff files with a resname built as follows: ERR\_{componentSignature}\_{errCode}". |
-| deferred           | boolean  | True if the error should be deferred when the current method returns or at the end of the [Try block](../Concepts/error-handling.md#trycatchend-try). Default value is false.                                                                                                                                                                                                                                                                      |
+| **propriété**      | **type**  | **description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| componentSignature | texte     | Signature de quatre lettres latines pour identifier de manière unique la source de l'erreur. Si la **componentSignature** n'est pas fournie, la commande utilise "host" pour la base de données hôte et "C001", "C002", ... pour les composants.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| errCode            | numérique | Code d'erreur. Si le **errCode** n'est pas fourni, la commande utilise -1.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| message            | texte     | Description de l'erreur. Le **message** peut contenir des placeholders qui seront remplacés par des propriétés personnalisées ajoutées à l'objet *errorObj*. Chaque placeholder doit être spécifié en utilisant des accolades {} entourant le nom de la propriété à utiliser. If the **message** is not provided or is an empty string, the command will look for a description in the current database xliff files with a resname built as follows: ERR\_{componentSignature}\_{errCode}". Si le **message** n'est pas fourni ou s'il s'agit d'une chaîne vide, la commande recherchera une description dans les fichiers xliff de la base de données actuelle, avec un nouveau nom construit comme suit : ERR\_{componentSignature}\_{errCode}". |
+| deferred           | booléen   | Vrai si l'erreur doit être différée au retour de la méthode en cours ou à la fin du [Try block](../Concepts/error-handling.md#trycatchend-try). La valeur par défaut est faux.  |
 
-When you use this syntax, the *errorObj* object is returned in [Last errors](./commands/last-errors).
+Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last errors](../commands/last-errors.md).
 
-**Note:** It is possible to call the command several times in the same project method to generate several errors. You can use the deferred option to send all errors at once.
+**Note :** Il est possible d'appeler la commande plusieurs fois dans la même méthode de projet pour générer plusieurs erreurs. Vous pouvez utiliser l'option **deferred** pour envoyer toutes les erreurs en une seule fois.
 
 ### **throw** 
 
-It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](on-err-call.md) callback.
+Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](on-err-call.md) callback.
 
-* **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](on-err-call.md) method of the application is called at the end of the current method. The [Last errors](./commands/last-errors) function returns the stack of errors.
-* **As a consequence, in a component:** The stack of errors can be sent to the host application and the [ON ERR CALL](on-err-call.md) method of the host application is called.
+* **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](on-err-call.md) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](../commands/last-errors.md) renvoie la pile d'erreurs.
+* **Par conséquent, dans un composant** : La pile d'erreurs peut être envoyée à l'application hôte et la méthode [ON ERR CALL](on-err-call.md) de l'application hôte est appelée.
 
 ## Example 1 
 
 ```4d
  var $code : Integer
  var $description : text
- $code:=50042 //Custom code
- $description:=“This is a custom error”
- throw($code ;$description) // Throws an error with message "This is a custom error" and errCode = 50042
+ $code:=50042 //Code personnalisé
+ $description:=“Il s'agit d'une erreur personnalisée”
+ throw($code ;$description) // Lance une erreur avec le message " Il s'agit d'une erreur personnalisée " et errCode = 50042
 ```
 
 ## Example 2 
 
 ```4d
-throw({errCode: 1; message: "This an error"}) // Throws an error with errCode = 1 and message "This an error"
+throw({errCode: 1; message: "Ceci est une erreur"}) // Lance une erreur avec errCode = 1 et le message "Ceci est une erreur"
 ```
 
 ## Example 3 
 
 ```4d
-throw({errCode: 1}) // Throws an error with errCode = 1 and message "Error code: 1 (host)"
+throw({errCode: 1}) // Lance une erreur avec errCode = 1 et le message "Error code : 1 (host)"
 ```
 
 ## Example 4 
 
 ```4d
-throw({message: "This an error"}) // Throws an error with errCode = -1 and message "This is my error"
+throw({message: "Ceci est une erreur"}) //  Lance une erreur avec errCode = -1 et le message "Ceci est une erreur"
 ```
 
 ## Example 5 
 
 ```4d
-throw({message: "This is my error"; deferred: True}) // Throw an error with message "This is my error" and errCode = -1 in deferred mode
+throw({message: "Ceci est mon erreur"; deferred: True}) // Lance une erreur avec le message "Ceci est mon erreur" et errCode = -1 en deferred mode 
 ```
+
+``
 
 ## Example 6 
 
 ```4d
-throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Throws an error with message "File myFileName not found (myFilePath)" in deferred mode
+throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFilePath"; deferred: True})// Lance une erreur avec le message "File myFileName not found (myFilePath)" en mode différé
 ```
 
-## See also 
+## Voir aussi 
 
 [ASSERT](assert.md)  
-[Last errors](./commands/last-errors)  
+[Last errors](../commands/last-errors.md)  
 [ON ERR CALL](on-err-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1805 |
+| Numéro de commande | 1805 |
 | Thread safe | no |
-
 
 

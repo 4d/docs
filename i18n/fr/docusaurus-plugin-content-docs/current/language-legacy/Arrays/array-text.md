@@ -5,62 +5,62 @@ slug: /commands/array-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of the array |
-| size | Integer | &#8594;  | Number of elements in the array or Number of rows if size2 is specified |
-| size2 | Integer | &#8594;  | Number of columns in a two-dimensional array |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.ARRAY TEXT.Summary-->The ARRAY TEXT command creates and/or resizes an array of [Text](# "A character string that may contain from 0 to 2 GB of text") elements in memory.<!-- END REF-->parameter is the name of the array.
-* The *size* parameter is the number of elements in the array.
-* The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
+<!--REF #_command_.ARRAY TEXT.Summary-->La commande **ARRAY TEXT** crée et/ou redimensionne un tableau d'éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") en mémoire.<!-- END REF-->est le nom du tableau.
+* Le paramètre *taille* est le nombre d'éléments du tableau.
+* Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
-While applying ARRAY TEXT to an existing array:
+Lorsque vous appliquez la commande **ARRAY TEXT** à un tableau existant :
 
-* If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to "" (empty string).
-* If you reduce the array size, the last elements deleted from the array are lost.
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à "" (chaîne vide).
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-## Example 1 
+## Exemple 1 
 
-This example creates a process array of 100 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
+Cet exemple crée un tableau process contenant 100 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") :
 
 ```4d
- ARRAY TEXT(atValues;100)
+ ARRAY TEXT(tabTexte;100)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example creates a local array of 100 rows of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements:
+Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") : 
 
 ```4d
- ARRAY TEXT($atValues;100;50)
+ ARRAY TEXT($tabEntiersLongs;100;50)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example creates an interprocess array of 50 [Text](# "A character string that may contain from 0 to 2 GB of text") elements and sets each element to the value “Element #” followed by its element number:
+Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Une chaine de caractères jusqu'à 2 Go") et affecte à chaque élément la valeur "Elément No" suivie du numéro de l'élément :
 
 ```4d
- ARRAY TEXT(◊atValues;50)
- For($vlElem;1;50)
-    ◊atValues{$vlElem}:="Element #"+String($vlElem)
+ ARRAY TEXT(◊tabTexte;50)
+ For($vElem;1;50)
+    ◊tabTexte{$vElem}:="Elément n°"+String($vElem)
  End for
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 222 |
+| Numéro de commande | 222 |
 | Thread safe | yes |
 
 

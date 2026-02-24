@@ -5,103 +5,103 @@ slug: /commands/call-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *window* : Integer ; *formula* : Object, Text {; *...param* : Expression} )<!-- END REF-->
+<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *fenêtre* ; *formule* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number |
-| formula | Object, Text | &#8594;  | Formula object or Name of project method |
-| param | Expression | &#8594;  | Parameter(s) passed to formula |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre |
+| formule | Object, Text | &#8594;  | Objet Formula ou Nom de la méthode projet |
+| param | Expression | &#8594;  | Paramètre(s) passé(s) à la méthode |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R6|Modified|
-|16 R4|Modified|
-|15 R5|Created|
+|19 R6|Modifié|
+|16 R4|Modifié|
+|15 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CALL FORM.Summary-->The **CALL FORM** command executes the 4D code designated in *formula* with the optional *param*(s) in the context of a form displayed in a *window*, regardless of the process owning the window.<!-- END REF-->
+<!--REF #_command_.CALL FORM.Summary-->La commande **CALL FORM** exécute le code 4D désigné dans formule avec un ou plusieurs *param*(s) optionnel(s) dans le contexte d'un formulaire affiché dans la *fenêtre*, indépendamment du process auquel appartient la fenêtre.<!-- END REF-->
 
-Just like in the [worker-based interprocess communication feature](../Develop/processes.md#worker-processes), a message box is associated with the window and can be used when the window displays a form (after the [On Load](../Events/onLoad.md) form event). **CALL FORM** encapsulates the formula and its arguments in a message that is posted in the window's message box. The form then executes the message in its own process. The calling process can be cooperative or preemptive, thus this feature allows a preemptive process to exchange information with forms.
+Tout comme dans la communication interprocess basée sur les workers (voir *A propos des workers*), une boîte aux lettres est associée à chaque fenêtre et peut être utilisée lorsque la fenêtre affiche un formulaire (après l'événement On Load). **CALL FORM** encapsule la formule et ses arguments dans un message envoyé dans la boîte aux lettres de la fenêtre. Le formulaire exécute alors le message dans son propre process. Le process appelant peut être coopératif ou préemptif, par conséquent cette fonctionnalité permet à un process préemptif d'échanger des informations avec des formulaires.
 
-In *window*, you pass the window reference number of the window displaying the called form.
+Dans *fenêtre*, passez le numéro de référence de la fenêtre affichant le formulaire appelé.
 
-In *formula*, you designate the 4D code to be executed in the context of the *window* parent process. You can pass either:
+Dans *formule*, vous désignez le code 4D qui doit être exécuté dans le contexte du process parent de la *fenêtre*. Vous pousser passer soit :
 
-* a **formula object** (see *Formula Objects*). Formula objects can encapsulate any executable expressions, including functions and project methods;
-* a **string** containing the name of a project method.
+* un objet **formula** (voir *Objets Formula*). Les objets formula peuvent encapsuler toute expression exécutable, y compris les fonctions et les méthodes projet ;
+* une **chaîne** contenant le nom d'une méthode projet.
 
-You can also pass parameters to the formula using one or more *param* parameters. You can use *sequential parameters* or, if the formula expression is a function or a project method, *named parameters*. Upon starting execution in the context of the form, the process formula receives the parameter values either in the named parameters, or in *$1*, *$2*, and so on. Remember that arrays cannot be passed as parameters. Furthermore, in the context of the **CALL FORM** command, the following additional considerations need to be taken into account:
+Vous pouvez aussi passer des paramètres à la formule en utilisant un ou plusieurs paramètres *param*. Vous pouvez utiliser des *paramètres séquentiels* ou, si l'expression de la formule est une fonction ou une méthode projet, des *paramètres nommés*. Lors de l'exécution dans le contexte du formulaire, la formule du process reçoit les paramètres nommés ou bien les valeurs des paramètres dans *$1*, *$2*, et ainsi de suite. N'oubliez pas que des tableaux ne peuvent pas être passés en paramètre. En outre, dans le contexte de la commande **CALL FORM**, les points suivants doivent être pris en compte :
 
-* Pointers to tables or fields are allowed.
-* Pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the moment they are being accessed by the process method.
-* If you pass an Object or a Collection type parameter, 4D creates a copy of the object or the collection in the destination process (instead of a reference) if the form is in a process different from the one calling the **CALL FORM** command.
+* Les pointeurs sur les tables et les champs sont autorisés.
+* Les pointeurs sur les variables, en particulier les variables locales ou process, ne sont pas recommandés car ces variables peuvent être indéfinies au moment où la méthode du process tente d'y accéder.
+* Si vous passez un paramètre de type Objet ou Collection, 4D crée une copie de l'objet ou de la collection dans le process de destination si le formulaire est dans un process différent de celui appelant la commande **CALL FORM**.
 
-## Example 1 
+## Exemple 1 
 
-You can use the **CALL FORM** command to pass custom settings to a form, for example configuration values, without having to use process variables:
+Vous pouvez utiliser la commande **CALL FORM** pour passer des paramètres personnalisés à un formulaire, tels que des valeurs de configuration par exemple, sans avoir à utiliser de variables process :
 
 ```4d
- $win:=Open form window("form")
+ $win:=Créer fenêtre formulaire("form")
  CALL FORM($win;Formula(configure);param1;param2)
  DIALOG("form")
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to open two different dialog windows from the same form, but with different background colors and different messages. You also want to send messages afterwards and display them in each dialog window.
+Vous voulez ouvrir deux fenêtres de dialogue à partir d'un même formulaire, mais avec des couleurs de fonds différentes et des messages différents. Vous souhaitez également envoyer des messages par la suite et les afficher dans chaque fenêtre de dialogue.
 
-In the main form, a button opens the two dialogs:
+Dans le formulaire principal, un bouton ouvre les deux dialogues :
 
 ```4d
-  //Object method to create forms
-  //First window
+  //Méthode objet pour créer les formulaires
+  //Première fenêtre
  formRef1:=Open form window("FormMessage";Palette form window;On the left)
  SET WINDOW TITLE("MyForm1";formRef1)
  DIALOG("FormMessage";*)
  SHOW WINDOW(formRef1)
  
-  //Second window
+  //Seconde fenêtre
  formRef2:=Open form window("FormMessage";Palette form window;On the left+500)
  SET WINDOW TITLE("MyForm2";formRef2)
  DIALOG("FormMessage";*)
  SHOW WINDOW(formRef2)
  
-  //Send colors
+  //Envoi des couleurs
  CALL FORM(formRef1;"doSetColor";0x00E6F2FF)
  CALL FORM(formRef2;"doSetColor";0x00F2E6FF)
-  //Create messages
+  //Création des messages
  CALL FORM(formRef1;"doAddMessage";Current process name;"Hello Form 1")
  CALL FORM(formRef2;"doAddMessage";Current process name;"Hello Form 2")
 ```
 
-The *doAddMessage* method only adds a row in the list box in the "FormMessage" form:
+La méthode *doAddMessage* ajoute simplement une ligne dans la list box du formulaire "FormMessage" :
 
 ```4d
- #DECLARE ($caller : Text ; $message : Text) //Caller name
-  //Message to display
-  //Receive message from $message and log the message in the list box
+ #DECLARE ($caller : Text ; $message : Text) //Origine du message
+  //Message à afficher
+  //Récupère le message contenu dans $message et l'envoie dans la list box
  $p:=OBJECT Get pointer(Object named;"Column1")
  INSERT IN ARRAY($p->;1)
  $p->{1}:=$caller+" sends "+$message
 ```
 
-At runtime, you get the following result:
+A l'utilisation, vous obtenez le résultat suivant :
 
 ![](../assets/en/commands/pict2896824.en.png)
 
-You can then add other messages by executing the **CALL FORM** command again:
+Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande **CALL FORM** :
 
 ```4d
  CALL FORM(formRef1;"doAddMessage";Current process name;"Hello 2 Form 1")
@@ -110,18 +110,17 @@ You can then add other messages by executing the **CALL FORM** command again:
 
 ![](../assets/en/commands/pict2896833.en.png)
 
-## See also 
+## Voir aussi 
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1391 |
+| Numéro de commande | 1391 |
 | Thread safe | yes |
-
 
 

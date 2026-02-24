@@ -5,113 +5,110 @@ slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *barre* {; *process*}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menuBar | Integer, Text, Text | &#8594;  | Number or name of the menu bar or Menu reference |
-| process | Integer | &#8594;  | Process reference number |
-| * | Operator | &#8594;  | Save menu bar state |
+| barre | Integer, Text, Text | &#8594;  | Numéro ou nom de la barre de menus ou Référence de menu |
+| process | Integer | &#8594;  | Numéro de référence du process |
+| * | Opérateur | &#8594;  | Conserver l'état de la barre de menus |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU BAR.Summary-->**SET MENU BAR** replaces the current menu bar with the one specified by *menuBar* for the current process only.<!-- END REF--> In the *menuBar* parameter, you can pass either the number or name of the new menu bar. You can also pass a menu ID ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type, 16-character string). When you work with references, the menus can be used as menu bars and vice versa (see the *Managing Menus* section).
+<!--REF #_command_.SET MENU BAR.Summary-->La commande **SET MENU BAR** remplace la barre de menus courante par la barre de menus *barre*, pour le process en cours uniquement.<!-- END REF--> Vous pouvez passer dans le paramètre *barre* soit le numéro soit le nom de la nouvelle barre. Vous pouvez également passer une référence unique de menu (type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)"), chaîne de 16 caractères). Lorsque vous travaillez avec des références, les menus peuvent être utilisés comme barres de menus et inversement (cf. section *Gestion des menus*). 
 
-**Note:** The name of a menu bar may contain up to 31 characters and must be unique.
+**Note :** Le nom d’une barre de menus peut contenir jusqu’à 31 caractères et doit être unique. 
 
-The optional *process* parameter changes the menu bar of the specified process to *menuBar*.
+Si vous passez le paramètre optionnel *process*, c'est la barre de menus du process spécifié qui sera remplacée par la *barre*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menuBar*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *barre*, le paramètre *process* est inutile et sera ignoré.
 
-The optional *\** parameter allows you to save the state of the menu bar. If this parameter is omitted, **SET MENU BAR** reinitializes the menu bar when the command is executed.
+Le paramètre optionnel \* vous permet de conserver l'état de la barre de menus. Si ce paramètre est omis, **SET MENU BAR** réinitialise la barre de menus lors de l'exécution de la commande.  
+Imaginez, par exemple, que l'instruction **SET MENU BAR**(1) soit exécutée. Ensuite, plusieurs commandes de menu sont désactivées à l'aide de la commande [DISABLE MENU ITEM](disable-menu-item.md).  
+Si **SET MENU BAR**(1) est exécutée une seconde fois, soit à partir du même process, soit à partir d'un autre process, toutes les commandes de menu retournent à leur état d'activation initial.   
+Si **SET MENU BAR**(1;\*) est exécutée, la barre de menus conservera son état précédent, les commandes de menu qui étaient inactivées le resteront.
 
-For example, suppose that **SET MENU BAR**(1) is executed. Next, several menu commands are disabled using the [DISABLE MENU ITEM](disable-menu-item.md) command.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *barre*, le paramètre *\** est inutile et sera ignoré.
 
-If **SET MENU BAR** **(1)** is executed a second time, either from the same process or from a different process, all menu commands will revert to their initial enabled state.
+Lorsqu'un utilisateur arrive en mode Application, la première barre de menus s'affiche (Barre n° 1). Vous pouvez changer cette barre de menus par défaut en spécifiant la barre que vous voulez dans la , ou dans la méthode de démarrage associée à un utilisateur. 
 
-If **SET MENU BAR** **(1;\*)** is executed, the menu bar will retain the same state as before, and the menu commands that were disabled will remain disabled.
+## Exemple 1 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menuBar*, the *\** parameter serves no purpose and will be ignored.
-
-When a user enters the Application environment, the first menu bar is displayed (Menu Bar #1). You can change this menu bar when opening a database by specifying the desired menu bar in the or in the startup method for an individual user.
-
-## Example 1 
-
-The following example changes the current menu bar to menu bar #3 and resets the states of the menu commands to their original states:
+L'exemple suivant remplace la barre de menus courante par la barre de menus n° 3 et initialise l'état des commandes des menus : 
 
 ```4d
  SET MENU BAR(3)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example changes the current menu bar to the menu bar named “FormMenuBar1” and saves the states of the menu commands. Menu commands that were previously disabled will appear disabled.
+L'exemple suivant remplace la barre de menus courante par la barre de menus nommée “BarreForm1” et conserve l'état des commandes des menus : celles qui étaient précédemment inactivées apparaîtront inactivées :
 
 ```4d
- SET MENU BAR("FormMenuBar1";*)
+ SET MENU BAR("BarreForm1";*)
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example sets the current menu bar to menu bar #3 while records are being modified. After the records have been modified, the menu bar is reset to menu bar #2, with the menu state saved:
+L'exemple suivant remplace la barre de menus courante par la barre de menus n° 3 pendant que des enregistrements sont en cours de modification. Une fois les enregistrements modifiés, la barre de menus n° 2 est réaffichée. L'état des commandes de ce menu est conservé :
 
 ```4d
- SET MENU BAR(3)
- ALL RECORDS([Customers])
- MODIFY SELECTION([Customers])
- SET MENU BAR(2;*)
+ SET MENU BAR(3) // Définir la barre de menus n° 3 pour le formulaire suivant
+ ALL RECORDS([Clients])
+ MODIFY SELECTION([Clients]) // Afficher la sélection
+ SET MENU BAR(2;*) // Après modification, retour à la barre de menus n° 2
 ```
 
-## Example 4 
+## Exemple 4 
 
-In this comprehensive example, we will create, by programming, a menu bar including the following File and Edit menus: 
+Dans cet exemple complet, nous allons créer par programmation une barre comportant les menus Fichier et Edition suivants : 
 
-![](../assets/en/commands/pict17860.en.png)
+![](../assets/en/commands/pict17860.fr.png)
 
 ```4d
-  //Method for creating File menu
- var FileMenu : Text // FileMenu will contain the File menu reference
+  //Méthode de création menu Fichier
+ var FileMenu : Text // FileMenu contiendra la référence du menu Fichier
  FileMenu:=Create menu
- INSERT MENU ITEM(FileMenu;-1;"My Database "+Get indexed string(131;29))
+ INSERT MENU ITEM(FileMenu;-1;Get indexed string(131;29)+" Ma Base de Données(")
  SET MENU ITEM MARK(FileMenu;1;Char(18))
  INSERT MENU ITEM(FileMenu;-1;"(-")
- INSERT MENU ITEM(FileMenu;-1;"Quit the Test Application mode/Y")
+ INSERT MENU ITEM(FileMenu;-1;"Quitter le mode Test Application/Y")
  SET MENU ITEM PROPERTY(FileMenu;3;Associated standard action;ak return to design mode)
  INSERT MENU ITEM(FileMenu;-1;"(-")
- INSERT MENU ITEM(FileMenu;-1;"Preferences")
- SET MENU ITEM PROPERTY(FileMenu;5;Associated standard action;ak database settings) //Settings
+ INSERT MENU ITEM(FileMenu;-1;"Préférences")
+ SET MENU ITEM PROPERTY(FileMenu;5;Associated standard action;ak database settings) //Paramètres
  INSERT MENU ITEM(FileMenu;-1;"(-")
  INSERT MENU ITEM(FileMenu;-1;Get indexed string(131;30))
- SET MENU ITEM PROPERTY(FileMenu;7;Associated standard action;ak quit) //Quit
+ SET MENU ITEM PROPERTY(FileMenu;7;Associated standard action;ak quit) //Quitter
  SET MENU ITEM SHORTCUT(FileMenu;7;Character code("Q"))
  
-  //Method for creating Find and Replace menu
- var FindAndReplaceMenu : Text //FindAndReplaceMenu will contain the Find and Replace menu reference
+  //Méthode de création menu Chercher et Remplacer
+ var FindAndReplaceMenu : Text //FindAndReplaceMenu contiendra la référence du menu Chercher remplacer
  FindAndReplaceMenu:=Create menu
- APPEND MENU ITEM(FindAndReplaceMenu;"Find;Find Next;Find Previous;(-;Replace;Replace Next;Replace Previous")
+ APPEND MENU ITEM(FindAndReplaceMenu;"Chercher;Chercher Suivant;Chercher Précédent;(-;Remplacer;Remplacer suivant;Remplacer précédent")
  SET MENU ITEM SHORTCUT(FindAndReplaceMenu;1;Character code("F"))
  SET MENU ITEM SHORTCUT(FindAndReplaceMenu;5;Character code("R"))
- SET MENU ITEM METHOD(FindAndReplaceMenu;1;"MyFindMethod")
+ SET MENU ITEM METHOD(FindAndReplaceMenu;1;"MaMethodechercher")
  
-  //Method for creating Edit menu
- var EditMenu : Text //EditMenu will contain the Edit menu reference
+  //Méthode de création menu Edition
+ var EditMenu : Text //EditMenu contiendra la référence du menu Edition
  EditMenu:=Create menu
- APPEND MENU ITEM(EditMenu;"Cut;Copy;Paste")
+ APPEND MENU ITEM(EditMenu;"Couper;Copier;Coller")
  SET MENU ITEM SHORTCUT(EditMenu;1;Character code("X"))
  SET MENU ITEM PROPERTY(EditMenu;1;Associated standard action;ak cut)
  SET MENU ITEM SHORTCUT(EditMenu;2;Character code("C"))
@@ -119,24 +116,24 @@ In this comprehensive example, we will create, by programming, a menu bar includ
  SET MENU ITEM SHORTCUT(EditMenu;3;Character code("V"))
  SET MENU ITEM PROPERTY(EditMenu;3;Associated standard action;ak paste)
  INSERT MENU ITEM(EditMenu;-1;"(-")
- INSERT MENU ITEM(EditMenu;-1;"Find and Replace";FindAndReplaceMenu) // item that will have submenu
+ INSERT MENU ITEM(EditMenu;-1;"Chercher et Remplacer";FindAndReplaceMenu) // ligne qui aura le sous menu
  
- main_Bar:=Create menu // Create the menu bar made up of other menus
+ main_Bar:=Create menu // Cree la barre constituée des autres menus
  INSERT MENU ITEM(main_Bar;-1;Get indexed string(79;1);FileMenu)
- APPEND MENU ITEM(main_Bar;"Edit";EditMenu)
+ APPEND MENU ITEM(main_Bar;"Edition";EditMenu)
  
  SET MENU BAR(main_Bar)
 ```
 
-## See also 
+## Voir aussi 
 
-*Managing Menus*  
+*Gestion des menus*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 67 |
+| Numéro de commande | 67 |
 | Thread safe | no |
 
 

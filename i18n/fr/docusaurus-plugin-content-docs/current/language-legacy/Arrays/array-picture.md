@@ -5,68 +5,69 @@ slug: /commands/array-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY PICTURE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of the array |
-| size | Integer | &#8594;  | Number of elements in the array, or Number of rows if size2 is specified |
-| size2 | Integer | &#8594;  | Number of columns in a two-dimensional array |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.ARRAY PICTURE.Summary-->The ARRAY PICTURE command creates and/or resizes an array of [Picture](# "Can be any Windows or Macintosh picture") elements in memory.<!-- END REF-->parameter is the name of the array.
-* The *size* parameter is the number of elements in the array.The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
+<!--REF #_command_.ARRAY PICTURE.Summary-->La commande **ARRAY PICTURE** crée et/ou redimensionne un tableau d'éléments de type [Image](# "Can be any Windows or Macintosh picture") en mémoire.<!-- END REF-->est le nom du tableau.
+* Le paramètre *taille* est le nombre d'éléments du tableau.
+* Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
-While applying to an existing array:
+Lorsque vous appliquez la commande **ARRAY PICTURE** à un tableau existant :
 
-* If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to empty pictures. This means that [Picture size](picture-size.md) applied to one of these elements will return *0*.
-* If you reduce the array size, the last elements deleted from the array are lost.
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à une image vide (ce qui signifie que la fonction [Picture size](picture-size.md) appliquée à l'un de ces éléments retourne 0).
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-## Example 1 
+## Exemple 1 
 
-This example creates a process array of 100 [Picture](# "Can be any Windows or Macintosh picture") elements:
+Cet exemple crée un tableau process contenant 100 éléments de type [Image](# "Can be any Windows or Macintosh picture") :
 
 ```4d
- ARRAY PICTURE(agValues;100)
+ ARRAY PICTURE(tabImages;100)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example creates a local array of 100 rows of 50 [Picture](# "Can be any Windows or Macintosh picture") elements:
+Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type [Image](# "Can be any Windows or Macintosh picture") : 
 
 ```4d
- ARRAY PICTURE($agValues;100;50)
+ ARRAY PICTURE($tabImages;100;50)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example creates an interprocess array of [Picture](# "Can be any Windows or Macintosh picture") elements and loads each picture into one of the elements of the array. The array’s size is equal to the number of *'PICT'* resources available to the database. The array’s resource name starts with *"User Intf/"*:
+Cet exemple crée un tableau interprocess d'éléments de type [Image](# "Can be any Windows or Macintosh picture"). La taille du tableau est égale au nombre de ressources *'PICT'* dont le nom commence par *"Utilisateur Intf/"* disponibles dans la base. Chaque image est chargée dans un élément du tableau :
 
 ```4d
- RESOURCE LIST("PICT";$aiResIDs;$asResNames)
- ARRAY PICTURE(◊agValues;Size of array($aiResIDs))
+ RESOURCE LIST("PICT";$aiResIDs;$asResNoms)
+ ARRAY PICTURE(◊tabImages;Taille tableau($aiResIDs))
  $vlPictElem:=0
- For($vlElem;1;Size of array(◊agValues))
-    If($asResNames{$vlElem}="User Intf/@")
+ For($vlElem;1;Size of array(◊tabImages))
+    If($asResNoms{$vlElem}="Utilisateur Intf/@")
        $vlPictElem:=$vlPictElem+1
-       GET PICTURE RESOURCE("PICT";$aiResIDs{$vlElem};$vgPicture)
-       ◊agValues{$vlPictElem}:=$vgPicture
+       GET PICTURE RESOURCE("PICT";$aiResIDs{$vlElem};$vgImage)
+       ◊tabImages{$vlPictElem}:=$vgImage
     End if
  End for
- ARRAY PICTURE(◊agValues;$vlPictElem)
+ ARRAY PICTURE(◊tabImages;$vlPictElem)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 279 |
+| Numéro de commande | 279 |
 | Thread safe | yes |
 
 

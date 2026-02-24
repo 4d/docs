@@ -5,116 +5,116 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* : Text {; *options* : Object} ) : Object<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *cheminDossier* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | Path of the destination folder for project files |
-| options | Object | &#8594;  | Export options |
-| Function result | Object | &#8592; | Validation status and messages (if any) |
+| cheminDossier | Text | &#8594;  | Chemin du dossier de destination pour les fichiers projets |
+| options | Object | &#8594;  | Options d'export |
+| Résultat | Object | &#8592; | Statuts et messages de validation (le cas échéant) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18|Modified|
-|17 R5|Modified|
-|17 R3|Created|
+|18|Modifié|
+|17 R5|Modifié|
+|17 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Export structure file.Summary-->The **Export structure file** command breaks down the current 4D database structure into a set of text-based files or native picture files and stores them in the specified *folderPath*.<!-- END REF--> By default, the entirety of the database structure (methods, forms, catalog, etc.) is exported. You can filter the contents to export using the *options* parameter (see below).
+<!--REF #_command_.Export structure file.Summary-->La commande **Export structure file** décompose la structure de la base de données 4D courante en un ensemble de fichiers de type texte ou de fichiers natifs de type image et les stocke dans le *cheminDossier* spécifié.<!-- END REF--> Par défaut, la structure de la base (méthodes, formulaires, catalogues, etc.) est intégralement exportée. Vous pouvez filtrer les contenus à exporter à l'aide du paramètre *options* (voir ci-dessous).
 
-This command allows you to store database structure files in a source control repository (*i.e.*, *Git, Perforce*, etc.). Successive changes or changes from several sources can then be compared using standard source control tools. 
+Cette commande vous permet de stocker des fichiers de structure de base de données dans un système de gestion de version (*i.e.*, *Git, Perforce,* etc.). Il est alors possible de comparer les modifications successives ou les modifications apportées par plusieurs sources à l'aide d'outils standards de gestion de version. 
 
-This command can be used in the following contexts only:
+Cette commande peut être utilisée dans les cas suivants :
 
-* 4D in local mode or 4D Server (an error is returned if it is called from 4D in remote mode),
-* Interpreted database (the command does nothing if it is called from a .4DC database)
+* 4D en mode local ou 4D Server (une erreur est retournée si elle est appelée depuis 4D en mode distant),
+* Base de données interprétée (la commande ne fait rien si elle est appelée depuis une base de données .4DC)
 
-Note also that when it is called from a component, the command always exports the host database structure.
+Notez également que lorsque la commande est appelée depuis un composant, elle exporte toujours la structure de la base de données hôte.
 
-In *folderPath*, pass the system path of the folder where the export files must be saved.
+Dans *cheminDossier*, passez le chemin du système du dossier où les fichiers d'export doivent être stockés.
 
-The *options* parameter allows you to customize the conversion process. The *options* object can contain the following properties:
+Le paramètre *options* vous permet de personnaliser le processus de conversion. L'objet *options* peut contenir les propriétés suivantes :
 
-| **Property name** | **Value type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| withLog           | boolean or string | <table><tbody><tr><td>true or "always": create a conversion log file the destination Logs folder.</td></tr><tr><td>"ifNotEmpty": create a conversion log file only if it contains some messages</td></tr><tr><td>false or omitted (default): do not create a conversion log file</td></tr></tbody></table> |
-| makeProject       | boolean           | true to generate a .4DProject file in the "Project" folder                                                                                                                                                                                                                                                                                                                                                 |
-| filter            | object            | Contents to export. If omitted (default), everything is exported                                                                                                                                                                                                                                                                                                                                           |
-| projectMethods    | boolean           | true to export project methods                                                                                                                                                                                                                                                                                                                                                                             |
-| databaseMethods   | boolean           | true to export database methods                                                                                                                                                                                                                                                                                                                                                                            |
-| triggerMethods    | boolean           | true to export trigger methods                                                                                                                                                                                                                                                                                                                                                                             |
-| forms             | boolean           | true to export forms                                                                                                                                                                                                                                                                                                                                                                                       |
-| pageFormat        | boolean           | true to include the forms page format as "pageFormat" property of each form json file                                                                                                                                                                                                                                                                                                                      |
-| catalog           | boolean           | true to export table and field definitions                                                                                                                                                                                                                                                                                                                                                                 |
-| folders           | boolean           | true to export Explorer folders definitions                                                                                                                                                                                                                                                                                                                                                                |
-| settings          | boolean           | true to export structure settings                                                                                                                                                                                                                                                                                                                                                                          |
-| menus             | boolean           | true to export menus                                                                                                                                                                                                                                                                                                                                                                                       |
-| tips              | boolean           | true to export tips                                                                                                                                                                                                                                                                                                                                                                                        |
-| lists             | boolean           | true to export lists                                                                                                                                                                                                                                                                                                                                                                                       |
-| filters           | boolean           | true to export filters                                                                                                                                                                                                                                                                                                                                                                                     |
-| pictures          | boolean           | true to export pictures from picture library                                                                                                                                                                                                                                                                                                                                                               |
-| resources         | boolean           | true to export Resources folder                                                                                                                                                                                                                                                                                                                                                                            |
-| trash             | boolean           | true to export trashed methods and forms (\*)                                                                                                                                                                                                                                                                                                                                                              |
-| windowPositions   | boolean           | true to export window positions                                                                                                                                                                                                                                                                                                                                                                            |
-| methodPreferences | boolean           | true to export method editor preferences                                                                                                                                                                                                                                                                                                                                                                   |
-| buildSettings     | boolean           | true to export the buildApp.xml file                                                                                                                                                                                                                                                                                                                                                                       |
-| dataPath          | boolean           | true to copy the last open data file path into the project user preferences file                                                                                                                                                                                                                                                                                                                           |
-| directory         | boolean           | true to export 4D users and groups                                                                                                                                                                                                                                                                                                                                                                         |
-| styleSheets       | boolean           | true to export style sheets as CSS                                                                                                                                                                                                                                                                                                                                                                         |
-| documentation     | boolean           | true to export Explorer comments as markdown files                                                                                                                                                                                                                                                                                                                                                         |
+| **Nom de propriété** | **Type de valeur** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| withLog              | booléen ou chaîne  | <table><tbody><tr><td>vrai ou "always" : crée un fichier log de conversion dans le dossier de destination Logs.</td></tr><tr><td>"ifNotEmpty" : crée un fichier log de conversion uniquement s'il contient des messages</td></tr><tr><td>faux ou omis (défaut) : ne crée pas de fichier log de conversion </td></tr></tbody></table> |
+| makeProject          | booléen            | vrai pour générer un fichier .4DProject dans le dossier "Project"                                                                                                                                                                                                                                                                                                                                                                    |
+| filter               | objet              | Contenus à exporter. Si omis (défaut), tout est exporté                                                                                                                                                                                                                                                                                                                                                                              |
+| projectMethods       | booléen            | vrai pour exporter les méthodes projet                                                                                                                                                                                                                                                                                                                                                                                               |
+| databaseMethods      | booléen            | vrai pour exporter les méthodes base de données                                                                                                                                                                                                                                                                                                                                                                                      |
+| triggerMethods       | booléen            | vrai pour exporter les méthodes trigger                                                                                                                                                                                                                                                                                                                                                                                              |
+| forms                | booléen            | vrai pour exporter les formulaires                                                                                                                                                                                                                                                                                                                                                                                                   |
+| pageFormat           | booléen            | vrai pour exporter le format de page des formulaires dans la propriété "pageFormat" de chaque fichier json du formulaire                                                                                                                                                                                                                                                                                                             |
+| catalog              | booléen            | vrai pour exporter les définitions de tables et de champs                                                                                                                                                                                                                                                                                                                                                                            |
+| folders              | booléen            | vrai pour exporter les définitions de dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                      |
+| settings             | booléen            | vrai pour exporter les paramètres de structure                                                                                                                                                                                                                                                                                                                                                                                       |
+| menus                | booléen            | vrai pour exporter les menus                                                                                                                                                                                                                                                                                                                                                                                                         |
+| tips                 | booléen            | vrai pour exporter les infobulles                                                                                                                                                                                                                                                                                                                                                                                                    |
+| lists                | booléen            | vrai pour exporter les listes                                                                                                                                                                                                                                                                                                                                                                                                        |
+| filters              | booléen            | vrai pour exporter les filtres                                                                                                                                                                                                                                                                                                                                                                                                       |
+| pictures             | booléen            | vrai pour exporter les images à partir d'une bibliothèque d'images                                                                                                                                                                                                                                                                                                                                                                   |
+| resources            | booléen            | vrai pour exporter le dossier Ressources                                                                                                                                                                                                                                                                                                                                                                                             |
+| trash                | booléen            | vrai pour exporter les méthodes et des formulaires placés dans la corbeille (\*)                                                                                                                                                                                                                                                                                                                                                     |
+| windowPositions      | booléen            | vrai pour exporter les emplacements de fenêtre                                                                                                                                                                                                                                                                                                                                                                                       |
+| methodPreferences    | booléen            | vrai pour exporter les préférences de l'éditeur de méthodes                                                                                                                                                                                                                                                                                                                                                                          |
+| buildSettings        | booléen            | vrai pour exporter le fichier buildApp.xml                                                                                                                                                                                                                                                                                                                                                                                           |
+| dataPath             | booléen            | vrai pour copier, dans le fichier de préférences utilisateur du projet, le dernier chemin du fichier de données ouvert                                                                                                                                                                                                                                                                                                               |
+| directory            | booléen            | vrai pour exporter les groupes et utilisateurs 4D                                                                                                                                                                                                                                                                                                                                                                                    |
+| styleSheets          | booléen            | vrai pour exporter les feuilles de style (*style sheets*) en CSS                                                                                                                                                                                                                                                                                                                                                                     |
+| documentation        | booléen            | vrai pour exporter les commentaires de l'Explorateur en fichiers markdown                                                                                                                                                                                                                                                                                                                                                            |
 
-(\*) The "trash" filter is useful only if "projectMethods" or "forms" filters are also selected.
+(\*) Le filtre "corbeille" est utile uniquement si les filtres "projectMethods" ou "forms" sont également sélectionnés.
 
-**Warning:** When the *options* parameter is passed and the "filter" object is used, you must explicitly declare each property to export with the **true** value. When this object is passed, 4D assumes all properties are set to **false** by default. 
+**Attention :** Lorsque le paramètre *options* est passé et que l'objet "filter" est utilisé, vous devez déclarer explicitement chaque propriété destinée à l'export avec la valeur **vrai**. Lorsque cet objet est passé, 4D considère que toutes les propriétés sont, par défaut, fixées à **faux**. 
 
-### Result 
+### Résultat 
 
-The command returns an object providing the final status of the export as well as information on encountered issues or errors, if any. The following properties are returned:
+La commande retourne un objet qui indique le statut final de l'export ainsi que des informations sur les irrégularités et les erreurs survenues, le cas échéant. Les propriétés suivantes sont retournées :
 
-| **Property name** | **Value type** | **Description**                                                                                            |
-| ----------------- | -------------- | ---------------------------------------------------------------------------------------------------------- |
-| success           | boolean        | True if export operation was successful, false otherwise.                                                  |
-| messages          | collection     | Collection of objects describing issues encountered during the export operation                            |
-| \[ \].severity    | text           | Level of issue. Possible values: "info", "error". Only "error" level sets the "success" property to false. |
-| \[ \].message     | text           | Description of the issue or error, for example "Unsupported for object type"                               |
-| \[ \].errors      | collection     | Error stack (if any)                                                                                       |
+| **Nom de propriété** | **Type de valeur** | **Description**                                                                                                                 |
+| -------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| success              | booléen            | Vrai si l'export est réussi, sinon Faux.                                                                                        |
+| messages             | collection         | Collection d'objets décrivant les irrégularités survenues durant l'export                                                       |
+| \[ \].severity       | texte              | Niveau d'irrégularité. Valeurs possibles : "info", "erreur". Seul le niveau "erreur" définit la propriété "success" comme Faux. |
+| \[ \].message        | texte              | Description de l'irrégularité ou de l'erreur, par exemple "Unsupported for object type"                                         |
+| \[ \].errors         | collection         | Pile d'erreurs (le cas échéant)                                                                                                 |
 
-**Note:** Issue objects can include additional properties depending on the context.
+**Note :** Les objets listant des irrégularités peuvent contenir des propriétés supplémentaires selon le contexte.
 
-Possible errors include:
+Les erreurs peuvent être notamment :
 
-* duplicated elements
-* file management errors (file already exists, file locked, disk full, etc.)
-* unsupported form object or property (see also ).
+* des éléments dupliqués
+* des erreurs liées à la gestion de fichier (fichier déjà existant, fichier verrouillé, disque plein, etc.)
+* une propriété ou un objet formulaire non pris en charge (voir également ).
 
-## Example 1 
+## Exemple 1 
 
-You want to export the database structure file in an "Export" folder with the default settings:
+Vous souhaitez exporter le fichier de structure de la base de données dans un dossier "Export" avec les paramètres par défaut :
 
 ```4d
  var $result : Object
  $result:=Export structure file("Export")
  If($result.success=True)
-    ALERT("Export successful")
+    ALERT("Export réussi")
  Else
-    ALERT("Error during export")
+    ALERT("Erreur durant l'export")
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to export only project and database methods, and a log file:
+Vous souhaitez exporter uniquement les méthodes projet et les méthodes base, ainsi qu'un fichier historique :
 
 ```4d
  var $option;$result : Object
@@ -125,15 +125,15 @@ You want to export only project and database methods, and a log file:
  $result:=Export structure file("exportWithLog";$option)
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM Convert to dynamic](form-convert-to-dynamic.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1565 |
+| Numéro de commande | 1565 |
 | Thread safe | no |
 
 

@@ -5,50 +5,50 @@ slug: /commands/listbox-get-grid-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( * ; *object* : Text ; *hColor* : Text, Integer ; *vColor* : Text, Integer )<br/>**LISTBOX GET GRID COLORS** ( *object* : Variable ; *hColor* : Text, Integer ; *vColor* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( {* ;} *objet* ; *couleurH* ; *couleurV* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| hColor | Text, Integer | &#8592; | Value of RGB color for horizontal lines |
-| vColor | Text, Integer | &#8592; | Value of RGB color for vertical lines |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| couleurH | Text, Integer | &#8592; | Valeur de couleur RVB pour les traits horizontaux |
+| couleurV | Text, Integer | &#8592; | Valeur de couleur RVB pour les traits verticaux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|13|Created|
+|17 R6|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->The **LISTBOX GET GRID COLORS** command returns the color of the horizontal and vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->La commande **LISTBOX GET GRID COLORS** retourne la couleur des lignes horizontales et verticales composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In *hColor* and *vColor*, the command returns the values of the RGB colors. The color format depends on the type of the parameter you passed in *hColor* and *vColor*:
+La commande retourne dans les paramètres *couleurH* et *couleurV* des valeurs de couleurs RVB. Le format de la couleur dépend du type de paramètre que vous avez passé dans *couleurH* et *couleurV* :
 
-* if you passed a text, the color will be expressed as a CSS text (format "#rrggbb")
-* if you passed a longint, the color will be expressed as a 4-byte Long Integer (format 0x00rrggbb).
+* Si vous avez passé un texte, la couleur sera exprimée sous forme de CSS (format "#rrggbb")
+* Si vous avez passé un entier long, la couleur sera exprimée sous forme d'entier long de 4 octets (format 0x00rrggbb).
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1200 |
+| Numéro de commande | 1200 |
 | Thread safe | no |
 
 

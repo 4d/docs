@@ -5,57 +5,54 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.USE ENTITY SELECTION.Syntax-->**USE ENTITY SELECTION** ( *entitySelection* : 4D.EntitySelection )<!-- END REF-->
-<!--REF #_command_.USE ENTITY SELECTION.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| entitySelection | 4D.EntitySelection | &#8594;  | An entity selection |
-</div>
+<!--REF #_command_.USE ENTITY SELECTION.Params-->
+
+| Paramètres      | Type                               |                             | Description          |
+| --------------- | ---------------------------------- | --------------------------- | -------------------- |
+| entitySelection | 4D.EntitySelection | &#8594; | Une entity selection |
+
 <!-- END REF-->
 
-## Description 
+## Description
 
-The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.
+La commande `USE ENTITY SELECTION` <!--REF #_command_.USE ENTITY SELECTION.Summary-->met à jour la sélection courante de la table correspondant à la classe de données du paramètre *entitySelection*, en fonction du contenu de la entity selection<!-- END REF-->.
 
-This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
-
+Cette commande ne peut pas être utilisée avec un [datastore distant](../ORDA/remoteDatastores.md).
 
 :::info
 
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+Cette commande est conçue pour permettre aux sélections courantes 4D de bénéficier de la puissance des requêtes ORDA. Pour des raisons de performance, dans 4D monoposte et 4D Server, la commande connecte directement *entitySelection* à la sélection courante. Par conséquent, une fois que *entitySelection* a été utilisée, elle ne doit pas être réutilisée ou modifiée.
 
 :::
 
 :::note
 
-After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
+Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la sélection courante mise à jour (s'il n'est pas vide) devient l'enregistrement courant, mais il n'est pas chargé en mémoire. Si vous avez besoin d'utiliser les valeurs des champs de l'enregistrement courant, utilisez la commande `LOAD RECORD` après la commande `USE ENTITY SELECTION`.
 
 :::
 
-## Example
+## Exemple
 
 ```4d
 var $entitySel : cs.EmployeeSelection
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel est associée à la dataclass Employee
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
+USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee est mise à jour
 ```
 
+## Voir également
 
+[Create entity selection](create-entity-selection.md)
 
-## See also 
+## Propriétés
 
-[Create entity selection](create-entity-selection.md)  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1513 |
-| Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+|                                  |      |
+| -------------------------------- | ---- |
+| Numéro de commande               | 1513 |
+| Thread safe                      | oui  |
+| Modifie l'enregistrement courant |      |
+| Modifie la sélection courante    |      |
 
 

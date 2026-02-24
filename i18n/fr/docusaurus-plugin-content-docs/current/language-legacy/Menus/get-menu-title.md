@@ -5,47 +5,47 @@ slug: /commands/get-menu-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* : Integer, Text {; *process* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *process*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Text | &#8592; | Title of the menu |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Text | &#8592; | Titre du menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu title.Summary-->The **Get menu title** command returns the title of the menu whose number or reference is passed in *menu.<!-- END REF-->*
+<!--REF #_command_.Get menu title.Summary-->La commande **Get menu title** retourne le titre du menu dont vous avez passé le numéro ou la référence dans *menu*.<!-- END REF-->
 
-If you omit the *process* parameter, **Get menu title** applies to the menu bar for the current process. Otherwise, the command applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **Get menu title** s'applique à la barre de menus du process courant. Sinon, **Get menu title** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-## See also 
+## Voir aussi 
 
 [Count menus](count-menus.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 430 |
+| Numéro de commande | 430 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

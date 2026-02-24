@@ -5,56 +5,56 @@ slug: /commands/form-set-horizontal-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *resize* : Boolean {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
+<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimension* {; *largeurMini* {; *largeurMaxi*}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resize | Boolean | &#8594;  | True: The form can be resized horizontally False: The form cannot be resized horizontally |
-| minWidth | Integer | &#8594;  | Smallest form width allowed (pixels) |
-| maxWidth | Integer | &#8594;  | Largest form width allowed (pixels) |
+| redimension | Boolean | &#8594;  | Vrai : le formulaire est redimensionnable horizontalement Faux : le formulaire n’est pas redimensionnable horizontalement |
+| largeurMini | Integer | &#8594;  | Largeur minimale du formulaire (pixels) |
+| largeurMaxi | Integer | &#8594;  | Largeur maximale du formulaire (pixels) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->The FORM SET HORIZONTAL RESIZING command allows you to change the horizontal resizing properties of the current form through programming.<!-- END REF--> By default, these properties are set in the Design environment Form editor. New properties are set for the current process; they are not stored with the form. 
+<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Summary-->La commande **FORM SET HORIZONTAL RESIZING** permet de modifier par programmation les propriétés de redimensionnement horizontal du formulaire courant.<!-- END REF--> Par défaut, ces propriétés sont définies dans l’éditeur de formulaires en mode Développement. Les nouvelles propriétés sont fixées pour le process courant, elles ne sont pas stockées avec le formulaire. 
 
-The *resize* parameter lets you set whether the form can be resized horizontally; in other words, if the width can be changed (manually by the user or through programming). 
+Le paramètre *redimension* permet de définir si le formulaire est redimensionnable horizontalement, c’est-à-dire si sa largeur est modifiable (manuellement par l’utilisateur ou par programmation). 
 
-If you pass **True**, the form width can be modified by the user; 4D uses values passed in *minWidth* and *maxWidth* as markers.
+Si vous passez Vrai, la largeur du formulaire peut être modifiée par l’utilisateur ; 4D utilise comme bornes les valeurs éventuellement passées dans les paramètres *largeurMini* et *largeurMaxi*.
 
-If you pass **False**, the current form width cannot be changed; in this case, there is no need to pass values in the *minWidth* and *maxWidth* parameters. 
+Si vous passez Faux, la largeur courante du formulaire n’est pas modifiable ; dans ce cas, il est inutile de passer des valeurs dans les paramètres *largeurMini* et *largeurMaxi*. 
 
-If you passed **True** in the first parameter, you can pass new minimum and maximum widths (in pixels) in the optional *minWidth* and *maxWidth* parameters. If you leave these parameters out, the values set in the Design environment (if any) are used.
+Si vous avez passé Vrai dans le premier paramètre, vous pouvez passer dans les paramètres facultatifs *largeurMini* et *largeurMaxi* les nouvelles largeurs minimale et maximale du formulaire en pixels. Si vous omettez ces paramètres, les valeurs définies en mode Développement (le cas échéant) seront utilisées.
 
-## Example 
+## Exemple 
 
-Refer to the example of the [FORM SET SIZE](form-set-size.md) command. 
+Reportez-vous à l'exemple de la commande [FORM SET SIZE](form-set-size.md). 
 
-## See also 
+## Voir aussi 
 
 [FORM GET HORIZONTAL RESIZING](form-get-horizontal-resizing.md)  
 [FORM SET SIZE](form-set-size.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 892 |
+| Numéro de commande | 892 |
 | Thread safe | no |
 
 

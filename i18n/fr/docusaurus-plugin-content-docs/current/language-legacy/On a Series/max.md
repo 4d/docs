@@ -5,92 +5,94 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *series* : Field, Array {; *attributePath* : Text} ) : any<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *séries* {; *cheminAttribut*} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the maximum value |
-| attributePath | Text | &#8594;  | Path of attribute for which to return the maximum value |
-| Function result | any | &#8592; | Maximum value in series (Date or Real) |
+| séries | Field, Array | &#8594;  | Valeurs desquelles dont vous voulez obtenir la plus élevée |
+| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la valeur maximale |
+| Résultat | Date, Number | &#8592; | Valeur la plus élevée de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|13|Modified|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Max.Summary-->**Max** returns the maximum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the maximum value.
+<!--REF #_command_.Max.Summary-->**Max** retourne la valeur la plus élevée contenue dans *séries*.<!-- END REF--> 
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint, Real, or Date type.
+Si *séries* est un champ indexé, l'index est utilisé pour la recherche de cette valeur. 
 
-If the *series* selection is empty, **Max** returns 0.
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long, Réel ou Date.
 
-This command accepts an optional *attributePath* parameter of the Text type, that you can use if *series* is an object field. It allows you to define the path of the attribute to compute. Use the standard dot notation to define paths to nested attributes, for example "company.address.number". Keep in mind that object attribute names are case-sensitive.   
-Only numeric attribute values are computed. If there are values in the attribute path which are not of a numeric type, they are ignored.
+Si la sélection de *séries* est vide, **Max** retourne 0.
 
-If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
+La commande accepte un paramètre optionnel de type texte, *cheminAttribut*, que vous pouvez utiliser si *séries* est un champ de type Objet. Il vous permet de définir le chemin de l'attribut dont le contenu doit être utilisé pour le calcul de la valeur maximale. Utilisez la notation à points standard pour définir le chemin dans l'objet jusqu'à l'attribut, par exemple "Clients.enfants.age". Attention, gardez à l'esprit que les noms d'attributs d'objets tiennent compte de la casse des caractères.  
+Seules les valeurs numériques des attributs sont utilisées pour le calcul. Si l'attribut contient des valeurs non numériques, elles sont ignorées. 
 
-## Example 1 
+Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Si elle est interrompue (par exemple si l'utilisateur clique sur le bouton **Arrêt** dans le thermomètre de progression), la variable OK prend la valeur 0.
 
-The following example is an object method for the variable *vMax* placed in the break 0 portion of the form. The variable is printed at the end of the report. The object method assigns the maximum value of the field to the variable, which is then printed in the last break of the report.
+## Exemple 1 
+
+L'exemple ci-dessous est la méthode objet d'une variable, *vMax*, placée dans la zone de rupture R0 d'un formulaire sortie. La variable est imprimée à la fin de l'état. La méthode objet assigne la valeur la plus élevée du champ à la variable, qui est alors imprimée dans la dernière rupture de l'état.
 
 ```4d
- vMax:=Max([Employees] Salary)
+ vMax:=Max([Employés]Salaire)
 ```
 
-**Note:** Make sure the "On printing break" form event is selected for the variable.
+**Note :** Assurez-vous que l'événement formulaire "Sur impression sous total" est bien coché pour la variable. 
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection courante et activer la phase de rupture :
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]Company;>)
+ ALL RECORDS([Employés])
+ ORDER BY([Employés];[Employés]Société;>)
  BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- FORM SET OUTPUT([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ACCUMULATE([Employés]Salaire)
+ FORM SET OUTPUT([Employés];"FormImpression")
+ PRINT SELECTION([Employés])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the highest value in the array:
+Cet exemple vous permet d’obtenir la valeur la plus élevée d’un tableau :
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vMax:=Max($ArrGrades)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ vMax:=Max($TabNote)
 ```
 
-## Example 3 
+## Exemple 3 
 
-For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
+Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous reporter à l'exemple 3 de la commande [Average](average.md).
 
-## See also 
+## Voir aussi 
 
 [Min](min.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 3 |
+| Numéro de commande | 3 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

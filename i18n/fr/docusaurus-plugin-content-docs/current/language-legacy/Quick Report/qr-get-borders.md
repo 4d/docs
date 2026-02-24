@@ -5,88 +5,88 @@ slug: /commands/qr-get-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *area* : Integer ; *column* : Integer ; *row* : Integer ; *border* : Integer ; *line* : Integer {; *color* : Integer} )<!-- END REF-->
+<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *zone* ; *colonne* ; *ligne* ; *encadrement* ; *ligne* {; *couleur*} )<!-- END REF-->
 <!--REF #_command_.QR GET BORDERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| column | Integer | &#8594;  | Column number |
-| row | Integer | &#8594;  | Row number |
-| border | Integer | &#8594;  | Border value |
-| line | Integer | &#8592; | Line thickness |
-| color | Integer | &#8592; | Border color |
+| zone | Integer | &#8594;  | Référence de la zone |
+| colonne | Integer | &#8594;  | Numéro de colonne |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| encadrement | Integer | &#8594;  | Valeur d'encadrement |
+| ligne | Integer | &#8592; | Epaisseur de trait |
+| couleur | Integer | &#8592; | Couleur de l'encadrement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET BORDERS.Summary-->The **QR GET BORDERS** command allows you to retrieve the border style for a border of a given cell.<!-- END REF-->
+<!--REF #_command_.QR GET BORDERS.Summary-->La commande **QR GET BORDERS** retourne les attributs d'encadrement d'une cellule spécifique de *zone*.<!-- END REF-->
 
-*area* is the reference of the Quick Report area.  
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*column* is the column number of the cell.
+Passez dans *colonne* le numéro de colonne de la cellule à lire.
 
-*row* designates the row number of the cell. You can either:
+Le paramètre *ligne* contient le numéro de ligne de la cellule à lire. Vous pouvez soit :
 
-* pass a positive integer value to designate the corresponding subtotal (break) level that is affected.
-* pass one of the following constants of the *QR Rows for Properties* theme:
-  
-| Constant       | Type    | Value | Comment               |  
-| -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Integer | \-2   | Detail area of report |  
-| qr grand total | Integer | \-3   | Grand total area      |  
-| qr title       | Integer | \-1   | Title of report       |
+* passer une valeur entière positive pour désigner la ligne de sous-total correspondante.
+* passer une des constantes suivantes du thème *QR Lignes pour Propriétés* :  
 
-*border* is the value that indicates which cell border is affected. Pass one of the constants from the *QR Borders* theme:  
+| Constante      | Type        | Valeur | Comment               |  
+| -------------- | ----------- | ------ | --------------------- |  
+| qr detail      | Entier long | \-2    | Zone Détail de l'état |  
+| qr grand total | Entier long | \-3    | Zone Total général    |  
+| qr title       | Entier long | \-1    | Intitulé de l'état    |
 
-| Constant                    | Type    | Value | Comment                  |
-| --------------------------- | ------- | ----- | ------------------------ |
-| qr bottom border            | Integer | 8     | Bottom border            |
-| qr inside horizontal border | Integer | 32    | Inside horizontal border |
-| qr inside vertical border   | Integer | 16    | Inside vertical border   |
-| qr left border              | Integer | 1     | Left border              |
-| qr right border             | Integer | 4     | Right border             |
-| qr top border               | Integer | 2     | Top border               |
+Le paramètre *encadrement* permet d'indiquer la bordure de cellule à lire. Passez l'une des constantes du thème *QR Encadrements* :  
 
-**Note:** Unlike the command [QR SET BORDERS](qr-set-borders.md), **QR GET BORDERS** does not accept a cumulative value. You must test all the parameters separately to have an overall view of the cell border.
+| Constante                   | Type        | Valeur | Comment                        |
+| --------------------------- | ----------- | ------ | ------------------------------ |
+| qr bottom border            | Entier long | 8      | Bordure inférieure             |
+| qr inside horizontal border | Entier long | 32     | Bordure intérieure horizontale |
+| qr inside vertical border   | Entier long | 16     | Bordure intérieure verticale   |
+| qr left border              | Entier long | 1      | Bordure gauche                 |
+| qr right border             | Entier long | 4      | Bordure droite                 |
+| qr top border               | Entier long | 2      | Bordure supérieure             |
 
-*line* is the thickness of the line:
+**Note :** A la différence de la commande [QR SET BORDERS](qr-set-borders.md), **QR GET BORDERS** n'accepte pas de valeurs cumulées. Vous devez tester séparément toutes les valeurs pour obtenir une description globale de l'encadrement de la cellule. 
 
-* 0 indicates no line
-* 1 indicates a thickness of 1/4 point
-* 2 indicates a thickness of 1/2 point
-* 3 indicates a thickness of 1 point
-* 4 indicates a thickness of 2 points.
+Le paramètre *épaisseur* retourne l'épaisseur de l'encadrement :
 
-*color* is the color of the line; it returns the value of the color applied to the line segment.
+* 0 indique une épaisseur nulle (pas de bordure),
+* 1 indique une épaisseur d'1/4 point,
+* 2 indique une épaisseur d'1/2 point,
+* 3 indique une épaisseur d'1 point,
+* 4 indique une épaisseur de 2 points.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *column* number, the error -9852 will be generated.  
-If you pass an invalid *row* number, the error -9853 will be generated.  
-If you pass an invalid *border* parameter, the error -9854 will be generated.
+Le paramètre *couleur* retourne le numéro de la couleur de la bordure. 
 
-## See also 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *colonne* est incorrect, l’erreur -9852 est générée.  
+Si le paramètre *ligne* est incorrect, l’erreur -9853 est générée.  
+Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.
+
+## Voir aussi 
 
 [QR SET BORDERS](qr-set-borders.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 798 |
+| Numéro de commande | 798 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

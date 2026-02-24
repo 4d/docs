@@ -5,71 +5,70 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** ({*type* : Integer }) : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| type | Integer | &#8594;  | Type of system folder |
-| Function result | Text | &#8592; | Pathname to a system folder |
+| type | Integer | &#8594;  | Type de dossier système |
+| Résultat | Text | &#8592; | Chemin d’accès d’un dossier du système actif |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R8|Modified|
-|13|Modified|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|19 R8|Modifié|
+|13|Modifié|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.System folder.Summary-->The **System folder** command returns the pathname to a particular folder of the operating system or to the active Windows or macOS System folder itself.<!-- END REF-->
+<!--REF #_command_.System folder.Summary-->La fonction **System folder** retourne le chemin d'accès du dossier Système Windows ou macOS actif, ou le chemin d’accès d’un dossier particulier du système d'exploitation.<!-- END REF-->
 
-You pass in the optional *type* parameter a value indicating the type of system folder. 4D provides you with the following predefined constants, placed in the “*System Folder*” theme:
+Le paramètre optionnel *type* vous permet d’indiquer le type de dossier dont vous souhaitez obtenir le chemin d'accès. Si vous ne passez pas ce paramètre, **System folder** retourne le chemin d’accès du dossier Système Windows ou Mac OS actif.   
+Vous passez dans *type* un code représentant le type de dossier. 4D fournit les constantes prédéfinies suivantes (placées dans le thème "*Dossier Système*") :
 
-| Constant                      | Type    | Value | Comment                                                        |
-| ----------------------------- | ------- | ----- | -------------------------------------------------------------- |
-| Applications or program files | Integer | 16    |                                                                |
-| Desktop                       | Integer | 15    |                                                                |
-| Documents folder              | Integer | 17    | "Documents" folder of user                                     |
-| Favorites Win                 | Integer | 14    |                                                                |
-| Fonts                         | Integer | 1     |                                                                |
-| Home folder                   | Integer | 18    | Current home folder of the user (usually "/Users/<username>/") |
-| Start menu Win\_all           | Integer | 8     |                                                                |
-| Start menu Win\_user          | Integer | 9     |                                                                |
-| Startup Win\_all              | Integer | 4     |                                                                |
-| Startup Win\_user             | Integer | 5     |                                                                |
-| System                        | Integer | 0     |                                                                |
-| System Win                    | Integer | 12    |                                                                |
-| System32 Win                  | Integer | 13    |                                                                |
-| User preferences\_all         | Integer | 2     |                                                                |
-| User preferences\_user        | Integer | 3     |                                                                |
+| Constante                     | Type        | Valeur | Comment                                                                               |
+| ----------------------------- | ----------- | ------ | ------------------------------------------------------------------------------------- |
+| Applications or program files | Entier long | 16     |                                                                                       |
+| Desktop                       | Entier long | 15     |                                                                                       |
+| Documents folder              | Entier long | 17     | Dossier "Documents" de l’utilisateur                                                  |
+| Favorites Win                 | Entier long | 14     |                                                                                       |
+| Fonts                         | Entier long | 1      |                                                                                       |
+| Home folder                   | Entier long | 18     | Dossier personnel courant de l'utilisateur (généralement "/Users/<nom utilisateur>/") |
+| Start menu Win\_all           | Entier long | 8      |                                                                                       |
+| Start menu Win\_user          | Entier long | 9      |                                                                                       |
+| Startup Win\_all              | Entier long | 4      |                                                                                       |
+| Startup Win\_user             | Entier long | 5      |                                                                                       |
+| System                        | Entier long | 0      |                                                                                       |
+| System Win                    | Entier long | 12     |                                                                                       |
+| System32 Win                  | Entier long | 13     |                                                                                       |
+| User preferences\_all         | Entier long | 2      |                                                                                       |
+| User preferences\_user        | Entier long | 3      |                                                                                       |
 
-**Notes:**
+**Notes :**
 
-* The constants suffixed **Win** can be used on Windows only. When they are used on macOS, **System folder** will return an empty string.
-* The pathnames to some system folders can specific to the current user. Constants 2 to 9 allow you to choose whether you want to obtain the pathname to a folder which is shared by all users, or customized for the current user.
+* Les constantes suffixées **Win** sont réservées à une utilisation sous Windows. Lorsqu’elles sont utilisées sous macOS, **System folder** retourne une chaîne vide.
+* L’emplacement de certains dossiers peut être différent suivant le type de session ouverte par l’utilisateur. Les constantes 2 à 9 permettent de choisir si vous souhaitez obtenir le chemin d’accès du dossier spécifique à l’utilisateur courant (constantes simples) ou commun à tous les utilisateurs (constantes suivies de “Tous”).
 
-If you omit the *type* parameter, the function will return the pathname to active System folder (= constant System).
-
-## See also 
+## Voir aussi 
 
 [Get 4D folder](get-4d-folder.md)  
 [Temporary folder](temporary-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 487 |
+| Numéro de commande | 487 |
 | Thread safe | yes |
 
 

@@ -5,65 +5,65 @@ slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<br/>**ST Get expression** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
-| Function result | Text | &#8592; | Expression label |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
+| Résultat | Text | &#8592; | Libellé de l’expression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST Get expression.Summary-->The **ST Get expression** command returns the first expression found in the current selection of the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
+<!--REF #_command_.ST Get expression.Summary-->La commande **ST Get expression** retourne la première expression présente dans la sélection courante du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-The command returns the label of the expression as it was inserted into the object (for example "mymethod" or "\[table1\]field1"). The current value of the expression is not returned. 
+La commande retourne le libellé de l’expression tel qu’il a été inséré dans l’objet (par exemple "maméthode" ou "\[table1\]champ1"). La valeur courante de l’expression n’est pas retournée. 
 
-**Note:** This command returns "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands. 
+**Note :** Cette commande retourne des noms "réels" pour les champs et les tables, même si une structure "virtuelle" a été définie à l'aide des commandes [SET TABLE TITLES](set-table-titles.md) et [SET FIELD TITLES](set-field-titles.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns the information of the object being edited; if the object does not have the focus, the command returns the information of the object’s data source (variable or field).  
-If you omit the *\** parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string. During execution, the command returns the information of the variable or field.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l’exécution, si l’objet a le focus, la commande retourne les informations de l’objet en cours d'édition ; si l’objet n'a pas le focus, la commande retourne les informations de la source de données de l’objet (variable ou champ).  
+Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l’exécution, la commande retourne les informations de la variable ou du champ.
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags that may be present.
+Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. 
 
-* If you pass *startSel* and *endSel*, **ST Get expression** looks for the expression within this selection.
-* If you only pass *startSel* or if the value of *endSel* is greater than the total number of characters in *object*, the command looks for the expression between *startSel* and the end of the text.
-* If you omit *startSel* and *endSel*, the command looks for the expression within the current text selection.
+* Si vous passez *débutSél* et *finSél*, **ST Get expression** recherche l’expression à l’intérieur de cette sélection.
+* Si vous passez uniquement *débutSél* ou si la valeur de *finSél* est supérieure au nombre total de caractères dans l’*objet*, la commande recherche l’expression entre *débutSél* et la fin du texte.
+* Si vous omettez *débutSél* et *finSél*, la commande recherche l’expression à l’intérieur de la sélection courante de texte.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-If there is no expression found in the selection, the command returns an empty string. 
+Si aucune expression n’est présente dans la sélection, la commande retourne une chaîne vide. 
 
-## Example 1 
+## Exemple 1 
 
-When there is a double-click event, you check that there is in fact an expression, and if so, you display a dialog where you have retrieved its values so that the user can modify them:
+Sur un événement double-clic, vous vérifiez que vous êtes bien en présence d’une expression, et dans ce cas affichez un dialogue où vous avez récupéré ses valeurs afin de permettre à l’utilisateur de la modifier :
 
 ```4d
  Case of
@@ -71,7 +71,7 @@ When there is a double-click event, you check that there is in fact an expressio
        GET HIGHLIGHT(*;"StyledText_t";startSel;endSel)
        If(ST Get content type(*;"StyledText_t";startSel;endSel)=ST Expression type)
           vExpression:=ST Get expression(*;"StyledText_t";startSel;endSel)
-          $winRef:=Open form window("Dial_InsertExpr";Movable form dialog box;Horizontally centered;Vertically centered;*)
+          $winRef:=Open form window("Dial_InsertExpr";Form dialogue modal déplaçable;Centrée horizontalement;Centrée verticalement;*)
           DIALOG("Dial_InsertExpr")
           If(OK=1)
              ST INSERT EXPRESSION(*;"StyledText_t";vExpression;startSel;endSel)
@@ -81,35 +81,35 @@ When there is a double-click event, you check that there is in fact an expressio
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to execute a 4D method when a user link is clicked:
+Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien utilisateur :
 
 ```4d
  Case of
     :(Form event code=On Clicked)
-  //we retrieve the selection
-       HIGHLIGHT TEXT(*;"myText";startSel;endSel)
-       If(startSel#endSel) //there is selected content
-  //we get the content type
+              //on récupère la sélection
+       GET HIGHLIGHT(*;"myText";startSel;endSel)
+       If(startSel#endSel)  //il y a du contenu sélectionné
+                 //on lit le type de contenu
           $CT_type:=ST Get content type(*;"myText";startSel;endSel)
-          If($CT_type=ST User type) //this is a user link
-             MyMethod //we execute a 4D method
+          If($CT_type=ST User type) //c’est un lien utilisateur
+             MaMethode //on exécute une méthode 4D
           End if
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1287 |
+| Numéro de commande | 1287 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

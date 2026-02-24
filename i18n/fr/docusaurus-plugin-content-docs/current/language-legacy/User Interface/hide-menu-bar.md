@@ -9,59 +9,59 @@ displayed_sidebar: docs
 <!--REF #_command_.HIDE MENU BAR.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.HIDE MENU BAR.Summary-->The HIDE MENU BAR command makes the menu bar invisible.<!-- END REF-->
+<!--REF #_command_.HIDE MENU BAR.Summary-->La commande **HIDE MENU BAR** rend invisible la barre de menus.<!-- END REF-->
 
-If the menu bar was already hidden, the command does nothing.
+Si la barre de menus était déjà cachée, la commande est sans effet.
 
-## Example 
+## Exemple 
 
-The following method displays a record in full-screen display (Macintosh) until you click the mouse button:
+La méthode suivante passe un enregistrement en plein écran (sous Mac OS) jusqu'à ce que l'utilisateur clique sur le bouton de la souris :
 
 ```4d
  HIDE TOOL BAR
- HIDE MENU BAR
- Open window(-1;-1;1+Screen width;1+Screen height;Alternate dialog box)
- FORM SET INPUT([Paintings];"Full Screen 800")
- DISPLAY RECORD([Paintings])
+ CACHER BARRE DE MENUS
+ Open window(-1;-1;1+Screen width;1+Screen height;Modal dialog box)
+ FORM SET INPUT([Tableaux];"Plein écran 800")
+ DISPLAY RECORD([Tableaux])
  Repeat
-    MOUSE POSITION($vlX;$vlY;$vlButton)
- Until($vlButton#0)
+    MOUSE POSITION($vlX;$vlY;$vlBouton)
+ Until($vlBouton#0)
  CLOSE WINDOW
  SHOW MENU BAR
  SHOW TOOL BAR
 ```
 
-**Note:** On Windows, the window will be limited to the bounds of the application window.
+**Note :** Sous Windows, la taille de la fenêtre sera limitée par celle de la fenêtre de l'application.
 
-## See also 
+## Voir aussi 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 432 |
+| Numéro de commande | 432 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

@@ -5,60 +5,60 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* : Picture {; *horOffset* : Integer {; *vertOffset* : Integer}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icône* {; *décalageH* {; *décalageV*}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| icon | Picture | &#8594;  | Icon to use during drag |
-| horOffset | Integer | &#8594;  | Horizontal offset from left edge of picture with respect to cursor position (>0 = to the left, <0 = to the right) |
-| vertOffset | Integer | &#8594;  | Vertical offset from top edge of picture with respect to cursor position (>0 = upwards, <0 = downwards) |
+| icône | Picture | &#8594;  | Icône à utiliser lors du glisser |
+| décalageH | Integer | &#8594;  | Décalage horizontal du bord gauche de l’image par rapport à la position du curseur (>0 = vers la gauche, <0 = vers la droite) |
+| décalageV | Integer | &#8594;  | Décalage vertical du bord supérieur de l’image par rapport à la position du curseur (>0 = vers le haut, <0 = vers le bas) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET DRAG ICON.Summary-->The **SET DRAG ICON** command associates the icon picture with the cursor during drag and drop operations that are managed by programming.<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Summary-->La commande **SET DRAG ICON** vous permet d’associer l’image *icône* au curseur lors des glisser-déposer gérés par programmation.<!-- END REF-->
 
-This command can only be called in the context of the On Begin Drag Over form event (see the [Form event code](./commands/form-event-code) command).
+Cette commande peut être appelée uniquement dans le contexte de l’événement formulaire On Begin Drag Over (cf. commande [Form event code](../commands/form-event-code.md)).
 
-In the *icon* parameter, pass the picture to use. Its maximum size is 256x256 pixels. If one of its dimensions exceeds 256 pixels, it is automatically resized. 
+Passez dans le paramètre *icône* l’image à utiliser. Sa taille maximale est de 256x256 pixels. Si l’une de ses dimensions excède 256 pixels, elle est automatiquement redimensionnée. 
 
-In *horOffset* and *vertOffset*, you can pass offset values in pixels:
+Vous pouvez passer dans *décalageH* et *décalageV* des valeurs de décalage en pixels : 
 
-* for *horOffset*, you pass the horizontal offset from the left edge of the icon with respect to the cursor position. Pass a positive value to apply this offset towards the left or a negative value to apply it towards the right.
-* for *vertOffset*, you pass the vertical offset from the top edge of the icon with respect to the cursor position. Pass a positive value to apply this offset upwards or a negative value to apply it downwards.
+* passez dans *décalageH* le décalage horizontal du bord gauche de l’icône par rapport à la position du curseur. Passez une valeur positive pour appliquer le décalage vers la gauche ou une valeur négative pour appliquer le décalage vers la droite.
+* passez dans *décalageV* le décalage vertical du bord supérieur de l’icône par rapport à la position du curseur. Passez une valeur positive pour appliquer le décalage vers le haut ou une valeur négative pour appliquer le décalage vers le bas.
 
-If you omit this parameter, the cursor is placed at the center of the icon.
+Si vous omettez ce paramètre, le curseur est placé au centre de l’icône.
 
-## Example 
+## Exemple 
 
-In a form, a user can generate a label by dragging and dropping a row. In the object method of the list box, you can write:
+Dans un formulaire, l’utilisateur peut générer une étiquette par glisser-déposer d’une ligne. Dans la méthode objet de la list box, vous écrivez :
 
 ```4d
- If(Form event code=On Begin Drag Over)
-    READ PICTURE FILE(Get 4D folder(Current resources folder)+"splash.png";vpict)
-    CREATE THUMBNAIL(vpict;vpict;48;48)
-    SET DRAG ICON(vpict)
+ If(Form event code=Sur début glisser)
+       READ PICTURE FILE(Get 4D folder(Current resources folder)+"splash.png";vpict)
+       CREATE THUMBNAIL(vpict;vpict;48;48)
+       SET DRAG ICON(vpict)
  End if
 ```
 
-When you drag a row, the picture appears as shown here:
+Lors du glisser d’une ligne, l’image apparaît :
 
-![](../assets/en/commands/pict1204050.en.png)
+![](../assets/en/commands/pict1204050.fr.png)
 
-Note that you can modify the position of the cursor with respect to the picture:
+A noter que vous pouvez modifier la position du curseur par rapport à l’image :
 
 ```4d
  SET DRAG ICON(vpict;0;0)
@@ -66,16 +66,15 @@ Note that you can modify the position of the cursor with respect to the picture:
 
 ![](../assets/en/commands/pict1204052.fr.png)
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1272 |
+| Numéro de commande | 1272 |
 | Thread safe | no |
-
 
 

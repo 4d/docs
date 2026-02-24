@@ -9,36 +9,36 @@ displayed_sidebar: docs
 <!--REF #_command_.Current method path.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Full internal pathname of the method being executed |
+| Résultat | Text | &#8592; | Chemin interne complet de la méthode en cours d’exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current method path.Summary-->The **Current method path** command returns the internal pathname of the database method, trigger, project method, form method or object method being executed.<!-- END REF-->In the context of 4D macro-commands, the *<method\_path>* tag is replaced in the code by the full pathname of the method being executed. 
+<!--REF #_command_.Current method path.Summary-->La commande **Current method path** retourne le chemin d’accès interne de la méthode base, du trigger, de la méthode projet, méthode formulaire ou méthode objet en cours d’exécution.<!-- END REF-->Dans le contexte des macro-commandes 4D, la balise *<method\_path>* est remplacée par le chemin d’accès complet du code en cours d’édition. 
 
-## See also 
+## Voir aussi 
 
 [METHOD Get path](method-get-path.md)  
 [METHOD GET PATHS](method-get-paths.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1201 |
+| Numéro de commande | 1201 |
 | Thread safe | yes |
 
 

@@ -5,43 +5,43 @@ slug: /commands/count-menus
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menus.Syntax-->**Count menus** ( *process* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menus.Syntax-->**Count menus** {( *process* )} : Integer<!-- END REF-->
 <!--REF #_command_.Count menus.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Integer | &#8592; | Number of menus in the current menu bar |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Integer | &#8592; | Nombre de menus de la barre de menus courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count menus.Summary-->The **Count menus** command returns the number of menus present in the menu bar.<!-- END REF-->
+<!--REF #_command_.Count menus.Summary-->La commande **Count menus** retourne le nombre de menus présents dans la barre de menus.<!-- END REF-->
 
-If you omit the *process* parameter, **Count menus** applies to the menu bar for the current process. Otherwise, **Count menus** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **Count menus** s'applique à la barre de menus du process courant. Sinon, **Count menus** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-## See also 
+## Voir aussi 
 
 [Count menu items](count-menu-items.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 404 |
+| Numéro de commande | 404 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

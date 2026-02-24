@@ -5,59 +5,59 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; offset} )<br/>**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| integer| Integer | &#8594;  | Integer value to write into the BLOB |
-| Blob | Blob | &#8594;  | BLOB to receive the Integer value |
-| byteOrder| Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
-| * | Operator | &#8594; | * to append the value |
+| entier | Integer | &#8594;  | Valeur entière à écrire dans le BLOB |
+| blob | Blob | &#8594;  | BLOB devant recevoir la valeur entière |
+| ordreOctet | Integer | &#8594;  | 0=Ordre des octets en mode natif, 1=Ordre des octets Macintosh, 2=Ordre des octets PC |
+| offset &#124; * | Variable, Opérateur | &#8596;  | Offset (en octets) de l'entier dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
+| ||| Nouvel offset après écriture si * omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INTEGER TO BLOB.Summary-->The INTEGER TO BLOB command writes the 2-byte Integer value *integer* into the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Summary-->**INTEGER TO BLOB** écrit la valeur entière (2 octets) *entier* dans le BLOB *blob*.<!-- END REF-->
 
-The *byteOrder* parameter fixes the byte ordering of the 2-byte Integer value to be written. You pass one of the following predefined constants provided by 4D:
+Le paramètre *ordreOctet* fixe l'ordre des octets ("byte ordering") de la valeur entière à écrire. Vous pouvez passer une des constantes fournies par 4D :
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Macintosh byte ordering | Integer | 1     |
-| Native byte ordering    | Integer | 0     |
-| PC byte ordering        | Integer | 2     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Macintosh byte ordering | Entier long | 1      |
+| Native byte ordering    | Entier long | 0      |
+| PC byte ordering        | Entier long | 2      |
 
-**Note regarding Platform Independence:** If you exchange BLOBs between the Macintosh and PC platforms, it is up to you to manage byte swapping issues when using this command.
+**Note sur l'indépendance de plate-forme :** Si vous échangez des BLOBs entre les plates-formes Macintosh et PC, il vous incombe de traiter les conversions d'octets ("byte swapping") lorsque vous utilisez cette commande. 
 
-If you specify the \* optional parameter, the 2-byte Integer value is appended to the BLOB and the size of the BLOB is extended accordingly. Using the \* optional parameter, you can sequentially store any number of Integer, Long Integer, Real or Text values (see other BLOB commands) in a BLOB, as long as the BLOB fits into memory. 
+Si vous passez le paramètre optionnel \*, la valeur entière sur 2 octets est ajoutée à la fin du BLOB et sa taille est modifiée en conséquence. Ainsi, à l'aide du paramètre optionnel \*, vous pouvez stocker les unes derrière les autres autant de valeurs de type Entier, Entier long, Numérique ou Texte (référez-vous aux autres commandes sur les BLOBs) que vous voulez dans un BLOB, la seule limite étant celle de la mémoire disponible. 
 
-If you do not specify the \* optional parameter or the *offset* variable parameter, the 2-byte Integer value is stored at the beginning of the BLOB, overriding its previous contents; the size of the BLOB is adjusted accordingly.
+Si vous ne passez pas le paramètre optionnel \* ni de variable dans le paramètre *offset*, la valeur entière est stockée au début de *blob* en remplaçant son contenu précédent, et la taille du BLOB est modifiée en conséquence.
 
-If you pass the *offset* variable parameter, the 2-byte Integer value is written at the byte offset (starting from zero) within the BLOB. No matter where you write the 2-byte Integer value, the size of the BLOB is increased according to the location you passed (plus up to 2 bytes, if necessary). Newly allocated bytes, other than the ones you are writing, are initialized to zero.
+Si vous passez une variable dans le paramètre *offset*, la valeur entière est écrite à partir de l'offset *offset*, exprimé en octets (à partir de zéro), du BLOB. Quel que soit l'endroit où vous placez l'entier, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (plus jusqu'à 2 octets le cas échéant). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therefore, you can reuse that same variable with another BLOB writing command to write another value.
+Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre valeur juste après celle que vous venez d'écrire.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## Example 1 
+## Exemple 1 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
@@ -65,59 +65,59 @@ After executing this code:
  INTEGER TO BLOB(518;vxBlob;Macintosh byte ordering;vlOffset)
 ```
 
-* The size of *vxBlob* is 100 bytes
-* On all platforms *vxBLOB{50}* \= *$02* and *vxBLOB{51}* \= *$06*
-* The other bytes of the BLOB are left unchanged
-* The variable *vlOffset* has been incremented by 2 (and is now equal to 52)
+* La taille de *vxBlob* est 100 octets
+* Sur toutes les plates-formes *vxBLOB{50}* \= *$02* et *vxBLOB{51}* \= *$06*
+* Les autres octets du BLOB restent inchangés
+* La variable *vlOffset* est incrémentée de 2 (et est alors égale à 52)
 
-## Example 2 
+## Exemple 2 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering)
 ```
 
-* The size of *vxBlob* is 2 bytes
-* On all platforms *vxBLOB{0}* \= *$06* and *vxBLOB{1}* \= *$02*
+* La taille de *vxBlob* est 2 octets
+* Sur toutes les plates-formes *vxBLOB{0}* \= *$06* et *vxBLOB{1}* \= *$02*
 
-## Example 3 
+## Exemple 3 
 
-After executing this code:
+Après l'exécution de ce code:
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
  INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering;*)
 ```
 
-* The size of *vxBlob* is 102 bytes
-* On all platforms *vxBLOB{100}* \= *$06* and *vxBLOB{101}* \= *$02*
-* The other bytes of the BLOB are left unchanged
+* La taille de *vxBlob* est 102 octets
+* Sur toutes les plates-formes *vxBLOB{100}* \= *$06* et *vxBLOB{101}* \= *$02*
+* Les autres octets du BLOB restent inchangés
 
-## Example 4 
+## Exemple 4 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  INTEGER TO BLOB(0x0206;vxBlob;Native byte ordering)
 ```
 
-* The size of *vxBlob* is 2 bytes
-* On PowerPC platform: *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
-* On Intel platform: *vxBLOB{0}* \= *$06* and *vxBLOB{1}* \= *$02*
+* La taille de *vxBlob* est 2 octets
+* Sur plate-forme PowerPC *vxBLOB{0}* \= *$02* et *vxBLOB{1}* \= *$06*
+* Sur plate-forme Intel *vxBLOB{0}* \= *$06* et *vxBLOB{1}* \= *$02*
 
-## Example 5 
+## Exemple 5 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  INTEGER TO BLOB(0x0206;vxBlob;Macintosh byte ordering)
 ```
 
-* The size of *vxBlob* is 2 bytes
-* On all platforms *vxBLOB{0}* \= *$02* and *vxBLOB{1}* \= *$06*
+* La taille de *vxBlob* est 2 octets
+* Sur toutes les plates-formes *vxBLOB{0}* \= *$02* et *vxBLOB{1}* \= *$06*
 
-## See also 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -127,11 +127,11 @@ After executing this code:
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 548 |
+| Numéro de commande | 548 |
 | Thread safe | yes |
 
 

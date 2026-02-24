@@ -5,55 +5,55 @@ slug: /commands/add-to-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* : Date ; *years* : Integer ; *months* : Integer ; *days* : Integer ) : Date<!-- END REF-->
+<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* ; *années* ; *mois* ; *jours* ) : Date<!-- END REF-->
 <!--REF #_command_.Add to date.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date to which to add days, months, and years |
-| years | Integer | &#8594;  | Number of years to add to the date |
-| months | Integer | &#8594;  | Number of months to add to the date |
-| days | Integer | &#8594;  | Number of days to add to the date |
-| Function result | Date | &#8592; | Resulting date |
+| date | Date | &#8594;  | Date à laquelle ajouter jours, mois et années |
+| années | Integer | &#8594;  | Nombre d'années à ajouter à la date |
+| mois | Integer | &#8594;  | Nombre de mois à ajouter à la date |
+| jours | Integer | &#8594;  | Nombre de jours à ajouter à la date |
+| Résultat | Date | &#8592; | Date résultante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Add to date.Summary-->The **Add to date** command adds *years*, *months,* and *days* to the date you pass in *aDate*, then returns the result.<!-- END REF-->
+<!--REF #_command_.Add to date.Summary-->**Add to date** ajoute *années*, *mois* et *jours* à la date que vous avez passée dans *laDate*, et retourne la date résultante.<!-- END REF-->
 
-Although you can use the [Self](self.md) to add days to a date, **Add to date** allows you to quickly add months and years without having to deal with the number of days per month or leap years (as you would when using the + date operator).
+Alors que les [Self](self.md) vous permettent d'ajouter des jours à une date, **Add to date** vous permet d'ajouter rapidement des mois et des années sans vous soucier du nombre de jours par mois ou des années bissextiles (comme vous devriez le faire avec l'opérateur "+" sur les dates).
 
-## Example 
+## Exemple 
 
 ```4d
-  // This line calculates the date in one year, same day
- $vdInOneYear:=Add to date(Current date;1;0;0)
+  //Cette ligne calcule la date dans un an, le même jour
+ $vdDansUnAn:=Add to date(Current date;1;0;0)
  
-  // This line calculates the date next month, same day
- $vdNextMonth:=Add to date(Current date;0;1;0)
+  //Cette ligne calcule la date le mois prochain, le même jour
+ $vdMoisProchain:=Add to date(Current date;0;1;0)
  
-  // This line does the same thing as $vdTomorrow:=Current date+1
- $vdTomorrow:=Add to date(Current date;0;0;1)
+  //Cette ligne fait la même chose que '$vdDemain:=Date du jour+1'
+ $vdDemain:=Add to date(Current date;0;0;1)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 393 |
+| Numéro de commande | 393 |
 | Thread safe | yes |
 
 

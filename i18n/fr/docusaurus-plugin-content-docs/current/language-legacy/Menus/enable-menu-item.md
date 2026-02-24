@@ -5,51 +5,51 @@ slug: /commands/enable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* ; *ligneMenu* {; *process*} )<!-- END REF-->
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
-| process | Integer | &#8594;  | Proces reference number |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594;  | Numéro de référence du process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ENABLE MENU ITEM.Summary-->The **ENABLE MENU ITEM** command enables the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.
+<!--REF #_command_.ENABLE MENU ITEM.Summary-->**ENABLE MENU ITEM** active la commande de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-If the *menuItem* parameter designates a hierarchical submenu, all the items of this menu and any submenus are enabled. This command also works with a menu bar created using the [Create menu](create-menu.md) command and installed with the [SET MENU BAR](set-menu-bar.md) command.
+Si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, toutes les lignes de ce menu et de ses éventuels sous-menus sont activées. Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](create-menu.md) et installée avec la commande [SET MENU BAR](set-menu-bar.md).
 
-If you omit the *process* parameter, **ENABLE MENU ITEM** applies to the menu bar for the current process. Otherwise, **ENABLE MENU ITEM** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **ENABLE MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **ENABLE MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-**Tip:** To enable/disable all items of a menu at once, pass 0 (zero) in *menuItem*.
+**Astuce :** Pour activer/inactiver toutes les lignes de menus en une fois, passez 0 (zéro) dans *ligneMenu*.
 
-## See also 
+## Voir aussi 
 
 [DISABLE MENU ITEM](disable-menu-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 149 |
+| Numéro de commande | 149 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

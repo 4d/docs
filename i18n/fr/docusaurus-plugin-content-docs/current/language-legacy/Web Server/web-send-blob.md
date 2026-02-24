@@ -5,57 +5,62 @@ slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* : Blob ; *type* : Text )<!-- END REF-->
+<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* ; *type* )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB to send to the browser |
-| type | Text | &#8594;  | Data type of the BLOB |
+| blob | Blob | &#8594;  | BLOB à envoyer au browser |
+| type | Text | &#8594;  | Type de données du BLOB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|6.5|Created|
+|13|Renommé|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SEND BLOB.Summary-->The **WEB SEND BLOB** command allows you to send *blob* to the browser.<!-- END REF--> 
+<!--REF #_command_.WEB SEND BLOB.Summary-->La commande **WEB SEND BLOB** permet d’envoyer le BLOB *blob* au navigateur.<!-- END REF-->
 
-The type of data contained in the BLOB is indicated by *type*. This parameter can be one of the following types: 
+Le type de données contenues dans le BLOB est indiqué par le paramètre *type*. Ce paramètre peut contenir les valeurs suivantes : 
 
-* *type* \= **Empty String** (""): In this case, you don’t need to supply any more information in the BLOB. The browser will try to interpret the contents of the BLOB.
-* *type* \= **File extension** (example: ".HTM", ".GIF", ".JPEG", etc.): In this case, you specify the MIME type of the data contained in the BLOB by indicating its extension. The BLOB will then be interpreted according to its extension. However, the extension must be a standard one so that the browser can correctly interpret it.
-* *type* \= **Mime/Type** (example: “text/html”, “image/tiff”, etc.): In this case, you directly specify the MIME type of data contained in the BLOB. This solution offers you more freedom. Besides the standard types, you can pass a custom MIME type to send proprietary documents via Intranet. To do so, you only need to configure the browsers so that they recognize the type sent and so that they can open the appropriate application. The value you pass to *type* is, in this case, “application/x-\[TypeName\]”. In the client workstations’s browser, you reference this type and associate it to the “Launch the application” action. The WEB SEND BLOB command allows you to therefore send all types of documents, the Intranet clients automatically open the associated application.  
-    
-**Note:** For more information about MIME types, refer to the page: <http://www.iana.org/assignments/media-types>.
+* *type* \= **Chaîne vide** ("") : dans ce cas, vous ne fournissez aucune information sur le BLOB. Le navigateur tentera alors d’interpréter lui-même le contenu du BLOB.
+* *type* \= **Extension de fichier** (ex. : “.HTM”, “.GIF”, “.JPEG”, etc.) : dans ce cas, vous fournissez au navigateur, par l’intermédiaire de son extension, le type MIME des données contenues dans le BLOB. Le BLOB sera interprété en fonction de cette extension. Toutefois, l’extension doit être standard afin que le navigateur puisse l’interpréter correctement. Une liste des types MIME les plus courants et de leurs extensions est fournie ci-dessous.
+* *type* \= **Mime/Type** (ex. : “text/html”, “image/tiff”, etc.) : dans ce cas, vous fournissez directement au navigateur le type MIME des données contenues dans le BLOB. Cette solution est celle qui vous offre le plus de latitude. En effet, outre les types standard, vous pouvez passer un type MIME personnalisé pour envoyer des documents propriétaires en Intranet. Il vous suffit pour cela de configurer les navigateurs afin qu’ils reconnaissent le type envoyé et, par exemple, exécutent l’application correspondante. La valeur à passer dans le paramètre *type* est, dans ce cas “application/x-\[NomDuType\]”). Dans les navigateurs des postes clients, vous référencez ce type et lui associez l’action “Exécuter l’application”. La commande **WEB SEND BLOB** vous permet alors d’envoyer des documents de tout type, les clients Intranet ouvrant automatiquement l’application associée.  
 
-The list of MIME types and their file extensions supported by the 4D HTTP server is saved in the "MimeTypes.xml" file found in the "Resources" folder of the 4D application.
 
-The references to 4D variables and *4DSCRIPT* type tags in the page are always parsed.
+:::note
 
-## Example 
+Pour plus d'informations sur les types MIME, reportez-vous à la page <http://www.iana.org/assignments/media-types>.
 
-Refer to the example of the [PICTURE TO BLOB](picture-to-blob.md) routine.
+:::
 
-## See also 
+La liste des types MIME et leurs extensions pris en charge par le serveur HTTP de 4D est stockée dans le fichier "MimeTypes.xml" situé dans le dossier "Resources" de l'application 4D.
+
+Les éventuelles références aux variables 4D et balises de type *4DSCRIPT* dans la page sont toujours analysées.
+
+## Exemple 
+
+Reportez-vous à l’exemple de la routine [PICTURE TO BLOB](picture-to-blob.md). 
+
+## Voir aussi 
 
 [WEB SEND FILE](web-send-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 654 |
+| Numéro de commande | 654 |
 | Thread safe | yes |
 
 

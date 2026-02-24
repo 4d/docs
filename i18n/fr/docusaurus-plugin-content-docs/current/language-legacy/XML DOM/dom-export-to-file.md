@@ -5,82 +5,81 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* : Text ; *filePath* : Text )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* ; *cheminFichier* )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Root XML element reference |
-| filePath | Text | &#8594;  | Full access path of the file |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| cheminFichier | Text | &#8594;  | Chemin d’accès complet du fichier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM EXPORT TO FILE.Summary-->The DOM EXPORT TO FILE command stores an XML tree in a file on disk.<!-- END REF--> 
+<!--REF #_command_.DOM EXPORT TO FILE.Summary-->La commande **DOM EXPORT TO FILE** permet de sauvegarder un arbre XML dans un fichier sur disque.<!-- END REF--> 
 
-Pass the root element reference to export in the *elementRef* parameter. 
+Passez dans *refElément* la référence de l’élément racine à exporter.   
+Passez dans *cheminFichier* le chemin d’accès complet du fichier d’export à utiliser ou à créer. Si le fichier n’existe pas, il est créé.   
+Si vous passez uniquement un nom de fichier (sans chemin d’accès), le fichier sera recherché ou créé à côté du fichier de structure.  
+Si vous passez une chaîne vide (*""*), une boîte de dialogue standard d’ouverture et de création de fichier apparaît.
 
-Pass the full access path to use or create of the export file in *filePath*. If the file does not already exist, it is created. 
+### Notes sur le traitement des caractères de fin de ligne et des BOM 
 
-If you only pass a file name (without an access path), a search for the file will take place or it will be created next to the structure file.
+En XML, les sauts de ligne ne sont pas significatifs, qu'ils soient présents à l'intérieur ou entre des éléments XML. En interne, le XML utilise des caractères normalisés LF comme séparateurs de lignes.
 
-If you pass an empty string (*""*), a standard open file and new file dialog box appears.
+Lors des opérations d'import et d'export, les caractères de saut de ligne peuvent être convertis. Lors d'un import, le parseur XML remplace les caractères CRLF (sauts de ligne standard sous Windows) par des caractères LF. Pendant l'export, les caractères LF sont remplacés par des caractères CRLF sous Windows (pas de remplacement sous macOS).
 
-### About end-of-line characters and BOM management 
+**Note** : Si vous souhaitez conserver les retours chariot, vous devez les inclure dans un élément XML CDATA afin qu'ils ne soient pas traités par l'analyseur XML. Vous pouvez également utiliser le caractère "<br/>", qui est un retour chariot explicite qui ne sera pas traité par le parseur en lieu et place des caractères CRLF.
 
-In XML, line breaks are not significant regardless of whether they are within or between XML elements. Internally, XML uses standard LF characters as line separators. During import and export operations, line break characters can be converted. During an import, the XML parser replaces CRLF characters (standard line breaks under Windows) with LF characters. During export, LF characters are replaced by CRLF characters on Windows (no replacement on macOS).
+Par défaut, les fichiers XML sont écrits sans BOM (Byte order mask). 
 
-**Note:** If you want to keep carriage returns, you must include them in an XML CDATA element so that they will not be processed by the XML parser. Instead of CRLF characters, you can also use "<br/>" characters, which are explicit carriage returns that will not be processed by the parser.
+Vous pouvez contrôler le traitement des fins de ligne XML et du BOM à l'aide de la commande [XML SET OPTIONS](xml-set-options.md). 
 
-By default, XML files are written without BOM (Byte order mask). 
+**Note de compatibilité** : Dans les bases /projets créés avec des versions de 4D allant jusqu'à la v19.x, 4D utilise par défaut CR comme caractère de fin de ligne sur macOS et ainsi qu'un BOM. Pour activer les nouveaux paramètres par défaut, vérifiez les paramètres de compatibilité (voir la page Compatibilité) ou utilisez la commande [XML SET OPTIONS](xml-set-options.md). 
 
-You can control the XML line ending and BOM management using the [XML SET OPTIONS](xml-set-options.md) command. 
+## Exemple 
 
-**Compatibility Note:** In databases/projects created with 4D versions up to v19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](xml-set-options.md) command. 
-
-## Example 
-
-This example stores the tree *vElemRef* in the file MyDoc.xml:
+Cet exemple sauvegarde l’arbre *vRefElem* dans le fichier MonDoc.xml :
 
 ```4d
- DOM EXPORT TO FILE(vElemRef;"C:\\folder\MyDoc.xml")
+ DOM EXPORT TO FILE(vRefElem;"C:\\dossier\MonDoc.xml")
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## Error management 
+## Gestion des erreurs 
 
-An error is generated when:
+Une erreur est générée lorsque :
 
-* The element reference is invalid,
-* The specified access path is invalid,
-* The storage volume returns an error (insufficient disk space, etc.).
+* la référence de l’élément n’est pas valide,
+* le chemin d’accès spécifié n’est pas valide,
+* le volume de stockage retourne une erreur (disque plein, etc.).
 
-## See also 
+## Voir aussi 
 
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 [SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 862 |
+| Numéro de commande | 862 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

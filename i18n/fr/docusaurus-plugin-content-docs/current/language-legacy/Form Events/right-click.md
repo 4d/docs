@@ -9,39 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Right click.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if a right click was detected, otherwise False |
+| Résultat | Boolean | &#8592; | Vrai si un clic droit a été détecté, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Right click.Summary-->The Right click command returns True if the right button of the mouse has been clicked.<!-- END REF-->
+<!--REF #_command_.Right click.Summary-->La commande **Right click** retourne Vrai si un clic effectué avec le bouton droit de la souris a été effectué.<!-- END REF--> 
 
-This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object.
+Cette commande doit être appelée uniquement dans le cadre de l’événement formulaire On Clicked. Il est donc nécessaire de vérifier en mode Développement que cet événement a bien été coché dans les Propriétés du formulaire et/ou de l’objet. 
 
-## See also 
+## Voir aussi 
 
 [Contextual click](contextual-click.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 712 |
+| Numéro de commande | 712 |
 | Thread safe | no |
-
 
 

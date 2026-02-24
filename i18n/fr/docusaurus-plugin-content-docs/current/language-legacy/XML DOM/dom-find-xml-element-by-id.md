@@ -5,48 +5,48 @@ slug: /commands/dom-find-xml-element-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *elementRef* : Text ; *id* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *refElément* ; *id* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| id | Text | &#8594;  | Value of ID attribute of element to look for |
-| Function result | Text | &#8592; | Reference of the element found (if applicable) |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| id | Text | &#8594;  | Valeur de l’attribut ID de l’élément à chercher |
+| Résultat | Text | &#8592; | Référence de l’élément trouvé (le cas échéant) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Find XML element by ID.Summary-->The DOM Find XML element by ID command searches within an XML document for the element whose id attribute equals the value passed in the *id* parameter.<!-- END REF-->
+<!--REF #_command_.DOM Find XML element by ID.Summary-->La commande **DOM Find XML element by ID** vous permet de rechercher, à l'intérieur d'un document XML, l'élément dont l'attribut id est égal à la valeur passée dans le paramètre *id*.<!-- END REF-->
 
-In *elementRef*, pass the reference of an element in the XML document where you want to perform the search. You can pass the reference of the root element or any other element; the search does not take the position of *elementRef* into account and always searches the whole document. 
+Passez dans *refElément* la référence d'un élément du document XML dans lequel vous souhaitez effectuer la recherche. Vous pouvez passer la référence de l'élément racine ou de tout autre élément, la recherche ne tient pas compte de la position de *refElément* et s'effectue toujours dans la totalité du document. 
 
-The command returns the XML reference of the element found as a result.
+La commande retourne en résultat la référence XML de l’élément trouvé.
 
-**Warning:** In XML, the id attribute associates a unique ID to each document element. The value of the id attribute must be a valid XML name and it must be unique among all the elements in the XML document (validity constraint). In order for the DOM Find XML element by ID command to work properly, this constraint must be complied with; otherwise, the result is random (the command returns the reference to the first element found in the document).
+**Attention :** En XML, l’attribut id permet d’associer un identifiant unique à chaque élément d'un document. La valeur de l’attribut id doit être un nom XML valide et doit être unique dans le document XML, tous éléments confondus (contrainte de validité). Le bon fonctionnement de la commande **DOM Find XML element by ID** requiert que cette contrainte soit respectée, sinon le résultat sera aléatoire (la commande retournera la référence du premier élément trouvé dans le document).
 
-## See also 
+## Voir aussi 
 
 [DOM Find XML element](dom-find-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1010 |
+| Numéro de commande | 1010 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,66 +5,65 @@ slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* : Text array {; *altNamesArray* : Text array {; *modelsArray* : Text array}} )<!-- END REF-->
+<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *tabNoms* {; *tabNomsAlt* {; *tabModèles*}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| namesArray | Text array | &#8592; | Printer names |
-| altNamesArray | Text array | &#8592; | Windows: Printer locations, macOS: Custom printer names |
-| modelsArray | Text array | &#8592; | Printer models |
+| tabNoms | Text array | &#8592; | Noms des imprimantes |
+| tabNomsAlt | Text array | &#8592; | Windows : Emplacements des imprimantes, macOS : Noms personnalisés des imprimantes |
+| tabModèles | Text array | &#8592; | Modèles des imprimantes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|2004.1|Modified|
-|<6|Created|
+|16|Modifié|
+|2004.1|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PRINTERS LIST.Summary-->The **PRINTERS LIST** command fills in the array(s) passed as parameter(s) with the names as well as, optionally, the locations or custom names and models of the available printers for the machine.<!-- END REF--> 
+<!--REF #_command_.PRINTERS LIST.Summary-->La commande **PRINTERS LIST** remplit le ou les tableau(x) passé(s) en paramètre(s) avec les noms ainsi que, facultativement, les emplacements ou les noms personnalisés et les modèles des imprimantes disponibles pour le poste.<!-- END REF-->
 
-**Note:** If the printers are managed using a print server (spooler), the complete access path (under Windows) or the name of the spooler (under macOS) is returned.
+Passez dans le paramètre *tabNoms* le nom d’un tableau texte. Après l’exécution de la commande, ce tableau contiendra la liste des noms d’imprimantes disponibles. Sous Mac OS, il s'agit des noms “système” fixes.
 
-Pass the name of a text array in the *namesArray* parameter. After command execution, this array will contain the names of available printers. Under macOS, this will be the fixed “system” names.
+**Note :** Si les imprimantes sont gérées via un serveur d’impression (“spouleur”), le chemin d’accès complet (sous Windows) ou le nom du spouleur (sous macOS) est retourné.
 
-You can pass a second optional array, *altNamesArray*. The contents of this array will depend on the platform:
+Vous pouvez passer un deuxième tableau facultatif, *tabNomsAlt*. Le contenu de ce tableau dépend de la plate-forme :
 
-* Under Windows, for each printer, you get its network location (or local port).
-* Under macOS, for each printer, you get its custom name, which can be modified by the user. This name can be used, for example, in dialog boxes.
+* Sous Windows, vous récupérez pour chaque imprimante son emplacement réseau (ou son port local).
+* Sous macOS, vous récupérez pour chaque imprimante son nom personnalisé, modifiable par l'utilisateur. Ce nom peut être utilisé par exemple dans des boîtes de dialogue.
 
-The optional *modelsArray* parameter is used to get the model of each printer. 
+Le paramètre facultatif *tabModèles* permet de récupérer le modèle de chaque imprimante.
 
-Use the [SET CURRENT PRINTER](set-current-printer.md) and [Get current printer](get-current-printer.md) commands to modify or get the selected printer in 4D. You must pass them the names returned in the first array (*namesArray*)
+Utilisez les commandes [SET CURRENT PRINTER](set-current-printer.md) et [Get current printer](get-current-printer.md) pour modifier ou connaître l’imprimante sélectionnée dans 4D. Vous devez leur passer les noms retournés dans le premier tableau (*tabNoms*).
 
-Under Windows, the name of a printer can be modified manually at the operating system level. On the other hand, its location and model type are linked to its physical characteristics. Therefore, you can use the optional array values to check the characteristics of the selected printer — typically, you can check that all the client machines use the same printer.
+Sous Windows, le nom d’une imprimante peut être modifié manuellement au niveau du système d’exploitation. En revanche, son emplacement et son modèle sont liés à ses caractéristiques physiques. Vous pouvez donc utiliser les valeurs des tableaux optionnels pour vérifier les caractéristiques de l’imprimante sélectionnée — typiquement, vous pouvez vérifier que tous les clients utilisent la même imprimante.  
+Sous macOS, cette vérification peut s’effectuer sur le nom de l’imprimante (nom du serveur d’impression), qui est le même pour chaque poste connecté.
 
-Under macOS, this check can be carried out using the name of the printer (name of the print server), which is the same for each machine that is connected.
+## Variables et ensembles système 
 
-## System variables and sets 
+La variable système OK prend la valeur 1 si la commande a été exécutée correctement, sinon elle prend la valeur 0 et les tableaux sont retournés vides. 
 
-The system variable OK is set to 1 if the command has been executed correctly; otherwise, it is set to 0 and the arrays are returned empty. 
-
-## See also 
+## Voir aussi 
 
 [Get current printer](get-current-printer.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 789 |
+| Numéro de commande | 789 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

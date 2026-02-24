@@ -5,47 +5,47 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* : Integer, Text {; *process* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Integer | &#8592; | Number of menu items in the menu |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Integer | &#8592; | Nombre de lignes du menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count menu items.Summary-->The **Count menu items** command returns the number of menu items present in the menu whose number or reference is passed in *menu.<!-- END REF-->*
+<!--REF #_command_.Count menu items.Summary-->La commande **Count menu items** retourne le nombre de lignes (commandes) de menus présentes dans le menu dont vous avez passé le numéro ou la référence dans *menu.<!-- END REF-->*  
+  
+Si vous omettez le paramètre *process*, **Count menu items** s'applique à la barre de menus du process courant. Sinon, **Count menu items** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-If you omit the *process* parameter, **Count menu items** applies to the menu bar for the current process. Otherwise, **Count menu items** applies to the menu bar for the process whose reference number is passed in *process*. 
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") parameter in *menu*, the *process* parameter serves no purpose and will be ignored.
-
-## See also 
+## Voir aussi 
 
 [Count menus](count-menus.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 405 |
+| Numéro de commande | 405 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

@@ -5,48 +5,48 @@ slug: /commands/object-to-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *pathObject* : Object ) : Text<!-- END REF-->
+<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objetChemin* ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathObject | Object | &#8594;  | Object describing a path contents |
-| Function result | Text | &#8592; | Pathname |
+| objetChemin | Object | &#8594;  | Objet décrivant un contenu de chemin |
+| Résultat | Text | &#8592; | Chemin de fichier ou de dossier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Object to path.Summary-->The **Object to path** command returns a pathname (string) based upon path information you passed in the *pathObject* parameter.<!-- END REF--> The following paths are supported:
+<!--REF #_command_.Object to path.Summary-->La commande **Object to path** retourne un chemin (chaîne) basé sur les informations passées dans le paramètre *objetChemin*.<!-- END REF--> Les chemins suivants sont pris en charge :
 
-* System path (Windows or macOS) or Posix path. The path type is defined by the last character of the *parentFolder* property (see below).
-* Relative path or absolute path (see *Absolute or relative pathname* for more information).
+* Chemin système (Windows / macOS) ou chemin POSIX. Le type de chemin est défini par le dernier caractère de la propriété *parentFolder* (voir ci-dessous).
+* Chemin relatif ou chemin absolu (voir *Chemin d'accès absolu ou relatif* pour plus d'informations).
 
- In *pathObject*, pass an object defining the path you want to generate. It must contain the following properties:
+Dans *objetChemin*, passez un objet définissant le chemin que vous souhaitez générer. Il doit contenir les propriétés suivantes :
 
-| **Property** | **Type** | **Description**                                                                                                                                                                                                                                                       |
-| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parentFolder | Text     | Directory information for the path. The last character must be a folder separator. This character is used by the command to know the path type. If it is a Posix separator ("/"), the path is created with Posix separators; otherwise, the system separator is used. |
-| name         | Text     | Final file or folder name of the specified path without extension.                                                                                                                                                                                                    |
-| extension    | Text     | Extension of the final file or folder name. Starts with "." (can be omitted). Empty string "" if no extension.                                                                                                                                                        |
-| isFolder     | Boolean  | True if name is a folder name, false otherwise (default is false)                                                                                                                                                                                                     |
+| **Propriété** | **Type** | **Description**                                                                                                                                                                                                                                                                                                           |
+| ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parentFolder  | Texte    | Description des répertoires constituant le chemin. Le dernier caractère doit être un séparateur de dossier. Ce caractère est utilisé par la commande pour détecter le type de chemin. S'il s'agit du séparateur POSIX ("/"), le chemin est créé avec des séparateurs POSIX; sinon, des séparateurs système sont utilisés. |
+| name          | Texte    | Nom du fichier ou du dossier final du chemin spécifié, sans extension.                                                                                                                                                                                                                                                    |
+| extension     | Texte    | Extension du fichier ou du dossier final. Commence par "." (peut être omis). Chaîne vide "" si pas d'extension.                                                                                                                                                                                                           |
+| isFolder      | Booléen  | "true" si "name" est un nom de dossier, sinon "false" ("false" par défaut)                                                                                                                                                                                                                                                |
 
-Usually, *pathObject* will be generated by the [Path to object](path-to-object.md) command, however the object can be built with any means. Note that **Object to path** only handles strings. It neither checks if the path is valid with regards to the path type, nor the actual existence of any file or folder. 
+*objetChemin* sera généralement fourni par la commande [Path to object](path-to-object.md), mais en principe l'objet peut être créé de manière personnaliée. Notez que **Object to path** manipule uniquement des chaînes de caractères. La commande ne vérifie ni la validité du chemin par rapport à son type, ni l'existence réelle des dossiers et fichiers sur le disque. 
 
-## Example 
+## Exemple 
 
-We want to duplicate and rename a file in its own folder:
+Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
 
 ```4d
  var $o : Object
@@ -59,21 +59,20 @@ We want to duplicate and rename a file in its own folder:
  COPY DOCUMENT($path;Object to path($o))
 ```
 
-## See also 
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](./commands/file)  
-[Folder](./commands/folder)  
+[File](../commands/file.md)    
+[Folder](../commands/folder.md)    
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1548 |
+| Numéro de commande | 1548 |
 | Thread safe | yes |
-
 
 

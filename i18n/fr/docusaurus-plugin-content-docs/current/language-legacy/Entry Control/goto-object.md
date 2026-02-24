@@ -5,71 +5,71 @@ slug: /commands/goto-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( * ; *object* : Text )<br/>**GOTO OBJECT** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objet* )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified = object is an object name (string) If omitted = object is a field or a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * specified) or Variable or Field (if * omitted) to go to |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | Field, Variable | &#8594;  | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|12|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|12|Modifié|
+|12|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GOTO OBJECT.Summary-->The **GOTO OBJECT** command is used to select the data entry object *object* as the active area of the form.<!-- END REF--> It is equivalent to the user’s clicking on or tabbing into the field or variable.
+<!--REF #_command_.GOTO OBJECT.Summary-->La commande **GOTO OBJECT** permet de sélectionner l'objet saisissable *objet* (variable ou champ) en tant que zone active du formulaire.<!-- END REF--> C'est l'équivalent d'un clic de l'utilisateur dans la zone ou de l'utilisation de la touche **Tabulation** pour sélectionner le champ ou la variable.
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional *\** parameter, you indicate a field or a variable in *object*. In this case, specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the section *Object Properties*. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le second paramètre désigne le nom d'un objet (une chaîne). Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables texte uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-To remove any focus in the current form, call the command while passing an empty object name in *object* (see example 2). 
+Pour supprimer tout focus dans le formulaire courant, appelez la commande en passant un nom d'objet vide dans *objet* (cf. exemple 2). 
 
-The **GOTO OBJECT** command can be used in the context of a subform. When it is called from a subform, it first looks for the object in the subform, then, if the search does not find anything there, it extends the search to objects of the parent form.
+La commande **GOTO OBJECT** peut être utilisée dans le contexte d’un sous-formulaire. Lorsqu’elle est appelée depuis un sous-formulaire, elle recherche en premier lieu objet dans le sous-formulaire puis, si la recherche n’aboutit pas, elle étend la recherche aux objets du formulaire parent.
 
-## Example 1 
+## Exemple 1 
 
-The **GOTO OBJECT** command can be used in both ways: 
+Voici les deux modes d'utilisation de la commande **GOTO OBJECT** : 
 
 ```4d
- GOTO OBJECT([People]Name) // Field Reference
- GOTO OBJECT(*;"AgeArea") // Object Name
+ GOTO OBJECT([Personnel]Nom) //Référence de champ
+ GOTO OBJECT(*;"ZonePrénoms") //Nom d'objet
 ```
 
-## Example 2 
+## Exemple 2 
 
-You don't want any object of the form to have the focus: 
+Vous souhaitez que plus aucun objet du formulaire n'ait le focus : 
 
 ```4d
  GOTO OBJECT(*;"")
 ```
 
-## Example 3 
+## Exemple 3 
 
-See the example for the [REJECT](reject.md) command.
+Reportez-vous à l'exemple de la commande [REJECT](reject.md).
 
-## See also 
+## Voir aussi 
 
 [CALL SUBFORM CONTAINER](call-subform-container.md)  
 [REJECT](reject.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 206 |
+| Numéro de commande | 206 |
 | Thread safe | no |
 
 

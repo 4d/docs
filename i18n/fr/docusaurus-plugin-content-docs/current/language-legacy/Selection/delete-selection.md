@@ -5,73 +5,74 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to delete the current selection, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle supprimer la sélection courante ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.DELETE SELECTION.Summary-->**DELETE SELECTION** deletes the current selection of records from *aTable*.<!-- END REF--> If the current selection is empty, **DELETE SELECTION** has no effect. After the records are deleted, the current selection is empty. Records that are deleted during a transaction are locked to other users and other processes until the transaction is validated or canceled.
+<!--REF #_command_.DELETE SELECTION.Summary-->La commande **DELETE SELECTION** supprime la sélection courante d'enregistrements de *laTable*.<!-- END REF--> Si la sélection courante est vide, **DELETE SELECTION** ne fait rien. Après la suppression des enregistrements, la sélection courante est vide. Les enregistrements supprimés pendant une transaction sont verrouillés pour les autres utilisateurs et/ou process jusqu'à ce que la transaction soit validée ou annulée. 
 
-**Warning:** Deleting a selection of records is a permanent operation, and cannot be undone.
+**Attention :** La suppression d'une sélection d'enregistrements est une opération définitive. Elle ne peut être annulée par la suite. 
 
-Unchecking the **Records definitively deleted** option in the table Inspector allows you to increase the speed of deletions when **DELETE SELECTION** is used (see *Records definitively deleted* in the *Design Reference* manual).
+Désélectionner l'option **Enregistrement(s) définitivement supprimé(s)** dans l'Inspecteur des tables vous permet d'augmenter la vitesse des suppressions lors de l'utilisation de **DELETE SELECTION** (cf. paragraphe *Enregistrement(s) définitivement supprimé(s)* dans le manuel *Mode Développement*).
 
-## Example 1 
+## Exemple 1 
 
-The following example displays all the records from the \[People\] table and allows the user to select which ones to delete. The example has two sections. The first is a method to display the records. The second is an object method for a Delete button. Here is the first method:   
+L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] et permet à l'utilisateur de sélectionner ceux qu'il souhaite effacer. L'exemple est en deux parties. La première est la méthode affichant les enregistrements. La seconde est la méthode objet d'un bouton 'Supprimer'. Voici la première méthode : 
 
 ```4d
- ALL RECORDS([People]) // Select all records
- FORM SET OUTPUT([People];"Listing") // Set the form to list the records
- DISPLAY SELECTION([People]) // Display all records
+ ALL RECORDS([Personnes]) // Sélection de tous les enregistrements
+ FORM SET OUTPUT([Personnes];"FormSortie") // Définition du formulaire listant les enregistrements
+ DISPLAY SELECTION([Personnes]) // Affichage de tous les enregistrements
 ```
 
-The following is the object method for the Delete button, which appears in the Footer area of the output form. The object method uses the records the user selected (the UserSet) to delete the selection. Note that if the user did not select any records, **DELETE SELECTION** has no effect.
+Voici la méthode objet du bouton Supprimer, apparaissant dans le pied de page du formulaire sortie. La méthode utilise les enregistrements sélectionnés par l'utilisateur (l'ensemble système UserSet) pour effacer la sélection (notez que si l'utilisateur ne sélectionne aucun enregistrement, **DELETE SELECTION** ne fait rien) :
 
 ```4d
-  // Confirm that the user really wants to delete the records
- CONFIRM("You selected "+String(Records in set("UserSet"))+" people to delete."+Char(13)+"Click OK to delete them.")
+  // Demander confirmation que l'utilisateur veut réellement supprimer les enregistrements
+ CONFIRM("Vous avez sélectionné "+String(Enregistrements dans ensemble("UserSet"))+
+ " enregistrements à supprimer."+Char(13)+"Cliquez sur OK pour confirmer l'opération.")
  If(OK=1)
-    USE SET("UserSet") // Use the records chosen by the user
-    DELETE SELECTION([People]) // Delete the selection of records
+    USE SET("UserSet") // Use l'ensemble défini par l'utilisateur
+    DELETE SELECTION([Personnes]) // Supprimer la sélection d'enregistrements
  End if
- ALL RECORDS([People]) // Select all records
+ ALL RECORDS([Personnes]) // Sélection de tous les enregistrements
 ```
 
-## Example 2 
+## Exemple 2 
 
-If a locked record is encountered during the execution of **DELETE SELECTION**, that record is not deleted. Any locked records are put into a set called LockedSet. After **DELETE SELECTION** has executed, you can test the LockedSet to see if any records were locked. The following loop will execute until all the records have been deleted:
+Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci n'est pas supprimé. Tous les enregistrements verrouillés sont placés dans un ensemble système nommé LockedSet. Après l'exécution de **DELETE SELECTION**, vous pouvez tester cet ensemble afin de vérifier si des enregistrements étaient verrouillés. La boucle suivante s'exécutera jusqu'à ce que tous les enregistrements aient été supprimés.
 
 ```4d
- Repeat // Repeat for any locked records
-    DELETE SELECTION([ThisTable])
-    If(Records in set("LockedSet")#0) // If there are locked records
-       USE SET("LockedSet") // Select only the locked records
+ Repeat // Répéter pour chaque enregistrement verrouillé
+    DELETE SELECTION([CetteTable])
+    If(Records in set("LockedSet")#0) // Si des enregistrements sont verrouillés
+       USE SET("LockedSet") // Sélectionner les enregistrements verrouillés
     End if
- Until(Records in set("LockedSet")=0) // Until there are no more locked records
+ Until(Records in set("LockedSet")=0) // Jusqu'à ce qu'il n'y en ait plus
 ```
 
-## See also 
+## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
 [MODIFY SELECTION](modify-selection.md)  
-*Record Locking*  
-*Sets*  
+*Présentation des ensembles*  
 [TRUNCATE TABLE](truncate-table.md)  
+*Verrouillage d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 66 |
+| Numéro de commande | 66 |
 | Thread safe | yes |
-| Changes current selection ||
+| Change la sélection courante ||
 
 

@@ -5,64 +5,64 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set1 | Text | &#8594;  | Set |
-| set2 | Text | &#8594;  | Set to subtract |
-| resultSet | Text | &#8594;  | Resulting set |
+| ensemble1 | Text | &#8594;  | Ensemble initial |
+| ensemble2 | Text | &#8594;  | Ensemble à exclure |
+| résultat | Text | &#8594;  | Ensemble résultant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.DIFFERENCE.Summary-->**DIFFERENCE** compares *set1* and *set2* and excludes all records that are in *set2* from the *resultSet*.<!-- END REF--> In other words, a record is included in the *resultSet* only if it is in *set1*, but not in *set2*. The following table shows all possible results of a set Difference operation.
+<!--REF #_command_.DIFFERENCE.Summary-->**DIFFERENCE** fusionne *ensemble1* et *ensemble2* et exclut de l'ensemble *résultat* tous les enregistrements se trouvant dans *ensemble2*.<!-- END REF--> Autrement dit, un enregistrement est inclus dans l'ensemble *résultat* s'il appartient à *ensemble1* mais n'appartient pas à *ensemble2*. Le tableau suivant liste les résultats possibles d'une opération de différence d'ensembles.
 
-| **Set1** | **Set2** | **Result Set** |
-| -------- | -------- | -------------- |
-| Yes      | No       | Yes            |
-| Yes      | Yes      | No             |
-| No       | Yes      | No             |
-| No       | No       | No             |
+| **Ensemble1** | **Ensemble2** | **Ensemble résultant** |
+| ------------- | ------------- | ---------------------- |
+| Oui           | Non           | Oui                    |
+| Oui           | Oui           | Non                    |
+| Non           | Oui           | Non                    |
+| Non           | Non           | Non                    |
 
-The result of a Difference operation is depicted here. The shaded area is the result set.
+Le schéma ci-dessous est la représentation graphique d'une opération de différence entre deux ensembles. La zone colorée est l'ensemble résultant.
 
-![](../assets/en/commands/pict32936.en.png)
+![](../assets/en/commands/pict32936.fr.png)
 
-The *resultSet* is created by **DIFFERENCE**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*.
+L'ensemble *résultat* est créé par **DIFFERENCE**. Il remplace tout ensemble du même nom existant déjà, y compris *ensemble1* et *ensemble2*. Les ensembles *ensemble1* et *ensemble2* doivent appartenir à la même table. L'ensemble *résultat* appartient à la même table que *ensemble1* et *ensemble2*.
 
-**4D Server:** In Client/Server mode, sets are "visible" depending on their type (interprocess, process and local) and where they were created (server or client). **DIFFERENCE** requires all three sets to be visible on the same machine. See the paragraph *4D Server, Sets and Named Selections* in the 4D Server Reference manual for more information.
+**4D Server :** En mode client/serveur, les ensembles sont "visibles" en fonction de leur type (interprocess, process et local) et de leur lieu de création (serveur ou client). **DIFFERENCE** requiert que les trois ensembles soient visibles sur la même machine. Pour plus d'informations sur ce point, reportez-vous au paragraphe *4D Server, ensembles et sélections* dans le manuel de référence de 4D Server.
 
-## Example 
+## Exemple 
 
-This example excludes the records that a user selects from a displayed selection. The records are displayed on screen with the following line:
-
-```4d
- DISPLAY SELECTION([Customers]) //Display the customers in a list
-```
-
-At the bottom of the list of records is a button with an object method. The object method excludes the records that the user has selected (the set named “UserSet”), and displays the reduced selection:
+L'exemple suivant exclut les enregistrements sélectionnés par l'utilisateur. Les enregistrements sont affichés à l'écran par l'instruction suivante :
 
 ```4d
- CREATE SET([Customers];"$Current") //Create a set of current selection
- DIFFERENCE("$Current";"UserSet";"$Current") //Exclude selected records
- USE SET("$Current") //Use the new set
- CLEAR SET("$Current") //Clear the set
+ DISPLAY SELECTION([Clients]) // Affichage des clients sous forme de liste
 ```
 
-## See also 
+Un bouton associé à une méthode objet est placé en bas de la liste. La méthode objet exclut les enregistrements sélectionnés par l'utilisateur (l'ensemble système nommé UserSet) et affiche une sélection réduite : 
+
+```4d
+ CREATE SET([Clients];"$Courant") // Création d'un ensemble à partir de la sélection courante
+ DIFFERENCE("$Courant";"UserSet";"$Courant") // Exclusion des enregistrements sélectionnés
+ USE SET("$Courant") // Utilisation du nouvel ensemble
+ CLEAR SET("$Courant") // Effacement de l'ensemble
+```
+
+## Voir aussi 
 
 [INTERSECTION](intersection.md)  
 [UNION](union.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 122 |
+| Numéro de commande | 122 |
 | Thread safe | yes |
 
 

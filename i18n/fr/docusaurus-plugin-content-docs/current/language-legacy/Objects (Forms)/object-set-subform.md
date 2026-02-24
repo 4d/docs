@@ -5,63 +5,63 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *object* : Text {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *object* : Variable, Field {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *objet* {; *laTable*}; *sousFormDetail* {; *sousFormListe*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| aTable | Table | &#8594;  | Table of form (if table form) |
-| detailSubform | Text, Object | &#8594;  | Name (text) of the detail form, or a POSIX path (text) to a .json file describing the detail form, or an object describing the detail form of the subform |
-| listSubform | Text, Object | &#8594;  | Name (text) of the list form, ora POSIX path (text) to a .json file describing the list form, or an object describing the list form of the subform (table form) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| laTable | Table | &#8594;  | Table du formulaire (si formulaire table) |
+| sousFormDetail | Text, Object | &#8594;  | Nom (chaîne) du formulaire détail du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire détail, ouObjet décrivant le formulaire détail |
+| sousFormListe | Text, Object | &#8594;  | Nom (chaîne) du formulaire liste du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire liste, ouObjet décrivant le formulaire liste (formulaire table) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|13|Created|
+|16 R6|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SUBFORM.Summary-->The **OBJECT SET SUBFORM** command dynamically modifies the detail form as well as, optionally, the screen list form associated with the subform object designated by the *\**, *object* parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Summary-->La commande **OBJECT SET SUBFORM** vous permet de modifier dynamiquement le formulaire détaillé ainsi que, optionnellement, le formulaire liste écran associé à l’objet sous-formulaire désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
-**Note:** This command cannot change the type of the subform itself (list or page). This property can only be set in Design mode. 
+**Note :** Cette commande ne permet pas de changer le type du sous-formulaire lui-même (liste ou page). Cette propriété peut être définie en mode Développement uniquement. 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In the *aTable* parameter, pass the table of the forms to be used. This parameter is optional; you can omit it when you specify a project form as detail subform. 
+Passez dans le paramètre *laTable* la table des formulaires à utiliser. Ce paramètre est optionnel, vous pouvez l’omettre si vous définissez un formulaire projet comme sous-formulaire détaillé. 
 
-In the *detailSubform* and *listSubform* parameters, pass either :
+Dans les paramètres *sousFormDetail* et *sousFormListe*, vous pouvez passer :
 
-* the name of a form, or
-* the path\* (in POSIX syntax) to a valid .json file containing a description of the form to use (see *Form file path*), or
-* an object containing a description of the form.
+* le nom d'un formulaire à utiliser,
+* le chemin\* (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser (voir *Chemin d'accès du formulaire*),
+* un objet contenant la description du formulaire à utiliser.
 
-\*Unlike other dynamic form-related commands, **OBJECT SET SUBFORM** filepaths are relative to the subform's parent form. 
+\* A la différence des autres commandes liées aux formulaires dynamiques, les chemins de fichier de **OBJECT SET SUBFORM** sont relatifs au formulaire parent du sous-formulaire. 
 
-**Note**: The *listSubform* parameter can only be passed when you modify a list type subform.
+**Note :** Le paramètre *sousFormListe* ne peut être passé que si vous modifiez un sous-formulaire de type liste. 
 
-When you modify a page subform, the command can be executed at any time; current selections are not modified. However, when you modify a list subform, it can only be modified when it displays the list. If the command is executed when the detail form is displayed following a double-click in the list, an error is generated. 
+Lorsque vous modifiez un sous-formulaire en page, la commande peut être exécutée à tout moment, les éventuelles sélections courantes ne sont pas modifiées. En revanche, si vous modifiez un sous-formulaire en liste, il ne peut être modifié que lorsqu’il affiche la liste. Si la commande est exécutée alors que le formulaire détaillé est affiché à la suite d’un double-clic dans la liste, une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET SUBFORM](object-get-subform.md)  
 [OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1138 |
+| Numéro de commande | 1138 |
 | Thread safe | no |
 
 

@@ -5,65 +5,65 @@ slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* : Integer ; *strID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
+<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* ; *strNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
-| strID | Integer | &#8594;  | String number or 'id' attribute of the 'trans-unit' element (XLIFF) |
-| resFile | Time | &#8594;  | Resource file reference number If omitted: all the XLIFF files or open resource files |
-| Function result | Text | &#8592; | Value of the indexed string |
+| resNum | Integer | &#8594;  | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
+| strNum | Integer | &#8594;  | Numéro de chaîne ou Attribut 'id' de l'élément 'trans-unit' (XLIFF) |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
+| Résultat | Text | &#8592; | Valeur de la chaîne indexée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-The **Get indexed string** command returns: 
+La commande **Get indexed string** retourne :
 
-* Either <!--REF #_command_.Get indexed string.Summary-->one of the strings stored in the string list (“STR#”) resource whose ID is passed in *resID*.<!-- END REF-->
-* Or a string stored in an open XLIFF file whose 'id' attribute of the 'group' element is passed in *resID* (see "Compatibility with XLIFF architecture" below).
+* soit <!--REF #_command_.Get indexed string.Summary-->une des chaînes stockées dans la ressource liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*<!-- END REF-->,
+* soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").
 
-You pass the number of the string in *strID*. The strings of a string list resource are numbered from 1 to N. To get all the strings (and their numbers) of a string list resource, use the [STRING LIST TO ARRAY](string-list-to-array.md) command.
+Vous passez le numéro de la chaîne dans *strNum*. Les chaînes d'une ressource liste de chaînes sont numérotées de 1 à N. Pour récupérer toutes les chaînes (et donc leur nombre) d'une ressource liste de chaînes, utilisez la commande [STRING LIST TO ARRAY](string-list-to-array.md).
 
-If the resource or the string within the resource is not found, an empty string is returned and the OK variable is set to 0 (zero).
+Si la ressource n'est pas trouvée, ou si la chaîne n'est pas trouvée à l'intérieur de la ressource, une chaîne vide est retournée et la variable système OK prend la valeur 0 (zéro).
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource est recherchée dans ce fichier uniquement. Si vous ne passez pas le paramètre *resFichier*, c'est la première occurrence de la ressource rencontrée dans la chaîne des fichiers de ressources qui sera retournée. 
 
-**Note:** A string of a string list resource can contain up to 255 characters.
+**Note :** Chaque chaîne d'une ressource liste de chaînes peut contenir jusqu'à 255 caractères.
 
-### Compatibility with XLIFF architecture 
+### Compatibilité avec l'architecture XLIFF 
 
-The **Get indexed string** command is compatible with the XLIFF architecture of 4D beginning with version 11: the command first looks for values corresponding to *resID* and *strID* in all the open XLIFF files (when the *resFile* parameter is omitted). In this case, *resID* specifies the **id** attribute of the **group** element and *strID* specifies the **id** attribute of the **trans-unit** element. If the value is not found, the command continues searching in the open resources files. For more information about XLIFF architecture in 4D, refer to the Design Reference manual.
+La commande **Get indexed string** est compatible avec l’architecture XLIFF de 4D à compter de la v11 : la commande recherche dans un premier temps les valeurs correspondant à *resNum* et *strNum* dans tous les fichiers XLIFF ouverts (si le paramètre *resFichier* est omis). Dans ce cas, *resNum* désigne l’attribut **id** de l’élément **group** et *strNum* désigne l’attribut **id** de l’élément **trans-unit**. Si la valeur n’est pas trouvée, la commande poursuit la recherche dans les fichiers de ressources ouverts. Pour plus d'informations sur l'architecture XLIFF dans 4D, reportez-vous au manuel Mode Développement.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-## See also 
+## Voir aussi 
 
 [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 510 |
+| Numéro de commande | 510 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -9,56 +9,55 @@ displayed_sidebar: docs
 <!--REF #_command_.Contextual click.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if a contextual click was detected, otherwise False |
+| Résultat | Boolean | &#8592; | Vrai si un clic contextuel a été détecté, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made<!-- END REF-->:
+<!--REF #_command_.Contextual click.Summary-->La commande **Contextual click** retourne Vrai si un clic de type contextuel a été effectué<!-- END REF--> :
 
-* Under Windows and Mac OS, contextual clicks are made using the right button of the mouse.
-* Under Mac OS, contextual clicks can also be made using a **Control+click** combination.
+* Sous Windows et Mac OS, les clics contextuels sont effectués avec le bouton droit de la souris.
+* Sous Mac OS, des clics contexuels peuvent également être générés à l’aide de la combinaison **Control+clic**.
 
-This command should be used only in the context of the On Clicked form event. It is therefore necessary to verify in Design mode that the event has been properly selected in the Form properties and/or in the specific object. 
+Cette commande doit être appelée uniquement dans le cadre de l’événement formulaire On Clicked. Il est donc nécessaire de vérifier en mode Développement que cet événement a bien été coché dans les Propriétés du formulaire et/ou de l’objet.
 
-## Example 
+## Exemple 
 
-This method, combined with a scrollable area, enables you to change the value of an array element using a context menu: 
+Cette méthode, associée à une zone de défilement, permet de changer la valeur d’un élément de tableau à l’aide d’un menu contextuel : 
 
 ```4d
  If(Contextual click)
-    If(Pop up menu("True;False")=1)
-       myArray{myArray}:="True"
+    If(Pop up menu("Vrai;Faux")=1)
+       monTableau{monTableau}:="Vrai"
     Else
-       myArray{myArray}:="False"
+       monTableau{monTableau}:="Faux"
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Right click](right-click.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 713 |
+| Numéro de commande | 713 |
 | Thread safe | no |
-
 
 

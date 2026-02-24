@@ -5,42 +5,42 @@ slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
+<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *nomFichier* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document containing 4D variables |
-| variable | Variable | &#8592; | Variable(s) to receive the value(s) |
+| nomFichier | Text | &#8594;  | Document contenant la ou les variable(s) à lire |
+| variable | Variable | &#8592; | Nom de(s) variable(s) devant recevoir les valeurs |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.LOAD VARIABLES.Summary-->The **LOAD VARIABLES**  command loads one or more variables from the document specified by *document*.<!-- END REF--> The document must have been created using the [SAVE VARIABLES](save-variables.md) command.
+<!--REF #_command_.LOAD VARIABLES.Summary-->La commande **LOAD VARIABLES** charge une ou plusieurs variable(s) depuis le document désigné par *document*.<!-- END REF--> Ce document doit avoir été créé à l'aide de la commande [SAVE VARIABLES](save-variables.md).
 
-The variables *variable*, *variable2*...*variableN* are created; if they already exist, they are overwritten.
+Les variables *variable, variable2...variableN* sont soit créées, soit réécrites si elles existent déjà. 
 
-If you supply an empty string for *document*, the standard Open File dialog box appears, so the user can choose the document to open. If a document is chosen, the 4D system variable Document is set to the name of the document.
+Si vous passez une chaîne vide ("") dans *document*, une boîte de dialogue standard d'ouverture de fichiers apparaît, permettant à l'utilisateur de sélectionner le document à ouvrir. Dans ce cas, la variable système Document contiendra le nom du document choisi.
 
-In compiled databases, each variable must be of the same type as those loaded from disk.
+Dans le cadre de bases compilées, les variables utilisées doivent être du même type que celles chargées du disque. 
 
-**WARNING:** This command does not support array variables. Use the new BLOB commands instead.
+**ATTENTION :** Cette commande ne traite pas les variables de type Tableau. Pour cela, vous devez utiliser les commandes du thème BLOB.
 
-## Example 
+## Exemple 
 
-The following example loads three variables from a document named UserPrefs:
+L'exemple suivant charge trois variables d'un document nommé PrefsUti :
 
 ```4d
- LOAD VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
+ LOAD VARIABLES("PrefsUti";VSNom;VLCode;VGIconPict)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the variables are loaded properly, the OK system variable is set to 1; otherwise it is set to 0.
+La variable système OK prend la valeur 1 si les variables ont été correctement chargées, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
@@ -48,12 +48,12 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 [RECEIVE VARIABLE](receive-variable.md)  
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 74 |
+| Numéro de commande | 74 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

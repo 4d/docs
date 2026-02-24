@@ -5,61 +5,61 @@ slug: /commands/dom-get-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *elementRef* : Text ; *elementName* : Variable )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *refElément* ; *nomElément* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| elementName | Variable | &#8592; | Name of the element |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElément | Variable | &#8592; | Nom de l’élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->The DOM GET XML ELEMENT NAME command returns, in the *elementName* parameter, the name of the XML element designated by *elementRef*.<!-- END REF--> If the *elementName* variable type is not defined, the text type is used by default. 
+<!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->La commande DOM LIRE NOM ELEMENT XML retourne dans le paramètre *nomElément* le nom de l’élément XML désigné par *refElément*.<!-- END REF--> Si le type de la variable *nomElément* n'est pas défini, le type texte est utilisé par défaut.
 
-For more information on XML element names, refer to the *Overview of XML DOM Commands* section.
+Pour plus d'informations sur les noms d'éléments XML, reportez-vous à la section .
 
-## Example 
+## Exemple 
 
-This method returns the name of the $xml\_Element\_Ref element:
+Cette méthode retourne le nom de l’élément $ref\_XML\_Elément :
 
 ```4d
- var $xml_Element_Ref : Text
- var $name : Text
+ var $ref_XML_Elément : Text
+ var $nom : Text
  
- DOM GET XML ELEMENT NAME($xml_Element_Ref;$name)
+ DOM GET XML ELEMENT NAME($ref_XML_Elément;$nom)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
 [DOM SET XML ELEMENT NAME](dom-set-xml-element-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 730 |
+| Numéro de commande | 730 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

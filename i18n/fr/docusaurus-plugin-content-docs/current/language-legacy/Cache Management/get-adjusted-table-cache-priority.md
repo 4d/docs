@@ -5,46 +5,46 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *laTable* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which the scalar priority value has to be retrieved |
-| Function result | Integer | &#8592; | Current priority value for scalar fields |
+| laTable | Table | &#8594;  | Table pour laquelle connaître la valeur de priorité des données scalaires |
+| Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs scalaires |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get adjusted table cache priority.Summary-->The **Get adjusted table cache priority** command returns the adjusted cache priority value applied in cache by the cache manager for the *aTable* scalar data.<!-- END REF--> This command is only needed for debugging purposes.
+<!--REF #_command_.Get adjusted table cache priority.Summary-->La commande **Get adjusted table cache priority** retourrne la valeur ajustée de priorité de cache appliquée par le gestionnaire de cache aux données scalaires de laTable.<!-- END REF--> Cette commande est destinée uniquement à la phase de débogage et de mise au point de l'application. 
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
-Scalar data field types include fields of date/hour, numeric, or string type. 
+Les types de données scalaires incluent les types date/heure, numériques et alpha.
 
-## See also 
+## Voir aussi 
 
 [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
-*Managing priorities in database cache*  
+*Gestion des priorités dans le cache de la base*  
 [SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1426 |
+| Numéro de commande | 1426 |
 | Thread safe | yes |
 
 

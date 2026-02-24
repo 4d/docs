@@ -5,54 +5,53 @@ slug: /commands/set-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* : Integer, Text ; *menuItem* : Integer ; *methodName* : Text {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* ; *ligneMenu* ; *nomMéthode* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| methodName | Text | &#8594;  | Method name |
-| process | Integer | &#8594;  | Process number |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| nomMéthode | Text | &#8594;  | Nom de la méthode |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU ITEM METHOD.Summary-->The **SET MENU ITEM METHOD** command modifies the 4D project method associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM METHOD.Summary-->La commande **SET MENU ITEM METHOD** permet de modifier la méthode projet 4D associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
+Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
 
-You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu. Si vous passez un identifiant unique, la commande s’appliquera à toutes les instances du menu dans tous les process. Dans ce cas, le paramètre *process* est ignoré s’il est passé. Si vous passez un numéro de menu, la commande s’appliquera au menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) or a menu number. If you pass a menu reference, the command will apply to all the instances of the menu in all the processes. In this case, the *process* parameter is ignored if it is passed. If you pass a menu number, the command will be applied to the corresponding menu in the main menu bar of the current process. If you want to designate another process, pass its number in the optional *process* parameter.
+Passez dans *nomMéthode* le nom de la méthode 4D sous la forme d’une chaîne de caractères (expression).
 
-In *method*, pass the name of the 4D method as a character string (expression).
+**Note :** Si la ligne de menu correspond au libellé d’un sous-menu hiérarchique, la méthode ne sera pas appelée lorsque la ligne de menu sera sélectionnée.
 
-**Note:** If the menu item corresponds to the title of a hierarchical sub-menu, the method will not be called when the menu item is selected.
+## Exemple 
 
-## Example 
+Reportez-vous aux exemple de la commande [SET MENU BAR](set-menu-bar.md). 
 
-Refer to the example of the [SET MENU BAR](set-menu-bar.md) command. 
-
-## See also 
+## Voir aussi 
 
 [Get menu item method](get-menu-item-method.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 982 |
+| Numéro de commande | 982 |
 | Thread safe | no |
 
 

@@ -5,154 +5,152 @@ slug: /commands/qr-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*aTable* : Table ;} *document* : Text {; *methodName* : Text}{; *} )<!-- END REF-->
+<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*laTable* ;} *nomFichier* {; *nomMéthode*}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to use for the report, or Default table if omitted |
-| document | Text | &#8594;  | Quick Report document to load |
-| methodName | Text | &#8594;  | Name of method to call |
-| * | Operator | &#8594;  | Deletion of printing dialog boxes |
+| laTable | Table | &#8594;  | Table à utiliser ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594;  | Document d'état rapide à charger |
+| nomMéthode | Text | &#8594;  | Nom de la méthode à appeler |
+| * | Opérateur | &#8594;  | Suppression des boîtes de dialogue d'impression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|2004|Modified|
-|<6|Created|
+|14|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR REPORT.Summary-->**QR REPORT** prints a report for *aTable*, created with the Quick Report editor.<!-- END REF--> This editor allows users to create their own reports. For more information about creating reports with the Quick Report editor, refer to the *Quick reports* section of the 4D *Design Reference* manual.
+<!--REF #_command_.QR REPORT.Summary-->La commande **QR REPORT** imprime un état pour *laTable*, à l'aide de l'Editeur d'états rapides de 4D.<!-- END REF--> Cet éditeur permet à l'utilisateur de construire en totalité son propre état. Pour plus d'informations sur la création d'états à l'aide de l'Editeur d'états rapides, reportez-vous à la section *Etats rapides* dans le manuel *Mode Développement* de 4D.
 
-**Notes:**
+**Notes :**
 
-* The editor does not appear if the *table* has been declared “Invisible.”
-* When the editor is called using the **QR REPORT** command, relations between tables keep their manual status, where applicable. This allows the developer to manage this status himself using the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md) command. However, keep in mind that automatic features are disabled when related tables are being viewed in a list form displayed using [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), or a subform. See *Automatic and manual relations*.
-* The editor is called in an external window and it is not possible to use the [QR ON COMMAND](qr-on-command.md) command in this context. However, you can use the *methodName* parameter to execute custom code when an interface command is activated (see below).
+* L'éditeur n'apparaît pas si la *laTable* a été déclarée “Invisible”.
+* Lorsque l'éditeur est appelé via la commande **QR REPORT**, les liens entre les tables conservent leur statut manuel, le cas échéant. Ce principe permet au développeur de gérer lui-même ce statut à l'aide des commandes [SET AUTOMATIC RELATIONS](set-automatic-relations.md) et [SET FIELD RELATION](set-field-relation.md). Toutefois, n'oubliez pas que les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
+* L'éditeur est appelé dans une fenêtre externe, il n'est pas possible d'utiliser la commande [QR ON COMMAND](qr-on-command.md) dans ce contexte. Vous pouvez cependant utiliser le paramètre *nomMéthode* afin d'exécuter du code personnalisé lorsqu'une commande d'interface est activée (cf. ci-dessous).
 
-The *document* parameter is a report document that was created with the Quick Report editor and saved on disk. The document stores the specifications of the report, not the records to be printed.   
-If an empty string ("") is specified for *document*, **QR REPORT** displays an Open File dialog box and the user can select the report to print.  
-If the *document* parameter specifies a document that does not exist (for example, pass [Char](char.md)**(1)** in *document*), the Quick Report editor is displayed.
+Le paramètre *nomFichier* désigne un modèle d'état créé dans l'éditeur d'états rapides et sauvegardé sur disque. Le document stocke les paramètres de l'état, pas les enregistrements. Si une chaîne vide ("") est passée dans *nomFichier*, **QR REPORT** affiche une boîte de dialogue d'ouverture de fichiers, dans laquelle l'utilisateur peut choisir un modèle d'état à imprimer.   
+Si le paramètre *nomFichier* spécifie un document qui n'existe pas (si vous passez, par exemple, [Char](char.md)(1) dans *nomFichier*), l'éditeur d'états rapides s'affiche.
 
-The *methodName* parameter designates a 4D project method that will be executed each time a document management command of the Quick Report editor is called by a user click on a button. Using this parameter is equivalent to using [QR ON COMMAND](qr-on-command.md) in the context of the Quick Report editor window ([QR ON COMMAND](qr-on-command.md) only works within the context of an included area). For example, you can use this parameter to change the character set used by the quick report. The *methodName* method receives two parameters:  
+Le paramètre *nomMéthode* désigne une méthode projet 4D qui sera exécutée chaque fois qu'une commande de gestion de documents de l'éditeur d'états rapides sera appelée via un clic sur un bouton. L'utilisation de ce paramètre équivaut à l'utilisation de [QR ON COMMAND](qr-on-command.md) dans la fenêtre de l'éditeur d'états rapides ([QR ON COMMAND](qr-on-command.md) fonctionne uniquement pour une une zone intégrée). Par exemple, vous pouvez utiliser ce paramètre pour modifier le jeu de caratètres utilisé par l'état rapide. La méthode *nomMéthode* reçoit deux paramètres :
 
-| **Parameter** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $area            | Integer  | Area reference                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| $command            | Integer  | Number of the command selected. To compare with the following constants of the *QR Commands* theme (only listed events are supported): <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Use of command [QR RUN](qr-run.md) recommended</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| **Paramètre** | **Type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $area            | Entier long | Référence de la zone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| $command            | Entier long | Numéro de la commande sélectionnée. À comparer avec les constantes suivantes du thème *QR Commandes* (seuls les événements listés sont pris en charge) : <table> <thead> <tr> <td>Constante</td> <td>Valeur</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Utilisation de la commande [QR RUN](qr-run.md) conseillée</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
-**Note:** If you want to compile your database, you must declare the $area et $command parameters explicitly as longints, even if you do not use them.
+**Note :** Si vous souhaitez compiler votre base de données, vous devez déclarer explicitement les paramètres $area et $command comme entiers longs, même si vous ne les utilisez pas.
 
-If you want to execute the initial command chosen by the user, use the following statement in the *methodName* method:
+Si vous souhaitez exécuter la commande initiale choisie par l'utilisateur, saisissez l'instruction suivante dans la méthode *nomMéthode* :
 
 ```4d
  QR EXECUTE COMMAND($area;$command)
 ```
 
-If the *methodName* parameter is an empty string ("") or is omitted, no method is called and the standard operation of **QR REPORT** is applied.
+Si le paramètre *nomMéthode* est une chaîne vide ("") ou est omis, aucune méthode n'est appelée et l'opération standard de **QR REPORT** est appliquée.
 
-After a report is selected, the dialog boxes for printing are displayed, unless the *\** parameter is specified. If this parameter is specified, these dialog boxes are not displayed. The report is then printed.
+Une fois qu'un fichier d'état est sélectionné, les boîtes de dialogue d'impression s'affichent, sauf si le paramètre *\** a été spécifié — dans ce cas, elles ne s'affichent pas. L'état est alors imprimé.
 
-If the Quick Report editor is not involved, the OK variable is set to 1 if a report is printed; otherwise, it is set to 0 (zero) (i.e., if the user clicked **Cancel** in the printing dialog boxes).
+Lorsque l'Editeur d'états rapides n'est pas affiché, la variable système OK prend la valeur 1 si un état est imprimé ; sinon elle prend la valeur 0 (zéro) — par exemple si l'utilisateur a cliqué sur **Annuler** dans les boîtes de dialogue d'impression.
 
-**4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
+**4D Server :** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
-* Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** parameter.
-* The syntax which makes the Quick Report editor appear does not work with 4D Server; in this case, the system variable OK is set to 0.
-* In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+* Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\**.
+* La syntaxe faisant apparaître l‘éditeur d'états rapide ne fonctionne pas avec 4D Server, dans ce cas la variable système OK prend la valeur 0.
+* En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-## Example 1 
+## Exemple 1 
 
-The following example lets the user query the \[People\] table, and then automatically prints the report “Detailed Listing”:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis imprime automatiquement l'état "Liste détaillée" :
 
 ```4d
- QUERY([People])
+ QUERY([Personnes])
  If(OK=1)
-    QR REPORT([People];"Detailed Listing";*)
+    QR REPORT([Personnes];"Liste détaillée";*)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example lets the user query the \[People\] table, and then lets the user choose which report to print:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis de sélectionner le document d'état qui sera ensuite utilisé pour l'impression :
 
 ```4d
- QUERY([People])
+ QUERY([Personnes])
  If(OK=1)
-    QR REPORT([People];"")
+    QR REPORT([Personnes];"")
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example lets the user query the \[People\] table, and then displays the Quick Report editor so the user can design, save, load and print any reports:
+L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la table \[Personnes\], puis affiche l'Editeur d'états rapides afin que l'utilisateur puisse construire, charger, sauvegarder ou imprimer tout état :
 
 ```4d
- QUERY([People])
+ QUERY([Personnes])
  If(OK=1)
-    QR REPORT([People];Char(1))
+    QR REPORT([Personnes];Char(1))
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-Refer to the example of the [SET FIELD RELATION](set-field-relation.md) command. 
+Reportez-vous à l'exemple de la commande [SET FIELD RELATION](set-field-relation.md). 
 
-## Example 5 
+## Exemple 5 
 
-You want to convert the character set used in a quick report called using **QR REPORT** into Mac Roman:
+Vous souhaitez convertir le jeu de caractères utilisé dans un état rapide appelé via **QR REPORT** en Mac Roman :
 
 ```4d
- QR REPORT([MyTable];Char(1);"myCallbackMeth")
+ QR REPORT([MaTable];Char(1);"maCallbackMeth")
 ```
 
-The myCallbackMeth method converts the report when it is generated:
+La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 
 ```4d
  #DECLARE($area : Integer ; $command : Integer)
- If($command=qr cmd generate) //if we generated a report
+ If($command=qr cmd generate) //si on a généré un état
     var $myblob : Blob
     var $path;$text : Text
     var $type : Integer
-    QR EXECUTE COMMAND($area;$command) //execution of command
-    QR GET DESTINATION($area;$type;$path) //retrieval of destination
-    If(($type=qr HTML file)|($type=qr text file))
+    QR EXECUTE COMMAND($area;$command) //exécution de la commande
+    QR GET DESTINATION($area;$type;$path) //récupération de la destination
+    If(($type=qr HTML file)|$type=qr text file))
        DOCUMENT TO BLOB($path;$myblob)
-  //conversion to text using UTF-8
+  //conversion vers un texte en utilisant UTF-8
        $text:=Convert to text($myblob;"UTF-8")
-  //use of MacRoman set
+  //utilisation du jeu MacRoman
        CONVERT FROM TEXT($text;"MacRoman";$myblob)
-  //Return of converted report
+  //Renvoi de l’état converti
        BLOB TO DOCUMENT($path;$myblob)
     End if
- Else //otherwise, execution of the command
+ Else //sinon exécution de la commande
     QR EXECUTE COMMAND($area;$command)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [PRINT LABEL](print-label.md)  
 [PRINT SELECTION](print-selection.md)  
-[SET ALLOWED METHODS](./commands/set-allowed-methods)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 197 |
+| Numéro de commande | 197 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

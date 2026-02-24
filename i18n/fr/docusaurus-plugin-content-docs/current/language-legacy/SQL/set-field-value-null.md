@@ -5,47 +5,47 @@ slug: /commands/set-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *aField* : Field )<!-- END REF-->
+<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field where NULL value is to be attributed |
+| leField | Field | &#8594;  | Champ auquel attribuer la valeur NULL |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET FIELD VALUE NULL.Summary-->The SET FIELD VALUE NULL command assigns the NULL value to the field designated by the *aField* parameter.<!-- END REF-->
+<!--REF #_command_.SET FIELD VALUE NULL.Summary-->La commande **SET FIELD VALUE NULL** attribue la valeur NULL au champ désigné par le paramètre *leChamp*.<!-- END REF-->
 
-The NULL value is used by the SQL kernel of 4D. For more information, please refer to the 4D SQL Reference manual.
+La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’informations, reportez-vous au manuel Guide de référence 4D SQL.
 
-**Notes:** 
+**Notes :** 
 
-* It is possible to disallow the Null value for 4D fields at the Structure editor level (see the Design Reference manual).
-* **SET FIELD VALUE NULL** erases the contents of object fields.
+* Il est possible d’interdire la valeur Null pour les champs 4D au niveau de l’éditeur de Structure (cf. manuel Mode Développement).
+* **SET FIELD VALUE NULL** efface le contenu des champs objet.
 
-## See also 
+## Voir aussi 
 
 [Is field value Null](is-field-value-null.md)  
 [Null](null.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 965 |
+| Numéro de commande | 965 |
 | Thread safe | yes |
 
 

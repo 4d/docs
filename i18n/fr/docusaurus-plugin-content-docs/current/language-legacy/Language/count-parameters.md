@@ -9,35 +9,34 @@ displayed_sidebar: docs
 <!--REF #_command_.Count parameters.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of parameters actually passed |
+| Résultat | Integer | &#8592; | Nombre de paramètres effectivement passés |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Count parameters.Summary-->The Count parameters command returns the number of parameters passed to a project method.<!-- END REF-->Count parameters is meaningful only in a project method that has been called by another method (project method or other). If the project method calling this command is associated with a menu, it returns 0.
+<!--REF #_command_.Count parameters.Summary-->**Count parameters** retourne le nombre de paramètres passés à une méthode projet.<!-- END REF-->**Count parameters** n'a d'intérêt que dans une méthode projet appelée par une autre méthode (projet ou non). Si la méthode projet qui appelle **Count parameters** est associée à une commande de menu, la fonction retourne 0.
 
-## Example 1 
+## Exemple 1 
 
-4D project methods accept optional parameters, starting from the right.   
-For example, you can call the method MyMethod(a;b;c;d) in the following ways:
+Les méthodes projet de 4D acceptent que des paramètres soient optionnels, à partir de la droite. Par exemple, la méthode *maMéthode(a;b;c;d)* peut accepter les syntaxes suivantes : 
 
 ```4d
- MyMethod(a;b;c;d) // All parameters are passed
- MyMethod(a;b;c) // The last parameter is not passed
- MyMethod(a;b) // The last two parameters are not passed
- MyMethod(a) // Only the first parameter is passed
- MyMethod // No Parameter is passed at all
+ maMéthode(a;b;c;d) // Tous les paramètres sont passés
+ maMéthode(a;b;c) // Le dernier paramètre n'est pas passé
+ maMéthode(a;b) // Les deux derniers paramètres ne sont pas passés
+ maMéthode(a) // Seul le premier paramètre est passé
+ maMéthode // Aucun paramètre n'est passé
 ```
 
-Using Count parameters from within MyMethod, you can detect the actual number of parameters and perform different operations depending on what you have received. The following example displays a text message and can insert the text into a 4D Write area or send the text into a document on disk:
+Si vous utilisez Nombre de parametres dans maMéthode, vous pouvez détecter le nombre de paramètres passés et effectuer des opérations différentes selon ce nombre. L'exemple suivant affiche un texte et peut soit l'insérer dans une zone de 4D Write, soit l'écrire dans un document sur disque :
 
 ```4d
-  // APPEND TEXT Project Method
-  // APPEND TEXT ( Text { ; Long { ; Time } } )
-  // APPEND TEXT ( Text { ; 4D Write Area { ; DocRef } } )
+  // Méthode AJOUTER TEXTE
+  // AJOUTER TEXTE ( Texte { ; Entier long { ; Heure } } )
+  // AJOUTER TEXTE ( Texte { ; zone 4D Write { ; RéfDoc } } )
  
  #DECLARE ($text : Text ; $4dwp : Object ; $doc : Time)
  
@@ -46,29 +45,29 @@ Using Count parameters from within MyMethod, you can detect the actual number of
     SEND PACKET($doc;$text)
  Else
     If(Count parameters>=2)
-       WR INSERT TEXT($2;$1)
+       WP SET TEXT($4dwp;$text;wk prepend)
     End if
  End if
 ```
 
-After this project method has been added to your application, you can write:
+Vous pouvez ensuite appeler cette méthode de ces trois façons différentes : 
 
 ```4d
- APPEND TEXT(vtSomeText) // Will only display the text message
- APPEND TEXT(vtSomeText;$wrArea) // Displays text message and appends it to $wrArea
- APPEND TEXT(vtSomeText;0;$vhDocRef) // Displays text message and writes it to $vhDocRef
+ AJOUTER TEXTE(vtTexte) // Afficher seulement le message texte
+ AJOUTER TEXTE(vtTexte;$wrZone) // Afficher le message texte et ajouter le texte à $wrZone
+ AJOUTER TEXTE(vtTexte;0;$vhRéfDoc) // Afficher le message texte et l'écrire dans $vhRéfDoc
 ```
 
-## Example 2 
+## Exemple 2 
 
-4D project methods accept a variable number of parameters of the same type, starting from the right. To declare these parameters, you use a compiler directive to which you pass *${N}* as a variable, where N specifies the first parameter. Using Count parameters you can address those parameters with a For loop and the parameter indirection syntax. This example is a function that returns the greatest number received as parameter:
+Les méthodes projet de 4D acceptent un nombre variable de paramètres du même type à partir de la droite. Pour déclarer ces paramètres, vous devez utiliser des directives de compilation auxquelles vous passez *${N}* en tant que variable, où N spécifie le premier des paramètres. A l'aide de **Count parameters**, vous pouvez référencer ces paramètres dans une boucle avec la syntaxe d'indirection de paramètre. L'exemple suivant est une fonction qui retourne la valeur maximale reçue en tant que paramètre :
 
 ```4d
-  // Max of Project Method
-  // Max of ( Real { ; Real2... ; RealN } ) -> Real
-  // Max of ( Value { ; Value2... ; ValueN } ) -> Greatest value
+  // Méthode projet Max de
+  // Max de ( Réel { ; Réel2... ; RéelN } ) -> Réel
+  // Max de ( Valeur { ; Valeur2... ; ValeurN } ) -> Valeur maximale
  
- var $0;${1} : Real // All parameters will be of type REAL as well as the function result
+ var $0;${1} : Real // Tous les paramètres sont de type REEL ainsi que le résultat de la fonction
  $0:=${1}
  For($vlParam;2;Count parameters)
     If(${$vlParam}>$0)
@@ -77,28 +76,28 @@ After this project method has been added to your application, you can write:
  End for
 ```
 
-After this project method has been added to your application, you can write:
+Vous pouvez alors appeler cette méthode d'une des deux manières suivantes :
 
 ```4d
- vrResult:=Max of(Records in set("Operation A");Records in set("Operation B"))
+ vrRésultat:=Max de(Records in set("Opération A");Records in set("Opération B"))
 ```
 
-or:
+ou :
 
 ```4d
- vrResult:=Max of(r1;r2;r3;r4;r5;r6)
+ vrRésultat:=Max de(r1;r2;r3;r4;r5;r6)
 ```
 
-## See also 
+## Voir aussi 
 
-*Compiler Commands*  
+*Commandes du thème Compilateur*  
 [Copy parameters](copy-parameters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 259 |
+| Numéro de commande | 259 |
 | Thread safe | yes |
 
 

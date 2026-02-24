@@ -5,46 +5,46 @@ slug: /commands/close-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* : Time )<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Document reference number |
+| docRef | Time | &#8594;  | Numéro de référence du document |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLOSE DOCUMENT.Summary-->**CLOSE DOCUMENT** closes the document specified by *docRef*.<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Summary-->**CLOSE DOCUMENT** ferme le document spécifié par *docRef*.<!-- END REF-->
 
-Closing a document is the only way to ensure that the data written to a file is saved. You must close all the documents you open with the commands [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md).
+Fermer un document est le seul moyen de s'assurer que les données écrites dans le fichier sont sauvegardées. Vous devez fermer tous les documents ouverts par les commandes [Open document](open-document.md), [Create document](create-document.md) et [Append document](append-document.md).
 
-## Example 
+## Exemple 
 
-The following example lets the user create a new document, writes the string “Hello” into it, and closes the document:
+L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit la chaîne “Bonjour”, puis le referme :
 
 ```4d
- var vhDocRef : Time
- vhDocRef:=Create document("")
+ var vDoc : Time
+ vDoc:=Create document("")
  If(OK=1)
-    SEND PACKET(vhDocRef;"Hello") // Write one word into the document
-    CLOSE DOCUMENT(vhDocRef) // Close the document
+    SEND PACKET(vDoc;"Bonjour") // Ecrire un mot dans le document
+    CLOSE DOCUMENT(vDoc) // Fermer le document
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Append document](append-document.md)  
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 267 |
+| Numéro de commande | 267 |
 | Thread safe | yes |
 
 

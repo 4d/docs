@@ -5,59 +5,59 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** ({ *menu* : Text, Integer }) : Text<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Text, Integer | &#8594;  | Menu reference or Number or Name of menu bar |
-| Function result | Text | &#8592; | Menu reference |
+| menu | Text, Integer, Text | &#8594;  | Référence de menu ou Numéro ou Nom de barre de menus |
+| Résultat | Text | &#8592; | Référence du menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Create menu.Summary-->The **Create menu** command creates a new menu in memory.<!-- END REF--> This menu will only exist in memory and will not be added in the Menu editor in Design mode. Any changes made to this menu during the session will be immediately carried over to all the instances of this menu and in all the processes of the database.
+<!--REF #_command_.Create menu.Summary-->La commande **Create menu** permet de créer un nouveau menu en mémoire.<!-- END REF--> Ce menu n’existera qu’en mémoire et ne sera pas ajouté dans l’éditeur de menus en mode Développement. Toute modification effectuée sur ce menu durant la session sera immédiatement répercutée à l’ensemble des instances de ce menu et ce, dans tous les process de la base.
 
-The command returns an ID of the [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type for the new menu.
+La commande retourne un identifiant unique de type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") pour le nouveau menu.
 
-* If you do not pass the optional *menu* parameter, the menu is created blank. You must build and manage it using the [RELEASE MENU](release-menu.md), [SET MENU ITEM](set-menu-item.md), etc. commands.
-* If you pass the *menu* parameter, the menu created will be an exact copy of the source menu designated by this parameter. All the properties of the source menu, including any associated submenus, will be applied to the new menu. Note that a new [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") reference is created for the source menu and for any existing submenus that are associated with it.
+* Si vous ne passez pas le paramètre facultatif *menu*, le menu sera créé vide. Vous devrez le construire et le gérer à l’aide des commandes [RELEASE MENU](release-menu.md), [SET MENU ITEM](set-menu-item.md), etc.
+* Si vous passez le paramètre *menu*, le menu créé sera une copie exacte du menu source désigné par ce paramètre. Toutes les propriétés du menu source, y compris les éventuels sous-menus associés, seront appliquées au nouveau menu. A noter qu’une nouvelle référence [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") est créée pour le menu source et pour chaque sous-menu associé existant.
 
-In the *menu* parameter, you can pass either a valid menu reference, or the number or name of a menu bar defined in Design mode. In this last case, the new menu will be made up of the menus and submenus of the source menu bar. 
+Vous pouvez passer dans *menu* soit une référence de menu valide, soit un numéro ou un nom de barre de menus défini en mode Développement. Dans ce dernier cas, le nouveau menu sera constitué des menus et sous-menus de la barre d’origine. 
 
-**Note:** If you pass an invalid value in *menu*, a blank menu is created.
+**Note :** Si vous passez une valeur invalide dans *menu*, un menu vide est créé.
 
-A menu created by this command can be used as the menu bar using the [SET MENU BAR](set-menu-bar.md) command.
+Un menu créé par cette commande peut être utilisé en tant que barre de menus à l’aide de la commande [SET MENU BAR](set-menu-bar.md).
 
-When you no longer need the menu created by [Create menu](create-menu.md), remember to call the [RELEASE MENU](release-menu.md) command in order to free up the memory being used. 
+Lorsque vous n'avez plus besoin d'un menu créé par [Create menu](create-menu.md), n'oubliez pas d'appeler la commande [RELEASE MENU](release-menu.md) afin de libérer la mémoire qu'il occupe. 
 
-## Example 
+## Exemple 
 
-Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
+Reportez-vous à l'exemple de la commande [SET MENU BAR](set-menu-bar.md).
 
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [SET MENU BAR](set-menu-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 408 |
+| Numéro de commande | 408 |
 | Thread safe | no |
 
 

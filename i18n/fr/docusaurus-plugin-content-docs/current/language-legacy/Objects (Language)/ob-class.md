@@ -5,61 +5,58 @@ slug: /commands/ob-class
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* : Object ) : Object<!-- END REF-->
+<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *objet* ) : any<!-- END REF-->
 <!--REF #_command_.OB Class.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Object whose class is to be returned |
-| Function result | Object | &#8592; | Class of object (null if object does not exist)|
+| objet | Object | &#8594;  | Objet dont la classe doit être retournée |
+| Résultat | Null, Object | &#8592; | Classe de l'objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Class.Summary-->The **OB Class** command returns the class of the *object* passed in parameter.<!-- END REF--> In 4D, all objects inherit from the Object class. If *object* is not an existing object, **OB Class** returns null. 
+<!--REF #_command_.OB Class.Summary-->La commande **OB Class** retourne la classe de l'*objet* passé en paramètre.<!-- END REF--> Dans 4D, tous les objets sont hérités de l'objet classe. Si *objet* est un objet inexistant, **OB Class** retourne null. 
 
-## Example 
+## Exemple 
 
-You created the Polygon class:
+Vous avez créé la classe Polygone :
 
 ```4d
-  //Class: Polygon
- 
+  //Classe : Polygone
  Class constructor( $width : Integer ; $height : Integer)
  This.area:=$width*$height
 ```
 
-Then, in a method, you can write:
+Puis, dans une méthode, vous pouvez saisir :
 
 ```4d
  var $poly;$class : Object
- $poly:=cs.Polygon.new(4;3)
- 
- $class:=OB Class($poly)
-  //$class contains Class: Polygon
+ $poly:=cs.Polygone.new(4;3)
+ $class:=OB Class($poly) //$class contient Classe : Polygone
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Instance of](ob-instance-of.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1730 |
+| Numéro de commande | 1730 |
 | Thread safe | yes |
 
 

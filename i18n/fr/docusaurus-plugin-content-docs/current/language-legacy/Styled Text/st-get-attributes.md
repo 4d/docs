@@ -5,99 +5,97 @@ slug: /commands/st-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer ; *attribValue* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer ; *attribValue* : Variable)} )<!-- END REF-->
+<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( {* ;} *objet* ; *débutSél* ; *finSél* ; *nomAttribut* ; *valeurAttribut* {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| startSel | Integer | &#8594;  | Start of text selection |
-| endSel | Integer | &#8594;  | End of text selection |
-| attribName | Integer | &#8594;  | Attribute to get |
-| attribValue | Variable | &#8592; | Current value of attribute |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection de texte |
+| finSél | Integer | &#8594;  | Fin de la sélection de texte |
+| nomAttribut | Integer | &#8594;  | Attribut à lire |
+| valeurAttribut | Variable | &#8592; | Valeur courante de l’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Renamed|
-|12.1|Modified|
-|12|Created|
+|14|Renommé|
+|12.1|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST GET ATTRIBUTES.Summary-->The ST GET ATTRIBUTES command is used to recover the current value of a style attribute in a selection of text of the form object(s) designated by *object*.<!-- END REF--> 
+<!--REF #_command_.ST GET ATTRIBUTES.Summary-->La commande **ST GET ATTRIBUTES** permet de récupérer la valeur courante d’un attribut de style dans une sélection de texte du ou des objet(s) de formulaire désigné(s) par *objet*.<!-- END REF--> 
 
 ### 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns information about the object being edited; however, when the object does not have the focus, the command returns information about the data source (field or variable) of the object.  
-If you omit the *\** parameter, this indicates that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference instead of a string and during execution, the command returns information about this field or variable.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande retourne les informations de l'objet en cours d'édition ; si l'objet n'a pas le focus, la commande retourne les informations de la source de données de l'objet (variable ou champ).  
+Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l'exécution, la commande retourne les informations de la variable ou du champ.
 
 ### 
 
-The *startSel* and *endSel* parameters are used to designate the text selection of the object from which the style attribute is to be read. Pass the position of the first character of the selection in *startSel* and the position plus one of the last character of the selection in *endSel*. You can pass 0 in *endSel* to designate automatically the last character of the text (pass 1 in *startSel* to designate the first character of the text).  
-If the values of *startSel* and *endSel* are equal or if *startSel* is greater than *endSel* (except if *endSel* value is 0, see above), an error is returned.   
-The *startSel* and *endSel* values do not take any style tags already present in the area into account. They are evaluated on the basis of raw text (text from which style tags have been filtered). 
+Les paramètres *débutSél* et *finSél* permettent de désigner la sélection de texte de laquelle lire l’attribut de style. Passez dans *débutSél* la position du premier caractère et dans *finSél* la position plus un du dernier caractère de la sélection. Vous pouvez passer 0 dans *finSél* afin de désigner automatiquement le dernier caractère du texte (passez 1 dans *débutSél* pour désigner le premier caractère).  
+Si les valeurs de *débutSél* et *finSél* sont égales ou si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), une erreur est retournée.   
+Les valeurs *débutSél* et *finSél* ne tiennent pas compte des balises de style éventuellement déjà présentes dans la zone. Elles sont évaluées sur la base du texte brut (texte duquel les balises de style ont été filtrées). 4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+Passez dans le paramètre *nomAttribut* le nom de l’attribut à lire et dans le paramètre *valeurAttribut* une variable devant récupérer la valeur courante de l’attribut. Pour définir le paramètre *nomAttribut*, vous devez utiliser l’une des constantes du thème *Attributs de texte multistyle*. 
 
-Pass the name of the attribute to get in the *attribName* parameter and pass a variable which must recover the current value of the attribute in the *attribValue* parameter. To specify the *attribName* parameter, you must use one of the constants of the *Multistyle Text Attributes* theme.
+| Constante                     | Type        | Valeur | Comment                                                                                                                                |
+| ----------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Attribute background color    | Entier long | 8      | *valeurAttribut*\=Valeur hexadécimale ou nom de couleur HTML (Windows uniquement)                                                      |
+| Attribute bold style          | Entier long | 1      | *valeurAttribut*\=0 : pas d'attribut gras pour la sélection<br/>*valeurAttribut*\=1 : attribut gras pour la sélection          |
+| Attribute font name           | Entier long | 5      | *valeurAttribut*\=Nom de la famille de police (chaîne)                                                                                 |
+| Attribute italic style        | Entier long | 2      | *valeurAttribut*\=0 : pas d'attribut italique pour la sélection<br/> *valeurAttribut*\=1 : attribut italique pour la sélection |
+| Attribute strikethrough style | Entier long | 3      | *valeurAttribut*\=0 : pas d'attribut barré pour la sélection<br/>*valeurAttribut*\=1 : attribut barré pour la sélection        |
+| Attribute text color          | Entier long | 7      | *valeurAttribut*\=Valeur hexadécimale ou nom de couleur HTML                                                                           |
+| Attribute text size           | Entier long | 6      | *valeurAttribut*\=Nombre de points (numérique)                                                                                         |
+| Attribute underline style     | Entier long | 4      | *valeurAttribut*\=0 : pas d'attribut souligné pour la sélection<br/> *valeurAttribut*\=1 : attribut souligné pour la sélection |
 
-| Constant                      | Type    | Value | Comment                                                                                                                                  |
-| ----------------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Attribute background color    | Integer | 8     | *attribValue*\=Hexadecimal values or HTML color names (Windows only)                                                                     |
-| Attribute bold style          | Integer | 1     | *attribValue*\=0: remove bold attribute from selection<br/>*attribValue*\=1: apply bold attribute to selection                   |
-| Attribute font name           | Integer | 5     | *attribValue*\=Font family name (string)                                                                                                 |
-| Attribute italic style        | Integer | 2     | *attribValue*\=0: remove italic attribute from selection<br/> *attribValue*\=1: apply italic attribute to selection              |
-| Attribute strikethrough style | Integer | 3     | *attribValue*\=0: remove strikethrough attribute from selection<br/>*attribValue*\=1: apply strikethrough attribute to selection |
-| Attribute text color          | Integer | 7     | *attribValue*\=Hexadecimal values or HTML color names                                                                                    |
-| Attribute text size           | Integer | 6     | *attribValue*\=Number of points (number)                                                                                                 |
-| Attribute underline style     | Integer | 4     | *attribValue*\=0: remove underline attribute from selection<br/> *attribValue*\=1: apply underline attribute to selection        |
+Vous pouvez passer autant de paires attribut/valeur que vous souhaitez.
 
-You can pass as many attribute/value pairs as you want.
+Si la valeur de l’attribut *nomAttribut* est identique dans la totalité de la sélection, elle est retournée dans *valeurAttribut*. Si cette valeur est différente ou si *objet* ne contient pas de balises SPAN, les valeurs suivantes sont retournées :  
 
-If the value of the *attribName* attribute is the same for all of the selection, it is returned in *attribValue*. If this value is different or if *object* does not contain SPAN tags, the following values are returned:  
+| **nomAttribut**               | **valeurAttribut si attribut hétérogène dans la sélection ou pas de balises SPAN** |
+| ----------------------------- | ---------------------------------------------------------------------------------- |
+| Attribute background color    | FFFFFFFF                                                                           |
+| Attribute bold style          | 2                                                                                  |
+| Attribute font name           | "" (chaîne vide)                                                                   |
+| Attribute italic style        | 2                                                                                  |
+| Attribute strikethrough style | 2                                                                                  |
+| Attribute text color          | FFFFFFFF                                                                           |
+| Attribute text size           | \-1                                                                                |
+| Attribute underline style     | 2                                                                                  |
 
-| **attribName**                | **attribValue if attribute heterogenous in selection or no SPAN tags** |
-| ----------------------------- | ---------------------------------------------------------------------- |
-| Attribute background color    | FFFFFFFF                                                               |
-| Attribute bold style          | 2                                                                      |
-| Attribute font name           | "" (empty string)                                                      |
-| Attribute italic style        | 2                                                                      |
-| Attribute strikethrough style | 2                                                                      |
-| Attribute text color          | FFFFFFFF                                                               |
-| Attribute text size           | \-1                                                                    |
-| Attribute underline style     | 2                                                                      |
+## Exemple 
 
-## Example 
+Soit un champ \[Table\_1\]StyledText affiché dans un formulaire. L’objet comporte la propriété Multistyle et est nommé "StyledText\_t". Vous souhaitez récupérer le texte sélectionné ainsi que le statut de l’attribut Gras. Vous pouvez procéder de deux manières différentes, selon que vous utilisez le nom d’objet ou la référence de champ. 
 
-Given a \[Table\_1\]StyledText field displayed in a form. The object has the Multistyle property and is named "StyledText\_t". You want to get the highlighted text as well as the status of the Bold style attribute. You can proceed in two different ways depending on whether you use the object name or the field reference. 
-
-* Using the object name:
+* Utilisation du nom d’objet :
 
 ```4d
  $text:=ST Get text(*;"StyledText_t";ST Start highlight;ST End highlight)
  ST GET ATTRIBUTES(*;"StyledText_t";ST Start highlight;ST End highlight;Attribute bold style;$bold)
 ```
 
-* Using the field name:
+* Utilisation du nom de champ :
 
 ```4d
  GET HIGHLIGHT([Table_1]StyledText;$Begin_l;$End_l)
@@ -105,22 +103,22 @@ Given a \[Table\_1\]StyledText field displayed in a form. The object has the Mul
  ST GET ATTRIBUTES([Table_1]StyledText;$Begin_l;$End_l;Attribute bold style;$bold)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
+A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
-In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
+A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-## See also 
+## Voir aussi 
 
 [ST SET ATTRIBUTES](st-set-attributes.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1094 |
+| Numéro de commande | 1094 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

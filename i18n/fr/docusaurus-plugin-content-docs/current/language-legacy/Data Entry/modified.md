@@ -5,88 +5,85 @@ slug: /commands/modified
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* : Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.Modified.Syntax-->**Modified** ( *leChamp* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field to test |
-| Function result | Boolean | &#8592; | True if the field has been assigned a new value, otherwise False |
+| leField | Field | &#8594;  | Champ dont vous voulez tester la modification |
+| Résultat | Boolean | &#8592; | Vrai si une nouvelle valeur a été assignée au champ, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Modified.Summary-->**Modified** returns [True](true.md "True") if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).
+<!--REF #_command_.Modified.Summary-->**Modified** retourne **Vrai** si une valeur a été assignée par programmation au champ *leChamp* ou s'il a été modifié lors de la saisie de données.<!-- END REF--> La commande **Modified** ne fonctionne que lorsqu'elle est appelée dans le cadre d'une méthode formulaire (ou d'une sous-méthode appelée par la méthode formulaire).
 
-Be careful, this command only returns a significant value within the same execution cycle. It is more particularly set to [False](false.md "False") for all the form events that correspond to the former *\_o\_During* execution cycle (On Clicked, On After Keystroke, etc.).
+Attention, cette commande ne retourne une valeur significative qu'à l'intérieur d'un même cycle d'exécution. Elle est notamment remise à **Faux** pour tous les événements formulaires correspondant à l'ancien cycle d'exécution *\_o\_During* (On Clicked, On After Keystroke...).
 
-During data entry, a field is considered modified if the user has edited the field (whether or not the original value is changed) and then left it by going to another field or by clicking on a control. Note that just tabbing out of a field does not set **Modified** to True. The field must have been edited in order for **Modified** to be True.
+Dans le cas de la saisie de données, un champ est considéré comme modifié à partir du moment où un utilisateur l'édite (et change ou non sa valeur originale) puis le quitte pour un autre champ ou pour cliquer sur un objet de formulaire. Notez que le fait qu'un utilisateur active puis quitte un champ à l'aide de la touche Tabulation ne suffit pas en soi à ce que **Modified** retourne **Vrai**. Le champ doit avoir été réellement modifié pour que **Modified** retourne **Vrai**.
 
-When executing a method, a field is considered to be modified if it has been assigned a value (different or not). 
+Dans le cas de l'exécution d'une méthode, un champ est considéré comme modifié si une valeur lui a été assignée (différente ou non de sa valeur précédente).
 
-**Note:** **Modified** always returns [True](true.md "True") after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands.
+**Note :** La commande **Modified** retourne toujours **Vrai** après l'exécution des commandes [PUSH RECORD](push-record.md) et [POP RECORD](pop-record.md).
 
-In all cases, use the [Old](old.md) command to detect whether the field value has actually been changed.
+Dans tous les cas, pour savoir si la valeur d'un champ a été effectivement modifiée, utilisez la commande [Old](old.md). 
 
-**Note:** Although **Modified** can be applied to any type of field, if you use it in combination with the [Old](old.md) command, be aware of the restrictions that apply to the [Old](old.md) command. For details, see the description of the [Old](old.md) command.
+**Note :** Bien que la fonction **Modified** puisse être appliquée à tout type de champ, si vous l'utilisez conjointement avec la fonction [Old](old.md), vous devez dans ce cas tenir compte des restrictions liées à cette fonction. Reportez-vous à la description de la commande [Old](old.md).
 
-During data entry, it is usually easier to perform operations in object methods using the [Form event code](./commands/form-event-code) command than to use **Modified** in form methods. Since an object method is sent an On Data Change event whenever a field is modified, the use of an object method is equivalent to using **Modified** in a form method.
+Pendant la saisie de données, il est généralement plus pratique d'effectuer des opérations dans des méthodes objet à l'aide de la commande [Form event code](../commands/form-event-code.md) que d'utiliser la fonction **Modified** dans des méthodes formulaires. Comme une méthode objet reçoit l'événement On Data Change à chaque fois qu'un champ est modifié, utiliser une telle méthode équivaut à appeler **Modified** dans une méthode formulaire.
 
-**Note:** To operate properly, the **Modified** command is to be used only in a form method or in a method called by a form method.
+## Exemple 1 
 
-## Example 1 
-
-The following example tests whether either the *\[Orders\]Quantity* field or the *\[Orders\]Price* field has changed. If either has been changed, then the *\[Orders\]Total* field is recalculated. 
+L'exemple suivant teste si le champ *\[Commandes\]Quantité* ou le champ *\[Commandes\]Prix* a été modifié. Si c'est le cas, le champ *\[Commandes\]Total* est recalculé :
 
 ```4d
- If((Modified([Orders]Quantity)|(Modified([Orders]Price))
-    [Orders]Total :=[Orders]Quantity*[Orders]Price
+ If((Modified([Commandes]Quantité)|(Modified([Commandes]Prix))
+    [Commandes]Total:=[Commandes]Quantité*[Commandes]Prix
  End if
 ```
 
-Note that the same thing could be accomplished by using the second line as a subroutine called by the object methods for the *\[Orders\]Quantity* field and the *\[Orders\]Price* field within the On Data Change form event.
+Notez que le même résultat aurait pu être obtenu en utilisant la seconde ligne de cette méthode en tant que méthode objet des champs *\[Commandes\]Quantité* et *\[Commandes\]Prix* dans le cadre de l'événement formulaire On Data Change. 
 
-## Example 2 
+## Exemple 2 
 
-You select a record for the table *\[anyTable\]*, then you call multiple subroutines that may modify the field *\[anyTable\]Important field,* but do not save the record. At the end of the main method, you can use the **Modified** command to detect whether you must save the record:
+Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appelez plusieurs sous-routines qui sont susceptibles de modifier le champ *\[uneTable\]Champ important* mais sans provoquer de sauvegarde de l'enregistrement. A la fin de la méthode principale, vous pouvez utiliser la commande **Modified** pour déterminer si vous devez stocker l'enregistrement :
 
 ```4d
-  // Here the record has been selected as current record
-  // Then you perform actions using subroutines
- DO SOMETHING
- DO SOMETHING ELSE
- DO NOT FORGET TO DO THAT
+  // L'enregistrement a été sélectionné comme enregistrement courant
+  // Puis vous effectuez des actions à l'aide des sous-routines
+ FAIRE QUELQUE CHOSE
+ FAIRE AUTRE CHOSE
+ NE PAS OUBLIER DE FAIRE CA
   // ...
-  // And then you test the field to detect whether the record has to be saved
- If(Modified([anyTable]Important field))
-    SAVE RECORD([anyTable])
+  // Enfin, vous testez le champ pour déterminer s'il faut stocker l'enregistrement
+ If(Modified([uneTable]Champ important))
+    SAVE RECORD([uneTable])
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Old](old.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 32 |
+| Numéro de commande | 32 |
 | Thread safe | no |
-
 
 

@@ -5,102 +5,103 @@ slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *manyField* : Field ; *one* : Integer ; *many* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *champN* ; *aller* ; *retour* {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| manyField | Field | &#8594;  | Starting field of a relation |
-| one | Integer | &#8592; | Status of the Many-to-One relation |
-| many | Integer | &#8592; | Status of the One-to-Many relation |
-| * | Operator | &#8594;  | • If passed: one and many return the current status of the relation (values 2 or 3 only) • If omitted (default): one and many can return the value 1 if the relation has not been modified through programming |
+| champN | Field | &#8594;  | Champ de départ du lien |
+| aller | Integer | &#8592; | Statut du lien aller |
+| retour | Integer | &#8592; | Statut du lien retour |
+| * | Opérateur | &#8594;  | • Si passé : aller et retour retournent le statut courant effectif du lien (valeurs 2 ou 3 uniquement)• Si omis (défaut) : aller et retour peuvent retourner la valeur 1 si le lien n’a pas été modifié par programmation |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET FIELD RELATION.Summary-->The **GET FIELD RELATION** command lets you find out the automatic/manual status of the relation starting from *manyField* for the current process.<!-- END REF--> You can view any relation, including automatic relations set in the Structure window.
+<!--REF #_command_.GET FIELD RELATION.Summary-->La commande **GET FIELD RELATION** permet de connaître le statut automatique/manuel du lien partant du *champN* pour le process courant.<!-- END REF--> Tous les liens peuvent être consultés, y compris les liens déclarés automatiques dans la fenêtre de Structure.
 
-* In *manyField*, pass the name of theMany table field from which the relation whose status you want to find out originates. If no relation originates from the *manyField* field, the *one* et *many* parameters return 0, an error is returned and the system variable OK is set to 0 (see below).
-* After the command is executed, the *one* parameter contains a value indicating whether the Many-to-One relation specified is set as automatic:  
-0 = There is no relation originating from *manyField*. Syntax error No. 16 (“The field has no relation”) is generated and the system variable OK is set to 0\.  
-1 = The automatic/manual status of the Many-to-One relation specified is that set by the **Auto Relate One** option in the Relation properties of the Design environment (it has not been modified by programming).  
-2 = The Many-to-One relation is manual for the process.  
-3 = The Many-to-One relation is automatic for the process.
-* After the command is executed, the *many* parameter contains a value indicating whether the One-to-Many relation specified is set as automatic:  
-0 = There is no relation originating from *manyField*. Syntax error No. 16 (“The field has no relation”) is generated and the system variable OK is set to 0\.  
-1 = The automatic/manual status of the One-to-Many relation specified is that set by the **Auto One to Many** option in the Relation properties of the Design environment (it has not been modified by programming).  
-2 = The One-to-Many relation is manual for the process.  
-3 = The One-to-Many relation is automatic for the process.
+* Passez dans *champN* le nom du champ de la table N d’où part le lien dont vous souhaitez connaître le statut. Si aucun lien ne part du champ *champN*, les paramètres *aller* et *retour* retournent 0, une erreur est générée et la variable système OK prend la valeur 0 (cf. ci-dessous).
+* Après l’exécution de la commande, la variable *aller* contient une valeur indiquant si le lien aller spécifié est défini comme automatique :  
+0 = il n’y a pas de lien partant de *champN*. L’erreur de syntaxe n°16 (“Ce champ ne possède pas de lien”) est générée et la variable système OK prend la valeur 0\.  
+1 = le statut automatique/manuel du lien aller spécifié est celui défini par l’option **Lien aller auto** dans les propriétés du lien en mode Développement (il n’a pas été modifié par programmation).  
+2 = le lien N vers 1 est manuel pour le process.  
+3 = le lien N vers 1 est automatique pour le process.
+* Après l’exécution de la commande, la variable *retour* contient une valeur indiquant si le lien retour spécifié est défini comme automatique :  
+0 = il n’y a pas de lien partant de *champN*. L’erreur de syntaxe n°16 (“Ce champ ne possède pas de lien”) est générée et la variable système OK prend la valeur 0\.  
+1 = le statut automatique/manuel du lien retour spécifié est celui défini par l’option **Lien retour auto** dans les propriétés du lien en mode Développement (il n’a pas été modifié par programmation).  
+2 = le lien 1 vers N est manuel pour le process.  
+3 = le lien 1 vers N est automatique pour le process.
 
-You can compare the values returned in the *one* and *many* parameters with the constants of the “*Relations*” theme: 
+Vous pouvez comparer les valeurs reçues dans les paramètres *aller* et *retour* aux constantes du thème “*Liens*” :
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Automatic               | Integer | 3     |
-| Manual                  | Integer | 2     |
-| No relation             | Integer | 0     |
-| Structure configuration | Integer | 1     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Automatic               | Entier long | 3      |
+| Manual                  | Entier long | 2      |
+| No relation             | Entier long | 0      |
+| Structure configuration | Entier long | 1      |
 
-* The optional *\** parameter lets you “force” the reading of the current status of the relation, even if it has not been modified by programming. In other words, when you pass the \* parameter, only the values 2 or 3 can be returned in the *one* and *many* parameters.
+* Le paramètre facultatif *\** permet de “forcer” la lecture du statut courant du lien, même s’il n’a pas été modifié par programmation. Autrement dit, lorsque vous passez le paramètre *\**, seules les valeurs 2 ou 3 peuvent être retournées dans les paramètres *aller* et *retour*.
 
-## Example 
+## Exemple 
 
-Given the following structure:
+Soit la structure suivante :
 
-![](../assets/en/commands/pict31607.en.png)
+![](../assets/en/commands/pict31607.fr.png)
 
-The properties of the relation linking the \[Employees\]Company field to the \[Companies\]Name field are the following:
+Les propriétés du lien reliant le champ \[Employés\]Société au champ \[Sociétés\]Nom sont les suivantes :
 
-![](../assets/en/commands/pict31608.en.png)
+![](../assets/en/commands/pict31608.fr.png)
 
-The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) commands along with their effects:
+Le code ci-dessous illustre les différentes possibilités offertes par les commandes **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) et [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) ainsi que leurs effets :
 
 ```4d
- GET AUTOMATIC RELATIONS(one;many) //returns False, False
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
+ GET AUTOMATIC RELATIONS(liens_Appel;liens_Retour) //retourne Faux, Faux
+ GET FIELD RELATION([Employés]Société;aller;retour) //retourne 1,1
+ GET FIELD RELATION([Employés]Société;aller;retour;*) //retourne 3,2
  
- SET FIELD RELATION([Employees]Company;2;0) //changes Many-to-One relation to manual
+ SET FIELD RELATION([Employés]Société;2;0) //passe le lien N vers 1 en manuel
  
- GET FIELD RELATION([Employees]Company;one;many) //returns 2,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 2, 2
+ GET FIELD RELATION([Employés]Société;aller;retour) //retourne 2,1
+ GET FIELD RELATION([Employés]Société;aller;retour;*) //retourne 2, 2
  
- SET FIELD RELATION([Employees]Company;1;0) //re-establishes the parameters set in Design environment for Many-to-One relation
+ SET FIELD RELATION([Employés]Société;1;0) //rétablit les paramètres définis en
+  //structure pour le lien N vers 1
  
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,2
+ GET FIELD RELATION([Employés]Société;aller;retour) //retourne 1,1
+ GET FIELD RELATION([Employés]Société;aller;retour;*) //retourne 3,2
  
- SET AUTOMATIC RELATIONS(True;True) //changes all relations of all tables to automatic
+ SET AUTOMATIC RELATIONS(True;True) //passe tous les liens de toutes les tables en automatique
  
- GET AUTOMATIC RELATIONS(one;many) //returns True, True
- GET FIELD RELATION([Employees]Company;one;many) //returns 1,1
- GET FIELD RELATION([Employees]Company;one;many;*) //returns 3,3
+ GET AUTOMATIC RELATIONS(liens_Appel;liens_Retour) //retourne Vrai, Vrai
+ GET FIELD RELATION([Employés]Société;aller;retour) //retourne 1,1
+ GET FIELD RELATION([Employés]Société;aller;retour;*) //retourne 3,3
 ```
 
-## See also 
+## Voir aussi 
 
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 920 |
+| Numéro de commande | 920 |
 | Thread safe | yes |
 
 

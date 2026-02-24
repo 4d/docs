@@ -5,69 +5,69 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; *order* : >, <})} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*laTable* ;} *champObjet* ; *cheminAttribut* ; > ou < {; *champObjet2* ; *cheminAttribut2* ; > ou <2 ; ... ; *champObjetN* ; *cheminAttributN* ; > ou <N} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
-| objectField | Object | &#8594;  | Object field containing the sorting attribute |
-| attributePath | Text | &#8594;  | Name or path of attribute on which to set the order for each level |
-| order | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
-| * | Operator | &#8594;  | Continue order flag |
+| laTable | Table | &#8594;  | Table dans laquelle la sélection est triée ou Table par défaut si ce paramètre est omis |
+| champObjet | Object | &#8594;  | Champ objet dont les attributs sont à utiliser pour le tri |
+| cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut pour chaque niveau que l'on veut trier |
+| > ou < | Opérateur | &#8594;  | Sens de tri pour chaque niveau : > pour trier par ordre ascendant, ou < pour trier par ordre descendant. |
+| * | Opérateur | &#8594;  | Attente d'exécution du tri |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->The **ORDER BY ATTRIBUTE** command sorts (reorders) the records of the current selection of *aTable* for the current process based on the contents of the *objectField*'s *attributePath*.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record.
+<!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->La commande **ORDER BY ATTRIBUTE** trie (réorganise) les enregistrements de la sélection courante de *laTable* pour le process courant, basé sur les contenus des *cheminAttribut* des *champObjet*.<!-- END REF--> Après réorganisation des enregistrements, le nouveau premier enregistrement de la sélection courante devient l'enregistrement courant.
 
-If you omit the *aTable* parameter, the command applies to the default table, if it has been specified. Otherwise, 4D uses the table of the first field passed as a parameter.
+Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut, si celle-ci a été spécifiée. Sinon 4D utilise la table du premier champ passé en paramètre.
 
- In *objectField*, pass the Object field whose attribute you want to use for the sort. This field can belong to *aTable* or to a One table related to *aTable* with an automatic or manual relation. In this case, the sort is always sequential.
+ Dans *champObjet*, passez le champ Objet dont vous voulez utiliser l'attribut pour le tri. Ce champ peut appartenir *laTable* ou à une table en lien Aller à partir de *laTable*, avec un lien automatique ou manuel. Dans ce cas, le tri est toujours séquentiel.
 
-In *attributePath*, pass the path of the attribute whose values you want to use to sort the records, for example "children.girls.age".
+Dans le paramètre *cheminAttribut*, indiquez le chemin d'accès de l'attribut dont vous souhaitez utiliser les valeurs pour trier les enregistrements, par exemple "children.girls.age".
 
-**Notes:** 
+**Notes :** 
 
-* Only attributes containing scalar values (number, text, boolean, date) can be sorted. Others types of values (object, picture...) are considered as null values.
-* You cannot pass an element of an array in *attributePath* (in this case, an error is returned).
-* Keep in mind that attribute names are case-sensitive: you can have different "MyAtt" and "myAtt" attribute names in the same record.
-* You cannot use attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the order by string. For more information, please refer to the *Object property identifiers* paragraph.
+* Seuls les attributs contenant des valeurs scalaires (nombres, textes, booléens, date) peuvent être triés. Les autres types de valeurs (objet, image...) sont considérés comme des valeurs null.
+* Vous ne pouvez pas passer un élément de tableau dans *cheminAttribut* (dans ce cas, une erreur est retournée).
+* N'oubliez pas que les noms des attributs sont sensibles à la casse : "MonAtt" et "monAtt" sont des noms d'attributs différents dans le même enregistrement.
+* Vous ne pouvez pas rechercher des attributs dont le nom contient des caractères spéciaux tels que "." ou "\[ \]", car ils seront incorrectement interprétés comme des tokens dans la chaîne de tri. Pour plus d'informations, veuillez consulter le paragraphe *Identifiants de propriétés d'objets*.
 
-If the field attribute contains values in different data types (i.e. numbers, strings, booleans), they are first grouped by type, then by value. 
+Si l'attribut du champ contient des valeurs de types différents (c'est-à-dire nombres, textes, booléens...), elles sont d'abord regroupées par type, puis par valeur.
 
-If the field attribute value is **null** for some records (i.e. the attribute value is null or attributePath does not exist in the field): 
+Si la valeur d'un attribut de champ est **null** pour des enregistrements (c'est-à-dire la valeur de l'attribut est null ou *cheminAttribut* n'existe pas dans le champ) : 
 
-* If the order is **ascending** (>), records with **null** value will be placed at the beginning of the selection.
-* If the order is **descending** (<), records with **null** value will be placed at the end of the selection.
+* Si l'ordre est **ascendant** (>), les enregistrements avec valeur **null** seront placés au début de la sélection.
+* Si l'ordre est **descendant** (<), les enregistrements avec valeur **null** seront placés à la fin de la sélection.
 
-You can sort the selection on one level or on several levels. For each sort level, you specify an *aField*, an *attributePath* and the sorting order in *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.   
-If only one field is specified (one level sort) and it is indexed, the index is used for the order. If the field is not indexed or if there is more than one field, the order is performed sequentially. 
+Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau de tri, vous précisez un *champObjet*, un *cheminAttribut* et un ordre de tri *\> ou <*. Si vous passez le symbole "plus grand que" (>), le tri sera ascendant. Si vous passez le symble "plus petit que" (<), le tri sera descendant. Si vous ne spécifiez pas d'ordre de tri, le tri sera ascendant par défaut.  
+Si un seul champ est précisé (un niveau de tri) et que celui-ci est indexé, l'index est utilisé pour le tri. Si le champ n'est pas indexé ou que vous utilisez plus d'un champ, le tri est exécuté séquentiellement.
 
-For multiple sorts (sorts on multiple fields), you can call **ORDER BY ATTRIBUTE** as many times as necessary and specify the optional *\** parameter, except for the last **ORDER BY ATTRIBUTE** call, which starts the actual sort operation. This feature is useful for multiple sorts management in customized user interfaces. Note that you can combine **ORDER BY ATTRIBUTE** calls with [ORDER BY](order-by.md) calls.
+Pour les tris multiples (tris sur plusieurs champs), vous pouvez appeler la commande **ORDER BY ATTRIBUTE** autant de fois que nécessaire et utiliser le paramètre optionnel *\**, excepté pour le dernier appel de **ORDER BY ATTRIBUTE**, qui lance l'opération de tri. Cette fonctionnalité est utile pour la gestion du multi-tri dans des interfaces utilisateurs personnalisées. Notez que vous pouvez combiner les appels à la commande **ORDER BY ATTRIBUTE** avec les appels à la commande [ORDER BY](order-by.md).
 
-**Note:** With this syntax, you can pass only one sort level (field) per **ORDER BY ATTRIBUTE** call.
+**Note :** Avec cette syntaxe, vous ne pouvez passer qu'un seul niveau de tri (champ) pour l'appel à **ORDER BY ATTRIBUTE**.
 
-No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These message can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click the **Stop** button to interrupt the sort. If the sort is completed, OK is set to 1\. Otherwise, if the sort is interrupted, OK is set to 0 (zero).
+Quelle que soit la façon dont le tri a été défini, si l'opération de tri doit prendre du temps, 4D affiche automatiquement un message avec thermomètre de progression. L'affichage de ce message peut être contrôlé grâce aux commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre le tri. Si le tri n'est pas interrompu, la variable OK passe à 1\. Sinon, si le tri est interrompu, la variable OK passe à 0 (zéro). 
 
-## Example 
+## Exemple 
 
-You want to sort the current selection by age (descending) and then by name (ascending). Default order is:
+Vous souhaitez trier la sélection courante par âge (descendant) puis par nom (ascendant). L'ordre par défaut est :
 
 ```json
-// [Customer]OB_Info contents partial export
+// [Customer]OB_Info contient un export partiel
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Sarah","age":42,"client":true},
 {"LastName":"Mikken","age":"Forty-six","client":true},
@@ -90,13 +90,13 @@ You want to sort the current selection by age (descending) and then by name (asc
 {"LastName":"Smeldorf","age":70,"client":true}
 ```
 
-If you execute:
+Après exécution du tri :
 
 ```4d
  ORDER BY ATTRIBUTE([Customer];[Customer]OB_Info;"age";<;[Customer]OB_Info;"LastName";>)
 ```
 
-Records are in the following order:
+Les enregistrements sont dans l'ordre suivant : 
 
 ```json
 {"LastName":"Smeldorf","age":70,"client":true}
@@ -114,22 +114,22 @@ Records are in the following order:
 {"LastName":"Giorgio","age":33,"client":true},
 {"LastName":"Smeldorf","age":33,"client":true},
 {"LastName":"Smeldorf","age":22,"client":true},
-{"LastName":"Hamp","age":"Sixty","client":true}, //string values in age
-{"LastName":"Belami","age":"Forty-six","client":true}, //are handled separately
+{"LastName":"Hamp","age":"Sixty","client":true}, //les valeurs de type chaîne dans age
+{"LastName":"Belami","age":"Forty-six","client":true}, //sont gérés séparément
 {"LastName":"Mikken","age":"Forty-six","client":true}
-{"LastName":"Gordini","client":true}, //at the end because
-{"LastName":"Martin","client":true} //age is null (missing)
+{"LastName":"Gordini","client":true}, //en fin car
+{"LastName":"Martin","client":true} //age est null (manquant)
 ```
 
-## See also 
+## Voir aussi 
 
   
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1407 |
+| Numéro de commande | 1407 |
 | Thread safe | yes |
 
 

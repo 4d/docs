@@ -9,54 +9,54 @@ displayed_sidebar: docs
 <!--REF #_command_.Application file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Long name of the 4D executable file or application |
+| Résultat | Text | &#8592; | Nom long du fichier 4D exécutable ou de l'application 4D |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Application file.Summary-->The Application file command returns the long name of the 4D executable file or application you are running.<!-- END REF--> 
-If, for example, you are running 4D located at \\PROGRAMS\\4D on the volume E, the command returns E:\\PROGRAMS\\4D\\4D.EXE.
+<!--REF #_command_.Application file.Summary-->La fonction **Application file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier exécutable ou de l'application 4D que vous utilisez.<!-- END REF--> 
+Si, par exemple, vous utilisez 4D qui se trouve dans le répertoire \\PROGRAMMES\\4D sur le volume E, **Application file** renvoie E:\\PROGRAMMES\\4D\\4D.EXE.
 
-*On Macintosh*  
-If, for example, you are running 4D in the Programs folder on the disk Macintosh HD, the command returns Macintosh HD:Programs:4D.app.
+*Sous Mac OS*  
+Si, par exemple, vous utilisez 4D qui se trouve dans le dossier Programmes sur le disque Disque Dur, **Application file** renvoie Disque Dur:Programmes:4D.app.
 
-## Example 
+## Exemple 
 
-At startup on Windows, you need to check if a DLL Library is correctly located at the same level as the 4D executable file. In the of your application you can write:
+Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une librairie DLL se trouve au même niveau que le fichier exécutable de 4D. Dans la , vous pouvez écrire les instructions suivantes :
 
 ```4d
  If(Is Windows&(Application type#4D Server))
     var $appPath : Object
     $appPath:=Path to object(Application file)
     If(Test path name(($appPath.parentFolder)+"XRAYCAPT.DLL")#Is a document)
-       ALERT("XRAYCAPT.DLL is missing. The X-ray capture capability will not be available.")
+       ALERT("XRAYCAPT.DLL n'est pas présent. La saisie de radios n'est pas disponible.")
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Data file](data-file.md)  
 [Structure file](structure-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 491 |
+| Numéro de commande | 491 |
 | Thread safe | yes |
 
 

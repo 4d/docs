@@ -5,47 +5,47 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* : Text {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *cheminFichier* {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| filePath | Text | &#8594;  | File pathname |
-| * | Operator | &#8594;  | Validate data |
-| Function result | Boolean | &#8592; | True = filePath designates a picture file; otherwise, False |
+| cheminFichier | Text | &#8594;  | Chemin d’accès de fichier |
+| * | Opérateur | &#8594;  | Valider les données |
+| Résultat | Boolean | &#8592; | Vrai = cheminFichier désigne un fichier image, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Is picture file.Summary-->The Is picture file command tests the file designated by the *filePath* parameter and returns True if it is a valid picture file.<!-- END REF--> The command returns False if the file is not of the picture type or if it is not found. 
+<!--REF #_command_.Is picture file.Summary-->La commande **Is picture file** teste le fichier désigné par le paramètre *cheminFichier* et retourne Vrai s’il s’agit d’un fichier image valide.<!-- END REF--> La commande retourne Faux si le fichier n’est pas de type image ou s’il n’a pas été trouvé. 
 
-Pass the pathname of the picture file to be tested in the *filePath* parameter. The path must be expressed with the system syntax. You can pass an absolute pathname or a pathname relative to the database structure file. If you pass an empty string (""), the command returns False. 
+Passez dans le paramètre *cheminFichier* le chemin d’accès du fichier image à tester. Ce chemin doit être exprimé avec la syntaxe système. Vous pouvez passer un chemin d’accès absolu ou relatif au fichier de structure de la base. Si vous passez une chaîne vide (""), la commande retourne Faux. 
 
-If you do not pass the *\** parameter, the command tests the file by looking for its extension among the list of available codecs. If you want to be able to test files without extensions or to carry out a more thorough verification, pass the *\** parameter. In this case, the command makes additional tests: it loads and inspects the file header and queries the codecs in order to validate the picture. This syntax slows command execution.
+Si vous ne passez pas le paramètre *\**, la commande teste le fichier en recherchant son extension parmi la liste des codecs disponibles. Si vous souhaitez pouvoir tester des fichiers sans extension ou effectuer une vérification plus complète, passez le paramètre *\**. Dans ce cas, la commande effectue des analyses supplémentaires : elle charge et inspecte l’en-tête du fichier et interroge les codecs afin de valider l’image. Cette syntaxe ralentit l’exécution de la commande.
 
-**Note:** The command returns True for PDF files under Windows and EMF files under Mac OS. 
+**Note :** La commande retourne Vrai pour les fichiers PDF sous Windows et les fichiers EMF sous Mac OS. 
 
-## See also 
+#### Voir aussi 
 
 [PICTURE CODEC LIST](picture-codec-list.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1113 |
+| Numéro de commande | 1113 |
 | Thread safe | yes |
 
 

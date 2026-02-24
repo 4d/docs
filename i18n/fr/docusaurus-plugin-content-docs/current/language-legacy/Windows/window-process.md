@@ -5,42 +5,42 @@ slug: /commands/window-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window process.Syntax-->**Window process** ( *window* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Window process.Syntax-->**Window process** {( *fenêtre* )} : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number |
-| Function result | Integer | &#8592; | Process reference number |
+| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre |
+| Résultat | Integer | &#8592; | Numéro de référence de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Window process.Summary-->The Window process command returns the process number that runs the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, 0 (zero) is returned.
+<!--REF #_command_.Window process.Summary-->La commande **Window process** retourne le numéro du process qui exécute la fenêtre dont le numéro de référence est passé dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande retourne *0* (zéro).
 
-If you omit the *window* parameter, Window process returns the process of the current frontmost window.
+Si vous omettez le paramètre *fenêtre*, **Window process** retourne le numéro du process de la fenêtre de premier plan du process courant.
 
-## See also 
+## Voir aussi 
 
 [Current process](current-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 446 |
+| Numéro de commande | 446 |
 | Thread safe | no |
 
 

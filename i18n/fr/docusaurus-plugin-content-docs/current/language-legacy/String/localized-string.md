@@ -5,64 +5,64 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resName | Text | &#8594;  | Name of resname attribute |
-| Function result | Text | &#8592; | Value of string designated by resName in current language |
+| resName | Text | &#8594;  | Nom d’attribut resname |
+| Résultat | Text | &#8592; | Valeur de la chaîne désignée par resName dans le langage courant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Localized string.Summary-->The **Localized string** command returns the value of the string designated by the *resName* attribute for the current language.<!-- END REF-->
+<!--REF #_command_.Localized string.Summary-->La commande **Localized string** retourne la valeur de la chaîne désignée par l’attribut *resName* pour la langue courante.<!-- END REF--> 
 
-This command only works within an XLIFF architecture. For more information about this type of architecture, please refer to the description of XLIFF support in the *Design Reference* manual.
+Cette commande fonctionne uniquement dans le cadre d’une architecture XLIFF. Pour plus d’informations sur ce type d'architecture, reportez-vous à la description de la prise en charge du XLIFF dans le manuel *Mode Développement*.
 
-**Note:** The [Get database localization](get-database-localization.md) command can be used to find out the language used by the application.
+**Note :** La commande [Get database localization](get-database-localization.md) permet de connaître la langue utilisée par l’application.
 
-Pass the resource name of the string for which you want to get the translation into the current target language in *resName*.
+Passez dans *resName* le nom de ressource de la chaîne dont vous voulez obtenir la traduction dans la langue cible courante (target).
 
-Note that XLIFF is diacritical.
+A noter que le XLIFF est diacritique.
 
-## Example 
+## Exemple 
 
-Here is an extract from an .xlf file:
+Voici un extrait de fichier .xlf :
 
 ```XML
 <file source-language="en-US" target-language="fr-FR">
-[...]
+   [...]
    <trans-unit resname="Show on disk">
       <source>Show on disk</source>
       <target>Montrer sur le disque</target>
    </trans-unit>
 ```
 
-After executing the following statement:
+Après exécution de l’instruction suivante :
 
 ```4d
- $FRvalue:=Localized string("Show on disk")
+ $valeurFR:=Localized string("Show on disk")
 ```
 
-... if the current language is French, $FRvalue contains “Montrer sur le disque”.
+... si la langue courante est le français, $valeurFR contient “Montrer sur le disque”.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command is executed correctly, the OK variable is set to 1\. If *resName* is not found, the command returns an empty string and the OK variable is set to 0.
+Si la commande a été exécutée correctement, la variable OK prend la valeur 1\. Si *resName* n’est pas trouvé, la commande retourne une chaîne vide et la variable OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [Get database localization](get-database-localization.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 991 |
+| Numéro de commande | 991 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

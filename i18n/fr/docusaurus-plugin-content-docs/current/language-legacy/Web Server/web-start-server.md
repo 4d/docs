@@ -9,43 +9,43 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB START SERVER.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2003|Modified|
-|<6|Created|
+|13|Renommé|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB START SERVER.Summary-->The **WEB START SERVER** command starts the Web server of the 4D application on which it has been executed (4D or 4D Server).<!-- END REF--> The database is therefore published on your Intranet network or on the Internet.
+<!--REF #_command_.WEB START SERVER.Summary-->La commande **WEB START SERVER** démarre le serveur Web de l'application 4D sur laquelle elle a été exécutée (4D ou 4D Server).<!-- END REF--> La base est alors publiée sur votre réseau Intranet ou sur Internet.
 
-If the Web Server is successfully started, **OK** is set to *1*, otherwise **OK** is set to *0* (zero). For example, if the TCP/IP network protocol is not properly configured, **OK** is set to *0*.
+Si le serveur Web a été correctement lancé, la variable système OK prend la valeur 1, sinon — si par exemple le protocole réseau TCP/IP n'est pas correctement configuré — OK prend la valeur 0 (zéro).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the Web Server is successfully started, **OK** is set to 1; otherwise **OK** is set to 0.
+Si le serveur Web est correctement démarré, OK prend la valeur 1, sinon OK prend la valeur 0 (zéro).
 
-## See also 
+## Voir aussi 
 
 [WEB STOP SERVER](web-stop-server.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 617 |
+| Numéro de commande | 617 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

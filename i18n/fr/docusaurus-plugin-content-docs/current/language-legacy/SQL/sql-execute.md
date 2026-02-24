@@ -5,93 +5,93 @@ slug: /commands/sql-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* : Text {; *...boundObj* : Variable, Field} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *instructionSQL* {; *objetLié*}{; *objetLié2* ; ... ; *objetLiéN*} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sqlStatement | Text | &#8594;  | SQL command to execute |
-| boundObj | Variable, Field | &#8592; | Receives result (if necessary) |
+| instructionSQL | Text | &#8594;  | Commande SQL à exécuter |
+| objetLié | Variable, Field | &#8592; | Réception du résultat (si nécessaire) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL EXECUTE.Summary-->The SQL EXECUTE command executes an SQL command and binds the result to 4D objects (arrays, variables or fields).<!-- END REF--> 
+<!--REF #_command_.SQL EXECUTE.Summary-->La commande **SQL EXECUTE** permet d’exécuter une commande SQL et d’associer le résultat à des objets 4D (tableaux, variables ou champs) liés.<!-- END REF--> 
 
-A valid connection must be specified in the current process in order to execute this command. 
+Pour que la commande puisse être exécutée, une connexion valide doit être définie dans le process courant. 
 
-The *sqlStatement* parameter contains the SQL command to execute. *boundObj* receives the results. Variables are bound in the column sequence order, which means that any remaining remote columns are discarded. 
+Le paramètre *instructionSQL* contient la commande SQL à exécuter. Le paramètre *objetLié* reçoit les résultats. Les objets sont liés dans l’ordre de la colonne, ce qui signifie que les éventuelles colonnes distantes supplémentaires sont ignorées. 
 
 :::note
 
-The command supports up to 127 *boundObj* parameters.  
+La commande prend en charge jusqu'à 127 paramètres *objetLié*.  
 
 :::
 
-If 4D fields are passed as parameters in *boundObj*, the command will create records and save them automatically. 4D fields must come from the same table (a field from table 1 and a field from table 2 cannot be passed in the same call). If fields from more than one table are passed, an error is generated. 
+Si des champs 4D sont passés dans le(s) paramètre(s) *objetLié*, la commande créera des enregistrements et les sauvegardera automatiquement. Les champs doivent appartenir à la même table (il n’est pas possible de passer un champ de la table 1 et un champ de la table 2 dans le même appel). Si des champs de tables différentes sont passés, une erreur est générée. 
 
-**Warning:** When you pass 4D fields in the *boundObj* parameter(s) and execute the *SELECT* command, it is always the data of the remote 4D source that is modified. If you want to retrieve data from the remote source locally, you must use intermediary local arrays and call the *INSERT* command (see example 6). 
+**Attention :** Lorsque vous passez des champs 4D dans le(s) paramètre(s) *objetLié* et exécutez la commande *SELECT*, ce sont toujours les données de la source 4D distante qui sont modifiées. Si vous souhaitez récupérer en local des données de la source distante, vous devez utiliser des tableaux locaux intermédiaires et appeler la commande *INSERT* (cf. exemple 6). 
 
-If you pass 4D arrays in the *boundObj* parameter(s), it is advisable to declare them before calling the command in order to check the type of data processed. Arrays are automatically resized when necessary. 
+Si vous passez des tableaux ou des variables 4D dans le(s) paramètre(s) *objetLié*, il est conseillé de les déclarer préalablement à l’appel de la commande afin de contrôler le type de données traitées. Les tableaux sont redimensionnés automatiquement si nécessaire. 
 
-With a 4D variable, one record is fetched at a time. The other results are ignored.
+Dans le cas d’une variable 4D, un seul enregistrement est récupéré à la fois. 
 
-**Note:** For more information about referencing 4D expressions in SQL queries, refer to the *Overview of SQL Commands* section.
+**Note :** Pour plus d'informations sur le référencement des expressions 4D dans les requêtes SQL, reportez-vous à la section *Présentation des commandes du thème SQL*.
 
-## Example 1 
+## Exemple 1 
 
-In this example, we will get the ename column of the emp table of the data source. The result is stored in the \[Employee\]Name 4D field. 4D records will be created automatically: 
+Dans cet exemple, nous récupérons la colonne ename de la table emp dans la source de données. Le résultat est stocké dans le champ 4D \[Employés\]Nom. Les enregistrements 4D seront créés automatiquement : 
 
 ```4d
  SQLStmt:="SELECT ename FROM emp"
- SQL EXECUTE(SQLStmt;[Employee]Name)
+ SQL EXECUTE(SQLStmt;[Employés]Nom)
  SQL LOAD RECORD(SQL all records)
 ```
 
-## Example 2 
+## Exemple 2 
 
-To check the creation of records, it is possible to include code within a transaction and to validate it only if the operation proves to be satisfactory:
+Pour mieux contrôler la création des enregistrements, il est possible d’inclure le code au sein d’une transaction et de ne la valider que si le déroulement de l’opération s’est avéré satisfaisant :
 
 ```4d
  SQL LOGIN("mysql";"root";"")
  SQLStmt:="SELECT alpha_field FROM app_testTable"
  START TRANSACTION
- SQL EXECUTE(SQLStmt;[Table 2]Field1)
+ SQL EXECUTE(SQLStmt;[Table 2]Champ1)
  While(Not(SQL End selection))
     SQL LOAD RECORD
-    ... //Place the data validation code here
+    ... //Placer ici le code de validation des données
  End while
- VALIDATE TRANSACTION //Validation of the transaction
+ VALIDATE TRANSACTION //Validation de la transaction
 ```
 
-## Example 3 
+## Exemple 3 
 
-In this example, we want to get the ename column of the emp table of the data source. The result will be stored in an *aName* array. We fetch records 10 at a time. 
+Dans cet exemple, nous récupérons la colonne ename de la table emp dans la source de données. Le résultat est stocké dans le tableau *tNoms*. Nous récupérons les enregistrements 10 par 10.
 
 ```4d
- ARRAY STRING(30;aName;20)
+ ARRAY STRING(30;tNoms;20)
  SQLStmt:="SELECT ename FROM emp"
- SQL EXECUTE(SQLStmt;aName)
+ SQL EXECUTE(SQLStmt;tNoms)
  While(Not(SQL End selection))
     SQL LOAD RECORD(10)
  End while
 ```
 
-## Example 4 
+## Exemple 4 
 
-In this example, we want to get the ename and job of the emp table for a specific ID (WHERE clause) of the data source. The result will be stored in the *vName* and *vJob* 4D variables. Only the first record is fetched.
+Dans cet exemple, nous récupérons les colonnes ename et job de la table emp pour un ID spécifique (clause WHERE) de la source de données. Le résultat est stocké dans les variables 4D *vNom* and *vJob*. Seul le premier enregistrement est récupéré.
 
 ```4d
  SQLStmt:="SELECT ename, job FROM emp WHERE id = 3"
@@ -99,58 +99,58 @@ In this example, we want to get the ename and job of the emp table for a specifi
  SQL LOAD RECORD
 ```
 
-## Example 5 
+## Exemple 5 
 
-In this example, we want to get the Blob\_Field column of the Test table in the data source. The result will be stored in a BLOB variable whose value is updated each time a record is loaded.
+Dans cet exemple, nous récupérons la colonne Champ\_Blob de la table Test dans la source de données. Le résultat est stocké dans une variable BLOB dont la valeur est mise à jour à chaque chargement d’enregistrement.
 
 ```4d
- var MyBlob : Blob
+ var MonBlob : Blob
  SQL LOGIN
- SQL EXECUTE("SELECT Blob_Field FROM Test";MyBlob)
+ SQL EXECUTE("SELECT Champ_Blob FROM Test";MonBlob)
  While(Not(SQL End selection))
-  //We look through the results
+  //On parcourt le résultat
     SQL LOAD RECORD
-  //The value of MyBlob is updated on each call
+  //La valeur de MonBlob est mise à jour à chaque appel
  End while
 ```
 
-## Example 6 
+## Exemple 6 
 
-You want to retrieve data locally from a remote 4D Server database where it is stored. To do this, you must use intermediary arrays:
+Vous souhaitez récupérer en local des données stockées sur une base 4D Server distante. Pour cela, vous devez passer par des tableaux intermédiaires :
 
 ```4d
-  // Log in to the remote database
+   // Connexion à la base distante
  SQL LOGIN("IP:192.168.18.15:19812";"user";"password";*)
  If(OK=1)
-  // Starting from here all SQL requests are made on the remote database
-    var $LastName_value : Text // 4D variable used in the search statement
-    ARRAY TEXT($a_LastName;0) // Temporary storage of remote values for LastName
-    ARRAY TEXT($a_FirstName;0) // Temporary storage of remote values for FirstName
-    var $UseSQL : Boolean //Choice of means for local storage of data from the remote database
-  // (demo only)
+        //A partir de ce point les requêtes sont adressées à la base distante
+    var $LastName_value : Text // variable 4D utilisée dans la chaine de recherche
+    ARRAY TEXT($a_LastName;0) // Stockage temporaire des valeurs distantes de LastName
+    ARRAY TEXT($a_FirstName;0) // Stockage temporaire des valeurs distantes de FirstName
+    var $UseSQL : Boolean //Choix du moyen de stocker en local
+        // les données de la base distante (démonstration uniquement)
  
-    $LastName_value:="Smith" // Initialization of 4D variable
+     $LastName_value:="Smith"  // Initialisation de la variable 4D
  
-  // Associate the 4D $LastName_value variable with the first "?" in the SQL request
+        // Associer la variable 4D $LastName_value avec le premier "?" dans la requête SQL
     SQL SET PARAMETER($LastName_value;SQL param in)
  
-  // From the remote PERSONS table, retrieve the values of the LastName and FirstName fields
-  // where "LastName = Smith" and store them in the $a_LastName and $a_FirstName arrays
+        // Récupérer de la table PERSONS distante les valeurs des champs LastName et FirstName
+        // où "LastName = Smith" et les stocker dans les tableaux $a_LastName et $a_FirstName
     SQL EXECUTE("SELECT LastName, FirstName FROM PERSONS WHERE LastName = ?";$a_LastName;$a_FirstName)
-    If(Not(SQL End selection)) // If at least one record is found
+    If(Not(SQL End selection))  // si au moins un enregistrement est trouvé
  
-       SQL LOAD RECORD(SQL all records) // Load all the records
+       SQL LOAD RECORD(SQL all records)  // Charger tous les enregistrements
  
-       $UseSQL:=True // Chooses the way to integrate the data (demo only)
+       $UseSQL:=True  // Pour choisir la manière d'intégrer les données (démonstration uniquement)
  
-       If($UseSQL) // Use SQL requests
-          SQL LOGOUT // Log out from the remote database
-          SQL LOGIN(SQL_INTERNAL;"user";"password") // Log in to the local database
-  // Starting from here all SQL requests are made on the local database
-  // Save the $a_LastName and $a_FirstName arrays in the local PERSONS table
+       If($UseSQL)  // Utilisation de requêtes SQL
+          SQL LOGOUT  // Déconnexion de la base distante
+          SQL LOGIN(SQL_INTERNAL;"user";"password")  // Connexion à la base locale
+              //A partir de ce point les requêtes sont adressées à la base locale
+              // Sauvegarde des tableaux $a_LastName et $a_FirstName dans la table locale PERSONS
           SQL EXECUTE("INSERT INTO PERSONS(LastName, FirstName) VALUES (:$a_LastName, :$a_FirstName);")
  
-       Else // Using 4D commands
+       Else   // Utilisation de commandes 4D
           For($i;1;Size of array($a_LastName))
              CREATE RECORD([PERSONS])
              [PERSONS]LastName:=$a_LastName{$i}
@@ -159,24 +159,24 @@ You want to retrieve data locally from a remote 4D Server database where it is s
           End for
        End if
     End if
-    SQL LOGOUT // Close the connection
+    SQL LOGOUT  // Fermeture de la connexion
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 820 |
+| Numéro de commande | 820 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

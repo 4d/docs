@@ -5,31 +5,31 @@ slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*laTable* ;} *ensemble* )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Current record's table, or Default table, if omitted |
-| set | Text | &#8594;  | Name of the set to which to add the current record |
+| laTable | Table | &#8594;  | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom de l'ensemble auquel ajouter l'enregistrement courant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.ADD TO SET.Summary-->ADD TO SET adds the current record of *aTable* to *set*.<!-- END REF--> The set must already exist; if it does not, an error occurs. If a current record does not exist for *aTable*, ADD TO SET has no effect.
+<!--REF #_command_.ADD TO SET.Summary-->**ADD TO SET** ajoute l'enregistrement courant de *laTable* à *ensemble*.<!-- END REF--> L'ensemble doit avoir déjà été créé ; si *ensemble* n'existe pas, une erreur est retournée. S'il n'y a pas d'enregistrement courant pour *laTable*, **ADD TO SET** ne fait rien.
 
-## See also 
+## Voir aussi 
 
 [REMOVE FROM SET](remove-from-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 119 |
+| Numéro de commande | 119 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

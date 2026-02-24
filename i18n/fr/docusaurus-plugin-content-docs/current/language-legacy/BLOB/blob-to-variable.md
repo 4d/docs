@@ -5,63 +5,63 @@ slug: /commands/blob-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *blob* : Blob ; *variable* : Variable {; *offset* : Integer} )<!-- END REF-->
+<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *blob* ; *variable* {; *offset*} )<!-- END REF-->
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB containing 4D variables |
-| variable | Variable | &#8592; | Variable to write with BLOB contents |
-| offset | Integer | &#8596;  | Position of variable within BLOB |
-| ||| Position of following variable within BLOB |
+| blob | Blob | &#8594;  | BLOB contenant une ou plusieurs variable(s) 4D |
+| variable | Variable | &#8592; | Variable à écrire avec le contenu de BLOB |
+| offset | Integer | &#8596;  | Position de la variable dans BLOB |
+|||| Position de la variable suivante dans BLOB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Modified|
-|6|Created|
+|16 R4|Modifié|
+|14|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB TO VARIABLE.Summary-->The BLOB TO VARIABLE command rewrites the variable *variable* with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset*.<!-- END REF-->
+<!--REF #_command_.BLOB TO VARIABLE.Summary-->**BLOB TO VARIABLE** réécrit la variable *variable* avec les données stockées dans le BLOB *blob* à l'offset d'octet (à partir de zéro) spécifié par *offset*.<!-- END REF-->
 
-The BLOB data must be consistent with the destination variable. Typically, you will use BLOBs that you previously filled out using the command [VARIABLE TO BLOB](variable-to-blob.md).
+Les données dans le BLOB doivent être compatibles avec la variable de destination : vous utiliserez généralement des BLOBs que vous avez précédemment remplis à l'aide de [VARIABLE TO BLOB](variable-to-blob.md).
 
-If you do not specify the optional *offset* parameter, the variable data is read starting from the beginning of the BLOB. If you deal with a BLOB in which several variables have been stored, you must pass the *offset* parameter and, in addition, you must pass a numeric variable. Before the call, set this numeric variable to the appropriate offset. After the call, that same numeric variable returns the offset of the next variable stored within the BLOB.
+Si vous ne spécifiez pas le paramètre *offset*, les données de la variable sont lues à partir du début du BLOB. Si le BLOB contient plusieurs variables, vous devez passer le paramètre *offset* ainsi qu'une variable numérique. Avant d'appeler la commande, définissez cette variable numérique avec l'offset correspondant. Après l'appel, la même variable numérique retourne l'offset de la variable suivante stockée dans le BLOB.
 
-**Note:** **BLOB TO VARIABLE** supports object and collection variables. For more information, refer to the [VARIABLE TO BLOB](variable-to-blob.md) command.
+**Note:** **BLOB TO VARIABLE** prend en charge les variables objet de type *C\_OBJECT* et les variables collection de type *C\_COLLECTION*. Pour plus d'informations, reportez-vous à la commande [VARIABLE TO BLOB](variable-to-blob.md).
 
-After the call, if the variable has been successfully rewritten, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, if there was not enough memory.
+La variable OK prend la valeur 1 si l'opération s'est correctement déroulée. Si l'opération n'a pas pu être effectuée, par exemple à cause d'un manque de mémoire, la variable OK prend la valeur 0.
 
-**Note regarding Platform Independence:** BLOB TO VARIABLE and [VARIABLE TO BLOB](variable-to-blob.md) use a 4D internal format for handling variables stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms while using these two commands. In other words, a BLOB created on Windows using either of these commands can be reused on Macintosh, and vice-versa.
+**Note sur l'indépendance de plate-forme :** **BLOB TO VARIABLE** et [VARIABLE TO BLOB](variable-to-blob.md) utilisent un format interne à 4D pour gérer les variables stockées dans les BLOBs. Vous n'avez donc pas besoin de vous préoccuper de la conversion des octets ("byte swapping") entre les différentes plates-formes lors de l'utilisation de ces deux commandes. Un BLOB créé sous Windows à l'aide de ces deux commandes peut être réutilisé sans la moindre manipulation sous Mac OS et vice-versa.
 
-## Example 
+## Exemple 
 
-See the examples for the [VARIABLE TO BLOB](variable-to-blob.md) command.
+Référez-vous aux exemples de [VARIABLE TO BLOB](variable-to-blob.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK variable is set to 1 if the variable has been successfully rewritten, otherwise it is set to 0.
+La variable OK prend la valeur 1 si la variable a été correctement réécrite, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [VARIABLE TO BLOB](variable-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 533 |
+| Numéro de commande | 533 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

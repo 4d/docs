@@ -5,40 +5,40 @@ slug: /commands/exp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Exp.Syntax-->**Exp** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number to evaluate |
-| Function result | Real | &#8592; | Natural log base by the power of number |
+| nombre | Real | &#8594;  | Nombre à évaluer |
+| Résultat | Real | &#8592; | Exponentielle de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Exp.Summary-->Exp raises the natural log base (e = 2.71828...) by the power of *number*.<!-- END REF--> Exp is the inverse function of [Log](log.md).
+<!--REF #_command_.Exp.Summary-->**Exp** retourne l'exponentielle (e=2,71828...) de *nombre*.<!-- END REF-->est la fonction inverse de [Log](log.md). 
 
-**Note:** 4D provides the predefined constant *e number* (2.71828...).
+**Note :** La fonction exponentielle, qui au nombre réel x fait correspondre le nombre réel y, est notée y = ex. 4D fournit la constante prédéfinie e number (2,71828...).
 
-## Example 
+## Exemple 
 
-The following example assigns the exponential of 1 to *vrE* (the log of *vrE* is 1):
+L'exemple suivant assigne l'exponentielle de 1 à *vrE* (le logarithme de *vrE* est 1) :
 
 ```4d
- vrE:=Exp(1) // vrE gets 2.17828...
+ vrE:=Exp(1) // vrE vaut e (e = 2,71828...)
 ```
 
-## See also 
+## Voir aussi 
 
 [Log](log.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 21 |
+| Numéro de commande | 21 |
 | Thread safe | yes |
 
 

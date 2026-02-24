@@ -5,66 +5,65 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ({ * })<br/>**PAGE BREAK** ({ > })<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Cancel printing job started with Print form |
-| > | > | &#8594;  | Force one printing job |
+| * &#124; > |Operator| &#8594;  | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Modified|
-|<6|Created|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PAGE BREAK.Summary-->**PAGE BREAK** triggers the printing of the data that has been sent to the printer and ejects the page.<!-- END REF--> **PAGE BREAK** is used with [Print form](./commands/print-form) (in the context of the On Printing Detail form event) to force page breaks and to print the last page created in memory. Do not use **PAGE BREAK** with the [PRINT SELECTION](print-selection.md) command. Instead, use [Subtotal](subtotal.md) or [BREAK LEVEL](break-level.md) with the optional parameter to generate page breaks.
+<!--REF #_command_.PAGE BREAK.Summary-->La commande **PAGE BREAK** déclenche l'impression des données envoyées à l'imprimante et provoque un saut de page.<!-- END REF--> **PAGE BREAK** s'utilise conjointement avec [Print form](../commands/print-form.md) (dans le cadre de l'événement formulaire On Printing Detail) pour forcer des sauts de page et imprimer la dernière page créée en mémoire.   
+N'appelez pas **PAGE BREAK** avec la commande [PRINT SELECTION](print-selection.md) : dans ce cas, il est préférable d'utiliser les routines [Subtotal](subtotal.md) ou [BREAK LEVEL](break-level.md) avec leur paramètre optionnel pour générer des sauts de pages.
 
-The *\** and *\>* parameters are both optional.
+Les paramètres *\** et *\>* sont optionnels.
 
-The *\** parameter allows you to cancel a print job started with the [Print form](./commands/print-form) command. Executing this command immediately stops the print job in progress.
+Le paramètre \* vous permet d'annuler une impression lancée avec la commande [Print form](../commands/print-form.md). L'exécution de cette instruction stoppe immédiatement l'impression en cours. 
 
-**Note:** Under Windows, this mechanism can be disrupted by the spooling properties of the print server. If the printer is configured to start printing immediately, cancelling will not be effective. For the **PAGE BREAK**(\*) command to operate correctly, it is preferable to choose the "Start printing after last page is spooled" property for the printer. 
+**Note :** Sous Windows, ce mécanisme peut être perturbé par les propriétés de "spouling" du serveur d'impression. Si l'imprimante est paramétrée de manière à lancer les impressions directement, l'annulation ne sera pas effective. Pour que l'instruction **PAGE BREAK**(\*) fonctionne correctement, il est préférable d'affecter la propriété "Commencer l'impression une fois la dernière page spoulée" à l'imprimante. 
 
-The *\>* parameter modifies the way in which the **PAGE BREAK** command behaves. This syntax has two effects:
+Le paramètre *\>* modifie le fonctionnement de la commande **PAGE BREAK**. Cette syntaxe provoque deux effets :
 
-* It holds the print job open until the **PAGE BREAK** command is executed again without a parameter.
-* It gives priority to the print job. No other printing can take place until the print job is finished.  
-The second option is particularly useful when used with a spooled print job. The > parameter guarantees that the print job will be spooled to one file. This will reduce printing time.
+* Elle reporte l'impression jusqu'à ce que l'instruction **PAGE BREAK** sans paramètre soit de nouveau exécutée.
+* Elle rend l'impression prioritaire. Aucune autre impression ne pourra s'intercaler tant que celle en cours ne sera pas terminée.  
+Cette seconde option est particulièrement intéressante lorsqu'elle est utilisée dans le cadre d'impressions en files d'attente. Le paramètre > garantit que l'impression sera réalisée à partir d'un seul fichier. Cela permet de réduire le temps d'impression.
 
-**Note:** When screen printing, if the user clicks on Cancel in the print preview dialog box, the **PAGE BREAK** command sets the system variable OK to 0.
+**Note :** Lors d'une impression avec aperçu, si l'utilisateur clique sur le bouton d'annulation dans la boîte de dialogue de prévisualisation, la commande **PAGE BREAK** met la variable système OK à 0.
 
-## Example 1 
+## Exemple 1 
 
-See example for the [Print form](./commands/print-form) command.
+Reportez-vous à l'exemple de la commande [Print form](../commands/print-form.md).
 
-## Example 2 
+## Exemple 2 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
+Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-## See also 
+## Voir aussi 
 
 [CANCEL](cancel.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 6 |
+| Numéro de commande | 6 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

@@ -5,85 +5,87 @@ slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( {* ;} *objet* ; *typeTab* ; *ptrTab* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| arrType | Integer | &#8594;  | Type of array |
-| arrPtr | Pointer | &#8594;  | Array to associate with property |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| typeTab | Integer | &#8594;  | Type de tableau |
+| ptrTab | Pointer | &#8594;  | Tableau à associer à la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|15 R4|Modified|
-|14|Created|
+|16|Modifié|
+|15 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX SET ARRAY** command associates an *arrType* array with the list box or list box column designated by the *object* and *\** parameters.
+La commande **LISTBOX SET ARRAY** vous permet d’associer un tableau de type *typeTab* à la list box ou à la colonne de list box désignée par les paramètres *objet* et *\**.
 
-**Note:** Arrays of styles, colors, background colors or row controls can also be associated with array type list boxes using the Property list in the Design mode. 
+**Note :** Des tableaux de style, de couleur, de couleur de fond ou de contrôle des lignes peuvent également être associés aux list box de type tableau via la Liste des propriétés en mode Développement.
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box.
 
-In *arrType*, pass the type of array to associate with the list box or column. You can use one of the following constants, available in the "*List Box*" theme:
+Passez dans *typeTab* le type de tableau à associer à la list box ou à la colonne. Vous pouvez utiliser une des constantes suivantes du thème "*List box*" :
 
-| Constant                  | Type    | Value |
-| ------------------------- | ------- | ----- |
-| lk background color array | Integer | 1     |
-| lk control array          | Integer | 3     |
-| lk font color array       | Integer | 0     |
-| lk row height array       | Integer | 4     |
-| lk style array            | Integer | 2     |
+| Constante                 | Type        | Valeur | Comment                       |
+| ------------------------- | ----------- | ------ | ----------------------------- |
+| lk background color array | Entier long | 1      |                               |
+| lk control array          | Entier long | 3      |                               |
+| lk font color array       | Entier long | 0      |                               |
+| lk row height array       | Entier long | 4      | (Licence 4D View Pro requise) |
+| lk style array            | Entier long | 2      |                               |
 
-In the *arrPtr* parameter, you pass a pointer to the array to use to support the property type.
+Passez dans le paramètre *ptrTab* un pointeur vers le tableau à utiliser pour prendre en charge le type de propriété.
 
-## Example 1 
+## Exemple 1 
 
-You want to reuse the font color array of the 4th column for the 10th column:
+Vous souhaitez réutiliser le tableau de couleurs de police de la colonne 4 pour la colonne 10 :
 
 ```4d
-  // retrieve a pointer to the array for column 4
+     // récupérer un pointeur vers le tableau de la colonne 4
  $Pointer:=LISTBOX Get array(*;"Col4";lk font color array)
-  // check that it exists
+     // vérification qu’il existe
  If(Not(Nil($Pointer)))
-  //transfer to column 10
-    LISTBOX SET ARRAY(*;"Col10";lk font color array;$Pointer)
+           //report sur la colonne 10
+       LISTBOX SET ARRAY(*;"Col10";lk font color array;$Pointer)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to set a row height array for a list box:
+Vous voulez associer un tableau de hauteurs de ligne à une list box :
 
 ```4d
  LISTBOX SET ARRAY(*;"LB";lk row height array;->RowHeightArray)
 ```
 
-## See also 
+**Note** : La propriété de list box **Tableau hauteurs lignes** nécessite la licence 4D View Pro. Pour plus d'informations, veuillez vous reporter à la section *4D View Pro*.
+
+## Voir aussi 
 
 [LISTBOX Get array](listbox-get-array.md)  
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1279 |
+| Numéro de commande | 1279 |
 | Thread safe | no |
 
 

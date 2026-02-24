@@ -5,79 +5,79 @@ slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *refElément* {; *nomElémentEnf* {; *valeurElémentEnf*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| childElemName | Text | &#8592; | Name of child XML element |
-| childElemValue | Text | &#8592; | Value of child XML element |
-| Function result | Text | &#8592; | Child XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElémentEnf | Text | &#8592; | Nom de l'élément XML enfant |
+| valeurElémentEnf | Text | &#8592; | Valeur de l'élément XML enfant |
+| Résultat | Text | &#8592; | Référence de l’élément XML enfant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.2|Modified|
-|<6|Created|
+|2004.2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get first child XML element.Summary-->The DOM Get first child XML element command returns a reference to the first “child” of the XML element passed in *elementRef*.<!-- END REF--> This reference can be used with other XML parsing commands.
+<!--REF #_command_.DOM Get first child XML element.Summary-->La commande **DOM Get first child XML element** retourne une référence XML vers le premier “enfant” de l’élément XML passé en référence dans *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
-The *childElemName* and *childElemValue* parameters, if they are passed, receive respectively the name and the value of the child element. 
+Les paramètres *nomElémentEnf* et *valeurElémentEnf*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément enfant. 
 
-![](../assets/en/commands/pict39972.en.png)
+![](../assets/en/commands/pict39972.fr.png)
 
-## Example 1 
+## Exemple 1 
 
-Retrieval of the reference of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
-
-```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- 
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
-```
-
-## Example 2 
-
-Retrieval of the reference, name and value of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
+Récupération de la référence du premier élément XML du parent racine. La structure XML (C:\\\\import.xml) est préalablement chargée dans un BLOB : 
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var $childName;$childValue : Text
+ var maVarBlob : Blob
+ var $ref_XML_Parent;$ref_XML_Enfant : Text
  
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref;$childName;$childValue)
+ DOCUMENT TO BLOB("c:\\import.xml";maVarBlob)
+ $ref_XML_Parent:=DOM Parse XML variable(maVarBlob)
+ $ref_XML_Enfant:=DOM Get first child XML element($ref_XML_Parent)
 ```
 
-## System variables and sets 
+## Exemple 2 
 
-If the command has been correctly executed, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
+Récupération de la référence, du nom et de la valeur du premier élément XML du parent racine. La structure XML (C:\\\\import.xml) est préalablement chargée dans un BLOB : 
 
-## See also 
+```4d
+ var maVarBlob : Blob
+ var $ref_XML_Parent;$ref_XML_Enfant : Text
+ var $enfantNom;$enfantValeur : Text
+ 
+ DOCUMENT TO BLOB("c:\\import.xml";maVarBlob)
+ $ref_XML_Parent:=DOM Parse XML variable(maVarBlob)
+ $ref_XML_Enfant:=DOM Get first child XML element($ref_XML_Parent;$enfantNom;$enfantValeur)
+```
+
+## Variables et ensembles système 
+
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0\. 
+
+## Voir aussi 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 723 |
+| Numéro de commande | 723 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

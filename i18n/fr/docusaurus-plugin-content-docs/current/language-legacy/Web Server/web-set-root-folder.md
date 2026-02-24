@@ -5,59 +5,59 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *rootFolder* : Text )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *dossierRacine* )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| rootFolder | Text | &#8594;  | Pathname of Web server root folder |
+| dossierRacine | Text | &#8594;  | Chemin d'accès du dossier racine du serveur Web |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|13|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Summary-->The **WEB SET ROOT FOLDER** command is used to modify the default root folder where 4D looks for the HTML files requested of the Web server.<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Summary-->La commande **WEB SET ROOT FOLDER** permet de modifier le dossier racine par défaut dans lequel 4D ira rechercher les fichiers HTML demandés au serveur Web.<!-- END REF-->
 
-This command does not take the default root folder that may have been set in the Database Settings into account. For more information about this folder, please refer to the *Connection Security* section.
+Cette commande ne tient pas compte du dossier racine HTML par défaut éventuellement défini dans les Propriétés de la base. Pour plus d'informations sur ce dossier, reportez-vous à la section *Sécurité des connexions*.
 
-The location of the root folder can be expression either in HTML syntax (URL type), or in system syntax (absolute path):
+L'emplacement du dossier racine peut être exprimé soit en syntaxe HTML (type URL), soit en syntaxe système (chemin absolu) :
 
-* HTML syntax: folder names are separated by a slash ("/"), regardless of the platform you use.
-* System syntax: absolute pathname (“long name”) respecting the syntax of the current platform, for example:  
-   * (macOS) Disk:Applications:myserv:folder  
-   * (Windows) C:\\Applications\\myserv\\folder
+* Syntaxe HTML : les noms de dossiers sont séparés par une barre oblique ("/"), quelle que soit la plate-forme que vous utilisez.
+* Syntaxe système : chemin d’accès absolu (“nom long”) respectant la syntaxe de la plate-forme courante, par exemple :  
+   * (macOS) Disque:Applications:monserv:dossier  
+   * (Windows) C:\\Applications\\monserv\\dossier
 
-**Notes:**
+**Notes :**
 
-* The Web server will need to be restarted in order for the new root folder to be taken into account.
-* You can find out the location of the current root folder at any time using the [Get 4D folder](get-4d-folder.md) command.
+* La prise en compte du nouveau dossier racine nécessite le redémarrage du serveur Web.
+* Vous pouvez connaître à tout moment l'emplacement du dossier racine courant à l'aide de la commande [Get 4D folder](get-4d-folder.md).
 
-If you specify an invalid pathname, an OS File manager error is generated. You can intercept the error with an [ON ERR CALL](on-err-call.md) method. If you display an alert or a message from within the error method, it will appear on the browser side.
+Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fichiers du système d'exploitation est générée. Vous pouvez intercepter l'erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Si la méthode affiche une boîte de dialogue d'alerte ou de message, celle-ci apparaît sur l'écran du navigateur. 
 
-## See also 
+## Voir aussi 
 
 [Get 4D folder](get-4d-folder.md)  
 [ON ERR CALL](on-err-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 634 |
+| Numéro de commande | 634 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

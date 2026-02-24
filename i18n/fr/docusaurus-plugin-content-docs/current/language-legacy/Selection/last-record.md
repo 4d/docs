@@ -5,29 +5,29 @@ slug: /commands/last-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to move to the last selected record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle vous voulez aller au dernier enregistrement ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD** makes the last record of the current selection of *aTable* the current record and loads the record from disk.<!-- END REF--> If the current selection is empty or if the current record is already the last one in the selection, **LAST RECORD** has no effect.
+<!--REF #_command_.LAST RECORD.Summary-->**LAST RECORD** désigne le dernier enregistrement de la sélection de *laTable* comme enregistrement courant et le charge en mémoire.<!-- END REF--> Si la sélection est vide ou si l'enregistrement courant est déjà le dernier de la sélection, **LAST RECORD** ne fait rien.
 
-## Example 
+#### Exemple 
 
-The following example makes the last record of the \[People\] table the current record:
+L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] comme enregistrement courant :
 
 ```4d
- LAST RECORD([People])
+ LAST RECORD([Contacts])
 ```
 
-## See also 
+#### Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -35,12 +35,12 @@ The following example makes the last record of the \[People\] table the current 
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 200 |
+| Numéro de commande | 200 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

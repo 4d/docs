@@ -5,54 +5,54 @@ slug: /commands/wa-get-current-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( * ; *object* : Text ) : Text<br/>**WA Get current URL** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get current URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | URL currently loaded in the Web area |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &#8592; | URL actuellement chargé dans la zone Web |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Get current URL.Summary-->The WA Get current URL command returns the URL address of the page displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA Get current URL.Summary-->La commande **WA Get current URL** retourne l’adresse URL de la page affichée dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
-If the current URL is not available, the command returns an empty string.
+Si l’URL courant n’est pas disponible, la commande retourne une chaîne vide.
 
-If the Web page is completely loaded, the value returned by the function is the same as that of the "URL" variable associated with the Web area. If the page is in the process of being loaded, the two values will be different: the function returns the completely loaded URL and the variable contains the URL in the process of being loaded.
+Si la page Web est entièrement chargée, la valeur retournée par la fonction est identique à celle de la variable "URL" associée à la zone Web. Si la page est en cours de chargement, les deux valeurs seront différentes : la fonction retourne l’URL entièrement chargé et la variable contient l’URL en cours de chargement.
 
-## Example 
+## Exemple 
 
-The page displayed is the URL "www.apple.com" and the "www.4d.com" page is in the process of being loaded:
+La page affichée est l’URL "www.apple.com" et la page "www.4d.com" est en cours de chargement : 
 
 ```4d
- $url:=WA Get current URL(MyWArea) //returns "http://www.apple.com"
-  //The associated URL variable contains "http://www.4d.com"
+ $url:=WA Get current URL(MaZoneW) //retourne "http://www.apple.com"
+  //La variable URL associée contient "http://www.4d.com"
 ```
 
-## See also 
+## Voir aussi 
 
 [WA OPEN URL](wa-open-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1025 |
+| Numéro de commande | 1025 |
 | Thread safe | no |
 
 

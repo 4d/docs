@@ -9,48 +9,48 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL Get current dictionary.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | ID of dictionary used for spell check |
+| Résultat | Integer | &#8592; | ID du dictionnaire utilisé pour la correction orthographique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL Get current dictionary.Summary-->The **SPELL Get current dictionary** command returns the ID number of the dictionary being used.<!-- END REF-->
+<!--REF #_command_.SPELL Get current dictionary.Summary-->La commande **SPELL Get current dictionary** retourne le numéro d’ID du dictionnaire en cours d’utilisation.<!-- END REF--> 
 
-## Example 
+## Exemple 
 
-We want to display the language of the current dictionary: 
+On souhaite afficher la langue du dictionnaire courant : 
 
 ```4d
-  // List of loaded dictionaries
- SPELL GET DICTIONARY LIST($IDs_al;$Codes_at;$Names_at)
+  // Liste des dictionnaires chargés
+ SPELL GET DICTIONARY LIST($IDs_al;$Codes_at;$Noms_at)
  $curLangCode:=SPELL Get current dictionary
- $countryName:=$Names_at{Find in array($IDs_al;$curLangCode)}
-  // Display message
- ALERT("Current dictionary: "+$countryName) // Spanish
+ $countryName:=$Noms_at{Find in array($IDs_al;$curLangCode)}
+  // Affichage du message
+ ALERT("Dictionnaire courant : "+$countryName) // Espagnol
 ```
 
-## See also 
+## Voir aussi 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1205 |
+| Numéro de commande | 1205 |
 | Thread safe | no |
 
 

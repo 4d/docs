@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Get assert enabled.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True = assertions are enabled<br/>False = assertions are disabled |
+| Résultat | Boolean | &#8592; | Vrai = les assertions sont activées, Faux = les assertions sont inactivées |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get assert enabled.Summary-->The **Get assert enabled** command returns True or False according to whether or not assertions are enabled in the current process.<!-- END REF--> For more information about assertions, please refer to the description of the [ASSERT](assert.md) command. 
+<!--REF #_command_.Get assert enabled.Summary-->La commande **Get assert enabled** retourne Vrai ou Faux suivant que les assertions sont actives ou non dans le process courant.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](assert.md). 
 
-By default, assertions are enabled but they may have been disabled using the [SET ASSERT ENABLED](set-assert-enabled.md) command. 
+Par défaut, les assertions sont actives mais elles peuvent avoir été désactivées à l’aide de la commande [SET ASSERT ENABLED](set-assert-enabled.md). 
 
-## See also 
+## Voir aussi 
 
 [ASSERT](assert.md)  
 [Asserted](asserted.md)  
 [SET ASSERT ENABLED](set-assert-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1130 |
+| Numéro de commande | 1130 |
 | Thread safe | yes |
 
 

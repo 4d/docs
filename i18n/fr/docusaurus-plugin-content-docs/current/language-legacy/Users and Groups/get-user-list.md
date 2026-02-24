@@ -5,55 +5,55 @@ slug: /commands/get-user-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *userNames* : Text array ; *userNumbers* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUtil* ; *réfUtil* )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userNames | Text array | &#8592; | User names as they appear in the Password editor window |
-| userNumbers | Integer array | &#8592; | Corresponding unique user ID numbers |
+| nomsUtil | Text array | &#8592; | Noms des utilisateurs tels qu'ils apparaissent dans l'éditeur de Mots de passe |
+| réfUtil | Integer array | &#8592; | Numéros de référence uniques pour chaque utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET USER LIST.Summary-->GET USER LIST populates the arrays *userNames* and *userNumbers* with the names and unique ID numbers of the users as they appear in the Passwords window.<!-- END REF-->
+<!--REF #_command_.GET USER LIST.Summary-->La commande **GET USER LIST** remplit les tableaux *nomsUtil* et *réfsUtil* avec les noms et les numéros de référence uniques des utilisateurs tels qu'ils apparaissent dans la fenêtre des Mots de passe de 4D.<!-- END REF-->
 
-The array *userNames* is filled with the user names displayed in the Passwords window, including users whose accounts are disabled (user names displayed in green in the Passwords window).
+Le tableau *nomsUtil* est rempli avec les noms des utilisateurs, y compris ceux dont le compte est supprimé (les utilisateurs dont le nom apparaît en vert dans la fenêtre des mots de passe).
 
-**Note:** Use the [Is user deleted](is-user-deleted.md) command to detect deleted users.
+**Note :** Utilisez la commande [Is user deleted](is-user-deleted.md) pour savoir si un compte utilisateur est supprimé.
 
-The array *userNumbers*, synchronized with *userNames*, is filled with the corresponding unique user ID numbers. 
+Le tableau *réfsUtil*, synchronisé avec *nomsUtil*, est rempli avec les numéros de référence uniques des utilisateurs. 
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
+**Note concernant les bases binaires :** Les valeurs des références des groupes et utilisateurs dépendent de la personne qui les crée (Super utilisateur, Administrateur ou propriétaire du goupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling GET USER LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER LIST** ou si le système des Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 609 |
+| Numéro de commande | 609 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

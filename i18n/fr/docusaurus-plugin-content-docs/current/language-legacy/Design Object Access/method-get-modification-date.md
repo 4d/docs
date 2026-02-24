@@ -5,73 +5,73 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* : Text, Text array ; *modDate* : Date, Date array ; *modTime* : Time, Integer array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *chemin* ; *dateMod* ; *heureMod* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
-| modDate | Date, Date array | &#8592; | Method modification date(s) |
-| modTime | Time, Integer array | &#8592; | Method modification time(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| dateMod | Date, Date array | &#8592; | Date(s) de modification de méthode(s) |
+| heureMod | Time, Integer array | &#8592; | Heure(s) de modification de méthode(s) |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->The **METHOD GET MODIFICATION DATE** command returns, in the *modDate* and *modTime* parameters, the dates and times of the last modification of the method(s) designated by the *path* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->La commande **METHOD GET MODIFICATION DATE** retourne dans les paramètres *dateMod* et *heureMod* les dates et heures de dernière modification de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF--> 
 
-You can use two types of syntaxes, based either on arrays or variables:  
+Vous pouvez utiliser deux types de syntaxes, basées soit sur des tableaux, soit sur des variables :  
 
 ```4d
- var tVpath : Text // variables
+ var vTchemin : Text // variables
  var vDate : Date
- var vTime : Time
- METHOD GET MODIFICATION DATE(tVpath;vDate;vTime) // date and time of a single method
+ var vHeure : Time
+ METHOD GET MODIFICATION DATE(vTchemin;vDate;vHeure) // date et heure d’une seule méthode
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // arrays
- ARRAY DATE(arrDates;0)
- ARRAY LONGINT(arrTimes;0)
- METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes) // dates and times of several methods
+ ARRAY TEXT(tabChemins;0) // tableaux
+ ARRAY DATE(tabDates;0)
+ ARRAY LONGINT(tabHeures;0)
+ METHOD GET MODIFICATION DATE(tabChemins;tabDates;tabHeures) // dates et heures de plusieurs méthodes
 ```
 
-You cannot mix the two syntaxes. 
+Il n’est pas possible de mixer les deux syntaxes. 
 
-If the command is executed from a component, it applies by default to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
+Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte. 
 
-## Example 1 
+## Exemple 1 
 
-You want to find out modification dates and times for several methods:
+Vous souhaitez connaître les dates et heures de modification de plusieurs méthodes :
 
 ```4d
- ARRAY TEXT(arrPaths;0)
- APPEND TO ARRAY(arrPaths;"MyMethod1")
- APPEND TO ARRAY(arrPaths;"MyMethod2")
+ ARRAY TEXT(tabChemins;0)
+ APPEND TO ARRAY(tabChemins;"MaMethode1")
+ APPEND TO ARRAY(tabChemins;"MaMethode2")
  ...
- ARRAY DATE(arrDates;0)
- ARRAY LONGINT(arrTimes;0)
- METHOD GET MODIFICATION DATE(arrPaths;arrDates;arrTimes)
+ ARRAY DATE(tabDates;0)
+ ARRAY LONGINT(tabHeures;0)
+ METHOD GET MODIFICATION DATE(tabChemins;tabDates;tabHeures)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to get modification dates for methods in a module that are prefixed with "Web\_". You cannot use the "@" symbol in a path; however, you can write:
+Vous souhaitez obtenir les dates de modification des méthodes d'un module, préfixées "Web\_". Il n’est pas possible d’utiliser "@" dans le chemin, vous pouvez cependant écrire :
 
 ```4d
- ARRAY TEXT($_webMethod;0)
+ ARRAY TEXT($_webMethod;0)      
  METHOD GET NAMES($_webMethod;"Web_@")
  ARRAY DATE($_date;0)
  ARRAY LONGINT($_time;0)
@@ -81,11 +81,11 @@ You want to get modification dates for methods in a module that are prefixed wit
   
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1170 |
+| Numéro de commande | 1170 |
 | Thread safe | no |
 
 

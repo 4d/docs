@@ -5,46 +5,46 @@ slug: /commands/listbox-get-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX GET GRID** ( *object* : Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( {* ;} *objet* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| horizontal | Boolean | &#8592; | True = shown, False = hidden |
-| vertical | Boolean | &#8592; | True = shown, False = hidden |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| horizontal | Boolean | &#8592; | Vrai = affichée, Faux = cachée |
+| vertical | Boolean | &#8592; | Vrai = affichée, Faux = cachée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET GRID.Summary-->The **LISTBOX GET GRID** command returns the shown/hidden status of the horizontal and/or vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID.Summary-->La commande **LISTBOX GET GRID** retourne le statut affiché/masqué des lignes horizontales et/ou verticales composant la grille de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In *horizontal* and *vertical*, the command returns the value **True** or **False** depending on whether the corresponding lines are shown (True) or hidden (False). By default, the grid is shown. 
+La commande retourne dans les paramètres *horizontal* et *vertical* la valeur **Vrai** ou **Faux** selon que si les lignes correspondantes sont affichées (Vrai) ou cachées (Faux). Par défaut, la grille est affichée. 
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET GRID](listbox-set-grid.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1199 |
+| Numéro de commande | 1199 |
 | Thread safe | no |
 
 

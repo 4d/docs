@@ -5,52 +5,52 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *laTable* {; *formule*} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records |
-| queryFormula | Boolean | &#8594;  | Query formula |
+| laTable | Table | &#8594;  | Table dans laquelle effectuer la recherche parmi la sélection courante |
+| formule | Boolean | &#8594;  | Formule de recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->La commande **QUERY SELECTION BY FORMULA** vous permet de rechercher des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
-**QUERY SELECTION BY FORMULA** performs the same actions as [QUERY BY FORMULA](query-by-formula.md). The difference between the two commands is the scope of the query:
+**QUERY SELECTION BY FORMULA** fonctionne de la même manière que [QUERY BY FORMULA](query-by-formula.md). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
 
-* [QUERY BY FORMULA](query-by-formula.md) looks for records among all the records in the table.
-* **QUERY SELECTION BY FORMULA** looks for records among the records currently selected in the table.
+* [QUERY BY FORMULA](query-by-formula.md) effectue sa recherche parmi la totalité des enregistrements de la table.
+* **QUERY SELECTION BY FORMULA** effectue sa recherche uniquement parmi les enregistrements de la sélection courante.
 
-For more information, see the description of the [QUERY BY FORMULA](query-by-formula.md) command.
+Pour plus d'informations, reportez-vous à la description de la commande [QUERY BY FORMULA](query-by-formula.md).
 
-## See also 
+## Voir aussi 
 
 [QUERY](query.md)  
 [QUERY BY FORMULA](query-by-formula.md)  
 [QUERY SELECTION](query-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 207 |
+| Numéro de commande | 207 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

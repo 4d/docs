@@ -5,60 +5,60 @@ slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *title* : Text ; *text* : Text {; *duration* : Integer} )<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titre* ; *contenu* {; *durée*} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| title | Text | &#8594;  | Notification title |
-| text | Text | &#8594;  | Notification text |
-| duration | Integer | &#8594;  | Display duration in seconds |
+| titre | Text | &#8594;  | Titre de la notification |
+| contenu | Text | &#8594;  | Texte de la notification |
+| durée | Integer | &#8594;  | Délai d’affichage en secondes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|2004|Created|
+|14|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Summary-->The DISPLAY NOTIFICATION command displays a notification message to the user.<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Summary-->La commande **DISPLAY NOTIFICATION** provoque l’affichage d’un message de notification à destination de l'utilisateur.<!-- END REF--> 
 
-Usually this kind of message is used by the OS or an application to inform the user of an external event (network disconnection, availability of an upgrade, etc.).
+Ce type de message est généralement utilisé par le système ou les applications pour informer l’utilisateur d’un événement (déconnexion réseau, disponibilité de mises à jour, etc.)
 
-* Under Windows, the message appears in the notification area of the taskbar:  
-![](../assets/en/commands/pict1206085.en.png)
-* Under macOS (version 10.8 minimum), the message appears in a small sliding window in the top right corner of the screen.  
-![](../assets/en/commands/pict1206031.en.png)  
-Note that in compliance with Apple specifications, the notification is only displayed when the application is not in the foreground. However, the message still appears in the "notification center" list.
+* Sous Windows, le message apparaît dans la zone de notification de la barre des tâches :  
+![](../assets/en/commands/pict1206085.fr.png)
+* Sous macOS (version 10.8 minimum), le message apparaît dans une petite fenêtre glissant dans l’angle supérieur droit de l’écran.  
+![](../assets/en/commands/pict1206031.fr.png)  
+A noter que, conformément aux spécifications d’Apple, la notification n’est affichée que si l’application n’est pas au premier plan. Le message apparaît cependant toujours dans la liste du "notification center".
 
-In *title* and *text*, pass the title and the text of the message to display (in our example, the title is “4D Export”). You can enter up to 255 characters. 
+Passez dans les paramètres *titre* et *contenu* le titre et le texte du message à afficher (dans notre exemple, le titre est "Exportation 4D"). Vous pouvez saisir jusqu’à 255 caractères. 
 
-Under Windows, the message window remains displayed as long as no activity has been detected on the machine, or until the user clicks on the close box. The optional *duration* parameter modifies the default display duration. Note that the display of notifications depends on the system configuration. 
+Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'a été détectée sur la machine, ou jusqu’à ce que l’utilisateur clique sur sa case de fermeture. Le paramètre facultatif *durée* permet de modifier la durée d'affichage par défaut. A noter que l'affichage des notifications dépend des configurations système. 
 
-## Example 
+## Exemple 
 
 ```4d
- DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
+ DISPLAY NOTIFICATION("Exportation 4D";"Les données sont prêtes pour l’exportation")
 ```
 
-## See also 
+## Voir aussi 
 
 [ALERT](alert.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 910 |
+| Numéro de commande | 910 |
 | Thread safe | no |
 
 

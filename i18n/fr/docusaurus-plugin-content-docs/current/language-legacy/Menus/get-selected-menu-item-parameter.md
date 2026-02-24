@@ -9,40 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Get selected menu item parameter.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Custom parameter of the menu item |
+| Résultat | Text | &#8592; | Paramètre personnalisé de la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get selected menu item parameter.Summary-->The **Get selected menu item parameter** command returns the custom character string associated with the selected menu item.<!-- END REF--> This parameter must have been set beforehand using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command.
+<!--REF #_command_.Get selected menu item parameter.Summary-->La commande **Get selected menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu sélectionnée.<!-- END REF--> Ce paramètre doit avoir été préalablement défini à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md).  
+Si aucune ligne de menu n’a été sélectionnée, la commande retourne une chaîne vide "".
 
-If no menu item has been selected, the command returns an empty string "".
-
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1005 |
+| Numéro de commande | 1005 |
 | Thread safe | no |
 
 

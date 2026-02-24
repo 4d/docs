@@ -5,112 +5,115 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *typeDonnées* ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dataType | Text | &#8594;  | Data type |
-| Function result | Integer | &#8592; | Size (in bytes) of data located in the pasteboard or error code |
+| typeDonnées | Text | &#8594;  | Type de données |
+| Résultat | Integer | &#8592; | Taille (en octets) des données présentes dans le conteneur ou code d'erreur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Pasteboard data size.Summary-->The **Pasteboard data size** command checks whether there is any data of the type you passed in *dataType* present in the pasteboard.<!-- END REF--> 
+<!--REF #_command_.Pasteboard data size.Summary-->**Pasteboard data size** vous permet de savoir s'il y a des données du type *typeDonnées* dans le conteneur de données.<!-- END REF--> 
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard. 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-If the pasteboard is empty or does not contain any data of the specified type, the command returns an error -102\. If the pasteboard contains data of the specified type, the command returns the size of this data, expressed in bytes.
+Si le conteneur de données est vide ou ne contient pas de données du type spécifié, la fonction retourne une erreur -102\. Si le conteneur contient des données du type spécifié, la fonction retourne la taille des données exprimée en octets. 
 
-In *dataType*, pass a value specifying the type of data to be checked for. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+Passez dans *typeDonnées* une valeur définissant le type de données à tester. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
-After you have detected that the pasteboard contains data of the type in which you are interested, you can extract that data from the pasteboard using one the following commands:
+Après avoir vérifié que le conteneur contient bien des données du type que vous voulez, vous pouvez les récupérer à l'aide d'une des commandes suivantes :
 
-* If the pasteboard contains text type data, you can obtain that data using the [Get text from pasteboard](get-text-from-pasteboard.md) command, which returns a text value, or the [GET PASTEBOARD DATA](get-pasteboard-data.md) command, which returns the text in a BLOB.
-* If the pasteboard contains picture type data, you can obtain that data using the [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) command, which returns the picture in a picture field or variable, or the [GET PASTEBOARD DATA](get-pasteboard-data.md) command*,* which returns the picture in a BLOB.
-* If the pasteboard contains a file pathname, you can extract it using the [Get file from pasteboard](get-file-from-pasteboard.md) command, which will return the file pathname.
-* For any other data type, use the [GET PASTEBOARD DATA](get-pasteboard-data.md) command, which returns the data in a BLOB.
+* Si le conteneur contient du texte, vous pouvez l'extraire à l'aide de la commande [Get text from pasteboard](get-text-from-pasteboard.md), qui retourne une valeur texte. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne le texte dans un BLOB.
+* Si le conteneur contient une image, vous pouvez l'extraire à l'aide de la commande [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md), qui retourne l'image dans un champ ou une variable. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne l'image dans un BLOB.
+* Si le conteneur contient un chemin d'accès de fichier, vous pouvez l'extraire à l'aide de la commande [Get file from pasteboard](get-file-from-pasteboard.md), qui retourne le chemin d'accès du fichier.
+* Pour tout type de données, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne les données dans un BLOB.
 
-## Example 1 
+## Exemple 1 
 
-The following code tests whether the pasteboard contains a picture and, if so, copies that picture into a 4D variable:
+L'exemple suivant teste si le Presse-papiers contient une image jpeg et, si oui, la copie dans une variable 4D : 
 
 ```4d
- If(Pasteboard data size(Picture data)=1) //Is there a picture in the pasteboard?
-    GET PICTURE FROM PASTEBOARD($vPicVariable) //If so, extract the picture from the pasteboard
+ If(Pasteboard data size("com.4d.private.picture.jfif")>0) // Y a-t-il une image jpeg dans le Presse-papiers ?
+    GET PICTURE FROM PASTEBOARD($vPicVariable) // Si oui, extraire l'image du Presse-papiers
  Else
-    ALERT("There is no picture in the pasteboard.")
+    ALERT("Il n'y a pas d'image dans le Presse-papiers.")
  End if
 ```
 
-## Example 2 
+  
+**Note :** Si vous passez le type générique 'PICT' (ou la constante Picture data) à la commande, elle retournera toujours 1 et non une taille si le Presse-papiers contient une image. 
 
-Usually, applications cut and copy Text or Picture type data into the pasteboard, because most applications recognize these two standard data types. However, an application can append to the pasteboard several instances of the same data in different formats. For example, each time you cut or copy a part of a spreadsheet, the spreadsheet application could append the data under the hypothetical ‘SPSH’ format, as well as in SYLK and TEXT formats. The ‘SPSH’ instance would contain the data formatted using the application’s data structure. The SYLK form would contain the same data, but using the SYLK format recognized by most of the other spreadsheet programs. Finally, the TEXT format would contain the same data, without the extra information included in the SYLK or the hypothetical ‘SPSH’ format. At this point, while writing Cut/Copy/Paste routines between 4D and that hypothetical spreadsheet application, assuming you know the description of the ‘SPSH’ format and that you are ready to parse SYLK data, you could write something like:
+## Exemple 2 
+
+Généralement, après un couper ou un copier, les applications placent des données de type Texte ou Image dans le Presse-papiers, ces deux types de données standard sont reconnus par la plupart des applications. Cependant, une application peut placer dans le Presse-papiers plusieurs copies des mêmes données sous des formats différents. Par exemple, chaque fois que vous copiez ou coupez un tableau, l'application tableur peut placer les données dans un format propriétaire — par exemple, ‘SPSH’ — ou dans les formats SYLK et TEXT. La copie ‘SPSH’ contient les données structurées dans le format interne de l'application. La copie SYLK contient les mêmes données, mais dans le format SYLK, reconnu par la plupart des tableurs. Enfin, la copie TEXT contient les mêmes données, mais sans les informations de formatage supplémentaires présentes dans les formats SYLK ou ‘SPSH’. Donc, lorsque vous écrivez des routines de Couper/Copier/Coller entre 4D et une application tableur, en prenant l'hypothèse que vous connaissez la description du format ‘SPSH’ et que vous pouvez analyser les données SYLK, vous pouvez écrire le code suivant :
 
 ```4d
  Case of
-  // First, check whether the pasteboard contains data from the hypothetical spreadsheet application
+  // D'abord, vérifier si le Presse-papiers contient les données venant du tableur
     :(Pasteboard data size('SPSH')>0)
   // ...
-  // Second, check whether the pasteboard contains Sylk data
+  // Ensuite, vérifier si le Presse-papiers contient des données au format SYLK
     :(Pasteboard data size('SYLK')>0)
   // ...
-  // Finally check whether the pasteboard contains Text data
+  // Enfin, vérifier si le Presse-papiers contient des données au format TEXT
     :(Pasteboard data size('TEXT')>0)
   // ...
  End case
 ```
 
-In other words, you try to extract from the pasteboard the instance of the data that carries most of the original information.
+Autrement dit, vous essayez d'extraire du Presse-papiers la copie des données la plus riche en informations originales.
 
-## Example 3 
+## Exemple 3 
 
-You want to drag some private data from different objects in your form. You can write:
+Vous voulez déplacer des données en format privé entre divers objets de votre formulaire. Vous pouvez écrire :
 
 ```4d
-  //source object
+  //objet source
  If(FORM Event.code=On Begin Drag Over)
     APPEND DATA TO PASTEBOARD("some.private.data";$data)
  End if
 ```
 
 ```4d
-  //target object
+  //objet cible
  If(FORM Event.code=On Drag Over)
     $0:=Choose(Pasteboard data size("some.private.data")>0;0;-1)
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-## See also 
+## Voir aussi 
 
+*Conteneur de données*  
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
-*Pasteboard*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 400 |
+| Numéro de commande | 400 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

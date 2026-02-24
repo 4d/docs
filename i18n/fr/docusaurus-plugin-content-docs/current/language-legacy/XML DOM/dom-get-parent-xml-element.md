@@ -5,54 +5,54 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* : Text {; *parentElemName* : Text {; *parentElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *refElément* {; *nomElémentPar* {; *valeurElémentPar*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| parentElemName | Text | &#8592; | Name of parent XML element |
-| parentElemValue | Text | &#8592; | Value of parent XML element |
-| Function result | Text | &#8592; | Parent XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElémentPar | Text | &#8592; | Nom de l’élément XML parent |
+| valeurElémentPar | Text | &#8592; | Valeur de l’élément XML parent |
+| Résultat | Text | &#8592; | Référence de l’élément XML parent |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.2|Created|
+|2004.2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get parent XML element.Summary-->The DOM Get parent XML element command returns an XML reference to the “parent” of the XML element passed as reference in *elementRef*.<!-- END REF--> This reference may be used with the other XML parsing commands.
+<!--REF #_command_.DOM Get parent XML element.Summary-->La commande **DOM Get parent XML element** retourne une référence XML vers le “parent” de l’élément XML passé en référence dans *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
-The optional *parentElemName* and *parentElemValue* parameters, when passed, receive respectively the name and value of the parent element. 
+Les paramètres *nomElémentPar* et *valeurElémentPar*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément parent. 
 
-When you pass a root element in *elementRef*, the command returns the "#document" reference. The document node is the parent of a root element.   
-If you use this command on a document node, the command returns a null reference ("0000000000000000") and the OK variable is set to 0\. 
+Si vous utilisez cette commande en passant un élément racine dans *refElément*, la commande retourne la référence "#document". Le noeud document est le parent d'un élément racine.   
+Si vous utilisez cette commande sur un noeud document, la commande retourne une référence nulle ("0000000000000000") et la variable OK prend la valeur 0\. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 [DOM Get last child XML element](dom-get-last-child-xml-element.md)  
 [DOM Get root XML element](dom-get-root-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 923 |
+| Numéro de commande | 923 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

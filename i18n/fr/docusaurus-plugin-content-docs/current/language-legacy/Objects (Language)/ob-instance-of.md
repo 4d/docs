@@ -5,71 +5,64 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* : Object ; *class* : Object ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objet* ; *classe* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Object whose class is to be tested |
-| class | Object | &#8594;  | Class to test belongship |
-| Function result | Boolean | &#8592; | True if object belongs to the specified class or a child class, and false otherwise |
+| objet | Object | &#8594;  | Objet dont la classe doit être identifiée |
+| classe | Object | &#8594;  | Classe dont l'appartenance est à identifier |
+| Résultat | Boolean | &#8592; | Vrai si l'objet appartient à la classe ou classe enfant indiquée, sinon faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Instance of.Summary-->The **OB Instance of** command returns true if *object* belongs to *class* or to one of its child classes, and false otherwise.<!-- END REF-->
+<!--REF #_command_.OB Instance of.Summary-->La commande **OB Instance of** retourne vrai si *objet* appartient à *classe* ou à l'une de ses classes enfant.<!-- END REF--> Sinon, elle retourne faux.
 
-If *class* is not a valid Class object, the error -10745 is returned.
+Si *classe* n'est pas un objet de classe valide, l'erreur -10745 est retournée.
 
-## Example 
+## Exemple 
 
-You created the Polygon class:
+Vous avez créé la classe Polygone :
 
 ```4d
-  //Class: Polygon
+  //Classe : Polygone
  Class constructor($width : Integer; $height : Integer)
  This.area:=$width*$height
 ```
 
-Then, in a method, you can write:
+Puis, dans une méthode, vous pouvez saisir :
 
 ```4d
  var $poly : Object
  var $instance : Boolean
- 
- $poly:=cs.Polygon.new(4;3)
- 
- $instance:=OB Instance of($poly;cs.Polygon)
-  // true
- 
- $instance:=OB Instance of($poly;4D.Object)
-  // true 
- 
- $instance:=OB Instance of($poly;cs.Circle)
-  // false
+ $poly:=cs.Polygone.new(4;3)
+ $instance:=OB Instance of($poly;cs.Polygone) // vrai
+ $instance:=OB Instance of($poly;4D.Object) // vrai
+ $instance:=OB Instance of($poly;cs.Circle) // faux
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Class](ob-class.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1731 |
+| Numéro de commande | 1731 |
 | Thread safe | yes |
 
 

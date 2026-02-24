@@ -5,118 +5,118 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomFichier* {; *typeFichier*} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resFilename | Text | &#8594;  | Short or long name of resource file, or Empty string for standard Open File dialog box |
-| fileType | Text | &#8594;  | Mac OS file type (4-character string), or Windows file extension (1- to 3-character string), or All files, if omitted |
-| Function result | Time | &#8592; | Resource file reference number |
+| resNomFichier | Text | &#8594;  | Nom ou chemin d'accès complet du fichier de ressources ou chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
+| typeFichier | Text | &#8594;  | Type de fichier Mac OS (chaîne de 4 caractères), ou extension de fichier Windows (chaîne de 1 à 3 caractères), ou fichier de ressources ("res " / .RES) si omis |
+| Résultat | Time | &#8592; | Numéro de référence du fichier de ressources |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Open resource file.Summary-->The **Open resource file** command opens the resource file whose name or pathname you pass in *resFileName*.<!-- END REF-->
+<!--REF #_command_.Open resource file.Summary-->La commande **Open resource file** ouvre le fichier de ressources dont vous avez passé le nom ou le chemin d'accès complet dans le paramètre *resNomFichier*.<!-- END REF-->
 
-If you pass a file name, the file should be located in the same folder as the structure file of the database. Pass a pathname to open a resource file located in another folder.
+Si vous passez un nom de fichier, celui-ci doit se trouver dans le même dossier/répertoire que le fichier de structure de la base. Pour ouvrir un fichier de ressources se trouvant dans un autre dossier, passez un chemin d'accès complet dans *resNomFichier*.
 
-If you pass an empty string in *resFileName*, the Open File dialog box is presented. You can then select the resource file to open. If you cancel the dialog, no resource file is open; **Open resource file** returns a null DocRef and sets the OK variable to 0.
+Si vous passez une chaîne vide dans *resNomFichier*, la boîte de dialogue standard d'ouverture de fichiers apparaît, permettant à l'utilisateur de sélectionner le fichier à ouvrir. Si l'utilisateur clique sur **Annuler** dans cette boîte de dialogue, aucun fichier de ressources n'est ouvert, **Open resource file** retourne une valeur nulle dans [RefDoc](# "Référence unique de document (valeur de type heure)") et la variable OK prend la valeur 0.
 
-If the resource file is opened correctly, **Open resource file** returns its resource file reference number and sets the OK variable to 1\. If the resource file does not exist, or if the file you try to open is not a resource file, an error is generated.
+Si le fichier de ressources est correctement ouvert, **Open resource file** retourne son numéro de référence de fichier et met la variable OK à 1\. Si le fichier de ressources n'existe pas ou si le fichier de que vous tentez d'ouvrir n'est pas un fichier de ressources, une erreur est générée. 
 
-* On Macintosh, if you use the Open File dialog box, all files are presented by default. To show a particular type of file, specify the file type in the optional *fileType* parameter.
-* On Windows, if you use the Open File dialog box, all files are presented by default. To show a particular type of file, in *fileType*, pass a 1- to 3-character Windows file extension or a Macintosh file type mapped using the *\_o\_MAP FILE TYPES* command.
+* Sous Mac OS, si vous utilisez la boîte de dialogue standard d'ouverture de fichiers, tous les fichiers sont présentés par défaut. Pour ne faire apparaître que les fichiers d'un type particulier, spécifiez-le dans le paramètre optionnel *typeFichier*.
+* Sous Windows, si vous utilisez la boîte de dialogue standard d'ouverture de fichiers, tous les fichiers sont présentés par défaut. Pour ne faire apparaître que les fichiers d'un type particulier, passez dans *typeFichier* une extension de fichier Windows de 1 à 3 caractères ou un type de fichier Macintosh associé à une extension Windows à l'aide de la commande *\_o\_MAP FILE TYPES*.
 
-Remember to call [CLOSE RESOURCE FILE](close-resource-file.md) for the resource file. Note, however, that when you quit the application (or open another database), 4D automatically closes all the resource files you opened using **Open resource file**.
+N'oubliez pas d'appeler finalement [CLOSE RESOURCE FILE](close-resource-file.md) pour le fichier de ressources. Notez cependant que 4D referme automatiquement tous les fichiers de ressources ouverts par l'intermédiaire de **Open resource file** lorsque vous quittez l'application ou ouvrez une autre base de données.
 
-Unlike the [Open document](open-document.md) command, which opens a document with exclusive read-write access by default, **Open resource file** does not prevent you from opening a resource file already open from within the 4D session. For example, if you try to open the same document twice using [Open document](open-document.md), an I/O error will be returned at second attempt. On the other hand, if you try to open a resource file already open from within the 4D session, **Open resource file** will return the resource file reference number to the file already open. Even if you open a resource file several times, you need to call [CLOSE RESOURCE FILE](close-resource-file.md) once in order to close that file. Note that this is permitted if the resource file is open from within the 4D session; if you try open a resource file already opened by another application, you will get an I/O error.
+A la différence de la commande [Open document](open-document.md) qui ouvre par défaut un document avec un accès exclusif en lecture-écriture, **Open resource file** vous permet d'ouvrir un fichier de ressources déjà ouvert dans la session 4D. Par exemple, lorsque vous tentez d'ouvrir deux fois le même document avec [Open document](open-document.md), une erreur d'E/S vous est retournée lors de la seconde opération. En revanche, vous pouvez accéder à un fichier de ressources déjà ouvert lors de la session 4D : **Open resource file** retourne son numéro de référence. Même lorsque vous ouvrez plusieurs fois un fichier de ressources, il vous suffit d'appeler [CLOSE RESOURCE FILE](close-resource-file.md) une seule fois pour refermer ce fichier. Notez que ce fonctionnement n'est valable que lorsque le fichier de ressources est ouvert à l'intérieur de la session 4D. Si vous tentez d'ouvrir un fichier de ressources déjà ouvert par une autre application, une erreur d'E/S vous sera retournée.
 
-**WARNING:**
+**ATTENTION :**
 
-* It is forbidden to access a 4D application resource file as well as a 4D Desktop merged database resource file.
-* Although it is technically possible, you are advised not to use the database structure resource file because your code will not work if the database is compiled and merged with 4D Desktop.  
-However, if you access and intend to programmatically add, delete or modify its resources, be sure to test the environment in which you are running. With 4D Server, this will probably lead to serious issues. For example, if you modify a resource on the server machine (via a database method or a stored procedure), you will definitely affect the built-in 4D Server administration service that distributes resources (transparently) to the workstations. Note that with 4D Client, you do not have direct access to the structure file; it is located on the server machine.
-* For these reasons, if you use resources, store them in your own files.
-* When working with your own resources, do NOT use negative resource IDs; they are reserved for use by the Operating System. Do NOT use resource IDs in the range 0..14,999; this range is reserved for use by 4D. Use the range 15,000..32,767 for your own resources. Remember that once you have opened a resource file, it will be the first file to be searched in the resource files chain. If you store a resource in that file with an ID in the range of system or 4D resources, this resource will be found by commands such as [GET RESOURCE](get-resource.md) and also by internal routines of the 4D application. This may be the result you want to achieve, but if you are not sure, do NOT use these ranges, as they may lead to system errors.
-* Resource files are highly structured files and cannot accept more than 2,700 resources per file. If you work with files containing a large number of resources, it is a good idea to test that number before adding new resources to a file. See the Count resources method listed for the [RESOURCE TYPE LIST](resource-type-list.md) command.
+* Il est interdit d'accéder aux fichiers de ressources des applications 4D et des bases fusionnées avec 4D Desktop.
+* Bien que techniquement possible, l'accès au fichier de ressources de la structure de la base est fortement déconseillé car ce fonctionnement devient caduc lorsque la base est compilée et fusionnée avec 4D Desktop.  
+Si toutefois vous accédez au fichier de ressources de la structure et souhaitez ajouter, supprimer ou modifier des ressources par programmation, pensez à tester l'environnement dans lequel la base s'exécute. Avec 4D Server, cela posera certainement d'épineux problèmes. Si, par exemple, vous modifiez une ressource sur le poste serveur (via une méthode base ou une procédure stockée), vous allez en définitive perturber le système d'administration de 4D Server chargé de distribuer de manière transparente les ressources aux postes clients. Notez qu'avec 4D Client vous n'accédez pas directement au fichier de structure : il est situé sur le poste serveur.
+* Pour toutes ces raisons, si vous exploitez des ressources, vous devez les stocker dans vos propres fichiers.
+* Lorsque vous travaillez avec vos propres ressources, n'utilisez pas de numéros de ressources négatifs, ils sont réservés au Système d'exploitation. N'utilisez pas non plus de numéros situés entre 0 et 14 999, cet intervalle est réservé à 4D. Pour vos propres ressources, utilisez les numéros situés entre 15 000 et 32 767\. Rappelez-vous que dès qu'un fichier de ressources est ouvert, il devient le premier maillon de la chaîne des fichiers de ressources, et c'est dans ce fichier que les ressources seront recherchées en premier lieu. En conséquence, si vous stockez dans ce fichier des ressources dont les numéros appartiennent aux intervalles réservés au Système ou à 4D, ces ressources seront utilisées non seulement par les commandes telles que [GET RESOURCE](get-resource.md) mais également par les routines internes de l'application 4D elle-même. Si vous n'êtes pas absolument certain de ce que vous faites, n'utilisez pas les intervalles réservés, cela peut conduire à des erreurs système.
+* Un fichier de ressources est très structuré et ne peut contenir plus 2 700 ressources. Si vous travaillez avec des fichiers comportant un grand nombre de ressources, il est conseillé de tester ce nombre avant d'ajouter de nouvelles ressources à un fichier (reportez-vous à l'exemple Nombre de ressources dans la description de la commande [RESOURCE TYPE LIST](resource-type-list.md) ).
 
-After you have opened a resource file, you can analyze the contents of the file using the [RESOURCE TYPE LIST](resource-type-list.md) and [RESOURCE LIST](resource-list.md) commands.
+Une fois que vous avez ouvert un fichier de ressources, vous pouvez analyser son contenu à l'aide des commandes [RESOURCE TYPE LIST](resource-type-list.md) et [RESOURCE LIST](resource-list.md).
 
-## Example 1 
+## Exemple 1 
 
-The following example tries to open, on Windows, the resource file “MyPrefs.res” located in the database folder:
-
-```4d
- $vhResFile:=Open resource file("MyPrefs";"res ")
-```
-
-On Macintosh, the example tries to open the file “MyPrefs”.
-
-## Example 2 
-
-The following example tries to open, on Windows. the resource file “MyPrefs.rsr” located in the database folder:
+Dans l'exemple suivant, nous cherchons à ouvrir sous Windows le fichier de ressources "MesPrefs.res" situé dans le dossier de la base :
 
 ```4d
- $vhResFile:=Open resource file("MyPrefs";"rsr")
+ $vhResFile:=Open resource file("MesPrefs";"res ")
 ```
 
-On Macintosh, the example tries to open the file “MyPrefs”.
+Sous Mac OS, l'exemple recherchera le fichier “MesPrefs”.
 
-## Example 3 
+## Exemple 2 
 
-The following example displays the Open file dialog box showing all types of files:
+Cet exemple tente d'ouvrir sous Windows le fichier de ressources "MesPrefs.rsr" situé dans le dossier de la base :
+
+```4d
+ $vhResFile:=Open resource file("MesPrefs";"rsr")
+```
+
+Sous Mac OS, l'exemple recherchera le fichier “MesPrefs”.
+
+## Exemple 3 
+
+L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de fichiers, dans laquelle tous les types de documents sont affichés :
 
 ```4d
  $vhResFile:=Open resource file("")
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following example displays the Open file dialog box showing files created by the  command, using the default file type:
+L'exemple suivant fait apparaître la boîte de dialogue standard d'ouverture de fichiers, dans laquelle seuls les documents créés à l'aide de la fonction  et utilisant le type par défaut sont affichés : 
 
 ```4d
  $vhResFile:=Open resource file("";"res ")
  If(OK=1)
-    ALERT("You just opened "+Document+”.")
+    ALERT("Vous venez d'ouvrir "+Document+”.")
     CLOSE RESOURCE FILE($vhResFile)
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource file is successfully opened, the OK variable is set to 1\. If the resource file could not be opened or if the user clicked Cancel in the Open file dialog box, the OK variable is set to 0 (zero).
+Si le fichier de ressources est correctement ouvert, la variable système OK prend la valeur 1\. Si le fichier de ressources n'a pas pu être ouvert ou si l'utilisateur a cliqué sur le bouton Annuler dans la boîte de dialogue standard d'ouverture de fichiers, la variable OK prend la valeur 0 (zéro).
 
-If the resource file is successfully opened using the Open file dialog box, the Document variable is set to the pathname of the file.
+Si le fichier de ressources est correctement ouvert par l'intermédiaire de la boîte de dialogue standard d'ouverture de fichiers, la variable système Document contient le chemin d'accès au fichier.
 
-## Error management 
+## Gestion des erreurs 
 
-If the resource file could not be opened due to a resource or I/O problem, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème de ressource ou d'E/S, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [CLOSE RESOURCE FILE](close-resource-file.md)  
-*Resources*  
+*Ressources*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 497 |
+| Numéro de commande | 497 |
 | Thread safe | no |
-| Modifies variables | OK, Document, error |
+| Modifie les variables | OK, Document, error |
 
 

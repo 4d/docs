@@ -5,60 +5,60 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* : Text {; *pathType* : Integer} ) : Object<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* {; *typeChemin*} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | Pathname |
-| pathType | Integer | &#8594;  | Type of path syntax: System (default) or Posix |
-| Function result | Object | &#8592; | Object describing the path contents |
+| chemin | Text | &#8594;  | Chemin |
+| typeChemin | Integer | &#8594;  | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
+| Résultat | Object | &#8592; | Objet décrivant le contenu du chemin |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Path to object.Summary-->The **Path to object** command returns an object containing the specific properties of the *path* you passed in parameter.<!-- END REF--> 
+<!--REF #_command_.Path to object.Summary-->La commande **Path to object** retourne un objet contenant les propriétés spécifiques du *chemin* passé en paramètre.<!-- END REF--> 
 
-By default, if you omit the *pathType* parameter, it will be assumed that you passed a system *path*, containing system separators ("\\" on Windows, ":" on macOS). If you passed a Posix *path* containing Posix separators ("/") or want to express the path type, pass one of the following constants in the *pathType* parameter:
+Par défaut, si vous omettez le paramètre *typeChemin*, il sera présumé que vous passez un *chemin* système, contenant des séparateurs systèmes ("\\" sous Windows, ":" sous macOS). Si vous passez un *chemin* Posix contenant des séparateurs Posix ("/") ou si vous souhaitez expressément indiquer le type du chemin, passez une des constantes suivantes dans le paramètre *typeChemin* : 
 
-| Constant       | Type    | Value | Comment                                                                            |
-| -------------- | ------- | ----- | ---------------------------------------------------------------------------------- |
-| Path is POSIX  | Integer | 1     | The path is expressed using the Posix syntax                                       |
-| Path is system | Integer | 0     | (Default) The path is expressed using the current system syntax (Windows or macOS) |
+| Constante      | Type        | Valeur | Comment                                                                            |
+| -------------- | ----------- | ------ | ---------------------------------------------------------------------------------- |
+| Path is POSIX  | Entier long | 1      | Le chemin est exprimé en syntaxe POSIX.                                            |
+| Path is system | Entier long | 0      | (Défaut) Le chemin est exprimé avec la syntaxe système courante (Windows ou macOS) |
 
-The command returns an object resulting from parsing the *path*. The following properties are available:
+La commande renvoie un objet résultant de l'analyse du *chemin*. Les propriétés suivantes sont disponibles :
 
-| **Property** | **Type** | **Description**                                                                                      |
-| ------------ | -------- | ---------------------------------------------------------------------------------------------------- |
-| parentFolder | Text     | Directory information for the path. The last character is always a folder separator.                 |
-| name         | Text     | Final file or folder name of the specified path, without extension.                                  |
-| extension    | Text     | Extension of the final file or folder name. Always starts with ".". Empty string "" if no extension. |
-| isFolder     | Boolean  | True if name is a folder name, false otherwise (default is false)                                    |
+| **Propriété** | **Type** | **Description**                                                                                             |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
+| parentFolder  | Texte    | Description des répertoires constituant le chemin. Le dernier caractère est un séparateur de dossier.       |
+| name          | Texte    | Nom du fichier ou du dossier final du chemin spécifié, sans extension.                                      |
+| extension     | Texte    | Extension du fichier final ou nom du dossier. Commence toujours par ".". Chaîne vide "" si pas d'extension. |
+| isFolder      | Booléen  | "true" si "name" est un nom de dossier, sinon "false" ("false" par défaut)                                  |
 
-It will be assumed that you passed a folder path if the last character of *path* is a separator corresponding to the path type (for example "\\" on Windows). Otherwise, it will be assumed that you passed a file name.   
-The extension, if not empty, is returned regardless of whether the path represents a file or a folder. In either case, you need to concatenate the name and extension in order to retrieve the full name.
+4D considère que vous avez passé un chemin de dossier si le dernier caractère du chemin est un séparateur correspondant à son type (par exemple "\\" sous Windows). Sinon, 4D considère que vous avez passé un nom de fichier.  
+L'extension est retournée, si elle n'est pas vide, que le chemin désigne un fichier ou un dossier. Dans les deux cas, vous devez concaténer le nom et l'extension pour obtenir le nom complet.
 
-Note that **Path to object** only handles strings. It neither checks if the path is valid with regards to the path type, nor the actual existence of any file or folder. 
+Notez que **Path to object** ne gère que les chaînes. Cette commande ne vérifie pas si le type de chemin est valide, ni l'existence réelle d'un fichier ou d'un dossier.
 
-## Example 1 
+## Exemple 1 
 
-The following examples show various results with file paths:
+Les exemples suivants montrent différents résultats avec les chemins d'accès :
 
 ```4d
  var $o : Object
- $o:=Path to object("C:\\first\\second\\fileZ") //on Windows
+ $o:=Path to object("C:\\first\\second\\fileZ") //sous Windows
   //$o.parentFolder="C:\\first\\second\\"
   //$o.name="fileZ"
   //$o.extension=""
@@ -67,7 +67,7 @@ The following examples show various results with file paths:
 
 ```4d
  var $o : Object
- $o:=Path to object("osx:Users:john:Documents:Comments.text)  //on macOS
+ $o:=Path to object("osx:Users:john:Documents:Comments.text") //sous MacOS
   //$o.parentFolder="osx:Users:john:Documents:"
   //$o.name="Comments"
   //$o.extension=".text"
@@ -76,27 +76,27 @@ The following examples show various results with file paths:
 
 ```4d
  var $o : Object
- $o:=Path to object("\\images\\jan\\pict1.png";Path is system) //on Windows
+ $o:=Path to object("\\images\\jan\\pict1.png";Path is system) //sous Windows
   //$o.parentFolder="\\images\\jan\\"
   //$o.name="pict1"
   //$o.extension=".png"
   //$o.isFolder=false
 ```
 
-Defining a path to a folder:
+Définir un chemin vers un dossier :
 
 ```4d
  var $o : Object
- $o:=Path to object("osx:Users:oscargoldman:Desktop:Databases:") //macOS
+ $o:=Path to object("osx:Users:oscargoldman:Desktop:Databases:") // MacOS
   //$o.parentFolder="osx:Users:oscargoldman:Desktop:"
   //$o.name="Databases"
   //$o.extension=""
-  //$o.isFolder=True
+  //$o.isFolder=true
 ```
 
 ```4d
  var $o : Object
- $o:=Path to object("C:\\4D\\Main\\216410\\64\\4D\\4D.user\\")  //windows
+ $o:=Path to object("C:\\4D\\Main\\216410\\64\\4D\\4D.user\\")  // Windows
   //$o.parentFolder="C:\\4D\\Main\\216410\\64\\4D\\"
   //$o.name="4D"
   //$o.extension=".user"
@@ -112,28 +112,30 @@ Defining a path to a folder:
   //$o.isFolder=true
 ```
 
-If the path is a root directory, *parentFolder* is empty:
+Si le chemin est un répertoire racine, parentFolder est vide :
 
 ```4d
  var $o : Object
- $o:=Path to object("C:\\")  //on windows
+ $o:=Path to object("C:\\")  // sous Windows
   //$o.parentFolder=""
   //$o.name="c:"
   //$o.extension=""
   //$o.isFolder=true
 ```
-
+  
+  
 ```4d
  var $o : Object
- $o:=Path to object("osx:") //on macOS
+ $o:=Path to object("osx:") // sous MacOS
   //$o.parentFolder=""
   //$o.name="osx"
   //$o.extension=""
   //$o.isFolder=true
 ```
-
-If the last portion of the path is ".something", it is considered as a file name:
-
+  
+  
+Si la dernière partie du chemin est ".something", c'est considéré comme un nom de fichier :  
+  
 ```4d
  var $o : Object
  $o:=Path to object("/folder/.invisible";Path is POSIX)
@@ -143,9 +145,9 @@ If the last portion of the path is ".something", it is considered as a file name
   //$o.isFolder=false
 ```
 
-## Example 2 
+## Exemple 2 
 
-You can combine this command with the [Object to path](object-to-path.md) to rename a file in a path:
+Vous pouvez combiner cette commande avec [Object to path](object-to-path.md) pour renommer un fichier dans un chemin :
 
 ```4d
  var $o : Object
@@ -161,38 +163,37 @@ You can combine this command with the [Object to path](object-to-path.md) to ren
   //$path="C:\4D\resources\images\4DOld.jpg"
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to know the number of subfolders contained in a path:
+Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 
 ```4d
  var $o : Object
  var $path : Text
  var $vCount : Integer
- $path:=Select folder //let the user select a folder
+ $path:=Select folder // on laisse l'utilisateur sélectionner un dossier
  $o:=Path to object($path)
  Repeat
     $o:=Path to object($o.parentFolder)
     $vCount:=$vCount+1
  Until($o.parentFolder="")
- ALERT("The path depth is: "+String($count))
+ ALERT("La profondeur du chemin est : "+String($count))
 ```
 
-## See also 
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
-[File](./commands/file)  
-[Folder](./commands/folder)  
+[File](../commands/file.md)    
+[Folder](../commands/folder.md)    
 [Object to path](object-to-path.md)  
 [Test path name](test-path-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1547 |
+| Numéro de commande | 1547 |
 | Thread safe | yes |
-
 
 

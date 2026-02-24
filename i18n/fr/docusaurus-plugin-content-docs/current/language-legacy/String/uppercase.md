@@ -5,57 +5,57 @@ slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* : Text {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *laChaîne* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | Text | &#8594;  | String to convert to uppercase |
-| * | Operator | &#8594;  | If passed: keep accents |
-| Function result | Text | &#8592; | String in uppercase |
+| laText | Text | &#8594;  | Chaîne à convertir en majuscules |
+| * | Opérateur | &#8594;  | Si passé : conserver les accents Si omis : supprimer les accents |
+| Résultat | Text | &#8592; | chaîne en majuscules |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Uppercase.Summary-->Uppercase takes *aString* and returns the string with all alphabetic characters in uppercase.<!-- END REF-->
+<!--REF #_command_.Uppercase.Summary-->**Uppercase** retourne une chaîne de caractères égale à *laChaîne* dont tous les caractères alphabétiques ont été convertis en majuscules.<!-- END REF-->
 
-The optional *\** parameter, if passed, indicates that any accented characters present in *aString* must be returned as accented uppercase characters. By default, when this parameter is omitted, accented characters “lose” their accents after the conversion is carried out. 
+Le paramètre facultatif *\**, s'il est passé, indiqueque les éventuels caractères accentués présents dans *laChaîne* doivent être retournés sous forme de majuscules accentuées. Par défaut, lorsque ce paramètre est omis, les caractères accentués “perdent” leur accent une fois la conversion effectuée. 
 
-## Example 1 
+## Exemple 1 
 
-This example compares the results obtained according to whether or not the *\** parameter has been passed:
+Cet exemple compare les résultats obtenus suivant que le paramètre \* a été passé ou non :
 
 ```4d
- $thestring:=Uppercase("hélène") // $thestring is "HELENE"
- $thestring:=Uppercase("hélène";*) // $thestring is "HÉLÈNE"
+ $lachaine:=Uppercase("hélène") // $lachaine vaut « HELENE »
+ $lachaine:=Uppercase("hélène";*) // $lachaine vaut « HÉLÈNE »
 ```
 
-## Example 2 
+## Exemple 2 
 
-See the example for [Lowercase](lowercase.md).
+Reportez-vous à l'exemple de [Lowercase](lowercase.md).
 
-## See also 
+## Voir aussi 
 
 [Lowercase](lowercase.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 13 |
+| Numéro de commande | 13 |
 | Thread safe | yes |
 
 

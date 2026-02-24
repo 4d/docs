@@ -5,59 +5,59 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; *createdOn* : Date ; *createdAt* : Time ; *modifiedOn* : Date ; *modifiedAt* : Time )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *nomFichier* ; *verrouillé* ; *invisible* ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document name |
-| locked | Boolean | &#8592; | Locked (True) or unlocked (False) |
-| invisible | Boolean | &#8592; | Invisible (True) or visible (False) |
-| createdOn | Date | &#8592; | Creation date |
-| createdAt | Time | &#8592; | Creation time |
-| modifiedOn | Date | &#8592; | Last modification date |
-| modifiedAt | Time | &#8592; | Last modification time |
+| nomFichier | Text | &#8594;  | Nom du document |
+| verrouillé | Boolean | &#8592; | Verrouillé (Vrai) ou non verrouillé (Faux) |
+| invisible | Boolean | &#8592; | Invisible (Vrai) ou visible (Faux) |
+| créé le | Date | &#8592; | Date de création |
+| créé à | Heure | &#8592; | Heure de création |
+| modifié le | Date | &#8592; | Date de la dernière modification |
+| modifié à | Heure | &#8592; | Heure de la dernière modification |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->The **GET DOCUMENT PROPERTIES** command returns information about the document whose name or pathname you pass in *document*.<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Summary-->La commande **GET DOCUMENT PROPERTIES** retourne des informations sur le document dont le nom ou le chemin d'accès est passé dans le paramètre *document*.<!-- END REF-->
 
-After the call:
+Après l'appel :
 
-* *locked* returns True if the document is locked. A locked document cannot be modified.
-* *invisible* returns True if the document is hidden.
-* *createdOn* and *createdAt* return the date and time when the document was created.
-* *modifiedOn* and *modifiedAt* return the date and time when the document modified for the last time.
+* *verrouillé* retourne Vrai si le document est verrouillé. Un document verrouillé ne peut pas être modifié.
+* *invisible* retourne Vrai si le document est caché.
+* *créé le* et *créé à* retournent la date et l'heure de création du document.
+* *modifié le* et *modifié à* retournent la date et l'heure de la dernière modification du document.
 
-## Example 
+## Exemple 
 
-You have created a documentation database and you would like to export all the records you created in the database to documents on disk. Because the database is regularly updated you want to write an export algorithm that create or recreate each document on disk if the document does not exist or if the corresponding record has been modified after the document was saved for the last time. Consequently, you need to compare the date and time of modification of a document (if it exists) with its corresponding record. For illustrating this example, we use the table whose definition is shown below:
+Vous avez créé une base de documentation et vous voulez exporter tous les enregistrements créés dans le base vers un document sur disque. Comme la base est régulièrement mise à jour, vous voulez écrire un algorithme d'export qui crée ou recrée chaque document sur disque si le document n'existe pas ou si l'enregistrement correspondant a été modifié depuis la dernière sauvegarde du document. Par conséquent, vous devez comparer la date et l'heure de modification du document (s'il existe) avec celles de l'enregistrement correspondant. Pour illustrer cet exemple, nous allons utiliser la table suivante :
 
-![](../assets/en/commands/pict840812.en.png)
+![](../assets/en/commands/pict840812.fr.png)
 
-Rather than saving both a date and time values into each record, you can save a “time stamp” value which expresses the number of seconds elapsed between an arbitrary anterior date and time (in this example we use Jan, 1st 1995 at 00:00:00) and the date and time when the record was saved.
+Plutôt que de sauvegarder une date et une heure dans chaque enregistrement, vous pouvez stocker un "marqueur" dont la valeur exprime le nombre de secondes écoulées depuis une date antérieure arbitraire (dans cet exemple, le 1er janvier 1995 à 00:00:00) ainsi que la date et l'heure de la sauvegarde de l'enregistrement. 
 
-In our example, the field *\[Documents\]Creation Stamp* holds the time stamp when the record was first created and the field *\[Documents\]Modification Stamp* holds the time stamp when the record was last modified.
+Dans notre exemple, le champ *\[Documents\]Marqueur création* contient le marqueur de création de l'enregistrement et le champ *\[Documents\]Marqueur modification* contient le marqueur de la dernière modification de l'enregistrement. 
 
-The Time stamp project method listed below calculates the time stamp for a specific date and time or for the current date and time if no parameters are passed:
+La méthode projet marqueurTemps suivante calcule le marqueur de temps par rapport à une date et une heure spécifiques ou par rapport à la date et l'heure courantes si aucun paramètre n'est passé :
 
 ```4d
- [ // Time stamp Project Method
-  // Time stamp { ( date ; Time ) } -> Long
-  // Time stamp { ( date ; Time ) } -> Number of seconds since Jan, 1st 1995
+  // Méthode projet marqueurTemps
+  // marqueurTemps { ( Date ; Heure ) } -> Entier long
+  // marqueurTemps { ( Date ; Heure ) } -> Nombre de secondes depuis le 1er janvier 1995
  
  #DECLARE ($vdDate : Date ; $vhTime : Time) : Integer
  
@@ -69,160 +69,158 @@ The Time stamp project method listed below calculates the time stamp for a speci
 
 ```
 
-**Note:** Using this method, you can encode dates and times from the *01/01/95* at *00:00:00* to the *01/19/2063* at *03:14:07* which cover the long integer range *0* to *2^31* minus one.
+**Note :** Avec cette méthode, vous pouvez encoder toutes les dates et les heures situées entre le *01/01/95* à *00:00:00* et le *19/01/2063* à *03:14:07*, ce qui représente l'intervalle de données exploitables par un entier long (de *0* à *2^31* moins 1).
 
-Conversely, the Time stamp to date and Time stamp to time project methods listed below allow extracting the date and the time stored into a time stamp:
+A l'inverse, les méthodes projet Marqueur vers date et Marqueur vers heure vous permettent d'extraire la date et l'heure stockées dans un marqueur :
 
 ```4d
-  // Time stamp to date Project Method
-  // Time stamp to date ( Long ) -> Date
-  // Time stamp to date ( Time stamp ) -> Extracted date
+  // Méthode projet Marqueur vers date
+  // Marqueur vers date ( Entier long ) -> Date
+  // Marqueur vers date ( Marqueur ) -> Date extraite
  
 #DECLARE ($timeStamp : Integer) : Date
 
 return !01/01/95!+($timeStamp\86400)
-```
-
-```4d
-  // Time stamp to time Project Method
-  // Time stamp to time ( Long ) -> Date
-  // Time stamp to time ( Time stamp ) -> Extracted time
+ 
+  // Méthode projet Marqueur vers heure
+  // Marqueur vers heure ( Entier long ) -> Heure
+  // Marqueur vers heure ( Marqueur ) -> Heure extraite
  
 #DECLARE ($timeStamp : Integer) : Time
 
 return Time(Time string(?00:00:00?+($timeStamp %86400)))
 ```
 
-For ensuring that the records have their time stamps correctly updated no matter the way they are created or modified, we just need to enforce that rule using the trigger of the table *\[Documents\]*:
+Pour vous assurer que les marqueurs des enregistrements sont correctement mis à jour, quelle que soit la manière dont ils sont créés ou modifiés, il suffit de faire appliquer cette règle par le trigger de la table *\[Documents\]*:
 
 ```4d
-  // Trigger for table [Documents]
+  // Trigger de la table [Documents]
+ 
  Case of
-    :(Trigger event=Save New Record Event)
-       [Documents]Creation Stamp:=Time stamp
-       [Documents]Modification Stamp:=Time stamp
-    :(Trigger event=Save Existing Record Event)
-       [Documents]Modification Stamp:=Time stamp
+    :(Trigger event=On Saving New Record Event)
+       [Documents]Marqueur création:=marqueurTemps
+       [Documents]Marqueur modification:=marqueurTemps
+    :(Trigger event=On Saving Existing Record Event)
+       [Documents]Marqueur modification:=marqueurTemps
  End case
 ```
 
-Once this is implemented in the database, we have all we need to write the project method CREATE DOCUMENTATION listed below. We use of **GET DOCUMENT PROPERTIES** and [SET DOCUMENT PROPERTIES](set-document-properties.md) for handling the date and time of creation and modification of the documents.
+Une fois que cela est implémenté dans votre base, il suffit d'écrire la méthode projet CREER DOCUMENTATION listée ci-dessous. Nous utilisons **GET DOCUMENT PROPERTIES** et [SET DOCUMENT PROPERTIES](set-document-properties.md) pour gérer la date et l'heure de création et de modification des documents.
 
 ```4d
-  // CREATE DOCUMENTATION Project Method
+  //Méthode projet CREER DOCUMENTATION
  
- var $vsPath;$vsDocPathName;$vsDocName : TExt
+ C_TEXT($vsPath;$vsDocPathName;$vsDocName)
  var $vlDoc : Integer
  var $vbOnWindows;$vbDoIt;$vbLocked;$vbInvisible : Boolean
  var $vhDocRef;$vhCreatedAt;$vhModifiedAt : Time
  var $vdCreatedOn;$vdModifiedOn : Date
  
  If(Application type=4D Client)
-  // If we are running 4D Client, save the documents
-  // locally on the Client machine where 4D Client is located
-    $vsPath:=Long name to path name(Application file)
+  // Si 4D Client est utilisé, sauvegarder les documents localement
+  // c'est-à-dire sur le poste client où se trouve 4D Client
+    $vsPath:=Nom long vers chemin d'accès(Application type)
  Else
-  // Otherwise, save the documents where the data file is located
-    $vsPath:=Long name to path name(Data file)
+  // Else, sauvegarder les documents là où se trouve le fichier de données
+    $vsPath:=Nom long vers chemin d'accès(Data file)
  End if
-  // Save the documents in a directory we arbitrarily name "Documentation"
- $vsPath:=$vsPath+"Documentation"+Char(Directory symbol)
-  // If this directory does not exist, create it
- If(Test path name($vsPath)#Is a folder)
+  // Stocker les documents dans un répertoire nommé arbitrairement "Documentation"
+ $vsPath:=$vsPath+"Documentation"+Char(Symbole séparateur)
+  // Si ce répertoire n'existe pas, le créer
+ If(Test path name($vsPath) #Is a folder)
     CREATE FOLDER($vsPath)
  End if
-  // Establish the list of the already existing documents
-  // because we'll have to delete the obsolete ones, in other words,
-  // the documents whose corresponding records have been deleted.
+  // Etablir la liste des documents existants
+  // car nous allons devoir supprimer ceux qui sont obsolètes, autrement dit
+  // ceux dont les enregistrements correspondants ont été supprimés.
  ARRAY STRING(255;$asDocument;0)
  DOCUMENT LIST($vsPath;$asDocument)
-  // Select all the records from the [Documents] table
+  // Sélection de tous les enregistrements de la table [Documents]
  ALL RECORDS([Documents])
-  // For each record
+  // For each enregistremnt
  $vlNbRecords:=Records in selection([Documents])
  $vlNbDocs:=0
- $vbOnWindows:=On Windows
+ $vbOnWindows:=Sous Windows
  For($vlDoc;1;$vlNbRecords)
-  // Assume we will have to (re)create the document on disk
+  // Supposons que nous aurons à (re)créer le document sur disque
     $vbDoIt:=True
-  // Calculate the name and the path name of the document
-    $vsDocName:="DOC"+String([Documents]Number;"00000")
+  // Calcul du nom et du chemin d'accès au document
+    $vsDocName:="DOC"+String([Documents]Numéro;"00000")
     $vsDocPathName:=$vsPath+$vsDocName
-  // Does this document already exist?
+  // Est-ce que ce document existe déjà ?
     If(Test path name($vsDocPathName+".HTM")=Is a document)
-  // If so, remove the document from the list of the documents
-  // that may end up deleted
+  // Si oui, retirer le document de la liste des documents
+  // qui peuvent être supprimés
        $vlElem:=Find in array($asDocument;$vsDocName+".HTM")
        If($vlElem>0)
           DELETE FROM ARRAY($asDocument;$vlElem)
        End if
-  // Was the document saved after the last time the record was modified?
-       GET DOCUMENT PROPERTIES($vsDocPathName+".HTM";$vbLocked;$vbInvisible;$vdCreatedOn;$vhCreatedAt;
-       $vdModifiedOn;$vhModifiedAt)
-       If(Time stamp($vdModifiedOn;$vhModifiedAt)>=[Documents]Modification Stamp)
-  // If so, we do not need to recreate the document
+  // Est-ce que le document a été stocké après la dernière modification de l'enregistrement?
+       GET DOCUMENT PROPERTIES($vsDocPathName+".HTM";$vbLocked;$vbInvisible;$vdCreatedOn;
+       $vhCreatedAt;$vdModifiedOn;$vhModifiedAt)
+       If(marqueurTemps($vdModifiedOn;$vhModifiedAt)>=[Documents]Marqueur modification)
+  //Si oui, nous n'avons pas besoin de recréer le document
           $vbDoIt:=False
        End if
     Else
-  // The document does not exist, reset these two variables so
-  // we know we'll have to compute them before setting the final properties
-  // of the document
+  //Le document n'existe pas, mettre ces deux variables à zéro, pour que
+  // nous sachions que nous devrons les traiter avant de fixer les propriétés finales
+  // du document
        $vdModifiedOn:=!00/00/00!
        $vhModifiedAt:=†00:00:00†
     End if
-  // Do we need to (re)create the document?
+  // Avons-nous besoin de (re)créer le document?
     If($vbDoIt)
-  // If so, increment the number of updated documents
+  // Si oui, incrémenter le nombre de documents mis à jour
        $vlNbDocs:=$vlNbDocs+1
-  // Delete the document if it already exists
+  // Supprimer le document s'il existe déjà
        DELETE DOCUMENT($vsDocPathName+".HTM")
-  // And create it again
+  // Et le recréer
        If($vbOnWindows)
           $vhDocRef:=Create document($vsDocPathName;"HTM")
        Else
           $vhDocRef:=Create document($vsDocPathName+".HTM")
        End if
        If(OK=1)
-  // Here write the contents of the document
+  //...
+  // Ecrivons ici le contenu du document
+  // ...
           CLOSE DOCUMENT($vhDocRef)
           If($vdModifiedOn=!00/00/00!)
-  // The document did not exist, set the modification date and time
-  // to their right values
+  // Le document n'existait pas, fixer les valeurs correctes pour
+  // la date et l'heure de modification
              $vdModifiedOn:=Current date
              $vhModifiedAt:=Current time
           End if
-  // Change the properties of the document so its date and time of creation
-  // are made equal to those of the corresponding record
-          SET DOCUMENT PROPERTIES($vsDocPathName+".HTM";$vbLocked;$vbInvisible;
-          Time stamp to date([Documents]Creation Stamp);
-          Time stamp to time([Documents]Creation Stamp);
-          $vdModifiedOn;$vhModifiedAt)
+  // Changer les propriétés du document de telle manière que sa date et son heure de création
+  // soit égales à celles de l'enregistrement correspondant
+          SET DOCUMENT PROPERTIES($vsDocPathName+".HTM";$vbLocked;$vbInvisible;Marqueur vers date([Documents]Marqueur création);Marqueur vers heure([Documents]Marqueur création);$vdModifiedOn;$vhModifiedAt)
        End if
     End if
-  // Just to know what's going on
-    SET WINDOW TITLE("Processing Document "+String($vlDoc)+" of "+String($vlNbRecords))
+  // Juste pour savoir ce qui se passe
+    SET WINDOW TITLE("Traitement du document "+String($vlDoc)+" sur "+Chaine($vlNbRecords))
     NEXT RECORD([Documents])
  End for
-  // Delete the obsolete documents, in other words
-  // those which are still in the array $asDocument
+  //Suppression des documents obsolètes, c'est-à-dire ceux
+  // qui sont toujours dans le tableau $asDocument
  For($vlDoc;1;Size of array($asDocument))
     DELETE DOCUMENT($vsPath+$asDocument{$vlDoc})
-    SET WINDOW TITLE("Deleting obsolete document: "+Char(34)+$asDocument{$vlDoc}+Char(34))
+    SET WINDOW TITLE("Suppression du document obsolète: "+Char(34)+$asDocument{$vlDoc}+Char(34))
  End for
-  // We're done
- ALERT("Number of documents processed: "+String($vlNbRecords)+Char(13)+"Number of documents updated: "+String($vlNbDocs)+Char(13)+"Number of documents deleted: "+String(Size of array($asDocument)))
+  //C'est la fin
+ ALERT("Nombre de documents traités : "+String($vlNbRecords)+Caractere(13)+"Nombre de documents mis à jour : "+Chaine($vlNbDocs)+Caractere(13)+"Nombre de documents supprimés : "+Chaine(Taille tableau($asDocument)))
 ```
 
-## See also 
+## Voir aussi 
 
 [SET DOCUMENT PROPERTIES](set-document-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 477 |
+| Numéro de commande | 477 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

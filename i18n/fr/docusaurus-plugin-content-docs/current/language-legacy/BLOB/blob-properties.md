@@ -5,98 +5,97 @@ slug: /commands/blob-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* : Blob ; *compressed* : Integer {; *expandedSize* : Integer {; *currentSize* : Integer}} )<!-- END REF-->
+<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *blob* ; *compressé* {; *tailleDécompressée* {; *tailleCourante*}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB for which to get information |
-| compressed | Integer | &#8592; | 0 = BLOB is not compressed, 1 = Compact compression, 2 = Fast compression, -1 = GZIP Best compression, -2 = GZIP Fast compression |
-| expandedSize | Integer | &#8592; | Size of BLOB (in bytes) when not compressed |
-| currentSize | Integer | &#8592; | Current size of BLOB (in bytes) |
+| blob | Blob | &#8594;  | BLOB sur lequel vous voulez obtenir des informations |
+| compressé | Integer | &#8592; | 0 = pas de compression, 1 = interne compact, 2 = interne rapide, -1 = GZIP compact, -2 = GZIP rapide |
+| tailleDécompressée | Integer | &#8592; | Taille du BLOB décompressé en octets |
+| tailleCourante | Integer | &#8592; | Taille courante du BLOB en octets |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|6|Created|
+|13|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB PROPERTIES.Summary-->The **BLOB PROPERTIES** command returns information about the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.BLOB PROPERTIES.Summary-->**BLOB PROPERTIES** retourne des informations sur le BLOB *blob*.<!-- END REF-->
 
-The *compressed* parameter returns a value indicating if and how the BLOB is compressed. You can compare this value with the following constants, found in the *BLOB* theme: 
+Le paramètre *compressé* retourne une valeur indiquant si et comment le BLOB est compressé. Vous pouvez comparer cette valeur aux constantes suivantes, placées dans le thème *BLOB* :
 
-| Constant                   | Type    | Value | Comment                                                                                                                                                      |
-| -------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Compact compression mode   | Integer | 1     | Compressed as much as possible (at the expense of the speed of compression and decompression operations). Default method.                                    |
-| Fast compression mode      | Integer | 2     | Compressed as fast as possible (and will be decompressed as fast as possible), at the expense of the compression ratio (the compressed BLOB will be bigger). |
-| GZIP best compression mode | Integer | \-1   | Most compact GZIP compression                                                                                                                                |
-| GZIP fast compression mode | Integer | \-2   | Fastest GZIP compression                                                                                                                                     |
-| Is not compressed          | Integer | 0     | No compression                                                                                                                                               |
+| Constante                  | Type        | Valeur | Comment                                                                                                                                              |
+| -------------------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compact compression mode   | Entier long | 1      | Compression interne la plus compacte (au détriment de la vitesse à laquelle la compression et la décompression sont effectuées). Méthode par défaut. |
+| Fast compression mode      | Entier long | 2      | Compression/décompression interne la plus rapide au détriment du taux de compression (une fois compressé, le BLOB prend plus de place)               |
+| GZIP best compression mode | Entier long | \-1    | Compression GZIP la plus compacte (au détriment de la vitesse à laquelle la compression et la décompression sont effectuées)                         |
+| GZIP fast compression mode | Entier long | \-2    | Compression/décompression GZIP la plus rapide (au détriment du taux de compression)                                                                  |
+| Is not compressed          | Entier long | 0      | Pas de compression                                                                                                                                   |
 
-Whatever the compression status of the BLOB, the *expandedSize* parameter returns the size of the BLOB when it is not compressed.
+Quel que soit l'état de compression du BLOB, le paramètre *tailleDécompressée* retourne la taille du BLOB non compressé.
 
-The parameter *currentSize* returns the current size of the BLOB. If the BLOB is compressed, you will usually obtain *currentSize* less than *expandedSize*. If the BLOB is not compressed, you will always obtain *currentSize* equal to *expandedSize*.
+Le paramètre *tailleCourante* retourne la taille courante du BLOB. Si le BLOB est compressé, *tailleCourante* sera inférieur à *tailleDécompressée*. Si le BLOB n'est pas compressé, *tailleCourante* sera égal à *tailleDécompressée*.
 
-## Example 1 
+## Exemple 1 
 
-See examples for the commands [COMPRESS BLOB](compress-blob.md) and [EXPAND BLOB](expand-blob.md).
+Référez-vous aux exemples des commandes [COMPRESS BLOB](compress-blob.md) et [EXPAND BLOB](expand-blob.md).
 
-## Example 2 
+## Exemple 2 
 
-After a BLOB has been compressed, the following project method obtains the percentage of space saved by the compression: 
+Lorsqu'un BLOB est compressé, la méthode projet suivante vous permet de connaître le taux de place gagnée en compressant le BLOB :
 
 ```4d
-  // Space saved by compression project method
-  // Space saved by compression (Pointer {; Pointer } ) -> Long integer
-  // Space saved by compression ( -> BLOB {; -> savedBytes } ) -> Percentage
+  // Méthode projet Place gagnée par compression
+  // Place gagnée par compression (Pointeur {; Pointeur } ) -> Entier long
+  // Place gagnée par compression ( -> BLOB {; -> octetsGagnés } ) -> Pourcentage
  
-#DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
- var $vlCompressed;$vlExpandedSize;$vlCurrentSize : Integer
+ #DECLARE ($blob : Pointer ; $saved : Pointer ) -> $percent : Integer
+ var $vlCompressé;$vlTailleDécompressée;$vlTailleCourante : Integer
  
- BLOB PROPERTIES($blob->;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
- If($vlExpandedSize=0)
+ BLOB PROPERTIES($blob->;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
+ If($vlTailleDécompressée=0)
     $percent:=0
     If(Count parameters>=2)
        $saved->:=0
     End if
  Else
-    $percent:=100-(($vlCurrentSize/$vlExpandedSize)*100)
+    $percent:=100-(($vlTailleCourante/$vlTailleDécompressée)*100)
     If(Count parameters>=2)
-       $saved->:=$vlExpandedSize-$vlCurrentSize
+       $saved->:=$vlTailleDécompressée-$vlTailleCourante
     End if
  End if
 ```
 
-After this method has been added to your application, you can use it this way:
+Lorsque cette méthode est placée dans votre application, vous pouvez écrire :
 
 ```4d
   // ...
  COMPRESS BLOB(vxBlob)
- $vlPercent:=Space saved by compression(->vxBlob;->vlBlobSize)
- ALERT("The compression saved "+String(vlBlobSize)+" bytes, so "+String($vlPercent;"#0%")+
- " of space.")
+ $vlPourcent:=Place gagnée par compression(->vxBlob;->vlTailleBlob)
+ ALERT("La compression permet de gagner "+String(vlTailleBlob)+" octets, donc "+Chaine($vlPourcent;"#0%")+" d'espace.")
 ```
 
-## See also 
+## Voir aussi 
 
 [COMPRESS BLOB](compress-blob.md)  
 [EXPAND BLOB](expand-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 536 |
+| Numéro de commande | 536 |
 | Thread safe | yes |
 
 

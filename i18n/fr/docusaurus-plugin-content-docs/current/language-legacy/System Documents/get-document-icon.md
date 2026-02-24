@@ -5,46 +5,46 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* : Text ; *icon* : Picture {; *size* : Integer} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* ; *icône* {; *taille*} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docPath | Text | &#8594;  | Name or path of document to get icon, or Empty string for standard Open File dialog box |
-| icon | Picture | &#8592; | Document icon |
-| size | Integer | &#8594;  | Size of the returned picture (in pixels) |
+| cheminDoc | Text | &#8594;  | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
+| icône | Picture | &#8592; | Icône du document |
+| taille | Integer | &#8594;  | Taille de l’icône (en pixels) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Created|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET DOCUMENT ICON.Summary-->The GET DOCUMENT ICON command returns, in the 4D picture variable or field *icon*, the icon of the document whose name or complete pathname is passed in *docPath*.<!-- END REF-->can specify a file of any type (executable, document, shortcut or alias, etc.) or a folder. 
+<!--REF #_command_.GET DOCUMENT ICON.Summary-->La commande **GET DOCUMENT ICON** retourne dans le champ ou la variable image 4D *icône*, l’icône du document dont vous avez passé le nom ou le chemin d’accès complet dans *cheminDoc*.<!-- END REF-->peut désigner un fichier de tout type (document, exécutable, raccourci ou alias...) ou un dossier.
 
-*docPath* contains the full pathname of the document. You can also pass the document name only or a relative pathname, in this case the document must be placed in the database current working directory (usually, the folder containing the database structure file).  
-If you pass an empty string in *docPath*, the standard Open File dialog box appears. The user can then select the file to read. Once the dialog box is validated, the Document system variable contains the full pathname to the selected file. 
+Passez dans *cheminDoc* le chemin d’accès absolu du document dont vous souhaitez récupérer l’icône. Vous pouvez passer uniquement le nom du document ou un chemin d’accès relatif, dans ce cas il doit se trouver dans le dossier courant de la base (généralement, le dossier contenant le fichier de structure de la base).   
+Si vous passez une chaîne vide dans *cheminDoc*, la boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner un fichier. Une fois la boîte de dialogue validée, la variable système Document contient le chemin d’accès complet du fichier sélectionné. 
 
-Pass a 4D picture field or variable in *icon*. After the command is executed, this parameter contains the icon of the file (PICT format).
+Passez dans le paramètre *icône* un champ ou une variable image 4D. Après l’exécution de la commande, ce paramètre contient l’icône du fichier (au format PICT).  
+  
+Le paramètre optionnel *taille* vous permet d’indiquer les dimensions de l’image que vous souhaitez obtenir. La valeur du paramètre correspond à la longueur d’un côté du carré dans lequel l’image sera incluse. Généralement, les icônes sont définies en 32x32 pixels (“grande icône”) ou 16x16 pixels (“petite icône”). Si vous passez 0 ou omettez le paramètre, la commande retourne l’icône dans sa plus grande taille disponible.
 
-The optional *size* parameter sets the dimensions in pixels of the returned icon. This value actually represents the side length of the square including the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the largest available icon is returned.
 
-
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 700 |
+| Numéro de commande | 700 |
 | Thread safe | yes |
-| Modifies variables | Document, error |
+| Modifie les variables | Document, error |
 
 

@@ -5,48 +5,48 @@ slug: /commands/plugin-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numbersArray* : Integer array ; *namesArray* : Text array )<!-- END REF-->
+<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *tabNuméros* ; *tabNoms* )<!-- END REF-->
 <!--REF #_command_.PLUGIN LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numbersArray | Integer array | &#8592; | Numbers of plug-ins |
-| namesArray | Text array | &#8592; | Names of plug-ins |
+| tabNuméros | Integer array | &#8592; | Numéros des plug-ins |
+| tabNoms | Text array | &#8592; | Noms des plug-ins |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PLUGIN LIST.Summary-->The PLUGIN LIST command fills in the *numbersArray* and *namesArray* arrays with the numbers and names of the plug-ins loaded and usable by the 4D application.<!-- END REF--> These two arrays are automatically sized and synchronized by the command.
+<!--REF #_command_.PLUGIN LIST.Summary-->La commande **PLUGIN LIST** remplit les tableaux *tabNuméros* et *tabNoms* avec les numéros et les noms des plug-ins chargés par l'application 4D et utilisables.<!-- END REF--> Les deux tableaux sont automatiquement dimensionnés et synchronisés par la commande.
 
-**Note:** You can compare the values returned in *numbersArray* with the constants of the *Is License Available* theme. 
+**Note :** Vous pouvez comparer les valeurs retournées dans le tableau *tabNuméros* avec les constantes du thème *Licence disponible*. 
 
-PLUGIN LIST takes all plug-ins into account, including those that are integrated (for example, 4D Chart), and third-party plug-ins. 
+**PLUGIN LIST** prend en compte tous les plug-ins, y compris les plug-ins intégrés (par exemple 4D Chart) et les plug-ins des éditeurs tiers. 
 
-## See also 
+## Voir aussi 
 
 [COMPONENT LIST](component-list.md)  
 [Get plugin access](get-plugin-access.md)  
 [Is license available](is-license-available.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 847 |
+| Numéro de commande | 847 |
 | Thread safe | yes |
 
 

@@ -5,152 +5,151 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File {; *options* : Object} ) : Object<!-- END REF-->
-<!--REF #_command_.Compile project.Params-->
-<div class="no-index">
+<!--REF #_command_.Compile project.Syntax-->**Compile project** {( {*projectFile*}{;}{*options*} )} : Object<!-- END REF-->
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| projectFile | 4D.File | &#8594;  | .4DProject file to compile |
-| options | Object | &#8594;  | Object that specifies compilation options |
-| Function result | Object | &#8592; | Object containing information on the compilation status |
-</div>
+<!--REF #_command_.Compile project.Params-->
+
+| Paramètres  | Type                    |                             | Description                                                   |
+| ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
+| projectFile | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
+| options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
+| Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R8|Support of `type` "formObjectExpression"|
+| Release | Modifications                                    |
+| ------- | ------------------------------------------------ |
+| 20 R8   | Prise en charge du `type` "formObjectExpression" |
 
 </details>
 
+## Description
 
-## Description 
+**Compile project**<!--REF #_command_.Compile project.Summary--> vous permet de compiler le projet hôte courant ou le projet spécifié dans le paramètre *projectFile*.<!-- END REF--> Pour plus d'informations sur la compilation, consultez la [page Compilation] (../Project/compiler.md).
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
+Par défaut, la commande utilise les options du compilateur définies dans les Paramètres de structure. Vous pouvez les remplacer en passant un paramètre *options*. Les syntaxes suivantes sont prises en charge :
 
-By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. The following syntaxes are supported:
+- **Compile project**() : compile le projet ouvert à l'aide des options définies dans les paramètres de structure
+- **Compile project**(*options*) : compile le projet ouvert. Les *options* définies remplacent les paramètres de structure
+- **Compile project**(*projectFile*) : compile le projet 4D *projectFile* en utilisant les options définies dans les paramètres de structure
+- **Compile project**(*projectFile*; *options*) : compile le projet 4D *projectFile* et les *options* définies remplacent les paramètres de structure
 
-* **Compile project**(): compiles the opened project using the options defined in the Structure Settings
-* **Compile project**(*options*): compiles the opened project. The *options* defined override the Structure Settings
-* **Compile project**(*projectFile*): compiles the *projectFile* 4DProject using the options defined in the Structure Settings
-* **Compile project**(*projectFile*; *options*): compiles the *projectFile* 4DProject and the *options* defined override the Structure Settings
+\*\*Note :\*\*Les bases de données binaires ne peuvent pas être compilées avec cette commande.
 
-**Note:** Binary databases cannot be compiled using this command.
+Contrairement à la fenêtre du Compilateur, cette commande nécessite que vous désigniez explicitement le ou les composants à compiler. Lors de la compilation d'un projet avec **Compile project**, vous devez déclarer ses composants à l'aide de la propriété *components* du paramètre *options*. A noter que les composants doivent déjà être compilés (les composants binaires sont pris en charge).
 
-Unlike the Compiler window, this command requires that you explicitly designate the component(s) to compile. When compiling a project with **Compile project**, you need to declare its components using the *components* property of the *options* parameter. Keep in mind that the components must already be compiled (binary components are supported).
+Le code compilé résultant sera stocké dans le dossier DerivedData ou Libraries du projet, en fonction de la propriété *targets* du paramètre *options*. Si vous souhaitez créer des fichiers .4dz, vous devez toujours compresser manuellement le projet compilé ou utiliser la fonctionnalité [build application](../Desktop/building.md).
 
-The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../Desktop/building.md) feature.
+Si vous passez une collection vide dans *targets*, **Compile project** exécutera une vérification syntaxique sans compiler.
 
-If you pass an empty collection in *targets*, **Compile project** will execute a syntax check without compiling.
+Les erreurs de compilation, le cas échéant, sont retournées sous forme d'objets dans la collection *errors*.
 
-Compilation errors, if any, are returned as objects in the *errors* collection.
+**Note :** Vous ne pouvez pas appeler cette commande quand une autre compilation est en cours d'exécution (par exemple, une compilation lancée depuis la fenêtre de compilation).
 
-**Note:** You cannot call this command when another compilation is running (for example, a compilation launched from the Compilation window).
+### Paramètre options
 
-### options Parameter 
+Le paramètre *options* est un objet. Voici les options de compilation disponibles :
 
-The *options* parameter is an object. Here are the available compilation options:
+| **Propriété**                                                                      | **Type**                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| components                                                                         | Collection                       | Collection d'objets 4D.File vers des composants dépendants (doit être déjà compilé)                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| defaultTypeForButtons                                                              | Integer                          | Valeur possible : Is real ou Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| defaultTypeForNumerics                                                             | Integer                          | Valeur possible : Is real ou Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| generateSymbols                                                                    | Boolean                          | True pour générer des informations sur les symboles dans l'objet .symbols renvoyé                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| generateSyntaxFile                                                                 | Boolean                          | Vrai pour générer un [fichier de syntaxe pour la complétion de code](../settings/general.md#generate-syntax-file-for-code-completion-when-compiled) dans le dossier \\Resources\\en.lproj du projet                                                                                                                                                                                                                                                                                                                                             |
+| generateTypingMethods                                                              | Text                             | "reset" ou "append" pour générer des méthodes de typage. Si la valeur est "append", les déclarations de variables existantes ne seront pas modifiées (comportement de la fenêtre du compilateur). Si la valeur est "reset", les déclarations de variables existantes seront supprimées au préalable.                                                                                                                                                                                           |
+| plugins                                                                            | 4D.Folder object | Dossier de plug-ins à utiliser à la place du [Dossier de plug-ins du projet courant](../Project/architecture.md#plugins). Cette propriété n'est disponible qu'avec la syntaxe *projectFile*.                                                                                                                                                                                                                                                                                                                                      |
+| targets                                                                            | Collection de chaînes            | Valeurs possibles : "x86_64_generic", "arm64_macOS_lib". Passez une collection vide pour exécuter la vérification syntaxique uniquement                                                                                                                                                                                                                                                                                                       |
+| typeInference                                                                      | Text                             | "all" : Le compilateur déduit les types de toutes les variables non explicitement déclarées, "locals" : Le compilateur déduit le type des variables locales non déclarées explicitement, "none" : Toutes les variables doivent être explicitement déclarées dans le code (mode legacy), "direct" : Toutes les variables doivent être explicitement déclarées dans le code ([direct typing](../Project/compiler.md#enabling-direct-typing)). |
+| warnings                                                                           | Collection d'objets              | Définit le statut des warnings                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| \[\].major   | Number                           | Numéro principal du warning, avant le point                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| \[\].minor   | Number                           | Numéro secondaire du warning, après le point                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| \[\].enabled | Boolean                          | Statut d'activation du warning                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
-| **Property** | **Type**| **Description** |
-| --------------| ---------- | ------------------------- |
-| components | Collection | Collection of 4D.File objects to dependent components (must be already compiled) |
-| defaultTypeForButtons | Integer | Possible value: Is real or Is longint |
-| defaultTypeForNumerics | Integer | Possible value: Is real or Is longint |
-| generateSymbols | Boolean | True to generate symbol information in the .symbols returned object |
-| generateSyntaxFile |Boolean | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project |
-| generateTypingMethods | Text | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand. |
-| plugins | 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax. |
-| targets | Collection of strings | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only |
-| typeInference | Text | "all": The compiler deduces the types of all variables not explicitly declared, "locals": The compiler deduces the types of local variables not explicitly declared, "none": All variables must be explicitly declared in the code (legacy mode), "direct": All variables must be explicitly declared in the code ([direct typing](../Project/compiler.md#enabling-direct-typing)). |
-| warnings | Collection of objects | Defines the warnings state |
-| \[\].major | Number | Warning main number, before the dot |
-| \[\].minor | Number | Warning second number, after the dot |
-| \[\].enabled | Boolean | Warning activation state |
+**Note:** Lorsque l'attribut *warnings* n'est pas défini dans l'objet *options*, la commande **Compile project** utilise les statuts de génération de warnings par défaut définis dans les paramètres.
 
-**Note:** When the *warnings* attribute is not defined in the *options* object, the **Compile project** command uses the default warning generation statuses defined in the settings.
+### Résultat
 
-### Function result 
+L'objet renvoyé par **Compile project** possède jusqu'à trois propriétés :
 
-The object returned by **Compile project** has up to three properties:
+| **Propriété**                                                                                                          | **Type**            | **Description**                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                                                                                                                | Boolean             | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                                           |
+| errors                                                                                                                 | Collection d'objets | **Disponible uniquement en cas d'erreur ou de warning**. Collection d'objets décrivant les erreurs de compilation ou les warnings        |
+| \[\].isError                                     | Boolean             | Erreur si True, sinon warning                                                                                                                            |
+| \[\].message                                     | Text                | Message d'erreur                                                                                                                                         |
+| \[\].code                                        | Object              | [objet code](#code-object)                                                                                                                               |
+| \[\].line                                        | Number              | Numéro de ligne de l'erreur dans le code. Pour les méthodes de classe, le numéro de ligne dans la fonction                               |
+| \[\].lineInFile                                  | Number              | Numéro de ligne dans le fichier (différent de "line" pour les méthodes de classe, et prend en compte la ligne de préfixe %attributes) |
+| symbols                                                                                                                | Object              | **Disponible uniquement si l'option generateSymbols est fixée à True :**                                                                 |
+| symbols.interprocessVariables                                                                          | Object              | Liste de toutes les variables interprocessus                                                                                                             |
+| symbols.interprocessVariables.variables                                                | Collection          | Collection d'[objets variables](#objets-variables)                                                                                                       |
+| symbols.interprocessVariables.size                                                     | Number              |                                                                                                                                                          |
+| symbols.processVariables                                                                               | Object              | Liste de toutes les variables process                                                                                                                    |
+| symbols.processVariables.variables                                                     | Collection          | Collection d'[objets variables](#objets-variables)                                                                                                       |
+| symbols.processVariables.size                                                          | Number              |                                                                                                                                                          |
+| symbols.localVariables                                                                                 | Collection d'objets | Liste des variables locales par méthode                                                                                                                  |
+| symbols.localVariables[].code      | Object              | [objet code](#code-object)                                                                                                                               |
+| symbols.localVariables[].variables | Collection          | Collection d'[objets variables](#objets-variables)                                                                                                       |
+| symbols.methods                                                                                        | Collection d'objets | Liste des méthodes                                                                                                                                       |
+| symbols.methods\[\].code         | Object              | [objet code](#code-object)                                                                                                                               |
+| symbols.methods\[\].callCount    | Number              | Nombre de fois où cette méthode a été appelée                                                                                                            |
+| symbols.methods\[\].params       | Collection          | Collection de types de paramètres (codes numériques des types de valeurs)                                                             |
+| symbols.methods\[\]. threadSafe  | Boolean             | Indique si cette méthode est *thread safe*                                                                                                               |
 
-| **Property** | **Type** | **Description** |
-| ------------ |-------- |---------------- |
-| success  | Boolean  | True if the save action is successful, False otherwise. |
-| errors | Collection of objects | **Available only in case of error or warning**. Collection of objects describing compilation errors or warnings |
-| \[\].isError | Boolean | Error if True, warning otherwise |
-| \[\].message | Text | Error message |
-| \[\].code | Object | [code object](#code-object) |
-| \[\].line | Number | Line number of error in the code. For class methods, line number in the function |
-| \[\].lineInFile | Number | Line number in the file (different from "line" for class methods, and takes into account the %attributes prefix line) |
-| symbols | Object |**Available only if generateSymbols option is set to True:** | 
-|symbols.interprocessVariables | Object | List of all interprocess variables |
-|symbols.interprocessVariables.variables | Collection | Collection of [variable objects](#variable-objects) |
-|symbols.interprocessVariables.size | Number | |
-|symbols.processVariables | Object | List of all process variables |
-|symbols.processVariables.variables | Collection | Collection of [variable objects](#variable-objects) |
-|symbols.processVariables.size | Number | |
-|symbols.localVariables | Collection of objects | List of local variables per method |
-|symbols.localVariables[].code | Object | [code object](#code-object) |
-|symbols.localVariables[].variables | Collection | Collection of [variable objects](#variable-objects) |
-|symbols.methods | Collection of objects | List of methods |
-|symbols.methods\[\].code | Object | [code object](#code-object) |
-|symbols.methods\[\].callCount | Number | Number of times this method has been called |
-|symbols.methods\[\].params | Collection | Collection of parameter types (Value type numerical codes) |
-|symbols.methods\[\]. threadSafe | Boolean | Indicates if this method is thread safe |
+Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#compilation-tools).
 
-For more information, see [Compilation tools](../Project/compiler.md#compilation-tools).
+## Objets variables
 
-## variable objects 
+`interprocessVariables.variables` et `processVariables.variables` contiennent des objets ayant la structure suivante :
 
-`interprocessVariables.variables` and `processVariables.variables` contain objects with the following structure:
+| **Propriété**  | **Type** | **Description**                                                                                                            |
+| -------------- | -------- | -------------------------------------------------------------------------------------------------------------------------- |
+| name           | Text     | Nom de la variable                                                                                                         |
+| type           | number   | Type de la variable (comme la commande Value type)                                                      |
+| arrayDimension | number   | Pour les tableaux uniquement : 1 pour les tableaux mono-dimensionnels, 2 pour les tableaux bidimensionnels |
+| code           | Object   | Pour les variables process et interprocess : description de l'endroit où la variable a été définie         |
 
-| **Property**   | **Type** | **Description**  |
-| -------------- | -------- | --------------- |
-| name           | Text   | Name of the variable                                                                      |
-| type           | number   | Type of the variable (like Value type command)                                            |
-| arrayDimension | number   | For arrays only: 1 for mono dimension arrays, 2 for two-dimension arrays                  |
-| code           | Object   | For process and interprocess variables: descriptor of where the variable has been defined |
+## Objet code
 
-## code object 
+La propriété `code` dans `methods.code` et `errors.code` est un objet avec les propriétés suivantes :
 
-The `code` property in `methods.code` and `errors.code` is an object with the following properties:
+| **Propriété**  | **Type**                | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type           | Text                    | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (lors de l'appel d'une méthode projet avec l'attribut *Execute on Server*), "executeFormula" (lors de l'exécution d'une formule via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) ou de l'évaluation d'une formule dans un document 4D Write Pro), "class", "classFunction", "formObjectExpression" (pour les erreurs survenant dans les expressions associées à des objets formulaire) |
+| path           | Text                    | Chemin d'accès de la méthode (même format que [`METHOD OPEN PATH`](../commands-legacy/method-open-path.md))                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| file           | 4D.File | Fichier de méthode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                |                         | **Retourné en fonction de la valeur de la propriété `type`:**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| methodName     | Text                    | Méthode                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| table          | Number                  | Numéro de la table (retourné pour un trigger, une méthode formulaire table ou une méthode objet de formulaire table)                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| formName       | Text                    | Nom du formulaire (renvoyé pour une méthode de formulaire)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| objectName     | Text                    | Nom de l'objet du formulaire (renvoyé pour une méthode objet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| propertyName   | Text                    | Nom de la propriété de l'objet du formulaire (renvoyé pour une expression de l'objet du formulaire)                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| className      | Text                    | Nom de classe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| functionName   | Text                    | Nom de la fonction de classe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| databaseMethod | Number                  | Indice de méthode base                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-| **Property**   | **Type** | **Description**  |
-| ------------------- | -------- | ---- |
-| type     | Text   | "projectMethod", "formObjectMethod", "formMethod", "databaseMethod", "triggerMethod", "executeOnServer" (when calling a project method with the *Execute on Server attribute*), "executeFormula" (when executing a formula via [PROCESS 4D TAGS](./commands/process-4d-tags) or evaluation of a formula in a 4D Write Pro document), "class", "classFunction", "formObjectExpression" (for errors occuring in expressions associated to form objects)|
-| path  | Text   | Method path (same format as [METHOD OPEN PATH](./commands/method-open-path)) |
-| file | 4D.File  | Method file  |
-||          |  **Returned depending on the value of the `type` property:**  |
-| methodName  | Text   | Project method  |
-|table| Number   | Number of the table (returned for a trigger, a table form method or a table form object method)  |
-| formName  | Text   | Form name (returned for a form method)  |
-| objectName | Text   | Form object name (returned for an object method)  |
-| propertyName | Text   | Form object property name (returned for a form object expression)  |
-| className  | Text   | Class name   |
-| functionName   | Text   | Class function name   |
-| databaseMethod     | Number   | Database method index        |
+## Exemples
 
-## Examples 
+Pour effectuer un contrôle de syntaxe uniquement, passez une collection vide au paramètre targets :
 
-To perform a syntax check only, pass an empty collection to the targets parameter: 
- 
 ```4d
  var $status : Object
  var $options:={}
- $options.targets:=New collection //Empty collection for syntax checking
+ $options.targets:=New collection //Collection vide pour le contrôle syntaxique
  $status:=Compile project($options)
 ```
 
-Compile the current project using the compiler options of the Structure Settings only: 
- 
+Compilez le projet courant en utilisant uniquement les options de compilateur définies dans les Paramètres de Structure :
+
 ```4d
  var $status : Object
  $status:=Compile project
 ```
 
-On a Silicon Mac, compile the current project to ARM only: 
+Sur un Mac Silicon, compilez le projet courant uniquement pour ARM :
 
 ```4d
  var $status : Object
@@ -159,7 +158,7 @@ On a Silicon Mac, compile the current project to ARM only:
  $status:=Compile project($options)
 ```
 
-Compile a project other than the current project: 
+Compilez un projet autre que le projet courant :
 
 ```4d
  var $status : Object
@@ -168,7 +167,7 @@ Compile a project other than the current project:
  $status:=Compile project($projectFile)
 ```
 
-Compile a project and declare its component: 
+Compilez un projet et déclarez son composant :
 
 ```4d
  var $status : Object
@@ -179,7 +178,7 @@ Compile a project and declare its component:
  $status:=Compile project($options)
 ```
 
-Disable warnings 518.1 and 518.2 when compiling your project:
+Désactivez les warnings 518.1 et 518.2 lors de la compilation de votre projet :
 
 ```4d
 var $options:={}
@@ -189,16 +188,15 @@ $options.warnings.push({major: 518; minor: 2; enabled: False})
 var $result:=Compile project($options)
 ```
 
-## See also 
+## Voir également
 
-[BUILD APPLICATION](./commands/build-application)
+[BUILD APPLICATION](../commands-legacy/build-application.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1760 |
-| Thread safe | no |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1760 |
+| Thread safe        | non  |
 
 

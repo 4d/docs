@@ -5,119 +5,119 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *object* : Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *variableCol* ; *nomEnTête* ; *variableEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is set) or Variable (if * is omitted) |
-| colPosition | Integer | &#8594;  | Location of column to insert |
-| colName | Text | &#8594;  | Name of the column object |
-| colVariable | Array, Field, Variable, Pointer | &#8594;  | Column array name or field or variable |
-| headerName | Text | &#8594;  | Name of the column header object |
-| headerVar | Integer, Pointer | &#8594;  | Column header variable |
-| footerName | Text | &#8594;  | Column footer object name |
-| footerVar | Variable, Pointer | &#8594;  | Column footer variable |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
+| nomCol | Text | &#8594;  | Nom d’objet de la colonne |
+| variableCol | Array, Field, Variable, Pointer | &#8594;  | Nom de la variable tableau de la colonne ou champ ou variable |
+| nomEnTête | Text | &#8594;  | Nom d’objet de l’en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#8594;  | Variable d’en-tête de la colonne |
+| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R3|Modified|
-|13|Modified|
-|12|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|14 R3|Modifié|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->The **LISTBOX INSERT COLUMN** command inserts a column in the list box set by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->La commande **LISTBOX INSERT COLUMN** insère une colonne dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-**Note:** This command does nothing if it is applied to the first column of a list box displayed in hierarchical mode. 
+**Note :** Cette commande ne fait rien si elle est appliquée à la première colonne d’une list box affichée en mode hiérarchique. 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*.
 
-The new column is inserted just in front of the column set using the *colPosition* parameter. If the *colPosition* parameter is greater than the total number of columns, the column is added after the last column. 
+La nouvelle colonne est insérée juste avant la colonne désignée par le paramètre *positionCol*. Si le paramètre *positionCol* est supérieur au nombre total de colonnes, la colonne est ajoutée après la dernière colonne. 
 
-Pass the name of the object and the variable of the inserted column in the *colName* and *colVariable* parameters. 
+Passez dans les paramètres *nomCol* et *variableCol* le nom d’objet et la variable de la colonne insérée. 
 
-* With an array type list box, the name of the variable must match the name of the array whose contents will be displayed in the column. You can pass a Nil (->\[\]) pointer if you use the command in a dynamic context when the form is executed (see below).
-* With a selection list box, you must pass a field or variable in the *colVariable* parameter. The contents of the column will thus be the value of the field or variable, evaluated for each record of the selection associated with the list box. This type of content can only be used when the “Data Source” property of the list box is Current Selection or Named Selection (see the *Managing List Box Objects* section). You can use fields or variables of the string, number, Date, Time, Picture and Boolean types.
+* Dans le cadre d'une list box de type tableau, le nom de la variable correspond au nom du tableau dont le contenu sera affiché dans la colonne. Vous pouvez passer un pointeur Nil (->\[\]) si vous utilisez la commande dans un contexte dynamique à l'exécution du formulaire (cf. ci-dessous).
+* Dans le cadre d'une list box de type sélection, vous pouvez passer un champ ou une variable dans le paramètre *variableCol*. Le contenu de la colonne sera alors la valeur du champ ou de la variable, évaluée pour chaque enregistrement de la sélection associée à la list box. Ce type de contenu ne peut être utilisé que lorsque la propriété “Source de données” de la list box est Sélection courante ou Sélection temporaire (cf. section *Gestion programmée des objets de type List box*). Vous pouvez utiliser des champs ou des variables de type chaîne, numérique, Date, Heure, Image et Booléen.
 
-In the context of list boxes based on selections of records, **LISTBOX INSERT COLUMN** can be used to insert simple elements (fields or variables). If you want to handle more complex expressions (such as formulas or methods), you must use the [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md) command.   
-Collection or Entity selection type list boxes are also supported, however since the *colName* parameter does not accept expressions, you must use the [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) command to assign the data source. It is more accurate to use the [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md) command in this case. 
+Dans le contexte de list box basées sur des sélections d'enregsitrements, **LISTBOX INSERT COLUMN** permet d’insérer des éléments simples (champs ou variables). Si vous souhaitez manipuler des expressions plus complexes (telles que des formules ou des méthodes), vous devez utiliser la commande [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md).  
+Les list box de type collection ou entity selection sont également prises en charge, mais comme le paramètre *variableCol* n'accepte pas les expressions, vous devrez utiliser la commande [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) pour assigner la source de données. Il est plus judicieux dans ce cas d'utiliser directement la commande [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md).
 
-**Note:** It is not possible to combine columns of the array type (array data source) and those of the field or variable type (selection data source) in the same list box.
+**Note :** Il n’est pas possible de combiner dans une même list box des colonnes de type tableau (source de données tableaux) et des colonnes de type champ ou variable (source de données sélection).
 
-Pass the object name and the variable of the inserted column header in the *headerName* and *headerVar* parameters.
+Passez dans les paramètres *nomEntête* et *variableEntête* le nom d’objet et la variable de l’en-tête de la colonne insérée.
 
-In the *footerName* and *footerVar* parameters, you can also pass the object name and variable of the footer of the inserted column.
+Vous pouvez également passer dans les paramètres *nomPied* et *variablePied* le nom d’objet et la variable du pied de la colonne insérée.
 
-**Note:** Object names must be unique in a form. You must be sure that the names passed in the *colName*, *headerName*  and *footerName* parameters are not already used. Otherwise, the column is not created and an error is generated.
+**Note :** Les noms d’objets doivent être uniques dans un formulaire. Vous devez veiller à ce que les noms passés dans les paramètres *nomCol*, *nomEntête* et *nomPied* ne soient pas déjà utilisés. Sinon, la colonne n’est pas créée et une erreur est générée.
 
-### Dynamic insertion 
+### Insertion dynamique 
 
-You can use this command to insert columns into list boxes dynamically when the form is executed. 4D will automatically handle the definition of the necessary variables (column, footer and header).
+Vous pouvez utiliser cette commande pour insérer dynamiquement des colonnes dans les list box à l'exécution du formulaire, 4D prenant automatiquement en charge les définitions de variables nécessaires (colonne, pied et en-tête).
 
-To do this, **LISTBOX INSERT COLUMN** accepts a **Nil** (**\->\[\]**) pointer as a value for the *colVariable* (array type list box only), *headerVar* and *footerVar* parameters. In this case, when the command is executed, 4D creates the required variables dynamically (for more information, refer to the section). 
+Pour cela, **LISTBOX INSERT COLUMN** accepte un pointeur **Nil** (**\->\[\]**) comme valeur pour les paramètres *variableCol* (list box de type tableau uniquement), *variableEntête* et *variablePied*. Dans ce cas, 4D va créer dynamiquement les variables requises lors de l'exécution de la commande (pour plus d'informations, reportez-vous à la section ). 
 
-Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 3). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](listbox-insert-rows.md) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](append-to-array.md) both for setting the type of the array and inserting elements. 
+A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 3). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](listbox-insert-rows.md) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](append-to-array.md) pour à la fois typer le tableau et insérer des éléments. 
 
-## Example 1 
+#### Exemple 1 
 
-We would like to add a column at the end of the list box: 
+Nous souhaitons ajouter une colonne à la fin de la list box : 
 
 ```4d
- var HeaderVarName;$Last;RecNum : Integer
+ var NomVarHeader;$Der;$NbEnr : Integer
  ALL RECORDS([Table 1])
- $RecNum:=Records in table([Table 1])
- ARRAY PICTURE(Picture;$RecNum)
+ $NbEnr:=Records in table([Table 1])
+ ARRAY PICTURE(tabImage;$NbEnr)
  
- $Last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN(*;"ListBox1";$Last;"ColumnPicture";Picture;"HeaderPicture";HeaderVarName)
+ $Der:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN(*;"ListBox1";$Der;"ColumnPicture";tabImage;"HeaderPicture";NomVarHeader)
 ```
 
-## Example 2 
+#### Exemple 2 
 
-We would like to add a column to the right of the list box and associate the values of the \[Transport\]Fees field with it: 
+Nous souhaitons ajouter une colonne à la droite de la list box et lui associer les valeurs du champ \[Envois\]Frais : 
 
 ```4d
- $last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN(*;"ListBox1";$last;"FieldCol";[Transport]Fees;"HeaderName";HeaderVar)
+ $der:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN(*;"ListBox1";$der;"ColChamp";[Envois]Frais;"NomEntete";VarEntete)
 ```
 
-## Example 3 
+#### Exemple 3 
 
-You want to insert a column dynamically into an array type list box and define its header:
+Vous souhaitez insérer dynamiquement une colonne dans une list box de type tableau et définir son en-tête :
 
 ```4d
  var $NilPtr : Pointer
  LISTBOX INSERT COLUMN(*;"MyListBox";1;"MyNewColumn";$NilPtr;"MyNewHeader";$NilPtr)
  ColPtr:=OBJECT Get pointer(Object named;"MyNewColumn")
  ARRAY TEXT(ColPtr->;10)
-  //Definition of header
+     //Définition de l'en-tête
  headprt:=OBJECT Get pointer(Object named;"MyNewHeader")
- OBJECT SET TITLE(headprt->;"Inserted header")
+ OBJECT SET TITLE(headprt->;"Entête inséré")
 ```
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX DELETE COLUMN](listbox-delete-column.md)  
 [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 829 |
+| Numéro de commande | 829 |
 | Thread safe | no |
 
 

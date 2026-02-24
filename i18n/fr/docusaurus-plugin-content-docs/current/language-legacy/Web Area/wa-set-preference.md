@@ -5,79 +5,72 @@ slug: /commands/wa-set-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Boolean )<br/>**WA SET PREFERENCE** ( *object* : Variable, Field ; *selector* : Integer ; *value* : Boolean )<!-- END REF-->
+<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( {* ;} *objet* ; *sélecteur* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| selector | Integer | &#8594;  | Preference to be modified |
-| value | Boolean | &#8594;  | Value of the preference (True = allowed,  False = not allowed) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#8594;  | Préférence à modifier |
+| valeur | Boolean | &#8594;  | Valeur de la préférence (Vrai = autorisé, Faux = non autorisé) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Modified|
-|19|Modified|
-|14 R2|Modified|
-|14|Modified|
-|11 SQL Release 2|Created|
+|19 R5|Modifié|
+|19|Modifié|
+|14 R2|Modifié|
+|14|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA SET PREFERENCE.Summary-->The WA SET PREFERENCE command sets different preferences for the Web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA SET PREFERENCE.Summary-->La commande **WA SET PREFERENCE** permet de fixer différentes préférences pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-Pass the preference to be modified in the *selector* parameter and the value to be assigned to it in the *value* parameter. In *selector*, you can pass one of the following constants, found in the *Web Area* theme:
+Passez dans le paramètre *sélecteur* la préférence à modifier et dans *valeur* la valeur à lui attribuer. Vous pouvez passer dans *sélecteur* l’une des constantes suivantes, placées dans le thème "*Zone Web*" :
 
-| Constant                  | Value | Comment                                                                                                                                 |
-| ------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| WA enable contextual menu | 4     | Allow the display of a standard contextual menu in the Web area. Default (any engine) = False                                           |
-| WA enable URL drop        | 101   | Change drop icon and call *On Window Opening Denied* event when URLs or files are dropped in the Web area. Default (any engine) = False. |
-| WA enable Web inspector   | 100   | Allow the display of the Web inspector in the area. Default (any engine) = False                                                        |
+| Constante                 | Valeur | Comment                                                                                                                                                                                     |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WA enable contextual menu | 4      | Autoriser l’affichage du menu contextuel standard dans la zone Web. Par défaut (n'importe quelle machine) = Faux.                                                                           |
+| WA enable URL drop        | 101    | Modifie l'icône de déposer et appelle l'événement *Sur refus ouverture fenêtre* lorsque les URL ou les fichiers sont déposés dans la zone Web. Par défaut (n'importe quelle machine) = Faux |
+| WA enable Web inspector   | 100    | Autoriser l’affichage de l’inspecteur Web dans la zone. Par défaut (n'importe quelle machine) = Faux.                                                                                       |
 
-For each preference, pass **True** in *value* to activate it and **False** to deactivate it.
+Pour chaque préférence, passez Vrai dans *valeur* pour l’activer et Faux pour l’inactiver.
 
+## Exemple 
 
-:::note Compatibility
-
-Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. Passing **true** to the `WA enable URL drop` selector is ignored in this context. 
-
-:::
-
-## Example 
-
-To enable URL drops in the 'myarea' Web area:
+Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 
 ```4d
-  //in the form method
+  //dans la méthode formulaire
  WA SET PREFERENCE(*;"myarea";WA enable URL drop;True)
 ```
 
 ```4d
-  //in web area object method
+  //dans une méthode objet zone web
  If(FORM Event.code=On Window Opening Denied)
     WA OPEN URL(*;"myarea";WA Get last filtered URL(*;"WebArea"))
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [WA GET PREFERENCE](wa-get-preference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1041 |
+| Numéro de commande | 1041 |
 | Thread safe | no |
 
 

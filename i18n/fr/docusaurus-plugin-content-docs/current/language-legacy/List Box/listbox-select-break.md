@@ -5,81 +5,81 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *object* : Text ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *object* : Variable ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *objet* ; *ligne* ; *colonne* {; *action*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| row | Integer | &#8594;  | Number of break row |
-| column | Integer | &#8594;  | Number of break column |
-| action | Integer | &#8594;  | Selection action |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| ligne | Integer | &#8594;  | Numéro de ligne de la rupture |
+| colonne | Integer | &#8594;  | Numéro de colonne de la rupture |
+| action | Integer | &#8594;  | Action de sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Modified|
-|12|Created|
+|16 R2|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Summary-->The **LISTBOX SELECT BREAK** command can be used to select break rows in the list box object designated by the *object* and *\** parameters.<!-- END REF--> The list box must be displayed in hierarchical mode. 
+<!--REF #_command_.LISTBOX SELECT BREAK.Summary-->La commande **LISTBOX SELECT BREAK** permet de sélectionner des lignes de rupture dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> La list box doit être affichée en mode hiérarchique. 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-Break rows are added to represent the hierarchy but they do not correspond to existing rows in the array. To designate a break row to be selected, in the *row* and *column* parameters, you must pass the row and column number corresponding to the first occurrence in the corresponding array. These values are returned by the [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) command when the user has selected a break row. This principle is described in the “Management of break rows” paragraph of the *Hierarchical list boxes* section. 
+Les lignes de rupture sont ajoutées pour représenter la hiérarchie mais ne correspondent pas à des lignes de tableaux existantes. Pour désigner une ligne de rupture à sélectionner, vous devez passer dans les paramètres *ligne* et *colonne* des numéros de ligne et de colonne correspondant à la première occurrence dans le tableau correspondant. Ces valeurs sont retournées par la commande [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) lorsque l’utilisateur a sélectionné une ligne de rupture. Ce principe est détaillé dans le paragraphe “Gestion des lignes de rupture” de la section *List box hiérarchiques*. 
 
-The *action* parameter, if it is passed, can set the selection action to be carried out when a selection of break rows already exists in the list box. You can pass a value or one of the following constants, found in the "*List Box*" theme:
+Le paramètre *action*, s’il est passé, permet de définir l’action de sélection à effectuer lorsqu’une sélection de lignes de rupture existe déjà dans la list box. Vous pouvez passer une valeur ou l’une des constantes suivantes, placées dans le thème "*List box*" :
 
-| Constant                 | Type    | Value | Comment                                                                                                                                                                                                                                                       |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk add to selection      | Integer | 1     | The row selected is added to the existing selection. If the row specified already belongs to the existing selection, the command does nothing.                                                                                                                |
-| lk remove from selection | Integer | 2     | The row selected is removed from the existing selection. If the row specified does not belong to the existing selection, the command does nothing.                                                                                                            |
-| lk replace selection     | Integer | 0     | The row selected becomes the new selection and replaces the existing selection. The command has the same effect as a user click on a row (however, the On Clicked event is not generated). This is the default action (if the *action* parameter is omitted). |
+| Constante                | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk add to selection      | Entier long | 1      | La ligne sélectionnée est ajoutée à la sélection existante. Si la ligne désignée appartient déjà à la sélection existante, la commande ne fait rien.                                                                                                                                                                         |
+| lk remove from selection | Entier long | 2      | La ligne sélectionnée est supprimée de la sélection existante. Si la ligne désignée n’appartient pas à la sélection existante, la commande ne fait rien.                                                                                                                                                                     |
+| lk replace selection     | Entier long | 0      | La ligne sélectionnée devient la nouvelle sélection et remplace la sélection existante. La commande produit le même effet qu’un clic de l’utilisateur sur une ligne de la list box (l'événement Sur clic n'est toutefois pas généré). Cette action est effectuée par défaut (lorsque le paramètre *action* n’est pas passé). |
 
-**Note:** If you have checked the **Hide selection highlight** option for a list box:
+**Note :** Si vous avez coché l'option **Cacher surlignage sélection** pour la list box : 
 
-* you have to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
-* you cannot highlight break rows for hierarchical list boxes in this case (see *Limitation with hierarchical list boxes*).
+* vous devrez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Pour plus d'informations sur ce point, veuillez vous reporter au paragraphe *Personnaliser la représentation des sélections*.
+* vous ne pouvez pas surligner les lignes de rupture dans les list box hiérarchiques dans ce cas (cf. *Limitation pour les list box hiérarchiques*).
 
-## Example 
+## Exemple 
 
-Given the following arrays shown in a list box:
+Soient les tableaux suivants représentés dans une list box :
 
-![](../assets/en/commands/pict185052.en.png)
+![](../assets/en/commands/pict185052.fr.png)
 
-We want to select the "Normandy" break row:
+Nous souhaitons sélectionner la ligne de rupture "Normandie" dans la représentation hiérarchique de ces tableaux :
 
 ```4d
- $row:=Find in array(T2;"Normandy")
- $column:=2
- LISTBOX COLLAPSE(*;"MyListbox") //collapsing of all levels
- LISTBOX SELECT BREAK(*;"MyListbox";$row;$column)
+ $ligne:=Find in array(T2;"Normandie")
+ $colonne:=2
+ LISTBOX COLLAPSE(*;"MaListbox") //contraction de tous les niveaux
+ LISTBOX SELECT BREAK(*;"MaListbox";$ligne;$colonne)
 ```
 
-Here is the result:
+Voici le résultat :
 
-![](../assets/en/commands/pict185059.en.png)
+![](../assets/en/commands/pict185059.fr.png)
 
-## See also 
+## Voir aussi 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1117 |
+| Numéro de commande | 1117 |
 | Thread safe | no |
 
 

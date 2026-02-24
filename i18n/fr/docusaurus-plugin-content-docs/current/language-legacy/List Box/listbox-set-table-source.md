@@ -5,59 +5,57 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Variable ; *tableNum* : Integer {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( * ; *object* : Text ; *selName* : Text {; *highlightName* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *object* : Variable ; *selName* : Text {; *highlightName* : Text} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nomSurlignage*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *tempo* {; *nomSurlignage*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| tableNum | Integer | &#8594;  | Number of table whose current selection is to be used |
-| selName | Text | &#8594;  | Named selection to be used |
-| highlightName | Text | &#8594;  | Name of highlight set |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numTable &#124; tempo | Entier long, Chaîne | &#8594;  | Numéro de la table de laquelle utiliser la sélection courante ou Nom de la sélection temporaire à utiliser |
+| nomSurlignage | Text | &#8594;  | Nom de l’ensemble de surlignage |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|12|Renamed|
-|11 SQL|Created|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->The **LISTBOX SET TABLE SOURCE** command can be used to modify the source of the data displayed in the listbox that is designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->La commande **LISTBOX SET TABLE SOURCE** vous permet de modifier la source des données affichées dans la list box désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-**Note:** This command can only be used when the “Data Source” property of the list box is set to **Current Selection** or **Named Selection** (for more information about this, please refer to the *Managing List Box Objects* section). It does nothing if you use it with a listbox that is associated with an array, a collection or an entity selection.
+**Note :** Cette commande ne peut être utilisée que lorsque la propriété “Source de données” de la list box est **Sélection courante** ou **Sélection temporaire** (pour plus d'informations sur ce point, reportez-vous à la section *Gestion programmée des objets de type List box*). Elle ne fait rien si vous l’utilisez avec une list box associée à des tableaux, des collections ou des entity selections.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, please refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-If you pass a table number as the *tableNum* parameter, the listbox will be filled in with the data of the records in the current selection of the table.
+Si vous passez un numéro de table comme paramètre *numTable*, la list box sera remplie avec les données des enregistrements de la sélection courante de la table.  
+Si vous passez un nom de sélection temporaire comme paramètre *tempo*, la list box sera remplie avec les données des enregistrements appartenant à la sélection temporaire.
 
-If you pass a named selection as the *selName* parameter, the listbox will be filled in with the data of the records belonging to the named selection.
+Le paramètre optionnel *nomSurlignage* vous permet d’associer un ensemble de surlignage à la list box. L’ensemble de surlignage est utilisé pour gérer le surlignage des enregistrements par l’utilisateur dans la list box. 
 
-The optional *highlightName* parameter associates a highlight set with the list box. The highlight set manages record highlighting by the user in the list box. 
+Si la list box contenait déjà des colonnes, leur contenu est mis à jour à l’issue de l’exécution de la commande.
 
-If the listbox already contains columns, their contents will be updated after the command is executed.
+**Note :** Pour des raisons d'optimisation, cette commande est traitée de manière asynchrone, c'est-à-dire que le changement de source de la listbox n'est effectif qu'à l'issue de l'exécution complète de la méthode dans laquelle la commande est appelée. 
 
-**Note:** For optimization purposes, this command is processed in an asynchronous manner; in other words, the source of the listbox is changed only after the complete execution of the method in which the command is called. 
-
-## See also 
+## Voir aussi 
 
 [LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1013 |
+| Numéro de commande | 1013 |
 | Thread safe | no |
 
 

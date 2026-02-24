@@ -5,106 +5,106 @@ slug: /commands/current-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current date.Syntax-->**Current date** ({ * }) : Date<!-- END REF-->
+<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Returns the current date from the server |
-| Function result | Date | &#8592; | Current date |
+| * | Opérateur | &#8594;  | Retourne la date du jour du serveur |
+| Résultat | Date | &#8592; | Date du jour |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Current date.Summary-->The Current date command returns the current date as kept by the system clock.<!-- END REF-->If you use the asterisk (\*) parameter when executing this function on a 4D Client machine, it returns the current date from the server.
+<!--REF #_command_.Current date.Summary-->**Current date** retourne la date courante telle que définie dans l'horloge système de la machine.<!-- END REF-->**:** Si vous passez le paramètre astérisque (\*) — lors d'une exécution sur un poste 4D Client —, la fonction retourne la date du jour telle que définie dans l'horloge du poste serveur. 
 
-## Example 1 
+## Exemple 1 
 
-The following example displays an alert box containing the current date:
+L'exemple suivant fait apparaître une boîte de dialogue d'alerte affichant la date du jour :
 
 ```4d
- ALERT("The date is "+String(Current date)+".")
+ ALERT("Nous sommes le "+String(Date du jour)+".")
 ```
 
-## Example 2 
+## Exemple 2 
 
-If you write an application for the international market, you may need to know if the version of 4D that you run works with dates formatted as MM/DD/YYYY (US version) or DD/MM/YYYY (French version). This is useful to know for customizing data entry fields.
+Vous développez une application pour le marché international. Vous souhaitez savoir si la version de 4D avec laquelle votre application est exécutée fonctionne avec des dates formatées en MM/JJ/AAAA (version US) ou JJ/MM/AAAA (version française). Cette information est nécessaire pour vous permettre, par exemple, de personnaliser correctement les zones de saisie.
 
-The following project method allows you to do so:
+La méthode projet suivante vous permet de traiter cette question :
 
 ```4d
-  // Sys date format global function
-  // Sys date format -> String
-  // Sys date format -> Default 4D data format
+  // Méthode projet (fonction) Format date système
+  // Format date système -> Chaine
+  // Format date système -> Format de données 4D par défaut
  
- #DECLARE -> $format : Text
- var $vsDate;$vsMDY;$vsMonth;$vsDay;$vsYear : Text
+ #DECLARE -> $format : Text
+ var $vsDate;$vsMJA;$vsMois;$vsJour;$vsAnnée : Text
  var $vlPos : Integer
  var $vdDate : Date
  
-  // Get a Date value where the month, day and year values are all different
+  // Récupérer une date dans laquelle les valeurs de mois, de jour et d'année sont toutes différentes
  $vdDate:=Current date
  Repeat
-    $vsMonth:=String(Month of($vdDate))
-    $vsDay:=String(Day of($vdDate))
-    $vsYear:=String(Year of($vdDate)%100)
-    If(($vsMonth=$vsDay)|($vsMonth=$vsYear)|($vsDay=$vsYear))
-       vOK:=0
+    $vsMois:=String(Mois de($vdDate))
+    $vsJour:=String(Jour de($vdDate))
+    $vsAnnée:=String(Annee de($vdDate)%100)
+    If(($vsMois=$vsJour) | ($vsMois=$vsAnnée) | ($vsJour=$vsAnnée))
+       OK:=0
        $vdDate:=$vdDate+1
     Else
-       vOK:=1
+       OK:=1
     End if
- Until(vOK=1)
- $format:="" // Initialize function result
+ Until(OK=1)
+ $format:=""   // Initialisation du résultat de la fonction
  $vsDate:=String($vdDate)
- $vlPos:=Position("/";$vsDate) // Find the first / separator in the string ../../..
- $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the first digits from the date
- $vsDate:=Substring($vsDate;$vlPos+1) // Eliminate the first digits as well as the first / separator
+ $vlPos:=Position("/";$vsDate)   // Trouver le premier séparateur / dans la chaîne ../../..
+ $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les premiers chiffres de la date
+ $vsDate:=Substring($vsDate;$vlPos+1)   // Eliminer les premiers chiffres et le premier séparateur /
  Case of
-    :($vsMDY=$vsMonth) // The digits express the month
+    :($vsMJA=$vsMois)   // Les chiffres expriment le mois
        $format:="MM"
-    :($vsMDY=$vsDay) // The digits express the day
-       $format:="DD"
-    :($vsMDY=$vsYear) // The digits express the year
-       $format:="YYYY"
+    :($vsMJA=$vsJour)   // Les chiffres expriment le jour
+       $format:="JJ"
+    :($vsMJA=$vsAnnée)   // Les chiffres expriment l'année
+       $format:="AAAA"
  End case
- $format:=$format+"/" // Start building the function result
- $vlPos:=Position("/";$vsDate) // Find the second separator in the string ../..
- $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the next digits from the date
- $vsDate:=Substring($vsDate;$vlPos+1) // Reduce the string to the last digits from the date
+ $format:=$format+"/"   // Commencer à construire le résultat de la fonction
+ $vlPos:=Position("/";$vsDate)   // Trouver le deuxième séparateur dans la chaîne ../..
+ $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les chiffres suivants de la date
+ $vsDate:=Substring($vsDate;$vlPos+1)   // Réduire la chaîne aux derniers chiffres de la date
  Case of
-    :($vsMDY=$vsMonth) // The digits express the month
+    :($vsMJA=$vsMois)   // Les chiffres expriment le mois
        $format:=$format+"MM"
-    :($vsMDY=$vsDay) // The digits express the day
-       $format:=$format+"DD"
-    :($vsMDY=$vsYear) // The digits express the year
-       $format:=$format+"YYYY"
+    :($vsMJA=$vsJour)   // Les chiffres expriment le jour
+       $format:=$format+"JJ"
+    :($vsMJA=$vsAnnée)   // Les chiffres expriment l'année
+       $format:=$format+"AAAA"
  End case
- $format:=$format+"/" // Pursue building the function result
+ $format:=$format+"/"   // Poursuivre la construction du résultat de la fonction
  Case of
-    :($vsDate=$vsMonth) // The digits express the month
+    :($vsDate=$vsMois)   // Les chiffres expriment le mois
        $format:=$format+"MM"
-    :($vsDate=$vsDay) // The digits express the day
+    :($vsDate=$vsJour)   // Les chiffres expriment le jour
        $format:=$format+"DD"
-    :($vsDate=$vsYear) // The digits express the year
-       $format:=$format+"YYYY"
+    :($vsDate=$vsAnnée)   // Les chiffres expriment l'année
+       $format:=$format+"AAAA"
  End case
-  // At this point $format is equal to MM/DD/YYYY or DD/MM/YYYY or...
+  // A ce moment, $format vaut soit MM/JJ/AAAA soit JJ/MM/AAAA, ou encore...
 ```
 
-## See also 
+## Voir aussi 
 
 [Day of](day-of.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 33 |
+| Numéro de commande | 33 |
 | Thread safe | yes |
 
 

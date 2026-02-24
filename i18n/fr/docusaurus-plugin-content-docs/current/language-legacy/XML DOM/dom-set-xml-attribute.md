@@ -5,47 +5,47 @@ slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* : Text ; *attribName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date {; ...(*attribName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date)} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *refElément* ; *nomAttribut* ; *valeurAttribut* {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| attribName | Text | &#8594;  | Attribute to set |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomAttribut | Text | &#8594;  | Attribut à définir |
+| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nouvelle valeur d’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->The DOM SET XML ATTRIBUTE command adds one or more attributes to the XML element whose reference is passed in the *elementRef* parameter.<!-- END REF--> It also sets the value of each attribute defined.
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->La commande **DOM SET XML ATTRIBUTE** permet d’ajouter un ou plusieurs attribut(s) à l’élément XML dont la référence est passée dans le paramètre *refElément*.<!-- END REF--> Elle permet également de définir la valeur de chaque attribut défini.
 
-Pass the attribute you want to set and its value respectively in the *attrName* and *attrValue* parameters (in the form of variables, fields or literal values). You can pass as many attribute/value pairs as you want.   
-The *attrValue* parameter can be of the text type or another type (Boolean, integer, real, date or time). If you pass a value other than text, 4D handles its conversion to text, according to the following principles:
+Passez dans les paramètres *nomAttribut* et *valeurAttribut* respectivement l’attribut à écrire et sa valeur (sous forme de variables, champs ou valeurs littérales). Vous pouvez passer autant de couples attribut/valeur que vous voulez.   
+Le paramètre *valeurAttribut* peut être de type texte ou d'un autre type (booléen, entier, réel, heure ou date). Si vous passez une valeur d'un type autre que texte, 4D se charge de la conversion en texte, selon les principes suivants :
 
-| **Type** | **Example of converted value**                |
-| -------- | --------------------------------------------- |
-| Boolean  | "true" or "false"                             |
-| Integer  | "123456"                                      |
-| Real     | "12.34" (the decimal separator is always ".") |
-| Date     | "2006-12-04T00:00:00Z" (RFC 3339 standard)    |
-| Time     | "5233" (number of seconds)                    |
+| **Type** | **Exemple de valeur convertie**                  |
+| -------- | ------------------------------------------------ |
+| Booléen  | "true" ou "false" (non traduit)                  |
+| Entier   | "123456"                                         |
+| Réel     | "12.34" (le séparateur décimal est toujours ".") |
+| Heure    | "5233" (nombre de secondes)                      |
+| Date     | "2006-12-04T00:00:00Z" (norme RFC 3339)          |
 
-## Example 
+## Exemple 
 
-In the following XML source:
+Soit la source XML suivante :
 
 ```XML
 <Book>
@@ -53,15 +53,15 @@ In the following XML source:
 </Book>
 ```
 
-If the following code is executed:
+Si le code suivant est exécuté :
 
 ```4d
  vAttrName:="Font"
  vAttrVal:="Verdana"
- DOM SET XML ATTRIBUTE(vElemRef;vAttrName;vAttrVal)
+ DOM SET XML ATTRIBUTE(vRefElem;vAttrName;vAttrVal)
 ```
 
-We get:
+Nous obtenons :
 
 ```XML
 <Book>
@@ -69,23 +69,23 @@ We get:
 </Book>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 866 |
+| Numéro de commande | 866 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

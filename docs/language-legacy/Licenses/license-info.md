@@ -1,6 +1,7 @@
 ---
 id: license-info
 title: License info
+slug: /commands/license-info
 displayed_sidebar: docs
 ---
 

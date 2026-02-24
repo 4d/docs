@@ -5,126 +5,127 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *object* : Text ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *object* : Variable, Field ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( {* ;} *objet* ; *couleurAvantPlan* {; *couleurArrièrePlan* {; *couleurArrièrePlanAlt*}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) ||
-| foregroundColor | Text, Integer | &#8594;  | RGB color value for foreground |
-| backgroundColor | Text, Integer | &#8594;  | RGB color value for background |
-| altBackgrndColor | Text, Integer | &#8594;  | RGB color value for alternating background |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou Variable (si * est omis) |
+| couleurAvantPlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'avant-plan |
+| couleurArrièrePlan | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan |
+| couleurArrièrePlanAlt | Text, Integer | &#8594;  | Valeur de la couleur RVB d'arrière-plan alternée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|14|Modified|
-|12|Renamed|
-|2004|Modified|
-|<6|Created|
+|17 R6|Modifié|
+|14|Modifié|
+|12|Renommé|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->The **OBJECT SET RGB COLORS** command changes the foreground and background colors of the objects specified by the *object* parameter and the optional *\** parameter.<!-- END REF--> When the command is applied to a list box object, an additional parameter lets you modify the alternating color of the rows.
+<!--REF #_command_.OBJECT SET RGB COLORS.Summary-->La commande **OBJECT SET RGB COLORS** modifie les couleurs d'avant-plan et d'arrière-plan du ou des objet(s) défini(s) par le paramètre *objet* et le paramètre optionnel *\**.<!-- END REF--> Lorsque la commande est appliquée à un objet de type list box, un paramètre supplémentaire permet de modifier la couleur alternée des lignes.
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the *Object Properties* section.
+Si vous passez le paramètre optionnel *\**, vous spécifiez que le paramètre *objet* est le nom d'un objet (une chaîne de caractères). Si le paramètre \* est omis, vous spécifiez que *objet* est un champ ou un objet. Dans ce cas, vous ne passez pas dans *objet* une chaîne de caractères mais la référence à un champ ou à une variable (champ ou variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-The optional *altBackgrndColor* parameter lets you set an alternate background color for even-numbered rows. This parameter is only used when the object specified is a list box or a column of the list box. When this parameter is used, the *backgroundColor* parameter is only used for odd-numbered rows. Using alternating colors makes lists easier to read.
+Le paramètre facultatif *couleurArrièrePlanAlt* permet de désigner une couleur alternative pour l’arrière-plan (c’est-à-dire le fond) des lignes paires. Ce paramètre n’est utile que lorsque l’objet désigné est de type list box ou colonne de list box. Lorsque ce paramètre est utilisé, la *couleurArrièrePlan* est utilisée pour le fond des lignes impaires uniquement. Utiliser des couleurs alternées améliore la lisibilité des tableaux.
 
-If *object* specifies a list box object, alternating colors are used for the entire list box. If *object* specifies a column of the list box, only that column will use the colors set.
+Si *objet* désigne l’objet list box, les couleurs alternées sont utilisées dans la totalité de la list box. Si *objet* désigne une colonne de list box, seule cette colonne utilisera les couleurs définies.
 
-**Definition of colors**
+**Définition des couleurs**
 
-You indicate RGB color values in *foregroundColor* and, optionally, *backgroundColor*, and *altBackgrndColor* parameters. The following formats are supported:
+Vous passez des valeurs de couleurs RVB dans les paramètres *couleurAvantPlan* et, éventuellement, *couleurArrièrePlan* et *couleurArrièrePlanAlt*. Les formats suivants sont pris en charge :
 
-| **Format name**               | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **Examples**                                                                                              |
-| ----------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| CSS color name                | Text     | Standard CSS2 color name. <li> List of available names can be found in various locations on the web, for example on the [htmlcolorcodes.com](https://htmlcolorcodes.com/color-names/) web site.</li><li>Use "transparent" to set transparency to background (can only be used with the *backgroundColor* and *altBackgrndColor* parameters).</li><li> Use "" (empty string) in *foregroundColor* and/or *backgroundColor* to let it unchanged.</li> | "red", "cyan", "lightblue"                                                                                |
-| CSS color "#rrggbb" syntax    | Text     | Standard CSS2 hex color code:<li>rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color     </li>    | "#ff0000", "#00FFFF", "#ADD8E6"                                                                           |
-| CSS color "rgb(r,g,b)" syntax | Text     | Standard CSS2 rgb color code:<li>r = red component of the color (0...255)</li><li>g = green component of the color (0...255)</li><li>b = blue component of the color (0...255) </li>       | "rgb(255,255,0)", "rgb(255,0,0)"                                                                          |
-| 4-byte RGB value              | Integer  | 4-byte Long Integer (format 0x00rrggbb). Hex values:<li> rr = red component of the color</li><li>gg = green component of the color</li><li>bb = blue component of the color</li>  | 0x00000000, 0x00FF7F7F                                                                                    |
-| 4D "system" color constant    | Integer  | Colors used by 4D for drawing objects with automatic colors. Available constants (from *SET RGB COLORS* theme):<li> Background color</li><li>Background color none (can only be used with the *backgroundColor* and *altBackgrndColor* parameters)</li><li>Dark shadow color</li><li>Disable highlight item color</li><li>Foreground color</li><li>Highlight menu background color</li><li>Highlight menu text color</li><li>Highlight text background color</li><li>Highlight text color</li><li>Light shadow color </li>| **Note:* Automatic colors depend on the system as well as the type of object to which they are assigned.* |
+| **Nom du format**                      | **Type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | **Exemples**                                                                                                |
+| -------------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Nom de la couleur CSS                  | Texte       | Nom de la couleur CSS standard. <br/> La liste des noms est disponible en ligne, comme par exemple sur le site web [htmlcolorcodes.com](https://htmlcolorcodes.com/color-names/). Utilisez "transparent" pour obtenir un fond transparent (peut être utilisé uniquement avec les paramètres *couleurArrièrePlan* et *couleurArrièrePlanAlt*). Utilisez "" (chaîne vide) dans *couleurAvantPlan* et/ou couleurArrièrePlan pour laisser la couleur inchangée.                                               | "red", "cyan", "lightblue"                                                                                  |
+| Syntaxe "#rrggbb" de la couleur CSS    | Texte       | Code couleur standard CSS2 en notation hexadécimale : rr = Composante rouge de la couleur gg = Composante verte de la couleur bb = Composante bleue de la couleur                                                                                                                                                                                                                                                                                                                                                 | "#ff0000", "#00FFFF", "#ADD8E6"                                                                             |
+| Syntaxe "rgb(r,g,b)" de la couleur CSS | Texte       | Code couleur standard CSS2 en notation rvb :<br/> r = Composante rouge de la couleur (0...255) g = Composante verte de la couleur (0...255) b = Composante bleue de la couleur (0...255)                                                                                                                                                                                                                                                                                                                  | "rgb(255,255,0)", "rgb(255,0,0)"                                                                            |
+| Valeur RVB de 4 octets                 | Entier long | Entier long de 4 octets (format 0x00rrggbb). Valeurs hexadécimales :<br/> rr = Composante rouge de la couleur gg = Composante verte de la couleur bb = Composante bleue de la couleur                                                                                                                                                                                                                                                                                                                     | 0x00000000, 0x00FF7F7F                                                                                      |
+| Constante couleur "système" 4D         | Entier long | Couleurs utilisées par 4D pour dessiner des objets avec des couleurs automatiques. Constantes disponibles (du thème *FIXER COULEUR RVB*):<br/> Background color Background color none (cette constante peut être utilisée uniquement avec les paramètres *couleurArrièrePlan* et couleurArrièrePlanAlt) Dark shadow color Disable highlight item color Foreground color Highlight menu background color Highlight menu text color Highlight text background color Highlight text color Light shadow color | **Note :* Les couleurs automatiques dépendent du système et du type d'objet auxquels elles sont affectées.* |
 
-## Example 1 
+## Exemple 1 
 
-This form contains the two non-enterable variables *vsColorValue* and *vsColor* as well as the three thermometers: *thRed*, *thGreen*, and *thBlue*.
+Voici un formulaire contenant deux variables non saisissables, *vsColorValue* et *vsColor* ainsi que trois thermomètres, *thRouge*, *thVert* et *thBleu* :
 
 ![](../assets/en/commands/pict4278097.en.png)
 
-Here are the methods for these objects:
+Les méthodes associées à ces objets sont les suivantes :
 
 ```4d
-  //vsColorValue non-enterable Object Method
+  // Méthode objet de la variable non saisissable vsColorValue
  Case of
     :(FORM Event.code=On Load)
        vsColorValue:="0x00000000"
  End case
-  // vsColor non-enterable variable Object Method
+ 
+  // Méthode objet de la variable non saisissable vsColor
  Case of
     :(FORM Event.code=On Load)
        vsColor:=""
        OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;0x0000)
  End case
  
-  // thRed Thermometer Object Method
- CLICK IN COLOR THERMOMETER
+  // Méthode objet du thermomètre thRouge
+ CLIC SUR THERMOMETRE COULEUR
  
-  // thGreen Thermometer Object Method
- CLICK IN COLOR THERMOMETER
+  // Méthode objet du thermomètre thVert
+ CLIC SUR THERMOMETRE COULEUR
  
-  // thBlue Thermometer Object Method
- CLICK IN COLOR THERMOMETER
+  // Méthode objet du thermomètre thBleu
+ CLIC SUR THERMOMETRE COULEUR
 ```
 
-The project method called by the three thermometers is:
+La méthode projet appelée par les trois thermomètres est la suivante :
 
 ```4d
-  // CLICK IN COLOR THERMOMETER Project Method
- OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;(thRed<<16)+(thGreen<<8)+thBlue)
- vsColorValue:=String((thRed<<16)+(thGreen<<8)+thBlue;"&x")
- If(thRed=0)
+  // Méthode projet CLIC SUR THERMOMETRE COULEUR
+ OBJECT SET RGB COLORS(vsColor;0x00FFFFFF;(thRouge << 16)+(thVert << 8)+thBleu)
+ vsColorValue:=String((thRouge << 16)+(thVert << 8)+thBleu;" & x")
+ If(thRouge=0)
     vsColorValue:=Substring(vsColorValue;1;2)+"0000"+Substring(vsColorValue;3)
  End if
 ```
 
-Note the use of the [bitwise operators](../Concepts/dt_number.md#bitwise-operators) for calculating the color value from the thermometer values.
+Notez l'utilisation des **[SET AUTOMATIC RELATIONS](set-automatic-relations.md)** pour le calcul des valeurs des couleurs à partir de celles des thermomètres.
 
-When executed, the form looks like this:
+En exécution, le formulaire a l'aspect suivant :
 
 ![](../assets/en/commands/pict4278099.en.png)
 
-## Example 2 
+## Exemple 2 
 
-Changing to transparent background with a light font color:
+Passage du fond en transparent avec couleur de police claire :
 
-![](../assets/en/commands/pict1210700.en.png)
+![](../assets/en/commands/pict1210700.fr.png)
 
 ```4d
- OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
+ OBJECT SET RGB COLORS(*;"maVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.en.png)
+![](../assets/en/commands/pict1210702.fr.png)
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
 [Select RGB color](select-rgb-color.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 628 |
+| Numéro de commande | 628 |
 | Thread safe | no |
 
 

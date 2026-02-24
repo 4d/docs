@@ -5,45 +5,45 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* : Text {; *fontStyle* : Integer} ) : Object<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *famillePolice* {; *stylePolice*} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fontFamily | Text | &#8594;  | Name of font family |
-| fontStyle | Integer | &#8594;  | Font style: 0=normal (default), 1=bold, 2=italic |
-| Function result | Object | &#8592; | Font file object (null if font not installed) |
+| famillePolice | Text | &#8594;  | Nom de la famille de police |
+| stylePolice | Integer | &#8594;  | Style de police : 0=normale (par défaut), 1=gras, 2=italique |
+| Résultat | Null, Object | &#8592; | Objet fichier police |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18|Created|
+|18|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Font file.Summary-->The **Font file** command returns an object describing the font file in your OS corresponding to the *fontFamily* and, optionally, *fontStyle* you passed in parameter.<!-- END REF--> 
+<!--REF #_command_.Font file.Summary-->La commande **Font file** retourne un objet décrivant le fichier de polices de votre système d'exploitation correspondant à *famillePolice* et, éventuellement, à *stylePolice* que vous avez passé dans le paramètre.<!-- END REF-->
 
-If the font designated by *fontFamily* is not installed in the OS, the command returns a *Null* object. 
+Si la police sélectionnée dans *famillePolice* n'est pas installée dans le système d'exploitation, la commande retourne un objet *Null* .
 
-The optional *fontStyle* parameter allows to define a style variation to get. You can pass one or a combination of the following constants from the *Font Styles* theme (any other value is ignored):
+Le paramètre optionnel *stylePolice* permet de définir une variation de style. Vous pouvez passer une ou plusieurs des constantes du thème *Styles de caractères* suivantes (toutes les autres valeurs sont ignorées) :
 
-| Constant | Type    | Value |
-| -------- | ------- | ----- |
-| Bold     | Integer | 1     |
-| Italic   | Integer | 2     |
-| Plain    | Integer | 0     |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
 
-## Example 
+## Exemple 
 
-You want to make sure the font used in a text area is available on the user system for a correct display:
+Vous souhaitez vérifier que la police utilisée dans une zone de texte est intégrée à votre systeme pour qu'elle soit affichée correctement :
 
 ```4d
  var $fontName : Text
@@ -53,19 +53,20 @@ You want to make sure the font used in a text area is available on the user syst
  $fontStyle:=OBJECT Get font style(*;"vText")
  $fontFile:=Font file($fontName;$fontStyle)
  If($fontFile=Null)
-    ALERT("Defined font is not available, please install: "+$fontName)
+    $webFolder:=Folder(fk dossier resources).folder("webFolder")
+    $fontFile.copyTo($webFolder)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET FONT](object-set-font.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1700 |
+| Numéro de commande | 1700 |
 | Thread safe | yes |
 
 

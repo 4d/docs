@@ -5,47 +5,47 @@ slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* : Time )<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFichier* )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resFile | Time | &#8594;  | Resource file reference number |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Summary-->The **CLOSE RESOURCE FILE** command closes the resource file whose reference number is passed in *resFile*.<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Summary-->La commande **CLOSE RESOURCE FILE** referme le fichier de ressources dont vous avez passé le numéro de référence dans *resFichier*.<!-- END REF-->
 
-Even if you have opened the same resource file several times, you need to call **CLOSE RESOURCE FILE** only once in order to close that file.
+Même si vous avez ouvert plusieurs fois un fichier de ressources, il vous suffit d'appeler **CLOSE RESOURCE FILE** une seule fois pour le refermer.
 
-If you apply **CLOSE RESOURCE FILE** to the 4D application or database resource files, the command detects it and does nothing.
+Si vous appliquez **CLOSE RESOURCE FILE** au fichier de ressources de l'application 4D ou de la base, la commande le détecte et ne fait rien.
 
-If you pass an invalid resource file reference number, the command does nothing.
+Si vous passez un numéro de référence de fichier de ressources non valide, la commande ne fait rien.
 
-Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you have opened using [Open resource file](open-resource-file.md). Note that when you quit the application (or open another database), 4D automatically closes all the resource files you opened.
+N'oubliez pas d'appeler finalement **CLOSE RESOURCE FILE** pour un fichier de ressources que vous avez ouvert à l'aide de la commande [Open resource file](open-resource-file.md). Notez cependant que 4D referme automatiquement tous les fichiers de ressources ouverts lorsque vous quittez l'application ou ouvrez une autre base de données.
 
-## See also 
+## Voir aussi 
 
 [Open resource file](open-resource-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 498 |
+| Numéro de commande | 498 |
 | Thread safe | no |
 
 

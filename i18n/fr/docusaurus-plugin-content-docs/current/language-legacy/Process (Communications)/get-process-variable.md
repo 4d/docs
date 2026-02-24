@@ -5,135 +5,135 @@ slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *srcVar* : Variable ; *dstVar* : Variable {; ...(*srcVar* : Variable ; *dstVar* : Variable)} )<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* ; *varSource* ; *varDestination* {; *varSource2* ; *varDestination2* ; ... ; *varSourceN* ; *varDestinationN*} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Source process number |
-| srcVar | Variable | &#8594;  | Source variable |
-| dstVar | Variable | &#8592; | Destination variable |
+| process | Integer | &#8594;  | Numéro de process source |
+| varSource | Variable | &#8594;  | Variable source |
+| varDestination | Variable | &#8592; | Variable de destination |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PROCESS VARIABLE.Summary-->The **GET PROCESS VARIABLE** command reads the *srcVar* process variables (*srvVar2*, etc.) from the source process whose number is passed in *process*, and returns their current values in the *dstVar* variables ( *dstVar2*, etc.) of the current process.<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Summary-->La commande **GET PROCESS VARIABLE** lit la valeur de la ou des variable(s) process *varSource* (*varSource2*, etc.) depuis le process source dont le numéro est passé dans *process* et la retourne dans la ou les variables(s) *varDestination* ( *varDestination2*, etc.) du process courant.<!-- END REF-->
 
-Each source variable can be a variable, an array or an array element. However, see the restrictions listed later in this section.
+Chaque variable source peut être une variable, un tableau ou un élément de tableau. Tenez cependant compte des restrictions évoquées plus bas.
 
-In each couple of *srcVar;dstVar* variables, the two variables must be of compatible types, otherwise the values you obtain may be meaningless.
+Pour chaque association *varSource;varDestination* les types des deux variables doivent être compatibles, sinon vous pourrez obtenir des valeurs non significatives. 
 
-The current process “peeks” the variables from the source process—the source process is not warned in any way that another process is reading the instance of its variables.
+Le process courant "pille" les variables du process de destination : ce dernier n'est averti en aucune manière de la lecture de l'instance de ses variables par un autre process.
 
-**4D Server:** Using 4D Client, you can read variables in a destination process executed on the server machine (stored procedure). To do so, put a minus sign before the process ID number in the *process* parameter.  
-“Intermachine” process communication, provided by the commands **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) and [VARIABLE TO VARIABLE](variable-to-variable.md), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+**4D Server :** A partir d'un 4D Client, vous pouvez lire des variables dans un process de destination exécuté sur le poste serveur (procédure stockée). Pour cela, passez dans *process* le numéro du process serveur en négatif, c'est-à-dire précédé du signe - (moins).   
+Attention, la communication process “intermachine” permise par les commandes **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) et [VARIABLE TO VARIABLE](variable-to-variable.md) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
 
-**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, you can use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **GET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As clients machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
+**Astuce :** Si vous ne connaissez pas le numéro du process serveur source, vous pouvez tout de même lire les variables interprocess du serveur. Pour cela, il vous suffit de passer toute valeur négative dans *process*. En d'autres termes, il n'est pas nécessaire de connaître précisément le numéro d'un process exécuté sur le serveur pour utiliser **GET PROCESS VARIABLE** avec les variables interprocess du serveur.   
+Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](on-server-startup-database-method.md). Comme, par défaut, les postes clients ne connaissent pas le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
 
 ### Restrictions 
 
-**GET PROCESS VARIABLE** does not accept local variables as source variables. 
+**GET PROCESS VARIABLE** n'accepte pas de variables locales comme variables sources.   
+En revanche, les variables de destination peuvent être interprocess, process ou locales. Vous pouvez "recevoir" les valeurs uniquement dans des variables, pas dans des champs.
 
-On the other hand, the destination variables can be interprocess, process or local variables. You “receive” the values only into variables, not into fields.
+**GET PROCESS VARIABLE** accepte tout type de variable source, process ou interprocess, à l'exception des variables de type :
 
-**GET PROCESS VARIABLE** accepts any type of source process or interprocess variable, except:
+* Pointeur
+* Tableau de pointeurs
+* Tableau à deux dimensions
 
-* Pointers
-* Array of pointers
-* Two-dimensional arrays
+Le process source doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process source n'existe pas, la commande ne fait rien.
 
-The source process must be a user process; it cannot be a kernel process. If the source process does not exist, this command has no effect.
+**Note :** En mode interprété, si une variable source n'existe pas, la valeur indéfinie est retournée. Vous pouvez le détecter en testant la variable de destination correspondante à l'aide de la fonction [Type](type.md). 
 
-**Note:** In interpreted mode, if a source variable does not exist, the undefined value is returned. You can detect this by using the [Type](type.md) function to test the corresponding destination variable.
+## Exemple 1 
 
-## Example 1 
-
-This line of code reads the value of the text variable *vtCurStatus* from the process whose number is *$vlProcess*. It returns the value in the process variable *vtInfo* of the current process:
+La ligne de code suivante lit la valeur de la variable Texte *vtCurStatus* dans le process dont le numéro est *$vlProcess* et retourne le résultat dans la variable process *vtInfo* du process courant :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtInfo)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This line of code does the same thing, but returns the value in the local variable *$vtInfo* for the method executing in the current process:
+La ligne de code suivante fait la même chose mais retourne la valeur dans la variable locale *$vtInfo* de la méthode s'exécutant dans le process courant :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This line of code does the same thing, but returns the value in the variable *vtCurStatus* of the current process:
+La ligne de code suivante fait la même chose mais retourne la valeur dans la même variable *vtCurStatus* du process courant :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtCurStatus)
 ```
 
-**Note:** The first *vtCurStatus* designates the instance of the variable in the source process The second *vtCurStatus* designates the instance of the variable in the current process.
+**Note :** La première *vtCurStatus* désigne l'instance de la variable dans le process source, la seconde *vtCurStatus* désigne l'instance de la variable dans le process courant.
 
-## Example 4 
+## Exemple 4 
 
-This example sequentially reads the elements of a process array from the process indicated by *$vlProcess*:
+L'exemple suivant lit séquentiellement les éléments d'un tableau process depuis le process indiqué par *$vlProcess* :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
  For($vlElem;1;$vlSize)
     GET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};$vtElem)
-  // Do something with $vtElem
+  // Faire quelque chose avec $vtElem
  End for
 ```
 
-**Note:** In this example, the process variable *vl\_IPCom\_Array* contains the size of the array *at\_IPCom\_Array*, and must be maintained by the source process.
+**Note :** Dans cet exemple, la variable process *vl\_IPCom\_Array* doit être gérée par le process source et contient la taille du tableau *at\_IPCom\_Array*.
 
-## Example 5 
+## Exemple 5 
 
-This example does the same thing as the previous one, but reads the array as a whole, instead of reading the elements sequentially:
+L'exemple suivant fait la même chose que le précédent mais lit le tableau dans son intégralité au lieu de le faire élément par élément :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
  For($vlElem;1;Size of array($anArray))
-  // Do something with $anArray{$vlElem}
+  // Faire quelque chose avec $anArray{$vlElem}
  End for
 ```
 
-## Example 6 
+## Exemple 6 
 
-This example reads the source process instances of the variables *v1*,*v2*,*v3* and returns their values in the instance of the same variables for the current process:
+L'exemple suivant lit l'instance des variables *v1*,*v2*,*v3* dans le process source et retourne leurs valeurs dans l'instance des mêmes variables du process courant :
 
 ```4d
  GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
-## Example 7 
+## Exemple 7 
 
-See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
+Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 
-## See also 
+## Voir aussi 
 
-*Drag and Drop*  
+*Introduction aux process*  
 [POST OUTSIDE CALL](post-outside-call.md)  
-[Processes](../Develop/processes.md)  
+*Présentation du Glisser-Déposer*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 371 |
+| Numéro de commande | 371 |
 | Thread safe | no |
 
 

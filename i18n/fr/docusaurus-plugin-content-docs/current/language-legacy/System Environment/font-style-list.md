@@ -5,43 +5,43 @@ slug: /commands/font-style-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *fontFamily* : Text ; *fontStyleList* : Text array ; *fontNameList* : Text array )<!-- END REF-->
+<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *famillePolice* ; *listeStylesPolice* ; *listeNomsPolice* )<!-- END REF-->
 <!--REF #_command_.FONT STYLE LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fontFamily | Text | &#8594;  | Name of font family |
-| fontStyleList | Text array | &#8592; | List of font styles supported by the font family |
-| fontNameList | Text array | &#8592; | List of complete font names supported by the font family |
+| famillePolice | Text | &#8594;  | Nom de la famille de police |
+| listeStylesPolice | Text array | &#8592; | Liste des styles pris en charge par la famille de police |
+| listeNomsPolice | Text array | &#8592; | Liste des noms complets pris en charge par la famille de police |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Created|
+|15 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FONT STYLE LIST.Summary-->The **FONT STYLE LIST** command returns the list of font styles and the list of complete font names supported by the font family defined in the *fontFamily* parameter.<!-- END REF--> This command allows you to design interfaces handling fonts and font styles, particularly in the context of 4D Write Pro areas (see *4D Write Pro Reference*).
+<!--REF #_command_.FONT STYLE LIST.Summary-->La commande **FONT STYLE LIST** retourne la liste des styles et la liste des noms complets pris en charge par la famille de police désignée par le paramètre *famillePolice*.<!-- END REF--> Cette commande vous permet de concevoir des interfaces manipulant les familles de polices et les styles de police, en particulier dans le contexte des zones *4D Write Pro*. 
 
-In *fontFamily*, pass the name of the font family for which you want to know the supported font styles and names.
+Dans *famillePolice*, passez le nom de la famille de police dont vous souhaitez connaître les styles et les noms complets.
 
-In *fontStyleList*, you pass a text array to be filled with the list of font styles supported by the *fontFamily*. Styles are returned using their localized names (i.e. an "Italic" element will be returned as "Itálico" on a Spanish system), so that you can build a localized "Style" pop-up menu, for example. 
+Dans *listeStylesPolice*, passez un tableau texte qui sera rempli avec la liste des styles pris en charge par la *famillePolice*. Les styles sont retournés avec leurs noms localisés (i.e. un élément "Italique" sera "Itálico" sur un système espagnol), ce qui vous permet par exemple de construire dynamiquement un pop-up menu "Styles" localisé.
 
-In *fontNameList*, you pass a text array to be filled with the complete list of font names supported by the *fontFamily*. Unlike the *fontStyleList* array, the *fontNameList* array returns non-localized values, i.e. font names based upon the system identification. Thus, font names will be independent from the system language. Elements of this array are strings intended to be used with the wk font 4D Write Pro attribute of the *WP SET ATTRIBUTES* command. Using this feature, 4D Write Pro documents can store font names and then be opened on machines using any system language without font issues. 
+Dans *listeNomsPolice*, passez un tableau texte qui sera rempli avec la liste complète des noms de police pris en charge par la *famillePolice*. A la différence du tableau *listeStylesPolice*, le tableau *listeNomsPolice* retourne des valeurs non localisées, i.e. des noms de police basés sur leur identifiant système. Ainsi, les noms de police seront indépendants de la langue du système. Les éléments de ce tableau sont des chaînes de caractères destinées à être utilisées avec l'attribut wk font de la commande 4D Write Pro *WP SET ATTRIBUTES*. Grâce à cette fonctionnalité, les documents 4D Write Pro stockent les noms de police et peuvent donc être ouverts sur différentes machines, quelle que soit la langue du système, sans problèmes de polices. 
 
- If the *fontFamily* is not found on the machine, arrays are returned empty. To get the list of font families available on the machine, use the [FONT LIST](font-list.md) command.
+ Si la *famillePolice* n'est pas trouvée sur la machine, les tableaux sont retournés vides. Pour connaître la liste des familles de police disponibles sur la machine, utilisez la commande [FONT LIST](font-list.md).
 
-## Example 
+## Exemple 
 
-You want to select styles of the "Verdana" font family (if available):
+Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle est disponible) :
 
 ```4d
  ARRAY TEXT($aTfonts;0)
@@ -55,11 +55,11 @@ You want to select styles of the "Verdana" font family (if available):
     FONT STYLE LIST($aTfonts{$numStyle};$aTStyles;$aTnames)
  End if
  
-  //For example, resulting arrays are:
+  //Par exemple, les tableaux résultants sont :
   //$aTStyles{1}="Normal"
-  //$aTStyles{1}="Italic"
-  //$aTStyles{1}="Bold"
-  //$aTStyles{1}="Bold Italic"
+  //$aTStyles{1}="Italique"
+  //$aTStyles{1}="Gras"
+  //$aTStyles{1}="Gras Italique"
  
   // $aTnames{1}="Verdana"
   // $aTnames{1}="Verdana Italic"
@@ -67,15 +67,15 @@ You want to select styles of the "Verdana" font family (if available):
   // $aTnames{1}="Verdana Bold Italic"
 ```
 
-## See also 
+## Voir aussi 
 
 [FONT LIST](font-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1362 |
+| Numéro de commande | 1362 |
 | Thread safe | yes |
 
 

@@ -5,43 +5,43 @@ slug: /commands/is-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *set* : Text ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *ensemble* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | Name of the set to test |
-| Function result | Boolean | &#8592; | Current record of set's table is in set (True) or Current record of set's table is not in set (False) |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à tester |
+| Résultat | Boolean | &#8592; | L'enregistrement courant est dans l'ensemble (Vrai) ou l'enregistrement courant n'est pas dans l'ensemble (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Is in set.Summary-->Is in set tests whether or not the current record for the table is in *set*.<!-- END REF--> The Is in set function returns TRUE if the current record of the table is in *set*, and returns FALSE if the current record of the table is not in *set*.
+<!--REF #_command_.Is in set.Summary-->**Is in set** teste si l'enregistrement courant de la table est inclus dans *ensemble*.<!-- END REF--> La fonction **Is in set** retourne Vrai si l'enregistrement courant de la table est dans *ensemble*, et retourne Faux si l'enregistrement courant de la table n'est pas dans *ensemble*.
 
-## Example 
+## Exemple 
 
-The following example is a button object method. It tests to see whether or not the currently displayed record is in the set of best customers:
+L'exemple suivant est la méthode objet d'un bouton testant si l'enregistrement courant est inclus dans l'ensemble des meilleurs clients :
 
 ```4d
- If(Is in set("Best")) // Check if it is a good customer
-    ALERT("They are one of our best customers.")
+ If(Is in set("Meilleurs"))
+    ALERT("C'est un de nos meilleurs clients.")
  Else
-    ALERT("They are not one of our best customers.")
+    ALERT("Ce n'est pas un de nos meilleurs clients.")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [ADD TO SET](add-to-set.md)  
 [REMOVE FROM SET](remove-from-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 273 |
+| Numéro de commande | 273 |
 | Thread safe | yes |
 
 

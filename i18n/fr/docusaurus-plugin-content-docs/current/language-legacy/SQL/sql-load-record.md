@@ -5,53 +5,53 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *numRecords* : Integer })<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *nombreEnr* )}<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numRecords | Integer | &#8594;  | Number of records to load |
+| nombreEnr | Integer | &#8594;  | Nombre d’enregistrements à charger |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL LOAD RECORD.Summary-->The SQL LOAD RECORD command retrieves one or more record(s) in 4D coming from the data source open in the current connection.<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Summary-->La commande **SQL LOAD RECORD** récupère dans 4D un ou plusieurs enregistrement(s) provenant de la source de données ouverte dans la connexion courante.<!-- END REF-->
 
-The optional *numRecords* parameter sets the number of records to retrieve:
+Le paramètre facultatif *nombreEnr* permet de définir le nombre d’enregistrements à récupérer :
 
-* If you omit this parameter, the command retrieves the current record from the data source. This principle corresponds to the retrieval of data in a loop where one record is received at a time.
-* If you pass an integer value in *numRecords*, the command retrieves *numRecords* records.
-* If you pass the SQL All Records constant (value -1), the command retrieves all the records of the table.
+* Si vous omettez ce paramètre, la commande récupèrera l’enregistrement courant dans la source de données. Ce principe correspond à la récupération des données dans une boucle où un enregistrement est reçu à la fois.
+* Si vous passez une valeur entière dans *nombreEnr*, la commande récupérera *nombreEnr* enregistrements.
+* Si vous passez la constante SQL all records (ou la valeur -1), la commande récupèrera tous les enregistrements de la table.
 
-**Note:** These last two settings are only useful when the retrieved data is associated with 4D arrays or fields. 
+**Note :** Ces deux derniers paramétrages n’ont de sens que si les données récupérées sont associées à des tableaux ou des champs 4D. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SQL CANCEL LOAD](sql-cancel-load.md)  
 [SQL EXECUTE](sql-execute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 822 |
+| Numéro de commande | 822 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

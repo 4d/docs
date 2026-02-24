@@ -5,74 +5,74 @@ slug: /commands/object-get-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get text orientation** ( *object* : Variable, Field ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get text orientation.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Integer | &#8592; | Angle of text rotation |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Integer | &#8592; | Angle de rotation du texte |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get text orientation.Summary-->The **OBJECT Get text orientation** command returns the current orientation value applied to the text of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get text orientation.Summary-->La commande **OBJECT Get text orientation** retourne la valeur d’orientation courante appliquée au texte de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-You can set the "Orientation" option for an object in Design mode using the Property List, or using the [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md) command.
+L’option "Orientation" d’un objet peut avoir été définie en mode Développement via la Liste des propriétés ou à l’aide de la commande [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-The value returns corresponds to one of the following constants, found in the "*Form Objects (Properties)*" theme:
+La valeur retournée correspond à l’une des constantes suivantes du thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant              | Type    | Value | Comment                                      |
-| --------------------- | ------- | ----- | -------------------------------------------- |
-| Orientation 0°        | Integer | 0     | No rotation (default value)                  |
-| Orientation 180°      | Integer | 180   | Orientation of text to 180° clockwise        |
-| Orientation 90° left  | Integer | 270   | Orientation of text to 90° counter-clockwise |
-| Orientation 90° right | Integer | 90    | Orientation of text to 90° clockwise         |
+| Constante             | Type        | Valeur | Comment                                              |
+| --------------------- | ----------- | ------ | ---------------------------------------------------- |
+| Orientation 0°        | Entier long | 0      | Pas de rotation (valeur par défaut)                  |
+| Orientation 180°      | Entier long | 180    | Orientation du texte à 180° dans le sens horaire     |
+| Orientation 90° left  | Entier long | 270    | Orientation du texte à 90° dans le sens anti-horaire |
+| Orientation 90° right | Entier long | 90     | Orientation du texte à 90° dans le sens horaire      |
 
-## Example 
+## Exemple 
 
-Given the following object (where a "90° left" orientation was applied in the Form editor):
+Soit l’objet suivant (une orientation "90° gauche" lui a été appliquée dans l’éditeur de formulaires) :
 
 ![](../assets/en/commands/pict1209704.fr.png)
 
-When the form is executed, if you call the following statement:
+Si, à l’exécution du formulaire, vous appelez l’instruction suivante :
 
 ```4d
- OBJECT SET TEXT ORIENTATION(*;"myText";Orientation 180°)
+ OBJECT SET TEXT ORIENTATION(*;"monTexte";Orientation 180°)
 ```
 
-... then the object appears as follows:
+... l’objet prend alors l’apparence suivante :
 
 ![](../assets/en/commands/pict1209706.fr.png)
 
 ```4d
- $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180
+ $vOrt:=OBJECT Get text orientation(*;"monTexte") //$vOrt=180
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1283 |
+| Numéro de commande | 1283 |
 | Thread safe | no |
 
 

@@ -9,60 +9,60 @@ displayed_sidebar: docs
 <!--REF #_command_.Refresh license.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &#8592; | Status object |
+| Résultat | Object | &#8592; | Objet statut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R4|Created|
+|17 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Refresh license.Summary-->The **Refresh license** command updates the current 4D Server license.<!-- END REF--> It connects you to the 4D customer database and automatically activates any new or updated licenses (*e.g.*, additional purchased clients) related to the current license.
+<!--REF #_command_.Refresh license.Summary-->La commande **Refresh license** met à jour la licence 4D Server courante.<!-- END REF--> Elle vous connecte à la base cliente de 4D et active automatiquement les nouvelles licences ou les mises à jour (*ex:* suite à l'achat de nouveaux clients).
 
-**Returned object**
+**Objet retourné**
 
-The object returned by **Refresh license** contains the following properties:  
+L'objet retourné par **Refresh license** contient les propriétés suivantes :  
   
-| **Property** | **Type** | **Description**                                            |
-| ------------ | -------- | ---------------------------------------------------------- |
-| success      | boolean  | True if the refresh action is successful, False otherwise. |
-| status       | number   | Status code                                                |
-| statusText   | text     | Status description                                         |
-| tips         | text     | Suggestions to resolve error.                              |
+| **Propriété** | **Type**  | **Description**                                  |
+| ------------- | --------- | ------------------------------------------------ |
+| success       | booléen   | Vrai si l'actualisation est réussie, sinon Faux. |
+| status        | numérique | Code du statut                                   |
+| statusText    | texte     | Description du statut                            |
+| tips          | texte     | Suggestions pour résoudre l'erreur.              |
 
-**Note**: This command can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **Refresh license** does nothing.
+**Note** : Cette commande ne peut être exécutée que sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **Refresh license** ne fait rien.
 
-## Example 
+## Exemple 
 
-You want to update your license and receive a message when it's completed:
+Vous souhaitez mettre à jour votre licence et recevoir un message à la fin de l'opération :
 
 ```4d
-  // Method to be executed on server
+  // Méthode à exécuter sur le serveur
  var $res : Object
  $res:=Refresh license
  If($res.success)
-    ALERT("Success")
+    ALERT("Mise à jour réussie")
  Else
     ALERT($res.statusText)
  End if
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1336 |
+| Numéro de commande | 1336 |
 | Thread safe | no |
 
 

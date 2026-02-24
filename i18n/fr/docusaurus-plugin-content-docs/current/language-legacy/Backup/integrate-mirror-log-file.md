@@ -5,119 +5,120 @@ slug: /commands/integrate-mirror-log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* : Text ; *operationNum* : Real {; *mode* : Integer {; *errObject* : Object}} )<!-- END REF-->
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *cheminAccès* ; *numOpération* {; *mode* {; *objErreur*}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathName | Text | &#8594;  |  Name or pathname of the log file to be integrated |
-| operationNum | Real | &#8596;  | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
-| mode | Integer | &#8594;  | 0=strict mode (default mode), 1=auto repair mode |
-| errObject | Object | &#8592; | Missed operation(s) |
+| cheminAccès | Text | &#8594;  | Nom ou chemin d’accès du fichier d’historique à intégrer |
+| numOpération | Real | &#8594;  | Numéro de la dernière opération intégrée ou -2 pour tout intégrer |
+| &#8592; | Nouveau numéro de la dernière opération intégrée |
+| mode | Integer | &#8594;  | 0=mode strict (mode par défaut), 1=mode réparation auto |
+| objErreur | Object | &#8592; | Opération(s) manquante(s) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|14|Created|
+|15 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Preliminary note:** This command only works with 4D Server.<!-- END REF--> It can only be executed via the [Execute on server](execute-on-server.md) command or in a stored procedure.
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Note préliminaire :** Cette commande ne fonctionne qu’avec 4D Server.<!-- END REF--> Elle ne peut être exécutée que via la commande [Execute on server](execute-on-server.md) ou dans une procédure stockée.
 
-The **INTEGRATE MIRROR LOG FILE** integrates the log file designated by *pathName* into a 4D Server database, after the *operationNum* operation. The command accepts to integrate any log file into the database, even if it does not correspond to the the data file. This command is specifically intended for use in the context of a mirror database. 
+La commande **INTEGRATE MIRROR LOG FILE** permet d’intégrer le fichier d’historique désigné par *cheminAccès* dans une base 4D Server, à la suite de l’opération *numOpération*. La commande accepte d’intégrer tout fichier d’historique dans la base, même s’il ne correspond pas au fichier de données. Cette commande est particulièrement destinée à une utilisation dans le contexte d’une base miroir. 
 
-**Note:** It is possible to use a log file as part of a "mirror" database: the "Use Log File" option can now be checked in the Database Settings of a 4D Server used as a logical mirror, thus allowing the implementation of a series of cascading mirror servers (see the *Setting up a logical mirror* section in the 4D Server manual).
+**Note :** Depuis 4D v14, il est possible d’utiliser un fichier d’historique dans le contexte d’une base miroir : l’option "Utiliser fichier d’historique" peut désormais être cochée dans les propriétés d’une base 4D Server utilisée comme miroir logique, permettant la mise en place de serveurs miroirs en série (cf. section *Mise en place d'un miroir logique* dans le manuel de 4D Server).
 
-Unlike the existing *\_o\_INTEGRATE LOG FILE* command, at the end of its execution **INTEGRATE MIRROR LOG FILE** does not replace the current log file with the integrated one: the current log file of the database continues to be used. Accordingly, any changes made during integration are saved in the current log file.
+A la différence de la commande *\_o\_INTEGRATE LOG FILE*, la commande **INTEGRATE MIRROR LOG FILE** ne substitue pas le fichier d’historique intégré à l’historique courant à l’issue de son exécution : le fichier d’historique de la base continue d’être utilisé. Par conséquent, les modifications effectuées lors de l’intégration sont enregistrées dans le fichier d’historique courant. 
 
-In *pathName*, you pass an absolute or relative path to the database folder. If you pass an empty string in this parameter, a standard open file dialog box appears so that you can specify the file to be integrated. If this dialog box is canceled, no file is integrated and the *OK* system variable is set to 0.
+Passez dans *cheminAccès* un chemin d’accès absolu ou relatif au dossier de la base. Si vous passez une chaîne vide dans ce paramètre, une boîte de dialogue standard d’ouverture de fichier s’affiche, permettant de désigner le fichier à intégrer. Si la boîte de dialogue est annulée, aucun fichier n’est intégré et la variable système *OK* prend la valeur 0.
 
-In the *operationNum* variable, you pass the number of the last operation integrated, so that integration begins at the next operation. After integration, the value of the *operationNum* variable is updated with the number of the last operation integrated. You must save this variable and then reuse it directly as the *operationNum* parameter for the next integration operation. This allows you to follow on with subsequent log file integrations using **INTEGRATE MIRROR LOG FILE**. Pass -2 in the variable to integrate all the operations in the log file.
+Passez dans la variable *numOpération* le numéro de la dernière opération intégrée, afin que l’intégration débute à l'opération suivante. A l’issue de l’intégration, la valeur de la variable *numOpération* est mise à jour avec le numéro de la dernière opération intégrée. Vous devez alors stocker cette variable puis la réutiliser directement comme paramètre *numOpération* lors de l'opération d'intégration suivante. Ce principe vous permet d’enchaîner les intégrations d’historiques à l'aide de **INTEGRATE MIRROR LOG FILE**. Passez la valeur -2 dans la variable si vous souhaitez intégrer la totalité du fichier.
 
-**Compatibility note:** In versions of 4D prior to v15 R4, the *operationNum* parameter was optional; however, from now on, if the *operationNum* parameter is omitted, an error is generated. To restore the original functioning of your former code, you can just pass -2 in the *operationNum* parameter variable.
+**Note de compatibilité :* Dans les versions de 4D antérieures à la v15 R4, le paramètre numOpération était optionnel. Désormais, si le paramètre numOpération est omis, une erreur est générée. Pour rétablir le fonctionnement initial de votre ancien code, passez simplement une variable avec la valeur -2 dans le paramètre numOpération.* 
 
-In *mode*, you pass the integration mode you want to activate. You can use one of the following constants found in the "*Backup and Restore*" theme:
+Le paramètre *mode* vous permet de spécifier le mode d'intégration que vous souhaitez utiliser. Vous pouvez passer une des constantes suivantes, placées dans le thème "*Sauvegarde et restitution*" :
 
-| Constant         | Type    | Value | Comment                                                                                |
-| ---------------- | ------- | ----- | -------------------------------------------------------------------------------------- |
-| Auto repair mode | Integer | 1     | Use flexible mode with auto-repair actions and fill the *errObject* parameter (if any) |
-| Strict mode      | Integer | 0     | Use strict integration mode (default)                                                  |
+| Constante        | Type        | Valeur | Comment                                                                                                                     |
+| ---------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Auto repair mode | Entier long | 1      | Utiliser le mode flexible avec réparation automatique et remplir le paramètre *objErreur* (si passé)                        |
+| Strict mode      | Entier long | 0      | Utiliser le mode d'intégration avec contrôle strict des opérations (option par défaut). Recommandé dans la plupart des cas. |
 
-* Strict mode: In this mode, as soon as an error occurs during integration, it stops and you have to use the MSC in order to trace the error. This secure mode is used by default and is recommended in most cases.
-* Auto repair mode: In this mode, when a non-critical error occurs, it is bypassed and integration continues. If you passed the *errObject* parameter, each error is logged and can be analyzed afterwards.  
-Cases of non-critical errors are:  
-   * The log requests to add a record, but this record already exists in the data.  
-   Repair action: 4D updates the record.  
-   * The log requests to update a record, but this record does not yet exist.  
-   Repair action: 4D adds the record.  
-   * The log requests to delete a record, but this record does not exist.  
-   Repair action: 4D does nothing.
+* Strict mode : Dans ce mode, dès qu'une erreur se produit au cours de l'intégration, la procédure est stoppée et vous devez utiliser le CSM pour tracer l'erreur. Ce mode sécurisé est utilisé par défaut et est recommandé dans la plupart des cas.
+* Auto repair mode : Dans ce mode, lorsqu'une erreur non critique est détectée, elle est "réparée" et l'intégration se poursuit. Si vous avez passé le paramètre *objErreur*, chaque erreur est enregistrée et pourra être analysée par la suite.  
+Les cas d'erreurs non critiques sont les suivants :  
+   * Le fichier d'historique demande à ajouter un enregistrement mais l'enregistrement existe déjà dans les données.  
+   Action de réparation : 4D met à jour l'enregistrement.  
+   * Le fichier d'historique demande à mettre à jour un enregistrement mais l'enregistrement n'existe pas.  
+   Action de réparation : 4D ajoute l'enregistrement.  
+   * Le fichier d'historique demande à supprimer un enregistrement mais l'enregistrement n'existe pas.  
+   Action de réparation : 4D ne fait rien.
 
-**Note**: In strict mode (default mode), integration will stop at the first error encountered. In this case, if you want to continue with the integration you will need to use the MSC.
+**Note :** En mode strict (mode par défaut), l’intégration stoppe à la première erreur rencontrée. Si vous souhaitez poursuivre l’intégration dans ce cas, il sera nécessaire d’utiliser le CSM.
 
-When one of these anomalies occurs in auto-repair mode, the record concerned is automatically "repaired" and the related operation is logged in the *errObject* parameter. After execution is completed, the *errObject* parameter lists all the repaired records. It contains a single object array named "operations" built as follows:
+Lorsqu'une anomalie se produit en mode réparation auto, l'enregistrement concerné est automatiquement "réparé" et l'opération associée est enregistrée dans le paramètre *objErreur*. Une fois l'intégration terminée, le paramètre *objErreur* contient la liste de tous les enregistrements réparés. Il se compose d'un unique tableau d'objets nommé "operations", structuré de la manière suivante :
 
 ```json
 {"operations":    [        {            "operationType":24,            "operationName":"Create record",            "operationNumber":2,            "contextID":48,            "timeStamp":"2015-07-10T07:53:02.413Z",            "dataLen":24,            "recordNumber":0,            "tableID":"F4CXXXXX",            "tableName":"Customers",            "fields": {                "1": 9,                "2": "test value",                "3": "2003-03-03T00:00:00.000Z",                "4": "BlobPath: Table 1/Field 4/Data_9ACB28F1A2744FDFA5822B22F18B2E12.png",                "8": "BlobID: 2"              }        },        {...}     ]
 ```
 
-**Warning:** The auto-repair mode must be used in specific cases since it bypasses 4D's internal data integrity checking features. It can be used, for example, when an intermediary log file has been lost or corrupted and you want to recover as many operations as possible. In any case, you need to pay particular attention to data integrity when using this mode.
+**Attention :** Le mode réparation auto doit être activé dans des cas spécifiques car il contourne les sécurités intégrées de 4D chargées de contrôler l'intégrité des données. Il peut être utilisé, par exemple, lorsqu'un fichier d'historique intermédiaire a été perdu ou corrompu et que vous souhaitez récupérer autant d'opérations que possible. Dans tous les cas, vous devez être particulièrement vigilant en ce qui concerne l'intégrité des données lorsque ce mode est activé.
 
 ### 
 
-The actual list of available properties depends on the operation type (i.e.: create record, delete record, modify record, create Blob, etc.). Here are the main properties:
+La liste effective des propriétés présentes dans l'objet "operations" dépend du type d'opération (i.e.: création, suppression ou modification de l'enregistrement, créer Blob, etc.). Les principales propriétés sont les suivantes :
 
-* *operationType*: internal code for the operation
-* *operationName*: kind of operation, for example "create record," "modify record"
-* *operationNumber*: internal number of operation in the log file
-* *contextID*: ID of execution context; the context is detailed in the *extraData* section
-* *timeStamp*: timestamp of operation in the log file
-* *dataLen*: internal size of data
-* *recordNumber*: internal record number
-* *tableID*: internal ID of the table
-* *tableName*: name of the table
-* *fields*: object containing the list of field numbers along with their values. All fields in the table are logged.  
-In case of Blob or picture values, different information is provided based on their storage location:  
-   * If the Blob or picture is stored inside the data file, the property will be "BlobID:"+ an internal Blob number, for example: "BlobID:1"  
-   * If the Blob or picture is stored outside the data file, the property will be "BlobPath:" + the path for the data, for example: "BlobPath: Table 1/Field 6/Data\_EE12D091535F9748BCE62EDE972A4BA2.jpg"
-* *extraData*: user context data, including user name and ID, task name and ID, host machine name, and client version.
-* *sequenceNumber*: current number within auto-increment sequence.
-* *primaryKey*: primary key value.
+* *operationType* : Code interne de l'opération
+* *operationName* : Type d'opération, par exemple "create record," "modify record"
+* *operationNumber* : Numéro interne de l'opération dans le fichier d'historique
+* *contextID* : ID du contexte d'exécution ; le contexte est détaillé dans la section *extraData*
+* *timeStamp* : horodatage de l'opération dans le fichier d'historique
+* *dataLen* : taille interne des données
+* *recordNumber* : numéro interne d'enregistrement
+* *tableID* : ID interne de la table
+* *tableName* : nom de la table
+* *fields* : objet contenant la liste des numéros de champ ainsi que leur valeur. Tous les champs de la table sont listés.  
+Dans le cas de valeurs de type Blob ou image, différentes informations sont stockées en fonction de leur mode de stockage :  
+   * si le Blob ou l'image est stocké(e) dans le fichier de données, la propriété sera "BlobID:"+ un numéro de Blob interne, par exemple : "BlobID:1"  
+   * si le Blob ou l'image est stocké(e) à l'extérieur du fichier de données, la propriété sera "BlobPath:" + chemin du fichier, par exemple : "BlobPath: Table 1/Field 6/Data\_EE12D091535F9748BCE62EDE972A4BA2.jpg"
+* *extraData* : données du contexte de l'utilisateur, incluant son nom et son ID, le nom et l'ID de la tâche, le nom de la machine hôte ainsi que la version du client.
+* *sequenceNumber* : numéro courant au sein d'une séquence d'incrémentation automatique.
+* *primaryKey* : valeur de clé primaire.
 
-## Example 
+## Exemple 
 
-You want to integrate a log file on the mirror server in auto-repair mode:
+Vous voulez intégrer un fichier d'historique sur le serveur miroir en mode réparation auto :
 
 ```4d
-  //to be executed on the server
+  //à exécuter sur le serveur
  var $err : Object
- var $num : Integer //-2 to integrate all operations
+ var $num : Integer //-2 pour tout intégrer
  INTEGRATE MIRROR LOG FILE("c:\\mirror\\logNew.journal";$num;Auto repair mode;$err)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the integration is carried out correctly, the system variable OK is set to 1; otherwise, it is set to 0\. 
+Si l'intégration s'effectue correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [LOG FILE TO JSON](log-file-to-json.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1312 |
+| Numéro de commande | 1312 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

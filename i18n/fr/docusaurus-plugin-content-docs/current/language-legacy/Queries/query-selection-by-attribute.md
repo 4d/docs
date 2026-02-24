@@ -5,68 +5,68 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table}{;}{*conjOp* : Operator ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* :  Text, >, <, >=, <=, #, =, |, % ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*laTable*}{;}{*opConj* ;} *champObjet* ; *cheminAttribut* ; *opRecherche* ; *valeur* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | Operator | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
-| objectField | Field | &#8594;  | Object field to query attributes |
-| attributePath | Text | &#8594;  | Name or path of attribute |
-| queryOp | Text, >, <, >=, <=, #, =, \|, %  | &#8594;  | Query operator (comparator) |
-| value | Text, Real, Date, Time | &#8594;  | Value to compare |
-| * | Operator | &#8594;  | Continue query flag |
+| laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| opConj | Operator | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &#8594;  | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut |
+| opRecherche | Text, Operator | &#8594;  | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &#8594;  | Valeur à comparer |
+| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Modified|
-|16|Created|
+|16 R2|Modifié|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** works and performs the same actions as [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> The difference between these two commands is the scope of the query:
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** fonctionne de la même façon et exécute les mêmes actions que la commande [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> La différence entre ces deux commandes est la portée de la recherche :
 
-* [QUERY BY ATTRIBUTE](query-by-attribute.md) looks for records among all the records in the table.
-* **QUERY SELECTION BY ATTRIBUTE** looks for records among the records currently selected in the table.
+* [QUERY BY ATTRIBUTE](query-by-attribute.md) recherche les enregistrements sur la totalité des enregistrements de la table.
+* **QUERY SELECTION BY ATTRIBUTE** recherche les enregistrements dans la sélection courante de la table.
 
-**QUERY SELECTION BY ATTRIBUTE** looks for records in *aTable*. The **QUERY SELECTION BY ATTRIBUTE** command changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
+**QUERY SELECTION BY ATTRIBUTE** recherche des enregistrements dans *laTable*. La commande **QUERY SELECTION BY ATTRIBUTE** change la sélection courante de l*aTable* pour le process courant et le premier enregistrement de la sélection devient l'enregistrement courant.
 
-For more information, see the description of the [QUERY BY ATTRIBUTE](query-by-attribute.md) command.
+Pour plus d'information, voir la description de la commande [QUERY BY ATTRIBUTE](query-by-attribute.md).
 
-The **QUERY SELECTION BY ATTRIBUTE** command is useful when a query cannot be defined using a combination of [QUERY BY ATTRIBUTE](query-by-attribute.md) (and even [QUERY](query.md)) calls joined with the \* parameter. Typically, this is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
+La commande **QUERY SELECTION BY ATTRIBUTE** est utile lorsqu'une recherche ne peut pas être définie en utilisant la combinaison de plusieurs [QUERY BY ATTRIBUTE](query-by-attribute.md) (voire de plusieurs [QUERY](query.md)) appelées conjointement avec le paramètre \*. C'est typiquement le cas lorsque vous recherchez dans une sélection courante qui ne résulte pas d'une recherche mais d'une commande telle que [USE SET](use-set.md). 
 
-## Example 
+## Exemple 
 
-You want to find people with an age between 20 and 30, among the records that were previously highlighted by the user:
+Vous souhaitez trouver les personnes âgées entre 20 et 30 ans parmi les enregistrements sélectionnés par l'utilisateur :
 
 ```4d
- USE SET("UserSet") //creates a new current selection
- QUERY SELECTION BY ATTRIBUTE([People];[People]OB_Info;"age";>;20;*)
- QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //triggers the query
+ USE SET("UserSet") // crée une nouvelle sélection courante
+ QUERY SELECTION BY ATTRIBUTE([People];[People]OB_Info;"age";>;20;*)
+ QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //déclenche la recherche
 ```
 
-## See also 
+## Voir aussi 
 
 [QUERY BY ATTRIBUTE](query-by-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1424 |
+| Numéro de commande | 1424 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

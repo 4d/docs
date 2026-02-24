@@ -5,67 +5,67 @@ slug: /commands/qr-find-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* : Integer ; *expression* : Text, Pointer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *zone* ; *expression* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Find column.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| expression | Text, Pointer | &#8594;  | Column object |
-| Function result | Integer | &#8592; | Number of the column |
+| zone | Integer | &#8594;  | Référence de la zone |
+| expression | Text, Pointer | &#8594;  | Objet de colonne |
+| Résultat | Integer | &#8592; | Numéro de colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Find column.Summary-->The QR Find column command returns the number of the first column whose contents match the *expression* passed in parameter.<!-- END REF-->
+<!--REF #_command_.QR Find column.Summary-->La commande **QR Find column** retourne le numéro de la première colonne de la *zone* dont le contenu correspond à l'*expression* passée en paramètre.<!-- END REF--> 
 
-*expression* can either be a string or a pointer.
+*expression* peut contenir soit une chaîne soit un pointeur. 
 
-QR Find column returns –1 if nothing has been found.
+**QR Find column** retourne -1 si la recherche n'aboutit pas.
 
-If you pass an invalid area number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## Example 
+## Exemple 
 
-The following code retrieves the column number that holds the field \[G.NQR Tests\]Quarter and deletes that column:
+Le code suivant permet de récupérer le numéro de la colonne contenant le champ \[G.ER Tests\]Quarter puis de supprimer la colonne :
 
 ```4d
- $NumColumn:=QR Find column(MyArea;->[G.NQR Tests]Quarter)
+ $NumColonne:=QR Find column(MaZone;->[G.ER Tests]Quarter)
 ```
 
-or:
+ou :
 
 ```4d
- $NumColumn:=QR Find column(MyArea;"[G.NQR Tests]Quarter")
+ $NumColonne:=QR Find column(MaZone;"[G.ER Tests]Quarter")
 ```
 
-followed by:
+suivi de :
 
 ```4d
- If($NumColumn#-1)
-    QR DELETE COLUMN(MyArea;$NumColumn)
+ If($NumColonne#-1)
+    QR DELETE COLUMN(MaZone;$NumColonne)
  End if
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 776 |
+| Numéro de commande | 776 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

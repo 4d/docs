@@ -5,59 +5,58 @@ slug: /commands/listbox-delete-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( * ; *object* : Text ; *rowPosition* : Integer {; *numRows* : Integer} )<br/>**LISTBOX DELETE ROWS** ( *object* : Variable ; *rowPosition* : Integer {; *numRows* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( {* ;} *objet* ; *positionLigne* {; *nbLignes*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Integer | &#8594;  | Position of the row to delete |
-| numRows | Integer | &#8594;  | Number of rows to delete |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#8594;  | Numéro de la première ligne à supprimer |
+| nbLignes | Integer | &#8594;  | Nombre de lignes à supprimer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|13|Modified|
-|12|Renamed|
-|2004|Created|
+|13|Renommé|
+|13|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX DELETE ROWS.Summary-->The **LISTBOX DELETE ROWS** command deletes one or several row(s) starting at *rowPosition* row (visible or not) from the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE ROWS.Summary-->La commande **LISTBOX DELETE ROWS** supprime une ou plusieurs ligne(s) à partir de la ligne numéro *positionLigne* (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->
 
-**Note:** This command only works with list boxes based on arrays. When this command is used with a list box based on a selection, it does nothing and the OK system variable is set to 0.
+**Note :** Cette commande fonctionne uniquement avec les list box basées sur des tableaux. Lorsque cette commande est utilisée avec une list box basée sur des sélections, elle ne fait rien et la variable système OK retourne 0.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Keep in mind that after command execution, there will no longer be any element selected in the list box.
+La ligne *positionLigne* est supprimée automatiquement de tous les tableaux composant la list box.   
+Notez qu’après l’exécution de la commande, il n’y a plus d’élément sélectionné dans la list box. 
 
-The *rowPosition* row is automatically removed from all the arrays used by the list box columns. 
+Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux de la list box ou s'il est inférieur à 1, la commande ne fait rien. 
 
-If the *rowPosition* value is higher than the total number of rows in the list box, or if it is less than 1, the command does nothing. 
+**Note :** Cette commande ne tient pas compte de l'éventuel statut masqué/affiché des lignes de la list box. 
 
-**Note:** This command does not take into account any hidden/displayed states of list box rows. 
-
-## See also 
+## Voir aussi 
 
 [LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
 [LISTBOX INSERT ROWS](listbox-insert-rows.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 914 |
+| Numéro de commande | 914 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

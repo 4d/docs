@@ -5,69 +5,69 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *resultingPict* : Picture ; *pict1* : Picture ; *operator* : Integer ; *pict2* : Picture {; *horOffset* : Integer ; *vertOffset* : Integer} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* ; *image1* ; *opérateur* ; *image2* {; *décalHoriz* ; *décalVert*} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resultingPict | Picture | &#8592; | Picture resulting from combination |
-| pict1 | Picture | &#8594;  | First picture to combine |
-| operator | Integer | &#8594;  | Type of combination to be done |
-| pict2 | Picture | &#8594;  | Second picture to combine |
-| horOffset | Integer | &#8594;  | Horizontal offset for superimposition |
-| vertOffset | Integer | &#8594;  | Vertical offset for superimposition |
+| imageRésultat | Picture | &#8592; | Image résultant de la combinaison |
+| image1 | Picture | &#8594;  | Première image à combiner |
+| opérateur | Integer | &#8594;  | Type de combinaison à effectuer |
+| image2 | Picture | &#8594;  | Seconde image à combiner |
+| décalHoriz | Integer | &#8594;  | Décalage horizontal pour la superposition |
+| décalVert | Integer | &#8594;  | Décalage vertical pour la superposition |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.COMBINE PICTURES.Summary-->The **COMBINE PICTURES** command combines the *pict1* and *pict2* pictures in *operator* mode in order to produce a third, *resultingPict*.<!-- END REF--> The resulting picture is of the compound type and keeps all the characteristics of the source pictures.
+<!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 
-**Note:** This command extends the functionalities offered by the conventional [picture combination operators](../Concepts/dt_picture.md#picture-operators). 
+**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
 
-In *operator*, pass the type of combination to be applied. Three types of combinations, which can be accessed via the constants of the “*Picture Transformation*” theme, are proposed:
+Passez dans *opérateur* le type de combinaison à appliquer. Trois types de combinaisons sont proposés, accessibles via des constantes placées dans le thème “*Transformation des images*” :
 
-* Horizontal concatenation (1): *pict2* is attached to *pict1*, the top left corner of *pict2* coincides with the top right corner of *pict1*.
-* Vertical concatenation (2): *pict2* attached to *pict1*, the top left corner of *pict2* coincides with the lower left corner of *pict1*.
-* Superimposition (3): *pict2* is placed over *pict1*, the top left corner of *pict2* coincides with the top left corner of *pict1*.  
-If the optional *horOffset* and *vertOffset* parameters are used, a translation is applied to *pict2* before superimposition. The values passed in *horOffset* and *vertOffset* must correspond to pixels. Pass positive values for an offset to the right or towards the bottom and a negative value for an offset to the left or towards the top.
+* Horizontal concatenation (1) : *image2* est accolée à *image1*, le coin supérieur gauche de *image2* coïncidant avec le coin supérieur droit de *image1*.
+* Vertical concatenation (2) : image2 est accolée à *image1*, le coin supérieur gauche de *image2* coïncidant avec le coin inférieur gauche de *image1*.
+* Superimposition (3) : *image2* est placée par-dessus *image1*, le coin supérieur gauche de *image2* coïncidant avec le coin supérieur gauche de *image1*.  
+Si les paramètres facultatifs *décalHoriz* et *décalVert* sont utilisés, une translation est appliquée à *image2* avant la superposition. Les valeurs passées dans *décalHoriz* et *décalVert* doivent correspondre à des pixels. Passez des valeurs positives pour un décalage vers la droite ou vers le bas et une valeur négative pour un décalage vers la gauche ou vers le haut.
 
-**Note:** Superimposition carried out by the **COMBINE PICTURES** command differs from the superimposition provided by the conventional & and |operators (exclusive and inclusive superimposition). While the **COMBINE PICTURES** command preserves the characteristics of each source picture in the resulting picture, the & and | operators process each pixel and generate a bitmap picture in all cases. These operators, originally intended for black and white pictures, are now obsolete.
+**Note :** La superposition effectuée par la commande **COMBINE PICTURES** diffère de la superposition proposée par les opérateurs “classiques” & et | (superposition exclusive et superposition inclusive). Tandis que la commande **COMBINE PICTURES** conserve les caractéristiques de chaque image source dans l’image résultante, les opérateurs & et | traitent chaque pixel et génèrent une image bitmap dans tous les cas. Ces opérateurs, conçus à l’origine pour les images monochromes, sont désormais obsolètes.
 
-## Example 
+## Exemple 
 
-Given the following pictures: 
+Soient les images suivantes : 
 
-![](../assets/en/commands/pict27793.en.png)
+![](../assets/en/commands/pict27793.fr.png)
 
 ```4d
- COMBINE PICTURES(flag;mybackground;Superimposition;mycircle;50;30)
+ COMBINE PICTURES(drapeau;monfond;Superimposition;monrond;50;30)
 ```
 
-Result:
+Résultat :
 
-![](../assets/en/commands/pict27794.en.png)
+![](../assets/en/commands/pict27794.fr.png)
 
-## See also 
+## Voir aussi 
 
 [TRANSFORM PICTURE](transform-picture.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 987 |
+| Numéro de commande | 987 |
 | Thread safe | yes |
 
 

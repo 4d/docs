@@ -9,40 +9,40 @@ displayed_sidebar: docs
 <!--REF #_command_.EDIT ACCESS.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.EDIT ACCESS.Summary-->EDIT ACCESS lets the user edit the password system.<!-- END REF--> When this command is executed, the Toolbox window with only the Users and User groups pages appears.
+<!--REF #_command_.EDIT ACCESS.Summary-->**EDIT ACCESS** permet de modifier le système de mots de passe.<!-- END REF--> Lorsque cette commande est exécutée, la fenêtre de la boîte à outils de 4D contenant les pages Utilisateurs et Groupes est appelée pour modifier les privilèges.
 
-**Note:** This command opens a modal window so you must not call it from another modal window; if you do, it will not do anything. 
+**Note :** Cette commande ouvre une fenêtre modale. Par conséquent, vous ne devez pas l'appeler depuis une autre fenêtre modale, sinon l'ouverture de la fenêtre sera impossible et la commande ne fera rien.
 
-Groups can be edited by the Designer, the Administrator and group owners. The Designer and the Administrator can edit any group. Group owners can edit only the groups they own. Users can be added to and removed from groups. The command has no effect if no groups are defined.
+Les groupes peuvent être modifiés par le Super\_Utilisateur et l'Administrateur et par les propriétaires de groupe. Seuls le Super\_Utilisateur et l'Administrateur peuvent modifier tous les groupes. Les propriétaires de groupe ne peuvent modifier que leur propre groupe. Des utilisateurs peuvent être ajoutés et retirés des groupes. Cette commande ne fait rien si aucun groupe n'est défini.
 
-The Designer and the Administrator can add new users, as well as assign them to groups.
+Le Super\_Utilisateur et l'Administrateur peuvent créer des utilisateurs et les placer dans des groupes.
 
-## Example 
+## Exemple 
 
-The following example displays the Users and User groups management window to the user:
+L'exemple suivant affiche la fenêtre de gestion des utilisateur et des groupes :
 
 ```4d
  EDIT ACCESS
 ```
 
-## See also 
+## Voir aussi 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [CHANGE PASSWORD](change-password.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 281 |
+| Numéro de commande | 281 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

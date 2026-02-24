@@ -5,53 +5,53 @@ slug: /commands/set-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemText* : Text {; *process* : Integer}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *ligneMenu* ; *libelléElément* {; *process*}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
-| itemText | Text | &#8594;  | New text for the menu item |
-| process | Integer | &#8594;  | Process reference number |
-| * | Operator | &#8594;  | If passed: consider metacharacters as standard characters |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| libelléElément | Text | &#8594;  | Nouveau libellé de la ligne de menu |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| * | Opérateur | &#8594;  | Si passé : considérer les métacaractères comme des caractères standard |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU ITEM.Summary-->The SET MENU ITEM command changes the text of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*, to the text passed in *itemText*.<!-- END REF--> You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.
+<!--REF #_command_.SET MENU ITEM.Summary-->La commande **SET MENU ITEM** remplace le libellé de la ligne de menu, dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*, par le libellé que vous avez passé dans *texteLigne*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
-If you do not pass the *\** parameter, any "special" characters included in *itemText* (such as ( ; or !) will be considered as instruction characters (metacharacters). For example, to set a menu item as a separator line, you insert the “-” character into *itemText*. If you pass the *\** parameter, the "special" characters will be considered as standard characters. Please refer to the description of the [APPEND MENU ITEM](append-menu-item.md) command for more details about these characters. 
+Si vous ne passez pas le paramètre *\**, les caractères "spéciaux" inclus dans *texteLigne* (tels que ( ; ou !) seront considérés comme des caractères d'instruction (métacaractères). Par exemple, pour définir une ligne de menu comme ligne de séparation, insérez le caractère “-” dans *texteLigne*. Si vous passez le paramètre *\**, les caractères "spéciaux" seront considérés comme des caractères standard. Reportez-vous à la description de la commande [APPEND MENU ITEM](append-menu-item.md) pour plus de détails sur ces caractères. 
 
-If you omit the *process* parameter, SET MENU ITEM applies to the menu bar for the current process. Otherwise, SET MENU ITEM applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **SET MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **SET MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-## See also 
+## Voir aussi 
 
 [APPEND MENU ITEM](append-menu-item.md)  
 [Get menu item](get-menu-item.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 348 |
+| Numéro de commande | 348 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

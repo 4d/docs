@@ -5,50 +5,50 @@ slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* : Table ) : Real<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *laTable* ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to get the fragmentation rate |
-| Function result | Real | &#8592; | Percentage of fragmentation |
+| laTable | Table | &#8594;  | Table de laquelle connaître le taux de fragmentation |
+| Résultat | Real | &#8592; | Pourcentage de fragmentation |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Table fragmentation.Summary-->The Table fragmentation command returns the percentage of logical fragmentation for the records of the table designated by the *aTable* parameter.<!-- END REF--> 
+<!--REF #_command_.Table fragmentation.Summary-->La commande **Table fragmentation** retourne le pourcentage de fragmentation logique des enregistrements de la table désignée par le paramètre *laTable*.<!-- END REF--> 
 
-The rate of logical fragmentation of the records indicates whether the records are stored in an ordered manner in the data file. If the fragmentation becomes too high, this can considerably slow down sorts and sequential searches on the table. A fragmentation percentage of 0 corresponds to no fragmentation. Beyond a rate of 20%, it may be useful to compact the data file. 
+Le taux de fragmentation logique des enregistrements indique si les enregistrements sont stockés de manière ordonnée dans le fichier de données. Une fragmentation trop élevée peut ralentir sensiblement les tris et les recherches séquentiels sur la table. Un pourcentage de fragmentation de 0 correspond à une fragmentation nulle. Au-delà de 20 %, il peut être intéressant de procéder au compactage du fichier de données. 
 
-## Example 
+## Exemple 
 
-This maintenance method lets you request the compacting of the data file in the case where there is considerable fragmentation in at least one table of the database:
+Cette méthode de maintenance permet de demander le compactage du fichier de données en cas de fragmentation importante d’au moins une table de la base :
 
 ```4d
- ToBeCompacted:=False
- For($i ;1;Last table number)
-    If(Is table number valid($i))
-       If(Table fragmentation(Table($i)->)>20)
-          ToBeCompacted:=True
+ ACompacter:=False
+ For($i;1;Last table number)
+       If(Is table number valid($i))
+          If(Table fragmentation(Table($i)->)>20)
+             ACompacter:=True
+          End if
        End if
-    End if
  End for
- If(ToBeCompacted)
-  // Places a marker requesting compacting
+ If(ACompacter)
+        // Poser un marqueur de demande de compactage
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Compact data file](compact-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1127 |
+| Numéro de commande | 1127 |
 | Thread safe | yes |
 
 

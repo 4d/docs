@@ -5,41 +5,41 @@ slug: /commands/form-get-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *resize* : Boolean {; *minHeight* : Integer {; *maxHeight* : Integer}} )<!-- END REF-->
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *redimension* {; *hauteurMini* {; *hauteurMaxi*}} )<!-- END REF-->
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resize | Boolean | &#8592; | True: Form can be resized vertically<br/>False: Form cannot be resized vertically |
-| minHeight | Integer | &#8592; | Smallest form height allowed (pixels) |
-| maxHeight | Integer | &#8592; | Largest form height allowed (pixels) |
+| redimension | Boolean | &#8592; | Vrai : le formulaire est redimensionnable verticalement, Faux : le formulaire n'est pas redimensionnable verticalement |
+| hauteurMini | Integer | &#8592; | Hauteur minimale du formulaire (pixels) |
+| hauteurMaxi | Integer | &#8592; | Hauteur maximale du formulaire (pixels) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM GET VERTICAL RESIZING.Summary-->The FORM GET VERTICAL RESIZING command returns the vertical resizing properties of the current form in the *resize*, *minHeight* and *maxHeight* variables.<!-- END REF--> These properties may have been set for the form in the Form editor in Design mode or for the current process via the [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md) command.
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Summary-->La commande **FORM GET VERTICAL RESIZING** retourne dans les variables *redimension*, *hauteurMini* et *hauteurMaxi* les propriétés de redimensionnement vertical du formulaire courant.<!-- END REF--> Ces propriétés peuvent avoir été définies pour le formulaire dans l’éditeur de formulaires en mode Développement ou pour le process courant via la commande [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md).
 
-## See also 
+## Voir aussi 
 
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1078 |
+| Numéro de commande | 1078 |
 | Thread safe | no |
 
 

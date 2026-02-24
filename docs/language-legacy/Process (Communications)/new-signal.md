@@ -1,6 +1,7 @@
 ---
 id: new-signal
 title: New signal
+slug: /commands/new-signal
 displayed_sidebar: docs
 ---
 

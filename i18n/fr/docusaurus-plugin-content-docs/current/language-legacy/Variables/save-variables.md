@@ -5,58 +5,58 @@ slug: /commands/save-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
+<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *nomFichier* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
 <!--REF #_command_.SAVE VARIABLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document in which to save the variables |
-| variable | Variable | &#8594;  | Variables to save |
+| nomFichier | Text | &#8594;  | Nom du document dans lequel sauvegarder la ou les variable(s) |
+| variable | Variable | &#8594;  | Variable(s) à sauvegarder |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SAVE VARIABLES.Summary-->The **SAVE VARIABLES** command saves one or more variables in the document whose name you pass in *document*.<!-- END REF-->
+<!--REF #_command_.SAVE VARIABLES.Summary-->La commande **SAVE VARIABLES** sauvegarde une ou plusieurs variable(s) dans un document disque dont le nom est passé dans le paramètre *document*.<!-- END REF-->
 
-The variables do not need to be of the same type, but must be of the String, Text, Real, Integer, Long Integer, Date, Time, Boolean, or Picture type.
+Les variables ne doivent pas obligatoirement être du même type, mais doivent avoir le type Texte, numérique, Date, Heure, Booléen ou Image. 
 
-If you pass an empty string for *document*, the standard Save File dialog box appears; the user can then choose the document to create. In this case, the 4D system variable Document is set to the name of the document if one is created. 
+Si vous passez une chaîne vide ("") dans *document*, une boîte de dialogue standard d'enregistrement de fichiers apparaît, permettant à l'utilisateur de donner un nom au document à créer. Dans ce cas, la variable système Document récupère le nom du document, s'il a bien été créé.
 
-If the variables are properly saved, the OK variable is set to 1\. If not, OK is set to 0.
+Si les variables ont été correctement sauvegardées, la variable système OK prend la valeur 1\. Sinon, OK prend la valeur 0.
 
-**Note:** When you write variables to documents with **SAVE VARIABLES**, 4D uses an internal data format. You can retrieve the variables only with the [LOAD VARIABLES](load-variables.md) command. Do not use [RECEIVE PACKET](receive-packet.md) or [RECEIVE VARIABLE](receive-variable.md) to read a document created by **SAVE VARIABLES**.
+**Note :** Lorsque vous écrivez des variables dans des documents à l'aide de la commande **SAVE VARIABLES**, 4D utilise un format de données qui lui est propre. Vous ne pouvez récupérer les variables qu'avec la commande [LOAD VARIABLES](load-variables.md). N'utilisez pas les commandes [RECEIVE PACKET](receive-packet.md) ou [RECEIVE VARIABLE](receive-variable.md) pour lire un document créé par **SAVE VARIABLES**.
 
-**WARNING:** This command does not support array variables. Use the new BLOB commands instead.
+**ATTENTION :** La commande **SAVE VARIABLES** ne permet pas de sauvegarder les variables de type Tableau. Pour cela, vous devez utiliser les commandes du thème BLOB.
 
-## Example 
+## Exemple 
 
-The following example saves three variables to a document named UserPrefs:
+L'exemple suivant enregistre trois variables dans un fichier nommé PrefsUti :
 
 ```4d
- SAVE VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
+ SAVE VARIABLES("PrefsUti";VSNom;VLCode;VGIconPict)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the variables are saved properly, the **OK** system variable is set to 1; otherwise it is set to 0.
+Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [BLOB TO DOCUMENT](blob-to-document.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [DOCUMENT TO BLOB](document-to-blob.md)  
 [LOAD VARIABLES](load-variables.md)  
-*System Variables*  
 [VARIABLE TO BLOB](variable-to-blob.md)  
+*Variables système*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 75 |
+| Numéro de commande | 75 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

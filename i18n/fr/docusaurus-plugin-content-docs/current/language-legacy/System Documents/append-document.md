@@ -5,59 +5,59 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *nomFichier* {; *typeFichier*} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document name or Full document pathname or Empty string for standard file dialog box |
-| fileType | Text | &#8594;  | List of types of documents to be screened, or "*" to not screen the documents |
-| Function result | Time | &#8592; | Document reference number |
+| nomFichier | Text | &#8594;  | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
+| typeFichier | Text | &#8594;  | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| Résultat | Time | &#8592; | Numéro de référence du document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Append document.Summary-->The **Append document** command does the same as thing as [Open document](open-document.md): it opens a document on disk.<!-- END REF-->
+<!--REF #_command_.Append document.Summary-->La commande **Append document** "fait la même chose" que la commande [Open document](open-document.md) : elle vous permet d'ouvrir un document sur disque et de se placer à la fin du document.<!-- END REF--> 
 
-The only difference is that **Append document** sets the file position at the end of the document while [Open document](open-document.md) sets its at the beginning of the document.
+La seule différence est que **Append document** se place initialement à la fin du document, alors que [Open document](open-document.md) se place au début. 
 
-Refer to [Open document](open-document.md) for more details about using **Append document**.
+Pour plus d'informations, reportez-vous à la description de la commande [Open document](open-document.md).
 
-## Example 
+## Exemple 
 
-The following example opens an existing document called Note, appends the string "and so long" and a carriage return onto the end of the document, and closes the document. If the document already contained the string "Good-bye", the document would now contain the string “Good-bye and so long”, followed by a carriage return:
+L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à la fin du document la chaîne “ et à bientôt” suivie d'un retour chariot puis le referme. Si le document contenait déjà la chaîne “Au revoir”, il contiendra la chaîne “Au revoir et à bientôt” suivie d'un retour chariot :
 
 ```4d
- var vhDocRef : Time
- vhDocRef:=Append document("Note.txt") //Open Note document
- SEND PACKET(vhDocRef;" and so long"+Char(13)) //Append a string
- CLOSE DOCUMENT(vhDocRef) //Close the document
+ var vDoc : Time
+ vDoc:=Append document("Note.txt") // Ouvrir le document Note
+ SEND PACKET(vDoc;" et à bientôt"+Char(13)) // Ajouter la chaîne
+ CLOSE DOCUMENT(vDoc) // Fermer le document
 ```
 
-## See also 
+## Voir aussi 
 
 [Create document](create-document.md)  
 [Open document](open-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 265 |
+| Numéro de commande | 265 |
 | Thread safe | yes |
-| Modifies variables | OK, Document, error |
+| Modifie les variables | OK, Document, error |
 
 

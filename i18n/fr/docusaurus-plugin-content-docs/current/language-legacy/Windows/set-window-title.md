@@ -5,69 +5,69 @@ slug: /commands/set-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *title* : Text {; *window* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titre* {; *fenêtre*} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| title | Text | &#8594;  | Window title |
-| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
+| titre | Text | &#8594;  | Titre de la fenêtre |
+| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET WINDOW TITLE.Summary-->The **SET WINDOW TITLE** command changes the title of the window whose reference number is passed in *window* to the text passed in *title* (max. length 80 characters).<!-- END REF-->
+<!--REF #_command_.SET WINDOW TITLE.Summary-->La commande **SET WINDOW TITLE** remplace le titre de la fenêtre dont le numéro de référence est passé dans *fenêtre* par le texte passé dans *titre* (longueur maximale 80 caractères).<!-- END REF-->
 
-If the window does not exist, **SET WINDOW TITLE** does nothing. 
+Si la fenêtre n'existe pas, **SET WINDOW TITLE** ne fait rien. 
 
-If you omit the *window* parameter, **SET WINDOW TITLE** changes the title of the frontmost window for the current process.
+Si vous omettez le paramètre *fenêtre*, **SET WINDOW TITLE** remplace le titre de la fenêtre de premier plan du process courant.
 
-**Note:** In the Design environment, 4D changes the window titles automatically —i.e., “Entry for Table” when you perform data entry. If you change a window title, 4D will probably override it. On the other hand, in the Application environment, 4D does not change the titles of the windows.
+**Note :** En mode Développement, 4D définit automatiquement les titres des fenêtres — par exemple “Saisie pour table1” est affiché lorsque vous passez en saisie de données. Si vous changez le titre d'une fenêtre du mode Développement, il est probable que 4D le remplacera par la suite. En revanche, en mode Application, 4D ne modifie pas le titre des fenêtres.
 
-## Example 
+## Exemple 
 
-While performing data entry in a form, you click on a button that executes a lengthy operation (i.e., browsing programmatically related records shown in a subform). You keep informed about the progress of the operation using the title of the current window:
+Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui déclenche une longue opération (par exemple une modification par programmation des enregistrements liés affichés dans un sous-formulaire). Vous pouvez afficher des informations sur la progression des opérations dans le titre de la fenêtre :
 
 ```4d
-  // bAnalysis button Object Method
+  // Méthode objet du bouton bAnalyse
  Case of
     :(FORM Event.code=On Clicked)
-  // Save current window title in a local variable
-       $vsCurTitle:=Get window title
-  // Start the lengthy operation
-       FIRST RECORD([Invoice Line Items])
-       For($vlRecord;1;Records in selection([Invoice Line Items]))
-          DO SOMETHING
-  // Show progress information
-          SET WINDOW TITLE("Processing Line Item #"+String($vlRecord))
-       End for
-  // Restore original window title
-       SET WINDOW TITLE($vsCurTitle)
+  // Sauvegarde du titre courant de la fenêtre dans une variable
+       $vsTitreCour:=Get window title
+  // Commencer l'opération longue
+       FIRST RECORD([Lignes facture])
+       For($vlRecord;1;Records in selection([Lignes facture]))
+          FAIRE QUELQUE CHOSE
+  // Afficher la progression
+          SET WINDOW TITLE("Traitement de la ligne #"+String($vlEnreg))
+       End if
+  // Remettre en place l'ancien titre de fenêtre
+       SET WINDOW TITLE($vsTitreCour)
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Get window title](get-window-title.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 213 |
+| Numéro de commande | 213 |
 | Thread safe | no |
 
 

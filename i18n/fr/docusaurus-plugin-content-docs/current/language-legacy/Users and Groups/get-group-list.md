@@ -5,52 +5,52 @@ slug: /commands/get-group-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *groupNames* : Text array ; *groupNumbers* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *nomsGroupes* ; *numérosGroupes* )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groupNames | Text array | &#8592; | Names of the groups as they appear in the Password editor window |
-| groupNumbers | Integer array | &#8592; | Corresponding unique group ID numbers |
+| nomsGroupes | Text array | &#8592; | Noms des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe |
+| numérosGroupes | Integer array | &#8592; | Numéros de référence uniques pour chaque groupe |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST populates the arrays *groupNames* and *groupNumbers* with the names and unique ID numbers of the groups as they appear in the Password editor window.<!-- END REF-->
+<!--REF #_command_.GET GROUP LIST.Summary-->**GET GROUP LIST** remplit les tableaux *nomsGroupes* et *numérosGroupes* avec les noms et les numéros de référence uniques des groupes tels qu'ils apparaissent dans l'éditeur de Mots de passe.<!-- END REF-->
 
-The array *groupNumbers*, synchronized with *groupNames*, is filled with the corresponding unique group ID numbers. 
+Le tableau *numérosGroupes*, synchronisé avec le tableau *nomsGroupes*, est rempli avec les numéros de référence uniques des groupes. 
 
-* In project databases, these numbers start at 15001 and are dynamically allocated at startup and maintained during the session.
-* In binary databases, these numbers are stored and belong to a specific range, depending on the group creator. For more information, please refer to the *User and group ID ranges* paragraph.
+* Dans les bases projets, ces numéros commencent à 15001, sont assignés dynamiquement au démarrage et sont maintenus au cours de la session.
+* Dans les bases binaires, ces numéros sont stockés et correspondent à une plage spécifique, en fonction du créateur du groupe. Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling GET GROUP LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP LIST** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 [Set group properties](set-group-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 610 |
+| Numéro de commande | 610 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

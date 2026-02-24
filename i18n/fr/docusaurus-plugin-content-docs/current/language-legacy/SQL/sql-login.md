@@ -5,203 +5,201 @@ slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ({ *dataEntry* : Text ; *userName* : Text ; *password* : Text ; * })<!-- END REF-->
+<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** {( *source* ; *nomUtilisateur* ; *motDePasse* ; * )}<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dataEntry | Text | &#8594;  | Publication name of 4D database or IP address of remote database or Name of the data source entry in the ODBC Manager or "" to display the selection dialog box |
-| userName | Text | &#8594;  | Name of the user registered in the data source |
-| password | Text | &#8594;  | Password of the user registered in the data source |
-| * | Operator | &#8594;  | Applied to Begin SQL/End SQL If omitted: do not apply (local database); if passed: apply |
+| source | Text | &#8594;  | Nom de publication de base 4D ouAdresse IP de base distante ouNom de source de données dans le gestionnaire ODBC ou"" pour afficher le dialogue de sélection |
+| nomUtilisateur | Text | &#8594;  | Nom d’utilisateur enregistré dans la source de données |
+| motDePasse | Text | &#8594;  | Mot de passe de l’utilisateur |
+| * | Opérateur | &#8594;  | Appliquer à Debut SQL/Fin SQL Si omis : ne pas appliquer (base locale), si passé : appliquer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|12|Modified|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|12|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL LOGIN.Summary-->The **SQL LOGIN** command allows you to connect to an SQL data source specified in the *dataEntry* parameter.<!-- END REF--> It designates the target of the SQL queries executed subsequently in the current process: 
+<!--REF #_command_.SQL LOGIN.Summary-->La commande **SQL LOGIN** vous permet d’ouvrir une connexion avec une source de données SQL, définie dans le paramètre *source*.<!-- END REF--> Elle désigne la cible des requêtes SQL exécutées ultérieurement dans le process courant : 
 
-* via the [SQL EXECUTE](sql-execute.md) command,
-* via code placed within the Begin SQL / End SQL tags (if the *\** parameter is passed).
+* via la commande [SQL EXECUTE](sql-execute.md),
+* via le code placé à l’intérieur des balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) (si le paramètre *\** est passé).
 
-The SQL data source can either be:
+La source de données SQL peut être soit :
 
-* an external 4D Server database that you access directly,
-* an external ODBC source,
-* the local 4D database (internal database).
+* une base 4D Server externe à laquelle vous accédez directement,
+* une source ODBC externe,
+* la base 4D locale (base interne).
 
-In *dataEntry*, you can pass one of the following values: an IP address, a 4D database publication name, an ODBC data source name, an empty string or the SQL\_INTERNAL constant.
+Vous pouvez passer dans *source* l’une des valeurs suivantes : une adresse IP, un nom de publication de base 4D, un nom de source de données ODBC, une chaîne vide ou la constante SQL\_INTERNAL.
 
-* **IP address**  
-Syntax: **IP:<IPAddress>{:<TCPPort>}**  
-In this case, the command opens a direct connection with the 4D Server database executed on the machine with the IP address specified. On the "target" machine, the SQL server must be started. If you pass a TCP port number, it must have been specified as the publication port of the SQL server in the "target" database. If you do not pass a TCP port number, the default port will be used (19812). The TCP port number of the SQL server can be modified on the "SQL" page of the Database Settings. Refer to examples 4 and 5.  
-If you have enabled TLS for the "target" SQL server (option available in the Database Settings), you must add the ":ssl" keyword to the end of the IP address and TCP port number (mandatory in that case) in order for the server to be able to handle the request correctly (see example 6).
-* **4D database publication name**  
-Syntax: **4D:<Publication\_Name>**  
-In this case, the command opens a direct connection with the 4D Server database whose publication name on the network corresponds to the name specified. The network publication name of a database is set on the "Client-Server" page of the Database Settings.  
-Refer to example 4.  
-**Note:** The TCP port number of the target 4D SQL server (that publishes the 4D database) and the TCP port number of the SQL server of the 4D application that opens the connection must be the same.
-* **valid ODBC data source name**  
-Syntax: **ODBC:<My\_DSN> or <My\_DSN>**  
-In this case, the *dataEntry* parameter contains the name of the data source as it has been set in the ODBC driver manager.  
-**Notes:**  
-   * For compatibility with previous versions of 4D, it is possible to omit the "ODBC:" prefix. However, for better code readability, it is recommended to use this prefix.  
-   Refer to example 2.  
-   * Under Windows, the data source name is case sensitive. For example, if the data source was defined as "4D\_v16", passing the value "4D\_V16" will fail.  
-   * Under Windows and Mac, the "ODBC:" prefix must be entered using uppercase letters. If you pass "odbc:", the connection will fail.
-* **empty string**  
-Syntax: *""*  
-In this case, the command displays the connection dialog box so that the data source to be connected to can be entered manually:  
-    
-![](../assets/en/commands/pict33536.en.png)  
-    
-This dialog box includes several pages. The TCP/IP page includes the following elements:  
-   * Target Name: This menu is built using two lists:  
-         * The list of databases that have been opened recently in direct connection. The mechanism for updating this list is the same as that of the 4D application, except that the folder containing the .4DLink files is named "Favorites SQL vXX" instead of "Favorites vXX".  
-         * The list of 4D Server applications whose SQL server is started and whose TCP port for SQL connections is the same as that of the source application. This list is dynamically updated on each new call to the **SQL LOGIN** command without the *dataEntry* parameter. If the "^" character is placed before a database name, this indicates that the connection has been made in secured mode via SSL.  
-   * Network Address: This area displays the address and possibly the TCP port of the database selected in the Target Name menu. You can also enter an IP address in this area and then click on the Connection button in order to connect to the corresponding 4D Server database. You can also specify the TCP port by entering a colon (:) followed by the port number after the address. For example: 192.168.93.105:19855  
-   * User Name and Password: These areas can be used to enter the con-nection identifiers.  
-   * The User DSN and System DSN pages display, respectively, the list of user and system ODBC data sources specified in the ODBC driver of the machine. These pages can be used to select a data source and enter the identifiers in order to open a connection with an external ODBC data source.  
-    
-If the connection is established, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated. This error can be intercepted via an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
-* **SQL\_INTERNAL constant**  
-Syntax: SQL\_INTERNAL  
-In this case, the command redirects subsequent SQL queries to the internal 4D database.
+* **adresse IP**  
+Syntaxe : **IP:<Adresse IP>{:<PortTCP>}**  
+Dans ce cas, la commande ouvre une connexion directe avec la base 4D Server exécutée sur l’ordinateur ayant l’adresse IP définie. Sur l’ordinateur "cible", le serveur SQL doit être lancé. Si vous passez un numéro de port TCP, il doit avoir été spécifié comme port de publication du serveur SQL dans la base "cible". Si vous ne passez pas de numéro de port TCP, le port par défaut sera utilisé (19812). Le numéro de port TCP du serveur SQL peut être modifié dans la page "SQL" des Propriétés de la base. Reportez-vous aux exemples 4 et 5.  
+Si vous avez activé le SSL pour le serveur SQL "cible" (option accessible via les Propriétés de la base), vous devez ajouter le mot-clé ":ssl" à la suite de l'adresse IP et du port TCP (obligatoire dans ce cas) afin que le serveur puisse traiter correctement la requête (voir exemple 6).
+* **nom de publication de base 4D**  
+Syntaxe : **4D:<Nom\_de\_Publication>**  
+Dans ce cas, la commande ouvre une connexion directe avec la base 4D Server dont le nom de publication sur le réseau correspond au nom spécifié. Le nom de publication réseau d’une base est défini dans la page "Client-Serveur" des Propriétés de la base.  
+Reportez-vous à l’exemple 4.  
+**Note :** Le numéro de port TCP du serveur SQL 4D cible (qui publie la base 4D) et le numéro de port TCP du serveur SQL de l’application 4D ouvrant la connexion doivent être identiques.
+* **nom de source de données ODBC valide**  
+Syntaxe : **ODBC:<Ma\_DSN>** ou **<Ma\_DSN>**  
+Dans ce cas, le paramètre *source* contient le nom de la source de données telle qu'elle a été définie dans le gestionnaire du pilote ODBC.  
+**Notes :**  
+   * Par compatibilité avec les versions précédentes de 4D, il est possible d'omettre le préfixe "ODBC:". Toutefois pour des raisons de lisibilité du code il est conseillé d’utiliser ce préfixe. Reportez-vous à l’exemple 2.  
+   * Sous Windows, le nom de la source de données doit respecter les majuscules/minuscules. Par exemple, si la source de données a été définie en "4D\_v16", passer la valeur "4D\_V16" échouera.  
+   * Sous Windows et Mac, le préfixe "ODBC:" doit être saisi en majuscules. Si vous passez "odbc:", la connexion échouera.
+* **chaîne vide**  
+Syntaxe : ***""***  
+Dans ce cas la commande provoque l’affichage de la boîte de dialogue de connexion, permettant de désigner manuellement la source de données à laquelle se connecter :  
+![](../assets/en/commands/pict33536.fr.png)  
+Cette boîte de dialogue comporte plusieurs pages. La page TCP/IP se compose des éléments suivants :  
+   * Nom cible : ce menu est construit à l’aide de deux listes :  
+         * la liste des bases ouvertes récemment en connexion directe. Le mécanisme de mise à jour de cette liste est identique à celui de l’application 4D, à la différence près que le dossier contenant les fichiers .4DLink est nommé "Favorites SQL vXX" au lieu de "Favorites vXX".  
+         * la liste des applications 4D Server dont le serveur SQL est lancé et dont le port TCP pour les connexions SQL est égal à celui de l’application source. Cette liste est mise à jour dynamiquement à chaque nouvel appel de la commande **SQL LOGIN** sans le paramètre *source*. Le caractère "^" placé devant un nom de base indique que la connexion est effectuée en mode sécurisé via SSL.  
+   * Adresse réseau : cette zone affiche l’adresse IP et éventuellement le port TCP de la base sélectionnée dans le menu Nom cible. Vous pouvez également saisir dans cette zone une adresse IP puis cliquer sur le bouton Connexion afin de vous connecter à la base 4D Server correspondante. Vous pouvez également spécifier le port TCP, en saisissant deux points (:) puis le numéro du port à la suite de l’adresse. Par exemple : 192.168.93.105:19855  
+   * Utilisateur et Mot de passe : ces zones permettent de saisir les identifiants de la connexion.  
+   * Les pages DSN utilisateur et DSN système affichent respectivement la liste des sources de données ODBC utilisateur et système définies dans le gestionnaire ODBC de la machine. Ces pages permettent de sélectionner une source de données et de saisir des identifiants afin d’ouvrir une connexion avec une source ODBC externe.
 
-**Warning:** The prefixes used in the *dataEntry* parameter (IP, ODBC, 4D) must be written in uppercase. 
+> Si la connexion est établie, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est générée. Cette erreur peut être interceptée via une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-*userName* contains the name of the user authorized to connect to the external data source. For example, with Oracle®, the user name can be “Scott”.
+* **constante SQL\_INTERNAL**  
+Syntaxe : **SQL\_INTERNAL**  
+Dans ce cas, la commande redirige les requêtes SQL suivantes vers la base 4D interne.
 
-*password* contains the password of the user authorized to connect to the external data source. For example, with Oracle®, the password can be “tiger”.
+**Attention :** Les préfixes utilisés dans le paramètre *source* (IP, ODBC, 4D) doivent être écrits en majuscules. 
 
-**Note:** In the case of a direct connection, if you pass empty strings in the *userName* and *password* parameters, the connection will only be accepted if 4D passwords are not activated in the target database. Otherwise, the connection will be refused.
+Le paramètre *utilisateur* contient le nom de l’utilisateur autorisé à se connecter à la source de données externe. Par exemple, avec Oracle®, ce nom d’utilisateur peut être “Scott”.
 
-The optional *\** parameter can be used to change the target of the SQL code executed within the Begin SQL/End SQL tags. If you do not pass this parameter, the code placed within the Begin SQL/End SQL tags will still be sent to the internal SQL engine of 4D, without taking the configuration specified by the **SQL LOGIN** command into account. If you do pass this parameter, the SQL code executed within the Begin SQL/End SQL tags will be sent to the source specified in the *dataEntry* parameter. 
+Le paramètre *motDePasse* contient le mot de passe de l’utilisateur autorisé à se connecter. Par exemple, avec Oracle®, ce mot de passe peut être “tiger”.
 
-To close the current connection and free the memory, simply execute the [SQL LOGOUT](sql-logout.md) command. All the SQL queries are then sent to the internal 4D SQL database.   
-If you call **SQL LOGIN** again without having explicitly closed the current connection, it will be closed automatically. 
+**Note :** Dans le cas d’une connexion directe, si vous passez des chaînes vides dans les paramètres *utilisateur* et *motDePasse*, la connexion ne sera acceptée que si les mots de passe 4D ne sont pas activés dans la base cible. Sinon, la connexion est refusée.
 
-**Note:** In the case where an external connection attempt via **SQL LOGIN** fails, the internal 4D database automatically becomes the current data source.
+Le paramètre facultatif *\** permet de changer la cible du code SQL exécuté au sein des balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md). Si vous ne passez pas ce paramètre, le code placé dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) sera toujours adressé au moteur SQL interne de 4D, sans tenir compte du paramétrage défini par la commande **SQL LOGIN**. Si vous passez ce paramètre, le code SQL exécuté au sein des balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) sera adressé à la *source* définie par la commande. 
 
-These parameters are optional; if no parameters are passed, the command will bring up the ODBC Login dialog box that allows you to select the external data source. 
+Pour refermer la connexion courante et libérer la mémoire, il suffit d’exécuter la commande [SQL LOGOUT](sql-logout.md). Toutes les requêtes SQL sont alors dirigées vers la base 4D SQL interne.   
+Si vous appelez une nouvelle fois **SQL LOGIN** sans avoir refermé explicitement la connexion courante, elle est automatiquement refermée. 
 
-The scope of this command is per process; in other words, if you want to execute two distinct connections, you must create two processes and execute each connection in each process. 
+**Note :** En cas d'échec d'une tentative de connexion externe via **SQL LOGIN**, la base 4D interne devient automatiquement la source de données courante.
 
-**Warning:** It is not possible to open an ODBC connection in the contexts described below. These configurations lead to blocking of the application:
+Tous les paramètres sont facultatifs. Si aucun paramètre n’est passé, la commande provoquera l’affichage de la boîte de dialogue de connexion ODBC, permettant de désigner manuellement la source de données à laquelle se connecter. 
 
-* connection via ODBC from the running application to itself
-* connection via ODBC from a 4D application to 4D Server when a standard client/server connection is already open between these two applications.
+La portée de cette commande est le process. Autrement dit, si vous souhaitez ouvrir deux connexions distinctes, vous devez créer deux process et ouvrir chaque connexion dans chaque process. 
 
-## Example 1 
+**Attention :** Il n'est pas possible d'ouvrir une connexion ODBC dans les contextes décrits ci-dessous. Ces configurations conduisent au blocage de l'application :
 
-This statement will bring up the ODBC Manager dialog box: 
+* connexion via ODBC depuis l'application en exécution vers elle-même
+* connexion via ODBC depuis une application 4D vers 4D Server alors qu'une connexion client/serveur classique est déjà ouverte entre les deux applications.
+
+## Exemple 1 
+
+Cette instruction provoque l’affichage de la boîte de dialogue du gestionnaire ODBC : 
 
 ```4d
  SQL LOGIN
 ```
 
-## Example 2 
+## Exemple 2 
 
-Opening of a connection via the ODBC protocol with the "MyOracle" external data source. SQL queries executed via the [SQL EXECUTE](sql-execute.md "SQL EXECUTE") command and queries included within the [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") tags will be redirected to this connection:
-
-```4d
- SQL LOGIN("ODBC:MyOracle";"Scott";"tiger";*)
-```
-
-## Example 3 
-
-Open a connection with the 4D internal SQL kernel:
+Ouverture d’une connexion via le protocole ODBC avec la source de données externe "MonOracle". Les requêtes SQL exécutées via la commande [SQL EXECUTE](sql-execute.md) et les requêtes incluses dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) seront redirigées vers cette connexion :
 
 ```4d
- SQL LOGIN(SQL_INTERNAL;$user;$password)
+ SQL LOGIN("ODBC:MonOracle";"Scott";"tiger";*)
 ```
 
-## Example 4 
+## Exemple 3 
 
-Opening of a direct connection with the 4D Server application executed on the machine having the IP address 192.168.45.34 and replying on the default TCP port. The SQL queries executed via the [SQL EXECUTE](sql-execute.md "SQL EXECUTE") command will be redirected to this connection; the queries included within the [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") tags will not be redirected. 
+Ouverture d'une connexion avec le moteur SQL interne de 4D : 
+
+```4d
+ SQL LOGIN(SQL_INTERNAL;$utilisateur;$motdepasse)
+```
+
+## Exemple 4 
+
+Ouverture d’une connexion directe avec l’application 4D Server exécutée sur le poste ayant l’adresse IP 192.168.45.34 et répondant sur le port TCP par défaut. Les requêtes SQL exécutées via la commande [SQL EXECUTE](sql-execute.md) seront redirigées vers cette connexion, les requêtes incluses dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) ne seront pas redirigées. 
 
 ```4d
  SQL LOGIN("IP:192.168.45.34";"John";"azerty")
 ```
 
-## Example 5 
+## Exemple 5 
 
-Opening of a direct connection with the 4D Server application executed on the machine having the IP address 192.168.45.34 and replying on TCP port 20150\. The SQL queries executed via the [SQL EXECUTE](sql-execute.md "SQL EXECUTE") command and the queries included within the [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") tags will be redirected to this connection. 
+Ouverture d’une connexion directe avec l’application 4D Server exécutée sur le poste ayant l’adresse IP 192.168.45.34 et répondant sur le port TCP 20150\. Les requêtes SQL exécutées via la commande [SQL EXECUTE](sql-execute.md) et les requêtes incluses dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) seront redirigées vers cette connexion. 
 
 ```4d
  SQL LOGIN("IP:192.168.45.34:20150";"John";"azerty";*)
 ```
 
-## Example 6 
+## Exemple 6 
 
-Opening of a direct connection in TLS with the 4D Server application running on the machine with the IP address 192.168.45.34 and responding on the default TCP port. You must have enabled TLS for the SQL server on the 4D Server application:
+Ouverture d’une connexion directe en SSL avec l’application 4D Server exécutée sur le poste ayant l’adresse IP 192.168.45.34 et répondant sur le port TCP par défaut. Le SSL doit avoir été activé pour le serveur SQL sur l'application 4D Server :
 
 ```4d
- SQL LOGIN("IP:192.168.45.34:19812:ssl";"Admin";"sd156") // Note the ":ssl" after of the IP address and TCP port
+ SQL LOGIN("IP:192.168.45.34:19812:ssl";"Admin";"sd156") // Notez le ":ssl" après l'adresse IP et le port TCP
 ```
 
-## Example 7 
+## Exemple 7 
 
-Opening of a direct connection with the 4D Server application executed on the machine having the IPv6 address 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747 and replying on the TCP port 20150\. The SQL queries executed via the [SQL EXECUTE](sql-execute.md) command will be redirected to this connection; the queries included within the [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) tags will not be redirected.
+Ouverture d'une connexion directe avec l'application 4D Server exécutée sur la machine ayant l'adresse IPv6 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747 et répondant sur le port TCP 20150\. Les requêtes SQL exécutées via la commande [SQL EXECUTE](sql-execute.md) seront redirigées sur cette connexion ; les requêtes inclues dans les mots-clés [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) ne seront pas redirigées.
 
 ```4d
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
 ```
 
-## Example 8 
+## Exemple 8 
 
-Opening of a direct connection with the 4D Server application which publishes, on the local network, a database whose publication name is "Accounts\_DB." The TCP port used for the SQL server of both databases (set on the SQL page of the Database Settings) must be the same (19812 by default). The SQL queries executed via the [SQL EXECUTE](sql-execute.md "SQL EXECUTE") command will be redirected to this connection; the queries included within the [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL") tags will not be redirected. 
+Ouverture d’une connexion directe avec l’application 4D Server qui publie sur le réseau local une base dont le nom de publication est "DB\_Compta". Le port TCP utilisé pour le serveur SQL des deux bases (défini dans la page "SQL" des Propriétés de la base) doit être identique (19812 par défaut). Les requêtes SQL exécutées via la commande [SQL EXECUTE](sql-execute.md) seront redirigées vers cette connexion, les requêtes incluses dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) ne seront pas redirigées. 
 
 ```4d
- SQL LOGIN("4D:Accounts_DB";"John";"azerty")
+ SQL LOGIN("4D:DB_Compta";"John";"azerty")
 ```
 
-## Example 9 
+## Exemple 9 
 
-This example illustrates the connection possibilities provided by the SQL LOGIN command:   
+Cet exemple illustre les possibilités de connexion offertes par la commande SQL LOGIN : 
 
 ```4d
  ARRAY TEXT(aNames;0)
  ARRAY LONGINT(aAges;0)
- SQL LOGIN("ODBC:MyORACLE";"Marc";"azerty")
+ SQL LOGIN("ODBC:MonORACLE";"Marc";"azerty")
  If(OK=1)
-  //The following query will be redirected to the external ORACLE database
+  //La requête suivante sera redirigée vers la base ORACLE externe
     SQL EXECUTE("SELECT Name, Age FROM PERSONS";aNames;aAges)
-  //The following query will be sent to the local 4D database
+  //La requête suivante sera dirigée vers la base 4D locale
     Begin SQL
        SELECT Name, Age
        FROM PERSONS
        INTO :aNames, :aAges;
     End SQL
-  //The following SQL LOGIN command closes the current connection
-  //with the external ORACLE database and opens a new connection
-  //with an external MySQL database
+  //La commande SQL LOGIN suivante referme la connexion courante
+  //avec la base externe ORACLE et ouvre une nouvelle connexion avec
+  //une base externe MySQL
     SQL LOGIN("ODBC:MySQL";"Jean";"qwerty";*)
     If(OK=1)
-  //The following query will be redirected to the external MySQL database
+  //La requête suivante sera redirigée vers la base MySQL externe
        SQL EXECUTE("SELECT Name, Age FROM PERSONS";aNames;aAges)
-  //The following query will also be redirected to the external MySQL database
+  //La requête suivante sera aussi redirigée vers la base MySQL externe
        Begin SQL
           SELECT Name, Age
           FROM PERSONS
           INTO :aNames, :aAges;
        End SQL
        SQL LOGOUT
-  //The following query will be sent to the local 4D database
+  //La requête suivante sera dirigée vers la base 4D locale
        Begin SQL
           SELECT Name, Age
           FROM PERSONS
@@ -211,22 +209,22 @@ This example illustrates the connection possibilities provided by the SQL LOGIN 
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the connection is successful, the system variable OK is set to 1; otherwise, it is set to 0.
+Si la connexion est correctement établie, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 817 |
+| Numéro de commande | 817 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

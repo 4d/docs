@@ -9,59 +9,59 @@ displayed_sidebar: docs
 <!--REF #_command_.Is in print preview.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True = Print preview,False = No print preview |
+| Résultat | Boolean | &#8592; | Vrai = Impression à l’écran, Faux = Pas d’impression écran |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is in print preview.Summary-->The **Is in print preview** command returns True if the **Preview on Screen** option is checked in the printing dialog box and False otherwise.<!-- END REF--> This setting is local to the process. 
+<!--REF #_command_.Is in print preview.Summary-->La commande **Is in print preview** retourne Vrai si l’option **Aperçu avant impression** est cochée dans la boîte de dialogue d’impression, et Faux sinon.<!-- END REF--> Ce paramétrage est local au process. 
 
-Unlike the [Get print preview](get-print-preview.md) command, **Is in print preview** returns the final value of the option, after the dialog box is validated by the user. So this command lets you determine with certainty whether printing actually takes place in "preview" mode. 
+A la différence de la commande [Get print preview](get-print-preview.md), **Is in print preview** retourne la valeur finale de l’option, après validation de la boîte de dialogue par l’utilisateur. Cette commande vous permet donc de déterminer avec certitude si l’impression a effectivement lieu en mode "aperçu". 
 
-## Example 
+## Exemple 
 
-This example takes all types of printing into account:
+Cet exemple permet de prendre en compte tous les types d’impressions : 
 
 ```4d
- SET PRINT PREVIEW(True) //Print preview by default
+ SET PRINT PREVIEW(True) //Impression écran par défaut
  PRINT SETTINGS
  If(OK=1)
-  //The user may have changed the print destination
-    If(Is in print preview) // True if preview
-       FORM SET OUTPUT([Invoices];"toScreen")
+  //L’utilisateur peut avoir changé la destination d’impression
+    If(Is in print preview)  // Vrai si aperçu
+       FORM SET OUTPUT([Factures];"versEcran")
     Else
-       FORM SET OUTPUT([Invoices];"toPrinter"
+       FORM SET OUTPUT([Factures];"versImprimante")
     End if
     OPEN PRINTING JOB
-    ALL RECORDS([Invoices])
-    PRINT SELECTION([Invoices];>)
+    ALL RECORDS([Factures])
+    PRINT SELECTION([Factures];>)
     CLOSE PRINTING JOB
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Get print preview](get-print-preview.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1198 |
+| Numéro de commande | 1198 |
 | Thread safe | no |
 
 

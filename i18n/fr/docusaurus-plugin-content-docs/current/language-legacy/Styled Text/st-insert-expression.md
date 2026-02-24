@@ -5,108 +5,105 @@ slug: /commands/st-insert-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( * ; *object* : Text ; *expression* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST INSERT EXPRESSION** ( *object* : Variable, Field ; *expression* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( {* ;} *objet* ; *expression* {; *débutSél* {; *finSél*}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| expression | Text | &#8594;  | Expression and (optional) format to insert |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | Object | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| expression | Text | &#8594;  | Expression et (optionnel) format à insérer |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|14|Created|
+|16 R5|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST INSERT EXPRESSION.Summary-->The **ST INSERT EXPRESSION** command inserts a reference to the *expression* in the styled text field or variable designated by the *object* parameter.<!-- END REF-->
+<!--REF #_command_.ST INSERT EXPRESSION.Summary-->La commande **ST INSERT EXPRESSION** insère une référence à l’*expression* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *expression* parameter, you pass the 4D expression to evaluate in the *object*. The expression must be placed in quotation marks ("").
+Passez dans le paramètre *expression* l’expression 4D à évaluer dans l’*objet*. Une expression 4D valide est une chaîne retournant une valeur. *expression* peut être un champ, une variable, une commande 4D, une instruction retournant une valeur, une méthode projet, etc. 
 
-A valid 4D expression is a string returning a value. *expression* can be a field, a variable, a 4D command, a statement returning a value, a project method, a 4D Write Pro special expression (see *Managing formulas*), and so on.
+L’expression doit être passée entre guillemets (""). 
 
-**Notes:**
+**Note :** Le paramètre *expression* ne peut pas être une variable de type Image.
 
-* Inserting picture expressions (e. g. Picture type variables) is supported in 4D Write Pro areas (see *Picture expressions*) but is not supported in multi-style text areas.
-* This command expects "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands.
+Si *expression* retourne une valeur contenant des retours chariot et des tabulations, 4D formate le texte en fonction de l’objet hébergeant l’expression ; les caractères retours chariot sont interprétés comme des retours à la ligne. 
 
-If *expression* returns a value containing carriage returns and tabs, 4D formats the text according to the object hosting the expression; carriage return characters are interpreted as line breaks. 
-
-You can format the expression by including formatting information in the *expression* parameter. In this case, the parameter must be in the form:  
+Vous pouvez formater l’expression en incluant une information de formatage dans le paramètre *expression*. Dans ce cas, le paramètre doit être de la forme :  
 
 ```RAW
-"String(value;format)"
+"String(valeur;format)"
 ```
 
-... where *value* contains the expression itself and *format* contains the format to apply. The *format* parameter can have the following values: 
+... où *valeur* contient l’expression elle-même et *format* le formatage à appliquer. Le paramètre *format* peut contenir les valeurs suivantes : 
 
-* for numbers: any number display format (existing or not), for example "###,##".
-* for dates: a number designating an existing date format. You can use the constants of the "*Date Display Formats*" theme, for example System date short .
-* for times: a number designating an existing time format. You can use the constants of the "*Time Display Formats*" theme, for example System time short .
+* pour les numériques : tout format d’affichage numérique existant ou non, par exemple "###,##"
+* pour les dates : un nombre désignant un format de date existant. Vous pouvez utiliser les constantes du thème "*Formats d'affichage des dates*", par exemple System date short.
+* pour les heures : un nombre désignant un format d’heure existant. Vous pouvez utiliser les constantes du thème "*Formats d'affichage des heures*", par exemple System time short.
 
-For example:
+Par exemple :
 
 ```4d
- "String([Table_1]Field_1;System date short)"
+ "Chaine([Table_1]Champ_1;Système date court)"
 ```
 
-By default, the expression **values** are displayed in the multi-style text areas. You can force the display of the **references** instead using the [ST SET OPTIONS](st-set-options.md) command.
+Par défaut, les **valeurs** des expressions sont affichées dans les zones de texte multistyle. Vous pouvez forcer l’affichage des **références** à l’aide de la commande [ST SET OPTIONS](st-set-options.md). 
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags that may be present. 
+Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. 
 
-* If you only pass *startSel*, the result of the expression is inserted at the specified location.
-* If you omit *startSel* and *endSel*, the result of the expression is inserted at the location of the cursor.
-* If you pass *startSel* and *endSel*, **ST INSERT EXPRESSION** replaces the text in this selection with the result of the *expression*. If the value of *endSel* is greater than the total number of characters in the object, all the characters between *startSel* and the end of the text are replaced by the result of the *expression*.
+* Si vous passez uniquement *débutSél*, le résultat de l’expression est inséré à l'emplacement spécifié.
+* Si vous omettez *débutSél* et *finSél*, le résultat de l’expression est inséré à l’emplacement du curseur.
+* Si vous passez *débutSél* et *finSél*, **ST INSERT EXPRESSION** remplace le texte situé à l’intérieur de cette sélection par le résultat de l’*expression*. Si la valeur de *finSél* est supérieure au nombre total de caractères dans l’objet, tous les caractères entre *débutSél* et la fin du texte sont remplacés par le résultat de l’*expression*.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-## Example 
+## Exemple 
 
-You want to replace the highlighted text with a field value:
+Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
 
 ```4d
- ST INSERT EXPRESSION(*;"myText";"[Customer]LastName";ST Start highlight;ST End highlight)
+ ST INSERT EXPRESSION(*;"myText";"[Clients]Nom";ST Start highlight;ST End highlight)
 ```
 
-## See also 
+## Voir aussi 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST Get expression](st-get-expression.md)  
 [ST INSERT URL](st-insert-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1281 |
+| Numéro de commande | 1281 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

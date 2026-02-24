@@ -5,39 +5,39 @@ slug: /commands/dec
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dec.Syntax-->**Dec** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Dec.Syntax-->**Dec** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Dec.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number whose decimal portion is returned |
-| Function result | Real | &#8592; | Decimal part of number |
+| nombre | Real | &#8594;  | Valeur dont voulez obtenir la partie décimale |
+| Résultat | Real | &#8592; | Partie décimale de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Dec.Summary-->Dec returns the decimal (fractional) portion of *number*.<!-- END REF-->The value returned is always positive or zero.
+<!--REF #_command_.Dec.Summary-->**Dec** retourne la partie décimale de *nombre*.<!-- END REF--> La valeur retournée est toujours positive ou nulle.
 
-## Example 
+## Exemple 
 
-The following example takes a monetary value expressed as a real number, and extracts the dollar part and the cents part. If *vrAmount* is 7.31, then *vlDollars* is set to 7 and *vlCents* is set to 31:
+L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique et en extrait les parties "euros" et "centimes". Si *vrMontant* valait 7,31, *vlEuros* vaudrait 7 et *vlCentimes* 31 : 
 
 ```4d
- vlDollars:=Int(vrAmount) // Get the dollars
- vlCents:=Dec(vrAmount)*100 // Get the fractional part
+ vlEuros:=Int(vrMontant) // Extraire les euros
+ vlCentimes:=Dec(vrMontant)*100 // Extraire la partie décimale et la multiplier par 100 pour obtenir un entier
 ```
 
-## See also 
+## Voir aussi 
 
 [Int](int.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 9 |
+| Numéro de commande | 9 |
 | Thread safe | yes |
 
 

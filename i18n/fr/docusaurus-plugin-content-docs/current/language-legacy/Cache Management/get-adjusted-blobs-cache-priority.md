@@ -5,44 +5,44 @@ slug: /commands/get-adjusted-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *laTable* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which the "blobs" priority value has to be retrieved |
-| Function result | Integer | &#8592; | Current priority value for "blobs" fields |
+| laTable | Table | &#8594;  | Table pour laquelle connaître la valeur de priorité des "blobs" |
+| Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs "blobs" |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get adjusted blobs cache priority.Summary-->The **Get adjusted blobs cache priority** command returns the current adjusted cache priority value applied in cache by the cache manager for the *aTable* "blobs" data.<!-- END REF--> This command is only needed for debugging purposes. 
+<!--REF #_command_.Get adjusted blobs cache priority.Summary-->La commande **Get adjusted blobs cache priority** retourrne la valeur ajustée de priorité de cache appliquée par le gestionnaire de cache aux données de type "blobs" de *laTable*.<!-- END REF--> Cette commande est destinée uniquement à la phase de débogage et de mise au point de l'application. 
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
-## See also 
+## Voir aussi 
 
 [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
-*Managing priorities in database cache*  
+*Gestion des priorités dans le cache de la base*  
 [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1428 |
+| Numéro de commande | 1428 |
 | Thread safe | yes |
 
 

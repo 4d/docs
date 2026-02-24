@@ -5,41 +5,41 @@ slug: /commands/json-stringify-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* : Text array, Real array, Boolean array, Pointer array, Object array {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *tab* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | Array whose contents must be serialized |
-| * | Operator | &#8594;  | Pretty formatting |
-| Function result | Text | &#8592; | String containing the serialized JSON array |
+| tab | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | Tableau dont le contenu doit être sérialisé |
+| * | Opérateur | &#8594;  | Améliorer le formatage |
+| Résultat | Text | &#8592; | Chaîne contenant le tableau JSON sérialisé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON Stringify array.Summary-->The **JSON Stringify array** command converts the 4D array *array* into a serialized JSON array.<!-- END REF--> This command performs the opposite action of the [JSON PARSE ARRAY](json-parse-array.md) command.
+<!--REF #_command_.JSON Stringify array.Summary-->La commande **JSON Stringify array** convertit le tableau 4D *tab* en un tableau JSON sérialisé.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON PARSE ARRAY](json-parse-array.md).
 
-In *array*, pass a 4D array containing the data to be serialized. This array may be of the text, real, Boolean, pointer or object type.
+Passez dans *tab* un tableau 4D contenant les données à sérialiser. Le tableau peut être de type texte, réel, booléen, pointeur ou objet.
 
-**Note:** If you pass a scalar variable or field in *array*, the command will return a string with the parameter value between "\[ \]". 
+**Note :** Si vous passez une variable scalaire ou un champ dans *tab*, la commande retournera simplement la valeur du paramètre entre "\[ \]".
 
-You can pass the optional *\** parameter to use pretty formatting in the resulting string. This improves the presentation of JSON data by including formatting characters when it is displayed in a Web page.
+Vous pouvez passer le paramètre optionnel *\** afin d’inclure des caractères de formatage dans la chaîne résultante. Cette option permet d’améliorer la présentation des données JSON lorsqu’elles sont affichées dans une page Web (*pretty formatting*).
 
-## Example 1 
+## Exemple 1 
 
-Conversion of a text array:
+Conversion d’un tableau texte :
 
 ```4d
  var $jsonString : Text
@@ -48,24 +48,24 @@ Conversion of a text array:
  $ArrayFirstname{2}:="Jim"
  $jsonString :=JSON Stringify array($ArrayFirstname)
  
-  // $jsonString = "["John","Jim"]"
+     // $jsonString = "["John","Jim"]"
 ```
 
-## Example 2 
+## Exemple 2 
 
-Conversion of a text array containing numbers:
+Conversion d’un tableau texte contenant des nombres :
 
 ```4d
  ARRAY TEXT($phoneNumbers;0)
  APPEND TO ARRAY($phoneNumbers ;"555-0100")
  APPEND TO ARRAY($phoneNumbers ;"555-0120")
  $string :=JSON Stringify array($phoneNumbers)
-  // $string = "["555-0100","555-0120"]"
+     // $string = "["555-0100","555-0120"]"
 ```
 
-## Example 3 
+## Exemple 3 
 
-Conversion of an object array:
+Conversion d’un tableau objet :
 
 ```4d
  var $ref_john : Object
@@ -76,18 +76,18 @@ Conversion of an object array:
  APPEND TO ARRAY($myArray ;$ref_john)
  APPEND TO ARRAY($myArray ;$ref_jim)
  $JsonString :=JSON Stringify array($myArray)
-  // $JsonString = "[{"name":"John","age":35},{"name":"Jim","age":40}]"
+     // $JsonString = "[{"name":"John","age":35},{"name":"Jim","age":40}]"
  
-  // If you want to view the result in a Web page,
-  // pass the optional * parameter:
+     // Si vous souhaitez visualiser le résultat dans une page Web, passez
+     // le paramètre optionnel * :
  $JsonStringPretty :=JSON Stringify array($myArray;*)
 ```
 
 ![](../assets/en/commands/pict1205072.fr.png)
 
-## Example 4 
+## Exemple 4 
 
-Conversion of a 4D selection in an object array:
+Conversion d’une sélection 4D dans un tableau objet :
 
 ```4d
  var $jsonObject : Object
@@ -101,31 +101,31 @@ Conversion of a 4D selection in an object array:
  ARRAY OBJECT($arraySel;0)
  
  While(Not(End selection([Company])))
-    $ref_value:=OB Copy($jsonObject;True)
-  // If you do not copy them, the values will be empty strings
-    APPEND TO ARRAY($arraySel;$ref_value)
-  // Each element contains the selected values, for example:
-  // $arraySel{1} = // {"company name":"APPLE","time":43200000,"city":
-  // "Paris","date":"2012-08-02T00:00:00Z"}
-    NEXT RECORD([Company])
+       $ref_value:=OB Copy($jsonObject;True)
+           // Si vous ne les copiez pas, les valeurs seront des chaînes vides
+       APPEND TO ARRAY($arraySel;$ref_value)
+           // Chaque élément contient les valeurs sélectionnées, par exemple :
+           // $arraySel{1} = // {"company name":"APPLE","time":43200000,"city":
+           // "Paris","date":"2012-08-02T00:00:00Z"}
+       NEXT RECORD([Company])
  End while
  
  $jsonString:=JSON Stringify array($arraySel)
-  // $jsonString = "[{"company name":"APPLE","time":43200000,"city":
-  //"Paris","date":"2012-08-02T00:00:00Z"},{"company name":
-  //"ALMANZA",...}]"
+     // $jsonString = "[{"company name":"APPLE","time":43200000,"city":
+     //"Paris","date":"2012-08-02T00:00:00Z"},{"company name":
+     //"ALMANZA",...}]"
 ```
 
-## See also 
+## Voir aussi 
 
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1228 |
+| Numéro de commande | 1228 |
 | Thread safe | yes |
 
 

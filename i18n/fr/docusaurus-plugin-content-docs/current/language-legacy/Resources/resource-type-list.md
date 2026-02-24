@@ -5,68 +5,68 @@ slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* : Text array {; *resFile* : Time} )<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resTypes | Text array | &#8592; | List of available resource types |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
+| resTypes | Text array | &#8592; | Liste des types de ressources disponibles |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts (si ce paramètre est omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESOURCE TYPE LIST.Summary-->The RESOURCE TYPE LIST command populates the array *resTypes* with the resource types of the resources present in the resource files currently open.<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Summary-->La commande **RESOURCE TYPE LIST** remplit le tableau *resTypes* avec les types des ressources présentes dans le(s) fichier(s) de resources ouvert(s).<!-- END REF-->
 
-If you pass a valid resource file reference number in the optional parameter *resFile*, only the resources from that file are listed. If you do not pass the parameter *resFile*, all the resources from the current open resource files are listed.
+Si vous passez un numéro de référence de fichier de ressources valide dans le paramètre optionnel *resFichier*, seules les ressources présentes dans ce fichier seront listées. Si vous ne passez pas le paramètre *resFichier*, toutes les ressources de tous les fichiers de ressources ouverts seront listées.
 
-You can predeclare the array *resTypes* as a String or Text array before calling RESOURCE TYPE LIST. If you do not predeclare the array, the command creates *resTypes* as a Text array. 
+Si vous ne pré-déclarez pas le tableau *resTypes* avant d'appeler **RESOURCE TYPE LIST**, la commande créera par défaut un tableau de type Texte. Si vous pré-déclarez le tableau, vous pouvez lui attribuer le type Alpha ou Texte.
 
-After the call, you can test the number of resource types found by applying the command [Size of array](size-of-array.md) to the array *resTypes*.
+Après l'appel, vous pouvez tester le nombre de types de ressources différents qui ont été trouvés en appliquant la commande [Size of array](size-of-array.md) au tableau *resTypes*.
 
-## Example 1 
+## Exemple 1 
 
-The following example populates the array *atResType* with the resource types of the resources present in all the resource files currently open:
+L'exemple suivant remplit le tableau *atResType* avec les types de ressources présents dans tous les fichiers de ressource ouverts :
 
 ```4d
  RESOURCE TYPE LIST(atResType)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example tells you if the Macintosh 4D structure file you are using contains old 4D plug-ins that will need to be updated in order to use the database on Windows:
+L'exemple suivant vous indique si le fichier de structure Mac OS que vous utilisez contient des plug-ins 4D "ancien modèle", qui devront être mis à jour si vous voulez exploiter la base sous Windows :
 
 ```4d
  $vhResFile:=Open resource file(Structure file)
  RESOURCE TYPE LIST(atResType;$vhResFile)
  If(Find in array(atResType;"4DEX")>0)
-    ALERT("This database contains old model Mac OS 4D plug-ins."+(Char(13)*2)+
-    "You will have to update them for using this database on Windows.")
+    ALERT("Cette base contient des plug-ins 4D basés sur l'ancien système."+(Char(13)*2)+
+    "Vous devrez les mettre à jour pour pouvoir utiliser la base sous Windows.")
  End if
 ```
 
-**Note:** The structure file is not the only file where old version plug-ins can be stored. The database can also include a Proc.Ext file.
+**Note :** Le fichier de structure n'est pas le seul fichier dans lequel des plug-ins "ancien modèle" ont pu être installés. La base peut également être associée à un fichier "Routines Externes" ou "Proc.Ext".
 
-## Example 3 
+## Exemple 3 
 
-The following project method returns the number of resources present in a resource file:
+La méthode projet suivante retourne le nombre de ressources présentes dans un fichier de ressources :
 
 ```4d
-  // Count resources project method
-  // Count resources ( Time ) -> Long
-  // Count resources ( DocRef ) -> Number of resources
+  // Méthode projet Compter ressources
+  // Compter ressources ( Heure ) -> Entier long
+  // Compter ressources ( DocRef ) -> Nombre de ressources
  
  #DECLARE($doc : Time) -> $result : Integer
  $result:=0
@@ -77,25 +77,26 @@ The following project method returns the number of resources present in a resour
  End for
 ```
 
-Once this project method is implemented in a database, you can write:
+Une fois que cette méthode est implémentée dans votre base, vous pouvez écrire par exemple :
 
 ```4d
  $vhResFile:=Open resource file("")
  If(OK=1)
-    ALERT("The file “"+Document+"” contains "+String(Count resources($vhResFile))+" resource(s).")
+    ALERT("Le fichier “"+Document+"” contient "+String(Compter ressources($vhResFile))+
+    " ressource(s).")
     CLOSE RESOURCE FILE($vhResFile)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [RESOURCE LIST](resource-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 499 |
+| Numéro de commande | 499 |
 | Thread safe | no |
 
 

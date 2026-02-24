@@ -9,45 +9,45 @@ displayed_sidebar: docs
 <!--REF #_command_.Current machine.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Network name of the machine |
+| Résultat | Text | &#8592; | Nom de la machine sur le réseau |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current machine.Summary-->The Current machine command returns the name of the machine as set in the network parameters of the operating system.<!-- END REF-->
+<!--REF #_command_.Current machine.Summary-->La commande   **Current machine** retourne le nom de la machine tel qu'il a été défini dans les paramètres réseau du système d'exploitation.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-Even if you are not running with the Client/Server version of the 4D environment, your application can include some network services that require your machine to be correctly configured. In the of your application, you write:
+Même si vous n'utilisez pas la version client/serveur de 4D, votre application peut comprendre des services réseaux qui nécessitent que votre machine soit correctement configurée. Dans la de votre application, vous pouvez écrire :
 
 ```4d
  If((Current machine="")|(Current system user=""))
-  //Display a dialog box asking the user to setup the Network identity of his or her machine
+  //Afficher une boîte de dialogue demandant à l'utilisateur de configurer ses paramètres réseau
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Current system user](current-system-user.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 483 |
+| Numéro de commande | 483 |
 | Thread safe | yes |
 
 

@@ -9,58 +9,59 @@ displayed_sidebar: docs
 <!--REF #_command_.Active transaction.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns False if the current transaction is suspended |
+| Résultat | Boolean | &#8592; | Faux si la transaction courante est suspendue |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Created|
+|15 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Active transaction.Summary-->The **Active transaction** command returns **True** if the current process is in transaction, and this transaction is not suspended.<!-- END REF--> It returns **False** if there is no current transaction, or if the current transaction is suspended. A transaction can be suspended using the [SUSPEND TRANSACTION](suspend-transaction.md) command. 
+<!--REF #_command_.Active transaction.Summary-->La commande **Active transaction** retourne **Vrai** si le process courant est en transaction et si cette transaction n'est pas suspendue.<!-- END REF--> Elle retourne **Faux** s'il n'y a pas de transaction en cours, ou si la transaction en cours est suspendue. Une transaction peut être suspendue à l'aide de la commande [SUSPEND TRANSACTION](suspend-transaction.md). 
 
-Since the command will also return **False** if the current process is not in transaction, you may need to check using the [In transaction](in-transaction.md) command to know whether the process is in transaction. 
+Comme cette commande retourne également **Faux** lorsque le process courant n'est pas en transaction, vous aurez besoin d'utiliser la commande [In transaction](in-transaction.md) afin de vérifier que le process est bien en transaction. 
 
-For more information, please refer to the [Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions) section. 
+Pour plus d'informations, reportez-vous à la section [Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
+. 
 
 ## Description 
 
-You want to know the current transaction status:
+Vous voulez connaître le statut courant de transaction :
 
 ```4d
  If(In transaction)
     If(Not(Active transaction))
-       ALERT("The current transaction is suspended")
+       ALERT("La transaction courante est suspendue")
     Else
-       ALERT("The current transaction is active")
+       ALERT("La transaction courante est active")
     End if
  Else
-    ALERT("We are not in transaction")
+    ALERT("Nous ne sommes pas en transaction")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
-[Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions)
+[Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1387 |
+| Numéro de commande | 1387 |
 | Thread safe | yes |
 
 

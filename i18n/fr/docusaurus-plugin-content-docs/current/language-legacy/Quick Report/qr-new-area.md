@@ -5,39 +5,39 @@ slug: /commands/qr-new-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* : Pointer )<!-- END REF-->
+<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* )<!-- END REF-->
 <!--REF #_command_.QR NEW AREA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptr | Pointer | &#8594;  | Pointer to a variable |
+| ptr | Pointer | &#8594;  | Pointeur vers une variable entier long |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Created|
+|15 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR NEW AREA.Summary-->The **QR NEW AREA** command creates a new Quick Report area and stores its reference number in the longint variable referenced by the *ptr* pointer.<!-- END REF-->
+<!--REF #_command_.QR NEW AREA.Summary-->La commande **QR NEW AREA** crée une nouvelle zone d'état rapide et stocke son numéro de référence dans la variable de type Entier long référencée par le pointeur *ptr*.<!-- END REF-->
 
-## See also 
+## Voir aussi 
 
 [QR New offscreen area](qr-new-offscreen-area.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1320 |
+| Numéro de commande | 1320 |
 | Thread safe | no |
 
 

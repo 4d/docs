@@ -9,43 +9,43 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW MENU BAR.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SHOW MENU BAR.Summary-->The SHOW MENU BAR command makes the menu bar visible.<!-- END REF-->
+<!--REF #_command_.SHOW MENU BAR.Summary-->La commande **SHOW MENU BAR** rend visible la barre de menus.<!-- END REF-->
 
-If the menu bar was already visible, the command does nothing.
+Si la barre de menus était déjà visible, cette commande ne fait rien.
 
-## Example 
+## Exemple 
 
-See example for the [HIDE MENU BAR](hide-menu-bar.md) command.
+Reportez-vous à l'exemple de la commande [HIDE MENU BAR](hide-menu-bar.md).
 
-## See also 
+## Voir aussi 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [HIDE TOOL BAR](hide-tool-bar.md)  
 [SHOW TOOL BAR](show-tool-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 431 |
+| Numéro de commande | 431 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

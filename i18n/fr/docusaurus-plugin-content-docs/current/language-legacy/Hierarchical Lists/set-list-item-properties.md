@@ -5,99 +5,99 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<br/>**SET LIST ITEM PROPERTIES** ( *list* : Integer ; *itemRef* : Integer, Operator ; *enterable* : Boolean ; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *liste* ; *refElément* ; *saisissable* ; *style* {; *icône* {; *couleur*}} )<br/>**SET LIST ITEM PROPERTIES** ( * ; *liste* ; * ; *saisissable* ; *style* {; *icône* {; *couleur*}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current list item |
-| enterable | Boolean | &#8594;  | TRUE = Enterable, FALSE = Non-enterable |
-| styles | Integer | &#8594;  | Font style for the item |
-| icon | Text, Integer | &#8594;  | Picture name or number ("" or 0 for no icon) |
-| color | Integer | &#8594;  | RGB color value or -1 = reset to original color |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| saisissable | Boolean | &#8594;  | Vrai = Saisissable, Faux = Non-saisissable |
+| style | Integer | &#8594;  | Style de police pour l'élément |
+| icône | Text, Integer | &#8594;  | Nom ou numéro d'image ("" ou 0 pour ne pas associer d'icône) |
+| couleur | Integer | &#8594;  | Valeur de couleur RVB ou -1 = rétablir couleur originale |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R6|Modified|
-|17 R6|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|18 R6|Modifié|
+|17 R6|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->The **SET LIST ITEM PROPERTIES** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->La commande **SET LIST ITEM PROPERTIES** modifie l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF-->
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique (RéfListe). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If there is no item with the item reference number that is passed, the command does nothing. You can optionally pass *0* in *itemRef* to modify the last item added to the list using [APPEND TO LIST](append-to-list.md).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien.   
+Vous pouvez également passer *0* dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la section *Gestion des listes hiérarchiques*.
 
-If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section.
+**Note :** Pour changer le libellé d'un élément ou de ses sous-listes, utilisez la commande [SET LIST ITEM](set-list-item.md).
 
-**Note:** To change the text of the item or its sublist, use the command [SET LIST ITEM](set-list-item.md).
+Si vous souhaitez que l'élément soit saisissable, passez Vrai dans le paramètre *saisissable*, sinon passez Faux.
 
-To make an item enterable, pass TRUE in *enterable*; otherwise, pass FALSE.
+**Important :** Pour qu'un élément soit saisissable, il doit appartenir à une liste elle-même saisissable. Pour déclarer une liste saisissable, utilisez la commande [OBJECT SET ENTERABLE](object-set-enterable.md). La commande **SET LIST ITEM PROPERTIES** vous permet de déclarer un élément individuel saisissable ou non. La modification de la propriété saisissable au niveau de la liste ne change pas la propriété saisissable individuelle de chaque élément. Un élément ne peut être saisissable que si la liste **et** l'élément le sont.
 
-**Important:** In order for an item to be enterable, it must belong to a list that is enterable. To make a whole list enterable, use the [OBJECT SET ENTERABLE](object-set-enterable.md) command. To make an individual list item enterable, use **SET LIST ITEM PROPERTIES**. Changing the enterable property at the list level does not affect the enterable properties of the items. However, an item can be enterable only if its list is enterable.
+Vous pouvez définir le style de l'élément dans le paramètre *styles*. Vous passez une ou une combinaison des constantes prédéfinies suivantes (thème *Styles de caractères*) :
 
-You specify the font style of the item in the *styles* parameter. You pass a combination (one or a sum) of the following predefined constants (*Font Styles* theme):
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
+| Underline | Entier long | 4      |
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| Bold      | Integer | 1     |
-| Italic    | Integer | 2     |
-| Plain     | Integer | 0     |
-| Underline | Integer | 4     |
+  
+Dans le paramètre *icône*, vous pouvez passer une image pour l'utiliser comme icône d'un élément. Vous pouvez utiliser une référence de fichier image ou (bases de données binaires uniquement) une image issue de la bibliothèque. 
+* Référence de fichier image (texte) : vous devez utiliser le modèle **path:<filesystem path>.** Pour plus d'informations, reportez-vous au pragraphe *Chemins des filesystem*.
+* Image de la bibliothèque (entier long ou texte, bases de données binaires uniquement) : vous pouvez passer soit le nom soit le numéro de l' image. Il est généralement préférable d’utiliser le numéro plutôt que le nom, car les numéros d’images sont des identifiants uniques, ce qui n’est pas le cas des noms. Si vous souhaitez utiliser un numéro, passez Use PicRef+N dans le paramètre, où N est le numéro de référence d'une image stockée dans la bibliothèque d'images de 4D. Use PicRef est ybe constante prédéfinie du thème *Listes hiérarchiques*.
+* Si vous ne souhaitez pas associer d'image à l'élément, passez une chaîne vide ("") ou zéro (0) dans *icône*.
 
-In the *icon* parameter, you can pass a picture to be used as the icon for the item. You can use a picture file reference or (binary databases only) a library picture.
+**Notes** **:**
 
-* Picture file reference (text): you must use the **path:<filesystem path>** pattern. For more information, refer to the [Filesystem pathnames](../Concepts/paths.md#filesystem-pathnames) paragraph.
-* Library picture (longint or text, binary databases only): you can pass either the name or number of the picture. It is generally preferable to use its number rather than its name since picture numbers are unique IDs, which is not the case with names. If you want to use a number, pass Use PicRef+*N* in the parameter, where *N* is the reference number of the picture in the picture library. Use PicRef is a predefined constant located in the *Hierarchical Lists* theme.
-* Pass an empty string ("") or zero (0) in *icon* if you do not want any graphic for the item.
+* Il est recommandé d'utiliser un chemin de fichier image, étant donné que la bibliothèque d'image est obsolète et n'est pas supportée dans les projets 4D.
+* Si vous souhaitez utiliser des expressions image 4D (champs, variables...) pour définir les icônes des éléments, utilisez la commande [SET LIST ITEM ICON](set-list-item-icon.md).
 
-**Notes:**
+Le paramètre *couleur* (facultatif) permet de modifier la couleur du texte de l’élément. La couleur doit être définie sous forme de couleur RVB, c’est-à-dire un entier long de 4 octets au format 0x00RRVVBB. Pour plus d’informations sur ce format, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Passez -1 dans le paramètre *couleur* pour rétablir la couleur d’origine de l’élément.
 
-* Use of a picture file path is recommended since the Picture library is deprecated and is not supported in 4D projects.
-* If you want to use 4D picture expressions (fields, variables, etc.) to specify the icons of the items, use the [SET LIST ITEM ICON](set-list-item-icon.md) command.
+## Exemple 1 
 
-The *color* parameter (optional) lets you modify the color of the item text. The color must be specified in the form of an RGB color, i.e. a 4-byte longint in the 0x00RRGGBB format. For more information about this format, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. Pass -1 in the *color* parameter to reset the original color of the item.
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-## Example 1 
+## Exemple 2 
 
-See the example for the [APPEND TO LIST](append-to-list.md) command.
-
-## Example 2 
-
-The following example changes the text of the current item of *list* to bold and bright red:
+L’exemple suivant passe le texte de l’élément courant de *liste* en gras et en rouge vif :
 
 ```4d
- SET LIST ITEM PROPERTIES(list;*;True;Bold;0;0x00FF0000)
+ SET LIST ITEM PROPERTIES(liste;*;True;Bold;0;0x00FF0000)
 ```
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[Hierarchical Lists](../FormObjects/list_overview.md)  
+*Listes hiérarchiques*  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 386 |
+| Numéro de commande | 386 |
 | Thread safe | no |
 
 

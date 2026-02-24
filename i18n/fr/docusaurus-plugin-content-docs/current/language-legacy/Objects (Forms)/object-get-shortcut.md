@@ -5,59 +5,59 @@ slug: /commands/object-get-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( * ; *object* : Text ; *key* : Text ; *modifiers* : Integer )<br/>**OBJECT GET SHORTCUT** ( *object* : Variable, Field ; *key* : Text ; *modifiers* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( {* ;} *objet* ; *touche* ; *modifiers* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| key | Text | &#8592; | Key associated with object |
-| modifiers | Integer | &#8592; | Modifier key mask or combination of masks |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| touche | Text | &#8592; | Touche associée à l’objet |
+| modifiers | Integer | &#8592; | Masque ou combinaison de masques de touche(s) de modification |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET SHORTCUT.Summary-->The **OBJECT GET SHORTCUT** command returns the keyboard shortcut associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT GET SHORTCUT.Summary-->La commande **OBJECT GET SHORTCUT** retourne l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The *key* parameter returns the character associated with the key (in the case of a standard key) or a string enclosed in brackets designating the key (in the case of a function key). You can compare this value with the constants of the *Shortcut and Associated Keys* theme (see the [OBJECT SET SHORTCUT](object-set-shortcut.md) command).
+Le paramètre *touche* retourne le caractère associé à la touche (dans le cas d’une touche standard) ou une chaîne entre crochets désignant la touche (dans le cas d’une touche de fonction). Vous pouvez comparer cette valeur aux constantes du thème *Touches équivalents clavier* (cf. commande [OBJECT SET SHORTCUT](object-set-shortcut.md)).
 
-The *modifiers* parameter returns a value indicating the modifier key(s) associated with the shortcut. If there are several modifier keys combined, the command returns the sum of their values. You can compare the value returned with the following constants of the *Events (Modifiers)* theme:
+Le paramètre *modifiers* retourne une valeur indiquant la ou les touche(s) de modification associée(s) à l’équivalent clavier. Si plusieurs touches de modification ont été combinées, la commande retourne le cumul de leurs valeurs. Vous pouvez comparer la valeur reçue aux constantes suivantes du thème *Evénements (Modifiers)* :
 
-| Constant         | Type    | Value | Comment                                                    |
-| ---------------- | ------- | ----- | ---------------------------------------------------------- |
-| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
-| Control key mask | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
-| Option key mask  | Integer | 2048  | Alt key (also called Option under macOS)                    |
-| Shift key mask   | Integer | 512   | Windows and macOS                                           |
+| Constante        | Type        | Valeur | Comment                                                   |
+| ---------------- | ----------- | ------ | --------------------------------------------------------- |
+| Command key mask | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key mask | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Option key mask  | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
+| Shift key mask   | Entier long | 512    | Windows et macOS                                           |
 
-If there are no modifier keys for the shortcut, *modifiers* returns 0\. 
+Si aucune touche de modification n’a été définie dans l’équivalent clavier, *modifiers* retourne 0\. 
 
-**Note:** If the *object* parameter designates several objects in the form that have different settings, the command returns "" in *key* and 0 in *modifiers*. 
+**Note :** Si le paramètre *objet* désigne plusieurs objets du formulaire ayant des paramétrages différents, la commande retourne "" dans *touche* et 0 dans *modifiers*. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET SHORTCUT](object-set-shortcut.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1186 |
+| Numéro de commande | 1186 |
 | Thread safe | no |
 
 

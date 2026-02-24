@@ -5,69 +5,68 @@ slug: /commands/listbox-get-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( * ; *object* : Text ; *row* : Integer ) : Integer<br/>**LISTBOX Get row font style** ( *object* : Variable ; *row* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( {* ;} *objet* ; *ligne* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row font style.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &#8594;  | Row number |
-| Function result | Integer | &#8592; | Style value |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| Résultat | Integer | &#8592; | Valeur de style |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get row font style.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row font style.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX Get row font style** command returns the font style of a row or a cell in the list box designated by the *object* and *\** parameters.
+La commande **LISTBOX Get row font style** retourne le style de police d’une ligne ou d’une cellule de la list box désignée par les paramètres *objet* et *\**.
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string.   
-You can designate a list box or a list box column in the *object* parameter:
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box :
 
-* When *object* designates a list box, the command returns the style of the row.
-* When *object* designates a list box column, the command returns the style of the cell.
+* si *objet* désigne une list box, la commande retourne le style de la ligne
+* si *objet* désigne une colonne, la commande retourne le style de la cellule
 
-In *row*, pass the number of the row whose style you want to get. 
+Passez dans *ligne* le numéro de la ligne dont vous souhaitez obtenir le style. 
 
-**Note:** The command does not take any hidden/shown states of the list box rows into account.
+**Note :** La commande ne tient pas compte de l’éventuel statut masqué/affiché des lignes de la list box.
 
-**Warning:** a style assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
+**Attention**, un style affecté à une ligne n’est pas forcément affiché dans toutes les cellules de ligne (cf. exemple). Si des valeurs de style contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-## Example 
+## Exemple 
 
-Given the following list box: 
+Soit la list box suivante : 
 
 ![](../assets/en/commands/pict1205514.fr.png)
 
 ```4d
- vStyle:=LISTBOX Get row font style(*;"Col5";3)
- vStyle2:=LISTBOX Get row font style(*;"List Box";3)
-  // vStyle contains 1 (Bold)
-  // vStyle2 contains 6 (Italic + Underline)
+ vStyl:=LISTBOX Get row font style(*;"Col5";3)
+ vStyl2:=LISTBOX Get row font style(*;"List Box";3)
+     // vStyl contient 1 (Gras)
+     // vStyl2 contient 6 (Italique + Souligné)
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1269 |
+| Numéro de commande | 1269 |
 | Thread safe | no |
 
 

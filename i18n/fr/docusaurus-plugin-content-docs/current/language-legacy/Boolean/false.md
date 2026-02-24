@@ -9,34 +9,34 @@ displayed_sidebar: docs
 <!--REF #_command_.False.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | False |
+| Résultat | Boolean | &#8592; | Faux |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.False.Summary-->False returns the Boolean value False.<!-- END REF-->
+<!--REF #_command_.False.Summary-->**False** retourne la valeur booléenne Faux.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The following example sets the variable *vbOptions* to False:
+L'exemple suivant met la variable *vbOptions* à Faux :
 
 ```4d
  vbOptions:=False
 ```
 
-## See also 
+## Voir aussi 
 
 [Not](not.md)  
 [True](true.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 215 |
+| Numéro de commande | 215 |
 | Thread safe | yes |
 
 

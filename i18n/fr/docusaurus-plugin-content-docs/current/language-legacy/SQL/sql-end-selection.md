@@ -9,31 +9,31 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL End selection.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Result set boundaries reached |
+| Résultat | Boolean | &#8592; | Limites de l’ensemble de recherche atteintes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL End selection.Summary-->The SQL End selection command is used to determine if the boundaries of the result set have been reached.<!-- END REF--> 
+<!--REF #_command_.SQL End selection.Summary-->La commande **SQL End selection** indique si les limites de l’ensemble résultat ont été atteintes.<!-- END REF--> 
 
-## Example 
+## Exemple 
 
-The code below connects to an external data source (Oracle) using the following parameters:
+Le code ci-dessous se connecte à une source de données externe (Oracle) à l’aide des paramètres suivants :
 
-![](../assets/en/commands/pict33359.en.png)
+![](../assets/en/commands/pict33359.fr.png)
 
 ```4d
  var vName : Text
@@ -48,14 +48,14 @@ The code below connects to an external data source (Oracle) using the following 
  End if
 ```
 
-This code will return in the 4D *vName* variable the emp names (ename) stored in the table named emp.
+Cet exemple retournera dans la variable 4D *vName* les noms (ename) stockés dans la table nommée emp.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 821 |
+| Numéro de commande | 821 |
 | Thread safe | no |
 
 

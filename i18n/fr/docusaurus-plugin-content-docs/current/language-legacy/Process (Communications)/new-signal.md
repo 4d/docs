@@ -4,83 +4,77 @@ title: New signal
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New signal.Syntax -->**New signal** ({  *description* : Text }) : 4D.Signal<!-- END REF -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!--REF #_command_.New signal.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| description | Text | &#8594;  | Description for the signal |
-| Function result | 4D.Signal | &#8592; | Native object encapsulating the signal |
-</div>
+| Paramètres  | Type                      |                             | Description                  |
+| ----------- | ------------------------- | --------------------------- | ---------------------------- |
+| Description | Text                      | &#8594; | Description du signal        |
+| Résultat    | 4D.Signal | &#8592; | Object encapsulant le signal |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|17 R4|Added|
+| Release | Modifications |
+| ------- | ------------- |
+| 17 R4   | Ajout         |
 
 </details>
 
+## Description
 
-## Description 
+La commande `New signal` <!-- REF #_command_.New signal.Summary -->crée un objet `4D.Signal`<!-- END REF -->.
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
+Un signal est un objet partagé qui peut être passé en paramètre depuis un worker ou un process à un autre worker ou process, de manière à ce que :
 
-A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
+- le worker/process appelé puisse mettre à jour l'objet signal après qu'un traitement spécifique soit terminé
+- le worker/process appelant puisse stopper son exécution et attende jusqu'à ce que le signal soit mis à jour, sans consommer aucune ressource CPU.
 
-*	the called worker/process can update the signal object after specific processing has completed
-*	the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources.
+Optionnellement, dans le paramètre *description*, vous pouvez passer un texte personnalisé décrivant le signal. Ce texte peut également être défini après la création du signal.
 
-Optionally, in the *description* parameter you can pass a custom text describing the signal. This text can also be defined after signal creation.
+Comme l'objet signal est un objet partagé, il peut aussi être utilisé pour maintenir des propriétés utilisateur, y compris la propriété [`.description`](#description), via l'appel de la structure `Use...End use`.
 
-Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
+**Valeur retournée**
 
+Un nouvel objet [`4D.Signal`](../API/SignalClass.md#signal-object).
 
-**Returned value**
+## Exemple
 
-A new [`4D.Signal` object](../API/SignalClass.md#signal-object).
-
-## Example
-
-Here is a typical example of a worker that sets a signal:
+Voici un exemple type de worker qui définit un signal :
 
 ```4d
  var $signal : 4D.Signal
- $signal:=New signal("This is my first signal")
+ $signal:=New signal("Ceci est mon premier signal")
 
  CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) //wait for 1 second max
+ $signaled:=$signal.wait(1) //patienter 1 seconde au maximum
 
  If($signaled)
-    ALERT("myworker finished the work. Result: "+$signal.myresult)
+    ALERT("myworker a terminé le travail. Résultat : "+$signal.myresult)
  Else
-    ALERT("myworker has not finished in less than 1s")
+    ALERT("myworker n'a pas terminé en moins d'1 seconde")
  End if
 ```
 
-
-The ***doSomething*** method could be like:
+La méthode ***doSomething*** est par exemple :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
-  //any processing
+  //tout traitement
   //...
  Use($signal)
-    $signal.myresult:=$processingResult  //return the result
+    $signal.myresult:=$processingResult  //renvoi du résultat
  End use
- $signal.trigger() // The work is finished
+ $signal.trigger() // Le travail est terminé
 ```
 
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1641 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1641 |
+| Thread safe        | oui  |
 
 

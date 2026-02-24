@@ -5,198 +5,172 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text {; ...(*attribName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElément* ; *xPath* {; *nomAttribut* ; *valeurAttribut*} {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Root XML element reference |
-| xPath | Text | &#8594;  | XPath path of the XML element to create |
-| attribName | Text | &#8594;  | Attribute to set |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
-| Function result | Text | &#8592; | Reference of the created XML element |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| xPath | Text | &#8594;  | Chemin XPath de l’élément XML à créer |
+| nomAttribut | Text | &#8594;  | Attribut à définir |
+| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nouvelle valeur d’attribut |
+| Résultat | Text | &#8592; | Référence de l’élément XML créé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Create XML element.Summary-->The **DOM Create XML element** command creates a new element in the XML element *elementRef* in the path set by the *xPath* parameter and adds attributes to it if necessary.<!-- END REF--> 
+<!--REF #_command_.DOM Create XML element.Summary-->La commande **DOM Create XML element** permet de créer un nouvel élément dans l’élément XML *refElément*, à l’emplacement du noeud désigné par le paramètre *xPath*, et de lui ajouter éventuellement des attributs.<!-- END REF-->
 
-Pass the root element reference in *elementRef* (created, for example, using the [DOM Create XML Ref](dom-create-xml-ref.md) command).
+Passez dans *refElément* la référence de l’élément racine (créé par exemple à l’aide de la commande [DOM Create XML Ref](dom-create-xml-ref.md)).
 
-In *xPath*, pass the path of the element to create, expressed using the XPath notation (for more information, see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
+Passez dans *xPath* le chemin de l’élément à créer, exprimé à l'aide de la notation XPath (pour plus d'informations, reportez-vous à la section *Utilisation de la notation XPath*). Les expressions de chemin suivantes sont prises en charge :
 
-| **Expression** | **Action**                                          |
-| -------------- | --------------------------------------------------- |
-| /              | Designates the root node (absolute path)            |
-| para\[1\]      | Designates the first para child of the context node |
-| para\[last()\] | Designates the last para child of the context node  |
+| **Expression** | **Action**                                         |
+| -------------- | -------------------------------------------------- |
+| /              | Désinge le noeud racine (chemin absolu)            |
+| para\[1\]      | Désigne le premier para enfant du noeud contextuel |
+| para\[last()\] | Désigne le dernier para enfant du noeud contextuel |
 
-**Compatibility Note:* Starting with v18 R3, the XPath implementation in 4D is more compliant. For compatibility reasons, the previous non-standard implementation is maintained by default in converted databases. If you want to benefit from the extended features in your converted databases, you need to select the *Use standard XPath* compatibility option of the Compatibility page.* 
+**Note de compatibilité :** *A partir de v18 R3, la conformité de l'implémentation de XPath dans 4D est renforcée. Pour des raisons de compatibilité, l'implémentation antérieure non standard est maintenue par défaut dans les bases converties. Si vous souhaitez obtenir les fonctionnalités avancées dans vos bases converties, vous devez cocher l'option de compatibilité *Utiliser XPath standard* de la* **Page Compatibilité.* 
 
-It is possible to pass a simple item name directly in the *xPath* parameter in order to create a sub-item from the current item (see example 3).
+Il est possible de passer directement dans *xPath* un nom d'élément simple afin de créer un sous-élément à partir de l'élément courant (cf. exemple 3).
 
-If any path elements do not exist, they are created. If path elements already exist, a new node is added.
+Si des éléments de chemin n'existent pas, ils sont alors créés. Si les éléments de chemin existent déjà, un nouveau noeud est ajouté.
 
-**Note:** If you have defined one or more namespaces for the tree set using *elementRef* (see the [DOM Create XML Ref](dom-create-xml-ref.md) command), you must precede the *xPath* parameter with the namespace to be used (for example, “MyNameSpace:MyElement”).
+**Note :** Si vous avez défini un ou plusieurs espace(s) de nommage pour l’arbre désigné par *refElément* (cf. commande [DOM Create XML Ref](dom-create-xml-ref.md)), vous devez préfixer le paramètre *xPath* du nom de l’espace à utiliser (par exemple “MonNameSpace:MonElément”).
 
-You can pass attribute/attribute value pairs (in the form of variables, fields or literal values) in the optional *attrName* and *attrValue* parameters. You can pass as many pairs as you want.
+Vous pouvez passer dans les paramètres facultatifs *nomAttribut* et *valeurAttribut* un couple attribut / valeur d’attribut (sous forme de variables, champs ou valeurs littérales). Vous pouvez passer autant de couples que vous voulez.   
+  
+Le paramètre *valeurAttribut* peut être de type texte ou d'un autre type (booléen, entier, réel, heure ou date). Si vous passez une valeur d'un type autre que texte, 4D se charge de la conversion en texte, selon les principes suivants :
 
-The *attrValue* parameter can be of the text type or another type (Boolean, integer, real, date or time). If you pass a value other than text, 4D handles its conversion to text, according to the following principles:
+| **Type** | **Exemple de valeur convertie**                  |
+| -------- | ------------------------------------------------ |
+| Booléen  | "true" ou "false" (non traduit)                  |
+| Entier   | "123456"                                         |
+| Réel     | "12.34" (le séparateur décimal est toujours ".") |
+| Heure    | "5233" (nombre de secondes)                      |
+| Date     | "2006-12-04T00:00:00Z" (norme RFC 3339)          |
 
-| **Type** | **Example of converted value**                |
-| -------- | --------------------------------------------- |
-| Boolean  | "true" or "false"                             |
-| Integer  | "123456"                                      |
-| Real     | "12.34" (the decimal separator is always ".") |
-| Date     | "2006-12-04T00:00:00Z" (RFC 3339 standard)    |
-| Time     | "5233" (number of seconds)                    |
+La commande retourne en résultat la référence XML de l’élément créé.
 
-The command returns the XML reference of the element created as a result.
+## Exemple 1 
 
-## Example 1 
+Nous souhaitons créer l’élément suivant : 
 
-We want to create the following element: 
-
-```xml
-     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3> </Elem3>
-         <Elem3> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>                                 
+```RAW
+                                      
 ```
 
-To do so, simply write:
+Pour cela, il suffit d’écrire :
 
 ```4d
- var vRootRef;vElemRef : Text
- vRootRef:=DOM Create XML Ref("RootElement")
+ var vRefRacine;vRefElement : Text
+ vRefRacine:=DOM Create XML Ref("RootElement")
  vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
- vElemRef:=DOM Create XML element(vRootRef;vxPath)
+ vRefElement:=DOM Create XML element(vRefRacine;vxPath)
 ```
 
-## Example 2 
+## Exemple 2 
 
-We want to create the following element (containing attributes): 
+Nous souhaitons créer l’élément suivant (comportant des attributs) : 
 
-```xml
-       <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3 Font=Verdana Size=10> </Elem3>
-         <Elem3 Font=Verdana Size=8> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>                               
+```RAW
+                                      
 ```
 
-To do so, simply write:
+Pour cela, il suffit d’écrire :
 
 ```4d
- var vRootRef;vElemRef : Text
- var $aAttrName1;$aAttrName2;$aAttrVal1;$aAttrVal2;$aAttrVal3 : Text
+ var vRefRacine;vRefElement : Text
+   var $aAttrNom1;$aAttrNom2;$aAttrVal1;$aAttrVal2;$aAttrVal3 : Text
 
-$aAttrName1:="Font"
- $aAttrName2:="Size"
+$aAttrNom1:="Font"
+ $aAttrNom2:="Size"
  $aAttrVal1:="Verdana"
  $aAttrVal2:="10"
  $aAttrVal3:="8"
  
- vRootRef:=DOM Create XML Ref("RootElement")
+ vRefRacine:=DOM Create XML Ref("RootElement")
  vxPath:="/RootElement/Elem1/Elem2/Elem3"
- vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal2)
- vElemRef:=DOM Create XML element(vRootRef;vxPath;$aAttrName1;$aAttrVal1;$aAttrName2;$aAttrVal3)
+ vRefElement:=DOM Create XML element(vRefRacine;vxPath;$aAttrNom1;$aAttrVal1;$aAttrNom2;$aAttrVal2)
+ vRefElement:=DOM Create XML element(vRefRacine;vxPath;$aAttrNom1;$aAttrVal1;$aAttrNom2;$aAttrVal3)
 
 
 ```
 
-If you want to insert an element afterwards, you can write:
+Si par la suite vous souhaitez insérer un élément, vous pouvez saisir le code suivant : 
 
 ```4d
- vxPath:="/RootElement/Elem1/Elem2/Elem3[2]"
- vElemRef:=DOM Create XML element(vRootRef;vxPath;"Font";"Arial")
+ vxPath:="/RootElement/Elem1/Elem2/Elem3[2]" 
+ vElemRef:=DOM Creer element XML(vRefRacine;vxPath;"Font";"Arial")
 ```
 
-You have then:
+Vous obtenez alors :
 
-```xml
-     <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3 Font=Verdana Size=10> </Elem3>
-         <Elem3 Font=Arial> </Elem3>
-         <Elem3 Font=Verdana Size=8> </Elem3>
-      </Elem2>
-   </Elem1>
-</RootElement>
-                                           
+```RAW
+                                                
 ```
 
-## Example 3 
+## Exemple 3 
 
-We want to create and export the following structure: 
+Nous souhaitons créer et exporter la structure suivante : 
 
-```xml
+```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<Root>
+<Racine>
    <Elem1>Hello</Elem1>
-</Root>
+</Racine>
 ```
 
-We want to use the syntax based on a simple item name. To do this, simply write:
+Nous souhaitons utiliser la syntaxe basée sur un nom d'élément simple. Pour cela, il suffit d’écrire :
 
 ```4d
  var $root : Text
  var $ref1 : Text
  
- $root:=DOM Create XML Ref("Root")
+ $root:=DOM Create XML Ref("Racine")
  $ref1:=DOM Create XML element($root;"Elem1")
  DOM SET XML ELEMENT VALUE($ref1;"Hello")
- DOM EXPORT TO FILE($root;"mydoc.xml")
+ DOM EXPORT TO FILE($root;"mondoc.xml")
  DOM CLOSE XML($root)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## Error management 
+## Gestion des erreurs 
 
-An error is generated when:
+Une erreur est générée lorsque :
 
-* The root element reference is invalid.
-* The name of the element to create is invalid (for example, if it starts with a number).
+* la référence de l’élément racine n’est pas valide
+* le nom de l’élément à créer n’est pas valide (par exemple, s’il débute par un chiffre).
 
-## See also 
+## Voir aussi 
 
 [DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
 [DOM Get XML element](dom-get-xml-element.md)  
 [DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 865 |
+| Numéro de commande | 865 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

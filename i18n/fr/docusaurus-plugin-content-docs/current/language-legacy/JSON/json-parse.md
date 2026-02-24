@@ -5,118 +5,118 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *chaîneJSON* {; *type*}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonString | Text | &#8594;  | JSON string to parse |
-| type | Integer | &#8594;  | Type in which to convert the values |
-| * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
-| Function result | any | &#8592; | Values extracted from JSON string |
+| chaîneJSON | Text | &#8594;  | Chaîne en JSON à analyser |
+| type | Integer | &#8594;  | Type dans lequel convertir les valeurs |
+| * | Opérateur | &#8594;  | Ajouter la ligne et la position de chaque propriété si la valeur retournée est un objet |
+| Résultat | Object, any | &#8592; | Valeurs extraites de la chaîne JSON |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R4|Modified|
-|14|Created|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON Parse.Summary-->The **JSON Parse** command parses the contents of a JSON-formatted string and extracts values that you can store in a 4D field or variable.<!-- END REF--> This command deserializes JSON data; it performs the opposite action of the [JSON Stringify](json-stringify.md) command.
+<!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](json-stringify.md).
 
-In *jsonString*, pass the JSON-formatted string whose contents you want to parse. This string must be formatted correctly, otherwise a parsing error is generated. **JSON Parse** can therefore be used to validate JSON strings. 
+Passez dans *chaîneJSON* la chaîne au format JSON dont vous souhaitez analyser le contenu. Cette chaîne doit être correctement formatée, sinon une erreur de parsing est générée. **JSON Parse** peut donc être utilisée pour valider du JSON. 
 
-**Note:** If you use pointers, you must call the [JSON Stringify](json-stringify.md) command before calling **JSON Parse**. 
+**Note :** Si vous utilisez des pointeurs, vous devez appeler la commande [JSON Stringify](json-stringify.md) avant **JSON Parse**. 
 
-By default, if you omit the *type* parameter, 4D attempts to convert the value obtained into the type of the variable or field used to store the results (if one is defined). Otherwise, 4D attempts to infer its type. You can also force the type interpretation by passing the *type* parameter: pass one of the following constants, available in the *Field and Variable Types* theme:
+Par défaut, si vous omettez le paramètre *type*, 4D tentera de convertir la valeur obtenue dans le type de la variable ou du champ utilisé pour stocker le résultat (s’il est défini). Sinon, 4D tentera de déduire le type. Vous pouvez également forcer l’interprétation du type en passant le paramètre *type* : passez une des constantes suivantes du thème *Types champs et variables* :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is date       | Integer | 4     |
-| Is longint    | Integer | 9     |
-| Is object     | Integer | 38    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Is time       | Integer | 11    |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Is Boolean    | Entier long | 6      |
+| Is collection | Entier long | 42     |
+| Is date       | Entier long | 4      |
+| Is longint    | Entier long | 9      |
+| Is object     | Entier long | 38     |
+| Is real       | Entier long | 1      |
+| Is text       | Entier long | 2      |
+| Is time       | Entier long | 11     |
 
-**Notes:** 
+**Notes :** 
 
-* Real type values must be included in the range ±10.421e±10
-* In text type values, all special characters must be escaped, including quotes (see examples)
-* By default when you use the `Is date` constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the [`Dates inside objects` date setting of the `SET DATABASE PARAMETER`(./set-database-parameter.md#dates-inside-objects-85) command.
-* If the current date setting is `Date type` (deafult), JSON date strings in "YYYY-MM-DD" format are automatically returned as date values by the **JSON Parse** command. 
-* Time type values can be returned from numbers in strings. By default, the parsed value is considered a number of seconds.
+* Les valeurs de type numérique doivent être incluses dans l'intervalle ±10.421e±10
+* Dans les valeurs de type texte, tous les caractères spéciaux doivent être échappés, y compris les guillemets (cf. exemples)
+* Par défaut lorsque vous utilisez la constante Is date, la commande considère que la chaîne date contient une heure locale et non GMT. Vous pouvez modifier ce fonctionnement à l'aide du sélecteur Dates inside objects de la commande \[#cmd id="642"/\].
+* A compter de 4D v16 R6, si le paramétrage courant de stockage des dates "type date", les chaînes date JSON au format "YYYY-MM-DD" sont automatiquement retournées sous forme de valeurs de type date par la commande **JSON Parse**. Pour plus d'informations sur ce paramétrage, veuillez vous reporter à l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans la *Page Compatibilité*.
+* Une valeur de type heure peut être retournée à partir d'un nombre dans une chaîne. Par défaut, 4D considère que la valeur est un nombre de secondes.
 
-If you pass the *\** optional parameter and if the *jsonString* parameter represents an object, the returned object contains an additional property named *\_\_symbols* that provides path, line position, and line offset of each property and sub-property of the object. This information can be useful for debugging purposes. The structure of the *\_\_symbols* property is: 
+Si vous passez le paramètre optionnel *\** et si le paramètre *chaîneJSON* représente un objet, l'objet retourné contiend une propriété supplémentaire nommée *\_\_symbols* qui fournit le chemin, l'emplacement de la ligne et la position dans la ligne de chaque propriété et sous-propriété de l'objet. Cette information est utile pour le débogage. La structure de la propriété *\_\_symbols* est la suivante :
 
 ```json
-__symbols:{//object description
-   myAtt.mySubAtt...:{ //property path
-      line:10, //line number of the property 
-      offset:35 //offset of the property from the beginning of the line
+__symbols:{//description de l'objet
+   myAtt.mySubAtt...:{ //chemin de la propriété
+      line:10, //numéro de la ligne de la propriété
+      offset:35 //position de la propriété à partir du début de la ligne
       }
    }
 ```
 
-**Note:** The *\** parameter is ignored if the returned value is not of the object *type*.
+**Note :** Le paramètre *\** est ignoré si la valeur retournée n'est pas de type objet.
 
-## Example 1 
+## Exemple 1 
 
-Examples of simple conversions:
+Exemples de conversions simples : 
 
 ```4d
  var $r : Real
- $r:=JSON Parse("42.17") //$r = 42,17 (Real)
+ $r:=JSON Parse("42.17") //$r = 42,17 (réel)
  
  var $el : Integer
  $el:=JSON Parse("120.13";Is longint) //$el=120
  
  var $t : Text
- $t:=JSON Parse("\"Year 42\"";Is text) // $t="Year 42" (text)
+ $t:=JSON Parse("\"Année 42\"";Is text) //$t="Année 42" (texte)
  
  var $o : Object
- $o:=JSON Parse("{\"name\":\"john\"}")
-  // $o = {"name":"john"} (4D object)
+ $o:=JSON Parse("{\"name\":\"jean\"}")
+     // $o = {"name":"jean"} (objet 4D)
  
  var $b : Boolean
- $b:=JSON Parse("{\"manager\":true}";Is Boolean) // $b=true
+ $b:=JSON Parse("{\"manager\":true}";Is Boolean) //$b=vrai
  
  var $h : Time
  $h:=JSON Parse("5120";Is time) //$h=01:25:20
 ```
 
-## Example 2 
+## Exemple 2 
 
-Examples of converting date type data: 
+Exemples de conversions de données de type date : 
 
 ```4d
  $test:=JSON Parse("\"1990-12-25T12:00:00Z\"")
-  // $test="1990-12-25T12:00:00Z"
+     // $test=1990-12-25T12:00:000Z
  var $date;$date2;$date3 : Date
- $date:=JSON Parse("\"2008-01-01T12:00:00Z\"";Is date)
+ $date:=JSON Parse("\"2008-01-01T12:00:000Z\"";Is date)
   //$date=01/01/08
  $date2:=JSON Parse("\"2017-07-13T23:00:00.000Z\"";Is date)
-  //$date2=14/07/17 (Paris time zone)
- SET DATABASE PARAMETER(Dates inside objects;String type without time zone)
+  //$date2=14/07/17 (fuseau horaire Paris)
+ SET DATABASE PARAMETER(Dates dans objets;String type without time zone)
  $date3:=JSON Parse("\"2017-07-13T23:00:00.000Z\"";Is date)
   //$date3=13/07/17
 ```
 
-## Example 3 
+## Exemple 3 
 
-If the current date storage setting is "date type", you can write:
+Si le paramétrage courant de stockage de date est "type date", vous pouvez écrire :
 
 ```4d
  var $o : Object
@@ -129,36 +129,36 @@ If the current date storage setting is "date type", you can write:
   //$birthday=16/10/17
 ```
 
-**Note:** For more information on this setting, please refer to the "Use date type instead of ISO date format in objects" option in the *Compatibility page*. 
+**Note :** Pour plus d'informations sur ce paramétrage, reportez-vous à l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans le *Page Compatibilité*. 
 
-## Example 4 
+## Exemple 4 
 
-This example shows the combined use of the [JSON Stringify](json-stringify.md) and **JSON Parse** commands:
+Cet exemple montre l’utilisation conjointe des commandes [JSON Stringify](json-stringify.md) et **JSON Parse** :
 
 ```4d
  var $JSONContact : Text
  var $Contact;$Contact2 : Object
  $Contact:=New object("name";"Monroe";"firstname";"Alan")
  
-  // JSON Stringify: conversion of an object into a JSON string
+  // JSON Stringify : conversion d’un objet JSON en chaîne JSON
  $JSONContact:=JSON Stringify($Contact)
  
-  // JSON Parse: conversion of JSON string into a new object
+  // JSON Parse : conversion d’une chaîne JSON en nouvel objet
  $Contact2:=JSON Parse($JSONContact)
 ```
 
-## Example 5 
+## Exemple 5 
 
-You want to create a 4D collection from a JSON array:
+Vous souhaitez créer une collection 4D à partir d'un tableau JSON :
 
 ```4d
  var $myCol : Collection
- $myCol:=JSON Parse("[\"Monday\",10,\"Tuesday\",11,\"Wednesday\",12,false]")
+ $myCol:=JSON Parse("[\"Lundi\",10,\"Mardi\",11,\"Mercredi\",12,false]")
 ```
 
-## Example 6 
+## Exemple 6 
 
-You want to parse the following string and get line position and offset of each property:
+Vous souhaitez analyser la chaîne suivante et obtenir le chemin et la position de chaque propriété :
 
 ```json
 {
@@ -176,15 +176,15 @@ You want to parse the following string and get line position and offset of each 
 }
 ```
 
-You can write:
+Vous pouvez écrire :
 
 ```4d
  var $obInfo : Object
- $obInfo=JSON Parse("json_string";Is object;*) //* to get the __symbols property
-  //in the returned $obInfo object
+ $obInfo=JSON Parse("json_string";Is object;*) //* pour ajouter la propriété __symbols
+  //dans l'objet $obInfo retourné
 ```
 
-The *$obInfo* object contains:
+L'objet *$obInfo* contient :
 
 ```json
 {alpha:4552,
@@ -197,19 +197,18 @@ beta[1].echo:{line:9,offset:12},
 beta[1].golf:{line:10,offset:12}}}
 ```
 
-## See also 
+## Voir aussi 
 
-*Field and Variable Types*  
 [JSON PARSE ARRAY](json-parse-array.md)  
 [JSON Stringify](json-stringify.md)  
-[JSON Validate](./commands/json-validate)  
+[JSON Validate](json-validate.md)  
+*Types champs et variables*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1218 |
+| Numéro de commande | 1218 |
 | Thread safe | yes |
-
 
 

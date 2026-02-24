@@ -5,82 +5,82 @@ slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* : Integer {; *pivotYear* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siècle* {; *anPivot*} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| century | Integer | &#8594;  | Default century (minus one) for entry of date with two-digit year |
-| pivotYear | Integer | &#8594;  | Pivot year for entry of date with two-digit year |
+| siècle | Integer | &#8594;  | Siècle par défaut (moins un) lors de la saisie d'années sur 2 chiffres |
+| anPivot | Integer | &#8594;  | Année pivot lors de la saisie d'années sur 2 chiffres |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET DEFAULT CENTURY.Summary-->The SET DEFAULT CENTURY command specifies the default century and the pivot year used by 4D when you enter a date with only two digits for the year.<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Summary-->La commande **SET DEFAULT CENTURY** vous permet de définir le siècle courant par défaut et l'année pivot adoptés par 4D lorsque des dates sont saisies avec seulement deux chiffres pour l'année.<!-- END REF-->
 
-The pivot year value defines the way 4D will interpret data entry of a date with a two-digit year:
+L'année pivot indique la valeur au-dessous de laquelle une année saisie sur deux chiffres sera interprétée comme appartenant au siècle suivant :
 
-* If the year is greater than or equal to the pivot year, 4D uses the current default century.
-* If the year is less than the pivot year, 4D uses the next century (relative to the current default).
+* si l'année saisie est supérieure ou égale à l'année pivot, elle appartient au siècle courant,
+* si l'année saisie est inférieure à l'année pivot, elle appartient au siècle suivant (relativement au siècle courant par défaut).
 
-By default, 4D sets the century to be the 20th century and uses 30 as pivot year. For example:
+Par défaut, 4D présume que les dates appartiennent au 20e siècle et utilise la valeur 30 comme année pivot :
 
-* 01/25/97 means January 25, 1997.
-* 01/25/30 means January 25, 1930.
-* 01/25/29 means January 25, 2029.
-* 01/25/07 means January 25, 2007.
+* Si vous saisissez la date 25/01/97, 4D considère que vous voulez indiquer le 25 janvier 1997
+* Si vous saisissez la date 25/01/30, 4D considère que vous voulez indiquer le 25 janvier 1930
+* Si vous saisissez la date 25/01/29, 4D considère que vous voulez indiquer le 25 janvier 2029
+* Si vous saisissez la date 25/01/07, 4D considère que vous voulez indiquer le 25 janvier 2007
 
-To change this default, execute the command. The effect of the command is immediate. You can pass a new default century only, or a new default century and a pivot year.
+La commande **SET DEFAULT CENTURY** permet de modifier ce comportement par défaut. Une fois exécutée, elle prend effet immédiatement.  
+Vous pouvez passer uniquement un siècle par défaut, ou un siècle par défaut et une année pivot.
 
-If you pass only a new default century minus one in *century*, 4D will interpret data entry of a date with a two-digit year as belonging to this century.  
-For example, after the call:
-
-```4d
- SET DEFAULT CENTURY(20) // Switch to 21st century for default century
-```
-
-* 01/25/97 means January 25, 2097
-* 01/25/07 means January 25, 2007
-
-In addition, you can specify the optional *pivotYear* parameter.  
-For example, after this call, in which the pivot year is 1995:
+Si vous passez uniquement un nouveau siècle par défaut moins un dans *siècle*, 4D interprétera toutes les années saisies sur deux chiffres comme appartenant à ce siècle.   
+Par exemple, après l'appel :
 
 ```4d
- SET DEFAULT CENTURY(19;95) // Switch to 21st century for default century if year is less than 95
+ SET DEFAULT CENTURY(20) // Fixer le 21e siècle comme siècle par défaut
 ```
 
-* 01/25/97 means January 25, 1997
-* 01/25/07 means January 25, 2007
+* Si vous saisissez la date 25/01/97, 4D considère que vous voulez indiquer le 25 janvier 2097
+* Si vous saisissez la date 25/01/07, 4D considère que vous voulez indiquer le 25 janvier 2007
 
-**Note:** This command only affects how 4D interprets dates entered with a two-digit year.   
-In all cases:
+En outre, vous pouvez spécifier le paramètre *anPivot*.   
+Par exemple, après l'appel :
 
-* 01/25/1997 means January 25, 1997
-* 01/25/2097 means January 25, 2097
-* 01/25/1907 means January 25, 1907
-* 01/25/2007 means January 25, 2007
+```4d
+ SET DEFAULT CENTURY(19;95) // Fixer le 21e siècle comme siècle par défaut si l'année est inférieure à 95
+```
 
-This command only affects data entry. It has no effect on date storage, computation, and so on.
+* Si vous saisissez la date 25/01/97, 4D considère que vous voulez indiquer le 25 janvier 1997
+* Si vous saisissez la date 25/01/07, 4D considère que vous voulez indiquer le 25 janvier 2007
+
+Notez que cette commande n'affecte que l'interprétation des dates lorsque les années sont saisies sur 2 chiffres. Quels que soient les paramètres passés à **SET DEFAULT CENTURY** :
+
+* Si vous saisissez la date 25/01/1997, 4D considère que vous voulez indiquer le 25 janvier 1997
+* Si vous saisissez la date 25/01/2097, 4D considère que vous voulez indiquer le 25 janvier 2097
+* Si vous saisissez la date 25/01/1907, 4D considère que vous voulez indiquer le 25 janvier 1907
+* Si vous saisissez la date 25/01/2007, 4D considère que vous voulez indiquer le 25 janvier 2007
+
+Cette commande affecte uniquement la saisie des données. Elle n'influe pas sur le stockage des données, les calculs, etc. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 392 |
+| Numéro de commande | 392 |
 | Thread safe | yes |
 
 

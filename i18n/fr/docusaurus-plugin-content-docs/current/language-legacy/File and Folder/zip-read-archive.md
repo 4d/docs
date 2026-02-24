@@ -7,41 +7,40 @@ displayed_sidebar: docs
 <!-- REF #_command_.ZIP Read archive.Syntax -->**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|zipFile|4D.File|&#8594; |Zip archive file|
-|password|Text|&#8594; |ZIP archive password if any|
-|Result|4D.ZipArchive|&#8592;|Archive object|
-</div>
+| Paramètres | Type                          |                             | Description                                   |
+| ---------- | ----------------------------- | :-------------------------: | --------------------------------------------- |
+| zipFile    | 4D.File       | &#8594; | Fichier archive ZIP                           |
+| password   | Text                          | &#8594; | Mot de passe de l'archive ZIP, le cas échéant |
+| Résultat   | 4D.ZipArchive | &#8592; | Objet archive                                 |
+
 <!-- END REF -->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|18|Added|
+| Release | Modifications |
+| ------- | ------------- |
+| 18      | Ajout         |
 
 </details>
 
-## Description 
+## Description
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+La commande `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->récupère le contenu de *zipFile* et le renvoie sous forme d'objet `4D.ZipArchive`<!-- END REF -->.
 
-> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. Pour extraire le contenu d'une archive, vous devez utiliser des méthodes telles que [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
 
-Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
+Passez un objet `4D.File` référençant l'archive ZIP compressée dans le paramètre *zipFile*. Le fichier d'archive cible est ouvert jusqu'à la fin de l'exécution de la commande `ZIP Read archive` et jusqu'à ce que tous les contenus/références soient extrait(e)s/publié(e)s ; il est ensuite fermé automatiquement.
 
-If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. If a password is required but not passed when trying to read the contents of the archive, an error is generated.
+Si le *zipFile* est protégé par un mot de passe, vous devez utiliser le paramètre *password* pour fournir un mot de passe. Si un mot de passe est requis mais qu'il n'est pas passé lorsque vous tentez de lire le contenu de l'archive, une erreur est générée.
 
-**Archive object**
+**Objet archive**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive.
+L'objet `4D.ZipArchive` retourné contient une seule propriété [`root`](../API/ZipArchiveClass.md#root) dont la valeur est un objet `4D.ZipFolder`. Ce dossier décrit le contenu de l'archive ZIP.
 
-## Example
+## Exemple
 
-To retrieve and view the contents of a ZIP file object:
+Pour récupérer et visualiser le contenu d'un objet ZIP file :
 
 ```4d
  var $archive : 4D.ZipArchive
@@ -51,14 +50,14 @@ To retrieve and view the contents of a ZIP file object:
  $archive:=ZIP Read archive($path)
 ```
 
-To retrieve the list of the files and folders in the archive:
+Pour récupérer la liste des fichiers et dossiers de l'archive :
 
 ```4d
  $folders:=$archive.root.folders()
  $files:=$archive.root.files()
 ```
 
-To read the contents of a file without extracting it from the root folder:
+Pour lire le contenu d'un fichier sans l'extraire du dossier root :
 
 ```4d
 
@@ -69,28 +68,28 @@ To read the contents of a file without extracting it from the root folder:
  End if
 ```
 
-To extract from the root folder:
+Pour extraire à partir du dossier root :
 
 ```4d
-  //extract a file
+  //extraire un fichier
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
 
-  //extract all files
+  //extraire tous les fichiers
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 
-## See also 
+## Voir également
 
 [ZipArchive Class](../API/ZipArchiveClass.md)
 [ZipFile Class](../API/ZipFileClass.md)
 [ZipFolder Class](../API/ZipFolderClass.md)
-[`ZIP Create archive`](zip-create-archive.md)  
+[`ZIP Create archive`](zip-create-archive.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1637 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1637 |
+| Thread safe        | oui  |
 
 

@@ -5,63 +5,63 @@ slug: /commands/qr-blob-to-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* : Integer ; *blob* : Blob )<!-- END REF-->
+<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *zone* ; *blob* )<!-- END REF-->
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Blob | Blob | &#8594;  | BLOB that houses the report |
+| zone | Integer | &#8594;  | Référence de la zone |
+| blob | Blob | &#8594;  | BLOB contenant l'état |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR BLOB TO REPORT.Summary-->The QR BLOB TO REPORT command places the report contained in *blob* in the Quick Report area passed in *area*.<!-- END REF--> 
+<!--REF #_command_.QR BLOB TO REPORT.Summary-->La commande **QR BLOB TO REPORT** place l’état contenu dans le paramètre *blob* dans la zone d'état rapide désignée par le paramètre *zone*.<!-- END REF--> 
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *blob* parameter, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *blob* est incorrect, l’erreur -9852 est générée.
 
-## Example 1 
+## Exemple 1 
 
-The following code allows you to display, in MyArea, a report file named “report.4qr” located next to the database structure. The report file does not have to be created with 4D version 2003; it can originate from previous versions:
+Le code suivant affiche dans la zone MaZone l'état rapide “etat.4qr”, stocké à côté du fichier de structure de la base. A noter que le fichier d'état peut avoir été créé avec une version de 4D antérieure à la 2003 :
 
 ```4d
  var $doc : Blob
- var MyArea : Integer
- DOCUMENT TO BLOB("report.4qr";$doc)
- QR BLOB TO REPORT(MyArea;$doc)
+ var MaZone : Integer
+ DOCUMENT TO BLOB("etat.4qr";$doc)
+ QR BLOB TO REPORT(MaZone;$doc)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following statement retrieves the Quick Report stored in Field4 and displays it in MyArea:
+L'instruction suivante affiche l'état stocké dans le champ ChampBlob dans la zone MaZone :
 
 ```4d
- QR BLOB TO REPORT(MyArea;[Table 1]Field4)
+ QR BLOB TO REPORT(MaZone;[Table 1]ChampBlob)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR REPORT TO BLOB](qr-report-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 771 |
+| Numéro de commande | 771 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

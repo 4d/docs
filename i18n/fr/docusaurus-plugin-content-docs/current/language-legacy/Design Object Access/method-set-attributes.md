@@ -5,71 +5,82 @@ slug: /commands/method-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *path* : Text, Text array ; *attributes* : Object, Object array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *chemin* ; *attributs* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Method path(s) |
-| attributes | Object, Object array | &#8594;  | Attribute(s) to set for selected method(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Chemin(s) de méthode(s) |
+| attributs | Object, Object array | &#8594;  | Attribut(s) de méthode(s) à définir |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|15|Created|
+|15 R5|Modifié|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->The **METHOD SET ATTRIBUTES** command allows you to set the *attributes* values for the method(s) specified in the *path* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->La commande **METHOD SET ATTRIBUTES** vous permet de définir les valeurs des *attributs* pour la ou les méthode(s) spécifiée(s) dans le paramètre *chemin*.<!-- END REF-->
 
-In *path*, you can pass either a text containing a method path, or a text array containing an array of paths. You will need to pass the same kind of parameter (string or array) in *attributes* in order to set the appropriate attributes. This command only works with project methods. If you pass an invalid *path*, an error is generated.
+Dans le paramètre *chemin*, vous pouvez passer soit un texte contenant un chemin de méthode, soit un tableau texte contenant un tableau de chemins. Vous devrez passer le même type de paramètre (variable simple ou tableau) dans le paramètre *attributs* afin de définir les valeurs adéquates. Cette commande ne fonctionne qu’avec les méthodes projet. Si vous passez un *chemin* invalide, une erreur est générée.
 
-In *attributes*, you pass an object or an array of objects (depending on the kind of parameter you passed in *path*) containing all the attributes that you want to set for the method(s).
+Dans le paramètre *attributs*, vous pouvez passer un objet ou un tableau d'objets, selon le type de paramètre passé dans *chemin*, contenant tous les attributs à fixer pour la ou les méthode(s).
 
-Method attributes must be set using the [OB SET](ob-set.md) or [OB SET ARRAY](ob-set-array.md) commands, with True or False values for Boolean attributes, or specific values for extended attributes. Only attributes that are present in the *attributes* parameter will be updated in the method attributes.
+Les attributs de méthodes doivent être définis à l'aide des commandes [OB SET](ob-set.md) ou [OB SET ARRAY](ob-set-array.md), avec les valeurs Vrai or Faux pour les attributs booléens, ou des valeurs spécifiques pour les attributs étendus. Seuls les attributs présents dans le paramètre *attributs* seront mis à jour dans les attributs des méthodes.
 
-If the command is executed from a component, by default it applies to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
+Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
+
+**Note :** La commande existante [METHOD SET ATTRIBUTE](method-set-attribute.md) reste prise en charge, toutefois comme elle ne peut retourner que des valeurs booléennes, elle ne peut pas être utilisée pour les attributs étendus tels que les propriétés 4D Mobile.
 
 ### 
 
-The supported attributes are:
-
-```RAW
-{    "invisible" : false, // true if visible    "preemptive" : "capable" // or "incapable" or "indifferent"    "publishedWeb" : false,  // true if available through 4D tags and URLs    "publishedSoap": false,  // true if offered as Web Service    "publishedWsdl": false,  // true if published in WSDL    "shared" : false,  // true if shared by components and host database    "publishedSql" : false,  // true if available through SQL    "executedOnServer" : false, // true if executed on server}
+```json
+{
+    "invisible" : false, // true si visible
+    "preemptive" : "capable" // ou bien "incapable" ou "indifferent"
+    "publishedWeb" : false,  // true si disponible via les balised et URLs 4D
+    "publishedSoap": false,  // true si offerte comme Web Service
+    "publishedWsdl": false,  // true si publiée dans WSDL
+    "shared" : false,  // true si partagée entre composants et base hôte
+    "publishedSql" : false,  // true si disponible via SQL
+    "executedOnServer" : false, // true si exécutée sur le serveur
+    "published4DMobile" : {
+        "scope": "table",  // "none" ou "table" ou "currentRecord" ou "currentSelection" 
+        "table": "nomTable"  // présent si scope est différent de "none" 
+    }
+}
 ```
 
-**Note:** "published4DMobile" attributes are deprecated as for 4D v18.
+## Exemple 
 
-## Example 
-
-You want to set a single attribute:
+Vous souhaiter modifier un seul attribut :
 
 ```4d
  var $attributes : Object
  OB SET($attributes;"executedOnServer";True)
- METHOD SET ATTRIBUTES("aMethod";$attributes) //Only the "executedOnServer" attribute is modified
+ METHOD SET ATTRIBUTES("aMethod";$attributes) //seul l'attribut "executedOnServer" est modifié
 ```
 
-## See also 
+## Voir aussi 
 
 [METHOD GET ATTRIBUTES](method-get-attributes.md)  
 [METHOD SET ATTRIBUTE](method-set-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1335 |
+| Numéro de commande | 1335 |
 | Thread safe | no |
 
 

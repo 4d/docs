@@ -9,44 +9,45 @@ displayed_sidebar: docs
 <!--REF #_command_.Last table number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Highest table number in the database |
+| Résultat | Integer | &#8592; | Numéro de table le plus élevé dans la base |
 </div>
 <!-- END REF-->
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Last table number.Summary-->**Last table number** returns the highest table number among the tables in the database.<!-- END REF--> Tables are numbered in the order in which they are created. If no table has been deleted from the database, this command then returns the number of tables present in the database. In the case of repeated loops on the table numbers of the database, you must use the [Is table number valid](is-table-number-valid.md) command in order to check that the table has not been deleted.
+<!--REF #_command_.Last table number.Summary-->**Last table number** retourne le numéro de table le plus élevé parmi les tables de la base.<!-- END REF-->   
+Les tables sont numérotées dans l’ordre dans lequel elles ont été créées. Si aucune table n’a été supprimée dans la base, cette commande retourne donc le nombre de tables présentes dans la base. Dans le cadre de boucles itératives sur les numéros de tables de la base, vous devez utiliser la commande [Is table number valid](is-table-number-valid.md) afin de vérifier que la table n’a pas été supprimée.
 
-## Example 
+#### Exemple 
 
-The following example builds an array, named asTables*,* with the names of tables defined in the database. This array can be used as a drop-down list (or tab control, scrollable area, and so on) to display the list of the tables, within a form:
+L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau peut être utilisé comme liste déroulante (ou onglets, zone de défilement, etc.) pour afficher dans un formulaire la liste des tables de la base :
 
 ```4d
- ARRAY TEXT(asTables;Last table number)
- If(Last table number>0) //If the database does contain tables
-    For($vlTables;Size of array(asTables);1;-1)
+ ARRAY TEXT(tabTables;Lire numero derniere table)
+ If(Last table number>0) //si la base contient bien des tables
+    For($vlTables;Size of array(tabTables);1;-1)
        If(Is table number valid($vlTables))
-          asTables{$vlTables}:=Table name($vlTables)
+          tabTables{$vlTables}:=Table name($vlTables)
        Else
-          DELETE FROM ARRAY(asTables;$vlTables)
+          DELETE FROM ARRAY(tabTables;$vlTables)
        End if
     End for
  End if
 ```
 
-## See also 
+#### Voir aussi 
 
 [Last field number](last-field-number.md)  
 [Is table number valid](is-table-number-valid.md)  
 [Table name](table-name.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 254 |
+| Numéro de commande | 254 |
 | Thread safe | yes |
 
 

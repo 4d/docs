@@ -5,33 +5,33 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** ({ * }) : Integer<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Windows: height of application window, or height of screen if * is specified Macintosh: height of main screen |
-| Function result | Integer | &#8592; | Height expressed in pixels |
+| * | Opérateur | &#8594;  | Windows : hauteur de la fenêtre de l'application ou hauteur de l'écran si * est spécifiéMacintosh : hauteur de l'écran principal |
+| Résultat | Integer | &#8592; | Hauteur exprimée en pixels |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Screen height.Summary-->On Windows, Screen height returns the height of 4D application window (MDI window).<!-- END REF--> If you specify the optional *\** parameter, the function returns the height of the screen.
+<!--REF #_command_.Screen height.Summary-->Sous Windows, **Screen height** retourne la hauteur de la fenêtre d'application 4D (fenêtre MDI).<!-- END REF--> Si vous passez le paramètre optionnel *\**, **Screen height** retourne la hauteur de l'écran. 
 
-On Macintosh, Screen height returns the height of the main screen, the screen where the menu bar is located.
+Sous Mac OS, **Screen height** retourne la hauteur de l'écran principal, c'est-à-dire celui qui contient la barre de menus.
 
-## See also 
+## Voir aussi 
 
 [SCREEN COORDINATES](screen-coordinates.md)  
 [Screen width](screen-width.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 188 |
+| Numéro de commande | 188 |
 | Thread safe | no |
 
 

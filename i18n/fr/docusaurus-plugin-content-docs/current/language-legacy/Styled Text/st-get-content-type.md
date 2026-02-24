@@ -5,92 +5,92 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *objet* {; *débutSél* {; *finSél* {; *débutBloc* {; *finBloc*}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
-| startBlock | Integer | &#8592; | Start position of first type of selection |
-| endBlock | Integer | &#8592; | End position of first type of selection |
-| Function result | Integer | &#8592; | Type of content |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
+| débutBloc | Integer | &#8592; | Début de position du premier type de la sélection |
+| finBloc | Integer | &#8592; | Fin de position du premier type de la sélection |
+| Résultat | Integer | &#8592; | Type de contenu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Modified|
-|14|Created|
+|14 R5|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST Get content type.Summary-->The **ST Get content type** command returns the type of content found in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
+<!--REF #_command_.ST Get content type.Summary-->La commande **ST Get content type** retourne le type de contenu présent dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns the information of the object being edited; if the object does not have the focus, the command returns the information of the object’s data source (variable or field).  
-If you omit the *\** parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string. During execution, the command returns the information of the variable or field.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l’exécution, si l’objet a le focus, la commande retourne les informations de l’objet en cours d'édition ; si l’objet n'a pas le focus, la commande retourne les informations de la source de données de l’objet (variable ou champ).  
+Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l’exécution, la commande retourne les informations de la variable ou du champ.
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags that may be present. 
+Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. 
 
-* If you pass *startSel* and *endSel*, **ST Get content type** evaluates the contents within this selection.
-* If you only pass *startSel* or if the value of *endSel*is greater than the total number of characters in *object*, the contents between *startSel* and the end of the text is evaluated.
-* If you omit *startSel* and *endSel*, the contents within the current text selection is evaluated.
+* Si vous passez *débutSél* et *finSél*, **ST Get content type** évalue le contenu situé à l’intérieur de cette sélection.
+* Si vous passez uniquement *débutSél* ou si la valeur de *finSél* est supérieure au nombre total de caractères dans l’*objet*, le contenu situé entre *débutSél* et la fin du texte est évalué.
+* Si vous omettez *débutSél* et *finSél*, le contenu situé à l’intérieur de la sélection courante de texte est évalué.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-The optional *startBlock* and *endBlock* parameters retrieve the position of the first and last character of the first homogenous block identified in the object or the selection of the object. For example, if the selection contains an expression and then plain text, *startBlock* and *endBlock* will return the limits of the expression. You can make a loop to process all the blocks of the selection.
+Les paramètres optionnels *débutBloc* et *finBloc* permettent de récupérer la position du premier et du dernier caractère du premier bloc homogène identifié dans l’objet ou la sélection de l’objet. Par exemple, si la sélection contient une expression puis du texte brut, *débutBloc* et *finBloc* retourneront les bornes de l’expression. Vous pouvez effectuer une boucle afin de traiter tous les blocs de la sélection.
 
-This command returns a value designating the type of contents identified. You can compare this value with the following constants, found in the "*Multistyle Text*" theme: 
+La commande retourne une valeur désignant le type de contenu identifié. Vous pouvez comparer cette valeur aux constantes suivantes, placées dans le thème "*Texte multistyle*" : 
 
-| Constant            | Type    | Value | Comment                                                     |
-| ------------------- | ------- | ----- | ----------------------------------------------------------- |
-| ST Expression type  | Integer | 2     | Selection contains only an expression reference             |
-| ST Mixed type       | Integer | 3     | Selection contains at least two different types of contents |
-| ST Picture type     | Integer | 6     | Selection contains only a picture (4D Write Pro areas only) |
-| ST Plain type       | Integer | 0     | Selection contains text and no references                   |
-| ST Unknown tag type | Integer | 4     | Selection contains only an unknown tag type                 |
-| ST URL type         | Integer | 1     | Selection contains only a URL reference                     |
-| ST User type        | Integer | 5     | Selection contains only a custom reference                  |
+| Constante           | Type        | Valeur | Comment                                                                    |
+| ------------------- | ----------- | ------ | -------------------------------------------------------------------------- |
+| ST Expression type  | Entier long | 2      | La sélection contient uniquement une référence d’expression                |
+| ST Mixed type       | Entier long | 3      | La sélection contient au moins deux types de contenus différents           |
+| ST Picture type     | Entier long | 6      | La sélection contient uniquement une image (zones 4D Write Pro uniquement) |
+| ST Plain type       | Entier long | 0      | La sélection contient du texte et aucune référence                         |
+| ST Unknown tag type | Entier long | 4      | La sélection contient uniquement une balise de type inconnu                |
+| ST URL type         | Entier long | 1      | La sélection contient uniquement une référence d’URL                       |
+| ST User type        | Entier long | 5      | La sélection contient uniquement une référence personnalisée               |
 
-## Example 
+## Exemple 
 
-You want to display context-menu commands based on the type of contents selected in the area.
+Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type de contenu sélectionné dans la zone. 
 
 ```4d
  Case of
-    :(Form event code=On Clicked)
-  //we retrieve the selection
+    :(FORM Event.code=On Clicked)
+  //on récupère la sélection
        GET HIGHLIGHT(*;"myText";startSel;endSel)
-       If(Contextual click&(Macintosh control down=False)) //calls the context menu
-          If(startSel=endSel) // no contents selected
-  //we enable only certain commands
+       If(Contextual click&(Macintosh control down=False)) //appel du menu contextuel
+          If(startSel=endSel) //pas de contenu sélectionné
+  //on active uniquement certaines commandes
              DISABLE MENU ITEM(<>menu_STYLEDTEXT;2)
              DISABLE MENU ITEM(<>menu_STYLEDTEXT;4)
              ENABLE MENU ITEM(<>menu_STYLEDTEXT;6)
              ...
-          Else // we get the content type
+          Else //on lit le type de contenu
              CT_Texttype:=ST Get content type(*;"myText";startSel;endSel)
-             Case of // processing of different types
+             Case of //traitement des différents types
                 :(CT_Texttype=ST URL type)
                    DISABLE MENU ITEM(<>menu_STYLEDTEXT;6)
                    ENABLE MENU ITEM(<>menu_STYLEDTEXT;7)
@@ -105,22 +105,22 @@ You want to display context-menu commands based on the type of contents selected
                    ...
              End case
           End if
-          MOUSE POSITION($xCoord;$yCoord;$ButtonState)
+          MOUSE POSITION($xCoord;$yCoord;$StateButton)
           $AlphaVar:=Dynamic pop up menu(<>menu_STYLEDTEXT;"";$xCoord;$yCoord)
           startSel:=-3
           endSel:=-3
        End if
        ...
-    End if
+ End case
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1286 |
+| Numéro de commande | 1286 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

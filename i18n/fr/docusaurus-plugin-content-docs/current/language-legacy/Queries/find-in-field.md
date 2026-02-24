@@ -5,81 +5,83 @@ slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *targetField* : Field ; *value* : Field, Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *champCible* ; *valeur* ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetField | Field | &#8594;  | Field on which to execute the search |
-| value | Field, Variable | &#8596;  | *in:* Value to search<br/>*out:* Value found|
-| Function result | Integer | &#8592; | Number of the record found or -1 if no record was found |
+| champCible | Field | &#8594;  | Champ sur lequel effectuer la recherche |
+| valeur | Field, Variable | &#8594;  | Valeur à rechercher |
+| &#8592; | Valeur trouvée |
+| Résultat | Integer | &#8592; | Numéro de l’enregistrement trouvé ou -1 si pas d’enregistrement trouvé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Find in field.Summary-->The **Find in field** command returns the number of the first record whose *targetField* field is equal to *value*.<!-- END REF-->  
-If no records are found, **Find in field** returns -1\. 
+<!--REF #_command_.Find in field.Summary-->La commande **Find in field** retourne le numéro du premier enregistrement dont le champ *champCible* est égal à la valeur *valeur*.<!-- END REF-->  
+Si aucun enregistrement ne correspond au critère, **Find in field** retourne -1\. 
 
-After calling this command, *value* contains the value found. This feature allows you to execute searches using the wildcard character (“@”) on Alpha fields and then retrieve the value found. 
+Après l’appel, le paramètre *valeur* contient la valeur effectivement trouvée. Ce fonctionnement permet d’effectuer des recherches utilisant le caractère “@” sur des champs de type alpha, et pour lesquelles il est nécessaire de récupérer la valeur trouvée. 
 
-**Note:** Due to this principle, you cannot use a *parameter* ($1, $2, etc.) in *value* because this would cause malfunctions in compiled mode. Similarly, if you pass a field in the *value* parameter, keep in mind that its value will be reassigned if the query is successful (the command [Modified record](modified-record.md), in particular, will return True for the current record of the table).
+**Note :** Du fait de ce principe, vous ne pouvez pas utiliser un *paramètre* ($1, $2...) dans *valeur* car cela entraînerait des dysfonctionnements en mode compilé. De même, si vous passez un champ dans le paramètre *valeur*, gardez à l'esprit que sa valeur sera réaffectée si la recherche aboutit (la commande [Modified record](modified-record.md), notamment, retournera Vrai pour l'enregistrement courant de la table).
 
-This command doesn’t modify the current selection or the current record.   
-It is fast and particularly useful to avoid creating double entries during data entry. 
+La commande ne modifie ni la sélection courante, ni l’enregistrement courant.
 
-**Historical note:** In earlier versions of 4D, the **Find in field** command was named **Find index key** and only worked with indexed fields. Beginning with 4D v11 SQL, this limitation was removed and the command was renamed. 
+Cette fonction, très rapide, est particulièrement utile pour prévenir la création de doublons au moment de la saisie de données.
 
-## Example 1 
+**Note historique :** Dans les anciennes versions de 4D, la commande **Find in field** était nommée **Trouver clef index** et ne fonctionnait qu'avec les champs indexés. La commande a été renommée et la limitation supprimée à compter de 4D v11 SQL. 
 
-In an audio CD database, during data entry let’s assume that you want to verify the singer’s name to see if it already exists in the database. Because homonyms can exist, you don’t want the \[Singer\]Name field to be unique. Therefore, in the input form, you can write the following code in the \[Singer\]Name field’s object method:
+## Exemple 1 
+
+Dans une base de données de CD audio, vous souhaitez vérifier, au moment de la saisie d’un nouveau nom de chanteur, si celui-ci n’existe pas déjà dans la base. Comme il peut exister des homonymes, vous ne souhaitez pas toutefois que le champ \[Chanteur\]Nom soit unique. Pour cela, dans le formulaire d’entrée, vous écrivez dans la méthode objet du champ \[Chanteur\]Nom :
 
 ```4d
  If(FORM Event.code=On Data Change)
-    $RecNum:=Find in field([Singer]Name;[Singer]Name)
-    If($RecNum #-1) // If this name has already been entered
-       CONFIRM("A singer with the same already exists. Do you want to see the record?";"Yes";"No")
+    $EnrgNum:=Find in field([Chanteur]Nom;[Chanteur]Nom)
+    If($EnrgNum #-1) // Si ce nom a déjà été saisi
+       CONFIRM("Un chanteur de ce nom existe déjà. Voulez-vous visualiser sa fiche ?";"Oui";"Non")
        If(OK=1)
-          GOTO RECORD([Singer];$RecNum)
+          GOTO RECORD([Chanteur];$EnrgNum)
        End if
     End if
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Here is an example that lets you verify the existence of a value:
+Voici un exemple permettant de vérifier l'existence d'une valeur :
 
 ```4d
  var $id;$1 : Integer
  $id:=$1
- If(Find in field([MyTable]MyID;$id)>=0)
+ If(Find in field([MaTable]MonID;$id)>=0)
     $0:=True
  Else
     $0:=False
  End if
 ```
 
-Note the >= that lets you cover all cases. In fact, the function returns a record number and the first record is numbered 0.
+Remarquez le >= qui permet de couvrir tous les cas. En effet, la fonction retourne un numéro d'enregistrement et le premier enregistrement porte le numéro 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 653 |
+| Numéro de commande | 653 |
 | Thread safe | yes |
 
 

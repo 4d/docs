@@ -5,100 +5,97 @@ slug: /commands/resolve-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *aPointer* : Pointer ; *varName* : Text ; *tableNum* : Integer ; *fieldNum* : Integer )<!-- END REF-->
+<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *pointeur* ; *nomVar* ; *numTable* ; *numChamp* )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &#8594;  | Pointer for which to retrieve the referenced object |
-| varName | Text | &#8592; | Name of referenced variable or empty string |
-| tableNum | Integer | &#8592; | Number of referenced table or array element or 0 or -1 |
-| fieldNum | Integer | &#8592; | Number of referenced field or 0 |
+| pointeur | Pointer | &#8594;  | Pointeur duquel récupérer l'objet référencé |
+| nomVar | Text | &#8592; | Nom de la variable référencée ou chaîne vide |
+| numTable | Integer | &#8592; | Numéro de la table ou de l'élément de tableau référencé(e) ou 0 ou -1 |
+| numChamp | Integer | &#8592; | Numéro du champ ou de l'élément de tableau 2D référencé ou 0 ou -1 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|6|Created|
+|15|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESOLVE POINTER.Summary-->The RESOLVE POINTER command retrieves the information of the object referenced by the pointer expression *aPointer* and returns it into the parameters *varName*, *tableNum,* and *fieldNum*.<!-- END REF-->
+<!--REF #_command_.RESOLVE POINTER.Summary-->**RESOLVE POINTER** récupère l'information de l'objet référencé par *pointeur* et la retourne dans les paramètres *nomVar*, *numTable* et *numChamp*.<!-- END REF-->
 
-Depending on the nature of the referenced object, RESOLVE POINTER returns the following values:
+Selon la nature de l'objet référencé par le pointeur, **RESOLVE POINTER** retourne les valeurs suivantes :
 
-| **Referenced object** | **Parameters**       |                    |                       |
-| --------------------- | -------------------- | ------------------ | --------------------- |
-| **varName**           | **tableNum**         | **fieldNum**       |                       |
-| None (NIL pointer)    | "" (empty string)    | 0                  | 0                     |
-| Variable              | Name of the variable | \-1                | \-1                   |
-| Array                 | Name of the array    | \-1                | \-1                   |
-| Array element         | Name of the array    | Element number     | \-1                   |
-| 2D array element      | Name of the 2D array | Element row number | Element column number |
-| Table                 | "" (empty string)    | Table number       | 0                     |
-| Field                 | "" (empty string)    | Table number       | Field number          |
+| **Objet référencé**   | **Paramètres**     |                              |                                |
+| --------------------- | ------------------ | ---------------------------- | ------------------------------ |
+| **nomVar**            | **numTable**       | **numChamp**                 |                                |
+| Aucun (pointeur NIL)  | "" (chaîne vide)   | 0                            | 0                              |
+| Variable              | Nom de la variable | \-1                          | \-1                            |
+| Tableau               | Nom du tableau     | \-1                          | \-1                            |
+| Elément de tableau    | Nom du tableau     | numéro de l'élément          | \-1                            |
+| Elément de tableau 2D | Nom du tableau 2D  | numéro de ligne de l'élément | numéro de colonne de l'élément |
+| Table                 | "" (chaîne vide)   | numéro de la table           | 0                              |
+| Champ                 | "" (chaîne vide)   | numéro de la table           | numéro du champ                |
 
-**Notes:** 
+**Notes :** 
 
-* If the value you pass in *pointer* is not a pointer expression, a syntax error occurs.
-* The RESOLVE POINTER command does not work with pointers to local variables. In fact, by definition several local variables with the same name could exist in different locations, so it is not possible for the command to find the correct variable.
+* Si la valeur que vous passez dans le paramètre *pointeur* n'est pas de type pointeur, une erreur de syntaxe est générée.
+* La commande **RESOLVE POINTER** ne fonctionne pas avec les pointeurs vers des variables locales. En effet, par définition plusieurs variables locales de même nom pouvant exister à différents emplacements, il n’est pas possible pour la commande de connaître la variable à dépointer.
 
-## Example 1 
+## Exemple 1 
 
-Within a form, you create a group of 100 enterable variables called v1, v2... v100\. To do so, you perform the following steps:
+Dans un formulaire, vous créez un groupe de 100 variables saisissables qui s'appellent v1, v2... v100\. Pour cela, vous procédez de la manière suivante : 
 
-a. Create one enterable variable that you name v. 
-
-b. Set the properties of the object. 
-
-c. Attach the following method to that object:
+* Vous créez une variable saisissable que vous appelez v.
+* Vous définissez les propriétés de l'objet suivant vos besoins.
+* Vous associez la méthode suivante à l'objet :
 
 ```4d
- DoSomething(Self) // DoSomething being a project method in your database
+ FaireQuelqueChose(Self) // FaireQuelqueChose est une méthode projet de la base
 ```
 
-  
-d. At this point, you can either duplicate the variable as many times as you need, or use the Objects on Grid feature in the Form Editor.
-
-e. Within the DoSomething method, if you need to know the index of the variable for which the method is called, you write:
+* Vous pouvez alors soit dupliquer la variable autant de fois que nécessaire, soit utiliser la fonctionnalité Tableau sur la grille de l'éditeur de formulaires.
+* Dans la méthode FaireQuelqueChose, si vous voulez connaître l'indice de la variable pour laquelle la méthode est appelée, vous écrivez le code suivant :
 
 ```4d
- RESOLVE POINTER($1;$vsVarName;$vlTableNum;$vlFieldNum)
- $vlVarNum:=Num(Substring($vsVarName;2))
+ RESOLVE POINTER($1;$vaNomVar;$vlNumTable;$vlNumChamp)
+ $vlVarNum:=Num(Substring($vaNomVar;2))
 ```
 
-Note that by constructing your form in this way, you write the methods for the 100 variables only once; you do not need to write DoSomething (1), DoSomething (2)...,DoSomething (100).
+* En suivant ces étapes, vous avez écrit une fois seulement les méthodes objet pour les 100 variables : vous n'avez pas eu besoin d'écrire FaireQuelqueChose(1), FaireQuelqueChose(2)..., FaireQuelqueChose(100)).
 
-## Example 2 
+## Exemple 2 
 
-For debugging purposes, you need to verify that the second parameter ($2) to a method is a pointer to a table. At the beginning of this method, you write: // ...  
-  
+Pour des raisons de débogage, vous voulez vérifier si le deuxième paramètre ($2) d'une méthode est un pointeur vers une table. Le début de votre méthode peut être écrit ainsi : 
+
 ```4d
- If(<>DebugOn)
-    RESOLVE POINTER($2;$vsVarName;$vlTableNum;$vlFieldNum)
-    If(Not(($vlTableNum>0)&($vlFieldNum=-1)&($vsVarName="")))
-  // WARNING: The pointer is not a reference to a table
+  // ...
+ If(<>Débogage)
+    RESOLVE POINTER($2;$vaNomVar;$vlNumTable;$vlNumChamp)
+    If(Not(($vlNumTable>0)&($vlNumChamp=-1)&($vlNomVar="")))
+  // ATTENTION : Le pointeur n'est pas une référence à une table
        TRACE
-       End
     End if
+ End if
   // ...
 ```
 
-## Example 3 
+## Exemple 3 
 
-See example for the *\_o\_DRAG AND DROP PROPERTIES* command.
+Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*. 
 
-## Example 4 
+## Exemple 4 
 
-Here is an example of a 2D array pointer:
+Voici un exemple de pointeur vers un tableau 2D :
 
 ```4d
  ARRAY TEXT(atCities;100;50)
@@ -106,7 +103,7 @@ Here is an example of a 2D array pointer:
  atCities{1}{2}:="Rome"
  atCities{1}{5}:="Paris"
  atCities{2}{6}:="New York"
-  // ...other values
+  // ...autres valeurs
  $city:=->atCities{1}{5}
  RESOLVE POINTER($city;$var;$rowNum;$colNum)
   //$var="atCities"
@@ -114,7 +111,7 @@ Here is an example of a 2D array pointer:
   //$colNum="5"
 ```
 
-## See also 
+## Voir aussi 
 
 [Field](field.md)  
 [Get pointer](get-pointer.md)  
@@ -122,11 +119,11 @@ Here is an example of a 2D array pointer:
 [Is nil pointer](is-nil-pointer.md)  
 [Table](table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 394 |
+| Numéro de commande | 394 |
 | Thread safe | yes |
 
 

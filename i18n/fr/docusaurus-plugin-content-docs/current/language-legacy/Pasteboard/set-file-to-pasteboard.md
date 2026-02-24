@@ -5,47 +5,47 @@ slug: /commands/set-file-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *file* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *fichier* {; *} )<!-- END REF-->
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| file | Text | &#8594;  | File name or complete pathname of file |
-| * | Operator | &#8594;  | If passed = add; If omitted = replace |
+| fichier | Text | &#8594;  | Nom de fichier ou Chemin d'accès complet de fichier |
+| * | Opérateur | &#8594;  | Si passé = ajouter, Si omis = remplacer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Created|
+|12|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->The SET FILE TO PASTEBOARD command adds the complete pathname of the file passed in the *file* parameter.<!-- END REF--> This command can be used to set up interfaces allowing the drag and drop of 4D objects to files on the desktop for example.
+<!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->La commande **SET FILE TO PASTEBOARD** ajoute dans le conteneur de données le chemin d’accès complet du fichier passé dans le paramètre *fichier*.<!-- END REF--> Cette commande permet de mettre en place des interfaces autorisant le glisser-déposer d’objets 4D vers des fichiers sur le bureau par exemple.
 
-In the *file* parameter, you can pass either a complete pathname or a simple file name (without a pathname). In the latter case, the file must be located next to the database structure file.
+Vous pouvez passer dans *fichier* soit un chemin d'accès complet, soit un nom de fichier simple (sans chemin d'accès). Dans ce dernier cas, le fichier doit être situé à côté du fichier de structure de la base.
 
-The command accepts the star *\** as an optional parameter. By default, when this parameter is omitted, the command replaces the contents of the pasteboard by the last pathname specified by *file*. If you pass this parameter, the command adds the *file* to the pasteboard. This way it can contain a "stack" of file pathnames. In both cases, if data other than pathnames was present in the pasteboard, it is erased.
+La commande admet l’étoile *\** en paramètre optionnel. Par défaut, lorsque ce paramètre est omis, la commande remplace le contenu du conteneur de données par le dernier chemin d’accès défini par *fichier*. Si vous passez ce paramètre, la commande ajoute le *fichier* au conteneur de données. Il peut ainsi contenir une "pile" de chemins d’accès de fichiers. Dans les deux cas, si des données autres que des chemins d’accès étaient présentes dans le conteneur, elles sont effacées.
 
-**Note:** The pasteboard is in read-only mode during the On Drag Over form event. It is therefore not possible to use this command in that context.
+**Note :** Le conteneur de données est en lecture seule pendant l’événement formulaire On Drag Over. Il n’est pas possible d’utiliser cette commande dans ce contexte.
 
-## See also 
+## Voir aussi 
 
 [Get file from pasteboard](get-file-from-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 975 |
+| Numéro de commande | 975 |
 | Thread safe | no |
 
 

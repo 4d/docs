@@ -5,41 +5,41 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ({ * }) : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
-| Function result | Integer | &#8592; | Window reference number |
+| * | Opérateur | &#8594;  | Si omis = ignorer les fenêtres flottantes, Si spécifié = prendre en compte les fenêtres flottantes |
+| Résultat | Integer | &#8592; | Numéro de référence de fenêtre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Frontmost window.Summary-->The **Frontmost window** command returns the window reference number of the frontmost window.<!-- END REF-->
+<!--REF #_command_.Frontmost window.Summary-->La commande **Frontmost window** retourne le numéro de référence de la fenêtre actuellement située au premier plan.<!-- END REF-->
 
-## See also 
+## Voir aussi 
 
 [Frontmost process](frontmost-process.md)  
 [Next window](next-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 447 |
+| Numéro de commande | 447 |
 | Thread safe | no |
 
 

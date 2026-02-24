@@ -5,178 +5,179 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* : Table ;} *sqlFormula* : Text )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* ;} *formuleSQL* )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table in which to return a selection of records or Default table if this parameter is omitted |
-| sqlFormula | Text | &#8594;  | Valid SQL search formula representing the WHERE clause of the SELECT query |
+| laTable | Table | &#8594;  | Table de laquelle retourner une sélection d’enregistrements ou Table par défaut si ce paramètre est omis |
+| formuleSQL | Text | &#8594;  | Formule de recherche SQL valide représentant la clause WHERE de la requête SELECT |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY BY SQL.Summary-->The QUERY BY SQL command can be used to take advantage of the SQL kernel integrated into 4D.<!-- END REF--> It can execute a simple SELECT query that can be written as follows:
+<!--REF #_command_.QUERY BY SQL.Summary-->La commande **QUERY BY SQL** permet de tirer directement parti du moteur SQL intégré de 4D.<!-- END REF--> Elle exécute une requête SELECT simple qui peut être écrite ainsi :
 
 ```SQL
-   SELECT *       FROM table       WHERE 
+SELECT *   FROM laTable    WHERE 
 ```
 
-*aTable* is the name of the table passed in the first parameter and *sqlFormula* is the query string passed in the second parameter.
+*laTable* est le nom de la table passé en premier paramètre et *formuleSQL* la chaîne de recherche passée en deuxième paramètre. 
 
-For example, the following statement:
+Par exemple, l’instruction suivante :
 
 ```4d
- ([Employees];"name=’smith’")
+ QUERY BY SQL([Employees];"name=’smith’")
 ```
 
-is equivalent to the following SQL query:
-
-```4d
- SELECT*FROM Employees WHERE"name=’smith’"
-```
-
-The QUERY BY SQL command is similar to the [QUERY BY FORMULA](query-by-formula.md) command. It looks for records in the specified table. It changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
-
-**Note:** The QUERY BY SQL command cannot be used in the context of an external SQL connection; it connects directly to the integrated SQL engine of 4D.
-
-QUERY BY SQL applies *sqlFormula* to each record in the table selection. *sqlFormula* is a Boolean expression that must return **True** or **False**. As you may know, in the SQL standard, a search condition can yield a **True**, **False** or NULL result. All the records (rows) where the search condition returns **True** are included in the new current selection.
-
-The *sqlFormula* expression may be simple, such as comparing a field (column) to a value; or it may be complex, such as performing a calculation. Like [QUERY BY FORMULA](query-by-formula.md), QUERY BY SQL is able to evaluate information in related tables (see example 4). *sqlFormula* must be a valid SQL statement that is compliant with the SQL-2 standard and with respect to the limitations of the current SQL implementation of 4D. For more information about SQL support in 4D, refer to the *4D SQL Reference* manual.
-
-The *sqlFormula* parameter can use references to 4D expressions. The syntax to use is the same as for the integrated SQL commands or the code included between the [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) tags, i.e.: *<<MyVar>>* or *:MyVar*.
-
-**Note:** This command is compatible with the [SET QUERY LIMIT](set-query-limit.md) and [SET QUERY DESTINATION](set-query-destination.md) commands.
-
-**Reminder:** You cannot have references to local variables in compiled mode. For more information about SQL programming in 4D, refer to the section *Overview of SQL Commands*.   
-
-### About Relations 
-
-QUERY BY SQL does not use relations between tables defined in the 4D Structure editor. If you want to make use of related data, you will have to add a JOIN to the query. For example, assuming we have the following structure with a Many-to-One relation from\[Persons\]City to \[Cities\]Name:
+équivaut à la requête SQL :
 
 ```SQL
-   [People]       Name       City    [Cities]       Name       Population
+SELECT * FROM Employees WHERE "name=’smith’"
 ```
 
-Using the [QUERY BY FORMULA](query-by-formula.md) command, you can write:
+La commande **QUERY BY SQL** est semblable à la commande [QUERY BY FORMULA](query-by-formula.md). Elle effectue une recherche parmi les enregistrements de la table définie. Elle modifie la sélection courante de *table* pour le process courant et fait du premier enregistrement de la nouvelle sélection le nouvel enregistrement courant.
+
+**Note :** La commande **QUERY BY SQL** ne peut pas être utilisée dans le contexte d'une connexion SQL externe, elle s'adresse directement au moteur SQL intégré de 4D.
+
+**QUERY BY SQL** applique *formuleSQL* à chaque enregistrement de la sélection de la table. *formuleSQL* est une expression booléenne qui doit retourner VRAI ou FAUX. Comme vous le savez peut-être, dans la norme SQL, une condition de recherche peut avoir un résultat VRAI, FAUX ou NULL. Tous les enregistrements (rows) pour lesquels la condition de recherche retourne VRAI sont inclus dans la nouvelle sélection courante.
+
+L’expression *formuleSQL* peut être simple, comme par exemple la comparaison d’un champ (colonne) à une valeur ; elle peut également être complexe, comme la réalisation d’un calcul. Comme [QUERY BY FORMULA](query-by-formula.md), **QUERY BY SQL** peut évaluer des valeurs dans les tables liées (cf. exemple 4). *formuleSQL* doit être une instruction SQL valide, conforme à la norme SQL-2 et tenant compte de l’implémentation actuelle du SQL dans 4D. Pour plus d’information la prise en charge du SQL dans 4D, reportez-vous au manuel Guide de référence 4D SQL.
+
+Le paramètre *formuleSQL* peut contenir des références à des expressions 4D. La syntaxe à utiliser est la même que pour les commandes SQL intégrées ou le code inclus dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md), c’est-à-dire : *<<MaVar>>* ou *:MaVar*  
+Pour plus d’informations sur ce point, reportez-vous à la section *Présentation des commandes du thème SQL*.
+
+**Note :** Cette commande est compatible avec les commandes [SET QUERY LIMIT](set-query-limit.md) et [SET QUERY DESTINATION](set-query-destination.md).
+
+**Rappel :** Les références aux variables locales ne sont pas possibles en mode compilé. Pour plus d'informations sur la programmation SQL dans 4D, reportez-vous à la section *Présentation des commandes du thème SQL*.   
+
+### A propos des liens 
+
+**QUERY BY SQL** n’utilise pas les liens entre les tables définis dans l’éditeur de structure de 4D. Si vous souhaitez tirer parti des données liées, vous devez ajouter une clause JOIN dans la requête. Par exemple, considérons la structure suivante, dans laquelle un lien N vers 1 relie les champs \[Personnes\]Ville à \[Villes\]Nom :
+
+```RAW
+[Personnes]   Nom   Ville[Villes]   Nom   Population
+```
+
+Avec la commande [QUERY BY FORMULA](query-by-formula.md), vous pourriez écrire :
 
 ```4d
- QUERY BY FORMULA([People];[Cities]Population>1000)
+ QUERY BY FORMULA([Personnes];[Villes]Population>1000)
 ```
 
-Using QUERY BY SQL, you must write the following statement, regardless of whether the relation exists:
+Avec **QUERY BY SQL**, vous devez écrire l’instruction suivante, que le lien existe ou non :
 
 ```4d
- QUERY BY SQL([People];"people.city=cities.name AND cities.population>1000")
+ QUERY BY SQL([Personnes];"personnes.ville=villes.nom AND villes.population>1000")
 ```
 
-**Note:** QUERY BY SQL handles One-to-Many and Many-to-Many relations differently than [QUERY BY FORMULA](query-by-formula.md).
+**Note :** Les liens 1 vers N et N vers N sont également traités par **QUERY BY SQL** d’une manière différente de [QUERY BY FORMULA](query-by-formula.md).
 
-## Example 1 
+## Exemple 1 
 
-This example shows the offices where sales exceed 100\. The SQL query is: 
+Cet exemple recherche les bureaux dont les ventes sont supérieures à 100\. La requête SQL est : 
 
 ```SQL
-   SELECT *      FROM Offices      WHERE Sales > 100
+SELECT * FROM Bureaux WHERE Ventes > 100
 ```
 
-When using the **QUERY BY SQL** command:
+En utilisant la commande **QUERY BY SQL** :
 
 ```4d
- C_STRING(30;$queryFormula)
- $queryFormula:="Sales > 100"
- QUERY BY SQL([Offices];$queryFormula)
+ C_STRING(30;$formuleRequete)
+ $formuleRequete:="Ventes > 100"
+ QUERY BY SQL([Bureaux];$formuleRequete)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example shows the orders that fall into the 3000 to 4000 range. The SQL query is: 
+Cet exemple recherche les commandes comprises entre 3000 et 4000\. La requête SQL est :   
 
 ```SQL
-   SELECT *      FROM Orders      WHERE Amount BETWEEN 3000 AND 4000
+SELECT * FROM Commandes WHERE Total BETWEEN 3000 AND 4000
 ```
 
-When using the QUERY BY SQL command:
+En utilisant la commande **QUERY BY SQL** :
 
 ```4d
- C_STRING(40;$queryFormula)
- $queryFormula:="Amount BETWEEN 3000 AND 4000"
- QUERY BY SQL([Orders];$queryFormula)
+ C_STRING(40;$formuleRequete)
+ $formuleRequete:="Total BETWEEN 3000 AND 4000"
+ QUERY BY SQL([Ventes];$formuleRequete)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example shows how to get the query result ordered by a specific criterion. The SQL query is: 
+Cet exemple montre comment trier le résultat de la requête sur un critère spécifique. La requête SQL est : 
 
 ```SQL
-   SELECT *      FROM People      WHERE City =’Paris’         ORDER BY Name
+SELECT * FROM PersonnesWHERE Ville =’Paris’ORDER BY Nom
 ```
 
-When using the QUERY BY SQL command:
+En utilisant la commande **QUERY BY SQL** :
 
 ```4d
- C_STRING(40;$queryFormula)
- $queryFormula:="City= ‘Paris’ ORDER BY Name"
- QUERY BY SQL([People];$queryFormula)
+ C_STRING(40;$formuleRequete)
+ $formuleRequete:="Ville = ‘Paris’ ORDER BY Nom"
+ QUERY BY SQL([Personnes];$formuleRequete)
 ```
 
-## Example 4 
+## Exemple 4 
 
-This example shows a query using related tables in 4D. In SQL you should use a JOIN to simulate this relation. Assuming we have the two following tables: 
+Cet exemple montre une requête utilisant des tables liées dans 4D. Via le SQL vous devez utiliser un JOIN pour recréer cette relation. Considérons les deux tables suivantes : 
+
+```RAW
+   [Factures] avec les champs (colonnes) suivants :      ID_Fact : Entier long      Date_Fact : Date      Total : Réel   [Lignes_Factures] avec les champs (colonnes) suivants :      ID_Ligne : Entier long      ID_Fact : Entier long      Code : Alpha (10)
+```
+
+Un lien de N vers 1 relie le champ \[Lignes\_Factures\]ID\_Fact au champ \[Factures\]ID\_Fact.  
+Avec la commande [QUERY BY FORMULA](query-by-formula.md), vous pourriez écrire :
+
+```4d
+ QUERY BY FORMULA([Lignes_Factures];([Lignes_Factures]Code="FX-200") & (Month of([Factures]Date_Fact)=4))
+```
+
+La requête SQL est :
 
 ```SQL
-   [Invoices] with the following columns (fields):      ID_Inv: Longint      Date_Inv: Date      Amount: Real   [Lines_Invoices] with the following columns (fields):      ID_Line: Longint      ID_Inv: Longint      Code: Alpha (10)
+SELECT ID_LigneFROM Lignes_Factures, FacturesWHERE Lignes_Factures.ID_Fact=Factures.ID_FactAND Lignes_Factures.Code='FX-200'AND MONTH(Factures.Date_Fact) = 4
 ```
 
-There is a Many-to-One relation from \[Lines\_Invoices\]ID\_Inv to \[Invoices\]ID\_Inv.  
-Using the [QUERY BY FORMULA](query-by-formula.md) command, you could write:
+En utilisant la commande **QUERY BY SQL** :
 
 ```4d
- QUERY BY FORMULA([Lines_Invoices];([Lines_Invoices]Code="FX-200") & (Month of([Invoices]Date_Inv)=4))
+ C_STRING(40;$formuleRequete)
+ $formuleRequete:="Lignes_Factures.ID_Fact=Factures.ID_Fact AND Lignes_Factures.Code=’FX-200’ AND MONTH(Factures.Date_Fact)=4"
+ QUERY BY SQL([Lignes_Factures];$formuleRequete)
 ```
 
-The SQL query is:
+## Variables et ensembles système 
 
-```SQL
-   SELECT ID_Line      FROM Lines_Invoices, Invoices      WHERE Lines_Invoices.ID_Inv=Invoices.ID_Inv         AND Lines_Invoices.Code='FX-200'         AND MONTH(Invoices.Date_Inv) = 4
-```
+Si le format de la condition de recherche est correct, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0, le résultat de la commande est une sélection vide et une erreur est retournée. Cette erreur peut être interceptée par une méthode installée à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
-When using the **QUERY BY SQL** command:
-
-```4d
- C_STRING(40;$queryFormula)
- $queryFormula:="Lines_Invoices.ID_Inv=Invoices.ID_InvAND Lines_Invoices.Code=’FX-200’ AND MONTH(Invoices.Date_Inv)=4"
- QUERY BY SQL([Lines_Invoices];$queryFormula)
-```
-
-## System variables and sets 
-
-If the format of the search condition is correct, the system variable OK is set to 1\. Otherwise, it is set to 0, the result of the command is an empty selection and an error is returned. This error can be intercepted by a method installed using the [ON ERR CALL](on-err-call.md) command.
-
-## See also 
+## Voir aussi 
 
 [QUERY BY FORMULA](query-by-formula.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 942 |
+| Numéro de commande | 942 |
 | Thread safe | no |
-| Modifies variables | OK, error |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK, error |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

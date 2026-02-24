@@ -1,6 +1,7 @@
 ---
 id: formula-from-string
 title: Formula from string
+slug: /commands/formula-from-string
 displayed_sidebar: docs
 ---
 

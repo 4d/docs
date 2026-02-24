@@ -4,45 +4,43 @@ title: Session storage
 displayed_sidebar: docs
 ---
 
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) : Object<!-- END REF-->
 
-<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.Session storage.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| id | Text | &#8594;  | Unique identifier (UUID) of the session  |
-| Function result | Object | &#8592; | Storage object of the session |
-</div>
+| Paramètres | Type   |                             | Description                                                |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id         | Text   | &#8594; | Identifiant unique (UUID) de la session |
+| Résultat   | Object | &#8592; | Objet de stockage de la session                            |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R8|Support of standalone sessions|
-|20 R6|Added|
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20 R8   | Prise en charge des sessions autonomes |
+| 20 R6   | Ajout                                  |
 
 </details>
 
+## Description
 
-## Description 
+<!--REF #_command_.Session storage.Summary-->La commande **Session storage** renvoie l'objet de stockage de la session dont l'identifiant unique a été passé dans le paramètre *id*.<!-- END REF--> 
 
-<!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
+Dans *id*, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le stockage. Il est automatiquement attribué par 4D (4D Server ou, pour les sessions autonomes, 4D monoposte) et est stocké dans la propriété [**.id**](../API/SessionClass.md#id) de l'[objet session](../API/SessionClass.md). Si la session n'existe pas, la commande renvoie **Null**.
 
-In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../API/SessionClass.md#id) property of the [session object](../API/SessionClass.md). If the session does not exist, the command returns **Null**. 
+**Note:** Vous pouvez obtenir les identifiants de session à l'aide de la commande [Process activity](process-activity.md).
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command. 
+L'objet renvoyé est la propriété [**.storage**](../API/SessionClass.md#storage) de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les process de la session.
 
-The returned object is the [**.storage**](../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
+## Exemple
 
-## Example 
-
-This method modifies the value of a "settings" property stored in the storage object of a specific session:
+Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'objet storage d'une session spécifique :
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
+  //Définition du storage d'une session
+  //La propriété de méthode "Execute On Server" est définie
  
  #DECLARE($id : Text; $text : Text)
  var $obj : Object
@@ -60,16 +58,16 @@ This method modifies the value of a "settings" property stored in the storage ob
  End if
 ```
 
-## See also 
+## Voir également
 
-[Process activity](process-activity.md)  
-[Session](./session.md)  
+[Process activity](process-activity.md)\
+[Session](./session.md)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1839 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1839 |
+| Thread safe        | oui  |
 
 

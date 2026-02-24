@@ -5,62 +5,62 @@ slug: /commands/object-get-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Syntax-->**OBJECT GET RESIZING OPTIONS** ( * ; *object* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT GET RESIZING OPTIONS** ( *object* : Variable, Field ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Syntax-->**OBJECT GET RESIZING OPTIONS** ( {* ;} *objet* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| horizontal | Integer | &#8592; | Horizontal resizing option |
-| vertical | Integer | &#8592; | Vertical resizing option |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| horizontal | Integer | &#8592; | Option de redimensionnement horizontal |
+| vertical | Integer | &#8592; | Option de redimensionnement vertical |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->The **OBJECT GET RESIZING OPTIONS** command returns the current resizing options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Summary-->La commande **OBJECT GET RESIZING OPTIONS** retourne les options de redimensionnement courantes de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The command returns the current resizing options, as set in the Design mode or for the process using the [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md) command. These options specify the display of the object when the form window is resized.
+La commande retourne les options de redimensionnement courantes, qu’elles aient été définies en mode Développement ou pour le process à l’aide de la commande [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md). Ces options définissent l’affichage de l’objet en cas de redimensionnement de la fenêtre du formulaire.
 
-The *horizontal* parameter returns a value indicating the horizontal resizing option that is set for the object. You can compare the value received with the following constants, found in the *Form Objects (Properties)* theme:
+Le paramètre *horizontal* retourne une valeur indiquant l’option de redimensionnement horizontal définie pour l’objet. Vous pouvez comparer la valeur reçue aux constantes suivantes, placées dans le thème *Objets de formulaire (Propriétés)* :
 
-| Constant               | Type    | Value | Comment                                                                                       |
-| ---------------------- | ------- | ----- | --------------------------------------------------------------------------------------------- |
-| Resize horizontal grow | Integer | 1     | If the window grows by 50% in width, the object is expanded by 50% to the right.              |
-| Resize horizontal move | Integer | 2     | If the window grows by 100 pixels in width, the object is moved 100 pixels to the right.      |
-| Resize horizontal none | Integer | 0     | If the window is expanded in width, neither the width nor the position of the object changes. |
+| Constante              | Type        | Valeur | Comment                                                                                            |
+| ---------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------- |
+| Resize horizontal grow | Entier long | 1      | Si la fenêtre s’agrandit de 50% en largeur, l’objet s’élargit de 50% vers la droite                |
+| Resize horizontal move | Entier long | 2      | Si la fenêtre s’agrandit de 100 pixels en largeur, l’objet se déplace de 100 pixels vers la droite |
+| Resize horizontal none | Entier long | 0      | Si la fenêtre s’agrandit en largeur, ni la largeur ni la position de l’objet ne varient            |
 
-The *vertical* parameter returns a value indicating the vertical resizing option that is set for the object. You can compare the value received with the following constants, found in the *Form Objects (Properties)* theme:
+Le paramètre *vertical* retourne une valeur indiquant l’option de redimensionnement vertical définie pour l’objet. Vous pouvez comparer la valeur reçue aux constantes suivantes, placées dans le thème *Objets de formulaire (Propriétés)* :
 
-| Constant             | Type    | Value | Comment                                                                                         |
-| -------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Resize vertical grow | Integer | 1     | If the window grows by 50% in height, the object is lengthened by 50% towards the bottom.       |
-| Resize vertical move | Integer | 2     | If the window grows by 100 pixels in height, the object is moved 100 pixels towards the bottom. |
-| Resize vertical none | Integer | 0     | If the window is expanded in height, neither the height nor the position of the object changes. |
+| Constante            | Type        | Valeur | Comment                                                                                         |
+| -------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------- |
+| Resize vertical grow | Entier long | 1      | Si la fenêtre s’agrandit de 50% en hauteur, l’objet s’allonge de 50% vers le bas                |
+| Resize vertical move | Entier long | 2      | Si la fenêtre s’agrandit de 100 pixels en hauteur, l’objet se déplace de 100 pixels vers le bas |
+| Resize vertical none | Entier long | 0      | Si la fenêtre s’agrandit en hauteur, ni la hauteur ni la position de l’objet ne varient         |
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1176 |
+| Numéro de commande | 1176 |
 | Thread safe | no |
 
 

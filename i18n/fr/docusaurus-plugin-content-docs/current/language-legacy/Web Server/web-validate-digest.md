@@ -5,74 +5,77 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *userName* : Text ; *password* : Text ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUtilisateur* ; *motDePasse* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userName | Text | &#8594;  | User name |
-| password | Text | &#8594;  | User password |
-| Function result | Boolean | &#8592; | True=Authentication OK, False=Authentication failed |
+| nomUtilisateur | Text | &#8594;  | Nom de l'utilisateur |
+| motDePasse | Text | &#8594;  | Mot de passe de l'utilisateur |
+| Résultat | Boolean | &#8592; | Vrai=Authentification correcte, Faux=Echec de l’authentification |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|11 SQL|Created|
+|13|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB Validate digest.Summary-->The **WEB Validate digest** command checks the validity of the identifying information (name and password) provided by a user connecting to the Web server.<!-- END REF--> This command must be used in the *On Web Authentication Database Method* in the context of Web authentication in Digest mode (see the *Connection Security* section). 
+<!--REF #_command_.WEB Validate digest.Summary-->La commande **WEB Validate digest** permet de vérifier la validité des identifiants (nom et mot de passe) fournis par un utilisateur se connectant au serveur Web.<!-- END REF--> Cette commande doit être utilisée dans la *Méthode base Sur authentification Web* dans le cadre d’une authentification Web en mode Digest (cf. section *Sécurité des connexions*). 
 
-In the *userName* and *password* parameters, pass the identifying information of the user stored locally. The command uses this information to generate a value that it compares with the information sent by the Web browser.
+Passez dans les paramètres *nomUtilisateur* et *motDePasse* les identifiants de l’utilisateur conservés en local. La commande utilise ces identifiants pour générer une valeur qu’elle compare aux informations envoyées par le navigateur Web.
 
-If the values are the same, the command returns True. Otherwise, it returns False.
+Si les valeurs sont identiques, la commande retourne Vrai. Sinon, elle retourne Faux.
 
-You can use this mechanism to manage and maintain your own secure access system to the Web server by programming. Note that Digest validation cannot be used jointly with 4D passwords.
+Ce mécanisme vous permet de gérer et de maintenir par programmation votre propre système sécurisé d’accès au serveur Web. A noter que la validation Digest ne peut pas être utilisée conjointement avec les mots de passe 4D.
 
-**Note:** If the browser does not support Digest authentication, an error is returned (authentication error).
+**Note :** Si le navigateur ne prend pas en charge l’authentification Digest, une erreur est retournée (erreur d’authentification).
 
-## Example 
+## Exemple 
 
-Example using *On Web Authentication Database Method* in Digest mode:
+Exemple de *Méthode base Sur authentification Web* en mode Digest 
 
 ```4d
-  // On Web Authentication Database Method
+  // Méthode base Sur authentification Web
  #DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+
+ var $utilisateur : Text
+ var $0 : Boolean
  $result:=False
- $user:=$5
-  //For security reasons, refuse names containing @
- If(WithWildcard($user))
-    $result:=False
-  //The WithWildcard method is described in the "On Web Authentication Database Method" section
+ $utilisateur:=$5
+     //Pour des raisons de sécurité, refuser les noms qui contiennent @
+ If(AvecJoker($utilisateur))
+       $result:=False
+           //La méthode AvecJoker est décrite dans la section "Méthode base Sur authentification Web"
  Else
-    QUERY([WebUsers];[WebUsers]User=$user)
-    If(OK=1)
-       $result:=WEB Validate digest($user;[WebUsers]password)
-    Else
-       $result:=False //User does not exist
-    End if
+       QUERY([WebUsers];[WebUsers]User=$utilisateur)
+       If(OK=1)
+          $result:=WEB Validate digest($utilisateur;[WebUsers]Mdp)
+       Else
+          $result:=False //Utilisateur inexistant
+       End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Generate digest](generate-digest.md)  
 [Validate password](validate-password.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 946 |
+| Numéro de commande | 946 |
 | Thread safe | yes |
 
 

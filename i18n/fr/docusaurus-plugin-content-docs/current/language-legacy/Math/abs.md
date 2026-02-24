@@ -5,35 +5,35 @@ slug: /commands/abs
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Abs.Syntax-->**Abs** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Abs.Syntax-->**Abs** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number for which to return the absolute value |
-| Function result | Real | &#8592; | Absolute value of number |
+| nombre | Real | &#8594;  | Nombre dont vous voulez obtenir la valeur absolue |
+| Résultat | Real | &#8592; | Valeur absolue de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Abs.Summary-->Abs returns the absolute (unsigned, positive) value of *number*.<!-- END REF--> If *number* is negative, it is returned as positive. If *number* is positive, it is returned unchanged.
+<!--REF #_command_.Abs.Summary-->**Abs** retourne la valeur absolue (positive et sans signe) de *nombre*.<!-- END REF--> Si *nombre* est négatif, sa valeur positive est retournée. Si *nombre* est positif, il est retourné inchangé. 
 
-## Example 
+## Exemple 
 
-The following example returns the absolute value of –10.3, which is 10.3:
+L'exemple suivant retourne la valeur absolue de -10,3, qui est 10,3 :
 
 ```4d
- vlVector:=Abs(-10.3)
+ vVector:=Abs(-10,3)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 99 |
+| Numéro de commande | 99 |
 | Thread safe | yes |
 
 

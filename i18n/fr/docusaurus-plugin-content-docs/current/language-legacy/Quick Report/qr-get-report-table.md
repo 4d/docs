@@ -5,43 +5,43 @@ slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *area* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *zone* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report table.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Function result | Integer | &#8592; | Table number |
+| zone | Integer | &#8594;  | Référence de la zone |
+| Résultat | Integer | &#8592; | Numéro de table |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Get report table.Summary-->The QR Get report table command returns the current table number for the report area whose reference was passed in *area*.<!-- END REF-->
+<!--REF #_command_.QR Get report table.Summary-->La commande **QR Get report table** retourne le numéro de la table courante de l'état désigné par le paramètre *zone*.<!-- END REF--> 
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR SET REPORT TABLE](qr-set-report-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 758 |
+| Numéro de commande | 758 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

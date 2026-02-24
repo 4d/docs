@@ -5,65 +5,67 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* : Time ; *statement* : Text )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* ; *instruction* )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| statement | Text | &#8594;  | Statement to insert in the document |
+| document | Time | &#8594;  | Référence du document ouvert |
+| instruction | Text | &#8594;  | Instruction à insérer dans le document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->In the XML document referenced by *document*, the SAX ADD PROCESSING INSTRUCTION command adds an XML processing *statement*.<!-- END REF--> 
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->La commande **SAX ADD PROCESSING INSTRUCTION** ajoute dans le document XML référencé par *document* une *instruction* de traitement XML.<!-- END REF--> 
 
-A processing statement lets you indicate the application type and when necessary any additional parameters allowing you to process an unparsable external entity. 
+Une instruction de traitement permet d’indiquer le type d’application et éventuellement des paramètres additionnels permettant de traiter une entité externe non analysable. 
 
-The command formats the data of the statement in conformity with XML. However, the statements themselves are not parsed and it is up to the developer to make sure that they are valid.
+La commande formate les données d’instruction conformément au XML. En revanche, les instructions elles-mêmes ne sont pas analysées, il revient au développeur de s’assurer qu’elles sont valides.
 
-## Example 
+## Exemple 
 
-The following code: 
+Le code suivant : 
+
+... inscrira cette ligne dans le document : 
 
 ```4d
- vtInstruct:="xml-stylesheet type="+Char(Quote)+"text/xsl"+Char(Quote)+
- "href="+Char(Quote)+"style.xsl"+Char(Quote)
- SAX ADD PROCESSING INSTRUCTION($DocRef;vtInstruct)
+ vtInstruct:="xml-stylesheet type="+Char(Double quote)+"text/xsl"+Char(Double quote)+"href="+
+ Char(Double quote)+"style.xsl"+Char(Double quote)
+ SAX ADD PROCESSING INSTRUCTION($RefDoc;vtInstruct)
 ```
 
-... will write the following line in the document: 
+... inscrira cette ligne dans le document : 
 
-```xml
- <?xml-stylesheet type="text/xsl"href="style.xsl"?>
+```XML
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 857 |
+| Numéro de commande | 857 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

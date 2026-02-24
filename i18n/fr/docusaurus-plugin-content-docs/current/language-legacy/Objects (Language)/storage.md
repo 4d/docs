@@ -9,40 +9,40 @@ displayed_sidebar: docs
 <!--REF #_command_.Storage.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &#8592; | Catalog of shared objects and shared collections registered in Storage |
+| Résultat | Object | &#8592; | Catalogue des objets et collections partagé(e)s enregistré(e)s dans Storage |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Storage.Summary-->The **Storage** method returns the catalog of shared objects or shared collections that you have registered in the *Storage* object on the current machine or component.<!-- END REF--> 
+<!--REF #_command_.Storage.Summary-->La commande **Storage** retourne le catalogue des objets partagés et des collections partagées qui ont été enregistré(e)s dans l'objet *Storage* sur la machine ou le composant courant(e).<!-- END REF--> 
 
-The catalog returned by **Storage** is automatically created by 4D and is available to all processes of the database, including preemptive processes. There is one **Storage** catalog per machine and component: in a client/server application, there is one **Storage** shared object on the server, and one **Storage** shared object on each remote 4D application; if the database uses components, there is one **Storage** object per component.
+Le catalogue retourné par **Storage** est créé automatiquement par 4D et est disponible pour tous les process de la base, y compris les process préemptifs. Il existe un seul catalogue **Storage** par machine et par composant : dans une application client/serveur, il y a un seul objet partagé **Storage** sur le serveur, et un objet partagé **Storage** sur chaque application 4D distante ; si la base utilise des composants, il y a également un objet **Storage** par composant.
 
-Use the **Storage** catalog to reference any shared objects or shared collections that you want to be used from any preemptive or standard process. To register a shared object or a shared collection in the catalog, add its reference to the shared object returned by **Storage**.
+Utilisez le catalogue **Storage** pour référencer les objets ou collections partagé(e)s que vous souhaitez utiliser depuis tout process préemptif ou standard. Pour enregistrer un objet partagé ou une collection partagée dans **Storage**, il suffit d'ajouter sa référence à l'objet partagé retourné par **Storage**.
 
-Since the catalog returned by **Storage** is a *shared object*, it follows the rules described in the *Shared objects and shared collections* section, but with some specificities:
+Comme le catalogue retourné par **Storage** est un *objet partagé*, il suit les règles décrites dans la section *Objets partagés et collections partagées*, avec toutefois les spécificités suivantes :
 
-* This object can only contain shared objects and shared collections. Trying to add other kinds of values (non-shared objects or collections, null, scalar values) will generate an error.
-* Adding a property to this object must be surrounded by the *Use...End use* structure, otherwise an error is returned. Reading an attribute outside of a *Use...End use* structure is, however, possible.
-* When surrounded by the *Use...End use* structure, first-level attributes of **Storage** are locked for other processes.
-* Unlike standard shared objects, the object returned by **Storage** will NOT share its *locking identifier* with shared objects or collections added as attributes (for more information, refer to the *About the locking identifier (how shared groups work)* section).
+* Cet objet peut uniquement contenir des objets partagés ou des collections partagées. Si vous tentez d'ajouter d'autres types de valeurs (objets ou collections non partagé(e)s, null, valeurs scalaires), une erreur est générée.
+* L'ajout d'une propriété dans cet objet doit être encadré par une structure *Utiliser...Fin utiliser*, sinon une erreur est générée. La lecture d'une propriété en-dehors d'une structure *Utiliser...Fin utiliser* est cependant possible.
+* Lorsqu'ils sont encadrés par une structure *Utiliser...Fin utiliser*, les attributs de premier niveau de **Storage** sont verrouillés pour les autres process.
+* A la différence des objets partagés standard, l'objet retourné par **Storage** ne partage PAS son *locking identifier* avec les objets partagés ou les collections partagées qui lui sont ajoutés en tant qu'attributs (pour plus d'informations, reportez-vous à la section *A propos du locking identifier (comment fonctionnent les groupes partagés)*).
 
-## Example 1 
+## Exemple 1 
 
-A common practice could be initializing the **Storage** object in the : 
+Il est pratique d'initialiser le contenu de l'objet **Storage** dans la : 
 
 ```4d
  Use(Storage)
@@ -50,9 +50,9 @@ A common practice could be initializing the **Storage** object in the :
  End use
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example shows a standard way to set **Storage** values: 
+Cet exemple montre la manière standard de définir les valeurs de **Storage** : 
 
 ```4d
  Use(Storage)
@@ -64,26 +64,26 @@ This example shows a standard way to set **Storage** values:
  End use
 ```
 
-## Example 3 
+## Exemple 3 
 
-**Storage** allows implementing a singleton with a *lazy initialization*, as shown in the following example.
+**Storage** permet d'implémenter un singleton en *lazy initialization*, comme proposé dans l'exemple ci-dessous.
 
-**Note:** For more information about singleton patterns, you can refer to this [Wikipedia page](https://en.wikipedia.org/wiki/Singleton%5Fpattern).
+**Note :** Pour plus d'informations sur les singletons, vous pouvez consulter cette [page Wikipedia](https://fr.wikipedia.org/wiki/Singleton%5F%28patron%5Fde%5Fconception%29).
 
 ```4d
  var $0 : Integer
  var $counterValue : Integer
- var counter : Object //create a reference to counter for the process
+ var counter : Object //créer une référence de counter pour le process
  
- If(counter=Null) //if this reference is null, get if from Storage
-    Use(Storage) //Use of Storage needed only once!
+ If(counter=Null) //si la référence est null, on la récupère depuis Storage
+    Use(Storage) //L'utilisation de Storage n'est nécessaire qu'une seule fois !
        If(Storage.counter=Null)
           Storage.counter:=New shared object("operation";0)
        End if
-       counter:=Storage.counter //Get the reference of the counter shared object
+       counter:=Storage.counter //Obtenir la référence de l'objet partagé counter
     End use
  End if
- Use(counter) //directly use the shared object counter (no need to use Storage!)
+ Use(counter) //on utilise directement l'objet partagé counter (pas besoin de Storage)
     counter.operation:=counter.operation+1
     $counterValue:=counter.operation
  End use
@@ -91,15 +91,15 @@ This example shows a standard way to set **Storage** values:
  $0:=$counterValue
 ```
 
-## See also 
+## Voir aussi 
 
-*Shared objects and shared collections*  
+*Objets partagés et collections partagées*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1525 |
+| Numéro de commande | 1525 |
 | Thread safe | yes |
 
 

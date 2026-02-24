@@ -5,332 +5,331 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( *aTable* : Table {; *queryArgument* : Expression {; *}} )<br/>**QUERY** ( *queryArgument* : Expression {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*laTable* }{;}{ *critère* {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
-| queryArgument | Expression | &#8594;  | Query argument |
-| * | Operator | &#8594;  | Continue query flag |
+| laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| critère | Expression | &#8594;  | Critère de recherche |
+| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY.Summary-->**QUERY** looks for records matching the criteria specified in *queryArgument* and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
+<!--REF #_command_.QUERY.Summary-->La commande **QUERY** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) dans *critère* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
 
-If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
+Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
-If you do not specify *queryArgument* or the *\** parameters, **QUERY** displays the Query editor for *aTable* (except when it is the last row of a multiple query, see example 2):
+Si vous ne passez ni le paramètre *critère* ni le paramètre *\**, **QUERY** affiche la boîte de dialogue de l'Editeur de recherches de 4D pour *table* (sauf lorsqu'il s'agit de la dernière ligne d'une recherche complexe, cf. ci-dessous) :
 
-![](../assets/en/commands/pict1581957.en.png)
+![](../assets/en/commands/pict1581957.fr.png)
 
-For more information about using the Query Editor, refer to the 4D Design Reference manual.
+Pour plus d'informations sur l'utilisation de cet éditeur, reportez-vous au manuel *Mode Développement*.  
+L'utilisateur construit la recherche puis clique sur le bouton **Chercher** ou **Chercher dans sélection**. Si la recherche est correctement effectuée et n'est pas interrompue, la variable système OK prend la valeur *1*. Si l'utilisateur clique sur **Annuler**, la commande **QUERY** est interrompue sans effectuer de recherche et la variable OK prend la valeur *0* (zéro).
 
-The user builds the query, then clicks the Query button or chooses Query in selection to perform the query. If the query is performed without interruption, the OK variable is set to 1\. If the user clicks Cancel, the **QUERY** terminates with no query actually performed, and sets the OK variable to *0* (zero). 
+## Exemple 1 
 
-## Example 1 
-
-The following line displays the Query editor for the \[Products\] table:
+L'exemple suivant affiche l'Editeur de recherches pour la table \[Produits\] :
 
 ```4d
- QUERY([Products])
+ QUERY([Produits])
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following line displays the Query editor for the default table (if it has been set)
+L'exemple suivant affiche l'Editeur de recherches pour la table par défaut (si elle a été définie) : 
 
 ```4d
  QUERY
 ```
 
-If you specify the *queryArgument* parameter, the standard Query editor is not presented and the query is defined programmatically. For simple queries (search on only one field) you call QUERY once with *queryArgument*. For multiple queries (search on multiple fields or with multiple conditions), you call QUERY as many times as necessary with *queryArgument*, and you specify the optional \* parameter, except for the last QUERY call, which starts the actual query operation. The *queryArgument* parameter is described further in this section.
+Si vous spécifiez le paramètre *critère*, l'Editeur de recherches ne s'affiche pas et la recherche est entièrement définie par programmation. Pour des recherches simples (recherches sur un seul champ), vous appelez **QUERY** une seule fois avec le paramètre *critère* construit de la manière décrite plus bas. Pour des recherches complexes (recherches sur de multiples champs ou avec de multiples conditions), vous appelez **QUERY** autant de fois que nécessaire avec le paramètre *critère* et le paramètre optionnel \* sauf pour la dernière ligne **QUERY** (qui déclenche la recherche).
 
-## Example 3 
+## Exemple 3 
 
-The following line looks for the \[People\] whose name starts with an “a”:
+L'exemple suivant recherche les \[Personnes\] dont le nom commence par "a" :
 
 ```4d
- QUERY([People];[People]Last name="a@")
+ QUERY([Personnes];[Personnes]Nom="a@")
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following line looks for the \[People\] whose name starts with “a” or “b”:
+L'exemple suivant recherche les \[Personnes\] dont le nom commence par "a" ou "b" :
 
 ```4d
- QUERY([People];[People]Name="a@";*) // * indicates that there are further search criteria
- QUERY([People];|;[People]Name="b@") // No * ends the query definition and starts the actual query operation
+ QUERY([Personnes];[Personnes]Nom="a@";*) // * indique qu'il y a un autre critère de recherche
+ QUERY([Personnes];|;[Personnes]Nom="b@")
+  // Pas de * : indique la fin de la définition des critères et lance l'exécution de la recherche
 ```
 
-**Note:** The interpretation of @ characters in queries can be modified via an option in the Preferences. For more information, please refer to the *Comparison Operators* section.
+**Note :** Le mode d'interprétation du caractère @ dans les recherches peut être modifié via une option des préférences. Pour plus d'informations, reportez-vous à la section *Opérateurs de comparaison*.
 
-## Specifying the Query Argument 
+## Construction d'une ligne de recherche 
 
-The *queryArgument* parameter uses the following syntax:
+Le paramètre *critère* utilise la syntaxe suivante :
 
-*{ conjunction ; } field comparator value*
+*{opérateur ; } champ comparateur valeur*
 
- The conjunction is used to join QUERY calls when defining multiple queries. The conjunctions available are the same as those in the Query editor:
+* L'opérateur est utilisé pour lier deux appels à **QUERY** lors d'une définition de recherche complexe. Les opérateurs disponibles sont les mêmes que ceux proposés dans l'Editeur de recherches :  
 
-| **Conjunction** | **Symbol to use with QUERY** |
-| --------------- | ---------------------------- |
-| AND             | &                            |
-| OR              | \|                           |
-| Except          | #                            |
+| **Opérateur** | **Symbole** |  
+| ------------- | ----------- |  
+| ET            | &           |  
+| OU            | \|          |  
+| Sauf          | #           |  
+    
+L'opérateur est optionnel et n'est pas nécessaire pour le premier appel à **QUERY** lors d'une recherche complexe. Il est également inutile si votre recherche s'écrit sur une seule ligne. Si vous l'omettez à l'intérieur d'une recherche complexe, le **ET** (&) est utilisé par défaut.
+* Le *champ* est le champ sur lequel va porter la recherche. Il peut provenir d'une autre table si celle-ci est la table 1 d'une table liée à *table* par un lien automatique ou manuel.
+* Le *comparateur* est l'élément qui va permettre de confronter *champ* et *critèreRecherche*. Voici la liste des comparateurs possibles :  
 
-The *conjunction* is optional and not used for the first QUERY call of a multiple query, or if the query is a simple query. If you omit it within a multiply query, AND (&) is used by default.
+| **Comparateur**     | **Symbole à utiliser avec** **QUERY** |  
+| ------------------- | ------------------------------------- |  
+| Egal à              | \=                                    |  
+| Différent de        | #                                     |  
+| Inférieur à         | <                                     |  
+| Supérieur à         | \>                                    |  
+| Inférieur ou égal à | <=                                    |  
+| Supérieur ou égal à | \>=                                   |  
+| Contient mot-clé    | %                                     |
 
- The *field* is the field to query. The *field* may belong to another table if it belongs to a One table related to *aTable* with an automatic or manual relation.  
-  
-The *comparator* is the comparison that is made between *field* and *value*. The *comparator* is one of the symbols shown here:
+**Note :** Il est possible de définir le comparateur sous la forme d'une expression alphanumérique au lieu d'un symbole. Dans ce cas, il est obligatoire d'utiliser des points-virgules pour dissocier les éléments de la chaîne de recherche. Ce principe permet par exemple de créer des séquences de recherches paramétrables en faisant varier le comparateur, ou de construire des interfaces de recherche utilisateur personnalisées. Reportez-vous à l'exemple 21\. 
 
-| **Comparison**           | **Symbol to use with QUERY** |
-| ------------------------ | ---------------------------- |
-| Equal to                 | \=                           |
-| Not equal to             | #                            |
-| Less than                | <                            |
-| Greater than             | \>                           |
-| Less than or equal to    | <=                           |
-| Greater than or equal to | \>=                          |
-| Contains keyword         | %                            |
+* La *valeur* représente ce qui va être comparé au contenu de *champ*. La valeur peut être toute expression du même type que *champ*. Le type de la valeur n'est évalué qu'une seule fois, au démarrage de la recherche, et ne l'est donc pas pour chaque enregistrement. Si la recherche porte sur le contenu d'une chaîne de caractères, utilisez dans 'valeur' le symbole "@" pour isoler le contenu à rechercher, par exemple "@Dupon@". Il est à noter, dans ce cas, que la recherche ne tire que partiellement parti de l'index (compacité du stockage des données).  
+La recherche par mots-clés n'est disponible qu'avec des champs de type alpha ou texte. Pour plus d'informations sur ce type de recherche, reportez-vous à la section *Opérateurs de comparaison*.
 
-**Note:** It is also possible to specify the comparison operator as an alphanumeric expression instead of a symbol. In this case, it is mandatory to use semi-colons in order to separate the items of the query string. This means that it is possible, for example, to create configurable query sequences by varying the comparison operator, or to build custom user query interfaces. Please refer to example 21.
+Voici les règles à observer pour la construction de séquences de recherche :
 
-The *value* is the data against which *field* will be compared. The value can be any expression that evaluates to the same data type as *field*. The value is evaluated once, at the beginning of the query. The value is not evaluated for each record. To query for a string contained in a string (a “contains” query), use the wildcard symbol (@) in *value* to isolate the string to be searched for as shown in this example "@Smith@". Note that in this case, the search only partially benefits from the index (compactness of data storage).
+* La première ligne ne doit pas contenir d'opérateur.
+* Les suivantes peuvent débuter par un opérateur de liaison. Si vous l'omettez, l'opérateur ET (&) est utilisé par défaut.
+* Toutes les lignes, à l'exception de la dernière, doivent s'achever par le symbole \*.
+* Pour lancer la recherche, ne passez pas le paramètre \* lors de la construction de votre dernière ligne. Autre solution : vous pouvez exécuter la commande **QUERY** sans autre paramètre que la table (l'Editeur de recherches ne s'affiche pas ; au lieu de cela, les lignes de recherche complexes définies auparavant sont exécutées).
 
-Searching by keywords is only available with Alpha or Text type fields. For more information about this type of query, please refer to the *Comparison Operators* section. 
+**Note :** Chaque table maintient sa propre construction de recherche courante. Cela signifie que vous pouvez créer de multiples recherches simultanément, une pour chaque table. Dans ce cas, vous devez passer le paramètre *table* ou spécifier une table par défaut. 
 
-Here are the rules for building multiple queries:
+Quelle que soit la manière dont la recherche a été définie :
 
-* The first query argument must not contain a conjunction.
-* Each successive query argument can begin with a conjunction. If you omit it, the AND (&) operator is used by default.
-* The first query and every other query, except the last, must use the \* parameter.
-* To perform the query, do not specify the \* parameter in the last QUERY command. Alternatively, you may execute the QUERY command without any parameters other than the table (the Query editor is not shown; instead, the multiple query you just defined is performed).
+* Si l'exécution d'une commande **QUERY** nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ces thermomètres peuvent être cachés à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
+* Si des champs indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération. La commande tire parti des index composites pour les recherches utilisant le **ET** (&).
 
-**Note:** Each table maintains its own current built query. This means that you can create multiple built queries simultaneously, one for each table. You must use the *aTable* parameter or set the default table to specify which table to use.
+## Exemple 5 
 
-No matter which way a query has been defined:
-
-* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click on the Stop button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
-* If any indexed fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible. The command makes use of composite indexes for queries using the AND (&).
-
-## Example 5 
-
-The following command finds the records for all the people named Smith:
+Nous recherchons tous les enregistrements dont le nom correspond à "Dupont" :
 
 ```4d
- QUERY([People];[People]Last Name="Smith")
+ QUERY([Personnes];[Personnes]Nom="Dupont")
 ```
 
-**Note:** If the Last Name field were indexed, the QUERY command would automatically use the index for a fast query.
+**Note :** Si le champ Nom est indexé, nous bénéficions donc d'une recherche accélérée tirant parti de l'index.
 
-**Reminder:** This query will find records like “Smith”, “smith”,“SMITH”, etc. To distinguish lowercase from uppercase, perform additional queries using the character codes.
+**Rappel :** Cette recherche trouvera les enregistrements tels que "Dupont", "dupont", "DUPONT", etc. Si vous voulez que la recherche tienne compte des majuscules/minuscules, définissez des critères supplémentaires utilisant les codes de caractères.
 
-## Example 6 
+## Exemple 6 
 
-The following example finds the records for all people named John Smith. The Last Name field is indexed. The First Name field is not indexed. 
+ Nous recherchons les personnes se nommant "Dupont" et se prénommant "Jean". Le champ Nom est indexé. En revanche, le champ Prénom ne l'est pas :
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) // Find every person named Smith
- QUERY([People]; & ;[People]First Name="john") // with John as first name
+ QUERY([Personnes];[Personnes]Nom="Dupont";*) // Chercher toute personne qui s'appelle Dupont
+ QUERY([Personnes];&;[Personnes]Prénom="Jean") // dont le prénom est Jean
 ```
 
-When the query is performed, it quickly does an indexed search on Last Name and reduces the selection of records to those of people named Smith. The query then sequentially searches on First Name in this selection of records.
+Cet exemple effectue dans un premier temps une recherche rapide sur le champ indexé Nom, ce qui réduit la sélection d'enregistrements à ceux des personnes s'appelant Dupont. La recherche s'effectue ensuite séquentiellement sur le champ Prénom, mais nous serons peu pénalisés puisqu'elle s'exécute parmi une présélection d'enregistrements.
 
-## Example 7 
+## Exemple 7 
 
-The following example will automatically take advantage of a composite index of the *\[People\]First Name*+*\[People\]Last Name* fields (if it exists) to find the records for all people named John Smith.
+Cet exemple tirera automatiquement parti de l'index composite incluant les champs *\[Personnes\]Prénom+\[Personnes\]Nom* (s'il existe) pour trouver les enregistrements de toutes les personnes nommées Jean Dupont :
 
 ```4d
- QUERY([People];[People]First Name="john";*) // Find every person named John
- QUERY([People];&;[People]Last Name="smith") // with Smith as last name
+ QUERY([Personnes];[Personnes]Prénom="john";*) // Trouver tous les Jean
+ QUERY([Personnes];&;[Personnes]Nom="Dupont") // dont le nom est Dupont
 ```
 
-For more information, see *Composite indexes*.
+Pour plus d'informations, veuillez vous référer au paragraphe *Index composites*.
 
-## Example 8 
+## Exemple 8 
 
-The following example finds the records of people named Smith or Jones. The Last Name field is indexed.
+L'exemple suivant recherche les personnes se nommant Dupont ou Blanc. Le champ Nom est indexé :
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) // Find every person named Smith…
- QUERY([People];|;[People]Last Name="jones") // ...or Jones
+  // Chercher toute personne qui s'appelle Dupont…
+ QUERY([Personnes];[Personnes]Nom="Dupont";*)
+ QUERY([Personnes];|;[Personnes]Nom="Blanc") // ou Blanc
 ```
 
-The QUERY command uses the Last Name index for both queries. The two queries are performed, and their results put into internal sets that are eventually combined using a union.
+La commande utilise l'index du champ Nom pour les deux recherches. Les deux recherches sont effectuées, et leurs résultats sont placés dans des ensembles internes qui sont finalement combinés par l'intermédiaire d'une opération Union. 
 
-## Example 9 
+## Exemple 9 
 
-The following example finds the records for people who do not have a company name. It does this by finding entries with empty fields (the empty string).
+L'exemple suivant recherche des personnes qui ne travaillent pas pour une société. La recherche est effectuée en testant si le nom de la société est une chaîne vide.
 
 ```4d
- QUERY([People];[People]Company="") // Find every person with no company
+ QUERY([Personnes];[Personnes]Société="") // Chercher les personnes sans société
 ```
 
-## Example 10 
+## Exemple 10 
 
-The following example finds the record for every person whose last name is Smith and who works for a company based in New York. The second query uses a field from another table. This query can be done because the \[People\] table is related to the \[Company\] table with a many to one relation:
+L'exemple suivant recherche chaque personne se nommant "Dupont" et travaillant dans une société basée à Paris. La deuxième recherche utilise un champ venant d'une autre table. Cette recherche peut être effectuée parce que la table \[Personnes\] est liée à la table \[Société\] par un lien de N vers 1 :
 
 ```4d
- QUERY([People];[People]Last Name="smith";*) // Find every person named Smith…
- QUERY([People];&;[Company]State="NY") // ... who works for a company based in NY
+ QUERY([Personnes];[Personnes]Nom="Dupont";*) // Chercher toute personne qui s'appelle Dupont…
+ QUERY([Personnes];&;[Société]Ville ="Paris") // ...qui travaille pour une société à Paris
 ```
 
-## Example 11 
+## Exemple 11 
 
-The following example finds the record for every person whose name falls between A (included) and M (included):
+L'exemple suivant recherche l'enregistrement de chaque personne dont l'initiale du nom est située entre les lettre A (incluse) et M (incluse) :
 
 ```4d
- QUERY([People];[People]Name<"n") // Find every person from A to M
+ QUERY([Personnes];[Personnes]Nom<"n") // Trouver toute personne entre A et M
 ```
 
-## Example 12 
+## Exemple 12 
 
-The following example finds the records for all the people living in the San Francisco or Los Angeles areas (ZIP codes beginning with 94 or 90):
+L'exemple suivant recherche les enregistrements des personnes habitant soit Paris soit Lyon :
 
 ```4d
- QUERY([People];[People]ZIP Code ="94@";*) // Find every person in the SF…
- QUERY([People];|;[People]ZIP Code ="90@") // ...or Los Angeles areas
+ QUERY([Personnes];[Personnes]CodePostal="75@";*) // Trouver ceux qui habitent Paris…
+ QUERY([Personnes];|;[Personnes]CodePostal="6900@") // ou Lyon
 ```
 
-## Example 13 
+## Exemple 13 
 
-Searching by keyword: the following example searches the \[Products\] table for records where the Description field contains the word “easy”: 
+Recherche par mot-clé : l’exemple suivant recherche dans toute la table \[Produits\] les enregistrements dont le champ Description contient le mot “facile” : 
 
 ```4d
- QUERY([Products];[Products]Description%"easy")
-  // Find products whose description contains the keyword easy
+ QUERY([Produits];[Produits]Description%"facile")
+  // Trouver les produits dont la description contient le mot-clé facile
 ```
 
-## Example 14 
+## Exemple 14 
 
-The following example finds the record that matches the invoice reference entered in the request dialog box:
+Nous recherchons les enregistrements correspondant à la réponse fournie dans une boîte de dialogue :
 
 ```4d
- vFind:=Request("Find invoice reference:") // Get an invoice reference from the user
- If(OK=1) // If the user pressed OK
-    QUERY([Invoice];[Invoice]Ref=vFind) // Find the invoice reference that matches vFind
+ vTrouvé:=Request("Saisissez un code de facture :") //Demander un code de facture à l'utilisateur
+ If(OK=1) // Si l'utilisateur clique sur OK…
+    QUERY([Factures];[Factures]Code =vTrouvé) //Trouver le code qui correspond à vTrouvé
  End if
 ```
 
-## Example 15 
+## Exemple 15 
 
-The following example finds the records for the invoices entered in 1996\. It does this by finding all records entered after 12/31/95 and before 1/1/97:
+Cet exemple recherche tous les enregistrements des factures saisies en 1996\. Nous recherchons les dates entre le 31/12/95 et le 1/1/97 :
 
 ```4d
- QUERY([Invoice];[Invoice]In Date>!12/31/95!;*) // Find invoices after 12/31/95…
- QUERY([Invoice];&;[Invoice]In Date
+ QUERY([Factures];[Factures]DateFacture >!31/12/95!;*) // Trouver des factures après le 31/12/95…
+ QUERY([Factures];&;[Factures]DateFacture 
 ```
 
-## Example 16 
+## Exemple 16 
 
-The following example finds the record for each employee whose salary is between $10,000 and $50,000\. The query includes the employees who make $10,000, but excludes those who make $50,000:
+L'exemple suivant trouve les employés qui ont un salaire entre 20 000 et 40 000 Euros. La recherche inclut les employés qui gagnent 20 000 Euros et exclut ceux qui gagnent 40 000 Euros :
 
 ```4d
- QUERY([Employee];[Employee]Salary >=10000;*) // Find employees who make between…
- QUERY([Employee];&;[Employee]Salary <50000) // ...$10,000 and $50,000
+ QUERY([Employés];[Employés]Salaire >=20000;*) // Trouver les employés qui ont un salaire entre…
+ QUERY([Employés];&;[Employés]Salaire <40000) // 20 000 et 40 000 Euros
 ```
 
-## Example 17 
+## Exemple 17 
 
-The following example finds the records for the employees in the marketing department who have salaries over $20,000\. The Salary field is queried first because it is indexed. Notice that the second query uses a field from another table. It can do this because the \[Dept\] table is related to the \[Employee\] table with an automatic many to one relation:
+L'exemple suivant cherche les employés du service Marketing qui ont un salaire supérieur à 30 000 Euros. Le champ Salaire est utilisé dans un premier temps car il est indexé. Notez que la seconde recherche utilise un champ venant d'une autre table. Le champ \[Service\]Nom est lié à la table \[Employés\] par un lien automatique de N vers 1.
 
 ```4d
- QUERY([Employee];[Employee]Salary >20000;*) // Find employees with salaries over $20,000 and...
- QUERY([Employee];&;[Dept]Name="marketing") // ...who are in the marketing department
+ QUERY([Employés];[Employés]Salaire >30000;*)
+  // Trouver les employés qui ont un salaire supérieur à 30 000 Euros
+ QUERY([Employés];&;[Service]Nom="marketing") // et qui travaillent dans le service marketing
 ```
 
-## Example 18 
+## Exemple 18 
 
-Given three tables related by Many-to-One relations: \[City\] -> \[Department\] -> \[Region\]. The following query finds all the regions with cities whose names begin with "Saint":
+Soient trois tables reliées par des liens de N vers 1 : \[Ville\] -> \[Département\] -> \[Région\] . La recherche suivante trouve toutes les régions comportant des villes dont le nom débute par "Saint" :
 
 ```4d
- QUERY([Region];[City]Name="Saint@") // Find all the regions with cities beginning with "Saint"
+ QUERY([Région];[Ville]Nom="Saint@") // Trouver toutes les régions contenant des villes commençant par Saint
 ```
 
-## Example 19 
+## Exemple 19 
 
-The following example queries for information that was entered into the variable *myVar*.
+La recherche suivante recherche les informations égales à la valeur de la variable *mavar*.
 
 ```4d
- QUERY([Laws];[Laws]Text =myVar) // Find all laws that match myVar
+ QUERY([Lois];[Lois]Texte =mavar) // Trouver toutes les lois qui sont égales à la valeur de mavar
 ```
 
-The query could have many different results, depending on the value of *myVar*. The query will also be performed differently. For example:
+La recherche peut avoir des résultats différents selon la valeur de *mavar*. Elle sera également exécutée différement. Par exemple :
 
-* If *myVar* equals *"Copyright@"*, the selection contains all laws with texts beginning with Copyright.
-* If *myVar* equals *"@Copyright@"*, the selection contains all laws with texts containing at least one occurrence of Copyright.
+* Si *mavar* est égale à "Copyright@", la sélection contient toutes les lois qui commencent par Copyright.
+* Si *mavar* est égale à "@Copyright@", la sélection contient toutes les lois qui contiennent au moins une occurrence de Copyright.
 
-## Example 20 
+## Exemple 20 
 
-The following example adds or does not add lines to a complex query depending on the value of the variables. This way, only valid criteria are taken into account for the query: 
+L'exemple suivant ajoute ou non les lignes d'une recherche complexe en fonction de la valeur de variables. Ainsi, seuls les critères valides sont pris en compte pour la recherche : 
 
 ```4d
- QUERY([Invoice];[Invoice]Paid=False;*)
- If($city#"") // if a city name has been specified
-    QUERY([Invoice];[Invoice]Delivery_city=$city;*)
+ QUERY([Facture];[Facture]Payee=False;*)
+ If($ville#"") // Si un nom de ville a été spécifié
+    QUERY([Facture];[Facture]Ville_Livraison=$ville;*)
  End if
- If($zipcode#"") // If a zip code has been specified
-    QUERY([Invoice];[Invoice]ZipCode=$zipcode;*)
+ If($code_postal#"") // Si un code postal a été spécifié
+    QUERY([Facture];[Facture]Code_Postal=$code_postal;*)
  End if
- QUERY([Invoice]) // Execution of query on the criteria
+ QUERY([Facture]) // Exécution de la recherche sur les critères
 ```
 
-## Example 21 
+## Exemple 21 
 
-This example illustrates the use of a comparison operator as an alphanumeric expression. The value of the comparison operator is specified using a pop-up menu placed in a custom query dialog box:
+Cet exemple illustre l'utilisation d'un comparateur sous forme d'expression alphanumérique. La valeur du comparateur est définie via un pop up menu placé dans une boîte dialogue de recherche personnalisée :
 
 ```4d
- var $oper : Text
- $oper:=_popup_operator{_popup_operator} //$oper equals for example "#" or "="
+ var $ope : Text
+ $ope:=_pup_operateur{_pup_operateur} //$ope vaut par exemple "#", ou "="
  If(OK=1)
-    QUERY(Invoice];[Invoice]Amount;$oper;$amount)
+    QUERY([Facture];[Facture]Montant;$ope;$montant)
  End if
 ```
 
-## Example 22 
+## Exemple 22 
 
-Using picture keyword indexes can greatly increase the speed of your applications.
+L’utilisation des index de mots-clés d’image peut accélérer de façon importante vos applications.
 
 ```4d
- QUERY([PICTURES];[PICTURES]Photos %"cats") // look for photos associated with the "cats" keyword
+ QUERY([IMAGES];[IMAGES]Photos %"cats") // cherche les photos contenant le mot-clé cats
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the query is carried out correctly, the OK system variable is set to 1.  
-The OK variable is set to 0 if:
+Si la recherche est correctement effectuée, la variable système OK prend la valeur 1.  
+La variable OK prend la valeur 0 si :
 
-* the user clicks on the **Cancel**/**Stop** button,
-* in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
+* l'utilisateur clique sur le bouton **Annuler** / **Stop**,
+* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
-## See also 
+## Voir aussi 
 
 [QUERY SELECTION](query-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 277 |
+| Numéro de commande | 277 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

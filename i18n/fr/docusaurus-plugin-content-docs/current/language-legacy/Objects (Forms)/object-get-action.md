@@ -5,42 +5,42 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *object* : Text ) : Text<br/>**OBJECT Get action** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Associated standard action name and (if any) parameter string |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Text | &#8592; | Nom de l'action standard associée et (s'il existe) son paramètre chaîne. |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Modified|
-|<6|Created|
+|16 R3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get action.Summary-->The **OBJECT Get action** command returns the name and (if any) parameter of the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Summary-->La commande **OBJECT Get action** retourne le nom et (s'il existe), le paramètre de l'action standard associée à l'objet désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Passer le paramètre optionnel *\** indique que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, cela signifie que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous passez une référence à un champ ou une variable au lieu d'une chaîne (champ ou objet variable seulement).
 
-You can set a standard action for an object in the Form editor using the Property List, or using the [OBJECT SET ACTION](object-set-action.md) command. **OBJECT Get action** returns a string containing the name of the standard action associated with the object (as well as its parameter, if any). 
+Vous pouvez fixer une action standard sur un objet dans l'éditeur de formulaire, en utilisant la Liste des propriétés ou en utilisant la commande [OBJECT SET ACTION](object-set-action.md). **OBJECT Get action** retourne une chaîne contenant le nom de l'action standard associée à l'objet (ainsi que son paramètre s'il y en a un).
 
-For a comprehensive list of standard actions, please refer to the *Standard actions* section in the *Design Reference* manual. 
+Pour une liste complète des actions standard, référez-vous à la section *Actions standard* dans le manuel *Mode Développement*. 
 
-## Example 
+## Exemple 
 
-You want to associate the "Cancel" action with all the objects in the form that do not already have any associated action:
+Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui n'ont aucune action associée :
 
 ```4d
  ARRAY TEXT($arrObjects;0)
@@ -53,15 +53,15 @@ You want to associate the "Cancel" action with all the objects in the form that 
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET ACTION](object-set-action.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1457 |
+| Numéro de commande | 1457 |
 | Thread safe | no |
 
 

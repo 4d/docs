@@ -9,53 +9,53 @@ displayed_sidebar: docs
 <!--REF #_command_.BACKUP.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BACKUP.Summary-->The BACKUP command starts the backup of the database using the current backup settings.<!-- END REF--> No confirmation dialog is displayed; however, a progress bar appears on screen.
+<!--REF #_command_.BACKUP.Summary-->La commande **BACKUP** déclenche la sauvegarde de la base de données avec les paramétrages de sauvegarde courants.<!-- END REF--> Aucune boîte de dialogue de confirmation n’est affichée. Une fenêtre de progression apparaît à l’écran.
 
-Backup settings are set in the Database Settings. They are stored in the *backup.4DSettings* file in the database Settings folder or in the data folder (see *Configuration and trace files*). 
+Les paramétrages de sauvegarde sont définis dans les Propriétés de la base. Ils sont stockés dans le fichier *backup.4DSettings* situé dans le dossier Settings de la base ou dans le dossier Data (voir *Fichiers de configuration et de suivi*).
 
-The BACKUP command calls the *On Backup Startup Database Method* at the beginning of its execution and the *On Backup Shutdown Database Method* at the end of its execution. 
+La commande **BACKUP** appelle la *Méthode base Sur démarrage sauvegarde* au début de son exécution et la *Méthode base Sur arrêt sauvegarde* à la fin de son exécution. 
 
-Because of this mechanism, the command should not be called from one of these database methods.
+Attention, du fait de ce mécanisme, la commande ne doit PAS être appelée depuis l'une de ces méthodes base.
 
-**4D Server:** When called from a client machine, BACKUP is considered as a stored procedure; it is still executed on the server.
+**4D Server :** Lorsqu’elle est appelée depuis un poste client, la commande **BACKUP** est considérée comme une procédure stockée, elle est toujours exécutée sur le serveur.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the backup is performed correctly, the system variable OK is set to 1; otherwise, it is set to 0\. 
+Si la sauvegarde se déroule correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## Error management 
+## Gestion des erreurs 
 
-If an incident occurs during backup, information about the incident is written in the backup log and the top-level error is sent only to the [On Backup Shutdown database method](on-backup-shutdown-database-method.md). It is therefore particularly important to use this database method in order to be able to manage back-up related errors using programming.
+En cas d’incident au cours de la sauvegarde, les informations relatives à l'incident sont écrites dans le journal des sauvegardes et l'erreur de plus haut niveau est transmise uniquement à la [On Backup Shutdown database method](on-backup-shutdown-database-method.md). Il est donc particulièrement important d'utiliser cette méthode base afin de pouvoir gérer par programmation les erreurs liées à la sauvegarde.
 
-## See also 
+## Voir aussi 
 
 [BACKUP INFO](backup-info.md)  
-*On Backup Startup Database Method*  
+*Méthode base Sur démarrage sauvegarde*  
 [RESTORE](restore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 887 |
+| Numéro de commande | 887 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

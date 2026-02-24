@@ -5,60 +5,60 @@ slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *userID* : Integer ; *name* : Text ; *startup* : Text ; *password* : Text ; *nbLogin* : Integer ; *lastLogin* : Date {; *memberships* : Integer array {; *groupOwner* : Integer}} )<!-- END REF-->
+<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *réfUtilisateur* ; *nom* ; *démarrage* ; *motDePasse* ; *nbUtilisations* ; *dernièreUtilisation* {; *adhésions* {; *groupePropriétaire*}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &#8594;  | Unique user ID number |
-| name | Text | &#8592; | Name of the user |
-| startup | Text | &#8592; | Startup method name |
-| password | Text | &#8592; | Always an empty string |
-| nbLogin | Integer | &#8592; | Number of logins to the database (Binary databases only) |
-| lastLogin | Date | &#8592; | Date of last login to the database (Binary databases only) |
-| memberships | Integer array | &#8592; | ID numbers of groups to which the user belongs |
-| groupOwner | Integer | &#8592; | ID number of user group owner (Binary databases only) |
+| réfUtilisateur | Integer | &#8594;  | Numéro de référence unique de l'utilisateur |
+| nom | Text | &#8592; | Nom de l'utilisateur |
+| démarrage | Text | &#8592; | Nom de la méthode de démarrage |
+| motDePasse | Text | &#8592; | *** obsolète (chaîne vide)  *** |
+| nbUtilisations | Integer | &#8592; | Nombre d'utilisations de la base |
+| dernièreUtilisation | Date | &#8592; | Date de la dernière utilisation de la base |
+| adhésions | Integer array | &#8592; | Numéros de référence des groupes auxquels l'utilisateur appartient |
+| groupePropriétaire | Integer | &#8592; | Numéro de référence du groupe propriétaire de l’utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** returns the information about the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command.
+<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** retourne les informations concernant l'utilisateur dont le numéro de référence est passé dans le paramètre *réfUtilisateur*.<!-- END REF--> Vous devez passer le numéro de référence retourné par la commande [GET USER LIST](get-user-list.md).
 
-If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md). Otherwise, you can call [Is user deleted](is-user-deleted.md) to test the user account before calling **GET USER PROPERTIES**.
+Si le compte d'utilisateur n'existe pas ou a été supprimé, l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md). Sinon, vous pouvez appeler la fonction [Is user deleted](is-user-deleted.md) pour tester le compte de l'utilisateur avant d'appeler **GET USER PROPERTIES**.
 
-After the call, you retrieve the name, startup method, number of logins and date of last login for the user, in the parameters *name*, *startup*, *nbLogin* and *lastLogin*.
+Après l'appel, vous récupérez le nom, la méthode de démarrage, le nombre d'utilisations et la date de la dernière utilisation de la base dans les paramètres *nom*, *démarrage*, *nbUtilisation* et *dernièreUtilisation*.
 
-**Notes:** 
+**Notes :** 
 
-* The *nbLogin* and *lastLogin* parameters are used in binary databases only. They always return respectively 0 and 00/00/00 in project databases.
-* The *password* parameter is obsolete (it always returns an empty string). If you want to check a user's password, use the [Validate password](validate-password.md) function.
+* Les paramètres *nbUtilisation* et dernièreUtilisation sont utilisés uniquement dans les bases binaires. Ils retournent toujours, respectivement, 0 et 00/00/00 dans les bases projets.
+* Le paramètre *motDePasse* est obsolète (il retourne toujours une chaîne vide). Si vous souhaitez contrôler le mot de passe d'un utilisateur, utilisez la fonction [Validate password](validate-password.md)
 
-If you pass the optional *memberships* parameter, the unique ID numbers of the groups to which the user belongs are returned. 
+Si vous passez le paramètre optionnel *adhésion*, vous récupérez le numéro de référence unique du groupe auquel l'utilisateur appartient.
 
-*(Binary databases only)* You can pass the optional *groupOwner* parameter to get the ID number of the user group “owner”, i.e. the default owner group of the objects created by this user.
+*(Bases binaires uniquement)* Vous pouvez passer le paramètre optionnel groupePropriétaire pour lire le numéro de référence du groupe "propriétaire" de l'utilisateur, c'est-à-dire le groupe propriétaire par défaut des objets créés par cet utilisateur.
 
-**Note:** The *groupOwner* array always returns 0 values in project databases. 
+**Note :** Le tableau groupePropriétaire retourne toujours la valeur 0 dans les bases projets.
 
-**Note for binary databases:** Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph.
+**Note pour les bases binaires :** Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*.
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling GET USER PROPERTIES or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET USER LIST](get-user-list.md)  
@@ -66,12 +66,12 @@ If you do not have the proper access privileges for calling GET USER PROPERTIES 
 [Set user properties](set-user-properties.md)  
 [Validate password](validate-password.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 611 |
+| Numéro de commande | 611 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

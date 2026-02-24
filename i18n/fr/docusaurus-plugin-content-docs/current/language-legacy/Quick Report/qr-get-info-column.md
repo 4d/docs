@@ -5,109 +5,106 @@ slug: /commands/qr-get-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Text ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text {; *resultVar* : Text} )<!-- END REF-->
+<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *zone* ; *numColonne* ; *titre* ; *objet* ; *cachée* ; *taille* ; *valeursRépétées* ; *format* {; *varRésultat*} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNum | Integer | &#8594;  | Column number |
-| title | Text | &#8592; | Column title |
-| object | Text | &#8592; | Object assigned for that column |
-| hide | Integer | &#8592; | 0 = displayed, 1 = hidden |
-| size | Integer | &#8592; | Column size |
-| repeatedValue | Integer | &#8592; | 0 = not repeated, 1 = repeated |
-| displayFormat | Text | &#8592; | Display format for the data |
-| resultVar | Text | &#8592; | Name of the formula variable |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| titre | Text | &#8592; | Titre de la colonne |
+| objet | Text | &#8592; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
+| cachée | Integer | &#8592; | 0 = visible, 1 = invisible |
+| taille | Integer | &#8592; | Largeur de la colonne |
+| valeursRépétées | Integer | &#8592; | 0 = non répétées, 1 = répétées |
+| format | Text | &#8592; | Format d'affichage des données |
+| varRésultat | Text | &#8592; | Nom de la variable de formule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Modified|
-|2003|Created|
+|15 R3|Modifié|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET INFO COLUMN.Summary-->### List mode 
+<!--REF #_command_.QR GET INFO COLUMN.Summary-->### Etats en liste 
 
-The **QR GET INFO COLUMN** command retrieves the parameters of an existing column.<!-- END REF-->
+La commande **QR GET INFO COLUMN** vous permet de récupérer les paramètres d'une colonne existante de l'état présent dans la *zone*.<!-- END REF--> 
 
-*area* is the reference of the Quick Report area.
+Passez dans *zone* la référence de la zone d'état rapide et dans *numColonne* le numéro de la colonne à définir.
 
-*colNum* is the number of the column to modify.
+Le paramètre *titre* retourne l'intitulé de l'en-tête de la colonne. 
 
-*title* returns the title that will be displayed in the header of the column.
+Le paramètre *objet* retourne le nom du champ ou la formule associé(e) à la colonne.
 
-*object* returns the field name or the formula assigned to the column.
+**Note :** La commande ne tient pas compte de la structure virtuelle éventuellement définie via les commandes [SET TABLE TITLES](set-table-titles.md) et [SET FIELD TITLES](set-field-titles.md). Le nom réel des champs est retourné dans le paramètre *objet*. 
 
-**Note:** The command does not take into account any virtual structure defined by means of the [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands. The actual name of the field is returned in the *object* parameter. 
+Le paramètre *cachée* indique si la colonne est affichée ou masquée :
 
-*hide* returns whether the column is displayed or hidden:
+* si *cachée* vaut 1, la colonne est masquée ;
+* si *cachée* vaut 0, la colonne est affichée.
 
-* if *hide* equals 1, the column is hidden;
-* if *hide* equals 0, the column is displayed.
+Le paramètre *taille* retourne la taille en pixels de la colonne. Si la valeur retournée est négative, la taille de la colonne est automatique. 
 
-*size* returns the size of the column in pixels. If the value returned is negative, the size of the column is automatic.
+*valeursRépétées* retourne le statut de la propriété de répétition des données. Par exemple, si la valeur d'un champ ou d'une variable ne change pas d'un enregistrement à l'autre, il est possible de la répéter ou non dans chaque ligne de la colonne.
 
-*repeatedValue* returns the status for data repetition. For example, if the value for a field or variable does not change from one record to the other, it may or may not be repeated when they do not change: 
+* si *valeursRépétées* vaut 0, les valeurs ne sont pas répétées.
+* si *valeursRépétées* vaut 1, les valeurs sont répétées.
 
-* if *repeatedValue* equals 0, values are not repeated,
-* if *repeatedValue* equals 1, values are repeated.
+Le paramètre *format* retourne le format d'affichage de la colonne. Vous pouvez utiliser tout format d'affichage standard de 4D compatible avec les données affichées dans la colonne. 
 
-*format* returns the display format. Display formats are the 4D formats compatible with the data displayed.
+Le paramètre optionnel *varRésultat*, lorsqu'il est passé, retourne le nom de la variable automatiquement affectée par l'éditeur d'états rapides à la colonne de formule (le cas échéant) : "C1" pour la première colonne de formule, "C2" pour la seconde, et ainsi de suite. 4D utilise cette variable pour stocker les résultats de la dernière exécution de la formule de colonne lors de la génération de l'état. 
 
-When passed, the optional *resultVar* parameter returns the name of the variable automatically assigned by the Quick Report editor to the formula column (if any): "C1" for the first formula column, "C2" for the second, and so on. 4D uses this variable to store the results from the last execution of the column's formula when generating the report. 
+### Etats tableaux croisés 
 
-### Cross-table mode 
+Avec ce type d'état, la commande **QR GET INFO COLUMN** permet de récupérer globalement les mêmes paramètres que ceux décrits dans le paragraphe ci-dessus, toutefois les zones auxquelles ils s'appliquent sont différentes et varient en fonction du paramètre à lire.   
+En outre, les paramètres *titre*, *cachée* et *valeursRépétées* ne sont pas utilisés lorsque vous travaillez avec des états tableaux croisés, les valeurs retournées dans ces paramètres ne sont donc pas significatives.   
+La valeur à passer dans le paramètre *numColonne* dépend de l'opération que vous souhaitez effectuer : lire la taille de la colonne ou lire la source de données et le format d'affichage. 
 
-The QR GET INFO COLUMN command retrieves the same parameters but the reference of the areas to which it applies is different and varies depending on the parameter you want to set. First of all, the *title*, *hide*, and *repeatedValue* parameters are meaningless when this command is used in cross-table mode. The value to use for *colNum* varies depending on whether you want to retrieve the column size or the data source and display format.
+* Taille de la colonne  
+Il s'agit d'un attribut “visuel”, par conséquent les colonnes sont simplement numérotées de gauche à droite, comme illustré ci-dessous :  
+![](../assets/en/commands/pict30562.fr.png)
 
-* Column size  
-This is a “visual” attribute, therefore columns are numbered from left to right, as depicted below:
-
-![](../assets/en/commands/pict30562.en.png)
-
-The following statement sets the size to automatic for all the columns in a cross-table report and leaves other elements unchanged:
+La méthode suivante affecte une taille automatique à toutes les colonnes d'un état en tableau croisé et laisse les autres éléments inchangés :
 
 ```4d
  For($i;1;3)
-    QR GET INFO COLUMN(qr_area;$i;$title;$obj;$hide;$size;$rep;$format)
-    QR SET INFO COLUMN(qr_area;$i;$title;$obj;$hide;0;$rep;$format)
+    QR GET INFO COLUMN(qr_zone;$i;$titre;$obj;$caché;$taille;$rep;$format)
+    QR SET INFO COLUMN(qr_zone;$i;$titre;$obj;$caché;0;$rep;$format)
  End for
 ```
 
-You will notice that since you want to alter only the column size, you have to use QR GET INFO COLUMN to retrieve the column properties and pass them to [QR SET INFO COLUMN](qr-set-info-column.md) to leave it unchanged, except for the column size.
+* Source de données (objet) et format d'affichage  
+Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :  
+![](../assets/en/commands/pict30563.fr.png)
 
-* Data source (object) and display format  
-In this case, the numbering of columns operates as depicted below:
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-![](../assets/en/commands/pict30563.en.png)
+## Exemple 
 
-If you pass an invalid area number, the error -9850 will be generated.  
-If you pass an invalid ColNum value, the error -9852 will be generated.
+Vous avez construit l'état suivant :
 
-## Example 
+![](../assets/en/commands/pict2569537.fr.png)
 
-You have designed the following report:
-
-![](../assets/en/commands/pict2569537.en.png)
-
-You can write:
+Vous pouvez écrire :
 
 ```4d
  var $vTitle;$vObject;$vDisplayFormat;$vResultVar : Text
  var $area;$vHide;$vSize;$vRepeatedValue : Integer
  QR GET INFO COLUMN($area;3;$vTitle;$vObject;$vHide;$vSize;$vRepeatedValue;$vDisplayFormat;$vResultVar)
   //$vTitle = "Age"
-  //$vObject = "[People]Birthdate-Current date"
+  //$vObject = "[Personnes]Date_Naissance-Date du jour" ou
+  // "[Personnes]Date_Naissance-Current date" selon vos préférences de langage
   //$vHide = 0
   //$vSize = 57
   //$vRepeatedValue = 1
@@ -115,18 +112,18 @@ You can write:
   //$vResultVar = "C1"
 ```
 
-## See also 
+## Voir aussi 
 
 [QR Get info row](qr-get-info-row.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 766 |
+| Numéro de commande | 766 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

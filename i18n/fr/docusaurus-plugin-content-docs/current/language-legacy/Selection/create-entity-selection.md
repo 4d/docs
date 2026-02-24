@@ -5,50 +5,48 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.Create entity selection.Syntax-->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF-->
+
 <!--REF #_command_.Create entity selection.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| dsTable | Table | &#8594;  | Table in the 4D database whose current selection will be used to build the entity selection |
-| settings | Object |&#8594;  | Build option: context |
-| Function result | 4D.EntitySelection | &#8592; | Entity selection matching the dataclass related to the given table |
-</div>
+| Paramètres | Type                               |                             | Description                                                                                          |
+| ---------- | ---------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| dsTable    | Table                              | &#8594; | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
+| settings   | Object                             | &#8594; | Option de création : contexte                                                        |
+| Résultat   | 4D.EntitySelection | &#8592; | Nouvelle entity selection liée à la dataclass de la table                                            |
+
 <!-- END REF-->
-
 
 ## Description
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+La commande `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->construit et renvoie une nouvelle entity selection [modifiable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relative à la classe de données correspondant à la *dsTable* fournie, en fonction de la sélection actuelle de cette table<!-- END REF-->.
 
-If the current selection is sorted, an [ordered](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
+Si la sélection actuelle est triée, une entity selection [triée](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) est créée (l'ordre de la sélection actuelle est conservé). Si la sélection courante n'est pas triée, une entity selection non-triée est créée.
 
-If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. This command cannot be used with a Remote datastore.
+Si la *dsTable* n'est pas exposée dans [`ds`](ds.md), une erreur est retournée. Cette commande ne peut pas être utilisée avec un datastore distant.
 
-In the optional *settings* parameter, you can pass an object containing the following property:
+Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
-|Property|Type|Description|
-|---|---|---|
-|context|Text|Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection.|
+| Propriété | Type | Description                                                                                                            |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Nom du [contexte d'optimisation](../ORDA/client-server-optimization.md) appliqué à l'entity selection. |
 
-
-## Example
+## Exemple
 
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee])
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
+$employees:=Create entity selection([Employee]) 
+// L'entity selection $employees contient maintenant un ensemble de 
+// références vers toutes les entités de la dataclass Employee
 ```
 
-## See also 
+## Voir également
 
 [USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
 
-## Properties
+## Propriétés
 
-|  |  |
-| --- | --- |
-| Command number | 1512 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1512 |
+| Thread safe        | oui  |

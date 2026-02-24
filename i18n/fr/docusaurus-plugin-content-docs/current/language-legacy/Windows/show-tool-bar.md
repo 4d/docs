@@ -9,43 +9,42 @@ displayed_sidebar: docs
 <!--REF #_command_.SHOW TOOL BAR.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Modified|
-|14|Modified|
-|6|Created|
+|14 R5|Modifié|
+|14|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SHOW TOOL BAR.Summary-->The **SHOW TOOL BAR** command handles the display of custom toolbars created by the [Open form window](./commands/open-form-window) command for the current process.<!-- END REF-->
+<!--REF #_command_.SHOW TOOL BAR.Summary-->La commande **SHOW TOOL BAR** permet de gérer l'affichage des barres d'outils personnalisées créées par la commande [Open form window](open-form-window.md) pour le process courant.<!-- END REF-->
 
-If a toolbar window has been created by the [Open form window](./commands/open-form-window) command with the Toolbar form window option, the command makes this window visible. If the toolbar window was already visible or if no window of this type has been created, the command does nothing.
+Si une fenêtre barre d'outils a été créée par la commande [Open form window](open-form-window.md) avec l'option Toolbar form window, la commande rend visible la fenêtre. Si la fenêtre barre d'outils était déjà visible ou si aucune fenêtre de ce type n'a été créée, la commande ne fait rien.
 
-## Example 
+## Exemple 
 
-Refer to the example of the [HIDE TOOL BAR](hide-tool-bar.md) command.
+Reportez-vous à l'exemple de la commande [HIDE TOOL BAR](hide-tool-bar.md).
 
-## See also 
+## Voir aussi 
 
 [HIDE TOOL BAR](hide-tool-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 433 |
+| Numéro de commande | 433 |
 | Thread safe | no |
-
 
 

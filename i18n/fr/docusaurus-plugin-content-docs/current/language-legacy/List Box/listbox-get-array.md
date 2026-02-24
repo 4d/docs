@@ -5,81 +5,81 @@ slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( * ; *object* : Text ; *arrType* : Integer ) : Pointer<br/>**LISTBOX Get array** ( *object* : Variable ; *arrType* : Integer ) : Pointer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *objet* ; *typeTab* ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| arrType | Integer | &#8594;  | Type of array |
-| Function result | Pointer | &#8592; | Pointer to array associated with property |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| typeTab | Integer | &#8594;  | Type de tableau |
+| Résultat | Pointer | &#8592; | Pointeur vers le tableau associé à la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|15 R4|Modified|
-|14|Created|
+|16|Modifié|
+|15 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get array.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX Get array** command returns a pointer to the *arrType* array of the list box or list box column designated by the *object* and *\** parameters.
+La commande **LISTBOX Get array** retourne un pointeur vers le tableau *typeTab* de la list box ou de la colonne de list box désignée par les paramètres *objet* et *\**.
 
-Style, color, background color or row control arrays can be associated with array type list boxes or (except for row control arrays) with the columns of array type list boxes, using the Property list in Design mode or using the [LISTBOX SET ARRAY](listbox-set-array.md) command. 
+Des tableaux de style, de couleur, de couleur de fond ou de contrôle des lignes peuvent être associés aux list box de type tableau ou (hormis le tableau de contrôle des lignes) aux colonnes de list box tableau via la Liste des propriétés en mode Développement ou la commande [LISTBOX SET ARRAY](listbox-set-array.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box. 
 
-In *arrType*, pass the type of array for the property you want to get. You can use one of the following constants, available in the "*List Box*" theme: 
+Passez dans *typeTab* le type du tableau de propriété à obtenir. Vous pouvez utiliser une des constantes suivantes du thème "*List box*" : 
 
-| Constant                  | Type    | Value |
-| ------------------------- | ------- | ----- |
-| lk background color array | Integer | 1     |
-| lk control array          | Integer | 3     |
-| lk font color array       | Integer | 0     |
-| lk row height array       | Integer | 4     |
-| lk style array            | Integer | 2     |
+| Constante                 | Type        | Valeur | Comment                       |
+| ------------------------- | ----------- | ------ | ----------------------------- |
+| lk background color array | Entier long | 1      |                               |
+| lk control array          | Entier long | 3      |                               |
+| lk font color array       | Entier long | 0      |                               |
+| lk row height array       | Entier long | 4      | (Licence 4D View Pro requise) |
+| lk style array            | Entier long | 2      |                               |
 
-The command returns one of the following values:
+La commande retourne une des valeurs suivantes :
 
-* [Is nil pointer](is-nil-pointer.md) if no array for the requested property is associated with the column or the list box.
-* a pointer to the array of the requested property, defined by the user.
-* a pointer to the array of the requested property, defined dynamically when calling the [LISTBOX SET ROW COLOR](listbox-set-row-color.md) or [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md) command.
+* [Is nil pointer](is-nil-pointer.md) si aucun tableau de la propriété demandée n’est associé à la colonne ou à la list box
+* un pointeur vers le tableau de la propriété demandée, défini par l’utilisateur
+* un pointeur vers le tableau de la propriété demandée, défini dynamiquement lors de l’appel de la commande [LISTBOX SET ROW COLOR](listbox-set-row-color.md) ou [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md).
 
-## Example 
+## Exemple 
 
-Typical examples of use:
+Exemples type d’utilisation :
 
 ```4d
  vPtr:=LISTBOX Get array(*;"MyLB";lk font color array)
-  // returns a pointer to the font color array
-  // associated with the "MyLB" list box
+     // retourne un pointeur vers le tableau de couleurs de police associé
+     // à la list box "MyLB"
  
  vPtr:=LISTBOX Get array(*;"Col4";lk style array)
-  // returns a pointer to the font style array
-  // associated with the columns of the "Col4" list box
+     // retourne un pointeur vers le tableau de styles de police associé
+     // à la colonne de list box "Col4"
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX GET ARRAYS](listbox-get-arrays.md)  
 [LISTBOX SET ARRAY](listbox-set-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1278 |
+| Numéro de commande | 1278 |
 | Thread safe | no |
 
 

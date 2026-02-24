@@ -9,40 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN SECURITY CENTER.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN SECURITY CENTER.Summary-->The OPEN SECURITY CENTER command displays the Maintenance and Security Center (MSC) window.<!-- END REF--> For more information, please refer to the *Maintenance and security center* page. 
+<!--REF #_command_.OPEN SECURITY CENTER.Summary-->La commande **OPEN SECURITY CENTER** provoque l’affichage de la fenêtre du Centre de sécurité et de maintenance (CSM).<!-- END REF--> Pour plus d'informations, veuillez consulter la page *Centre de Sécurité et de Maintenance*.
 
-**Notes:** 
+**Notes :** 
 
-* This command works on the same principle as a call to [DIALOG](./commands/dialog) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](cancel.md). So you need to manage its display through the code of the process being executed.
-* This command cannot be executed on a remote 4D application.
+* Cette commande fonctionne sur le même principe qu'un appel à [DIALOG](../commands/dialog.md) avec le paramètre *\** : le CSM est affiché dans une fenêtre et la commande rend immédiatement la main au code 4D. Si le process courant se termine, la fenêtre est automatiquement fermée en simulant un [CANCEL](cancel.md). Vous devez donc gérer son affichage via le code du process en cours d'exécution.
+* Cette commande ne peut pas être exécutée sur une application 4D distante.
 
-## See also 
+## Voir aussi 
 
 [VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1018 |
+| Numéro de commande | 1018 |
 | Thread safe | no |
-
 
 

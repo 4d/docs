@@ -5,47 +5,47 @@ slug: /commands/web-set-home-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* : Text )<!-- END REF-->
+<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* )<!-- END REF-->
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| homePage | Text | &#8594;  | Page name or HTML access path to the page or "" to not send the custom home page |
+| homePage | Text | &#8594;  | Nom de page ou chemin d’accès HTML à la page ou "" pour ne pas envoyer de page d’accueil personnalisée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|6.5|Created|
+|13|Renommé|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SET HOME PAGE.Summary-->The **WEB SET HOME PAGE** command allows you to modify the custom home page for the current Web process.<!-- END REF-->
+<!--REF #_command_.WEB SET HOME PAGE.Summary-->La commande **WEB SET HOME PAGE** vous permet de modifier la page d’accueil (page Home) personnalisée pour le process Web courant.<!-- END REF--> 
 
-The defined page is linked to the Web process, you can therefore define the different home pages depending, for example, on the user that is connected. This page can either be static or semi-dynamic. 
+La page définie est liée au process Web, vous pouvez donc définir des pages d’accueil différentes en fonction, par exemple, de l’utilisateur connecté. Cette page peut être statique ou semi-dynamique.
 
-You pass the name of the HTML home page or the page’s HTML access path to the *homePage* parameter. 
+Vous passez dans le paramètre *homePage* le nom de la page HTML d’accueil ou le chemin d’accès HTML complet à la page.
 
-**Note:** If the page specified in the *homePage* parameter does not exist when the Web process accesses it for the first time, the Web server creates it and assigns it the contents of the default home page (see ). 
+**Note :** Si la page définie par le paramètre *homePage* n'existe pas lorsque le process Web y accède pour la première fois, le serveur Web la crée et lui affecte le contenu de la . 
 
-To stop sending *homePage* as home page for the current Web process, execute **WEB SET HOME PAGE** with an empty string ("") passed in *homePage*.
+Pour ne plus envoyer *homePage* comme page d’accueil pour le process Web courant, appelez de nouveau la commande **WEB SET HOME PAGE** en passant une chaîne vide ("") dans *homePage*.
 
-**Note:** The default home page of the Web server is specified in the Database Settings dialog box. 
+**Note :** La page d’accueil par défaut du serveur Web est définie dans les Propriétés de la base. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 639 |
+| Numéro de commande | 639 |
 | Thread safe | yes |
 
 

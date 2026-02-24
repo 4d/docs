@@ -5,90 +5,89 @@ slug: /commands/list-item-parent
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ) : Integer<!-- END REF-->
+<!--REF #_command_.List item parent.Syntax-->**List item parent** ( {* ;} *liste* ; *refElément* ) : Integer<br/>**List item parent** ( * ; *liste* ; * ) : Integer<!-- END REF-->
 <!--REF #_command_.List item parent.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number  (if * omitted), or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item in the list |
-| Function result | Integer | &#8592; | Item reference number of parent item or 0 if none |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément courant de la liste |
+| Résultat | Integer | &#8592; | Numéro de référence de l'élément parent ou 0 s'il n'y en a pas |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.List item parent.Summary-->The **List item parent** command returns the item reference number of a parent item.<!-- END REF-->
+<!--REF #_command_.List item parent.Summary-->La commande **List item parent** retourne le numéro de référence de l'élément parent.<!-- END REF-->
 
-Pass the reference number or object name of the list in *list* . 
+Passez dans *liste* le numéro de référence ou le nom d'objet de la liste. 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists matching this name, the **List item parent** command will be applied to the first object whose name corresponds. 
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **List item parent** s'appliquera au premier objet dont le nom correspond. 
 
-You pass the item reference number of an item in the list or 0 or yet again \*, in *itemRef*. If you pass 0, the command applies to the last item added to the list. If you pass \*, the command applies to the current item of the list. If several items have been selected manually, the current item is the last one selected. 
+Passez dans *réfElément* le numéro de référence d'un élément de la liste ou 0, ou encore \*. Si vous passez 0, la commande s’applique au dernier élément ajouté à la liste. Si vous passez \*, la commande s’applique à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés, l’élément courant est celui qui a été sélectionné en dernier.
 
-In return, if the corresponding item exists in the list and if this item is in a sublist (and therefore has a parent item), you obtain the item reference number of the parent item.
+En retour, si un élément correspondant existe bien dans la liste et si cet élément se trouve bien dans une sous-liste (et a donc un élément parent), vous récupérez le numéro de référence de l'élément parent. 
 
-If there is no item with the item reference number you passed, or if you have passed \* and no item is selected, or if the item has no parent, **List item parent** returns 0 (zero).
+S'il n'existe pas d'élément numéro *réfElément*, ou si vous avez passé \* et qu’aucun élément n’est sélectionné, ou si cet élément n'a pas d'élément parent, **List item parent** retourne *0* (zéro).
 
-If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
 
-## Example 
+## Exemple 
 
-Given the list named *hList* shown here in the Application environment:
+Voici une liste *hList* affichée en mode Application :
 
-![](../assets/en/commands/pict22613.en.png)
+![](../assets/en/commands/pict22613.fr.png)
 
-The item reference numbers are set as follows:
+Voici les numéros de référence des éléments de cette liste :
 
-| **Item** | **Item Reference Number** |
-| -------- | ------------------------- |
-| *a*      | *100*                     |
-| *a - 1*  | *101*                     |
-| *a - 2*  | *102*                     |
-| *b*      | *200*                     |
-| *b - 1*  | *201*                     |
-| *b - 2*  | *202*                     |
-| *b - 3*  | *203*                     |
+| **Elément** | **Numéro** |
+| ----------- | ---------- |
+| a           | 100        |
+| a-1         | 101        |
+| a-2         | 102        |
+| b           | 200        |
+| b-1         | 201        |
+| b-2         | 202        |
+| b-3         | 203        |
 
-  
-* In the following code, if the item “b - 3” is selected, the variable *$vlParentItemRef* gets 200, the item reference number of the item “b”:
+* Avec le code ci-dessous, si l'élément “b-3” est sélectionné, la variable *$vlParentElémRef* prend la valeur 200, c'est-à-dire le numéro de référence de l'élément “b” :
 
 ```4d
- $vlItemPos:=Selected list items(hList)
- GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText)
- $vlParentItemRef:=List item parent(hList;$vlItemRef) // $vlParentItemRef gets 200
+ $vlElémPos:=Selected list items(hList)
+ GET LIST ITEM(hList;$vlElémPos;$vlElémRef;$vsItemText)
+ $vlParentElémRef:=List item parent(hList;$vlElémRef) // $vlParentElémRef vaut 200
 ```
 
-* If the item “a - 1” is selected, the variable *$vlParentItemRef* gets 100, the item reference number of the item “a”.
-* If the item “a” or “b” is selected, the variable *$vlParentItemRef* gets 0, because these items have no parent item.
+* Si l'élément “a-1” était sélectionné, la variable *$vlParentElémRef* prendrait la valeur 100, c'est-à-dire le numéro de référence de l'élément “a”.
+* Si l'élément “a” ou “b” était sélectionné, la variable *$vlParentElémRef* prendrait la valeur 0 car ces éléments n'ont pas d'élément parent.
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM](get-list-item.md)  
 [List item position](list-item-position.md)  
 [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
 [SET LIST ITEM](set-list-item.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 633 |
+| Numéro de commande | 633 |
 | Thread safe | no |
 
 

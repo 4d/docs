@@ -5,59 +5,58 @@ slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
+<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objet* ; *propriété* )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Name of property where null value is to be applied |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à laquelle appliquer la valeur null |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|14|Created|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB SET NULL.Summary-->The **OB SET NULL** command stores the **null** value in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB SET NULL.Summary-->La commande **OB SET NULL** permet de stocker la valeur **null** dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-In the *property* parameter, pass the label of the property where you want to store the **null** value. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
-Note that the *property* parameter is case sensitive.
+Passez dans le paramètre *propriété* le libellé de la propriété dans laquelle stocker la valeur **null**. Si la propriété existe déjà dans *objet*, sa valeur sera mise à jour. Si elle n’existe pas, elle est créée. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-## Example 
+## Exemple 
 
-We want to put the null value in the "age" property for Lea:
+On souhaite mettre la valeur null dans la propriété "âge" de Léa :
 
 ```4d
  var $ref : Object
- OB SET($ref;"name";"Lea";"age";4)
-  // $ref = {"name":"Lea","age":4}
+ OB SET($ref;"nom";"Léa";"âge";4)
+     // $ref = {"nom":"Léa","âge":4}
  ...
- OB SET NULL($ref ;"age")
-  // $ref = {"name":"Lea","age":null}
+ OB SET NULL($ref ;"âge")
+     // $ref = {"nom":"Léa","âge":null}
 ```
 
-## See also 
+## Voir aussi 
 
 [Null](null.md)  
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [OB SET](ob-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1233 |
+| Numéro de commande | 1233 |
 | Thread safe | yes |
 
 

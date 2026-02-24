@@ -5,56 +5,56 @@ slug: /commands/is-nil-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *aPointer* : Pointer ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *pointeur* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aPointer | Pointer | &#8594;  | Pointer to be tested |
-| Function result | Boolean | &#8592; | TRUE = Nil pointer (->[]) FALSE = Valid pointer to an existing object |
+| pointeur | Pointer | &#8594;  | Pointeur à tester |
+| Résultat | Boolean | &#8592; | VRAI = Pointeur Nil (->[]) FAUX = Pointeur valide vers un objet existant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Renamed|
-|<6|Created|
+|16 R4|Renommé|
+|<6|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Is nil pointer.Summary-->The **Is nil pointer** command returns True if the pointer you pass in *aPointer* is Nil (*\->\[\]*).<!-- END REF--> It returns False in all other cases (pointer to field, table or variable).
+<!--REF #_command_.Is nil pointer.Summary-->**Is nil pointer** retourne Vrai si le pointeur que vous passez dans *pointeur* est **Nil** (*\->\[\]*).<!-- END REF--> Elle retourne Faux dans tous les autres cas (pointeur vers un champ, une table ou une variable).
 
-If you want to find out the name of the variable or the number of the field that is being pointed to, you can use the [RESOLVE POINTER](resolve-pointer.md) command.
+Si vous souhaitez connaître le nom de la variable pointée ou le numéro du champ, vous pouvez utiliser la commande [RESOLVE POINTER](resolve-pointer.md).
 
-## Example 
+#### Exemple 
 
 ```4d
  var $ptr : Pointer
  ...
  If(Is nil pointer($ptr))
  End if
-  // is equivalent to
+  // est équivalent à
  If($ptr=Null)
  End if
 ```
 
-## See also 
+#### Voir aussi 
 
 [Is a variable](is-a-variable.md)  
 [RESOLVE POINTER](resolve-pointer.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 315 |
+| Numéro de commande | 315 |
 | Thread safe | yes |
 
 

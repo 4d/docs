@@ -5,54 +5,54 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *colNumber* : Integer )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *zone* ; *numColonne* )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNumber | Integer | &#8594;  | Column number |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR DELETE COLUMN.Summary-->The QR DELETE COLUMN command deletes the column in *area* whose number was passed in *colNumber*.<!-- END REF--> This command does not apply to cross-table reports.
+<!--REF #_command_.QR DELETE COLUMN.Summary-->La commande **QR DELETE COLUMN** supprime de la *zone* la colonne dont le numéro a été passé dans *numColonne*.<!-- END REF--> Cette commande ne peut pas être utilisée avec les états en tableau croisé.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *column* number, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
-## Example 
+## Exemple 
 
-The following example makes sure the report is a list report and deletes the third column: 
+Cet exemple supprime la troisième colonne de l'état : 
 
 ```4d
- If(QR Get report kind(MyArea)=qr list report)
-    QR DELETE COLUMN(MyArea;3)
+ If(QR Get report kind(MaZone)=qr list report)
+    QR DELETE COLUMN(MaZone;3)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [QR INSERT COLUMN](qr-insert-column.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 749 |
+| Numéro de commande | 749 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

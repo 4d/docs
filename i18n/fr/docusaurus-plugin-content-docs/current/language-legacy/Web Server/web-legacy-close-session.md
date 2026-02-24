@@ -5,56 +5,56 @@ slug: /commands/web-legacy-close-session
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *sessionID* : Text )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *idSession* )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sessionID | Text | &#8594;  | Session UUID |
+| idSession | Text | &#8594;  | UUID de session |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R6|Renamed|
-|15 R4|Modified|
-|13|Created|
+|18 R6|Renommé|
+|15 R4|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
-## Compatibility Note 
+## Note de compatibilité 
 
-<!--REF #_command_.WEB LEGACY CLOSE SESSION.Summary-->This command can only be used with **legacy web sessions**, available in databases converted from versions prior to 4D v18 R6\.<!-- END REF--> It is ignored when **scalable web sessions** mode is enabled (recommended in 4D v18 R6 and higher). For more information, please refer to the *Web Sessions Management (Legacy)* section.
+<!--REF #_command_.WEB LEGACY CLOSE SESSION.Summary-->Cette commande peut être utilisée uniquement avec les **anciennes sessions Web**, disponibles dans les bases de données converties à partir de versions antérieures à 4D v18 R6\.<!-- END REF--> Elle est ignorée lorsque le mode **sessions Web extensibles** est activé (recommandé dans 4D v18 R6 et versions plus récentes). Pour plus d'informations, reportez-vous à la section *Gestion des sessions Web*.
 
 ## Description 
 
-The **WEB LEGACY CLOSE SESSION** command invalidates an existing session designated by the *sessionID* parameter. If the session does not exist, the command does nothing.
+La commande **WEB LEGACY CLOSE SESSION** clôt la session Web existante désignée par le paramètre *idSession*. Si la session n’existe pas, la commande ne fait rien.
 
-When this command is called from a Web process or any other process:
+Lorsque cette commande est appelée depuis un process Web ou tout autre process :
 
-* The cookie expiration date is set to 0,
-* The [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md) is called, allowing you to store session information,
-* Selections are erased, records are unlocked and variables are reset.
+* la date d’expiration du cookie est mise à 0,
+* la [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md) est appelée, vous permettant de stocker les informations de la session,
+* les sélections courantes sont détruites, les enregistrements déverrouillés et les variables réinitialisées.
 
-After this command is executed, if a Web client sends a request using an invalid cookie, a new session is opened and a new cookie is sent.
+Après l’exécution de cette commande, si un client Web envoie une requête utilisant un cookie invalide, une nouvelle session est ouverte et un nouveau cookie est envoyé.
 
-**Note:** In the context of a 4D Mobile session, the **WEB LEGACY CLOSE SESSION** command closes the 4D Mobile session whose ID is passed in the *sessionID* parameter. Since a 4D Mobile session can manage several processes, this command actually requests all the Web processes related to the session to finish their execution. 
+**Note :** Dans le contexte d'une session 4D Mobile, la commande **WEB LEGACY CLOSE SESSION** referme la session 4D Mobile dont l'ID a été passé dans *idSession*. Comme une session 4D Mobile peut gérer plusieurs process, cette commande demande en fait à tous les process Web liés à la session de terminer leur exécution. 
 
-## See also 
+## Voir aussi 
 
+*Gestion des sessions Web*  
 [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
-*Web Sessions Management (Legacy)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1208 |
+| Numéro de commande | 1208 |
 | Thread safe | yes |
 
 

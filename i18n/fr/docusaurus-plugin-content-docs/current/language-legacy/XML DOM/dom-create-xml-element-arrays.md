@@ -5,43 +5,43 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* : Text ; *xPath* : Text {; ...(*attribNamesArray* : Text array ; *attribValuesArray* : Text array)} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* ; *xChemin* {; *tabNomsAttributs* ; *tabValeursAttributs*} {; *tabNomsAttributs2* ; *tabValeursAttributs2* ; ... ; *tabNomsAttributsN* ; *tabValeursAttributsN*} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML root element reference |
-| xPath | Text | &#8594;  | XPath path of the XML element to create |
-| attribNamesArray | Text array | &#8594;  | Array of attribute names |
-| attribValuesArray | Text array | &#8594;  | Array of attribute values |
-| Function result | Text | &#8592; | Reference of created XML element |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| xChemin | Text | &#8594;  | Chemin XPath de l’élément XML à créer |
+| tabNomsAttributs | Text array | &#8594;  | Tableau de noms d’attributs |
+| tabValeursAttributs | Text array | &#8594;  | Tableau de valeurs d’attributs |
+| Résultat | Text | &#8592; | Référence de l'élément XML créé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Create XML element arrays.Summary-->The **DOM Create XML element arrays** command is used to add a new element in the *elementRef* XML element, as well as, optionally, attributes and their values in the form of arrays.<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Summary-->La commande **DOM Create XML element arrays** permet d’ajouter un nouvel élément dans l’élément XML *refElément* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF-->
 
-Apart from supporting arrays (see below), this command is identical to [DOM Create XML element](dom-create-xml-element.md). Please refer to the description of this command for the details of its functioning. 
+Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [DOM Create XML element](dom-create-xml-element.md). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
 
-Optionally, this command can be used to pass several pairs of attributes and attribute values as arrays in the *attribNamesArray* and *attribValuesArray* parameters. In *attribValuesArray*, you can pass arrays of the text, date, number, and picture type. 4D automatically carries out the necessary conversions; you can modify these conversions using the [XML SET OPTIONS](xml-set-options.md) command. 
+Facultativement, la commande **DOM Create XML element arrays** permet de passer plusieurs couples d’attributs et de valeurs d’attributs sous forme de tableaux dans les paramètres *tabNomsAttributs* et *tabValeursAttributs*. Vous pouvez passer dans *tabValeursAttributs* des tableaux de type texte, date, numérique et image. 4D effectue automatiquement les conversions nécessaires, vous pouvez modifier ces conversions à l’aide de la commande [XML SET OPTIONS](xml-set-options.md). 
 
-The arrays must have been created beforehand and function by pairs. You can pass as many pairs of arrays and as many elements in each pair as you want. 
+Les tableaux doivent avoir été créés au préalable et fonctionner par paires. Vous pouvez passer autant de couples de tableaux et autant d’éléments dans chaque couple que vous voulez. 
 
-## Example 
+## Exemple 
 
-We want to create the following element:
+Nous souhaitons créer l'élément suivant :
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -54,31 +54,31 @@ We want to create the following element:
 </RootElement>
 ```
 
-For this, you can simply write:
+Pour cela, il suffit d'écrire :
 
 ```4d
- ARRAY TEXT(arrAttNames;3)
- ARRAY TEXT(arrAttValues;3)
- arrAttNames{1}:="Font"
- arrAttValues{1}:="Verdana"
- arrAttNames{2}:="Size"
- arrAttValues{2}:="10"
- arrAttNames{3}:="Style"
- arrAttValues{3}:="Bold"
- vRootRef:=DOM Create XML Ref("RootElement")
+ ARRAY TEXT(tNomsAtt;3)
+ ARRAY TEXT(tValeursAtt;3)
+ tNomsAtt{1}:="Font"
+ tValeursAtt{1}:="Verdana"
+ tNomsAtt{2}:="Size"
+ tValeursAtt{2}:="10"
+ tNomsAtt{3}:="Style"
+ tValeursAtt{3}:="Bold"
+ vRefRacine:=DOM Create XML Ref("RootElement")
  vxPath:="/RootElement/Elem1/Elem2/Elem3"
- vElementRef:=DOM Create XML element arrays(vRootRef;vxPath;arrAttNames;arrAttValues)
+ vRefElement:=DOM Create XML element arrays(vRefRacine;vxPath;tNomsAtt;tValeursAtt)
 ```
 
-## See also 
+## Voir aussi 
 
 [DOM Create XML element](dom-create-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1097 |
+| Numéro de commande | 1097 |
 | Thread safe | yes |
 
 

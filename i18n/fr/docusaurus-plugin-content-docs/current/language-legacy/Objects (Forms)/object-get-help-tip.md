@@ -5,55 +5,55 @@ slug: /commands/object-get-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *object* : Text ) : Text<br/>**OBJECT Get help tip** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get help tip.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Help message of object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &#8592; | Message d’aide de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get help tip.Summary-->The **OBJECT Get help tip** command returns the help message associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT Get help tip.Summary-->La commande **OBJECT Get help tip** retourne le message d’aide associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** dans le process courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The command returns the current help message associated with the object, as it is defined in Design mode or for the process using the [OBJECT SET HELP TIP](object-set-help-tip.md) command. The string returned shows the message as it appears when the form is executed. If it contains variable items (xliff *resname* or 4D references), they are interpreted according to the context. 
+La commande retourne le message d’aide courant associé à l’objet, qu’il ait été défini en mode Développement ou pour le process à l’aide de la commande [OBJECT SET HELP TIP](object-set-help-tip.md). La chaîne retournée représente le message tel qu’il apparaît lors de l’exécution du formulaire. S’il contient des éléments variables (*resname* xliff ou références 4D), ils sont interprétés en fonction du contexte. 
 
-## Example 
+## Exemple 
 
-The title of a picture button is stored as a help message. This title is stored in an xliff file and differs according to the current language of the application: 
+Le libellé d’un bouton image est stocké sous forme de message d’aide. Ce libellé est stocké dans un fichier xliff, il diffère en fonction de la langue courante de l’application : 
 
 ```4d
- OBJECT SET HELP TIP(*;"button1";":xliff:btn_discover")
- $helpmessage:=OBJECT Get help tip(*;"button1")
-  // $helpmessage contains for example "Découvrir" with a French 4D and "Discover" with an English 4D.
+ OBJECT SET HELP TIP(*;"bouton1";":xliff:btn_discover")
+ $helpmess:=OBJECT Get help tip(*;"bouton1")
+     // $helpmess contient par exemple "Découvrir" avec un 4D français et "Discover" avec un 4D anglais
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET HELP TIP](object-set-help-tip.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1182 |
+| Numéro de commande | 1182 |
 | Thread safe | no |
 
 

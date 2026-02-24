@@ -5,50 +5,50 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *object* : Text ; *vPosition* : Integer {; *hPosition* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *object* : Variable, Field ; *vPosition* : Integer {; *hPosition* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *objet* ; *positionLigne* {; *positionH*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| vPosition | Integer | &#8592; | Number of first line displayed or Vertical scrolling in pixels (pictures) |
-| hPosition | Integer | &#8592; | Number of first column displayed or<br/>Horizonal scrolling in pixels (pictures) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| positionLigne | Integer | &#8592; | Numéro de la première ligne affichée ou Défilement vertical en pixels (images) |
+| positionH | Integer | &#8592; | Numéro de la première colonne affichée (list box) ou<br/>Défilement horizontal en pixels (images) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->The OBJECT GET SCROLL POSITION returns, in the *vPosition* and *hPosition* parameters, information related to the position of the scroll bars of the form object designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->La commande **OBJECT GET SCROLL POSITION** retourne dans les paramètres *positionLigne* et *positionH* des informations relatives à la position des barres de défilement de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is the name of an object of the subform, hierarchical list, scrollable area, list box or picture type (in this case, pass a string in object). If you do not pass this parameter, you indicate that the *object* parameter is a variable ([ListRef](# "A Longint reference to a hierachical list") of hierarchical list, picture or list box variable) or a field.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *objet* est le nom d’un objet de type sous-formulaire, liste hiérarchique, zone de défilement, list box ou image (dans ce cas, passez une chaîne dans objet). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique") de liste hiérarchique, image ou list box) ou un champ. 
 
-**Note:** With subform type objects, only the syntax using an *\** is supported. 
+**Note :** Avec les objets de type sous-formulaire, seule la syntaxe avec *\** est prise en charge. 
 
-If *object* designates a list type object (subform, list form, hierarchical list, scrollable area or list box), *vPosition* returns the number of the first line displayed in the object. *hPosition* (list box only) returns the number of the first column that is completely visible in the left part of the list box. With other types of objects, this parameter returns 0.
+Si *objet* désigne un objet de type liste (sous-formulaire, liste hiérarchique, zone de défilement ou list box), *positionLigne* retourne le numéro de la première ligne affichée dans l’objet. *positionH* (list box uniquement) retourne le numéro de la première colonne affichée dans la partie gauche de la list box. Avec les autres types d’objets, ce paramètre retourne 0.
 
-If *object* designates a picture (variable or field), *vPosition* returns the vertical movement and *hPosition* the horizontal movement of the picture. These values are expressed in pixels with respect to the origin of the picture in the local coordinate system. 
+Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le décalage vertical et *positionH* le décalage horizontal de l’image. Ces valeurs sont exprimées en pixels par rapport à l’origine de l’image dans le système de coordonnées locales. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1114 |
+| Numéro de commande | 1114 |
 | Thread safe | no |
 
 

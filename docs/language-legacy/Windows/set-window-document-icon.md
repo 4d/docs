@@ -1,6 +1,7 @@
 ---
 id: set-window-document-icon
 title: SET WINDOW DOCUMENT ICON
+slug: /commands/set-window-document-icon
 displayed_sidebar: docs
 ---
 

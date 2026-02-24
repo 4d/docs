@@ -5,55 +5,55 @@ slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *window* : Integer} )<!-- END REF-->
+<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* ; *haut* ; *droite* ; *bas* {; *fenêtre*} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &#8592; | Left coordinate of window's contents area |
-| top | Integer | &#8592; | Top coordinate of window's contents area |
-| right | Integer | &#8592; | Right coordinate of window's contents area |
-| bottom | Integer | &#8592; | Bottom coordinate of window's contents area |
-| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted or MDI window if -1 (Windows) |
+| gauche | Integer | &#8592; | Coordonnée gauche de l'intérieur de la fenêtre |
+| haut | Integer | &#8592; | Coordonnée supérieure de l'intérieur de la fenêtre |
+| droite | Integer | &#8592; | Coordonnée droite de l'intérieur de la fenêtre |
+| bas | Integer | &#8592; | Coordonnée inférieure de l'intérieur de la fenêtre |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si omis ou Fenêtre MDI si -1 (Windows) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Modified|
-|<6|Created|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET WINDOW RECT.Summary-->The **GET WINDOW RECT** command returns the coordinates of the window whose reference number is passed in *window*.<!-- END REF--> If the window does not exist, the variable parameters are left unchanged.
+<!--REF #_command_.GET WINDOW RECT.Summary-->La commande **GET WINDOW RECT** retourne les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, les variables des paramètres sont inchangées.
 
-If you omit the *window* parameter, **GET WINDOW RECT** applies to the frontmost window for the current process.
+Si vous omettez le paramètre *fenêtre*, **GET WINDOW RECT** s'applique à la fenêtre de premier plan du process courant. 
 
-The coordinates are expressed relative to the top left corner of the contents area of the application window (Windows MDI mode) or to the main screen (macOS and Windows SDI mode). The coordinates return the rectangle corresponding to the contents area of the window (excluding title bars and borders).
+Les coordonnées retournées sont exprimées relativement au coin supérieur gauche de la zone de contenu de la fenêtre d'application (sous Windows mode MDI) ou de l'écran principal (macOS et Windows en mode SDI). Les coordonnées retournent le rectangle correspondant à la zone de contenu de la fenêtre (en excluant les barres de titres et les bordures). 
 
-**Note:** Under Windows, if you pass -1 in *window*, **GET WINDOW RECT** returns the coordinates of the application window (MDI window). These coordinates correspond to the contents area of the window (excluding menu bars and borders). In this case in SDI mode, **GET WINDOW RECT** returns (0;0;0;0) as coordinates. 
+**Note :** Sous Windows, si vous passez -1 dans *fenêtre*, **GET WINDOW RECT** retourne les coordonnées de la fenêtre d'application (fenêtre MDI) relativement à l'écran. Dans ce cas en mode SDI, **GET WINDOW RECT** retourne les coordonnées (0;0;0;0). 
 
-## Example 
+## Exemple 
 
-See example for the [WINDOW LIST](window-list.md) command.
+Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 
-## See also 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 443 |
+| Numéro de commande | 443 |
 | Thread safe | no |
 
 

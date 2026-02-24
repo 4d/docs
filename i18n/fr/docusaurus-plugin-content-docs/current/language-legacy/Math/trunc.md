@@ -5,44 +5,44 @@ slug: /commands/trunc
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* : Real ; *places* : Integer ) : Real<!-- END REF-->
+<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *nombre* ; *nbDécimales* ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number to be truncated |
-| places | Integer | &#8594;  | Number of decimal places used for truncating |
-| Function result | Real | &#8592; | Number with its decimal part truncated to the number of decimal places specified by Places |
+| nombre | Real | &#8594;  | Nombre à tronquer |
+| nbDécimales | Integer | &#8594;  | Nombre de décimales à conserver |
+| Résultat | Real | &#8592; | nombre tronqué à partir du nombre de décimales indiqué par nbDécimales |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Trunc.Summary-->**Trunc** returns *number* with its decimal part truncated to the number of decimal places specified by *places*.<!-- END REF-->always truncates toward negative infinity.
+<!--REF #_command_.Trunc.Summary-->**Trunc** retourne *nombre* dont la partie décimale a été tronquée à partir du nombre de décimales spécifié par *nbDécimales*.<!-- END REF-->arrondit toujours *nombre* à la valeur inférieure.
 
-If *places* is positive, *number* is truncated to *places* decimal places. If *places* is negative, number is truncated on the left of the decimal point.
+Si *nbDécimales* est positif, la troncature se fait sur la partie décimale de *nombre*. Si *nbDécimales* est négatif, la troncature se fait sur la partie entière de *nombre*.
 
-## Example 
+## Exemple 
 
-The following example illustrates how Trunc works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
+L'exemple suivant illustre la manière dont **Trunc** fonctionne dans différents cas. A chaque ligne, une valeur est assignée à la variable *vRésultat*. Les commentaires décrivent le résultat :
 
 ```4d
- vlResult:=Trunc(216.897;1) // vlResult gets 216.8
- vlResult:=Trunc(216.897;-1) // vlResult gets 210
- vlResult:=Trunc(-216.897;1) // vlResult gets –216.9
- vlResult:=Trunc(-216.897;-1) // vlResult gets –220
+ vRésultat:=Trunc(216,897;1) // Résultat prend la valeur 216,8
+ vRésultat:=Trunc(216,897;-1) // Résultat prend la valeur 210
+ vRésultat:=Trunc(-216,897;1) // Résultat prend la valeur -216,9
+ vRésultat:=Trunc(-216,897;-1) // Résultat prend la valeur -220
 ```
 
-## See also 
+## Voir aussi 
 
 [Round](round.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 95 |
+| Numéro de commande | 95 |
 | Thread safe | yes |
 
 

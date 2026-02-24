@@ -5,59 +5,59 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* : Integer ; *row* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *zone* ; *ligne* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area created |
-| row | Integer | &#8594;  | Row designator |
-| Function result | Integer | &#8592; | 0 = displayed, 1 = hidden |
+| zone | Integer | &#8594;  | Référence de la zone |
+| ligne | Integer | &#8594;  | Ligne |
+| Résultat | Integer | &#8592; | 0 = Visible, 1 = Cachée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Get info row.Summary-->The **QR Get info row** command retrieves the display status of the row whose reference was passed in *row*.<!-- END REF-->
+<!--REF #_command_.QR Get info row.Summary-->La commande **QR Get info row** indique si la ligne désignée par le paramètre *ligne* est affichée ou masquée dans la *zone*.<!-- END REF--> 
 
-*row* designates which row is affected by the command. You can pass either: 
+Le paramètre *ligne* désigne la ligne à vérifier. Vous pouvez passer soit :
 
-* a positive integer value to designate the corresponding subtotal (break) level,
-* one of the following constants from the *QR Rows for Properties* theme:
-  
-| Constant       | Type    | Value | Comment               |  
-| -------------- | ------- | ----- | --------------------- |  
-| qr detail      | Integer | \-2   | Detail area of report |  
-| qr grand total | Integer | \-3   | Grand total area      |  
-| qr title       | Integer | \-1   | Title of report       |
-The value returned by **QR Get info row** indicates whether the contents of the row are displayed or hidden. If it equals 1, the contents of the row are hidden; if it equals 0, the contents of the row are displayed. 
+* une valeur entière positive pour désigner la ligne de sous-total correspondante,
+* une des constantes suivantes du thème *QR Lignes pour Propriétés* :  
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *row* value, the error -9852 will be generated.
+| Constante      | Type        | Valeur | Comment               |  
+| -------------- | ----------- | ------ | --------------------- |  
+| qr detail      | Entier long | \-2    | Zone Détail de l'état |  
+| qr grand total | Entier long | \-3    | Zone Total général    |  
+| qr title       | Entier long | \-1    | Intitulé de l'état    |
+La valeur retournée par **QR Get info row** indique si le contenu de la ligne est affiché ou masqué. Si la fonction retourne 1, le contenu de la ligne est masqué ; si elle retourne 0, le contenu de la ligne est affiché. 
 
-## See also 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
+
+## Voir aussi 
 
 [QR GET INFO COLUMN](qr-get-info-column.md)  
 [QR SET INFO COLUMN](qr-set-info-column.md)  
 [QR SET INFO ROW](qr-set-info-row.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 769 |
+| Numéro de commande | 769 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

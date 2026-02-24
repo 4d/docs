@@ -5,43 +5,43 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ({ *startFrom* : Integer }) : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | startFrom | Integer | &#8594;  | Starting index (included) |
-| Function result | Collection | &#8592; | New collection containing parameters actually passed |
+| Résultat | Collection | &#8592; | New collection containing parameters actually passed |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Created|
+|19 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Copy parameters.Summary-->The Copy parameters command returns a new collection containing all parameters actually passed to a method or a function.<!-- END REF--> This command is useful when you need to forward a various number of parameters from a method or function to another method or function. 
+<!--REF #_command_.Copy parameters.Summary-->La commande Copy parameters retourne une nouvelle collection contenant tous les paramètres passés à une méthode ou à une fonction.<!-- END REF--> Cette commande est utile lorsque vous devez transférer un certain nombre de paramètres d'une méthode ou d'une fonction à une autre méthode ou fonction. 
 
-In the *startFrom* optional parameter, you can pass the index of the parameter from which to start collecting parameters to forward. The *startFrom* parameter itself is included. 
+Dans le paramètre facultatif *startFrom*, vous pouvez passer l'index du paramètre à partir duquel vous souhaitez commencer à collecter les paramètres à transférer. Le paramètre *startFrom* lui-même est inclus. 
 
-When called inside a formula, **Copy parameters** returns the parameters passed explicitely using *apply()* or *call()* (and not those passed to the parent method or function). 
+Lorsque la commande **Copy parameters** est appelée à l'intérieur d'une formule, elle retourne les paramètres passés explicitement à l'aide de *apply()* ou *call()* (et non ceux passés à la méthode ou fonction parente). 
 
-**Copy parameters** returns an empty collection if:
+**Copy parameters** retourne une collection vide si :
 
-* it is not called in a method or function that has been called by another method or function,
-* no parameter was passed to the parent method or function.
+* elle n'est pas appelée dans une méthode ou fonction qui a été appelée par une autre méthode ou fonction,
+* aucun paramètre n'a été passé à la méthode ou à la fonction parente.
 
-## Example 1 
+## Exemple 1 
 
-Calling a different function depending on the first parameter and passing other parameters to this function:
+Appeler une fonction différente en fonction du premier paramètre et passer d'autres paramètres à cette fonction :
 
 ```4d
  Function selectTask($task Text)
@@ -53,22 +53,22 @@ Calling a different function depending on the first parameter and passing other 
  End case
 ```
 
-Or, calling another function on another object with **apply()** and pass the parameters:
+Ou, appeler une autre fonction ou un autre objet avec **apply()** passer les paramètres :
 
 ```4d
  Function doSomething($param Text;$extraParameters Variant)
  This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Since the command returns a collection, it can be used with **.join()** to build for example a html list:
+Puisque la commande retourne une collection, elle peut être utilisée avec **.join()** pour générer une liste html par exemple :
 
 ```4d
-  // Class
+  // Classe
  
  Function list($typeText)->Text
-  //type of list is "u" or "o"
+  //le type de liste est "u" ou "o"
  var $value : Collection
  $value:=Copy parameters(2)
  $html:="<"+$type+"l>
@@ -79,7 +79,7 @@ Since the command returns a collection, it can be used with **.join()** to build
 "
  return$html
  
-  // Method
+  // Méthode
  
  $htmlList:=$c.list("u";"Alpha";"Bravo";"Charlie")
   // $htmlList = 
@@ -89,15 +89,15 @@ Since the command returns a collection, it can be used with **.join()** to build
 
 ```
 
-## See also 
+## Voir aussi 
 
 [Count parameters](count-parameters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1790 |
+| Numéro de commande | 1790 |
 | Thread safe | yes |
 
 

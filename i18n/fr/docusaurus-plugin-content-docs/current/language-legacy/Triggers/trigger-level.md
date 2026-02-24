@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger level.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Level of trigger execution (0 if outside any trigger execution cycle) |
+| Résultat | Integer | &#8592; | Niveau d'exécution du trigger (0 si hors du cycle d'exécution du trigger) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Trigger level.Summary-->The Trigger level command returns the execution level of the trigger.<!-- END REF-->
+<!--REF #_command_.Trigger level.Summary-->La commande **Trigger level** retourne le niveau d'exécution du trigger.<!-- END REF-->
 
-For more information on execution levels, see the topic *Cascading Triggers*.
+Reportez-vous à la description des *Triggers en cascade*.
 
-## See also 
+## Voir aussi 
 
+*Présentation des triggers*  
 [Trigger event](trigger-event.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
-*Triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 398 |
+| Numéro de commande | 398 |
 | Thread safe | yes |
 
 

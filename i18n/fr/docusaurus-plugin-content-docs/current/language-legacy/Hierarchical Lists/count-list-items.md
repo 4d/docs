@@ -5,79 +5,78 @@ slug: /commands/count-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *list* : Integer, Text {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *liste* {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count list items.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| * | Operator | &#8594;  | If omitted (default): Return visible list items (expanded) If specified: Return all list items |
-| Function result | Integer | &#8592; | Number of visible (expanded) list items (if 2nd * omitted) or Total number of list items (if 2nd * present) |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| * | Opérateur | &#8594;  | Si omis (défaut) : Retourner les éléments visibles (déployés) dans la ou les liste(s) Si spécifié : Retourner tous les éléments |
+| Résultat | Integer | &#8592; | Nombre d'éléments visibles (déployés) si 2e * omis ou Nombre total d’éléments si 2e * passé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count list items.Summary-->The Count list items command returns either the number of items currently “visible” or the total number of items in the list whose reference number or object name you pass in *list*.<!-- END REF-->
+<!--REF #_command_.Count list items.Summary-->La fonction **Count list items** retourne soit le nombre d'éléments visibles soit le nombre total d'éléments dans la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with all the items (the second *\** is passed), you can use either syntax. Conversely, if you use several representations of the same list and work with the visible items (the second *\** is omitted), the syntax based on the object name is required since each representation can have its own expanded/collapsed configuration.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec tous les éléments (le second *\** est passé), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec les éléments visibles (le second *\** est omis), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de sa propre configuration déployée/contractée.
 
-**Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the Count list items command will only apply to the first object whose name corresponds. 
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **Count list items** s'appliquera au premier objet dont le nom correspond. 
 
-Use the second \* parameter to determine which type of information will be returned. When this parameter is passed, the command returns the total number of items present in the list, regardless of whether it is expanded or collapsed. 
+Le choix du type d'information à retourner est effectué à l'aide du second paramètre *\**. Lorsque ce paramètre est passé, la commande retourne le nombre total d’éléments présents dans la liste, quel que soit son état courant déployé/contracté.   
+Lorsque ce paramètre est omis, la commande retourne le nombre d'éléments qui sont visibles, en fonction de l'état déployé/contracté actuel de la liste et de ses sous-listes.
 
-When this parameter is omitted, the command returns the number of items that are visible, depending on the current expanded/collapsed state of the list and its sublists.
+Cette fonction doit être appliquée à une liste affichée dans un formulaire.
 
-You apply this command to a list displayed in a form.
+## Exemples 
 
-## Examples 
+Voici la liste *hList* affichée en mode Application :
 
-Here a list named *hList* shown in the Application environment:
-
-![](../assets/en/commands/pict22362.en.png)
-
-```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 8
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems also gets 8
-```
-
-![](../assets/en/commands/pict22363.en.png)
+![](../assets/en/commands/pict22362.fr.png)
 
 ```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 2
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
+ $vlNbItems:=Count list items(hList) // à ce stade, $vlNbItems vaut 8
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems vaut également 8
 ```
 
-![](../assets/en/commands/pict22364.en.png)
+![](../assets/en/commands/pict22363.fr.png)
 
 ```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 5
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
+ $vlNbItems:=Count list items(hList) // à ce stade, $vlNbItems vaut 2
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems vaut toujours 8
 ```
 
-## See also 
+![](../assets/en/commands/pict22364.fr.png)
+
+```4d
+ $vlNbItems:=Count list items(hList) //$vlNbItems vaut 5
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems vaut toujours 8
+```
+
+## Voir aussi 
 
 [List item position](list-item-position.md)  
 [Selected list items](selected-list-items.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 380 |
+| Numéro de commande | 380 |
 | Thread safe | no |
 
 

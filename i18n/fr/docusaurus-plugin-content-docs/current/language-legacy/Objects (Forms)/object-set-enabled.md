@@ -5,55 +5,57 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *object* : Text ; *active* : Boolean )<br/>**OBJECT SET ENABLED** ( *object* : Variable, Field ; *active* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( {* ;} *objet* ; *actif* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| active | Boolean | &#8594;  | True = object(s) enabled; otherwise, False |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| actif | Boolean | &#8594;  | Vrai = objet(s) activé(s), Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET ENABLED.Summary-->The **OBJECT SET ENABLED** command can be used to enable or disable the object or group of objects specified by *object* in the current form.<!-- END REF--> An enabled object reacts to mouse clicks and to keyboard shortcuts.
+<!--REF #_command_.OBJECT SET ENABLED.Summary-->La commande **OBJECT SET ENABLED** permet d’activer ou d’inactiver l’objet ou le groupe d’objets désigné par *objet* dans le formulaire courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference (object variable only) instead of a string.
+Un objet activé réagit aux clics souris et aux raccourcis clavier.
 
-Pass True in the *active* parameter to enable the objects and False to disable them. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable (variable objet uniquement). 
 
-This command can be applied to the following types of objects:
+Passez Vrai dans le paramètre *actif* pour activer les objets et Faux pour les inactiver. 
 
-* Button, Default button, 3D button, Invisible button, Highlight button
-* Radio button, 3D radio button, Picture button
-* Check Box, 3D Check Box
-* Pop-up menu, Drop-down List, Combo Box, Menu/Drop-down List
-* Thermometer, Ruler
+Cette commande peut être appliquée aux types d'objets suivants :
 
-**Note:** This command has no effect with an object to which a standard action has been assigned (4D looks after modifying the state of this object when necessary), except in the case of the **Validate** and **Cancel** actions.
+* Bouton, Bouton par défaut, Bouton 3D, Bouton invisible, Bouton inversé
+* Bouton radio, Bouton radio 3D, Bouton image
+* Case à cocher, Case à cocher 3D
+* Pop-up menu, Liste déroulante, Combo Box, Menu/Liste déroulante
+* Thermomètre, Règle
 
-## See also 
+**Note :** Cette commande est sans effet avec un objet auquel une action standard a été assignée (4D se charge de modifier l’état de cet objet lorsque c’est nécessaire), sauf dans le cas des actions **Valider** et **Annuler**.
+
+## Voir aussi 
 
 [OBJECT Get enabled](object-get-enabled.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1123 |
+| Numéro de commande | 1123 |
 | Thread safe | no |
 
 

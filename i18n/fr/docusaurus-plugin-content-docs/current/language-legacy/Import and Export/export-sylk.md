@@ -5,59 +5,59 @@ slug: /commands/export-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
+<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to export data, or Default table, if omitted |
-| document | Text | &#8594;  | SYLK document to receive the data |
+| laTable | Table | &#8594;  | Table de laquelle effectuer l'export ou Table par défaut si ce paramètres est omis |
+| nomFichier | Text | &#8594;  | Document SYLK à exporter |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.EXPORT SYLK.Summary-->The EXPORT SYLK command writes data from the records of the current selection of *aTable* in the current process.<!-- END REF--> The data is written to *document*, a Windows or Macintosh Sylk document on the disk.
+<!--REF #_command_.EXPORT SYLK.Summary-->La commande **EXPORT SYLK** écrit dans *document* (document SYLK Windows ou Mac OS) les données des enregistrements de la sélection courante de la table *laTable* du process courant.<!-- END REF-->
 
-The export operation is performed through the current output form. The export operation writes fields and variables based on the entry order of the output form. For this reason, you should use an output form that contains only the fields or enterable objects that you wish to export. Do not place buttons or other extraneous objects on the export form.Subform objects are ignored.
+L'opération d'export s'effectue par l'intermédiaire du formulaire sortie courant. Les champs et les variables sont écrits en fonction de l'ordre de saisie dans le formulaire sortie. C'est pourquoi vous devez veiller à utiliser un formulaire sortie ne contenant que les champs ou objets saisissables que vous voulez exporter. Ne placez pas de boutons ou autres objets sur le formulaire sortie. Les objets de sous-formulaire sont ignorés.
 
-An On Load event is sent to the form method for each record that is exported. Use this event to set the variables you may use in the export form.
+L'événement On Load est envoyé à la méthode du formulaire pour chaque enregistrement exporté. Utilisez cet événement pour définir les variables utilisées dans le formulaire d'export.
 
-The *document* parameter can name a new or existing document. If *document* is given the same name as an existing document, the existing document is overwritten. The *document* can include a path that contains volume and folder names. If you pass an empty string, the standard Save File dialog box is displayed. If the user cancels this dialog, the export operation is canceled, and the OK system variable is set to 0.
+Le paramètre *document* peut créer un nouveau document ou désigner un document existant. Si le document a le même nom qu'un document existant, ce dernier est remplacé. Le document peut contenir un chemin d'accès de volume et/ou de dossiers. Si vous passez une chaîne vide, la boîte de dialogue standard de sauvegarde de fichiers est affichée. Si l'utilisateur annule ce dialogue, l'opération d'export est annulée et la variable système OK est mise à 0\. 
 
-A progress thermometer is displayed during export. The user can cancel the operation by clicking a Stop button. If the export is successfully completed, the OK system variable is set to 1\. If the operation is canceled or an error occurs, the OK system variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md "MESSAGES OFF") command.
+Un thermomètre de progression est affiché pendant l'export. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Si l'export s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](messages-off.md).
 
-By default, the command uses the UTF-8 character set. Since SYLK format documents generally use the ISO-8859-1 character set, you may need to use the [USE CHARACTER SET](use-character-set.md "USE CHARACTER SET") command to specify the appropriate character set. 
+La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au format SYLK utilisant généralement le jeu de caractères ISO-8859-1, il peut être nécessaire d'utiliser la commande [USE CHARACTER SET](use-character-set.md) pour fixer le jeu de caractères approprié. 
 
-When using **EXPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13) under macOS and the carriage return+line feed (code 13 + code 10) under Windows. You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
+Lors de l'utilisation de **EXPORT SYLK**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrement est par défaut le retour chariot (code 13) sous macOS et le retour chariot+retour à la ligne (code 13 + code 10) sous Windows. Vous pouvez modifier ces valeurs en assignant de nouvelles valeurs aux deux *Variables système* *FldDelimit* et *RecDelimit*. L'utilisateur peut modifier ces valeurs par défaut dans le dialogue d'export du mode Développement. A noter que si des champs exportés contiennent des caractères définis comme délimiteurs de champ ou d'enregistrement, ces caractères sont automatiquement remplacés par des espaces dans le fichier exporté, afin de ne pas perturber le processus d'import. 
 
-## Example 
+## Exemple 
 
-The following example exports data to a SYLK document. The method first sets the output form so that the data will be exported through the correct form, then performs the export:
+Cet exemple exporte des données vers un document SYLK. La méthode commence par le choix du formulaire sortie, puis l'export est déclenché :
 
 ```4d
- FORM SET OUTPUT([People];"Export")
- EXPORT SYLK([People];"NewPeople.slk") // Export to the "NewPeople.slk" document
+ FORM SET OUTPUT([Personnes];"Export")
+ EXPORT SYLK([Personnes];"Nouvelles Personnes.slk") // Export vers le document "Nouvelles Personnes.slk"
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-OK is set to 1 if the export is successfully completed; otherwise, it is set to 0.
+OK prend la valeur 1 si l'export s'est correctement déroulé, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT SYLK](import-sylk.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 85 |
+| Numéro de commande | 85 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

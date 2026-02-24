@@ -4,19 +4,17 @@ title: cs
 displayed_sidebar: docs
 ---
 
-| Parameter | Type |  | Description |
-|---|---|---|---|
-| classStore | Object | &#8592; | User class store for the project or component |
+| Paramètres | Type   |                             | Description                                                         |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
+| classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
 
+Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](../Concepts/classes.md#cs).
 
-The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).  
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1710 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1710 |
+| Thread safe        | oui  |
 
 

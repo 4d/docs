@@ -5,48 +5,48 @@ slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* : Text )<!-- END REF-->
+<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElément* )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML root element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM CLOSE XML.Summary-->The DOM CLOSE XML command frees up the memory occupied by the XML object designated by *elementRef*.<!-- END REF--> 
+<!--REF #_command_.DOM CLOSE XML.Summary-->La commande **DOM CLOSE XML** libère l’espace mémoire occupé par l’objet XML désigné par *refElément*.<!-- END REF--> 
 
-If *elementRef* is not an XML root object, an error is generated. 
+Si *refElément* n’est pas un objet XML racine, une erreur est générée. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Parse XML source](dom-parse-xml-source.md)  
 [DOM Parse XML variable](dom-parse-xml-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 722 |
+| Numéro de commande | 722 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

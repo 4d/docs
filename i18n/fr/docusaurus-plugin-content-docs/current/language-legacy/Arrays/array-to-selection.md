@@ -5,102 +5,100 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *aField* : Field {; ...(*array* : Array; *aField* : Field)}{; *} })<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *tableau* ; *leChamp* {; *tableau2* ; *leChamp2* ; ... ; *tableauN* ; *leChampN*}{; *} )}<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array to copy to the selection |
-| aField | Field | &#8592; | Field to receive the array data |
-| * | Operator | &#8594;  | Await execution |
+| tableau | Array | &#8594;  | Tableau à copier dans la sélection |
+| leField | Field | &#8592; | Champ recevant les valeurs du tableau |
+| * | Opérateur | &#8594;  | Attente d’exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|13|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ARRAY TO SELECTION.Summary-->The **ARRAY TO SELECTION** command copies one or more arrays into a selection of records.<!-- END REF--> All fields listed must belong to the same table.
+<!--REF #_command_.ARRAY TO SELECTION.Summary-->La commande **ARRAY TO SELECTION** copie un ou plusieurs tableau(x) vers une sélection d'enregistrements.<!-- END REF--> Tous les champs listés doivent appartenir à la même table.
 
-If a selection exists at the time of the call, the elements of the array are put into the records, based on the order of the array and the order of the records. If there are more elements than records, new records are created. The records, whether new or existing, are automatically saved.
+Si une sélection existe au moment de l'appel, les éléments du tableau sont copiés dans les enregistrements en fonction de l'ordre du tableau et de l'ordre des enregistrements. Si le nombre d'éléments du tableau est supérieur au nombre d'enregistrements de la sélection courante, de nouveaux enregistrements sont créés. Les enregistrements, qu'ils soient nouveaux ou existants, sont automatiquement sauvegardés.
 
-**Note:** Since it can create new records, this command does not take a table's read-only state (if any) into account (see *Record Locking*). 
+**Note :** Comme elle permet de créer de nouveaux enregistrements, cette commande ne tient pas compte de l'état lecture seulement éventuel de la table (cf. *Verrouillage d'enregistrements*). 
 
-All the arrays must have the same number of elements. If the arrays are of different sizes, a syntax error is generated.
+Tous les tableaux doivent avoir le même nombre d'éléments. Si des tableaux ont des tailles différentes, une erreur de syntaxe est générée. 
 
-This command does the reverse of [SELECTION TO ARRAY](selection-to-array.md). However, the **ARRAY TO SELECTION** command does not allow fields from different tables, including related tables, even when an automatic relation exists.
+Cette commande effectue l'opération inverse de [SELECTION TO ARRAY](selection-to-array.md). Cependant, **ARRAY TO SELECTION** ne permet pas d'utiliser de champs en provenance de tables différentes ni de tables liées, même si un lien automatique existe.
 
-When you pass the *\** parameter, 4D does not execute the corresponding statement line immediately but instead stores it in memory; this way you can stack several lines ending with an *\**. All of these lines awaiting execution are executed by one final **ARRAY TO SELECTION** statement that does not have the *\** parameter. For this reason, the command can now be called without any parameters.  
-As with the [QUERY](query.md) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements. 
+Si vous passez un *\** en dernier paramètre, 4D n’exécute pas immédiatement la ligne d’instruction correspondante mais la stocke en mémoire ; vous pouvez ainsi empiler plusieurs lignes se terminant par un *\**. L’ensemble des lignes en attente sera exécuté par une instruction **ARRAY TO SELECTION** finale sans paramètre *\**. A cette fin, la commande peut être appelée sans aucun paramètre.   
+A l’image de la commande [QUERY](query.md), ce principe vous permet de scinder une instruction complexe en un ensemble de lignes, plus lisibles et plus faciles à maintenir. Il est également possible d’insérer des instructions intermédiaires. 
 
-**WARNING:** Use **ARRAY TO SELECTION** with caution, because it overwrites information in existing records. If a record is locked by another process during the execution of **ARRAY TO SELECTION**, that record is not modified. Any locked records are put into the process set called LockedSet. After **ARRAY TO SELECTION** has executed, you can test the set LockedSet to see if any records were locked.
+**ATTENTION :** Comme **ARRAY TO SELECTION** remplace les informations éventuellement présentes dans les enregistrements existants, cette commande doit être utilisée avec prudence. Si un enregistrement est verrouillé par un autre process pendant l'exécution de la commande **ARRAY TO SELECTION**, il n'est pas modifié. Tous les enregistrements verrouillés sont placés dans l'ensemble LockedSet. Après l'exécution de **ARRAY TO SELECTION**, vous pouvez tester si l'ensemble LockedSet contient des enregistrements qui étaient verrouillés.
 
-**Note**: This command does not take into account the read-only/read-write state of the table containing the field. 
+**4D Server :** Cette commande est optimisée pour 4D Server. Le tableau est envoyé au serveur depuis le poste client. Les enregistrements sont modifiés ou créés sur le serveur. Comme une telle requête est gérée de façon synchrone, le poste client doit attendre que l'opération se soit correctement déroulée. Dans les environnements multi-utilisateurs et multi-process, aucun enregistrement verrouillé ne sera réécrit.
 
-**4D Server:** The command is optimized for 4D Server. Arrays are sent by the client machine to the server, and the records are modified or created on the server machine. As such a request is handled synchronously, the client machine must wait for the operation to be completed successfully. In the multi-user or multi-process environment, any records that are locked will not be overwritten.
+## Exemple 1 
 
-## Example 1 
-
-In the following example, the two arrays *asLastNames* and *asCompanies* place data in the *\[People\]* table. The values from the array *asLastNames* area placed in the field *\[People\]Last Name* and the values from the array *asCompanies* are placed in the field *\[People\]Company*:
+Dans l'exemple suivant, les deux tableaux *tabNoms* et *tabSociétés* écrivent des données dans la table *\[Personnes\]*. Les valeurs du tableau *tabNoms* sont placées dans le champ *\[Personnes\]Nom* et les valeurs du tableau *tabSociétés* sont placées dans le champ *\[Personnes\]Société* :
 
 ```4d
- ARRAY TO SELECTION(asLastNames;[People]Last Name;asCompanies;[People]Company)
+ ARRAY TO SELECTION(tabNoms;[Personnes]Nom;tabSociétés;[Personnes]Société)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to copy a selection of records to an archive table by selecting the fields according to the option value:
+Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive en sélectionnant les champs en fonction de la valeur d'options :
 
 ```4d
- ARRAY TEXT($_name;0)
- ARRAY TEXT($_firstname;0)
+ ARRAY TEXT($_nom;0)
+ ARRAY TEXT($_prenom;0)
  ARRAY TEXT($_cv;0)
  ARRAY PICTURE($_photo;0)
  
- SELECTION TO ARRAY([Candidate]Name;$_name;*)
- SELECTION TO ARRAY([Candidate]Firstname;$_firstname;*)
- If(withCV) //load the CV field
-    SELECTION TO ARRAY([Candidate]cv;$_cv;*)
+ SELECTION TO ARRAY([Candidat]Nom;$_nom;*)
+ SELECTION TO ARRAY([Candidat]Prenom;$_prenom;*)
+ If(avecCV) //on embarque le champ cv
+    SELECTION TO ARRAY([Candidat]cv;$_cv;*)
  End if
- If(withPhoto) //load the photo field
-    SELECTION TO ARRAY([Candidate]photo;$_photo;*)
+ If(avecPhoto) //on embarque le champ photo
+    SELECTION TO ARRAY([Candidat]photo;$_photo;*)
  End if
- SELECTION TO ARRAY //execute copy
+ SELECTION TO ARRAY //exécution de la copie
  
- REDUCE SELECTION([Candidate_Archive];0)
- ARRAY TO SELECTION($_name;[Candidate_Archive]Name;*)
- ARRAY TO SELECTION($_prenom;[Candidate_Archive]Firstname;*)
- If(withCV)
-    ARRAY TO SELECTION($_cv;[Candidate_Archive]cv;*)
+ REDUCE SELECTION([Candidat_Archive];0)
+ ARRAY TO SELECTION($_nom;[Candidat_Archive]Nom;*)
+ ARRAY TO SELECTION($_prenom;[Candidat_Archive]Prenom;*)
+ If(avecCV)
+    ARRAY TO SELECTION($_cv;[Candidat_Archive]cv;*)
  End if
- If(withPhoto)
-    ARRAY TO SELECTION($_photo;[Candidate_Archive]photo;*)
+ If(avecPhoto)
+    ARRAY TO SELECTION($_photo;[Candidat_Archive]photo;*)
  End if
  ARRAY TO SELECTION
 ```
 
-## See also 
+## Voir aussi 
 
 [SELECTION TO ARRAY](selection-to-array.md)  
-*System Variables*  
+*Variables système*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 261 |
+| Numéro de commande | 261 |
 | Thread safe | yes |
-| Changes current selection ||
+| Change la sélection courante ||
 
 

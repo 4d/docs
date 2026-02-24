@@ -9,31 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.In footer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns True if the execution cycle is in footer |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en pied |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.In footer.Summary-->**In footer** returns True for the In footer execution cycle.<!-- END REF-->
+<!--REF #_command_.In footer.Summary-->**In footer** retourne Vrai pour le cycle d'exécution En pied.<!-- END REF-->
 
-In order for the   **In footer** execution cycle to be generated, make sure that the On Printing Footer event property for the form and/or the objects has been selected in the Design environment.
+Si vous voulez que le cycle d'exécution **In footer** soit généré, vérifiez que la propriété d'événement On Printing Footer du formulaire et/ou des objets est sélectionnée en mode Développement. 
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Printing Footer event.
+**Note :** Cette fonction équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Printing Footer.
 
-## See also 
+## Voir aussi 
 
 [In break](in-break.md)  
 [In header](in-header.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 191 |
+| Numéro de commande | 191 |
 | Thread safe | no |
-
 
 

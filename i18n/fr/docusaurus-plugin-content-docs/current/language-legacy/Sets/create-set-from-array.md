@@ -5,59 +5,59 @@ slug: /commands/create-set-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *aTable* : Table ; *recordsArray* : Integer, Boolean array {; *setName* : Text} )<!-- END REF-->
+<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *laTable* ; *tabEnrg* {; *nomEnsemble*} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the set |
-| recordsArray | Integer, Boolean array | &#8594;  | Array of record numbers, or Array of booleans (True = the record is in the set, False = the record is not in the set) |
-| setName | Text | &#8594;  | Name of the set to create, or Apply the command to the Userset if omitted |
+| laTable | Table | &#8594;  | Table de l’ensemble |
+| tabEnrg | Integer, Boolean array | &#8594;  | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans l’ensemble, Faux = il n’est pas dans l’ensemble) |
+| nomEnsemble | Text | &#8594;  | Nom de l’ensemble à créer, ou Appliquer la commande à l’ensemble Userset si ce paramètre est omis ou vide |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->The **CREATE SET FROM ARRAY** command creates *setName*<!-- END REF-->  from:
+<!--REF #_command_.CREATE SET FROM ARRAY.Summary-->La commande **CREATE SET FROM ARRAY** crée l’ensemble *nomEnsemble*<!-- END REF--> à partir :
 
-* Either an array of absolute record numbers *recordsArray* from *aTable*,
-* Or an array of booleans *recordsArray*.In this case, the values of the array indicate if each record in the table belongs (**True**) or not (**False**) to *setName*.
+* soit du tableau de numéros d’enregistrements absolus *tabEnrg* de *laTable*,
+* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (VRAI) ou non (FAUX) de chaque enregistrement de table à l’ensemble *nomEnsemble*.
 
-When you use this command and pass a Longint array in *recordsArray*, all the numbers in the array represent the list of record numbers that are in *setName*. If a number is invalid (for example, if a record has not been created), the error -10503 is generated.
+Lorsque vous utilisez la commande avec un tableau d’entiers longs, tous les numéros du tableau représentent la liste des numéros d’enregistrements qui feront partie de l’ensemble *nomEnsemble*. Si un numéro est invalide (enregistrement non créé), l’erreur -10503 est générée.
 
-When you use this command and pass a Boolean array in *recordsArray*, the Nth element of the array indicates whether the "Nth" record is contained (**True**) or not (**False**) in *setName*. Usually, the number of elements in the array must equal the number of records in the table. If the array is smaller than the number of records, only the records defined by the array will be in the set.
+Lorsque vous utilisez la commande avec un tableau de booléens, le Nième élément du tableau représente l’intégration (VRAI) ou non (FAUX) de l’enregistrement numéro N à l’ensemble *nomEnsemble*. En principe, le nombre d’éléments du tableau doit être égal au nombre d’enregistrements de *table*. Si le tableau est plus petit que le nombre d’enregistrements, seuls les enregistrements définis par le tableau pourront faire partie de l’ensemble.
 
-**Note:** With a Boolean array, this command uses the elements from 0 to N-1.
+**Note :** Avec un tableau de booléens, la commande utilise les éléments à partir du numéro 0 jusqu'au numéro N-1.
 
-If you do not pass the *setName* parameter or if you pass an empty string, the command will be applied to the Userset system set.
+Si vous ne passez pas le paramètre *nomEnsemble* ou si vous passez une chaîne vide, la commande s’applique à l’ensemble système Userset.
 
-## Error management 
+## Gestion des erreurs 
 
-In a Longint array, if a record number is invalid (record not created), the error -10503 is generated.
+Dans un tableau d'entier longs, si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée.
 
-## See also 
+## Voir aussi 
 
 [BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 641 |
+| Numéro de commande | 641 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

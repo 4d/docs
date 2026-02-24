@@ -9,37 +9,37 @@ displayed_sidebar: docs
 <!--REF #_command_.Process aborted.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True = the process is about to be aborted, False = the process is not about to be aborted |
+| Résultat | Boolean | &#8592; | Vrai = le process est sur le point d’être interrompu, Faux = le process n’est pas sur le point d’être interrompu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Process aborted.Summary-->The **Process aborted** command returns **True** if the process in which it is called is about to be interrupted unexpectedly, which means that the execution of the command was unable to reach its “normal” completion.<!-- END REF-->
+<!--REF #_command_.Process aborted.Summary-->La commande **Process aborted** retourne **Vrai** si le process dans lequel elle est appelée est sur le point d’être interrompu de manière inopinée — c’est-à-dire sans être parvenu au terme “normal” de son exécution.<!-- END REF-->
 
-This status will happen very rarely. Processes are usually stopped before the code can be notified the "process aborted" condition. This condition might only happen in compiled loops not executing any 4D command. For more infomation about how 4D handles the closure of processes, please refer to the [On Exit database method](on-exit-database-method.md) page.
+Ce statut se produira très rarement. Les process sont généralement arrêtés avant que le code ne puisse être notifié de la condition "process interrompu". Cette condition peut se produire uniquement dans des boucles compilées n'exécutant aucune commande 4D. Pour plus d'informations sur la façon dont 4D gère la fermeture des process, veuillez vous reporter à la page [On Exit database method](on-exit-database-method.md).
 
-## See also 
+## Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 672 |
+| Numéro de commande | 672 |
 | Thread safe | yes |
 
 

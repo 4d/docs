@@ -5,38 +5,38 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *string* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *chaîne* ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| string | Text | &#8594;  | String for which to return length |
-| Function result | Integer | &#8592; | Length of string |
+| chaîne | Text | &#8594;  | Chaîne dont vous voulez connaître la longueur |
+| Résultat | Integer | &#8592; | Nombre de caractères de chaîne |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Length.Summary-->**Length** is used to find the length of *aString*.<!-- END REF-->returns the number of characters that are in *aString*.
+<!--REF #_command_.Length.Summary-->**Length** vous permet d'obtenir la longueur de *laChaîne*.<!-- END REF-->retourne le nombre de caractères alphanumériques contenus dans *laChaîne*.
 
-**Note:** In Unicode mode, when you want to check whether a string contains any characters, including ignorable characters, you must use the test If(Length(vtAnyText)=0) rather than If(vtAnyText=""). If the string contains for example Char(1), which is an ignorable character, Length(vtAnyText) does return 1 but vtAnyText="" returns True.
+**Note :** En mode Unicode, si vous souhaitez vérifier qu'une chaîne ne contient aucun caractère, y compris des caractères ignorables, vous devez utiliser le test Si(Longueur(vTexte)=0) plutôt que Si(vTexte=""). En effet, si la chaîne contient par exemple Caractere(1) qui est un caractère ignorable, Longueur(vTexte) retourne bien 1 mais vTexte="" retourne Vrai.
 
-## Example 
+## Exemple 
 
-This example illustrates the use of **Length**. The results, described in the comments, are assigned to the variable *vlResult*.
+L'exemple suivant illustre l'utilisation de **Length**. Les valeurs retournées sont assignées à la variable *vRésultat*. Les commentaires fournissent la valeur de *vRésultat* :
 
 ```4d
- vlResult:=Length("Topaz") // vlResult gets 5
- vlResult:=Length("Citizen") // vlResult gets 7
+ vRésultat:=Length("Topaze") // vRésultat prend la valeur 6
+ vRésultat:=Length("Citoyen") // vRésultat prend la valeur 7
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 16 |
+| Numéro de commande | 16 |
 | Thread safe | yes |
 
 

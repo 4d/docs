@@ -5,82 +5,83 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* : Object, any {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valeur* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Object, any | &#8594;  | Data to convert into JSON string |
-| * | Operator | &#8594;  | Pretty printing |
-| Function result | Text | &#8592; | String containing serialized JSON text |
+| valeur | Object, any | &#8594;  | Données à convertir en chaîne JSON |
+| * | Opérateur | &#8594;  | Améliorer la présentation |
+| Résultat | Text | &#8592; | Chaîne contenant le texte JSON sérialisé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R4|Modified|
-|14|Created|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON Stringify.Summary-->The **JSON Stringify** command converts the *value* parameter into a JSON string.<!-- END REF--> This command performs the opposite action of the [JSON Parse](json-parse.md) command.
+<!--REF #_command_.JSON Stringify.Summary-->La commande **JSON Stringify** convertit le paramètre *valeur* en une chaîne JSON.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON Parse](json-parse.md).
 
-Pass the data to be serialized in *value*. It can be expressed in scalar form (string, number, date or time) or by means of a 4D object or collection. 
+Passez dans *valeur* les données à sérialiser. Elles peuvent être exprimées sous forme scalaire (chaîne, numérique, date ou heure) ou via un objet 4D ou une collection. 
 
-**Note:** 4D dates will be converted either in "yyyy-mm-dd" or "YYYY-MM-DDThh:mm:sssZ" format according to the [current database date setting](./set-database-parameter.md#dates-inside-objects-85).
+**Note :** Les dates 4D seront converties au format "yyyy-mm-dd" ou "YYYY-MM-DDThh:mm:sssZ" en fonction du paramétrage courant de la base (voir l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans la *Page Compatibilité*).
 
-In the case of an object or a collection, you can include all types of values (see the *JSON data types* paragraph), with respect to the following JSON rules:
+Dans le cas d’un objet ou d'une collection, vous pouvez inclure tout type de valeurs (cf. paragraphe *Types de données JSON*), en respectant les règles suivantes du JSON :
 
-* String values must be enclosed in quotes. All Unicode character can be used except for special characters that must be preceded by a backslash.
-* Numbers: interval of ±10.421e±10
-* Booleans: "true" or "false" strings
-* Dates: Text type in "yyyy-mm-dd" or "\\"YYYY-MM-DDTHH:mm:ssZ"\\" format, according to the current database date setting (see above).
-* Times: Real type (number of seconds by default)  
-**Notes:**  
-   * Picture attributes are converted to the following string: "\[object Picture\]".  
-   * Pointers to a field, variable or array are evaluated when stringified
+* les valeurs de type chaîne doivent être encadrées de guillemets. Tous les caractères Unicode peuvent être utilisés à l’exception des caractères spéciaux, devant être précédés par une barre oblique inversée.
+* numérique : intervalle ±10.421e±10
+* booléen : chaîne "true" ou "false"
+* date : type texte au format "aaaa-mm-jj" ou "\\"AAAA-MM-JJTHH:mm:ssZ"\\", en fonction des paramètres courants de la base (voir ci-dessus)
+* heure : type réel (nombre de secondes par défaut)
+* pointeur vers un champ, une variable ou un tableau (le pointeur est évalué au moment du stringify)  
+**Notes :**  
+   * Les attributs image sont convertis en chaîne "\[object Picture\]"  
+   * les pointeurs vers des champs, variables ou tableaux sont évalués au moment du stringify.
 
-You can pass the optional *\** parameter to include formatting characters in the resulting string. This improves the presentation of JSON data (known as pretty formatting).
+Vous pouvez passer le paramètre optionnel *\** afin d’inclure des caractères de formatage dans la chaîne résultante. Cette option permet d’améliorer la présentation des données JSON (*pretty formatting*). 
 
-## Example 1 
+## Exemple 1 
 
-Conversion of scalar values:
+Conversions de valeurs scalaires :
 
 ```4d
- $vc:=JSON Stringify("Eureka!") // "Eureka!"
+ $vc:=JSON Stringify("Saperlipopette") // "Saperlipopette"
  $vel:=JSON Stringify(120) // "120"
  
- $vh:=JSON Stringify(?20:00:00?) // "72000" seconds since midnight
- SET DATABASE PARAMETER(Times inside objects;Times in milliseconds)
- $vhms:=JSON Stringify(?20:00:00?) // "72000000" milliseconds since midnight
+ $vh:=JSON Stringify(?20:00:00?) // "72000" secondes depuis minuit
+ SET DATABASE PARAMETER(Heures dans objets;Heures en milliseconds)
+ $vhms:=JSON Stringify(?20:00:00?) // "72000000" millisecondes depuis minuit
  
- $vd:=JSON Stringify(!28/08/2013!) // "2013-08-27T22:00:00.000Z" (Paris timezone)
- SET DATABASE PARAMETER(Dates inside objects;String type without time zone)
+ $vd:=JSON Stringify(!28/08/2013!) //  "2013-08-27T22:00:000Z" (fuseau horaire Paris)
+ SET DATABASE PARAMETER(Dates dans objets;String type without time zone)
  $vdd:=JSON Stringify(!28/08/2013!) // "2013-08-28T00:00:00.000Z"
 ```
 
-## Example 2 
+## Exemple 2 
 
-Conversion of a string containing special characters:
+Conversion d’une chaîne contenant des caractères spéciaux :
 
 ```4d
  $s:=JSON Stringify("{\"name\":\"john\"}")
-  // $s="{\\"name\\":\\"john\\"}"
+     // $s="{\\"name\\":\\"john\\"}"
  $p:=JSON Parse($s)
-  // $p={"name":"john"}
+     // $p={"name":"john"}
 ```
 
-## Example 3 
+## Exemple 3 
 
-Examples of serializing a 4D object with and without the *\** parameter:
+Exemples de sérialisation d’un objet 4D avec et sans le paramètre *\** :
 
 ```4d
  var $MyContact : Text
@@ -91,39 +92,39 @@ Examples of serializing a 4D object with and without the *\** parameter:
  OB SET($Contact;"children";$Children)
  $MyContact:=JSON Stringify($Contact)
  $MyPContact:=JSON Stringify($Contact;*)
-  //$MyContact= {"lastname":"Monroe","firstname":"Alan","children":{"firstname":"John","age":"12"}}
-  //$MyPContact= {\n\t"lastname": "Monroe",\n\t"firstname": "Alan",\n\t"children": {\n\t\t"firstname": "John",\n\t\t"age": "12"\n\t}\n}
+     //$MyContact= {"lastname":"Monroe","firstname":"Alan","children":{"firstname":"John","age":"12"}}
+     //$MyPContact= {\n\t"lastname": "Monroe",\n\t"firstname": "Alan",\n\t"children": {\n\t\t"firstname": "John",\n\t\t"age": "12"\n\t}\n}
 ```
 
-The advantage of this formatting is clear when the JSON is shown in a Web area:
+L’intérêt de ce formatage apparaît clairement lorsque le JSON est représenté dans une zone Web :
 
-* Standard formatting:  
+* Formatage standard :  
 ![](../assets/en/commands/pict1205013.fr.png)
-* Pretty formatting:  
+* Formatage amélioré :  
 ![](../assets/en/commands/pict1205011.fr.png)
 
-## Example 4 
+## Exemple 4 
 
-Example using a pointer to a variable:
+Exemple utilisant un pointeur vers une variable :
 
 ```4d
- var $MyTestVar : Object
+ var $MaVarTest : Object
  var $name ;$jsonstring  : Text
- OB SET($MyTestVar;"name";->$name) // object definition
-  // $MyTestVar= {"name":"->$name"}
+ OB SET($MaVarTest;"name";->$name) // définition de l’objet
+     // $MaVarTest = {"name":"->$name"}
  
- $jsonstring :=JSON Stringify($MyTestVar)
-  // $jsonstring ="{"name":""}"
-  //...
+ $jsonstring :=JSON Stringify($MaVarTest)
+     // $jsonstring ="{"name":""}"
+     //...
  
  $name:="Smith"
- $jsonstring :=JSON Stringify($MyTestVar)
-  //$jsonstring = "{"name" : "Smith"}"
+ $jsonstring :=JSON Stringify($MaVarTest) 
+     //$jsonstring = "{"name" : "Smith"}"
 ```
 
-## Example 5 
+## Exemple 5 
 
-Serialization of a 4D object:
+Sérialisation d’un objet 4D :
 
 ```4d
  var $varjsonTextserialized : Text
@@ -135,13 +136,13 @@ Serialization of a 4D object:
  
  $varjsonTextserialized:=JSON Stringify($Contact)
  
-  // $varjsonTextserialized = "{"lastname":"Monroe","phone":"[555-0100,
-  // 555-0120]","age":40,"firstname":"Alan"}"
+     // $varjsonTextserialized = "{"lastname":"Monroe","phone":"[555-0100,
+     // 555-0120]","age":40,"firstname":"Alan"}"
 ```
 
-## Example 6 
+## Exemple 6 
 
-Serialization of a 4D object containing a date value (Paris time zone). The resulting string depends on the current database date settings.
+Sérialisation d'un objet 4D contenant une valeur de date (Fuseau horaire de Paris). La chaîne résultante dépend du paramétrage courant de la base.
 
 ```4d
  var $varjsonTextserialized : Text
@@ -150,20 +151,20 @@ Serialization of a 4D object containing a date value (Paris time zone). The resu
  $varjsonTextserialized:=JSON Stringify($Contact)
 ```
 
-* If the "Use date type instead of ISO date format in objects" option is not checked:  
+* Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" n'est pas cochée :  
 ```json  
 "name":"Smith","birthday":"1975-10-21T22:00:00.000Z"  
 ```
-* If the "Use date type instead of ISO date format in objects" option is checked:  
+* Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" est cochée :  
 ```json  
 "name":"Smith","birthday":"1975-10-22"  
 ```
 
-**Note:** For more information on this setting, please refer to the *Compatibility page*.
+**Note :** Pour plus d'informations sur cette option, reportez-vous à la *Page Compatibilité*.
 
-## Example 7 
+## Exemple 7 
 
-Conversion of a collection (Paris time zone). The resulting string depends on the current database date settings.
+Conversion d'une collection (fuseau horaire Paris). La chaîne résultante dépend du paramétrage courant de la base.
 
 ```4d
  var $myCol : Collection
@@ -172,27 +173,27 @@ Conversion of a collection (Paris time zone). The resulting string depends on th
  $myTxtCol:=JSON Stringify($myCol)
 ```
 
-* If the "Use date type instead of ISO date format in objects" option is not checked:  
+* Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" n'est pas cochée :  
 ```json  
 $myTxtCol="[33,"mike","2017-08-27T22:00:00.000Z",false]"  
 ```
-* If the "Use date type instead of ISO date format in objects" option is checked:  
+* Si l'option "Utiliser le type date au lieu du format date ISO dans les objets" est cochée :  
 ```json  
 $myTxtCol="[33,"mike","2017-08-28",false]"  
 ```
 
-**Note:** For more information on this option, please refer to the *Compatibility page*.
+**Note :** Pour plus d'informations sur cette option, reportez-vous à la *Page Compatibilité*.
 
-## See also 
+## Voir aussi 
 
 [JSON Parse](json-parse.md)  
 [JSON Stringify array](json-stringify-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1217 |
+| Numéro de commande | 1217 |
 | Thread safe | yes |
 
 

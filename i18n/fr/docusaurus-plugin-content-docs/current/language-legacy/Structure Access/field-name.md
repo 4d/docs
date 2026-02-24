@@ -5,58 +5,57 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *fieldPtr* : Pointer ) : Text<br/>**Field name** ( *tableNum* : Integer ; *fieldNum* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *numTable* ; *numChamp* ) : Text<br/>**Field name** ( *ptrChamp* ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr  | Pointer | &#8594;  | Field pointer  |
-| tableNum | Integer | &#8594;  | Table number |
-| fieldNum | Integer | &#8594;  | Field number if a table number is passed as first parameter |
-| Function result | Text | &#8592; | Name of the field |
+| ptrChamp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur vers un champ ou Numéro de table |
+| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| Résultat | Text | &#8592; | Nom du champ |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Field name.Summary-->The Field name command returns the name of the field whose pointer you pass in *fieldPtr* or whose table and field number you pass in *tableNum* and *fieldNum*.<!-- END REF-->
+<!--REF #_command_.Field name.Summary-->La commande **Field name** retourne le nom du champ dont vous avez passé le pointeur dans *ptrChamp*, ou dont vous avez passé les numéros de table et de champ dans *numTable* et *numChamp*.<!-- END REF-->
 
-## Example 1 
+## Exemple 1 
 
-This example sets the second element of the array FieldArray{1} to the name of the second field in the first table. FieldArray is a two-dimensional array:
-
-```4d
- FieldArray{1}{2}:=Field name(1;2)
-```
-
-## Example 2 
-
-This example sets the second element of the array FieldArray{1} to the name of the field *\[MyTable\]MyField*. FieldArray is a two-dimensional array:
+L'exemple suivant assigne au second élément du tableau ChampTableau{1} (ChampTableau étant un tableau à deux dimensions) le nom du second champ de la première table :
 
 ```4d
- FieldArray{1}{2}:=Field name(->[MyTable]MyField)
+ ChampTableau{1}{2}:=Field name(1;2)
 ```
 
-## Example 3 
+## Exemple 2 
 
-This example displays an alert. This method passes a pointer to a field: 
+L'exemple suivant assigne au second élément du tableau ChampTableau{1} (ChampTableau étant un tableau à deux dimensions) le nom du champ *\[MaTable\]MonChamp* :
 
 ```4d
- ALERT("The ID number for the field "+Field name($1)+" in the table "+Table name(Table($1))+" has to be longer than five characters.")
+ ChampTableau{1}{2}:=Field name(->[MaTable]MonChamp)
 ```
 
-## See also 
+## Exemple 3 
+
+L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette méthode un pointeur vers un champ : 
+
+```4d
+ ALERT("Le numéro du champ "+Field name($1)+" de la table "+Table name(Table($1))+" doit faire plus de cinq caractères.")
+```
+
+## Voir aussi 
 
 [Field](field.md)  
 [Last field number](last-field-number.md)  
 [Table name](table-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 257 |
+| Numéro de commande | 257 |
 | Thread safe | yes |
 
 

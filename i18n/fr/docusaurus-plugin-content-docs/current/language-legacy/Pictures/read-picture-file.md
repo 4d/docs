@@ -5,61 +5,61 @@ slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* : Text ; *picture* : Picture {; *} )<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *nomFichier* ; *image* {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | Name or full pathname of the file to read, or empty string |
-| picture | Picture | &#8592; | Field or variable receiving picture |
-| * | Operator | &#8594;  | If passed = accept any type of file |
+| nomFichier | Text | &#8594;  | Nom ou chemin d’accès complet du fichier à lire, ou chaîne vide |
+| image | Picture | &#8592; | Champ ou variable recevant l’image |
+| * | Opérateur | &#8594;  | Si passé = accepter tout type de fichier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.READ PICTURE FILE.Summary-->The **READ PICTURE FILE** command opens the picture saved in the *fileName* disk file and loads it in the *picture* 4D field or variable.<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Summary-->La commande **READ PICTURE FILE** vous permet d’ouvrir l’image stockée dans le fichier disque désigné par *nomFichier* et de la placer dans le champ ou la variable 4D *image*.<!-- END REF--> 
 
-You can pass in *fileName* the full pathname of the file to read, or a file name only. If you pass only the file name, it should be located next to the database structure file. Under Windows, the file extension must be indicated.  
-If an empty string ("") is passed in *fileName*, the standard Open file dialog box appears and the user selects the file to be read, as well as the available formats.
+Vous pouvez passer dans *nomFichier* le chemin d’accès complet du fichier à lire, ou uniquement le nom du fichier — auquel cas il doit se trouver à côté du fichier de structure de la base. Sous Windows, vous devez également passer l’extension du fichier.  
+Si vous passez une chaîne vide ("") dans *nomFichier*, la boîte de dialogue standard d’ouverture de documents apparaît, permettant à l’utilisateur de sélectionner le fichier à lire, ainsi que les formats disponibles. 
 
-You can get the list of available formats using the [PICTURE CODEC LIST](picture-codec-list.md) command.
+Vous pouvez obtenir la liste des formats disponibles à l’aide de la commande [PICTURE CODEC LIST](picture-codec-list.md). 
 
-You pass in *picture* the picture variable or field which will receive the picture read.
+Passez dans *image* la variable ou le champ image devant recevoir l’image lue. 
 
-**Note:** The internal picture format is stored within the 4D variable or field.
+**Note :** Le format interne de l’image est conservé au sein de la variable ou du champ 4D. 
 
-If you pass the optional *\** parameter, the command will accept any type of file. This means that you can work with pictures without necessarily having the suitable codecs (see the description of the [BLOB TO PICTURE](blob-to-picture.md) command).
+Si vous passez le paramètre facultatif *\**, la commande acceptera tout type de fichier. Ce principe permet de manipuler des images sans nécessairement disposer des codecs adéquats (cf. description de la commande [BLOB TO PICTURE](blob-to-picture.md)).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command is executed successfully, the system variable Document contains the full pathname to the open file and the system variable OK is set to 1\. Otherwise, OK is set to 0.
+Si l’exécution de la commande est correcte, la variable système Document contient le chemin d’accès complet du fichier ouvert et la variable système OK prend la valeur 1\. En cas d’échec, OK prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [BLOB TO PICTURE](blob-to-picture.md)  
+*Introduction aux images*  
 [PICTURE CODEC LIST](picture-codec-list.md)  
-*Pictures*  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 678 |
+| Numéro de commande | 678 |
 | Thread safe | yes |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

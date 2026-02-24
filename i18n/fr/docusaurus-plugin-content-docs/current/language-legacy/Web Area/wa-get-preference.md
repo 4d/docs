@@ -5,63 +5,58 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Variable )<br/>**WA GET PREFERENCE** ( *object* : Variable, Field ; *selector* : Integer ; *value* : Variable )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *objet* ; *sélecteur* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| selector | Integer | &#8594;  | Preference to get |
-| value | Variable | &#8592; | Current value of the preference |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#8594;  | Préférence à lire |
+| valeur | Variable | &#8592; | Valeur courante de la préférence |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Modified|
-|19|Modified|
-|14 R2|Modified|
-|11 SQL Release 2|Created|
+|19 R5|Modifié|
+|19|Modifié|
+|14 R2|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA GET PREFERENCE.Summary-->The WA GET PREFERENCE command gets the current value of the preference in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA GET PREFERENCE.Summary-->La commande **WA GET PREFERENCE** permet de lire la valeur courante d’une préférence dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
-Pass the preference whose value you want to get in the *selector* parameter. You can pass one of the following constants, found in the *Web Area* theme:
+Passez dans le paramètre *sélecteur* la préférence à lire. Vous pouvez passer l’une des constantes suivantes, placées dans le thème "*Zone Web*" :
 
-| Constant                  | Value | Comment                                                                                                                                 |
-| ------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| WA enable contextual menu | 4     | Allow the display of a standard contextual menu in the Web area. Default (any engine) = False                                           |
-| WA enable URL drop        | 101   | Change drop icon and call *On Window Opening Denied* event when URLs or files are dropped in the Web area. Default (any engine) = False |
-| WA enable Web inspector   | 100   | Allow the display of the Web inspector in the area. Default (any engine) = False                                                        |
+| Constante                 | Type        | Valeur | Comment                                                                                                                                                                    |
+| ------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WA enable contextual menu | Entier long | 4      | Autoriser l’affichage du menu contextuel standard dans la zone Web. Par défaut (n'importe quelle machine) = Faux.                                                          |
+| WA enable Java applets    | Entier long | 1      | Autoriser l’exécution d’applets Java dans la zone Web. Par défaut (machine système) = Vrai. Par défaut (machine intégrée) = toujours Faux, ne peut pas être activé.        |
+| WA enable JavaScript      | Entier long | 2      | Autoriser l’exécution de code JavaScript dans la zone Web. Par défaut (machine système) = Vrai. Par défaut (machine intégrée) = toujours Vrai, ne peut pas être désactivé. |
+| WA enable plugins         | Entier long | 3      | Autoriser l’installation de plug-ins dans la zone Web. Par défaut (machine système) = Vrai. Par défaut (machine intégrée) = toujours Faux, ne peut pas être activé.        |
+| WA enable URL drop        | Entier long | 101    | Autoriser le déposer d'URLs ou de fichiers dans la zone Web. Par défaut (n'importe quelle machine) = Faux.                                                                 |
+| WA enable Web inspector   | Entier long | 100    | Autoriser l’affichage de l’inspecteur Web dans la zone. Par défaut (n'importe quelle machine) = Faux.                                                                      |
 
-In the *value* parameter, pass a variable that will receive the current value of the preference. The *value* variable is always a Boolean: it contains **True** if the preference is active and **False** otherwise.
+Passez dans le paramètre *valeur* une variable devant recevoir la valeur courante de la préférence. Le type de la variable dépend de la préférence. La variable *valeur* est toujours de type booléen : elle contient Vrai si la préférence est active et Faux sinon. 
 
-
-:::note Compatibility
-
-Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. The `WA enable URL drop` selector value is always **False** in this context. 
-
-:::
-
-
-## See also 
+## Voir aussi 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1042 |
+| Numéro de commande | 1042 |
 | Thread safe | no |
 
 

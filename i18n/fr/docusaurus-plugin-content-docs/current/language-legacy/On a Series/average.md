@@ -5,96 +5,96 @@ slug: /commands/average
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Average.Syntax-->**Average** ( *series* : Field, Array {; *attributePath* : Text} ) : Real<!-- END REF-->
+<!--REF #_command_.Average.Syntax-->**Average** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the average |
-| attributePath | Text | &#8594;  | Path of attribute for which to return the average |
-| Function result | Real | &#8592; | Arithmetic mean (average) of series |
+| séries | Field, Array | &#8594;  | Valeurs dont vous voulez calculer la moyenne |
+| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la moyenne |
+| Résultat | Real | &#8592; | Moyenne arithmétique de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|13|Modified|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the average.
+<!--REF #_command_.Average.Summary-->**Average** retourne la moyenne arithmétique de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul. 
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-This command accepts an optional *attributePath* parameter of the Text type, that you can use if *series* is an object field. It allows you to define the path of the attribute to compute. Use the standard dot notation to define paths to nested attributes, for example "company.address.number". Keep in mind that object attribute names are case-sensitive.   
-Only numeric attribute values are computed. If there are values in the attribute path which are not of a numeric type, they are ignored.
+La commande accepte un paramètre optionnel de type texte, *cheminAttribut*, que vous pouvez utiliser si *séries* est un champ de type Objet. Il vous permet de définir le chemin de l'attribut dont le contenu doit être utilisé pour le calcul de la moyenne. Utilisez la notation à points standard pour définir le chemin dans l'objet jusqu'à l'attribut, par exemple "Clients.enfants.age". Attention, gardez à l'esprit que les noms d'attributs d'objets tiennent compte de la casse des caractères.  
+Seules les valeurs numériques des attributs sont utilisées pour le calcul. Si l'attribut contient des valeurs non numériques, elles sont ignorées. 
 
-If the command is correctly executed, the OK system variable is set to 1\. If it is interrupted (for example if the user clicks on the **Stop** button of the progress thermometer), the OK variable is set to 0.
+Si la commande est correctement exécutée, la variable système OK prend la valeur 1\. Si elle est interrompue (par exemple si l'utilisateur clique sur le bouton **Arrêt** dans le thermomètre de progression), la variable OK prend la valeur 0.
 
-## Example 1 
+## Exemple 1 
 
-The following example sets the variable *vAverage* that is in the B0 Break area of an output form. The line of code is the object method for *vAverage*. The object method is not executed until the level 0 break:
+Dans l'exemple suivant, une valeur est assignée à une variable se trouvant dans la zone de rupture R0 d'un formulaire sortie. La ligne de code ci-dessous constitue la méthode objet de la variable. Elle n'est exécutée qu'à l'impression du niveau de rupture 0 :
 
 ```4d
- vAverage:=Average([Employees] Salary)
+ vMoyenne:=Average([Employés]Salaire)
 ```
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection courante et activer la phase de rupture :
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]LastNm;>)
+ ALL RECORDS([Employés])
+ ORDER BY([Employés];[Employés]Nom;>)
  BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- FORM SET OUTPUT([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ACCUMULATE([Employés]Salaire)
+ FORM SET OUTPUT([Employés];"FormImpression")
+ PRINT SELECTION([Employés])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the average of the first 15 grades in the selection:
+Cet exemple vous permet d’obtenir la moyenne des 15 premières notes de la sélection : 
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- ORDER BY([Exams];[Exams]Exam_Grade;<)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- ARRAY REAL($ArrGrades;15)
- vAverage:=Average($ArrGrades)
+ ORDER BY([Exams];[Exams]Exam_Note;<)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ ARRAY REAL($TabNote;15)
+ vAverage:=Average($TabNote)
 ```
 
-## Example 3 
+## Exemple 3 
 
-Your \[Customer\] table contains a "full\_Data" object field with the following data:
+Votre table \[Customer\] comporte un champ objet "full\_Data" contenant les données suivantes :
 
 ![](../assets/en/commands/pict2898119.en.png)
 
-You can perform the following computations:
+Vous pouvez effectuer les calculs suivants :
 
 ```4d
  var $vAvg : Real
  ALL RECORDS([Customer])
  $vAvg:=Average([Customer]full_Data;"age")
-  //$vAvg is 44,46
+  //$vAvg vaut 44,46
  
  var $vTot : Integer
  $vTot:=Sum([Customer]full_Data;"Children[].age")
-  //$vTot is 105
+  //$vTot vaut 105
 ```
 
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
@@ -105,12 +105,12 @@ You can perform the following computations:
 [Subtotal](subtotal.md)  
 [Sum](sum.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 2 |
+| Numéro de commande | 2 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

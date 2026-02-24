@@ -9,31 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.In header.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns True if the execution cycle is in header |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en entête |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.In header.Summary-->**In header** returns True for the In header execution cycle.<!-- END REF--> 
+<!--REF #_command_.In header.Summary-->**In header** retourne Vrai pour le cycle d'exécution En entête.<!-- END REF--> 
 
-In order for the **In header** execution cycle to be generated, make sure that the On Header event property for the form and/or the objects has been selected in the Design environment.
+Si vous souhaitez que le cycle d'exécution **In header** soit généré, assurez-vous que l'événement formulaire On Header a bien été activé dans la boîte de dialogue des propriétés du formulaire ou du (des) objet(s) sélectionné(s), en mode Développement.
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Header event.
+**Note :** Cette commande équivaut à utiliser la commande [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Header.
 
-## See also 
+## Voir aussi 
 
 [In break](in-break.md)  
 [In footer](in-footer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 112 |
+| Numéro de commande | 112 |
 | Thread safe | no |
-
 
 

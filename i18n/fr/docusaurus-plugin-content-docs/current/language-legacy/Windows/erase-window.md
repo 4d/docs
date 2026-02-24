@@ -5,47 +5,47 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *fenêtre* )}<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number, or Frontmost window of current process, if omitted |
+| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ERASE WINDOW.Summary-->The **ERASE WINDOW** command clears the contents of the window whose reference number is passed in *window*.<!-- END REF--> 
+<!--REF #_command_.ERASE WINDOW.Summary-->La commande **ERASE WINDOW** efface le contenu de la fenêtre dont vous avez passé la référence dans *fenêtre*.<!-- END REF--> 
 
-If you omit the *window* parameter, **ERASE WINDOW** clears the contents of the frontmost window for the current process.
+Si vous omettez le paramètre *fenêtre*, **ERASE WINDOW** efface le contenu de la fenêtre de premier plan du process courant. 
 
-Usually, you will use **ERASE WINDOW** in combination with [MESSAGE](message.md) and [GOTO XY](goto-xy.md). In this case, **ERASE WINDOW** clears the contents of the window and moves the cursor to the upper-left corner of the window, the [GOTO XY](goto-xy.md)(0; 0) position. 
+Généralement, vous utiliserez **ERASE WINDOW** en combinaison avec [MESSAGE](message.md) et [GOTO XY](goto-xy.md). Dans ce cas, **ERASE WINDOW** efface le contenu de la fenêtre et place le curseur dans son angle supérieur gauche, c'est-à-dire à la position correspondant à [GOTO XY](goto-xy.md)(0; 0). 
 
-Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CLOSE WINDOW](close-window.md), which removes the window from the screen.
+Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOTO XY](goto-xy.md), qui supprime la fenêtre de l'écran.
 
-## See also 
+## Voir aussi 
 
 [GOTO XY](goto-xy.md)  
 [MESSAGE](message.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 160 |
+| Numéro de commande | 160 |
 | Thread safe | no |
 
 

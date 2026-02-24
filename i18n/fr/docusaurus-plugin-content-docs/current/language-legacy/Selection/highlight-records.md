@@ -5,47 +5,47 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( *aTable* : Table {; *setName* : Text {; *}} )<br/>**HIGHLIGHT RECORDS** ( *setName* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*laTable* }{;}{ *nomEnsemble* {; *}} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table where records will be highlighted If omitted, table of current form |
-| setName | Text | &#8594;  | Set of records to highlight or Userset if omitted |
-| * | Operator | &#8594;  | Disable the automatic scroll of the list |
+| laTable | Table | &#8594;  | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
+| nomEnsemble | Text | &#8594;  | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
+| * | Opérateur | &#8594;  | Inactiver le défilement automatique de la liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->The **HIGHLIGHT RECORDS** command highlights records in a list form.<!-- END REF--> This operation is identical to manually selecting records in list mode by using the mouse or the **Shift+Click** or **Ctrl+Click** (Windows) or **Command+Click** (macOS) key combinations. The current selection is not modified. 
+<!--REF #_command_.HIGHLIGHT RECORDS.Summary-->La commande **HIGHLIGHT RECORDS** permet de “surligner” des enregistrements dans un formulaire en liste.<!-- END REF--> Cette opération est identique à la sélection en mode liste, par l’utilisateur, d’enregistrement(s) à l’aide des combinaisons **Maj+clic** ou **Ctrl+clic** (Windows) ou **Commande+clic** (macOS). La sélection courante n’est pas modifiée. 
 
-**Note:** The set of “selected” records is updated after redrawing the records; that is, after executing the entire calling method — and not just immediately after executing **HIGHLIGHT RECORDS**.
+**Note :** L’ensemble des enregistrements marqués est mis à jour après le redessinement des enregistrements, c’est-à-dire après la fin de l’exécution de toute la méthode d’appel — et non immédiatement après l’exécution de la commande **HIGHLIGHT RECORDS**.
 
-The *aTable* parameter lets you designate the table where records will be “highlighted.” This parameter can be used, in particular, to highlight the records of included subforms — which do not belong to the current table (see below). 
+Le paramètre *laTable* permet de désigner la table de laquelle les enregistrements doivent être “marqués”. Ce paramètre permet en particulier de marquer les enregistrements des sous-formulaires inclus — n’appartenant donc pas à la table courante (cf. ci-dessous).
 
-* If you pass a valid set name to *setName*, the command is applied to the records in that set for the *table* defined.
-* If you omit the *setName* parameter, the command only highlights the records in the current UserSet set. This set is only managed in Design mode and when calling the [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md) commands. If you want to highlight the records of a subform, you must pass a table name and set name. For more information about the UserSet set, refer to the *Sets* section.
+* Si vous passez un nom d’ensemble valide dans le paramètre *nomEnsemble*, la commande s’appliquera aux enregistrements de cet ensemble pour la *table* définie.
+* Si vous omettez le paramètre *nomEnsemble*, la commande marquera les enregistrements de l’ensemble système UserSet courant. Cet ensemble est géré uniquement en mode Développement et dans le cadre de l'appel des commandes [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md)). Si vous souhaitez marquer les enregistrements d'un sous-formulaire, vous devez passer un nom de table et d'ensemble. Pour plus d'informations sur l'ensemble UserSet, reportez-vous à la section *Ensembles*.
 
-The *\** parameter, when passed, disables the automatic scroll function of the list if the highlighted records are not visible. This mechanism allows customized scroll management using the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command. 
+Le paramètre *\**, s’il est passé, provoque l’inactivation de la fonction de défilement automatique de la liste si les enregistrements marqués ne sont pas visibles. Ce mécanisme autorise la gestion personnalisée du défilement via la commande [OBJECT SET SCROLL POSITION](object-set-scroll-position.md).
 
-**Note:** Regarding included subforms, the **HIGHLIGHT RECORDS** command does nothing if the Selection Mode property **Multiple** is not selected for the subform. In this case, to highlight a line, you must use the [GOTO SELECTED RECORD](goto-selected-record.md) command. 
+**Note :** Dans le cadre des sous-formulaires inclus, la commande **HIGHLIGHT RECORDS** ne fait rien si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour marquer une ligne, vous devez utiliser la commande [GOTO SELECTED RECORD](goto-selected-record.md). 
 
-## Example 
+## Exemple 
 
-In an output form displayed by the [MODIFY SELECTION](modify-selection.md) command, you want the user to be able to perform searches without the current selection being modified. To do this, place a **Search** button in the form and associate it with the following method: 
+Dans un formulaire en liste affiché par la commande [MODIFY SELECTION](modify-selection.md), vous souhaitez que l’utilisateur puisse effectuer des recherches, sans que la sélection courante soit modifiée. Pour cela, placez un bouton **Chercher** dans le formulaire et associez-lui la méthode suivante :
 
 ```4d
  SET QUERY DESTINATION(Into set;"UserSet")
@@ -54,18 +54,18 @@ In an output form displayed by the [MODIFY SELECTION](modify-selection.md) comma
  HIGHLIGHT RECORDS
 ```
 
-When the user clicks the button, the standard query dialog box appears. Once the search has been validated, the records found will be highlighted without the current selection being modified.
+Lorsque l’utilisateur clique sur le bouton, la boîte de dialogue standard de recherche apparaît. Une fois la recherche validée, les enregistrements trouvés sont surlignés, sans que la sélection courante ne soit modifiée.
 
-## See also 
+## Voir aussi 
 
 [GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
 [OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 656 |
+| Numéro de commande | 656 |
 | Thread safe | no |
 
 

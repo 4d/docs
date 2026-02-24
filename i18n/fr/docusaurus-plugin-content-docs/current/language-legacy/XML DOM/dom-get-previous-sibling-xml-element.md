@@ -5,53 +5,53 @@ slug: /commands/dom-get-previous-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* : Text {; *siblingElemName* : Text {; *siblingElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *refElément* {; *nomElémentFrère* {; *valeurElémentFrère*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| siblingElemName | Text | &#8592; | Name of sibling XML element |
-| siblingElemValue | Text | &#8592; | Value of sibling XML element |
-| Function result | Text | &#8592; | Sibling XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElémentFrère | Text | &#8592; | Nom de l’élément XML frère |
+| valeurElémentFrère | Text | &#8592; | Valeur de l’élément XML frère |
+| Résultat | Text | &#8592; | Référence de l’élément XML frère |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.2|Created|
+|2004.2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get previous sibling XML element.Summary-->The DOM Get previous sibling XML element command returns a reference to the previous “sibling” of the XML element passed as reference.<!-- END REF--> This reference may be used with the other XML parsing commands.
+<!--REF #_command_.DOM Get previous sibling XML element.Summary-->La commande **DOM Get previous sibling XML element** retourne une référence vers le précédent “frère” de l’élément XML passé en référence.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
-The optional *siblingElemName* and *siblingElemValue* parameters, when passed, receive respectively the name and value of the previous “sibling” element. 
+Les paramètres *nomElémentFrère* et *valeurElémentFrère*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément “frère” précédent. 
 
-This command can be used to navigate among the “children” of an XML element. 
+Cette commande permet de naviguer parmi les “enfants” d’un élément XML. 
 
-Before the first “sibling,” the system variable OK is set to 0\. 
+Avant le premier “frère”, la variable système OK prend la valeur 0\. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly and if the referenced element is not the first “child” of the structure, the system variable OK is set to 1\. If an error occurs or if the element parsed is the first “child” of the structure, it is set to 0.
+Si la commande a été correctement exécutée et si l’élément référencé n’est pas le premier “enfant” de la structure, la variable système OK prend la valeur 1\. Si une erreur se produit ou si l’élément analysé est le premier “enfant” de la structure, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 924 |
+| Numéro de commande | 924 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

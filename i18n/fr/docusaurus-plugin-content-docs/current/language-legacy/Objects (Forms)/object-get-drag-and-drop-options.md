@@ -5,55 +5,55 @@ slug: /commands/object-get-drag-and-drop-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( * ; *object* : Text ; *draggable* : Boolean ; *automaticDrag* : Boolean ; *droppable* : Boolean ; *automaticDrop* : Boolean )<br/>**OBJECT GET DRAG AND DROP OPTIONS** ( *object* : Variable, Field ; *draggable* : Boolean ; *automaticDrag* : Boolean ; *droppable* : Boolean ; *automaticDrop* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( {* ;} *objet* ; *glissable* ; *glissableAuto* ; *déposable* ; *déposableAuto* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field|
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| draggable | Boolean | &#8592; | Draggable = True; otherwise, False |
-| automaticDrag | Boolean | &#8592; | Automatic Drag = True; otherwise, False |
-| droppable | Boolean | &#8592; | Droppable = True; otherwise, False |
-| automaticDrop | Boolean | &#8592; | Automatic Drop = True; otherwise, False |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| glissable | Boolean | &#8592; | Glissable = Vrai, sinon Faux |
+| glissableAuto | Boolean | &#8592; | Glisser automatique = Vrai, sinon Faux |
+| déposable | Boolean | &#8592; | Déposable = Vrai, sinon Faux |
+| déposableAuto | Boolean | &#8592; | Déposer automatique = Vrai, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->The **OBJECT GET DRAG AND DROP OPTIONS** command returns the drag and drop options for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->La commande **OBJECT GET DRAG AND DROP OPTIONS** retourne les options de glisser-déposer pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The command returns the current drag and drop options, as set in Design mode or for the current process using the [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md) command.
+La commande retourne les options de glisser-déposer courantes, qu’elles aient été définies en mode Développement ou pour le process à l’aide de la commande [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md). 
 
-Each parameter returns True or False according to whether the corresponding option is enabled or disabled:
+Chaque paramètre retourne Vrai ou Faux suivant que l’option correspondante est active ou inactive :
 
-* *draggable* \= True: Object draggable in programmed mode.
-* *automaticDrag* \= True (only used with text fields and variables, combo boxes and list boxes): Object draggable in automatic mode.
-* *droppable* \= True: Object accepts drops in programmed mode.
-* *automaticDrop* \= True (only used with picture fields and variables, text, combo boxes and list boxes): Object accepts drops in automatic mode.
+* *glissable* \= Vrai : objet glissable en mode programmé.
+* *glissableAuto* \= Vrai (utilisable uniquement avec les champs et variables texte, combo box et list box) : objet glissable en mode automatique.
+* *déposable* \= Vrai : objet acceptant le déposer en mode programmé.
+* *déposableAuto* \= Vrai (utilisable uniquement avec les champs et variables image, texte, combo box et list box) : objet acceptant le déposer en mode automatique.
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1184 |
+| Numéro de commande | 1184 |
 | Thread safe | no |
 
 

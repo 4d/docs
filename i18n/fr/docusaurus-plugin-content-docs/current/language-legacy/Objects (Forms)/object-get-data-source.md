@@ -5,60 +5,58 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *object* : Text ) : Pointer<br/>**OBJECT Get data source** ( *object* : Variable, Field ) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( {* ;} *objet* ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Pointer | &#8592; | Pointer to current data source of object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Pointer | &#8592; | Pointeur vers la source de données courante de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get data source.Summary-->The **OBJECT Get data source** command returns the current data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get data source.Summary-->La commande **OBJECT Get data source** retourne la source de données courante de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-You can define the data source for an object in Design mode using the Property List, or using the [OBJECT SET DATA SOURCE](object-set-data-source.md) command.
+La source de données d’un objet peut avoir été définie en mode Développement via la Liste des propriétés ou à l’aide de la commande [OBJECT SET DATA SOURCE](object-set-data-source.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-## Example 
+## Exemple 
 
-Given a combo box object defined in a form:
+Soit un objet combo box défini dans un formulaire :
 
-![](../assets/en/commands/pict1209738.en.png)![](../assets/en/commands/pict1209740.en.png)
+![](../assets/en/commands/pict1209738.fr.png)![](../assets/en/commands/pict1209740.fr.png)
 
-You execute the following code:
+Vous exécutez le code suivant :
 
 ```4d
  $vPtr :=OBJECT Get data source(*;"vCombo")
-  // $vPtr contains -> vCombo
+     //$vPtr contient ->vCombo
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
-[OBJECT Get data source formula](./commands/object-get-data-source-formula)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1265 |
+| Numéro de commande | 1265 |
 | Thread safe | no |
-
 
 

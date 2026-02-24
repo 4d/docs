@@ -1,6 +1,7 @@
 ---
 id: web-form
 title: Web Form
+slug: /commands/web-form
 displayed_sidebar: docs
 ---
 

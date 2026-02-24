@@ -5,64 +5,64 @@ slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** {( *fenêtre* )}<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number or Current process frontmost window, if omitted |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.HIDE WINDOW.Summary-->The **HIDE WINDOW** command hides the window whose number was passed in *window* or, if this parameter is omitted, the current process frontmost window.<!-- END REF--> For example, this command lets you display only the active window in a process that consists of several processes. 
+<!--REF #_command_.HIDE WINDOW.Summary-->La commande **HIDE WINDOW** permet de masquer la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF--> Cette commande vous permet, par exemple, dans un process comportant plusieurs fenêtres, de ne conserver à l'écran que la fenêtre active. 
 
-The window disappears from the screen but remains open. You can still apply any changes supported by 4D windows programmatically. 
+La fenêtre disparaît de l'écran mais reste ouverte. Vous pouvez continuer à lui appliquer par programmation tout traitement supporté par les fenêtres 4D. 
 
-To display a window that was previously hidden by the **HIDE WINDOW** command:
+Pour réafficher une fenêtre masquée par **HIDE WINDOW** :
 
-* Use the [SHOW WINDOW](show-window.md) command and pass the window reference ID.
-* Use the **Process** page of the Runtime Explorer. Select the process in which the window is handled, then click on the **Show** button.
+* Utilisez la commande [SHOW WINDOW](show-window.md) et passez-lui le numéro de référence de la fenêtre.
+* Ou bien, utilisez la page **Process** de l'Explorateur d'exécution. Sélectionnez le process dans lequel la fenêtre est gérée (process de gestion de la fenêtre ou Process principal) puis cliquez sur le bouton **Montrer**.
 
-To hide all the windows of a process, use the [HIDE PROCESS](hide-process.md) command.
+Si vous souhaitez cacher toutes les fenêtres d'un process, utilisez la commande [HIDE PROCESS](hide-process.md).
 
-## Example 
+## Exemple 
 
-This example corresponds to a method of a button located in an input form. This button opens a dialog box in a new window that belongs to the same process. In this example, the user wants to hide the other windows of the process (an entry form and a tool palette) while displaying the dialog box. Once the dialog box is validated, other process windows are displayed again.
+Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bouton ouvre une boîte de dialogue dans une nouvelle fenêtre du même process. Vous souhaitez masquer les autres fenêtres du process (un formulaire de saisie et une palette d'outils) afin de ne présenter que la boîte de dialogue. Une fois que celle-ci a été validée, vous réaffichez les fenêtres du process.
 
 ```4d
-  // Object method for the "Information" button
+  // Méthode objet du bouton "Informations"
  
- HIDE WINDOW(Entry) // Hide the entry window
- HIDE WINDOW(Palette) // Hide the palette
- $Infos:=Open window(20;100;500;400;8) // Create the information window
- ... // Place here instructions that are dedicated to the dialog management
- CLOSE WINDOW($Infos) // Close the dialog
- SHOW WINDOW(Entry)
- SHOW WINDOW(Palette) // Display the other windows
+ HIDE WINDOW(Saisie) // Masquer la fenêtre de saisie
+ HIDE WINDOW(Palette) // Masquer la palette
+ $Infos:=Open window(20;100;500;400;8) // Créer la fenêtre d'informations
+ ... // Placer ici les instructions nécessaires au remplissage et à la gestion du dialogue
+ CLOSE WINDOW($Infos) // Fermer le dialogue
+ SHOW WINDOW(Saisie)
+ SHOW WINDOW(Palette) // Réafficher les autres fenêtres du process
 ```
 
-## See also 
+## Voir aussi 
 
 [SHOW WINDOW](show-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 436 |
+| Numéro de commande | 436 |
 | Thread safe | no |
 
 

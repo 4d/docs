@@ -7,56 +7,54 @@ displayed_sidebar: docs
 <!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!--REF #_command_.New shared collection.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| value |any| &#8594;  | Shared collection's value(s) |
-| Function result | Collection | &#8592; | New shared collection |
-</div>
+| Paramètres | Type                                                  |                             | Description                                            |
+| ---------- | ----------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
+| value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valeur(s) de la collection partagée |
+| Résultat   | Collection                                            | &#8592; | New shared collection                                  |
+
 <!-- END REF-->
 
-## Description 
+## Description
 
-The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference. Collections can be handled using properties and functions of the [Collection class API](../API/CollectionClass.md). 
+nombres Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](../Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](../API/CollectionClass.md#push) or [`map()`](../API/CollectionClass.md#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](../Concepts/shared.md#useend-use), sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](../API/CollectionClass.md#push) ou [`map()`](../API/CollectionClass.md#map) car elles utilisent automatiquement une structure interne *Use...End use*). Copie inversée de la collection
 
 :::info
 
-For more information on shared collections, please refer to the [Shared objects and collections](../Concepts/shared.md) page.
+Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](../Concepts/shared.md).
 
 :::
 
-If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
+Symbole(s)
 
-You must assign the returned reference to a 4D variable of the Collection type.
+Vous devez affecter la référence retournée à une variable 4D de type Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> N'oubliez pas que l'instruction `var : Collection` déclare une variable de type `Collection` mais ne crée pas de collection.
 
-Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
+Symbole(s) Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
 If the new element index is beyond the last existing element of the shared collection, the collection is automatically resized and all new intermediary elements are assigned a **null** value.
 
-You can pass any number of values of the following supported types:
+Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
-*	number (real, longint...). Number values are always stored as reals.
-*	text
-*	boolean
-*	date
-*	time (stored as number of milliseconds - real)
-*	null
-*	shared object
-*	shared collection
+- nombre (réel, entier...). Les valeurs numériques sont toujours stockées sous forme de réels.
+- text
+- boolean
+- date
+- heure (stockée en nombre de milliseconds - réel)
+- Null
+- Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
+- *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode.
 
 :::note
 
-Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.  
+Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
 
 :::
 
-
-## Example
+## Exemple
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -65,20 +63,17 @@ Unlike standard (not shared) collections, shared collections do not support pict
  End use
 ```
 
+## Voir également
 
+[New collection](new-collection.md)\
+[New shared object](../commands-legacy/new-shared-object.md)\
+*Shared objects and shared collections*
 
-## See also 
+## Propriétés
 
-[New collection](new-collection.md)  
-[New shared object](./commands/new-shared-object)  
-*Shared objects and shared collections*  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1527 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1527 |
+| Thread safe        | oui  |
 
 

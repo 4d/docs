@@ -5,78 +5,78 @@ slug: /commands/variable-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *srcVar* : Variable {; ...(*dstVar* : Variable ; *srcVar* : Variable)} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO VARIABLE.Syntax-->**VARIABLE TO VARIABLE** ( *process* ; *varDestination* ; *varSource* {; *varDestination2* ; *varSource2* ; ... ; *varDestinationN* ; *varSourceN*} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Destination process number |
-| dstVar | Variable | &#8594;  | Destination variable |
-| srcVar | Variable | &#8594;  | Source variable |
+| process | Integer | &#8594;  | Numéro du process de destination |
+| varDestination | Variable | &#8594;  | Variable de destination |
+| varSource | Variable | &#8594;  | Variable source |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VARIABLE TO VARIABLE.Summary-->The **VARIABLE TO VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values of the variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
+<!--REF #_command_.VARIABLE TO VARIABLE.Summary-->La commande **VARIABLE TO VARIABLE** écrit la valeur de la ou des variable(s) *varSource1* (*varSource2*, etc.), dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont vous avez passé le numéro dans *process*.<!-- END REF-->
 
-**VARIABLE TO VARIABLE** has the same action as [SET PROCESS VARIABLE](set-process-variable.md), with the following differences: 
+**VARIABLE TO VARIABLE** a un fonctionnement semblable à celui de la commande [SET PROCESS VARIABLE](set-process-variable.md), avec cependant les différences suivantes : 
 
-* You pass source expressions to [SET PROCESS VARIABLE](set-process-variable.md), and therefore cannot pass an array as a whole. You must exclusively pass source variables to **VARIABLE TO VARIABLE**, and therefore can pass an array as a whole.
-* Each destination variable of [SET PROCESS VARIABLE](set-process-variable.md) can be a variable or an array element, but cannot be an array as a whole. Each destination variable of **VARIABLE TO VARIABLE** can be a variable or an array or an array element.
+* Alors que vous passez comme source à [SET PROCESS VARIABLE](set-process-variable.md)des expressions (et donc vous ne pouvez pas passer un tableau en totalité), vous devez passer comme source à **VARIABLE TO VARIABLE** uniquement des variables (et donc vous pouvez passer un tableau en totalité).
+* Avec [SET PROCESS VARIABLE](set-process-variable.md), chaque variable de destination peut être une variable ou un élément de tableau, mais ne peut pas être un tableau. Avec **VARIABLE TO VARIABLE**, chaque variable de destination peut être une variable, un tableau ou un élément de tableau.
 
-**4D Server:** “Intermachine” process communication, provided by the commands [GET PROCESS VARIABLE](get-process-variable.md), [SET PROCESS VARIABLE](set-process-variable.md) and **VARIABLE TO VARIABLE**, is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+**4D Server :** La communication process “intermachine” permise par les commandes **VARIABLE TO VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) et [GET PROCESS VARIABLE](get-process-variable.md) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
 
-For each couple of *dstVar;expr* variables, the source variable must be of a type compatible with the destination variable, otherwise you may end up with a meaningless value in the variable. In interpreted mode, if a destination variable does not exist, it is created and assigned with the type and value of the source variable.
+Pour chaque association *varDestination;varSource*, le type de la variable source doit être compatible avec la variable de destination, sinon vous pourrez obtenir des variables avec des valeurs non significatives. En mode interprété, si la variable de destination n'existe pas, elle est créée puis le type et la valeur de la variable source lui sont affectés.
 
-The current process “pokes” the variables of the destination process—the destination process is not warned in any way that another process is writing the instance of its variables.
+Lorsque le process courant écrit les variables du process de destination, ce dernier n'est averti en aucune manière de l'écriture de l'instance de ses variables par un autre process.
 
 ### Restrictions 
 
-**VARIABLE TO VARIABLE** does not accept local variables as destination variables. 
+**VARIABLE TO VARIABLE** n'accepte pas de variables locales comme variables de destination. 
 
-**VARIABLE TO VARIABLE** accepts any type of destination process or interprocess variables except:
+**VARIABLE TO VARIABLE** accepte tout type de variable process ou interprocess de destination, à l'exception de variables de type :
 
-* Pointers
-* Array of pointers
-* Two-dimensional arrays
+* Pointeur
+* Tableau de pointeurs
+* Tableau à deux dimensions
 
-The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
+Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, une erreur est retournée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-## Example 
+## Exemple 
 
-The following example reads a process array from the process indicated by *$vlProcess*, sequentially sets the elements to uppercase and then writes back the array as a whole:
+L'exemple suivant récupère un tableau process depuis le process désigné par *$vlProcess*, passe séquentiellement tous ses éléments en caractères majuscules puis réécrit entièrement le tableau :
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
- For($vlElem;1;Size of array($anArray))
-    $anArray{$vlElem}:=Uppercase($anArray{$vlElem})
+ GET PROCESS VARIABLE($vlProcess;at_IPCom_Tab;$anTab)
+ For($vlElem;1;Size of array($anTab))
+    $anTab{$vlElem}:=Uppercase($anTab{$vlElem})
  End for
- VARIABLE TO VARIABLE($vlProcess;at_IPCom_Array;$anArray)
+ VARIABLE TO VARIABLE($vlProcess;at_IPCom_Tab;$anTab)
 ```
 
-## See also 
+## Voir aussi 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
-[Processes](../Develop/processes.md)  
+*Introduction aux process*  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 635 |
+| Numéro de commande | 635 |
 | Thread safe | no |
 
 

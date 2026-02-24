@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar screen.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of screen where menu bar is located |
+| Résultat | Integer | &#8592; | Numéro de l'écran contenant la barre de menus |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Menu bar screen.Summary-->Menu bar screen returns the number of the screen where the menu bar is located.<!-- END REF-->
+<!--REF #_command_.Menu bar screen.Summary-->La commande **Menu bar screen** retourne le numéro de l'écran dans lequel se trouve la barre de menus.<!-- END REF-->
 
-**Windows note:** On Windows, Menu bar screen always returns 1.
+**Note pour les utilisateurs Windows :** Sous Windows, **Menu bar screen** renvoie toujours 1.
 
-## See also 
+## Voir aussi 
 
 [Count screens](count-screens.md)  
 [Menu bar height](menu-bar-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 441 |
+| Numéro de commande | 441 |
 | Thread safe | no |
 
 

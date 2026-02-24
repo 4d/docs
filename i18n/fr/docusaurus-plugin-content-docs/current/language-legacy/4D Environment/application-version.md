@@ -5,108 +5,109 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** ( {*buildNum* : Integer} {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** {( *numBuild* {; *} )} : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| buildNum | Integer | &#8592; | Build number |
-| * | Operator | &#8594;  | Long version number if passed, otherwise Short version number |
-| Function result | Text | &#8592; | Version number encoded string |
+| numBuild | Integer | &#8592; | Numéro de build |
+| * | Opérateur | &#8594;  | Si passé = numéro de version long Si omis = numéro de version court |
+| Résultat | Text | &#8592; | Numéro de version dans une chaîne encodée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R2|Modified|
-|11 SQL Release 5|Modified|
-|6|Created|
+|14 R2|Modifié|
+|11 SQL Release 5|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Application version.Summary-->The **Application version** command returns an encoded string value that expresses the version number of the 4D environment you are running.<!-- END REF-->
+<!--REF #_command_.Application version.Summary-->**Application version** retourne une chaîne encodée qui exprime le numéro de version de l'environnement 4D que vous utilisez.<!-- END REF-->
 
-- If you do not pass the optional \* parameter, a 4-character string is returned, formatted as follows:
+Si vous ne passez pas le paramètre optionnel *\**, une chaîne de 4 caractères est retournée, formatée de la manière suivante :  
 
-| **Characters** | **Description** |
-| -------------- | --------------- |
-| 1-2            | Version number  |
-| 3              | "R" number      |
-| 4              | Revision number |
+| **Caractères** | **Description**    |
+| -------------- | ------------------ |
+| 1-2            | Numéro de version  |
+| 3              | Numéro "R"         |
+| 4              | Numéro de révision |
 
-- If you pass the optional *\** parameter, an 8-character string is returned, formatted as follows:
+Si vous passez le paramètre optionnel *\**, une chaîne de 8 caractères est retournée, formatée de la manière suivante :  
 
-| **Characters**    | **Description**    |
-| ----------------- | ------------------------------ |
-| 1         | <ul><li> "F" denotes a final version</li><li>"B" denotes a beta version</li><li>Other characters denote an 4D internal</li></ul>  |
-| 2-3-4                                          | Internal 4D compilation number |
-| 5-6                                            | Version number                 |
-| 7                                              | "R" number                     |
-| 8                                              | Revision number                |
+| **Caractères**                                              | **Description**                    |
+| ----------------------------------------------------------- | ---------------------------------- |
+| 1                                                           | "F" représente une version finale  |
+| "B" représente une version beta                             |                                    |
+| Les autres caractères représentent une version interne à 4D |                                    |
+| 2-3-4                                                       | Numéro de compilation interne à 4D |
+| 5-6                                                         | Numéro de version                  |
+| 7                                                           | Numéro "R"                         |
+| 8                                                           | Numéro de révision                 |
 
-**Compatibility note**
+**Note de compatibilité (4D v14)**
 
-Version numbering has been changed beginning with version 14 of 4D:
+**Attention**, la numérotation est modifiée à compter des versions 14 de 4D :
 
-* the **"R" number** is the number of the "R" version of 4D, for example 3 for version R3 (contains 0 for a bug fix version),
-* the **revision number** is the number of the bug fix version of 4D (contains 0 for an "R" version).
+* le **numéro "R"** est le numéro de version "R" de 4D, par exemple 3 pour la version R3 (contient 0 pour une version "bug fix"),
+* le **numéro de révision** est le numéro de version "bug fix" de 4D (contient 0 pour une version "R").
 
-In previous versions of 4D, the number of the "R" version was the update number; it designated the revision and the revision number itself was always 0.
+Dans les versions précédentes de 4D, le numéro de version "R" était le numéro de mise à jour, il désignait la révision. Le numéro de révision était toujours 0.
 
-Examples for a short version number:
+Exemples pour un numéro de version court :
 
-| **Versions** | **Value returned** |                                  |
-| ------------ | ------------------ | -------------------------------- |
-| 4D 13.1     | "1310"             | *Previous numbering system*      |
-| 4D 14 R2    | "1420"             | Release R2                       |
-| 4D 14 R3    | "1430"             | Release R3                       |
-| 4D 14.1     | "1401"             | First bug fix version of 4D 14  |
-| 4D 14.2     | "1402"             | Second bug fix version of 4D 14 |
+| **Versions** | **Valeur retournée** |                                      |
+| ------------ | -------------------- | ------------------------------------ |
+| 4D v13.1     | "1310"               | *Précédent système de numérotation*  |
+| 4D v14 R2    | "1420"               | Release R2                           |
+| 4D v14 R3    | "1430"               | Release R3                           |
+| 4D v14.1     | "1401"               | Première version "bug fix" de 4D v14 |
+| 4D v14.2     | "1402"               | Seconde version "bug fix" de 4D v14  |
 
-Examples for a long version number:
+Exemples pour un numéro de version long :
 
-| **Versions**    | **Value returned** |
-| --------------- | ------------------ |
-| 4D 12.5 beta   | "B0011250"         |
-| 4D 14 R2 beta  | "B0011420"         |
-| 4D 14 R3 final | "F0011430"         |
-| 4D 14.1 beta   | "B0011401"         |
+| **Versions**     | **Valeur retournée** |
+| ---------------- | -------------------- |
+| 4D v12.5 beta    | "B0011250"           |
+| 4D v14 R2 beta   | "B0011420"           |
+| 4D v14 R3 finale | "F0011430"           |
+| 4D v14.1 beta    | "B0011401"           |
 
-The `Application version` command can return additional information in the optional *buildNum* parameter: the build number of the current version of the 4D application. This is an internal compilation number that can be used for versioning or when contacting the 4D Technical Services department.
+La commande **Application version** peut retourner une information supplémentaire dans le paramètre optionnel *numBuild* : le numéro de "build" de la version courante de l’application 4D. Il s’agit d’un numéro de compilation interne qui peut être utile pour du versionning ou lors d’échanges avec les services techniques de 4D. 
 
-**Note:** In the case of applications that are compiled and merged with 4D Volume Desktop, the build number returned is not significant. In this context, version information is managed by the developer. 
+**Note :** Dans le cas des applications compilées et fusionnées avec 4D Volume Licence, le numéro de build retourné n'est pas significatif. Dans ce contexte, les informations de version sont gérées par le développeur. 
 
-## Example 1 
+## Exemple 1 
 
-This example displays the 4D environment version number:
+Cet exemple affiche le numéro de version de l'environnement 4D : 
 
 ```4d
  $vs4Dversion:=Application version
- ALERT("You are using the version "+String(Num(Substring($vs4Dversion;1;2)))+"."+
- $vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
+ ALERT("Vous utilisez la version "+String(Num(Sous chaine($vs4Dversion;1;2)))+"."+$vs4Dversion[[3]]+"."+$vs4Dversion[[4]])
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example tests to verify that you are using a final version:
+Cet exemple teste si vous utilisez une version finale :
 
 ```4d
  If(Substring(Application version(*);1;1)#"F")
-    ALERT("Please make sure you are using a Final Production version of 4D with this database!")
+    ALERT("Veuillez vous assurer que vous utilisez une version finale de 4D avec cette base !")
     QUIT 4D
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-You want to use the application's short version value returned by the command to display the 4D application release name. You can write:
+Le code suivant reconstitue le numéro de version de l'application et permet de distinguer les versions v14 "bug fix" des versions v14 "R" :
 
 ```4d
  var $Lon_build : Integer
@@ -114,7 +115,7 @@ You want to use the application's short version value returned by the command to
  
  $Txt_version:=Application version($Lon_build)
  
- $Txt_major:=$Txt_version[[1]]+$Txt_version[[2]] //version number, e.g. 14
+ $Txt_major:=$Txt_version[[1]]+$Txt_version[[2]] //numéro de version, p.e. 14
  $Txt_release:=$Txt_version[[3]] //Rx
  $Txt_minor:=$Txt_version[[4]] //.x
  
@@ -127,16 +128,16 @@ You want to use the application's short version value returned by the command to
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Application type](application-type.md)  
 [Version type](version-type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 493 |
+| Numéro de commande | 493 |
 | Thread safe | yes |
 
 

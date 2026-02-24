@@ -5,84 +5,83 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *statement* : Text )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| statement | Text | &#8594;  | Code to be executed |
+| instruction | Text | &#8594;  | Code à exécuter |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|15 R4|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** executes *statement* as a line of code.<!-- END REF--> This command is designed to be used when you need to evaluate expressions that can be built or modified by the user. 
+<!--REF #_command_.EXECUTE FORMULA.Summary-->**EXECUTE FORMULA** exécute *instruction* comme une ligne de code.<!-- END REF--> Cette commande est destinée à être utilisée lorsque vous devez évaluer des expressions qui peuvent être construites ou modifiées par l'utilisateur. 
 
-The statement string must be one line. If *statement* is an empty string, **EXECUTE FORMULA** does nothing. The rule of thumb is that if the *statement* can be executed as a one-line method, then it will execute properly. Use **EXECUTE FORMULA** sparingly, as it can slow down execution speed. In a compiled database, the line of code is not compiled. This means that *statement* will be executed, but it will not have been checked by the compiler at compilation time.
+ La chaîne d'instructions doit comporter une seule ligne. Si *instruction* est une chaîne vide, **EXECUTE FORMULA** ne fait rien. Le principe est que si *instruction* peut être exécutée comme une méthode d'une seule ligne, alors elle s'exécutera correctement. La commande **EXECUTE FORMULA** doit être utilisée avec précautions, car elle ralentit la vitesse d'exécution. Dans une base compilée, le code d'*instruction* n'est pas compilé. Cela signifie que l'*instruction* sera bien exécutée, mais ne sera pas vérifiée par le compilateur au moment de la compilation. 
 
-**Note:** Executing formulas in compiled mode can be optimized using a cache (see *Cache for formulas in compiled mode* below).
+**Note :** L'exécution de formules en mode compilé peut être optimisée à l'aide d'un cache (cf. paragraphe "Cache de formules en mode compilé" ci-dessous).
 
-The *statement* can include the following elements:
+L'*instruction* peut notamment contenir les éléments suivants :
 
-* a Call to a function (a project method that returns a value)
-* a Call to a 4D command
-* an Assignment
+* un appel à une fonction (méthode projet qui retourne une valeur),
+* un appel à une commande 4D,
+* une assignation.
 
-**Notes:** 
+**Notes :** 
 
-* If *statement* is a project method, it is recommended to use the [EXECUTE METHOD](execute-method.md) that allows you to pass parameters.
-* It is not recommend to call any variable declaration in *statement* since it can generate conflicts in the code.
+* Si *instruction* est une méthode projet, il est recommandé d'utiliser [EXECUTE METHOD](execute-method.md) qui permet de passer des paramètres.
+* Il est déconseillé d'appeler des commandes de déclaration de variables telles que *C\_DATE* dans *instruction* afin d'éviter tout risque de conflit de type.
 
-The formula can include process variables and interprocess variables. However, the statement cannot contain control of flow statements (If, While, etc.), because it must be in one line of code.
+La formule peut utiliser des variables process et interprocess. En revanche, *instruction* ne doit pas contenir d'instructions de contrôle de flux (Si, Tant que...) car le code doit "tenir" sur une seule ligne.
 
-To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](current-time.md) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
+Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](current-time.md), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 
-### Cache for formulas in compiled mode 
+### Cache de formules en mode compilé 
 
-For optimization purposes, each formula executed by **EXECUTE FORMULA** in compiled mode can be stored in a dedicated cache in memory. The formula is cached in tokenized form. Once it is placed in the cache, its subsequent executions are highly optimized since the tokenization step is bypassed. 
+A des fins d'optimisation, chaque formule exécutée via **EXECUTE FORMULA** en mode compilé peut être conservée en mémoire dans un cache dédié. La formule est stockée sous forme de références (*tokens*). Une fois placée dans le cache, une formule s'exécutera de manière beaucoup plus rapide par la suite car la phase de *tokenisation* sera évitée. 
 
-The cache size is zero by default (no cache); it needs to be created or adjusted using the [SET DATABASE PARAMETER](set-database-parameter.md) command. For example:
-
-```4d
- SET DATABASE PARAMETER(Number of formulas in cache;0) //no cache for formulas
- SET DATABASE PARAMETER(Number of formulas in cache;3) //up to three formulas can be cached for each process
-```
-
-The **EXECUTE FORMULA** command uses the cache only when called from a compiled database or component.
-
-## Example 
-
-You want to execute a formula including calls to 4D commands and tables. Since these elements could potentially be renamed, you can ensure correct execution in future versions of your application by using the token syntax as shown here:
+La taille du cache est de zéro par défaut (pas de cache) ; vous devez le créer et l'ajuster à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). Par exemple :
 
 ```4d
- EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
+ SET DATABASE PARAMETER(Number of formulas in cache;0) //pas de cache de formules
+ SET DATABASE PARAMETER(Number of formulas in cache;3) //jusqu'à trois formules peuvent être en cache pour chaque process
 ```
 
-## See also 
+La commande **EXECUTE FORMULA** utilise le cache uniquement lorsqu'elle est appelée depuis une base ou un composant exécuté(e) en mode compilé. 
 
-[Command name](./commands/command-name)  
+## Exemple 
+
+Vous voulez exécuter une formule incluant des appels à des commandes et des tables 4D. Comme ces éléments peuvent potentiellement être renommés, vous voulez vous assurer de l'exécution correcte de l'instruction dans les versions futures de votre application en utilisant la syntaxe avec *tokens* :
+
+```4d
+ EXECUTE FORMULA("Annee de:C25 ([Products:5]Creation_Date:2])+$add")
+```
+
+## Voir aussi 
+
+[Command name](../commands/command-name.md)  
 [EDIT FORMULA](edit-formula.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 63 |
+| Numéro de commande | 63 |
 | Thread safe | yes |
-
 
 

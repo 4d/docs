@@ -5,37 +5,40 @@ slug: /commands/clear-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *semaphore* : Text )<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | Text | &#8594;  | Semaphore to clear |
+| sémaphore | Text | &#8594;  | Sémaphore à effacer |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** erases *semaphore* previously set by the [Semaphore](semaphore.md) function.<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** permet d'effacer le *sémaphore* précédemment créé par la fonction [Semaphore](semaphore.md).<!-- END REF-->
 
-As a rule, all semaphores that have been created should be cleared. If semaphores are not cleared, they remain in memory until the process that creates them ends. A process can only clear semaphores that it has created. If you try to clear a semaphore from within a process that did not create it, nothing happens.
+La règle d'utilisation est que tous les sémaphores doivent être effacés lorsqu'ils ne sont plus nécessaires. Si les sémaphores ne sont pas effacés, ils restent en mémoire jusqu'à la fermeture du process dans lequel ils ont été créés.  
+Un process ne peut effacer que les sémaphores qu'il a créés. Si vous tentez d'effacer un sémaphore depuis un autre process que celui qui l'a créé, **CLEAR SEMAPHORE** ne fait rien.
 
-## Example 
+**Note :** Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
 
-See the example for [Semaphore](semaphore.md).
+## Exemple 
 
-## See also 
+Reportez-vous à l'exemple de la fonction [Semaphore](semaphore.md "Semaphore").
+
+## Voir aussi 
 
 [Semaphore](semaphore.md)  
-*Semaphores and signals*  
+*Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 144 |
+| Numéro de commande | 144 |
 | Thread safe | yes |
 
 

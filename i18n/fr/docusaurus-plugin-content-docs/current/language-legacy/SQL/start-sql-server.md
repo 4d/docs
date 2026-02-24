@@ -9,41 +9,41 @@ displayed_sidebar: docs
 <!--REF #_command_.START SQL SERVER.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.START SQL SERVER.Summary-->The START SQL SERVER command launches the integrated SQL server in the 4D application where it has been executed.<!-- END REF--> Once launched, the SQL server can respond to external SQL queries.
+<!--REF #_command_.START SQL SERVER.Summary-->La commande **START SQL SERVER** démarre le serveur SQL intégré de l’application 4D sur laquelle elle a été exécutée.<!-- END REF--> Une fois lancé, le serveur SQL peut répondre aux requêtes SQL externes.
 
-**Note:** This command does not affect the internal functioning of the 4D SQL kernel. The SQL kernal is always available for internal queries.
+**Note :** Cette commande n’influe pas sur le fonctionnement du moteur SQL interne de 4D. Le moteur SQL est toujours disponible pour les requêtes internes.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the SQL server has been launched correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
+Si le serveur SQL a été correctement lancé, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [STOP SQL SERVER](stop-sql-server.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 962 |
+| Numéro de commande | 962 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

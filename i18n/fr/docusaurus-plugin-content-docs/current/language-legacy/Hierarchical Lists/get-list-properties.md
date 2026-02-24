@@ -5,62 +5,57 @@ slug: /commands/get-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *liste* ; *apparence* {; *icône* {; *hauteurLigne* {; *doubleClic* {; *multiSélection* {; *modifiable*}}}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | List reference number |
-| appearance | Integer | &#8592; | Graphical style of the list 1 = Hierarchical list a la Macintosh 2 = Hierarchical list a la Windows |
-| icon | Integer | &#8592; | *** Deprecated, always 0 *** |
-| lineHeight | Integer | &#8592; | Minimal line height expressed in pixels |
-| doubleClick | Integer | &#8592; | Expand/Collapse sublist on double-click? 0 = Yes, 1= No |
-| multiSelections | Integer | &#8592; | Multiple selections: 0 = No, 1 = Yes |
-| editable | Integer | &#8592; | List editable by user: 0 = No, 1 = Yes |
+| liste | Integer | &#8594;  | Numéro de référence de la liste |
+| apparence | Integer | &#8592; | Style graphique de la liste 1 = Liste hiérarchique à la Macintosh 2 = Liste hiérarchique à la Windows |
+| icône | Integer | &#8592; | *** Paramètre obsolète, retourne 0 *** |
+| hauteurLigne | Integer | &#8592; | Hauteur minimale de la ligne (pixels) |
+| doubleClic | Integer | &#8592; | Déploiement/contraction sur double-clic 0 = autorisé, 1= empêché |
+| multiSélection | Integer | &#8592; | Sélections multiples : 0 = interdites, 1 = autorisées |
+| modifiable | Integer | &#8592; | Enumération modifiable : 0 = non, 1 = oui |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST PROPERTIES.Summary-->The **GET LIST PROPERTIES** command returns information about the list whose reference number you pass in *list*.<!-- END REF-->
+<!--REF #_command_.GET LIST PROPERTIES.Summary-->La commande **GET LIST PROPERTIES** retourne des informations sur la liste hiérarchique dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
-The *appearance* parameter returns the graphical style of the list.
+Le paramètre *apparence* retourne le style graphique de la liste.  
+Le paramètre *icône* est obsolète, il retourne toujours 0.  
+Le paramètre *hauteurLigne* retourne la hauteur de ligne minimale.  
+Si le paramètre *doubleClic* vaut 1, le déploiement ou la contraction des sous-listes en cas de double-clic sur l’élément parent est désactivé(e). Si *doubleClic* vaut 0, ce fonctionnement est actif (valeur par défaut).   
+Si le paramètre *multiSélection* vaut 0, la sélection multiple d’éléments (manuelle ou par programmation) n’est pas possible dans la liste. S’il vaut 1, la sélection multiple est permise.   
+Si le paramètre *modifiable* vaut 1, la liste est modifiable lorsqu’elle est affichée sous forme d’énumération dans les enregistrements. S’il vaut 0, la liste n’est pas modifiable. 
 
-The *icon* parameter returns the resource IDs of the node icons displayed in the list.
+Ces propriétés peuvent être définies à l'aide de la commande [SET LIST PROPERTIES](set-list-properties.md) et/ou dans l'éditeur d'énumérations en mode Développement, si la liste a été créée dans cet éditeur ou sauvegardée avec la commande [SAVE LIST](save-list.md).
 
-The *lineHeight* parameter returns the minimal line height.
+Pour une description complète de ces propriétés d'apparence et de comportement, reportez-vous à la commande [SET LIST PROPERTIES](set-list-properties.md).
 
-If *doubleClick* is set to 1, double-clicking on a parent list item does not provoke its child list to expand or to collapse. If *doubleClick* is set to 0, this behavior is active (defaut value).
-
-If the *multiSelections* parameter is set to 0, multiple selections of items (manually or by programming) are not possible in the list. If it is set to 1, multiple selections are allowed. 
-
-If the *editable* parameter is set to 1, the list is editable when it is displayed as a choice list in a record. If it is set to 0, the list is not editable. 
-
-These properties can be set using the [SET LIST PROPERTIES](set-list-properties.md) command and/or in the Design environment List Editor, if the list was created there or saved using the [SAVE LIST](save-list.md) command.
-
-For a complete description of the appearance, node icons, minimal line height and double-click management of a list, see the [SET LIST PROPERTIES](set-list-properties.md) command.
-
-## See also 
+## Voir aussi 
 
 [SET LIST PROPERTIES](set-list-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 632 |
+| Numéro de commande | 632 |
 | Thread safe | no |
 
 

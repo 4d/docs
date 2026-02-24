@@ -5,78 +5,79 @@ slug: /commands/object-set-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *object* : Variable, Field ; *alignment* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( {* ;} *objet* ; *alignement* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an Object name (String) If omitted, object is a field or a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| alignment | Integer | &#8594;  | Alignment code |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
+| alignement | Integer | &#8594;  | Code d’alignement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20|Modified|
-|15 R4|Modified|
-|13|Renamed|
-|12|Renamed|
-|6.8.1|Created|
+|20|Modifié|
+|15 R4|Modifié|
+|13|Renommé|
+|12|Renommé|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->The **OBJECT SET HORIZONTAL ALIGNMENT** command allows you to set the type of horizontal alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->La commande **OBJECT SET HORIZONTAL ALIGNMENT** vous permet de fixer le type d’alignement horizontal appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in the *object* parameter. If you omit the *\** parameter, you indicate a field or variable in the *object* parameter. In this case, you specify a field or variable reference (field or variable objects only) instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* désigne le nom d’un objet (une chaîne). Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objet* désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables de formulaire uniquement).
 
-Pass one of the constants of the *Form Objects (Properties)* theme in the *alignment* parameter:  
+Passez dans le paramètre *alignement* une des constantes du thème *Objets de formulaire (Propriétés)* :
 
-| Constant      | Type    | Value | Comment                               |
-| ------------- | ------- | ----- | ------------------------------------- |
-| Align center  | Integer | 3     |                                       |
-| Align default | Integer | 1     |                                       |
-| Align left    | Integer | 2     |                                       |
-| Align right   | Integer | 4     |                                       |
-| wk justify    | Integer | 5     | Available for 4D Write Pro areas only |
+| Constante     | Type        | Valeur | Comment                                                                 |
+| ------------- | ----------- | ------ | ----------------------------------------------------------------------- |
+| Align center  | Entier long | 3      | <br/>                                                           |
+| Align default | Entier long | 1      |                                                                         |
+| Align left    | Entier long | 2      |                                                                         |
+| Align right   | Entier long | 4      |                                                                         |
+| wk justify    | Entier long | 5      | Alignement justifié. Disponible uniquement pour les zones 4D Write Pro. |
 
-  
-The form objects to which alignment can be applied are as follows:
+**Note :** La constante wk justify est disponible dans le thème "*4D Write Pro*".
 
-* Scrollable areas
-* Combo boxes
-* Buttons
-* Radio buttons
-* Check boxes
-* Static text
-* Group areas
-* Pop up menu/Drop-down lists
-* Fields
+Les objets de formulaire auxquels vous pouvez appliquer cette commande sont les suivants :
+
+* Zones de défilement
+* Combo box
+* Boutons
+* Boutons radio
+* Cases à cocher
+* Textes statiques
+* Zones de groupes
+* Pop up menus/Listes déroulantes
+* Champs
 * Variables
-* List boxes
-* List box columns
-* List box headers
-* List box footers
-* *4D Write Pro Reference* areas
+* List box
+* Colonnes de list box
+* En-tête de list box
+* Pieds de list box
+* Zones *4D Write Pro*
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 706 |
+| Numéro de commande | 706 |
 | Thread safe | no |
 
 

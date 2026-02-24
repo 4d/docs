@@ -5,70 +5,70 @@ slug: /commands/sax-get-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* : Time ; *value* : Text, Blob )<!-- END REF-->
+<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML CDATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| value | Text, Blob | &#8592; | Element value |
+| document | Time | &#8594;  | Référence du document ouvert |
+| valeur | Text, Blob | &#8592; | Valeur de l’élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML CDATA.Summary-->The **SAX GET XML CDATA** command gets the CDATA *value* of an XML element that exists in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML CDATA SAX event. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML CDATA.Summary-->La commande **SAX GET XML CDATA** permet de récupérer la *valeur* CDATA d’un élément XML existant dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML CDATA. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-Pass a *value* variable of the Text type if you want to retrieve data having a size greater than 32 KB (the database must be running in Unicode mode). 
+Passez une variable *valeur* de type Texte si vous souhaitez récupérer des données de taille supérieure à 32 Ko (la base doit fonctionner en mode Unicode). 
 
-**Compatibility note:** Starting with 4D v12, CDATA contents encoded in base64 are automatically decoded by the **SAX GET XML CDATA** command, so it is not necessary to call the [BASE64 DECODE](base64-decode.md) command. 
+**Note de compatibilité :** A compter de 4D v12, les contenus CDATA encodés en base64 sont automatiquement décodés par la commande **SAX GET XML CDATA**, il est donc inutile d'appeler la commande [BASE64 DECODE](base64-decode.md). 
 
-## Example 
+## Exemple 
 
-Let's look at the following piece of XML code:
+Considérons l’extrait de code XML suivant :
 
 ```XML
 <RootElement>
-   <Child>MyText<![CDATA[MyCData]]</Child>
+   <Child>MonTexte<![CDATA[MonCData]]</Child>
 </RootElement>
 ```
 
-The following 4D code will return “MyCData” in *vTextData*: 
+Le code 4D suivant retournera “MonCData” dans *vDonnéesTexte* : 
 
 ```4d
- var vData : Blob
- var vTextData : Text
- SAX GET XML CDATA(DocRef;vData)
- vTextData:=BLOB to text(vData;UTF8 C string)
+ var vDonnées : Blob
+ var vDonnéesTexte : Text
+ SAX GET XML CDATA(RefDoc;vDonnées)
+ vDonnéesTexte:=BLOB to text(vDonnées;UTF8 C string)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [SAX ADD XML CDATA](sax-add-xml-cdata.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 878 |
+| Numéro de commande | 878 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

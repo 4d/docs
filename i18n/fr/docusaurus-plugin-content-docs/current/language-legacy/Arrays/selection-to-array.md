@@ -5,87 +5,84 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}{; *}})<br/>**SELECTION TO ARRAY** ( *aTable* : Table ; *array* : Array {; *aField* : Field ; *array* : Array {; ...(*aField* : Field ; *array* : Array)}}{; *})<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}{; *})<br/>**SELECTION TO ARRAY** {( *laTable* ; *tableau* {; *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}}{; *})}<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field to use for retrieving data  |
-| aTable | Table | &#8594;  | Table to use for retrieving record numbers |
-| array | Array | &#8592; | Array to receive field data or record numbers |
-| aField | Field | &#8594;  | Field to retrieve in array |
-| array | Array | &#8592; | Array to receive field data |
-| * | Operator | &#8594;  | Await execution |
+| leChamp &#124; laTable | Champ, Table | &#8594;  | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
+| tableau | Array | &#8592; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
+| leField | Field | &#8594;  | Champ à récupérer dans le tableau |
+| tableau | Array | &#8592; | Tableau recevant les valeurs du champ |
+| * | Opérateur | &#8594;  | Attente d’exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|<6|Created|
+|13|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SELECTION TO ARRAY.Summary-->The **SELECTION TO ARRAY** command creates one or more arrays and copies data in the fields or record numbers from the current selection into the arrays.<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Summary-->La commande **SELECTION TO ARRAY** crée un ou plusieurs tableau(x) et y copie les valeurs des champ(s) ou les numéros d'enregistrement(s) de la sélection courante.<!-- END REF-->s'applique à la sélection courante de la table désignée par le premier paramètre (nom de table ou nom de champ). La commande peut réaliser les opérations suivantes :
 
-The command **SELECTION TO ARRAY** applies to the selection for the table designated by the first parameter (table name or field name). **SELECTION TO ARRAY** can perform the following:
+* Charger les valeurs d'un ou plusieurs champs,
+* Charger les numéros des enregistrements de la table, à l'aide de la syntaxe *\[table\];tableau*
+* Charger des valeurs de champs liés, s'il existe un lien automatique de N vers 1 entre les tables, ou si vous avez préalablement appelé la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) pour rendre automatiques les liens manuels N vers 1 (dans les deux cas, les valeurs peuvent être chargées à travers plusieurs niveaux de liens N vers 1 entre les tables).
 
-* Load values from one or several fields.
-* Load Record numbers from the table using the syntax *\[table\];array*
-* Load values from related fields, provided that there is a Many to One automatic relation between the tables or provided that you have previously called [SET AUTOMATIC RELATIONS](set-automatic-relations.md) to make manual Many to One relations automatic. In both cases, values are loaded from tables through several levels of Many to One relations.
+Chaque tableau est typé en fonction du type de champ. 
 
-Each array is typed according to the field type. 
-
-When you apply **SELECTION TO ARRAY** to a Time type field, it is important to note that they only create a Time type array if the array has not already been defined as another type. For example, in the following context, the *myArray* array remains a Longint type array:  
+A noter toutefois que **SELECTION TO ARRAY** appliquée à un champ de type Heure créera un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type. Par exemple dans le contexte ci-dessous, le tableau *monTab* conservera le type Entier long :  
 
 ```4d
- ARRAY LONGINT(myArray;0)
- SELECTION TO ARRAY([myTable]myTimeField;myArray)
+ ARRAY LONGINT(monTab;0)
+ SELECTION TO ARRAY([maTable]monChpHeure;monTab)
 ```
 
-If you load record numbers, they are copied into a Long Integer array.
+Si vous chargez les numéros des enregistrements, ils sont copiés dans un tableau de type Entier long. 
 
-When you pass the *\** parameter, 4D does not execute the corresponding statement line immediately but instead stores it in memory; this way you can stack several lines ending with an *\**. All of these lines awaiting execution are executed by one final **SELECTION TO ARRAY** statement that does not have the *\** parameter. For this reason, the command can now be called without any parameters. In this case, array types are verified when the final line (without the *\** parameter) is executed.   
-As with the [QUERY](query.md) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements or build an array within a loop (see example 2 of the [ARRAY TO SELECTION](array-to-selection.md) command). 
+Si vous passez un *\** en dernier paramètre, 4D n’exécute pas immédiatement la ligne d’instruction correspondante mais la stocke en mémoire ; vous pouvez ainsi empiler plusieurs lignes se terminant par un *\**. L’ensemble des lignes en attente sera exécuté par une instruction **SELECTION TO ARRAY** finale sans paramètre *\**. A cette fin, la commande peut être appelée sans aucun paramètre. Dans ce cas, les types des tableaux sont vérifiés au moment de l’exécution de la ligne finale (ne contenant pas de *\**).   
+A l’image de la commande [QUERY](query.md), ce principe vous permet de scinder une instruction complexe en un ensemble de lignes, plus lisibles et plus faciles à maintenir. Il est également possible d’insérer des instructions intermédiaires ou de construire un tableau dans une boucle (cf. exemple 2 de la commande [ARRAY TO SELECTION](array-to-selection.md)). 
 
-**4D Server:** The **SELECTION TO ARRAY** command is optimized for 4D Server. Each array is created on the server and then sent, in its entirety, to the client machine.
+**4D Server :** La commande **SELECTION TO ARRAY** est optimisée pour 4D Server. Chaque tableau est créé sur le serveur puis envoyé en totalité sur le poste client.
 
-**WARNING:** The **SELECTION TO ARRAY** command can create large arrays, depending on the size of the current selection and on the type and size of the data you are loading. Arrays reside in memory, so it is a good idea to test the result after the command is completed. To do so, test the size of each resulting array or cover the call to the command, using an [ON ERR CALL](on-err-call.md) project method.
+**ATTENTION :** **SELECTION TO ARRAY** peut créer des tableaux de taille importante, en fonction de la taille de la sélection courante, ainsi que du type et de la taille des données à charger. Comme les tableaux résident en mémoire, il peut être utile de tester la taille des tableaux créés après l'exécution de la commande, ou d'utiliser une méthode projet d'appel sur erreur. 
 
-**Note:** After a call to **SELECTION TO ARRAY**, the current selection and current record remain the same, but the current record is no longer loaded. If you need to use the values of the fields in the current record, use the [LOAD RECORD](load-record.md) command after the **SELECTION TO ARRAY** command.
+**Note :** Après un appel à **SELECTION TO ARRAY**, la sélection courante et l'enregistrement courant ne sont pas modifiés, mais l'enregistrement courant n'est plus chargé. Utilisez la commande [LOAD RECORD](load-record.md) après un **SELECTION TO ARRAY** si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant. 
 
-## Example 1 
+## Exemple 1 
 
-In the following example, the *\[People\]* table has an automatic relation to the \[Company\] table. The two arrays *asLastName* and *asCompanyAddr* are sized according to the number of records selected in the *\[People\]* table and will contain information from both tables:
+Dans l'exemple suivant, la table *\[Personnes\]* dispose d'un lien automatique vers la table *\[Sociétés\]*. Les deux tableaux *tabNoms* et *tabAdresseSociétés* sont dimensionnés en fonction du nombre d'enregistrements dans la sélection de la table *\[Personnes\]* et contiennent des informations venant des deux tables :
 
 ```4d
- SELECTION TO ARRAY([People]Last Name;asLastName;[Company]Address;asCompanyAddr)
+ SELECTION TO ARRAY([Personnes]Nom;tabNoms;[Sociétés]Adresse;tabAdresseSociétés)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example returns the *\[Clients\]* record numbers in the array *alRecordNumbers* and the *\[Clients\]Names* field values in the array *asNames*:
+L'exemple ci-dessous retourne les numéros d'enregistrements de la table *\[Clients\]* dans le tableau *tabNumEnr* et les valeurs du champ *\[Clients\]Noms* dans le tableau *tabNoms* :
 
 ```4d
- SELECTION TO ARRAY([Clients];alRecordNumbers;[Clients]Names;asNames)
+ SELECTION TO ARRAY([Clients];tabNumEnr;[Clients]Noms;tabNoms)
 ```
 
-The same example can be written:
+Le même exemple peut être écrit :
 
 ```4d
- SELECTION TO ARRAY([Clients];alRecordNumbers;*)
- SELECTION TO ARRAY([Clients]Names;asNames;*)
+ SELECTION TO ARRAY([Clients];tabNumEnr;*)
+ SELECTION TO ARRAY([Clients]Noms;tabNoms;*)
  SELECTION TO ARRAY
 ```
 
-## See also 
+## Voir aussi 
 
 [ARRAY TO SELECTION](array-to-selection.md)  
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
@@ -94,11 +91,11 @@ The same example can be written:
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 260 |
+| Numéro de commande | 260 |
 | Thread safe | yes |
 
 

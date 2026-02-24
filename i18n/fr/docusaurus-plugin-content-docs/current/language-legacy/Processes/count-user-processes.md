@@ -9,42 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Count user processes.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of live processes (excluding internal processes) |
+| Résultat | Integer | &#8592; | Nombre de process vivants (à l'exception de process internes) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Modified|
-|<6|Created|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count user processes.Summary-->Count user processes returns the current number of "live" processes in the 4D application whose type is different from -25 (Internal Timer Process), -31 (Client Manager Process) and -15 (Server Interface Process).<!-- END REF--> For more information about process types, please refer to the [Process info](./commands/process-info) command and to the *Process Type* constants theme. 
+<!--REF #_command_.Count user processes.Summary-->**Count user processes** retourne le nombre courant de process "vivants" dans l'application 4D et dont le type est différent de -25 (Internal Timer Process), -31 (Client Manager Process) et -15 (Server Interface Process).<!-- END REF--> Pour plus d'informations sur les types de process, reportez-vous à la commande [Process info](../commands/process-info.md) et au thème de constantes *Type du process*. 
 
-The Count user processes function returns the number of processes opened directly or indirectly by the user (processes for which the *origin* parameter returned by the [Process info](./commands/process-info) command is greater than or equal to 0). 
+**Note :** Les process "vivants" sont des process dont le statut n'est ni *détruit*, ni *inexistant* (cf. commande [Process state](process-state.md)). 
 
-**Note:** The "live" processes are processes whose status is neither *aborted*, nor *does not exist* (see the [Process state](process-state.md) command). 
-
-## See also 
+## Voir aussi 
 
 [Count tasks](count-tasks.md)  
 [Count users](count-users.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 343 |
+| Numéro de commande | 343 |
 | Thread safe | yes |
-
 
 

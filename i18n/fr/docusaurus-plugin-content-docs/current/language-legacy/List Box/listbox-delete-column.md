@@ -5,54 +5,53 @@ slug: /commands/listbox-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer {; *number* : Integer} )<br/>**LISTBOX DELETE COLUMN** ( *object* : Variable ; *colPosition* : Integer {; *number* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( {* ;} *objet* ; *positionCol* {; *nombre*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| colPosition | Integer | &#8594;  | Column number to remove |
-| number | Integer | &#8594;  | Number of columns to be removed |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594;  | Numéro courant de la colonne à supprimer |
+| nombre | Integer | &#8594;  | Nombre de colonnes à supprimer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->The **LISTBOX DELETE COLUMN** command removes one or more columns (visible or invisible) in the list box set in the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE COLUMN.Summary-->La commande **LISTBOX DELETE COLUMN** supprime une ou plusieurs colonne(s) (visibles ou non) dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-**Note:** This command does nothing if it is applied to the first column of a list box displayed in hierarchical mode. 
+**Note :** Cette commande ne fait rien si elle est appliquée à la première colonne d’une list box affichée en mode hiérarchique. 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-If you do not pass the optional *number* parameter, the command simply removes the column set in the *colPosition* parameter. 
+Si vous ne passez pas le paramètre facultatif *nombre*, la commande supprime simplement la colonne désignée par le paramètre *positionCol*.   
+Sinon, le paramètre *nombre* indique le nombre de colonnes à supprimer vers la droite à partir de la colonne *positionCol* (celle-ci incluse). 
 
-Otherwise, the *number* parameter indicates the number of columns to remove to the right starting from the column *colPosition* (this one included). 
+Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list box, la commande ne fait rien.
 
-If the *colPosition* parameter is greater than the number of columns in the list box, the command does nothing.
-
-## See also 
+## Voir aussi 
 
 [LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
 [LISTBOX INSERT COLUMN](listbox-insert-column.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 830 |
+| Numéro de commande | 830 |
 | Thread safe | no |
 
 

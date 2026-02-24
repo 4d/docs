@@ -5,62 +5,62 @@ slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*aTable* : Table ;} *process* : Integer ; *4Duser* : Text ; *sessionUser* : Text ; *processName* : Text )<!-- END REF-->
+<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*laTable* ;} *process* ; *utilisateur4D* ; *utilisateurSession* ; *nomProcess* )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to check for record locked, or Default table, if omitted |
-| process | Integer | &#8592; | Process reference number |
-| 4Duser | Text | &#8592; | 4D user name |
-| sessionUser | Text | &#8592; | Name of user that opened work-session |
-| processName | Text | &#8592; | Process name |
+| laTable | Table | &#8594;  | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
+| process | Integer | &#8592; | Numéro du process |
+| utilisateur4D | Text | &#8592; | Nom de l'utilisateur 4D |
+| utilisateurSession | Text | &#8592; | Nom de l'utilisateur ayant ouvert la session de travail |
+| nomProcess | Text | &#8592; | Nom du process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R4|Modified|
-|14 R3|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|19 R4|Modifié|
+|14 R3|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LOCKED BY.Summary-->LOCKED BY returns information about the user and process that have locked a record.<!-- END REF--> The process number(\*), the user name in the 4D application and in the system as well as the process name are returned in the *process*, *4Duser*, *sessionUser*, and *processName* variables. You can use this information in a custom dialog box to warn the user when a record is locked.
+<!--REF #_command_.LOCKED BY.Summary-->**LOCKED BY** retourne des informations sur l'utilisateur et le process qui ont verrouillé l'enregistrement.<!-- END REF--> Le numéro du process(\*), le nom de l'utilisateur dans l'application 4D et dans le système ainsi que le nom du process sont retournés dans les variables *process*, *utilisateur4D*, *utilisateurSession* et *nomProcess*. Vous pouvez utiliser ces informations dans une boîte de dialogue pour avertir l'utilisateur lorsqu'un enregistrement est verrouillé.
 
-(\*) This is the number of the process on the machine where the code that actually locked the record is executed. In the case of a trigger or a method that is executed on the server, the number of the "twin" process on the server machine is returned. In the case of a method that is executed on a remote application, the number of the process on the remote machine is returned.
+(\*) Il s'agit du numéro du process sur la machine où est exécuté le code à l'origine du verrouillage. Dans le cas d'un trigger ou d'une méthode exécutée sur serveur, c'est le numéro du process "jumeau" sur le serveur qui est retourné. Dans le cas d'un process exécuté sur une machine distante, c'est le numéro du process sur la machine distante qui est retourné.
 
-If the record is not locked, *process* returns 0 and *4Duser*, *sessionUser*, and *processName* return empty strings. If the record you try to load in read/write has been deleted, *process* returns -1 and *4Duser*, *sessionUser*, and *processName* return empty strings.
+Si l'enregistrement n'est pas verrouillé, *process* prend la valeur 0 et *utilisateur4D*, *utilisateurSession* et *nomProcess* retournent des chaînes vides. Si vous essayez de charger en lecture/écriture un enregistrement qui a été supprimé, *process* retourne -1 et *utilisateur4D*, *utilisateurSession* et *nomProcess* retournent des chaînes vides.
 
-The *4Duser* parameter returned is the user name from the 4D password system or the user alias as defined with the [SET USER ALIAS](set-user-alias.md) (if any). If there is no password system or alias defined, “Designer” is returned.
+Le paramètre *utilisateur4D* est le nom de l'utilisateur défini dans l'éditeur de mots de passe de 4D ou bien l'alias de l'utilisateur tel qu'il a été défini avec la commande [SET USER ALIAS](set-user-alias.md) (le cas échéant). Si aucun mot de passe ou alias n'a été défini, "Super\_Utilisateur" est retourné.
 
-The *sessionUser* parameter returned corresponds to the name of the user that opened the session on the client machine (this name is displayed more particularly in the 4D Server administration window for each open process).
+Le paramètre *utilisateurSession* retourné correspond au nom de l'utilisateur ayant ouvert la session sur le poste client (ce nom est notamment affiché dans la fenêtre d'administration de 4D Server pour chaque process ouvert).
 
-If the record has been locked by a *$lock REST request*:
+Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 
-* *process* returns -2
-* *4Duser* returns ""
-* *sessionUser* returns ""
-* *processName* returns the IP address of the locker, e.g. "127.0.0.1"
+* *process* retourne -2
+* *4Duser* retourne ""
+* *sessionUser* retourne ""
+* *processName* retourne l'adresse IP du cadenas, comme par exemple "127.0.0.1"
 
-## See also 
+## Voir aussi 
 
 [Locked](locked.md)  
-*Record Locking*  
+*Verrouillage d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 353 |
+| Numéro de commande | 353 |
 | Thread safe | yes |
 
 

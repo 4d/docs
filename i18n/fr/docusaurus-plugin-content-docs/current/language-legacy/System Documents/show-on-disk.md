@@ -5,67 +5,67 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *cheminAccès* {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | Pathname of item to show |
-| * | Operator | &#8594;  | If the item is a folder, show its contents |
+| cheminAccès | Text | &#8594;  | Chemin d’accès de l’élément à montrer |
+| * | Opérateur | &#8594;  | Si l’élément est un dossier, montrer son contenu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.1|Created|
+|2004.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SHOW ON DISK.Summary-->The SHOW ON DISK command displays the file or folder whose pathname was passed in the *pathname* parameter in a standard window of the operating system.<!-- END REF-->  
-In a user interface, this command lets you designate the location of a specific file or folder.
+<!--REF #_command_.SHOW ON DISK.Summary-->La commande **SHOW ON DISK** affiche dans une fenêtre standard du système d’exploitation le fichier ou le dossier dont le chemin d’accès est passé dans le paramètre *cheminAccès*.<!-- END REF-->   
+Dans le cadre d’une interface utilisateur, cette commande permet à l'utilisateur de visualiser l’emplacement d’un fichier ou d’un dossier spécifique.
 
-By default, if *pathname* designates a folder, the command displays the level of the folder itself. If you pass the optional *\** parameter, the command opens the folder and displays its contents in the window. If *pathname* designates a file, the *\** parameter is ignored. 
+Par défaut, si *cheminAccès* désigne un dossier, la commande affiche le niveau du dossier lui-même. Si vous passez le paramètre facultatif *\**, la commande ouvre le dossier et affiche son contenu dans la fenêtre. Si *cheminAccès* désigne un fichier, le paramètre *\** est ignoré. 
 
-## Example 
+## Exemple 
 
-The following examples illustrate the operation of this command:
-
-```4d
- SHOW ON DISK("c:\\MyFolder\\MyFile.txt") // Displays the designated file
-```
-
-![](../assets/en/commands/pict35007.en.png)
+Ces exemples illustrent le fonctionnement de la commande.
 
 ```4d
- SHOW ON DISK("c:\\MyFolder\\Folder2") // Displays the designated folder
+ SHOW ON DISK("c:\\MonDossier\\MonFichier.txt") //Affiche le fichier désigné
 ```
 
-![](../assets/en/commands/pict35008.en.png)
+![](../assets/en/commands/pict35007.fr.png)
 
 ```4d
- SHOW ON DISK("c:\\MyFolder\\Folder2";*) // Displays the contents of the designated folder
+ SHOW ON DISK("c:\\MonDossier\\Dossier2") //Affiche le dossier désigné
 ```
 
-![](../assets/en/commands/pict35009.en.png)
+![](../assets/en/commands/pict35008.fr.png)
 
-## System variables and sets 
+```4d
+ SHOW ON DISK("c:\\MonDossier\\Dossier2";*) //Affiche le contenu du dossier désigné
+```
 
-The system variable OK is set to 1 if the command is executed correctly. 
+![](../assets/en/commands/pict35009.fr.png)
+
+## Variables et ensembles système 
+
+La variable système OK prend la valeur 1 si la commande est correctement exécutée, sinon elle prend la valeur 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 922 |
+| Numéro de commande | 922 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

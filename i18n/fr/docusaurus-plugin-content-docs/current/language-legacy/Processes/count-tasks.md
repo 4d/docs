@@ -9,35 +9,34 @@ displayed_sidebar: docs
 <!--REF #_command_.Count tasks.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of open processes (including kernel processes) |
+| Résultat | Integer | &#8592; | Nombre total de process ouverts (y compris les process du moteur de 4D) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Count tasks.Summary-->**Count tasks** returns the highest alive process number in the 4D single-user, 4D remote, or 4D Server (stored procedures) version.<!-- END REF--> Processes are numbered in the order in which they are created. When still no process has been aborted during the session, then this command returns the total number of open processes. 
+<!--REF #_command_.Count tasks.Summary-->**Count tasks** retourne le numéro de process vivant le plus élevé sur un poste 4D distant, 4D Server (procédures stockées) ou dans une version monoposte de 4D.<!-- END REF--> Les process sont numérotés dans l'ordre de leur création. Lorsqu'aucun process n'a encore été détruit au cours de la session, la commande retourne le nombre de process ouverts. 
 
-This number takes into account all processes, even those that are automatically managed by 4D. These include the Main process, Design process, Cache Manager process, Indexing process, and Web Server process.
+Ce nombre inclut tous les process, qu'ils soient créés par vos soins ou par 4D. Le Process principal, le Gestionnaire de cache, le Process développement, le Gestionnaire d'index ou le Process du serveur Web par exemple sont des process créés automatiquement par 4D.
 
-## Example 
+## Exemple 
 
-See the example for [Process state](process-state.md) and for the [Semaphore](semaphore.md).
+Référez-vous à l'exemple de [Process state](process-state.md) et [Semaphore](semaphore.md).
 
-## See also 
+## Voir aussi 
 
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
-[Process info](./commands/process-info)  
+[Process info](../commands/process-info.md)  
 [Process state](process-state.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 335 |
+| Numéro de commande | 335 |
 | Thread safe | yes |
-
 
 

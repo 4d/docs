@@ -5,61 +5,60 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<br/>**SET LIST ITEM FONT** ( *list* : Integer ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *liste* ; *refElément * ; *police* )<br/>**SET LIST ITEM FONT** ( * ; *liste* ; * ; *police* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| font | Text, Integer | &#8594;  | Font name or number |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| police | Text, Integer | &#8594;  | Nom ou numéro de police |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST ITEM FONT.Summary-->The **SET LIST ITEM FONT** command modifies the character font of the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Summary-->La commande **SET LIST ITEM FONT** modifie la police de caractères de l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
-If you pass the first optional \* parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second \* is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second \* is passed), the syntax based on the object name is required since each representation can have its own current item. 
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to any item of the list, the command does nothing. You can also pass 0 in *itemRef* in order to request the modification of the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien.Vous pouvez également passer 0 dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).  
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-Lastly, you can pass \* in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
+Passez dans le paramètre *police* le nom ou le numéro de la police à utiliser. Pour réappliquer la police par défaut de la liste hiérarchique, passez une chaîne vide dans *police*.
 
-In the *font* parameter, pass the name or number of the font to be used. To reapply the default font of the hierarchical list, pass an empty string in *font*.
+## Exemple 
 
-## Example 
-
-Apply the Times font to the current item of the list:
+Appliquer la police Times à l’élément courant de la liste :
 
 ```4d
- SET LIST ITEM FONT(*;"Mylist";*;"Times")
+ SET LIST ITEM FONT(*;"Maliste";*;"Times")
 ```
 
-## See also 
+## Voir aussi 
 
 [Get list item font](get-list-item-font.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 953 |
+| Numéro de commande | 953 |
 | Thread safe | no |
 
 

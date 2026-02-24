@@ -5,64 +5,64 @@ slug: /commands/break-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *level* : Integer {; *pageBreak* : Integer} )<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *niveau* {; *sautPage*} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| level | Integer | &#8594;  | Number of break levels |
-| pageBreak | Integer | &#8594;  | Break level for which to do a page break |
+| niveau | Integer | &#8594;  | Nombre de niveaux de rupture |
+| sautPage | Integer | &#8594;  | Niveau de saut de page |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** specifies the number of break levels in a report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** spécifie le nombre de niveaux de rupture dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
-You **must** execute **BREAK LEVEL** and [ACCUMULATE](accumulate.md) before every report for which you want to do break processing. These commands activate break processing for a report. See the explanation for the [Subtotal](subtotal.md) command.
+Vous **devez** appeler **BREAK LEVEL** et [ACCUMULATE](accumulate.md) avant la génération de chaque état dans lequel vous voulez utiliser des ruptures. Ces commandes activent le traitement des ruptures pour un état. Pour plus d'informations, reportez-vous à la description de la commande [Subtotal](subtotal.md). 
 
-The *level* parameter indicates the deepest level for which you want to perform break processing. You must have sorted the records with at least that many levels. If you have sorted more levels, those levels will be printed as sorted, but will not be processed for breaks.
+Le paramètre *niveau* indique le dernier niveau de rupture pour lequel vous voulez utiliser des ruptures. Ce nombre doit être inférieur ou égal aux niveaux de tris que vous aurez effectués avant l'impression. Si vous avez effectué un tri sur davantage de niveaux, ces niveaux seront imprimés triés, mais ne comporteront pas de rupture.
 
-Each break level that is generated will print the corresponding Break areas and Header areas in the form. There should be at least as many Break areas in the form as the number you pass in *level*. If there are more Break areas, they will be ignored and will not be printed.
+Chaque niveau de rupture généré provoquera l'impression de zones de rupture et d'en-tête dans le formulaire. Il doit y avoir au moins autant de zones de rupture dans le formulaire que la valeur que vous avez passée dans *niveau*. S'il y a davantage de zones de rupture, elles seront ignorées et ne seront pas imprimées.
 
-The second, optional, argument, *pageBreak*, is used to cause page breaks during printing.
+Le second paramètre (optionnel), *sautPage*, permet de provoquer un saut de page sur le niveau de rupture de votre choix.
 
-## Example 
+## Exemple 
 
-The following example prints a report with two break levels. The selection is sorted on four levels, but the **BREAK LEVEL** command specifies to break on only two levels. One field is accumulated with the [ACCUMULATE](accumulate.md) command:
+L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection est triée sur quatre champs, mais la commande **BREAK LEVEL** ne spécifie que deux niveaux de rupture. Seul un champ est cumulé à l'aide de la commande [ACCUMULATE](accumulate.md) :
 
 ```4d
- ORDER BY([Emp]Dept;>;[Emp]Title;>;[Emp]Last;>;[Emp]First;>) // Sort on four levels
- BREAK LEVEL(2) // Turn on break processing to 2 levels (Dept and Title)
- ACCUMULATE([Emp]Salary) // Accumulate the salaries
- FORM SET OUTPUT([Emp];"Dept salary") // Select the report form
- PRINT SELECTION([Emp]) // Print the report
+ ORDER BY([Emp]Service;>;[Emp]Titre;>;[Emp]Nom;>;Emp]Prénom;>) // Trier sur quatre champs
+ BREAK LEVEL(2) // Fixer 2 niveaux de rupture (Service et Titre)
+ ACCUMULATE([Emp]Salaire) // Cumuler sur les salaires
+ FORM SET OUTPUT([Emp];"ServiceRessHum") // Sélectionner le formulaire à imprimer
+ PRINT SELECTION([Emp]) // Imprimer l'état
 ```
 
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [ORDER BY](order-by.md)  
 [PRINT SELECTION](print-selection.md)  
 [Subtotal](subtotal.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 302 |
+| Numéro de commande | 302 |
 | Thread safe | no |
 
 

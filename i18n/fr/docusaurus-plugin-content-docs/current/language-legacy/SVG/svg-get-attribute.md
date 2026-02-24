@@ -5,59 +5,59 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer )<br/>**SVG GET ATTRIBUTE** ( *pictureObject* : Variable, Field ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *objetImage* ; id_Element ; *nomAttribut* ; *valeurAttribut* )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
-| element_ID | Text | &#8594;  | ID of element whose attribute value you want to get |
-| attribName | Text | &#8594;  | Attribute whose value you want to get |
-| attribValue | Text, Integer | &#8592; | Current value of attribute |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id_Element | Text | &#8594;  | ID de l'élément dont vous souhaitez connaître une valeur d'attribut |
+| nomAttribut | Text | &#8594;  | Nom d’attribut |
+| valeurAttribut | Text, Integer | &#8592; | Valeur courante de l'attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Summary-->The SVG GET ATTRIBUTE command is used to get the current value of the *attribName* attribute in an object or an SVG picture.<!-- END REF--> 
+<!--REF #_command_.SVG GET ATTRIBUTE.Summary-->La commande **SVG GET ATTRIBUTE** permet de lire la valeur courante de l’attribut *nomAttribut* dans un objet ou une image SVG.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). In this case, the command returns the value of the attribute for the rendered image attached to the object. This value may have been modified by [SVG SET ATTRIBUTE](svg-set-attribute.md) for example.   
-If you do not pass the *\** parameter, you indicate that the *pictureObject* parameter is a variable or a field. Therefore, you pass a variable (object variable only) or field reference instead of a string. In this case, the command returns the value of the attribute for the initial rendered image (corresponding to the data source of the variable). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Dans ce cas, la commande retourne la valeur de l’attribut pour l’image de rendu attachée à l’objet. Cette valeur peut avoir été modifiée par [SVG SET ATTRIBUTE](svg-set-attribute.md) par exemple.   
+Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objetImage* est une variable ou un champ. Vous ne passez alors pas une chaîne mais une référence de variable (variable objet uniquement) ou de champ. Dans ce cas, la commande retourne la valeur de l’attribut pour l’image de rendu initiale (correspondant à la source de données de la variable). 
 
-**Note:** This principle also applies to the [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md) command. 
+**Note :** Ce principe s’applique également à la commande [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md). 
 
-The *element\_ID* parameter is used to set the ID ("id" or "xml:id" attribute) of the element whose attribute value you want to get. 
+Le paramètre *id\_Element* permet de définir l'ID (attribut "id" ou "xml:id") de l’élément dont vous souhaitez lire la valeur d’attribut. 
 
-For more information about SVG attributes, please refer to the description of the [SVG SET ATTRIBUTE](svg-set-attribute.md) command. Here is a list of 4D attributes reserved and dedicated to animation:
+Pour plus d’informations sur les attributs SVG, reportez-vous à la description de la commande [SVG SET ATTRIBUTE](svg-set-attribute.md). Voici la liste des attributs 4D réservés et dédiés à l’animation :
 
-| **Attributes**                                | **Access** | **Comments**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 4D-text                                       | read/write | Replaces/reads the contents of the text node. Can be used with 'text' 'tspan' and 'textArea' elements.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| 4D-bringToFront                               | write      | If 'true', move node in front of sibling nodes. Can only be used with the [SVG SET ATTRIBUTE](svg-set-attribute.md) command.                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | read       | Returns 'true' if inherited class attribute of node contains all class name(s); otherwise, returns 'false'. Returns for example true for "4D-isOfClass-land" if the inherited class of the node is "land department01").                                                                                                                                                                                                                                                                                                                            |
-| 4D-enableD2D                                  | read/write | If 'false', disables Direct2D for the SVG rendering engine. In fact, SVG filters are not rendered in Direct2D but they are in GDI/GDIPlus. This option lets you use SVG filters even when the database is in Direct2D. Note that this option is only taken into account when a picture has already been loaded into the *pictureObject*. However, since this option is applied globally to the engine, you only need to set it once per session (for example with a simple SVG loaded in memory from a text variable when the database is started). |
+| **Attributs**                                 | **Accès**        | **Commentaire**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4D-text                                       | lecture/écriture | Remplace/lit le contenu du noeud de texte. Utilisable avec les éléments 'text', 'tspan' et 'textArea'                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 4D-bringToFront                               | écriture         | Si 'true', déplacer le noeud devant les noeuds frères. Utilisable uniquement avec la commande [SVG SET ATTRIBUTE](svg-set-attribute.md)                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 4D-isOfClass-{IDENT \[\[S\|COMMA\] IDENT\]\*} | lecture          | Si l’attribut de la classe héritée du noeud contient tous les noms de classes, retourne 'true' sinon retourne 'false'. Retourne par exemple true pour "4D-isOfClass-land" si la classe héritée du noeud est "land department01")                                                                                                                                                                                                                                                                                                                           |
+| 4D-enableD2D                                  | lecture/écriture | Si 'false', inactive Direct2D pour le moteur de rendu SVG. En effet, les filtres SVG ne sont pas rendus en Direct2D mais ils le sont en GDI/GDIPlus. Cette option permet de bénéficier des filtres SVG même si la base est en Direct2D. A noter que cette option n'est prise en compte que si *objetImage* contient déjà une image chargée. En revanche, elle n'a besoin d'être définie qu'une seule fois par session (par exemple avec un SVG simple chargé en mémoire depuis une variable texte au démarrage de la base) car elle est globale au moteur. |
 
-## See also 
+## Voir aussi 
 
 [SVG SET ATTRIBUTE](svg-set-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1056 |
+| Numéro de commande | 1056 |
 | Thread safe | no |
 
 

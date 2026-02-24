@@ -5,68 +5,67 @@ slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
+<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| x | Integer | &#8594;  | x (horizontal) position of cursor |
-| y | Integer | &#8594;  | y (vertical) position of cursor |
+| x | Integer | &#8594;  | Coordonnée x (horizontale) du curseur |
+| y | Integer | &#8594;  | Coordonnée y (verticale) du curseur |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](./commands/open-window).<!-- END REF-->  
-  
-**GOTO XY** positions the character cursor (an invisible cursor) to set the location of the next message in the window.
+<!--REF #_command_.GOTO XY.Summary-->La commande **GOTO XY** est destinée à être utilisée conjointement avec la commande [MESSAGE](message.md) lorsque vous affichez des messages dans une fenêtre ouverte par la commande [Open window](open-window.md).<!-- END REF--> 
 
-The upper-left corner is position 0,0\. The cursor is automatically placed at 0,0 when a window is opened and after [ERASE WINDOW](erase-window.md) is executed.
+La commande **GOTO XY** détermine l'emplacement du curseur d'insertion des caractères (ce curseur est invivible) : elle définit les coordonnées auxquelles le prochain message s'affichera à l'intérieur de la fenêtre. 
 
-After **GOTO XY** positions the cursor, you can use [MESSAGE](message.md) to display characters in the window.
+L'angle supérieur gauche de la fenêtre représente les coordonnées 0,0\. Le curseur est automatiquement positionné à 0,0 lorsqu'une fenêtre est créée ou après l'exécution de la commande [ERASE WINDOW](erase-window.md).
 
-## Example 1 
+Après que **GOTO XY** ait défini l'emplacement du curseur, la commande [MESSAGE](message.md) peut être appelée pour afficher des caractères dans la fenêtre.
 
-See example for the [MESSAGE](message.md) command.
+## Exemple 1 
 
-## Example 2 
+Reportez-vous à l'exemple de la commande [MESSAGE](message.md).
 
-See example for the [Milliseconds](milliseconds.md) command.
+## Exemple 2 
 
-## Example 3 
+Reportez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
 
-The following example: 
+## Exemple 3 
+
+L'exemple ci-dessous : 
 
 ```4d
- Open window(50;50;300;300;5;"This is only a test")
- For($vlRow;0;9)
-    GOTO XY($vlRow;0)
-    MESSAGE(String($vlRow))
+ Open window(50;50;300;300;5;"Ce n'est qu'un test")
+ For($vlColonne;0;9)
+    GOTO XY($vlColonne;0)
+    MESSAGE(String($vlColonne))
  End for
- For($vlLine;0;9)
-    GOTO XY(0;$vlLine)
-    MESSAGE(String($vlLine))
+ For($vlLigne;0;9)
+    GOTO XY(0;$vlLigne)
+    MESSAGE(String($vlLigne))
  End for
- $vhStartTime:=Current time
+ $vhHeureDébut:=Current time
  Repeat
- Until((Current time-$vhStartTime)>†00:00:30†)
+ Until((Current time-$vhHeureDébut)>?00:00:30?)
 ```
 
-displays the following window (on Macintosh) for 30 seconds:
+... affiche la fenêtre suivante (sous Mac OS) pendant 30 secondes :
 
-![](../assets/en/commands/pict25419.en.png)
+![](../assets/en/commands/pict25419.fr.png)
 
-## See also 
+## Voir aussi 
 
 [MESSAGE](message.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 161 |
+| Numéro de commande | 161 |
 | Thread safe | no |
-
 
 

@@ -5,112 +5,112 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *object* : Text {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/>**OBJECT SET SCROLL POSITION** ( *object* : Variable, Field, Table {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/><!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *objet* {; *positionLigne* {; *positionH*}}{; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a table, a field or a variable |
-| object | Text, Variable, Field, Table | &#8594;  | Object name (if * is specified) or <br/>Variable, Field, or Table (if * is omitted) |
-| vPosition | Integer | &#8594;  | Line number to display or Vertical scrolling in pixels (pictures) |
-| hPosition | Integer | &#8594;  | Column number to display (list box) or<br/>Horizontal scrolling in pixels (pictures) |
-| * | Operator | &#8594;  | Display of line (and column if the *hPosition* parameter is passed) in first position after scroll |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne)Si omis, objet est une table, un champ ou une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Table, champ ou variable (si * est omis) |
+| positionLigne | Integer | &#8594;  | Numéro de ligne à afficher ou Défilement vertical en pixels (images) |
+| positionH | Integer | &#8594;  | Numéro de colonne à afficher (list box) ou<br/>Défilement horizontal en pixels (images) |
+| * | Opérateur | &#8594;  | Afficher la ligne (et la colonne si le paramètre positionH est passé) en première position après défilement (listes)Appliquer un défilement relatif (images) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|12|Renommé|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->The **OBJECT SET SCROLL POSITION** command allows scrolling the contents of several types of objects: the lines of a subform, of a list form (displayed using the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands), or of a hierarchical list, the rows and columns of a list box or even the pixels of a picture.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->La commande **OBJECT SET SCROLL POSITION** permet de faire défiler le contenu de plusieurs types d'objets : lignes d’un sous-formulaire, d’un formulaire liste affiché via la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md), ou d'une liste hiérarchique, lignes et colonnes d'une List box ou encore pixels d'une image.<!-- END REF--> 
 
-**Note:** Scrolling via programming remains possible even if scrollbars have been hidden in the form.
+**Note :** Le défilement par programmation d’un objet reste possible même si les barres de défilement ont été masquées dans le formulaire.
 
-If you pass the first optional *\** parameter, you indicate that the *object* parameter is the name of a subform, a hierarchical list, a list box object or a picture field/variable (in this case, pass a string in *object*). If you do not pass anything in this parameter, you indicate that the *object* parameter is a table (list form table or subform table), a variable ([ListRef](# "A Longint reference to a hierachical list") of a hierarchical list or list box or picture) or a field.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *objet* est le nom d’un objet de type sous-formulaire, liste hiérarchique, List box ou champ/variable image (dans ce cas, passez une chaîne dans *objet*). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une table (table du formulaire liste ou du sous-formulaire), une variable ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique") de liste hiérarchique, list box ou image) ou un champ. 
 
-The *vPosition* parameter can be used to specify the number of the row to display or, in the case of a picture, the vertical coordinate of the pixel to display.   
-If you do not pass this parameter, the command provokes the vertical scroll of lines of the list so that the first highlighted line in the list is visible. In this case, if no line is selected or if at least one selected line is already visible, no vertical scrolling is applied.  
-If you pass this parameter, the command provokes the vertical scroll of lines of the list so that the set line is visible (highlighted or not). If the line is already visible, the command does nothing, unless the second *\** parameter is passed (see below). 
+Le paramètre *positionLigne* permet de spécifier le numéro de la ligne à afficher ou, dans le cas d'une image, la coordonnée verticale du pixel à afficher.   
+Si vous ne passez pas ce paramètre, la commande provoque le défilement vertical des lignes de la liste de manière à ce que la première ligne sélectionnée (surlignée) dans la liste soit visible. Dans ce cas, si aucune ligne n’est sélectionnée ou si au moins une ligne sélectionnée est déjà visible, aucun défilement vertical n'est effectué.  
+Si vous passez ce paramètre, la commande provoque le défilement vertical des lignes de la liste de manière à ce que la ligne désignée soit visible (qu’elle soit surlignée ou non). Si la ligne est déjà visible, la commande ne fait rien, sauf si le second paramètre \* est passé (cf. ci-dessous). 
 
-* For list forms and subforms, this number is the number of the line among the current selection (its position).
-* In the case of hierarchical lists, the command takes the expanded/collapsed state of the items into account.
-* For list boxes, this number is the number of the row among all the object rows (including hidden rows). If the number passed in *vPosition* corresponds to a hidden row in the list box, the command displays the first visible row that follows.  
-**Note:** Keep in mind that this command goes by the "standard" representation (non-hierarchical) of a list box, even if it is displayed in hierarchical mode. Therefore, the result may be different depending on whether the list box is displayed in standard or hierarchical mode (see example).
-* For pictures displayed in the form, *vPosition* indicates the vertical coordinate point of the picture to display in the object. Pass 0 in *vPosition* if you do not want to scroll the picture vertically. The value must be expressed in pixels in relation to the origin of the picture. If the vertical coordinate point is already shown in the object, the command does nothing (except when you pass the second *\** parameter. see below). The picture must be displayed in the "Truncated (non-centered)" format.
+* Pour les formulaires liste et les sous-formulaires, ce numéro correspond au numéro d’un enregistrement parmi la sélection courante, c’est-à-dire sa position.
+* Dans le cas des listes hiérarchiques, la commande tient compte de l'état déployé/contracté des éléments.
+* Pour les list box, ce numéro correspond au numéro de la ligne parmi toutes les lignes de l'objet (y compris les lignes éventuellement cachées). Si le numéro passé dans *positionLigne* correspond à une ligne masquée dans la list box, la commande affiche la première ligne visible suivante.  
+**Note :** Gardez à l’esprit que cette commande se base toujours sur la représentation "standard" (non hiérarchique) d’une list box, même si elle est affichée en mode hiérarchique. Par conséquent, le résultat pourra être différent suivant que la list box est affichée en mode standard ou en mode hiérarchique (cf. exemple).
+* Dans le cas d'une image affichée dans le formulaire, *positionLigne* indique le point de coordonnée verticale de l’image à afficher dans l'objet. Passez 0 dans *positionLigne* dans pour ne pas faire défiler l’image dans la dimension verticale. La valeur doit être exprimée en pixels relativement à l’origine de l’image. Si le point de coordonnée verticale est déjà visible dans l'objet, la commande ne fait rien (hormis si vous passez le second paramètre *\**, cf. ci-dessous). L’image doit être affichée dans le format "Image tronquée (non centrée)".
 
-The *hPosition* parameter can be used in the context of a list box or a picture. 
+Le paramètre *positionH* peut être utilisé dans le contexte d’une list box ou d'une image. 
 
-* For list boxes, you can pass a column number in *hPosition*. Executing the command causes horizontal scrolling of the list box so that this column will be shown. If the column is already visible, the command does nothing. As with vertical scrolling, if you pass the second optional *\** parameter, the column made visible by the command (if the list box is actually scrolled) will be placed in the first position (see below).
-* For a picture displayed in a form, *hPosition* indicates the horizontal coordinate point to display in the object. The value must be expressed in pixels in relation to the origin of the picture. If the horizontal coordinate point is already shown in the object, the command does nothing (except when you pass the second *\** parameter. see below).
+* Dans le cas d'une list box, vous pouvez passer dans *positionH* un numéro de colonne. L’exécution de la commande provoquera le défilement horizontal de la list box de manière à ce que la colonne soit visible. Si la colonne est déjà visible, la commande ne fait rien. Comme pour le défilement vertical, si vous passez le second paramètre optionnel *\**, la colonne rendue visible par la commande (si la list box a effectivement défilé) sera placée en première position (cf. ci-dessous).
+* Dans le cas d'une image affichée dans le formulaire, *positionH* indique le point de coordonnée horizontale de l’image à afficher dans l'objet. La valeur doit être exprimée en pixels relativement à l’origine de l’image. Si le point de coordonnée horizontale est déjà visible dans l'objet, la commande ne fait rien (hormis si vous passez le second paramètre *\**, cf. ci-dessous).
 
-If you pass the second optional *\** parameter:
+Si vous passez le second paramètre optionnel *\** :
 
-* the line made visible using the command (if the list was scrolled) will be placed in the first position of the list. If the line is situated at the end of the list, this option has no effect.
-* in the context of a picture, the coordinates requested will be placed at the origin of the picture variable (0,0), even if these coordinates were already shown in the object.
+* la ligne rendue visible par la commande (si la liste a effectivement défilé) sera placée en première position de la liste. Si la ligne est située en fin de liste, cette option n'a pas d'effet.
+* dans le contexte d'une image, les coordonnées demandées seront positionnées à l'origine de la variable image (0,0), même si ces coordonnées étaient déjà visibles dans l'objet.
 
-**Note:** The [HIGHLIGHT RECORDS](highlight-records.md) command features an optional *\** parameter that allows delegating scroll management to the **OBJECT SET SCROLL POSITION** command. 
+**Note :** La commande [HIGHLIGHT RECORDS](highlight-records.md) comporte un paramètre *\** facultatif permettant de déléguer la gestion du défilement dans les formulaires à la commande **OBJECT SET SCROLL POSITION**.
 
-## Example 1 
+## Exemple 1 
 
-This example illustrates the difference in the way the command functions depending on whether the list box is displayed in standard or hierarchical mode:
+Cet exemple illustre la différence de fonctionnement de la commande avec une list box affichée en mode standard et hiérarchique :
 
 ```4d
- OBJECT SET SCROLL POSITION(*;"mylistbox";4;2;*) // displays 4th row of 2nd column of list box in the first position
+ OBJECT SET SCROLL POSITION(*;"malistbox";4;2;*) // afficher en tête la 4e ligne de la 2e colonne de la list box
 ```
 
-If this statement is applied to a list box displayed in standard mode:
+Si cette instruction est appliquée à une list box affichée en mode standard :
 
-![](../assets/en/commands/pict197489.en.png)
+![](../assets/en/commands/pict197489.fr.png)
 
-... the rows and columns of the list box actually scroll:
+... les lignes et les colonnes de la list box défilent effectivement :
 
-![](../assets/en/commands/pict197491.en.png)
+![](../assets/en/commands/pict197491.fr.png)
 
-On the other hand, if the same statement is applied to a list box displayed in hierarchical mode, the rows scroll but not the columns because the 2nd column is part of the hierarchy:
+En revanche, si la même instruction est appliquée à la list box affichée en mode hiérarchique, les lignes défilent mais pas les colonnes car la 2e colonne appartient à la hiérarchie :
 
-![](../assets/en/commands/pict197493.en.png)
+![](../assets/en/commands/pict197493.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-You want to scoll a picture that is included in a form variable. This montage shows the visible part of the picture as well as the point to be displayed (166 pixels vertically and 200 pixels horizontally):
+Vous souhaitez faire défiler une image incluse dans une variable de formulaire. Ce montage fait apparaître la partie visible de l'image ainsi que le point à afficher (166 pixels verticalement et 200 pixels horizontalement) :
 
 ![](../assets/en/commands/pict1513843.fr.png)
 
-To scroll the visible part and display the red point at the origin of the picture variable, you can just write:
+Pour faire défiler la partie visible et afficher le point rouge à l'origine de la variable image, il vous suffit d'écrire :
 
 ```4d
- OBJECT SET SCROLL POSITION(*;"myVar";166;200;*)
+ OBJECT SET SCROLL POSITION(*;"maVar";166;200;*)
 ```
 
-You then get the following result:
+Vous obtenez le résultat suivant :
 
 ![](../assets/en/commands/pict1513846.fr.png)
 
-Make sure that you do not omit the second *\** parameter in this case, otherwise the picture will not scroll because the point defined is already displayed. 
+Attention dans ce cas, si vous omettez le second paramètre \*, l'image ne défilera pas car le point défini est déjà visible. 
 
-## See also 
+## Voir aussi 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 [OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 906 |
+| Numéro de commande | 906 |
 | Thread safe | no |
 
 

@@ -5,92 +5,91 @@ slug: /commands/post-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *what* : Integer ; *message* : Integer ; *when* : Integer ; *mouseX* : Integer ; *mouseY* : Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* ; *message* ; *quand* ; *sourisX* ; *sourisY* ; *modifiers* {; *process*} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| what | Integer | &#8594;  | Type of event |
-| message | Integer | &#8594;  | Event message |
-| when | Integer | &#8594;  | Event time expressed in ticks |
-| mouseX | Integer | &#8594;  | Horizontal coordinate of mouse |
-| mouseY | Integer | &#8594;  | Vertical coordinate of mouse |
-| modifiers | Integer | &#8594;  | Modifier keys state |
-| process | Integer | &#8594;  | Destination process reference number, or Application event queue, if omitted, or 0 |
+| quoi | Integer | &#8594;  | Type d'événement |
+| message | Integer | &#8594;  | Message de l'événement |
+| quand | Integer | &#8594;  | Moment de l'événement exprimé en ticks |
+| sourisX | Integer | &#8594;  | Coordonnée horizontale de la souris |
+| sourisY | Integer | &#8594;  | Coordonnée verticale de la souris |
+| modifiers | Integer | &#8594;  | Etat des touches Modifier |
+| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.POST EVENT.Summary-->The **POST EVENT** command simulates a keyboard or mouse event.<!-- END REF--> Its effect is as if the user actually acted on the keyboard or the mouse.
+<!--REF #_command_.POST EVENT.Summary-->La commande **POST EVENT** simule un événement (clavier ou souris).<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur agit réellement par l'intermédiaire du clavier ou de la souris.
 
-You pass one of the following values in *what*:
+Vous devez passer une des constantes prédéfinies suivantes dans le paramètre *quoi* :
 
-| Constant         | Type    | Value |
-| ---------------- | ------- | ----- |
-| Auto key event   | Integer | 5     |
-| Key down event   | Integer | 3     |
-| Key up event     | Integer | 4     |
-| Mouse down event | Integer | 1     |
-| Mouse up event   | Integer | 2     |
-  
-  
-If the event is a mouse-related event, you pass *0* (zero) in *message*. If the event is a keyboard-related event, you pass the code of the simulated character in *message*. 
+| Constante        | Type        | Valeur |
+| ---------------- | ----------- | ------ |
+| Auto key event   | Entier long | 5      |
+| Key down event   | Entier long | 3      |
+| Key up event     | Entier long | 4      |
+| Mouse down event | Entier long | 1      |
+| Mouse up event   | Entier long | 2      |
 
-Usually, you pass the value returned by [Tickcount](tickcount.md) in *when*.
+Si l'événement est lié à la souris, passez *0* (zéro) dans le paramètre *message*. Si l'événement est lié au clavier, passez dans *message* le code du caractère simulé.
 
-If the event is a mouse-related event, you pass the horizontal and vertical coordinates of the click in *mouseX* and *mouseY*. 
+Généralement, vous passez la valeur retournée par la fonction [Tickcount](tickcount.md) dans *quand*.
 
-In the parameter *modifiers*, you pass one or a combination of the constants of the *Events (Modifiers)* theme. 
+Si l'événement est lié à la souris, passez les coordonnées horizontale et verticale du clic dans *sourisX* et *sourisY*. 
 
-| Constant               | Type    | Value | Comment                                                    |
-| ---------------------- | ------- | ----- | ---------------------------------------------------------- |
-| Activate window bit    | Integer | 0     |                                                            |
-| Activate window mask   | Integer | 1     |                                                            |
-| Caps lock key bit      | Integer | 10    | Windows and macOS                                           |
-| Caps lock key mask     | Integer | 1024  | Windows and macOS                                           |
-| Command key bit        | Integer | 8     | Ctrl key under Windows, Command key under macOS             |
-| Command key mask       | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
-| Control key bit        | Integer | 12    | Ctrl key under macOS, or right click under Windows and macOS |
-| Control key mask       | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
-| Mouse button bit       | Integer | 7     |                                                            |
-| Mouse button mask      | Integer | 128   |                                                            |
-| Option key bit         | Integer | 11    | Alt key (also called Option under macOS)                    |
-| Option key mask        | Integer | 2048  | Alt key (also called Option under macOS)                    |
-| Right control key bit  | Integer | 15    |                                                            |
-| Right control key mask | Integer | 32768 |                                                            |
-| Right option key bit   | Integer | 14    |                                                            |
-| Right option key mask  | Integer | 16384 |                                                            |
-| Right shift key bit    | Integer | 13    |                                                            |
-| Right shift key mask   | Integer | 8192  |                                                            |
-| Shift key bit          | Integer | 9     | Windows and macOS                                           |
-| Shift key mask         | Integer | 512   | Windows and macOS                                           |
+Dans le paramètre *modifiers*, vous devez passer une constante ou une combinaison de constantes du thème *Evénements (Modifiers)* :
 
-For example, to simulate the Shift key, pass Shift key bit.
+| Constante              | Type        | Valeur | Comment                                                   |
+| ---------------------- | ----------- | ------ | --------------------------------------------------------- |
+| Activate window bit    | Entier long | 0      |                                                           |
+| Activate window mask   | Entier long | 1      |                                                           |
+| Caps lock key bit      | Entier long | 10     | Windows et macOS                                           |
+| Caps lock key mask     | Entier long | 1024   | Windows et macOS                                           |
+| Command key bit        | Entier long | 8      | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Command key mask       | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key bit        | Entier long | 12     | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Control key mask       | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Mouse button bit       | Entier long | 7      |                                                           |
+| Mouse button mask      | Entier long | 128    |                                                           |
+| Option key bit         | Entier long | 11     | Touche Alt (aussi appelée Option sous macOS)               |
+| Option key mask        | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
+| Right control key bit  | Entier long | 15     |                                                           |
+| Right control key mask | Entier long | 32768  |                                                           |
+| Right option key bit   | Entier long | 14     |                                                           |
+| Right option key mask  | Entier long | 16384  |                                                           |
+| Right shift key bit    | Entier long | 13     |                                                           |
+| Right shift key mask   | Entier long | 8192   |                                                           |
+| Shift key bit          | Entier long | 9      | Windows et macOS                                           |
+| Shift key mask         | Entier long | 512    | Windows et macOS                                           |
 
-If you specify the *process* parameter, the event is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the event is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
+Par exemple, pour simuler la touche Majuscule, passez la valeur Shift key bit.
 
-## See also 
+Si vous passez le paramètre *process*, l'événement est envoyé au process dont vous avez passé le numéro. Si vous passez *0* (zéro) ou si vous omettez ce paramètre, l'événement est envoyé au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
+
+## Voir aussi 
 
 [POST CLICK](post-click.md)  
 [POST KEY](post-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 467 |
+| Numéro de commande | 467 |
 | Thread safe | no |
 
 

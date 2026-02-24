@@ -5,60 +5,59 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetImage* ; *x* ; *y* ; *largeur* ; *hauteur* ; *tabIds* ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Field or variable (if * omitted) |
-| x | Integer | &#8594;  | Horizontal coordinate of top left corner of selection rectangle |
-| y | Integer | &#8594;  | Vertical coordinate of top left corner of selection rectangle |
-| width | Integer | &#8594;  | Width of selection rectangle |
-| height | Integer | &#8594;  | Height of selection rectangle |
-| arrIDs | Text array | &#8592; | IDs of elements whose bounding rectangle intersects with the selection rectangle |
-| Function result | Boolean | &#8592; | True = at least one element is found |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#8594;  | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
+| y | Integer | &#8594;  | Coordonnée verticale du coin haut gauche du rectangle de sélection |
+| largeur | Integer | &#8594;  | Largeur du rectangle de sélection |
+| hauteur | Integer | &#8594;  | Hauteur du rectangle de sélection |
+| tabIds | Text array | &#8592; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
+| Résultat | Boolean | &#8592; | Vrai = au moins un élément est trouvé, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG Find element IDs by rect.Summary-->The **SVG Find element IDs by rect** command fills the Text or Alpha *arrIDs* array with the IDs ("id" or "xml:id" attribute) of the XML elements whose bounding rectangle intersects with the selection rectangle at the location specified by the *x* and *y* parameters.<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Summary-->La commande **SVG Find element IDs by rect** remplit le tableau texte *tabIds* avec les IDs (attribut "id" ou "xml:id") des éléments XML dont le rectangle englobant est en intersection avec le rectangle de sélection à l’emplacement défini par les paramètres *x* et *y*.<!-- END REF-->
 
-The command returns True if at least one element is found (in other words if the *arrIDs* array is not empty), and False otherwise. 
+La commande retourne Vrai si au moins un élément est trouvé (c’est-à-dire si le tableau *tabIds* est non vide) et Faux sinon. 
 
-This command can be used in particular to manage interactive graphic interfaces. 
+Cette commande permet notamment de gérer des interfaces graphiques interactives. 
 
-If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). If you do not pass this parameter, you indicate that the *pictureObject* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objetImage* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).  
+Si vous travaillez avec un champ ou une variable image, la commande utilise l'image d'origine, correspondant à la source de données (*datasource*). En revanche, si vous travaillez avec un objet du formulaire, la commande utilise l'image courante, éventuellement modifiée via la commande [SVG SET ATTRIBUTE](svg-set-attribute.md) et qui est conservée avec les propriétés de l'objet du formulaire.
 
-If you are working with a picture field or variable, the command uses the original picture, corresponding to the data source. However, if you are working with a form object, the command uses the current picture, that may have been modified via the [SVG SET ATTRIBUTE](svg-set-attribute.md) command and that is kept with the properties of the form object.
+Les coordonnées passées dans les paramètres *x* et *y* doivent être exprimées en pixels relativement à l’angle supérieur gauche de l’image (0,0). Vous pouvez utiliser les valeurs retournées par les *Variables système* MouseX et MouseY. Ces variables sont mises à jour dans les événements formulaire On Clicked, On Double Clicked ainsi que On Mouse Enter et On Mouse Move. 
 
-The coordinates passed in the *x* and *y* parameters must be expressed in pixels in relation to the top left corner of the picture (0,0). You can use the values returned by the MouseX and MouseY *System Variables*. These variables are updated in the On Clicked and On Double Clicked form events as well as the in the On Mouse Enter and On Mouse Move form events. 
+**Note :** Dans le système de coordonnées des images, \[x;y\] définit toujours le même point, quel que soit le format d’affichage de l’image, hormis pour le format "mosaïque". 
 
-**Note:** In the system of picture coordinates, \[x;y\] always specifies the same point, regardless of the picture display format, apart from the "Replicated" format. 
+Tous les ID d’éléments dont le rectangle englobant est en intersection avec le rectangle de sélection sont pris en compte, même ceux situés sous d’autres éléments.
 
-All elements whose bounding rectangle intersects with the selection rectangle are taken into account, even those that are under other elements.
-
-## See also 
+## Voir aussi 
 
 [SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1109 |
+| Numéro de commande | 1109 |
 | Thread safe | no |
 
 

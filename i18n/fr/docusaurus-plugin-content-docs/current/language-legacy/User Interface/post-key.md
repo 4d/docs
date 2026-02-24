@@ -5,80 +5,79 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* : Integer {; *modifiers* : Integer {; *process* : Integer}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* {; *modifiers* {; *process*}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| code | Integer | &#8594;  | Character code or function key code |
-| modifiers | Integer | &#8594;  | State of modifier keys |
-| process | Integer | &#8594;  | Destination process reference number, or Application event queue, if omitted, or 0 |
+| code | Integer | &#8594;  | Code d'un caractère ou code de touche de fonction |
+| modifiers | Integer | &#8594;  | Etat des touches Modifier |
+| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.POST KEY.Summary-->The **POST KEY** command simulates a keystroke.<!-- END REF--> Its effect is as if the user actually entered a character on the keyboard.
+<!--REF #_command_.POST KEY.Summary-->La commande **POST KEY** simule la frappe d'une touche sur le clavier.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur tape réellement un caractère au clavier. 
 
-You pass the code of the character in *code*. 
+Vous passez le code du caractère dans le paramètre *code*. 
 
-If you pass the *modifiers* parameter, you pass one or a combination of the *Events (Modifiers)* constants:
+Si vous n'utilisez pas le paramètre *modifiers*, aucun "modifier" (Majuscule, Option, etc...) n'est simulé. Si vous utilisez le paramètre *modifiers*, vous devez passer une constante ou une combinaison de constantes du thème *Evénements (Modifiers)* :
 
-| Constant               | Type    | Value | Comment                                                    |
-| ---------------------- | ------- | ----- | ---------------------------------------------------------- |
-| Activate window bit    | Integer | 0     |                                                            |
-| Activate window mask   | Integer | 1     |                                                            |
-| Caps lock key bit      | Integer | 10    | Windows and macOS                                           |
-| Caps lock key mask     | Integer | 1024  | Windows and macOS                                           |
-| Command key bit        | Integer | 8     | Ctrl key under Windows, Command key under macOS             |
-| Command key mask       | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
-| Control key bit        | Integer | 12    | Ctrl key under macOS, or right click under Windows and macOS |
-| Control key mask       | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
-| Mouse button bit       | Integer | 7     |                                                            |
-| Mouse button mask      | Integer | 128   |                                                            |
-| Option key bit         | Integer | 11    | Alt key (also called Option under macOS)                    |
-| Option key mask        | Integer | 2048  | Alt key (also called Option under macOS)                    |
-| Right control key bit  | Integer | 15    |                                                            |
-| Right control key mask | Integer | 32768 |                                                            |
-| Right option key bit   | Integer | 14    |                                                            |
-| Right option key mask  | Integer | 16384 |                                                            |
-| Right shift key bit    | Integer | 13    |                                                            |
-| Right shift key mask   | Integer | 8192  |                                                            |
-| Shift key bit          | Integer | 9     | Windows and macOS                                           |
-| Shift key mask         | Integer | 512   | Windows and macOS                                           |
+| Constante              | Type        | Valeur | Comment                                                   |
+| ---------------------- | ----------- | ------ | --------------------------------------------------------- |
+| Activate window bit    | Entier long | 0      |                                                           |
+| Activate window mask   | Entier long | 1      |                                                           |
+| Caps lock key bit      | Entier long | 10     | Windows et macOS                                           |
+| Caps lock key mask     | Entier long | 1024   | Windows et macOS                                           |
+| Command key bit        | Entier long | 8      | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Command key mask       | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key bit        | Entier long | 12     | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Control key mask       | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Mouse button bit       | Entier long | 7      |                                                           |
+| Mouse button mask      | Entier long | 128    |                                                           |
+| Option key bit         | Entier long | 11     | Touche Alt (aussi appelée Option sous macOS)               |
+| Option key mask        | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
+| Right control key bit  | Entier long | 15     |                                                           |
+| Right control key mask | Entier long | 32768  |                                                           |
+| Right option key bit   | Entier long | 14     |                                                           |
+| Right option key mask  | Entier long | 16384  |                                                           |
+| Right shift key bit    | Entier long | 13     |                                                           |
+| Right shift key mask   | Entier long | 8192   |                                                           |
+| Shift key bit          | Entier long | 9      | Windows et macOS                                           |
+| Shift key mask         | Entier long | 512    | Windows et macOS                                           |
 
- For example, to simulate the Shift key, pass Shift key mask. If you do not pass *modifiers*, no modifiers are simulated.
+Par exemple, pour simuler la touche Majuscule, passez la valeur Shift key mask.
 
-If you specify the *process* parameter, the keystroke is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the keystroke is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
+Si vous passez le paramètre *process*, la frappe clavier est envoyée au process dont le numéro de référence est spécifié. Si vous passez *0* (zéro) dans ce paramètre ou si vous l'omettez, la frappe clavier est envoyée au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
 
-## Example 
+## Exemple 
 
-See example for the [Process number](./commands/process-number) command.
+Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
 
-## See also 
+## Voir aussi 
 
-*ASCII Codes*  
-*Function Key Codes*  
+*Codes ASCII*  
+*Codes des touches de fonction*  
 [POST CLICK](post-click.md)  
 [POST EVENT](post-event.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 465 |
+| Numéro de commande | 465 |
 | Thread safe | no |
-
 
 

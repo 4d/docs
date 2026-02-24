@@ -4,56 +4,52 @@ title: Session info
 displayed_sidebar: docs
 ---
 
-
 <!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
 
-
 <!-- REF #_command_.Session info.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|sessionID |Integer|&#8594; |Session ID|
-|Result|Object|&#8592;|Information about the session|
-</div>
+| Paramètres | Type    |                             | Description                 |
+| ---------- | ------- | :-------------------------: | --------------------------- |
+| sessionID  | Integer | &#8594; | ID de session               |
+| Résultat   | Object  | &#8592; | Informations sur la session |
+
 <!-- END REF -->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R8|Support of standalone sessions |
-|20 R7|Added |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 20 R8   | Prise en charge des sessions autonomes |
+| 20 R7   | Ajout                                  |
 
 </details>
 
-
 ## Description
 
-The `Session info` command <!-- REF #_command_.Session info.Summary -->returns an object describing the session whose ID you pass in the *sessionID* parameter.<!-- END REF -->. If you pass an invalid *sessionID*, the command returns a null object.
+La commande `Session info` <!-- REF #_command_.Session info.Summary -->retourne un objet décrivant la session dont vous passez l'ID dans le paramètre *sessionID*<!-- END REF -->. Si vous transmettez une *sessionID* invalide, la commande renvoie un objet nul.
 
-The returned object contains the following properties:
+L'objet retourné contient les propriétés suivantes :
 
-|Property|Type|Description|
-|---|---|---|
-|type|Text|Session type: "remote", "storedProcedure", "standalone"|
-|userName|Text|4D user name (same value as [`Session.userName`](../API/SessionClass.md#username))|
-|machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine. Standalone session: name of the machine|
-|systemUserName|Text|Remote sessions: name of the system session opened on the remote machine.  |
-|IPAddress|Text|IP address of the remote machine|
-|hostType|Text|Host type: "windows" or "mac"|
-|creationDateTime|Date ISO 8601|Date and time of session creation. Standalone session: date and time of application startup|
-|state|Text|Session state: "active", "postponed", "sleeping"|
-|ID|Text|Session UUID (same value as [`Session.id`](../API/SessionClass.md#id))|
-|persistentID|Text|Remote sessions: Session's persistent ID|
+| Propriété        | Type          | Description                                                                                                                                                                                                                    |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type             | Text          | Type de session : "remote", "storedProcedure", "standalone"                                                                                                                                                    |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`Session.userName`](../API/SessionClass.md#username))                                                                                                                |
+| machineName      | Text          | Sessions distantes : nom de la machine distante. Session procédures stockées : nom de la machine serveur. Session autonome : nom de la machine |
+| systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                |
+| IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                              |
+| hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                               |
+| creationDateTime | Date ISO 8601 | Date et heure de création de la session. Session autonome : date et heure de démarrage de l'application                                                                                        |
+| state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                         |
+| ID               | Text          | UUID de la session (même valeur que [`Session.id`](../API/SessionClass.md#id))                                                                                                                              |
+| persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                                                                                               |
 
 :::note
 
-This command returns the [`.info`](../API/SessionClass.md#info) property of the *sessionID* session. To get information about the current session, you can directly call `Session.info`.
+Cette commande renvoie la propriété [`.info`](../API/SessionClass.md#info) de la session *sessionID*. Pour obtenir des informations sur la session en cours, vous pouvez appeler directement `Session.info`.
 
 :::
 
-Here is an example of output object:
+Voici un exemple d'objet retourné :
 
 ```json
 
@@ -72,7 +68,7 @@ Here is an example of output object:
 
 ```
 
-## Example
+## Exemple
 
 ```4d
 
@@ -82,17 +78,16 @@ Here is an example of output object:
 
 ```
 
-## See also 
+## Voir également
 
 [`Session` class](../API/SessionClass.md)
 [Session](session.md)
-[Session storage](session-storage.md)  
-[Process info](process-info.md)  
+[Session storage](session-storage.md)\
+[Process info](process-info.md)
 
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1844|
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1844 |
+| Thread safe        | oui  |

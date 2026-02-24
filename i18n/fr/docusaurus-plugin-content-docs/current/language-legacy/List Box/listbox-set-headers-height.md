@@ -5,57 +5,57 @@ slug: /commands/listbox-set-headers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Syntax-->**LISTBOX SET HEADERS HEIGHT** ( * ; *object* : Text ; *height* : Integer {; *unit* : Integer} )<br/>**LISTBOX SET HEADERS HEIGHT** ( *object* : Variable ; *height* : Integer {; *unit* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Syntax-->**LISTBOX SET HEADERS HEIGHT** ( {* ;} *objet* ; *hauteur* {; *unité*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| height | Integer | &#8594;  | Row height |
-| unit | Integer | &#8594;  | Unit of height value: 0 or omitted = pixels, 1 = lines |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis |
+| hauteur | Integer | &#8594;  | Hauteur de la ligne |
+| unité | Integer | &#8594;  | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->The **LISTBOX SET HEADERS HEIGHT** command modifies by programming the height of the header row in the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Summary-->La commande **LISTBOX SET HEADERS HEIGHT** permet de modifier par programmation la hauteur de la ligne d’en-tête de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-You can designate either the list box or any header of the list box.
+Vous pouvez désigner indifféremment la list box ou tout en-tête de la list box.
 
-Pass the height to set in the *height* parameter. By default, if you omit the *unit* parameter, this height is expressed in pixels. To change the unit, you can pass one of the following constants (found in the *List Box* theme), in the *unit* parameter:
+Passez dans le paramètre *hauteur* la hauteur à définir. Par défaut, si vous omettez le paramètre *unité*, cette hauteur est exprimée en pixels. Pour modifier l’unité, vous pouvez passer dans le paramètre *unité* l’une des constantes suivantes, placées dans le thème *List box* :
 
-| Constant  | Type    | Value | Comment                                                                                             |
-| --------- | ------- | ----- | --------------------------------------------------------------------------------------------------- |
-| lk lines  | Integer | 1     | Height is expressed as a number of lines. 4D calculates the height of a line according to the font. |
-| lk pixels | Integer | 0     | Height is expressed as a number of pixels (default).                                                |
+| Constante | Type        | Valeur | Comment                                                                                             |
+| --------- | ----------- | ------ | --------------------------------------------------------------------------------------------------- |
+| lk lines  | Entier long | 1      | La hauteur désigne un nombre de lignes. 4D calcule la hauteur d’une ligne en fonction de la police. |
+| lk pixels | Entier long | 0      | La hauteur est un nombre de pixels (défaut)                                                         |
 
-Headers must respect the minimum height set by the system. This height is 24 pixels under Windows and 17 pixels under Mac OS. If you pass a lower value in the *height* parameter, the minimum height is applied. 
+Les en-têtes doivent respecter une hauteur minimale, définie par le système d’exploitation. Cette hauteur est de 24 pixels sous Windows et 17 pixels sous Mac OS. Si vous passez une hauteur inférieure, la hauteur minimale est appliquée. 
 
-**Note:** For more information about calculation row heights, refer to the *Design Reference* manual.
+**Note :** Pour plus d’informations sur le calcul des hauteurs de lignes, reportez-vous au manuel *Mode Développement*.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get headers height](listbox-get-headers-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1143 |
+| Numéro de commande | 1143 |
 | Thread safe | no |
 
 

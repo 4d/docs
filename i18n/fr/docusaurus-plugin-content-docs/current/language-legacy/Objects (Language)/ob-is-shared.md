@@ -5,39 +5,39 @@ slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* : Object, Collection ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | toCheck | Object, Collection | &#8594;  | Object or collection or to check |
-| Function result | Boolean | &#8592; | True if the object or collection is shareable, False if it is alterable |
+| Résultat | Boolean | &#8592; | True if the object or collection is shareable, False if it is alterable |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R5|Created|
+|18 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Is shared.Summary-->The **OB Is shared** command returns **True** if the *toCheck* object or collection is shared, and **False** otherwise (see [Shared objects and shared collections](../Concepts/shared.md)).<!-- END REF-->
+<!--REF #_command_.OB Is shared.Summary-->La commande **OB Is shared** retourne **Vrai** si l'objet ou la collection *toCheck* est partagé , sinon **Faux** (voir *Objets partagés et collections partagées*).<!-- END REF-->
 
-This command returns **True** if you pass a shareable entity selection in *toCheck* (see ).
+Cette commande retourne **Vrai** si vous passez une sélection d'entité partageable dans *toCheck* (voir ). 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1759 |
+| Numéro de commande | 1759 |
 | Thread safe | yes |
 
 

@@ -9,55 +9,55 @@ displayed_sidebar: docs
 <!--REF #_command_.HTTP Get certificates folder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Complete pathname of active certificates folder |
+| Résultat | Text | &#8592; | Chemin d’accès complet du dossier de certificats actif |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
-:::info Compatibility
+:::info Compatibilité
 
-This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
 
 :::
 
 ## Description 
 
-<!--REF #_command_.HTTP Get certificates folder.Summary-->The **HTTP Get certificates folder** command returns the complete pathname of the active client certificates folder.<!-- END REF-->
+<!--REF #_command_.HTTP Get certificates folder.Summary-->La commande **HTTP Get certificates folder** retourne le chemin d’accès complet du dossier de certificats client actif.<!-- END REF--> 
 
-By default, 4D uses the "ClientCertificatesFolder" folder that is created next to the structure file (folder only created if necessary). However, you can create a custom folder for the current process using the [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) command.
+Par défaut, 4D utilise le dossier "ClientCertificatesFolder" créé à côté du fichier de structure (dossier créé uniquement si nécessaire). Vous pouvez toutefois créer un dossier personnalisé pour le process courant à l’aide de la commande [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md).
 
-## Example 
+## Exemple 
 
-You want to change certificates folder temporarily:
+Vous souhaitez changer temporairement de dossier de certificats :
 
 ```4d
  var $certifFolder : Text
- $certifFolder :=HTTP Get certificates folder //save current folder
+ $certifFolder :=HTTP Get certificates folder //on stocke le dossier courant
  HTTP SET CERTIFICATES FOLDER("C:/temp/certifTempo/")
- ... // execution of specific requests
- HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
+    ... // exécution de requêtes spécifiques
+ HTTP SET CERTIFICATES FOLDER($certifFolder) //on rétablit le dossier
 ```
 
-## See also 
+## Voir aussi 
 
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1307 |
+| Numéro de commande | 1307 |
 | Thread safe | yes |
 
 

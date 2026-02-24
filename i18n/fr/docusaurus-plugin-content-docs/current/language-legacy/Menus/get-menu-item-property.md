@@ -5,52 +5,51 @@ slug: /commands/get-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* : Integer, Text ; *menuItem* : Integer ; *property* : Text ; *value* : any {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *ligneMenu* ; *propriété* ; *valeur* {; *process*} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| property | Text | &#8594;  | Property type |
-| value | any | &#8592; | Property value |
-| process | Integer | &#8594;  | Process number |
+| menu | Integer | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| propriété | Text | &#8594;  | Type de propriété |
+| valeur | any | &#8592; | Valeur de la propriété |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Modified|
-|11 SQL|Created|
+|16 R3|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->The **GET MENU ITEM PROPERTY** command returns, in the *value* parameter, the current value of the property of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM PROPERTY.Summary-->La commande **GET MENU ITEM PROPERTY** retourne dans le paramètre *valeur* la valeur courante de la propriété de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->  
+Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
 
-You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu. Si vous passez un identifiant unique, le paramètre *process* est inutile et sera ignoré s’il est passé. Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) or a menu number. If you pass a menu reference, the *process* parameter is unnecessary and will be ignored if it is passed. If you pass a menu number, the command will take the corresponding menu in the main menu bar of the current process into account. If you want to designate another process, pass its number in the optional *process* parameter.
+Passez dans le paramètre *propriété* la propriété dont vous souhaitez obtenir la valeur. Vous pouvez utiliser l’une des constantes du thème “*Propriétés des lignes de menu*” ou une chaîne correspondant à une propriété personnalisée. Pour plus d’informations sur les propriétés des menus et leurs valeurs, reportez-vous à la description de la commande [SET MENU ITEM PROPERTY](set-menu-item-property.md).
 
-In the *property* parameter, pass the property for which you want to get the value. You can use one of the constants of the “*Menu Item Properties*” theme or a string corresponding to a custom property. For more information about menu properties and their values, please refer to the description of the [SET MENU ITEM PROPERTY](set-menu-item-property.md) command.
+**Note de compatibilité :** Par défaut, si la variable *valeur* n'est pas typée explicitement ou est déclarée de type texte, la commande retournera un nom d'*Action standard*. Si vous souhaitez obtenir une valeur numérique comme défini dans le thème de constantes (obsolète) *Valeurs pour Actions standard associée*, vous devez déclarer la variable *valeur* de type entier long.
 
-**Compatibility Note:** By default, if the *value* variable is not explicitely typed or is declared as text, the command will return a *Standard Action* name. If you want to get a numeric value as defined in the (deprecated) *Value for Associated Standard Action* constant theme, you need to declare the *value* variable as longint. 
-
-## See also 
+## Voir aussi 
 
 [SET MENU ITEM PROPERTY](set-menu-item-property.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 972 |
+| Numéro de commande | 972 |
 | Thread safe | no |
 
 

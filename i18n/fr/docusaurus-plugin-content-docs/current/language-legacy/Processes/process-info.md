@@ -4,129 +4,125 @@ title: Process info
 displayed_sidebar: docs
 ---
 
-
 <!-- REF #_command_.Process info.Syntax -->**Process info** ( *processNumber* : Integer ) : Object<!-- END REF -->
 
-
 <!-- REF #_command_.Process info.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|processNumber|Integer|&#8594; |Process number|
-|Result|Object|&#8592;|Information about the process|
-</div>
+| Paramètres    | Type    |                             | Description                 |
+| ------------- | ------- | :-------------------------: | --------------------------- |
+| processNumber | Integer | &#8594; | Process number              |
+| Résultat      | Object  | &#8592; | Informations sur le process |
+
 <!-- END REF -->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R7|Added |
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R7   | Ajout         |
 
 </details>
 
 ## Description
 
-The `Process info` command <!-- REF #_command_.Process info.Summary -->returns an object providing detailed information about process whose number you pass in *processNumber*<!-- END REF -->. If you pass an incorrect process number, the command returns a null object.
+La commande `Process info` <!-- REF #_command_.Process info.Summary -->renvoie un objet fournissant des informations détaillées sur le process dont le numéro est passé dans *processNumber*<!-- END REF -->. Si vous passez un numéro de process incorrect, la commande renvoie un objet null.
 
-The returned object contains the following properties:
+L'objet retourné contient les propriétés suivantes :
 
-|Property|Type|Description|
-|---|----|-----|
-|cpuTime|Real|Running time (seconds)|
-|cpuUsage|Real|Percentage of time devoted to this process (between 0 and 1)|
-|creationDateTime|Text (Date ISO 8601)|Date and time of process creation|
-|ID|Integer|Process unique ID|
-|name|Text|Process name|
-|number|Integer|Process number|
-|preemptive|Boolean|True if run preemptive, false otherwise|
-|sessionID|Text|Session UUID|
-|state|Integer|Current status. Possible values: see below|
-|systemID|Text|ID for the user process, 4D process or spare process|
-|type|Integer|Running process type. Possible values: see below|
-|visible|Boolean|True if visible, false otherwise|
+| Propriété        | Type                                    | Description                                                                                               |
+| ---------------- | --------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| cpuTime          | Real                                    | Durée d'exécution (secondes)                                                           |
+| cpuUsage         | Real                                    | Pourcentage de temps consacré à ce process (entre 0 et 1)                              |
+| creationDateTime | Text (Date ISO 8601) | Date et heure de création du process                                                                      |
+| ID               | Integer                                 | ID unique du process                                                                                      |
+| name             | Text                                    | Nom du process                                                                                            |
+| number           | Integer                                 | Process number                                                                                            |
+| preemptive       | Boolean                                 | Vrai si l'exécution est préemptive, faux sinon                                                            |
+| sessionID        | Text                                    | UUID de la session                                                                                        |
+| state            | Integer                                 | Statut courant. Valeurs possibles : voir ci-dessous                       |
+| systemID         | Text                                    | ID du process utilisateur, 4D ou de réserve                                                               |
+| type             | Integer                                 | Type de process en cours d'exécution. Valeurs possibles : voir ci-dessous |
+| visible          | Boolean                                 | Vrai si visible, faux sinon                                                                               |
 
-- Possible values for "state":
+- Valeurs possibles pour "state" :
 
-| Constant                  	| Value 	|
-|---------------------------	|-------	|
-| Does not exist            	| -100  	|
-| Aborted                   	| -1    	|
-| Executing                 	| 0     	|
-| Delayed                   	| 1     	|
-| Waiting for user event    	| 2     	|
-| Waiting for input output  	| 3     	|
-| Waiting for internal flag 	| 4     	|
-| Paused                    	| 5     	|
+| Constante                 | Valeur |
+| ------------------------- | ------ |
+| Does not exist            | -100   |
+| Aborted                   | -1     |
+| Executing                 | 0      |
+| Delayed                   | 1      |
+| Waiting for user event    | 2      |
+| Waiting for input output  | 3      |
+| Waiting for internal flag | 4      |
+| Paused                    | 5      |
 
-- Possible values for "type":
+- Valeurs possibles pour "type" :
 
-| Constant                      	| Value 	|
-|-------------------------------	|-------	|
-| Apple event manager           	| -7    	|
-| Backup process                	| -19   	|
-| Cache manager                 	| -4    	|
-| Client manager process        	| -31   	|
-| Compiler process              	| -29   	|
-| Created from execution dialog 	| 3     	|
-| Created from menu command     	| 2     	|
-| DB4D Cron                     	| -49   	|
-| DB4D Flush cache              	| -46   	|
-| DB4D Garbage collector        	| -47   	|
-| DB4D Index builder            	| -45   	|
-| DB4D Listener                 	| -51   	|
-| DB4D Mirror                   	| -50   	|
-| DB4D Worker pool user         	| -48   	|
-| Design process                	| -2    	|
-| Event manager                 	| -8    	|
-| Execute on client process     	| -14   	|
-| Execute on server process     	| 1     	|
-| External task                 	| -9    	|
-| HTTP Listener                 	| -56   	|
-| HTTP Log flusher              	| -58   	|
-| HTTP Worker pool server       	| -55   	|
-| Indexing process              	| -5    	|
-| Internal 4D server process    	| -18   	|
-| Internal timer process        	| -25   	|
-| Log file process              	| -20   	|
-| Logger process                	| -57   	|
-| Main 4D process               	| -39   	|
-| Main process                  	| -1    	|
-| Method editor macro process   	| -17   	|
-| Monitor process               	| -26   	|
-| MSC process                   	| -22   	|
-| None                          	| 0     	|
-| On exit process               	| -16   	|
-| Other 4D process              	| -10   	|
-| Other internal process        	| -40   	|
-| Other user process            	| 4     	|
-| Restore Process               	| -21   	|
-| Serial Port Manager           	| -6    	|
-| Server interface process      	| -15   	|
-| ServerNet Listener            	| -43   	|
-| ServerNet Session manager     	| -44   	|
-| SOAP process                  	| -33   	|
-| SQL Listener                  	| -54   	|
-| SQL Method execution process  	| -24   	|
-| SQL Net Session manager       	| -53   	|
-| SQL Worker pool server        	| -52   	|
-| Web process on 4D remote      	| -12   	|
-| Web process with no context   	| -3    	|
-| Web server process            	| -13   	|
-| Web server spare process      	| -32   	|
-| Worker pool in use            	| -41   	|
-| Worker pool spare             	| -42   	|
-| Worker process                	| 5     	|
+| Constante                     | Valeur |
+| ----------------------------- | ------ |
+| Apple event manager           | -7     |
+| Backup process                | -19    |
+| Cache manager                 | -4     |
+| Client manager process        | -31    |
+| Compiler process              | -29    |
+| Created from execution dialog | 3      |
+| Created from menu command     | 2      |
+| DB4D Cron                     | -49    |
+| DB4D Flush cache              | -46    |
+| DB4D Garbage collector        | -47    |
+| DB4D Index builder            | -45    |
+| DB4D Listener                 | -51    |
+| DB4D Mirror                   | -50    |
+| DB4D Worker pool user         | -48    |
+| Design process                | -2     |
+| Event manager                 | -8     |
+| Execute on client process     | -14    |
+| Execute on server process     | 1      |
+| External task                 | -9     |
+| HTTP Listener                 | -56    |
+| HTTP Log flusher              | -58    |
+| HTTP Worker pool server       | -55    |
+| Indexing process              | -5     |
+| Internal 4D server process    | -18    |
+| Internal timer process        | -25    |
+| Log file process              | -20    |
+| Logger process                | -57    |
+| Main 4D process               | -39    |
+| Main process                  | -1     |
+| Method editor macro process   | -17    |
+| Monitor process               | -26    |
+| MSC process                   | -22    |
+| Aucun                         | 0      |
+| On exit process               | -16    |
+| Other 4D process              | -10    |
+| Other internal process        | -40    |
+| Other user process            | 4      |
+| Restore Process               | -21    |
+| Serial Port Manager           | -6     |
+| Server interface process      | -15    |
+| ServerNet Listener            | -43    |
+| ServerNet Session manager     | -44    |
+| SOAP process                  | -33    |
+| SQL Listener                  | -54    |
+| SQL Method execution process  | -24    |
+| SQL Net Session manager       | -53    |
+| SQL Worker pool server        | -52    |
+| Web process on 4D remote      | -12    |
+| Web process with no context   | -3     |
+| Web server process            | -13    |
+| Web server spare process      | -32    |
+| Worker pool in use            | -41    |
+| Worker pool spare             | -42    |
+| Worker process                | 5      |
 
 :::note
 
-4D's internal processes have a negative type value and processes generated by the user have a positive value. Worker processes launched by user have type 5.
+Les process internes de 4D ont une valeur de type négative et les process générés par l'utilisateur ont une valeur positive. Les process worker lancés par l'utilisateur sont de type 5.
 
 :::
 
-
-Here is an example of output object:
+Voici un exemple d'objet retourné :
 
 ```json
 
@@ -147,9 +143,9 @@ Here is an example of output object:
 
 ```
 
-## Example
+## Exemple
 
-You want to know if the process is preemptive:
+Vous voulez savoir si le process est préemptif :
 
 ```4d
 
@@ -159,10 +155,9 @@ $preemptive:=Process info(Current process).preemptive
 
 ```
 
-## See also 
+## Voir également
 
-[Count tasks](./commands/count-tasks)  
-[Process activity](process-activity.md)  
-[Process state](./commands/process-state)  
-[Session info](session-info.md)  
-
+[Count tasks](../commands-legacy/count-tasks.md)\
+[Process activity](process-activity.md)\
+[Process state](../commands-legacy/process-state.md)\
+[Session info](session-info.md)

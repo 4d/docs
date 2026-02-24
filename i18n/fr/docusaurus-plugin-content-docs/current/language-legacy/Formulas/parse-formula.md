@@ -5,116 +5,111 @@ slug: /commands/parse-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* : Text {; *options* : Integer}{; *errorMessage* : Text} ) : Text<!-- END REF-->
+<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formule* {; *options*}{; *messageErr*} ) : Text<!-- END REF-->
 <!--REF #_command_.Parse formula.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| formula | Text | &#8594;  | Plain text formula |
-| options | Integer | &#8594;  | Instructions for input / output |
-| errorMessage | Text | &#8592; | Error message (empty string if no error) |
-| Function result | Text | &#8592; | Transformed formula (plain text) |
+| formule | Text | &#8594;  | Texte brut de la formule |
+| options | Integer | &#8594;  | Instructions d'entrée / sortie |
+| messageErr | Text | &#8592; | Message d'erreur (chaîne vide si pas d'erreur) |
+| Résultat | Text | &#8592; | Formule avec transformation (texte brut) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Parse formula.Summary-->The **Parse formula** function analyzes the 4D *formula*, checks its syntax, and returns its normalized form.<!-- END REF--> This allows the formula to remain valid in the event that a 4D language or structure element (command, constant, table, field, or 4D Plugin) is renamed. 
+<!--REF #_command_.Parse formula.Summary-->La commande **Parse formula** inspecte le contenu de la *formule* 4D, vérifie sa syntaxe, et la retourne sous une forme normalisée.<!-- END REF--> Cette opération permet à la formule de rester valide dans le cas où un élément du langage 4D ou de la structure est renommé (commande, constante, table, champ ou plug-in 4D). 
 
-**Parse formula** can be used to evaluate and translate formulas in the following manner: 
+Vous pouvez utiliser **Parse formula** pour évaluer et traduire les formules de différentes manières : 
 
-* "Real" table/field names can be converted to "virtual" structure\* names (custom names) or tokenized equivalents\*\*
-* Tokenized table/field equivalents can be converted to virtual structure names or real table/field names
-* Virtual structures can be converted to real table/field names or tokenized equivalents
-* 4D language elements can be converted to tokenized 4D language equivalents
-* Tokenized 4D language equivalents can be converted to 4D language elements
+* Les noms "réels" de tables et de champs peuvent être convertis en noms "virtuels\*" (noms personnalisés) ou en équivalents *tokenisé*s\*\*.
+* Les équivalents tokenisés des tables/champs peuvent être convertis en noms "virtuels" ou "réels".
+* Les noms "virtuels" des tables/champs peuvent être convertis en noms "réels" ou en équivalents *tokenisé*s.
+* Les éléments du langage 4D peuvent être convertis en équivalents tokenisés du langage 4D.
+* Les équivalents tokenisés du langage 4D peuvent être convertis en éléments du langage 4D.
 
-**\** Virtual structures are defined using the [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands (\* parameter required).* 
+**\** Les noms de la structure virtuelle sont définis à l'aide de commandes [SET TABLE TITLES](set-table-titles.md) et [SET FIELD TITLES](set-field-titles.md) (utilisées avec le paramètre \*).* 
 
-**\*\*** *Tokenized equivalents are 4D language and structure elements in plain text* **expressed with token syntax as shown below (* *see also Using tokens in formulas):* 
+**\*\** Les* équivalents tokenisés *sont les éléments du langage 4D et de la structure exprimés en texte brut et avec la* syntaxe tokenisée*, comme illustré ci-dessous* *(voir aussi la page* *Utiliser des tokens dans les formules) :* 
 
 ```RAW
-[Table:1]Field:1+String:C10(1)
+[Table:3]Field:1+Chaine:C10(1)
 ```
 
-In *formula*, pass a formula in plain text. It can use real or virtual structure names, as well as tokenized equivalents. 
+Passez dans le paramètre *formule* une formule 4D en texte brut. Elle peut utiliser des noms réels ou virtuels ainsi que des équivalents tokenisés. 
 
-No matter the name types used in *formula*, by default **Parse formula** returns the actual 4D language or structure element names without text tokens.
-
-The optional *options* parameter allows you to specify how *formula* is expressed and/or returned using the following constants from the *Formulas* theme. You can combine constants to designate both the input and output format of the returned formula.
+Quels que soient les types de noms utilisés dans *formule*, par défaut **Parse formula** retourne les noms réels des éléments de langage 4D ou de structure sans tokens. Le paramètre optionnel *options* vous permet d'indiquer comment la *formule* est exprimée et/ou doit être retournée. Vous pouvez passer dans ce paramètre une ou plusieurs des constantes suivantes du thème *Formules* (vous pouvez combiner des constantes afin d'indiquer simultanément les formats d'entrée et de sortie de la formule. 
 
   
-| Constant                           | Value | Comment                                                                                    |
-| ---------------------------------- | ----- | ------------------------------------------------------------------------------------------ |
-| Formula in with virtual structure  | 1     | Formula contains custom (virtual) names. By default, returned formula contains real names. |
-| Formula out with virtual structure | 2     | Returned formula must contain custom (virtual) names.                                      |
-| Formula out with tokens            | 4     | Returned formula must contain text tokens (e.g. :Cxx).                                     |
+| Constante                          | Valeur | Comment                                                                                                                              |
+| ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Formula in with virtual structure  | 1      | La formule utilise les noms de la structure virtuelle (noms personnalisés). Par défaut, la formule retournée utilise les noms réels. |
+| Formula out with virtual structure | 2      | La formule doit être retournée avec les noms de la structure virtuelle (noms personnalisés).                                         |
+| Formula out with tokens            | 4      | La formule doit être retournée avec des équivalents tokenisés (ex. : Cxx).                                                           |
 
   
-The optional *errorMessage* parameter will receive an error message if there is a syntax error in *formula*. If there is no error, an empty string will be returned.
+Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur est retourné dans le paramètre optionnel *messageErr*. Si aucune erreur n'est détectée, une chaîne vide est retournée. 
 
-## Example 1 
+## Exemple 1 
 
 ```4d
  ARRAY TEXT($t1;1)
  ARRAY LONGINT($t2;1)
- $t1{1}:="Virtual table"
+ $t1{1}:="Table virtuelle"
  $t2{1}:=1
  SET TABLE TITLES($t1;$t2;*)
  
  ARRAY TEXT($tf1;1)
  ARRAY LONGINT($tf2;1)
- $tf1{1}:="Virtual field"
+ $tf1{1}:="Champ virtuel"
  $tf2{1}:=2
  SET FIELD TITLES([Table_1];$tf1;$tf2;*)
  
-  //Virtual structure to table and field name equivalent
- $parsedFormula:=Parse formula("[Virtual table]Virtual field";Formula in with virtual structure;$errorMessage)
-  //return [Table_1]Field_2
+  //Structure virtuelle vers équivalents réels
+ $parsedFormula:=Parse formula("[Table virtuelle]Champ virtuel";Formula in with virtual structure;$errorMessage)
+  //retourne [Table_1]Champ_2
  
-  //Table and field name to virtual structure equivalent
- $parsedFormula:=Parse formula("[Table_1]Field_2";Formula out with virtual structure;$errorMessage)
-  //return [Virtual table]Virtual field
+  //Noms de champ et de table réels vers leur équivalent dans la structure virtuelle
+ $parsedFormula:=Parse formula("[Table_1]Champ_2";Formula out with virtual structure;$errorMessage)
+  //retourne [Table virtuelle]Champ virtuel
  
-  //Table and field name to the tokenized form equivalent
- $parsedFormula:=Parse formula("String([Table_1]Field_2)";Formula out with tokens;$errorMessage)
-  //return String:C10([Table_1:1]Field_2:2)
- 
- 
+  //Noms de champ et de table vers leur équivalent tokenisés
+ $parsedFormula:=Parse formula("Chaine([Table_1]Champ_2)";Formula out with tokens;$errorMessage)
+  //retourne Chaine:C10([Table_1:1]Champ_2:2)
 ```
 
-## Example 2 
+## Exemple 2 
 
 ```4d
-  //ask the user to type their favorite formula
+  //demander à l'utilisateur de saisir sa formule
  $formula:=""
  EDIT FORMULA([Table_1];$formula)
  
-  //save user's formula for later use
+  //sauvegarder la formule de l'utilisateur pour une utilisation ultérieure
  CREATE RECORD([users_preferences])
  $persistentFormula:=Parse formula($formula;Formula out with tokens)
  [users_preferences]formula:=$persistentFormula
  SAVE RECORD([users_preferences])
  
-  //later: execute the previously saved formula
+  //plus tard : exécution de la formule
  CREATE RECORD([Table_1])
  EXECUTE FORMULA([users_preferences]formula)
 ```
 
-## See also 
+## Voir aussi 
 
-[Formula from string](./commands/formula-from-string)  
+[Formula from string](../commands/formula-from-string.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 [SET TABLE TITLES](set-table-titles.md)  
-*Using tokens in formulas*  
+*Utiliser des tokens dans les formules*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1576 |
+| Numéro de commande | 1576 |
 | Thread safe | no |
-
 
 

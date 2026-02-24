@@ -5,57 +5,57 @@ slug: /commands/qr-set-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *area* : Integer ; *subtotal* : Integer ; *value* : Integer )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *zone* ; *sousTotal* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS SPACING.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| subtotal | Integer | &#8594;  | Subtotal number |
-| value | Integer | &#8594;  | 0=no space, 32000=inserts a page break, >0=spacing added below the break level, <0=proportional increase |
+| zone | Integer | &#8594;  | Référence de la zone |
+| sousTotal | Integer | &#8594;  | Numéro de sous-total |
+| valeur | Integer | &#8594;  | 0=pas d'espace, 32000=insère un saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET TOTALS SPACING.Summary-->The QR SET TOTALS SPACING command sets a space below a subtotal row.<!-- END REF--> It applies only to the list mode.
+<!--REF #_command_.QR SET TOTALS SPACING.Summary-->La commande **QR SET TOTALS SPACING** permet de définir l'espacement ajouté au-dessous d'une ligne de sous-total.<!-- END REF--> Elle ne peut être utilisée qu'avec des états en liste. 
 
-*area* is the reference of the Quick Report area.  
-*subtotal* is the subtotal level (or break level) that will be affected.
+Le paramètre *zone* contient la référence de la zone d'état rapide.   
+Le paramètre *sousTotal* désigne le niveau de sous-total (ou de rupture) à modifier. 
 
-*value* defines the value of the spacing:
+Le paramètre *valeur* permet de définir la valeur de l'espacement :
 
-* If *value* is 0, no space is added.
-* If *value* is 32000, a page break is inserted.
-* If *value* is a positive value, it expresses the spacing value in pixels.
-* If *value* is a negative value, it expresses the spacing as a percentage of the subtotal row. For example, -100 will set a space of 100% below the subtotal row.
+* Si *valeur* vaut 0, aucun espacement n'est ajouté.
+* Si *valeur* vaut 32000, un saut de page est ajouté.
+* Si *valeur* est une valeur positive, elle exprime l'espacement à ajouter en pixels.
+* Si *valeur* est une valeur négative, elle exprime l'espacement à ajouter en pourcentage de la ligne de sous-total. Par exemple, la valeur -100 définit l'ajout d'un espace au-dessous de la ligne de sous-total correspondant à 100% de la hauteur courante de la ligne.
 
-**Note:** If the space below a subtotal row “pushes” the next row onto the following page, there will be no space inserted above the row on that page.
+**Note :** Si l'espacement ajouté au-dessous d'une ligne de sous-total “repousse” la ligne suivante sur la page suivante, aucun espace n'apparaîtra au-dessus de la ligne sur cette page.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *subtotal*, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *sousTotal* est incorrect, l’erreur -9852 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 761 |
+| Numéro de commande | 761 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

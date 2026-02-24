@@ -9,36 +9,36 @@ displayed_sidebar: docs
 <!--REF #_command_.QR New offscreen area.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Reference of the area created |
+| Résultat | Integer | &#8592; | Référence de la zone créée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR New offscreen area.Summary-->The QR New offscreen area command creates a new Quick Report offscreen area and returns its reference.<!-- END REF-->
+<!--REF #_command_.QR New offscreen area.Summary-->La commande **QR New offscreen area** crée une zone d'Etat rapide hors écran et retourne son numéro de référence.<!-- END REF--> 
 
-## See also 
+## Voir aussi 
 
 [QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
 [QR NEW AREA](qr-new-area.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 735 |
+| Numéro de commande | 735 |
 | Thread safe | no |
 
 

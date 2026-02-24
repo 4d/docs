@@ -5,54 +5,54 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *object* : Text ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *object* : Variable ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *objet* ; *colonne* ; *ligne* ; *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| column | Integer | &#8594;  | Column number |
-| row | Integer | &#8594;  | Row number |
-| left | Integer | &#8592; | Left coordinate of the object |
-| top | Integer | &#8592; | Top coordinate of the object |
-| right | Integer | &#8592; | Right coordinate of the object |
-| bottom | Integer | &#8592; | Bottom coordinate of the object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| colonne | Integer | &#8594;  | Numéro de colonne |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| gauche | Integer | &#8592; | Coordonnée gauche de l'objet |
+| haut | Integer | &#8592; | Coordonnée supérieure de l’objet |
+| droite | Integer | &#8592; | Coordonnée droite de l’objet |
+| bas | Integer | &#8592; | Coordonnée inférieure de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Created|
+|14 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->The **LISTBOX GET CELL COORDINATES** command returns in variables or fields the *left*, *top*, *right* and *bottom* coordinates (in points) of the cell designated by the *column* and *row* parameters, in the list box defined by *\** and *object*.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->La commande **LISTBOX GET CELL COORDINATES** retourne dans les variables ou champs *gauche*, *haut*, *droite* et *bas* les coordonnées (en points) de la cellule désignée par les paramètres *colonne* et *ligne* dans la list box définie par *\** et *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, it indicates that the *object* parameter is an object name (a string). If you don’t pass the optional *\** parameter, this indicates that the object is a field or a variable. In this case, you pass a field or variable reference (only a field or variable of the object type) instead of a string
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne de caractères). Si vous ne passez pas le paramètre *\**, vous indiquez que l'objet est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable de type objet uniquement).
 
-For consistency with the *OBJECT GET COORDINATES* command, the origin is the upper-left corner of the form which contains the cell. Also, the coordinates returned are theoretical; they take into account the scrolling state of the list box before any clipping occurs. As a result, the cell may be not visible (or only partially so) at its coordinates, and these coordinates may be outside the form limits (or even negative). To find out if the cell is displayed (and which part of it is visible) you need to compare the coordinates returned with the list box coordinates, while considering the following rules:
+Par cohérence avec la commande [OBJECT GET COORDINATES](object-get-coordinates.md), le point d'origine est le coin supérieur gauche du formulaire qui contient la cellule. Aussi, les coordonnées retournées sont théoriques ; elles tiennent compte du défilement éventuel de la list box avant son affichage à l'intérieur de son cadre. En résultat, la cellule peut ne pas être visible (ou être visible seulement en partie) à ses coordonnées, et ces coordonnées peuvent se situer au-delà des limites du formulaire (voire être négatives). Pour savoir si la cellule est visible (et quelle partie) vous devez comparer les coordonnées retournées avec celles de la list box elle-même, en tenant compte des règles suivantes :
 
-* All cells are clipped to the coordinates of their parent list box (as returned by the [OBJECT GET COORDINATES](object-get-coordinates.md) command for the list box).
-* Header and footer sub-objects are displayed on top column content: when the coordinates of a cell intersect the coordinates of the header or footer rows, then the cell is not displayed at this intersection.
-* Elements of locked columns are displayed on top of elements of scrollable columns: when the coordinates of an element in a scrollable column intersect the coordinates of an element in a locked column, then it is not displayed at this intersection.
+* Les limites des cellules dépendent des coordonnées de leur list box parente (telles que retournées par la commande [OBJECT GET COORDINATES](object-get-coordinates.md) pour la list box).
+* Les sous-objets en-tête et pied sont affichés au-dessus du contenu des colonnes : lorsque les coordonnées d'une cellule coupent celles d'une ligne d'en-tête ou de pied, la cellule n'est pas affichée à l'emplacement de l'intersection.
+* Les éléments des colonnes verrouillées sont affichés au-dessus des éléments des colonnes défilables : lorsque les coordonnées d'un élément d'une colonne défilable croisent celles d'un élément d'une colonne verrouillée, l'élément défilable n'est pas affiché à l'emplacement de l'intersection.
 
-For more information, please refer to the [OBJECT GET COORDINATES](object-get-coordinates.md) command description.
+Pour plus d'informations, veuillez vous reporter à la description de la commande [OBJECT GET COORDINATES](object-get-coordinates.md).
 
-## Example 
+## Exemple 
 
-You want to draw a red rectangle around the selected cell of a list box:
+Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée dans une list box :
 
 ```4d
- OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
-  //the rectangle is already defined somewhere in the form
+ OBJECT SET VISIBLE(*;"RedRect";False) //initialiser un rectangle rouge
+  //le rectangle est déjà défini quelque part dans le formulaire
  LISTBOX GET CELL POSITION(*;"LB1";$col;$row)
  LISTBOX GET CELL COORDINATES(*;"LB1";$col;$row;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)
@@ -61,16 +61,16 @@ You want to draw a red rectangle around the selected cell of a list box:
 
 ![](../assets/en/commands/pict1741070.en.png)
 
-## See also 
+## Voir aussi 
 
 [LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1330 |
+| Numéro de commande | 1330 |
 | Thread safe | no |
 
 

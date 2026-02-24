@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.Get cache size.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Real | &#8592; | Size of database cache in bytes |
+| Résultat | Real | &#8592; | Taille, en octets, du cache de la base de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get cache size.Summary-->The **Get cache size** command returns the current database cache size in bytes.<!-- END REF-->This command only works in local mode (4D Server and 4D); it must not be used from 4D in remote mode. 
+<!--REF #_command_.Get cache size.Summary-->La commande **Get cache size** retourne, en octets, la taille courante du cache de la base de données.<!-- END REF-->Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.
 
-## Example 
+## Exemple 
 
-See example for [SET CACHE SIZE](set-cache-size.md) command. 
+Voir l'exemple de la commande [SET CACHE SIZE](set-cache-size.md). 
 
-## See also 
+## Voir aussi 
 
 [SET CACHE SIZE](set-cache-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1432 |
+| Numéro de commande | 1432 |
 | Thread safe | yes |
 
 

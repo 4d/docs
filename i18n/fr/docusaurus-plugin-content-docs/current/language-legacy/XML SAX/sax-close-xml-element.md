@@ -5,56 +5,56 @@ slug: /commands/sax-close-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *document* : Time )<!-- END REF-->
+<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *document* )<!-- END REF-->
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
+| document | Time | &#8594;  | Référence du document ouvert |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->The SAX CLOSE XML ELEMENT command writes the statements necessary for closing the last element opened using the [SAX OPEN XML ELEMENT](sax-open-xml-element.md) command in the XML document referenced by *document*<!-- END REF-->.
+<!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->La commande **SAX CLOSE XML ELEMENT** inscrit dans le document XML référencé par *document* les instructions nécessaires à la fermeture du dernier élément ouvert via la commande [SAX OPEN XML ELEMENT](sax-open-xml-element.md).<!-- END REF--> 
 
-The use of this command is optional. In fact, 4D will automatically add the necessary end tags for any unclosed elements when XML documents are closed.
+L’emploi de cette commande est facultatif. En effet, 4D ajoute automatiquement si nécessaire, au moment de la fermeture des documents XML, les balises de fin d’éléments non refermés explicitement.
 
-## Example 
+## Exemple 
 
-If the last element opened is *<Book>*, the following statement:
+Si le dernier élément ouvert est *<Book>*, l’instruction suivante :
 
 ```4d
- SAX CLOSE XML ELEMENT($DocRef)
+ SAX CLOSE XML ELEMENT($RefDoc)
 ```
 
-... will write the following line in the document: 
+... inscrira cette ligne dans le document : 
 
-```xml
- </Book>
+```XML
+</Book>
 ```
 
-## See also 
+## Voir aussi 
 
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 854 |
+| Numéro de commande | 854 |
 | Thread safe | yes |
 
 

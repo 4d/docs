@@ -5,43 +5,43 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *object* : Text ) : Text<br/>**LISTBOX Get column formula** ( *object* : Variable ) : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Text | &#8592; | Formula associated with column |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| Résultat | Text | &#8592; | Formule associée à la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get column formula.Summary-->The **LISTBOX Get column formula** command returns the formula associated with the list box column designated by the *object* and *\** parameters.<!-- END REF--> Formulas can only be used when the “Data Source” property of the list box is either **Current Selection**, **Named Selection**, or **Collection or Entity Selection**. If no formula is associated with the column, the command returns an empty string. 
+<!--REF #_command_.LISTBOX Get column formula.Summary-->La commande **LISTBOX Get column formula** retourne la formule associée à la colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> Les formules ne peuvent être utilisées que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection**. Si aucune formule n’est associée à la colonne, la commande retourne une chaîne vide. 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. This parameter must designate a column of the list box.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Ce paramètre doit désigner une colonne de la listbox.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1202 |
+| Numéro de commande | 1202 |
 | Thread safe | no |
 
 

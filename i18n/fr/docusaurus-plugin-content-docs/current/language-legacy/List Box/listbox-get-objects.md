@@ -5,79 +5,78 @@ slug: /commands/listbox-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( * ; *object* : Text ; *arrObjectNames* : Text array )<br/>**LISTBOX GET OBJECTS** ( *object* : Variable ; *arrObjectNames* : Text array )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( {* ;} *objet* ; *tabNomsObj* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| arrObjectNames | Text array | &#8592; | Names of sub-objects comprising list box (headers, columns, footers) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabNomsObj | Text array | &#8592; | Noms des sous-objets de la list box (en-têtes, colonnes, pieds) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX GET OBJECTS.Summary-->The **LISTBOX GET OBJECTS** command returns an array containing the names of each object making up the list box designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.LISTBOX GET OBJECTS.Summary-->La commande **LISTBOX GET OBJECTS** retourne un tableau contenant les noms de chaque objet composant la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In *arrObjectNames*, you pass a text array that is automatically filled in by the command. Object names are returned in their display order, with the following sequence: 
+Passez dans *tabNomsObj* un tableau texte qui sera automatiquement rempli par la commande. Les noms des objets sont retournés dans leur ordre d’affichage, avec la séquence suivante : 
 
-| nameCol1       |
-| -------------- |
-| headerNameCol1 |
-| footerNameCol1 |
-| nameCol2       |
-| headerNameCol2 |
-| footerNameCol2 |
-| ...            |
+| nomCol1       |
+| ------------- |
+| nomEntêteCol1 |
+| nomPiedCol1   |
+| nomCol2       |
+| nomEntêteCol2 |
+| nomPiedCol2   |
+| ...           |
 
-The array returns the object names for all the columns (including column footers), regardless of whether or not they are visible. 
+Le tableau retourne les noms des objets de toutes les colonnes (y compris les pieds de colonnes), quel que soit leur statut visible/invisible. 
 
-This command is useful in the context of the parsing of a form using the [FORM LOAD](./commands/form-load), [FORM GET OBJECTS](form-get-objects.md) and [OBJECT Get type](object-get-type.md) commands. You can use it, when needed, to obtain the names of list box sub-objects.
+Cette commande est utile dans le contexte de l’analyse d’un formulaire via les commandes [FORM LOAD](../commands/form-load.md), [FORM GET OBJECTS](form-get-objects.md) et [OBJECT Get type](object-get-type.md). Elle permet, si nécessaire, d’obtenir les noms des sous-objets des list box.
 
-## Example 
+#### Exemple 
 
-You want to load a form and get a list of all the objects of list boxes that it contains.
+Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des list box qu’il contient.
 
 ```4d
- FORM LOAD("MyForm")
- ARRAY TEXT(arrObjects;0)
- FORM GET OBJECTS(arrObjects)
- ARRAY LONGINT(ar_type;Size of array(arrObjects))
- For($i;1;Size of array(arrObjects))
-    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
-    If(ar_type{$i}=Object type listbox)
-       ARRAY TEXT(arrLBObjects;0)
-       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
-    End if
+ FORM LOAD("MonFormulaire")
+ ARRAY TEXT(tabObjets;0)
+ FORM GET OBJECTS(tabObjets)
+ ARRAY LONGINT(ar_type;Taille tableau(tabObjets))
+ For($i;1;Size of array(tabObjets))
+       ar_type{$i}:=OBJECT Get type(*;tabObjets{$i})
+       If(ar_type{$i}=Object type listbox)
+          ARRAY TEXT(tabObjetsLB;0)
+          LISTBOX GET OBJECTS(*;tabObjets{$i};tabObjetsLB)
+       End if
  End for
  FORM UNLOAD
 ```
 
-## See also 
+#### Voir aussi 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load.md)  
 [OBJECT Get type](object-get-type.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1302 |
+| Numéro de commande | 1302 |
 | Thread safe | no |
-
 
 

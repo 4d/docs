@@ -5,88 +5,88 @@ slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* : Integer ; *template* : Text )<!-- END REF-->
+<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *zone* ; *modèle* )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| template | Text | &#8594;  | HTML template |
+| zone | Integer | &#8594;  | Référence de la zone |
+| modèle | Text | &#8594;  | Code du modèle HTML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Summary-->The **QR SET HTML TEMPLATE** command sets the HTML template currently used for the Quick Report *area*.<!-- END REF--> The template will be used when building the report in HTML format. 
+<!--REF #_command_.QR SET HTML TEMPLATE.Summary-->La commande **QR SET HTML TEMPLATE** permet de définir le *modèle* HTML à utiliser pour la zone d'état rapide référencée par *zone*.<!-- END REF--> Ce modèle sera utilisé lors de l'exécution des états au format HTML. 
 
-The template uses a set of tags to process the data in order to either retain a layout close to the original report or to adopt your own custom HTML.
+Le modèle est construit à l'aide d'un ensemble de balises de traitement des données. Ce fonctionnement vous permet de générer des documents HTML proches des états originaux ou des documents à l'apparence entièrement personnalisée.
 
-**Note:** You first need to call [QR SET DESTINATION](qr-set-destination.md) to set the output to HTML file.
+**Note :** Vous devez appeler au préalable [QR SET DESTINATION](qr-set-destination.md) pour définir le format HTML comme destination de sortie.
 
-## HTML Tags 
+## Balises HTML 
 
 *<!--#4DQRheader--> ... <!--/#4DQRheader-->*  
-The HTML contents that are included between these tags come from the column titles. You will typically use these tags to define the title row of the report.
+Les intitulés des colonnes seront insérés entre ces balises. Ces balises sont généralement utilisées pour définir la ligne de titre de l'état.
 
 *<!--#4DQRrow--> ... <!--/#4DQRrow-->*  
-The HTML contents that are included between these tags are repeated for each data row (including detail and subtotal rows).
+Les informations insérées entre ces balises seront répétées pour chaque ligne de données (détail et sous-total compris). 
 
 *<!--#4DQRcol--> ... <!--/#4DQRcol-->*  
-The HTML contents that are included between these tags are repeated for each data column within a row. The column order will remain identical to the order in the report. When used in conjunction with *<!--#4DQRcol;n--> ... <!--/#4DQRcol;n-->*, the tags *<!--#4DQRcol--> ... <!--/#4DQRcol-->* will only go through the columns whose contents are not inserted using *<!--#4DQRcol;n--> ... <!--/#4DQRcol;n-->*.  
-For example, in a report that has five columns, you choose to use *<!--#4DQRcol;2--> ... <!--/#4DQRcol;2-->* to insert data from the second column, *<!--#4DQRcol--> ... <!--/#4DQRcol-->* will go, for each row, through columns 1, 3, 4, and 5\. These last tags ignore the column whose contents are published using *<!--#4DQRcol;2--> ... <!--/#4DQRcol;2-->*. 
+Les informations insérées entre ces balises seront répétées pour chaque colonne de données à l'intérieur des lignes. Le tri de la colonne est identique à celui de l'état. Lorsqu'elles sont utilisées conjointement à *<!--#4DQRcol;n--> ... <!--/#4DQRcol;n-->*, les balises *<!--#4DQRcol--> ... <!--/#4DQRcol-->* ne seront effectives qu'avec les colonnes dont le contenu n'est pas inséré à l'aide de *<!--#4DQRcol;n--> ... <!--/#4DQRcol;n-->*.  
+Par exemple, dans un état comportant cinq colonnes, vous utilisez les balises *<!--#4DQRcol;2--> ... <!--/#4DQRcol;2-->* afin d'insérer les données de la deuxième colonne. *<!--#4DQRcol--> ... <!--/#4DQRcol-->* traiteront, pour chaque ligne, les colonnes 1, 3, 4 et 5\. Ces balises ignoreront la colonne dont le contenu est publié à l'aide de *<!--#4DQRcol;2--> ... <!--/#4DQRcol;2-->*. 
 
 *<!--#4DQRcol;n--> ... <!--/#4DQRcol;n-->*  
-The HTML contents that are included between these tags are extracted from the column in the report whose number is “n”. If, for example, you want to display a different column order in the HTML output for a three-column report, you could use:  
+Les informations insérées entre ces balises seront extraites de la colonne de l'état dont le numéro est “n”. Si, par exemple, dans un état HTML à trois colonnes, vous souhaitez afficher les colonnes dans un ordre différent de celui de l'état initial, vous pouvez écrire :  
 *<!--#4DQRrow--> <!--#4DQRcol;3--> ... <!--/#4DQRcol;3--><!--#4DQRcol;2--> ... <!--/#4DQRcol;2--><!--#4DQRcol;1--> ... <!--/#4DQRcol;1--> <!--/#4DQRrow-->*  
-In this example, the columns are inserted in the opposite order of the report.
+Dans cet exemple, les colonnes sont générées dans l'ordre inverse de l'état.
 
 *<!--#4DQRfont--> ... <!--/#4DQRfont-->*  
-The HTML contents that are included between these tags will be assigned the font of the current column or cell.  
-*<!--#4DQRfont-->* will be replaced by an HTML font definition and *<!--/#4DQRfont-->* will be replaced by the matching closing tag (*</font>*).
+Les informations insérées entre ces balises seront utilisées pour la définition de la police de la colonne ou cellule courante.   
+*<!--#4DQRfont-->* sera remplacé par une définition de police HTML et *<!--/#4DQRfont-->* sera remplacé par la balise de fermeture standard (*</font>*).
 
 *<!--#4DQRface--> ... <!--/#4DQRface-->*  
-The HTML contents that are included between these tags will be assigned the font style of the current column or cell.  
-*<!--#4DQRface-->* will be replaced by an HTML face definition and *<!--#4DQRface-->* will be replaced by the matching closing tag (*</face>*).
+Les informations insérées entre ces balises seront utilisées pour la définition du style de la colonne ou cellule courante.  
+*<!--#4DQRface-->* sera remplacé par une définition de style HTML *<!--#4DQRface-->* sera remplacé par la balise de fermeture standard (*</face>*).
 
 *<!--#4DQRbgcolor-->*  
-This color tag will be replaced by the current color for the current cell.
+Cette balise de couleur sera remplacée par la définition de couleur de la cellule courante.
 
 *<!--#4DQRdata-->*  
-This tag will be replaced by the current data for the current cell.
+Cette balise sera remplacée par les données de la cellule courante.
 
 *<!--#4DQRlHeader--><!--#4DQRdata--><!--/#4DQRlHeader-->*  
 *<!--#4DQRcHeader--><!--#4DQRdata--><!--/#4DQRcHeader-->*  
 *<!--#4DQRrHeader--><!--#4DQRdata--><!--/#4DQRrHeader-->*  
-These tags will be replaced respectively by the data in the left, center or right header.
+Ces balises seront remplacées respectivement par les données de l'en-tête gauche, central et droit.
 
 *<!--#4DQRlFooter--><!--#4DQRdata--><!--/#4DQRlFooter-->*  
 *<!--#4DQRcFooter--><!--#4DQRdata--><!--/#4DQRcFooter-->*  
 *<!--#4DQRrFooter--><!--#4DQRdata--><!--/#4DQRrFooter-->*  
-These tags will be replaced respectively by the data in the left, center or right footer.
+Ces balises seront remplacées respectivement par les données du pied de page gauche, central et droit.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR Get HTML template](qr-get-html-template.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 750 |
+| Numéro de commande | 750 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

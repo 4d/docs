@@ -5,56 +5,56 @@ slug: /commands/web-get-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* : Text array ; *hits* : Integer array ; *usage* : Integer )<!-- END REF-->
+<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* ; *hits* ; *usage* )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pages | Text array | &#8592; | Names of the most consulted pages |
-| hits | Integer array | &#8592; | Number of hits for each page |
-| usage | Integer | &#8592; | Percentage of the cache used |
+| pages | Text array | &#8592; | Noms des pages les plus consultées |
+| hits | Integer array | &#8592; | Nombre de hits pour chaque page |
+| usage | Integer | &#8592; | Pourcentages du cache utilisé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|6.5|Created|
+|13|Renommé|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB GET STATISTICS.Summary-->The **WEB GET STATISTICS** command lets you get information about the most consulted pages loaded in the Web server’s cache.<!-- END REF--> Consequently, these statistics only concern static pages, GIF pictures, JPEG pictures <100 KB and style sheets (.css). 
+<!--REF #_command_.WEB GET STATISTICS.Summary-->La commande **WEB GET STATISTICS** vous permet d’obtenir des informations sur les pages les plus consultées, chargées dans le cache du serveur Web.<!-- END REF--> Par conséquent, ces statistiques concernent uniquement les pages statiques, les images GIF, les images JPEG <100 ko et les feuilles de style (.css). 
 
-**Note:** For more information about setting the 4D Web server’s cache, refer to the *Web Server Settings* section. 
+**Note :** Pour plus d’informations sur le paramétrage du cache du serveur Web 4D, reportez-vous à la section *Paramétrages du serveur Web*.
 
-The command fills the pages Text array with the names of the most consulted pages. The *hits* Longint array receives the number of “hits” for each page. The *usage* parameter receives the percentage of the Web cache used by each page.
+La commande remplit le tableau texte *pages* avec les noms des pages les plus consultées. Le tableau entier long *hits* reçoit le nombre de “hits” pour chaque page. La variable numérique *usage* reçoit le pourcentage du cache Web utilisé par chaque page.
 
-## Example 
+## Exemple 
 
-Let’s assume that you want to generate a semi-dynamic page that displays the statistics of the Web cache. For this, in a static HTML page named “stats.shtm” (pages suffixed .shtm are automatically parsed by the Web server), you place the tag *<!––#4DSCRIPT/STATS––>* as well as references to the *vPages* and *vUsage* variables, for example: 
+Vous souhaitez générer une page semi-dynamique affichant les statistiques d’utilisation du cache Web. Pour cela, dans une page HTML statique appelée “stats.shtm” (les pages suffixées .shtm sont automatiquement analysées par le serveur Web), vous placez la balise *<!––#4DSCRIPT/STATS––>* ainsi que des références aux variables *vPages* et *vUsage*, par exemple :
 
-```html
+```HTML
 <html>
-<head><title>4D Web Stats</title></head>
+<head><title>Stats Web 4D</title></head>
 <!--#4DSCRIPT/STATS-->
 <body>
-<strong>Percentage of cache used: </strong>
+<strong>Pourcentage du cache utilisé : </strong>
 <!--#4DTEXT vUsage-->
 <hr>
-<strong>Pages consulted most often: </strong>
+<strong>Pages les plus consultées : </strong>
 <!--#4DHTML vPages-->
 </body>
 </html>
 ```
 
-In the project method STATS, you write the following code:
+Dans la méthode projet STATS, écrivez le code suivant :
 
 ```4d
  var vPages : Text
@@ -64,21 +64,21 @@ In the project method STATS, you write the following code:
  
  WEB GET STATISTICS(pages;hits;vUsage)
  For($i;1;Size of array(pages))
-    \\For each page present in the cache
+  // For each page présente dans le cache
     vPages:=pages{$i}+"   "+String(hits{$i})+"
 "
-    \\Insert the name of the page and the HTML code
+  //Insertion du nom de la page et du code HTML
  End for
 ```
 
-You can send the "stats.shtm" page using a URL link or using the [WEB SEND FILE](web-send-file.md) command.
+Vous pouvez envoyer la page "stats.shtm" via un lien URL ou à l'aide de commande [WEB SEND FILE](web-send-file.md).
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 658 |
+| Numéro de commande | 658 |
 | Thread safe | yes |
 
 

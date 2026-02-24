@@ -5,82 +5,80 @@ slug: /commands/distinct-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *aField* : Field ; *array* : Array {; *countArray* : Integer array} )<!-- END REF-->
+<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *leChamp* ; *tableau* {; *tabNbVal*} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Indexable field to use for data |
-| array | Array | &#8592; | Array to receive field data |
-| countArray | Integer array | &#8592; | Array to receive count of each value |
+| leField | Field | &#8594;  | Champ à utiliser |
+| tableau | Array | &#8592; | Tableau devant recevoir les données du champ indexable |
+| tabNbVal | Integer array, Real array | &#8592; | Tableau devant recevoir le nombre d'occurrences de chaque valeur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|15 R4|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DISTINCT VALUES.Summary-->The **DISTINCT VALUES** command creates and populates the array *array* with non-repeated (unique) values coming from the field *aField* for the current selection of the table to which the field belongs and, optionally, returns the number of occurrences of each value in the *countArray* parameter.<!-- END REF-->
+<!--REF #_command_.DISTINCT VALUES.Summary-->**DISTINCT VALUES** crée et remplit le tableau *tableau* avec toutes les valeurs distinctes provenant du champ *leChamp* pour la sélection courante de la table du champ et, optionnellement, retourne dans *tabNbVal* le nombre d'occurrences de chaque valeur.<!-- END REF-->
 
-You can pass to **DISTINCT VALUES** any **indexable** field, that is, whose type supports indexing without necessarily being indexed.   
-However, executing this command on unindexed fields will be slower. Also note that, in this case, the command loses the current record. 
+Vous pouvez passer à cette commande tout type de champ **indexable**, c’est-à-dire dont le type supporte l’indexation mais qui n'est pas forcément indexé. Toutefois, l’exécution de la commande avec des champs non indexés est plus lente qu'avec des champs indexés. A noter également que dans ce cas, la commande perd l'enregistrement courant.   
+**DISTINCT VALUES** analyse et extrait les valeurs distinctes pour les enregistrements sélectionnés uniquement. 
 
-**DISTINCT VALUES** browses and retains the non-repeated values present only in the currently selected records.
+**Note :** Lorsque vous exécutez **DISTINCT VALUES** au sein d'une transaction non encore terminée, la commande tient compte des enregistrements créés au cours de la transaction.
 
-**Note:** When the **DISTINCT VALUES** command is called during a transaction (that has not yet finished), it **will take** into account records created during that transaction.
+Le tableau utilisé par **DISTINCT VALUES** doit être du même type que le champ passé en premier paramètre, sinon le tableau est retypé. Il y a une exception à cette règle : si le champ est de type Image (et est associé à un index de mots-clés), le tableau correspondant doit être de type Texte.
 
-The array used by **DISTINCT VALUES** must be of the same type as the field passed as first parameter, otherwise the array is retyped. There is one exception to this rule: if the field is of the Picture type (and is associated with a keyword index), the corresponding array must be of the Text type.
+Après l'appel, la taille du tableau est égale au nombre de valeurs distinctes trouvées dans la sélection. La commande ne modifie pas la sélection courante ni l'enregistrement courant. Les éléments dans *tableau* sont triés par ordre croissant car **DISTINCT VALUES** utilise l'index du champ. Si cet ordre vous convient, vous n'avez donc pas besoin d'appeler [SORT ARRAY](sort-array.md) après l'exécution de **DISTINCT VALUES**.
 
-After the call, the size of the array is equal to the number of distinct values found in the selection. The command does not change the current selection or the current record. The **DISTINCT VALUES** command uses the index of the field, so the elements in *array* are returned sorted in ascending order. If this is the order you need, you do not need to call [SORT ARRAY](sort-array.md) after using **DISTINCT VALUES**.
+**Note :** Lorsque **DISTINCT VALUES** est exécutée avec un champ texte ou image associé à un index de mots-clés, la commande remplit le tableau avec les mots-clés de l'index. A la différence des autres types de données, les valeurs retournées diffèrent donc en fonction de l'existence de l'index. Dans le cas d'un champ texte, l'index de mots-clés est toujours pris en compte, même si le champ est également associé à un index standard. Si le champ texte ou image n’est pas associé à un index de mots-clés, le tableau est retourné vide.
 
-**Note:** When **DISTINCT VALUES** is executed with a text or picture field associated with a keyword index, the command fills the array with the keywords of the index. Unlike other types of data, the values returned differ according to the existence of the index. In the case of a Text field, the keyword index is always taken into account, even when the field is also associated with a standard index. If the Text or Picture field is not associated with a keyword index, the array is returned empty. 
+La commande accepte en paramètre optionnel un tableau *tabNbVal*. Lorsqu'il est passé, ce tableau retourne, pour chaque valeur distincte de *leChamp* présente dans *tableau*, le nombre d'occurrences détectées dans la sélection courante. Le tableau *tabNbVal* est automatiquement dimensionné au même nombre d'éléments que *tableau*. Par exemple, pour une sélection qui contient trois enregistrements avec les valeurs de champs "A", "B" et "A", *tableau* contiendra {A;B} et *tabNbVal* contiendra {2;1}. Vous pouvez passer un tableau Entier long ou un tableau Réel dans *tabNbVal*. 
 
-The command accepts a *countArray* array as an optional parameter. When it is passed, this array returns, for each non-repeated value in *aField*, the number of occurrences detected in the current selection. The *countArray* array is automatically sized to the number of elements in *array*. For example, for a selection that contains three records with field values "A", "B", and "A", *array* will contain {A;B} and *countArray* will contain {2;1}. You can pass either an Integer array or a Real array in *countArray*. 
+**Note :** Le paramètre *tabNbVal* n'est pas pris en charge pour les champs texte ou image associés à des index de mots-clés (dans ce contexte, il est retourné vide). 
 
-**Note:** The *countArray* parameter is not supported for text or picture fields that are associated with keyword indexes (in this context, it is returned empty). 
+**ATTENTION :** **DISTINCT VALUES** peut créer des tableaux de taille importante, en fonction de la taille de la sélection courante, ainsi que du type et de la taille des données à charger. Comme les tableaux résident en mémoire, il peut être utile de tester la taille des tableaux créés après l'exécution de la commande, ou d'utiliser une méthode projet d'interception d'erreurs installée par la commande [ON ERR CALL](on-err-call.md). 
 
-**WARNING:** **DISTINCT VALUES** can create large arrays depending on the size of the selection and the number of different values in the records. Arrays reside in memory, therefore it is a good idea to test the result after the completion of the command. To do so, test the size of the resulting array or cover the call to the command, using an [ON ERR CALL](on-err-call.md) project method.
-
-**4D Server:** The command is optimized for 4D Server. The array is created and the values are calculated on the server machine; the array is then sent, in its entirety, to the client.
+**4D Server :** Cette commande est optimisée pour 4D Server. Le tableau est créé et les valeurs sont calculées sur le serveur. Seul le tableau est envoyé au client. 
 
 ### 
 
-**Note:** This command does not support Object type fields.
+**Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-## Example 1 
+## Exemple 1 
 
-The following example creates a list of cities from the current selection and tells the user the number of cities in which the firm has stores: 
-
-```4d
- ALL RECORDS([Retail Outlets]) // Create a selection of records
- DISTINCT VALUES([Retail Outlets]City;asCities)
- ALERT("The firm has stores in "+String(Size of array(asCities))+" cities.")
-```
-
-## Example 2 
-
-You want to get a complete list of keywords contained in the keyword index for the "Pictures" field: 
+L'exemple suivant crée une liste de villes à partir de la sélection courante et indique à l'utilisateur le nombre de villes dans lesquelles la société dispose de magasins : 
 
 ```4d
- ALL RECORDS([PICTURES])
- ARRAY TEXT(<>_MyKeywords;10)
- DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
+ ALL RECORDS([Revendeurs]) // Créer une sélection d'enregistrements
+ DISTINCT VALUES([Revendeurs]Ville;taVilles)
+ ALERT("Cette société dispose de magasins dans "+String(Taille tableau(taVilles))+" villes.")
 ```
 
-## Example 3 
+## Exemple 2 
 
-To compute statistics, you want to sort the number of distinct values in a field in descending order:
+Vous souhaitez obtenir la liste complète des mots-clés contenus dans l’index des mots-clés du champ "Photos" : 
+
+```4d
+ ALL RECORDS([IMAGES])
+ ARRAY TEXT(<>_MesMotsCles;10)
+ DISTINCT VALUES([IMAGES]Photos;<>_MesMotsCles)
+```
+
+## Exemple 3 
+
+Pour calculer des statistiques, vous voulez trier le nombre de valeurs distinctes d'un champ par ordre décroissant :
 
 ```4d
  ARRAY TEXT($_issue_type;0)
@@ -89,7 +87,7 @@ To compute statistics, you want to sort the number of distinct values in a field
  SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
-## See also 
+## Voir aussi 
 
   
 [GET TEXT KEYWORDS](get-text-keywords.md)  
@@ -97,11 +95,11 @@ To compute statistics, you want to sort the number of distinct values in a field
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 339 |
+| Numéro de commande | 339 |
 | Thread safe | yes |
 
 

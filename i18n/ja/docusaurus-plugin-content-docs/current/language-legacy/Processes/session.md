@@ -1,6 +1,7 @@
 ---
 id: session
 title: Session
+slug: /commands/session
 displayed_sidebar: docs
 ---
 

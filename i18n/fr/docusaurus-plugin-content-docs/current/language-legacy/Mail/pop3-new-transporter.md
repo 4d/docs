@@ -7,57 +7,56 @@ displayed_sidebar: docs
 <!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!--REF #_command_.POP3 New transporter.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| server | Object | &#8594;  | Mail server information |
-| Function result | 4D.POP3Transporter | &#8592; | [POP3 transporter object](../API/POP3TransporterClass.md#pop3-transporter-object) |
-</div>
+| Paramètres | Type                               |                             | Description                                                                       |
+| ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                         |
+| Résultat   | 4D.POP3Transporter | &#8592; | [Object POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|18 R2|Added|
+| Release | Modifications |
+| ------- | ------------- |
+| 18 R2   | Ajout         |
 
 </details>
 
-## Description 
+## Description
 
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) object. The returned transporter object will then usually be used to receive emails.
+La commande `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary --> configure une nouvelle connexion POP3<!-- END REF --> en fonction du paramètre *server* et retourne un nouvel objet [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object). L'objet transporteur retourné sera alors utilisé pour la réception d'emails.
 
-In the *server* parameter, pass an object containing the following properties:
+Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 
-|*server*|Default value (if omitted)|
-|---|---|
-|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../API/POP3TransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
-|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)* object.|none|
-|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../API/POP3TransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/POP3TransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
-|[<!-- INCLUDE #transporter.host.Syntax -->](../API/POP3TransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->|*mandatory*
-|[<!-- INCLUDE #transporter.logFile.Syntax -->](../API/POP3TransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->|none|
-|**.password** : Text<br/>User password for authentication on the server. Not returned in *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)* object.|none|
-|[<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->|995|
-|[<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->|none|
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Valeur par défaut (si omise)                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../API/POP3TransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                             | False                                                                            |
+| .**accessTokenOAuth2** : Text<br/>.**accessTokenOAuth2** : Object<br/>Chaîne ou objet token représentant les informations d'autorisation OAuth2. Utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non renvoyé dans l'objet *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)*. | aucun                                                                            |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../API/POP3TransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                               | le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/POP3TransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                  | 30                                                                               |
+| [<!-- INCLUDE #transporter.host.Syntax -->](../API/POP3TransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | *obligatoire*                                                                    |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](../API/POP3TransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                | aucun                                                                            |
+| **password** : Text<br/>Mot de passe utilisateur pour l'authentification sur le serveur. Non renvoyé dans l'objet *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)*.                                                                                                                                                                                                                                                                                                                                                         | aucun                                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](../API/POP3TransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 995                                                                              |
+| [<!-- INCLUDE #transporter.user.Syntax -->](../API/POP3TransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | aucun                                                                            |
 
-## Result
+## Résultat
 
-The function returns a [**POP3 transporter object**](../API/POP3TransporterClass.md#pop3-transporter-object). All returned properties are **read-only**.
+La fonction retourne un [**objet POP3 transporter**](../API/POP3TransporterClass.md#pop3-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
->The POP3 connection is automatically closed when the transporter object is destroyed.
+> La connexion POP3 est automatiquement fermée lorsque l'objet transporteur est détruit.
 
-## Example
+## Exemple
 
 ```4d
  var $server : Object
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obligatoire
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- $server.logFile:="LogTest.txt" //log to save in the Logs folder
+ $server.logFile:="LogTest.txt" //log à enregistrer dans le dossier Logs
 
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
@@ -68,12 +67,11 @@ The function returns a [**POP3 transporter object**](../API/POP3TransporterClass
  End if
 ```
 
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1697 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1697 |
+| Thread safe        | oui  |
 
 

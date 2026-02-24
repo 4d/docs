@@ -5,238 +5,230 @@ slug: /commands/append-data-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *dataType* : Text ; *data* : Blob )<!-- END REF-->
+<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *typeDonnées* ; *données* )<!-- END REF-->
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dataType | Text | &#8594;  | Type of data to be added |
-| data | Blob | &#8594;  | Data to append to the pasteboard |
+| typeDonnées | Text | &#8594;  | Type des données à ajouter |
+| données | Blob | &#8594;  | Données à ajouter au conteneur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->The APPEND DATA TO PASTEBOARD command appends to the pasteboard the data contained in the BLOB *data* under the data type specified in *dataType*.<!-- END REF-->
+<!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->**APPEND DATA TO PASTEBOARD** ajoute dans le conteneur les données du type spécifié dans *typeDonnées* présentes dans le BLOB *données*.<!-- END REF-->
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard. 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-In *dataType*, pass a value specifying the type of data to be added. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
+Passez dans *typeDonnées* une valeur définissant le type de données à ajouter. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
-**Note for Windows users:** When the command is used with Text type data (*dataType* is "TEXT", com.4d.private.text.native or com.4d.private.text.utf16), the string contained in the BLOB parameter *data* must end with the NULL character under Windows. 
+**Note pour les utilisateurs Windows :** Lorsque la commande est utilisée avec des données de type texte (*typeDonnées* vaut "TEXT", com.4d.private.text.native ou com.4d.private.text.utf16), la chaîne contenue dans le paramètre BLOB *données* doit se terminer par le caractère NULL sous Windows. 
 
-Usually, you will use the APPEND DATA TO PASTEBOARD command to append multiple instances of the same data to the pasteboard or to append data that is not text or a picture. To append new data to the pasteboard, you must first clear the pasteboard using the [CLEAR PASTEBOARD](clear-pasteboard.md) command.
+Généralement, vous utilisez la commande **APPEND DATA TO PASTEBOARD** pour placer plusieurs instances des mêmes données dans le conteneur de données ou pour y ajouter des valeurs qui ne sont pas du texte ou une image. Pour ajouter de nouvelles données au conteneur, il faut d'abord l'effacer à l'aide de la commande [CLEAR PASTEBOARD](clear-pasteboard.md). 
 
-If you want to clear and append:
+Si vous voulez effacer le conteneur et y ajouter :
 
-* text to the pasteboard, use the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) command,
-* a picture to the pasteboard, use the [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) command.
-* a file pathname (drag and drop), use the [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md) command.
+* du texte, utilisez la commande [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md),
+* une image, utilisez la commande [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md),
+* un chemin d'accès de fichier (glisser-déposer), utilisez la commande [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md).
 
-However, note that if a BLOB actually contains some text or a picture, you can use the APPEND DATA TO PASTEBOARD command to append a text or a picture to the pasteboard.
+Notez cependant que si un BLOB contient du texte ou une image, vous pouvez utiliser la commande **APPEND DATA TO PASTEBOARD** pour y ajouter du texte ou une image.
 
-## Example 
+## Exemple 
 
-Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste schemes that deal with structured data rather than a unique piece of data. In the following example, the two project methods SET RECORD TO PASTEBOARD and GET RECORD FROM PASTEBOARD enable you to treat a whole record as one piece of data to be copied to or from the pasteboard.
+A l'aide des commandes du thème Conteneur de données et des BLOBs, vous pouvez écrire des méthodes de Couper/Copier/Coller pour gérer des données structurées au lieu d'une seule information. Dans l'exemple suivant, les deux méthodes projet écrire enregistrement dans Presse papiers et lire enregistrement dans Presse papiers vous permettent de traiter un enregistrement comme une information à copier dans le Presse-papiers.
 
 ```4d
-  // SET RECORD TO PASTEBOARD project method
-  // SET RECORD TO PASTEBOARD ( Number )
-  // SET RECORD TO PASTEBOARD ( Table number )
+  // Méthode projet écrire enregistrement dans Presse papiers
+  // écrire enregistrement dans Presse papiers ( Numérique )
+  // écrire enregistrement dans Presse papiers ( Numéro de table )
  
- #DECLARE ($tabNum : Integer)
- var $vlField;$vlFieldType : Integer
- var $vpTable;$vpField : Pointer
- var $vsDocName : Text
- var $vtRecordData;$vtFieldData : Text
- var $vxRecordData : Blob
+ var $1;$vlChamp;$vlTypeChamp : Integer
+ var $vpTable;$vpChamp : Pointer
+ C_STRING(255;$vaNomDoc)
+ var $vtDonnéesEnregistrement;$vtDonnéesChamp : Text
+ var $vxDonnéesEnregistrement : Blob
  
-  // Clear the pasteboard (it will stay empty if there is no current record)
+  // Effacer le Presse-papiers (il restera vide s'il n'y a pas d'enregistrement courant)
  CLEAR PASTEBOARD
-  // Get a pointer to the table whose number is passed as parameter
+  // Obtenir un pointeur vers la table dont le numéro est passé en paramètre
  "Server Import Services";Table($tablePtr);$form;$vxData)
-  // If there is a current record for that table
- If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
-  //Initialize the text variable that will hold the text image of the record
-    $vtRecordData:=""
-  // For each field of the record:
-    For($vlField;1;Last field number($tabNum))
-  //Get the type of the field
-       GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
-  // Get a pointer to the field
-       $vpField:=Field($tabNum;$vlField)
-  // Depending on the type of the field, copy (or not) its data in the appropriate manner
+  // S'il y a un enregistrement courant pour cette table
+ If((Record number($vpTable->)>=0) | (Is new record($vpTable->)))
+  // Initialiser la variable Texte qui contiendra l'image de texte de l'enregistrement
+    $vtDonnéesEnregistrement:=""
+  // For each champ de l'enregistrement :
+    For($vlChamp;1;Last field number($1))
+  // Obtenir le type du champ
+       GET FIELD PROPERTIES($1;$vlChamp;$vlTypeChamp)
+  // Obtenir un pointeur vers le champ
+       $vpChamp:=Field($1;$vlChamp)
+  // Selon le type du champ, copier (ou non) ses données de façon appropriée
        Case of
-          :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))
-             $vtFieldData:=$vpField->
-          :(($vlFieldType=Is real)|($vlFieldType=Is integer)|($vlFieldType=Is longint)|($vlFieldType=Is date)|($vlFieldType=Is time))
-             $vtFieldData:=String($vpField->)
-          :($vlFieldType=Is Boolean)
-             $vtFieldData:=String(Num($vpField->);"Yes;;No")
+          :(($vlTypeChamp=Is alpha field) | ($vlTypeChamp=Is text))
+             $vtDonnéesChamp:=$vpChamp->
+          :(($vlTypeChamp=Is real) | ($vlTypeChamp=Is integer) | ($vlTypeChamp=Is longint)| ($vlTypeChamp=Is date)|($vlTypeChamp=Is time))
+             $vtDonnéesChamp:=String($vpChamp->)
+          :($vlTypeChamp=Is Boolean)
+             $vtDonnéesChamp:=String(Num($vpChamp->);"Oui;;Non")
           Else
-  // Skip and ignore other field data types
-             $vtFieldData:=""
+  // Passer et ignorer les autres types de champs
+             $vtDonnéesChamp:=""  
        End case
-  // Accumulate the field data into the text variable holding the text image of the record
-       $vtRecordData:=$vtRecordData+Field name($tabNum;$vlField)+":"+Char(9)+$vtFieldData+CR
-  // Note: The method CR returns Char(13) on Macintosh and Char(13)+Char(10) on Windows
+  // Accumuler les données sur le champ dans une variable texte qui stocke l'image de texte de l'enregistrement
+       $vtDonnéesEnregistrement:=$vtDonnéesEnregistrement+Field name($1;$vlChamp)+":"+Char(9)+$vtDonnéesChamp+CR
+  // Note : La méthode CR retourne Caractere(13) sous Mac OS et Caractere(13)+Caractere(10) sous Windows
     End for
-  // Put the text image of the record into the pasteboard
-    SET TEXT TO PASTEBOARD($vtRecordData)
-  // Name for scrap file in Temporary folder
-    $vsDocName:=Temporary folder+"Scrap"+String(1+(Random%99))
-  // Delete the scrap file if it exists (error should be tested here)
-    DELETE DOCUMENT($vsDocName)
-  // Create scrap file
-    SET CHANNEL(10;$vsDocName)
-  // Send the whole record into the scrap file
+  // Mettre l'image de texte de l'enregistrement dans le Presse-papiers
+    SET TEXT TO PASTEBOARD($vtDonnéesEnregistrement)  
+  // Nommez le fichier d'Album dans le Dossier temporaire
+    $vaNomDoc:=Temporary folder+"Album"+String(1+(Hasard%99))
+  // Supprimer le fichier d'Album s'il existe (il faut tester une erreur ici)
+    DELETE DOCUMENT($vaNomDoc)
+  // Créez le fichier d'Album
+    SET CHANNEL(10;$vaNomDoc)
+  // Envoyer l'enregistrement entier dans le Presse-papiers
     SEND RECORD($vpTable->)
-  // Close the scrap file
+  // Fermer le fichier d'Album
     SET CHANNEL(11)
-  // Load the scrap file into a BLOB
-    DOCUMENT TO BLOB($vsDocName;$vxRecordData)
-  // We longer need the scrap file
-    DELETE DOCUMENT($vsDocName)
-  // Append the full image of the record into the pasteboard
-  // Note: We use arbitrarily "4Drc" as data type
-    APPEND DATA TO PASTEBOARD("4Drc";$vxRecordData)
-  // At this point, the pasteboardcontains:
-  // (1) A text image of the record (as shown in the screen shots below)
-  // (2) A whole image of the record (Picture, Subfile and BLOB fields included)
+  // Charger le fichier d'Album dans un BLOB
+    DOCUMENT TO BLOB($vaNomDoc;$vxDonnéesEnregistrement)
+  // Nous n'avons plus besoin du fichier d'Album
+    DELETE DOCUMENT($vaNomDoc)
+  // Ajouter l'image complète de l'enregistrement dans le Presse-papiers
+  // Note: nous utilisons le type de données "4Drc" de façon arbitraire
+    APPEND DATA TO PASTEBOARD("4Drc";$vxDonnéesEnregistrement)
+  // Le Presse-papiers contient :
+  // (1) Une image de texte de l'enregistrement (comme illustré dans les copies d'écran ci-dessous)
+  // (2) Une image entière de l'enregistrement (y compris les images, sous-tables et les champs de type BLOB)
  End if
 ```
 
-While entering the following record:
+Lors de la saisie d'un enregistrement, si vous appliquez la méthode écrire enregistrement dans Presse papiers à la table, le Presse-papiers contiendra le texte de l'enregistrement et également l'image entière de l'enregistrement.
 
-![](../assets/en/commands/pict27501.en.png)
-
-If you apply the method SET RECORD TO PASTEBOARD to the \[Employees\] table, the pasteboard will contain the text image of the record, as shown, and also the whole image of the record.
-
-![](../assets/en/commands/pict27502.en.png)
-
-You can paste this image of the record to another record, using the method GET RECORD FROM PASTEBOARD, as follows:
+Vous pouvez coller cette image de l'enregistrement dans un autre enregistrement, à l'aide de la méthode lire enregistrement dans Presse papiers, qui est la suivante :
 
 ```4d
-  // GET RECORD FROM PASTEBOARD method
-  // GET RECORD FROM PASTEBOARD( Number )
-  // GET RECORD FROM PASTEBOARD( Table number )
- #DECLARE ($tabNum : Integer)
- var $vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
- var $vpTable;$vpField : Pointer
- var $vsDocName : Text
- var $vxPasteboardData : Blob
- var $vtPasteboardData;$vtFieldData : Text
+  // Méthode lire enregistrement dans Presse papiers
+  // lire enregistrement dans Presse papiers ( Numéro )
+  // lire enregistrement dans Presse papiers ( Numéro de table )
+ var $1;$vlChamp;$vlTypeChamp;$vlPosCR;$vlPosColon : Integer
+ var $vpTable;$vpChamp : Pointer
+ C_STRING(255;$vaNomDoc)
+ var $vxDonnéeesPressePapiers : Blob
+ var $vtDonnéeesPressePapiers;$vtDonnéesChamp : Text
  
-  // Get a pointer to the table whose number is passed as parameter
+  // Obtenir un pointeur vers la table dont le numéro est passé en tant que paramètre
  "Server Import Services";Table($tablePtr);$form;$vxData)
-  // If there is a current record
- If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
+  // S'il y a un enregistrement courant pour cette table
+ If((Record number($vpTable->)>=0) | (Is new record($vpTable->)))
     Case of
-  // Does the pasteboard contain a full image record?
+  // Est-ce que le Presse-papiers contient une image entière de l'enregistrement ?
        :(Pasteboard data size("4Drc")>0)
-  //  If so, extract the pasteboard contents
-          GET PASTEBOARD DATA("4Drc";$vxPasteboardData)
-  // Name for scrap file in Temporary folder
-          $vsDocName:=Temporary folder+"Scrap"+String(1+(Random%99))  
-  // Delete the scrap file if it exists (error should be tested here)
-          DELETE DOCUMENT($vsDocName)
-  // Save the BLOB into the scrap file
-          BLOB TO DOCUMENT($vsDocName;$vxPasteboardData)
-  // Open the scrap file
-          SET CHANNEL(10;$vsDocName)
-  // Receive the whole record from the scrap file
+  // Si oui, extraire le contenu du Presse-papiers
+          GET PASTEBOARD DATA("4Drc";$vxDonnéesPressePapiers)
+  // Nommer le fichier d'Album dans le Dossier temporaire
+          $vaNomDoc:=Temporary folder+"Album"+String(1+(Hasard%99))  
+  // Supprimer le fichier d'Album s'il existe (il faut tester l'erreur ici)
+          DELETE DOCUMENT($vaNomDoc)
+  // Enregistrer le BLOB dans le fichier d'Album
+          BLOB TO DOCUMENT($vaNomDoc;$vxDonnéesPressePapiers)
+  // Ouvrir le fichier d'Album
+          SET CHANNEL(10;$vaNomDoc)
+  // Recevoir l'enregistrement entier du fichier d'Album
           RECEIVE RECORD($vpTable->)
-  // Close the scrap file
+  // Fermer le fichier d'Album
           SET CHANNEL(11)
-  // We longer need the scrap file
-          DELETE DOCUMENT($vsDocName)
-  // Does the pasteboard contain TEXT?
+  // Nous n'avons plus besoin du fichier d'Album
+          DELETE DOCUMENT($vaNomDoc)
+  // Est-ce que le Presse-papiers contient du texte ?
        :(Pasteboard data size("TEXT")>0)
-  // Extract the text from the pasteboard
-          $vtPasteboardData:=Get text from pasteboard
-  // Initialize field number to be increment
-          $vlField:=0
+  // Extraire le texte du Presse-papiers  
+          $vtDonnéesPressePapiers:=Get text from pasteboard
+  // Initialiser le numéro de champ à incrémenter
+          $vlChamp:=0
           Repeat
-  // Look for the next field line in the text
-             $vlPosCR:=Position(CR;$vtPasteboardData)
+  // Chercher la ligne de champ suivante dans le texte
+             $vlPosCR:=Position(CR;$vtDonnéesPressePapiers)
              If($vlPosCR>0)
-  // Extract the field line
-                $vtFieldData:=Substring($vtPasteboardData;1;$vlPosCR-1)
-  // If there is a colon ":"
-                $vlPosColon:=Position(":";$vtFieldData)
+  // Extraire la ligne de champ
+                $vtDonnéesChamp:=Substring($vtDonnéesPressePapiers;1;$vlPosCR-1)
+  // S'il y a un signe deux points ":"
+                $vlPosColon:=Position(":";$vtDonnéesChamp)
                 If($vlPosColon>0)
-  // Take only the field data (eliminate field name)
-                   $vtFieldData:=Substring($vtFieldData;$vlPosColon+2)
+  // Récupérer seulement les données de champ (supprimer le nom du champ)
+                   $vtDonnéesChamp:=Substring($vtDonnéesChamp;$vlPosColon+2)
                 End if
-  // Increment field number
-                $vlField:=$vlField+1
-  // Pasteboard may contain more data than we need...
-                If($vlField<=Last field number($vpTable))
-  // Get the type of the field
-                   GET FIELD PROPERTIES($tabNum;$vlField;$vlFieldType)
-  // Get a pointer to the field
-                   $vpField:=Field($tabNum;$vlField)
-  // Depending on the type of the field, copy (or not) the text in the appropriate manner
+  // Incrémenter le numéro du champ
+                $vlChamp:=$vlChamp+1
+  // Le Presse-papiers peut contenir plus de données dont nous n'avons pas besoin...
+                If($vlChamp<=Last field number($vpTable))
+  // Obtenir le type du champ
+                   GET FIELD PROPERTIES($1;$vlChamp;$vlTypeChamp)
+  // Obtenir un pointeur vers le champ
+                   $vpChamp:=Field($1;$vlChamp)
+  // Selon le type du champ, copier (ou non) le texte d'une manière appropriée
                    Case of
-                      :(($vlFieldType=Is alpha field)|($vlFieldType=Is text))
-                         $vpField->:=$vtFieldData
-                      :(($vlFieldType=Is real)|($vlFieldType=Is integer)|($vlFieldType=Is longint))
-                         $vpField->:=Num($vtFieldData)
-                      :($vlFieldType=Is date)
-                         $vpField->:=Date($vtFieldData)
-                      :($vlFieldType=Is time)
-                         $vpField->:=Time($vtFieldData)
-                      :($vlFieldType=Is Boolean)
-                         $vpField->:=($vtFieldData="Yes")
+                      :(($vlTypeChamp=Is alpha field) | ($vlTypeChamp=Is text))
+                         $vpChamp->:=$vtDonnéesChamp
+                      :(($vlTypeChamp=Is real) | ($vlTypeChamp=Is integer) | ($vlTypeChamp=Is longint))
+                         $vpChamp->:=Num($vtDonnéesChamp)
+                      :($vlTypeChamp=Is date)
+                         $vpChamp->:=Date($vtDonnéesChamp)
+                      :($vlTypeChamp=Is time)
+                         $vpChamp->:=Time($vtDonnéesChamp)
+                      :($vlTypeChamp=Is Boolean)
+                         $vpChamp->:=($vtDonnéesChamp="Oui")
                       Else
-  // Skip and ignore other field data types
+  // Passer et ignorer les autres types de données
                    End case
                 Else
-  // All fields have been assigned, get out of the loop
-                   $vtPasteboardData:=""
+  // Tous les champs ont été affectés, sortir de la boucle
+                   $vtDonnéesPressePapiers:=""
                 End if
-  // Eliminate text that has just been extracted
-                $vtPasteboardData:=Substring($vtPasteboardData;$vlPosCR+Length(CR))
+  // Eliminer le texte qui vient d'être extrait
+                $vtDonnéeesPressePapiers:=Substring($vtDonnéeesPressePapiers;$vlPosCR+Length(CR))
              Else
-  // No delimiter found, get out of the loop
-                $vtPasteboardData:=""
+  // Aucun délimiteur trouvé, sortir de la boucle
+                $vtDonnéesPressePapiers:=""
              End if
-  // Repeat as long as we have data
-          Until(Length($vtPasteboardData)=0)
+  // Répéter jusqu'à ce que nous ayons des données
+          Until(Length($vtDonnéesPressePapiers)=0)
        Else
-          ALERT("The pasteboard does not any data that can be pasted as a record.")
+          ALERT("Le Presse-papiers ne contient pas de données pouvant être collées en tant qu'enregistrement.")
     End case
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the BLOB data is correctly appended to the pasteboard, OK is set to 1; otherwise OK is set to 0 and an error may be generated.
+Si les données dans le BLOB sont correctement ajoutées au conteneur, la variable système OK prend la valeur 1\. Sinon, OK est mise à 0 et une erreur peut être générée.
 
-## See also 
+## Voir aussi 
 
 [CLEAR PASTEBOARD](clear-pasteboard.md)  
 [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
 [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 403 |
+| Numéro de commande | 403 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

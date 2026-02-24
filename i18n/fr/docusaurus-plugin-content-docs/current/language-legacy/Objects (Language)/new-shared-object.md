@@ -5,66 +5,66 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** ( { ...(*property* : Text ; *value* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** {( *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )} : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| property | Text | &#8594;  | Name of property to create |
-| value | any | &#8594;  | Value of property |
-| Function result | Object | &#8592; | New shared object |
+| propriété | Text | &#8594;  | Nom de propriété à créer |
+| valeur | Text, Date, Boolean, Pointer, Number, Object | &#8594;  | Valeur de propriété |
+| Résultat | Object | &#8592; | Nouvel objet partagé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.New shared object.Summary-->The **New shared object** command creates a new empty or prefilled shared object and returns its reference.<!-- END REF--> Adding or editing a property to this object must be surrounded by the *Use...End use* structure, otherwise an error is generated. Reading a property without a *Use...End use* structure is, however, possible. 
+<!--REF #_command_.New shared object.Summary-->La commande **New shared object** crée un objet partagé vide ou pré-rempli et retourne sa référence.<!-- END REF--> L'ajout et la modification de propriétés dans un objet partagé doivent être encadrés par une structure *Utiliser...Fin utiliser*, sinon une erreur est générée. La lecture d'une propriété hors *Utiliser...Fin utiliser* est toutefois possible. 
 
-**Note:** For more information on *shared objects*, please refer to the *Shared objects and shared collections* page.
+**Note :** Pour plus d'informations sur les *objets partagés*, veuillez vous reporter à la page *Objets partagés et collections partagées*. 
 
-If you do not pass any parameters, **New shared object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable.
+Si vous ne passez aucun paramètre, **New shared object** crée un objet partagé vide et retourne sa référence. Vous devez assigner cette référence à une variable 4D déclarée avec *C\_OBJECT*.
 
-**Note:** `var : Object` declares a variable of the [Object] type but does not create an object. 
+**Note :** *C\_OBJECT* déclare une variable de type [Objet](# "Données structurées sous forme d'objet natif 4D") mais ne crée pas d'objet.
 
-Optionally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
+Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plusieurs paires *propriété*/*valeur* comme paramètres :
 
-* In the *property* parameter, pass the label of the property to be created (up to 255 characters). Note that the *property* parameter is case sensitive.
-* In the *value* parameter, pass the value you want to set for the property. Shared objects can only contain values of the following types:  
-   * number (real, longint...) Number values are always stored as reals.  
-   * text  
+* Dans le paramètre *propriété*, passez le libellé de la propriété à créer (jusqu'à 255 caractères). Notez que le libellé du paramètre *propriété* est sensible à la casse.
+* Dans le paramètre *valeur*, passez la valeur que vous souhaitez affecter à la propriété. Les objets partagés peuvent contenir les types de valeur suivants :  
+   * nombre (réel, entier long...). Les valeurs numériques sont toujours stockées sous forme de réels.  
+   * texte  
    * boolean  
    * date  
-   * time (stored as number of milliseconds - real)  
+   * heure (stockée sous forme de nombre de millisecondes - réel)  
    * null  
-   * shared object(\*)  
-   * shared collection(\*)  
-**Note:** Unlike standard (not shared) objects, shared objects do not support pictures, pointers, and objects or collections that are not shared.  
+   * objet partagé(\*)  
+   * collection partagée(\*)  
+**Note :** A la différence des objets standard (non partagés), les objets partagés ne peuvent pas contenir d'images, de pointeurs, ni d'objets ou collections qui ne sont pas partagé(e)s.  
     
-(\*)When a shared object or collection is added to a shared object, they share the same locking identifier. For more information on this point, refer to the *About the locking identifier (how shared groups work)* section.
+(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) à un objet partagé, l'objet ou la collection ajouté(e) hérite du *locking identifier* de l'objet parent. Pour plus d'informations sur ce point, reportez-vous à la section *A propos du locking identifier (comment fonctionnent les groupes partagés)*.
 
-## Example 1 
+## Exemple 1 
 
-You want to create a new prefilled shared object:
+Vous voulez créer un nouvel objet partagé prérempli : 
 
 ```4d
  var $contact : Object
  $contact:=New shared object("name";"Smith";"firstname";"John")
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to create and modify a shared object. The structure must be called for this object:   
+Vous souhaitez créer et modifier un objet partagé. La structure *Utiliser...Fin utiliser* doit être appelée pour cet objet :
 
 ```4d
  var $s_obj : Object
@@ -74,18 +74,17 @@ You want to create and modify a shared object. The structure must be called for 
  End use
 ```
 
-## See also 
+## Voir aussi 
 
 [New object](new-object.md)  
-[New shared collection](./commands/new-shared-collection)  
-*Shared objects and shared collections*  
+[New shared collection](../commands/new-shared-collection.md)  
+*Objets partagés et collections partagées*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1526 |
+| Numéro de commande | 1526 |
 | Thread safe | yes |
-
 
 

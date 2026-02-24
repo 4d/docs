@@ -5,53 +5,53 @@ slug: /commands/filter-keystroke
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *filteredChar* : Text )<!-- END REF-->
+<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltré* )<!-- END REF-->
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| filteredChar | Text | &#8594;  | Filtered keystroke character or Empty string to cancel the keystroke |
+| carFiltré | Text | &#8594;  | Caractère(s) de remplacement ou Chaîne vide pour annuler le filtrage clavier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FILTER KEYSTROKE.Summary-->**FILTER KEYSTROKE** enables you to replace the character entered by the user into a field or an enterable area with the first character of the string *filteredChar* you pass.<!-- END REF-->
+<!--REF #_command_.FILTER KEYSTROKE.Summary-->**FILTER KEYSTROKE** vous permet de remplacer le caractère saisi par l'utilisateur dans un champ ou une zone saisissable par le premier caractère de la chaîne *carFiltré*.<!-- END REF-->
 
-If you pass an empty string, the keystroke is cancelled and ignored.
+Si vous passez une chaîne vide, le filtrage clavier en cours est annulé.
 
-Usually, you will call **FILTER KEYSTROKE** within a form or object method while handling an On Before Keystroke form event. To detect keystroke events, use the command [Form event code](./commands/form-event-code). To obtain the actual keystroke, use the commands [Keystroke](keystroke.md) or [Get edited text](get-edited-text.md).
+Vous appelez généralement **FILTER KEYSTROKE** dans une méthode formulaire ou objet lorsque vous gérez l'événement formulaire On Before Keystroke . Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code.md). Pour récupérer les caractères saisis au clavier, utilisez les fonctions [Keystroke](keystroke.md) ou [Get edited text](get-edited-text.md). 
 
-**IMPORTANT NOTE:** The command **FILTER KEYSTROKE** allows you to cancel or replace the character entered by the user with another character. On the other hand, if you want to insert more than one character for a specific keystroke, remember that the text you see on the screen is NOT YET the value of the data source field or variable for the area being edited. The data source field or variable is assigned the entered value after the data entry for the area is validated. It is therefore up to you to “shadow” the data entry into a variable and then to work with this shadow value and reassign the enterable area (see the example in this section). You can also use the [Get edited text](get-edited-text.md) command.
+**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (lorsque l'utilisateur appuie sur la touche **Tabulation**, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, puis à assigner cette variable à la zone de saisie (reportez-vous à l'exemple ci-dessous). Vous pouvez également utiliser la fonction [Get edited text](get-edited-text.md).
 
-You will use the command **FILTER KEYSTROKE** for:
+Utilisez la commande **FILTER KEYSTROKE** dans les cas suivants :
 
-* Filtering characters in a customized way
-* Filtering data entry in a way that you cannot produce using data entry filters
-* Implement dynamic lookup or autocomplete areas
+* Pour effectuer un filtrage personnalisé des caractères,
+* Pour créer un filtre de saisie non disponible en standard,
+* Pour implémenter des zones de recherche ou de pré-saisie dynamiques.
 
-**WARNING:** If you call the command [Keystroke](keystroke.md) after calling **FILTER KEYSTROKE**, the character you pass to this command is returned instead of the character actually entered.
+**ATTENTION :** si vous appelez la commande [Keystroke](keystroke.md) après avoir appelé **FILTER KEYSTROKE**, c'est le caractère passé à cette commande qui sera retourné et non le caractère réellement saisi.
 
-## Example 1 
+## Exemple 1 
 
-Using the following code:
+Avec le code suivant :
 
 ```4d
-  //myObject enterable area object method
+  // Méthode objet de la zone saisissable monObjet
  Case of
     :(FORM Event.code=On Load)
-       myObject:=""
+       monObjet:=""
     :(FORM Event.code=On Before Keystroke)
        If(Position(Keystroke;"0123456789")>0)
           FILTER KEYSTROKE("*")
@@ -59,37 +59,35 @@ Using the following code:
  End case
 ```
 
-All the digits entered in the area *myObject* are transformed into star characters.
+... tous les chiffres saisis dans la zone *monObjet* seront transformés en astérisques. 
 
-## Example 2 
+## Exemple 2 
 
-This code implements the behavior of a Password enterable area in which all the entered characters are replaced (on the screen) by random characters:
+Le code ci-dessous définit le comportement d'une zone de saisie de mot de passe, dans laquelle les caractères saisis sont remplacés à l'écran par des caractères aléatoires : 
 
 ```4d
-  //vsPassword enterable area object method
+  // Méthode objet de la zone saisissable vaMotsPasse
  Case of
     :(FORM Event.code=On Load)
-       vsPassword:=""
-       vsActualPassword:=""
+       vaMotsPasse:=""
+       vaMotPasseActuel:=""
     :(FORM Event.code=On Before Keystroke)
-       Handle keystroke(->vsPassword;->vsActualPassword)
-       If(Position(Keystroke;Char(Backspace)+Char(Left arrow key)+Char(Right arrow key)+Char(Up arrow key)+Char(Down arrow key))=0)
+       Gérer frappe clavier(->vaMotsPasse;->vaMotPasseRéel)
+       If(Position(Keystroke;Char(Backspace key)+Char(Left arrow key)+
+          Char(Right arrow key)+Char(Up arrow key)+
+          Char(Down arrow key))=0)
           FILTER KEYSTROKE(Char(65+(Random%26)))
        End if
  End case
 ```
 
-After the data entry is validated, you retrieve the actual password entered by the user in the variable *vsActualPassword*. Note: The method Handle keystroke is listed in the Example section for the command Keystroke. 
+Une fois la zone validée, vous récupérez le mot de passe réellement saisi par l'utilisateur dans la variable *vaMotPasseRéel*. La méthode Gérer frappe clavier est listée dans l'exemple de la commande [Keystroke](keystroke.md). 
 
-## Example 3 
+## Exemple 3 
 
-In your application, you have some text areas into which you can enter a few sentences. Your application also includes a dictionary table of terms commonly used throughout your database. While editing your text areas, you would like to be able to quickly retrieve and insert dictionary entries based on the selected characters in a text area. You have two ways to do this:  
- \- Provide some buttons with associated keys, or  
- \- Intercept special keystrokes during the editing of the text area
+Vous disposez dans votre application de diverses zones de texte dans lesquelles vous pouvez saisir quelques phrases. Votre application comporte également une table de glossaire contenant les termes les plus fréquemment utilisés dans votre base. Lors de l'édition de vos zones de texte, vous voulez pouvoir rapidement, à partir du glossaire, retrouver et insérer des mots en fonction des caractères sélectionnés dans le texte. Pour cela, vous avez deux solutions : soit placer des boutons avec des touches associées qui vont exécuter l'opération, soit intercepter les frappes clavier spéciales pendant la saisie. L'exemple ci-dessous utilise la seconde solution, basée sur la touche **Aide**. 
 
-This example implements the second solution, based on the Help key.
-
-As explained above, during the editing of the text area, the data source for this area will be assigned the entered value after you validate the data entry. In order to retrieve and insert dictionary entries into the text area while this area is being edited, you therefore need to shadow the data entry. You pass pointers to the enterable area and the shadow variable as the first two parameters, and you pass a string of the “forbidden” characters as the third parameter. No matter how the keystroke will be treated, the method returns the original keystroke. The “forbidden” characters are those that you do not want to be inserted into the enterable area and you want to treat as special characters. 
+Comme décrit ci-dessus, lorsque vous éditez une zone de texte, la valeur du champ ou de la variable de texte ne sera réellement modifiée que lorsque que vous l'aurez validée. Pour retrouver et insérer rapidement des entrées du glossaire dans une zone de texte alors qu'elle est en train d'être modifiée, vous devez donc créer une seconde zone "tampon" pour y placer les valeurs saisies. Vous pouvez effectuer cette opération à l'aide de la méthode projet décrite ci-dessous. Vous passez comme premiers paramètres des pointeurs vers la zone de saisie et vers la variable, puis la chaîne de caractère “interdits” comme troisième paramètre. Peu importe comment l'entrée clavier sera traitée, la méthode retourne la valeur saisie originale. Les caractères “interdits” sont les caractères que vous ne voulez pas insérer dans la zone saisissable et que vous voulez traiter en tant que caractères spéciaux.
 
 ```4d
   // Shadow keystroke project method
@@ -128,7 +126,8 @@ As explained above, during the editing of the text area, the data source for thi
  $curVal->:=$vtNewValue
 ```
 
-This method uses the two following submethods:
+
+Cette méthode utilise les sous-méthodes suivantes :
 
 ```4d
   // Delete text project method
@@ -157,7 +156,7 @@ This method uses the two following submethods:
  End if
 ```
 
-After you have added these project methods to your project, you can use them in this way:
+Une fois que vous avez ajouté ces méthodes projet à votre base, vous pouvez les utiliser de la manière suivante :
 
 ```4d
   // vsDescription enterable area object method
@@ -179,7 +178,7 @@ After you have added these project methods to your project, you can use them in 
  End case
 ```
 
-The LOOKUP DICTIONARY project method is listed below. Its purpose is to use the shadow variable for reassigning the enterable area being edited:
+La méthode projet chercher\_Glossaire est listée ci-dessous (le point principal est l'utilisation de la variable tampon pour réaffecter la zone saisissable à modifier) :
 
 ```4d
   // LOOKUP DICTIONARY project method
@@ -221,7 +220,7 @@ The LOOKUP DICTIONARY project method is listed below. Its purpose is to use the 
  End if
 ```
 
-The Get highlighted text method is listed here:
+La méthode obtenirTexteSelectionne est la suivante :
 
 ```4d
   // Get highlighted text project method
@@ -246,19 +245,19 @@ The Get highlighted text method is listed here:
  End if
 ```
 
-## See also 
 
-[Form event code](./commands/form-event-code)  
+## Voir aussi 
+
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 [Is editing text](is-editing-text.md)  
 [Keystroke](keystroke.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 389 |
+| Numéro de commande | 389 |
 | Thread safe | no |
-
 
 

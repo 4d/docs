@@ -5,48 +5,46 @@ slug: /commands/get-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *aTable* : Table ; *fieldTitles* : Text array ; *fieldNums* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *laTable* ; *titresChamps* ; *numChamps* )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which you want to find out the field names |
-| fieldTitles | Text array | &#8592; | Current field names |
-| fieldNums | Integer array | &#8592; | Field numbers |
+| laTable | Table | &#8594;  | Table dont vous souhaitez connaître les noms des champs |
+| titresChamps | Text array | &#8592; | Noms courants des champs |
+| numChamps | Integer array | &#8592; | Numéros des champs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET FIELD TITLES.Summary-->The **GET FIELD TITLES** command fills the *fieldTitles* and *fieldNums* arrays with the names and numbers of database fields for the desired *aTable*.<!-- END REF--> The contents of these two arrays are synchronized.
+<!--REF #_command_.GET FIELD TITLES.Summary-->La commande **GET FIELD TITLES** remplit les tableaux *titresChamps* et *numChamps* avec les noms et les numéros des champs de *laTable* désignée.<!-- END REF--> Le contenu des deux tableaux est synchronisé.
 
-If the [SET FIELD TITLES](set-field-titles.md) command is called during the session, **GET FIELD TITLES** only returns the “modified” names and field numbers defined using this command.
+Si la commande [SET FIELD TITLES](set-field-titles.md) a été appelée au cours de la session, **GET FIELD TITLES** retourne uniquement les noms “modifiés” et les numéros des champs ayant été définis via cette commande.  
+Sinon, **GET FIELD TITLES** retourne le nom défini dans la fenêtre de Structure de tous les champs de la base.   
+Dans les deux cas, la commande ne retourne pas les champs déclarés invisibles. 
 
-Otherwise, **GET FIELD TITLES** returns the names of all database fields as defined in the Structure window. 
-
-In both cases, the command does not return invisible fields. 
-
-## See also 
+## Voir aussi 
 
 [GET TABLE TITLES](get-table-titles.md)  
 [SET FIELD TITLES](set-field-titles.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 804 |
+| Numéro de commande | 804 |
 | Thread safe | no |
 
 

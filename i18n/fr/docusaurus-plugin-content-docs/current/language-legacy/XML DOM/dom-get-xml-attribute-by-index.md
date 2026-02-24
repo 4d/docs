@@ -5,59 +5,59 @@ slug: /commands/dom-get-xml-attribute-by-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Syntax-->**DOM GET XML ATTRIBUTE BY INDEX** ( *elementRef* : Text ; *attribIndex* : Integer ; *attribName* : Variable ; *attribValue* : Variable )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Syntax-->**DOM GET XML ATTRIBUTE BY INDEX** ( *refElément* ; *indexAttribut* ; *nomAttribut* ; *valeurAttribut* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| attribIndex | Integer | &#8594;  | Attribute index number |
-| attribName | Variable | &#8592; | Attribute name |
-| attribValue | Variable | &#8592; | Attribute value |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| indexAttribut | Integer | &#8594;  | Numéro d’indice de l’attribut |
+| nomAttribut | Variable | &#8592; | Nom de l’attribut |
+| valeurAttribut | Variable | &#8592; | Valeur de l’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->The **DOM GET XML ATTRIBUTE BY INDEX** command gets the name of an attribute specified by its index number as well as its value.<!-- END REF--> 
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Summary-->La commande **DOM GET XML ATTRIBUTE BY INDEX** permet de connaître le nom ainsi que la valeur d’un attribut désigné par son numéro d’indice.<!-- END REF-->
 
-Pass the reference of an XML element in *elementRef* and the index number of the attribute that you want to know the name of in *attribIndex*. The name is returned in the *attribName* parameter and its value is returned in the *attribValue*, parameter. 4D attempts to convert the value obtained into the same type as that of the variable passed as parameter. If the variable type is not defined, the value is returned in text type by default.
+Passez dans *refElément* la référence d’un élément XML et dans *indexAttribut* le numéro d’indice de l’attribut dont vous voulez connaître le nom. Le nom est retourné dans le paramètre *nomAttribut* et sa valeur est retournée dans le paramètre *valeurAttribut*. 4D tentera de convertir la valeur obtenue dans le type de la variable passée en paramètre. Si le type de la variable n'est pas défini, la valeur est retournée, par défaut, en type texte.
 
-**Note:** The index number does not correspond to the location of the attribute in the XML file displayed in text form. In XML, the index of an attribute indicates it position among the attributes when placed in alphabetical order (based on their names). For an illustration of this, refer to the example of the [DOM Count XML attributes](dom-count-xml-attributes.md) command.
+**Note :** Le numéro d’indice ne correspond pas à l’emplacement de l’attribut dans le fichier XML affiché sous forme de texte. En XML, l’indice d’un attribut indique sa position parmi les attributs classés par ordre alphabétique (en fonction de leur nom). Pour une illustration de ce principe, reportez-vous à l’exemple de la commande [DOM Count XML attributes](dom-count-xml-attributes.md).
 
-If the value passed in *attribIndex* is greater than the number of attributes present in the XML element, an error is returned.
+Si la valeur passée dans *indexAttribut* est supérieure au nombre d’attributs présents dans l’élément XML, une erreur est retournée.
 
-## Example 
+## Exemple 
 
-Refer to the example in the [DOM Count XML attributes](dom-count-xml-attributes.md) command. 
+Reportez-vous à l’exemple de la commande [DOM Count XML attributes](dom-count-xml-attributes.md). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 729 |
+| Numéro de commande | 729 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

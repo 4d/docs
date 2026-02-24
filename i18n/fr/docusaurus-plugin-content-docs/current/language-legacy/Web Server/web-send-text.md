@@ -5,64 +5,64 @@ slug: /commands/web-send-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *htmlText* : Text {; *type* : Text} )<!-- END REF-->
+<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* {; *type*} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| htmlText | Text | &#8594;  | HTML text field or variable to be sent to the Web browser |
-| type | Text | &#8594;  | MIME type |
+| texteHTML | Text | &#8594;  | Champ ou variable texte au format HTML à envoyer au navigateur |
+| type | Text | &#8594;  | Type MIME |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Renamed|
-|6.7|Created|
+|14|Modifié|
+|13|Renommé|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SEND TEXT.Summary-->The **WEB SEND TEXT** command directly sends HTML formatted text data.<!-- END REF-->
+<!--REF #_command_.WEB SEND TEXT.Summary-->La commande **WEB SEND TEXT** permet d’envoyer directement des données texte formatées en HTML.<!-- END REF-->
 
-The *htmlText* parameter contains the data to be sent. Since 4D does not check the parameter content, make sure that the HTML encoding is correct.
+Le paramètre *texteHTML* contient les données à envoyer. 4D n’effectue aucun contrôle sur le contenu de ce paramètre, vous devez donc veiller à ce que le codage HTML soit correct. 
 
-Any references to 4D variables and *4DSCRIPT* type tags in the text are always parsed.
+Les éventuelles références aux variables 4D et balises de type *4DSCRIPT* dans le texte sont toujours analysées.
 
-By default, if you omit the *type* parameter, 4D assumes that the data sent is of the "text/html" type. The command is then exactly the same as sending a BLOB of the "text/html" type using the [WEB SEND BLOB](web-send-blob.md) command.   
-You can also use the *type* parameter to specify the MIME type of the text to be sent. For more information about the MIME types supported, refer to the description of the [WEB SEND BLOB](web-send-blob.md) command.
+Par défaut, si vous omettez le paramètre *type*, 4D assume que les données envoyées sont du type "text/html". La commande équivaut alors strictement à l’envoi d’un BLOB ayant le type "text/html" à l’aide de la commande [WEB SEND BLOB](web-send-blob.md).   
+Vous pouvez également préciser dans *type* le type MIME du texte à envoyer. Pour plus d’informations sur les types MIME pris en charge, reportez-vous à la description de la commande [WEB SEND BLOB](web-send-blob.md).
 
-## Example 
+## Exemple 
 
-The following method:
+La méthode suivante :
 
 ```4d
- TEXT TO BLOB(""+String(Current time)+"";$blob;UTF8 Text without length)
+ TEXT TO BLOB(""+String(Heure courante)+"";$blob;UTF8 Texte sans longueur)
  WEB SEND BLOB($blob;"text/html")
 ```
 
-... can be replaced by the single line:
+... peut être remplacée par :
 
 ```4d
- WEB SEND TEXT(""+String(Current time)+"")
+ WEB SEND TEXT(""+String(Heure courante)+"")
 ```
 
-## See also 
+## Voir aussi 
 
 [WEB SEND BLOB](web-send-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 677 |
+| Numéro de commande | 677 |
 | Thread safe | yes |
 
 

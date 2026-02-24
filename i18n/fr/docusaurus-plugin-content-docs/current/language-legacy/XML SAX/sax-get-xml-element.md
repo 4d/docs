@@ -5,77 +5,77 @@ slug: /commands/sax-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* : Time ; *name* : Text ; *prefix* : Text ; *attrNames* : Text array ; *attrValues* : Text array )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* ; *nom* ; *préfixe* ; *nomsAttributs* ; *valeursAttributs* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| name | Text | &#8592; | Element name |
-| prefix | Text | &#8592; | Namespace |
-| attrNames | Text array | &#8592; | Attribute names |
-| attrValues | Text array | &#8592; | Attribute values |
+| document | Time | &#8594;  | Référence du document ouvert |
+| nom | Text | &#8592; | Nom de l’élément |
+| préfixe | Text | &#8592; | Espace de nommage |
+| nomsAttributs | Text array | &#8592; | Noms des attributs |
+| valeursAttributs | Text array | &#8592; | Valeurs des attributs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML ELEMENT.Summary-->The **SAX GET XML ELEMENT** command returns various information about the element *name* that is present in the XML document reference in the *document* parameter.<!-- END REF--> This command must be called with the XML Start Element or XML End Element SAX events. In the specific case of XML End Element, the attribute parameters are not handled. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML ELEMENT.Summary-->La commande **SAX GET XML ELEMENT** retourne diverses informations relatives à l’élément *nom* présent dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML start element ou XML end element. Dans le cas particulier d’un XML end element, les paramètres d’attributs ne sont pas gérés. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-The *name* parameter contains the name of the element. 
+*nom* contient le nom de l’élément. 
 
-The *prefix* parameter returns the namespace of the element. This parameter is empty if no namespace is linked to the element. 
+*préfixe* retourne l’espace de nommage (namespace) de l’élément. Ce paramètre est vide si aucun espace de nommage n’est associé à l’élément. 
 
-The command fills the *attrNames* array with the names of attributes of the target element. If necessary, the command creates and sizes the array automatically. 
+La commande remplit le tableau *nomsAttributs* avec les noms des attributs de l’élément cible. Si nécessaire, la commande crée et dimensionne automatiquement le tableau. 
 
-The command also fills the *attrValues* array with the values of attributes of the target element. If necessary, the command creates and sizes the array automatically. 
+La commande remplit également le tableau *valeursAttributs* avec les valeurs des attributs de l’élément cible. Si nécessaire, la commande crée et dimensionne automatiquement le tableau. 
 
-## Example 
+## Exemple 
 
-Let's look at the following piece of XML code:
-
-```xml
-<RootElement>
-   <Child Att1="111" Att2="222" Att3="333">MyText</Child>
-</RootElement>
-```
-
-Once the following statement has been executed: 
+Considérons l’extrait de code XML suivant :
 
 ```4d
- SAX GET XML ELEMENT(DocRef;vName;vPrefix;tAttrNames;tAttrValues)
+ 
+ MonTexte
+ 
 ```
 
-...*vName* will contain “Child”  
-*vPrefix* will contain “”  
-*tAttrNames{1}* will contain “Att1”, *tAttrNames{2}* will contain “Att2”, *tAttrNames{3}* will contain “Att3”  
-*tAttrValues{1}* will contain “111”, *tAttrValues{2}* will contain “222”, *tAttrValues{3}* will contain “333”
+Une fois l’instruction suivante exécutée : 
 
-## System variables and sets 
+```4d
+ SAX GET XML ELEMENT(RefDoc;vNom;vPréfixe;tAttrNoms;tAttrValeurs)
+```
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
+...*vNom* contiendra “Child”  
+*vPréfixe* contiendra “”  
+*tAttrNoms{1}* contiendra “Att1”, *tAttrNoms{2}* contiendra “Att2”, *tAttrNoms{3}* contiendra “Att3”  
+*tAttrValeurs{1}* contiendra “111”, *tAttrValeurs{2}* contiendra “222”, *tAttrValeurs{3}* contiendra “333”
 
-## See also 
+## Variables et ensembles système 
+
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
+
+## Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 876 |
+| Numéro de commande | 876 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

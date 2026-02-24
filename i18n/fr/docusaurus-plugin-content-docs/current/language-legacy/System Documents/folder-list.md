@@ -5,44 +5,44 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *pathname* : Text ; *directories* : Text array )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* ; *dossiers* )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | Pathname to volume, directory or folder |
-| directories | Text array | &#8592; | Names of the directories present at this location |
+| cheminAccès | Text | &#8594;  | Chemin d'accès de volume, répertoire ou dossier |
+| dossiers | Text array | &#8592; | Noms des dossiers situés à cet endroit |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FOLDER LIST.Summary-->The **FOLDER LIST** command populates the Text or String array *directories* with the names of the folders located at the pathname you pass in *pathname*.<!-- END REF-->The *pathname* parameter only accepts absolute pathnames. 
+<!--REF #_command_.FOLDER LIST.Summary-->La commande **FOLDER LIST** remplit le tableau de type Texte ou Alpha *dossiers* avec les noms des dossiers (répertoires sous Windows) situés à l'endroit que vous avez indiqué avec le paramètre *cheminAccès*.<!-- END REF-->Vous devez passer un chemin d'accès absolu dans le paramètre *cheminAccès*. 
 
-If there are no folders at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **FOLDER LIST** generate a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
+S'il n'y pas de dossier à cet endroit, la commande retourne un tableau vide. Si le chemin d'accès que vous avez passé dans *cheminAccès* est invalide, **FOLDER LIST** génère une erreur de gestionnaire de fichiers que vous pouvez intercepter à l'aide d'une méthode installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [DOCUMENT LIST](document-list.md)  
 [VOLUME LIST](volume-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 473 |
+| Numéro de commande | 473 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

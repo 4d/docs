@@ -5,106 +5,105 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** : Text<br/>**Select folder** ( *message* : Text {; *defaultPath* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* }{;}{ *répertoire* {; *options*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Title of the window |
-| defaultPath | Text, Integer | &#8594;  |<ul><li>Default pathname or</li><li>Empty string to display the default user folder (“My documents” under Windows, “Documents” under macOS), or</li><li>Number of memorized pathname</li></ul> |
-| options | Integer | &#8594;  | Selection option(s) under macOS |
-| Function result | Text | &#8592; | Access path to the selected folder |
+| message | Text | &#8594;  | Titre de la fenêtre de sélection |
+| répertoire | Text, Integer | &#8594;  | Chemin d’accès du répertoire par défautou Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS),ou Numéro de chemin d’accès mémorisé |
+| options | Integer | &#8594;  | Option(s) de sélection sous Mac OS |
+| Résultat | Text | &#8592; | Chemin d’accès au dossier sélectionné |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Select folder.Summary-->The **Select folder** command displays a dialog box that allows you to manually select a folder and then retrieve the complete access path to that folder.<!-- END REF--> The optional *defaultPath* parameter can be used to designate the location of a folder that will be initially displayed in the folder selection dialog box.
+<!--REF #_command_.Select folder.Summary-->La commande **Select folder** affiche une boîte de dialogue permettant de désigner manuellement un dossier, et de récupérer en retour de fonction le chemin d’accès complet au dossier sélectionné.<!-- END REF--> Le paramètre facultatif *répertoire* vous permet de désigner un emplacement de dossier qui sera affiché initialement dans la boîte de dialogue de sélection de dossier.
 
-**Note:** This command does not modify 4D’s current folder.
+**Note :** Cette commande ne modifie pas le dossier courant de l’application 4D.
 
-The **Select folder** command displays a standard dialog box to browse through the workstation’s volumes and folders.   
-The optional parameter *message* allows you to display a message in the dialog box. In the following examples, the message is "Destination folder?":
+La commande **Select folder** affiche une boîte de dialogue standard de navigation à travers les volumes et les dossiers du poste.   
+Le paramètre optionnel *message* permet d’afficher une ligne d’information dans la boîte de dialogue (dans notre exemple, *message* a pour valeur "Dossier de destination ?").
 
-**Windows**  
-![](../assets/en/commands/pict3881936.en.png)
+**Windows :**  
 
-**macOS**
+![](../assets/en/commands/pict3881936.fr.png)
 
-![](../assets/en/commands/pict3881985.en.png)
+**macOS :**  
 
- You can use the *defaultPath* parameter to provide a default folder location in the folder selection dialog box. You can pass three types of values in this parameter: 
-* The pathname of a valid folder using the syntax of the current platform.
-* An empty string (“”) to display the default user folder of the system (“My documents” under Windows, “Documents” under macOS).
-* The number of a memorized pathname (from 1 to 32,000) to display the associated folder. This means that you can store in memory the pathname of the folder that is open when the user clicks on the selection button; in other words, the folder chosen by the user. When calling a random number (for instance, 5) the command displays the default user folder of the system (equivalent to passing an empty string). The user may then browse among the folders on their harddisk. When the user clicks on the selection button, the pathname is memorized and associated with the number 5\. When the number 5 is called subsequently, the memorized pathnname will be used by default. If a new location is selected, the path number 5 will be updated, and so on.  
-This mechanism can be used to memorize up to 32,000 pathnames. Under Windows, each path is only kept during the session. Under macOS, the paths remain memorized from one session to the next. If the pathname is incorrect, the *defaultPath* parameter is ignored.
+![](../assets/en/commands/pict3881985.fr.png)
 
-**Note:** This mechanism is identical to the one used by the [Select document](select-document.md) command. The numbers of memorized pathnames are shared between both these commands.
+Vous pouvez utiliser le paramètre *répertoire* pour proposer un emplacement de dossier par défaut dans la boîte de dialogue de sélection de dossier. Vous pouvez passer dans ce paramètre trois types de valeurs :
 
-The *options* parameter lets you benefit from additional functions under macOS. In this parameter, you can pass one of the following constants, found in the *System Documents* theme: 
+* un chemin d’accès de dossier valide utilisant la syntaxe de la plate-forme courante.
+* une chaîne vide (“”) pour afficher le dossier d’utilisateur par défaut du système (“Mes documents” sous Windows, “Documents” sous macOS).
+* un numéro de chemin d’accès mémorisé (de 1 à 32000) pour afficher le dossier associé. Avec ce principe, vous pouvez conserver en mémoire le chemin d’accès du dossier ouvert au moment où l’utilisateur a cliqué sur le bouton de sélection, c’est-à-dire le dossier choisi par l’utilisateur. Lors du premier appel d’un numéro arbitraire (par exemple 5), la commande affiche le dossier d’utilisateur par défaut du système (équivaut à passer une chaîne vide). L’utilisateur peut alors éventuellement naviguer parmi les dossiers de son disque dur. Au moment où il clique sur le bouton de sélection, le chemin d’accès est mémorisé et associé au numéro 5\. Lors des appels suivants du numéro 5, le chemin d’accès mémorisé sera utilisé par défaut. En cas de sélection d’un nouvel emplacement, le chemin numéro 5 sera mis à jour, et ainsi de suite.  
+Ce mécanisme vous permet de mémoriser jusqu’à 32000 chemins d’accès. Sous Windows, chaque chemin est conservé durant la session uniquement. Sous macOS, les chemins restent mémorisés d’une session à l’autre. Si le chemin d’accès est incorrect, le paramètre *cheminDéfaut* est ignoré.
 
-| Constant         | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Package open     | Integer | 2     | (Mac OS only): Authorizes the opening of packages as folders and thus the viewing /selection of their contents. By default, if this constant is not used, the command will not allow the opening of packages.                                                                                                                                                                                           |
-| Use sheet window | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the macOS interface which have graphic animation (for more information, refer to the [DISPLAY SELECTION](display-selection.md) section). By default, if this constant is not used, the command will display a standard dialog box. |
+**Note :** Ce mécanisme est identique à celui utilisé par la commande [Select document](select-document.md). Les numéros de chemins d’accès mémorisés sont partagés entre les deux commandes.
 
-You can pass a single constant or a combination of both. These options are only taken into account under macOS. Under Windows, the *options* parameter is ignored if it is passed. 
+Le paramètre *options* vous permet de bénéficier de fonctions supplémentaires sous macOS. Vous pouvez passer dans ce paramètre les constantes suivantes, placées dans le thème *Documents système* : 
 
-The user selects a folder and then clicks the **Select Folder** button (on Windows) or the **Open** button (on macOS). The access path to the folder is then returned by the function. 
+| Constante        | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Package open     | Entier long | 2      | (Mac OS uniquement) Autorise l’ouverture des progiciels (packages) en tant que dossiers et donc la visualisation/sélection de leur contenu. Par défaut, si cette constante n’est pas utilisée, la commande n’autorise pas l’ouverture des progiciels.                                                                                                                                                                                                                                   |
+| Use sheet window | Entier long | 16     | (Mac OS uniquement) Affiche la boîte de dialogue de sélection sous forme de fenêtre feuille (cette option est ignorée sous Windows). <br/>Les fenêtres feuilles sont des fenêtres spécifiques de l’interface macOS, bénéficiant notamment d’une animation graphique (pour plus d’informations, reportez-vous à la section [DISPLAY SELECTION](display-selection.md)). Par défaut, si cette constante n’est pas utilisée, la commande affiche une boîte de dialogue standard. |
 
-* On Windows, the access path is returned in the following format:  
-“C:\\Folder1\\Folder2\\SelectedFolder\\”
-* On macOS, the access path is returned in the following format:  
-“Hard Disk:Folder1:Folder2:SelectedFolder:”
+Vous pouvez passer une constante ou la combinaison des deux. Ces options sont prises en compte sous macOS uniquement. Sous Windows, le paramètre *options* est ignoré s’il est passé. 
 
-**Note:** On macOS, depending on whether or not the name of the folder is selected in the dialog box, the access path that is returned to you may be different.
+ L'utilisateur sélectionne un dossier en cliquant sur le bouton **OK** (Windows) ou **Sélectionner** (macOS). Le chemin d’accès au dossier choisi est alors retourné par la fonction. 
+* Sous Windows, la chaîne retournée est du type “C:\\Dossier1\\Dossier2\\DossierSélectionné\\”
+* Sous macOS, la chaîne retournée est du type “Disque:Dossier1:Dossier2:DossierSélectionné:”
 
-![](../assets/en/commands/pict34878.en.png)
+**Note :** Sous macOS, selon que le nom du dossier est sélectionné ou non dans la boîte de dialogue, le chemin retourné est différent.
 
-**4D Server:** This function allows you to view the volumes connected to the client workstations. It is not possible to call this function from a stored procedure.
+![](../assets/en/commands/pict34878.fr.png)
 
-If the user validates the dialog box, the **OK** system variable is set to 1\. If the user clicks the **Cancel** button, the **OK** system variable is set to 0 and the function returns an empty string.
+**4D Server :** Cette fonction permet de visualiser les volumes connectés aux postes clients. Il n’est pas possible de l’appeler depuis une procédure stockée.
 
-**Note:** On Windows, if the user selected some incorrect elements, such as “Workstation”, “Trash can”, and so on, the **OK** system variable is set to 0, even if the user validates the dialog box.
+Si l’utilisateur clique sur le bouton de sélection, la variable système OK prend la valeur 1\. Si l’utilisateur clique sur le bouton d’annulation, OK prend la valeur 0 et la fonction retourne une chaîne vide.
 
-## Example 
+**Note :** Sous Windows, si l’utilisateur a sélectionné certains éléments incorrects tels que “Poste de travail”, “Corbeille”, etc., la variable système OK prend la valeur 0, même si la boîte de dialogue est validée.
 
-The following example allows you to select the folder in which the pictures in the picture library will be stored:
+## Exemple 
+
+L’exemple suivant permet de sélectionner le dossier dans lequel toutes les images de la bibliothèque d’images seront enregistrées :
 
 ```4d
- $PictFolder:=Select folder("Select a folder for your pictures.")
- PICTURE LIBRARY LIST(pictRefs;pictNames)
- For($n;1;Size of array(pictNames))
-    GET PICTURE FROM LIBRARY(pictRefs{$n};$vStoredPict)
-    WRITE PICTURE FILE($PictFolder+pictNames{$n};$vStoredPict)
+ $DossierImages:=Select folder("Sélectionnez un dossier pour vos images.")
+ PICTURE LIBRARY LIST(pictRefs;pictNoms)
+ For($n;1;Size of array(pictNoms))
+    GET PICTURE FROM LIBRARY(pictRefs{$n};$vPictSauvegarde)
+    WRITE PICTURE FILE($DossierImages+pictNoms{$n};$vPictSauvegarde)
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [CREATE FOLDER](create-folder.md)  
 [FOLDER LIST](folder-list.md)  
 [Select document](select-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 670 |
+| Numéro de commande | 670 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

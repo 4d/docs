@@ -5,111 +5,111 @@ slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *object* : Text ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST SET TEXT** ( *object* : Variable, Field ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( {* ;} *objet* ; *nouvTexte* {; *débutSél* {; *finSél*}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| newText | Text | &#8594;  | Text to insert |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| nouvText | Text | &#8594;  | Texte multistyle à insérer |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Renamed|
-|12.1|Modified|
-|12|Created|
+|14|Renommé|
+|12.1|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST SET TEXT.Summary-->The ST SET TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the object parameter, without modifying any style tags that it contains. It can be used to modify, by programming, styled text displayed on screen. 
+<!--REF #_command_.ST SET TEXT.Summary-->La commande **ST SET TEXT** insère le texte passé dans le paramètre *nouvTexte* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> Cette commande s’applique uniquement au texte brut du paramètre *objet*, sans modifier les éventuelles balises de style qu’il contient. Elle permet de modifier par programmation du texte multistyle affiché à l’écran. 
 
 ### 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (string). During execution, when the object has the focus, the command only applies to the object being edited and not to its data source (field or variable). The changes are only transferred to the source (and to any other objects using this same source) when the object being edited is validated either by losing the focus or with the **Enter** key. When the object does not have the focus, the command applies directly to the data source and the changes are immediately transferred to any other objects using the same source.   
-If you omit the *\** parameter, this indicates that the *object* parameter is a field or variable and you pass a field or variable reference instead of a string. The command applies directly to the field or variable and changes are immediately transferred to all the objects using this source, including the object with the focus. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l'exécution, si l'objet a le focus, la commande s'applique uniquement à l'objet en cours d'édition et non à sa source de données (variable ou champ). Les modifications ne sont reportées dans la source (et donc dans les éventuels autres objets utilisant la même source) que lorsque l'objet en cours d'édition est validé via une perte de focus ou la touche **Entrée**. Si l'objet n'a pas le focus, la commande s'applique directement à la source de données et les modifications sont immédiatement répercutées aux éventuels autres objets utilisant la même source.   
+Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. La commande s'applique directement au champ ou à la variable et les modifications sont répercutées à tous les objets utilisant cette source, y compris l'objet ayant le focus. 
 
 ### 
 
-In *newText*, pass the text to be inserted. The ST SET TEXT command is intended for working with rich text (multistyle) containing <span> type tags. In all other cases (more particularly, when working with plain text that contains the <, > or & characters), you must use the [ST SET PLAIN TEXT](st-set-plain-text.md) command. If you pass plain text containing the <, > or & characters to the ST SET TEXT command, it does nothing. This is necessary behavior because if you insert a string such as "a<b" directly into rich text, it will distort the internal analysis of the <span> tags. In this case, "<" characters must be encoded beforehand as "&lt;", which can be done using the [ST SET PLAIN TEXT](st-set-plain-text.md) command (see also the example of this command).
+Passez dans *nouvTexte* le texte à insérer. La commande **ST SET TEXT** est destinée aux manipulations de texte stylé (multistyle), contenant des balises de type <span>. Dans tous les autres cas (notamment en cas de manipulation de texte non stylé mais contenant les caractères <, > ou &), vous devez utiliser la commande [ST SET PLAIN TEXT](st-set-plain-text.md). Si vous passez à la commande **ST SET TEXT** un texte brut contenant des caractères <, > ou &, la commande ne fait rien. Ce principe de fonctionnement est nécessaire car l'insertion directe d'une chaîne telle que "a<b" au sein d'un texte stylé va fausser l'analyse interne des balises <span>. Dans ce cas, le caractère "<" doit être préalablement encodé "&lt;", ce qui est effectué par la commande [ST SET PLAIN TEXT](st-set-plain-text.md) (voir également l'exemple de cette commande). 
 
-The optional *startSel* and *endSel* parameters let you designate a selection of text in *object*. The *startSel* and *endSel* values give a selection of plain text, without taking any style tags found in the text into account. The action of the command varies according to the optional *startSel* and *endSel* parameters:
+Les paramètres optionnels *débutSel* et *finSel* vous permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. L’action de la commande diffère en fonction des paramètres facultatifs *débutSél* et *finSél* :
 
-* If you omit *startSel* and *endSel*, ST SET TEXT replaces all the text of the *object* by *newText*,
-* If you only pass *startSel* or if the values of *startSel* and *endSel* are equal, ST SET TEXT inserts the *newText* text into object beginning at *startSel*,
-* If you pass both *startSel* and *endSel*, ST SET TEXT replaces the plain text set by these limits with the *newText* text.
-* You can pass 0 in *endSel* to designate automatically the last character of the text (pass 1 in *startSel* to designate the first character of the text).
+* si vous omettez *débutSél* et *finSél*, **ST SET TEXT** remplace la totalité du texte de *objet* par *nouvTexte*,
+* si vous passez uniquement *débutSél* ou si les valeurs de *débutSél* et *finSél* sont égales, **ST SET TEXT** insère le texte *nouvTexte* dans *objet* à partir de *débutSél*.
+* si vous passez *débutSél* et *finSél*, **ST SET TEXT** remplace le texte brut défini par ces bornes avec le texte *nouvTexte*.
+* vous pouvez passer 0 dans *finSél* afin de désigner automatiquement le dernier caractère du texte (passez 1 dans *débutSél* pour désigner le premier caractère).
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme:
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except if *endSel* value is 0, see above), the text is not modified and the OK variable is set to 0\. 
+**Note :** Si *débutSél* est supérieur à *finSél*, le texte n'est pas modifié et la variable OK prend la valeur 0 (hormis lorsque *finSél* vaut 0, cf. ci-dessus). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-After this command is executed, the OK variable is set to 1 if no error occurred; otherwise, it is set to 0\. This is the case more particularly when style tags are not evaluated properly (incorrect or missing tags).   
+A l’issue de l’exécution de cette commande, la variable OK prend la valeur 1 si aucune erreur n’a été rencontrée et 0 dans le cas contraire. C’est le cas notamment lorsque l’évaluation des balises de style échoue (balise incorrecte ou manquante). 
 
-In the case of an error, the variable is not changed. When an error occurs on a variable when text is being evaluated, 4D transforms the text into plain text; as a result, the <, > and & characters are converted into HTML entities.
+A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une erreur se produit sur une variable lors de l’évaluation du texte, 4D transforme le texte en texte brut ; par conséquent, les caractères <, > et & seront convertis en entités HTML.
 
-## Example 1 
+## Exemple 1 
 
-You want to replace the styled text selected by the user with the contents of a variable.
+Vous souhaitez remplacer le texte multistyle sélectionné par l’utilisateur avec le contenu d'une variable.
 
-Here is the selected text:
+Voici le texte sélectionné :
 
-![](../assets/en/commands/pict579068.en.png)
+![](../assets/en/commands/pict579068.fr.png)
 
-The following contents are stored in the field:
+Le contenu stocké dans le champ est le suivant :
 
-![](../assets/en/commands/pict579073.en.png)
+![](../assets/en/commands/pict579073.fr.png)
 
-After executing this code:
+Après exécution de ce code :
 
 ```4d
- vtempo:="Demonstration"
- GET HIGHLIGHT([Products]Notes;vStart;vEnd)
- ST SET TEXT([Products]Notes;vtemp;vStart;vEnd)
+ vtempo:="Démonstration"
+ GET HIGHLIGHT([Produits]Notes;vDebut;vFin)
+ ST SET TEXT([Produits]Notes;vtempo;vDebut;vFin)
 ```
 
-The field and its contents are as follows:
+Le champ et son contenu sont les suivants :
 
-![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
+![](../assets/en/commands/pict579075.fr.png) ![](../assets/en/commands/pict579077.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-Refer to the example of the [ST SET PLAIN TEXT](st-set-plain-text.md) command. 
+Reportez-vous à l'exemple de la commande [ST SET PLAIN TEXT](st-set-plain-text.md). 
 
-## See also 
+## Voir aussi 
 
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 [ST SET PLAIN TEXT](st-set-plain-text.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1115 |
+| Numéro de commande | 1115 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

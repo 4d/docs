@@ -5,80 +5,80 @@ slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* : Object, Object {; *property* : Text} ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *objet* {; *propriété*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | If passed = property to check, if omitted = check object |
-| Function result | Boolean | &#8592; | If property omitted: True if object is defined, otherwise False.<br/>If property passed: True if property is defined, otherwise False |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Si passé = propriété à vérifier, si omis = vérifier l’objet |
+| Résultat | Boolean | &#8592; | Si propriété omis : Vrai si objet est défini, sinon Faux.<br/>Si propriété passé : Vrai si propriété est définie, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|14|Created|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Is defined.Summary-->The **OB Is defined** command returns True if *object* or *property* is defined, and False otherwise.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Is defined.Summary-->La commande **OB Is defined** retourne **Vrai** si *objet* ou *propriété* est défini, et **Faux** sinon.<!-- END REF-->doit avoir été créé via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-By default, if you omit the *property* parameter, the command checks whether the *object* is defined. An object is defined if its contents has been initialized. 
+Par défaut, si vous omettez le paramètre *propriété*, la commande vérifie que *objet* est défini. Un objet est défini si son contenu a été initialisé. 
 
-**Note:** An object can be defined but empty. To find out if an object is undefined or empty, use the [OB Is empty](ob-is-empty.md) command. 
+**Note :** Un objet peut être défini mais vide. Pour savoir si un objet est indéfini ou vide, utilisez la commande [OB Is empty](ob-is-empty.md). 
 
-If you pass the *property* parameter, the command checks whether this property exists in *object*. Note that the *property* parameter is case sensitive. 
+Si vous passez le paramètre *propriété*, la commande vérifie si cette propriété existe dans *objet*. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-## Example 1 
+## Exemple 1 
 
-Syntax testing the initialization of an object:
+Syntaxe testant l’initialisation d’un objet :
 
 ```4d
- var $object : Object
- $def:=OB Is defined($object) // $def=false since $object is not initialized
+ var $objet : Object
+ $def:=OB Is defined($objet) //$def=faux car $objet n’est pas initialisé
  
- OB SET($object;"Name";"Martin")
- OB REMOVE($object;"Name")
- $def2:=OB Is defined($object) // $def2=true since $object is empty {} but has been initialized
+ OB SET($objet;"nom";"Martin")
+ OB REMOVE($objet;"nom")
+ $def2:=OB Is defined($objet) //$def2=vrai car $objet est vide {} mais a été initialisé
 ```
 
-## Example 2 
+## Exemple 2 
 
-Test for existence of a property:
+Test de l’existence d’une propriété :
 
 ```4d
  var $ref : Object
- OB SET($ref;"name";"smith";"age";42)
-  //...
+ OB SET($ref;"nom";"smith";"age";42)
+     //...
  If(OB Is defined($ref;"age"))
-  //...
+           //...
  End if
 ```
 
-This test is equivalent to:
+Ce test équivaut à :
 
 ```4d
- If(OB Get type($Object;"name")#Is undefined)
+ If(OB Get type($Objet;"nom")#Is undefined)
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Is empty](ob-is-empty.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1231 |
+| Numéro de commande | 1231 |
 | Thread safe | yes |
 
 

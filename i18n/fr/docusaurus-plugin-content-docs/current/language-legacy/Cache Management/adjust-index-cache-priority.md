@@ -5,71 +5,71 @@ slug: /commands/adjust-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *aField* : Field ; *priority* : Integer )<!-- END REF-->
+<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *leChamp* ; *priorité* )<!-- END REF-->
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field whose index(es) priority value has to be adjusted |
-| priority | Integer | &#8594;  | Cache priority value for the field index(es) |
+| leField | Field | &#8594;  | Champ dont vous voulez ajuster la priorité du ou des index dans le cache |
+| priorité | Integer | &#8594;  | Priorité du ou des index du champ dans le cache |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Created|
+|16 R2|Créé|
 
 </details>
 </div>
 
-## Expert mode 
+## Mode expert 
 
-<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
+<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->Cette commande est réservée pour des besoins spécifiques.<!-- END REF--> Elle doit être utilisée avec précaution car elle peut affecter les performances de la base. 
 
 ## Description 
 
-The **ADJUST INDEX CACHE PRIORITY** command modifies the *priority* value of the index(es) related to the *aField* in cache for the current process. A call to this command replaces any priority value previously adjusted through the same command in the same process. This command adjusts the priority for a temporary need, for example when executing an import or a query. 
+La commande **ADJUST INDEX CACHE PRIORITY** modifie la valeur de *priorité* du ou des index du champ *leChamp* chargés dans le cache pour le process courant. Un appel à cette commande remplace toute valeur précédente modifiée avec la même commande dans le même process. Cette commande ajuste la priorité pour des besoins ponctuels, par exemple lors de l'exécution d'un import ou d'une recherche.
 
-**Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
+**Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant. 
 
- This command handles priority for all indexes related to the *aField*, including keyword indexes. However, it does not change composite indexes priority. 
+ Cette commande modifie la priorité de tous les index liés au champ *leChamp*, y compris les index de mots-clés (à noter qu'il n'est pas possible de personnaliser la priorité des index composites).
 
-Pass one of the following constants from the "*Cache Management*" theme in the *priority* parameter:
+Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du cache*" :
 
-| Constant                 | Comment                                      |
-| ------------------------ | -------------------------------------------- |
-| Cache priority low       |                                              |
-| Cache priority very low  |                                              |
-| Cache priority normal    | Sets the cache priority to its default value |
-| Cache priority high      |                                              |
-| Cache priority very high |                                              |
+| Constante                | Comment                                              |
+| ------------------------ | ---------------------------------------------------- |
+| Cache priority low       |                                                      |
+| Cache priority very low  |                                                      |
+| Cache priority normal    | Rétablit la priorité de cache à sa valeur par défaut |
+| Cache priority high      |                                                      |
+| Cache priority very high |                                                      |
 
-## Example 
+## Exemple 
 
-You want to temporarily change the cache priority for the \[Docs\]Comments field index(es):
+Vous souhaitez modifier temporairement la priorité des index du champ \[Docs\]Comments dans le cache :
 
 ```4d
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority very high)
- QUERY([Docs];[Docs]Comments%"Extra") // search on an indexed field
-  //... run several other queries or sorts on the same table
-  // when finished, set back to normal cache priority
+ QUERY([Docs];[Docs]Comments%"Extra") // recherche dans le champ indexé
+  //...réalisation d'autres recherches ou tris sur la même table
+  //à l'issue, retour à la priorité de cache normale
  ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
-## See also 
+## Voir aussi 
 
 [Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
 [SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1430 |
+| Numéro de commande | 1430 |
 | Thread safe | yes |
 
 

@@ -5,106 +5,108 @@ slug: /commands/object-set-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( * ; *object* : Text ; *key* : Text {; *modifiers* : Integer} )<br/>**OBJECT SET SHORTCUT** ( *object* : Variable, Field ; *key* : Text {; *modifiers* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( {* ;} *objet* ; *touche* {; *modifiers*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| key | Text | &#8594;  | Key to associate with object |
-| modifiers | Integer | &#8594;  | Modifier key mask or combination of masks |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| touche | Text | &#8594;  | Touche à associer à l’objet |
+| modifiers | Integer | &#8594;  | Masque ou combinaison de masques de touche(s) de modification |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SHORTCUT.Summary-->The **OBJECT SET SHORTCUT** command sets or dynamically modifies the keyboard shortcut associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SHORTCUT.Summary-->La commande **OBJECT SET SHORTCUT** permet de définir ou de modifier dynamiquement l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas un nom mais une référence. 
 
-In the *key* parameter, pass a string indicating the key to associate with the object. You can either pass:
+Passez dans le paramètre *touche* une chaîne indiquant la touche du clavier à associer à l’objet. Vous pouvez passer soit :
 
-* a standard key name, for example "B"
-* or a constant (or its value) from the *Shortcut and Associated Keys* theme:
-  
-| Constant                      | Type   | Value           |  
-| ----------------------------- | ------ | --------------- |  
-| Shortcut with Backspace       | Text | \[backspace\]   |  
-| Shortcut with Carriage Return | Text | \[return\]      |  
-| Shortcut with Delete          | Text | \[del\]         |  
-| Shortcut with Down arrow      | Text | \[down arrow\]  |  
-| Shortcut with End             | Text | \[end\]         |  
-| Shortcut with Enter           | Text | \[enter\]       |  
-| Shortcut with Escape          | Text | \[esc\]         |  
-| Shortcut with F1              | Text | \[F1\]          |  
-| Shortcut with F10             | Text | \[F10\]         |  
-| Shortcut with F11             | Text | \[F11\]         |  
-| Shortcut with F12             | Text | \[F12\]         |  
-| Shortcut with F13             | Text | \[F13\]         |  
-| Shortcut with F14             | Text | \[F14\]         |  
-| Shortcut with F15             | Text | \[F15\]         |  
-| Shortcut with F2              | Text | \[F2\]          |  
-| Shortcut with F3              | Text | \[F3\]          |  
-| Shortcut with F4              | Text | \[F4\]          |  
-| Shortcut with F5              | Text | \[F5\]          |  
-| Shortcut with F6              | Text | \[F6\]          |  
-| Shortcut with F7              | Text | \[F7\]          |  
-| Shortcut with F8              | Text | \[F8\]          |  
-| Shortcut with F9              | Text | \[F9\]          |  
-| Shortcut with Help            | Text | \[help\]        |  
-| Shortcut with Home            | Text | \[home\]        |  
-| Shortcut with Left arrow      | Text | \[left arrow\]  |  
-| Shortcut with Page down       | Text | \[page down\]   |  
-| Shortcut with Page up         | Text | \[page up\]     |  
-| Shortcut with Right arrow     | Text | \[right arrow\] |  
-| Shortcut with Tabulation      | Text | \[tab\]         |  
-| Shortcut with Up arrow        | Text | \[up arrow\]    |
+* un nom de touche standard, par exemple "B"
+* une constante du thème *Touches équivalents clavier* (ou sa valeur) :  
 
-In the *modifiers* parameter, you can pass one or more modifier keys to associate with the shortcut. To set the *modifiers* parameter, pass one or more of the following "Mask" type constants found in the *Events (Modifiers)* theme:
+| Constante                     | Type   | Valeur          | Comment       |  
+| ----------------------------- | ------ | --------------- | ------------- |  
+| Shortcut with Backspace       | Chaîne | \[backspace\]   | <br/> |  
+| Shortcut with Carriage Return | Chaîne | \[return\]      |               |  
+| Shortcut with Delete          | Chaîne | \[del\]         |               |  
+| Shortcut with Down arrow      | Chaîne | \[down arrow\]  | <br/> |  
+| Shortcut with End             | Chaîne | \[end\]         | <br/> |  
+| Shortcut with Enter           | Chaîne | \[enter\]       | <br/> |  
+| Shortcut with Escape          | Chaîne | \[esc\]         | <br/> |  
+| Shortcut with F1              | Chaîne | \[F1\]          | <br/> |  
+| Shortcut with F10             | Chaîne | \[F10\]         | <br/> |  
+| Shortcut with F11             | Chaîne | \[F11\]         | <br/> |  
+| Shortcut with F12             | Chaîne | \[F12\]         | <br/> |  
+| Shortcut with F13             | Chaîne | \[F13\]         | <br/> |  
+| Shortcut with F14             | Chaîne | \[F14\]         | <br/> |  
+| Shortcut with F15             | Chaîne | \[F15\]         | <br/> |  
+| Shortcut with F2              | Chaîne | \[F2\]          | <br/> |  
+| Shortcut with F3              | Chaîne | \[F3\]          | <br/> |  
+| Shortcut with F4              | Chaîne | \[F4\]          | <br/> |  
+| Shortcut with F5              | Chaîne | \[F5\]          | <br/> |  
+| Shortcut with F6              | Chaîne | \[F6\]          | <br/> |  
+| Shortcut with F7              | Chaîne | \[F7\]          | <br/> |  
+| Shortcut with F8              | Chaîne | \[F8\]          | <br/> |  
+| Shortcut with F9              | Chaîne | \[F9\]          | <br/> |  
+| Shortcut with Help            | Chaîne | \[help\]        | <br/> |  
+| Shortcut with Home            | Chaîne | \[home\]        | <br/> |  
+| Shortcut with Left arrow      | Chaîne | \[left arrow\]  | <br/> |  
+| Shortcut with Page down       | Chaîne | \[page down\]   | <br/> |  
+| Shortcut with Page up         | Chaîne | \[page up\]     | <br/> |  
+| Shortcut with Right arrow     | Chaîne | \[right arrow\] | <br/> |  
+| Shortcut with Tabulation      | Chaîne | \[tab\]         | <br/> |  
+| Shortcut with Up arrow        | Chaîne | \[up arrow\]    | <br/> |
 
-| Constant         | Type    | Value | Comment                                                    |
-| ---------------- | ------- | ----- | ---------------------------------------------------------- |
-| Command key mask | Integer | 256   | Ctrl key under Windows, Command key under macOS             |
-| Control key mask | Integer | 4096  | Ctrl key under macOS, or right click under Windows and macOS |
-| Option key mask  | Integer | 2048  | Alt key (also called Option under macOS)                    |
-| Shift key mask   | Integer | 512   | Windows and macOS                                           |
+Passez dans le paramètre *modifiers* une ou plusieurs touche(s) de modification à associer à la touche de raccourci. Pour définir le paramètre *modifiers*, passez une ou plusieurs des constante(s) de type "Masque" suivantes du thème *Evénements (Modifiers)* :
 
-**Note:** When you omit the *modifiers* parameter, the object is enabled as soon as you press the key that was set. For example, if you associate the "H" key with a button, this button is enabled whenever you press the H key. This kind of functioning is to be reserved for specific interfaces.
+| Constante        | Type        | Valeur | Comment                                                   |
+| ---------------- | ----------- | ------ | --------------------------------------------------------- |
+| Command key mask | Entier long | 256    | Touche Ctrl sous Windows, touche Commande sous macOS       |
+| Control key mask | Entier long | 4096   | Touche Ctrl sous macOS, ou clic droit sous Windows et macOS |
+| Option key mask  | Entier long | 2048   | Touche Alt (aussi appelée Option sous macOS)               |
+| Shift key mask   | Entier long | 512    | Windows et macOS                                           |
 
-## Example 
+**Note :** Si vous omettez le paramètre *modifiers*, l’objet sera activé dès que vous appuierez sur la touche définie. Par exemple, si vous avez associé la touche "H" à un bouton, il sera activé dès que vous appuierez sur la touche H. Ce fonctionnement est à réserver à des interfaces spécifiques.
 
-You want to associate a different shortcut depending on the current language of the application. In the On Load form event, you can write:
+## Exemple 
+
+Vous voulez associer un équivalent clavier différent en fonction de la langue courante de l’application. Dans l’événement sur chargement du formulaire, vous pouvez écrire :
 
 ```4d
  Case of
-       vLang="FR"
-       OBJECT SET SHORTCUT(*;"SortButton";"T";Command key mask+Shift key mask) // Ctrl+Shift+T in French
-       vLang="US"
-       OBJECT SET SHORTCUT(*;"SortButton";"O";Command key mask+Shift key mask) // Ctrl+Shift+O in English
+    :(vLang="FR")
+       OBJECT SET SHORTCUT(*;"SortButton";"T";Command key mask+Shift key mask)
+  // Ctrl+Maj+T en français
+    :(vLang="US")
+       OBJECT SET SHORTCUT(*;"SortButton";"O";Command key mask+Shift key mask)
+  // Ctrl+Maj+O en anglais
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET SHORTCUT](object-get-shortcut.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1185 |
+| Numéro de commande | 1185 |
 | Thread safe | no |
 
 

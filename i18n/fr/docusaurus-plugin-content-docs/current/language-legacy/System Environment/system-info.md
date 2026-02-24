@@ -9,65 +9,66 @@ displayed_sidebar: docs
 <!--REF #_command_.System info.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &#8592; | System information |
+| Résultat | Object | &#8592; | Informations système |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.System info.Summary-->The **System info** command returns an object containg information about the operating system and the characteristics of the system hardware and software from the machine it's executed on.<!-- END REF-->
+<!--REF #_command_.System info.Summary-->La commande **System info** retourne un objet contenant les informations sur le système d'exploitation ainsi que les caractéristiques matérielles et logicielles de la machine sur laquelle elle est exécutée.<!-- END REF-->
 
-The command returns the following information: 
+La commande retourne les informations suivantes :
 
-| Property          |  |             | Type                            | Description                                                                                                                                                                 | Example                                                                         |
-|-------------------|-------------|-------------|---------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| accountName       |             |             | string                          | The name of the account for the current user. Typically used to identify an account in the directory.                                                                       | "msmith"                                                                        |
-| cores             |             |             | number                          | Total number of cores. In the case of virtual machines, the total number of cores allotted to it.                                                                           | 4                                                                               |
-| cpuThreads        |             |             | number                          | Total number of threads.                                                                                                                                                    | 8                                                                               |
-| machineName       |             |             | string                          | The name of the machine as set in the network parameters of the operating system.                                                                                           | "LAPTOP-M3BLHGSG"                                                               |
-| macRosetta        |             |             | boolean                         | True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).                                                                              | True                                                                            |
-| model             |             |             | string                          | Name of the computer model.                                                                                                                                                 | "iMac12,2", "Dell", "Acer", "VMware", etc.                                      |
-| networkInterfaces |             |             | collection                      | Physical and active network addresses only                                                                                                                                  |                                                                                 |
-|                   | ipAddresses |             | collection                      |                                                                                                                                                                             |                                                                                 |
-|                   |             | ip          | string                          | The address of the network interface                                                                                                                                        | "129.186.81.80"                                                                 |
-|                   |             | type        | string                          | The type of the network interface                                                                                                                                           | "ipv4", "ipv6"                                                                  |
-|                   | name        |             | string                          | The name of the interface.                                                                                                                                                  | "Intel(R) 82574L Gigabit Network Connection"                                    |
-|                   | type        |             | string                          | The type of interface (note that "ethernet" type is provided for bluetooth interfaces).                                                                                     | "wifi", "ethernet"                                                              |
-| osVersion         |             |             | string                          | The operating system version and build number(\*).                                                                                                                           | "Windows 10 Pro 1809 (17763.1577)"                                              |
-| osLanguage        |             |             | string                          | Language set by the current user of the system. Expressed in the standard defined by the RFC 3066. See Language codes in the Design Reference manual for a complete list.   | "fr", "en", "ja", "de", etc.                                                    |
-| physicalMemory    |             |             | number                          | The volume of memory storage (in kilobytes) available on the machine.                                                                                                       | 16777216                                                                        |
-| processor         |             |             | string                          | The name, type, and speed of the processor.                                                                                                                                 | "Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz"                                       |
-| uptime            |             |             | number                          | The total time (in seconds) since the machine was started.                                                                                                                  | 3600                                                                            |
-| userName          |             |             | string                          | The current user on the machine. Typically used as the display name (i.e., when logging into your computer).                                                                | "Mary Smith"                                                                    |
-| volumes           |             |             | collection                      |                                                                                                                                                                             |                                                                                 |
-|                   | available   |             | number                          | The remaining space that can be used.                                                                                                                                       | 524288                                                                          |
-|                   | capacity    |             | number                          | The total volume (in kilobytes) possible.                                                                                                                                   | 1048576                                                                         |
-|                   | disk        |             | object \| collection (Mac only) |                                                                                                                                                                             |                                                                                 |
-|                   |             | description | string                          | A brief summary describing the disk.                                                                                                                                        | "HP LOGICAL VOLUME SCSI Disk Device"                                            |
-|                   |             | identifier  | string                          | ID of disk(s) (UUID on Mac and physical drive on Windows)                                                                                                                   | Mac - "87547BDD-EA75-4F48-8BFA-9A7E393EEAB0", Windows - "\\\\.\\PHYSICALDRIVE0" |
-|                   |             | size        | number                          | The total capacity (in kilobytes) of the disk                                                                                                                               | 104857600                                                                       |
-|                   |             | interface   | string                          | The type of interface on the machine.                                                                                                                                       | "USB", "network", ,"SATA", "SCSI", "cd/dvd", "PCI"                              |
-|                   | fileSystem  |             | string                          | The file system used by the operating system for storing and retrieving files on the hard disk.                                                                             | "NTFS", "Journaled HFS+", "GPFS", etc.                                          |
-|                   | mountPoint  |             | string                          | The directory in the currently accessible file system on which an additional file system is mounted (i.e., logically attached). Note that this is in POSIX format for Macs. | Mac -  "/Volumes/Free HD", Windows - "C:"                                       |
-|                   | name        |             | string                          | only on Mac - name of the volume                                                                                                                                            | "iMac-27-Program6"                                                              |
+| Propriété         |  |             | Type                                | Description                                                                                                                                                                                                             | Exemple                                                                         |
+|-------------------|----------------|-------------|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| accountName       |                |             | chaîne                              | Le nom du compte de l'utilisateur courant. Généralement utilisé pour identifier un compte dans le répertoire.                                                                                                           | "msmith"                                                                        |
+| cores             |                |             | nombre                              | Nombre total de coeurs. Dans le cas de machines virtuelles, le nombre total de coeurs alloués à celles-ci.                                                                                                              | 4                                                                               |
+| cpuThreads        |                |             | nombre                              | Nombre total de threads.                                                                                                                                                                                                | 8                                                                               |
+| machineName       |                |             | chaîne                              | Le nom de la machine tel que défini dans les paramètres réseau du système d'exploitation.                                                                                                                               | "LAPTOP-M3BLHGSG"                                                               |
+| macRosetta        |                |             | booléen                             | Vrai si 4D est émulé par Rosetta sur macOS, Faux sinon (non émulé ou sous Windows).                                                                                                                                     | Vrai                                                                            |
+| model             |                |             | chaîne                              | Nom du modèle d'ordinateur.                                                                                                                                                                                             | "iMac12,2", "Dell", "Acer", "VMware", etc.                                      |
+| networkInterfaces |                |             | collection                          | Adresses réseau physiques et actives uniquement.                                                                                                                                                                        |                                                                                 |
+|                   | ipAddresses    |             | collection                          |                                                                                                                                                                                                                         |                                                                                 |
+|                   |                | ip          | chaîne                              | L'adresse de l'interface réseau.                                                                                                                                                                                        | "129.186.81.80"                                                                 |
+|                   |                | type        | chaîne                              | Le type de l'interface réseau.                                                                                                                                                                                          | "ipv4", "ipv6"                                                                  |
+|                   | name           |             | chaîne                              | Le nom de l'interface.                                                                                                                                                                                                  | "Intel(R) 82574L Gigabit Network Connection"                                    |
+|                   | type           |             | chaîne                              | Le type de l'interface (à noter que le type "ethernet" est fourni pour les interfaces bluetooth).                                                                                                                       | "wifi", "ethernet"                                                              |
+| osVersion         |                |             | chaîne                              | La version du système d'exploitation et son numéro de build (\*).                                                                                                                                                        | "Windows 10 Pro (17763.1577)"                                                   |
+| osLanguage        |                |             | chaîne                              | Langue du système défini par l'utilisateur courant. Exprimée dans la norme définie par la RFC 3066. Voir Codes de langue dans le manuel Mode Développement pour une liste complète.                                     | "fr", "en", "ja", "de", etc.                                                    |
+| physicalMemory    |                |             | nombre                              | Le volume de stockage de la mémoire disponible sur la machine (en kilo-octets).                                                                                                                                         | 16777216                                                                        |
+| processor         |                |             | chaîne                              | Le nom, le type et la vitesse du processeur.                                                                                                                                                                            | "Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz"                                       |
+| uptime            |                |             | nombre                              | La durée totale (en secondes) depuis que la machine a démarré.                                                                                                                                                          | 3600                                                                            |
+| userName          |                |             | chaîne                              | L'utilisateur courant de la machine. Généralement utilisé comme nom d'affichage (c'est-à-dire lors de la connexion à votre ordinateur).                                                                                 | "Mary Smith"                                                                    |
+| volumes           |                |             | collection                          |                                                                                                                                                                                                                         |                                                                                 |
+|                   | available      |             | nombre                              | L'espace restant pouvant être utilisé.                                                                                                                                                                                  | 524288                                                                          |
+|                   | capacity       |             | nombre                              | Le volume total possible (en kilo-octets).                                                                                                                                                                              | 1048576                                                                         |
+|                   | disk           |             | objet \| collection (Mac seulement) |                                                                                                                                                                                                                         |                                                                                 |
+|                   |                | description | chaîne                              | Un bref résumé décrivant le disque.                                                                                                                                                                                     | "HP LOGICAL VOLUME SCSI Disk Device"                                            |
+|                   |                | identifier  | chaîne                              | ID du (des) disque(s) (UUID sur Mac et disque physique sous Windows)                                                                                                                                                    | Mac - "87547BDD-EA75-4F48-8BFA-9A7E393EEAB0", Windows - "\\\\.\\PHYSICALDRIVE0" |
+|                   |                | size        | nombre                              | La capacité totale du disque (en kilo-octets).                                                                                                                                                                          | 104857600                                                                       |
+|                   |                | interface   | chaîne                              | Le type d'interface sur la machine.                                                                                                                                                                                     | "USB", "network", "SATA", "SCSI", "cd/dvd", "PCI"                               |
+|                   | fileSystem     |             | chaîne                              | Le système de fichiers utilisé par le système d'exploitation pour stocker et récupérer des fichiers sur le disque dur.                                                                                                  | "NTFS", "Journaled HFS+", "GPFS", etc.                                          |
+|                   | mountPoint     |             | chaîne                              | Le répertoire dans le système de fichiers actuellement accessible sur lequel un système de fichiers supplémentaire est monté (c'est-à-dire logiquement attaché). Notez  que celui-ci est au format POSIX pour les Macs. | Mac -  "/Volumes/Free HD", Windows - "C:"                                       |
+|                   | name           |             | chaîne                              | seulement sur mac - nom du volume                                                                                                                                                                                       | "iMac-27-Program6"                                                              |
 
 
-(\*) To determine only the platform being used, there are two commands available: [Is macOS](is-macos.md) and [Is Windows](is-windows.md).
 
-**Note**: In the case of virtual machines, the information returned will be that of the virtual machine.
+(\*) Pour déterminer simplement la plate-forme utilisée, vous pouvez utiliser les commandes [Is macOS](is-macos.md) et [Is Windows](is-windows.md).
 
-## Example 
+**Note** : Dans le cas de machines virtuelles, les informations retournées sont celles de la machine virtuelle.
 
-The following code on a Windows machine:
+## Exemple 
+
+Le code suivant sur une machine Windows :
 
 ```4d
  var $systemInfo : Object
  $systemInfo:=System info
 ```
 
-returns an object that contains, for example, the following information:
+retourne un objet contenant les informations suivantes :
 
 ```json
 {
@@ -142,18 +143,17 @@ returns an object that contains, for example, the following information:
 }
 ```
 
-## See also 
+## Voir aussi 
 
-[Application info](./commands/application-info)  
+[Application info](application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1571 |
+| Numéro de commande | 1571 |
 | Thread safe | yes |
-
 
 

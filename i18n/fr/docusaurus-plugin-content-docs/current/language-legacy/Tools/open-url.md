@@ -5,64 +5,64 @@ slug: /commands/open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *path* : Text {; *appName* : Text}{; *} )<!-- END REF-->
+<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *chemin* {; *nomApp*}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | Path of document or URL to open |
-| appName | Text | &#8594;  | Name of application to use |
-| * | Operator | &#8594;  | If specified = URL is not translated, If omitted = URL is translated |
+| chemin | Text | &#8594;  | Chemin du document ou URL à ouvrir |
+| nomApp | Text | &#8594;  | Nom de l'application à utiliser |
+| * | Opérateur | &#8594;  | Si spécifié = l’URL n’est pas traduit, Si omis = l’URL est traduit |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R3|Renamed|
-|14 R3|Modified|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|14 R3|Renommé|
+|14 R3|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN URL.Summary-->The **OPEN URL** command opens the file or URL passed in the *path* parameter with the application indicated in *appName* (if any).<!-- END REF--> 
+<!--REF #_command_.OPEN URL.Summary-->La commande **OPEN URL** ouvre le fichier ou l'URL passé dans le paramètre *chemin* avec l'application éventuellement désignée par *nomApp*.<!-- END REF-->
 
-The *path* parameter can contain either a standard URL or a file pathname. The command accepts colons (':') under macOS, slashes ('\\') under Windows or a Posix URL beginning with file://. 
+Le paramètre *chemin* peut contenir aussi bien un URL standard qu’un chemin d'accès de fichier. La commande accepte des ':' sous macOS, des '\\' sous Windows ou un URL posix commençant par file://.
 
-If the *appName* parameter is omitted, 4D first attempts to interpret the *path* parameter as a file pathname. If this is the case, 4D will request the system to open the file using the most suitable application (for example, a browser for .html files, Word for .doc files, etc.). The \* parameter is ignored in this case.  
-If the *path* parameter contains a standard URL (mailto:, news:, http:, etc. protocols), 4D starts the default Web browser and accesses the URL. If there is no browser on the volumes connected to the computer, this command has no effect. 
+Si le paramètre *nomApp* est omis, 4D tente d'abord d'interpréter le paramètre *chemin* comme un chemin d'accès de fichier. Si c'est le cas, 4D demande au système d'ouvrir le fichier avec l'application la plus adaptée (par exemple un navigateur pour les .html, Word pour les .doc, etc.). Le paramètre *\**, s'il est passé, est ignoré dans ce cas.  
+Si le paramètre *chemin* contient un URL standard (protocoles mailto:, news:, http:, etc), 4D lance le navigateur Web par défaut et accède à l’URL. S’il n’y a pas de navigateur sur les volumes connectés à l’ordinateur, la commande ne fait rien.
 
-When the *appName* parameter is passed, the command interrogates the system. If an application with this name is installed, it is started and the command requests it to open the specified URL or document.  
-Under Windows, the mechanism for recognizing the application name is the same as the one used by the "Run" command of the Start menu. For example, you could pass:
+Si le paramètre *nomApp* est passé, la commande interroge le système. Si une application de ce nom est installée, elle est lancée et la commande lui demande d'ouvrir l'URL ou le document spécifié.  
+Sous Windows, le mécanisme de reconnaissance du nom de l'application est le même que celui utilisé par la commande "Exécuter" du menu Démarrer. Vous pouvez passer par exemple :
 
-* "iexplore" to start the Internet Explorer.
-* "chrome" to start Chrome (if installed)
-* "winword" to start MS Word (if installed)
+* "iexplore" pour lancer Internet Explorer.
+* "chrome" pour lancer Chrome (si installé)
+* "winword" pour lancer MS Word (si installé)
 
-**Note:** You will find the list of applications installed in the *registry* at the following key: HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths
+**Note :** Vous pouvez trouver la liste des applications installées dans la *registry* à la clé suivante : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths
 
-Under macOS, the mechanism uses the Finder which automatically indexes all the applications installed. It can recognize any .app application by means of its package name (with or without the .app suffix). For example, you could pass:
+Sous macOS, le mécanisme utilise la base du Finder qui indexe automatiquement toutes les applications installées. Il reconnaît toute application .app via son nom de package (avec ou sans le suffixe .app). Vous pouvez passer par exemple :
 
 * "safari"
 * "FireFox"
 * "TextEdit"
 
-When the *appName* application is not found, no error is returned; the command is run as if this parameter had not been specified.
+Si l'application *nomApp* n'est pas trouvée, aucune erreur n'est retournée ; la commande s'exécute comme si le paramètre n'avait pas été spécifié. 
 
-4D automatically encodes the URL’s special characters. If you pass the *\** character, 4D will not translate the URL’s special characters. This option allows you to access and to send URLs of the type: "*http://www.server.net/page.htm?q=something*". 
+4D encode automatiquement les caractères spéciaux de l'URL passé en paramètre. Si vous passez le caractère *\**, 4D ne traduira pas les caractères spéciaux de l’URL. Cette option permet d’accéder à ou de renvoyer des URL du type "*http://www.server.net/page.htm?q=quelquechose*".
 
-**Note:** This command does not work when called from a Web process.
+**Note :** Cette commande ne fonctionne pas dans le cadre d’un process Web.
 
-## Example 1 
+## Exemple 1 
 
-The following examples illustrate different types of strings that are accepted as URLs by the command:
+Les exemples suivants illustrent les différents types de chaînes acceptées comme URLs par la commande :
 
 ```4d
  OPEN URL("http://www.4d.com")
@@ -71,36 +71,36 @@ The following examples illustrate different types of strings that are accepted a
  OPEN URL("mailto:jean_martin@4d.fr")
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example can be used to launch the most suitable application: 
+Cet exemple permet de lancer l'application la plus adaptée :
 
 ```4d
- $file:=Select document("";"";0)
+ $fichier:=Select document("";"";0)
  If(OK=1)
     OPEN URL(Document)
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-The *appName* parameter lets you open the same text file using different applications:
+Vous pouvez ouvrir un même fichier texte avec différentes applications en utilisant le paramètre *nomApp* :
 
 ```4d
- OPEN URL("C:\\temp\\cookies.txt") //open the file with Notepad
- OPEN URL("C:\\temp\\cookies.txt";"winword") //open the file with MS Word (if installed)
- OPEN URL("C:\\temp\\cookies.txt";"excel") //open the file with MS Excel (if installed)
+ OPEN URL("C:\\temp\\cookies.txt") //ouvre le fichier avec Notepad
+ OPEN URL("C:\\temp\\cookies.txt";"winword") //ouvre le fichier avec MS Word (si installé)
+ OPEN URL("C:\\temp\\cookies.txt";"excel") //ouvre le fichier avec MS Excel (si installé)
 ```
 
-## See also 
+## Voir aussi 
 
 [LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 673 |
+| Numéro de commande | 673 |
 | Thread safe | yes |
 
 

@@ -5,74 +5,74 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* : Picture ; *dest* : Picture {; *width* : Integer {; *height* : Integer {; *mode* : Integer {; *depth* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *largeur* {; *hauteur* {; *mode* {; *profondeur*}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Picture | &#8594;  | 4D picture field or variable to convert as a thumbnail |
-| dest | Picture | &#8592; | Resulting thumbnail |
-| width | Integer | &#8594;  | Thumbnail width in pixels, Default value = 48 |
-| height | Integer | &#8594;  | Thumbnail height in pixels, Default value = 48 |
-| mode | Integer | &#8594;  | Thumbnail creation mode Default value = Scaled to fit prop centered (6) |
-| depth | Integer | &#8594;  | Obsolete, do not use |
+| source | Picture | &#8594;  | Champ ou variable image 4D à passer en imagette |
+| dest | Picture | &#8592; | Imagette résultante |
+| largeur | Integer | &#8594;  | Largeur de l’imagette en pixels, Par défaut = 48 |
+| hauteur | Integer | &#8594;  | Hauteur de l’imagette en pixels, Par défaut = 48 |
+| mode | Integer | &#8594;  | Mode de création de l’imagette Par défaut = proportionnelle centrée (6) |
+| profondeur | Integer | &#8594;  | Obsolète, ne pas utiliser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CREATE THUMBNAIL.Summary-->The **CREATE THUMBNAIL** command returns a thumbnail from a given source picture.<!-- END REF--> Thumbnails are usually used for picture preview within multimedia software or Web sites.
+<!--REF #_command_.CREATE THUMBNAIL.Summary-->La commande **CREATE THUMBNAIL** retourne une imagette à partir d’une image source.<!-- END REF--> Les imagettes sont généralement utilisées pour la prévisualisation d’images dans le cadre d’applications multimédia ou de sites Web. 
 
-You pass in the *source* parameter the 4D variable or field containing the picture to reduce to a thumbnail. You pass in the *dest* parameter the 4D picture field or variable which should host the resulting thumbnail.
+Passez dans *source* la variable ou le champ image 4D contenant l’image source à réduire sous forme d’imagette, et dans *dest* la variable ou le champ image 4D devant recevoir l’imagette résultante. 
 
-The optional parameters *width* and *height* define the required thumbnail size (in pixels). If you omit these parameters, the thumbnail default size will be 48 x 48 pixels.
+Les paramètres optionnels *largeur* et *hauteur* vous permettent de définir la taille en pixels de l’imagette que vous souhaitez obtenir. Si vous omettez ces paramètres, la taille par défaut de l’imagette sera de 48x48 pixels. 
 
-The optional parameter *mode* defines the thumbnail creation mode, i.e. the resizing mode. Three modes are available. The following predefined constants are provided by 4D in the “*Picture Display Formats*” constant theme:
+Le paramètre optionnel *mode* vous permet de définir le mode de création de l’imagette, c’est-à-dire la manière dont elle sera redimensionnée. Vous pouvez utiliser l’un des trois modes suivants, accessibles par l’intermédiaire de constantes prédéfinies disponibles dans le thème “*Formats d'affichage des images*” :
 
-| Constant                    | Type    | Value |
-| --------------------------- | ------- | ----- |
-| Scaled to fit               | Integer | 2     |
-| Scaled to fit prop centered | Integer | 6     |
-| Scaled to fit proportional  | Integer | 5     |
+| Constante                   | Type        | Valeur |
+| --------------------------- | ----------- | ------ |
+| Scaled to fit               | Entier long | 2      |
+| Scaled to fit prop centered | Entier long | 6      |
+| Scaled to fit proportional  | Entier long | 5      |
 
-**Note:** Only these constants can be used with **CREATE THUMBNAIL**. The other constants in this theme cannot be applied to this command. 
+**Note :** Seules ces trois constantes peuvent être utilisées avec **CREATE THUMBNAIL**. Les autres constantes du thème “Formats d’affichage des images” ne s’appliquent pas à cette commande. 
 
-If you do not enter any parameter, the “Scaled to fit prop centered” mode (6) is applied by default. Below is an illustration of the various modes:
+Si vous omettez le paramètre *mode*, le mode 6 (Proportionnelle centrée) est appliqué par défaut. Le résultat des différents modes est illustré ci-dessous : 
 
-Source picture   
-![](../assets/en/commands/pict27911.en.png)
+Image source   
+![](../assets/en/commands/pict27911.fr.png)
 
-Resulting thumbnails (48x48)
+Imagettes résultantes (48x48)
 
-* Scaled to fit = 2  
-![](../assets/en/commands/pict27912.en.png)
-* Scaled to fit proportional = 5  
-![](../assets/en/commands/pict27913.en.png)
-* Scaled to fit prop centered = 6 (default mode)  
-![](../assets/en/commands/pict27914.en.png)
+* Non tronquée = 2  
+![](../assets/en/commands/pict27912.fr.png)
+* Proportionnelle = 5  
+![](../assets/en/commands/pict27913.fr.png)
+* Proportionnelle centrée = 6 (mode par défaut)  
+![](../assets/en/commands/pict27914.fr.png)
 
-**Note:** With the “Scaled to fit proportional” and the “Scaled to fit prop centered”, the free space will be displayed in white. When these modes are applied to picture field or variable in 4D forms, the free space is transparent.
+**Note :** Avec les modes “Proportionnelle” et “Proportionnelle centrée”, les espaces vides apparaîtront blancs dans les imagettes — lorsque ces modes sont appliqués aux champs ou variables images dans les formulaires 4D, les espaces vides sont transparents. 
 
-The *depth* parameter is ignored and must be omitted. The command always uses the current screen depth (number of colors). 
+Le paramètre *profondeur* est ignoré et doit être omis. La commande utilise toujours la profondeur écran (nombre de couleurs) courante. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 679 |
+| Numéro de commande | 679 |
 | Thread safe | yes |
 
 

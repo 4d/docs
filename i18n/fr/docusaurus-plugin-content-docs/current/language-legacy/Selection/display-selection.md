@@ -5,116 +5,113 @@ slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean} ; * {; *} )
-<!-- END REF-->
+<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*laTable*}{; *modeSélection*}{; *saisieListe*}{; *}{; *} )<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to display, or Default table, if omitted |
-| selectMode | Integer | &#8594;  | Selection mode |
-| enterList | Boolean | &#8594;  | Authorize Enter in list option |
-| * | Operator |  &#8594;  | Use output form for one record selection and hide scroll bars in the input form |
-| * | Operator |  &#8594;  | Show scroll bars in the input form (overrides second option of first optional *) |
+| laTable | Table | &#8594;  | Table à laquelle appartient la sélection ou Table par défaut si ce paramètre est omis |
+| modeSélection | Integer | &#8594;  | Mode de sélection |
+| saisieListe | Boolean | &#8594;  | Autoriser saisie en liste |
+| * | Operator |  &#8594;  | Utiliser le formulaire sortie en cas de sélection d'un seul enregistrement et masquer les barres de défilement dans le formulaire entrée |
+| * | Operator |  &#8594;  | Afficher les barres de défilement dans le formulaire entrée (= annuler le second effet du premier paramètre *) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** displays the selection of *aTable*, using the output form.<!-- END REF--> The records are displayed in a scrollable list similar to that of the Design environment. If the user double-clicks a record, by default the record is displayed in the current input form. The list is displayed in the frontmost window.
+<!--REF #_command_.DISPLAY SELECTION.Summary-->**DISPLAY SELECTION** affiche, pour le process en cours, la sélection courante de *laTable* dans le formulaire sortie courant.<!-- END REF--> Les enregistrements sont affichés sous la forme d'une liste que l'on peut faire défiler, semblable à celle du mode Développement. Lorsque l'utilisateur double-clique sur un enregistrement, par défaut celui-ci s'affiche dans le formulaire entrée courant. La liste est placée dans la fenêtre de premier plan.
 
-To display a selection and also modify a record in the current input form after you have double-clicked on it (as you do in the Design environment window), or via the Enter in list mode, use [MODIFY SELECTION](modify-selection.md) instead of **DISPLAY SELECTION**.   
-All of the following information applies to both commands, except for the information on modifying records.
+Si vous souhaitez afficher une sélection et pouvoir également modifier un enregistrement dans le formulaire entrée courant une fois que vous avez double-cliqué dessus (comme vous le faites dans la fenêtre du mode Développement) ou via le mode “Saisie en liste”, utilisez [MODIFY SELECTION](modify-selection.md) au lieu de **DISPLAY SELECTION**. Toutes les explications suivantes s'appliquent à ces deux commandes, hormis la possibilité de modifier des enregistrements. 
 
-After **DISPLAY SELECTION** is executed, there may not be a current record. Use a command such as [FIRST RECORD](first-record.md) or [LAST RECORD](last-record.md) to select one.
+Après qu'un **DISPLAY SELECTION** ait été exécuté, il n'y a plus d'enregistrement courant. Vous devez utiliser une commande telle que [FIRST RECORD](first-record.md) ou [LAST RECORD](last-record.md) pour en récupérer un.
 
-The *selectMode* parameter is used to set the possibilities for selecting records in the list using the mouse. You can pass one of the following constants of the “*Form Parameters*” theme in this parameter:
+Le paramètre *modeSélection* vous permet de définir les possibilités de sélection d’enregistrements dans la liste à l'aide de la souris. Vous pouvez passer dans ce paramètre une des constantes suivantes du thème “*Paramètres de formulaire*” :
 
-| Constant           | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------ | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Multiple selection | Integer | 2     | The user can select several records at once. To select adjacent records, click on the first record to be selected, then press the **Shift** key before clicking on the last record you want to include in the selection. To select non-adjacent records, click on each record separately while holding down the **Ctrl** (under Windows) or **Command** (under Mac OS) key. |
-| No selection       | Integer | 0     | It is not be possible to select a record in the list                                                                                                                                                                                                                                                                                                                        |
-| Single selection   | Integer | 1     | Only one record can be selected at a time                                                                                                                                                                                                                                                                                                                                   |
+| Constante          | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------ | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Multiple selection | Entier long | 2      | L’utilisateur peut sélectionner plusieurs enregistrements. Pour sélectionner des enregistrements contigus, il suffit de cliquer sur le premier enregistrement à sélectionner puis d'appuyer sur la touche **Majuscule** avant de cliquer sur le dernier. Pour sélectionner des enregistrements non adjacents, il suffit de cliquer sur chaque enregistrement en maintenant enfoncée la touche **Ctrl** (sous Windows) ou **Commande** (sous Mac OS). |
+| No selection       | Entier long | 0      | Il n'est pas possible de sélectionner un enregistrement dans la liste                                                                                                                                                                                                                                                                                                                                                                                |
+| Single selection   | Entier long | 1      | Seule la sélection d’un enregistrement à la fois est autorisée                                                                                                                                                                                                                                                                                                                                                                                       |
 
- If you do not pass the *selectMode* parameter, the “Multiple Selection” mode is used by default.   
+ Si vous ne passez pas le paramètre *modeSélection*, par défaut le mode “Sélection multiple” est utilisé. 
 
-The *enterList* parameter lets you authorize the “Enter in List” mode for the displayed list. This lets the user select and modify the record values directly in the output form. Pass [True](true.md "True") to enable this mode or [False](false.md "False") to disable it. By default, if you do not pass the *enterList* parameter, the “Enter in List” mode is disabled.   
-Keep in mind that with the **DISPLAY SELECTION** command, this parameter only allows the selection of the values in the list and not their modification. In fact, the **DISPLAY SELECTION** command loads the records of the current selection in Read only in the current process. Only the [MODIFY SELECTION](modify-selection.md) command allows the actual entry of values. 
+Le paramètre *saisieListe* vous permet d’autoriser le mode “Saisie en liste” dans la liste affichée. Ce mode permet à l'utilisateur de sélectionner et de modifier directement les valeurs des enregistrements dans le formulaire sortie. Passez Vrai pour autoriser ce mode ou Faux pour ne pas l’autoriser. Par défaut, si vous ne passez pas le paramètre *saisieListe*, le mode “Saisie en liste” n’est pas autorisé.   
+A noter qu'avec la commande **DISPLAY SELECTION**, ce paramètre permet uniquement la sélection de valeurs dans la liste et non leur modification. En effet, la commande **DISPLAY SELECTION** charge les enregistrements de la sélection courante en Lecture seulement dans le process en cours. Seule la commande [MODIFY SELECTION](modify-selection.md) permet effectivement la saisie de valeurs. 
 
-**Note:** The [OBJECT SET ENTERABLE](object-set-enterable.md) command can be used to enable or disable the Enter in list mode on the fly. 
+**Note :** La commande [OBJECT SET ENTERABLE](object-set-enterable.md) permet d’activer ou de désactiver le mode Saisie en liste à la volée. 
 
-If the selection contains only one record and the first optional *\** is not used, the record appears in the input form instead of the output form. If the first optional *\** is specified, a one-record selection is displayed, using the output form. If the first optional *\** is specified and the user displays the record in the input form by double-clicking on it, the scroll bars will be hidden in the input form. To reverse this effect, pass the second optional \*.
+Lorsque la sélection ne contient qu'un enregistrement, et que le premier paramètre optionnel *\** n'est pas passé, l'enregistrement s'affichera directement dans le formulaire entrée. Si le premier paramètre optionnel *\** est spécifié, l'enregistrement unique sera affiché dans le formulaire sortie. Si le premier paramètre optionnel *\** est spécifié et que l'utilisateur affiche l'enregistrement dans le formulaire entrée en double-cliquant dessus, les barres de défilement du formulaire seront masquées. Pour annuler ce second effet du premier paramètre optionnel *\**, passez le second paramètre optionnel *\**.
 
-Custom buttons may be put in the Footer or Header area of the output form in order to terminate the execution of the **DISPLAY SELECTION** command. You can use automatic Accept or Cancel buttons to exit, or use an object method that calls [ACCEPT](accept.md) or [CANCEL](cancel.md). When an output form called by the **DISPLAY SELECTION** command has no buttons, only the **Escape** (Windows) or **Esc** (macOS) key can be used to exit the list.
+Vous pouvez placer des boutons personnalisés dans la zone d'en-tête ou de pied de page du formulaire sortie pour terminer l'exécution de la commande **DISPLAY SELECTION**. Vous pouvez utiliser des boutons automatiques **Valider** ou **Annuler** permettant de sortir de la liste ou utiliser une méthode objet qui appelle les commandes [ACCEPT](accept.md) ou [CANCEL](cancel.md). Lorsqu’un formulaire sortie appelé par la commande **DISPLAY SELECTION** est dépourvu de boutons, seule la touche **Echap** (Windows) ou **Esc** (macOS) permet de quitter la liste. 
 
-During and after execution of **DISPLAY SELECTION**, the records that the user highlighted (selected) are kept in a set named UserSet. The UserSet is available within the selection display for object methods when a button is clicked or a menu item is chosen. It is also available to the project method that called **DISPLAY SELECTION** after the command was completed.
+Pendant et après l'exécution d'un **DISPLAY SELECTION**, les enregistrements sélectionnés par l'utilisateur sont conservés dans un ensemble système nommé UserSet. Après l'exécution de la commande, l'ensemble UserSet est accessible pendant un **DISPLAY SELECTION** aux méthodes objet de boutons, aux méthodes appelées par des commandes de menu, ainsi que pour la méthode projet qui avait appelé **DISPLAY SELECTION**. 
 
-## Example 1 
+## Exemple 1 
 
-The following example selects all the records in the \[People\] table. It then uses **DISPLAY SELECTION** to display the records, and allows the user to select the records to print. Finally, it selects the records with [USE SET](use-set.md), and prints them with [PRINT SELECTION](print-selection.md):
-
-```4d
- ALL RECORDS([People]) // Select all records
- DISPLAY SELECTION([People];*) // Display the records
- USE SET("UserSet") // Use only records picked by user
- PRINT SELECTION([People]) // Print the records that the user picked
-```
-
-## Example 2 
-
-See example #6 for the [Form event code](./commands/form-event-code) command. This example shows all the tests you may need to check in order to fully monitor the events that occur during a DISPLAY SELECTION.
-
-## Example 3 
-
-To reproduce the functionality provided by, for example, the **Records** menu of the Design environment when you use **DISPLAY SELECTION** or [MODIFY SELECTION](modify-selection.md) in the Application environment, proceed as follows:
-
-a. In the Design environment, create a menu bar with the menu commands you want, for example, Show All, Query and Order By. 
-
-b. Associate this menu bar (using the “Associated menu bar” menu in the form properties dialog box) with the output form used with **DISPLAY SELECTION** or [MODIFY SELECTION](modify-selection.md).
-
-c. Associate the following project methods to your menu commands:
+L'exemple suivant sélectionne tous les enregistrements de la table \[Personnes\]. La commande **DISPLAY SELECTION** est alors utilisée pour afficher les enregistrements et permettre à l'utilisateur de désigner ceux qu'il souhaite imprimer. Enfin, les enregistrements sélectionnés sont récupérés à l'aide de la commande [USE SET](use-set.md) et imprimés avec [PRINT SELECTION](print-selection.md) :
 
 ```4d
-  // M_SHOW_ALL (attached to menu item Show All)
- $vpCurTable:=Current form table
- ALL RECORDS($vpCurTable->)
- 
-  // M_QUERY (attached to menu item Query)
- $vpCurTable:=Current form table
- QUERY($vpCurTable->)
- 
-  // M_ORDER_BY (attached to menu item Order By)
- $vpCurTable:=Current form table
- ORDER BY($vpCurTable->)
+ ALL RECORDS([Personnes]) // Sélection de tous les enregistrements
+ DISPLAY SELECTION([Personnes];*) // Affichage des enregistrements
+ USE SET("UserSet") // Use uniquement les enregistrements sélectionnés par l'utilisateur
+ PRINT SELECTION([Personnes]) // Imprimer les enregistrements sélectionnés
 ```
 
-You can also use other commands, such as [PRINT SELECTION](print-selection.md), [QR REPORT](qr-report.md), and so on, to provide all the “standard” menu options you may want each time you display or modify a selection in the Application environment. Thanks to the [Current form table](current-form-table.md) command, these methods are generic, and the menu bar they support can be attached to any output form of any table.
+## Exemple 2 
 
-## See also 
+Reportez-vous à l'exemple n°6 de la commande [Form event code](../commands/form-event-code.md) ; il indique tous les tests que vous pourrez avoir besoin d'effectuer pour surveiller la totalité des événements intervenant pendant l'exécution de la commande **DISPLAY SELECTION**. 
 
-[Form event code](./commands/form-event-code)  
+## Exemple 3 
+
+Pour reproduire, par exemple, les fonctionnalités apportées par le menu **Enregistrements** du mode Développement lorsque vous utilisez [MODIFY SELECTION](modify-selection.md) ou **DISPLAY SELECTION** en mode Application, procédez de la manière suivante :
+
+I. Dans le mode Développement, créez une barre de menus comportant les menus qui vous intéressent (par exemple Tout montrer, Recherche et Trier).   
+II. Associez cette barre de menus (à l'aide du menu “Barre de menus associée” dans la boîte de dialogue des propriétés du formulaire) au formulaire sortie utilisé avec les commandes **DISPLAY SELECTION** ou [MODIFY SELECTION](modify-selection.md).  
+III. Associez les méthodes projet suivantes à vos commandes de menu :
+
+```4d
+  // M_TOUT_MONTRER (associée à la commande de menu Tout montrer)
+ $vpCourTable:=Current form table
+ ALL RECORDS($vpCourTable->)
+```
+
+```4d
+  // M_Recherche (associée à la commande de menu Recherche)
+ $vpCourTable:=Current form table
+ QUERY($vpCourTable->)
+ 
+  // M_TRIER (associée à la commande de menu Trier)
+ $vpCourTable:=Current form table
+ ORDER BY($vpCourTable->)
+```
+
+Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print-selection.md), [QR REPORT](qr-report.md), etc., afin de reproduire les commandes de menu "standard" à chaque fois que vous affichez ou modifiez une sélection en mode Application. Grâce à la commande [Current form table](current-form-table.md), ces méthodes sont génériques et les barres de menus auxquelles elles sont associées peuvent être rattachées à tout formulaire de sortie ou à toute table.
+
+## Voir aussi 
+
+[Form event code](../commands/form-event-code.md)  
 [MODIFY SELECTION](modify-selection.md)  
-*Sets*  
+*Présentation des ensembles*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 59 |
+| Numéro de commande | 59 |
 | Thread safe | no |
-| Forbidden on the server ||
-
+| Interdite sur le serveur ||
 
 

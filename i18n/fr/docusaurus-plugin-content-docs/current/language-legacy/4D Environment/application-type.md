@@ -9,58 +9,58 @@ displayed_sidebar: docs
 <!--REF #_command_.Application type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Numeric value denoting the type of the application |
+| Résultat | Integer | &#8592; | Valeur numérique représentant le type de l'application |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Application type.Summary-->The Application type command returns a numeric value that denotes the type of 4D environment that you are running.<!-- END REF--> 4D provides the following predefined constants:  
+<!--REF #_command_.Application type.Summary-->La fonction **Application type** renvoie une valeur numérique qui représente le type de l'environnement 4D que vous utilisez.<!-- END REF--> 4D vous fournit les constantes prédéfinies suivantes :
 
-| Constant          | Value | Comment                                                                                                     |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------- |
-| 4D Desktop        | 3     |                                                                                                             |
-| 4D Local mode     | 0     |                                                                                                             |
-| 4D Remote mode    | 4     |                                                                                                             |
-| 4D Server         | 5     |                                                                                                             |
-| 4D Volume desktop | 1     |                                                                                                             |
-| tool4d            | 6     | For more information, see [tool4D](http://developer.4d.com/docs/next/Admin/cli#tool4d) on developer.4d.com. |
+| Constante         | Valeur | Comment                                                                                                           |
+| ----------------- | ------ | ----------------------------------------------------------------------------------------------------------------- |
+| 4D Desktop        | 3      |                                                                                                                   |
+| 4D Local mode     | 0      |                                                                                                                   |
+| 4D Remote mode    | 4      |                                                                                                                   |
+| 4D Server         | 5      |                                                                                                                   |
+| 4D Volume desktop | 1      |                                                                                                                   |
+| tool4d            | 6      | Pour plus d'informations, voir [tool4D](http://developer.4d.com/docs/next/Admin/cli#tool4d) sur developer.4d.com. |
 
-**Note:** *4D Desktop* incorporates certain deployment offers, such as, for example,"4D SQL Desktop".
+**Note :** *4D Desktop* intègre certaines offres de déploiement, comme par exemple "4D SQL Desktop".
 
-## Example 
+## Exemple 
 
-Somewhere in your code, other than in the *On Server Startup Database Method*, you need to check if you are running 4D Server. You can write:
+Quelque part dans votre code, ailleurs que dans la *On Server Startup Database Method*, vous voulez vérifier si l'utilisateur a ouvert la base avec 4D Server. Pour cela, vous pouvez écrire les lignes de code suivantes :
 
 ```4d
  If(Application type=4D Server)
-  //Perform appropriate actions
+  //Exécuter les actions nécessaires
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Application version](application-version.md)  
 [Version type](version-type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 494 |
+| Numéro de commande | 494 |
 | Thread safe | yes |
 
 

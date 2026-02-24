@@ -5,45 +5,45 @@ slug: /commands/read-only-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Read only state.Syntax-->**Read only state** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Read only state.Syntax-->**Read only state** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to test read-only state, or Default table, if omitted |
-| Function result | Boolean | &#8592; | Access to table is read-only (TRUE), or Access to table is read-write (FALSE) |
+| laTable | Table | &#8594;  | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Read only state.Summary-->This function tests whether or not the state of *aTable* is read-only for the process in which it is called.<!-- END REF--> Read only state returns TRUE if the state of *aTable* is read-only. Read only state returns FALSE if the state of *aTable* is read/ write.
+<!--REF #_command_.Read only state.Summary-->La fonction **Read only state** est utilisé pour tester si *laTable* est en mode lecture seulement dans le process où la fonction est appelée.<!-- END REF-->retourne Vrai si *laTable* est en lecture seulement, et Faux si *laTable* est en lecture-écriture.
 
-## Example 
+## Exemple 
 
-The following example tests the state of an \[Invoice\] table. If the state of the \[Invoice\] table is read-only, it is set to read/write, and then the current record is reloaded.
+L'exemple suivant teste le statut de la table \[Factures\]. Si elle est en lecture seulement, le mode lecture-écriture lui est appliqué et l'enregistrement courant est rechargé.
 
 ```4d
- If(Read only state([Invoice]))
-    READ WRITE([Invoice])
-    LOAD RECORD([Invoice])
+ If(Read only state([Factures]))
+    READ WRITE([Factures])
+    LOAD RECORD([Factures])
  End if
 ```
 
-**Note:** The invoice record is reloaded to allow the user to modify it. A record that was previously loaded in a read-only state will remain locked until it is reloaded in a read/write state.
+**Note :** L'enregistrement courant est rechargé pour permettre à l'utilisateur de le modifier. En effet, un enregistrement précédemment chargé en mode lecture seulement reste verrouillé jusqu'à ce qu'il soit rechargé en mode lecture-écriture.
 
-## See also 
+## Voir aussi 
 
 [READ ONLY](read-only.md)  
 [READ WRITE](read-write.md)  
-*Record Locking*  
+*Verrouillage d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 362 |
+| Numéro de commande | 362 |
 | Thread safe | yes |
 
 

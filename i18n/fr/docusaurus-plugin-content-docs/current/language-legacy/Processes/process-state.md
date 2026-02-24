@@ -5,39 +5,39 @@ slug: /commands/process-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* ) : Integer<!-- END REF-->
 <!--REF #_command_.Process state.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number |
-| Function result | Integer | &#8592; | State of the process |
+| process | Integer | &#8594;  | Numéro du process |
+| Résultat | Integer | &#8592; | Statut du process |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Process state.Summary-->The **Process state** command returns the state of the process whose number you pass in *process*.<!-- END REF--> 
+<!--REF #_command_.Process state.Summary-->La commande **Process state** retourne le statut du process dont le numéro est passé dans *process*.<!-- END REF--> 
 
-The function result can be one of the values provided by the following predefined constants:
+Le résultat de la fonction peut être l'une des valeurs des constantes prédéfinies suivantes (thème *Statut du process*) : 
 
-| Constant                  | Type    | Value | Comment                                                                                                                                                                                                                                   |
-| ------------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Does not exist            | Integer | \-100 |                                                                                                                                                                                                                                           |
-| Aborted                   | Integer | \-1   |                                                                                                                                                                                                                                           |
-| Executing                 | Integer | 0     |                                                                                                                                                                                                                                           |
-| Delayed                   | Integer | 1     |                                                                                                                                                                                                                                           |
-| Waiting for user event    | Integer | 2     |                                                                                                                                                                                                                                           |
-| Waiting for input output  | Integer | 3     |                                                                                                                                                                                                                                           |
-| Waiting for internal flag | Integer | 4     |                                                                                                                                                                                                                                           |
-| Paused                    | Integer | 5     |                                                                                                                                                                                                                                           |
+| Constante                 | Type        | Valeur | Comment                                                                                                                                                                                                                                                 |
+| ------------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aborted                   | Entier long | \-1    |                                                                                                                                                                                                                                                         |
+| Delayed                   | Entier long | 1      |                                                                                                                                                                                                                                                         |
+| Does not exist            | Entier long | \-100  |                                                                                                                                                                                                                                                         |
+| Executing                 | Entier long | 0      |                                                                                                                                                                                                                                                         |
+| Paused                    | Entier long | 5      |                                                                                                                                                                                                                                                         |
+| Waiting for input output  | Entier long | 3      |                                                                                                                                                                                                                                                         |
+| Waiting for internal flag | Entier long | 4      |                                                                                                                                                                                                                                                         |
+| Waiting for user event    | Entier long | 2      |                                                                                                                                                                                                                                                         |
 
-If the process does not exist (which means you did not pass a number in the range 1 to [Count tasks](count-tasks.md)), **Process state** returns Does not exist (-100).
+Si le process n'existe pas (ce qui signifie le numéro que vous avez passé est hors de l'intervalle de 1 à [Count tasks](count-tasks.md)), **Process state** retourne Does not exist (-100).
 
-## Example 
+## Exemple 
 
-The following example puts the name and process reference number for each process into the *asProcName* and *aiProcNum* arrays. The method checks to see if the process has been aborted. In this case, the process name and number are not added to the arrays: 
+L'exemple suivant retourne le nom et le numéro de référence de chaque process dans les tableaux *asProcName* et *aiProcNum*. La méthode teste si le process a été détruit. Dans ce cas, le nom et le numéro du process ne sont pas ajoutés dans le tableau :
 
 ```4d
  $vlNbTasks:=Count tasks
@@ -51,22 +51,21 @@ The following example puts the name and process reference number for each proces
        aiProcNum{$vlActualCount}:=$vlProcess
     End if
  End for
-  // Eliminate unused extra elements
- ARRAY TEXT(asProcName;$vlNbTasks)
+  // Eliminer les éléments superflus
+ ARRAY TEXT(asProcName;$vlActualCount)
  ARRAY INTEGER(aiProcNum;$vlActualCount)
 ```
 
-## See also 
+## Voir aussi 
 
 [Count tasks](count-tasks.md)  
-[Process info](./commands/process-info)  
+[Process info](../commands/process-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 330 |
+| Numéro de commande | 330 |
 | Thread safe | no |
-
 
 

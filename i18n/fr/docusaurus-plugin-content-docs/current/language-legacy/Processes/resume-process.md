@@ -5,35 +5,35 @@ slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* : Integer )<!-- END REF-->
+<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.RESUME PROCESS.Summary-->**RESUME PROCESS** resumes a *process* whose execution has been paused or delayed.<!-- END REF--> If *process* is not paused or delayed, the command does nothing.
+<!--REF #_command_.RESUME PROCESS.Summary-->**RESUME PROCESS** réactive un process suspendu ou endormi.<!-- END REF--> Si *process* n'est pas endormi ou suspendu, **RESUME PROCESS** ne fait rien.
 
-If *process* has been delayed before, see the [PAUSE PROCESS](pause-process.md) or [DELAY PROCESS](delay-process.md) commands. If *process* does not exist, the command does nothing.
+Si *process* a été suspendu, référez-vous aux commandes [PAUSE PROCESS](pause-process.md) ou [DELAY PROCESS](delay-process.md). Si *process* n'existe pas, cette commande ne fait rien.
 
-**Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
+**Note :** Vous ne pouvez pas utiliser cette commande à partir d'un poste client pour affecter une procédure stockée sur le poste serveur (*process*<0).
 
-## See also 
+## Voir aussi 
 
 [DELAY PROCESS](delay-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 320 |
+| Numéro de commande | 320 |
 | Thread safe | yes |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

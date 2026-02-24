@@ -5,51 +5,50 @@ slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *ligneMenu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for last item added |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Integer | &#8592; | Current menu item style |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Integer | &#8592; | Style courant de la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu item style.Summary-->The **Get menu item style** command returns the font style of the menu item whose number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
+<!--REF #_command_.Get menu item style.Summary-->La commande **Get menu item style** retourne le style de police de la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-If you omit the *process* parameter, **Get menu item style** applies to the menu bar for the current process. Otherwise, **Get menu item style** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous omettez le paramètre *process*, **Get menu item style** s'applique à la barre de menus du process courant. Sinon, **Get menu item style** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-**Get menu item style** returns a combination (one or a sum) of the following predefined constants, found in the *Font Styles* theme:
+**Get menu item style** retourne une combinaison (une ou une somme) des constantes prédéfinies suivantes, placées dans le thème *Styles de caractères* :
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| Bold      | Integer | 1     |
-| Italic    | Integer | 2     |
-| Plain     | Integer | 0     |
-| Underline | Integer | 4     |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
+| Underline | Entier long | 4      |
 
-  
-## Example 
+## Exemple 
 
-To test if a menu item is displayed in bold, you write:
+Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, vous écrivez :
 
 ```4d
  If((Get menu item style($vlMenu;$vlItem)&Bold)#0)
@@ -57,16 +56,16 @@ To test if a menu item is displayed in bold, you write:
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [SET MENU ITEM STYLE](set-menu-item-style.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 426 |
+| Numéro de commande | 426 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

@@ -5,124 +5,124 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* : Text ; *bString* : Text {; *options* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* ; *bString* {; *options*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aString | Text | &#8594;  | String to compare |
-| bString | Text | &#8594;  | String to compare |
-| options | Integer | &#8594;  | Comparison rule(s) |
-| Function result | Integer | &#8592; | Result of string comparison |
+| aString | Text | &#8594;  | Chaîne à comparer |
+| bString | Text | &#8594;  | Chaîne à comparer |
+| options | Integer | &#8594;  | Règle(s) de comparaison |
+| Résultat | Integer | &#8592; | Résultat de la comparaison de chaînes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R6|Created|
+|18 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Compare strings.Summary-->The **Compare strings** command returns a negative, zero, or positive value depending on if *aString* is evaluated as lower, equal, or higher than *bString*.<!-- END REF--> 
+<!--REF #_command_.Compare strings.Summary-->La commande **Compare strings** retourne une valeur négative, zéro, ou une valeur positive, en fonction du paramètre *aString* selon qu'il soit évalué comme étant inférieur, égal ou supérieur au paramètre *bString*.<!-- END REF--> 
 
-In the *aString* parameter, pass a text value. 
+Dans le paramètre *aString*, passez une valeur texte.
 
-In the *bString* parameter, pass a text value to be compared to *aString*. 
+Dans le paramètre *aString*, passez une valeur texte à comparer avec *aString*.
 
-By default, **Compare strings** functions as if the "<" (less than) operator is used. (See *String operators*). This can be modified with the *options* parameter. You can pass one or a combination of the following constants from the *Strings* theme: 
+Par défaut, **Compare strings** fonctionne comme si l'opérateur "<" (inférieur à) était utilisé. (Voir *Opérateurs de chaînes*). Cela peut être modifié à l'aide du paramètre *options*. Vous pouvez passer une ou plusieurs des constantes du thème *Chaînes* : 
 
-| Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sk case insensitive      | 2     | Strings are compared according to the current data language with no consideration of capitalization differences. Note that diacritical marks are taken into consideration. For example, "A" is considered the same as "a", however "a" is not considered the same as "à" . By default, 4D string comparison is case insensitive. Can be combined with: sk char codes OR sk diacritic insensitive sk whole word ([Position](position.md) command only) This constant implies the use of the following constants (which can also be combined for improved readability): sk kana insensitive sk width insensitive sk strict                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| sk char codes            | 1     | Strings are compared according to character codes. Current data language settings are not taken into account during the comparison. Can be combined with: sk case insensitive Only for "a-z" or "A-Z" ranges. (e.g., Alpha = alpha, but Alpha # âlphà)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| sk diacritic insensitive | 4     | Strings are compared according to the current data language, however the diacritical mark (e.g., accent or symbol) of letters is ignored. For example, "a" is considered the same as "à". Can be combined with: sk case insensitive sk whole word ([Position](position.md) command only) This constant implies the use of the following constants (which can also be combined for improved readability): sk kana insensitive sk width insensitive sk strict                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| sk kana insensitive      | 8     | For Japanese language. Controls the distinction between Hiragana and Katakana syllables. From a semantic point of view, the difference between Hiragana and Katakana is usually significant, but to capture as many results as possible, the default mode in 4D is to ignore the difference (kana insensitive). For example, "あ" is considered the same as "ア". The sk strict option performs a kana sensitive comparison. sk kana insensitive can be used to partially relax the rule to be kana insensitive. **Note:** The data language must be set to Japanese to use this option. For all other languages, the option is ignored and [Compare strings](compare-strings.md) will work as if sk strict was specified. In other words, setting this option in a non-Japanese context would actually make the comparison kana sensitive (the opposite effect). Can be combined with: sk case insensitive sk diacritic insensitive This constant implies the use of the following constants (which can also be combined for improved readability): sk width insensitive sk strict                                                                                                                               |
-| sk strict                | 0     | Strings are compared for exact matches according to the current data language. In most cases, capitalization and diacritical marks of letters are taken into account during the comparison. Can be combined with: sk case insensitive sk diacritic insensitive sk kana insensitive This constant implies the use of the following constant (which can also be combined for improved readability): sk width insensitive                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| sk width insensitive     | 16    | For Japanese language. Corresponds to the "East Asian Width" Unicode standard, as defined in [Unicode Standard Annex #11](http://www.unicode.org/reports/tr11/). From a semantic point of view, the difference between a "narrow" and "wide" character or a "full width" and "half width" character is usually insignificant, which is the default mode in 4D. For example, "ｱ" is considered the same as "ア". The sk strict option performs a width sensitive comparison. **Notes:** The data language must be set to Japanese to use this option. For all other languages, the option is ignored and [Compare strings](compare-strings.md) will work as if sk strict was specified. In other words, setting this option in a non-Japanese context would actually make the comparison width sensitive (the opposite effect). This option is ignored by the [Position](position.md) function. Unicode width insensitive collation is asymmetric and impossible to locate by position or length. Can be combined with: sk case insensitive sk diacritic insensitive sk kana insensitive This constant implies the use of the following constant (which can also be combined for improved readability): sk strict |
+| Constante                | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sk case insensitive      | 2      | Les chaînes sont comparées en fonction de la langue des données, indépendamment des différences de capitalisation. A noter que les signes diacritiques sont pris en compte. Par exemple, "A" est considéré comme identique à "a", mais "a" n'est pas considéré comme identique à "à". Par défaut, la comparaison de chaînes 4D n'est pas sensible à la casse. Peut être combinée avec : sk char codes OU sk diacritic insensitive sk whole word (commande [Position](position.md) uniquement) Cette constante implique l'utilisation des constantes suivantes (qui peuvent également être combinées pour une meilleure lisibilité) : sk kana insensitive sk width insensitive sk strict                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| sk char codes            | 1      | Les chaînes sont comparées en fonction des codes de caractères. Les paramètres de langue des données ne sont pas pris en compte lors de la comparaison. Peut être combinée avec : sk case insensitive Uniquement pour les plages "a-z" ou "A-Z". (ex : Alpha = alpha, mais Alpha # âlphà)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| sk diacritic insensitive | 4      | Les chaînes sont comparées en fonction de la langue des données, mais le signe diacritique (par exemple, un accent ou un symbole) des lettres est ignoré. Par exemple, "a" est considéré comme identique à "à". Peut être combinée avec : sk case insensitive sk whole word (commande [Position](position.md) uniquement) Cette constante implique l'utilisation des constantes suivantes (qui peuvent également être combinées pour une meilleure lisibilité) : sk kana insensitive sk width insensitive sk strict                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| sk kana insensitive      | 8      | S'applique à la langue japonaise. Contrôle la distinction entre les syllabes Hiragana et Katakana. D'un point de vue sémantique, la différence entre Hiragana et Katakana est généralement significative, mais pour obtenir un maximum de résultats, le mode par défaut dans 4D est d'ignorer la différence (insensible au kana). Par exemple, "あ" est considéré comme étant identique à "ア". L'option sk strict effectue une comparaison sensible au kana. sk kana insensible peut être utilisé pour assouplir partiellement la règle et la rendre insensible au kana. **Notes :** La langue des données doit être définie sur le japonais pour utiliser cette option. Pour toutes les autres langues, l'option est ignorée et [Compare strings](compare-strings.md) fonctionnera comme si sk strict était spécifié. En d'autres termes, définir cette option dans un contexte non japonais rendrait la comparaison sensible au kana (l'effet inverse). Peut être combinée avec : sk case insensitive sk diacritic insensitive Cette constante implique l'utilisation des constantes suivantes (qui peuvent également être combinées pour une meilleure lisibilité) : sk width insensitive sk strict                                                                                                                                                                                                                                                                                         |
+| sk strict                | 0      | Les chaînes sont comparées pour les correspondances exactes en fonction de la langue actuelle des données. Dans la plupart des cas, les majuscules et les signes diacritiques des lettres sont pris en compte lors de la comparaison. Peut être combinée avec : sk case insensitive sk diacritic insensitive sk kana insensitive Cette constante implique l'utilisation de la constante suivante (qui peut également être combinée, pour une meilleure lisibilité) :*<br/>* sk width insensitive                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| sk width insensitive     | 16     | S'applique à la langue japonaise. Correspond à la norme Unicode « largeur est-asiatique », telle que définie dans[ l'Annexe 11 de la norme Unicode](http://www.unicode.org/reports/tr11/). D'un point de vue sémantique, la différence entre un caractère « étroit » et « large » ou un caractère « pleine largeur » et « demi-largeur » est généralement insignifiante, ce qui est le mode par défaut dans 4D. Par exemple, "ｱ" est considéré comme "ア". L'option sk strict effectue une comparaison sensible à la largeur. L'option sk largeur insensible peut être utilisée afin d'assouplir partiellement la règle et d'être insensible à la largeur (voir exemple 2). **Notes** : La langue des données doit être définie sur le japonais pour utiliser cette option. Pour toutes les autres langues, l'option est ignorée et [Compare strings](compare-strings.md) fonctionnera comme si sk strict était spécifié. En d'autres termes, définir cette option dans un contexte non japonais rendrait la comparaison sensible à la largeur (l'effet inverse). Cette option est ignorée par la fonction [Position](position.md). Le classement Unicode insensible à la largeur est asymétrique et impossible à localiser par position ou longueur. Peut être combinée avec : sk case insensitive sk diacritic insensitive sk kana insensitive Cette constante implique l'utilisation de la constante suivante (qui peut également être combinée, pour une meilleure lisibilité) : sk strict |
 
-For information about defining the data language, see the section in the *Design Reference*.
+Pour plus d'informations sur la définition du langage de données, veuillez consulter la section dans le *Manuel de Développement.*
 
-**Warning:** You cannot use the @ wildcard character with **Compare strings**. For example, if you pass *"abc@"* in *aString* or *bString* the command will actually evaluate the *"abc@"* string and not an "abc" string plus any character.
+**Attention :** Vous ne pouvez pas utiliser le caractère @ avec **Compare strings.** Par exemple, si vous passez *abc@"* dans *aString* ou *bString*, la commande évaluera la chaîne "abc@" et non une chaîne "abc" accompagnée de tout autre caractère.
 
-**Returned value**
+**Valeur retournée**
 
-The command returns the following longint values:
+La commande retourne les valeurs *entier long* suivantes :
 
-| **Value** | **Description**                   |
-| --------- | --------------------------------- |
-| \-1       | *aString* is lower than *bString* |
-| 0         | *aString* is equal to *bString*   |
-| 1         | *aString* is higher *bString*     |
+| **Valeur** | **Description**                     |
+| ---------- | ----------------------------------- |
+| \-1        | *aString* est inférieur à *bString* |
+| 0          | *aString* est égal à *bString*      |
+| 1          | *aString* est supérieur à *bString* |
 
-## Example 1 
+## Exemple 1 
 
-You want to compare the following strings: 
+Vous souhaitez comparer les chaînes suivantes :
 
 ```4d
  $string1:="alpha Bravo charlie Delta Echo Fox-Trot"
  $string2:="Alpha Bravo Charlie Delta Echo Fox-Trot"
  
-  //compare the strings using the character code
+  //comparer les chaînes à l'aide du code caractère
  $result:=Compare strings($string1;$string2;sk char codes)
   // $result = 1
  
-  //compare the strings using the character code but ignoring any capitalization
+  //comparer les chaînes à l'aide du code caractère mais en ignorant les majuscules
  $result:=Compare strings($string1;$string2;sk char codes+sk case insensitive)
   // $result = 0
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following examples illustrate the specific impact of options in **Japanese data language context**:
+Les exemples suivants illustrent l'incidence des options dans le **contexte de la langue de données japonaise** :
 
 ```4d
-  //default is kana insensitive
- $result:=Compare strings("イロハ";"いろは") // equal
- $result:=Compare strings("イロハ";"いろは";sk strict) // not equal
- $result:=Compare strings("イロハ";"いろは";sk kana insensitive) // equal
+  //par défaut, kana insensible à la casse
+ $result:=Compare strings("イロハ";"いろは") // identique
+ $result:=Compare strings("イロハ";"いろは";sk strict) // non identique
+ $result:=Compare strings("イロハ";"いろは";sk kana insensitive) // identique
 ```
 
 ```4d
-  //default is case insensitive
- $result:=Compare strings("さつき";"さっき") // equal
- $result:=Compare strings("さつき";"さっき";sk strict) // not equal
- $result:=Compare strings("さつき";"さっき";sk case insensitive) // equal
+  //par défaut, insensible à la casse
+ $result:=Compare strings("さつき";"さっき") // identique
+ $result:=Compare strings("さつき";"さっき";sk strict) // non identique
+ $result:=Compare strings("さつき";"さっき";sk case insensitive) // identique
 ```
 
 ```4d
-  //default is diacritic sensitive when the data language is set to Japanese (different to all other languages)
- $result:=Compare strings("ete";"été") // equal in non-Japanese data language
- $result:=Compare strings("ete";"été") // not equal in Japanese data language
- $result:=Compare strings("うがい";"うかい") // not equal
- $result:=Compare strings("うがい";"うかい";sk strict) // not equal
- $result:=Compare strings("うがい";"うかい";sk diacritic insensitive) // equal
+  //par défaut, sensible aux signes diacritiques lorsque la langue des données est définie sur le japonais (différente de toutes les autres langues)
+ $result:=Compare strings("ete";"été") // identique dans une langue de données autre que le japonais
+ $result:=Compare strings("ete";"été") // non identique en langue de données japonaise
+ $result:=Compare strings("うがい";"うかい") // non identique
+ $result:=Compare strings("うがい";"うかい";sk strict) // non identique
+ $result:=Compare strings("うがい";"うかい";sk diacritic insensitive) // identique
 ```
 
-**Note:** The "Sorting order appropriate for searching" setting (see ) has an impact on the **Compare strings** command. In particular, the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" will be interpreted differently. The setting also has an impact on "Japanese Iteration Marks" such as "ゝ" or "ゞ". For example:
+**Note :** Le paramètre "**Ordre de tri approprié pour la recherche"** (voir ) a une incidence sur la commande **Compare strings**. En particulier, la "Marque sonore prolongée Katakana-Hiragana" ou "長音記号" sera interprétée différemment. Le paramètre a également une incidence sur les « marques d'itération japonaises » telles que « ゝ » ou « ゞ ». Par exemple :
 
 ```4d
- $result:=Compare strings("いすず";"いすゞ") // equal if setting is disabled
- $result:=Compare strings("いすず";"いすゞ") // not equal if setting is enabled
- $result:=Compare strings("ラーメン";"ﾗｰﾒﾝ") // equal if setting is enabled
- $result:=Compare strings("ラーメン";&NBSP;"ﾗｰﾒﾝ") // not equal if setting is disabled
+ $result:=Compare strings("いすず";"いすゞ") // identique si le paramètre est désactivé
+ $result:=Compare strings("いすず";"いすゞ") // non identique si le paramètre est activé
+ $result:=Compare strings("ラーメン";"ﾗｰﾒﾝ") //  identique si le paramètre est activé
+ $result:=Compare strings("ラーメン"; "ﾗｰﾒﾝ") // non identique si le paramètre est désactivé
 ```
 
-## See also 
+## Voir aussi 
 
 [Position](position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1756 |
+| Numéro de commande | 1756 |
 | Thread safe | yes |
 
 

@@ -5,57 +5,57 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ({ *selector* : Integer }) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *sélecteur* )} : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Object category |
-| Function result | Text | &#8592; | Name of object |
+| sélecteur | Integer | &#8594;  | Catégorie d’objet |
+| Résultat | Text | &#8592; | Nom de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get name.Summary-->The **OBJECT Get name** command returns the name of a form object.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get name.Summary-->La commande **OBJECT Get name** retourne le nom d’un objet de formulaire.<!-- END REF--> 
 
-The command can be used to designate two types of objects according to the value of the *selector* parameter. In this parameter, you can pass one of the constants (placed in the "*Form Objects (Access)*" theme:
+La commande permet de désigner deux types d’objets en fonction du paramètre *sélecteur*. Vous pouvez passer dans ce paramètre l’une des constantes suivantes (placées dans le thème *Objets de formulaire (Accès)*) :
 
-* `Object current` or *selector* omitted: If you pass this selector or omit the *selector* parameter, the command returns the name of the object from which it was called (object method or submethod called by the object method). In this case, the command must be called in the context of a form object, otherwise it returns an empty string.
-* `Object with focus`: If you pass this selector, the command returns the name of the object that has the focus in the form.
+* Object current ou *sélecteur* omis : Si vous passez ce sélecteur ou omettez le paramètre *sélecteur*, la commande retourne le nom de l’objet à partir duquel elle a été appelée (méthode objet ou sous-méthode appelée par la méthode objet). Dans ce cas, la commande doit être appelée dans le contexte d’un objet de formulaire, sinon elle retourne une chaîne vide.
+* Object with focus : Si vous passez ce sélecteur, la commande retourne le nom de l’objet ayant le focus dans le formulaire.
 
-## Example 
+## Exemple 
 
-Object method for "bValidateForm" button:
+Méthode objet du bouton "bValiderForm" :
 
 ```4d
- $btnName:=OBJECT Get name(Object current)
+ $nomBtn:=OBJECT Get name(Object current)
 ```
 
-After the execution of this object method, the *$btnName* variable contains the "bValidateForm" value.
+Après l’exécution de cette méthode objet, la variable *$nomBtn* contient la valeur "bValiderForm".
 
-## See also 
+## Voir aussi 
 
-*Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
-*Objects (Forms)*  
+*Objets (Formulaires)*  
+*Objets de formulaire (Accès)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1087 |
+| Numéro de commande | 1087 |
 | Thread safe | no |
 
 

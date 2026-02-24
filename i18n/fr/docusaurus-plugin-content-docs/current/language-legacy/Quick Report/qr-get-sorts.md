@@ -5,55 +5,55 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* : Integer ; *aColumns* : Real array ; *aOrders* : Real array )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *zone* ; *tabColonnes* ; *tabTris* )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| aColumns | Real array | &#8592; | Sorted columns |
-| aOrders | Real array | &#8592; | Sort orders |
+| zone | Integer | &#8594;  | Référence de la zone |
+| tabColonnes | Real array | &#8592; | Colonnes triées |
+| tabTris | Real array | &#8592; | Ordres de tris |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET SORTS.Summary-->The QR GET SORTS command populates two arrays<!-- END REF-->:
+<!--REF #_command_.QR GET SORTS.Summary-->La commande **QR GET SORTS** remplit deux tableaux réels<!-- END REF--> :
 
-* *aColumns*  
-This array includes all the columns that have a sort order.
-* *aOrders*  
-Each element of this array contains the sort orders for the matching column.  
-\- If *aOrders{$i}* equals 1, the sort order is ascending.  
-\- If *aOrders{$i}* equals -1, the sort order is descending.
+* *tabColonnes*  
+Ce tableau contient toutes les colonnes auxquelles un ordre de tri a été associé.
+* *tabTris*  
+Chaque élément de ce tableau fournit l'ordre de tri courant de la colonne correspondante.  
+\- si *tabTris{$i}* vaut 1, le tri est croissant.  
+\- si *tabTris{$i}* vaut -1, le tri est décroissant.
 
-### Cross-table mode 
+### Etats tableaux croisés 
 
-In the case of cross-table mode, the resulting arrays cannot have more than two elements since sorts can only be performed on columns (1) and rows (2). (Values for *aColumns*).
+Avec ce type d'état, les tableaux ne peuvent pas comporter plus de deux éléments puisque les tris ne peuvent être effectués que sur les colonnes (1) et les lignes (2) (valeurs pour *tabColonnes*).   
+  
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR SET SORTS](qr-set-sorts.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 753 |
+| Numéro de commande | 753 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -9,47 +9,47 @@ displayed_sidebar: docs
 <!--REF #_command_.Current process name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Name of current process |
+| Résultat | Text | &#8592; | Nom du process courant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Created|
+|15 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current process name.Summary-->The **Current process name** command returns the name of the process within which this command is called.<!-- END REF-->
+<!--REF #_command_.Current process name.Summary-->La commande **Current process name** retourne le nom du process depuis lequel elle est appelée.<!-- END REF-->
 
-This command is particularly useful in the context of worker processes (see the *About workers* section). It can be used to identify the worker process to call when writing generic code. 
+Cette commande est particulièrement utile dans le contexte des process workers (voir la section *A propos des workers*). Lorsque vous écrivez du code générique, vous pouvez l'utiliser afin d'identifier le process worker à appeler. 
 
-## Example 
+## Exemple 
 
-You want to call a worker and pass the calling process name as parameter:
+Vous voulez appeler un process worker et lui passer comme paramètre le nom du process appelant :
 
 ```4d
- CALL WORKER(1;"myMessage";Current process name;"Start:"+String(vMax))
+ CALL WORKER(1;"monMessage";Current process name;"Début :"+String(vMax))
 ```
 
-## See also 
+## Voir aussi 
 
-*About workers*  
+*A propos des workers*  
 [CALL WORKER](call-worker.md)  
 [KILL WORKER](kill-worker.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1392 |
+| Numéro de commande | 1392 |
 | Thread safe | yes |
 
 

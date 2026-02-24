@@ -5,128 +5,126 @@ slug: /commands/selection-range-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *start* : Integer ; *end* : Integer {; ...(*data* : Field, Table ; *array* : Array)} )<!-- END REF-->
+<!--REF #_command_.SELECTION RANGE TO ARRAY.Syntax-->**SELECTION RANGE TO ARRAY** ( *début* ; *fin* ; *leChamp* ;  *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*} )<br/>**SELECTION RANGE TO ARRAY** ( *début* ; *fin* {; *laTable* ; *tableau* {; *laTable2* ; *tableau2* ; ... ; *laTableN* ; *tableauN*} )<!-- END REF-->
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| start | Integer | &#8594;  | Selected record number where data retrieval starts |
-| end | Integer | &#8594;  | Selected record number where data retrieval ends |
-| data | Field, Table | &#8594;  | Field to use for retrieving data or Table to use for retrieving record numbers |
-| array | Array | &#8592; | Array to receive field data or record numbers |
+| début | Integer | &#8594;  | Numéro de l'enregistrement sous-sélectionné à partir duquel commencer la copie des données |
+| fin | Integer | &#8594;  | Numéro de l'enregistrement sous-sélectionné auquel arrêter la copie des données |
+| leChamp &#124; laTable | Champ, Table | &#8594;  | Champ à utiliser pour récupérer les données ou Table à utiliser pour récupérer les numéros d'enregistrements |
+| tableau | Array | &#8592; | Tableau recevant les données ou les numéros d'enregistrements |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|<6|Created|
+|13|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** creates one or more arrays and copies data from the fields or record numbers from the current selection into the arrays.<!-- END REF--> 
+<!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crée un ou plusieurs tableau(x) et y copie des données en provenance des champs de la sélection courante ou les numéros des enregistrements de la sélection courante.<!-- END REF--> 
 
-Unlike [SELECTION TO ARRAY](selection-to-array.md), which applies to the current selection in its entirety, **SELECTION RANGE TO ARRAY** only applies to the range of selected records specified by the parameters *start* and *end*.
+A la différence de [SELECTION TO ARRAY](selection-to-array.md) qui s'applique à l'intégralité de la sélection courante, **SELECTION RANGE TO ARRAY** s'applique uniquement à une sous-sélection d'enregistrements, définie par les paramètres *début* et *fin*.
 
-The command expects you to pass in *start* and *end* the selected record numbers complying with the formula *1 <= start <= end <= Records in selection (\[...\])*. 
+Vous devez passer dans les paramètres *début* et *fin* des numéros d'enregistrements sous-sélectionnés s'inscrivant dans l'intervalle défini par la formule *1 <= début <= fin <= Enregistrements trouves (\[...\])*. 
 
-If you pass *1 <= start = end < Records in selection (\[...\])*, you will load fields or get the record number from the record whose selected record is *start = end*.
+Si vous passez des numéros correspondant à *1 <= début = fin <= Enregistrements trouves (\[...\])*, ce sont les champs ou les numéros des enregistrements de la sélection courante répondant à *début = fin* qui seront chargés.
 
-If you pass incorrect selected record numbers, the command does the following:
+Si vous passez des numéros d'enregistrements incorrects, vous obtiendrez les résultats suivants : 
 
-* If *end > Records in selection (\[...\])*, it returns values from the selected record specified by *start* to the last selected record.
-* If *start > end*, it returns values from the record whose selected record is *start* only.
-* If both parameters are inconsistent with the size of the selection, it returns empty arrays.
+* Si *fin > Enregistrements trouves (\[...\])*, la commande retourne toutes les valeurs, à partir de l'enregistrement sous-sélectionné spécifié par *début* jusqu'au dernier enregistrement sous-sélectionné.
+* Si *début > fin*, la commande ne retourne que les valeurs de l'enregistrement *début*.
+* Si les deux paramètres sont incompatibles avec la taille de la sous-sélection, les tableaux sont retournés vides
 
-Like [SELECTION TO ARRAY](selection-to-array.md), the **SELECTION RANGE TO ARRAY** command applies to the selection for the table specified in the first parameter.
+Comme [SELECTION TO ARRAY](selection-to-array.md), **SELECTION RANGE TO ARRAY** s'applique à la sélection de la table passée en paramètre. La commande peut réaliser les opérations suivantes :
 
-Also like [SELECTION TO ARRAY](selection-to-array.md), **SELECTION RANGE TO ARRAY** can perform the following:
+* Charger les valeurs d'un ou plusieurs champs,
+* Charger les numéros des enregistrements, à l'aide de la syntaxe *...;\[table\];tableau;...*
+* Charger des valeurs de champs liés, s'il existe un lien automatique de N vers 1 entre les tables, ou si vous avez préalablement appelé la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) pour rendre automatiques les liens manuels N vers 1 (dans les deux cas, les valeurs peuvent être chargées à travers plusieurs niveaux de liens N vers 1 entre les tables).
 
-* Load values from one or several fields.
-* Load Record numbers using the syntax *...;\[table\];Array;...*
-* Load values from related fields, if there is a Many to One automatic relation between the tables or if you have previously called [SET AUTOMATIC RELATIONS](set-automatic-relations.md) to change manual Many to One relations to automatic. In both cases, values can be loaded from tables through several levels of Many to One relations.
+Chaque tableau est typé en fonction du type de champ.
 
-Each array is typed according to the field type. 
-
-When you apply **SELECTION RANGE TO ARRAY** to a Time type field, it is important to note that they only create a Time type array if the array has not already been defined as another type. For example, in the following context, the *myArray* array remains a Longint type array:  
+A noter toutefois que **SELECTION RANGE TO ARRAY** appliquée à un champ de type Heure créera un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type. Par exemple dans le contexte ci-dessous, le tableau *monTab* conservera le type Entier long :  
 
 ```4d
- ARRAY LONGINT(myArray;0)
- SELECTION TO ARRAY([myTable]myTimeField;myArray)
+ ARRAY LONGINT(monTab;0)
+ SELECTION RANGE TO ARRAY([maTable]monChpHeure;monTab)
 ```
 
-If you load record numbers, they are copied into a Long Integer array.
+Si vous chargez les numéros des enregistrements, ils sont copiés dans un tableau de type Entier long. 
 
-**Note:** You can call the **SELECTION RANGE TO ARRAY** command with just the *start* and *end* parameters. You use this special syntax to launch, on a limited selection, the execution of a deferred series of [SELECTION TO ARRAY](selection-to-array.md) commands using the *\** parameter (see example 4). 
+**Note :** Il est possible d’appeler la commande **SELECTION RANGE TO ARRAY** avec uniquement les paramètres *début* et *fin*. Cette syntaxe particulière peut être employée pour lancer sur une sélection limitée l’exécution d’une série différée de commandes [SELECTION TO ARRAY](selection-to-array.md) utilisant le paramètre *\** (cf. exemple 4). 
 
-**4D Server**: **SELECTION RANGE TO ARRAY** is optimized for 4D Server. Each array is created on the server and then sent, in its entirety, to the client machine.
+**4D Server :** La commande **SELECTION RANGE TO ARRAY** est optimisée pour 4D Server. Chaque tableau est créé sur le serveur puis envoyé en totalité sur le poste client.
 
-**WARNING:** **SELECTION RANGE TO ARRAY** can create large arrays, depending on the range you specify in *start* and *end,* and on the type and size of the data you are loading. Arrays reside in memory, so it is a good idea to test the result after the command is completed. To do so, test the size of each resulting array or cover the call to the command, using an [ON ERR CALL](on-err-call.md) project method.
+**ATTENTION :** **SELECTION RANGE TO ARRAY** peut créer des tableaux de taille importante, en fonction de l'intervalle défini par *début* et *fin*, ainsi que du type et de la taille des données à charger. Comme les tableaux résident en mémoire, il peut être utile de tester la taille des tableaux créés après l'exécution de la commande, ou d'utiliser une méthode projet d'interception d'erreurs, installée par la commande [ON ERR CALL](on-err-call.md). 
 
-If the command is successful, the size of each resulting array is equal to *(end-start)+1*, except if the *end* parameter exceeded the number of records in the selection. In such a case, each resulting array contains *(Records in selection(\[...\])-start)+1* elements.
+Une fois la commande correctement exécutée, la taille des tableaux résultants est égale à *(fin-début)+1* — sauf si le paramètre *fin* est supérieur au nombre d'enregistrements dans la sélection. Dans ce cas, les tableaux contiennent *(Enregistrements trouves(\[...\])-début)+1* éléments.
 
-## Example 1 
+## Exemple 1 
 
-The following code addresses the first 50 records from the current selection for the *\[Invoices\]* table. It loads the values from the *\[Invoices\]Invoice ID* field and the *\[Customers\]Customer ID* related field.
+La ligne de code suivante utilise les 50 premiers enregistrements de la sélection courante de la table *\[Factures\]*. Les valeurs du champ *\[Factures\]RéfFacture* et du champ lié *\[Clients\]RéfClient* sont chargées.
 
 ```4d
- SELECTION RANGE TO ARRAY(1;50;[Invoices]Invoice ID;alInvoID;[Customers]Customer ID;alCustID)
+ SELECTION RANGE TO ARRAY(1;50;[Factures]RéfFacture;tlRéfFacture;[Clients]RéfClient;tlRéfClient)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following code addresses the last 50 records from the current selection for the *\[Invoices\]* table. It loads the record numbers of the *\[Invoices\]* records as well as those of the *\[Customers\]* related records:
+Les lignes de code suivantes utilisent les 50 derniers enregistrements de la sélection courante de la table *\[Factures\]*. Les numéros d'enregistrements de la table *\[Factures\]* ainsi que ceux de la table liée *\[Clients\]* sont chargés :
 
 ```4d
- lSelSize:=Records in selection([Invoices])
- SELECTION RANGE TO ARRAY(lSelSize-49;lSelSize;[Invoices];alInvRecN;[Customers];alCustRecN)
+ lTailleSél:=Records in selection([Factures])
+ SELECTION RANGE TO ARRAY(lTailleSél-49;lTailleSél;[Factures];taFactureNum;[Clients];taClientNum)
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following code process, in sequential “chunks”of 1000 records, a large selection that could not be downloaded in its entirety into arrays:
+Les lignes de code suivantes vous permettent de travailler séquentiellement avec des portions de 1000 enregistrements d'une sélection importante qui ne peut pas être chargée dans des tableaux en une seule fois :
 
 ```4d
  lMaxPage:=1000
- lSelSize:=Records in selection([Phone Directory])
- For($lPage ;1;1+((lSelSize-1)\lMaxPage))
-  // Load the values and/or record numbers
+ lTailleSél:=Records in selection([Annuaire])
+ For($lPage ;1;1+((lTailleSél-1)\lMaxPage))
+  // Charger les valeurs et/ou les numéros d'enregistrements
     SELECTION RANGE TO ARRAY(1+(lMaxPage*($lPage-1));lMaxPage*$lPage;...;...;...;...;...;...)
-  // Do something with the arrays
+  // Faire quelque chose avec les tableaux
  End for
 ```
 
-## Example 4 
+## Exemple 4 
 
-Use the first 50 current records of the \[Invoices\] table to load various arrays, in deferred execution: 
+Utilisation des 50 premiers enregistrements courants de la table \[Factures\] pour charger divers tableaux, en exécution différée : 
 
 ```4d
-  // Deferred statements
- SELECTION TO ARRAY([Invoices]InvoiceRef;arrLInvRef;*)
- SELECTION TO ARRAY([Invoices]Date;arrDInvDate;*)
- SELECTION TO ARRAY([Clients]ClientRef;arrLClientRef;*)
-  // Execution of deferred statements
+     // Instructions différées
+ SELECTION TO ARRAY([Factures]RefFacture;tLRefFac;*)
+ SELECTION TO ARRAY([Factures]Date;tDDateFac;*)
+ SELECTION TO ARRAY([Clients]RefClient;tLRefCli;*)
+     // Exécution des instructions différées
  SELECTION RANGE TO ARRAY(1;50)
 ```
 
-## See also 
+## Voir aussi 
 
 [ON ERR CALL](on-err-call.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 368 |
+| Numéro de commande | 368 |
 | Thread safe | yes |
 
 

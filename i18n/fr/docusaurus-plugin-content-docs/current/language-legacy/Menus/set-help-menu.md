@@ -5,79 +5,78 @@ slug: /commands/set-help-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* : Collection )<!-- END REF-->
+<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | menuCol | Collection | &#8594;  | Collection of menu objects |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20|Created|
+|20|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET HELP MENU.Summary-->The **SET HELP MENU** command allows you to replace the default 4D **Help** menu with the *menuCol* collection of menu items in the application mode.<!-- END REF--> 
+<!--REF #_command_.SET HELP MENU.Summary-->La commande **SET HELP MENU** vous permet de remplacer le menu **Aide** par défaut de 4D par la collection d'éléments de menu MenuCol dans le mode d'application.<!-- END REF-->
 
-This command replaces the default **Help** menu of the application mode in all 4D environments: interpreted, compiled, merged, single-user and client/server. 
+Cette commande remplace le menu **Aide** par défaut du mode d'application dans tous les environnements 4D : interprété, compilé, fusionné, mono et client/serveur.
 
-**Notes:** 
+**Notes :** 
 
-* The "Help" label itself is managed by the system and cannot be customized with this command.
-* Customized Help menus do not support submenus, checkmarks, styles, or icons.
+* Le label "Help" lui-même est géré par le système et ne peut pas être personnalisé avec cette commande.
+* Les menus d'aide personnalisés ne prennent pas en charge les sous-menus, les coches, les styles ou les icônes.
 
-In *menuCol*, pass a collection of menu objects defining all items of the customized Help menu. Each menu object can contain the following properties:
+Dans *menuCol*, passez une collection d'objets de menu définissant tous les éléments du menu d'aide personnalisé. Chaque objet de menu peut inclure les propriétés suivantes :
 
-| **Property**  | **Type**                                                                                        | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| title         | Text                                                                                            | Menu item name                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| method        | Text \| [4D.Function](./commands/formula.md-objects) | Project method name or 4D formula object to execute when the menu item is selected. When this property is used, the "action" property should not be passed (otherwise "method" is ignored).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| worker        | Text \| Number                                                                                  | Name of the worker or Number of the process to handle the "method" code execution. Several configurations are supported, depending on the the "worker" property value:<br/> if it is a worker name (Text), 4D uses or creates this worker to execute the "method" (equivalent to [CALL WORKER](call-worker.md)) if it is a process number, 4D uses this process if it exists, otherwise it does nothing (equivalent to [CALL WORKER](call-worker.md)) if it is undefined and the application displays a current dialog (frontmost dialog), 4D uses the process of this dialog (equivalent to [CALL FORM](call-form.md)) if it is undefined and the application does not display a current dialog, 4D calls and uses the worker 1 (4D remote/single-user) or the worker *4D\_server\_interface* (4D Server) |
-| action        | Text                                                                                            | *Standard Action* to execute when the menu item is selected. When this property is used, the "method" property is ignored if passed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| shortcutKey   | Text                                                                                            | Shortcut key of the item (to call with Ctrl/Command key)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| shortcutShift | Boolean                                                                                         | True to add the **Shift** key to the item shortcut                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| shortcutAlt   | Boolean                                                                                         | True to add the **Alt/Option** key to the item shortcut                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Propriété** | **Type**                                                                                         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| title         | Texte                                                                                            | Nom de l'élément de menu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| method        | Texte \| [4D.Function](../API/FunctionClass.md#about-4dfunction-objects) | Nom de la méthode du projet ou de l'objet de formule 4D à exécuter lorsque l'élément de menu est sélectionné. Lorsque cette propriété est utilisée, la propriété "action" ne doit pas être transmise (sinon la "method" est ignorée).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| worker        | Texte \| Nombre                                                                                  | Nom du worker ou Numéro du processus qui doit gérer l'exécution du code de la "method". Plusieurs configurations sont possibles, en fonction de la valeur de la propriété "worker" :<br/> s'il s'agit d'un nom du worker (Texte), 4D utilise ou crée ce worker pour exécuter la "method" (équivalent à [CALL WORKER](call-worker.md)) si c'est un numéro de processus, 4D utilise ce processus s'il existe, sinon rien ne se passe (équivalent à [CALL WORKER](call-worker.md)) s'il est indéfini et que l'application affiche un dialogue courant (dialogue le plus en avant), 4D utilise le processus de ce dialogue (équivalent à [CALL FORM](call-form.md)) s'il est indéfini et que l'application n'affiche pas de dialogue en cours, 4D appelle et utilise le worker 1 (4D distant/mono) ou le worker 4D\_server\_interface (4D Server). |
+| action        | Texte                                                                                            | *Action standard* à exécuter lorsque l'élément de menu est sélectionné. Lorsque cette propriété est utilisée, la propriété "method" est ignorée si elle est transmise.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| shortcutKey   | Texte                                                                                            | Touche de raccourci de l'élément (à appeler avec la touche Ctrl/Commande)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| shortcutShift | Booléen                                                                                          | Vrai pour ajouter la touche **Shift** au raccourci de l'élément                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| shortcutAlt   | Booléen                                                                                          | Vrai pour ajouter la touche **Alt/Option** au raccourci de l'élément                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-The customized **Help** menu will display items in the same order as the collection. 
+Le menu **Aide** personnalisé affichera les éléments dans le même ordre que la collection.
 
-To insert a separator line, pass **null** or an empty object in the collection. 
+Pour insérer une ligne de séparation, passez **null** ou un objet vide dans la collection.
 
-## Example 
+## Exemple 
 
-You want to customize the **Help** menu for your application:
+Vous souhaitez personnaliser le menu **Aide** de votre application :
 
 ```4d
  var $col : Collection
- $col:=New collection
- $col.push(New object("title";"Knowledge base";"worker";"workerHlp";"method";"methodHlp";"shortcutAlt";True;"shortcutKey";"Y"))
- $col.push(Null) //to add a separation line
- $col.push(New object("title";"Tools";"action";ak msc;"shortcutShift";True;"shortcutKey";"Y"))
+ $col:=Créer collection
+ $col.push(Créer objet("title";"Knowledge base";"worker";"workerHlp";"method";"methodHlp";"shortcutAlt";True;"shortcutKey";"Y"))
+ $col.push(Null) //pour ajouter une ligne de séparation
+ $col.push(Créer objet("title";"Tools";"action";ak msc;"shortcutShift";True;"shortcutKey";"Y"))
  SET HELP MENU($col)
- SET ABOUT("About this application";"m_about") //to replace 'About 4D' on Windows
+ APPELER SURÀPROPOS("À propos de cette application";"m_apropos") //pour remplacer "A propos de 4D" sur Windows
 ```
 
 ![](../assets/en/commands/pict6260534.en.png)
 
-## See also 
+## Voir aussi 
 
 [SET ABOUT](set-about.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1801 |
+| Numéro de commande | 1801 |
 | Thread safe | no |
-
 
 

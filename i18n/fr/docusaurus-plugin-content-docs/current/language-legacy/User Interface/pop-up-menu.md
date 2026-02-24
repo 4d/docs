@@ -5,122 +5,119 @@ slug: /commands/pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contents* : Text {; *default* : Integer {; *xCoord* : Integer ; *yCoord* : Integer}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenu* {; *parDéfaut* {; *coordX* ; *coordY*}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| contents | Text | &#8594;  | Menu text definition |
-| default | Integer | &#8594;  | Number of menu item selected by default |
-| xCoord | Integer | &#8594;  | X coordinate of upper left corner |
-| yCoord | Integer | &#8594;  | Y coordinate of upper left corner |
-| Function result | Integer | &#8592; | Selected menu item number |
+| contenu | Text | &#8594;  | Définition du texte du menu |
+| parDéfaut | Integer | &#8594;  | Numéro de l'élément sélectionné par défaut |
+| coordX | Integer | &#8594;  | Coordonnée X du coin supérieur gauche |
+| coordY | Integer | &#8594;  | Coordonnée Y du coin supérieur gauche |
+| Résultat | Integer | &#8592; | Numéro de l'élément de menu sélectionné |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Pop up menu.Summary-->The **Pop up menu** command displays a pop-up menu at the current location of the mouse.<!-- END REF--> 
+<!--REF #_command_.Pop up menu.Summary-->La commande **Pop up menu** fait apparaître un pop up à l'emplacement courant du curseur de la souris ou à l'emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->
 
-In order to follow user interface rules, you usually call this command in response to a mouse click and if the mouse button is still down.
+Selon les règles standard d'interface utilisateur, cette commande doit généralement être appelée en réponse à un clic souris, et lorsque le bouton reste enfoncé un certain laps de temps.
 
-You define the items of the pop-up menu with the parameter *contents* as follows:
+Vous définissez les éléments du pop up menu à l'aide du paramètre *contenu*, de la manière suivante :
 
-* Separate each item from the next one with a semi-colon (*;*). For example, *"ItemText1;ItemText2;ItemText3".*
-* To disable an item, place an opening parenthesis (*(*) in the item text.
-* To specify a separation line, pass "-" or "(-" as item text.
-* To specify a font style for a line, place in the item text a less than sign (*<*) followed by one of these characters:
-  
-| <B | Bold                     |  
-| -- | ------------------------ |  
-| <I | Italic                   |  
-| <U | Underline                |  
-| <O | Outline (Macintosh only) |  
-| <S | Shadow (Macintosh only)  |
-* To add a check mark to an item, place in the item text an exclamation mark (*!*) followed by the character you want as a check mark.  
-   * On Macintosh, the character is displayed directly. To display the standard check mark whatever the system version or language, use the following statement: Char(18).  
-   * On Windows, a check mark is displayed, no matter what character you passed.
-* To add an icon to an item, place in the item text a circumflex accent (^) followed by a character whose code plus 208 is the resource ID of a Mac OS-based icon resource.
-* To add a shortcut to an item, place in the item text a slash (*/*) followed by the shortcut character for the item. Note that this last option is purely informative; no shortcut will activate the pop-up menu. However, you may want to include a shortcut if the pop-up menu item has an equivalent in the main menu bar of your application.
+* Chaque élément est séparé des autres par un point-virgule (;), *"Elément1;Elément2;Elément3"*.
+* Pour inactiver un élément, placez une parenthèse ouvrante "*(*" dans son libellé.
+* Pour définir une ligne de séparation, passez la valeur "-" ou "(-" en tant que libellé.
+* Pour définir le style de caractères d'un élément, placez dans son libellé le symbole inférieur à "*<*" suivi d'une lettre. Voici les différents codes :  
 
-**Tip:** It is possible to disable the mechanism for interpreting special characters (!, /, etc.) in a pop up menu item in order, for example, to have these characters included in the wording. To do this, simply have the item definition in the *contents* parameter begin with the Char(1) statement (e.g. **Char*(1)+"1/4 pt"* to define a "1/4 pt" item). 
+| <B | Gras                        |  
+| -- | --------------------------- |  
+| <I | Italique                    |  
+| <U | Souligné                    |  
+| <O | Contours (Mac OS seulement) |  
+| <S | Relief (Mac OS seulement)   |
+* Pour associer une coche à un élément, insérez dans son libellé un point d'exclamation "*!*" suivi du caractère que vous voulez utiliser comme coche.  
+   * Sous Mac OS, le caractère passé est directement affiché. Pour afficher la coche standard quelle que soit la version ou la langue du système, utilisez l'instruction [Char](char.md)(18).  
+   * Sous Windows, une coche standard est affichée (quel que soit le caractère passé).
+* Pour associer une icône à un élément, insérez dans son libellé un accent circonflexe "^" suivi d'un caractère dont le code moins 48 plus 256 (ou plus 208) représente un numéro de ressource d'icône Mac OS.
+* Pour ajouter un raccourci clavier à un élément, insérez dans son libellé une barre oblique "*/*" suivie du caractère de raccourci. Notez que cette dernière option est uniquement informative (aucun raccourci clavier n'active le pop up menu), cependant vous pouvez indiquer un raccourci clavier si l'élément du pop up menu dispose d'une commande équivalente dans la barre de menus principale de votre application.
 
-The optional *default* parameter specifies the default menu item selected when the pop-up menu is displayed. Pass a value between 1 and the number of menu items. If you omit this parameter, the command selects the first menu item as the default.
+Astuce : Il est possible de désactiver le mécanisme d'interprétation des caractères spéciaux (!, /, etc.) dans un élément de pop up menu afin, par exemple, de faire figurer ces caractères dans les libellés. Pour cela, il suffit de faire débuter la définition de l'élément contenue dans le paramètre *contenu* par l'instruction [Char](char.md)(1) (ex : **Caractere*(1)+"1/4"* pour définir un élément "1/4").
 
-The optional *xCoord* and *yCoord* parameters designate the location of the pop-up menu to be displayed. In *xCoord* and *yCoord*, pass respectively the horizontal and vertical coordinates of the upper left corner of the menu. These coordinates must be expressed in pixels in the local coordinate system of the current form. These two parameters must be passed together; if only one is passed, it will be ignored.
+Le paramètre optionnel *parDéfaut* vous permet de définir l'élément du pop up menu sélectionné par défaut lorsque celui-ci apparaît. Passez une valeur située entre 1 et le nombre d'éléments du menu. Si vous ne passez pas ce paramètre, le premier élément du menu sera sélectionné par défaut. Si vous passez également les paramètres *coordX* et *coordY* (cf. ci-dessous), ce paramètre est ignoré.
 
-If you use the *xCoord* and *yCoord* parameters, the *default* parameter is ignored. In this case, the mouse is not necessarily located at the level of the pop-up menu.
+Les paramètres facultatifs *coordX* et *coordY* permettent de désigner l’emplacement du pop up menu à afficher. Passez respectivement dans *coordX* et *coordY* les coordonnées horizontale et verticale du coin supérieur gauche du menu. Ces coordonnées doivent être exprimées en pixels dans le système de coordonnées local au formulaire courant. Ces deux paramètres doivent être passés ensemble ; si un seul est passé, il est ignoré.   
+Si vous utilisez les paramètres *coordX* et *coordY*, le paramètre *parDéfaut* est ignoré. Dans ce cas en effet, la souris ne se trouve pas nécessairement au niveau du pop up menu.   
+Ces paramètres sont utiles notamment pour la gestion des boutons 3D avec pop up menu associé.
 
-These parameters are particularly useful for managing 3D buttons with an associated pop-up menu.
+Lorsqu'un élément du pop up menu est sélectionné, la commande retourne son numéro, autrement elle retourne zéro.
 
-If you select a menu item, the command returns its number; otherwise, it returns zero (0).
+**Note :** Utilisez les pop up menus avec un nombre "raisonnable" d'éléments. Si, par exemple, vous voulez afficher plus de 50 éléments, envisagez plutôt d'employer une zone de défilement dans un formulaire.
 
-**Note:** Use pop-up menus that have a reasonable number of items. If you want to display more than 50 items, you might think about a using scrollable area in a form instead of a pop-up menu.
+## Exemple 
 
-## Example 
-
-The project method MY SPEED MENU pulls down a navigation speed menu:
+La méthode projet MON RACCOURCI fait apparaître un pop up menu de navigation :
 
 ```4d
-  // MY SPEED MENU project method
- MOUSE POSITION($vlMouseX;$vlMouseY;$vlButton)
- If(Macintosh control down|($vlButton=2))
-   $vtItems:="About this database...<I;(-;!-Other Options;(-"
-   For($vlTable;1;Get last table number)
-      If(Is table number valid($vlTable))
-         $vtItems:=$vtItems+";"+Table name($vlTable)
-      End if
-   End for
-   $vlUserChoice:=Pop up menu($vtItems)
-   Case of
-      :($vlUserChoice=1)
-  // Display Information
-      :($vlUserChoice=2)
-  // Display options
-   Else
-         If($vlUserChoice>0)
-  // Go to table whose number is $vlUserChoice-4
-         End if
-   End case
+  // Méthode projet MON RACCOURCI
+ MOUSE POSITION($vlMouseX;$vlMouseY;$vlBouton)
+ If(Macintosh control down | ($vlBouton=2))
+    $vtItems:="A propos de cette base...<I;(-;!-Autres options;(-"
+    For($vlTable;1;Get last table number)
+       If(Is table number valid($vlTable))
+          $vtItems:=$vtItems+";"+Table name($vlTable)
+       End if
+    End for
+    $vlChoixUtilisateur:=Pop up menu($vtItems)
+    Case of
+       :($vlChoixUtilisateur=1)
+  ` Afficher les informations
+       :($vlChoixUtilisateur=2)
+  ` Afficher les options
+       Else
+          If($vlChoixUtilisateur>0)
+  ` Aller à la table dont le numéro est $vlChoixUtilisateur-4
+          End if
+    End case
  End if
-```
 
-This project method can be called from:
+Cette méthode projet peut être appelée d'une des manières suivantes :
 
-* The method of a form object that reacts to a mouse click without waiting for the mouse button to be released (i.e., an invisible button)
-* A process that “spies” events and communicate with the other processes
-* An event-handling method installed using [ON ERR CALL](on-err-call.md).
+* depuis la méthode d'un objet réagissant à un clic souris, et n'attendant pas que le bouton soit relâché (par exemple un bouton invisible),
+* depuis un process qui “épie” les événements et communique avec les autres process,
+* depuis une méthode de gestion d'événements installée par la commande [ON ERR CALL](on-err-call.md).
 
-In the last two cases, the click does not need to occur in any form object. This is one of the advantages of the **Pop up menu** command. Generally, you use form objects to display pop-up menus. Using **Pop up menu**, you can display the menu anywhere.
+Dans les deux derniers cas, il n'est pas nécessaire que le clic se produise dans un objet de formulaire. C'est l'un des avantages de la commande **Pop up menu**. Généralement, les pop up menus sont affichés par l'intermédiaire d'objets de formulaire. Avec **Pop up menu**, vous pouvez faire apparaître un pop up menu n'importe où. 
 
-The pop-up menu is displayed on Windows by pressing the right mouse button; it is displayed on Macintosh by pressing Control-Click. Note, however, that the method does not actually check whether or not there was a mouse click; the caller method tests that.
+Le pop up menu s'affiche sous Windows lorsque l'utilisateur appuie sur le **bouton droit** de la souris, et sous Mac OS lorsqu'il utilise la combinaison **Control+clic**. Notez cependant que la méthode ci-dessus ne teste pas le clic souris, c'est la méthode appelante qui en est chargée. 
 
-The following is the pop-up menu as it appears on Windows (left) and Macintosh (right). Note the standard check mark for the Windows version.
+Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS (à droite). Notez la coche standard de la version Windows :
 
-![](../assets/en/commands/pict36394.en.png)
+![](../assets/en/commands/pict36394.fr.png)
 
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [MOUSE POSITION](mouse-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 542 |
+| Numéro de commande | 542 |
 | Thread safe | no |
 
 

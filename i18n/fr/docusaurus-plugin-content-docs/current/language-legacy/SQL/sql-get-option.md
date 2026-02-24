@@ -5,47 +5,47 @@ slug: /commands/sql-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *option* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SQL GET OPTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | Option number |
-| value | Integer, Text | &#8592; | Option value |
+| option | Integer | &#8594;  | Numéro d’option |
+| valeur | Integer, Text | &#8592; | Valeur de l’option |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL GET OPTION.Summary-->The **SQL GET OPTION** command returns the current *value* of the option passed in *option*.<!-- END REF-->
+<!--REF #_command_.SQL GET OPTION.Summary-->La commande **SQL GET OPTION** retourne la *valeur* courante de l’option passée dans le paramètre *option*.<!-- END REF-->
 
-For more information on the different options and their associated values, refer to the description of the [SQL SET OPTION](sql-set-option.md) command.
+Pour plus d’informations sur les différentes options et leurs valeurs associées, reportez-vous à la description de la commande [SQL SET OPTION](sql-set-option.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was properly executed, the system variable OK is set to 1\. Otherwise, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SQL SET OPTION](sql-set-option.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 819 |
+| Numéro de commande | 819 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

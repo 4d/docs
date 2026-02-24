@@ -5,48 +5,48 @@ slug: /commands/object-set-minimum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( * ; *object* : Text ; *minValue* : Date, Time, Real )<br/>**OBJECT SET MINIMUM VALUE** ( *object* : Variable, Field ; *minValue* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( {* ;} *objet* ; *valeurMini* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| minValue | Date, Time, Real | &#8594;  | Minimum value for object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| valeurMini | Date, Time, Number | &#8594;  | Valeur minimale pour l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->The **OBJECT SET MINIMUM VALUE** command modifies the minimum value of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET MINIMUM VALUE.Summary-->La commande **OBJECT SET MINIMUM VALUE** permet de modifier la valeur minimum de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-The "Minimum Value" property can be applied to number, date or time type data. For more information, refer to *Maximum and minimum values* in the *Design Reference* manual.
+La propriété "Valeur minimum" peut être appliquée aux données de type numérique, date ou heure. Pour plus d’informations, reportez-vous au paragraphe *Valeurs maximales et minimales* dans le manuel *Mode Développement*.
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In *minValue*, pass the new minimum value you want to assign to the object for the current process. This value must correspond to the object type, otherwise error 18 "Field types are incompatible" is returned. 
+Passez dans *valeurMini* la nouvelle valeur minimum à affecter à l’objet pour le process courant. Cette valeur doit correspondre au type de l’objet, sinon l’erreur 18 "Les types sont incompatibles" est retournée. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
 [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1242 |
+| Numéro de commande | 1242 |
 | Thread safe | no |
 
 

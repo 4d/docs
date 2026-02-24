@@ -9,48 +9,48 @@ displayed_sidebar: docs
 <!--REF #_command_.Is macOS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if operating system = macOS, else False |
+| Résultat | Boolean | &#8592; | Vrai si le système d'exploitation est macOS, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17|Created|
+|17|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Is macOS.Summary-->The **Is macOS** command returns True if the current operating system is macOS.<!-- END REF--> 
+<!--REF #_command_.Is macOS.Summary-->La commande **Is macOS** retourne Vrai si le système d'exploitation courant est macOS.<!-- END REF--> 
 
-## Example 
+#### Exemple 
 
-You want to determine if the current operating system is macOS:
+Vous voulez déterminer si le système d'exploitation courant est macOS :
 
 ```4d
  If(Is macOS)
-    ALERT("It's macOS")
+    ALERT("C'est macOS")
  Else
-    ALERT("It's not macOS")
+    ALERT("Ce n'est pas macOS")
  End if
 ```
 
-## See also 
+#### Voir aussi 
 
 [System info](system-info.md)  
 [Is Windows](is-windows.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1572 |
+| Numéro de commande | 1572 |
 | Thread safe | yes |
 
 

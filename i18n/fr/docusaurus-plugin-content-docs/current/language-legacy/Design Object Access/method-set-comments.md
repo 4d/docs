@@ -5,80 +5,80 @@ slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *path* : Text, Text array ; *comments* : Text, Text array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *chemin* ; *commentaires* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
-| comments | Text, Text array | &#8594;  | Documentation of designated method(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| commentaires | Text, Text array | &#8594;  | Documentation de(s) méthode(s) désignée(s) |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD SET COMMENTS.Summary-->The **METHOD SET COMMENTS** command replaces the documentation of the method(s) designated by the *path* parameter by those specified in the *comments* parameter.<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Summary-->La commande **METHOD SET COMMENTS** remplace la documentation de la ou des méthode(s) désignée(s) par le paramètre *chemin* par ceux définis dans le paramètre *commentaires*.<!-- END REF-->
 
-The documentation modified by this command is displayed in the 4D Explorer (not to be confused with lines of comments in the code). It contains:
+La documentation modifiée par cette commande est affichée dans l’Explorateur de 4D (à ne pas confondre avec les lignes de commentaires dans le code). Ils contiennent du texte stylé. Elle contient :
 
-* markdown text in project databases,
-* styled text in binary databases.
+* du texte markdown dans les bases projet,
+* du texte stylé dans les bases binaires.
 
-This documentation can be generated for methods ot type triggers, project methods, form methods, database methods, and classes. 
+Cette documentation peut être générée pour les méthodes de type trigger, méthodes projet, méthodes formulaire, méthodes base ou les classes.
 
-**Note:** Forms and form methods share the same documentation.
+**Note :** Les formulaires et les méthodes formulaire partagent la même documentation.
 
-You can use two types of syntaxes, based either on text arrays, or text variables:  
+Vous pouvez utiliser deux types de syntaxes, basées soit sur des tableaux texte, soit sur des variables texte :  
 
 ```4d
- var tVpath : Text // text variables
- var tVcomments : Text
- METHOD SET COMMENTS(tVpath;tVcomments) // documentation for a single method
+ var vTchemin : Text // variables texte
+ var vTcommentaires : Text
+ METHOD SET COMMENTS(vTchemin;vTcommentaires) // documentation d’une seule méthode
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrComments;0)
- METHOD SET COMMENTS(arrPaths;arrComments) // documentation for several methods
+ ARRAY TEXT(tabChemins;0) // tableaux texte
+ ARRAY TEXT(tabCommentaires;0)
+ METHOD SET COMMENTS(tabChemins;tabCommentaires) // documentation de plusieurs méthodes
 ```
 
-You cannot mix the two syntaxes.
+Il n’est pas possible de mixer les deux syntaxes.
 
-If you pass an invalid pathname, an error is generated.
+Si un chemin d’accès passé est invalide, une erreur est générée.
 
-You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated
+Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-## Example 
+## Exemple 
 
-Add a modification date to an existing trigger documentation:
+Ajout d’une date de modification à une documentation de trigger existante :
 
 ```4d
  METHOD GET COMMENTS("[trigger]/Table1";$comments)
- $comments:="Modif:"+String(Current date)+"\r"+$comments
+ $comments:="Modif :"+String(Date du jour)+"\r"+$comments
  METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
-## See also 
+## Voir aussi 
 
 [METHOD GET COMMENTS](method-get-comments.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1193 |
+| Numéro de commande | 1193 |
 | Thread safe | no |
 
 

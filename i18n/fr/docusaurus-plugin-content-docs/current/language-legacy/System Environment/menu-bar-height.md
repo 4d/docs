@@ -9,44 +9,44 @@ displayed_sidebar: docs
 <!--REF #_command_.Menu bar height.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Height (expressed in pixels) of menu bar (returns zero if menu bar is hidden) |
+| Résultat | Integer | &#8592; | Hauteur (exprimée en pixels) de la barre de menus (retourne zéro si la barre de menus est cachée) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Menu bar height.Summary-->Menu bar height returns the height of the menu bar, expressed in pixels.<!-- END REF-->
+<!--REF #_command_.Menu bar height.Summary-->La commande **Menu bar height** retourne la hauteur de la barre de menus, exprimée en pixels.<!-- END REF--> 
 
-The command returns 0:
+La commande retourne 0 :
 
-* if the menu bar is hidden
-* in SDI mode on Windows, if it is called from a process without a form window. For more information on this mode, please refer to the *SDI mode on Windows* section.
+* si la barre de menus est masquée,
+* en mode SDI sous Windows, si elle est appelée depuis un process dépourvu de fenêtre formulaire. Pour plus d'informations sur ce mode, veuillez vous reporter à la section *Mode SDI sous Windows*.
 
-**Note:** When the application is running in SDI mode on Windows, **Menu bar height** returns the height of a single menu bar line even if the window is narrowed and the menu bar has been wrapped on two or more lines. 
+**Note :** Lorsque l'application est exécutée en mode SDI sous Windows, **Menu bar height** retourne la hauteur d'une seule ligne de barre même si la largeur de la fenêtre est réduite et que la barre de menus est affichée sur deux lignes ou plus. 
 
-## See also 
+## Voir aussi 
 
 [HIDE MENU BAR](hide-menu-bar.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SHOW MENU BAR](show-menu-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 440 |
+| Numéro de commande | 440 |
 | Thread safe | no |
 
 

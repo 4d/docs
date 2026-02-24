@@ -5,112 +5,112 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *object* : Text {; *listType* : Integer}; *list* : Text )<br/>**OBJECT SET LIST BY NAME** ( *object* : Variable, Field {; *listType* : Integer}; *list* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objet* {; *typeListe*}; énumération )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an Object Name (String) If omitted, object is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
-| list | Text | &#8594;  | Name of the list to use as Choice list or "" to disassociate the list |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| énumération | Text | &#8594;  | Nom de l'énumération (définie en mode Développement) ou "" pour dissocier l’énumération |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Renamed|
-|14|Modified|
-|12|Renamed|
-|6|Modified|
-|<6|Created|
+|14|Renommé|
+|14|Modifié|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->The OBJECT SET LIST BY NAME command sets, replaces or disassociates the *list* associated with the object or group of objects specified by *object*.<!-- END REF--> The list whose name is passed in the *list* parameter must have been created using the List Editor in the Design environment.
+<!--REF #_command_.OBJECT SET LIST BY NAME.Summary-->La commande **OBJECT SET LIST BY NAME** définit, remplace ou dissocie l'*énumération* associée à l'objet ou au groupe d'objets désigné(s) par *objet*.<!-- END REF--> L'énumération dont le nom est passé dans le paramètre *énumération* doit avoir été créée dans l'éditeur d'énumérations, en mode Développement.
 
-This command can be applied in an input or dialog form, to fields and enterable variables whose value can be entered as text.
+Cette commande peut être appliquée, dans un formulaire entrée ou un formulaire de dialogue, aux champs et variables saisissables dont les valeurs peuvent être saisies sous forme de texte.
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional *\** parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-**Note:** This command cannot be used with fields located in a subform’s list form.
+**Note :** Cette commande ne peut pas être utilisée avec des champs placés dans le formulaire "liste" d'un sous-formulaire.
 
-The **OBJECT SET LIST BY NAME** command now allows you to set or replace all the types of lists associated with the object(s) designated by the *object* and *\** parameters: choice lists, list of required values, and lists of excluded values. To do this, in the *listType* parameter you pass one of the following constants, found in the "*Form Objects (Properties)*" theme:
+La commande **OBJECT SET LIST BY NAME** vous permet de définir ou de remplacer tous les types d’énumérations associées à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** : listes de choix (énumérations), listes de valeurs obligatoires et listes de valeurs exclues. Pour cela, il vous suffit de passer dans le paramètre *typeListe* une des constantes suivantes du thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant      | Type    | Value | Comment                                                                                    |
-| ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Constante     | Type        | Valeur | Comment                                                                                               |
+| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| Choice list   | Entier long | 0      | Liste simple de choix de valeurs (option "Enumération" dans la Liste des propriétés) (défaut)         |
+| Excluded list | Entier long | 2      | Liste de valeurs non acceptées pour la saisie (option "Exclusions" dans la Liste des propriétés)      |
+| Required list | Entier long | 1      | Liste des seules valeurs acceptées pour la saisie (option "Obligations" dans la Liste des propriétés) |
 
-If you omit this parameter, value 0 (Choice list) is used by default. 
+Si vous omettez ce paramètre, la valeur 0 (Liste énumération) est utilisée par défaut. 
 
-In the current process, to disassociate a list that was associated with the *object*, pass an empty string ("") in the *list* parameter for the type of list concerned.
+Pour dissocier dans le process courant une liste associée à l'*objet*, il suffit de passer une chaîne vide ("") dans le paramètre *énumération* pour le type de liste concerné.
 
-Existing list of values are replaced depending on how the list is associated to the form object:
+La liste de valeurs existante est remplacée en fonction de la manière dont la liste est associée à l'objet de formulaire :
 
-* using a choice list: the list itself is replaced.
-* using an array: the list is copied in array elements.
-* using an object (*not supported in binary databases*): the list is copied as collection elements in the *values* property of the object.
+* à l'aide d'une énumération : la liste elle-même est remplacée.
+* à l'aide d'un tableau : la liste est copiée dans les éléments du tableau.
+* à l'aide d'un objet (non pris en charge dans les bases binaires) : la liste est copiée en tant qu'éléments de collection dans la propriété values ​​de l'objet.
 
-## Example 1 
+## Exemple 1 
 
-The following example sets a choice list for a shipping field. If the shipping is overnight, then the choice list is set to shippers who can ship overnight. Otherwise, it is set to the standard shippers:
+L'exemple suivant définit l'énumération liée à un champ Coursiers. Si l'envoi doit être effectué de nuit, alors l'énumération affiche les sociétés de courses qui fonctionnent la nuit. Sinon, l'énumération standard est proposée :
 
 ```4d
- If([Shipments]Overnight)
-    OBJECT SET LIST BY NAME([Shipments]Shipper;"Fast Shippers")
+ If([Courses]Nuit)
+    OBJECT SET LIST BY NAME([Courses]Coursier;"Coursiers de nuit")
  Else
-    OBJECT SET LIST BY NAME([Shipments]Shipper;"Normal Shippers")
+    OBJECT SET LIST BY NAME([Courses]Coursier;"Coursiers standard")
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Associate the "color\_choice" list as a simple pop-up/drop-down list named "DoorColor":
-
-```4d
- OBJECT SET LIST BY NAME(*;"DoorColor";Choice list;"color_choice")
-  // in this case, the 3rd parameter (constant) can be omitted
-```
-
-## Example 3 
-
-You want to associate the "color\_choice" list with the "WallColor" combo box. Since this combo box is enterable, you want for it not to be possible to use certain colors such as "black", "purple" etc. These colors are placed in the "excl\_colors" list:
+Associer la liste "choix\_coul" en tant qu’énumération simple au pop up/Liste déroulante "CoulPorte" :
 
 ```4d
- OBJECT SET LIST BY NAME(*;"WallColor";Choice list;"color_choice")
- OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"excl_colors")
+ OBJECT SET LIST BY NAME(*;"CoulPorte";Choice list;"choix_coul")
+     // dans ce cas le 3e paramètre (constante) peut être omis
 ```
 
-## Example 4 
+## Exemple 3 
 
-You want to remove the list associations:
+Vous souhaitez associer la liste "choix\_coul" à une combo box "CoulMur". Comme la combo box est saisissable, vous souhaitez que certaines couleurs telles que "noir", "violet"... ne puissent être utilisées. Ces couleurs sont placées dans la liste "coul\_exclues" :
 
 ```4d
-  // removal of a choice list
- OBJECT SET LIST BY NAME(*;"DoorColor";Choice list;"")
-  // removal of list of values that are not allowed
- OBJECT SET LIST BY NAME(*;"WallColor";Excluded list;"")
+ OBJECT SET LIST BY NAME(*;"CoulMur";Choice list;"choix_coul")
+ OBJECT SET LIST BY NAME(*;"CoulMur";Excluded list;"coul_exclues")
 ```
 
-## See also 
+## Exemple 4 
+
+Vous souhaitez supprimer des associations de listes :
+
+```4d
+     // retrait de l’énumération simple
+ OBJECT SET LIST BY NAME(*;"CoulPorte";Choice list;"")
+     // retrait de la liste de valeurs non autorisées
+ OBJECT SET LIST BY NAME(*;"CoulMur";Excluded list;"")
+```
+
+## Voir aussi 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 237 |
+| Numéro de commande | 237 |
 | Thread safe | no |
 
 

@@ -5,49 +5,51 @@ slug: /commands/distinct-attribute-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* : Field ; *pathArray* : Text array )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *champObjet* ; *tabChemins* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectField | Field | &#8594;  | Indexed object field |
-| pathArray | Text array | &#8592; | Array to receive list of distinct paths |
+| champObjet | Field | &#8594;  | Champ objet indexé |
+| tabChemins | Text array | &#8592; | Tableau devant recevoir les chemins d'attributs du champ |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->The **DISTINCT ATTRIBUTE PATHS** command returns the list of distinct paths found in the indexed object field you passed in *objectField* for the current selection of the table to which this field belongs.<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->La commande **DISTINCT ATTRIBUTE PATHS** retourne la liste des chemins d'attributs différents présents dans le champ objet indexé passé dans *champObjet* et ce, pour la sélection courante de la table à laquelle le champ appartient.<!-- END REF-->
 
-In *objectField*, you must pass an Object type field that is indexed; otherwise, an error is returned. 
+Vous devez passer dans *champObjet* un champ de type Objet indexé ; sinon, une erreur est retournée. 
 
-After the call, the size of *pathArray* is equal to the number of distinct paths found in the selection. Paths to nested object attributes are returned using the standard dot notation, for example "company.address.number". Keep in mind that object attribute names are case-sensitive. The command does not change the current selection or the current record. 
+Après l'exécution de la commande, la taille du tableau *tabChemins* est égale au nombre de chemins différents trouvés dans la sélection. Les chemins des attributs imbriqués sont retournés avec la notation à points standard, par exemple "sociétés.adresse.numéro". Attention, gardez à l'esprit que les noms d'attributs d'objets tiennent compte de la casse des caractères. 
 
- In *pathArray*, the list of distinct paths is returned in alphabetical (diacritic) order. 
+ Dans *tabChemins*, la liste des chemins d'attributs distincts est retournée dans l'ordre alphabétique (diacritique). 
 
-**Notes:** 
+La commande ne modifie pas la sélection courante ni l'enregistrement courant. 
 
-* Records with an undefined value in the *objectField* are not taken into account.
-* Attribute paths created during a transaction are taken into account by the command. It is important to note that these paths are kept in the index of the object field even if the transation has been canceled.
+**Notes :**
 
-## Example 
+* Les enregistrements pour lesquels la valeur de *champObjet* est indéfinie ne sont pas pris en compte.
+* Les chemins d'attributs créés pendant une transaction sont pris en compte par la commande. Attention, ces chemins sont conservés dans l'index du champ objet même si la transaction a été annulée.
 
-Your database contains a \[Customer\]full\_Data (indexed) object field with 15 records:
+## Exemple 
 
-![](../assets/en/commands/pict2994114.en.png)
+Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements. Le champ est indexé :
 
-If you execute this code:
+![](../assets/en/commands/pict2994114.en.png) 
+
+Si vous exécutez ce code :
 
 ```4d
  ARRAY TEXT(aTPaths;0)
@@ -55,36 +57,36 @@ If you execute this code:
  DISTINCT ATTRIBUTE PATHS([Customer]full_Data;aTPaths)
 ```
 
-The *aTPaths* array receives the following elements:
+Le tableau *aTPaths* reçoit les éléments suivants :
 
-| Element | Value               |
-| ------- | ------------------- |
-| 1       | "age"               |
-| 2       | "Children"          |
-| 3       | "Children\[\]"      |
-| 4       | "Children\[\].age"  |
-| 5       | "Children\[\].Name" |
-| 6       | "Children.length"   |
-| 7       | "client"            |
-| 8       | "FirstName"         |
-| 9       | "LastName"          |
-| 10      | "Sex"               |
-| 11      | "telephone"         |
-| 12      | "telephone\[\]"     |
-| 13      | "telephone.length"  |
+| **Elément** | **Valeur**          |
+| ----------- | ------------------- |
+| 1           | "age"               |
+| 2           | "Children"          |
+| 3           | "Children\[\]"      |
+| 4           | "Children\[\].age"  |
+| 5           | "Children\[\].Name" |
+| 6           | "Children.length"   |
+| 7           | "client"            |
+| 8           | "FirstName"         |
+| 9           | "LastName"          |
+| 10          | "Sex"               |
+| 11          | "telephone"         |
+| 12          | "telephone\[\]"     |
+| 13          | "telephone.length"  |
 
-**Note:** "length" is a *virtual property* that is automatically available for all array type attributes. It provides the size of the array, i.e. the number of elements, and can be used in queries. For more information, please refer to the *Using the .length virtual property* paragraph. 
+**Note :** "length" est une *propriété virtuelle* qui est disponible automatiquement pour tous les attributs de type tableau. Elle fournit la taille du tableau, c'est-à-dire le nombre d'éléments, et peut être utilisée dans les requêtes. Pour plus d'informations, reportez-vous au paragraphe *Using the .length virtual property*. 
 
-## See also 
+## Voir aussi 
 
   
 [DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1395 |
+| Numéro de commande | 1395 |
 | Thread safe | yes |
 
 

@@ -5,55 +5,55 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; *createdOn* : Date ; *createdAt* : Time ; *modifiedOn* : Date ; *modifiedAt* : Time )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *nomFichier* ; *verrouillé* ; *invisible* ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document name or Full document pathname |
-| locked | Boolean | &#8594;  | Locked (True) or Unlocked (False) |
-| invisible | Boolean | &#8594;  | Invisible (True) or Visible (False) |
-| createdOn | Date | &#8594;  | Creation date |
-| createdAt | Time | &#8594;  | Creation time |
-| modifiedOn | Date | &#8594;  | Last modification date |
-| modifiedAt | Time | &#8594;  | Last modification time |
+| nomFichier | Text | &#8594;  | Nom du document ou Chemin d'accès complet au document |
+| verrouillé | Boolean | &#8594;  | Verrouillé (Vrai) ou non verrouillé (Faux) |
+| invisible | Boolean | &#8594;  | Invisible (Vrai) ou visible (Faux) |
+| créé le | Date | &#8594;  | Date de création |
+| créé à | Heure | &#8594;  | Heure de création |
+| modifié le | Date | &#8594;  | Date de dernière modification |
+| modifié à | Heure | &#8594;  | Heure de dernière modification |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->The **SET DOCUMENT PROPERTIES** command changes the information about the document whose name or pathname you pass in *document*.<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Summary-->La commande **SET DOCUMENT PROPERTIES** modifie certaines informations du document dont vous avez passé le nom ou le chemin d'accès dans *document*.<!-- END REF-->
 
-Before the call:
+Avant l'appel :
 
-* Pass True in *locked* to lock the document. A locked document cannot be modified. Pass False in *locked* to unlock a document.
-* Pass True in *invisible* to hide the document. Pass False in *invisible* to make the document visible in the desktop windows.
-* Pass the document creation date and time in *createdOn* and *createdAt*.
-* Pass the document last modification date and time in *modifiedOn* and *modifiedAt*.
+* Passez Vrai dans *verrouillé* pour verrouiller le document. Un document verrouillé ne peut être modifié. Passez Faux dans *verrouillé* pour déverrouiller un document.
+* Passez Vrai dans *invisible* pour cacher le document. Passez Faux dans *invisible* pour rendre le document visible dans les fenêtres du bureau.
+* Passez la date et l'heure de création du document dans *créé le* et *créé à*.
+* Passez la date et l'heure de la dernière modification du document dans *modifié le* et *modifié à*.
 
-The dates and times of creation and last modification are managed by the file manager of your system each time you create or access a document. Using this command, you can change those properties for special purpose. See example for the command [GET DOCUMENT PROPERTIES](get-document-properties.md).
+L'heure et la date de création et de dernière modification sont gérées par le gestionnaire de fichiers de votre système, à chaque fois que vous créez ou modifiez un document. Cette commande vous permet de modifier ces propriétés, dans des buts particuliers. Reportez-vous à l'exemple de la commande [GET DOCUMENT PROPERTIES](get-document-properties.md).
 
-## See also 
+## Voir aussi 
 
 [GET DOCUMENT PROPERTIES](get-document-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 478 |
+| Numéro de commande | 478 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

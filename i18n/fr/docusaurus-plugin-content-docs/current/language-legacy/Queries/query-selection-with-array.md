@@ -5,48 +5,48 @@ slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* : Field ; *array* : Array )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *champCible* ; *tableau* )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetField | Field | &#8594;  | Field used to compare the values |
-| array | Array | &#8594;  | Array of searched values |
+| champCible | Field | &#8594;  | Champ duquel comparer les valeurs |
+| tableau | Array | &#8594;  | Tableau des valeurs recherchées |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->The **QUERY SELECTION WITH ARRAY** command searches the table of the field passed as first parameter for the records where the value of *targetField* is equal to at least one of the values of the elements in the *array*.<!-- END REF--> The records found will become the new current selection.
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->La commande **QUERY SELECTION WITH ARRAY** recherche dans la sélection courante de la table du champ passé en premier paramètre les enregistrements pour lesquels la valeur de *champCible* est égale à au moins une des valeurs des éléments du *tableau*.<!-- END REF--> Les enregistrements trouvés constituent la nouvelle sélection courante.
 
-**QUERY SELECTION WITH ARRAY** functions in the same way as [QUERY WITH ARRAY](query-with-array.md). The difference between these two commands is the scope of the search:
+**QUERY SELECTION WITH ARRAY** fonctionne de la même manière que [QUERY WITH ARRAY](query-with-array.md). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
 
-* [QUERY WITH ARRAY](query-with-array.md) searches all the records of the table containing *targetField*.
-* **QUERY SELECTION WITH ARRAY** only searches the records of the current selection of the table containing *targetField*.
+* [QUERY WITH ARRAY](query-with-array.md) effectue sa recherche parmi la totalité des enregistrements de la table de *champCible*.
+* **QUERY SELECTION WITH ARRAY** effectue sa recherche uniquement parmi les enregistrements de la sélection courante de la table de *champCible*.
 
-For more information, please refer to the description of the [QUERY WITH ARRAY](query-with-array.md) command.
+Pour plus d’informations, reportez-vous à la description de la commande [QUERY WITH ARRAY](query-with-array.md).
 
-## See also 
+## Voir aussi 
 
 [QUERY WITH ARRAY](query-with-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1050 |
+| Numéro de commande | 1050 |
 | Thread safe | yes |
-| Changes current selection ||
+| Change la sélection courante ||
 
 

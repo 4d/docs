@@ -5,58 +5,58 @@ slug: /commands/qr-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* : Integer ; *column* : Integer ; *newPos* : Integer )<!-- END REF-->
+<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *zone* ; *numColonne* ; *nouvPosition* )<!-- END REF-->
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| column | Integer | &#8594;  | Column number |
-| newPos | Integer | &#8594;  | New position for column |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de la colonne |
+| nouvPosition | Integer | &#8594;  | Nouvelle position de la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Created|
+|15 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR MOVE COLUMN.Summary-->The **QR MOVE COLUMN** command moves the column currently found at the *column* position to the *newPos* position.<!-- END REF-->
+<!--REF #_command_.QR MOVE COLUMN.Summary-->La commande **QR MOVE COLUMN** déplace la colonne *numColonne* de sa position courante à la position *nouvPosition*.<!-- END REF-->
 
-Both the *column* and *newPos* parameters must be valid column numbers (between 1 and the total number of columns in the report); otherwise, the error -9852 is returned. 
+Les deux paramètres *numColonne* et *nouvPosition* doivent être des numéros de colonne valides (entre 1 et le nombre total de colonnes de l'état) ; dans le cas contraire, l'erreur -9852 est retournée. 
 
-**Note:** This command can be used with list reports only.
+**Note :** Cette commande peut être utilisée avec des états en liste uniquement. 
 
-## Example 
+## Exemple 
 
-You have designed the following report:
+Vous avez conçu l'état suivant :
 
-![](../assets/en/commands/pict2569470.en.png)
+![](../assets/en/commands/pict2569470.fr.png)
 
-If you execute:
+Si vous exécutez :
 
 ```4d
  QR MOVE COLUMN(area;3;4)
 ```
 
-The result is:
+Vous obtenez :
 
-![](../assets/en/commands/pict2569472.en.png)
+![](../assets/en/commands/pict2569472.fr.png)
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1325 |
+| Numéro de commande | 1325 |
 | Thread safe | no |
 
 

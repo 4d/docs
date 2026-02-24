@@ -9,43 +9,43 @@ displayed_sidebar: docs
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R2|Created|
+|17 R2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->The **MOBILE APP REFRESH SESSIONS** command checks all mobile application session files located in the MobileApps folder of the server, and updates existing session contents in memory for any edited files.<!-- END REF-->
+<!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->La commande **MOBILE APP REFRESH SESSIONS** vérifie tous les fichiers de session d'application mobile situés dans le dossier MobileApps du serveur et met à jour le contenu de la session existante en mémoire pour tous les fichiers modifiés.<!-- END REF-->
 
-This command is designed to be used by 4D for iOS and 4D for Android developers to "force" the reload of user session information after their local files have been edited. For example, if a session needs to be reset, you can remove the session file and then call **MOBILE APP REFRESH SESSIONS**. For more information about mobile app sessions, please refer to the [Go Mobile documentation](https://developer.4d.com/go-mobile).
+Cette commande est conçue pour être utilisée par 4D pour les développeurs iOS et Android afin de "forcer" le rechargement des informations de session utilisateur après la modification de leurs fichiers locaux. Par exemple, si une session doit être réinitialisée, vous pouvez supprimer le fichier de session, puis appeler **MOBILE APP REFRESH SESSIONS**. Pour plus d'informations sur les sessions d'applications mobiles, reportez-vous à la [documentation de Go Mobile](https://developer.4d.com/go-mobile/fr/).
 
-The command checks the compliance of each session file in the MobileApps folder (json syntax, json schema, session data). If the file is compliant and has been modified, the corresponding session is refreshed in memory (if it already exists) with edited contents.
+La commande vérifie la conformité de chaque fichier de session dans le dossier MobileApps (syntaxe json, shéma json, données de session). Si le fichier est conforme et a été modifié, la session correspondante est actualisée en mémoire (si elle existe déjà) avec le contenu modifié.
 
-If a session file is not valid or has been deleted, the corresponding session is removed from memory.
+Si un fichier de session n'est pas valide ou a été supprimé, la session correspondante est supprimée de la mémoire.
 
-The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](./commands/last-errors)  commands:
+La commande peut renvoyer l'une des erreurs suivantes, qui peuvent être traitées via les commandes [ON ERR CALL](on-err-call.md) et [Last errors](../commands/last-errors.md)  :
 
-| **Component name** | **Error code** | **Description**                                                |
-| ------------------ | -------------- | -------------------------------------------------------------- |
-| mobi               | 1              | The json file location does not match its content              |
-| mobi               | 2              | The json file is not correctly formed                          |
-| mobi               | 3              | The json file does not validate the json schema                |
-| mobi               | 4              | Connection token is not compliant with the current information |
+| **Nom du composant** | **Code d'erreur** | **Description**                                                     |
+| -------------------- | ----------------- | ------------------------------------------------------------------- |
+| mobi                 | 1                 | L'emplacement du fichier json ne correspond pas à son contenu       |
+| mobi                 | 2                 | Le fichier json n'est pas correctement formé                        |
+| mobi                 | 3                 | Le fichier json ne valide pas le shéma json                         |
+| mobi                 | 4                 | Le jeton de connexion n'est pas conforme aux informations courantes |
 
-## Example 
+## Exemple 
 
-You want to reset all current sessions for all mobile applications:
+Vous souhaitez réinitialiser toutes les sessions en cours pour toutes les applications mobiles :
 
 ```4d
  var $sessionsPath : Text
@@ -54,16 +54,15 @@ You want to reset all current sessions for all mobile applications:
  MOBILE APP REFRESH SESSIONS
 ```
 
-## See also 
+## Voir aussi 
 
 [On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1596 |
+| Numéro de commande | 1596 |
 | Thread safe | yes |
-
 
 

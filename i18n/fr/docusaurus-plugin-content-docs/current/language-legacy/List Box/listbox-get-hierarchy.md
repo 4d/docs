@@ -5,53 +5,53 @@ slug: /commands/listbox-get-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( * ; *object* : Text ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<br/>**LISTBOX GET HIERARCHY** ( *object* : Variable ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( {* ;} *objet* ; *hiérarchique* {; *hiérarchie*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET HIERARCHY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| hierarchical | Boolean | &#8592; | True = hierarchical list box<br/>False = non-hierarchical list box |
-| hierarchy | Pointer array | &#8592; | Array of pointers |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| hiérarchique | Boolean | &#8592; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
+| hiérarchie | Pointer array | &#8592; | Tableau de pointeurs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->The LISTBOX GET HIERARCHY command lets you find out the hierarchical properties of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->La commande **LISTBOX GET HIERARCHY** vous permet de connaître les propriétés hiérarchiques de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre objet est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The Boolean *hierarchical* parameter indicates whether or not the list box is in hierarchical mode:
+Le paramètre booléen *hiérarchique* indique si list box est en mode hiérarchique ou non :
 
-* if the parameter returns True, the list box is in hierarchical mode,
-* if the parameter returns False, the list box is displayed in non-hierarchical mode (standard array mode).
+* si le paramètre retourne Vrai, la list box est en mode hiérarchique,
+* si le paramètre retourne Faux, la list box est affichée en mode non hiérarchique (mode tableau standard).
 
-If the list box is in hierarchical mode, the command fills the *hierarchy* array with pointers to the arrays of the list box used to set the hierarchy.
+Si la list box est en mode hiérarchique, la commande remplit le tableau *hiérarchie* avec des pointeurs vers les tableaux de la list box utilisés pour définir la hiérarchie.
 
-**Note:** If the list box is in non-hierarchical mode, the command returns, in the first element of the *hierarchy* array, a pointer to the array of the first column of the list box.
+**Note :** Si la list box est en mode non hiérarchique, la commande retourne dans le premier élément du tableau *hiérarchie* un pointeur vers le tableau de la première colonne de la list box.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1099 |
+| Numéro de commande | 1099 |
 | Thread safe | no |
 
 

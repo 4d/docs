@@ -1,6 +1,7 @@
 ---
 id: form
 title: Formulário
+slug: /commands/form
 displayed_sidebar: docs
 ---
 

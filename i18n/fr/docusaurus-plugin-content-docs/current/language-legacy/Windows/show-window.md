@@ -5,45 +5,45 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *fenêtre* )}<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number or Current process frontmost window, if omitted |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SHOW WINDOW.Summary-->The **SHOW WINDOW** command displays the window whose number was passed in *window*.<!-- END REF--> If this parameter is omitted, the frontmost window of the current process will be displayed.
+<!--REF #_command_.SHOW WINDOW.Summary-->La commande **SHOW WINDOW** permet d'afficher la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, la fenêtre de premier plan du process courant.<!-- END REF-->
 
-In order to use the **SHOW WINDOW** command, the window must have been hidden by using the [HIDE WINDOW](hide-window.md) command. If the window is already displayed, the command does nothing.
+La fenêtre doit au préalable avoir été cachée à l'aide de la commande [HIDE WINDOW](hide-window.md). Si la fenêtre est déjà affichée, la commande ne fait rien.
 
-## Example 
+## Exemple 
 
-Refer to the example of the [HIDE WINDOW](hide-window.md) command.
+Voir l'exemple de la commande [HIDE WINDOW](hide-window.md).
 
-## See also 
+## Voir aussi 
 
 [HIDE WINDOW](hide-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 435 |
+| Numéro de commande | 435 |
 | Thread safe | no |
 
 

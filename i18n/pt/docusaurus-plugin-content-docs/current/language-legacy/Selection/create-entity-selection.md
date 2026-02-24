@@ -1,6 +1,7 @@
 ---
 id: create-entity-selection
 title: Criar uma seleção de entidades (entity selection)
+slug: /commands/create-entity-selection
 displayed_sidebar: docs
 ---
 

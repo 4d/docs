@@ -5,135 +5,134 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Release|Mofifications|
 |---|---|
-|21|Removed specific local process handling|
+|21|Suppression du traitement spécifique des process locuax|
 
 </details>
 
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *méthode* ; *pile* {; *nom* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| method | Text | &#8594;  | Method to be executed within the process |
-| stack | Integer | &#8594;  | Stack size in bytes |
-| name | Text | &#8594;  | Name of the process created |
-| param | Expression | &#8594;  | Parameter(s) to the method |
-| * | Operator | &#8594;  | Unique process |
-| Function result | Integer | &#8592; | Process number for newly created process or already executing process |
+| méthode | Text | &#8594;  | Méthode à exécuter dans le process |
+| pile | Integer | &#8594;  | Taille de la pile en octets (0 = taille par défaut) |
+| nom | Text | &#8594;  | Nom du process créé |
+| param | Expression | &#8594;  | Paramètre(s) de la méthode |
+| * | Opérateur | &#8594;  | Process unique |
+| Résultat | Integer | &#8592; | Numéro du process nouvellement créé ou du process déjà en cours d'exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|2004.3|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|2004.3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.New process.Summary-->The **New process** command starts a new process (on the same machine) and returns the process number for that process.<!-- END REF-->
+<!--REF #_command_.New process.Summary-->La commande **New process** lance un nouveau process (sur la même machine) et retourne le numéro de ce process.<!-- END REF-->
 
-If the process could not be created (for example, if there is not enough memory), **New process** returns zero (0) and an error is generated. You can catch this error using an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si le process n'a pas pu être créé, par exemple s'il n'y a pas assez de mémoire, **New process** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [`ON ERR CALL`](on-err-call.md).
 
-### Process Method 
+### Méthode du process 
 
- In *method*, you pass the name of the process method for the new process. After 4D has set up the context for the new process, it starts executing this method, which therefore becomes the process method.
+Vous passez le nom de la méthode de gestion du nouveau process dans *méthode*. Une fois que 4D a défini le contexte pour le nouveau process, il démarre l'exécution de cette méthode qui devient alors la méthode du process.
 
-If the execution context supports preemptive mode and if *method* is declared "thread-safe", the new 4D process will be executed in a preemptive thread when the application will run in compiled mode. For more information, please reter to the [Preemptive processes](../Develop/preemptive.md) page. 
+Si le contexte d'exécution prend en charge le mode préemptif, et si *méthode* est déclarée "thread-safe", le nouveau process 4D sera exécuté dans un *thread* préemptif lorsque l'application sera exécutée en mode compilé. Pour plus d'informations, veuillez consulter la page [Process 4D préemptifs](../Develop/preemptive.md). 
 
-### Process Stack 
+### Pile du process 
 
-The *stack* parameter allows you to indicate the amount of memory allocated for the stack of the process. This is the space in memory used to “pile up” method calls, local variables, parameters in subroutines, and stacked records.
+Le paramètre *pile* permet d'indiquer la quantité de mémoire allouée pour la pile du process. Cette valeur représente la place utilisée en mémoire pour "empiler" les appels de méthode, les variables locales, les paramètres des sous-routines et les enregistrements empilés.
 
-* Pass 0 in *stack* to use a default stack size, suitable for most applications (recommended setting).
-* In certain particular cases, you may want to set a custom value. It must be expressed in bytes. This setting should be used with precaution, it depends on the process chain call and the platform.
+* Passez 0 dans *pile* pour utiliser une taille de pile par défaut, adaptée à la plupart des applications (paramétrage recommandé).
+* Dans certains cas particuliers, vous pouvez souhaiter utiliser une valeur personnalisée. Elle doit être exprimée en octets. Ce paramétrage doit être utilisé avec précaution, et dépend de la chaîne d'appel dans le process et de la plateforme.
 
-**Note:** The stack is NOT the total memory for the process. Processes share memory for records, interprocess variables, and so on. A process also uses extra memory for storing its process variables. The stack contains various items of 4D information; the amount of information kept on the stack depends on the number of nested method calls the process will employ, the number of forms that it will open before closing them and the number and size of local variables used in each nested method call.
+**Note :** La pile n'est pas la mémoire totale réservée au process. Les process se partagent la mémoire pour les enregistrements, les variables interprocess, etc. Un process utilise également de la mémoire supplémentaire pour stocker ses variables process. La pile contient diverses informations internes à 4D ; la taille de ces informations varie en fonction du nombre d'appels de méthodes imbriquées.
 
-### Process Name 
+### Nom du process 
 
- You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](./commands/process-info) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
+Vous passez le nom du nouveau process dans *nomProcess*. Ce nom s'affichera dans la **liste des process** de l'Explorateur d'exécution et sera retourné par la commande [Process info](../commands/process-info.md). Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
 
-### Parameters to Process Method 
+### Paramètres de la méthode process 
 
- You can pass parameters to the process method using one or more *param* parameters. You pass parameters in the same way as you would pass them to a subroutine (see the [Parameters](../Concepts/parameters.md) section). Upon starting execution in the context of the new process, the process method receives the parameters values in its #DECLARE parameters. Remember that arrays cannot be passed as parameters to a method. Furthermore, these additional considerations are to be taken into account in the context of the **New process** command:
+Vous pouvez passer des paramètres à la méthode process via un ou plusieurs paramètre(s) *param*. Vous pouvez le faire de la même manière que pour les sous-routines (cf. paragraphe ). Une fois qu'elle a commencé à s'exécuter dans le contexte du nouveau process, la méthode process reçoit les valeurs des paramètres dans les variables déclarées via le #DECLARE. N'oubliez pas que les tableaux ne peuvent pas être passés comme paramètres à une méthode. En outre, des considérations supplémentaires sont à prendre en compte dans le contexte de la commande **New process** :
 
-* pointers to tables or fields are allowed.
-* pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the time when they are being accessed by the process method.
-* standard object or collection type parameters are passed **by copy**, *i.e.* 4D will create a copy of the object or the collection in the destination process instead of a reference. If you want to pass an object or a collection parameter **by reference**, you must use a shared object or collection (see [Shared objects and shared collections](../Concepts/shared.md)).
+* les pointeurs vers des tables ou des champs sont autorisés,
+* les pointeurs vers des variables, en particulier des variables process et locales, sont déconseillés car les variables peuvent être indéfinies au moment où la méthode process y accède.
+* les paramètres de type Objet ou Collection sont passés **par copie**, *i.e.* 4D créera une copie de l'objet ou de la collection dans le process de destination, et non une référence. Si vous souhaitez passer un paramètre de type objet ou collection **par référence**, vous devez utiliser un objet ou une collection partagé(e) (voir [Objets partagés et collections partagées](../Concepts/shared.md)).
 
-**Note:** If you pass parameters to the process method, you must pass the *name* parameter; it cannot be omitted in this case.
+**Note :** Si vous passez des paramètres à la méthode process, vous devez passer le paramètre *nom*, il ne peut être omis dans ce cas. 
 
-### Optional \* Parameter 
+### Paramètre optionnel \* 
 
-Specifying this last parameter tells 4D to first check whether or not a process with the name you passed in *name* is already running. If it is, 4D does not start a new process and returns the process number of the process with that name.
+Si vous passez le dernier paramètre (optionnel) *\**, vous indiquez à 4D de vérifier en premier lieu si un process du même nom que celui que vous avez passé dans *nom* est déjà en cours d'exécution. Si c'est le cas, 4D ne démarre pas de nouveau process et retourne le numéro du process existant.
 
-## Example 
+## Exemple 
 
-Given the following project method:
+Examinons la méthode projet suivante : 
 
 ```4d
-  // ADD CUSTOMERS
+  // AJOUT CLIENTS
  SET MENU BAR(1)
  Repeat
-    ADD RECORD([Customers];*)
+    ADD RECORD([Clients];*)
  Until(OK=0)
 ```
 
-If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](./commands/open-window)), the call to [ADD RECORD](add-record.md) will automatically open one.
+Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](open-window.md)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
 
-To be able to start this Add Customers process when you click on a button in a custom control panel, you can write:
+Si maintenant vous voulez pouvoir démarrer le process Ajout Clients lorsque vous cliquez sur un bouton situé dans un tableau de contrôle personnalisé, vous pouvez écrire : 
 
 ```4d
-  // bAddCustomers button object method
- $vlProcessID:=New process("Add Customers";0;"Adding Customers")
+  // Méthode objet bouton bAjoutClients
+ $vlProcessID:=New process("Ajout Clients";0;"Ajout de clients")
 ```
 
-The button does the same thing as the custom menu item.
+Ce bouton fait la même chose que la commande de menu personnalisée.
 
-While choosing the menu item or clicking the button, if you want to start the process (if it does not exist) or bring it to the front (if it is already running), you can create the method START ADD CUSTOMERS:
+Si, maintenant, lorsque la commande de menu est sélectionnée ou lorsque le bouton reçoit un clic, vous voulez que le process soit lancé s'il n'existe pas ou qu'il soit passé au premier plan s'il existe déjà, vous pouvez créer la méthode DEMARRER AJOUT CLIENTS :
 
 ```4d
-  // START ADD CUSTOMERS
- $vlProcessID:=New process("Add Customers";0;"Adding Customers";*)
+  // DEMARRER AJOUT CLIENTS
+ $vlProcessID:=New process("Ajout Clients";0;"Ajout de clients ";*)
  If($vlProcessID#0)
     BRING TO FRONT($vlProcessID)
  End if
 ```
 
-The object method of the *bAddCustomers* becomes:
+La méthode objet de *bAjoutClient* devient :
 
 ```4d
-  // bAddCustomers button object method
- START ADD CUSTOMERS
+  // Méthode objet bouton bAjoutClients
+ DEMARRER AJOUT CLIENTS
 ```
 
-In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method START ADD CUSTOMERS, and you deselect the **Start a New Process** property for the menu item.
+Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode DEMARRER AJOUT CLIENTS. Désélectionnez l'option **Démarrer un process** pour la commande de menu.
 
-## See also 
+## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
-[Preemptive processes](../Develop/preemptive.md)  
-[Processes](../Develop/processes.md)  
+[Process et Workers](../Develop/processes.md)  
+[Process préemptifs](../Develop/preemptive.md) 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 317 |
+| Numéro de commande | 317 |
 | Thread safe | yes |
-
 
 

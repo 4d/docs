@@ -5,55 +5,55 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( * ; *object* : Text {; *listType* : Integer} ) : Integer<br/>**OBJECT Get list reference** ( *object* : Variable, Field {; *listType* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *objet* {; *typeListe*} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
-| Function result | Integer | &#8592; | List reference number |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| Résultat | Integer | &#8592; | Numéro de référence de la liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get list reference.Summary-->The **OBJECT Get list reference** command returns the reference number (ListRef) of the hierarchical list associated with the object or group of objects designated by *object* and *\**.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get list reference.Summary-->La commande **OBJECT Get list reference** retourne le numéro de référence (*RefListe*) de la liste hiérarchique associée à l’objet ou au groupe d'objets désigné par *objet* et *\**.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, this indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-By default, if you omit the *listType* parameter, the command returns the name of the choice list (list of values) associated with the object. You can also get the reference number for required lists or excluded lists by passing, in *listType*, one of the following constants found in the "*Form Objects (Properties)*" theme:
+Par défaut, si vous omettez le paramètre *typeListe*, la commande retourne le nom de l’énumération simple (liste de valeurs) associée à l’*objet*. Vous pouvez également obtenir le numéro de référence des listes d’obligations ou d’exclusions en passant dans *typeListe* une des constantes suivantes du thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant      | Type    | Value | Comment                                                                                    |
-| ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Constante     | Type        | Valeur | Comment                                                                                               |
+| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| Choice list   | Entier long | 0      | Liste simple de choix de valeurs (option "Enumération" dans la Liste des propriétés) (défaut)         |
+| Excluded list | Entier long | 2      | Liste de valeurs non acceptées pour la saisie (option "Exclusions" dans la Liste des propriétés)      |
+| Required list | Entier long | 1      | Liste des seules valeurs acceptées pour la saisie (option "Obligations" dans la Liste des propriétés) |
 
-If there is no hierarchical list associated with the object for the *listType* defined, the command returns 0\. 
+Si aucune liste hiérarchique n’est associée à l’objet pour le *typeListe* défini, la commande retourne 0\. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get list name](object-get-list-name.md)  
 [OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1267 |
+| Numéro de commande | 1267 |
 | Thread safe | no |
 
 

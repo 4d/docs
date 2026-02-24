@@ -5,110 +5,110 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; offset : Variable }} )<br/>**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; offset }} )<br/>**TEXT TO BLOB** ( *texte* ; *blob* {; *formatTexte* {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | Text to write into the BLOB |
-| Blob | Blob | &#8594;  | BLOB to receive the text |
-| textFormat | Integer | &#8594;  | Format and character set of text |
-| offset | Variable |&#8596;  | Offset within the BLOB (expressed in bytes)<br/>New offset after writing if not * |
-| * | Operator |&#8596;  | Append the value |
+| texte | Text | &#8594;  | Texte à écrire dans blob |
+| blob | Blob | &#8594;  | BLOB devant recevoir le texte |
+| formatTexte | Integer | &#8594;  | Format et jeu de caractères du texte |
+| offset &#124; * | Variable, Opérateur | &#8596; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
+| || | Nouvel offset après l'écriture si * omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.TEXT TO BLOB.Summary-->The TEXT TO BLOB command writes the Text value *text* into the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Summary-->La commande **TEXT TO BLOB** écrit la valeur de type Texte *texte* dans le BLOB *blob*.<!-- END REF--> 
 
-The *textFormat* parameter can be used to set the internal format and the character set of the text value to be written. To do this, pass one of the following constants (found in the “*BLOB*” theme) in the *textFormat* parameter:
+Le paramètre *formatTexte* permet de définir le format interne et le jeu de caractères de la valeur de type Texte à écrire. Pour cela, passez dans *formatTexte* une des constantes suivantes, placées dans le thème “*BLOB*” :
 
-| Constant                 | Type    | Value |
-| ------------------------ | ------- | ----- |
-| Mac C string             | Integer | 0     |
-| Mac Pascal string        | Integer | 1     |
-| Mac text with length     | Integer | 2     |
-| Mac text without length  | Integer | 3     |
-| UTF8 C string            | Integer | 4     |
-| UTF8 text with length    | Integer | 5     |
-| UTF8 text without length | Integer | 6     |
+| Constante                | Type        | Valeur |
+| ------------------------ | ----------- | ------ |
+| Mac C string             | Entier long | 0      |
+| Mac Pascal string        | Entier long | 1      |
+| Mac text with length     | Entier long | 2      |
+| Mac text without length  | Entier long | 3      |
+| UTF8 C string            | Entier long | 4      |
+| UTF8 text with length    | Entier long | 5      |
+| UTF8 text without length | Entier long | 6      |
 
-If you omit the *textFormat* parameter, by default 4D uses the Mac C string format. In databases created beginning with version 11, 4D works by default with the Unicode character set (UTF8) for managing text, so it is recommended to use this character set. 
+Si vous omettez le paramètre *formatTexte*, par défaut 4D utilise le format Mac C string. Dans les bases de données créées à compter de la version 11, 4D travaille par défaut avec le jeu de caractères Unicode (UTF8) pour la gestion des textes, il est donc recommandé d'utiliser ce jeu de caractères. 
 
-**Notes:**
+**Notes** **:**
 
-* The “UTF8” constants can only be used when the application runs in Unicode mode.
-* The “Mac” constants cannot work with texts greater than 32 KB.
-* If you want to work with character sets other than UTF8, use the [CONVERT FROM TEXT](convert-from-text.md) command.
+* Les constantes “UTF8” sont utilisables uniquement lorsque l’application fonctionne en mode Unicode.
+* Les constantes “Mac” ne permettent pas de traiter des textes de plus de 32 ko.
+* Si vous souhaitez manipuler des jeux de caractères autres que UTF8, utilisez la commande [CONVERT FROM TEXT](convert-from-text.md).
 
-The following table describes each of these formats:
+Le tableau suivant décrit chacun de ces formats :
 
-| **Text format**                        | **Description and Examples**                                    |
-| -------------------------------------- | --------------------------------------------------------------- |
-| C string                               | The text is ended by a NULL character (ASCII code $00).         |
-| *UTF8*                                 | "" --> $00                                                      |
-| "Café" --> $43 61 66 C3 A9 00          |                                                                 |
-| *Mac*                                  | "" --> $00                                                      |
-| "Café" --> $43 61 66 8E 00             |                                                                 |
-| Pascal string                          | The text is preceded by a 1-byte length.                        |
-| *UTF8*                                 | \-                                                              |
-| \-                                     |                                                                 |
-| *Mac*                                  | "" --> $00                                                      |
-| "Café" --> $04 43 61 66 8E             |                                                                 |
-| Text with length                       | The text is preceded by a 4-byte (UTF8) or 2-byte (Mac) length. |
-| *UTF8*                                 | "" --> $00 00 00 00                                             |
-| "Café" --> $00 00 00 05 43 61 66 C3 A9 |                                                                 |
-| *Mac*                                  | "" --> $00 00                                                   |
-| "Café" --> $00 04 43 61 66 8E          |                                                                 |
-| Text without length                    | The text is composed only of its characters.                    |
-| *UTF8*                                 | "" --> No data                                                  |
-| "Café" --> $43 61 66 C3 A9             |                                                                 |
-| *Mac*                                  | "" --> No data                                                  |
-| "Café" --> $43 61 66 8E                |                                                                 |
+| **Format texte**                       | **Description et Exemples**                                            |
+| -------------------------------------- | ---------------------------------------------------------------------- |
+| Chaîne en C                            | Le texte se termine par un caractère NULL (code ASCII $00).            |
+| UTF8                                   | "" --> $00                                                             |
+| "Café" --> $43 61 66 C3 A9 00          |                                                                        |
+| Mac                                    | "" --> $00                                                             |
+| "Café" --> $43 61 66 8E 00             |                                                                        |
+| Chaîne pascal                          | Le texte est précédé d'un octet de longueur.                           |
+| UTF8                                   | \-                                                                     |
+| \-                                     |                                                                        |
+| Mac                                    | "" --> $00                                                             |
+| "Café" --> $04 43 61 66 8E             |                                                                        |
+| Texte avec longueur                    | Le texte est précédé de 4 octets (UTF8) ou 2 octets (Mac) de longueur. |
+| UTF8                                   | "" --> $00 00 00 00                                                    |
+| "Café" --> $00 00 00 05 43 61 66 C3 A9 |                                                                        |
+| Mac                                    | "" --> $00 00                                                          |
+| "Café" --> $00 04 43 61 66 8E          |                                                                        |
+| Texte sans longueur                    | Le texte est composé seulement de ses caractères.                      |
+| UTF8                                   | "" --> Pas de valeur                                                   |
+| "Café" --> $43 61 66 C3 A9             |                                                                        |
+| Mac                                    | "" --> Pas de valeur                                                   |
+| "Café" --> $43 61 66 8E                |                                                                        |
 
-If you specify the \* optional parameter, the Text value is appended to the BLOB; the size of the BLOB is extended accordingly. Using the \* optional parameter, you can sequentially store any number of Integer, Long Integer, Real or Text values (see other BLOB commands) in a BLOB, as long as the BLOB fits into memory. 
+Si vous passez le paramètre optionnel \*, la valeur de type Texte est ajoutée à la fin du BLOB et la taille de *blob* est modifiée en conséquence. Ainsi, à l'aide du paramètre optionnel \*, vous pouvez stocker les unes derrière les autres autant de valeurs de type Entier, Entier long, Numérique ou Texte (référez-vous aux autres commandes sur les BLOBs) que vous voulez dans un BLOB, la seule limite étant celle de la mémoire disponible. 
 
-If you do not specify the \* optional parameter nor the *offset* variable parameter, the Text value is stored at the beginning of the BLOB, overriding its previous contents; the size of the BLOB is adjusted accordingly.
+Si vous ne passez pas le paramètre optionnel \* ni de variable dans le paramètre *offset*, la valeur de type Texte est stockée au début de *blob* en remplaçant son contenu précédent, et la taille du BLOB est modifiée en conséquence.
 
-If you pass the *offset* variable parameter, the Text value is written at the offset (starting from zero) within the BLOB. No matter where you write the Text value, the size of the BLOB is, increased according to the location you passed (plus up to the size of the text, if necessary). New allocated bytes, other than the ones you are writing, are initialized to zero.
+Si vous passez une variable dans le paramètre *offset*, la valeur de type Texte est écrite à l'offset *offset*, exprimé en octets (à partir de zéro), du BLOB. Quel que soit l'endroit où vous placez la valeur, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (plus jusqu'à la taille du texte le cas échéant). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therfore, you can reuse that same variable with another BLOB writing command to write another value.
+Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre valeur juste après celle que vous venez d'écrire.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## Example 
+## Exemple 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  SET BLOB SIZE(vxBlob;0)
- var vtValue : Text
- vtValue:="Café" // Length of vtValue is 4 bytes
- TEXT TO BLOB(vtValue;vxBlob;Mac C string) // Size of BLOB becomes 5 bytes
- TEXT TO BLOB(vtValue;vxBlob;Mac Pascal string) // Size of BLOB becomes 5 bytes
- TEXT TO BLOB(vtValue;vxBlob;Mac text with length) // Size of BLOB becomes 6 bytes
- TEXT TO BLOB(vtValue;vxBlob;Mac text without length) // Size of BLOB becomes 4 bytes
- TEXT TO BLOB(vtValue;vxBlob;UTF8 C string) // Size of BLOB becomes 6 bytes
- TEXT TO BLOB(vtValue;vxBlob;UTF8 text with length) // Size of BLOB becomes 9 bytes
- TEXT TO BLOB(vtValue;vxBlob;UTF8 text without length) // Size of BLOB becomes 5 bytes
+ var vtValeur : Text
+ vtValeur:="Café" // La longueur de vtValeur est de 4 octets
+ TEXT TO BLOB(vtValeur;vxBlob;Mac C string) // La taille du BLOB devient 5 octets
+ TEXT TO BLOB(vtValeur;vxBlob;Mac Pascal string) // La taille du BLOB devient 5 octets
+ TEXT TO BLOB(vtValeur;vxBlob;Mac text with length) // La taille du BLOB devient 6 octets
+ TEXT TO BLOB(vtValeur;vxBlob;Mac text without length) // La taille du BLOB devient 4 octets
+ TEXT TO BLOB(vtValeur;vxBlob;UTF8 C string) // La taille du BLOB devient 6 octets
+ TEXT TO BLOB(vtValeur;vxBlob;UTF8 text with length) // La taille du BLOB devient 9 octets
+ TEXT TO BLOB(vtValeur;vxBlob;UTF8 text without length) // La taille du BLOB devient 5 octets
 ```
 
-## See also 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -119,11 +119,11 @@ After executing this code:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [REAL TO BLOB](real-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 554 |
+| Numéro de commande | 554 |
 | Thread safe | yes |
 
 

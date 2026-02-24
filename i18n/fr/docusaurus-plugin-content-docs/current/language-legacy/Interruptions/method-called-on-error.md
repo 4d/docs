@@ -5,65 +5,65 @@ slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on error.Syntax-->**Method called on error** ( {*scope* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *portée* )} : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| scope | Integer | &#8594;  | Scope of the error method |
-| Function result | Text | &#8592; | Name of method called on error |
+| portée | Integer | &#8594;  | Portée de la méthode de gestion d'erreur |
+| Résultat | Text | &#8592; | Nom de la méthode d’appel sur erreur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R8|Modified|
-|6.8.1|Created|
+|19 R8|Modifié|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Method called on error.Summary-->The **Method called on error** command returns the name of the method installed by the [ON ERR CALL](on-err-call.md) command for the current process or the defined *scope*.<!-- END REF-->
+<!--REF #_command_.Method called on error.Summary-->La commande **Method called on error** retourne le nom de la méthode installée par la commande [ON ERR CALL](on-err-call.md) pour le process courant ou la *portée* définie.<!-- END REF-->
 
-In the *scope* parameter, pass the execution context for which you want to get the name of the error handler method. You can use one of the following constants:
+Dans le paramètre *portée*, passez le contexte d'exécution pour lequel vous voulez obtenir le nom de la méthode de gestion d'erreurs. Vous pouvez utiliser l'une des constantes suivantes :
 
-| Constant                  | Value | Comment                                                                                       |
-| ------------------------- | ----- | --------------------------------------------------------------------------------------------- |
-| ek errors from components | 2     | Errors that occurred in components                                                            |
-| ek global                 | 1     | Errors that occurred in the global execution context of the project                           |
-| ek local                  | 0     | Errors that occurred in the local execution context (default if *scope* parameter is omitted) |
+| Constante                 | Valeur | Comment                                                                                     |
+| ------------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| ek errors from components | 2      | Erreurs générées dans les composants (et non interceptées par les composants)               |
+| ek global                 | 1      | Erreurs générées dans le contexte d'exécution global du projet                              |
+| ek local                  | 0      | Erreurs générées dans le contexte d'exécution local (par défaut si paramètre *portée* omis) |
 
-If no method has been installed for the *scope*, an empty string ("") is returned.
+Si aucune méthode d’appel sur erreur n’a été installée pour la *portée*, une chaîne vide ("") est retournée.
 
-## Example 
+## Exemple 
 
-This command is particularly useful in the context of components because it enables you to temporarily change and then restore the error-catching methods:
+Cette commande est particulièrement utile dans le cadre des composants, car elle permet de changer temporairement puis de rétablir les méthodes d’interception d’erreurs :
 
 ```4d
- $methCurrent:=Method called on error
- ON ERR CALL("NewMethod")
-  // If the document cannot be opened, an error is generated
- $ref:=Open document("MyDocument")
-  // Reinstallation of previous method
- ON ERR CALL($methCurrent)
+ $methCourante:=Method called on error
+ ON ERR CALL("NouvelleMéthode")
+  // Si le document ne peut être ouvert, une erreur est générée
+ $ref:=Open document("MonDocument")
+  // Réinstallation de la méthode précédente
+ ON ERR CALL($methCourante)
 ```
 
-## See also 
+## Voir aussi 
 
-*Error Handler*  
+*Gestionnaire d'erreur*  
 [ON ERR CALL](on-err-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 704 |
+| Numéro de commande | 704 |
 | Thread safe | yes |
 
 

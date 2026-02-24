@@ -9,73 +9,73 @@ displayed_sidebar: docs
 <!--REF #_command_.Is editing text.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if text is being entered, False otherwise |
+| Résultat | Boolean | &#8592; | Vrai si le texte est en cours de saisie, sinon faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R5|Created|
+|18 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is editing text.Summary-->The **Is editing text** command returns **True** if the user is entering values in an input form object, and **False** in all other cases.<!-- END REF--> 
+<!--REF #_command_.Is editing text.Summary-->La commande **Is editing text** retourne **Vrai** si l'utilisateur saisit des valeurs dans un objet de formulaire d'entrée, et **Faux** dans tous les autres cas.<!-- END REF--> 
 
-This command is mainly to be used to distinguish, within code triggered by the On Before Keystroke form event, between actual user data entry and use of shortcut keys. For example, you might want to execute a different code whether the user is pressing a key to enter text in a cell, or to scroll the listbox.
+Cette commande est principalement destinée à distinguer, dans le code lancé par l'événement formulaire Sur avant frappe clavier, la saisie de données utilisateur et l'utilisation de touches de raccourcis. Par exemple, vous pouvez choisir d'exécuter un code différent selon que l'utilisateur appuie sur une touche pour saisir du texte dans une cellule, ou pour faire défiler la listbox.
 
-The **Is editing text** command can only be used with the following form objects:
+La commande **Is editing text** peut être utilisée uniquement avec les objets de formulaire suivants :
 
-* input
-* listbox (enterable and non-enterable)
+* zone de saisie
+* listbox (saisissable et non saisissable)
 * combo box
 
-With other objects, the command always returns **False**. In particular, it cannot be used with 4D Write Pro and 4D View Pro areas.
+Avec d'autres objets, la commande retourne toujours **Faux**. Elle ne peut notamment pas être utilisée avec des zones 4D Write Pro et 4D View Pro.
 
-## Example 
+## Exemple 
 
-You want to allow the user to select a row beginning with the typed letter or number in an enterable listbox:
+Pour permettre à l'utilisateur de sélectionner une ligne commençant par la lettre ou le numéro saisi(e) dans une listbox saisissable :
 
 ```4d
  Case of
-    :(FORM Event.code=On Before Keystroke) //a key is pressed
-       If(Is editing text) //text is entered
-  // you disallow some characters
+    :(FORM Event.code=On Before Keystroke) //une touche est enfoncée
+       If(Is editing text) //le texte est saisi
+  // vous rejetez certains caractères
           If(Keystroke="+")|(Keystroke="-")|(Keystroke="/")|(Keystroke="*")
              FILTER KEYSTROKE("")
           End if
        Else
-  //nothing is beeing entered, scrolling shortcut feature
+  //rien n'est en cours de saisie, fonctionnalité raccourci défilement
           $charCode:=Keystroke
-          $char:=Uppercase($charCode) // removes accents
+          $char:=Majuscule($charCode) // supprime les accents
           Case of
              :((($char>="A")&($char<="Z"))|(($char>="0")&($char<="9")))
-                ... //Select a row beginning with the typed letter or number
-             :($charCode>=Left arrow key)&($charCode<=Down arrow key) // left/right/up/down arrows
-                FILTER KEYSTROKE("") // disable actions of arrows
+                ... //Sélectionne une ligne commençant par la lettre ou le numéro saisi(e)
+             :($charCode>=Left arrow key)&($charCode<=Down arrow key) // flèches gauche/droite/haut/bas
+                FILTER KEYSTROKE("")  // désactive les actions des flèches
           End case
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
+  
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [Get edited text](get-edited-text.md)  
-[Type ahead made easy (blog post)](https://blog.4d.com/type-ahead-made-easy/)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1744 |
+| Numéro de commande | 1744 |
 | Thread safe | no |
 
 

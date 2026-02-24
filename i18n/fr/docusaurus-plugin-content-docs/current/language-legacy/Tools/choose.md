@@ -5,98 +5,98 @@ slug: /commands/choose
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterion* : Boolean, Integer ; *value* : Expression {; *...value* : Expression} )  : any<!-- END REF-->
+<!--REF #_command_.Choose.Syntax-->**Choose** ( *critère* ; *valeur* {; *valeur2* ; ... ; *valeurN*} )  : any<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| criterion | Boolean, Integer | &#8594;  | Value to test |
-| value | Expression | &#8594;  | Possible values |
-| Function result | any | &#8592; | Value of criterion |
+| critère | Boolean, Integer | &#8594;  | Valeur à tester |
+| valeur | Expression | &#8594;  | Valeurs possibles |
+| Résultat | any | &#8592; | Valeur de critère |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Choose.Summary-->The **Choose** command returns one of the values passed in the *value1*, *value2*, etc.<!-- END REF--> parameters depending on the value of the *criterion* parameter.
+<!--REF #_command_.Choose.Summary-->La commande **Choose** retourne l’une des valeurs passées dans les paramètres *valeur*, *valeur2*, etc.<!-- END REF--> en fonction de la valeur du paramètre *critère*. 
 
-You can pass either a Boolean or Number type in the *criterion* parameter:
+Vous pouvez passer un paramètre *critère* de type booléen ou numérique :
 
-* If *criterion* is a Boolean, **Choose** returns *value1* if the Boolean equals True and *value2* if the Boolean equals False. In this case, the command expects exactly three parameters: *criterion*, *value1* and *value2*.
-* If *criterion* is an integer, **Choose** returns the value whose position corresponds to *criterion*. Be careful, numbering of the values begins with 0 (the position of *value1* is thus 0). In this case, the command expects at least two parameters: *criterion* and *value1*.
+* Si *critère* est un booléen, **Choose** retourne *valeur* si le booléen vaut Vrai et *valeur2* si le booléen vaut Faux. Dans ce cas, la commande attend exactement trois paramètres : *critère*, *valeur* et *valeur2*.
+* Si *critère* est un entier, **Choose** retourne la valeur dont la position correspond à *critère*. Attention, la numérotation des valeurs débute à 0 (la position de *valeur* est 0). Dans ce cas, la commande attend au minimum deux paramètres : *critère* et *valeur*.
 
-The command accepts all types of data for the *value* parameter(s), except for pictures, pointers, BLOBS and arrays. Nevertheless, you need to make sure that all the values passed are of the same type, 4D will not carry out any verification on this point.
+La commande accepte tous les types de données pour le(s) paramètre(s) *valeur*, hormis les images, pointeurs, BLOBS et tableaux. Veillez cependant à ce que toutes les valeurs passées soient du même type, 4D n’effectue pas de vérification sur ce point.
 
-If no *value* corresponds to *criterion*, **Choose** returns a “null” value with respect to the type of the *value* parameter (for example, 0 for a Number type, “” for a String type, and so on).
+Si aucune *valeur* ne correspond à *critère*, **Choose** retourne une valeur “nulle” en rapport avec le type du paramètre *valeur* (par exemple 0 pour le type numérique, “” pour le type chaîne, etc.).
 
-This command can be used to generate concise code that replaces tests of the “Case of” type that take up several lines (see example 2). It is also very useful in places where formulas can be executed: query editor, application of a formula, quick report editor, column calculated in a listbox, and so on.
+Cette commande permet de générer du code concis en remplacement des tests du type “Au cas ou” sur plusieurs lignes (cf. exemple 2). Elle est également très utile dans les emplacements où des formules peuvent être exécutées : éditeur de recherches, appliquer une formule, éditeur d’états rapides, colonne calculée de list box, etc.
 
-**Warning:** The **Choose** command evaluates each *value* parameter before its execution. It means that:
+**Attention :** Avant d'être exécutée, la commande **Choose** évalue chaque paramètre valeur. Cela signifie que : 
 
-* if *value* is a dynamic expression that causes side effects (update of a counter, modification of any kind), these effects will happen in all cases;
-* if a value parameter is an invalid expression, **Choose** will return an error in all cases. For example, the following code will return an error:  
+* Si valeur est une expression dynamique qui entraîne des effets secondaires (mise à jour d'un compteur, modifications en tous genres), ces effets se produiront dans tous les cas ;
+* Si un paramètre valeur n'est pas une expression valide, **Choose** retournera une erreur dans tous les cas. Par exemple, le code suivant retournera une erreur :  
 ```4d  
- $res:=Choose(True;"red1";"blue"+2) //error  
+ $res:=Choose(True;"red1";"blue"+2) //erreur  
 ```
 
-## Example 1 
+## Exemple 1 
 
-Here is an example of the typical use of this command with a Boolean type criterion:
+Voici une utilisation type de la commande avec un critère booléen :
 
 ```4d
- vTitle:=Choose([Person]Masculine;"Mr";"Ms")
+ vTitre:=Choose([Personne]Masculin;"Mr";"Madame")
 ```
 
-This code is strictly equivalent to:
+Ce code est strictement équivalent à :
 
 ```4d
- If([Person]Masculine)
-    vTitle:="Mr"
+ If([Personne]Masculin)
+    vTitre:="Mr"
  Else
-    vTitle:="Ms"
+    vTitre:="Madame"
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Here is an example of the typical use of this command with a Number type criterion:
+Voici une utilisation type de la commande avec un critère numérique :
 
 ```4d
- vStatus:=Choose([Person]Status;"Single";"Married";"Widowed";"Divorced")
+ vStatut:=Choose([Personne]Statut;"Célibataire";"Marié";"Veuf";"Divorcé")
 ```
 
-This code is strictly equivalent to:
+Ce code est strictement équivalent à :
 
 ```4d
  Case of
-    :([Person]Status=0)
-       vStatus:="Single"
-    :([Person]Status=1)
-       vStatus:="Married"
-    :([Person]Status=2)
-       vStatus:="Widowed"
-    :([Person]Status=3)
-       vStatus:="Divorced"
+    :([Personne]Statut=0)
+       vStatut:="Célibataire"
+    :([Personne]Statut=1)
+       vStatut:="Marié"
+    :([Personne]Statut=2)
+       vStatut:="Veuf"
+    :([Personne]Statut=3)
+       vStatut:="Divorcé"
  End case
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 955 |
+| Numéro de commande | 955 |
 | Thread safe | yes |
 
 

@@ -5,59 +5,59 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* : Text ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} ) : Object<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filtre* {; *scope* {; *attributs* {; *attributsEnTableau*}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | Distinguished Name of root entry where search is to start |
-| filter | Text | &#8594;  | LDAP search filter |
-| scope | Text | &#8594;  | Scope of search: "base" (default), "one", or "sub" |
-| attributes | Text array | &#8594;  | Attribute(s) to fetch |
-| attributesAsArray | Boolean array | &#8594;  | True = force attributes to be returned as array; False = force attributes to be returned as a simple variable |
-| Function result | Object | &#8592; | Key/value attributes |
+| dnRootEntry | Text | &#8594;  | Distinguished Name de l'élément racine où démarrer la recherche |
+| filtre | Text | &#8594;  | Filtre de recherche LDAP |
+| scope | Text | &#8594;  | Champ d'action de la recherche : "base" (défaut), "one" ou "sub" |
+| attributs | Text array | &#8594;  | Attribut(s) à récupérer |
+| attributsEnTableau | Boolean array | &#8594;  | Vrai = forcer le retour des attributs en tableaux, Faux = forcer le retour des attributs en variables simples |
+| Résultat | Object | &#8592; | Attributs clé/valeur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Created|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LDAP Search.Summary-->The **LDAP Search** command searches in the target LDAP server for the first occurrence matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
+<!--REF #_command_.LDAP Search.Summary-->La commande **LDAP Search** recherche sur le serveur LDAP cible la première occurrence correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
 
-In *dnRootEntry*, pass the *Distinguished Name* of the LDAP server root entry; the search will start at this entry.
+Dans *dnRootEntry*, passez le *Distinguished Name* de l'élément racine du serveur LDAP ; la recherche démarrera à partir de cet élément.
 
-In *filter*, pass the LDAP search filter to execute. The filter string must be compliant with [rfc2225](http://tools.ietf.org/search/rfc2254). You can pass an empty string "" in order not to filter the search; the "\*" is supported to search substrings. 
+Dans *filtre*, passez le filtre de recherche LDAP à appliquer. Ce filtre doit être conforme à la [rfc2225](http://tools.ietf.org/search/rfc2254). Vous pouvez passer une chaîne vide "" afin de ne pas appliquer de filtre. Le joker "\*" pour chercher des sous-chaînes est pris en charge. 
 
-In *scope*, pass one of the following constants from the "*LDAP*" theme:
+Dans *scope*, passez une des constantes suivantes du thème "*LDAP*" :
 
-| Constant           | Type   | Value | Comment                                                                                                     |
-| ------------------ | ------ | ----- | ----------------------------------------------------------------------------------------------------------- |
-| LDAP all levels    | Text | sub   | Search in the root entry level defined by *dnRootEntry* and in all subsequent entries                       |
-| LDAP root and next | Text | one   | Search in the root entry level defined by *dnRootEntry* and in the directly subsequent entries on one level |
-| LDAP root only     | Text | base  | Search only in the root entry level defined by *dnRootEntry* (default if omitted)                           |
+| Constante          | Type   | Valeur | Comment                                                                                                          |
+| ------------------ | ------ | ------ | ---------------------------------------------------------------------------------------------------------------- |
+| LDAP all levels    | Chaîne | sub    | Chercher dans l'élément racine défini par *dnRootEntry* et dans toutes les branches suivantes                    |
+| LDAP root and next | Chaîne | one    | Chercher dans l'élément racine défini par *dnRootEntry* et dans les branches directement suivantes sur un niveau |
+| LDAP root only     | Chaîne | base   | Chercher uniquement dans l'élément racine défini par *dnRootEntry* (défaut si omis)                              |
 
-In *attributes*, pass a text array which contains the list of all LDAP attributes to fetch from the matched entries. By default, if this parameter is omitted, all attributes are fetched.
+Dans *attributs*, passez un tableau texte contenant la liste de tous les attributs LDAP à récupérer à partir des entrées trouvées. Par défaut, si ce paramètre est omis, tous les attributs sont récupérés.
 
-**Note:** Keep in mind that LDAP attribute names are case-sensitive. For more information on LDAP attributes, you can refer to [this page](https://msdn.microsoft.com/en-us/library/ms675089%28v=vs.85%29.aspx) that lists all available attributes for the MS Active directory.
+**Note :** Les noms d'attributs LDAP tiennent compte des majuscules/minuscules. Pour plus d'informations sur les attributs LDAP, vous pouvez consulter [cette page](https://msdn.microsoft.com/en-us/library/ms675089%28v=vs.85%29.aspx) qui liste tous les attributs disponibles pour MS Active Directory.
 
-By default, the command returns attributes as a collection if multiple results are found, or as a variable if a single result is found. The optional *attributesAsArray* parameter allows you to "force" returned attribute(s) to be formatted as a collection or as a variable for each attribute defined:
+Par défaut, la commande retourne les attributs sous forme de collection si plusieurs résultats sont trouvés, ou sous forme de variable simple si un seul résultat est trouvé. Le paramètre optionnel *attributsEnTableau* vous permet de "forcer" le formatage des attributs retournés en collection ou en variable pour chaque attribut défini :
 
-* When you pass **true** in an element, the corresponding element of the *attributes* parameter will be returned in a collection. If a single value is found, the command returns a collection with a single element.
-* When you pass **false** in an element, the corresponding element of the *attributes* parameter will be returned in a simple variable. If multiple entries are found, the command returns only the first element.
+* Lorsque vous passez **true** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en collection. Si une seule valeur est trouvée, la commande retourne une collection à un seul élément.
+* Lorsque vous passez **false** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en variable simple. Si plusieurs valeurs sont trouvées, la commande retourne uniquement le premier élément.
 
-## Example 1 
+## Exemple 1 
 
-You want to get the phone number of the user "smith" in the company directory:
+Vous souhaitez obtenir le numéro de téléphone de l'utilisateur "smith" dans l'annuaire de l'entreprise :
 
 ```4d
  ARRAY TEXT($_tabAttributes;0)
@@ -69,9 +69,9 @@ You want to get the phone number of the user "smith" in the company directory:
  LDAP LOGOUT
 ```
 
-## Example 2 
+## Exemple 2 
 
-We want to get an array of all entries found for the "memberOf" attribute:
+Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut "memberOf" :
 
 ```4d
  var $entry : Object
@@ -88,19 +88,19 @@ We want to get an array of all entries found for the "memberOf" attribute:
  
  ARRAY TEXT($_arrMemberOf;0)
  OB GET ARRAY($entry;"memberOf";$_arrMemberOf)
-  // in $_arrMemberOf we have an array containing all entry groups
+  // $_arrMemberOf est un tableau contenant tous les groupes de l'entrée
 ```
 
-## See also 
+## Voir aussi 
 
 *LDAP*  
 [LDAP SEARCH ALL](ldap-search-all.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1328 |
+| Numéro de commande | 1328 |
 | Thread safe | no |
 
 

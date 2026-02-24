@@ -5,59 +5,59 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *object* : Variable ; *colPosition* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( {* ;} *objet* ; *positionCol* )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) of the column to be moved |
-| colPosition | Integer | &#8594;  | New location of column |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à déplacer |
+| positionCol | Integer | &#8594;  | Nouvel emplacement de la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->The **LISTBOX MOVE COLUMN** command moves the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
+<!--REF #_command_.LISTBOX MOVE COLUMN.Summary-->La commande **LISTBOX MOVE COLUMN** permet de déplacer par programmation la colonne désignée par le(s) paramètre(s) *objet* et *\** dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
 
-The *object* and *\** parameters designate the column to move. Passing the optional *\** parameter indicates that the *object* parameter is a column name (string). If you do not pass this parameter, this indicates that the *object* parameter is a column variable. In this case, you pass a variable reference instead of a string. 
+Les paramètres *objet* et *\** désignent la colonne à déplacer. Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom de colonne (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable de colonne. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-The column is moved to just in front of the one designated by the *colPosition* parameter. If the *colPosition* parameter is greater than the total number of columns, then the column is moved to just after the last column.
+La colonne est déplacée juste avant la colonne désignée par le paramètre *positionCol*. Si le paramètre *positionCol* est supérieur au nombre total de colonnes, la colonne est déplacée après la dernière colonne.
 
-**Note:** This command does nothing when it is applied to the first column of a list box displayed in hierarchical mode.
+**Note :** Cette commande ne fait rien si elle est appliquée à la première colonne d’une list box affichée en mode hiérarchique.
 
-The command takes the static and locked column properties into account: for example, if you try to move a static column, the command does nothing. 
+La commande tient compte des propriétés de colonnes statiques et verrouillées : si vous tentez par exemple de déplacer une colonne statique, la commande ne fait rien. 
 
-This functionality was already found in 4D in Application mode: the user can move non-static columns using the mouse. However, unlike columns moved by the user, this command does not generate the On Column Moved event. 
+Cette fonctionnalité est présente dans 4D en mode Application : l’utilisateur peut déplacer des colonnes non statiques à l’aide de la souris. En revanche, à la différence du déplacement effectué par l’utilisateur, la commande ne génère pas l’événement On Column Moved. 
 
-## Example 
+#### Exemple 
 
-You want to swap the 2nd and 3rd columns of the list box:
+Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
 
 ```4d
- LISTBOX MOVE COLUMN(*;"column2";3)
+ LISTBOX MOVE COLUMN(*;"colonne2";3)
 ```
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1274 |
+| Numéro de commande | 1274 |
 | Thread safe | no |
 
 

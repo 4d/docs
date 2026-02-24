@@ -9,65 +9,65 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->The **OPEN ADMINISTRATION WINDOW** command displays the server administration window on the machine that executes it.<!-- END REF--> The 4D Server administration window can be used to view the current parameters and to carry out various maintenance operations (see the 4D Server Reference Guide). Beginning with version 11 of 4D Server, this window can be displayed from a client machine: 
+<!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->La commande **OPEN ADMINISTRATION WINDOW** affiche la fenêtre d’administration du serveur sur le poste qui l’exécute.<!-- END REF--> La fenêtre d’administration de 4D Server permet de visualiser les paramètres courants et d’effectuer diverses opérations de maintenance (cf. Guide de référence de 4D Server). A compter de la version 11 de 4D Server, cette fenêtre peut être affichée depuis un poste client : 
 
-![](../assets/en/commands/pict12004.en.png)
+![](../assets/en/commands/pict12004.fr.png)
 
-This command must be called in the context of a connected 4D application or a 4D Server. It does nothing if: 
+Cette commande doit être appelée dans le contexte d’une application 4D connectée ou d'un 4D Server. Elle ne fait rien si :
 
-* it is called in a 4D application in local mode,
-* it is executed by a user other than the Designer or the Administrator (in this case, the error -9991 is generated, see the *Database Engine Errors (-10602 -> 4004)* section).
+* elle est appelée dans une application 4D en mode local,
+* elle est exécutée par un utilisateur autre que le Super\_Utilisateur ou l’Administrateur (dans ce cas, l’erreur -9991 est générée, cf. section *Erreurs de la base de données (-10602 -> 4004)*).
 
-## Example 
+## Exemple 
 
-Here is the code for an administration button: 
+Voici le code d'un bouton d’administration : 
 
 ```4d
- If(Application type=4D local mode)
+ If(Application type=4D mode local)
     OPEN SECURITY CENTER
   // ...
  End if
- If(Application type=4D remote mode)
+ If(Application type=4D mode distant)
     OPEN ADMINISTRATION WINDOW
   // ...
  End if
  If(Application type=4D Server)
-  // ...
     OPEN SECURITY CENTER
+  // ...
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the OK system variable is set to 1\. Otherwise, it is set to 0.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1\. Dans le cas contraire, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [OPEN SECURITY CENTER](open-security-center.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1047 |
+| Numéro de commande | 1047 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

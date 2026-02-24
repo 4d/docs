@@ -4,47 +4,45 @@ title: MAIL Convert to MIME
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|17 R4|Added|
-|17 R5|Modified|
+| Release | Modifications |
+| ------- | ------------- |
+| 17 R4   | Ajout         |
+| 17 R5   | Modifié       |
 
 </details>
 
 <!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
-
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|mail|Object|&#8594; |Email object|
-|options|Object|&#8594; |Charset and encoding mail options|
-|Result|Text|&#8592;|Email object converted to MIME|
-</div>
+| Paramètres | Type   |                             | Description                              |
+| ---------- | ------ | :-------------------------: | ---------------------------------------- |
+| mail       | Object | &#8594; | Objet email                              |
+| options    | Object | &#8594; | Options d'encodage et de charset du mail |
+| Résultat   | Text   | &#8592; | Objet email converti en MIME             |
+
 <!-- END REF -->
 
 ## Description
 
-The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL Convert to MIME.Summary -->converts an email object into MIME text<!-- END REF -->. This command is called internally by [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) to format the email object before sending it. It can be used to analyze the MIME format of the object.
+La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send()](../API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
-In *mail*, pass the content and the structure details of the email to convert. This includes information such as the email addresses (sender and recipient(s)), the message itself, and the type of display for the message.
+Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 
->4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
+> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
-In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
+Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
 
-|Property| Type| Description|
-|---|---|---|
-|headerCharset| Text|Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values:<table><tr><th>Constant</th><th>Value</th><th>Comment</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table>|
-|bodyCharset| Text| Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)|
+| Propriété     | Type | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| headerCharset | Text | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>Mode courrier ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII si possible, japonais (ISO-2022-JP) & 7-bit si possible, sinon UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mode courrier ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mode courrier UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</td></tr><tr><td>mode courrier UTF8 en base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
+| bodyCharset   | Text | Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
+Si le paramètre *options* est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.
 
-## Example
+## Exemple
 
 ```4d
 var $mail: Object
@@ -87,13 +85,11 @@ $mime:=MAIL Convert to MIME($mail)
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
 
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1604 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1604 |
+| Thread safe        | oui  |
 
 

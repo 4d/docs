@@ -5,66 +5,66 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *screenID* : Integer {; *screenArea* : Integer}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* ; *haut* ; *droite* ; *bas* {; *idEcran* {; *zoneEcran*}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &#8592; | Global left coordinate of screen area |
-| top | Integer | &#8592; | Global top coordinate of screen area |
-| right | Integer | &#8592; | Global right coordinate of screen area |
-| bottom | Integer | &#8592; | Global bottom coordinate of screen area |
-| screenID | Integer | &#8594;  | Screen number, or main screen if omitted |
-| screenArea | Integer | &#8594;  | Entire screen (default) or working area |
+| gauche | Integer | &#8592; | Coordonnée gauche de la zone de l'écran |
+| haut | Integer | &#8592; | Coordonnée supérieure de la zone de l'écran |
+| droite | Integer | &#8592; | Coordonnée droite de la zone de l'écran |
+| bas | Integer | &#8592; | Coordonnée inférieure de la zone de l'écran |
+| idEcran | Integer | &#8594;  | Numéro de l'écran ou écran principal si omis |
+| zoneEcran | Integer | &#8594;  | Ecran entier (par défaut) ou zone de travail |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R2|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|18 R2|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SCREEN COORDINATES.Summary-->The SCREEN COORDINATES command returns in *left*, *top*, *right,* and *bottom* the global coordinates of the screen specified by *screenID*.<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Summary-->La commande **SCREEN COORDINATES** retourne dans les paramètres *gauche*, *haut*, *droite* et *bas* les coordonnées de l'écran spécifié dans le paramètre *idEcran*.<!-- END REF-->
 
-If you omit the *screenID* parameter, the command returns the coordinates of the main screen. 
+Si vous omettez le paramètre *idEcran*, **SCREEN COORDINATES** retourne les coordonnées de l'écran principal.
 
-The optional *screenArea* parameter lets you specify if you want the coordinates for the entire screen area (default) or only for the available usable area. Two selectors are available:
+Le paramètre optionnel zoneEcran vous permet d'indiquer si vous souhaitez les coordonnées de la zone de l'écran entier (par défaut) ou uniquement les coordonnées de la zone utilisable disponible. Deux sélecteurs sont disponibles :
 
-| Constant         | Value | Comment                                                                                                                                      |
-| ---------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Screen size      | 0     | The coordinates of the entire screen. (default value)                                                                                        |
-| Screen work area | 1     | The coordinates of the available screen area that can be used *(i.e.*, they are not occupied by Windows taskbar or macOS menu bar and Dock). |
+| Constante        | Valeur | Comment                                                                                                                                                                             |
+| ---------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Screen size      | 0      | Les coordonnées de l'écran entier. (valeur par défaut)                                                                                                                              |
+| Screen work area | 1      | Les coordonnées de la zone de travail disponible pouvant être utilisées (c'est-à-dire non utilisées par la barre de tâches de Windows ou par la barre de menu et le Dock de macOS). |
 
-The following images demonstrate the differences between the screen size and the work area:
+Les images suivantes illustrent les différences entre la zone de l'écran et la zone de travail :
 
 ![](../assets/en/commands/pict4800387.en.png) 
 
-**Notes**:
+**Notes** :
 
-* If the taskbar or dock is automatically hidden, **SCREEN COORDINATES** always returns the entire screen size.
-* If an invalid value is given in *screenID* or *screenArea*, a zero is returned for all of the coordinates.
+* Si la barre de tâches ou le Dock est automatiquement caché(e), **SCREEN COORDINATES** retourne toujours la taille de l'écran entier.
+* Si une valeur non valide est lue dans *idEcran* ou *zoneEcran*, une valeur zéro est retournée pour toutes les coordonnées.
 
-## See also 
+## Voir aussi 
 
 [Count screens](count-screens.md)  
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN DEPTH](screen-depth.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 438 |
+| Numéro de commande | 438 |
 | Thread safe | no |
 
 

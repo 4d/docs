@@ -5,92 +5,92 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | Pathname to new folder to create |
-| * | Operator | &#8594;  | Create folder hierarchy |
+| cheminAccès | Text | &#8594;  | Chemin d'accès au nouveau dossier à créer |
+| * | Opérateur | &#8594;  | Créer la hiérarchie du dossier |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|6|Created|
+|13|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CREATE FOLDER.Summary-->The **CREATE FOLDER** command creates a folder according to the pathname you pass in *folderPath*.<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Summary-->La commande **CREATE FOLDER** crée un dossier en fonction du chemin d'accès que vous passez dans le paramètre *cheminAccès*.<!-- END REF-->
 
-If you pass a name in *folderPath*, the folder is created in the database folder. 
+Si vous passez un nom dans *cheminAccès*, le dossier est créé dans le dossier de la base. 
 
-In *folderPath*, you can also pass a folder hierarchy starting from the root of the volume or from the database folder (in this case, the string must end with a folder separator).   
-If you omit the *\** parameter, an error is generated and no folder is created if any one of the intermediary folders does not exist.   
-If you pass the *\** parameter, **CREATE FOLDER** recreates the folder hierarchy if necessary and no error is generated. In this case, you can also pass a document pathname in *folderPath*. The document name is then ignored but the folder hierarchy specified in *folderPath* is created recursively 
+Vous pouvez également passer dans *cheminAccès* une hiérarchie de dossiers à partir de la racine du volume ou du dossier de la base (dans ce cas, la chaîne doit se terminer par un séparateur de dossier).   
+Si vous omettez le paramètre \*, une erreur est générée et aucun dossier n'est créé si au moins un dossier intermédiaire n'existe pas.   
+Si vous passez le paramètre \*, **CREATE FOLDER** recrée la hiérarchie de dossiers si nécessaire et aucune erreur n'est générée. Dans ce cas, vous pouvez également passer un chemin d’accès de document dans *cheminAccès*. Le nom du document est alors ignoré mais la hiérarchie de dossiers définie dans *cheminAccès* est créée récursivement. 
 
-## Example 1 
+## Exemple 1 
 
-The following example creates the “Archives” folder in the folder of the database:
+L'exemple suivant crée le dossier “Archives” dans le dossier de la base :
 
 ```4d
  CREATE FOLDER("Archives")
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example creates the Archives folder in the folder of the database, then it creates the “January” and “February” subfolders:
+L'exemple suivant crée le dossier “Archives” dans le dossier de la base, puis crée les sous-dossiers “Janvier” et “Février”:
 
 ```4d
  CREATE FOLDER("Archives")
- CREATE FOLDER("Archives\\January")
- CREATE FOLDER("Archives\\February")
+ CREATE FOLDER("Archives\\Janvier")
+ CREATE FOLDER("Archives\\Février")
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example creates the “Archives” folder at the root level of the C volume:
+L'exemple suivant crée le dossier “Archives” à la racine du volume C :
 
 ```4d
  CREATE FOLDER("C:\\Archives")
 ```
 
-## Example 4 
+## Exemple 4 
 
-Creation of the "C:\\Archives\\2011\\January\\" folder hierarchy:
+Création de la hiérarchie de dossiers "C:\\Archives\\2011\\January\\" : 
 
 ```4d
  CREATE FOLDER("C:\\Archives\\2011\\January\\";*)
 ```
 
-## Example 5 
+## Exemple 5 
 
-Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder: 
+Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\\" : 
 
 ```4d
  CREATE FOLDER("C:\\Archives\\2011\\February\\Doc.txt";*)
-  // the "Doc.txt" file is ignored
+  // le fichier "Doc.txt" est ignoré
 ```
 
-## See also 
+## Voir aussi 
 
 [FOLDER LIST](folder-list.md)  
 [Test path name](test-path-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 475 |
+| Numéro de commande | 475 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

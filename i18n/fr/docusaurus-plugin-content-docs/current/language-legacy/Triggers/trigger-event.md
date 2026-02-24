@@ -9,70 +9,68 @@ displayed_sidebar: docs
 <!--REF #_command_.Trigger event.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | 0 Outside any trigger execution cycle 1 Saving a new record 2 Saving an existing record 3 Deleting a record |
+| Résultat | Integer | &#8592; | 0=Hors de tout événement de trigger, 1=Sauvegarde d'un nouvel enregistrement, 2=Sauvegarde d'un enregistrement existant, 3=Suppression d'un enregistrement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|13|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Trigger event.Summary-->Called from within a trigger, the **Trigger event** command returns a numeric value that denotes the type of the database event, in other words, the reason why the trigger has been invoked.<!-- END REF-->
+<!--REF #_command_.Trigger event.Summary-->La commande **Trigger event** est appelée dans un trigger et renvoie une valeur numérique qui indique le type de l'événement de la base, ou la raison pour laquelle le trigger a été appelé.<!-- END REF--> 4D fournit les constantes prédéfinies suivantes, placées dans le thème *Evénements trigger* :
 
-The following predefined constants are provided in the *Trigger Events* theme:
+| Constante                       | Type        | Valeur |
+| ------------------------------- | ----------- | ------ |
+| On Deleting Record Event        | Entier long | 3      |
+| On Saving Existing Record Event | Entier long | 2      |
+| On Saving New Record Event      | Entier long | 1      |
 
-| Constant                        | Type    | Value |
-| ------------------------------- | ------- | ----- |
-| On Deleting Record Event        | Integer | 3     |
-| On Saving Existing Record Event | Integer | 2     |
-| On Saving New Record Event      | Integer | 1     |
+Si, dans un trigger, vous effectuez des opérations de base de données sur plusieurs enregistrements (par exemple mise à jour de plusieurs enregistrements dans la table *\[Produits\]* et ajout d'enregistrement dans la table *\[Factures\]*), vous pouvez rencontrer des situations (comme des enregistrements verrouillés) qui empêchent le trigger d'exécuter correctement les opérations pour lesquelles il est appelé. Il vous faut alors stopper les actions de la base et retourner une erreur pour que le process appelant sache que la requête n'a pu être exécutée. Ce process doit également être en mesure d'annuler les opérations non exécutées. Autrement dit, lorsqu'une telle situation se produit, vous avez besoin de savoir dans le trigger si vous êtes en transaction avant même d'essayer de faire quoi que ce soit. Pour cela, utilisez la fonction [In transaction](in-transaction.md).
 
-Within a trigger, if you perform database operations on multiple records, you may encounter conditions (usually locked records) that will make the trigger unable to perform correctly. An example of this situation is updating multiple records in a \[Products\] table when a record is being added to an \[Invoices\] table. At this point, you must stop attempting database operations, and return a database error so the invoking process will know that its database request cannot be performed. Then the invoking process must be able to cancel, during the transaction, the incomplete database operations performed by the trigger. When this type of situation occurs, you need to know from within the trigger if you are in transaction even before attempting anything. To do so, use the command [In transaction](in-transaction.md).
+Dans 4D, il n'y a pas de limite, à part la mémoire disponible, aux appels de triggers en cascade. Pour optimiser l'exécution d'un trigger, vous pouvez écrire le code de vos triggers non seulement en fonction de l'événement de la base mais aussi du niveau de l'appel lorsque les triggers sont appelés en cascade. Par exemple, pendant l'événement trigger **Sur suppression enregistrement** pour la table *\[Factures\]*, vous pouvez ne pas effectuer la mise à jour du champ *\[Clients\]Ventes* si la suppression de l'enregistrement de la table *\[Factures\]* fait partie de la suppression en cascade des factures liées à l'enregistrement dans la table *\[Clients\]* que vous êtes en train de supprimer. Pour cela, utilisez les routines [Trigger level](trigger-level.md) et [TRIGGER PROPERTIES](trigger-properties.md).
 
-When cascading trigger calls, 4D has no limit other than the available memory. To optimize trigger execution, you may want to write the code of your triggers depending not only on the database event, but also on the level of the call when triggers are cascaded. For example, during a deletion database event for the \[Invoices\] table, you may want to skip the update of the \[Customers\] Gross Sales field if the deletion of the \[Invoices\] record is part of the deletion of **all** the invoices related to a \[Customers\] record being deleted. To do so, use the commands [Trigger level](trigger-level.md) and [TRIGGER PROPERTIES](trigger-properties.md).
+## Exemple 
 
-## Example 
-
-You use the **Trigger event** command to structure your triggers as follows:
+Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-dessous :
 
 ```4d
-  // Trigger for [anyTable]
+  // Un trigger de la table [toute table]
  var $0 : Integer
- $0:=0 // Assume the database request will be granted
+ $0:=0 // S'assurer que la requête de la base sera accordée
  Case of
     :(Trigger event=On Saving New Record Event)
-  // Perform appropriate action for the saving of a newly created record
+  // Exécuter les actions appropriées pour la sauvegarde d'un nouvel enregistrement
     :(Trigger event=On Saving Existing Record Event)
-  // Perform appropriate actions for the saving of an already existing record
+  // Exécuter les actions appropriées pour la sauvegarde d'un enregistrement existant
     :(Trigger event=On Deleting Record Event)
-  // Perform appropriate actions for the deletion of a record
+  // Exécuter les actions appropriées pour la suppression d'un enregistrement
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
+*Présentation des triggers*  
 [Trigger level](trigger-level.md)  
 [TRIGGER PROPERTIES](trigger-properties.md)  
-*Triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 369 |
+| Numéro de commande | 369 |
 | Thread safe | yes |
 
 

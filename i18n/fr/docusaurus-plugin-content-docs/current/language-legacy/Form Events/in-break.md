@@ -9,31 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.In break.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns True if the execution cycle is in break |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en rupture |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.In break.Summary-->**In break** returns True for the In break execution cycle.<!-- END REF--> 
+<!--REF #_command_.In break.Summary-->**In break** retourne Vrai pour le cycle d'exécution En rupture.<!-- END REF--> 
 
-In order for the **In break** execution cycle to be generated, make sure that the On Printing Break event property for the form and/or the objects has been selected in the Design environment.
+Si vous souhaitez que le cycle d'exécution **In break** soit généré, assurez-vous que l'événement formulaire On Printing Break a bien été activé dans la boîte de dialogue des propriétés du formulaire ou du (des) objet(s) sélectionné(s), en mode Développement. 
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Printing Break event.
+**Note :** Cette commande équivaut à utiliser la commande [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Printing Break.
 
-## See also 
+## Voir aussi 
 
 [In footer](in-footer.md)  
 [In header](in-header.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 113 |
+| Numéro de commande | 113 |
 | Thread safe | no |
-
 
 

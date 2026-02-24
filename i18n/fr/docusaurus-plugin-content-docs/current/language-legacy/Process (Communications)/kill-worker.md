@@ -5,72 +5,72 @@ slug: /commands/kill-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** ({ *process* : Text, Integer })<!-- END REF-->
+<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** {( *process* )}<!-- END REF-->
 <!--REF #_command_.KILL WORKER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Text, Integer | &#8594;  | Number or name of process to kill (kills current process if omitted) |
+| process | Text, Integer | &#8594;  | Nom ou numéro du process worker à tuer (process courant si omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Created|
+|15 R5|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.KILL WORKER.Summary-->The **KILL WORKER** command posts a message to the worker process whose name or number you passed in *process*, asking it to ignore any pending messages and to terminate its execution as soon as the current task ends.<!-- END REF-->
+<!--REF #_command_.KILL WORKER.Summary-->La commande **KILL WORKER** envoie un message au process worker dont vous avez passé le nom ou le numéro dans *process*, lui demandant d'ignorer tous les messages en attente (s'il y a) et de terminer son exécution à l'issue de la tâche en cours.<!-- END REF-->
 
-This command can only be used with worker processes. For more information, please refer to the *About workers* section. 
+Cette commande ne peut être utilisée qu'avec des process workers. Pour plus d'informations, reportez-vous à la section *A propos des workers*. 
 
-In *process*, you pass either the name or number of the worker process whose execution needs to be terminated. If no worker with the specified process name or number exists, **KILL WORKER** does nothing.  
-If you do not pass any parameter, **KILL WORKER** applies to the currently running worker and is therefore equivalent to **KILL WORKER* (Current process)*.
+Dans le paramètre *process*, vous pouvez passer soit le nom soit le numéro du process worker que vous voulez tuer. Si aucun process worker avec le nom ou le numéro spécifié existe, **KILL WORKER** ne fait rien.  
+Lorsque le paramètre *process* est omis, **KILL WORKER** s'applique au process worker courant et équivaut donc à **KILL WORKER*(Numero du process courant)*.
 
-If **KILL WORKER** is applied to a worker that was not created explicitly using the [CALL WORKER](call-worker.md) command (for example, the main application worker), it only asks this worker to empty its message box.
+Lorsque la commande est appliquée à un worker qui n’a pas été créé explicitement par la commande [CALL WORKER](call-worker.md) (par exemple, le process worker principal de l'application), elle vide uniquement sa boîte aux lettres.
 
-If the [CALL WORKER](call-worker.md) command is called to send a message to a worker that was just killed by **KILL WORKER**, a new process is started. To make sure that there is only one process running at a time for a worker, the new process will start after the previous one is actually terminated. Note however that if [CALL WORKER](call-worker.md) is called from a worker to send itself a message whereas it has just been killed by **KILL WORKER**, the command does nothing. 
+Si la commande [CALL WORKER](call-worker.md) est appelée pour envoyer un message à un worker qui vient juste d'être tué par **KILL WORKER**, un nouveau process est démarré. Pour être sûr qu'il y a un seul process lancé à la fois pour un worker, le nouveau process attendra que que le précédent soit effectivement terminé. A noter cependant que si la commande [CALL WORKER](call-worker.md) est appelée depuis un worker pour qu'il s'envoie lui-même un message alors qu'il vient juste d'être tué par **KILL WORKER**, la commande ne fait rien. 
 
-## Example 
+#### Exemple 
 
-The following code (executed from a form, for example) triggers the termination of a worker:
+Le code suivant (exécuté depuis un formulaire, par exemple) déclenche l’arrêt d'un process worker :
 
 ```4d
- CALL WORKER(vWorkerName;"theWorker";"end")
+ CALL WORKER(vNomWorker;"leWorker";"fin")
 ```
 
-In the worker method (*theWorker*), you add some code to handle this situation:
+Dans la méthode du process worker (*leWorker*), vous ajoutez du code pour gérer cette situation :
 
 ```4d
-  //theWorker method
- #DECLARE ($action : Text) //param
+  //méthode leWorker
+ #DECLARE ($action : Text) //paramètre
  
  Case of
-    :($action="call") //the worker is called
-       ... //do something
-    :($action="end") //the worker is asked to kill itself
+    :($action="appel") //on appelle le worker
+       ... //faire quelque chose
+    :($action="fin") //on demande au worker de terminer son exécution
        KILL WORKER
  End case
 ```
 
-## See also 
+#### Voir aussi 
 
-*About workers*  
+*A propos des workers*  
 [CALL WORKER](call-worker.md)  
 [Current process name](current-process-name.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1390 |
+| Numéro de commande | 1390 |
 | Thread safe | yes |
 
 

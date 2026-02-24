@@ -5,45 +5,45 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* : Object ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objet* ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Object to return property names |
-| Function result | Collection | &#8592; | Collection of property names (strings) |
+| objet | Object | &#8594;  | Objet dont on veut obtenir les noms des propriétés |
+| Résultat | Collection | &#8592; | Collection de noms de propriété (chaines) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Keys.Summary-->The **OB Keys** command returns a collection of strings containing all of the enumerable property names of the *object*.<!-- END REF--> 
+<!--REF #_command_.OB Keys.Summary-->La commande **OB Keys** retourne une collection de chaînes contenant tous les noms des propriétés énumérables de l'*objet*.<!-- END REF--> 
 
-Only first-level property names are returned (property names of sub-objects are not returned). The order of names within the returned collection follows the definition order of the properties.
+Seuls les noms de propriétés de premier niveau sont retournés (les noms des propriétés des sous-objets ne sont pas retournés). L'ordre des noms contenus dans la collection retournée suit l'ordre de défintion des propriétés.
 
-## Example 
+## Exemple 
 
-You want a collection with all first-level property names of an object:
+Vous souhaitez une collection avec tous les noms de propriétés de premier niveau d'un objet :
 
 ```4d
  var $person : Object
  var $col : Collection
  
  $person:=New object
- $person.lastName:="Smith"
- $person.firstName:="Jenny"
- $person.children:=New object("Mary";12;"Mark";8)
+ $person.lastName:="Dupont"
+ $person.firstName:="Jeanne"
+ $person.children:=New object("Marie";12;"Marc";8)
  
  $col:=OB Keys($person)
  
@@ -52,16 +52,16 @@ You want a collection with all first-level property names of an object:
   //$col[2]="children"
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Entries](ob-entries.md)  
 [OB Values](ob-values.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1719 |
+| Numéro de commande | 1719 |
 | Thread safe | no |
 
 

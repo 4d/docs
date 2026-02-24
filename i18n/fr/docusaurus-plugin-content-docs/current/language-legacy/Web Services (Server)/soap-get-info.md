@@ -5,54 +5,54 @@ slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *infoNum* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *numInfo* ) : Text<!-- END REF-->
 <!--REF #_command_.SOAP Get info.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| infoNum | Integer | &#8594;  | Number of type of SOAP info to get |
-| Function result | Text | &#8592; | SOAP Information |
+| numInfo | Integer | &#8594;  | Numéro du type d’information SOAP à lire |
+| Résultat | Text | &#8592; | Information SOAP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|13|Renamed|
-|2003|Created|
+|13|Renommé|
+|13|Renommé|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SOAP Get info.Summary-->The **SOAP Get info** command retrieves, in the form of a character string, the different types of information concerning a SOAP request.<!-- END REF--> 
+<!--REF #_command_.SOAP Get info.Summary-->La commande **SOAP Get info** permet de récupérer sous forme de chaîne de caractères différents types d’informations concernant une requête SOAP.<!-- END REF--> 
 
-When you process a SOAP request, it can be useful to obtain additional information — other than the RPC parameter values — about the request. For instance, for security reasons, you can use this command in the *On Web Authentication Database Method* to find out the name of the requested Web Service method. 
+Lorsque vous traitez une requête SOAP, il peut être utile d’obtenir des informations supplémentaires — en-dehors des valeurs des paramètres RPC — sur la requête. Par exemple, pour des raisons de sécurité, vous pouvez utiliser cette commande dans la *Méthode base Sur authentification Web* afin de connaître le nom de la méthode Web Service demandée. 
 
-Pass the number of the type of SOAP information you want to get in the *infoNum* parameter. You can use the following predefined constants, located in the *Web Services (Server)* theme:
+Passez dans le paramètre *numInfo* le numéro du type d’information SOAP à connaître. Vous pouvez utiliser les constantes prédéfinies suivantes, placées dans le thème *Web Services (Serveur)* :
 
-| Constant          | Type    | Value | Comment                                             |
-| ----------------- | ------- | ----- | --------------------------------------------------- |
-| SOAP method name  | Integer | 1     | Name of the Web Service method about to be executed |
-| SOAP service name | Integer | 2     | Name of the Web Service to which the method belongs |
+| Constante         | Type        | Valeur | Comment                                                                  |
+| ----------------- | ----------- | ------ | ------------------------------------------------------------------------ |
+| SOAP method name  | Entier long | 1      | Nom de la méthode offerte comme Web Service sur le point d’être exécutée |
+| SOAP service name | Entier long | 2      | Nom du Web Service auquel appartient la méthode                          |
 
-**Note:** Also for security reasons, it is possible to set the maximum size for Web Services requests sent to 4D. This configuration is carried out using the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+**Note :** Pour des raisons de sécurité également, il est possible de définir la taille maximale des requêtes Web Services adressées à 4D. Ce paramétrage est effectué à l’aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) (thème “Définition structure”).
 
-## See also 
+## Voir aussi 
 
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 [SOAP SEND FAULT](soap-send-fault.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 784 |
+| Numéro de commande | 784 |
 | Thread safe | yes |
 
 

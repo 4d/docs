@@ -5,81 +5,81 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *userID* : Integer, Text ; *password* : Text {; *digest* : Boolean} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *utilisateur* ; *motDePasse* {; *digest*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer, Text | &#8594;  | Unique user ID or User name |
-| password | Text | &#8594;  | Unencrypted password |
-| digest | Boolean | &#8594;  | Digest password = True, <br/>Plain-text password (default) = False |
-| Function result | Boolean | &#8592; | True = valid password False = invalid password |
+| utilisateur | Integer, Text | &#8594;  | N° de référence unique ou Nom de l’utilisateur |
+| motDePasse | Text | &#8594;  | Mot de passe non crypté |
+| digest | Boolean | &#8594;  | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
+| Résultat | Boolean | &#8592; | Vrai = mot de passe correct, Faux = mot de passe incorrect |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|2004|Modified|
-|<6|Created|
+|14|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Validate password.Summary-->Validate password returns True if the string passed in *password* is the password for the user account whose ID number or name is passed in *userID*.<!-- END REF-->
+<!--REF #_command_.Validate password.Summary-->La commande **Validate password** retourne Vrai si la chaîne passée dans *motDePasse* est le mot de passe du compte utilisateur dont le n° de référence ou le nom est passé dans *utilisateur*.<!-- END REF-->
 
-The optional *digest* parameter indicates whether the *password* parameter contains a plain-text password or a hashed password (digest mode):
+Le paramètre optionnel *digest* vous permet d’indiquer si le paramètre *motDePasse* contient un mot de passe en clair ou un mot de passe sous forme hachée (mode digest) :
 
-* When you pass **True**, this indicates that *password* contains a hashed password (digest mode),
-* When you pass **False** or omit this parameter, this indicates that *password* contains a plain-text password.
+* si vous passez **Vrai**, vous indiquez que le paramètre *motDePasse* contient un mot de passe sous forme hachée (mode digest),
+* si vous passez **Faux** ou omettez ce paramètre, vous indiquez que le paramètre *motDePasse* contient un mot de passe en clair.
 
-This parameter is particularly helpful when using authentication database methods, in particular the [On REST Authentication database method](on-rest-authentication-database-method.md). 
+Ce paramètre est particulièrement utile dans le contexte de l’utilisation des méthodes base d'authentification, notamment [On REST Authentication database method](on-rest-authentication-database-method.md). 
 
-The command execution is now delayed to prevent flooding (brute force attack), in other words, attempts of multiple user name/password combinations. As a result, after the 4th call to this command, it is run only after a period of 10 seconds. This delay is throughout the entire work station. 
+La commande est temporisée afin d’éviter des attaques par “force brute” (essais automatiques de multiples combinaisons de noms d’utilisateurs/mots de passe). Ainsi, au bout du quatrième appel à la commande, elle n’est exécutée qu’après 10 secondes d’attente. Cette temporisation est globale au poste de travail. 
 
-## Example 1 
+## Exemple 1 
 
-This example checks whether the password of the user “Hardy” is “Laurel”:
+L’exemple suivant vérifie que “Laurel” est le mot de passe de l’utilisateur “Hardy” :
 
 ```4d
- GET USER LIST(atUserName;alUserID)
- $vlElem:=Find in array(atUserName;"Hardy")
+ GET USER LIST(atNomUtil;alRefUtil)
+ $vlElem:=Find in array(atNomUtil;"Hardy")
  If($vlElem>0)
-    If(Validate password(alUserID{$vlElem};"Laurel"))
-       ALERT("Yep!")
+    If(Validate password(alRefUtil{$vlElem};"Laurel"))
+       ALERT("Oui !")
     Else
-       ALERT("Too bad!")
+       ALERT("Dommage !")
     End if
  Else
-    ALERT("Unknown user name")
+    ALERT("Nom d'utilisateur inconnu")
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-In the [On REST Authentication database method](on-rest-authentication-database-method.md), you want to test a connection request (using the 4D users of the database). You can just write:
+Dans la [On REST Authentication database method](on-rest-authentication-database-method.md), vous souhaitez tester une requête de connexion (vous utilisez les utilisateurs 4D de la base). Il vous suffit d’écrire :
 
 ```4d
  $0:=Validate password($1;$2;$3)
 ```
 
-## See also 
+## Voir aussi 
 
 [GET USER PROPERTIES](get-user-properties.md)  
 [Set user properties](set-user-properties.md)  
 [WEB Validate digest](web-validate-digest.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 638 |
+| Numéro de commande | 638 |
 | Thread safe | no |
 
 

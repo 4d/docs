@@ -5,71 +5,56 @@ slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Database measures.Syntax-->**Database measures** ({ *options* : Object }) : Object<!-- END REF-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| options | Object | &#8594;  | Return options |
-| Function result | Object | &#8592; | Object containing database measures |
+| options | Object | &#8594;  | Options de retour |
+| Résultat | Object | &#8592; | Objet contenant des mesures sur la base |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Database measures.Summary-->The **Database measures** command allows you to get detailed information about 4D database engine events.<!-- END REF--> Returned information includes data read/write access from/to the disk or the memory cache, as well as the use of database indexes, queries and sorts. 
+<!--REF #_command_.Database measures.Summary-->La commande **Database measures** vous permet d'obtenir un ensemble d'informations détaillées sur les événements du moteur de base de données de 4D.<!-- END REF--> Les informations renvoyées concernent les accès en lecture/écriture aux données depuis ou vers le disque ou le cache ainsi que l'utilisation des index de la base, les recherches et les tris. 
 
-**Database measures** returns a single object that contains all the relevant measures. The *options* object parameter allows you to set options for the returned information. 
+**Database measures** retourne un seul objet contenant toutes les mesures utiles. Le paramètre *options* vous permet de paramétrer les informations retournées. 
 
-### Overview of the returned object 
+### Présentation de l'objet retourné 
 
-The returned object contains a single property named "DB" that has the following basic structure:
+L'objet retourné par la commande contient une seule propriété, nommée "DB", dont la structure est la suivante :
 
 ```json
-{
-   "DB": {
-      "diskReadBytes": {…},
-      "cacheReadBytes": {…},
-      "cacheMissBytes": {…},
-      "diskWriteBytes": {…},
-      "diskReadCount": {…},
-      "cacheReadCount": {…},
-      "cacheMissCount": {…},
-      "diskWriteCount": {…},
-      "dataSegment1": {…},
-      "indexSegment": {…},
-      "tables": {…},
-      "indexes": {…}
-   }
-}
+{    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
-This object is made up of eight properties that contain basic measures ("diskReadBytes", "cacheReadBytes", "cacheMissBytes", "diskWriteBytes", "diskReadCount", "cacheReadCount", "cacheMissCount", "diskWriteCount") and additional properties ("dataSegment1", "indexSegment", "tables", "index") that can also contain elementary properties but at a different level and with a different scope (see below).
+Cet objet est composé de huit propriétés élémentaires qui contiennent les mesures de base ("diskReadBytes", "cacheReadBytes", "cacheMissBytes", "diskWriteBytes", "diskReadCount", "cacheReadCount", "cacheMissCount", "diskWriteCount") ainsi que des propriétés additionnelles ("dataSegment1", "indexSegment", "tables", "index") qui peuvent elles-mêmes contenir les propriétés élémentaires mais appliquées à des niveaux différents (voir ci-dessous).
 
-**Note:** A property is only present inside the object if it receives contents. Properties that do not have any contents are not included in the object. For example, if the database has been opened in read-only mode and indexes have not been used, the returned object will not contain "diskWriteBytes", "diskWriteCount", "indexSegment" or "indexes".
+**Note :** Une propriété est présente dans l'objet uniquement si elle contient des valeurs. Lorsqu'une propriété est vide, elle n'est pas incluse dans l'objet. Par exemple, si la base a été ouverte en mode lecture seulement et que les index n'ont pas été sollicités, l'objet retourné ne contiendra pas les propriétés "diskWriteBytes", "diskWriteCount", "indexSegment" et "indexes".
 
-### Elementary properties 
+### Propriétés élémentaires 
 
-Elementary properties can be found at different levels in the DB object. They return the same information but at different scopes. Here is a description of the elementary properties:
+Les propriétés élémentaires peuvent être présentes à différents niveaux de l'objet DB. Elles retournent les mêmes informations mais sur des périmètres spécifiques. Voici la description de ces propriétés :
 
-| **Name**       | **Information returned**        |
-| -------------- | ------------------------------- |
-| diskReadBytes  | Bytes read from disk            |
-| cacheReadBytes | Bytes read from cache           |
-| cacheMissBytes | Bytes missed from cache         |
-| diskWriteBytes | Bytes written to disk           |
-| diskReadCount  | Read accesses from disk         |
-| cacheReadCount | Read accesses from cache        |
-| cacheMissCount | Read accesses missed from cache |
-| diskWriteCount | Write accesses to disk          |
+| **Nom**        | **Information retournée**                  |
+| -------------- | ------------------------------------------ |
+| diskReadBytes  | Octets lus depuis le disque                |
+| cacheReadBytes | Octets lus depuis le cache                 |
+| cacheMissBytes | Octets manqués depuis le cache             |
+| diskWriteBytes | Octets écrits sur le disque                |
+| diskReadCount  | Nombre d'accès en lecture depuis le disque |
+| cacheReadCount | Nombre d'accès en lecture depuis le cache  |
+| cacheMissCount | Nombre d'accès manqués dans le cache       |
+| diskWriteCount | Nombre d'accès en écriture sur le disque   |
 
-The eight elementary properties all have the same object structure, for example:
+Ces huit propriétés élémentaires ont toutes la même structure d'objet, par exemple :
 
 ```json
 "diskReadBytes": {
     "value": 33486473620,
-    "history": [        // optional
+    "history": [        // optionnel
         {"value": 52564,"time": -1665},
         {"value": 54202,"time": -1649},
             …
@@ -77,41 +62,29 @@ The eight elementary properties all have the same object structure, for example:
 }
 ```
 
-* "**value**" (number): The "value" property contains a number that represents either a quantity of bytes or a count of accesses. Basically, this value is the sum of the value(s) of the "history" object (even if the "history" object is not present).
-* "**history**" (array of objects): The "history" object array is a compilation of event values grouped by second. The "history" property is present only if requested through the *options* parameter (see below). The history array will hold a maximum of 200 items. Each element of the array is itself an object that contains two properties: "value" and "time".  
-   * "value" (number): quantity of bytes or accesses handled during the time period designated in the associated "time" property.  
-   * "time" (number): number of seconds elapsed since the function has been called. In the example above ("time": -1649) means 1649 seconds ago (or more precisely between 1649 and 1650 seconds ago). During this one-second period, 54,202 bytes have been read on disk.  
-   The history array does not contain sequential values (-1650,-1651,-1652, etc.) The previous value is -1665, which means that nothing was read on the disk in the 15-second period between 1650 and 1665.  
-   **Note:** By default the array will only contain useful information.  
-   Since the maximum size of the array is 200, if the database is used intensively (e.g., something is read every second on the disk), the maximum length of the history will be 200 seconds. On the other hand, if almost nothing happens except, for example, once every 3 minutes, the length of the history will be 600 minutes (3\*200).  
-   This example can be represented in the following diagram:  
+* "**value**" (numérique): La propriété "value" contient un nombre représentant soit une quantité d'octets, soit un nombre d'accès. Cette valeur représente la somme théorique des valeurs de l'objet "history" (même si l'objet "history" n'est pas présent ).
+* "**history**" (tableau d'objets) : Le tableau d'objets "history" est une compilation de valeurs d'événements groupés par seconde. La propriété "history" est présente uniquement si elle a été demandée via le paramètre *options* (cf. ci-dessous). Le tableau "history" contient un maximum de 200 éléments. Chaque élément du tableau est lui-même un objet contenant deux propriétés : "value" et "time".  
+   * "value" (numérique) : nombre d'octets ou d'accès décomptés durant la période de temps indiquée par la propriété "time" associée.  
+   * "time" (numérique) : nombre de secondes écoulées depuis l'appel de la fonction. Dans l'exemple ci-dessus, ("time": -1649) signifie "il y a 1649 secondes" (ou plus précisément, entre 1649 et 1650 secondes). Pendant cette unique seconde, 54,202 octets ont été lus sur le disque.  
+   Le tableau "history" ne contient pas séquentiellement toutes les secondes (-1650,-1651,-1652, etc.). La valeur précédente est -1665, ce qui signifie que rien n'a été lu sur le disque durant la période de 15 secondes entre 1650 et 1665.  
+   Puisque la taille maximum du tableau est 200, si la base de données est sollicitée de manière intensive (quelque chose est lu chaque seconde sur le disque), la durée maximale de l'historique sera de 200 secondes. D'un autre côté, s'il ne se passe presque rien, par exemple uniquement toutes les 3 minutes, la durée de l'historique pourra atteindre 600 minutes (3\*200).  
+   Cet exemple peut être représenté dans le schéma suivant :  
    ![](../assets/en/commands/pict1510781.en.png)
 
-### dataSegment1 and indexSegment 
+### dataSegment1 et indexSegment 
 
-The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
+Les propriétés "dataSegment1" et "indexSegment" peuvent contenir jusqu'à quatre propriétés élémentaires (le cas échéant) : 
 
 ```json
-"dataSegment1": {
-   "diskReadBytes": {…},
-   "diskWriteBytes": {…},
-   "diskReadCount": {…},
-   "diskWriteCount": {…}
-},
-"indexSegment": {
-   "diskReadBytes": {…},
-   "diskWriteBytes": {…},
-   "diskReadCount": {…},
-   "diskWriteCount": {…}
-}
+"dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
-These properties return the same information as the elementary properties, but detailed for each database file:
+Ces propriétés retournent les mêmes informations que les propriétés élémentaires précédemment décrites, mais limitées à chaque fichier de la base :
 
-* "dataSegment1" represents the .4dd data file on the disk
-* "indexSegment" represents the .4dx index file on the disk
+* "dataSegment1" représente le fichier de données .4dd sur disque
+* "indexSegment" représente le fichier d'index .4dx sur disque
 
-For example, you can get the following object:
+Par exemple, vous pouvez obtenir l'objet suivant : 
 
 ```json
 {
@@ -141,7 +114,7 @@ For example, you can get the following object:
 }
 ```
 
-You can figure out how it works by adding up the returned values:
+Les valeurs retournées correspondent aux formules suivantes :
 
 *diskReadBytes.value = dataSegment1.diskReadBytes.value + indexSegment.diskReadBytes.value* 
 *diskWriteBytes.value = dataSegment1.diskWriteBytes.value + indexSegment.diskWriteBytes.value* 
@@ -150,7 +123,7 @@ You can figure out how it works by adding up the returned values:
 
 ### tables 
 
-The "tables" property contains as many properties as there are tables that have been accessed either in read or write mode since the opening of the database. The name of each property is the name of the table involved. For example: 
+La propriété "tables" contient autant de propriétés qu'il y a de tables ayant été utilisées en lecture ou en écriture depuis l'ouverture de la base. Le nom de chaque propriété est le nom de la table concernée. Par exemple : 
 
 ```json
 "tables": {
@@ -159,19 +132,19 @@ The "tables" property contains as many properties as there are tables that have 
     }
 ```
 
-Each table objects contains up to 12 properties:
+Chaque objet "table" contient jusqu' à 12 propriétés :
 
-* The first eight properties are the *elementary properties* (see above) with values related to the table involved.
-* Two other properties, "records" and "blobs", also have the same eight elementary properties, but concerning only certain field types:  
-   * The "records" property concerns all fields of the table (strings, dates, nums, etc.) except for text, pictures and Blobs  
-   * The "blobs" property concerns the text, picture and Blob fields of the table.
-* One or two additional properties, "fields" and "queries", may also be present depending on the queries and sorts performed on the table concerned:  
-   * The "fields" property contains as many "field name" attributes (which are also sub-objects) as the number of fields used for queries or sorts.  
-   Each field name object contains:  
-         * a "queryCount" object (with or without history, depending on the *options* parameter) if any query has been performed using this field  
-         * and/or a "sortCount" object (with or without history, depending on the *options* parameter) if any sort has been performed using this field.  
-   This attribute is not based on index use; all types of queries and sorts are taken into account.  
-   Example: Since the moment the database was launched, several queries and sorts have been carried out using the *CompID*, *Name* and *FirstName* fields. The returned object contains the following "fields" sub-object (*options* are with path and without history):  
+* Les huit premières propriétés sont les *propriétés élémentaires* (voir ci-dessus) limitées à la table concernée.
+* Deux autres propriétés, "records" et "blobs", contiennent également le même ensemble des huit propriétés élémentaires, mais limitées à certains types de champs :  
+   * La propriété "records" concerne tous les champs de la table (chaînes, dates, numériques, etc.) à l'exception des champs de type texte, image et BLOB.  
+   * La propriété "blobs" concerne les champs de type texte, image et BLOB de la table.
+* Une ou deux propriétés supplémentaires, "fields" et "queries", peuvent également être présentes en fonction des recherches et tris effectués sur la table concernée :  
+   * La propriété "fields" contient autant de propriétés "nom de champ" (chacune étant également un sous-objet) qu'il y a de champs ayant été utilisés pour des recherches ou des tris.  
+   Chaque objet nom de champ contient :  
+         * un objet "queryCount" (avec ou sans history, en fonction du paramètre *options*) si une recherche a été effectuée en utilisant ce champ  
+         * et/ou un objet "sortCount" (avec ou sans history, en fonction du paramètre *options*) si un tri a été effectué en utilisant ce champ.  
+   Cet attribut n'est pas basé sur l'utilisation des index ; tous les types de recherches et de tris sont pris en compte.  
+   Exemple : Depuis le lancement de la base, plusieurs recherches et tris ont été effectués en utilisant les champs *CompID*, *Name* et *FirstName*. L'objet retourné contient le sous-objet "fields" suivant (*options* sans historique) :  
          
    ```json  
    {  
@@ -200,17 +173,16 @@ Each table objects contains up to 12 properties:
    (...)  
    ```  
          
-   **Note**:The "fields" attribute is created only if a query or sort has been performed on the table; otherwise this attribute will not be present.  
-   * "queries" is an array of objects that provides a description of each query performed on the table. Each element of the array will contain three attributes:  
-         * "queryStatement" (string): query string (containing field names but not criteria values). For example: "(Companies.PK\_ID != ?)"  
-         * "queryCount" (object):  
-                  * "value" (number): number of times the query statement has been executed, regardless of the criteria values.  
-                  * "history" (array of objects) (if requested in *options*): "value" and "time" standard history properties  
-         * "duration" (object) (if the "value" is >0)  
-                  * "value" (number): number of milliseconds  
-                  * "history" (array of objects) (if requested in *options*): "value" and "time" standard history properties.  
-   Example: Since the moment the database was launched, a single query has been performed on the Employees table (*options* are with path and with history):  
-
+   **Note** : L'attribut "fields" est créé uniquement si une recherche ou un tri a été effectué(e) sur la table ; sinon, l'attribut n'est pas présent.  
+   * "queries" est un tableau d'objets fournissant une description de chaque recherche effectuée sur la table concernée. Chaque élément du tableau contient trois attributs :  
+         * "queryStatement" (chaîne) : chaîne de recherche (contenant les noms des champs mais pas les valeurs recherchées). Par exemple : "(Companies.PK\_ID != ?)"  
+         * "queryCount" (objet) :  
+                  * "value" (numérique) : nombre d'exécutions de la chaîne de recherche, quelles que soient les valeurs recherchées.  
+                  * "history" (tableau d'objets) (si requis via le paramètre *options*) : propriétés d'historique standard "value" et "time"  
+         * "duration" (objet) (si la "value" est >0)  
+                  * "value" (numérique) : nombre de millisecondes  
+                  * "history" (tableau d'objets) (si requis via le paramètre *options*) : propriétés d'historique standard "value" et "time".  
+   Exemple : Depuis le lancement de la base, une seule recherche a été effectuée sur la table Employees (*options* avec historique) :  
    ```json  
    {  
        "DB": {  
@@ -241,13 +213,13 @@ Each table objects contains up to 12 properties:
    (...)  
    ```  
          
-   **Note:** The "queries" attribute is created when at least one query has been performed on the table.
+   **Note :** L'attribut "queries" est créé si au moins une recherche a été effectuée sur la table.
 
 ### indexes 
 
-This is the most complex object. All tables that have been accessed using one or more of their indexes are stored as properties and, inside the properties, the names of the indexes used are also included as properties. Keyword indexes appear separately and their names are followed by "*(Keyword)*". Finally, each index name property object contains the eight elementary properties related to this index as well as up to four sub-objects depending on index use in the database since it was launched (each sub-object only exists if their corresponding operation has been performed at some point since the launch of the database).
+Il s'agit de l'objet ayant la structure la plus complexe. Toutes les tables auxquelles on a accédé via au moins l'un de leurs index sont stockées en tant que propriétés et, à l'intérieur de chaque propriété, les noms des index utilisés sont également stockés sous forme de propriétés. Les index de mots-clés apparaissent séparément, leur nom est suivi de "*(* *Keyword)*". Enfin, chaque objet nom d'index contient les huit propriétés élémentaires relatives à cet index ainsi que jusqu'à quatre sous-objets en fonction de l'utilisation des index de la base depuis son lancement (chaque sous-objet n'existe que si au moins une opération correspondante a été effectuée depuis le lancement de la base).
 
-Example: Since the moment the database was launched, several indexes of the \[Employees\]EmpLastName field have been solicited. In addition, 2 records were created and 16 were deleted in the \[Companies\] table. This table has a "name" field that is indexed. The table also has been queried and sorted using this field. The resulting object will contain:
+Exemple : Depuis le lancement de la base, divers index du champ \[Employees\]EmpLastName ont été sollicités. En outre, 2 enregistrements ont été créés et 16 enregistrements ont été supprimés dans la table \[Companies\]. Cette table comporte un champ "name" qui est indexé. Des recherches et des tris ont été effectués dans la table via ce champ. L'objet résultant contient :
 
 ```json
 "indexes": {
@@ -287,34 +259,32 @@ Example: Since the moment the database was launched, several indexes of the \[Em
 }
 ```
 
-### options parameter 
+### Paramètre options 
 
-The *options* parameter allows you to customize the actual information returned by the command. In *options*, you pass an object that can contain up to three properties: "withHistory", "historyLength", and "path".
+Le paramètre *options* vous permet de personnaliser les informations retournées par la commande. Dans *options*, vous devez passer un objet pouvant contenir jusqu'à trois propriétés : "withHistory", "historyLength" et "path".
 
-| **Property**    | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "withHistory"   | Boolean                | "true" means the history will be returned by the function inside the returned object; "false" means the object returned by the function will not contain any history                                                                                                                                                                                                                                                                                                                                                                      |
-| "historyLength" | number                 | Defines the size of the returned history array in seconds(\*).                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| "path"          | string \| string array | Full path of specific property or array of full paths for all specific properties that you want to get. When you pass a string, only the corresponding value is returned in the "DB" object (if the path is valid). Example: "DB.tables.Employees.records.diskWriteBytes". When you pass an array of strings, all the corresponding values are returned in the "DB" object (if the paths are valid). Example: \["DB.tables.Employee.records.diskWriteBytes", "DB.tables.Employee.records.diskReadCount","DB.dataSegment1.diskReadBytes"\] |
+| **Propriété**   | **Type**                     | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "withHistory"   | Booléen                      | "true" signifie que l'objet "history" devra être retourné par la commande; "false" signifie que l'objet retourné ne devra pas contenir d'objet "history"                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| "historyLength" | numérique                    | Définit la taille en secondes du tableau "history" retourné(\*).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| "path"          | chaîne \| tableau de chaînes | Chemin complet de la propriété spécifique ou tableau de chemins complets des propriétés spécifiques que vous voulez obtenir. Si vous passez une chaîne, seule la valeur correspondante est retournée dans l'objet "DB" (si le chemin est valide). Exemple : "DB.tables.Employees.records.diskWriteBytes". Si vous passez un tableau de chaînes, seules les valeurs correspondantes sont retournées dans l'objet "DB" (si les chemins sont valides). Exemple : \["DB.tables.Employee.records.diskWriteBytes", "DB.tables.Employee.records.diskReadCount","DB.dataSegment1.diskReadBytes"\] |
 
-(\*) As described above, the history is not stored as a sequence of seconds but only with relevant values. If nothing happens during a couple of seconds or more, nothing will be stored and a gap will appear in the internal history array. "time" can contain, for example, -2, -4, -5, -10, -15, -30 with values 200, 300, 250, 400, 500,150\. If the "historyLength" property value is set to 600 (10 minutes), then the returned array will contain 0, -1, -2, -3 … -599 for time, and only the values of -2, -4, -5, -10, -15, -30 will be filled. All the other values will get 0 (zero) as a value. Also as described above, the only limit of the internal array is the size (200), not the time. This means that if there is low activity for a specific property, the oldest time can be very remote (e.g.: -3600 for one hour ago). It may also contain less than 200 values if the database was just started. In these cases, if the internal history time is more recent than the requested one OR if all the relevant values have already been set in the returned array, then the returned value will be -1\.   
+(\*) Comme décrit précédemment, l'historique n'est pas stocké sous forme d'une séquence de secondes mais uniquement sous forme de valeurs remarquables. Si rien ne se produit durant deux secondes ou plus, rien n'est stocké et une rupture apparaît dans le tableau "history". Par exemple, "time" peut contenir -2, -4, -5, -10, -15, -30 avec des valeurs "value" 200, 300, 250, 400, 500,150\. Si la propriété "historyLength" est fixée à 600 (10 minutes), le tableau retourné contiendra 0, -1, -2, -3 … -599 pour "time", et seules les propriétés "value" des secondes -2, -4, -5, -10, -15, -30 seront remplies. Toutes les autres propriétés "value" auront pour valeur 0 (zéro). De plus, comme décrit également, la seule limite du tableau d'historique interne est sa taille (200 éléments), et non le temps. Cela signifie que s'il y a une activité réduite pour une propriété spécifique, le moment le plus ancien peut ête très éloigné (p.e. -3600 pour il y a une heure). Il peut également contenir moins de 200 valeurs si la base vient juste d'être lancée. Dans ces cas, si l'heure interne de l'historique est plus récent que celui demandé OU si toutes les valeurs remarquables ont déjà ajoutées au tableau retourné, la valeur retournée sera -1\.   
+Exemple : La base a été démarrée il y a 20 secondes et la taille demandée du tableau "history" est de 60 secondes. Les données retournées entre 0 et -20 seront bien constituées de valeurs et de 0, et les autres valeurs serront -1\. Lorsqu'une valeur "-1" est retournée, cela signifie soit que le temps demandé est top ancien, soit que la valeur n'est plus dans le tableau d'historique interne (c'est-à-dire que la limite des 200 éléments a été atteinte et que les valeurs plus anciennes ont été supprimées).
 
-Example: The database has just been started 20 seconds ago and the request history is 60 seconds. The returned values between 0 and -20 will be set with values or zeros, and the other ones will be set with -1\. When a "-1" value is returned, this means that either the request time is too old or the value is no longer in the internal history array (i.e., the 200-item limit has been reached and older values have been removed).
+### Client/serveur et composants 
 
-### About client/server and components 
+Cette commande retourne des informations relatives à l'utilisation de la base de données. Cela signifie qu'elle ne retourne un objet valide contenant des valeurs significatives uniquement lorsqu'elle est appelée :
 
-This command returns information about database usage. This means that it will return a valid object with relevant values only when called:
+* 4D en mode local (lorsqu'elle est appelée depuis un composant, elle retourne les données de la base hôte),
+* sur le serveur en mode client/serveur.
 
-* in 4D local mode (if called from a component, it returns information about the host database)
-* on the server side in client/server mode.
+Si la commande est appelée depuis un 4D distant en mode client/serveur, l'objet est retourné vide.   
+Dans ce contexte, si vous souhaitez obtenir des informations sur le serveur, le plus simple est de créer une méthode et d'activer l'option "Exécuter sur serveur". Ce principe fonctionne aussi pour un composant : si le composant est utilisé dans un contexte local, la commande retourne des informations sur la base hôte ; dans un contexte de 4D distant, elle retourne des informations sur la base du serveur. 
 
-If the command is called from a remote 4D, then the object will be left empty.  
-In this context, if you need to get information about the database on the server, the simplest way to perform this action is to create a method with the "Execute on server" option enabled.   
-This principle will also work for a component: if the component is used in a 4D local context, it will return information about the host database; in a 4D remote context, it will return information about the server database. 
+## Exemple 1 
 
-## Example 1 
-
-You want to have the history logged in the returned object:
+Vous souhaitez obtenir l'objet "history" dans l'objet retourné :
 
 ```4d
  var $param : Object
@@ -323,9 +293,9 @@ You want to have the history logged in the returned object:
  $measures:=Database measures($param)
 ```
 
-## Example 2 
+## Exemple 2 
 
-We only want to know the global number of bytes read in the cache ("cacheReadBytes"):
+Vous souhaitez connaître uniquement le nombre global d'octets lus dans le cache ("cacheReadBytes") :
 
 ```4d
  var $oStats : Object
@@ -334,7 +304,7 @@ We only want to know the global number of bytes read in the cache ("cacheReadByt
  $oStats:=Database measures($oParams)
 ```
 
-The object returned contains, for example:
+L'objet retourné contiendra, par exemple :
 
 ```json
 {
@@ -346,9 +316,9 @@ The object returned contains, for example:
 }
 ```
 
-## Example 3 
+## Exemple 3 
 
-We want to request measures for cache bytes read within the last two minutes:
+Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux dernières minutes :
 
 ```4d
  var $oParams : Object
@@ -360,11 +330,11 @@ We want to request measures for cache bytes read within the last two minutes:
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1314 |
+| Numéro de commande | 1314 |
 | Thread safe | yes |
 
 

@@ -5,142 +5,144 @@ slug: /commands/form-set-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*object* : Text ;} *horizontal* : Integer ; *vertical* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*objet* ;} *horizontal* ; *vertical* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Text | &#8594;  | Object name indicating form limits |
-| horizontal | Integer | &#8594;  | If * passed: horizontal margin (pixels)If * omitted: width (pixels) |
-| vertical | Integer | &#8594;  | If * passed: vertical margin (pixels)If * omitted: height (pixels) |
-| * | Operator | &#8594;  | • If passed, use horizontal and vertical as form margins• If omitted, use horizontal and vertical as width and height of the form<br/>This parameter cannot be passed if the object parameter is passed. |
+| objet | Text | &#8594;  | Nom d’objet indiquant les limites du formulaire |
+| horizontal | Integer | &#8594;  | Si * passé : marge horizontale (pixels)Si * omis : largeur (pixels) |
+| vertical | Integer | &#8594;  | Si * passé : marge verticale (pixels)Si * omis : hauteur (pixels) |
+| * | Opérateur | &#8594;  | • Si passé, utiliser horizontal et vertical comme marges du formulaire• Si omis, utiliser horizontal et vertical comme largeur et hauteur du formulaireCe paramètre ne peut pas être passé si objet est passé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2004|Created|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM SET SIZE.Summary-->The **FORM SET SIZE** command allows you to change the size of the current form by programming.<!-- END REF--> The new size is defined for the current process; it is not saved with the form.  
+<!--REF #_command_.FORM SET SIZE.Summary-->La commande **FORM SET SIZE** permet de modifier par programmation la taille du formulaire courant.<!-- END REF--> La nouvelle taille est définie pour le process courant, elle n’est pas stockée avec le formulaire.  
   
-As in the Design environment, you can use this command to set the form size in three ways:
+Comme en mode Développement, cette commande permet de définir la taille d’un formulaire de trois manières :
 
-* Automatically — 4D determines the size of the form based on the notion that all objects must be visible — and possibly adding a horizontal and vertical margin,
-* On the place where a form object is found, where a horizontal and vertical margin may be added,
-* By entering “fixed” sizes (width and height).  
-For more information on resizing forms, refer to the 4D *Design Reference* manual.
-**Automatic size**
+* automatiquement — 4D détermine la taille du formulaire sur le principe que tous les objets doivent être visibles — en ajoutant éventuellement une marge horizontale et une marge verticale,
+* sur la base de l’emplacement d’un objet du formulaire auquel s’ajoutent éventuellement une marge horizontale et une marge verticale,
+* en saisissant des dimensions “absolues” (largeur et hauteur).  
+Pour plus d’informations sur les possibilités de dimensionnement des formulaires, reportez-vous au manuel Mode Développement de 4D.
 
-If you want the size of the form to be set automatically, you must use the following syntax: 
+**Taille automatique**  
+Pour que le formulaire ait une taille automatique, vous devez utiliser la syntaxe suivante :   
 
 ```4d
  FORM SET SIZE(horizontal;vertical;*)
 ```
 
-In this case, you must pass the margins (in pixels) that you want to add to the right and bottom of the form in *horizontal* and *vertical*. 
+  
+Dans ce cas, vous devez passer dans *horizontal* et *vertical* les marges (en pixels) que vous souhaitez ajouter à droite et en bas du formulaire. 
 
-**Object-based size**
-
-If you want the form size to be based on an object, you must use the following syntax: 
+**Taille basée sur un objet**  
+ Pour que la taille du formulaire soit basée sur un objet, vous devez utiliser la syntaxe suivante :  
 
 ```4d
- FORM SET SIZE(object;horizontal;vertical)
+ FORM SET SIZE(objet;horizontal;vertical)
 ```
 
-In this case, you must pass the margins (in pixels) that you want to add to the right and bottom of the object in *horizontal* and *vertical*. You cannot pass the *\** parameter.
+  
+Dans ce cas, vous devez passer dans *horizontal* et *vertical* les marges (en pixels) que vous souhaitez ajouter à droite et en bas de l’objet. Il n'est pas possible de passer le paramètre *\**.
 
-**Fixed size**
-
-In you want to have a fixed form size, you must use the following syntax: 
+**Taille en valeur absolue**  
+ Pour passer une taille de formulaire absolue, vous devez utiliser la syntaxe suivante :  
 
 ```4d
  FORM SET SIZE(horizontal;vertical)
 ```
 
-In this case, you must pass the width and height (in pixels) of the form in *horizontal* and *vertical*. 
+  
+Dans ce cas, vous devez passer dans *horizontal* et *vertical* la largeur et la hauteur (en pixels) du formulaire. 
 
-The **FORM SET SIZE** command changes the size of the form, but also takes into account the resizing properties. For example, if the minimum width of a form is 500 pixels and if the command sets a width of 400 pixels, the new form width will be 500 pixels.   
-Also note that this command does not change the size of the form window (you can resize a form without changing the size of the window and vice versa). To change the size of the form window, refer to the [RESIZE FORM WINDOW](resize-form-window.md) command. 
+La commande **FORM SET SIZE** modifie la taille du formulaire mais tient compte de ses propriétés de redimensionnement. Par exemple, si la largeur minimale du formulaire est de 500 pixels et si la commande définit une largeur de 400 pixels, la nouvelle largeur du formulaire sera de 500 pixels. 
 
-## Example 
+A noter également que cette commande ne modifie pas la taille de la fenêtre du formulaire (il est possible de redimensionner un formulaire sans que la taille de la fenêtre soit modifiée, et inversement). Pour modifier la taille de la fenêtre d’un formulaire, reportez-vous à la description de la commande [RESIZE FORM WINDOW](resize-form-window.md). 
 
-The following example shows how an Explorer type window is set up. The following form is created in the Design environment :
+## Exemple 
 
-![](../assets/en/commands/pict21945.en.png)
+Voici un exemple de mise en place d’une fenêtre de type Explorateur. Le formulaire suivant est défini en mode Développement :
 
-The size of the form is “automatic”.
+![](../assets/en/commands/pict21945.fr.png)
 
-The window is displayed using the following code:
+La taille du formulaire est “automatique”.
+
+La fenêtre est affichée via l’instruction suivante :
 
 ```4d
- $ref:=Open form window([Table 1];"Form1";Plain form window;Horizontally centered;Vertically centered;*)
+ $ref:=Open form window([Table 1];"Form1";Form fenêtre standard;Centrée horizontalement;Centrée verticalement;*)
  DIALOG([Table 1];"Form1")
  CLOSE WINDOW
 ```
 
-The right part of the window can be displayed or hidden by clicking on the increase/decrease option:
+La partie droite de la fenêtre peut être affichée ou masquée via un clic sur l’option d’agrandissement/réduction :
 
-![](../assets/en/commands/pict21946.en.png)
+![](../assets/en/commands/pict21946.fr.png)
 
-The object method associated with this button is as follows:
+La méthode objet associée à ce bouton est la suivante :
 
 ```4d
  Case of
     :(FORM Event.code=On Load)
-       var b1;<>collapsed : Boolean
-       var margin : Integer
-       margin:=15
-       b1:=<>collapsed
-       If(<>collapsed)
+       var b1;<>contracté : Boolean
+       var marge : Integer
+       marge:=15
+       b1:=<>contracté
+       If(<>contracté)
           FORM SET HORIZONTAL RESIZING(False)
-          FORM SET SIZE("b1";margin;margin)
+          FORM SET SIZE("b1";marge;marge)
        Else
           FORM SET HORIZONTAL RESIZING(True)
-          FORM SET SIZE("tab";margin;margin)
+          FORM SET SIZE("onglet";marge;marge)
        End if
  
-    :(FORM Event.code=On click)
-       <>collapsed:=b1
+    :(FORM Event.code=On Clicked)
+       <>contracté:=b1
        If(b1)
-  //collapsed
-          OBJECT GET COORDINATES(*;"b1";$l;$t;$r;$b)
-          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
-          SET FORM HORIZONTAL RESIZING(False)
-          SET FORM SIZE("b1";margin;margin)
+  //contracté
+          OBJECT GET COORDINATES(*;"b1";$g;$h;$d;$b)
+          GET WINDOW RECT($gf;$hf;$df;$bf;Current form window)
+          SET WINDOW RECT($gf;$hf;$gf+$d+marge;$hf+$b+marge;Current form window)
+          FORM SET HORIZONTAL RESIZING(False)
+          FORM SET SIZE("b1";marge;marge)
  
        Else
-  //expanded
-          OBJECT GET COORDINATES(*;"tab";$l;$t;$r;$b)
-          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
+  //déployé
+          OBJECT GET COORDINATES(*;"onglet";$g;$h;$d;$b)
+          GET WINDOW RECT($gf;$hf;$df;$bf;Current form window)
+          SET WINDOW RECT($gf;$hf;$gf+$d+marge;$hf+$b+marge;Current form window)
           FORM SET HORIZONTAL RESIZING(True)
-          FORM SET SIZE("tab";margin;margin)
+          FORM SET SIZE("onglet";marge;marge)
        End if
  
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
 [FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 891 |
+| Numéro de commande | 891 |
 | Thread safe | no |
 
 

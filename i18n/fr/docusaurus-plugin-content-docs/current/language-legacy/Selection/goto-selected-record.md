@@ -5,82 +5,82 @@ slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*aTable* : Table ;} *record* : Integer )<!-- END REF-->
+<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*laTable* ;} *enregistrement* )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table in which to go to the selected record, or Default table, if omitted |
-| record | Integer | &#8594;  | Position of record in the selection |
+| laTable | Table | &#8594;  | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &#8594;  | Position de l'enregistrement dans la sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD** moves to the specified record in the current selection of *aTable* and makes that record the current record.<!-- END REF--> The current selection does not change. The *record* parameter is not the same as the number returned by [Record number](record-number.md); it represents the record’s position in the current selection. The record’s position depends on how the selection is made and whether or not the selection is sorted.
+<!--REF #_command_.GOTO SELECTED RECORD.Summary-->La commande **GOTO SELECTED RECORD** fait de l'enregistrement spécifié parmi la sélection courante de *laTable* l'enregistrement courant.<!-- END REF--> La sélection courante n'est pas modifiée. Le paramètre *enregistrement* n'est pas équivalent au numéro retourné par [Record number](record-number.md). Ce paramètre représente la position de l'enregistrement au sein de la sélection courante. Cette position dépend de la manière dont la sélection a été créée et si elle a été triée.  
+Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la section *A propos des numéros d'enregistrements*.
 
-**GOTO SELECTED RECORD** does nothing if:
+**GOTO SELECTED RECORD** ne fait rien si :
 
-* there are no records in the current selection
-* *record* is not in the current selection,
-* *record* is already the current record.
+* il n'y a aucun enregistrement dans la sélection courante
+* *enregistrement* n'appartient pas à la sélection courante,
+* *enregistrement* est déjà l'enregistrement courant.
 
-If you pass 0 in *record*, there will no longer be a current record in *aTable*. When the “single” selection mode is chosen, this allows you to deselect all the records in a list, in particular in the case of included subforms.
+Si vous passez 0 dans *enregistrement*, il n’y a plus d’enregistrement courant dans *laTable*. Ce mécanisme permet de n'avoir plus aucun enregistrement sélectionné dans une liste, notamment dans les sous-formulaires inclus, lorsque le mode de sélection est “unique”. 
 
-## Example 
+## Exemple 
 
-The following example loads data from the field \[People\]Last Name into the *atNames* array. An array of long integers, called *alRecNum*, is filled with numbers that will represent the selected record numbers. Both arrays are then sorted:
+L'exemple suivant charge les valeurs du champ \[Personnes\]Nom dans le tableau *taNoms*. Un tableau d'entiers longs, *numEnr*, est rempli avec des numéros qui représenteront ceux des enregistrements sélectionnés. Les deux tableaux sont alors triés :
 
 ```4d
-  // Make any selection for the [People] table here
-  // ...
-  // Get the names
- SELECTION TO ARRAY([People]Last Name;atNames)
-  // Create an array for the selected record numbers
- $vlNbRecords:=Size of array(atNames)
- ARRAY LONGINT(alRecNum;$vlNbRecords)
- For($vlRecord;1;$vlNbRecords)
-    alRecNum{$vlRecord}:=$vlRecord
+  // Créer ici la sélection de la table [Personnes]
+  //...
+  // Récupérer les noms
+ SELECTION TO ARRAY([Personnes]Nom;taNoms)
+  // Créer un tableau pour les numéros d'enregistrements sélectionnés
+ $vELNbEnrgs:=Size of array(taNoms)
+ ARRAY LONGINT(numEnr;$vELNbEnrgs)
+ For($Enrg;1;$vELNbEnrgs) // Remplir le tableau avec ces numéros
+    numEnr{$Enrg}:=$Enrg
  End for
-  // Sort the arrays in alphabetical order
- SORT ARRAY(atNames;alRecNum;>)
+  // Trier les deux tableaux par ordre alphabétique
+ SORT ARRAY(taNoms;numEnr;>)
 ```
 
-If the *atNames* array is displayed in a scrollable area, the user can click one of the items. Since the sorting of the two arrays is synchronized, any element in *alRecNum* provides the selected record number for the record whose name is stored in the corresponding element in *atNames*.
+Si le tableau *taNoms* est affiché dans une zone de défilement, l'utilisateur peut cliquer sur l'un des éléments. Comme les deux tableaux ont été triés de manière synchronisée, tout élément de *numEnr* fournit le numéro de l'enregistrement sélectionné pour lequel le nom a été stocké dans l'élément de *taNoms* correspondant.
 
-The following object method for *atNames* selects the correct record in the \[People\] selection, according to the name chosen in the scrollable area:
+La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bon enregistrement dans la sélection de \[Personnes\] en fonction de ce que l'utilisateur a choisi dans la zone de défilement.
 
 ```4d
  Case of
     :(Form event code=On Clicked)
-       If(atNames#0)
-          GOTO SELECTED RECORD(alRecNum{atNames})
-       End if
- End case
+       If(taNoms#0)
+          GOTO SELECTED RECORD(numEnr{taNoms})
+       End ifEnd case
 ```
 
-## See also 
+## Voir aussi 
 
 [Selected record number](selected-record-number.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 245 |
+| Numéro de commande | 245 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

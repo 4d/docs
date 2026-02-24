@@ -5,71 +5,67 @@ slug: /commands/generate-encryption-keypair
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *privKey* : Blob ; *pubKey* : Blob {; *length* : Integer} )<!-- END REF-->
+<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *cléPrivée* ; *cléPublique* {; *longueur*} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| privKey | Blob | &#8592; | BLOB to contain the private key |
-| pubKey | Blob | &#8592; | BLOB to contain the public key |
-| length | Integer | &#8594;  | Key length (bits) [512...2048] Default value = 512 |
+| cléPrivée | Blob | &#8592; | BLOB devant recevoir la clé privée |
+| cléPublique | Blob | &#8592; | BLOB devant recevoir la clé publique |
+| longueur | Integer | &#8594;  | Longueur des clés en bits [512...2048] Par défaut = 512 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Created|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->The **GENERATE ENCRYPTION KEYPAIR** command generates a new pair of RSA keys.<!-- END REF--> These keys allow asymmetric encryption features in 4D, usually required when you need to secure data exchanges over a network (e.g. using the 4D Web server and the TLS protocol). 
+<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->La commande **GENERATE ENCRYPTION KEYPAIR** génère une nouvelle paire de clés RSA.<!-- END REF--> Ces clés donnent accès à des fonctionnalités de cryptage asymétrique dans 4D, généralement requises pour sécuriser les échanges de données sur un serveur (par exemple, via le serveur Web de 4D et le protocole TLS).
 
-**Note:** If you need to encrypt your data on disk, you might consider using the data file encryption features provided by 4D (see *Encrypting data* page). 
+**Note :** Si vous souhaitez crypter vos données sur disque, il est préférable d'utiliser les fonctionnalités de cryptage du fichier de données proposées par 4D (voir la page *Chiffrer les données*).
 
-Once the command has been executed, the BLOBs passed in *privKey* and *pubKey* parameters contain a new pair of encryption keys.
+Après l’exécution de la commande, les BLOB passés dans les paramètres *cléPrivée* et *cléPublique* contiennent une nouvelle paire de clés de cryptage.
 
-The optional parameter *length* can be used to set the key size (in bits). The larger the key, the more difficult it is to break the encryption code.
+Le paramètre optionnel *longueur* vous permet de préciser la taille (en bits) des clés que vous souhaitez obtenir. Plus une clé est longue, plus son décryptage “frauduleux” sera difficile.   
+En contrepartie, plus les clés sont longues, plus les délais d’exécution ou de réponse seront importants, en particulier dans le cadre d’une connexion sécurisée.   
+Par défaut (si vous omettez le paramètre *longueur*), la taille des clés générée est de 512 bits. Vous pouvez générer des clés de 2048 bits, ce qui renforce la sécurité du cryptage, mais ralentira les connexions de votre application Web. Pour augmenter encore la sécurité, vous pouvez envisager de changer de paire de clés assez fréquemment, par exemple tous les six mois.
 
-However, large keys require longer execution or reply time, especially within a secured connection.
+Les clés générées par cette commande sont au format standard PKCS encodé en base64, ce qui signifie que leur contenu peut être copié et collé dans un e-mail en toute sécurité et sans risque d’altération. Une fois que vous avez obtenu une paire de clés, vous pouvez générer un document texte au format PEM (par exemple à l’aide de la commande [BLOB TO DOCUMENT](blob-to-document.md)) et stocker les clés dans un endroit sûr.
 
-By default (if the *length* parameter is omitted), the generated key size is set to 512 bits, which is a good compromise for the security/efficiency ratio. To increase the security factor, you can change keys more often, for example every six months.You can generate 2048 bits keys to increase the encryption security but the Web application connections will be slowed down.
+**Important :** La clé privée ne doit jamais être diffusée, sous quelque forme que ce soit.
 
-This command will generate keys in PKCS format encoded in base64, which means that their content can be copied/pasted in an email without any change. Once the pair of keys has been generated, a text document in PEM format can be produced (using the [BLOB TO DOCUMENT](blob-to-document.md) command for example) and the keys can be stored in a safe place.
+## RSA, clés privées et clés publiques 
 
-**Warning:** The private key should always be kept secret.
+L’algorithme de cryptage RSA employé par la commande **GENERATE ENCRYPTION KEYPAIR** est basé sur un système de cryptage à double clé : une clé privée et une clé publique. Comme son nom l’indique, la clé publique peut être diffusée auprès de tiers, et permet le décryptage des informations. Il lui correspond une clé privée unique, utilisée pour crypter les données. La clé privée sert au cryptage ; la clé publique, au décryptage (ou inversement). Ce qui est crypté avec une clé ne peut être décrypté qu’avec l’autre.   
+Les fonctions de cryptage du protocole TLS/SSL sont basées sur ce principe, la clé publique étant incluse dans le certificat envoyé aux navigateurs (cf. section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)). 
 
-## About RSA, private key and public key 
+Ce mode de cryptage est également utilisé par la première syntaxe des commande [ENCRYPT BLOB](encrypt-blob.md) et [DECRYPT BLOB](decrypt-blob.md). Ce principe requiert que la clé publique soit diffusée de manière confidentielle.  
+Il est possible de mêler les clés publiques et privées de deux intervenants pour crypter des données de telle manière que seul le récepteur peut décrypter les données, et seul l’émetteur peut les avoir cryptées. C’est le principe de la seconde syntaxe des commandes [ENCRYPT BLOB](encrypt-blob.md) et [DECRYPT BLOB](decrypt-blob.md). 
 
-The RSA cipher used by **GENERATE ENCRYPTION KEYPAIR** is based on a double key encryption system: a private key and a public key. As indicated by its name, the public key can be given to a third person and used to decrypt information. The public key is matched with a unique private key, used to encrypt the information. Thus, the private key is used for encryption; the public key for decryption (or vice versa). The information encrypted with one key can only be decrypted with the other one.
+## Exemple 
 
-The TLS/SSL protocol encryption functionalities are based on this principle, the public key being included in the certificate sent to the browsers (for more information, see the section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)). 
+Reportez-vous à l’exemple de la commande [ENCRYPT BLOB](encrypt-blob.md).
 
-This encryption mode is also used by the first syntax of the [ENCRYPT BLOB](encrypt-blob.md) and [DECRYPT BLOB](decrypt-blob.md) commands. The public key should be confidentially published. 
-
-It is possible to mix the public and private keys from two persons to encrypt information so that the recipient is the only person to be able to decrypt them and the sender is the only person to have encrypted them. This principle is given by the second syntax of the two [ENCRYPT BLOB](encrypt-blob.md) and [DECRYPT BLOB](decrypt-blob.md) commands.
-
-## Example 
-
-See example for the [ENCRYPT BLOB](encrypt-blob.md) command.
-
-## See also 
+## Voir aussi 
 
 [DECRYPT BLOB](decrypt-blob.md)  
 [ENCRYPT BLOB](encrypt-blob.md)  
 [GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 688 |
+| Numéro de commande | 688 |
 | Thread safe | yes |
 
 

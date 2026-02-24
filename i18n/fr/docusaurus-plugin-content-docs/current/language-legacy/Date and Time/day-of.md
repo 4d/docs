@@ -5,45 +5,45 @@ slug: /commands/day-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* : Date ) : Integer<!-- END REF-->
+<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date for which to return the day |
-| Function result | Integer | &#8592; | Day of the month of date |
+| date | Date | &#8594;  | Date dont vous voulez extraire le jour |
+| Résultat | Integer | &#8592; | Jour du mois de date |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Day of.Summary-->The **Day of** command returns the day of the month of *aDate*.<!-- END REF-->**Day of** returns a value between 1 and 31\. To get the day of the week for a date, use the command [Day number](day-number.md).
+<!--REF #_command_.Day of.Summary-->**Day of** retourne le jour du mois de *laDate*.<!-- END REF-->**Day of** retourne une valeur entre 1 et 31\. Pour obtenir le numéro du jour de la semaine pour une date, vous devez utiliser la commande [Day number](day-number.md).
 
-## Example 1 
+## Exemple 1 
 
-The following example illustrates the use of Day of. The results are assigned to the variable *vResult*. The comments describe what is put in *vResult*:
+L'exemple suivant illustre l'utilisation de **Day of**. Les valeurs retournées sont stockées dans la variable *Résultat*. Les commentaires décrivent la valeur de *Résultat* : 
 
 ```4d
- vResult:=Day of(!12/25/92!) // vResult gets 25
- vResult:=Day of(Current date) // vResult gets day of current date
+ Résultat:=Day of(!25/12/96!) // Résultat vaut 25
+ Résultat:=Day of(Current date) // Résultat prend la valeur du jour d'aujourd'hui
 ```
 
-## Example 2 
+## Exemple 2 
 
-See the example for the [Current date](current-date.md) command.
+Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 
-## See also 
+## Voir aussi 
 
 [Day number](day-number.md)  
 [Month of](month-of.md)  
 [Year of](year-of.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 23 |
+| Numéro de commande | 23 |
 | Thread safe | yes |
 
 

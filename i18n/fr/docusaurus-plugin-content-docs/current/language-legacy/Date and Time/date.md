@@ -5,114 +5,115 @@ slug: /commands/date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Date.Syntax-->**Date** ( *expression* : Text, Date ) : Date<!-- END REF-->
+<!--REF #_command_.Date.Syntax-->**Date** ( *expression* ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Text, Date | &#8594;  | String representing the date to be returned or Date expression |
-| Function result | Date | &#8592; | Date expression |
+| expression | Text, Date | &#8594;  | Chaîne contenant la date à retourner ou expression de type Date |
+| Résultat | Date | &#8592; | Expression de type Date |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R5|Modified|
-|<6|Created|
+|16 R6|Modifié|
+|16 R5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Date.Summary-->The Date command evaluates *expression* and returns a date.<!-- END REF-->
+<!--REF #_command_.Date.Summary-->La fonction **Date** extrait et retourne la date de la chaîne *expression*.<!-- END REF-->
 
-The *expression* parameter format must follow either the ISO date format or the regional settings defined at the system level.
+Le paramètre expression doit respecter soit le format date ISO, soit les paramètres régionaux du système.
 
-**ISO date format**  
-The string must be formatted as follows: "YYYY-MM-DD**T**HH:MM:SS", for example "2013-11-20T10:20:00". In this case, **Date** evaluates the *expression* parameter correctly, regardless of the current language settings. Decimal seconds, preceded by a period, are supported (e.g.: "2013-11-20T10:20:00.9854").   
-If the *expression* format does not precisely fit this ISO format, the date is evaluated as a short date format based on the regional settings of the system.
+**Format Date ISO**  
+La chaîne doit être formatée de la manière suivante : "AAAA-MM-JJ**T**HH:MM:SS", par exemple "2013-11-20T10:20:00". Dans ce cas, **Date** évaluera correctement expression, quels que soient les réglages de langue courants. Les décimales de secondes, précédées d'un point, sont prises en charge (ex : "2013-11-20T10:20:00.9854").   
+Si le format de expression ne respecte pas exactement ce format ISO, la date sera évaluée comme un format date court dépendant des paramètres régionaux du système.
 
-**Regional settings**  
-When the *expression* does not match the ISO format, the regional settings defined in the operating system for a short date are used for the evaluation. For example, in the US version of 4D, by default the date must be in the order MM/DD/YY (month, day, year). The month and day can be one or two digits. The year can be two or four digits. If the year is two digits, then Date considers whether the date belongs to the 21st or 20th century based on the value entered. By default, the pivotal value is 30:   
+**Note :** A compter de 4D v14, il est conseillé d'utiliser le format "AAAA-MM-JJTHH:MM:SS**Z**", conforme à la norme ISO et permettant d'exprimer le fuseau horaire.
 
-* If the value is greater than or equal to 30, 4D considers the century to be the 20th and adds 19 to the beginning of the value.
-* If the value is less than 30, 4D considers the century to be the 21st and adds 20 to the beginning of the value.
+**Paramètres régionaux**  
+Si expression ne correspond pas au format ISO, les paramètres régionaux définis dans le système d'exploitation pour une date courte sont utilisés pour l'évaluation. Par exemple, dans une version française de 4D, la date doit être par défaut de la forme JJ/MM/AA (jour, mois, année). Le jour et le mois peuvent être composés d'un ou deux chiffres. L'année peut être composée de deux ou quatre chiffres. Si l'année comporte deux chiffres, **Date** considère que la date appartient au XXe ou au XXIe siècle en fonction de la valeur saisie. Par défaut, la valeur pivot est 30 :
 
-This mechanism can be configured using the [SET DEFAULT CENTURY](set-default-century.md) command.   
-The following characters are valid date separators: slash (/), space, period (.), comma (,), and dash (-).
+* si la valeur saisie est supérieure ou égale à 30, 4D considère que la date appartient au XXe siècle et ajoute 19 devant la valeur.
+* si la valeur saisie est inférieure à 30, 4D considère que la date appartient au XXIe siècle et ajoute 20 devant la valeur.
 
-* If you pass an invalid date (such as "13/35/94" or "aa/12/94") in *expression*, **Date** returns an empty date (00/00/00). It is your responsibility to verify that *expression* is a valid date.
-* If the *expression* evaluates to undefined, **Date** returns an empty date (00/00/00). This is useful when you expect the result to be a date, even if it can be undefined (*e.g.* an object attribute).
+Ce mécanisme peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](set-default-century.md).  
+Les caractères de séparation de date autorisés sont les suivants : barre oblique (/), espace, point (.), virgule (,) et tiret (-).
 
-**Note:** Dates can be stored in object attributes as date type or as string type values, depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). To know if an attribute contains a date stored as a string or as a date, you need to use the [Value type](./value-type.md) command (see last example).
+* Si une date invalide (telle que "13/35/94" ou "aa/12/94") est passée dans expression, **Date** retourne une date vide (00/00/00). Il est de votre ressort de tester la validité de expression.
+* Si l'évaluation de l'expression expression donne une valeur indéfinie, **Date** retourne une date vide (00/00/00). Ce principe est utile lorsque le code attend toujours une date et que l'évaluation de expression peut parfois aboutir au type **indéfini** (par exemple dans le cas des attributs d'objets).
 
-**Date type expression**  
-If *expression* is of date type, **Date** returns the date passed in the parameter 'as is'. This is particularly useful in the context of generic programming using pointers or object attributes.
+**Note :** A compter de 4D v16 R6, les dates peuvent être stockées dans les attributs d'objets en tant que valeurs de type date. Dans les versions précédentes, elles pouvaient uniquement être stockées sous forme de textes (pour plus d'informations sur cette option, reportez-vous à la section *Page Compatibilité*, "Utiliser le type date au lieu du format date ISO dans les objets"). Pour savoir si un attribut contient une date stockée sous forme de date ou de texte, vous devez utiliser la commande [Value type](value-type.md) (voir dernier exemple).
 
-## Example 1 
+**Expression de type date** 
+Si expression est de type date, **Date** retourne la date passée dans le paramètre, telle quelle. Ce principe est utile en programmation générique, lors de l'utilisation de pointeurs ou d'attributs d'objets.
 
-The following example uses a request box to prompt the user for a date. The string entered by the user is converted to a date and stored in the *reqDate* variable:
+## Exemple 1 
+
+L'exemple suivant demande à l'utilisateur de saisir une date. La chaîne saisie est convertie en date et stockée dans la variable DemDate :
 
 ```4d
- vdRequestedDate:=Date(Request("Please enter the date:";String(Current date)))
+ DemDate:=Date(Demander("Saisissez une date :";Chaine(Date du jour)))
  If(OK=1)
-  // Do something with the date now stored in vdRequestedDate
+  // Faire quelque chose avec la date
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following examples show various cases:
+Les exemples suivants illustrent divers cas de conversion :
 
 ```4d
- vdDate:=Date("12/25/94") //returns 12/25/94 on a US system
+ vdDate:=Date("25/12/94") //retourne 25/12/94 sur un système français
  vdDate2:=Date("40/40/94") //00/00/00
- vdDate3:=Date("It was the 6/30, we were in 2016") //06/30/16
+ vdDate3:=Date("Nous étions le 30/6, en cette année 2016") //30/06/16
  var $vobj : Object
  $vobj:=New object("expDate";"2020-11-17T00:00:00.0000")
- vdDate4:=Date($vobj.expDate) //11/17/20
+ vdDate4:=Date($vobj.expDate) //17/11/20
  vdDate5:=Date($vobj.creationDate) //00/00/00
 ```
 
-## Example 3 
+## Exemple 3 
 
-Date evaluation based on a date in ISO format:
+Evaluation d'une date à partir d'une date au format ISO :
 
 ```4d
  $vtDateISO:="2013-06-05T20:00:00"
  $vDate:=Date($vtDateISO)
-  //$vDate represents June 5th, 2013 regardless of the system language
+     //$vDate représente le 5 juin 2013 quelle que soit la langue du système
 ```
 
-## Example 4 
+## Exemple 4 
 
-You want to get a date from an object attribute, whatever the current attribute date storage option:
+Vous souhaitez lire une date depuis un attribut d'objet, quelle que soit l'option courante de stockage d'attribut de date :
 
 ```4d
- If(Value type($myObj.myDate)=Is date) //it's stored as date, no need to convert
+ If(Value type($myObj.myDate)=Is date) //stockage en date, pas besoin de convertir
     $vDate:=$myObj.myDate
- Else //it's stored as string
+ Else //stockage en texte
     $vDate:=Date($myObj.myDate)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[Bool](bool.md)  
-[String](./commands/string)  
+[Bool](../commands/bool)  
+[String](../commands/string.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 102 |
+| Numéro de commande | 102 |
 | Thread safe | yes |
-
 
 

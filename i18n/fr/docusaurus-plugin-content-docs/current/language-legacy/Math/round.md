@@ -5,46 +5,46 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *round* : Real ; *places* : Integer ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *arrondi* ; *nbDécimales* ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| round | Real | &#8594;  | Number to be rounded |
-| places | Integer | &#8594;  | Number of decimal places used for rounding |
-| Function result | Real | &#8592; | Number rounded to the number of decimal places specified by Places |
+| arrondi | Real | &#8594;  | Nombre à arrondir |
+| nbDécimales | Integer | &#8594;  | Nombre de décimales de l'arrondi |
+| Résultat | Real | &#8592; | Valeur de nombre arrondie avec une précision égale à nbDécimales |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Round.Summary-->**Round** returns *number* rounded to the number of decimal places specified by *places*.<!-- END REF-->
+<!--REF #_command_.Round.Summary-->**Round** retourne la valeur arrondie de *nombre* avec une précision égale à *nbDécimales*.<!-- END REF-->
 
-If *places* is positive, *number* is rounded to *places* decimal places. If *places* is negative, *number* is rounded on the left of the decimal point.
+Si *nbDécimales* est positif, l'arrondi se fait sur la partie décimale de *nombre*. Si *nbDécimales* est négatif, l'arrondi se fait sur la partie entière de *nombre*.
 
-If the digit following *places* is 5 though 9, **Round** rounds toward positive infinity for a positive number, and toward negative infinity for a negative number. If the digit following *places* is 0 through 4, **Round** rounds toward zero.
+Si le chiffre placé derrière le nombre de décimales défini par *nbDécimales* est compris entre 5 et 9, *nombre* est arrondi à la valeur supérieure s'il est positif et inférieure s'il est négatif. Si le chiffre placé derrière la dernière décimale est compris entre 0 et 4, la fonction arrondit *nombre* vers zéro.
 
-## Example 
+## Exemple 
 
-The following example illustrates how Round works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
+L'exemple suivant illustre la manière dont Arrondi fonctionne dans différents cas. A chaque ligne, une valeur est assignée à la variable *vRésultat*. Les commentaires décrivent le résultat :
 
 ```4d
- vlResult:=Round(16.857;2) // vlResult gets 16.86
- vlResult:=Round(32345.67;-3) // vlResult gets 32000
- vlResult:=Round(29.8725;3) // vlResult gets 29.873
- vlResult:=Round(-1.5;0) // vlResult gets –2
+ vRésultat:=Round(16,857;2) // vRésultat vaut 16,86
+ vRésultat:=Round(32345,67;-3) // vRésultat vaut 32000
+ vRésultat:=Round(29,8725;3) // vRésultat vaut 29,873
+ vRésultat:=Round(-1,5;0) // vRésultat vaut -2
 ```
 
-## See also 
+## Voir aussi 
 
 [Trunc](trunc.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 94 |
+| Numéro de commande | 94 |
 | Thread safe | yes |
 
 

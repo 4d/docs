@@ -5,105 +5,101 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *privKey* : Blob ; *certifRequest* : Blob ; *codeArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *cléPrivée* ; *demCertif* ; *tabCodes* ; *tabLibellés* )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| privKey | Blob | &#8594;  | BLOB containing the private key |
-| certifRequest | Blob | &#8592; | BLOB receiving the certificate request |
-| codeArray | Integer array | &#8594;  | Information code list |
-| nameArray | Text array | &#8594;  | Name list |
+| cléPrivée | Blob | &#8594;  | BLOB contenant la clé privée |
+| demCertif | Blob | &#8592; | BLOB devant recevoir la demande de certificat |
+| tabCodes | Integer array | &#8594;  | Liste des codes d’informations |
+| tabLibellés | Text array | &#8594;  | Liste des libellés d’informations |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Created|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->The **GENERATE CERTIFICATE REQUEST** command generates a certificate request at the PKCS format which can be directly used by certificate authorities such as Verisign(R) .<!-- END REF--> The certificate plays an important part in the SSL secured protocol. It is sent to each browser connecting in SSL mode. It contains the “ID card” of the Web site (made from the information entered in the command), as well as its public key allowing the browsers to decrypt the received information. Furthermore, the certificate contains various information added by the certificate authority which guarantees its integrity.
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->La commande **GENERATE CERTIFICATE REQUEST** permet de générer une demande de certificat au format PKCS, directement exploitable par des autorités de certification telles que Verisign® ou Thawthe®.<!-- END REF--> Le certificat est une pièce essentielle du fonctionnement du protocole SSL dans le cadre d’un serveur Web. Il est envoyé à chaque browser se connectant en mode SSL. Il contient la “carte d’identité” du site Web (reprenant les informations que vous saisissez dans la commande), ainsi que sa clé publique — permettant aux browsers de décrypter les informations reçues. En outre, le certificat contient diverses informations ajoutées par l’autorité de certification.
 
-**Note:** For more information on the SSL protocol use with 4D Web server, refer to the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) section. 
+**Note :** Pour plus d’informations sur le fonctionnement du protocole SSL avec le serveur Web 4D, reportez-vous à la section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
-The certificate request uses keypairs generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command and contains various information. The certificate authority will generate its certificate combining this request with other parameters.
+La demande de certificat nécessite une paire de clés générée à l’aide de la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) et contient diverses informations. C’est en combinant cette demande avec d’autres paramètres qui lui sont propres, que l’autorité de certification sera en mesure de générer un certificat.
 
-Pass in *privKey* a BLOB containing the private key generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command.
+Passez dans *cléPrivée* un BLOB contenant la clé privée générée avec la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md). 
 
-Pass in *certifRequest* an empty BLOB. Once the command has been executed, it contains the certificate request at the PKCS format encoded in base64\. You can store the contents directly in a text file suffixed .pem, for example using the [BLOB TO DOCUMENT](blob-to-document.md) command, to submit it to the certificate authority.
+Passez dans *demCertif* un BLOB vide. Après l’exécution de la commande, il contiendra la demande de certificat au format PKCS encodé en base64\. Vous pouvez stocker directement ce contenu dans un fichier texte suffixé .pem, par exemple à l’aide de la commande [BLOB TO DOCUMENT](blob-to-document.md), pour la faire parvenir à l’autorité de certification.
 
-**Warning:** The private key is used to generate the request but should NOT be sent to the certificate authority.
+**Important :** La clé privée est utilisée pour générer la demande de certificat mais ne doit pas être envoyée à l’autorité de certification.
 
-The arrays *codeArray* (long integer) and *nameArray* (string) should be filled respectively with the code numbers and the information content required by the certificate authority. 
+Vous devez remplir les tableaux *tabCodes* (de type entier long) et *tabLibellés* (de type alpha) avec, respectivement, les numéros de code et les libellés des informations destinées à l’autorité de certification.   
+Les codes et les libellés attendus peuvent varier en fonction de l’autorité de certification et du mode d’utilisation du certificat. Toutefois, dans le cadre d’une utilisation standard du certificat (connexions d’un serveur Web via SSL), les tableaux doivent contenir les éléments suivants :
 
-The required codes and names may change according to the certificate authority and the certificate use. However, within a normal use of the certificate (Web server connections via SSL), the arrays should contain the following items:
+| **Informations à fournir**                               | **tabCodes** | **tabLibellés (Exemples)** |
+| -------------------------------------------------------- | ------------ | -------------------------- |
+| CommonName : Nom du domaine                              | 13           | www.4D.fr                  |
+| CountryName : Code du pays (deux lettres)                | 14           | FR                         |
+| LocalityName : Ville                                     | 15           | Clichy                     |
+| StateOrProvinceName : Département, Etat...               | 16           | Hauts de Seine             |
+| OrganizationName : Raison sociale                        | 17           | 4D                         |
+| OrganizationUnit : Service/Personne en charge du serveur | 18           | Web Administrator          |
 
-| **Information to provide** | **codeArray** | **nameArray (Examples)** |
-| -------------------------- | ------------- | ------------------------ |
-| CommonName                 | 13            | www.4D.com               |
-| CountryName (two letters)  | 14            | US                       |
-| LocalityName               | 15            | San Jose                 |
-| StateOrProvinceName        | 16            | California               |
-| OrganizationName           | 17            | 4D, Inc.                 |
-| OrganizationUnit           | 18            | Web Administrator        |
+L’ordre dans lequel les codes et les informations sont insérés dans les tableaux n’a pas d’importance, en revanche les deux tableaux doivent être “synchronisés” : si l’élément {3} du tableau *tabCodes* contient la valeur 15 (nom de la ville), l’élément {3} du tableau *tabLibellés* doit contenir cette information, dans notre exemple Clichy.
 
-The code and information content entering order does not matter, however the two arrays must be synchronized: if the third item of the *codeArray* contains the value *15* (locality name), the *nameArray* third item should contain this information, in our example San Jose.
+## Exemple 
 
-## Example 
+Un formulaire “Demande de certificat” comporte les six champs nécessaires à l’établissement d’une demande de certificat standard. Le bouton **Générer** crée un document sur disque contenant la demande de certificat. Le document “Cléprivée.txt” contient la clé privée (générée à l’aide la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)) doit déjà être présent sur le disque.
 
-A “Certificate request” form contains the six fields necessary for a standard certificate request. The **Generate** button creates a document on disk containing the certificate request. The “Privatekey.txt” document containing the private key (generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command) should be on the disk:
-
-![](../assets/en/commands/pict32461.en.png)  
-  
-Here is the **Generate** button method:
+![](../assets/en/commands/pict32461.fr.png)
 
 ```4d
-  // bGenerate Object Method
- 
- var $vbprivateKey;$vbcertifRequest : Blob
- var $tableNum : Integer
+  // Méthode objet du bouton bGénérer
+ var $vbcléPrivée;$vbDemandeCert : Blob
+ var $NumTable : Integer
  ARRAY LONGINT($tLCodes;6)
- ARRAY STRING(80;$tSInfos;6)
+ ARRAY STRING(80;$tAInfos;6)
  
- $tableNum:=Table(Current form table)
+ $NumTable:=Table(Current form table)
  For($i;1;6)
-    $tSInfos{$i}:=Field($tableNum;$i)->
+    $tAInfos{$i}:=Field($NumTable;$i)->
     $tLCodes{$i}:=$i+12
  End for
- If(Find in array($tSInfos;"")#-1)
-    ALERT("All fields should be filled.")
+ If(Find in array($tAInfos;"")#-1)
+    ALERT("Vous devez remplir tous les champs.")
  Else
-    ALERT("Select your private key.")
-    $vhDocRef:=Open document("")
+    ALERT("Sélectionnez votre clé privée.")
+    $vhRefDoc:=Open document("")
     If(OK=1)
-       CLOSE DOCUMENT($vhDocRef)
-       DOCUMENT TO BLOB(Document;$vbprivateKey)
-       GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
-       BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
+       CLOSE DOCUMENT($vhRefDoc)
+       DOCUMENT TO BLOB(Document;$vbcléPrivée)
+       GENERATE CERTIFICATE REQUEST($vbcléPrivée;$vbDemandeCert;$tLCodes;$tAInfos)
+       BLOB TO DOCUMENT("Demande.txt";$vbDemandeCert)
     Else
-       ALERT("Invalid private key.")
+       ALERT("Clé privée invalide.")
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
 [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 691 |
+| Numéro de commande | 691 |
 | Thread safe | yes |
 
 

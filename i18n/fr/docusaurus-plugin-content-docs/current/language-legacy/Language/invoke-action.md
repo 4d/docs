@@ -5,82 +5,82 @@ slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *target* : Integer} )<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* {; *cible*} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &#8594;  | Standard action name or pattern including parameter if required |
-| target | Integer | &#8594;  | Defines where to execute the action: current form (default) or main form |
+| action | Text | &#8594;  | Nom de l'action standard ou syntaxe avec paramètre si celui-ci est requis |
+| cible | Integer | &#8594;  | Définit le lieu d'exécution de l'action : le formulaire courant (par défaut) ou le formulaire principal |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R3|Created|
+|16 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INVOKE ACTION.Summary-->The **INVOKE ACTION** command triggers the standard action defined by the *action* parameter, optionally in the *target* context.<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Summary-->La commande **INVOKE ACTION** déclenche l'action standard définie par le paramètre *action*, optionnellement dans le contexte de la *cible*.<!-- END REF-->
 
-In *action*, pass the standard action to execute. It can be a string or a constant from the *Standard Action* theme. Some actions accept a target element and parameters. In this case, you must use the requested pattern, for example *"gotoPage?value=2"* or *paragraph/backgroundPositionV?value=top.*
+Dans *action*, passez l'action standard à exécuter. Ce peut être une chaîne ou une constante du thème *Action standard*. Certaines actions acceptent un élément cible et des paramètres. Dans ce cas, vous devez utiliser la syntaxe requise, par exemple *"gotoPage?value=2"* ou *paragraph/backgroundPositionV?value=top.*
 
-Available 4D actions are listed in the *Standard actions* section of the *4D Design Reference* manual.
+Les actions disponibles sont listées dans la section *Actions standard* du manuel *4D - Mode Développement*.
 
-**Note:** Additional specific actions are also provided for 4D Write Pro documents. They are detailed in the *Using 4D Write Pro standard actions* section of the 4D Write Pro Reference manual.
+**Note** : Des actions spécifiques sont également fournies pour les documents 4D Write Pro. Elles sont détaillées dans la section *Utiliser les actions standard 4D Write Pro* du manuel de référence 4D Write Pro.
 
 ### 
 
-In *target*, you can pass the form context where the *action* must be executed. You can use one of the following constants from the *Standard Action* theme:
+Dans *cible*, vous pouvez passer le contexte formulaire dans lequel l'*action* doit être exécutée. Vous pouvez utiliser une des constantes suivantes, du thème *Action standard* :
 
-| Constant        | Type    | Value | Comment                                                                                                                                                        |
-| --------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ak current form | Integer | 1     | The current form is the form where the action was called. It could be either the main form or a palette form in front of the main form of the current process. |
-| ak main form    | Integer | 2     | The main form is the frontmost document or dialog form of the process, excluding any floating or pop-up window.                                                |
+| Constante       | Type        | Valeur | Comment                                                                                                                                                                                                            |
+| --------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ak current form | Entier long | 1      | Le formulaire courant est le formulaire depuis lequel l'action a été appelée. Il peut s'agir soit du formulaire principal du process courant soit d'un formulaire palette situé au-dessus du formulaire principal. |
+| ak main form    | Entier long | 2      | Le formulaire principal est le document ou le formulaire de dialogue au premier plan du process, sans tenir compte des fenêtres palettes ou flottantes.                                                            |
 
-**Note:** If *target* is omitted, by default the ak current form context is used. 
+**Note :** Si *cible* est omis, par défaut le contexte ak current form est utilisé. 
 
-Depending on the *target*, the **INVOKE ACTION** command execution is either synchronous or asynchronous:
+En fonction de la *cible*, l'exécution de la commande **INVOKE ACTION** sera synchrone ou asynchrone :
 
-* With ak current form as *target*, the **INVOKE ACTION** command is synchronous; the action is executed in the current cycle at the moment when the command is called.
-* With ak main form as *target*, the **INVOKE ACTION** command is asynchronous; the action is executed in the next cycle after the end of the form object method's execution.
+* Avec ak current form comme *cible*, la commande **INVOKE ACTION** est synchrone ; l'action est exécutée dans le cycle courant, au moment même où la commande est appelée.
+* Avec ak main form comme *cible*, la commande **INVOKE ACTION** est asynchrone ; l'action est exécutée dans le cycle suivant, après la fin de l'exécution de la méthode de l'objet.
 
-**Note:** Standard edit actions (Cut, Copy, Paste, Select all, Clear, Undo/Redo) ignore the *target* parameter, if passed. Such actions are always executed synchronously in the context of the editable object that has the focus.
+**Note :** Les actions standard d'édition (Couper, Copier, Coller, Tout sélectionner, Effacer, Annuler édition/Répéter) ignore le paramètre *cible*, s'il est passé. Ces actions sont toujours exécutées de façon synchrone dans le contexte de l'objet éditable qui a le focus.
 
-The **INVOKE ACTION** command does not generate an error, for example, if the requested action is not available in the current context. You must validate the expected action using the [Action info](action-info.md) command. 
+La commande **INVOKE ACTION** ne génère pas une erreur, par exemple, si la commande requise n'est pas disponible dans le contexte courant. Vous devez valider l'action attendue en utilisant la commande [Action info](action-info.md). 
 
-## Example 1 
+## Exemple 1 
 
-You want to execute the **Copy** standard action in the current form:
+Vous souhaitez exécuter l'action standard **Copier** dans le formulaire courant :
 
 ```4d
  INVOKE ACTION(ak copy;ak current form)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to execute a **Goto page** standard action (page 3) in the main form:
+Vous souhaitez exécuter l'action standard **Aller a page** (page 3) dans le formulaire principal :
 
 ```4d
  INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
-## See also 
+## Voir aussi 
 
 [Action info](action-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1439 |
+| Numéro de commande | 1439 |
 | Thread safe | no |
 
 

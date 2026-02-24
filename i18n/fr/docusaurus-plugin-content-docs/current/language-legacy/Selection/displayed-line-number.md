@@ -9,61 +9,60 @@ displayed_sidebar: docs
 <!--REF #_command_.Displayed line number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of row being displayed |
+| Résultat | Integer | &#8592; | Numéro de ligne en cours d’affichage |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Displayed line number.Summary-->The **Displayed line number** command only works with the On Display Detail form event.<!-- END REF--> It returns the number of the row being processed while a list of records or list box rows is displayed on screen. If **Displayed line number** is called other than when displaying a list or a list box, it returns 0.
+<!--REF #_command_.Displayed line number.Summary-->La commande **Displayed line number** fonctionne uniquement dans le contexte de l’événement formulaire On Display Detail.<!-- END REF--> Elle retourne le numéro de la ligne en cours de traitement durant l’affichage à l’écran d’une liste d’enregistrements ou des lignes d'une list box. Si **Displayed line number** est appelée en-dehors de l’affichage d’une liste ou d'une listbox, elle retourne 0.
 
-In the case of a list of records, when the displayed row is not empty (when it is linked to a record), the value returned by **Displayed line number** is identical to the value returned by [Selected record number](selected-record-number.md).
+Dans le cas d'une liste d'enregistrements, lorsque la ligne affichée n’est pas vide (c’est-à-dire lorsqu’elle est associée à un enregistrement), la valeur retournée par **Displayed line number** est identique à celle retournée par [Selected record number](selected-record-number.md).
 
-Like [Selected record number](selected-record-number.md), **Displayed line number** starts at 1\. This command is useful if you want to process each row of a list form or list box displayed on screen, including empty rows. 
+Comme [Selected record number](selected-record-number.md), **Displayed line number** débute à 1\. Cette commande est utile lorsque vous souhaitez appliquer un traitement à chaque ligne d’un formulaire liste ou d'une list box affiché(e) à l’écran, y compris aux lignes vides. 
 
-## Example 
+## Exemple 
 
-This example lets you apply an alternating color to a list form displayed on screen, even for rows without records:
+Cet exemple permet d’appliquer une couleur alternée à un formulaire liste affiché à l’écran, même pour les lignes sans enregistrement :
 
 ```4d
-  //List form method
+  //Méthode du formulaire liste
  If(Form event code=On Display Detail)
     If(Displayed line number% 2=0)
-  //Black on white for even row text
-       OBJECT SET RGB COLORS([Table 1]Field1;-1;0x00FFFFFF)
+  //Noir sur blanc pour le texte des lignes paires
+       OBJECT SET RGB COLORS([Table 1]Champ1;-1;0x00FFFFFF)
     Else
-  //Black on light blue for odd row text
-       OBJECT SET RGB COLORS([Table 1]Field1;-1;0x00E0E0FF)
+  //Noir sur bleu pâle pour le texte des lignes impaires
+       OBJECT SET RGB COLORS([Table 1]Champ1;-1;0x00E0E0FF)
     End if
  End if
 ```
 
-![](../assets/en/commands/pict32598.en.png)
+![](../assets/en/commands/pict32598.fr.png)
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Selected record number](selected-record-number.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 897 |
+| Numéro de commande | 897 |
 | Thread safe | no |
-
 
 

@@ -5,41 +5,41 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *boolean* : Boolean ) : Boolean<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *booléen* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| boolean | Boolean | &#8594;  | Boolean value to negate |
-| Function result | Boolean | &#8592; | Opposite of Boolean |
+| booléen | Boolean | &#8594;  | Valeur booléenne à inverser |
+| Résultat | Boolean | &#8592; | Inverse de booléen |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Not.Summary-->The Not function returns the negation of *boolean*, changing True to False or False to True.<!-- END REF-->
+<!--REF #_command_.Not.Summary-->La fonction **Not** retourne la valeur inverse de *booléen*, changeant un [True](true.md) en [False](false.md) ou un [False](false.md) en [True](true.md).<!-- END REF--> 
 
-## Example 
+## Exemple 
 
-This example first assigns True to a variable, then changes the variable value to False, and then back to True.
+Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable. Cette valeur est alors modifiée en [False](false.md) puis de nouveau en [True](true.md) : 
 
 ```4d
- vResult:=True // vResult is set to True
- vResult:=Not(vResult) // vResult is set to False
- vResult:=Not(vResult) // vResult is set to True
+ Résultat:=True // Résultat prend la valeur VRAI
+ Résultat:=Not(Résultat) // Résultat prend la valeur FAUX
+ Résultat:=Not(Résultat) // Résultat prend la valeur VRAI
 ```
 
-## See also 
+## Voir aussi 
 
 [False](false.md)  
 [True](true.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 34 |
+| Numéro de commande | 34 |
 | Thread safe | yes |
 
 

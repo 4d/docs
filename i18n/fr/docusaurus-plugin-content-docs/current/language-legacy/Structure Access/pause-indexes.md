@@ -5,65 +5,65 @@ slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* : Table )<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *laTable* )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to pause indexes |
+| laTable | Table | &#8594;  | Table pour laquelle suspendre les index |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PAUSE INDEXES.Summary-->The **PAUSE INDEXES** command temporarily disables all the indexes of *aTable*, except for the index of the primary key.<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Summary-->La commande **PAUSE INDEXES** désactive temporairement tous les index de *laTable*, hormis l’index de la clé primaire.<!-- END REF-->
 
-The indexes are not physically deleted from the data (.4DIndx file) or the structure of the database (\_USER\_INDEXES, see *System Tables*), but they are rendered invalid and are thus no longer updated. When indexes are disabled, all the operations performed on *aTable* (queries, sorts, record additions, modifications and deletions) no longer use the indexes.
+Les index ne sont pas physiquement supprimés des données (fichier .4DIndx) et de la structure de la base (\_USER\_INDEXES, cf. *Tables système*), ils sont rendus invalides et par conséquent ne sont plus mis à jour. Lorsque les index sont désactivés, toutes les opérations effectuées sur *laTable* (recherches, tris, ajouts, modifications et suppressions d’enregistrements) n’utilisent plus les index.
 
-This command is mainly useful when you are importing or modifying large amounts of data in tables that have several indexes. Since 4D must update the indexes each time a record is validated, the operation could take a considerable amount of time. Disabling the indexes beforehand can significantly speed up the operation. 
+Cette commande est principalement utile dans le contexte de l’importation ou la modification massive de données dans des tables comportant plusieurs index. 4D devant mettre à jour les index à chaque validation d’enregistrement, l’opération peut prendre beaucoup de temps. Désactiver les index au préalable permet d’accélérer significativement l’opération. 
 
-To resume the indexes after the operation is over, you can just call the [RESUME INDEXES](resume-indexes.md) command for *aTable*. 
+Pour réactiver les index à l’issue de l’opération, il suffit d’appeler la commande [RESUME INDEXES](resume-indexes.md) sur *laTable*. 
 
-**Note:** You can obtain a similar result by using the [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) commands, but with notable differences:
+**Note :** Il est possible d’obtenir un résultat similaire en utilisant les commandes [DELETE INDEX](delete-index.md) et [CREATE INDEX](create-index.md), avec toutefois des différences notables :
 
-* it is necessary to call [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) for each index in *aTable*.
-* calling the [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) commands change the internal number of the index, which is not the case with **PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md). Changing the index number will generate an automatic reindexing of the data if the dataset changes.
+* il est nécessaire d’appeler [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) pour chaque index de *laTable*.
+* l'appel des commandes [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) modifie le numéro interne de l'index, ce qui n'est pas le cas avec **PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md). La modification du numéro d'index entraînera la réindexation automatique des données en cas de changement du jeu de données.
 
-If you call the **PAUSE INDEXES** command for a table and then quit the database without having called the [RESUME INDEXES](resume-indexes.md) command for this table, all this table’s indexes are automatically rebuilt when the database is restarted. 
+Si vous appelez la commande **PAUSE INDEXES** sur une table puis quittez la base sans que la commande [RESUME INDEXES](resume-indexes.md) ait été exécutée sur cette table, tous les index de la table seront automatiquement reconstruits au prochain démarrage de la base. 
 
-**Note:** This command cannot be executed from a 4D remote.
+**Note :** Cette commande ne peut pas être exécutée depuis un 4D distant.
 
-## Example 
+## Exemple 
 
-Example of method for importing large amounts of data:
+Exemple de méthode d’import massif de données :
 
 ```4d
  PAUSE INDEXES([Articles])
- IMPORT DATA("HugeImport.txt") //Importing
+ IMPORT DATA("GrosImport.txt") //Importation
  RESUME INDEXES([Articles])
 ```
 
-## See also 
+## Voir aussi 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1293 |
+| Numéro de commande | 1293 |
 | Thread safe | yes |
 
 

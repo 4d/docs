@@ -5,142 +5,143 @@ slug: /commands/copy-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *sourceName* : Text ; *destinationName* : Text {; *newName* : Text} {; *} )<!-- END REF-->
+<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomSource* ; *nomDest* {; *nouvNom*} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sourceName | Text | &#8594;  | Pathname of file or folder to be copied |
-| destinationName | Text | &#8594;  | Name or pathname of copied file or folder |
-| newName | Text | &#8594;  | New name of copied file or folder |
-| * | Operator | &#8594;  | Override existing document if any |
+| nomSource | Text | &#8594;  | Chemin d’accès du fichier ou du dossier à copier |
+| nomDest | Text | &#8594;  | Nom ou chemin d’accès du fichier ou du dossier copié |
+| nouvNom | Text | &#8594;  | Nouveau nom du fichier ou du dossier copié |
+| * | Opérateur | &#8594;  | Remplacer le document existant le cas échéant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Modified|
-|6|Created|
+|14|Modifié|
+|13|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.COPY DOCUMENT.Summary-->The **COPY DOCUMENT** command copies the file or folder specified by *sourceName* to the location specified by *destinationName* and, optionally, renames it.<!-- END REF--> 
-In this case, the *sourceName* parameter can contain:  
-   * either a complete file pathname expressed with respect to the root of the volume,  
-   * or a pathname relative to the database folder.  
-The *destinationName* parameter can contain several types of locations:  
-   * a complete file pathname expressed with respect to the root of the volume: the file is copied to this location  
-   * a file name or file pathname relative to the database folder: the file is copied into the database folder (the subfolders must already exist)  
-   * a complete folder pathname or a pathname relative to the database folder (*destinationName* must end with the folder separator for the platform): the file is copied into the designated folder. These folders must already exist on the disk; they are not created.  
-An error is generated if there is already a document named *destinationName* unless you specify the optional *\** parameter which, in this case, instructs **COPY DOCUMENT** to delete and override the existing document in the destination location.
-* **Copying folders**  
-To indicate that you are designating a folder, the strings passed in *sourceName* and *destinationName* must end with a folder separator for the platform. For example, under Windows "C:\\\\Element\\\\" designates a folder and "C:\\\\Element" designates a file.  
-To copy a folder, pass its complete pathname in *sourceName*. This folder must already exist on the disk. When a folder is set in the *sourceName* parameter, a folder must also be designated in the *destinationName* parameter. You must pass the complete folder pathname (where each element must already exist on the disk)  
-If a folder with the same name as the one designated by the *sourceName* parameter already exists at the location set by the *destinationName* parameter and it is not empty, 4D checks its contents before copying the items. An error is generated when a file with the same name already exists, unless you have passed the optional *\** parameter which, in this case, indicates to the command to delete and replace the file in the destination location. .
+<!--REF #_command_.COPY DOCUMENT.Summary-->La commande **COPY DOCUMENT** copie le fichier ou dossier désigné par *nomSource* à l'emplacement désigné par *nomDest* et le renomme optionnellement.<!-- END REF--> 
+Dans ce cas, le paramètre *nomSource* peut contenir :  
+   * soit un chemin d'accès complet de fichier, exprimé par rapport à la racine du volume,  
+   * soit un chemin d'accès relatif au dossier de la base.  
+Le paramètre *nomDest* peut contenir plusieurs types d'emplacements :  
+   * un chemin d'accès complet de fichier exprimé par rapport à la racine du volume : le fichier est recopié à cet emplacement  
+   * un nom de fichier ou un chemin d'accès de fichier relatif au dossier de la base : le fichier est recopié dans le dossier de la base (les sous-dossiers doivent exister)  
+   * un chemin d'accès de dossier complet ou relatif au dossier de la base (*nomDest* doit se terminer par un séparateur de dossier de la plate-forme) : le fichier est recopié dans le dossier désigné. Les dossiers doivent déjà exister sur le disque, il ne sont pas pas créés.  
+Une erreur est générée si un document nommé *nomDest* existe déjà, à moins que vous n'ayez spécifié le paramètre optionnel *\**, qui indique à **COPY DOCUMENT** de supprimer et de remplacer le document à l’emplacement de destination dans ce cas.
+* **Copie de dossier**  
+Pour indiquer que vous désignez un dossier, les chaînes passées dans *nomSource* et *nomDest* doivent se terminer par un séparateur de dossier de la plate-forme. Par exemple, sous Windows "C:\\\\Element\\\\" désigne un dossier et "C:\\\\Element" désigne un fichier.  
+Pour recopier un dossier, passez son chemin d’accès complet dans *nomSource*. Ce dossier doit exister sur le disque.  
+Lorsqu’un dossier est défini dans le paramètre *nomSource*, un dossier doit également être désigné dans le paramètre *nomDest*. Vous devez passer un chemin d’accès complet de dossier (dont chaque élément doit déjà exister sur le disque).  
+Si un dossier du même nom que celui désigné par le paramètre *nomSource* existe déjà à l’emplacement défini par *nomDest* et n’est pas vide, 4D vérifie son contenu avant de copier les éléments. Une erreur est générée si un fichier du même nom existe déjà, à moins que vous n’ayez spécifié le paramètre optionnel *\**, qui indique à la commande de supprimer et de remplacer le document à l’emplacement de destination dans ce cas.
 
-Note that you can pass a file in the *sourceName* parameter and a folder in the *destinationName* parameter, in order to copy a file into a folder.
+A noter que vous pouvez passer un fichier dans le paramètre *nomSource* et un dossier dans le paramètre *nomDest*, afin de copier un fichier dans un dossier.
 
-The optional *newName* parameter, when it is passed, renames the document copied to its destination location (file or folder). When it is passed in the context of copying a file, this parameter replaces the name (if any) passed in the *destinationName* parameter.
+Le paramètre optionnel *nouvNom*, s'il est passé, permet de renommer le document copié à son emplacement de destination (fichier ou dossier). Lorsqu’il est passé dans le contexte d’une copie de fichier, ce paramètre remplace le nom éventuellement passé via le paramètre *nomDest*.
 
-## Example 1 
+## Exemple 1 
 
-The following example duplicates a document in its own folder:
+L'exemple suivant duplique un document dans son propre dossier :
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2")
+ COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"C:\\DOSSIER\\LeDoc2")
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example copies a document to the database folder (provided C:\\\\FOLDER is not the database folder):
+L'exemple suivant copie un document dans le dossier de la base (dans la mesure où C:\\\\DOSSIER n'est pas le dossier de la base) :
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"DocName")
+ COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"LeDoc")
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example copies a document from one volume to another one:
+L'exemple suivant copie un document d'un volume vers un autre :
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"F:\\Archives\\DocName.OLD")
+ COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"F:\\Archives\\LeDoc.OLD")
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following example duplicates a document in its own folder overriding an already existing copy:
+L'exemple suivant duplique un document dans son propre dossier, écrasant la précédente copie si elle existe :
 
 ```4d
- COPY DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\DocName2";*)
+ COPY DOCUMENT("C:\\DOSSIER\\LeDoc";"C:\\DOSSIER\\LeDoc2";*)
 ```
 
-## Example 5 
+## Exemple 5 
 
-Copying a file into a specific folder while keeping the same name:
+Copie d’un fichier dans un dossier spécifique en conservant le même nom :
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\")
+ COPY DOCUMENT("C:\\Projets\\NomDoc";"C:\\Projets\\")
 ```
 
-## Example 6 
+## Exemple 6 
 
-Copying a file into a specific folder while keeping the same name and overriding the existing document:
+Copie d’un fichier dans un dossier spécifique en conservant le même nom et en remplaçant le document existant : 
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\DocName";"C:\\Projects\\"; *)
+ COPY DOCUMENT("C:\\Projets\\NomDoc";"C:\\Projets\\"; *)
 ```
 
-## Example 7 
+## Exemple 7 
 
-Copying a folder into another folder (both folders must already be present on the disk):
+Copie d’un dossier dans un autre dossier (les deux dossiers doivent exister sur le disque) : 
 
 ```4d
- COPY DOCUMENT("C:\\Projects\\";"C\\Archives\\2011\\")
+ COPY DOCUMENT("C:\\Projets\\";"C\\Archives\\2011\\")
 ```
 
-## Example 8 
+## Exemple 8 
 
-The following examples create different files and folders in the database folder (examples under Windows). In each case, the "folder2" folder must exist:
+Les exemples suivants créent différents fichiers et dossiers dans le dossier de la base (exemples Windows). Dans tous le cas, le dossier "dossier2" doit exister :
 
 ```4d
- COPY DOCUMENT("folder1\\name1";"folder2\\")
-  //creates the "folder2/name1" file
+ COPY DOCUMENT("dossier1\\nom1";"dossier2\\")
+     //crée le fichier "dossier2/nom1"
  
- COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
-  //creates the "folder2/new" file
+ COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveauté")
+     //crée le fichier "dossier2/nouveauté"
  
- COPY DOCUMENT("folder1\\name1";"folder2\\name2")
-  //creates the "folder2/name2" file
+ COPY DOCUMENT("dossier1\\nom1";"dossier2\\nom2")
+     //crée le fichier "dossier2/nom2"
  
- COPY DOCUMENT("folder1\\name1";"folder2\\name2";"new")
-  //creates the "folder2/new" file (name2 is ignored)
+ COPY DOCUMENT("dossier1\\nom1";"dossier2\\nom2";"nouveauté")
+     //crée le fichier "dossier2/nouveauté" (nom2 est ignoré)
  
- COPY DOCUMENT("folder1\\" ; "folder2\\")
-  //creates the "folder2/folder1/" folder
+ COPY DOCUMENT("dossier1\\" ; "dossier2\\")
+     //crée le dossier "dossier2/dossier1/"
  
- COPY DOCUMENT("folder1\\" ; "folder2\\" ; "new")
-  //creates the "folder2/new/" folder
+ COPY DOCUMENT("dossier1\\" ; "dossier2\\" ; "nouveauté")
+     //crée le dossier "dossier2/nouveauté/"
 ```
 
-## See also 
+## Voir aussi 
 
 [MOVE DOCUMENT](move-document.md)  
-*System Documents*  
+*Présentation des documents système*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 541 |
+| Numéro de commande | 541 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

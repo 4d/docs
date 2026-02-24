@@ -5,82 +5,82 @@ slug: /commands/array-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TIME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of array |
-| size | Integer | &#8594;  | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Integer | &#8594;  | Number of 2D array elements |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ARRAY TIME.Summary-->The **ARRAY TIME** command creates and/or resizes an array of Time type elements in memory.<!-- END REF-->In 4D, times can be processed as numeric values. In 4D versions prior to v14, you had to combine a longint array with a display format in order to manage an array of times. 
+<!--REF #_command_.ARRAY TIME.Summary-->La commande **ARRAY TIME** crée et/ou redimensionne un tableau d’éléments de type Heure en mémoire.<!-- END REF-->Dans 4D, les heures peuvent être traitées en tant que valeurs numériques. Dans les versions de 4D antérieures à la v14, il était nécessaire de combiner un tableau d’entiers longs et un format d’affichage pour gérer un tableau d’heures. 
 
-The *arrayName* parameter is the name of the array.
+Le paramètre *nomTableau* est le nom du tableau.
 
-The *size* parameter is the number of array elements.
+Le paramètre *taille* est le nombre d'éléments du tableau.
 
-The *size2* parameter is optional. If you pass it, this command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* the number of columns in each array. Each row in a two-dimensional array can be processed both as an element and an array. This means that when you work with the first dimension of a two-dimensional array, you can insert and remove entire arrays using other commands in this theme. 
+Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, taille définit le nombre de lignes et taille2 le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau. 
 
-When you apply the **ARRAY TIME** command to an existing array:
+Lorsque vous appliquez la commande **ARRAY TIME** à un tableau existant :
 
-* If you enlarge its size, existing elements are not changed and new elements are initialized to the null time value (00:00:00).
-* If you reduce its size, elements at the "bottom" of the array are deleted and lost.
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à la valeur d’heure nulle (00:00:00).
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-When you apply [SELECTION TO ARRAY](selection-to-array.md) or [SELECTION RANGE TO ARRAY](selection-range-to-array.md) to a Time type field, note that they only create a Time type array if the array has not already been defined as another type, such as Longint for example. 
+A noter que les commandes [SELECTION TO ARRAY](selection-to-array.md) et [SELECTION RANGE TO ARRAY](selection-range-to-array.md) appliquées à un champ de type Heure créent un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type, par exemple en entier long. 
 
-## Example 1 
+## Exemple 1 
 
-This example creates a process array containing 100 Time-type elements:
-
-```4d
- ARRAY TIME(arrTimes;100)
-```
-
-## Example 2 
-
-This example creates a local array of 100 rows each containing 50 Time-type elements:
+Cet exemple crée un tableau process contenant 100 éléments de type Heure :
 
 ```4d
- ARRAY TIME($arrTimes;100;50)
+ ARRAY TIME(tabHeures;100)
 ```
 
-## Example 3 
+## Exemple 2 
 
-Since time arrays accept numeric values, the following code is valid:
+Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type Heure :
 
 ```4d
- ARRAY TIME($arrTimeValues;10)
- $CurTime:=Current time+1
- APPEND TO ARRAY($arrTimeValues;$CurTime)
- $Found:=Find in array($arrTimeValues;$CurTime)
+ ARRAY TIME($tabHeures;100;50)
 ```
 
-## See also 
+## Exemple 3 
 
-*Creating Arrays*  
+Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant est valide :
+
+```4d
+ ARRAY TIME($tHValeurs;10)
+ $CrtHeure:=Current time+1
+ APPEND TO ARRAY($tHValeurs;$CrtHeure)
+ $Found:=Find in array($tHValeurs;$CrtHeure)
+```
+
+## Voir aussi 
+
+*Créer des tableaux*  
 [Time](time.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1223 |
+| Numéro de commande | 1223 |
 | Thread safe | yes |
 
 

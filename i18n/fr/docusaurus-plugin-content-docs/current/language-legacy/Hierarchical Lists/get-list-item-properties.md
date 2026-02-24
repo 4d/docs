@@ -5,73 +5,72 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<br/>*GET LIST ITEM PROPERTIES** ( *list* : Integer ; *itemRef* : Integer, Operator ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *liste* ; *refElément* ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *liste* ; * ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef  | Integer, Operator | &#8594;  | Item reference number, or 0 for last list item added, or * for the current list item |
-| enterable | Boolean | &#8592; | TRUE = Enterable, FALSE = Non-enterable |
-| styles | Integer | &#8592; | Font style for the item |
-| icon | Text, Integer | &#8592; | Picture name or number |
-| color | Integer | &#8592; | RGB color value |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| saisissable | Boolean | &#8592; | Vrai = Saisissable, Faux = Non-saisissable |
+| style | Integer | &#8592; | Style de police de l'élément |
+| icône | Text, Integer | &#8592; | 131072 + numéro de référence d'image |
+| couleur | Integer | &#8592; | Valeur de couleur RVB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|17 R6|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->The **GET LIST ITEM PROPERTIES** command returns the properties of the item designated by the *itemRef* parameterwithin the list whose list reference number or object name is passed in *list*.<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->La commande **GET LIST ITEM PROPERTIES** retourne les propriétés de l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF-->
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique (RéfListe). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists matching this name, the **GET LIST ITEM PROPERTIES** command will be applied to the first object whose name corresponds.
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM PROPERTIES** s'appliquera au premier objet dont le nom correspond.
 
-In *itemRef*, you can pass either a reference number, or the value 0 in order to designate the last item added to the list, or \* in order to designate the current item of the list. If several items are selected, the current item is the last one selected.
+Vous pouvez passer dans *réfElément* un numéro de référence, la valeur 0 afin de désigner le dernier élément ajouté à la liste ou encore \* afin de désigner l’élément courant de la liste. Si plusieurs éléments sont sélectionnés, l’élément courant est celui qui a été sélectionné en dernier.  
+Si vous passez \* et qu'aucun élément n’est sélectionné ou si le numéro de référence d'élément ne correspond à aucun élément de la liste, la commande laisse les paramètres inchangés.
 
-If you pass \* and no item is selected or if there is no item with the item reference number that is passed, the command leaves the parameters unchanged.
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
 
-If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the description of the command [APPEND TO LIST](append-to-list.md).
+Après l'appel :
 
-After the call:
-
-* *enterable* returns TRUE if the item is enterable.
-* *styles* returns the font style of the item.
-* *icon* returns the picture assigned to the item, if any.  
-   * If the icon has been specified using a picture file, the command returns in *icon* the pathname using the **path:<filesystem path>** pattern.  
-   * If the icon has been specified using a library picture (binary databases only), the command returns either the number or the name of the picture, depending on the type of variable passed in this parameter. The following pattern is used for a name: **pictlib:<name>**. If you do not attribute a specific type to the *icon* variable, by default, the name of the picture is returned (text). If no icon is associated with the item, the command returns a blank value.  
+* *saisissable* retourne Vrai si l'élément est saisissable.
+* *style* retourne le style de caractères de l'élément.
+* *icône* retourne l'image associée à l'élément, le cas échéant.  
+   * Si l'icône a été renseignée à l'aide d'un fichier image, la commande retourne dans icône le chemin d'accès à l'aide du modèle **path:<filesystem** **path>**  
+   * Si l'icône a été renseignée à l'aide d'une image issue de la bibliothèque (bases de données binaires uniquement), la commande retourne soit le nom soit le numéro de l'image, en fonction de du type de variable passé dans le paramètre. Le modèle suivant est utilisé pour un nom : **pictlib:<name>**. Si vous n'attribuez pas à la valeur icône un type spécifique, par défaut le nom de l'image est retourné (texte). Si aucune icône n'est associée à l'élément, la commande retourne une valeur vide.  
          
-   **Note:** You can retrieve, in a picture variable, the icon associated with an item using the [GET LIST ITEM ICON](get-list-item-icon.md) command*.*
-* *color* returns the color of the text of the item specified.
+   **Note :** Vous pouvez récupérer dans une variable image l'icône associée à un élément à l’aide de la commande [GET LIST ITEM ICON](get-list-item-icon.md).
+* *couleur* retourne la couleur du texte de l’élément désigné.
 
-For details about these properties, see the description of the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+Pour plus d'informations sur ces propriétés, reportez-vous à la description de la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM ICON](get-list-item-icon.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 631 |
+| Numéro de commande | 631 |
 | Thread safe | no |
 
 

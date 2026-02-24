@@ -5,113 +5,112 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; *okButtonTitle* : Text {; *cancelButtonTitle* : Text}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* {; *libelléBoutonOK* {; *libelléBoutonAnn*}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message to display in the confirmation dialog box |
-| okButtonTitle | Text | &#8594;  | OK button title |
-| cancelButtonTitle | Text | &#8594;  | Cancel button title |
+| message | Text | &#8594;  | Message à afficher dans la boîte de dialogue de confirmation |
+| libelléBoutonOK | Text | &#8594;  | Libellé du bouton OK |
+| libelléBoutonAnn | Text | &#8594;  | Libellé du bouton Annuler |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CONFIRM.Summary-->The CONFIRM command displays a confirm dialog box composed of a note icon, a message, an OK button, and a Cancel Button.<!-- END REF-->
+<!--REF #_command_.CONFIRM.Summary-->La commande **CONFIRM** affiche une boîte de dialogue de confirmation qui se compose d'une icône, d'un message, d'un bouton OK et d'un bouton Annuler.<!-- END REF-->
 
-You pass the message to be displayed in the *message* parameter.
+Les boîtes de dialogue de confirmation ou d'alerte sont utilisées pour afficher des informations (comme des messages d'erreur) qui ne nécessitent pas d'informations en retour.
 
-By default, the title of the OK button is “OK” and that of the Cancel button is “Cancel.” To change the titles of these buttons, pass the new custom titles into the optional parameters *okButtonTitle* and *cancelButtonTitle*. If necessary, the width of the buttons is resized toward the left, according to the width of the custom titles you pass.
+Vous passez le message à afficher dans le paramètre *message*. Ce message peut contenir jusqu'à 255 caractères. Si la longueur ou largeur des caractères est trop importante par rapport à la zone d'affichage, le message sera tronqué.
 
-The OK button has the [default button](../FormObjects/properties_Appearance.md#default-button) property. If the user clicks the OK button or presses Enter to accept the dialog box, the OK system variable is set to 1\. If the user clicks the Cancel button to cancel the dialog box, the OK system variable is set to 0.
+Par défaut, le libellé du bouton OK est “OK” et le libellé du bouton Annuler est “Annuler”. Si vous voulez modifier le libellé de ces boutons, passez le nouveau libellé dans les paramètres optionnels *libelléBoutonOK* et *libelléBouton*. Si nécessaire, les boutons sont agrandis vers la gauche en fonction de la taille des libellés que vous avez saisis.
 
-**Tip:** Do not call the CONFIRM command from the section of a form or object method that handles the On Activate or On Deactivate form events; this will cause an endless loop.
+Le bouton OK est le bouton par défaut. L'utilisateur peut cliquer sur le bouton OK ou appuyer sur la touche **Entrée** pour valider la boîte de dialogue, la variable système OK prend alors la valeur 1\. L'utilisateur peut cliquer sur le bouton Annuler pour annuler la boîte de dialogue, la variable système OK prend alors la valeur 0\. 
 
-## Example 1 
+**Conseil :** N'appelez pas la commande **CONFIRM** dans une méthode formulaire ou objet qui gère l'événement On Activate ou On Deactivate, car cela provoquerait une boucle sans fin.
 
-The line:
+## Exemple 1 
+
+L'exemple ci-dessous :
 
 ```4d
- CONFIRM("WARNING: You will not be able to revert this operation.")
+ CONFIRM("ATTENTION : Vous ne pourrez pas annuler cette opération.")
  If(OK=1)
-    ALL RECORDS([Old Stuff])
-    DELETE SELECTION([Old Stuff])
+    ALL RECORDS([Employes])
+    DELETE SELECTION([Employes])
  Else
-    ALERT("Operation canceled.")
+    ALERT("Opération annulée.")
  End if
 ```
 
-will display the confirm dialog box (on Windows) shown here:
+... provoquera l'affichage de la boîte de dialogue de confirmation suivante (sous Windows) :
 
-![](../assets/en/commands/pict4225029.en.png)
+![](../assets/en/commands/pict4225029.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-The line:
+La ligne :
 
 ```4d
- CONFIRM("Do you really want to close this account?";"Yes";"No")
+ CONFIRM("Voulez-vous vraiment fermer ce compte ?";"Oui";"Non")
 ```
 
-will display the confirm dialog box (on Windows) shown here:
+... provoquera l'affichage de la boîte de dialogue de confirmation suivante (sous Windows) :
 
-![](../assets/en/commands/pict4225038.en.png)
+![](../assets/en/commands/pict4225038.fr.png)
 
-## Example 3 
+## Exemple 3 
 
-You are writing a 4D application for the international market. You wrote your interface strings along with their target language translations in XLIFF files. In doing so, the code:
+Vous développez une application 4D pour le marché international. Vous avez écrit les chaines de votre interface ainsi que leurs traductions dans la langue cible dans des fichiers XLIFF. Dans ce cas, le code :
 
 ```4d
  var $title;$yes;$no : Text
  $title:=Localized string("add_Memo")
- $yes:=Localized string("yes")
- $no:=Localized string("no")
+ $yes:=Localized string("Yes")
+ $no:=Localized string("No")
  CONFIRM($title;$yes;$no)
 ```
 
-could display the French confirm dialog box (on Windows) shown here:
+... pourrait afficher la boîte de dialogue de confirmation (sous Windows) suivante :
 
-![](../assets/en/commands/pict4225048.en.png)
+![](../assets/en/commands/pict4225048.fr.png)
 
-**Note:** For more information on xliff database localization, please refer to the *Appendix B: XLIFF architecture* section. 
+## Exemple 4 
 
-## Example 4 
-
-The line:
+La ligne :
 
 ```4d
- CONFIRM("WARNING: If your pursue this operation, some records will be "+"irremediably affected."+\
- Char(13)+"What do you want to do?";"Do NOT continue";"Continue")
+ CONFIRM("ATTENTION : Si vous poursuivez cette opération, des enregistrements seront "+"modifiés irrémédiablement."+Char(13)+"Que voulez-vous faire ?";"Ne PAS continuer";"Continuer")
 ```
 
-will display the confirm dialog box (on Windows) shown here:
+... provoque l'affichage de la boîte de dialogue de confirmation suivante (sous Mac OS) :
 
-![](../assets/en/commands/pict4225058.en.png)
+![](../assets/en/commands/pict4225058.fr.png)
 
-## See also 
+## Voir aussi 
 
 [ALERT](alert.md)  
 [Request](request.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 162 |
+| Numéro de commande | 162 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

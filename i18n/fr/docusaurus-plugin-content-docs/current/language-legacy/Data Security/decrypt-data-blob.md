@@ -5,49 +5,48 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : Object ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : Text ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; *keyObject* ; *salt* ; *decryptedBLOB* ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* ; *passPhrase* ; *salt* ; *decryptedBLOB* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToDecrypt | Blob | &#8594;  | BLOB to decrypt |
-| keyObject | Object | &#8594;  | JSON object containing the encryption key |
-| passPhrase | Text | &#8594;  | Passphrase for direct encryption key generation |
+| blobToDecrypt | Blob | &#8594;  | BLOB à décrypter |
+| keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
 | salt | Integer | &#8594;  | Additional salt for algorithm |
-| decryptedBlob | Blob | &#8592; | decrypted BLOB |
-| Function result | Boolean | &#8592; | True if decryption has been correctly performed, False otherwise |
+| decryptedBlob | Blob | &#8592; | BLOB décrypté |
+| Résultat | Boolean | &#8592; | True si le déchiffrement a été effectué correctement. Sinon False |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Created|
+|19|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Decrypt data BLOB.Summary-->The **Decrypt data BLOB** command decrypts the *blobToDecrypt* parameter with the same algorithm as 4D uses to decrypt data (AES-256) and returns the result in *decryptedBLOB*.<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Summary-->La commande **Decrypt data BLOB**décrypte le paramètre blobToDecrypt avec le même algorithme utilisé par 4D pour décrypter les données (AES-256) et retourne le résultat dans decryptedBLOB.<!-- END REF-->.
 
-You can use either a *keyObject* or a *passPhrase* to decrypt the BLOB: 
+Vous pouvez utiliser un *keyObject* ou un *passPhrase* pour décrypter le BLOB :
 
-* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](new-data-key.md) command
-* *passPhrase*: a string used to generate the encryption key
+* keyObject : un objet JSON contenant la clé de chiffrement, avec la même structure que l'objet retourné par la commande [New data key](new-data-key.md)
+* passPhrase : une chaîne utilisée pour générer la clé de chiffrement
 
-The number passed in the *salt* parameter of **Decrypt data BLOB** must match the one used for encryption.
+Le nombre passé dans le paramètre *salt* de **Decrypt data BLOB** doit correspondre à celui utilisé pour le chiffrement.
 
-If the decryption is successful, the decrypted data is returned in the *decryptedBLOB* parameter and the command returns True.
+Si le déchiffrement est réussi, les données déchiffrées sont retournées dans le paramètre *decryptedBLOB* et la commande retourne True.
 
-In case of error, the BLOB is returned empty and the command returns false.
+En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
-## Example 
+## Exemple 
 
-The following example shows how to decrypt an encrypted file located in the RESOURCES folder of the database:  
+L'exemple suivant montre comment décrypter un fichier chiffré situé dans le dossier RESOURCES de la base de données :  
   
 ```4d
  var $fileToDecrypt;$decryptedFile : 4D.File
@@ -63,20 +62,20 @@ The following example shows how to decrypt an encrypted file located in the RESO
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-The *passPhrase* and *salt* used for decryption are identical to the *passPhrase* and *salt* used for encryption (see the [Encrypt data BLOB](encrypt-data-blob.md) example).
+Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont identiques aux paramètres *passPhrase* et *salt* utilisés pour le cryptage (voir l'exemple [Encrypt data BLOB](encrypt-data-blob.md)).
 
-## See also 
+## Voir aussi 
 
+  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
-[Encrypt your own data with the 4D algorithm](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
 [New data key](new-data-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1774 |
+| Numéro de commande | 1774 |
 | Thread safe | yes |
 
 

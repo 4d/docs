@@ -5,50 +5,50 @@ slug: /commands/users-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *users* : Blob )<!-- END REF-->
+<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *utilisateurs* )<!-- END REF-->
 <!--REF #_command_.USERS TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| users | Blob | &#8596;  | *in:* BLOB that must contain users<br/>*out:* User accounts (encrypted) |
+| utilisateurs | Blob | &#8594;  | BLOB devant contenir les utilisateurs |
+| &#8592; | Comptes utilisateurs (crypté) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-**Compatibility Note:** This command only works in binary databases. It always returns an empty BLOB in projects.
+<!--REF #_command_.USERS TO BLOB.Summary-->**Note de compatibilité :** Cette commande fonctionne uniquement dans les bases binaires.<!-- END REF--> Elle retourne toujours un BLOB vide dans les projets.
 
-<!--REF #_command_.USERS TO BLOB.Summary-->The **USERS TO BLOB** command stores in the BLOB *users* the list of all user accounts and database groups created by the Administrator.<!-- END REF-->
+La commande **USERS TO BLOB** stocke dans le BLOB *utilisateurs* la liste de tous les comptes d’utilisateurs et les groupes de la base créés par l’Administrateur.
 
-Only the database Administrator or the Designer can execute this command. If another user tries to execute it, the command does nothing and a privilege error (-9949) is generated.
+Seuls l’Administrateur et le Super\_Utilisateur de la base peuvent exécuter cette commande. Si un autre utilisateur tente de l’exécuter, la commande ne fait rien et une erreur de privilège (-9949) est générée.
 
-The generated BLOB is encrypted automatically and can only be read using the [BLOB TO USERS](blob-to-users.md) command. You can store this BLOB in a file on your hard disk or in a field.
+Le BLOB généré est automatiquement encrypté et ne peut être lu que par la commande [BLOB TO USERS](blob-to-users.md). Vous pouvez stocker ce BLOB dans un fichier disque ou dans un champ.   
+Cette commande équivaut à l’enregistrement des groupes et utilisateurs depuis la fenêtre de gestion des groupes de la Boîte à outils, à la différence près qu’elle permet de stocker les comptes utilisateurs dans un champ BLOB et non uniquement dans un fichier.
 
-This command is the equivalent of recording groups and users from the Toolbar. The only difference is that it lets you store user accounts in a BLOB field and not just in a file.
+Ce principe permet de conserver une sauvegarde des utilisateurs parmi les données de la base, et ainsi de mettre en place un mécanisme de sauvegarde et de chargement automatiques des utilisateurs en cas de mise à jour de la structure de la base (en effet, les informations relatives aux comptes utilisateurs sont stockées par 4D dans le fichier de structure de la base).
 
-This lets you keep a backup of users in the database data and, as such, implements a backup mechanism as well as a system to load users automatically when a database structure file is updated (information related to user accounts are stored by 4D in the database structure file).
-
-## See also 
+## Voir aussi 
 
 [BLOB TO USERS](blob-to-users.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 849 |
+| Numéro de commande | 849 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

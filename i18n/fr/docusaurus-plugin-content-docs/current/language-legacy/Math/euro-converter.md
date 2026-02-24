@@ -5,99 +5,135 @@ slug: /commands/euro-converter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *value* : Real ; *fromCurrency* : Text ; *toCurrency* : Text ) : Real<!-- END REF-->
+<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valeur* ; *deMonnaie* ; *versMonnaie* ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| value | Real | &#8594;  | Value to convert |
-| fromCurrency | Text | &#8594;  | Code of the currency in which the value is expressed |
-| toCurrency | Text | &#8594;  | Code of the currency into which the value must be converted |
-| Function result | Real | &#8592; | Converted value |
+| valeur | Real | &#8594;  | Valeur à convertir |
+| deMonnaie | Text | &#8594;  | Code ISO de la monnaie dans laquelle la valeur est exprimée |
+| versMonnaie | Text | &#8594;  | Code ISO de la monnaie dans laquelle la valeur doit être convertie |
+| Résultat | Real | &#8592; | Valeur convertie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Euro converter.Summary-->The **Euro converter** command converts any value from and to the different currencies belonging to “Euroland” and the Euro currency itself.<!-- END REF-->
+<!--REF #_command_.Euro converter.Summary-->La commande **Euro converter** vous permet d’effectuer tout type de conversion de valeurs entre les différentes monnaies des pays de la “zone euro” et l’Euro lui-même.<!-- END REF-->
 
-You can convert:
+Vous pouvez convertir :
 
-* a national currency into Euros,
-* Euros into a national currency,
-* a national currency into another national currency. In this case, the conversion is calculated by the intermediary of the Euro, as specified in the European reglementation. For example, to convert Belgian francs to Deutschemarks, 4D will perform the following calculations: Belgian francs -> Euros -> Deutchemarks.
+* une monnaie nationale en Euros,
+* des Euros en une monnaie nationale,
+* une monnaie nationale en une autre monnaie nationale. Dans ce cas, la conversion s’effectue toujours par l’intermédiaire de l’Euro, comme le stipule la réglementation. Par exemple, pour convertir des Francs belges en Marks allemands, 4D effectuera les conversions suivantes : Francs belges -> Euro -> Marks allemands.
 
-Pass the value to convert in the first parameter.   
-The second parameter indicates the Currency code in which value is expressed.   
-The third parameter indicates the Currency code into which value must be converted.
+Vous passez dans le premier paramètre la valeur à convertir. 
 
-To specify a Currency code, 4D proposes the following predefined constants, placed in the “*Euro Currencies*” theme:
+Dans le second paramètre, vous indiquez le code ISO de la monnaie dans laquelle valeur est exprimée. 
 
-| Constant            | Type   | Value |
-| ------------------- | ------ | ----- |
-| Austrian Schilling  | Text | ATS   |
-| Belgian Franc       | Text | BEF   |
-| Deutsche Mark       | Text | DEM   |
-| Euro                | Text | EUR   |
-| Finnish Markka      | Text | FIM   |
-| French Franc        | Text | FRF   |
-| Greek Drachma       | Text | GRD   |
-| Irish Pound         | Text | IEP   |
-| Italian Lira        | Text | ITL   |
-| Luxembourg Franc    | Text | LUF   |
-| Netherlands Guilder | Text | NLG   |
-| Portuguese Escudo   | Text | PTE   |
-| Spanish Peseta      | Text | ESP   |
+Dans le troisième paramètre, vous indiquez le code ISO de la monnaie dans laquelle vous souhaitez que valeur soit convertie.
 
-If necessary, 4D performs rounding automatically on conversion results and keeps 2 decimals —except for conversions to Italian Lires, Belgian Francs, Luxembourg Francs and Spanish Pesetas, for which 4D keeps 0 decimal (the result is an integer number).
+Pour désigner les codes ISO, 4D vous propose les constantes prédéfinies suivantes, placées dans le thème “*Euro monnaies*” :
 
-The conversion rates between the Euro and the currencies of the 11 participating Member States are fixed:
+| Constante           | Valeur |
+| ------------------- | ------ |
+| Austrian Schilling  | ATS    |
+| Belgian Franc       | BEF    |
+| Deutsche Mark       | DEM    |
+| Euro                | EUR    |
+| Finnish Markka      | FIM    |
+| French Franc        | FRF    |
+| Greek Drachma       | GRD    |
+| Irish Pound         | IEP    |
+| Italian Lira        | ITL    |
+| Luxembourg Franc    | LUF    |
+| Netherlands Guilder | NLG    |
+| Portuguese Escudo   | PTE    |
+| Spanish Peseta      | ESP    |
 
-| **Currency**        | **Value for 1 Euro** |
-| ------------------- | -------------------- |
-| Austrian Schilling  | 13.7603              |
-| Belgian Franc       | 40.3399              |
-| Deutschemark        | 1.95583              |
-| Finnish Markka      | 5.94573              |
-| French Franc        | 6.55957              |
-| Greek drachma       | 340.750              |
-| Irish Pound         | 0.787564             |
-| Italian Lire        | 1936.27              |
-| Luxembourg Franc    | 40.3399              |
-| Netherlands Guilder | 2.20371              |
-| Portuguese Escudo   | 200.482              |
-| Spanish Peseta      | 166.386              |
+  
+| Constante           |
+| ------------------- |
+| Austrian Schilling  |
+| Belgian Franc       |
+| Deutsche Mark       |
+| Euro                |
+| Finnish Markka      |
+| French Franc        |
+| Greek Drachma       |
+| Irish Pound         |
+| Italian Lira        |
+| Luxembourg Franc    |
+| Netherlands Guilder |
+| Portuguese Escudo   |
+| Spanish Peseta      |
 
-## Example 
+  
+| Constante           |
+| ------------------- |
+| Austrian Schilling  |
+| Belgian Franc       |
+| Deutsche Mark       |
+| Euro                |
+| Finnish Markka      |
+| French Franc        |
+| Greek Drachma       |
+| Irish Pound         |
+| Italian Lira        |
+| Luxembourg Franc    |
+| Netherlands Guilder |
+| Portuguese Escudo   |
+| Spanish Peseta      |
 
-Here are some examples of conversions that can be done with this command:
+Si nécessaire, 4D arrondit automatiquement le résultat des conversions et conserve 2 décimales — à l’exception des conversions vers les Lires italiennes, Francs luxembourgeois, Francs belges et Pesetas espagnoles, pour lesquelles 4D conserve 0 décimale (le résultat est un nombre entier).
+
+La parité des différentes monnaies vis-à-vis de l’Euro est fixe. Les taux de conversion, utilisés en interne par 4D, sont les suivants : 
+
+| **Monnaie**          | **Valeur pour 1 Euro** |
+| -------------------- | ---------------------- |
+| Drachme grecque      | 340,750                |
+| Escudo portugais     | 200,482                |
+| Florin néerlandais   | 2,20371                |
+| Franc belge          | 40,3399                |
+| Franc français       | 6,55957                |
+| Franc luxembourgeois | 40,3399                |
+| Lire italienne       | 1936,27                |
+| Livre irlandaise     | 0,787564               |
+| Mark allemand        | 1,95583                |
+| Mark finlandais      | 5,94573                |
+| Peseta espagnole     | 166,386                |
+| Schilling autrichien | 13,7603                |
+
+## Exemple 
+
+Voici différents types de conversion pouvant être obtenus à l’aide de cette commande :
 
 ```4d
- $value:=10000 //Value expressed in French Francs
-  //Convert the value into Euros
- $InEuros:=Euro converter($value;French Franc;Euro)
-  //Convert the value into Italian Lire
- $InLires:=Euro converter($value;French Franc;Italian Lire)
+ $valeur:=10000 //Valeur exprimée en francs français
+  //Convertir la valeur en euros
+ $EnEuros:=Euro converter($valeur;French Franc;Euro)
+  //Convertir la valeur en lires italiennes
+ $EnLires:=Euro converter($valeur;French Franc;Italian Lira)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 676 |
+| Numéro de commande | 676 |
 | Thread safe | yes |
 
 

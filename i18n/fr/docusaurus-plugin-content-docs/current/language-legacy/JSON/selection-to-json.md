@@ -5,111 +5,109 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* : Table {; *...aField* : Field}{; *template* : Object})  : Text<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTable* {; *leChamp*}{; *leChamp2* ; ... ; *leChampN*}{; *template*})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to serialize |
-| aField | Field | &#8594;  | Field(s) whose contents must be serialized |
-| template | Object | &#8594;  | Object for selection of labels and fields |
-| Function result | Text | &#8592; | String containing serialized JSON array |
+| laTable | Table | &#8594;  | Table à sérialiser |
+| leField | Field | &#8594;  | Champ(s) dont le contenu doit être sérialisé |
+| template | Object | &#8594;  | Objet pour la sélection de libellés et de champs |
+| Résultat | Text | &#8592; | Chaîne contenant le tableau JSON sérialisé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Created|
+|16 R4|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Selection to JSON.Summary-->The **Selection to JSON** command returns a string containing a JSON array with as many elements as there are records in the current selection of *aTable*.<!-- END REF--> Each element of the array is a JSON object containing the labels and values of the fields of the selection.
+<!--REF #_command_.Selection to JSON.Summary-->La commande **Selection to JSON** retourne une chaîne qui contient un tableau JSON avec autant d'éléments qu'il y a d'enregistrements dans la sélection courante de *laTable*.<!-- END REF--> Chaque élément du tableau est un objet JSON contenant les libellés et les valeurs des champs de la sélection.
 
-If you only pass the *aTable* parameter, the command includes, in the JSON array, the values of all the fields of the table that can be expressed in JSON. BLOB and Picture type fields are ignored.
+Si vous passez uniquement le paramètre *laTable*, la commande inclut dans le tableau JSON les valeurs de tous les champs de la table exprimables en JSON. Les champs de type BLOB et image sont ignorés.
 
-If you do not want to include all the fields of *aTable*, you can use either the *aField* parameter or the *template* parameter:
+Si vous ne souhaitez pas inclure tous les champs de *laTable*, vous pouvez utiliser soit le paramètre *leChamp* soit le paramètre *template* : 
 
-* *aField*: pass one or more fields in this parameter. Only the values of the fields defined are included in the JSON array.
-* *template*: pass a 4D object containing one or more *name/value* pairs where the *name* can be any valid attribute name and the *value* contains a pointer to a field you want to include. This syntax allows you to customize the labels of fields in the JSON array.
+* *leChamp* : passez un ou plusieurs champ(s) dans ce paramètre. Seules les valeurs des champs définis seront incluses dans le tableau JSON.
+* *template* : passez un objet 4D contenant une ou plusieurs paire(s) *nom/valeur* où *nom* peut être tout nom d'attribut valide et *valeur* est un pointeur vers un champ à inclure. Cette syntaxe permet de personnaliser les libellés des champs dans le tableau JSON.
 
-This command supports Object type fields: the data of these fields is automatically converted to the JSON format (picture attribute values are converted as "\[object Picture\]" strings). Note that the following 4D statement will be interpreted as "produce JSON from all values of *objectField* in the current selection of the table":  
-
-```4d
- Selection to JSON([aTable];objectField)
-```
-
-**Note:** After a call to **Selection to JSON**, the current selection remains the same, but the current record is no longer loaded and might have changed (the last record of the current selection is then the current record). After the **Selection to JSON** command, call [LOAD RECORD](load-record.md) in combination with [GOTO SELECTED RECORD](goto-selected-record.md) (if needed) to use the values of the fields in the current record. 
-
-## Example 1 
-
-You want to create a JSON string representing this selection:
-
-![](../assets/en/commands/pict1205203.en.png)
-
-1) You want to include the values of all the fields of the \[Members\] table:  
+Cette commande prend en charge les champs de type objet : les données des champs sont automatiquement converties au format JSON (les valeurs des attributs image sont converties en chaînes "\[object Picture\]"). A noter que l'instruction 4D suivante sera interprétée comme "produire du JSON à partir de toutes les valeurs de *champObjet* dans la sélection courante de la table" :  
 
 ```4d
- $jsonString :=Selection to JSON([Members])
-  // $jsonString =[{"LastName":"Durant","FirstName":"Mark","Address":
-  //"25 Park St","Zip code":"15205","City":"Pittsburgh"},{"LastName":
-  //"Smith","FirstName":"John","Address":"24 Philadelphia Ave","Zip code":
-  //"75203","City":"Dallas"},{"LastName":"Anderson","FirstName"
-  //:"Adeline","Address":"37 Market St","Zip code":"45205","City":"Cincinnati"},...]
+ Selection to JSON([uneTable];champObjet)
 ```
 
-2) You want to reduce the selection and only include two fields in the JSON string by using the syntax based on fields:  
+**Note :** Après un appel à **Selection to JSON**, la sélection courante n'est pas modifiée mais l'enregistrement courant n'est plus chargé et il peut avoir changé (le dernier enregistrement de la sélection devient l'enregistrement courant). Après un **Selection to JSON**, utilisez les commandes [LOAD RECORD](load-record.md) ainsi que [GOTO SELECTED RECORD](goto-selected-record.md) (si nécessaire) si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant d'origine. 
+
+## Exemple 1 
+
+Vous voulez créer une chaîne JSON représentant cette sélection :
+
+![](../assets/en/commands/pict1205203.fr.png)
+
+1) Vous souhaitez inclure les valeurs de tous les champs de la table \[Adhérents\] :  
 
 ```4d
- QUERY([Members];[Members]LastName="A@")
- $jsonString :=Selection to JSON([Members];[Members]LastName;[Members]City)
-  // $jsonString = [{"LastName":"Anderson","City":"Cincinnati"},{"LastName":"Albert","City":"Houston"}]
+ $jsonString :=Selection to JSON([Adhérents])
+     // $jsonString = [{"Nom":"Durant","Prénom":"Marc","Adresse":"25 rue du
+     //parc","Code postal":"95000","Ville":"Pontoise"},{"Nom":"Smith",
+     //"Prénom":"John","Adresse":"24, rue Philibert-Delorme ","Code postal":
+     //"75017","Ville":"Paris"},{"Nom":"Auquart","Prénom":"Adémart",
+     //"Adresse":"37, quai de l´Iton","Code postal":"37100","Ville":"Tours"},...]
 ```
 
-3) You only want to include one field in the JSON string and use a different label.  
-You can use the *template* syntax:  
+2) Vous souhaitez réduire la sélection et n’inclure que deux champs dans la chaîne JSON en utilisant la syntaxe basée sur les champs :  
+
+```4d
+ QUERY([Adhérents];[Adhérents]Nom="A@")
+ $jsonString :=Selection to JSON([Adhérents];[Adhérents]Nom;[Adhérents]Ville)
+     // $jsonString = [{"Nom":"Auquart","Ville":"Tours"},{"Nom":"Aubert","Ville":"Paris"}]
+```
+
+3) Vous souhaitez n’inclure qu’un champ dans la chaîne JSON et utiliser un autre libellé. Vous utilisez la syntaxe *template* :  
 
 ```4d
  var $template : Object
- OB SET($template;"Member";->[Members]LastName) //custom label and a single field
- ALL RECORDS([Members])
- $jsonString :=Selection to JSON([Members];$template)
-  // $jsonString = [{"Member":"Durant"},{"Member":"Smith"},{"Member":"Anderson"},
-  // {"Member":"Albert"},{"Member":"Leonard"},{"Member":"Pradel"}]
+ OB SET($template;"Membre";->[Adhérents]Nom) //libellé personnalisé et un seul champ
+ ALL RECORDS([Adhérents])
+ $jsonString :=Selection to JSON([Adhérents];$template)
+     // $jsonString = [{"Membre":"Durant"},{"Membre":"Smith"},{"Membre":"Auquart"},{"Membre":"Aubert"},{"Membre":"Lenuze"},{"Membre":"Pradel"}]
 ```
 
-## Example 2 
+## Exemple 2 
 
-You can use the *template* syntax in order to export fields from different tables:
+Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différentes tables :
 
 ```4d
  var $template : Object
- var $jsonString : Text
- OB SET($template;"Last name";->[Emp]LastName)
- OB SET($template;"First name";->[Emp]FirstName)
- OB SET($template;"Company";->[Company]LastName) //custom label otherwise conflict with [Emp]LastName field
+ var $chaineJSON : Text
+ OB SET($template;"Nom";->[Emp]Nom)
+ OB SET($template;"Prénom";->[Emp]Prénom)
+ OB SET($template;"Société";->[Société]Nom) //libellé personnalisé sinon conflit avec le champ [Emp]Nom
  ALL RECORDS([Emp])
- SET FIELD RELATION([Emp]UUID_Company;Automatic;Do not modify)
- $jsonString:=Selection to JSON([Emp];$template)
- SET FIELD RELATION([Emp]UUID_Company;Structure configuration;Do not modify)
+ SET FIELD RELATION([Emp]UUID_Societe;Automatic;Do not modify)
+ $chaineJSON:=Selection to JSON([Emp];$template)
+ SET FIELD RELATION([Emp]UUID_Societe;Structure configuration;Do not modify)
 ```
 
-## See also 
+## Voir aussi 
 
 [JSON TO SELECTION](json-to-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1234 |
+| Numéro de commande | 1234 |
 | Thread safe | yes |
 
 

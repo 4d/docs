@@ -5,61 +5,61 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ({ * }) : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | Returns information about host database |
-| Function result | Boolean | &#8592; | Compiled (True), Interpreted (False) |
+| * | Opérateur | &#8594;  | Retourner l'information de la base hôte |
+| Résultat | Boolean | &#8592; | Mode compilé (Vrai), mode interprété (Faux) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is compiled mode.Summary-->Is compiled mode tests whether you are running in compiled mode (True) or interpreted mode (False).<!-- END REF-->  
-  
-The optional *\** parameter is useful in the case of an architecture using components: it can be used to determine the database (host or component) for which you want to find out the running mode.  
+<!--REF #_command_.Is compiled mode.Summary-->La fonction **Is compiled mode** teste si la base tourne en mode compilé (Vrai) ou en mode interprété (Faux).<!-- END REF-->
 
-* When the command is called from a component:  
-   * If the *\** parameter is passed, the command returns [True](true.md) or [False](false.md) depending on the mode in which the host database is running,  
-   * If the *\** parameter is not passed, the command returns [True](true.md) or [False](false.md) depending on the mode in which the component is running.
-* When the command is called from a method of the host database, it returns [True](true.md) or [False](false.md) depending on the mode in which the host database is running.
+Le paramètre facultatif *\** est utile dans le cadre d'une architecture utilisant des composants : il permet de déterminer la base (hôte ou composant) dont vous souhaitez connaître le mode d'exécution. 
 
-## Example 
+* Lorsque la commande est appelée depuis un composant :  
+   * si le paramètre *\** est passé, la commande retourne [True](true.md) ou [False](false.md) en fonction du mode d’exécution de la base hôte,  
+   * si le paramètre *\** n’est pas passé, la commande retourne [True](true.md) ou [False](false.md) en fonction du mode d’exécution du composant.
+* Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours [True](true.md) ou [False](false.md) en fonction du mode d’exécution de la base hôte.
 
-In one of your routines, you include debugging code useful only when you are running in interpreted mode, so surround this debugging code with a test that calls **Is compiled mode**:
+## Exemple 
+
+Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsque vous êtes en mode interprété. Vous pouvez précéder ce code d'un test qui appelle la fonction **Is compiled mode** :
 
 ```4d
   // ...
  If(Not(Is compiled mode))
-  // Include debugging code here
+  // Mettre du code pour déboguer votre base ici
  End if
   // ...
 ```
 
-## See also 
+## Voir aussi 
 
 [IDLE](idle.md)  
 [Undefined](undefined.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 492 |
+| Numéro de commande | 492 |
 | Thread safe | yes |
 
 

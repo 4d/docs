@@ -5,78 +5,80 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* : Field, Array ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the standard deviation |
-| Function result | Real | &#8592; | Standard deviation of series |
+| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir l'écart type |
+| Résultat | Real | &#8592; | Ecart type de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|<6|Created|
+|13|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Std deviation.Summary-->**Std deviation** returns the standard deviation of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the standard deviation.
+<!--REF #_command_.Std deviation.Summary-->**Std deviation** retourne l'écart type (c.-à-d. la racine carrée de la variance) de *séries*.<!-- END REF--> 
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
+Si *séries* est un champ indexé, l'index sera utilisé pour le calcul. 
 
-## Example 1 
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-The following example is an object method for the variable *vDeviate*. The object method assigns the standard deviation for a data series to *vDeviate*:
+## Exemple 1 
+
+L'exemple suivant est la méthode objet d'une variable appelée EcartT. La méthode assigne l'écart type d'une série à EcartT :
 
 ```4d
- vDeviate:=Std deviation([Table1]DataSeries)
+ EcartT:=Std deviation([Table1]SérieValeurs)
 ```
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection et activer la phase de rupture : 
 
 ```4d
  ALL RECORDS([Table1])
- ORDER BY([Table1];[Table1]DataSeries;>)
+ ORDER BY([Table1];[Table1]SérieValeurs;>)
  BREAK LEVEL(1)
- ACCUMULATE([Table1]DataSeries)
- OUTPUT FORM([Table1];"PrintForm")
+ ACCUMULATE([Table1]SérieValeurs)
+ OUTPUT FORM([Table1];"FormImpression")
  PRINT SELECTION([Table1])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the printing commands.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the standard deviation of a series of values placed in an array: 
+Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs placées dans un tableau : 
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vStdDev:=Std deviation($ArrGrades)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ vEcartT:=Std deviation($TabNote)
 ```
 
-## See also 
+## Voir aussi 
 
 [Average](average.md)  
 [Sum](sum.md)  
 [Sum squares](sum-squares.md)  
 [Variance](variance.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 26 |
+| Numéro de commande | 26 |
 | Thread safe | yes |
 
 

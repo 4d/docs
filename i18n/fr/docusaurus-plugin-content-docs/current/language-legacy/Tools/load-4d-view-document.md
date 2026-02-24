@@ -5,62 +5,62 @@ slug: /commands/load-4d-view-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *4DViewDocument* : Blob ) : Object<!-- END REF-->
+<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *document4DView* ) : Object<!-- END REF-->
 <!--REF #_command_.Load 4D View document.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| 4DViewDocument | Blob | &#8594;  | 4D View document |
-| Function result | Object | &#8592; | Object representation of the 4D View document |
+| document4DView | Blob | &#8594;  | Document du plug-in 4D View |
+| Résultat | Object | &#8592; | Représentation du document 4D View sous forme d'objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Load 4D View document.Summary-->The **Load 4D View document** command allows you to convert a 4D View document into a 4D object.<!-- END REF--> 
+<!--REF #_command_.Load 4D View document.Summary-->La commande **Load 4D View document** convertit un document 4D View en objet 4D.<!-- END REF--> 
 
-Neither a valid 4D View license, nor an instance of the legacy 4D View plug-in in your environment are required for this command. 
+L'utilisation de cette commande ne nécessite ni licence 4D View, ni même une instance du plug-in 4D View dans votre environnement 4D. 
 
-Pass in the *4DViewDocument* parameter a BLOB variable or field containing the 4D View document to convert. The command returns a 4D [object](# "Data structured as a native 4D object") that describes all information originally stored within the 4D View document, including:
+Passez dans le paramètre *document4DView* la variable ou le champ BLOB contenant le document 4D View à convertir. La commande retourne un [objet](# "Données structurées sous forme d'objet natif 4D") 4D qui décrit toutes les informations stockées dans le document 4D View d'origine, incluant :
 
-* document structure (number of rows and columns), type and information (version, title...)
-* cell attributes (cell type, value, formula, name, style, security...)
-* column attributes (width, style, type, security, visibility, break...)
-* row attributes (height, style, type, security, visibility, break...)
-* styles, borders, and panes
+* la structure du document (nombre de lignes et de colonnes), son type et ses informations (version, titre...)
+* les attributs de cellules (type, valeur, formule, nom, style, sécurité...)
+* les attributs de colonnes (largeur, style, type, sécurité, visibilité, ruptures...)
+* les attributs de lignes (hauteur, style, type, sécurité, visibilité, ruptures...)
+* les styles, bordures et volets.
 
-Using this command, you can recover any data stored in your 4D View documents and handle them in an open format. 
+A l'aide de cette commande, vous pouvez récupérer toutes les données stockées dans vos documents 4D View et les manipuler dans un format ouvert. 
 
-**Note**: If you need to convert documents from 4D View to 4D View Pro, it is recommended to use the dedicated  command which performs a direct and transparent conversion. 
+**Note** : Si vous souhaitez convertir vos documents 4D View en 4D View Pro, il est recommandé d'utiliser la commande dédiée  qui effectue la conversion de façon directe et transparente. 
 
-## Example 
+## Exemple 
 
-You want to load and convert a 4D View document stored on disk:
+Vous souhaitez charger et convertir un document 4D View stocké sur disque :
 
 ```4d
  var $blob : Blob
  var $object : Object
  DOCUMENT TO BLOB("document.4PV";$blob)
  $object:=Load 4D View document($blob)
- ALERT("Document title is "+$object.title)
+ ALERT("Titre du document : "+$object.title)
 ```
 
-For example, if you convert the following document: 
+Par exemple, si vous convertissez le document suivant : 
 
 ![](../assets/en/commands/pict3631552.en.png)
 
-You will get the following result (stringified object):
+Vous obtenez le résultat suivant (objet stringifié) :
 
 ```json
 {
@@ -205,14 +205,14 @@ You will get the following result (stringified object):
 }
 ```
 
-**Note:** For more information about the format of the returned [object](# "Data structured as a native 4D object"), please contact the 4D technical services. 
+**Note :** Pour plus d'informations sur le format de l'[objet](# "Données structurées sous forme d'objet natif 4D") retourné, veuillez contacter les services techniques de 4D. 
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1528 |
+| Numéro de commande | 1528 |
 | Thread safe | yes |
 
 

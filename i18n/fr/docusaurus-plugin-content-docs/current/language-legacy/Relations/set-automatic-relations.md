@@ -5,64 +5,64 @@ slug: /commands/set-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *one* : Boolean {; *many* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *aller* {; *retour*} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| one | Boolean | &#8594;  | Status of all Many-to-One relations |
-| many | Boolean | &#8594;  | Status of all One-to-Many relations |
+| aller | Boolean | &#8594;  | Statut de tous les liens de N vers 1 |
+| retour | Boolean | &#8594;  | Statut de tous les liens de 1 vers N |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->**SET AUTOMATIC RELATIONS** temporarily changes all the manual relations into automatic relations for the entire database in the current process.<!-- END REF--> The relations stay automatic unless a subsequent call to **SET AUTOMATIC RELATIONS** is made.
+<!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->La commande **SET AUTOMATIC RELATIONS** transforme tous les liens manuels en liens automatiques pour toute la base dans le process courant.<!-- END REF--> Cette modification est temporaire et peut à tout moment être remise en cause par un nouvel appel à **SET AUTOMATIC RELATIONS**.
 
-* If *one* is true, then all manual Many-to-One relations will become automatic. If *one* is false, all previously changed Many-to-One relations will revert to manual relations.
-* The same is true for the *many* parameter, except that manual One-to-Many relations are affected.
+* Si *aller* est Vrai, tous les liens N vers 1 deviennent automatiques. Si *aller* est Faux, tous les liens N vers 1 deviennent manuels.
+* Si *retour* est Vrai, tous les liens 1 vers N deviennent automatiques. Si *retour* est Faux, tous les liens 1 vers N deviennent manuels.
 
-This command changes relations set as manual in the Design environment to automatic, just before executing operations that require them to be automatic (such as relational queries and sorts). After the operation is finished, relations can be changed back to manual by calling **SET AUTOMATIC RELATIONS** again. Any relations set as automatic in the Design environment are not affected by this command.
+Les liens définis comme automatiques en mode Développement ne sont pas affectés par cette commande. Elle permet de rendre automatiques les liens déclarés manuels en mode Développement, avant d'exécuter des opérations nécessitant qu'ils soient automatiques (par exemple, des recherches et tri relationnels). A l'issue de l'opération, le lien peut redevenir manuel via un nouvel appel à **SET AUTOMATIC RELATIONS**. 
 
-**Notes:** 
+**Notes :** 
 
-* When you pass [True](true.md "True") to the **SET AUTOMATIC RELATIONS** command, the automatic mode is "locked" for all the manual relations during the session. In this case, any calls to the [SET FIELD RELATION](set-field-relation.md) command during the same session are ignored, regardless of whether they are placed before or after **SET AUTOMATIC RELATIONS**. To "unlock" the automatic mode and take the calls to [SET FIELD RELATION](set-field-relation.md) into account, pass [False](false.md "False") to **SET AUTOMATIC RELATIONS**.
-* Automatic features are disabled when related tables are being viewed in a list form displayed using [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), or a subform. See *Automatic and manual relations*.
+* Lorsque vous passez Vrai à la commande **SET AUTOMATIC RELATIONS**, le mode automatique est "verrouillé" pour tous les liens manuels au cours de la session. Dans ce cas, les éventuels appels à la commande [SET FIELD RELATION](set-field-relation.md) dans la même session sont ignorés, qu'ils soient placés avant ou après **SET AUTOMATIC RELATIONS**. Pour "déverrouiller" le mode automatique et prendre en compte les appels à [SET FIELD RELATION](set-field-relation.md), passez Faux à **SET AUTOMATIC RELATIONS**.
+* Les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
 
-## Example 
+## Exemple 
 
-The following example makes all manual Many-to-One relations automatic and reverts any previously changed One-to-Many relations:
+L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manuel tous les liens 1 vers N qui étaient précédemment modifiés :
 
 ```4d
  SET AUTOMATIC RELATIONS(True;False)
 ```
 
-## See also 
+## Voir aussi 
 
-*About Relations*  
 [GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
 [GET RELATION PROPERTIES](get-relation-properties.md)  
+*Présentation des liens*  
 [SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
 [SELECTION TO ARRAY](selection-to-array.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 310 |
+| Numéro de commande | 310 |
 | Thread safe | yes |
 
 

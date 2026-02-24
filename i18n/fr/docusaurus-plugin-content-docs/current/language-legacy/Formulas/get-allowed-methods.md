@@ -5,63 +5,62 @@ slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
+<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *tabMéthodes* )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| methodsArray | Text array | &#8592; | Array of method names |
+| tabMéthodes | Text array | &#8592; | Tableau de noms de méthodes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET ALLOWED METHODS.Summary-->The **GET ALLOWED METHODS** command returns, in *methodsArray*, the names of methods that can be used to write formulas.<!-- END REF--> These methods are listed at the end of the list of commands in the editor. 
+<!--REF #_command_.GET ALLOWED METHODS.Summary-->La commande **GET ALLOWED METHODS** retourne dans le tableau *tabMéthodes* le nom des méthodes “autorisées” dans l’éditeur de formules, c’est-à-dire pouvant être utilisées lors de l’écriture d’une formule — ces méthodes sont listées à la fin de la liste des commandes dans l’éditeur.<!-- END REF--> 
 
-By default, methods cannot be used in the Formula editor. Methods must be explicitly authorized using the [SET ALLOWED METHODS](./commands/set-allowed-methods) command. If this command has not been executed, **GET ALLOWED METHODS** returns an empty array.  
+Par défaut, aucune méthode n’est utilisable dans l’éditeur de formules. Les méthodes doivent avoir été explicitement autorisées via la commande [SET ALLOWED METHODS](../commands/set-allowed-methods.md). Si cette commande n’a pas été exécutée, **GET ALLOWED METHODS** retourne une chaîne vide.  
   
-**GET ALLOWED METHODS** returns exactly what was passed to the [SET ALLOWED METHODS](./commands/set-allowed-methods) command, i.e. a string array (the command creates and sizes the array). Also, if the wildcard (@) character is used to set a group of methods, the string containing the @ character is returned (and not the names of the methods of the group). 
+**GET ALLOWED METHODS** retourne précisément ce qui a été passé à la commande [SET ALLOWED METHODS](../commands/set-allowed-methods.md), c’est-à-dire un tableau alpha (la commande crée et dimensionne le tableau). En outre, si le caractère “joker” (@) a été utilisé pour désigner un groupe de méthodes, la chaîne contenant le caractère @ est retournée (et non les noms des méthodes du groupe). 
 
-This command is useful for storing the settings of the current set of authorized methods before the execution of a formula in a specific context (for instance, a quick report). 
+Cette commande est utile pour préserver le paramétrage de l’ensemble courant de méthodes autorisées avant l’exécution d’une formule dans un contexte spécifique (par exemple un état rapide). 
 
-## Example 
+## Exemple 
 
-This example authorizes a set of specific methods to create a report: 
+Cet exemple permet d’autoriser ponctuellement un ensemble de méthodes spécifiques pour la création d’un état rapide : 
 
 ```4d
-  //Store current parameters
- GET ALLOWED METHODS(methodsArray)
+  //Stockage du paramétrage courant
+ GET ALLOWED METHODS(tabméthodes)
  
-  //Define methods for quick report
- methodsarr_Reports{1}:="Reports_@"
- SET ALLOWED METHODS(methodsarr_Reports)
- QR REPORT([People];"MyReport")
+  //Définition des méthodes pour l’état
+ tabméthodes_Etats{1}:="Etats_@"
+ SET ALLOWED METHODS(tabméthodes_Etats)
+ QR REPORT([Personnes];"MonEtat")
  
-  //Re-establish current parameters
- SET ALLOWED METHODS(methodsArray)
+  //Rétablissement des paramètres courants
+ SET ALLOWED METHODS(tabméthodes)
 ```
 
-## See also 
+## Voir aussi 
 
-[SET ALLOWED METHODS](./commands/set-allowed-methods)  
+[SET ALLOWED METHODS](../commands/set-allowed-methods.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 908 |
+| Numéro de commande | 908 |
 | Thread safe | no |
-
 
 

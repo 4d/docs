@@ -5,49 +5,49 @@ slug: /commands/method-get-folders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *arrNames* : Text array {; *filter* : Text}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *tabNoms* {; *filtre*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrNames | Text array | &#8592; | Array of Home page folder names |
-| filter | Text | &#8594;  | Name filter |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| tabNoms | Text array | &#8592; | Tableau des noms de dossiers de la page Démarrage |
+| filtre | Text | &#8594;  | Filtrage des noms |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD GET FOLDERS.Summary-->The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer<!-- END REF-->:
+<!--REF #_command_.METHOD GET FOLDERS.Summary-->La commande **METHOD GET FOLDERS** retourne dans le tableau *tabNoms* les noms des dossiers créés dans la page Démarrage de l’Explorateur de 4D <!-- END REF-->:
 
-![](../assets/en/commands/pict837666.en.png)
+![](../assets/en/commands/pict837666.fr.png)
 
-Since folder names must be unique, the hierarchy is not returned in this array. 
+Comme les noms des dossiers doivent être uniques, la hiérarchie n’est pas retournée dans le tableau. 
 
-You can limit this list of folders by passing a comparison string in the *filter* parameter: in this case, only folders whose names match the filter are returned. You can use the @ character in order to specify "starts with", "ends with" or "contains" type filters. If you pass an empty string, the *filter* parameter is ignored. 
+Vous pouvez restreindre la liste des dossiers en passant une chaîne de comparaison dans le paramètre *filtre* : dans ce cas, seuls les dossiers dont le nom correspond au filtre seront retournés. Vous pouvez utiliser le caractère @ afin de définir des filtres de type "commence par", "se termine par" ou "contient". Si vous passez une chaîne vide, le paramètre *filtre* est ignoré. 
 
-If the command is executed from a component, it returns by default the paths of the component methods. If you pass the *\** parameter, the array contains the paths of the methods of the host database.
+Si la commande est exécutée depuis un composant, elle retourne par défaut les chemins des méthodes du composant. Si vous passez le paramètre *\**, le tableau contiendra les chemins des méthodes de la base hôte.
 
-## See also 
+## Voir aussi 
 
 [METHOD GET PATHS](method-get-paths.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1206 |
+| Numéro de commande | 1206 |
 | Thread safe | no |
 
 

@@ -1,6 +1,7 @@
 ---
 id: ds
 title: ds
+slug: /commands/ds
 displayed_sidebar: docs
 ---
 

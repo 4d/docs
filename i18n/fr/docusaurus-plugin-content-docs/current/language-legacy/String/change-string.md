@@ -5,47 +5,47 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* : Text ; *newChars* : Text ; *where* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *nouveau* ; *positionDépart* ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Original string |
-| newChars | Text | &#8594;  | New characters |
-| where | Integer | &#8594;  | Where to start the changes |
-| Function result | Text | &#8592; | Resulting string |
+| source | Text | &#8594;  | Chaîne de départ |
+| nouveau | Text | &#8594;  | Nouveaux caractères |
+| positionDépart | Integer | &#8594;  | Position de départ du remplacement |
+| Résultat | Text | &#8592; | Chaîne résultante |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Change string.Summary-->Change string changes a group of characters in *source* and returns the resulting string.<!-- END REF--> The command overlays *source*, with the characters in *newChars*, at the character described by *where*.
+<!--REF #_command_.Change string.Summary-->**Change string** retourne une chaîne résultant du remplacement des caractères, dans la chaîne *source*, à partir de *positionDépart*, par la chaîne *nouveau*.<!-- END REF-->
 
-If *newChars* is an empty string (""), Change string returns *source* unchanged. Change string always returns a string of the same length as *source*. If *where* is less than one or greater than the length of *source*, Change string returns *source*.
+Si *nouveau* est une chaîne vide (""), **Change string** retourne *source* inchangé. **Change string** retourne toujours une chaîne de la même longueur que *source*. Si *positionDépart* est inférieur ou supérieur à la longueur de *source*, **Change string** retourne *source*.
 
-Change string is different from [Insert string](insert-string.md) in that it overwrites characters instead of inserting them.
+La fonction **Change string** est différente de [Insert string](../commands/insert-string) car elle remplace des caractères au lieu de les insérer.
 
-## Example 
+## Exemple 
 
-The following example illustrates the use of **Change string**. The results are assigned to the variable *vtResult*.
+L'exemple suivant illustre l'utilisation de **Change string**. Les résultats sont affectés à la variable *vRésultat*.
 
 ```4d
- vtResult:=Change string("Acme";"CME";2) // vtResult gets "ACME"
- vtResult:=Change string("November";"Dec";1) // vtResult gets "December"
+ vRésultat:=Change string("Acme";"CME";2) // vRésultat est égal à "ACME"
+ vRésultat:=Change string("novembre";"déc";1) // vRésultat est égal à "décembre"
 ```
 
-## See also 
+## Voir aussi 
 
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Delete string](../commands/delete-string)  
+[Insert string](../commands/insert-string)  
+[Replace string](../commands/replace-string)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 234 |
+| Numéro de commande | 234 |
 | Thread safe | yes |
 
 

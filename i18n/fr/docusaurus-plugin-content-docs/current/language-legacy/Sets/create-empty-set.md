@@ -5,37 +5,37 @@ slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
+<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*laTable* ;} *ensemble* )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to create an empty set, or Default table, if omitted |
-| set | Text | &#8594;  | Name of the new empty set |
+| laTable | Table | &#8594;  | Table pour laquelle créer un ensemble vide ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom du nouvel ensemble vide |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** creates a new empty set, *set*, for *aTable*.<!-- END REF--> You can add records to this set with the [ADD TO SET](add-to-set.md) command. If a set with the same name already exists, the existing set is cleared by the new set.
+<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** crée un ensemble vide, *ensemble*, pour *laTable*.<!-- END REF--> Vous pouvez ajouter des enregistrements dans cet ensemble à l'aide de la commande [ADD TO SET](add-to-set.md). Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
 
-**Note:** You do not need to use **CREATE EMPTY SET** before using [CREATE SET](create-set.md).
+**Note :** Il n'est pas indispensable d'appeler la commande **CREATE EMPTY SET** avant d'utiliser la commande [CREATE SET](create-set.md).
 
-## Example 
+## Exemple 
 
-Please refer to the examples of the *Sets* section.
+Reportez-vous à l'exemple proposé dans la section *Présentation des ensembles*.
 
-## See also 
+## Voir aussi 
 
 [CLEAR SET](clear-set.md)  
 [CREATE SET](create-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 140 |
+| Numéro de commande | 140 |
 | Thread safe | yes |
 
 

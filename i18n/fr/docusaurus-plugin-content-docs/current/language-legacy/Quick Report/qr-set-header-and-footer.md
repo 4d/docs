@@ -5,75 +5,74 @@ slug: /commands/qr-set-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* : Integer ; *selector* : Integer ; *leftTitle* : Text ; *centerTitle* : Text ; *rightTitle* : Text ; *height* : Integer {; *picture* : Picture {; *pictAlignment* : Integer}} )<!-- END REF-->
+<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *zone* ; *sélecteur* ; *titreGauche* ; *titreCentre* ; *titreDroit* ; *hauteur* {; *image* {; *alignementImage*}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| selector | Integer | &#8594;  | 1 = Header, 2 = Footer |
-| leftTitle | Text | &#8594;  | Text displayed on the left side |
-| centerTitle | Text | &#8594;  | Text displayed in the middle |
-| rightTitle | Text | &#8594;  | Text displayed on the right side |
-| height | Integer | &#8594;  | Header or footer height |
-| picture | Picture | &#8594;  | Picture to display |
-| pictAlignment | Integer | &#8594;  | Alignment attribute for the picture |
+| zone | Integer | &#8594;  | Référence de la zone |
+| sélecteur | Integer | &#8594;  | 1 = En-tête, 2 = Pied de page |
+| titreGauche | Text | &#8594;  | Texte affiché sur le côté gauche |
+| titreCentre | Text | &#8594;  | Texte affiché au centre |
+| titreDroit | Text | &#8594;  | Texte affiché sur le côté droit |
+| hauteur | Integer | &#8594;  | Hauteur de l'en-tête ou du pied de page |
+| image | Picture | &#8594;  | Image à afficher |
+| alignementImage | Integer | &#8594;  | Alignement de l'image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->The QR SET HEADER AND FOOTER command sets the contents and size of the header or footer.<!-- END REF-->
+<!--REF #_command_.QR SET HEADER AND FOOTER.Summary-->La commande **QR SET HEADER AND FOOTER** vous permet de définir le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
 
-*selector* selects the header or the footer:
+Le paramètre *sélecteur* vous permet de définir la zone à affecter :   
+• si *sélecteur* vaut 1, l'en-tête sera affecté ;   
+• si *sélecteur* vaut 2, le pied de page sera affecté.
 
-* If *selector* is 1, the header is affected;
-* If *selector* is 2, the footer is affected.
+Les paramètres *titreGauche*, *titreCentre* et *titreDroit* définissent le contenu des en-têtes ou pieds de page situés respectivement à gauche, au centre et à droite. 
 
-*leftTitle*, *centerTitle* and *rightTitle* are the values for, respectively, the left, center and right header/footer.
+Le paramètre *hauteur* indique la hauteur de l'en-tête ou du pied de page, exprimée dans l'unité courante de l'état rapide. 
 
-*height* is the height of the header/footer, expressed in the unit selected for the quick report.
+Le paramètre *image* contient l'image à afficher facultativement dans l'en-tête ou le pied de page. 
 
-*picture* is a picture that will be displayed in the header or footer.
+Le paramètre *alignementImage* définit la propriété d'alignement de l'image passée dans *image* :
 
-*pictAlignment* is the alignment attribute for the picture passed in *picture*.
+* si *alignementImage* vaut 1, l'image est alignée sur la gauche.
+* si *alignementImage* vaut 2, l'image est centrée.
+* si *alignementImage* vaut 3, l'image est alignée sur la droite.
 
-* If *pictAlignment* is 1, the picture is aligned to the left.
-* If *pictAlignment* is 2, the picture is centered.
-* If *pictAlignment* is 3, the picture is aligned to the right.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *sélecteur* est incorrect, l’erreur -9852 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *selector* value, the error -9852 will be generated.
+## Exemple 
 
-## Example 
-
-The following statement places the title “Center title” in the header for the Quick Report in MyArea and sets the header height to 200 points:
+L'instruction suivante place le libellé “Titre du centre” dans l'en-tête de l'état rapide dans MaZone et définit sa hauteur à 200 points :
 
 ```4d
- QR SET HEADER AND FOOTER(MyArea;1;"";"Center title";"";200)
+ QR SET HEADER AND FOOTER(MaZone;1;"";"Titre du centre";"";200)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 774 |
+| Numéro de commande | 774 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,53 +5,53 @@ slug: /commands/listbox-get-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height** ( * ; *object* : Text ; *row* : Integer ) : Integer<br/>**LISTBOX Get row height** ( *object* : Variable ; *row* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height** ( {* ;} *objet* ; *ligne* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row height.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| row | Integer | &#8594;  | List box row whose height you want to get |
-| Function result | Integer | &#8592; | Row height |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Ligne de la List box dont on veut récupérer la hauteur |
+| Résultat | Integer | &#8592; | Hauteur de la ligne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get row height.Summary-->The **LISTBOX Get row height** command returns the current height of the specified *row* in the list box object designated using the *object* and *\** parameters.<!-- END REF--> Row height can be set globally using the Property List or the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command, or individually by means of the [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md) command.
+<!--REF #_command_.LISTBOX Get row height.Summary-->La commande **LISTBOX Get row height** retourne la hauteur de la *ligne* spécifiée dans l'objet List box désigné en utilisant les paramètres *objet* et éventuellement *\**.<!-- END REF--> La hauteur des lignes peut être définie globalement via la Liste des propriétés ou la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md), ou individuellement à l'aide de la commande [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md).
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous passez une référence à une variable à la place d'une chaîne. Pour plus d'informations sur les noms d'objet, reportez vous à la section *Objets de formulaires*.
 
-If the specified *row* does not exist in the list box, the command returns 0 (zero).
+Si la *ligne* spécifiée n'existe pas, la commande retourne 0 (zéro).
 
-The returned height value is expressed:
+La hauteur de ligne retournée est exprimée:
 
-* in the current unit defined globally for the list box rows either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command when the row height is fixed,
-* in pixels when the row height is variable, i.e. set to automatic (see *Automatic Row Height*) or handled by an array.
+* dans l'unité courante définie globalement pour la List box, soit dans la Liste des propriétés, soit par un appel antérieur à la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) lorsque la hauteur des lignes est fixe,
+* en pixels lorsque la hauteur des lignes est variable, i.e. définie en automatique (voir *Hauteur de ligne automatique*) ou gérée via un tableau.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get auto row height](listbox-get-auto-row-height.md)  
 [LISTBOX Get rows height](listbox-get-rows-height.md)  
 [LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1408 |
+| Numéro de commande | 1408 |
 | Thread safe | no |
 
 

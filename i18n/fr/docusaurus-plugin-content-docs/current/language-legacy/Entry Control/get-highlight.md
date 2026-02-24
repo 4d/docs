@@ -5,51 +5,50 @@ slug: /commands/get-highlight
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *object* : Variable, Field, any ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *objet* ; *débutSél* ; *finSél* )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a field or variable |
-| object | Field, Variable, any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| startSel | Integer | &#8592; | Current text selection starting position |
-| endSel | Integer | &#8592; | Current text selection ending position |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
+| objet | Field, Variable, any | &#8594;  | Nom d’objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8592; | Position du début de la sélection de texte |
+| finSél | Integer | &#8592; | Position de la fin de la sélection de texte |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|<6|Created|
+|12|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET HIGHLIGHT.Summary-->The GET HIGHLIGHT command is used to determine what text is currently highlighted in *object*.<!-- END REF--> 
+<!--REF #_command_.GET HIGHLIGHT.Summary-->La commande **GET HIGHLIGHT** vous permet de déterminer précisément le texte actuellement sélectionné dans *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass the *\** parameter, you indicate that the *object* parameter is a field or variable. In this case, you pass the field or variable reference (form fields or variables only) instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* désigne le nom d’un objet (une chaîne). Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objet* désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables de formulaire uniquement).
 
-**Note:** This command cannot be used with fields in the List form of a subform.
+**Note :** Cette commande ne peut pas être utilisée avec des champs situés dans le formulaire en mode liste d'un sous-formulaire.
 
-Text can be highlighted by the user or by the [HIGHLIGHT TEXT](highlight-text.md) command.
+Le texte peut être sélectionné par l'utilisateur ou par la commande [HIGHLIGHT TEXT](highlight-text.md).
 
-The parameter *startSel* returns the position of the first highlighted character. 
+Le paramètre *débutSél* retourne la position du premier caractère sélectionné.   
+Le paramètre *finSél* retourne la position du dernier caractère sélectionné plus un. 
 
-The parameter *endSel* returns the position of the last highlighted character plus one. 
+Si les valeurs *débutSél* et *finSél* retournées sont identiques, l'utilisateur n'a pas sélectionné de texte et le point d'insertion est placé devant le caractère spécifié par *débutSél*.
 
-If *startSel* and *endSel* are returned equal, the insertion point is positioned before the character specified by *startSel*. The user has not selected any text, and no characters are highlighted.
+Si l'objet désigné par le paramètre *objet* n'est pas trouvé dans le formulaire, la commande retourne -1 dans *débutSél* et -2 dans *finSél*. 
 
-If the object designated by the *object* parameter is not found in the form, the command returns -1 in *startSel* and -2 in *endSel*. 
+## Exemple 1 
 
-## Example 1 
-
-The following example gets the highlighted selection from the field called *\[Products\]Comments*: 
+L'exemple suivant récupère le texte sélectionné dans le champ *\[Produits\]Notes* : 
 
 ```4d
 GET HIGHLIGHT([Products]Comments;vFirst;vLast)
@@ -58,30 +57,30 @@ If(vFirst < vlast)
 End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-## Example 3 
+## Exemple 3 
 
-Modification of highlighted text style:
+Modification du style du texte sélectionné :
 
 ```4d
- GET HIGHLIGHT(*;"myText";$startsel,$endsel)
- ST SET ATTRIBUTES(*;"myText";$startsel,$endsel;Attribute underline style;1;Attribute bold style;1)
+ GET HIGHLIGHT(*;"monTexte";$debutsel,$finsel)
+ ST SET ATTRIBUTES(*;"monTexte";$debutsel,$finsel;Attribute underline style;1;Attribute bold style;1)
 ```
 
-## See also 
+## Voir aussi 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
 [HIGHLIGHT TEXT](highlight-text.md)  
 [Keystroke](keystroke.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 209 |
+| Numéro de commande | 209 |
 | Thread safe | no |
 
 

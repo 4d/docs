@@ -5,67 +5,68 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *object* : Text ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *object* : Variable, Field ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *objet* ; *largeurOpti* ; *hauteurOpti* {; *largeurMaxi*} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| bestWidth | Integer | &#8592; | Optimum object width |
-| bestHeight | Integer | &#8592; | Optimum object height |
-| maxWidth | Integer | &#8594;  | Maximum object width |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis |
+| largeurOpti | Integer | &#8592; | Largeur optimale de l’objet |
+| hauteurOpti | Integer | &#8592; | Hauteur optimale de l’objet |
+| largeurMaxi | Integer | &#8594;  | Largeur maximum de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|2003|Created|
+|12|Renommé|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->The **OBJECT GET BEST SIZE** command returns the *bestWidth* and *bestHeight* parameters, the “optimal” width and height of the form object designated by the *\** and *object* parameters.<!-- END REF--> These values are expressed in pixels. This command is particularly useful for displaying or printing complex reports, associated with the [OBJECT MOVE](object-move.md) command.
+<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->La commande **OBJECT GET BEST SIZE** retourne dans les paramètres *largeurOpti* et *hauteurOpti* la largeur et la hauteur “optimales” de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF--> Ces valeurs sont exprimées en pixels. Cette commande est particulièrement utile dans le cadre de l’affichage ou de l’impression d’états complexes, associée à la commande [OBJECT MOVE](object-move.md). 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a character string). If you do not pass the \* parameter, this indicates that *object* is a field or a variable. In this case, do not pass a string but rather a field or variable reference (object type only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne de caractères). Si vous ne passez pas le paramètre \*, vous indiquez que *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (de type objet uniquement).
 
-The optimal values returned indicate the minimum size of the object so that its current contents are entirely included within the limits. Usually these values are only meaningful for objects containing text. This calculation takes the font, font size, font style and object contents into account. It also takes hyphenation and carriage returns into consideration. Note that in the case of 3D buttons, the command works even when button contains only an icon. If the object specified is empty, the *bestWidth* returned is 0\. 
+Les valeurs optimales retournées indiquent la taille minimale de l’objet pour que son contenu courant soit entièrement inclus dans ses limites. En général, ces valeurs n’ont de sens qu’avec des objets contenant du texte. Ce calcul tient compte de la police, de sa taille, de son style et du contenu de l’objet. Il tient compte également des césures et des retours chariot. A noter que dans le cas des boutons 3D, la commande fonctionne même si le bouton contient uniquement une icône.   
+Si l’objet spécifié est vide, la *largeurOpti* retournée est 0\. 
 
-The size returned does not take into account any graphic frame applied around the object, nor any scrollbars. To obtain the real size of an object on screen, it is necessary to add the width of these elements. 
+La taille retournée ne tient pas compte du cadre graphique éventuellement appliqué autour de l’objet ni des barres de défilement. Pour obtenir la taille réelle d’un objet à l’écran, il sera nécessaire d’ajouter l’épaisseur de ces éléments. 
 
-The optional *maxWidth* parameter enables you to attribute a maximum width to the object. If the optimal width of the object is greater than this value, **OBJECT GET BEST SIZE** returns *maxWidth* in the *bestWidth* parameter and increases the optimal height as a consequence.
+Le paramètre optionnel *largeurMaxi* vous permet d’attribuer une largeur maximale à l’objet. Si la largeur optimale de l’objet est supérieure à cette valeur, **OBJECT GET BEST SIZE** retourne *largeurMaxi* dans le paramètre *largeurOpti* et augmente la hauteur optimale en conséquence.
 
-The following objects are handled by this command:
+Les objets pris en charge par cette commande sont les suivants :
 
-* Static text areas
-* Text inserted in the form of references
-* Fields and variables of the following types: Alpha, Text, Real, Integer, Long Integer, Date, Time, Boolean (check boxes and radio buttons)
-* Buttons
-* List box columns in display context (only visible rows are taken into account).
+* Zones de texte statiques
+* Textes insérés sous forme de références
+* Champs et variables de type Alpha, Texte, Réel, Entier, Entier long, Date, Heure, Booléens (cases à cocher et boutons radio)
+* Boutons
+* Colonnes de list box en contexte d'affichage (seules les lignes visibles sont prises en compte)
 
-For all other form object types (group areas, tabs, rectangles, straight lines, circles/ovals, external areas, etc.), the **OBJECT GET BEST SIZE** command returns the current object size (defined in the form editor and possibly using the [OBJECT MOVE](object-move.md) command).
+Pour tous les autres types d’objets de formulaires (zones de groupes, onglets, rectangles, droites, cercles/ellipses, zones externes, etc.), la commande **OBJECT GET BEST SIZE** retourne la taille courante de l’objet (définie dans l’éditeur de formulaires et éventuellement à l’aide de la commande [OBJECT MOVE](object-move.md)).
 
-## Example 
+## Exemple 
 
-Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command. 
+Reportez-vous à l’exemple de la routine [SET PRINT MARKER](set-print-marker.md). 
 
-## See also 
+## Voir aussi 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 717 |
+| Numéro de commande | 717 |
 | Thread safe | no |
 
 

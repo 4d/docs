@@ -9,37 +9,37 @@ displayed_sidebar: docs
 <!--REF #_command_.Method called on event.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Name of method called on event |
+| Résultat | Text | &#8592; | Nom de la méthode d’appel sur evenement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Method called on event.Summary-->The **Method called on event** command returns the name of the method installed by the [ON EVENT CALL](on-event-call.md) command.<!-- END REF--> 
+<!--REF #_command_.Method called on event.Summary-->La commande **Method called on event** retourne le nom de la méthode installée par la commande [ON EVENT CALL](on-event-call.md).<!-- END REF--> 
 
-If no such method has been installed, an empty string ("") is returned.
+Si aucune méthode d’appel sur événement n’a été installée, une chaîne vide ("") est retournée.
 
-## See also 
+## Voir aussi 
 
 [ON EVENT CALL](on-event-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 705 |
+| Numéro de commande | 705 |
 | Thread safe | no |
 
 

@@ -5,66 +5,66 @@ slug: /commands/wa-open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( * ; *object* : Text ; *url* : Text )<br/>**WA OPEN URL** ( *object* : Variable, Field ; *url* : Text )<!-- END REF-->
+<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( {* ;} *objet* ; *url* )<!-- END REF-->
 <!--REF #_command_.WA OPEN URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| url | Text | &#8594;  | URL to load in Web area |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| url | Text | &#8594;  | URL à charger dans la zone Web |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA OPEN URL.Summary-->The **WA OPEN URL** command loads the URL passed in the *url* parameter into the Web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA OPEN URL.Summary-->La commande **WA OPEN URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL passé dans le paramètre *url*.<!-- END REF--> 
 
-If an empty string is passed in *url*, the command does nothing and no error is generated. To load a blank page into the Web area, pass the string "about:blank" in *url*.
+Si une chaîne vide est passée dans *url*, la commande **WA OPEN URL** ne fait rien et aucune erreur n’est générée. Pour charger une page vide dans la zone Web, passez la chaîne "about:blank" dans *url*. 
 
-Like the existing [OPEN URL](open-url.md) command, **WA OPEN URL** accepts several types of syntaxes in the *url* parameter to designate the files:
+Comme la commande [OPEN URL](open-url.md), **WA OPEN URL** accepte plusieurs types de syntaxes dans le paramètre *url* pour désigner les fichiers :
 
-* posix syntax: "file:///c:/My%20File"
-* system syntax: "c:\\MyFolder\\MyFile" (Windows) or "MyDisk:MyFolder:MyFile" (macOS).
+* syntaxe posix : "file:///c:/Mon%20Fichier"
+* syntaxe système : "c:\\MonDossier\\MonFichier" (Windows) ou "MonDisque:MonDossier:MonFichier" (macOS).
 
-**Note:** For compatibility, the "file://" syntax (using two "/") is accepted in 4D but it does not conform to RFC. We recommend using the "file:///" syntax (with three "/") that complies with RFC.
+**Note :** Par compatibilité, la syntaxe "file://" (utilisation de deux "/") est acceptée dans 4D mais elle n'est pas conforme aux RFC. Il est conseillé d'utiliser la syntaxe "file:///" (trois "/") qui est conforme aux RFC.
 
-On Mac OS, when FileVault is activated, you must use the Posix syntax. You can transform paths of the system using the [Convert path system to POSIX](convert-path-system-to-posix.md) command.
+Sous Mac OS, quand FileVault est activé, vous devez utiliser la syntaxe posix. Vous pouvez transformer les chemins système via la commande [Convert path system to POSIX](convert-path-system-to-posix.md). 
 
-This command has the same effect as modifying the value of the "URL" variable associated with the area. For example, if the variable of the area is named MyWArea\_url:
-
-```4d
- MyWArea_url:="http://www.4d.com/"
-```
-
-is the same as:
+Cette commande a le même effet que la modification de la valeur de la variable "URL" associée à la zone. Par exemple, si la variable de la zone est nommée MaZoneW\_url :
 
 ```4d
- WA OPEN URL(MyWArea;"http://www.4d.com/")
+ MaZoneW_url:="http://www.4d.com/"
 ```
 
-## See also 
+équivaut à :
+
+```4d
+ WA OPEN URL(MaZoneW;"http://www.4d.com/")
+```
+
+## Voir aussi 
 
 [OPEN URL](open-url.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN FORWARD URL](wa-open-forward-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1020 |
+| Numéro de commande | 1020 |
 | Thread safe | no |
 
 

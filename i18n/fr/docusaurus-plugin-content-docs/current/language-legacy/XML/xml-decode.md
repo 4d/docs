@@ -5,46 +5,46 @@ slug: /commands/xml-decode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *xmlValue* : Text ; *4Dvar* : Field, Variable )<!-- END REF-->
+<!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *valeurXML* ; *var4D* )<!-- END REF-->
 <!--REF #_command_.XML DECODE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| xmlValue | Text | &#8594;  | Text type value coming from an XML structure |
-| 4Dvar | Field, Variable | &#8592; | 4D variable or field receiving the converted XML value |
+| valeurXML | Text | &#8594;  | Valeur de type texte provenant d’une structure XML |
+| var4D | Field, Variable | &#8592; | Variable ou champ 4D devant recevoir la valeur XML convertie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.XML DECODE.Summary-->The XML DECODE command converts a value stored as an XML string into a 4D typed value.<!-- END REF--> The conversion is carried out automatically according to the following rules: 
+<!--REF #_command_.XML DECODE.Summary-->La commande **XML DECODE** convertit une valeur stockée en tant que chaîne XML en une valeur 4D typée.<!-- END REF--> La conversion est effectuée automatiquement en fonction des règles suivantes : 
 
-| **Value** | **Examples**     | Conversion on English system  |
-| --------- | ---------------------- | ------------------- |
-| number    | `<Price>8,5</Price><Price>8.5</Price>`                                                  | Real: 8.5                                                                                                                                                                                             |
-| Boolean   | `<Double>1</Double> <Double>0</Double>` or `<Double>true</Double> <Double>false</Double>` | Boolean: True/False                                                                                                                                                                                   |
-| BLOB      | Base64 decoding                                                                       |                                                                                                                                                                                                       |
-| Picture   | Base64 decoding + BLOB to picture command                                             |                                                                                                                                                                                                       |
-| Dates     | 2009-10-25T01:03:20+01:00                                                             | !10/25/2009! -> Deletion of time part as well as time zone                                                                                                                                            |
-| Time      | 2009-10-25T01:03:20+01:00                                                             | ?01:03:20? -> Deletion of date part. *Warning*: time zone is taken into account if different from local time. For example: "2009-10-25T01:03:20+05:00" will be decoded ?21:03:20? in UTC+1 local time |
+| **Valeur** | **Exemples**                                                                         | **Conversion sur système français**                                                                                                                                                                                          |
+| ---------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| numérique  | `<Prix>8,5</Prix><Prix>8.5</Prix>`                                                     | Réel : 8,5                                                                                                                                                                                                                   |
+| booléenne  | `<Double>1</Double> <Double>0</Double>` ou `<Double>vrai</Double> <Double>faux</Double>` | Booléen : Vrai/Faux                                                                                                                                                                                                          |
+| BLOB       | Décodage base64                                                                      |                                                                                                                                                                                                                              |
+| Images     | Décodage base64 + commande BLOB vers image                                           |                                                                                                                                                                                                                              |
+| Dates      | 2009-10-25T01:03:20+01:00                                                            | !25/10/2009! -> Suppression de la partie heure et du fuseau horaire                                                                                                                                                          |
+| Heures     | 2009-10-25T01:03:20+01:00                                                            | ?01:03:20? -> Suppression de la partie date. *Attention* : prise en compte du fuseau horaire s'il est différent de celui de l'heure locale. Par exemple "2009-10-25T01:03:20+05:00" donnera ?21:03:20? en heure locale UTC+1 |
 
-If the *4Dvar* parameter type is not defined, the text type is used by default. 
+Si le type du paramètre *var4D* n'est pas défini, le type texte est utilisé par défaut.
 
-## Example 
+## Exemple 
 
-Importing data from an XML document in which values are stored as attributes.  
-Example of XML document:  
+Importation de données depuis un document XML dans lequel les valeurs sont stockées en tant qu’attributs.  
+Exemple de document XML :  
 
 ```xml
 <CD Date="2003-01-01T00:00:00Z" 
@@ -57,51 +57,50 @@ Price="8.5"
 Title="4 Stabat mater"/>
 ```
 
-  
 ```4d
  Repeat
-    MyEvent:=SAX Get XML node(DocRef)
+       MyEvent:=SAX Get XML node(DocRef)
  
-    Case of
+       Case of
        :(MyEvent=XML Start Element)
-          ARRAY TEXT(arrAttrNames;0)
-          ARRAY TEXT(arrAttrValues;0)
-          SAX GET XML ELEMENT(DocRef;vName;vPrefix;arrAttrNames;arrAttrValues)
+          ARRAY TEXT(tAttrNames;0)
+          ARRAY TEXT(tAttrValues;0)
+          SAX GET XML ELEMENT(DocRef;vName;vPrefix;tAttrNames;tAttrValues)
           If(vName="CD")
              CREATE RECORD([CD])
-             For($i;1;Size of array(arrAttrNames))
-                $attrName:=arrAttrNames{$i}
+             For($i;1;Size of array(tAttrNames))
+                $attrName:=tAttrNames{$i}
                 Case of
-                   :($attrName="CD_ID")
-                      XML DECODE(arrAttrValues{$i};[CD]CD_ID)
-                   :($attrName="Title")
-                      [CD]Work:=arrAttrValues{$i}
-                   :($attrName="Price")
-                      XML DECODE(arrAttrValues{$i};[CD]Price)
-                   :($attrName="Date")
-                      XML DECODE(arrAttrValues{$i};[CD]Date entered)
-                   :($attrName="Duration")
-                      XML DECODE(arrAttrValues{$i};[CD]Total_duration)
-                   :($attrName="Double")
-                      XML DECODE(arrAttrValues{$i};[CD]Double_CD)
+                :($attrName="ID_CD")
+                   XML DECODE(tAttrValues{$i};[CD]ID_CD)
+                :($attrName="Titre")
+                   [CD]uvre:=tAttrValues{$i}
+                :($attrName="Prix")
+                   XML DECODE(tAttrValues{$i};[CD]Prix)
+                :($attrName="Date")
+                   XML DECODE(tAttrValues{$i};[CD]Date saisie)
+                :($attrName="Duree")
+                   XML DECODE(tAttrValues{$i};[CD]Durée_totale)
+                :($attrName="Double")
+                   XML DECODE(tAttrValues{$i};[CD]CD_Double)
                 End case
              End for
           End if
-          ...
-    End case
+       ...
+       End case
  Until(MyEvent=XML End Document)
 ```
 
-## See also 
+## Voir aussi 
 
 [BASE64 DECODE](base64-decode.md)  
 [BASE64 ENCODE](base64-encode.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1091 |
+| Numéro de commande | 1091 |
 | Thread safe | yes |
 
 

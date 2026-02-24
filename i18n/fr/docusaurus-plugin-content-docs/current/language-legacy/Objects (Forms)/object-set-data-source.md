@@ -5,70 +5,68 @@ slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *object* : Text ; *dataSource* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *object* : Variable, Field ; *dataSource* : Pointer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( {* ;} *objet* ; *sourceDonnées* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| dataSource | Pointer | &#8594;  | Pointer to new data source for object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| sourceDonnées | Pointer | &#8594;  | Pointeur vers la nouvelle source de données de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->The **OBJECT SET DATA SOURCE** command modifies the data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->La commande **OBJECT SET DATA SOURCE** vous permet de modifier la source de données de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-The data source is the field or variable whose value is represented by the object when the form is executed. In Design mode, the data source is defined in the Property list, usually through the Source and Source Field (fields) or Variable Name (variables) row: 
+La source de données est le champ ou la variable dont la valeur est représentée par l’objet lors de l’exécution du formulaire. En mode Développement, la source de données est définie dans la Liste de propriétés, généralement via les lignes Source et Champ source (champs) ou Nom de la variable (variables) : 
 
-![](../assets/en/commands/pict1208291.en.png)
+![](../assets/en/commands/pict1208291.fr.png)
 
-Except for list boxes (see below), all data sources of the form can be modified by this command. It is up to the developer to ensure the consistency of the changes made. 
+Hormis pour les list box (cf. ci-dessous), toutes les sources de données du formulaire peuvent être modifiées par cette commande. Il appartient au développeur de s’assurer de la cohérence des modifications effectuées. 
 
-In the case of list boxes, the following points must be considered:
+Dans le cas des list box, les points suivants sont à considérer :
 
-* Data source modifications must take the list box type into account: for example, it is not possible to use a field as the data source for a column in an array type list box.
-* For selection type list boxes, it is not possible to modify or read the data source of the list box object itself: in this case, it is an internal reference and not a data source.
-* This command is mainly used in the context of array type list boxes. For selection type list boxes, you can use the [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) command or [OBJECT SET DATA SOURCE FORMULA](./commands/object-set-data-source-formula) instead.
+* les modifications de sources de données doivent tenir compte du type de list box : par exemple, il n’est pas possible d’utiliser un champ comme source de données de colonne d’une list box de type tableau.
+* pour les list box de type sélection, il n’est pas possible de modifier ou de lire la source de données de l’objet list box lui-même : il s’agit dans ce cas d’une référence interne et non d’une source de données.
+* cette commande est utile principalement dans le contexte des list box de type tableau. Pour les list box de type sélection, vous pouvez plutôt utiliser la commande [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md).
 
-If this command is applied to a data source that is not modifiable, it does nothing. 
+Si la commande est appliquée à une source de données non modifiable, elle ne fait rien. 
 
-## Example 
+## Exemple 
 
-Modification of the data source for an entry area:
+Modification de la source de données d’une zone de saisie :
 
 ```4d
- var $ptrField : Pointer
- $ptrField:=Field(3;2)
- OBJECT SET DATA SOURCE(*;"Input";$ptrField)
+ var $ptrChp : Pointer
+ $ptrChp:=Field(3;2)
+ OBJECT SET DATA SOURCE(*;"Input";$ptrChp)
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
 [OBJECT Get data source](object-get-data-source.md)  
-[OBJECT SET DATA SOURCE FORMULA](./commands/object-set-data-source-formula)
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1264 |
+| Numéro de commande | 1264 |
 | Thread safe | no |
-
 
 

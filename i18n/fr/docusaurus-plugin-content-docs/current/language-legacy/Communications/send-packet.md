@@ -5,101 +5,101 @@ slug: /commands/send-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* : Time ;} *packet* : Text, Blob )<!-- END REF-->
+<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* ;} *paquet* )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Document reference number, or Current channel (serial port or document) |
-| packet | Text, Blob | &#8594;  | String or BLOB to be sent |
+| docRef | Time | &#8594;  | Référence de document ou canal courant (port série ou document) |
+| paquet | Text, Blob | &#8594;  | Chaîne ou BLOB à envoyer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SEND PACKET.Summary-->**SEND PACKET** sends a packet to a serial port or to a document.<!-- END REF--> If *docRef* is specified, the packet is written to the document referenced by *docRef*. If *docRef* is not specified, the packet is written to the serial port or document previously opened by the [SET CHANNEL](set-channel.md) command. 
+<!--REF #_command_.SEND PACKET.Summary-->La commande **SEND PACKET** envoie *paquet* vers un port série ou un document.<!-- END REF--> Si *docRef* est spécifié, le paquet est écrit dans le document référencé par *docRef*. Si *docRef* n'est pas spécifié, le paquet est envoyé vers le port série ou un document préalablement ouvert par la commande [SET CHANNEL](set-channel.md). 
 
-A *packet* is just a piece of data, generally a string of characters.  
-You can also pass a BLOB in *packet*. This allows you to bypass the constraints related to encoding for characters sent in text mode (see example 2).
+*paquet* représente une simple série de données, généralement une chaîne de caractères.   
+Vous pouvez également passer un BLOB dans *paquet*. Ce principe permet notamment de s’affranchir des contraintes liées à l’encodage des caractères envoyés en mode texte (cf. exemple 2).
 
-**Note:** When you pass a BLOB in *packet*, the command does not take into account any character set defined by the [USE CHARACTER SET](use-character-set.md) command. The BLOB is sent without any modification.
+**Note :** Lorsque vous passez un BLOB dans *paquet*, la commande ne tient pas compte du jeu de caractères éventuellement défini par la commande [USE CHARACTER SET](use-character-set.md). Le BLOB est envoyé sans aucune modification.
 
-Before you use SEND PACKET, you must open a serial port or a document with [SET CHANNEL](set-channel.md), or open a document with one of the document commands.
+Avant d'utiliser **SEND PACKET**, vous devez ouvrir un port série ou un document avec la commande [SET CHANNEL](set-channel.md), ou un document avec une commande de gestion des documents.
 
-When writing to a document, the first SEND PACKET begins writing at the beginning of the document unless the document was opened with [USE CHARACTER SET](use-character-set.md). Until the document is closed, each subsequent packet is appended to any previously sent packets.
+Lorsque vous envoyez un paquet vers un document, le premier **SEND PACKET** commence à écrire les données au début du document — à moins que ce dernier n'ait été ouvert par la fonction [USE CHARACTER SET](use-character-set.md). Puis, jusqu'à ce que le document soit refermé, chaque paquet envoyé y est écrit à la suite du précédent. 
 
-**Note:** This command is useful for a document opened with [SET CHANNEL](set-channel.md). On the other hand, for a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md), you can use the commands [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) to get and change the location in the document where the next writing (SEND PACKET) or reading ([RECEIVE PACKET](receive-packet.md)) will occur.
+**Note :** Ce fonctionnement est valide avec un document ouvert par [SET CHANNEL](set-channel.md). Cependant, pour un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md), vous pouvez utiliser les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md) pour connaître et modifier la position à laquelle, dans le document, la prochaine écriture (**SEND PACKET**) ou lecture ([RECEIVE PACKET](receive-packet.md)) aura lieu.
 
-## Example 1 
+## Exemple 1 
 
-The following example writes data from fields to a document. It writes the fields as fixed-length fields. Fixed-length fields are always of a specific length. If a field is shorter than the specified length, the field is padded with spaces. (That is, spaces are added to make up the specified length.) Although the use of fixed-length fields is an inefficient method of storing data, some computer systems and applications still use them:
+L'exemple suivant écrit, dans un document, des données en provenance de champs. Les valeurs sont écrites sous forme de champs de taille fixe. Dans ce cas, si la longueur d'un champ est inférieure à la taille fixée, le champ est comblé avec des espaces (c'est-à-dire que des espaces sont ajoutés de manière à ce que le champ corresponde à la taille définie). Bien que les champs de valeurs fixes soient un moyen peu efficace de stocker des données, certains systèmes informatiques et certaines applications l'utilisent encore :
 
 ```4d
- $vhDocRef :=Create document("") // Create a document
- If(OK=1) // Was the document created?
-    For($vlRecord;1;Records in selection([People])) // Loop once for each record
-  // Send a packet. Create the packet from a string of 15 spaces containing the first name field
-       SEND PACKET($vhDocRef;Change string(15*Char(SPACE);[People]First;1))
-  // Send a second packet. Create the packet from a string of 15 spaces containing the last name field
-  // This could be in the first SEND PACKET, but is separated for clarity
-       SEND PACKET($vhDocRef;Change string(15*Char(SPACE);[People]Last;1))
-       NEXT RECORD([People])
+ $Doc :=Create document("") // Création d'un document
+ If(OK=1) // Est-ce que le document a bien été créé ?
+    For($i;1;Records in selection([Personnes])) // Boucle pour chaque enregistrement
+       SEND PACKET($Doc;Change string(15*Char(Space);[Personnes]Prénom;1))
+  // Envoi du paquet créé à partir d'une chaîne de 15 espaces contenant le champ Prénom.
+       SEND PACKET($Doc;Change string(15*Char(Space);[Personnes]Nom;1))
+  // Envoi d'un second paquet créé à partir d'une chaîne de 15 espaces contenant le champ Nom.
+  // Cela aurait pu être mis dans le premier paquet, mais est séparé pour des raisons de clarté.
+       NEXT RECORD([Personnes])
     End for
-  // Send a Char(26), which is used as an end-of-file marker for some computers
-    SEND PACKET($vhDocRef;Char(SUB ASCII code))
-    CLOSE DOCUMENT($vhDocRef) // Close the document
+    SEND PACKET($Doc;Char(SUB ASCII code))
+  // Envoi du code ASCII SUB, utilisé comme marqueur de fin d'enregistrement par certains ordinateurs.
+    CLOSE DOCUMENT($Doc) // Fermeture du document
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example illustrates the sending and retrieval of extended characters via a BLOB in a document:
+Cet exemple illustre l’envoi et la récupération de caractères étendus via un BLOB dans un document :
 
 ```4d
- var $send_blob : Blob
- var $receive_blob : Blob
- TEXT TO BLOB("âzértÿ";$send_blob;UTF8 text without length)
- SET BLOB SIZE($send_blob;16;255)
- $send_blob{6}:=0
- $send_blob{7}:=1
- $send_blob{8}:=2
- $send_blob{9}:=3
- $send_blob{10}:=0
+ var $blob_envoi : Blob
+ var $blob_reception : Blob
+ TEXT TO BLOB("âzértÿ";$blob_envoi;UTF8 text without length)
+ SET BLOB SIZE($blob_envoi;16;255)
+ $blob_envoi{6}:=0
+ $blob_envoi{7}:=1
+ $blob_envoi{8}:=2
+ $blob_envoi{9}:=3
+ $blob_envoi{10}:=0
  $vlDocRef:=Create document("blob.test")
  If(OK=1)
-    SEND PACKET($vlDocRef;$send_blob)
+    SEND PACKET($vlDocRef;$blob_envoi)
     CLOSE DOCUMENT($vlDocRef)
  End if
  $vlDocRef:=Open document(document)
  If(OK=1)
-    RECEIVE PACKET($vlDocRef;$receive_blob;65536)
+    RECEIVE PACKET($vlDocRef;$blob_reception;65536)
     CLOSE DOCUMENT($vlDocRef)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [RECEIVE PACKET](receive-packet.md)  
 [SET DOCUMENT POSITION](set-document-position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 103 |
+| Numéro de commande | 103 |
 | Thread safe | yes |
 
 

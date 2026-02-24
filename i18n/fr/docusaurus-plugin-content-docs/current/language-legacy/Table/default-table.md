@@ -5,85 +5,86 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* : Table )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *laTable* )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to set as the default |
+| laTable | Table | &#8594;  | Table à définir comme table par défaut |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](default-table.md) takes priority when you use, for example, the [DIALOG](./commands/dialog) command with a project form and there is a default table form with the same name.
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Conseil :** Bien que l'appel de **DEFAULT TABLE** et l'omission du nom de la table rendent le code plus lisible, la plupart des programmeurs estiment que l'utilisation de cette commande apporte plus d'inconvénients que d'avantages.<!-- END REF-->  
+En particulier, notez que [DEFAULT TABLE](default-table.md) est prioritaire lorsque vous utilisez par exemple la commande [DIALOG](../commands/dialog.md) avec un formulaire projet et qu'un formulaire de la table par défaut a le même nom.
 
-**DEFAULT TABLE** sets *aTable* as the default table for the current process.
+**DEFAULT TABLE** désigne *laTable* comme la table par défaut pour le process courant.
 
-There is no default table for a process until the **DEFAULT TABLE** command is executed. After a default table has been set, any command that omits the *table* parameter will operate on the default table. For example, consider this command:
+Un process n'a pas de table par défaut tant que la commande **DEFAULT TABLE** n'a pas été exécutée. Après qu'une table par défaut ait été désignée, toute commande pour laquelle le paramètre *laTable* n'a pas été défini s'appliquera à la table par défaut. Considérez par exemple l'instruction suivante :
 
 ```4d
- FORM SET INPUT([Table];"form")
+ FORM SET INPUT([maTable];"Formulaire")
 ```
 
-If the default table is first set to \[Table\], the same command could be written this way:
+Si \[maTable\] a préalablement été définie comme table par défaut, la même instruction pourrait s'écrire :
 
 ```4d
- FORM SET INPUT("form")
+ FORM SET INPUT("Formulaire")
 ```
 
-One reason for setting the default table is to create code that is not table specific. Doing this allows the same code to operate on different tables. You can also use pointers to tables to write code that is not table specific. For more information about this technique, see the description of the [Table name](table-name.md) command.
+Une des raisons pour lesquelles vous pouvez définir une table par défaut est l'écriture de code qui ne soit pas lié à une table. Cela permet au même code d'être appliqué à différentes tables.  
+Vous pouvez aussi utiliser des pointeurs vers des tables pour écrire du code non lié aux tables. Pour plus d'informations sur cette technique, reportez-vous à la description de la commande [Table name](table-name.md).
 
-**DEFAULT TABLE** does not allow the omission of table names when referring to fields. For example:
+**DEFAULT TABLE** ne permet pas d'omettre les noms de tables lorsque vous vous référez à des champs. Par exemple :
 
 ```4d
- [My Table]My Field:="A string" //Good
+ [MaTable]MonChamp:="Une chaîne" // OK
 ```
 
-could not be written as:
+ne peut pas s'écrire :
 
 ```4d
- DEFAULT TABLE([My Table])
- My Field:="A string" //WRONG
+ DEFAULT TABLE([MaTable])
+ MonChamp:="Une chaîne" // Incorrect
 ```
 
-because a default table had been set. 
+... simplement parce qu'une table par défaut a été définie. 
 
-In 4D, all tables are “open” and ready for use. **DEFAULT TABLE** does not open a table, set a current table, or prepare the table for input or output. **DEFAULT TABLE** is simply a programming convenience to reduce the amount of typing and make the code easier to read.
+Dans 4D, toutes les tables sont “ouvertes” et prêtes à être utilisées. **DEFAULT TABLE** n'ouvre pas de table, ne définit pas de table courante et ne prépare pas de table pour la saisie ou l'affichage. **DEFAULT TABLE** est simplement une facilité de programmation proposée pour accélérer la saisie du code et le rendre plus facile à lire.
 
-## Example 
+## Exemple 
 
-The following example first shows code without the DEFAULT TABLE command. It then shows the same code, with DEFAULT TABLE. The code is a loop commonly used to add new records to a database. The [FORM SET INPUT](form-set-input.md) and [ADD RECORD](add-record.md) commands both require a table as the first parameter:
+L'exemple suivant présente la même méthode avec et sans la commande **DEFAULT TABLE**. Le code est une boucle souvent utilisée pour créer de nouveaux enregistrements dans une base. Les commandes [FORM SET INPUT](form-set-input.md) et [ADD RECORD](add-record.md) nécessitent le nom d'une table comme premier paramètre :
 
 ```4d
- FORM SET INPUT([Customers];"Add Recs")
+ FORM SET INPUT([Clients];"Ajout Enrg")
  Repeat
-    ADD RECORD([Customers])
+    ADD RECORD([Clients])
  Until(OK=0)
 ```
 
-Specifying the default table results in this code:
+Voici le résultat lorsqu'une table par défaut est définie :
 
 ```4d
- DEFAULT TABLE([Customers])
- FORM SET INPUT("Add Recs")
+ DEFAULT TABLE([Clients])
+ FORM SET INPUT("Ajout Enrg")
  Repeat
     ADD RECORD
  Until(OK=0)
 ```
 
-## See also 
+## Voir aussi 
 
 [Current default table](current-default-table.md)  
 [NO DEFAULT TABLE](no-default-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 46 |
+| Numéro de commande | 46 |
 | Thread safe | yes |
-
 
 

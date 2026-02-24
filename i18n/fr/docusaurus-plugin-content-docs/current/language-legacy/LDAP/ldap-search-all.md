@@ -5,63 +5,63 @@ slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResult* : Object array ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} )<!-- END REF-->
+<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *tabRésultat* ; *filtre* {; *scope* {; *attributs* {; *attributsEnTableau*}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | Distinguished Name of root entry where search is to start |
-| arrResult | Object array | &#8592; | Result of the search |
-| filter | Text | &#8594;  | LDAP search filter |
-| scope | Text | &#8594;  | Scope of the search: "base" (default), "one", or "sub" |
-| attributes | Text array | &#8594;  | Attribute(s) to fetch |
-| attributesAsArray | Boolean array | &#8594;  | True = force attributes to be returned as array; false = force attributes to be returned as a simple variable |
+| dnRootEntry | Text | &#8594;  | Distinguished Name de l'élément racine où démarrer la recherche |
+| tabRésultat | Object array | &#8592; | Résultat de la recherche |
+| filtre | Text | &#8594;  | Filtre de recherche LDAP |
+| scope | Text | &#8594;  | Champ d'action de la recherche : "base" (défaut), "one" ou "sub" |
+| attributs | Text array | &#8594;  | Attribut(s) à récupérer |
+| attributsEnTableau | Boolean array | &#8594;  | Vrai = forcer le retour des attributs en tableaux, Faux = forcer le retour des attributs en variables simples |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Created|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LDAP SEARCH ALL.Summary-->The **LDAP SEARCH ALL** command searches in the target LDAP server for all occurrences matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
+<!--REF #_command_.LDAP SEARCH ALL.Summary-->La commande **LDAP SEARCH ALL** recherche sur le server LDAP cible toutes les occurrences correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
 
-Note that LDAP servers usually impose a maximum number of entries that can be received from a search. For example, Microsoft Active directory limits this number to 1000 entries by default.
+A noter que les serveurs LDAP imposent généralement un nombre maximum d'entrées qui peuvent être récupérées lors d'une recherche. Par exemple, Microsoft Active directory limite de nombre à 1000 entrées par défaut.
 
-In *dnRootEntry*, pass the *Distinguished Name* of the LDAP server root entry; the search will start at this entry.
+Dans *dnRootEntry*, passez le *Distinguished Name* de l'élément racine du serveur LDAP ; la recherche démarrera à partir de cet élément. 
 
-In *arrResult*, pass an object array that will be filled with all matching entries; in this array, each element is an object containing attribute/value pairs returned for a matching entry. You can use the *attributes* parameter to define the attributes to be returned. 
+Dans *tabResult*, passez un tableau objet qui sera rempli avec les entrées trouvées ; dans ce tableau, chaque élément est un objet contenant les paires attributs/valeurs retournées pour une entrée trouvée. Vous pouvez utiliser le paramètre *attributs* pour définir les paramètres à retourner. 
 
-In *filter*, pass the LDAP search filter to execute. The filter string must be compliant with [rfc2225](http://tools.ietf.org/search/rfc2254). You can pass an empty string "" in order not to filter the search; the "\*" is supported to search substrings. 
+Dans *filtre*, passez le filtre de recherche LDAP à appliquer. Ce filtre doit être conforme à la [rfc2225](http://tools.ietf.org/search/rfc2254). Vous pouvez passer une chaîne vide "" afin de ne pas appliquer de filtre. Le joker "\*" pour chercher des sous-chaînes est pris en charge. 
 
-In *scope*, pass one of the following constants from the "*LDAP*" theme:
+Dans *scope*, passez une des constantes suivantes du thème "*LDAP*" :
 
-| Constant           | Type   | Value | Comment                                                                                                     |
-| ------------------ | ------ | ----- | ----------------------------------------------------------------------------------------------------------- |
-| LDAP all levels    | Text | sub   | Search in the root entry level defined by *dnRootEntry* and in all subsequent entries                       |
-| LDAP root and next | Text | one   | Search in the root entry level defined by *dnRootEntry* and in the directly subsequent entries on one level |
-| LDAP root only     | Text | base  | Search only in the root entry level defined by *dnRootEntry* (default if omitted)                           |
+| Constante          | Type   | Valeur | Comment                                                                                                          |
+| ------------------ | ------ | ------ | ---------------------------------------------------------------------------------------------------------------- |
+| LDAP all levels    | Chaîne | sub    | Chercher dans l'élément racine défini par *dnRootEntry* et dans toutes les branches suivantes                    |
+| LDAP root and next | Chaîne | one    | Chercher dans l'élément racine défini par *dnRootEntry* et dans les branches directement suivantes sur un niveau |
+| LDAP root only     | Chaîne | base   | Chercher uniquement dans l'élément racine défini par *dnRootEntry* (défaut si omis)                              |
 
-In *attributes*, pass a text array which contains the list of all LDAP attributes to fetch from the matched entries. By default, if this parameter is omitted, all attributes are fetched.
+Dans *attributs*, passez un tableau texte contenant la liste de tous les attributs LDAP à récupérer à partir des entrées trouvées. Par défaut, si ce paramètre est omis, tous les attributs sont récupérés.
 
-**Note:** Keep in mind that LDAP attribute names are case-sensitive. For more information on LDAP attributes, you can refer to [this page](https://msdn.microsoft.com/en-us/library/ms675089%28v=vs.85%29.aspx) that lists all available attributes for the MS Active directory.
+**Note :** Les noms d'attributs LDAP tiennent compte des majuscules/minuscules. Pour plus d'informations sur les attributs LDAP, vous pouvez consulter [cette page](https://msdn.microsoft.com/en-us/library/ms675089%28v=vs.85%29.aspx) qui liste tous les attributs disponibles pour MS Active Directory.
 
-By default, the command returns attributes as an array if multiple results are found, or as a variable if a single result is found. The optional *attributesAsArray* parameter allows you to "force" the attribute(s) returned to be formatted as an array or as a variable for each attribute defined:
+Par défaut, la commande retourne les attributs sous forme de tableau si plusieurs résultats sont trouvés, ou sous forme de variable simple si un seul résultat est trouvé. Le paramètre optionnel *attributsEnTableau* vous permet de "forcer" le formatage des attributs retournés en tableau ou en variable pour chaque attribut défini :
 
-* When you pass **true** in an element, the corresponding element of the *attributes* parameter will be returned in an array. If a single value is found, the command returns an array with a single element.
-* When you pass **false** in an element, the corresponding element of the *attributes* parameter will be returned in a simple variable. If multiple entries are found, the command returns only the first element.
+* Lorsque vous passez **true** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en tableau. Si une seule valeur est trouvée, la commande retourne un tableau à un seul élément.
+* Lorsque vous passez **false** dans un élément, l'élément correspondant du paramètre *attributs* sera retourné en variable simple. Si plusieurs valeurs sont trouvées, la commande retourne uniquement le premier élément.
 
-## Example 1 
+## Exemple 1 
 
-We want to get the phone number of all users named "smith" in the company directory:
+Nous voulons récupérer les numéros de téléphone de tous les utilisateurs nommés "smith" dans l'annuaire d'enterprise :
 
 ```4d
  ARRAY TEXT($_tabAttributes;0)
@@ -78,16 +78,16 @@ We want to get the phone number of all users named "smith" in the company direct
  LDAP LOGOUT
  
  
-  //$_entry will contain for example
+  //$_entry contiendra par exemple
   // $_entry{1} = {"cn":"John Smith","telephoneNumber":"01 40 87 00 00"}
   // $_entry{2} = {"cn":"Adele Smith","telephoneNumber":"01 40 87 00 01"}
   // $_entry{3} = {"cn":"Adrian Smith","telephoneNumber":"01 23 45 67 89"}
   // ...
 ```
 
-## Example 2 
+## Exemple 2 
 
-These examples illustrate the use of the *attributesAsArray* parameter:
+Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attributsEnTableau* :
 
 ```4d
  ARRAY OBJECT($_entry;0)
@@ -104,7 +104,7 @@ These examples illustrate the use of the *attributesAsArray* parameter:
  
  ARRAY TEXT($_arrMemberOf;0)
  OB GET ARRAY($_entry{1};"memberOf";$_arrMemberOf)
-  // in $_arrMemberOf we have an array containing all groups of the entry
+  // $_arrMemberOf est un tableau contenant tous les groupes de l'entrée
 ```
 
 ```4d
@@ -120,19 +120,19 @@ These examples illustrate the use of the *attributesAsArray* parameter:
  LDAP LOGOUT
  
  $memberOf:=OB Get($_entry{1};"memberOf")
-  // in $memberOf we have a variable containing the first group of the entry
+  // $memberOf est une variable contenant le premier groupe de l'entrée
 ```
 
-## See also 
+## Voir aussi 
 
 *LDAP*  
 [LDAP Search](ldap-search.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1329 |
+| Numéro de commande | 1329 |
 | Thread safe | no |
 
 

@@ -5,33 +5,33 @@ slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* : Text )<!-- END REF-->
+<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nom* )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | Name of named selection to be cleared |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à effacer |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Summary-->**CLEAR NAMED SELECTION** clears *name* from memory and frees the memory used by *name*.<!-- END REF--> The command does not affect tables, selections, or records. Since named selections use memory, it is good practice to clear named selections when they are no longer needed.
+<!--REF #_command_.CLEAR NAMED SELECTION.Summary-->**CLEAR NAMED SELECTION** efface *nom* de la mémoire et donc libère la mémoire qu'elle utilisait.<!-- END REF-->n'affecte pas les tables, sélections courantes ou enregistrements. Comme les sélections temporaires utilisent de la mémoire, il est conseillé de les effacer si vous n'en avez plus besoin.
 
-If *name* was created using the [CUT NAMED SELECTION](cut-named-selection.md) command and then manipulated using the [USE NAMED SELECTION](use-named-selection.md) command, *name* no longer exists in memory. In this case, the **CLEAR NAMED SELECTION** command does not need to be used.
+Si *nom* a été créée par la commande [CUT NAMED SELECTION](cut-named-selection.md) puis traitée à l'aide de la commande [USE NAMED SELECTION](use-named-selection.md), elle n'existe plus en mémoire. Dans ce cas, vous n'avez pas besoin d'utiliser **CLEAR NAMED SELECTION**.
 
-## See also 
+## Voir aussi 
 
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [CUT NAMED SELECTION](cut-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 333 |
+| Numéro de commande | 333 |
 | Thread safe | yes |
 
 

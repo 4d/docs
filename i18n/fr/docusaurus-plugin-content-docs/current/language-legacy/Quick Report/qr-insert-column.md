@@ -5,58 +5,58 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Variable, Field, Pointer )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *zone* ; *numColonne* ; *objet* )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNumber | Integer | &#8594;  | Column number |
-| object | Field, Variable, Pointer | &#8594;  | Object to be inserted in the column |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| objet | Field, Variable, Pointer | &#8594;  | Objet à insérer dans la colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR INSERT COLUMN.Summary-->The QR INSERT COLUMN command inserts or creates a column at the specified position.<!-- END REF--> Columns located to the right of that position will be shifted accordingly.
+<!--REF #_command_.QR INSERT COLUMN.Summary-->La commande **QR INSERT COLUMN** insère ou crée dans *zone* une colonne à un emplacement spécifique.<!-- END REF--> Les colonnes situées à droite de la colonne ajoutée seront décalées en conséquence.
 
-*position* is the number of the column, established from left to right.
+*numColonne* indique le numéro de la colonne, correspondant à la position de la colonne — les colonnes sont numérotées de gauche à droite.
 
-The default title for the column will be the value passed in *object*.
+La valeur passée dans *objet* sera l'intitulé par défaut de la colonne.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-**Note:** This command cannot be used with a cross-table report.
+**Note :** Cette commande ne peut pas être utilisée avec un état en tableau croisé.
 
-## Example 
+## Exemple 
 
-The following statement inserts (or creates) a first column in a Quick Report area, inserts “Field1” as column title (default behavior) and populates the contents of the body with values from Field1.
+La ligne suivante insère (ou crée) une première colonne dans la zone MaZone et la remplit avec le contenu du champ Noms. L'intitulé par défaut de la colonne sera “Noms” : 
 
 ```4d
- QR INSERT COLUMN(MyArea;1;->[Table 1]Field1)
+ QR INSERT COLUMN(MaZone;1;->[Table 1]Noms)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR DELETE COLUMN](qr-delete-column.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 748 |
+| Numéro de commande | 748 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

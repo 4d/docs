@@ -5,51 +5,51 @@ slug: /commands/qr-report-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *area* : Integer ; *blob* : Blob )<!-- END REF-->
+<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *zone* ; *blob* )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| Blob | Blob | &#8592; | BLOB to house the Quick Report |
+| zone | Integer | &#8594;  | Référence de la zone |
+| blob | Blob | &#8592; | BLOB devant recevoir l'état rapide |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR REPORT TO BLOB.Summary-->The QR REPORT TO BLOB command places the report whose reference was passed in *area* in a BLOB (variable or field).<!-- END REF-->
+<!--REF #_command_.QR REPORT TO BLOB.Summary-->La commande **QR REPORT TO BLOB** place dans le BLOB *blob* (variable ou champ) l’état dont la référence a été passée dans le paramètre *zone*.<!-- END REF-->
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## Example 
+## Exemple 
 
-The following statement assigns the Quick Report stored in MyArea into a BLOB Field.
+L'instruction suivante affecte l'état rapide stocké dans la zone MaZone à un champ BLOB :
 
 ```4d
- QR REPORT TO BLOB(MyArea;[Table 1]Field4)
+ QR REPORT TO BLOB(MaZone;[Table 1]ChampBlob)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR BLOB TO REPORT](qr-blob-to-report.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 770 |
+| Numéro de commande | 770 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

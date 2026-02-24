@@ -5,35 +5,35 @@ slug: /commands/clear-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *set* : Text )<!-- END REF-->
+<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *ensemble* )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | Name of the set to clear from memory |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à effacer de la mémoire |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CLEAR SET.Summary-->**CLEAR SET** clears *set* from memory and frees the memory used by *set*.<!-- END REF--> The command does not affect tables, selections, or records. To save a set before clearing it, use the [SAVE SET](save-set.md) command. Since sets use memory, it is good practice to clear them when they are no longer needed.
+<!--REF #_command_.CLEAR SET.Summary-->**CLEAR SET** efface *ensemble* de la mémoire et la libère ainsi pour d'autres utilisations.<!-- END REF-->n'a aucune conséquence sur les tables, sélections ou enregistrements. Pour sauvegarder un ensemble avant de l'effacer, utiliser la commande [SAVE SET](save-set.md). Comme les ensembles consomment de la mémoire, pensez à les effacer dès qu'ils ne sont plus nécessaires.
 
-## Example 
+## Exemple 
 
-See the example for [USE SET](use-set.md).
+Reportez-vous à l'exemple de la commande [USE SET](use-set.md).
 
-## See also 
+## Voir aussi 
 
 [CREATE EMPTY SET](create-empty-set.md)  
 [CREATE SET](create-set.md)  
 [LOAD SET](load-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 117 |
+| Numéro de commande | 117 |
 | Thread safe | yes |
 
 

@@ -1,6 +1,7 @@
 ---
 id: object-get-data-source-formula
 title: OBJECT Get data source formula
+slug: /commands/object-get-data-source-formula
 displayed_sidebar: docs
 ---
 

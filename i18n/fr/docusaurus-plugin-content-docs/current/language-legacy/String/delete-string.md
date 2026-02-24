@@ -5,54 +5,52 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* : Text ; *where* : Integer ; *numChars* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* ; *positionDépart* ; *nbCars* ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | String from which to delete characters |
-| where | Integer | &#8594;  | First character to delete |
-| numChars | Integer | &#8594;  | Number of characters to delete |
-| Function result | Text | &#8592; | Resulting string |
+| source | Text | &#8594;  | Chaîne de départ |
+| positionDépart | Integer | &#8594;  | Premier caractère à supprimer |
+| nbCars | Integer | &#8594;  | Nombre de caractères à supprimer |
+| Résultat | Text | &#8592; | Chaîne résultante |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Delete string.Summary-->Delete string deletes *numChars* from *source*, starting at *where*, and returns the resulting string.<!-- END REF-->
+<!--REF #_command_.Delete string.Summary-->**Delete string** supprime *nbCars* dans *source* à partir de *positionDépart* et retourne la chaîne résultante.<!-- END REF-->retourne la même chaîne que *source* dans les cas suivants :
 
-Delete string returns the same string as *source* when:
+* *source* est une chaîne vide,
+* *positionDépart* est supérieur à la longueur de *source*,
+* *nbCars* est égal à zéro (0).
 
-* *source* is an empty string
-* *where* is greater than the length of *source*
-* *numChars* is zero (0)
+Si *positionDépart* est inférieur à un (1), les caractères sont supprimés à partir du début de la chaîne.
 
-If *where* is less than one, the characters are deleted from the beginning of the string.
+Si *positionDépart* \+ *nbCars* est supérieur ou égal à la longueur de *source*, les caractères sont supprimés à partir de *positionDépart* jusqu'à la fin de *source*.
 
-If *where* plus *numChars* is equal to or greater than the length of *source*, the characters are deleted from *where* to the end of *source*.
+## Exemple 
 
-## Example 
-
-The following example illustrates the use of Delete string. The results are assigned to the variable *vtResult*.
+L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats sont affectés à la variable *vRésultat*.
 
 ```4d
- vtResult:=Delete string("Lamborghini";6;6) // vtResult gets "Lambo"
- vtResult:=Delete string("Indentation";6;2) // vtResult gets "Indention"
- vtResult:=Delete string(vtOtherVar;3;32000) // vtResult gets the first two characters of vtOtherVar
+ vRésultat:=Delete string("Lamborghini";6;6) // vRésultat est égal à "Lambo"
+ vRésultat:=Delete string("Indentation";6;2) // vRésultat est égal à "Indention"
+ vRésultat:=Delete string(var;3;32000) // vRésultat est égal aux deux premiers caractères de var
 ```
 
-## See also 
+## Voir aussi 
 
-[Change string](change-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Change string](../commands/change-string)  
+[Insert string](../commands/insert-string)  
+[Replace string](../commands/replace-string)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 232 |
+| Numéro de commande | 232 |
 | Thread safe | yes |
 
 

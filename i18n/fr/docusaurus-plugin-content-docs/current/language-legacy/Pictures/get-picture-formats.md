@@ -5,65 +5,65 @@ slug: /commands/get-picture-formats
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *picture* : Picture ; *codecIDs* : Text array )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *image* ; *tabCodecs* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture field or variable to analyze |
-| codecIDs | Text array | &#8592; | Picture codec IDs |
+| image | Picture | &#8594;  | champ ou variable Image à analyser |
+| tabCodecs | Text array | &#8592; | Liste des codecs de l'image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE FORMATS.Summary-->The **GET PICTURE FORMATS** command returns an array of all the codec IDs (picture formats) contained in the *picture* passed as parameter.<!-- END REF--> A 4D picture (field or variable) can contain the same picture encoded in different formats, such as PNG, BMP, GIF, etc.
+<!--REF #_command_.GET PICTURE FORMATS.Summary-->La commande **GET PICTURE FORMATS** remplit le tableau *tabCodecs* de tous les identifiants des codecs (formats image) de l'image contenue dans le paramètre *image*.<!-- END REF--> Une image 4D (champ ou variable) peut contenir la même image encodée dans différents formats, comme PNG, BMP, GIF, etc.
 
-In the *picture* parameter, you pass a picture field or a picture variable whose included formats you want to be returned in the *codecIDs* array. 
+Dans le paramètre *image*, vous passez un champ image ou une variable image qui inclut les formats que vous souhaitez récupérer dans le tableau *tabCodecs*. 
 
-The codec IDs returned are established by 4D in exactly the same way as for the [PICTURE CODEC LIST](picture-codec-list.md) command. They can be returned in the following forms:
+Les identifiants des codecs sont établis par 4D exactement de la même façon qu'avec la commande [PICTURE CODEC LIST](picture-codec-list.md). Ils peuvent prendre les formes suivantes :
 
-* As extensions (for example, “.gif”)
-* As Mime types (for example, “image/jpeg”)
-* As 4-character QuickTime codes
+* une extension (par exemple, “.gif”)
+* un type Mime (par exemple, “image/jpeg”)
+* un code QuickTime sur 4 caractères
 
 **Notes:** 
 
-* The following codecs, handled internally by 4D, are always returned as extensions: JPEG, PNG, TIFF, GIF, BMP, SVG, PDF, EMF.
-* 4-character QuickTime codes may be returned in databases where the QuickTime support compatibility option has been set (using the [SET DATABASE PARAMETER](set-database-parameter.md) command). However, QuickTime is no longer supported in 4D and we do not recommend using QuickTime codecs.
+* Les codecs suivants, gérés par 4D, sont toujours retournés en tant qu'extensions : JPEG, PNG, TIFF, GIF, BMP, SVG, PDF, EMF.
+* Les codes QuickTime sur 4 caractères peuvent être retournés dans les bases de données où l'option de compatibilité QuickTime a été mise en place (en utilisant la commande [SET DATABASE PARAMETER](set-database-parameter.md)). Toutefois, notez que QuickTime n'est plus pris en charge par 4D et que nous en déconseillons l'utilisation.
 
-For more information about picture codec IDs, refer to the *Pictures* section.
+Pour plus d'information sur les identifiants des Codecs des images, référez-vous à la section *Introduction aux images*.
 
-## Example 
+## Exemple 
 
-You want to know the picture formats stored in a field for the current record:
+Vous souhaitez connaître les formats de l'image stockée dans un champ Image de l'enregistrement courant :
 
 ```4d
  ARRAY TEXT($aTPictureFormats;0)
-  //Get all the formats saved
+  //lire tous les formats de l'image
  GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
-## See also 
+## Voir aussi 
 
   
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1406 |
+| Numéro de commande | 1406 |
 | Thread safe | yes |
 
 

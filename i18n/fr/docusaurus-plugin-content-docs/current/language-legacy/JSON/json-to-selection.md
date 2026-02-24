@@ -5,48 +5,48 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* : Table ; *jsonArray* : Text )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTable* ; *jsonTab* )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | 4D table into which elements are copied |
-| jsonArray | Text | &#8594;  | Array of objects in JSON |
+| laTable | Table | &#8594;  | Table 4D dans laquelle copier les éléments |
+| jsonTab | Text | &#8594;  | Tableau d'objets en JSON |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON TO SELECTION.Summary-->The **JSON TO SELECTION** command copies the contents of an array of JSON objects *jsonArray* to the selection of records of *aTable*.<!-- END REF--> 
+<!--REF #_command_.JSON TO SELECTION.Summary-->La commande **JSON TO SELECTION** copie le contenu du tableau d'objets JSON *jsonTab* vers la sélection d’enregistrements de *laTable*.<!-- END REF--> 
 
-The *jsonArray* parameter is a [text](# "A character string that may contain from 0 to 2 GB of text") representing an array of objects formatted in JSON and containing one or more elements. The expected syntax is of the type:
+Le paramètre *jsonTab* est un [texte](# "Une chaine de caractères jusqu'à 2 Go") représentant un tableau d'objets JSON contenant un ou plusieurs élément(s). Le format attendu est du type :
 
 ```json
-"[{"attribute1":"value1","attribute2":"value2",...},...,{"attribute1":"valueN","attribute2":"valueN",...}]"
+"[{"attribut1":"valeur1","attribut2":"valeur2",...},...,{"attribut1":"valeurN","attribut2":"valeurN",...}]"
 ```
 
-If a selection exists for *aTable* at the time of the call, the elements of the JSON array are copied into the records based on the order of the array and the order of the records. If the number of elements defined in the JSON array is greater than the number of records in the current selection, new records are created. The records, whether they are new or existing, are automatically saved.
+Si une sélection existe pour *laTable* au moment de l’appel, les éléments du tableau JSON sont copiés dans les enregistrements en fonction de l’ordre du tableau et de l’ordre des enregistrements. Si le nombre d’éléments définis dans le tableau JSON est supérieur au nombre d’enregistrements de la sélection courante, de nouveaux enregistrements sont créés. Les enregistrements, qu’ils soient nouveaux ou existants, sont automatiquement sauvegardés.
 
-**Note:** This command supports Object type fields: JSON data is converted automatically. 
+**Note :** Cette commande prend en charge les champs de type objet : les données JSON sont automatiquement converties. 
 
-**Warning:** Since **JSON TO SELECTION** replaces any information found in the existing records, this command must be used with caution. 
+**Attention :** Comme **JSON TO SELECTION** remplace les informations éventuellement présentes dans les enregistrements existants, cette commande doit être utilisée avec prudence. 
 
-If a record is locked by another process during the execution of the command, it is not modified. All the locked records are placed in the *The LockedSet System Set*. After the execution of **JSON TO SELECTION**, you can test whether the *LockedSet* set contains any records that were locked.
+Si un enregistrement est verrouillé par un autre process pendant l’exécution de la commande, il n’est pas modifié. Tous les enregistrements verrouillés sont placés dans l’*Ensemble système LockedSet*. Après l'exécution de **JSON TO SELECTION**, vous pouvez tester si l’ensemble *LockedSet* contient des enregistrements qui étaient verrouillés.
 
-## Example 
+## Exemple 
 
-Using the **JSON TO SELECTION** command to add records to the \[Company\] table: 
+Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrements dans la table \[Company\] : 
 
 ```4d
  var $Object1;$Object2;$Object3;$Object4 : Object
@@ -67,25 +67,25 @@ Using the **JSON TO SELECTION** command to add records to the \[Company\] table:
  
  $ObjectString:=JSON Stringify array($arrayObject)
  
-  // $ObjectString = "[{"ID":"200","City":"Clichy","Company Name":"4D
-  // SAS"},{"ID":"201","City":"Paris","Company Name":"APPLE"},{"ID":"202",
-  //"City":"London","Company Name":"IBM"},{"ID":"203","City":"New
-  //York","Company Name":"MICROSOFT"}]"
+     // $ObjectString = "[{"ID":"200","City":"Clichy","Company Name":"4D
+     // SAS"},{"ID":"201","City":"Paris","Company Name":"APPLE"},{"ID":"202",
+     //"City":"London","Company Name":"IBM"},{"ID":"203","City":"New
+     //York","Company Name":"MICROSOFT"}]"
  
  JSON TO SELECTION([Company];$ObjectString)
-  // You create 4 records in the [Company] table, filling the ID,
-  //Company name and city fields
+     // vous créez 4 enregistrements dans la table [Company], remplissant les
+     //champs ID, Company name et city
 ```
 
-## See also 
+## Voir aussi 
 
 [Selection to JSON](selection-to-json.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1235 |
+| Numéro de commande | 1235 |
 | Thread safe | yes |
 
 

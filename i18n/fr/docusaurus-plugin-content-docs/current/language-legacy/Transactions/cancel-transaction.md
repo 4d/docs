@@ -9,29 +9,29 @@ displayed_sidebar: docs
 <!--REF #_command_.CANCEL TRANSACTION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** cancels the [transaction](../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF-->cancels the operations executed on the data and stored during the transaction.
+<!--REF #_command_.CANCEL TRANSACTION.Summary-->**CANCEL TRANSACTION** annule la transaction ouverte par la commande [START TRANSACTION](start-transaction.md) de niveau correspondant dans le process courant.<!-- END REF-->annule toutes les opérations exécutées sur les données et stockées pendant la transaction. 
 
-**Note:** **CANCEL TRANSACTION** does not have an effect on any changes made in the current records that were not saved - they remain displayed after the command is executed.
+**Note :** **CANCEL TRANSACTION** est sans effet sur les modifications éventuellement effectuées dans les enregistrements courants mais non stockées - elles restent affichées après l'exécution de la commande.
 
-## See also 
+## Voir aussi 
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
@@ -39,11 +39,11 @@ displayed_sidebar: docs
 [Transactions](../Develop-legacy/transactions.md)
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 241 |
+| Numéro de commande | 241 |
 | Thread safe | yes |
 
 

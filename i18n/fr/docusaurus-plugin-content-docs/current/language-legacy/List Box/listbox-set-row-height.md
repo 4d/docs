@@ -5,101 +5,101 @@ slug: /commands/listbox-set-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *object* : Text ; *row* : Integer ; *height* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *object* : Variable ; *row* : Integer ; *height* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( {* ;} *objet* ; *ligne* ; *hauteur* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| row | Integer | &#8594;  | List box row whose height you want to set |
-| height | Integer | &#8594;  | Height of list box row |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Ligne de la List box dont la hauteur doit être fixée. |
+| hauteur | Integer | &#8594;  | Hauteur de la ligne de la List box |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->The **LISTBOX SET ROW HEIGHT** command allows you to modify the height of the specified *row* in the list box object designated using the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->La commande **LISTBOX SET ROW HEIGHT** permet de modifier la hauteur de la ligne spécifiée dans le paramètre *ligne* dans la List box désignée par les paramètres *objet* et éventuellement *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous précisez que le paramètre *objet* est un nom d'objet (chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous passez une référence de variable à la place d'une chaîne. Pour plus d'information sur les noms d'objet, reportez-vous à la section *Objets de formulaires*. 
 
-If the specified *row* does not exist in the list box, the command does nothing.
+Si la *ligne* spécifiée n'existe pas dans la List box, la commande ne fait rien.
 
-The unit used for the specified *height* corresponds to the one defined globally for the list box rows, either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command.
+L'unité utilisée par *hauteur* correspond à celle définie globalement pour les lignes de la List box, soit dans la Liste des propriétés, soit par un appel antérieur à la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md).
 
-The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified in the Property List, if any (for more information, please see the *Row Height Array* section in the *Design Reference* manual); otherwise, its creates a row height array dynamically. Using this command to set individual row heights produces the exact same visual result as associating a row height array using the Property List; however, filling a row height array with values is much faster than calling this command in a loop to set row heights one by one for the list box.
+La commande **LISTBOX SET ROW HEIGHT** modifie le tableau de hauteur de lignes spécifié dans la Liste des propriétés, le cas échéant (cf. section *Tableau hauteurs de lignes* dans le manuel *Mode Développement*. Sinon, la commande crée dynamiquement un tableau de hauteurs de lignes. Utiliser cette commande pour définir individuellement les hauteurs de lignes produit le même résultat qu'utiliser un tableau de hauteurs de lignes ; toutefois, remplir un tableau de hauteurs de lignes est plus rapide qu'appeler cette commande dans une boucle pour fixer les hauteurs de lignes une par une. 
 
-**Important note:** If the global [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command is called subsequently with a different unit than the one previously defined, the default value set by this command will replace and reinitialize any row heights set using **LISTBOX SET ROW HEIGHT** (see example 2).
+**Important :** Si la commande globale [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) est appelée par la suite avec une unité différente de celle définie précédemment, la valeur par défaut de cette commande remplacera et réinitialisera toute hauteur de ligne définie à l'aide de **LISTBOX SET ROW HEIGHT** (voir exemple 2).
 
-## Example 1 
+## Exemple 1 
 
-You want to change the height of a few rows in the following list box:
+Vous souhaitez modifier la hauteur de quelques lignes de la list box suivante :
 
 ![](../assets/en/commands/pict3071133.en.png)
 
-If you execute this code:
+Si vous exécutez ce code :
 
 ```4d
-  //current unit is pixels
+  //unité courante en pixels
  LISTBOX SET ROW HEIGHT(*;"listboxname";3;40) //Kuwait
  LISTBOX SET ROW HEIGHT(*;"listboxname";7;14) //Serbia
 ```
 
-... you get the following result:
+... vous obtenez le résultat suivant :
 
 ![](../assets/en/commands/pict3071135.en.png)
 
-## Example 2 
+## Exemple 2 
 
-You have set a default row height and then set several individual row height values using the **LISTBOX SET ROW HEIGHT** command:
+Vous devez fixer une hauteur de ligne par défaut puis mettre en place individuellement des hauteurs de lignes spécifiques pour certaines d'entre elles en utilisant la commande **LISTBOX SET ROW HEIGHT** :
 
 ```4d
- LISTBOX SET ROWS HEIGHT(*;"listboxname";25;lk pixels) // global height set in pixels
+ LISTBOX SET ROWS HEIGHT(*;"listboxname";25;lk pixels) // la hauteur est globalement fixée à 25 pixels
  
- LISTBOX SET ROW HEIGHT(*;"listboxname";1;30) // row 1: 30 pixels
- LISTBOX SET ROW HEIGHT(*;"listboxname";5;40) // row 5: 40 pixels
- LISTBOX SET ROW HEIGHT(*;"listboxname";11;50) // row 11: 50 pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";1;30) // ligne 1: 30 pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";5;40) // ligne 5: 40 pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";11;50) // ligne 11: 50 pixels
 ```
 
-Later, if the following code is executed…
+Par la suite, si le code suivant est exécuté :
 
 ```4d
  LISTBOX SET ROWS HEIGHT(*;"listboxname";18;lk pixels)
 ```
 
-…then the global row height is set to 18 pixels; however, since the unit has not changed, rows 1, 5 and 11 will keep their specific height values, i.e., 30, 40 and 50 pixels as defined above by the **LISTBOX SET ROW HEIGHT** command.  
+… la hauteur des lignes est globalement fixée à 18 pixels ; toutefois, étant donné que l'unité n'a pas changé, les lignes 1, 5 et 11 garderont leur hauteur personnalisée, à savoir, 30, 40 et 50 pixels tel que défini ci-dessus par la commande **LISTBOX SET ROW HEIGHT**.  
   
-On the other hand, if the code below is executed subsequently…
+En revanche, si le code suivant est exécuté :
 
 ```4d
  LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
 ```
 
-…then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.
+… alors les lignes 1, 5 et 11 sont réinitialisées à la valeur globale par défaut mise en place par la commande [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (c'est-à-dire 2 lignes) car l'unité est passée de "pixels" à "lignes". Comme il n'y a pas de conversion automatique, le changement d'unité aboutit toujours à la réinitialisation des hauteurs de lignes avec la nouvelle valeur par défaut.
 
-## See also 
+## Voir aussi 
 
   
 [LISTBOX Get row height](listbox-get-row-height.md)  
 [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
 [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1409 |
+| Numéro de commande | 1409 |
 | Thread safe | no |
 
 

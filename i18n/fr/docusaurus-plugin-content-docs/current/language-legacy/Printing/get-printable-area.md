@@ -5,58 +5,57 @@ slug: /commands/get-printable-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* : Integer {; *width* : Integer} )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *hauteur* {; *largeur*} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| height | Integer | &#8592; | Height of printable area |
-| width | Integer | &#8592; | Width of printable area |
+| hauteur | Integer | &#8592; | Hauteur de la zone d’impression |
+| largeur | Integer | &#8592; | Largeur de la zone d’impression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PRINTABLE AREA.Summary-->The **GET PRINTABLE AREA** command returns the size, in pixels, of the *height* and *width* parameters of the printable area.<!-- END REF--> This size depends on the current printing parameters, the paper orientation, etc. 
+<!--REF #_command_.GET PRINTABLE AREA.Summary-->La commande **GET PRINTABLE AREA** retourne dans les paramètres *hauteur* et *largeur* la taille en pixels de la zone d’impression.<!-- END REF--> Cette taille dépend des paramètres d’impression courants, de l’orientation du papier, etc. 
 
-The sizes returned do not vary from one page to another (after a page break, for instance). 
+Les tailles retournées ne varient pas d’une page à l’autre (après un saut de page par exemple). 
 
-Associated with the [Get printed height](get-printed-height.md) command, this command is useful for knowing the number of pixels available for printing or for centering an object on the page. 
+Associée à la commande [Get printed height](get-printed-height.md), cette commande est utile pour connaître le nombre de pixels disponibles pour l’impression, ou pour centrer un objet dans la page. 
 
-**Note:** For more information regarding Printing management and terminology in 4D, refer to the [GET PRINTABLE MARGIN](get-printable-margin.md) command description. 
+Pour connaître la taille totale de la page, vous pouvez :
 
-To know the total size of the page, you can:
-
-* either add the margins supplied by the [GET PRINTABLE MARGIN](get-printable-margin.md) command to the values returned by this command.
-* or use the following syntax:
+* soit ajouter aux valeurs retournées par cette commande les marges fournies par la commande [GET PRINTABLE MARGIN](get-printable-margin.md).
+* soit utiliser la syntaxe suivante :
 
 ```4d
- SET PRINTABLE MARGIN(0;0;0;0) // Set the paper margin
- GET PRINTABLE AREA(hPaper;wPaper) // Paper size
+ SET PRINTABLE MARGIN(0;0;0;0) // Fixer la marge papier
+ GET PRINTABLE AREA(hPapier;lPapier) // Taille du papier
 ```
 
-## See also 
+**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
+
+## Voir aussi 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 703 |
+| Numéro de commande | 703 |
 | Thread safe | no |
-
 
 

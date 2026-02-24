@@ -5,46 +5,46 @@ slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
+<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* ; *commentaire* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| comment | Text | &#8592; | XML comment |
+| document | Time | &#8594;  | Référence du document ouvert |
+| commentaire | Text | &#8592; | Commentaire XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML COMMENT.Summary-->The **SAX GET XML COMMENT** command returns a *comment* if an XML Comment SAX event is generated in the XML document referenced in the *document* parameter.<!-- END REF--> For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML COMMENT.Summary-->La commande **SAX GET XML COMMENT** retourne un *commentaire* si un événement SAX de type XML comment est généré dans le document XML référencé par *document*.<!-- END REF--> Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 [SAX Get XML node](sax-get-xml-node.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 874 |
+| Numéro de commande | 874 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

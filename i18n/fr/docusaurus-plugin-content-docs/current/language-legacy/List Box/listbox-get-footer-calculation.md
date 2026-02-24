@@ -5,50 +5,50 @@ slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *object* : Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Integer | &#8592; | Type of calculation |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Type de calcul |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get footer calculation.Summary-->The **LISTBOX Get footer calculation** command returns the type of calculation associated with the footer area of the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Summary-->La commande **LISTBOX Get footer calculation** retourne le type de calcul associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-The *object* parameter can designate:
+Le paramètre *objet* peut désigner :
 
-* the variable or name of a footer area. In this case, the command returns the calculation associated with this area.
-* the variable or name of a list box column. In this case, the command returns the calculation associated with footer area of this column.
+* la variable ou le nom d’une zone de pied. Dans ce cas, la commande retourne le calcul associé à cette zone.
+* la variable ou le nom d’une colonne de list box. Dans ce cas, la commande retourne le calcul associé à la zone de pied de cette colonne.
 
-You can compare the value returned with the constants of the *Listbox Footer Calculation* theme (see the [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md) command). 
+Vous pouvez comparer la valeur retournée aux constantes du thème *List box pied calcul* (cf. commande [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)). 
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1150 |
+| Numéro de commande | 1150 |
 | Thread safe | no |
 
 

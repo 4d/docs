@@ -5,102 +5,96 @@ displayed_sidebar: docs
 ---
 
 <!-- REF #_command_.Session.Syntax -->**Session** : 4D.Session<!-- END REF -->
-<!--REF #_command_.Session.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| Function result | 4D.Session | &#8592; | Session object |
-</div>
+<!--REF #_command_.Session.Params-->
+
+| Paramètres | Type                       |                             | Description   |
+| ---------- | -------------------------- | --------------------------- | ------------- |
+| Résultat   | 4D.Session | &#8592; | Objet session |
+
 <!-- END REF-->
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|20 R8|Support of standalone sessions|
-|20 R5|Support of remote client and stored procedure sessions|
-|18 R6|Added|
+| Release | Modifications                                                             |
+| ------- | ------------------------------------------------------------------------- |
+| 20 R8   | Prise en charge des sessions autonomes                                    |
+| 20 R5   | Prise en charge des sessions utilisateurs distants et procédures stockées |
+| 18 R6   | Ajout                                                                     |
 
 </details>
 
 ## Description
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current session<!-- END REF -->.
+La commande `Session` <!-- REF #_command_.Session.Summary -->retourne l'objet `Session` correspondant à la session courante<!-- END REF -->.
 
-Depending on the process from which the command is called, the current session can be:
+Selon le process à partir duquel la commande est appelée, la session courante peut être :
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
-- a remote user session (on the server),
-- a stored procedures session,
-- a standalone session.
+- une session web (lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-web-sessions)),
+- une session utilisateur distant (sur le serveur),
+- une session de procédures stockées,
+- une session autonome.
 
-For more information, see the [Session types](../API/SessionClass.md#session-types) paragraph.
+Pour plus d'informations, voir le paragraphe [Types de session](../API/SessionClass.md#session-types).
 
-The command returns *Null* if:
+La commande retourne *Null* si :
 
-- it is called in a web process and scalable sessions are disabled on the web server,
-- it is called on a remote 4D client.
+- elle est appelée dans un process web et les sessions évolutives sont désactivées sur le serveur web,
+- elle est appelée sur un client 4D distant.
 
+### Sessions Web
 
-### Web sessions
+L'objet `Session` des sessions web est disponible depuis n'importe quel process web :
 
-The `Session` object of web sessions is available from any web process:
+- Méthodes base `On Web Authentication`, `On Web Connection`, et `On REST Authentication`,
+- code traité par les balises 4D dans les pages semi-dynamiques (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
+- méthodes projet avec l'attribut "Disponible via balises HTML et URLs 4D (4DACTION...)" et appelées via les urls 4DACTION/
+- méthodes base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) pour les requêtes mobiles,
+- Fonctions ORDA [appelées via des requêtes REST](../REST/ClassFunctions.md).
 
-- `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
-- code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls,
-- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
-- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
+Pour plus d'informations sur les sessions utilisateur web, veuillez consulter la section [Sessions web](../WebServer/sessions.md).
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
+### Sessions utilisateur distant
 
-### Remote user sessions
+L'objet `Session` des sessions utilisateur distantes est disponible depuis :
 
-The `Session` object of remote user sessions is available from:
+- Les méthodes projet qui ont l'attribut [Exécuter sur serveur](../Project/project-method-properties.md#execute-on-server) (elles sont exécutées dans le process jumeau du process client),
+- Les Triggers,
+- Les [fonctions du modèle de données](../ORDA/ordaClasses.md) ORDA (sauf celles déclarées avec le mot-clé [`local`](../ORDA/ordaClasses.md#local-functions),
+- Les méthodes base `On Server Open Connection` et `On Server Shutdown Connection`.
 
-- Project methods that have the [Execute on Server](../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- Triggers,
-- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword, 
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+Pour plus d'informations sur les sessions utilisateur distant, veuillez consulter le paragraphe [**Sessions utilisateur distant**](../Desktop/sessions.md#remote-user-sessions).
 
-For more information on remote user sessions, please refer to the [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions) paragraph.
+### Session des procédures stockées
 
-### Stored procedures session
+Tous les process des procédures stockées partagent la même session d'utilisateur virtuel. L'objet `Session` des procédures stockées est disponible depuis :
 
-All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
+- les méthodes appelées avec la commande [`Execute on server`](../commands-legacy/execute-on-server.md),
+- Les méthodes base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, et `On System event`.
 
-- methods called with the [`Execute on server`](./commands/execute-on-server) command,
-- `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
+Pour plus d'informations sur la session utilisateur virtuel des procédures stockées, veuillez vous reporter au paragraphe [**Sessions de procédures stockées**](../Desktop/sessions.md#stored-procedure-sessions).
 
-For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
+### Session autonome
 
+L'objet `Session` est disponible à partir de n'importe quel process dans les applications autonomes (mono-utilisateur) afin que vous puissiez écrire et tester votre code client/serveur en utilisant l'objet `Session` dans votre environnement de développement 4D.
 
+Pour plus d'informations sur les sessions autonomes, veuillez consulter le paragraphe [**Sessions autonomes**](../Desktop/sessions.md#standalone-sessions).
 
+### `Session` et composants
 
-### Standalone session
+Lorsque `Session` est appelée à partir du code de différents [composants chargés dans le projet](../Concepts/components.md), la commande renvoie un objet qui dépend de la requête d'appel et du contexte :
 
-The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
-
-For more information on standalone sessions, please refer to the [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions) paragraph.
-
-
-
-### `Session` and components 
-
-When `Session` is called from the code of different [components loaded in the project](../Concepts/components.md), the command returns an object depending on the calling request and the context:
-
-- in case of a web request, `Session` always returns the session attached to the target web server of the request (and not a session of the component's web server),
-- in case of a remote request executed on the server, `Session` always returns the session attached to the remote user, 
-- in case of a stored procedure session or a standalone session, `Session` always returns the single current session (the same object is used during all the work session).
+- dans le cas d'une requête web, `Session` renvoie toujours la session attachée au serveur web cible de la requête (et non une session du serveur web du composant),
+- dans le cas d'une requête distante exécutée sur le serveur, `Session` renvoie toujours la session attachée à l'utilisateur distant,
+- dans le cas d'une session de procédure stockée ou d'une session autonome, `Session` renvoie toujours l'unique session courante (le même objet est utilisé pendant toute la session de travail).
 
 ```mermaid
 flowchart TD
-    A[Need a session] --> B{Is it a web request?}
-    B -->|Yes| C[Use the session attached to the web server of the web request]
-    B -->|No| D{Is it a remote request?}
-    D -->|Yes| E[Use the object of the remote user session]
-    D -->|No| F[Use the unique object of the stored procedure/standalone session]
+    A[Session requise] --> B{Est-ce une requête web?}
+    B -->|Yes| C[Utiliser la session associée au serveur web de la requête web]
+    B -->|No| D{Est-ce une requête distante?}
+    D -->|Yes| E[Utiliser l'objet de la session utilisateur distant]
+    D -->|No| F[Utiliser l'objet unique de la session procédure stockée/autonome]
 
     classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
     classDef process fill:#bbf,stroke:#333,stroke-width:2px;
@@ -111,10 +105,9 @@ flowchart TD
     class C,E,F process
 ```
 
+## Exemple
 
-## Example
-
-You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". You call the method by entering the following URL in your browser:
+Vous avez défini la méthode `action_Session` ayant l'attribut "Disponible via Balises HTML et URLs 4D". Vous appelez la méthode en saisissant l'URL suivant dans votre navigateur :
 
 ```
 IP:port/4DACTION/action_Session
@@ -124,7 +117,7 @@ IP:port/4DACTION/action_Session
   //action_Session method
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("CreateInvoices")) //calling the hasPrivilege function
+       If(Session.hasPrivilege("CreateInvoices")) //appel de la fonction hasPrivilege
           WEB SEND TEXT("4DACTION --> Session is CreateInvoices")
        Else
           WEB SEND TEXT("4DACTION --> Session is not CreateInvoices")
@@ -134,22 +127,19 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
-## See also
+## Voir également
 
 [Session storage](session-storage.md)  
-[Session API](../API/SessionClass.md) 
-[Desktop sessions](../Desktop/sessions.md) 
+[Session API](../API/SessionClass.md)
+[Desktop sessions](../Desktop/sessions.md)
 [Web server user sessions](../WebServer/sessions.md)  
-[*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+[*Sessions évolutives pour les applications web avancées* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1714 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1714 |
+| Thread safe        | oui  |
 
 

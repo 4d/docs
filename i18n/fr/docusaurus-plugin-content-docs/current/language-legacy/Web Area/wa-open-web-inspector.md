@@ -5,41 +5,41 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( {* ;} *objet* )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| * | Opérateur | &#8594;  | Si ce paramètre est spécifié, objet est un nom d'objet (chaîne). S'il est omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié), ou Variable (si * est omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->The **WA OPEN WEB INSPECTOR** command opens a web inspector for the web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Summary-->La commande **WA OPEN WEB INSPECTOR** ouvre un inspecteur web pour la zone web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-## See also 
+## Voir aussi 
 
-*[Web Area overview](../FormObjects/webArea_overview.md)*  
+*Gestion programmée des zones Web*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1736 |
+| Numéro de commande | 1736 |
 | Thread safe | no |
 
 

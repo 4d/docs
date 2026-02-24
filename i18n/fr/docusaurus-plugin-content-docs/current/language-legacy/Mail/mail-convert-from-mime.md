@@ -4,42 +4,40 @@ title: MAIL Convert from MIME
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|18|Added|
+| Release | Modifications |
+| ------- | ------------- |
+| 18      | Ajout         |
 
 </details>
 
 <!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
-
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|mime|Blob, Text|&#8594; |Email in MIME|
-|Result|Object|&#8592;|Email object|
-</div>
+| Paramètres | Type       |                             | Description   |
+| ---------- | ---------- | :-------------------------: | ------------- |
+| mime       | Blob, Text | &#8594; | Email en MIME |
+| Résultat   | Object     | &#8592; | Objet email   |
+
 <!-- END REF -->
 
 ## Description
 
-The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
+La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convertit un document MIME en un objet email valide<!-- END REF -->.
 
->4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
+> Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
-Pass in *mime* a valid MIME document to convert. It can be provided by any mail server or application. You can pass a BLOB or a text *mime* parameter. If the MIME comes from a file, it is recommended to use a BLOB parameter to avoid issues related to charset and line break conversions.
+Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Il peut être fourni par tout type de serveur ou d'application de messagerie. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
 
-## Returned object
+## Objet retourné
 
-Email object.
+Objet email.
 
-## Example 1
+## Exemple 1
 
-You want to load a mail template saved as MIME in a text document and send an email:
+Vous souhaitez charger un template mail enregistré au format MIME dans un document texte et l'envoyer par email :
 
 ```4d
 var $mime: Blob
@@ -61,21 +59,21 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-## Example 2
+## Exemple 2
 
-In this example, you send directly a 4D Write Pro document containing pictures:
+Dans cet exemple, vous envoyez directement un document 4D Write Pro contenant des images :
 
 ```4d
 var $mime: Blob
 var $email;$server;$transporter;$status: Object
 
-// Mime export of the 4D Write Pro document
+// Export Mime du document 4D Write Pro
 WP EXPORT VARIABLE(WParea;$mime;wk mime html)
 
-// convert 4D Write Pro Mime variable in mail object
+// convertir la variable Mime de 4D Write Pro en objet email
 $email:=MAIL Convert from MIME($mime)
 
-// Fill your mail object headers
+// Remplir les en-têtes de l'objet email
 $email.subject:="4D Write Pro HTML body"
 $email.from:="YourEmail@gmail.com"
 $email.to:="RecipientEmail@mail.com"
@@ -90,12 +88,11 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1681 |
-| Thread safe | yes |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1681 |
+| Thread safe        | oui  |
 
 

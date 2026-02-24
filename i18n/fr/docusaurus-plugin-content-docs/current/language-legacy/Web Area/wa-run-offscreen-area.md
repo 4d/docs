@@ -5,61 +5,60 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* : Object ) : any<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *paramètres* ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| parameters | Object | &#8594;  | Object containing the web area's attributes |
-| Function result | any | &#8592; | .result property of the onEvent object, or Null if does not return a value |
+| paramètres | Object | &#8594;  | Objet contenant les attributs de la zone web |
+| Résultat | any | &#8592; | Valeur retournée par la méthode callback (ou méthode de rétro-appel) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R6|Modified|
-|18 R3|Created|
+|18 R6|Modifié|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Run offscreen area.Summary-->The **WA Run offscreen area** command creates a web area in memory which can be used to automatically load and parse web pages.<!-- END REF--> 
+<!--REF #_command_.WA Run offscreen area.Summary-->La commande **WA Run offscreen area** crée une zone web dans la mémoire qui peut être utilisée pour charger et parser automatiquement des pages web.<!-- END REF-->
 
-**Note:** This command uses the embedded web rendering engine. 
+**Note** : Cette commande utilise le moteur de rendu web intégré.
 
-In *parameters* object, pass any of the following optional properties. These properties will be available through the [This](./commands/this) command within the *onEvent* method and reference the instance: 
+Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes pour la zone web. Ces propriétés seront disponibles via la commande [This](../commands/this.md) dans la méthode onEvent et référencent cette instance :
 
-| **Property**     | **Type**            | **Description**                                                                                                                                                                                                                                                                                                                           |
-| ---------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| url              | text \| file object | The URL or file to be loaded in the web area. If omitted or null, a blank page is loaded.                                                                                                                                                                                                                                                 |
-| area             | text                | The name of the web area. If omitted or null, a generic name is assigned (*e.g*., OffscreenArea1).                                                                                                                                                                                                                                        |
-| onEvent          | object (formula)    | A callback method that will be launched when the web area is ready. It can be either:<br/> an *onEvent* function of a class, or a [Formula](./commands/formula) object  By default, the callback method is called on the On Load, On Unload, On End URL Loading, On URL Loading Error, or On Timer events.                                |
-| autoQuit         | boolean             | True (default value) if the command must stop the formula execution when the On End URL Loading or On URL Loading Error events occur.<br/><br/>If false, you must use the [CANCEL](cancel.md) or [ACCEPT](accept.md) commands in the callback method or project methods called with the $4d object to close the web area. |
-| timeout          | real                | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                               |
-| result           | mixed               | Result of the processing to be returned (if any)                                                                                                                                                                                                                                                                                          |
-| <customProperty> | mixed               | Any custom attribute to be available in the callback or $4d method.                                                                                                                                                                                                                                                                       |
+| **Propriété**    | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| url              | objet texte \| fichier | L'URL ou le fichier à charger dans la zone web. S'il est omis, une page blanche est chargée.                                                                                                                                                                                                                                                                                                  |
+| area             | texte                  | Le nom de la zone web. S'il est omis ou null, un nom générique est attribué (ex : OffscreenArea1).                                                                                                                                                                                                                                                                                            |
+| onEvent          | objet (formule)        | Une méthode callback qui est lancée lorsque la zone web est prête. Elle peut être soit :<br/> une fonction *onEvent* d'une classe, ou un objet [Formula](../commands/formula.md)  <br/>Par défaut, la méthode callback est appelée sur les événements On Load, On Unload, On End URL Loading, On URL Loading Error, ou On Timer.                                                          |
+| autoQuit         | booléen                | Vrai (valeur par défaut) si la commande doit stopper l'exécution de la formule lorsque les événement On End URL Loading ou On URL Loading Error se produisent.<br/><br/><br/>Si faux, vous devez utiliser les commandes [CANCEL](cancel.md) ou [ACCEPT](accept.md) dans la méthode callback ou les méthodes projet appelées avec l'objet $4d pour fermer la zone web. |
+| timeout          | réel                   | Durée maximale (en secondes) avant la fermeture automatique de la zone, si aucun événément n'est généré. Si elle est définie sur 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                 |
+| result           | mixte                  | Résultat du traitement à retourner (le cas échéant)                                                                                                                                                                                                                                                                                                                                           |
+| <customProperty> | mixte                  | Un attribut personnalisé disponible dans la méthode callback ou $4d.                                                                                                                                                                                                                                                                                                                          |
 
-The following property is automatically added by the command if necessary:
+La propriété suivante est automaiquement ajoutée par la commande, si nécessaire : 
 
-| **Property**   | **Type** | **Description**                                        |
-| -------------- | -------- | ------------------------------------------------------ |
-| timeoutReached | boolean  | Added with **true** value if timeout has been exceeded |
+| **Propriété**  | **Type** | **Description**                                            |
+| -------------- | -------- | ---------------------------------------------------------- |
+| timeoutReached | booléen  | Ajoutée avec la valeur **true** si le timeout s'est écoulé |
 
-  
-If a null value is passed in *parameters*, a blank web area will be created and then automatically closed.
+Si une valeur null est passée dans *paramètres*, une zone web vide sera créée puis automatiquement fermée. 
 
-**Notes**: 
+**Notes** : 
 
-* The offscreen web area is only available during the execution of the **WA Run offscreen area** command. It will automatically be destroyed once execution has ended.
-* 4D methods can be called from the JavaScript code executed in a web area. See *Accessing 4D methods*.
+* La zone web hors écran est disponible uniquement durant l'exécution de la commande **WA Run offscreen area.** Elle sera automatiquement détruite une fois que l'exécution est terminée.
+* Les méthodes 4D peuvent être appelées avec le code JavaScript qui est exécuté dans une zone web. Voir *Accéder aux méthodes 4D*.
 
-The following commands can be used in the callback method:
+Les commandes suivantes peuvent être utilisées dans la méthode callback :
 
 * [ACCEPT](accept.md)
 * [CANCEL](cancel.md)
@@ -74,19 +73,19 @@ The following commands can be used in the callback method:
 * [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
 * [WA STOP LOADING URL](wa-stop-loading-url.md)
 
-## Example 
+## Exemple 
 
-You want to create and handle an offscreen web area using a function of your OffscreenArea class:
+Vous souhaitez créer et gérer une zone web hors écran à l'aide d'une fonction de votre classe OffscreenArea :
 
 ```4d
  $config:=cs.OffscreenArea.new()
  $result:=WA Run offscreen area($config)
- If($config.timeoutReached) //automatically returned in case of timeout
-    ALERT("Timeout reached")
+ If($config.timeoutReached) //retourné automatiquement en cas de timeout
+    ALERT("Timeout écoulé")
  End if
 ```
 
-In the **OffscreenArea class**:
+dans la **classe OffscreenArea** :
 
 ```4d
  Class constructor
@@ -100,23 +99,22 @@ In the **OffscreenArea class**:
  End case
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK system variable is set to 0 if the timeout has been reached or the [CANCEL](cancel.md) was called in *onEvent*, otherwise it is set to 1.
+La variable système OK est définie sur 0 si le timeout a été atteint ou si la commande [CANCEL](cancel.md) a été appelée dans onEvent, sinon elle est définie sur 1.
 
-## See also 
+## Voir aussi 
 
-[FORM Event](./commands/form-event)  
-*[Web Area overview](../FormObjects/webArea_overview.md)*  
+[FORM Event](../commands/form-event.md)  
+*Gestion programmée des zones Web*  
 [WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1727 |
+| Numéro de commande | 1727 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

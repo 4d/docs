@@ -4,85 +4,79 @@ title: Open datastore
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|21|Qodly cloud discontinued|
-|20 R6|Support access to Qodly cloud instances|
-|20 R4|New *passwordAlgorithm* property|
-|18|Added|
+| Release | Modifications                                          |
+| ------- | ------------------------------------------------------ |
+| 21      | Cloud Qodly interrompu                                 |
+| 20 R6   | Prise en charge des accès aux instances du cloud Qodly |
+| 20 R4   | Nouvelle propriété *passwordAlgorithm*                 |
+| 18      | Ajout                                                  |
 
 </details>
-
 
 <!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
 
 <!--REF #_command_.Open datastore.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| connectionInfo | Object | &#8594;  | Connection properties used to reach the remote datastore |
-| localID | Text | &#8594;  | Id to assign to the opened datastore on the local application (mandatory) |
-| Function result | 4D.DataStoreImplementation | &#8592; | Datastore object |
-</div>
+| Paramètres     | Type                                       |                             | Description                                                                                          |
+| -------------- | ------------------------------------------ | --------------------------- | ---------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propriétés de connexion utilisées pour joindre le datastore distant                                  |
+| localID        | Text                                       | &#8594; | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| Résultat       | 4D.DataStoreImplementation | &#8592; | Objet datastore                                                                                      |
+
 <!-- END REF-->
 
 ## Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
+La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `4D.DataStoreImplementation` correspondant associé à l'alias local *localID*.
 
-Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
+Les échanges avec le datastore distant sont automatiquement gérés via des requêtes REST. Le datastore 4D *connectionInfo* doit être disponible en tant que datastore distant, c'est-à-dire :
 
-- its Web Server must be launched with http and/or https enabled,
-- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
-- a client license must be available if required (see note).
+- son serveur Web doit être lancé avec http et/ou https activés,
+- son datasore doit être exposé en REST (option [**Activer le service REST**](REST/configuration.md#starting-the-rest-server) cochée),
+- une licence cliente doit être disponible si nécessaire (voir note).
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Refer to the [user login mode section](../REST/authUsers.md#force-login-mode) to know how to configure the authentication depending on the selected current user login mode.
+Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../REST/authUsers.md#force-login-mode) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
 
 :::
 
+Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
 
-Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
+| Propriété   | Type    | Application 4D distante                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                        |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                                                                                                                                    | API Endpoint de l'instance Qodly cloud |
+| user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                        |
+| password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                        |
+| idleTimeout | Integer | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |                                        |
+| tls         | Boolean | Vrai pour utiliser une connexion sécurisée(1). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                                                                                            |                                        |
+| type        | Text    | doit être "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                        |
 
-|Property| Type|Remote 4D application |
-|---|---|---|
-|hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|API Endpoint of the Qodly cloud instance|
-|user|Text|User name|
-|password|Text|User password|
-|idleTimeout|Integer|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|
-|tls|Boolean|True to use secured connection(1). If omitted, false by default. Using a secured connection is recommended whenever possible.|
-|type |Text |must be "4D Server"|
+(1) Si `tls` est vrai, le protocole HTTPS est utilisé si :
 
-(1) If `tls` is true, the HTTPS protocol is used if:
+- HTTPS est activé sur le datastore distant
+- Le port donné correspond au port HTTPS configuré dans les propriétés
+- un certificat valide et une clé de chiffrement privée sont installés dans l'application 4D. Sinon, l'erreur "1610 - Une requête vers l’hôte: "{xxx}" a échoué" est générée
 
-* HTTPS is enabled on the remote datastore
-* the given port is the right HTTPS port configured in the database settings
-* a valid certificate and private encryption key are installed in the 4D application. Otherwise, error "1610 - A remote request to host xxx has failed" is raised
+*localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
 
-
-*localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
-
-Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
+Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :
 
 ```4d
  $myds:=Open datastore(connectionInfo;"myLocalId")
  $myds2:=ds("myLocalId")
-  //$myds and $myds2 are equivalent
+  //$myds et $myds2 sont équivalents
 ```
 
-Objects available in the `4D.DataStoreImplementation` are mapped with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Les objets disponibles dans `4D.DataStoreImplementation` sont mappés conformément aux [règles générales ORDA](ORDA/dsMapping.md#general-rules).
 
+Si aucun datastore correspondant n'est trouvé, `Open datastore` retourne **Null**.
 
-If no matching datastore is found, `Open datastore` returns **Null**.
+## Exemple 1
 
-
-## Example 1  
-
-Connection to a remote datastore without user / password:
+Connexion à un datastore distant sans utilisateur/mot de passe :
 
 ```4d
  var $connectTo : Object
@@ -92,9 +86,9 @@ Connection to a remote datastore without user / password:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-## Example 2
+## Exemple 2
 
-Connection to a remote datastore with user / password / timeout / tls:
+Connexion à un datastore distant avec utilisateur/mot de passe/timeout/tls :
 
 ```4d
  var $connectTo : Object
@@ -105,9 +99,9 @@ Connection to a remote datastore with user / password / timeout / tls:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-## Example 3  
+## Exemple 3
 
-Working with several remote datastores:
+Travailler avec plusieurs datastores distants :
 
 ```4d
  var $connectTo : Object
@@ -120,23 +114,20 @@ Working with several remote datastores:
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
 ```
 
+## Gestion des erreurs
 
+En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut pas être joint (adresse incorrecte, web serveur non lancé, http et https non activés, etc.), l'erreur 1610 "Une requête vers l’hôte: {xxx} a échoué" est générée. Vous pouvez intercepter cette erreur avec une méthode installée par `ON ERR CALL`.
 
-## Error management  
+## Voir également
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
+[ds](ds.md)
 
+## Propriétés
 
-## See also 
-
-[ds](ds.md)  
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1452 |
-| Thread safe | yes |
-| Modifies variables | error |
+|                       |       |
+| --------------------- | ----- |
+| Numéro de commande    | 1452  |
+| Thread safe           | oui   |
+| Modifie les variables | error |
 
 

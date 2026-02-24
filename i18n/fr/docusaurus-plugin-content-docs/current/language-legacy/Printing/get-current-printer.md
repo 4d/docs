@@ -9,47 +9,47 @@ displayed_sidebar: docs
 <!--REF #_command_.Get current printer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Name of the current printer |
+| Résultat | Text | &#8592; | Nom de l’imprimante courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|2003|Created|
+|15 R5|Modifié|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get current printer.Summary-->The **Get current printer** command returns the name of the current printer defined in the 4D application.<!-- END REF--> By default, on start-up of 4D, the current printer is the printer defined in the system.
+<!--REF #_command_.Get current printer.Summary-->La commande **Get current printer** retourne le nom de l’imprimante courante définie dans l’application 4D.<!-- END REF--> Par défaut au lancement de 4D, l’imprimante courante est l’imprimante définie dans le système.
 
-If the current printer is managed using a print server (spooler), the complete access path (under Windows) or the name of the spooler (under macOS) is returned.
+Si l’imprimante courante est gérée via un serveur d’impression (“spouleur”), le chemin d’accès complet (sous Windows) ou le nom du spouleur (sous macOS) est retourné.
 
-To obtain the list of available printers as well as additional information, use the [PRINTERS LIST](printers-list.md) command. To modify the current printer, use the [SET CURRENT PRINTER](set-current-printer.md) command.
+Pour obtenir la liste des imprimantes disponibles ainsi que des informations complémentaires, utilisez la commande [PRINTERS LIST](printers-list.md). Pour modifier l’imprimante courante, utilisez la commande [SET CURRENT PRINTER](set-current-printer.md).
 
-**Note:** When the Generic PDF driver constant is used with [SET CURRENT PRINTER](set-current-printer.md), [Get current printer](get-current-printer.md) returns "\_4d\_pdf\_printer" or the actual name of the PDF driver.
+**Note :** Lorsque la constante Generic PDF driver est utilisée avec [SET CURRENT PRINTER](set-current-printer.md), [Get current printer](get-current-printer.md) retourne "\_4d\_pdf\_printer" ou le véritable nom du pilote PDF.
 
-## Error management 
+## Gestion des erreurs 
 
-If no printer is installed, an error is generated.
+Si aucune imprimante n'est installée, une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [PRINTERS LIST](printers-list.md)  
 [SET CURRENT PRINTER](set-current-printer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 788 |
+| Numéro de commande | 788 |
 | Thread safe | no |
 
 

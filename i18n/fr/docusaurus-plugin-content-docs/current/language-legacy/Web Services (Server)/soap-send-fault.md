@@ -5,63 +5,63 @@ slug: /commands/soap-send-fault
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP SEND FAULT.Syntax-->**SOAP SEND FAULT** ( *faultType* : Integer ; *description* : Text )<!-- END REF-->
+<!--REF #_command_.SOAP SEND FAULT.Syntax-->**SOAP SEND FAULT** ( *typeErreur* ; *description* )<!-- END REF-->
 <!--REF #_command_.SOAP SEND FAULT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| faultType | Integer | &#8594;  | 1 = Client fault, 2 = Server fault |
-| description | Text | &#8594;  | Description of error to be sent to SOAP client |
+| typeErreur | Integer | &#8594;  | 1 = Erreur Client, 2 = Erreur Serveur |
+| description | Text | &#8594;  | Description de l’erreur à envoyer au client SOAP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2003|Created|
+|13|Renommé|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SOAP SEND FAULT.Summary-->The **SOAP SEND FAULT** command returns an error to a SOAP client indicating the origin of the fault: client or server.<!-- END REF--> Using this command lets you indicate an error to a client without having to return a result. 
+<!--REF #_command_.SOAP SEND FAULT.Summary-->La commande **SOAP SEND FAULT** permet de retourner une erreur à un client SOAP en indiquant l’origine de l’erreur : client ou serveur.<!-- END REF--> Utiliser cette commande vous permet de signaler une erreur à un client sans devoir retourner de résultat. 
 
-For instance, a fault on the client side may be detected when you publish a “Square\_root” Web Service and a client sends a request with a negative number; you can use this command to indicate to the client that a positive value is required. 
+Par exemple, une erreur côté client peut être détectée lorsque vous publiez un Web Service “Racine\_carree” et qu’un client envoie une requête avec un nombre négatif ; vous pouvez utiliser cette commande afin d’indiquer au client qu’une valeur positive est requise. 
 
-A possible fault on the server side may be, for instance, a lack of memory occurring during method execution. 
+Une erreur possible côté serveur peut être par exemple un manque de mémoire survenu lors de l’exécution de la méthode. 
 
-Pass the origin of the error in *faultType*. You can use the following predefined constants, located in the *Web Services (Server)* theme:
+Passez dans *typeErreur* l’origine de l’erreur. Vous pouvez utiliser les constantes prédéfinies suivantes, placées dans le thème *Web Services (Serveur)* :
 
-| Constant          | Type    | Value |
-| ----------------- | ------- | ----- |
-| SOAP client fault | Integer | 1     |
-| SOAP server fault | Integer | 2     |
+| Constante         | Type        | Valeur |
+| ----------------- | ----------- | ------ |
+| SOAP client fault | Entier long | 1      |
+| SOAP server fault | Entier long | 2      |
 
-Pass a description of the error in *description*. If the client implementation is in conformity, the error can be processed. 
+Passez dans *description* un descriptif de l’erreur. Si l’implémentation du client est conforme, l’erreur pourra être traitée. 
 
-## Example 
+## Exemple 
 
-To go back to the example of the “Square\_root” Web Service provided in the command description, the following command can be used to process requests with negative numbers:
+Pour reprendre l’exemple du Web Service “Racine\_carree” fourni dans la description de la commande, l’instruction suivante peut être utilisée pour traiter les requêtes sur des nombres négatifs :
 
 ```4d
- SEND SOAP FAULT(SOAP client fault;"Positive values required")
+ SOAP SEND FAULT(SOAP client fault;"Valeurs positives requises")
 ```
 
-## See also 
+## Voir aussi 
 
 [SOAP DECLARATION](soap-declaration.md)  
 [SOAP Get info](soap-get-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 781 |
+| Numéro de commande | 781 |
 | Thread safe | yes |
 
 

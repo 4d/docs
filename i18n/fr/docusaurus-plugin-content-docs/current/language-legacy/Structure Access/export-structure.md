@@ -5,50 +5,50 @@ slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *exportedStructure* : Text {; *format* : Text} )<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *structureXML* {; *format*} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| exportedStructure | Text | &#8592; | Export of the 4D database structure definition (by default in XML format) |
+| structureXML | Text | &#8592; | Export de la définition XML de la structure de la base 4D |
 | format | Text | &#8594;  | Export format: xml format (default) or html format |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20 R4|Modified|
-|14 R4|Created|
+|20 R4|Modifié|
+|14 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXPORT STRUCTURE.Summary-->The **EXPORT STRUCTURE** command exports the structure definition of the current 4D database in *exportedStructure*.<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Summary-->La commande **EXPORT STRUCTURE** exporte la définition de la structure de la base 4D courante dans exportedStructure.<!-- END REF-->
 
-In exportedStructure, you pass the text variable intended to store the structure definition. The exported definition includes tables, fields, indexes, and relations, as well as their attributes and any characteristics necessary for a complete description of the structure. Invisible elements are exported with the corresponding attribute. However, deleted elements are not exported. 
+Passez dans exportedStructure la variable texte destinée à stocker la définition de la structure. La définition exportée inclut les tables, les champs, les index et les liens, ainsi que leurs attributs et toutes les caractéristiques nécessaires à la description complète de la structure. Les éléments invisibles sont exportés avec l'attribut correspondant. Les éléments supprimés, cependant, ne sont pas exportés. 
 
-By default if you omit the *format* parameter, the command exports the structure definition in XML format. Otherwise, you can pass one of the following constants in the *format* parameter:
+Par défaut, si vous omettez le paramètre format, la commande exporte la définition de la structure au format XML. Sinon, vous pouvez passer l'une des constantes suivantes dans le paramètre format :
 
-| Constant    | Value | Comment                                   |
-| ----------- | ----- | ----------------------------------------- |
-| html format | html  | Exports structure in html format          |
-| xml format  | xml   | Exports structure in xml format (default) |
+| Constante   | Valeur |
+| ----------- | ------ |
+| html format | html   |
+| xml format  | xml    |
 
-The command generates the same XML or HTML code as the **Export >** **Structure definition to XML file... or** **Export >** **Structure definition to HTML file...**menu item (see *Exporting and importing structure definitions*).
+La commande génère le même code XML ou HTML que la commande de menu **Exporter > Définition de structure vers le fichier XML... ou Exporter > Définition de structure vers le fichier HTML**... (voir *Exporter et importer des définitions de structure*).
 
-* **xml format**: the internal "grammar" of 4D structure definitions is documented by means of DTD files — also used for the validation of XML files. The DTD files used by 4D are grouped together in the **DTD** folder, found next to the 4D application. The **base\_core.dtd** and **common.dtd** files are used for structure definitions. For more information, you can consult these files along with the comments they contain.  
-A structure definition exported in XML format can be imported in another database (see [IMPORT STRUCTURE](import-structure.md)).
-* **html format**: the command generates raw HTML code which includes references to a folder containing external resources such as pictures or css, required for HTML representation. If you want to save this code in an HTML page to be displayed in a browser, you can reuse the folder created by the **Export >** **Structure definition to HTML file...** menu item, or create your own resources folder.
+* **format** **xml** : la "grammaire" interne des définitions de structures 4D est documentée via des fichiers DTD - également utilisés pour la validation des fichiers XML. Les fichiers DTD utilisés par 4D sont regroupés dans le dossier **DTD**, situé à côté de l'application 4D. Les fichiers **base\_core.dtd** et **common.dtd** sont utilisés pour les définitions de structure. Pour plus d'informations, vous pouvez consulter ces fichiers ainsi que les commentaires qu'ils contiennent.  
+Une définition de structure exportée au format XML peut être importée dans une autre base de données (voir [IMPORT STRUCTURE](import-structure.md)).
+* **format html** : la commande génère un code HTML brut qui inclut des références à un dossier contenant des ressources externes telles que des images ou du css, nécessaires à la représentation HTML. Si vous souhaitez enregistrer ce code dans une page HTML à afficher dans un navigateur, vous pouvez réutiliser le dossier créé par l'option de menu **Exporter > Définition de structure vers le fichier HTML**..., ou créer votre propre dossier de ressources.
 
-## Example 1 
+## Exemple 1 
 
-You want to export the current database structure in a text file:
+Vous voulez exporter la structure de la base courante dans un fichier texte :
 
 ```4d
  var $vTStruc : Text
@@ -56,9 +56,9 @@ You want to export the current database structure in a text file:
  TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to export the current database structure in html format:
+Vous voulez exporter la structure de la base courante au format html :
 
 ```4d
  var $vHtml : Text
@@ -66,15 +66,15 @@ You want to export the current database structure in html format:
  File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
-## See also 
+## Voir aussi 
 
 [IMPORT STRUCTURE](import-structure.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1311 |
+| Numéro de commande | 1311 |
 | Thread safe | yes |
 
 

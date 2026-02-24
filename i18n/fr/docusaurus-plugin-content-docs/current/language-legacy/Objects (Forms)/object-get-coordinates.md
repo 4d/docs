@@ -5,106 +5,106 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**OBJECT GET COORDINATES** ( *object* : Variable, Field ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *objet* ; *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified = object is the name of the object (string) If omitted = object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| left | Integer | &#8592; | Left coordinate of the object |
-| top | Integer | &#8592; | Top coordinate of the object |
-| right | Integer | &#8592; | Right coordinate of the object |
-| bottom | Integer | &#8592; | Bottom coordinate of the object |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| gauche | Integer | &#8592; | Coordonnée gauche de l’objet |
+| haut | Integer | &#8592; | Coordonnée supérieure de l’objet |
+| droite | Integer | &#8592; | Coordonnée droite de l’objet |
+| bas | Integer | &#8592; | Coordonnée inférieure de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R5|Modified|
-|12|Renamed|
-|6.7|Modified|
-|<6|Created|
+|14 R5|Modifié|
+|12|Renommé|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET COORDINATES.Summary-->The OBJECT GET COORDINATES command returns the coordinates *left*, *top*, *right* and *bottom* (in points) in variables or fields of the object(s) of the current form defined by the parameters *\** and *object*.<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Summary-->La commande **OBJECT GET COORDINATES** retourne dans les variables ou champs *gauche*, *haut*, *droite* et *bas* les coordonnées (en points) du ou des objet(s) du formulaire courant défini(s) par les paramètres *\** et *objet*.<!-- END REF-->
 
-If you pass the optional parameter *\**, it indicates that the object parameter is an object name (a string). If you don’t pass the optional parameter *\**, it indicates that object is a field or a variable. In this case, you don’t pass a string but a field or variable reference (only a field or variable of type object).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne de caractères). Si vous ne passez pas le paramètre *\**, vous indiquez que *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable de type objet uniquement).
 
-If you pass an object name to *object* and use the wildcard character (“@”) to select more than one object, the coordinates returned will be those of the rectangle formed by all the objects concerned. 
+Si vous passez un nom d’objet dans le paramètre *objet* et utilisez le caractère joker @ afin de sélectionner plusieurs objets, les coordonnées retournées seront celles du rectangle formé par l’ensemble des objets concernés.
 
-**Note:** Since 4D version 6.5, it is possible to set the interpretation mode of the wildcard character (“@”), when it is included in a string of characters. This option has an impact on the “Object Properties” commands. Please refer to the 4D Design Reference manual.
+**Note :** Il est possible de paramétrer le mode d’interprétation du caractère @, lorsque celui-ci est inclus dans une chaîne de caractères. Cette option influe sur le fonctionnement des commandes du thème “Propriétés des objets”. Pour plus d'informations, reportez-vous au manuel Mode Développement.
 
-If the object doesn’t exist or if the command is not called in a form, the coordinates (0;0;0;0) are returned.
+Si l’objet n’existe pas ou si la commande est appelée ailleurs que dans le contexte d’un formulaire, les coordonnées retournées sont (0;0;0;0).
 
-In the context of list boxes, the **OBJECT GET COORDINATES** command can return the coordinates of specific list box parts, i.e. columns, headers, or footers, and not just those of the list box parent object. In 4D versions prior to v14 R5, this command always returned the parent list box coordinates, regardless of the area passed as parameter. From now on, when the referenced *object* is a list box header, column, or footer sub-object, the coordinates returned are those of the designated list box sub-object. You can use this new feature, for example, to display a small icon in the list box header cell when it is hovered over, which a user can then click to display a context menu.  
-For consistency, the reference frame used is the same when the object is a list box sub-object or a list box object: the origin is the upper-left corner of the form which contains the object. For list box sub-objects, the coordinates returned are theoretical; they take into account the scrolling state of the list box before any clipping occurs (i.e., the cutting carried out according to the coordinates of the parent list box). As a result, the sub-object may not be visible (or only partially so) at its coordinates, and these coordinates may be outside the form limits (or even negative). To find out whether the sub-object is visible (and which part of it is visible) you need to compare the coordinates returned with the list box coordinates, while considering the following rules: 
+Dans le contexte des list box, la commande **OBJECT GET COORDINATES** peut retourner les coordonnées de parties spécifiques des list box, c.-à-d. des colonnes, en-têtes ou pieds, ou celles de l'objet list box parent. Dans les versions de 4D antérieures à la v14 R5, cette commande retournait toujours les coordonnées de la list box parente, quelle que soit la zone passée en paramètre. Désormais, lorsque le paramètre *objet* référence un en-tête, une colonne ou un pied de list box, ce sont les coordonnées de ce sous-objet qui sont retournées. Vous pouvez utiliser ce fonctionnement, par exemple, pour afficher une petite icône dans la cellule d'en-tête d'une list box lorsqu'elle est survolée par le curseur, indiquant à l'utilisateur qu'il peut cliquer pour afficher un menu contextuel.   
+Pour des raisons de cohérence, le cadre de référence utilisé par la commande est le même, qu'elle travaille avec un objet list box ou un sous-objet de la list box : le point d'origine est le coin supérieur gauche du formulaire contenant l'objet. Pour les sous-objets de list box, les coordonnées retournées sont théoriques ; elles prennent en compte le défilement appliqué à la list box avant tout éventuel *clipping* (c.-à-d. le découpage effectué en fonction des coordonnées de la list box parente). Par conséquent, le sous-objet peut ne pas être visible, ou être partiellement visible, et ses coordonnées peuvent se trouver en-dehors des limites du formulaire (voire être négatives). Pour déterminer si le sous-objet est visible (et quelle partie est visible), vous devez comparer les coordonnées retournées avec celles de la list box elle-même, en tenant compte des règles suivantes : 
 
-* All sub-objects are clipped to the coordinates of their parent list box (as returned by **OBJECT GET COORDINATES** on the list box).
-* Header and footer sub-objects are displayed on top of column content: when the coordinates of a column intersect the coordinates of the header or footer rows, then the column is not displayed at this intersection.
-* Elements of locked columns are displayed on top of elements of scrollable columns: when the coordinates of an element in a scrollable column intersect the coordinates of an element in a locked column, then it is not displayed at this intersection.
+* Les limites des sous-objets dépendent des coordonnées de leur list box parente (telles que retournées par la commande **OBJECT GET COORDINATES** pour la list box).
+* Les sous-objets en-tête et pied sont affichés au-dessus du contenu de la colonne : lorsque les coordonnées d'une colonne coupent celles d'une ligne d'en-tête ou de pied, la colonne n'est pas affichée à l'emplacement de l'intersection.
+* Les éléments des colonnes verrouillées sont affichés au-dessus des éléments des colonnes défilables : lorsque les coordonnées d'un élément d'une colonne défilable croisent celles d'un élement d'une colonne verrouillée, il n'est pas affiché à l'emplacement de l'intersection.
 
-For example, consider the following graphic where the coordinates of the *Capital* column are symbolized by the red rectangle:
+Par exemple, examinez le schéma suivant, dans lequel les coordonnées de la colonne *Capital* sont symbolisées par un rectangle rouge :
 
 ![](../assets/en/commands/pict1752174.en.png)
 
-As you can see in the first picture, the column is larger than the list box, so its coordinates go beyond the lower limit of the list box, including the footer. In the second picture, the list box has scrolled, so the column has also been moved "under" the *Language* column and header area. In any case, in order to calculate the actual visible part (green area), you need to subtract the red areas.
+Comme vous pouvez le voir dans la première image, la colonne est plus grande que la list box, donc ses coordonnées dépassent la limite basse de la list box, pied inclus. Dans la seconde image, la list box a défilé, et donc la colonne a également été déplacée "sous" les zones de la colonne *Language* et d'en-tête. Dans tous les cas, pour calculer la partie réellement visible de la colonne (représentée par la zone verte), vous devez soustraire les zones rouges. 
 
-## Example 1 
+## Exemple 1 
 
-Let’s assume that you want to obtain the coordinates of a rectangle formed by all the objects that begin with “button”:
+Vous souhaitez obtenir les coordonnées du rectangle formé par tous les objets dont le nom commence par “bouton” : 
 
 ```4d
- OBJECT GET COORDINATES(*;"button@";vLeft;vTop;vRight;vBottom)
+ OBJECT GET COORDINATES(*;"bouton@";gauche;haut;droite;bas)
 ```
 
-## Example 2 
+## Exemple 2 
 
-For interface needs, you want to surround the clicked area with a red rectangle:
+Pour les besoins de votre interface, vous souhaitez entourer d'un rectangle rouge la zone sur laquelle l'utilisateur a cliqué :
 
 ![](../assets/en/commands/pict1740373.en.png)
 
-In the object method of the list box, you can write:
+Dans la méthode objet de la list box, vous écrivez :
 
 ```4d
- OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
+ OBJECT SET VISIBLE(*;"RedRect";False) //initialiser un rectangle rouge
  $ptr:=OBJECT Get pointer(Object current)
  OBJECT GET COORDINATES($ptr->;$x1;$y1;$x2;$y2)
  OBJECT SET VISIBLE(*;"RedRect";True)
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
  
  OBJECT GET COORDINATES(*;"LB1";$lbx1;$lby1;$lbx2;$lby2)
- If($lby1>$y1)|($lby2<$y2) // if the clicked area is outside the list box
-    OBJECT SET VISIBLE(*;"Alert";True) //display a warning
+ If($lby1>$y1)|($lby2<$y2) // si la zone cliquée est en-dehors de la list box
+    OBJECT SET VISIBLE(*;"Alerte";True) //afficher une alerte
  Else
-    OBJECT SET VISIBLE(*;"Alert";False)
+    OBJECT SET VISIBLE(*;"Alerte";False)
  End if
 ```
 
-The method returns theoretical coordinates. In cases where the list box has been resized, you may need to calculate the clipping to know which part is visible:
+La méthode retourne les coordonnées théoriques. Si la list box est redimensionnée, vous pourrez avoir besoin de calculer le détourage afin de savoir quelle partie est visible :
 
 ![](../assets/en/commands/pict1740929.en.png)
 
-## See also 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 663 |
+| Numéro de commande | 663 |
 | Thread safe | no |
 
 

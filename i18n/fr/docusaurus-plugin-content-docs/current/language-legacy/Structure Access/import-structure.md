@@ -5,66 +5,66 @@ slug: /commands/import-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* : Text )<!-- END REF-->
+<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *structureXML* )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| xmlStructure | Text | &#8594;  | XML definition of 4D database structure |
+| structureXML | Text | &#8594;  | Définition XML de la structure de la base 4D |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R4|Created|
+|14 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.IMPORT STRUCTURE.Summary-->The **IMPORT STRUCTURE** command imports, into the current database, the XML definition of the 4D database structure passed in the *xmlStructure* parameter.<!-- END REF--> 
+<!--REF #_command_.IMPORT STRUCTURE.Summary-->La commande **IMPORT STRUCTURE** vous permet d'importer, dans la base courante, la définition XML de la structure de la base 4D passée dans le paramètre *structureXML*.<!-- END REF--> 
 
-The *xmlStructure* parameter must contain a valid 4D structure definition in XML format. There are several ways to obtain a valid structure definition:
+Le paramètre *structureXML* doit contenir une définition valide de structure 4D au format XML. Pour obtenir ce type de définition, vous pouvez utiliser l'un des moyens suivants :
 
-* Execute the [EXPORT STRUCTURE](export-structure.md) command,
-* Select the **Export > Structure definition to XML file...** menu item found in 4D's Design mode (see *Exporting and importing structure definitions*),
-* Create or modify a custom XML file based on public DTDs found in the "DTD" folder of the 4D application.
+* exécuter la commande [EXPORT STRUCTURE](export-structure.md),
+* sélectionner la commande de menu **Exporter > Définition de structure vers le fichier XML...** disponible dans l'interface du mode Développement de 4D (voir *Exporter et importer des définitions de structure*),
+* créer ou modifier un fichier XML personnalisé basé sur les DTD publiques présentes dans le dossier "DTD" de l'application 4D.
 
-The imported structure definition is added to the structure that is already open, and is displayed in the standard Structure editor of 4D among the existing tables (if any). If an imported table has the same name as a local one, an error is generated and the import operation is aborted. 
+La définition de structure importée est ajoutée à la structure déjà ouverte et est affichée dans l'éditeur de Structure standard de 4D parmi les tables existantes (s'il y en a). Si une table importée a le même nom qu'une table locale, une erreur est générée et l'opération d'import est annulée. 
 
-You can create a new database by importing a structure definition into an empty database. 
+Vous pouvez également importer la structure dans une base vide, et ainsi créer une nouvelle base. 
 
-An error is generated when the structure is in compiled and/or read only mode. 
+Une erreur est générée si la structure est en mode compilé ou en lecture seulement. 
 
-A 4D application operating in remote mode cannot call this command.
+Cette commande ne peut pas être appelée depuis une application 4D en mode distant.
 
-## Note for deployment 
+## Note pour le déploiement 
 
-Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
+Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-## Example 
+## Exemple 
 
-You want to import a saved structure definition into the current database:
+Vous souhaitez importer une définiton de structure stockée sur disque dans la base courante :
 
 ```4d
  $struc:=Document to text("c:\\4DStructures\\Employee.xml")
  IMPORT STRUCTURE($struc)
 ```
 
-## See also 
+## Voir aussi 
 
 [EXPORT STRUCTURE](export-structure.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1310 |
+| Numéro de commande | 1310 |
 | Thread safe | no |
 
 

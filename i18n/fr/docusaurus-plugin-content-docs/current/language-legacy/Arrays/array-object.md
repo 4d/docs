@@ -5,87 +5,88 @@ slug: /commands/array-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of array |
-| size | Integer | &#8594;  | Number of array elements or Number of arrays if size2 is specified |
-| size2 | Integer | &#8594;  | Number of 2D array elements |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ARRAY OBJECT.Summary-->The **ARRAY OBJECT** command creates and/or resizes an array of language Object type elements in memory.<!-- END REF-->
+<!--REF #_command_.ARRAY OBJECT.Summary-->La commande **ARRAY OBJECT** crée et/ou redimensionne un tableau d’éléments de type Objet de langage en mémoire.<!-- END REF-->
 
-The *arrayName* parameter is the name of the array. You can use any name that conforms to 4D conventions.
+Le paramètre *nomTableau* est le nom du tableau. Vous pouvez utiliser tout nom conforme aux conventions de 4D.
 
-The *size* parameter is the number of array elements.
+Le paramètre *taille* est le nombre d’éléments du tableau.
 
-The *size2* parameter is optional. If you pass it, this command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* the number of columns in each array. Each row in a two-dimensional array can be processed both as an element and an array. This means that when you work with the first dimension of a two-dimensional array, you can insert and remove entire arrays using other commands in the "Arrays" theme. 
+Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, *taille* définit le nombre de lignes et *taille2* le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes du thème "Tableaux", lorsque vous travaillez avec la première dimension du tableau. 
 
-When you apply the **ARRAY OBJECT** command to an existing array:
+Lorsque vous appliquez la commande **ARRAY OBJECT** à un tableau existant :
 
-* If you enlarge its size, existing elements are not changed and new elements are undefined. You can test whether an element is defined using the [OB Is defined](ob-is-defined.md) command.
-* If you reduce its size, elements at the "bottom" of the array are deleted and lost.
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont indéfinis. Vous pouvez tester si un élément est défini à l’aide de la commande [OB Is defined](ob-is-defined.md).
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-## Example 1 
+## Exemple 1 
 
-Creation of a process array of 100 Object-type elements:
-
-```4d
- ARRAY OBJECT(arrObjects;100)
-```
-
-## Example 2 
-
-Creation of a local array of 100 rows each containing 50 Object-type elements:
+Création d’un tableau process de 100 éléments de type Objet :
 
 ```4d
- ARRAY OBJECT($arrObjects;100;50)
+ ARRAY OBJECT(tabObjets;100)
 ```
 
-## Example 3 
+## Exemple 2 
 
-Creation and filling of a local object array:
+Création d’un tableau local de 100 lignes contenant chacune 50 éléments de type Objet :
+
+```4d
+ ARRAY OBJECT($tabObjets;100;50)
+```
+
+## Exemple 3 
+
+Création et remplissage d’un tableau local d’objets :
 
 ```4d
  var $Children;$ref_richard;$ref_susan;$ref_james : Object
  ARRAY OBJECT($arrayChildren;0)
- OB SET($ref_richard;"name";"Richard";"age";7)
+ OB SET($ref_richard;"nom";"Richard";"age";7)
  APPEND TO ARRAY($arrayChildren;$ref_richard)
- OB SET($ref_susan;"name";"Susan";"age";4)
+ OB SET($ref_susan;"nom";"Susan";"age";4)
  APPEND TO ARRAY($arrayChildren;$ref_susan)
- OB SET($ref_james;"name";"James";"age";3)
+ OB SET($ref_james;"nom";"James";"age";3)
  APPEND TO ARRAY($arrayChildren;$ref_james)
-  // $arrayChildren{1} -> {"name":"Richard","age":7}
-  // $arrayChildren{2} -> {"name":"Susan","age":4}
-  // $arrayChildren{3} -> {"name":"James","age":3}
+     //$arrayChildren{1} -> {"nom":"Richard","age":7}
+     //$arrayChildren{2} ->  {"nom":"Susan","age":4}
+     //$arrayChildren{3}  -> {"nom":"James","age":3}
 ```
 
-## See also 
+## Voir aussi 
 
-*Creating Arrays*  
-*Objects (Language)*  
+*C\_OBJECT*  
+*Créer des tableaux*  
+*Objets (Langage)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1221 |
+| Numéro de commande | 1221 |
 | Thread safe | yes |
 
 

@@ -5,66 +5,66 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* : Blob )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *utilisateurs* )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| users | Blob | &#8594;  | BLOB (encrypted) containing database user accounts created and saved by the database Administrator |
+| utilisateurs | Blob | &#8594;  | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB TO USERS.Summary-->The BLOB TO USERS command replaces the user accounts and groups found in the BLOB *users* in the current database.<!-- END REF--> The BLOB *users* is encrypted and must have been created using the [USERS TO BLOB](users-to-blob.md) command.
+<!--REF #_command_.BLOB TO USERS.Summary-->La commande **BLOB TO USERS** remplace les comptes utilisateurs et les groupes présents dans le BLOB *utilisateurs* dans la base courante.<!-- END REF--> Le BLOB *utilisateurs* est crypté et doit impérativement avoir été créé par la commande [USERS TO BLOB](users-to-blob.md).
 
-Only the database Administrator or Designer can execute this command. If another user attempts to execute it, the command does nothing and a privilege error (-9949) is generated.
+Seuls l’Administrateur et le Super\_Utilisateur de la base peuvent exécuter cette commande. Si un autre utilisateur tente de l’exécuter, la commande ne fait rien et une erreur de privilège (-9949) est générée.
 
-The effects of this command are different depending on whether it is executed from a project or a binary database:
+Les conséquences de cette commande sont différentes, selon qu'elle est exécutée depuis une base binaire ou une base projet :
 
-**Project database**
+**Base projet**
 
-This command is used for compatibility, to move previously saved users and groups from a BLOB file to the *directory.json* file of the database. All users and groups already defined in the *directory.json* file are replaced by the *users* BLOB contents, except the "Designer" and "Administrator".
+Cette commande est utilisée à des fins de compatibilité, pour déplacer les utilisateurs et groupes sauvegardés antérieurement d'un fichier BLOB vers le fichier *directory.json* de la base. Tous les utilisateurs et groupes déjà définis dans le fichier *directory.json* sont remplacés par le contenu du BLOB *utilisateurs*, à l'exception du "Super\_Utilisateur" et de l'"Administrateur".
 
-**Binary database**
+**Base binaire**
 
-This command causes the replacement of any existing accounts and groups created by the Administrator in the database. If the BLOB *users* contains valid data, the command performs the following operations:
+Cette commande provoque le remplacement des comptes et groupes créés par l'Administrateur éventuellement existant dans la base. Si le BLOB *utilisateurs* contient des données valide, la commande effectue les opérations suivantes :
 
-* all users and groups defined in the database whose reference numbers are negative (groups and users created by the Administrator) are removed from the structure,
-* all users and groups found in the BLOB *users* are added to the structure.
+* tous les groupes et utilisateurs définis dans la base dont le numéro de référence est négatif (groupes et utilisateurs créés par l'Administrateur) sont supprimés de la structure,
+* tous les groupes et utilisateurs présents dans le BLOB *utilisateurs* sont ajoutés dans la structure.
 
-**Compatibility note:** User and group files (.4UG extension) created by the **Save Groups...** menu command in previous 4D versions can be loaded in 4D using the following sequence (very old 4D versions may require to use intermediary versions):
+**Note de compatibilité :** Les fichiers d’utilisateurs et groupes (extension .4UG) créés par la commande de menu **Enregistrer les groupes & utilisateurs...** dans une version de 4D antérieure peuvent être chargés dans 4D via ces instructions (une version trop ancienne peut toutefois nécessiter de passer par des versions intermédiaires) :
 
 ```4d
- DOCUMENT TO BLOB(mydoc;blob)
+ DOCUMENT TO BLOB(mondoc;blob)
  BLOB TO USERS(blob)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
+Si la commande est exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [USERS TO BLOB](users-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 850 |
+| Numéro de commande | 850 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

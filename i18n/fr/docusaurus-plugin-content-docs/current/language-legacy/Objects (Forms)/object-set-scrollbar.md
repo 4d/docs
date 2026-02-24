@@ -5,67 +5,66 @@ slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *object* : Variable, Field ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( {* ;} *objet* ; *horizontal* ; *vertical* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| horizontal | Boolean, Integer | &#8594;  | Visibility of horizontal scrollbar |
-| vertical | Boolean, Integer | &#8594;  | Visibility of vertical scrollbar |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| horizontal | Boolean, Integer | &#8594;  | Visibilité de la barre horizontale |
+| vertical | Boolean, Integer | &#8594;  | Visibilité de la barre verticale |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|12|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|14|Modifié|
+|12|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->The OBJECT SET SCROLLBAR command allows you to display or hide the horizontal and/or vertical scrollbars in the object set using the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->La commande **OBJECT SET SCROLLBAR** permet d’afficher ou de masquer les barres de défilement horizontale et/ou verticale dans l’objet désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you do not pass a string, but a variable reference. For more information about object names, refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section Propriétés des objets. 
 
-In the *horizontal* and *vertical* parameters, you pass values indicating whether the corresponding scrollbars should be displayed. You can pass either Boolean values (True=displayed, False=hidden), or numeric values (0=hidden, 1=displayed, 2=automatic mode). Using numeric values gives you access to the automatic mode, where scrollbars are only displayed when necessary.
+Passez dans les paramètres *horizontal* et *vertical* des valeurs indiquant si les barres de défilement correspondantes doivent être affichées. Vous pouvez passer soit des valeurs booléennes (Vrai=affichée, Faux=masquée), soit des valeurs numériques (0=masquée, 1=affichée, 2=mode automatique). Utiliser des valeurs numériques permet notamment d'accéder au mode automatique, dans lequel la barre de défilement n'apparaît que lorsque c'est nécessaire. 
 
-The following table indicates the values you can pass in the *horizontal* and *vertical* parameters for objects that accept scrollbars (automatic mode is not available for all objects):
+Le tableau suivant indique les valeurs que vous pouvez passer dans les paramètres *horizontal* et *vertical* pour les objets acceptant des barres de défilement (le mode automatique n'est pas disponible avec tous les objets) :
 
-| **Objects with scrollbars**         | **Hide scrollbar** | **Show scrollbar** | **Automatic mode** |
-| ----------------------------------- | ------------------ | ------------------ | ------------------ |
-| Text object fields and variables    | False or 0         | True or 1          | *not available*    |
-| Picture object fields and variables | False or 0         | True or 1          | 2                  |
-| List boxes                          | False or 0         | True or 1          | 2                  |
-| Hierarchical lists                  | False or 0         | True or 1          | 2                  |
-| Subforms                            | False or 0         | True or 1          | *not available*    |
+| **Objets avec barres de défilement** | **Masquer barre** | **Afficher barre** | **Mode automatique** |
+| ------------------------------------ | ----------------- | ------------------ | -------------------- |
+| Champs et variables objet texte      | Faux ou 0         | Vrai ou 1          | *non disponible*     |
+| Champs et variables objet image      | Faux ou 0         | Vrai ou 1          | 2                    |
+| List box                             | Faux ou 0         | Vrai ou 1          | 2                    |
+| Listes hiérarchiques                 | Faux ou 0         | Vrai ou 1          | 2                    |
+| Sous-formulaires                     | Faux ou 0         | Vrai ou 1          | *non disponible*     |
 
- By default, scrollbars are displayed.
+ Par défaut, les barres de défilement sont affichées.
 
-**Note:** For more information about the automatic mode, refer to *Scroll bars*.
+**Note :** Pour plus d'informations sur le mode automatique, reportez-vous à la section *Barres de défilement*.
 
-## See also 
+## Voir aussi 
 
-[LISTBOX Get property](./commands/listbox-get-property)  
+[LISTBOX Get property](../commands/listbox-get-property.md)  
 [LISTBOX SET GRID](listbox-set-grid.md)  
 [OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
 [OBJECT SET VISIBLE](object-set-visible.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 843 |
+| Numéro de commande | 843 |
 | Thread safe | no |
-
 
 

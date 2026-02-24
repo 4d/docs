@@ -5,110 +5,111 @@ slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *object* : Object {; *options* : Object} ) : Object<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objet* {; *options*} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8596;  | *in:* Object containing JSON pointers to resolve<br/>*out:* Object with JSON pointers resolved (only if result is an object) |
-| options | Object | &#8594;  | Options for pointer resolution |
-| Function result | Object | &#8592; | Object containing the result of the processing |
+| objet | Object | &#8594;  | Objet contenant des pointeurs JSON à résoudre |
+| &#8592; | Objet avec pointeurs JSON résolus (uniquement si Résultat est un objet) |
+| options | Object | &#8594;  | Options pour la résolution des pointeurs |
+| Résultat | Object | &#8592; | Objet contenant le résultat du traitement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Created|
+|16 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.JSON Resolve pointers.Summary-->The **JSON Resolve pointers** command resolves all the JSON pointers found in the *object*, with regards to *options* settings (if any).<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Summary-->La commande **JSON Resolve pointers** résout tous les pointeurs JSON présents dans *objet*, en tenant compte des *options* définies (s'il y en a).<!-- END REF-->
 
-JSON pointers are particularily useful to:
+Les pointeurs JSON sont particulièrement utiles pour : 
 
-* embed some part of an external JSON document or reuse a part of a JSON document in other places in the same JSON document, in order to factorize information,
-* express a cyclic structure in JSON,
-* define a template object containing default properties stored in JSON.
+* intégrer une partie d'un document JSON externe ou réutiliser une partie d'un document JSON à divers endroits dans le même document JSON, afin de "factoriser" l'information,
+* exprimer une structure cyclique en JSON,
+* définir un objet modèle contenant des propriétés par défaut stockées en JSON.
 
-Pass in the *object* parameter an object containing JSON pointers to be resolved (for information on JSON pointer syntax, please refer to the *Defining JSON Pointers* paragraph below). 
+Passez dans le paramètre *objet* un objet contenant des pointeurs JSON à résoudre (pour une description de la syntaxe des pointeurs JSON, veuillez vous reporter au paragraphe *Defining JSON Pointers* ci-dessous). 
 
-**Note:** The source *object* will be updated with the result of pointer resolution after the command is executed (except if the result is not an object, see below). If you want to keep an original version of *object*, you may consider using the [OB Copy](ob-copy.md) beforehand. 
+**Note :** L'*objet* source sera mis à jour avec le résultat de la résolution des pointeurs après l'exécution de la commande (sauf si le résultat n'est pas un objet, voir ci-dessous). Si vous souhaitez conserver une version originale de *objet*, il sera nécessaire d'appeler la commande [OB Copy](ob-copy.md) au préalable. 
 
-Optionally, you can pass in *options* an object containing specific properties to be used when resolving pointers. The following properties are supported:
+Optionnellement, vous pouvez passer dans *options* un objet contenant des propriétés spécifiques à utiliser lors de la résolution des pointeurs. Les propriétés suivantes sont prises en charge :
 
-| **Property** | **Value type** | **Description**                                                                                                                                       |
-| ------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rootFolder   | Text         | Absolute path (using standard 4D syntax) to the folder to be used to resolve relative pointers in *object*. Default is the database Resources folder. |
-| merge        | Boolean        | Merge objects with pointer objects (true) instead of replacing them (false). Default is false ![](../assets/en/commands/pict3516702.en.png)           |
+| **Propriété** | **Type de valeur** | **Description**                                                                                                                                                          |
+| ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| rootFolder    | Chaîne             | Chemin absolu (en syntaxe 4D standard) du dossier à utiliser pour résoudre les pointeurs relatifs dans *objet*. Par défaut, le dossier Resources de la base est utilisé. |
+| merge         | Booléen            | Fusionner les objets avec les objets pointeur (true) au lieu de les remplacer (false). Par défaut, l'option est à faux ![](../assets/en/commands/pict3516702.en.png)     |
 
-After the command is executed: 
+Après l'exécution de la commande : 
 
-* if the result of pointer resolution is an object, *object* is updated and contains the resulting object.
-* if the result of pointer resolution is a scalar value (i.e. a text, a number...), *object* is left untouched and the resulting value is returned in the "value" property of the function result.
+* si le résultat de la résolution des pointeurs est un objet, *objet* est mis à jour et contient l'objet résultant.
+* si le résultat de la résolution des pointeurs est une valeur scalaire (i.e. un texte, un numérique...), *objet* n'est pas modifié et la valeur résultante est retournée dans la propriété "value" du résultat de la fonction.
 
-In any cases, the command returns an object containing the following properties:
+Dans tous les cas, la commande retourne un objet contenant les propriétés suivantes :
 
-| **Property**            | **Value type** | **Description**                                                                                           |
-| ----------------------- | -------------- | --------------------------------------------------------------------------------------------------------- |
-| value                   | Any            | Result of the command processing on *object*. If the result is an object, it is equal to output *object*. |
-| success                 | Boolean        | true if all pointers have been resolved successfully                                                      |
-| errors                  | Collection     | Collection of errors if any                                                                               |
-| errors\[\].code         | Number         | error code                                                                                                |
-| errors\[\].message      | Text         | error message                                                                                             |
-| errors\[\].pointerURI   | Text         | pointer value                                                                                             |
-| errors\[\].referredPath | Text         | document fullpath                                                                                         |
+| **Propriété**           | **Type de valeur** | **Description**                                                                                                  |
+| ----------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| value                   | tous               | Résultat du traitement de la commande sur *objet* ; si le résultat est un objet, est égal à l'*objet* en sortie. |
+| success                 | Booléen            | true si tous les pointeurs ont été résolus avec succès                                                           |
+| errors                  | Collection         | Collection d'erreurs (le cas échéant)                                                                            |
+| errors\[\].code         | Nombre             | Code d'erreur                                                                                                    |
+| errors\[\].message      | Chaîne             | Message d'erreur                                                                                                 |
+| errors\[\].pointerURI   | Chaîne             | Valeur de pointeur                                                                                               |
+| errors\[\].referredPath | Chaîne             | Chemin complet de document                                                                                       |
 
   
-## Defining JSON Pointers 
+## Définition des pointeurs JSON 
 
-JSON Pointer is a standard that defines a string syntax which can be used to access a particular field or key value in the entire JSON document. The standard has been described in the [RFC 6901](https://tools.ietf.org/html/rfc6901). 
+*JSON Pointer* est un standard qui définit une syntaxe de chaîne qui peut être utilisée pour accéder à un champ ou une valeur de clé particulière dans la totalité du document JSON. Ce standard a été décrit dans la [RFC 6901](https://tools.ietf.org/html/rfc6901). 
 
-A JSON pointer is, strictly speaking, a string composed of parts separated by '/'. A JSON pointer is usually found in a URI that specifies the document into which the pointer will be resolved. The fragment character "#' is used in the URI to specify the JSON pointer. By convention, a URI containing a JSON pointer can be found in a JSON object property that must be named "$ref".
+Un pointeur JSON est, à proprement parler, une chaîne composée de parties séparées par des '/'. Un pointeur JSON est généralement placé dans un URI qui spécifie le document dans lequel le pointeur sera résolu. Le caractère "#' est utilisé dans l'URI pour désigner le fragment contenant le pointeur JSON. Par convention, un URI contenant un pointeur JSON doit être placé dans une propriété d'objet JSON nommée "$ref".
 
 ```json
 {
-   "$ref":<path>#<json_pointer>
+   "$ref":<chemin>#<pointeur_json>
 }
 ```
 
-**Note:** 4D does not support the "-" character as reference to nonexistent arrray elements. 
+**Note :** 4D ne prend pas en charge le caractère "-" en tant que référence d'éléments de tableau non existants. 
 
-### Recursivity and path resolution 
+### Récursivité et résolution des chemins 
 
-JSON pointers are resolved recursively, which means that if a resolved pointer also contains pointers, they are resolved recursively and so on, until all pointers are resolved. In this context, all file paths found in JSON pointer URIs can be relative or absolute. They must use '/' as path delimiter and are resolved the following way:
+Les pointeurs JSON sont résolus récursivement, ce qui signifie que si un pointeur résolu contient lui-même des pointeurs, ils sont résolus et ainsi de suite jusqu'à ce que tous les pointeurs soient résolus. Dans ce contexte, tous les chemins de fichiers situés dans les URIs des pointeurs JSON peuvent être relatifs ou absolus. Ils doivent utiliser le "/" en tant que délimiteur de chemin et sont résolus selon les principes suivants :
 
-* A relative path must not start with '/'. It is resolved relatively to the JSON document where the path string has been found,
-* An absolute path starts with '/'. Only [filesystem pathnames](../Concepts/paths.md#filesystem-pathnames) are accepted as absolute paths. For example, "/RESOURCES/templates/myfile.json" points to the file "myfile.json" located in the current database resources folder.
+* Un chemin relatif ne doit pas débuter par '/'. Il est résolu relativement au document JSON contenant la chaîne du chemin.
+* Un chemin absolu débute par '/'. Seuls les [chemins des filesystem](../Concepts/paths.md#chemins-des-filesystem) sont acceptés comme chemins absolus. Par exemple, "/RESOURCES/templates/myfile.json" pointe vers le fichier "myfile.json" situé dans le dossier Resources de la base courante.
 
-**Notes:**
+**Notes :**
 
-* The name resolution is case sensitive.
-* 4D does not resolve a path to a json file located over the network (starting with "http/https").
+* La résolution de nom tient compte des majuscules/minuscules.
+* 4D ne résout pas les chemins vers des fichiers JSON situés sur le réseau (débutant par "http/https").
 
-## Example 1 
+## Exemple 1 
 
-This basic example illustrates how a JSON pointer can be set and replaced in an object:
+Cet exemple basique illustre comment un pointeur JSON peut être défini et remplacé dans un objet :
 
 ```4d
-  // create an object with some value
+  // création d'un objet avec valeurs
  var $o : Object
  $o:=New object("value";42)
  
-  // create the JSON pointer object
+  // création de l'objet pointeur JSON
  var $ref : Object
  $ref:=New object("$ref";"#/value")
  
-  // add the JSON pointer object as property
+  // ajout de l'objet pointeur JSON en tant que propriété
  $o.myJSONPointer:=$ref
  
-  // resolve the whole and check that the pointer has been resolved
+  // résolution de l'ensemble et vérification que le pointeur a été résolu
  var $result : Object
  $options:=New object("rootFolder";Get 4D folder(Current resources folder);"merge";True)
  $result:=JSON Resolve pointers($o;$options)
@@ -120,9 +121,9 @@ This basic example illustrates how a JSON pointer can be set and replaced in an 
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to reuse the "billingAddress" as the "shippingAddress" in the following JSON object (named $oMyConfig):
+Vous voulez réutiliser l'adresse "billingAddress" comme adresse "shippingAddress" dans l'objet JSON suivant (nommé $oMyConfig):
 
 ```json
 {
@@ -137,13 +138,13 @@ You want to reuse the "billingAddress" as the "shippingAddress" in the following
 }
 ```
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  $oResult:=JSON Resolve pointers($oMyConfig)
 ```
 
-... the following object is returned:
+... l'objet suivant est retourné :
 
 ```json
 {
@@ -165,9 +166,9 @@ After executing this code:
 }
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example illustrates the effect of the "merge" option. You want to edit an user's rights based upon a default file.
+Cet exemple illustre l'effet de l'option "merge". Vous souhaitez modifier les droits d'un utilisateur, basés sur un fichier par défaut.
 
 ```json
 {
@@ -179,7 +180,7 @@ This example illustrates the effect of the "merge" option. You want to edit an u
 }
 ```
 
-The *defaultSettings.json* file contains:
+Le fichier *defaultSettings.json* contient :
 
 ```json
 {
@@ -192,15 +193,15 @@ The *defaultSettings.json* file contains:
 }
 ```
 
-If you execute:
+Si vous exécutez :
 
 ```4d
  var $options : Object
- $options:=New object("merge";False) //replace contents
+ $options:=New object("merge";False) //remplacer le contenu
  $oResult:=JSON Resolve pointers($oMyConfig;$options)
 ```
 
-... the resulting value is exactly the *defaultSettings.json* file contents:
+... la valeur résultante est exactement le contenu du fichier *defaultSettings.json* :
 
 ```json
 {
@@ -215,15 +216,15 @@ If you execute:
 }
 ```
 
-If you execute:
+Si vous exécutez :
 
 ```4d
  var $options : Object
- $options:=New object("merge";True) //merge both contents
+ $options:=New object("merge";True) //fusionner les contenus
  $oResult:=JSON Resolve pointers($oMyConfig;$options)
 ```
 
-... the resulting value is a modified version of the original object:
+... la valeur résultante est une version modifiée de l'objet original :
 
 ```json
 {
@@ -239,15 +240,15 @@ If you execute:
 }
 ```
 
-## See also 
+## Voir aussi 
 
   
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1478 |
+| Numéro de commande | 1478 |
 | Thread safe | yes |
 
 

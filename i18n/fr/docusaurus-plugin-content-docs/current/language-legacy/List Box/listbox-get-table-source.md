@@ -5,53 +5,52 @@ slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *object* : Variable ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nom* {; *nomSurlignage*}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| tableNum | Integer | &#8592; | Table number of selection |
-| name | Text | &#8592; | Name of named selection or "" for the current selection |
-| highlightName | Text | &#8592; | Name of highlight set |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numTable | Integer | &#8592; | Numéro de la table de la sélection |
+| nom | Text | &#8592; | Nom de la sélection temporaire ou "" pour la sélection courante |
+| nomSurlignage | Text | &#8592; | Nom de l’ensemble de surlignage |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|12|Renamed|
-|11 SQL|Created|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->The LISTBOX GET TABLE SOURCE command can be used to find out the current source of the data displayed in the list box that is designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Summary-->La commande **LISTBOX GET TABLE SOURCE** permet de connaître la source courante des données affichées dans la list box désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, please refer to the *Object Properties* section. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-The command returns the number of the main table associated with the list box in the *tableNum* parameter and the name of any named selection used in the optional *name* parameter.
+La commande retourne dans le paramètre *numTable* le numéro de la table principale associée à la list box et dans le paramètre facultatif *nom* le nom de la sélection temporaire éventuellement utilisée.  
+Si les lignes de la list box sont liées à la sélection courante de la table, le paramètre *nom*, s’il est passé, retourne une chaîne vide. Si les lignes de la list box sont liées à une sélection temporaire, le paramètre *nom* retourne le nom de cette sélection temporaire. 
 
-If the rows of the list box are linked with the current selection of the table, the *name* parameter, if passed, returns an empty string. If the rows of the list box are linked with a named selection, the *name* parameter returns the name of this named selection.
+Si la list box est associée à des tableaux, *numTable* retourne -1 et *nom*, s’il est passé, retourne une chaîne vide.
 
-If the list box is associated with arrays, *tableNum* returns -1 and *name*, if passed, returns an empty string.
-
-## See also 
+## Voir aussi 
 
 [LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1014 |
+| Numéro de commande | 1014 |
 | Thread safe | no |
 
 

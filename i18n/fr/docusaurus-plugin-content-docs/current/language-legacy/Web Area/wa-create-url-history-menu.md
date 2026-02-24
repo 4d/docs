@@ -5,87 +5,82 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *object* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *object* : Variable, Field {; *direction* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *objet* {; *direction*} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| direction | Integer | &#8594;  | 0 or omitted=List of previous URLs, 1=List of next URLs |
-| Function result | Text | &#8592; | Menu reference |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| direction | Integer | &#8594;  | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| Résultat | Text | &#8592; | Référence du menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Modified|
-|11 SQL Release 2|Created|
+|19 R5|Modifié|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Create URL history menu.Summary-->The **WA Create URL history menu** command creates and fills a menu that can be used directly for navigation among the URLs visited during the session in the Web area designated by the *\** and *object* parameters.<!-- END REF--> It can be used to build a custom navigation interface.
+<!--REF #_command_.WA Create URL history menu.Summary-->La commande **WA Create URL history menu** crée et remplit un menu pouvant être utilisé directement pour la navigation parmi les URLs visités au cours de la session dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Elle permet de construire une interface de navigation personnalisée.
 
-The information provided concerns the session; in other words, the navigation carried out in the same Web area as long as the form has not been closed.
+Les informations fournies concernent la session, c’est-à-dire la navigation effectuée dans une même zone Web tant que le formulaire n’a pas été refermé.
 
-Pass a value indicating the list to recover in *direction*. You can use one of the following constants, found in the *Web Area* theme:
+Passez dans *direction* une valeur indiquant la liste à récupérer. Vous pouvez utiliser l’une des constantes suivantes, placées dans le thème "*Zone Web*" :
 
-| Constant         | Type    | Value |
-| ---------------- | ------- | ----- |
-| WA next URLs     | Integer | 1     |
-| WA previous URLs | Integer | 0     |
+| Constante        | Type        | Valeur |
+| ---------------- | ----------- | ------ |
+| WA next URLs     | Entier long | 1      |
+| WA previous URLs | Entier long | 0      |
 
-If you omit the *direction* parameter, the value 0 is used.
+Si vous omettez le paramètre *direction*, la valeur 0 est utilisée.
 
-Once the menu has been generated, you can display it using the 4D [Dynamic pop up menu](dynamic-pop-up-menu.md) command and you can work with it using the standard 4D menu management commands. The string returned by this command contains the URL of the page visited (see example).
+Une fois le menu généré, vous pouvez l’afficher via la commande de 4D [Dynamic pop up menu](dynamic-pop-up-menu.md) et le manipuler via les commandes standard de gestion des menus de 4D. La chaîne retournée par la commande [Dynamic pop up menu](dynamic-pop-up-menu.md) contient l’URL de la page visitée (voir exemple).
 
-Call the [RELEASE MENU](release-menu.md) command to delete a URL history menu when it is no longer useful.
+Appelez la commande [RELEASE MENU](release-menu.md) pour supprimer un menu historique d’URL lorsqu’il est devenu inutile.
 
-**Compatibility Note:* As of 4D 19 R5, this command fills a menu with only the current URL for web areas using the Windows system rendering engine.* 
+**Note de compatibilité :* A partir de 4D v19 R5, cette commande remplit un menu uniquement avec l'URL courante des zones web à l'aide du moteur de rendu du système de Windows.*
 
-## Example 
+## Exemple 
 
-The following code can be associated with a 3D button having a pop-up menu entitled "Previous":
+Le code suivant pourrait être associé à un bouton 3D avec pop up menu libellé "Précédent" :
 
 ```4d
  Case of
-  //Single click
-    :(Form event code=On Clicked)
-       WA OPEN BACK URL(WA_area)
-  //Click on arrow -> display of pop up
-    :(Form event code=On Alternative Click)
-  //Create a previous history menu
-       $Menu:=WA Create URL history menu(WA_area;WA previous URLs)
-  //Display this menu in a pop-up
+    :(Form event code=On Clicked) //Clic simple
+       WA OPEN BACK URL(WA_zone)
+    :(Form event code=On Alternative Click) //Clic sur la flèche -> affichage du pop up
+  //Créer un menu historique précédent
+       $Menu:=WA Create URL history menu(WA_zone;wa URLs précédents)
+  //Afficher ce menu dans un pop up
        $URL:=Dynamic pop up menu($Menu)
-  //If an item is selected
-       If($URL#"")
-  //Open Web page
-          WA OPEN URL(WA_area;$URL)
+       If($URL#"") //Si une ligne est sélectionnée
+          WA OPEN URL(WA_zone;$URL) // Ouvrir la page Web
        End if
-  //Delete menu to free up memory
-       RELEASE MENU($Menu)
+       RELEASE MENU($Menu) //Effacer le menu pour libérer la mémoire
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [RELEASE MENU](release-menu.md)  
 [WA GET URL HISTORY](wa-get-url-history.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1049 |
+| Numéro de commande | 1049 |
 | Thread safe | no |
 
 

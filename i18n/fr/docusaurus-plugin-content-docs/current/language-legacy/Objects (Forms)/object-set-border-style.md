@@ -5,57 +5,57 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *object* : Text ; *borderStyle* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *object* : Variable, Field ; *borderStyle* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *objet* ; *styleBordure* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| borderStyle | Integer | &#8594;  | Border line style |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| styleBordure | Integer | &#8594;  | Style de la ligne de bordure |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->The **OBJECT SET BORDER STYLE** command modifies the border line style of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->La commande **OBJECT SET BORDER STYLE** vous permet de modifier le style de la ligne de bordure de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-The "Border Line Style" property modifies the appearance of the object outlines. For more information, refer to *Border Line Style* in the *Design Reference* manual. 
+La propriété "Style de bordure" permet de modifier l’apparence du contour des objets. Pour plus d’informations, reportez-vous au paragraphe *Style de la bordure* dans le manuel *Mode Développement*. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *borderStyle* parameter, pass the value of the border line style that you want to apply to the object. You can pass one of the following constants, found in the "*Form Objects (Properties)*" theme:
+Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous souhaitez appliquer à l’objet. Vous pouvez passer une des constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant      | Type    | Value | Comment                                                                                         |
-| ------------- | ------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Border Dotted | Integer | 2     | Objects appear framed with a dotted 1-pt. border line                                           |
-| Border Double | Integer | 5     | Objects appear framed with a double line, i.e., two continuous 1-pt. lines separated by a pixel |
-| Border None   | Integer | 0     | Objects appear with no border                                                                   |
-| Border Plain  | Integer | 1     | Objects appear framed with a continuous 1-pt. border line                                       |
-| Border Raised | Integer | 3     | Objects appear framed with a 3D effect (raised)                                                 |
-| Border Sunken | Integer | 4     | Objects appear framed with a sunken 3D effect                                                   |
-| Border System | Integer | 6     | The border line is drawn based on the graphic specifications of the system                      |
+| Constante     | Type        | Valeur | Comment                                                                                                                 |
+| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Border Dotted | Entier long | 2      | Les objets apparaissent dans un cadre pointillé de 1 pt                                                                 |
+| Border Double | Entier long | 5      | Les objets apparaissent encadrés par une double ligne, c’est-à-dire deux lignes continues de 1 pt séparées par un pixel |
+| Border None   | Entier long | 0      | Les objets apparaissent sans encadrement                                                                                |
+| Border Plain  | Entier long | 1      | Les objets apparaissent dans un cadre continu de 1 pt                                                                   |
+| Border Raised | Entier long | 3      | Les objets apparaissent avec un effet 3D (relief)                                                                       |
+| Border Sunken | Entier long | 4      | Les objets apparaissent avec un effet 3D en creux (relief inversé)                                                      |
+| Border System | Entier long | 6      | Le cadre est dessiné en fonction des spécifications graphiques du système                                               |
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get border style](object-get-border-style.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1262 |
+| Numéro de commande | 1262 |
 | Thread safe | no |
 
 

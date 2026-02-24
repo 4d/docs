@@ -5,75 +5,75 @@ slug: /commands/http-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *name* : Text ; *password* : Text {; *authMethod* : Integer} {; *} )<!-- END REF-->
+<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *nom* ; *motDePasse* {; *méthodeAuth*} {; *} )<!-- END REF-->
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | User name |
-| password | Text | &#8594;  | User password |
-| authMethod | Integer | &#8594;  | Authentication method: 0 or omitted=not specified, 1=BASIC, 2=DIGEST |
-| * | Operator | &#8594;  | If passed: authentication by proxy |
+| nom | Text | &#8594;  | Nom de l’utilisateur |
+| motDePasse | Text | &#8594;  | Mot de passe de l’utilisateur |
+| méthodeAuth | Integer | &#8594;  | Méthode d’authentification : 0 ou omis=non définie, 1=BASIC, 2=DIGEST |
+| * | Opérateur | &#8594;  | Si passé : authentification par proxy |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
-:::info Compatibility
+:::info Compatibilité
 
-This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
 
 :::
 
 ## Description 
 
-<!--REF #_command_.HTTP AUTHENTICATE.Summary-->The **HTTP AUTHENTICATE** command enables HTTP requests to servers requiring authentication of the client application.<!-- END REF--> The BASIC and DIGEST methods are supported, as well as the presence of a proxy.
+<!--REF #_command_.HTTP AUTHENTICATE.Summary-->La commande **HTTP AUTHENTICATE** vous permet d’effectuer des requêtes HTTP vers des serveurs nécessitant l’authentification de l’application cliente.<!-- END REF--> Les méthodes BASIC et DIGEST sont prises en charge ainsi que la présence d’un proxy.
 
-In the *name* and *password* parameters, you pass the id information required (user name and password). This information is encoded and added to the next HTTP request sent using the [HTTP Request](http-request.md) or [HTTP Get](http-get.md) command, so you need to call the **HTTP AUTHENTICATE** command before each HTTP request.
+Passez dans les paramètres *nom* et *motDePasse* les informations d’identification requises (nom d’utilisateur et mot de passe). Ces informations seront encodées et ajoutées à la prochaine requête HTTP envoyée via la commande [HTTP Request](http-request.md) ou [HTTP Get](http-get.md). Il est donc nécessaire d’appeler la commande **HTTP AUTHENTICATE** avant chaque requête HTTP.
 
-The optional *authMethod* parameter indicates the authentication method to use. You pass one of the following constants, found in the *HTTP Client* theme:
+Le paramètre facultatif *méthodeAuth* permet d’indiquer la méthode d’authentification à utiliser. Vous pouvez passer l’une des constantes suivantes, placées dans le thème *Client HTTP* :
 
-| Constant    | Type    | Value | Comment                          |
-| ----------- | ------- | ----- | -------------------------------- |
-| HTTP basic  | Integer | 1     | Use BASIC authentication method  |
-| HTTP digest | Integer | 2     | Use DIGEST authentication method |
+| Constante   | Type        | Valeur | Comment                                       |
+| ----------- | ----------- | ------ | --------------------------------------------- |
+| HTTP basic  | Entier long | 1      | Utiliser la méthode d’authentification BASIC  |
+| HTTP digest | Entier long | 2      | Utiliser la méthode d’authentification DIGEST |
 
-If you omit the *authMethod* parameter (or pass 0), you let the program choose the appropriate method to use. In this case, 4D sends an additional request in order to negotiate the authentication method.
+Si vous omettez le paramètre *méthodeAuth* (ou passez 0), vous laissez le programme utiliser la méthode appropriée. Dans ce cas, 4D envoie une requête supplémentaire afin de négocier la méthode d’authentification.
 
-If you pass the *\** parameter, this indicates that the authentication information is intended for an HTTP proxy. This setting must be implemented when there is a proxy requiring authentication between the client and the HTTP server. If the server itself is authenticated, a double authentication is necessary.
+Si vous passez le paramètre *\**, vous indiquez que les informations d’authentification s’adressent à un proxy HTTP. Ce paramétrage doit être mis en oeuvre lorsqu’il existe un proxy nécessitant une authentification entre le client et le serveur HTTP. Si le serveur est lui-même authentifié, une double authentification est requise.
 
-By default, authentication information is stored temporarily and reused for each request in the current process. However, it is possible to reset this information after each request using an option set by the [HTTP SET OPTION](http-set-option.md) command. In this case, you will have to execute the **HTTP AUTHENTICATE** command before each call to [HTTP Request](http-request.md) or [HTTP Get](http-get.md).
+Par défaut, les informations d’authentification sont conservées et réutilisées dans le process courant. Vous pouvez toutefois les effacer après chaque requête à l’aide d'une option de la commande [HTTP SET OPTION](http-set-option.md). Dans ce cas, il sera nécessaire d’exécuter la commande **HTTP AUTHENTICATE** avant tout appel à [HTTP Request](http-request.md) ou [HTTP Get](http-get.md).
 
-## Example 
+## Exemple 
 
-Examples of requests with authentication:
+Exemples de requêtes avec authentification :
 
 ```4d
-  // Authentication on HTTP server in DIGEST mode
- HTTP AUTHENTICATE("httpUser";"123";2)
-  // Authentication on proxy in default mode
- HTTP AUTHENTICATE("ProxyUser";"456";*)
- $httpStatus:=HTTP Get(...)
+  //Authentification sur un serveur HTTP en mode DIGEST
+ HTTP AUTHENTICATE("httpUser";"123";2)
+  //Authentification sur un proxy en mode par défaut
+ HTTP AUTHENTICATE("ProxyUser";"456";*)
+ $httpStatus:=HTTP Get(...)
 ```
 
-## See also 
+## Voir aussi 
 
 [HTTP SET OPTION](http-set-option.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1161 |
+| Numéro de commande | 1161 |
 | Thread safe | yes |
 
 

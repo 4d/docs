@@ -5,75 +5,76 @@ slug: /commands/set-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *groupID* : Integer ; *name* : Text ; *owner* : Integer {; *members* : Integer array} )  : Integer<!-- END REF-->
+<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *réfGroupe* ; *nom* ; *propriétaire* {; *membres*} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Integer | &#8596;  | *in:* Unique ID number of group, -1 for adding a group <br/>*out:* Unique ID number of added group (if any)|
-| name | Text | &#8594;  | New group name |
-| owner | Integer | &#8594;  | User ID number of new group owner (Binary databases only) |
-| members | Integer array | &#8594;  | New group members |
-| Function result | Integer | &#8592; | Unique ID number of new group |
+| réfGroupe | Integer | &#8594;  | Numéro de référence unique du groupe activé ou -1 pour ajouter un groupe de Super_Utilisateur -2 pour ajouter un groupe d'Administrateur |
+| &#8592; | Unique ID number of added group (if any) |
+| nom | Text | &#8594;  | Nouveau nom de groupe |
+| propriétaire | Integer | &#8594;  | Numéro de référence unique de l'utilisateur ou le propriétaire du nouveau groupe |
+| membres | Integer array | &#8594;  | Nouveaux membres du groupe |
+| Résultat | Integer | &#8592; | Numéro de référence unique du nouveau groupe |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Set group properties.Summary-->Set group properties enables you to change and update the properties of an existing group whose unique group ID number you pass in *groupID*, or to add a new group.<!-- END REF--> 
+<!--REF #_command_.Set group properties.Summary-->**Set group properties** vous permet de modifier et de mettre à jour les propriétés d'un groupe existant dont vous passez le numéro de référence unique dans *réfGroupe*, ou d'ajouter un nouveau groupe.<!-- END REF-->
 
-To change the properties of an existing group, you must pass a valid group ID number returned by the command [GET GROUP LIST](get-group-list.md). 
+Pour modifier les propriétés d'un groupe existant, vous devez passer son numéro de référence tel que retourné dans la commande [GET GROUP LIST](get-group-list.md). 
 
-To add a new group, pass -1 in *groupID* (see also notes below for binary databases). 
+Si vous voulez ajouter un nouveau groupe, passez -1 dans *réfGroupe* (voir également la note ci-dessous pour les bases binaires). 
 
-After the call, if the group is successfully added, its unique ID number is returned in *groupID*. 
+Si le groupe a bien été créé, son numéro de référence unique est retourné dans réfGroupe.
 
-If you do not pass -1, -2 or a valid group ID number in *groupID*, Set group properties does nothing.
+Si vous ne passez pas -1, -2 ou un numéro de référence de groupe valide dans réfGroupe, **Set group properties** ne fait rien et retourne 0.
 
-Pass the new name of the group in the *name* parameter.
+Passez le nouveau nom du groupe dans le paramètre *nom*. 
 
-(*Binary databases only*) Pass the ID number of the new owner of the group in the *owner* parameter. This parameter is ignored in project databases. 
+*(Bases binaires uniquement) :* Passez le numéro de référence du nouveau propriétaire du groupe dans le paramètre propriétaire. Ce paramètre est ignoré dans les bases projets. 
 
-If you do not want to change all the properties of the group (besides the members, see below), first call [GET GROUP PROPERTIES](get-group-properties.md) and pass the returned values for the properties you want to leave unchanged.
+Si vous ne voulez pas modifier toutes les propriétés du groupe (à part ses membres, voir ci-dessous), passez les valeurs retournées par [GET GROUP PROPERTIES](get-group-properties.md) dans les paramètres que vous voulez laisser inchangés.
 
-If you do not pass the optional *members* parameter, the current member list of the group is left unchanged. If you do not pass *members* while adding a group, the group will have no members.
+Si vous ne passez pas le paramètre optionnel *membres*, la liste courante des membres du groupe reste inchangée. Si vous ne le faites pas lors d'une création d'un groupe, le groupe n'aura pas de membres.
 
-If you pass the optional *members* parameter, you change the whole member list for the group. Before the call, you must populate the array *members* with the unique ID numbers of the users and groups the group will get as members. 
+Si vous passez le paramètre optionnel *membres*, vous modifiez toute la liste des membres pour ce groupe. Avant d'appeler cette routine, vous devez remplir le tableau *membres* avec les numéros de référence uniques des utilisateurs et des groupes devant appartenir au groupe. 
 
-To remove all the members from a group, pass an empty *members* array.
+Si vous voulez enlever tous les membres d'un groupe, passez un tableau vide dans le paramètre *membres*.
 
-**Notes for binary databases**
+**Notes pour les bases binaires :** 
 
-* Group and user ID values depend on their creator (Designer, Administrator, or affiliated group owner). For more information, please refer to the *User and group ID ranges* paragraph. To create a group affiliated with the Designer, pass -1 in groupID. To create a group affiliated with the Administrator, pass -2 in groupID.
-* The group owner is not automatically set as a member of the group that he or she owns. It is up to you to include the group owner in the group, using the *members* parameter.
+* Les valeurs des références des groupes et des utilisateurs sont fonction de la personne qui les crée (Super Utilisateur, Administrateur, ou propriétaire du groupe affilié). Pour plus d'informations, veuillez consulter le paragraphe *Plages de références des groupes et des utilisateurs*. Si vous voulez ajouter un groupe affilié au Super\_Utilisateur, il faut passer -1 à réfGroupe. Si vous voulez ajouter un groupe affilié à l'Administrateur, il faut passer -2 à réfGroupe.
+* Le propriétaire d'un groupe n'est pas automatiquement défini comme membre du groupe qu'il possède. C'est à vous de l'y inclure explicitement, à l'aide du paramètre *membres*.
 
-## Error management 
+## Gestion des erreurs 
 
-If you do not have the proper access privileges for calling Set group properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [GET GROUP LIST](get-group-list.md)  
 [GET GROUP PROPERTIES](get-group-properties.md)  
 [GET USER LIST](get-user-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 614 |
+| Numéro de commande | 614 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

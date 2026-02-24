@@ -5,62 +5,62 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* : Table ;} *setName* : Text )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*laTable* ;} *nomEnsemble* )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table where the highlighted records will be read If omitted, table of the current form |
-| setName | Text | &#8594;  | Set where the highlighted records will be stored |
+| laTable | Table | &#8594;  | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
+| nomEnsemble | Text | &#8594;  | Ensemble dans lequel stocker les enregistrements marqués |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->The **GET HIGHLIGHTED RECORDS** command stores in the set designated by the *setName* parameter the highlighted records (i.e., the records highlighted by the user in the list form) in the *aTable* passed as parameter.<!-- END REF--> If the *aTable* parameter is omitted, the table of the current form or subform is used.
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->La commande **GET HIGHLIGHTED RECORDS** stocke dans l’ensemble désigné par le paramètre *nomEnsemble* les enregistrements marqués (c'est-à-dire, les enregistrements “surlignés” par l'utilisateur dans le formulaire liste) de *laTable* passée en paramètre.<!-- END REF--> Si le paramètre *laTable* est omis, la table du formulaire ou du sous-formulaire courant est utilisée.
 
-In Design mode or when executing the [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md) commands, this command can be replaced by calling the UserSet system set which is automatically maintained by 4D. However, since this command allows you to pick the table that will receive highlighted records, the GET HIGHLIGHTED RECORDS command can also manage record selections in subforms as well. In this case, subform selections can also come from different tables. For more information about the UserSet set, refer to the *Sets* section.
+En mode Développement ou dans le cadre de l'exécution des commandes [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md), cette commande peut être remplacée par l'appel de l'ensemble système UserSet, automatiquement maintenu par 4D. Toutefois, comme elle permet de désigner la table de laquelle récupérer les enregistrements marqués, la commande **GET HIGHLIGHTED RECORDS** peut en outre gérer les sélections d’enregistrements dans les sous-formulaires inclus. En effet dans ce cas, les sélections des sous-formulaires pouvant provenir de tables différentes, l'ensemble système UserSet n'est pas géré par 4D. Pour plus d'informations sur l'ensemble UserSet, reportez-vous à la section *Ensembles*.
 
-The **GET HIGHLIGHTED RECORDS** command can also be called in a non-form context; however, the returned set is empty.   
-The set designated by *setName* can be local/client, process or interprocess. 
+La commande **GET HIGHLIGHTED RECORDS** peut être appelée hors du contexte d’un formulaire, cependant dans ce cas l’ensemble retourné est vide.   
+L’ensemble désigné par le paramètre *nomEnsemble* peut être local/client, process ou interprocess. 
 
-**Note:** In included subforms, the **GET HIGHLIGHTED RECORDS** command returns an empty set if the subform does not have the **Multiple** Selection Mode property. In this case, to find out the selected row, you must use the [Selected record number](selected-record-number.md) command. 
+**Note :** Dans le cadre des sous-formulaires inclus, la commande **GET HIGHLIGHTED RECORDS** retourne un ensemble vide si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour connaître la ligne sélectionnée, vous devez utiliser la commande [Selected record number](selected-record-number.md). 
 
-## Example 
+## Exemple 
 
-This method indicates how many records are selected in the subform displaying the records of the \[CDs\] table:
+Cette méthode indique combien d’enregistrements sont sélectionnés dans le sous-formulaire affichant les enregistrements de la table \[CDs\] :
 
 ```4d
  GET HIGHLIGHTED RECORDS([CDs];"$highlight")
- ALERT(String(Records in set("$highlight"))"+"selected records.")
+ ALERT(String(Enregistrements dans ensemble("$highlight"))"+"enregistrements sélectionnés.")
  CLEAR SET("$highlight")
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was executed properly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [HIGHLIGHT RECORDS](highlight-records.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 902 |
+| Numéro de commande | 902 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

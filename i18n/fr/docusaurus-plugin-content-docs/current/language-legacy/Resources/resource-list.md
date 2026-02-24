@@ -5,88 +5,88 @@ slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* : Text ; *resIDs* : Integer array ; *resNames* : Text array {; *resFile* : Time} )<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* ; *resNums* ; *resNoms* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4-character resource type |
-| resIDs | Integer array | &#8592; | Resource ID numbers for resources of this type |
-| resNames | Text array | &#8592; | Resource names for resources of this type |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
+| resType | Text | &#8594;  | Type de ressource (4 caractères) |
+| resNums | Integer array | &#8592; | Numéros des ressources de ce type |
+| resNoms | Text array | &#8592; | Noms des ressources de ce type |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESOURCE LIST.Summary-->The **RESOURCE LIST** command populates the arrays *resIDs* and *resNames* with the resource IDs and names of the resources whose type is passed in *resType*.<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Summary-->La commande **RESOURCE LIST** remplit les tableaux *resNums* et *resNoms* avec les numéros et les noms des ressources dont vous avez passé le type dans *resType*.<!-- END REF-->
 
-**Important:** You must pass a 4-character string in *resType*.
+**Important :** Vous devez passez dans *resType* une chaîne de 4 caractères.
 
-If you pass a valid resource file reference number in the optional parameter *resFile*, only the resources from that file are listed. If you do not pass the parameter *resFile*, all resources from the current open resource files are listed.
+Si vous passez un numéro de référence de fichier de ressources valide dans le paramètre optionnel *resFichier*, seules les ressources présentes dans ce fichier seront listées. Si vous ne passez pas le paramètre *resFichier*, toutes les ressources de tous les fichiers de ressources ouverts seront listées. 
 
-If you predeclare the arrays before calling **RESOURCE LIST**, you must predeclare *resIDs* as a Longint array and *resNames* as a String or Text array. If you do not predeclare the arrays, the command creates *resIDs* as a Longint array and *resNames* as a Text array.
+Si vous ne pré-déclarez pas les tableaux *resNums* et *resNoms* avant d'appeler **RESOURCE LIST**, la commande créera par défaut le tableau *resNums* avec le type Entier long et *resNoms* avec le type Texte. Si vous pré-déclarez les tableaux, vous devez attribuer le type Entier long à *resNums*, mais pouvez attribuer le type Alpha ou Texte à *resNoms*.
 
-After the call, you can test the number of resources found by applying the [Size of array](size-of-array.md) command to the array *resIDs* or *resNames*.
+Après l'appel, vous pouvez tester le nombre de ressources qui ont été trouvées en appliquant la commande [Size of array](size-of-array.md) au tableau *resNums* ou *resNoms*.
 
-## Example 1 
+## Exemple 1 
 
-The following example populates the arrays *$alResID* and *$atResName* with the IDs and names of the string list resources present in the structure file of the database:
+L'exemple suivant remplit les tableaux *$alResNum* et *$atResNom* avec les numéros et les noms des ressources de type Listes de chaînes présentes dans le fichier de structure de la base : 
 
 ```4d
- If(On Windows)
+ If(Sous Windows)
     $vhStructureResFile:=Open resource file(Replace string(Structure file;".4DB";".RSR"))
  Else
     $vhStructureResFile:=Open resource file(Structure file)
  End if
  If(OK=1)
-    RESOURCE LIST("STR#";$alResID;$atResName;$vhStructureResFile)
+    RESOURCE LIST("STR#";$alResNum;$atResNom;$vhStructureResFile)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example copies the picture resources present in all currently open resource files into the Picture Library of the database:
+L'exemple suivant copie dans la bibliothèque d'images de la base les ressources image présentes dans tous les fichiers de ressources ouverts :
 
 ```4d
- RESOURCE LIST("PICT";$alResID;$atResName)
- Open window(50;50;550;120;5;"Copying PICT resources...")
- For($vlElem;1;Size of array($alResID))
-    GET PICTURE RESOURCE($alResID{$vlElem};$vgPicture)
+ RESOURCE LIST("PICT";$alResNum;$atResNom)
+ Open window(50;50;550;120;5;"Copie des ressources PICT...")
+ For($vlElem;1;Size of array($alResNum))
+    GET PICTURE RESOURCE($alResNum{$vlElem};$vgImage)
     If(OK=1)
-       $vsName:=$atResName{$vlElem}
-       If($vsName="")
-          $vsName:="PICT resID="+String($alResID{$vlElem})
+       $vsNom:=$atResNom{$vlElem}
+       If($vsNom="")
+          $vsNom:="PICT resID="+String($alResNum{$vlElem})
        End if
        ERASE WINDOW
        GOTO XY(2;1)
-       MESSAGE("Adding picture “"+$vsName+"” to the DB Picture library.")
-       SET PICTURE TO LIBRARY($vgPicture;$alResID{$vlElem};$vsName)
+       MESSAGE("Ajout de l'image “"+$vsNom+"” à la bibliothèque d'images de la base.")
+       SET PICTURE TO LIBRARY($vgImage;$alResNum{$vlElem};$vsNom)
     End if
  End for
  CLOSE WINDOW
 ```
 
-## See also 
+## Voir aussi 
 
 [RESOURCE TYPE LIST](resource-type-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 500 |
+| Numéro de commande | 500 |
 | Thread safe | no |
 
 

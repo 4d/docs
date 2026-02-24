@@ -5,70 +5,66 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* : Integer ) : Pointer<br/>**Table** ( *tablePtr* : Pointer ) : Integer<br/>**Table** ( *fieldPtr* : Pointer ) : Integer<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( numTable | unPtr ) : any<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableNum | Integer | &#8594;  | Table number |
-| tablePtr | Pointer | &#8594;  | Table pointer |
-| fieldPtr | Pointer | &#8594;  | Field pointer |
-| Function result | Pointer, Integer | &#8592; | Table pointer, if a Table number is passed<br/>Table number if a Table pointer or a Field pointer is passed|
+| numTable &#124; unPtr | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur de table ou Pointeur de champ |
+| Résultat | Integer, Pointer | &#8592; | Pointeur de table si un Numéro de table est passé, Numéro de table si un Pointeur de table est passé, Numéro de table si un Pointeur de champ est passé |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-The `Table` command has three forms:
+<!--REF #_command_.Table.Summary-->**Table** a trois syntaxes différentes.<!-- END REF-->retourne un pointeur sur la table.
+* Si vous passez un pointeur de table dans *unPtr*, **Table** retourne le numéro de la table.
+* Si vous passez un pointeur de champ dans *unPtr*, **Table** retourne le numéro de table du champ.
 
-<!--REF #_command_.Table.Summary-->* If you pass a table number in *tableNum*, Table returns a pointer to the table.
-* If you pass a table pointer in *tablePtr*, Table returns the table number of the table.
-* If you pass a field pointer in *fieldPtr*, Table returns the table number of the field.<!-- END REF-->
+## Exemple 1 
 
-## Example 1 
-
-This example sets the *tablePtr* variable to a pointer to the third table of the database:
+Dans cet exemple, la variable *ptrTable* reçoit un pointeur sur la table n°3 :
 
 ```4d
- TablePtr:=Table(3)
+ ptrTable:=Table(3)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Passing *tablePtr* (a pointer to the third table) to Table returns the number 3\. The following line sets *TableNum* to 3: 
+Si vous passez *ptrTable* à la fonction Table, elle retourne 3\. Par exemple, dans la ligne suivante, la variable *numTable* prend la valeur 3 : 
 
 ```4d
- TableNum:=Table(TablePtr)
+ numTable:=Table(ptrTable)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example sets the *tableNum* variable to the table number of *\[Table3\]*:
+Dans l'exemple suivant, la variable *numTable* est égale au numéro de la table \[Table3\] :
 
 ```4d
- TableNum:=Table(->[Table3])
+ numTable:=Table(->[Table3])
 ```
 
-## Example 4 
+## Exemple 4 
 
-This example sets the *tableNum* variable to the table number of the table to which the *\[Table3\]Field1* field belongs:
+Dans l'exemple suivant, la variable *numTable* est égale au numéro de la table à laquelle appartient le champ \[Table3\]Champ1 :
 
 ```4d
- TableNum:=Table(->[Table3]Field1)
+ numTable:=Table(->[Table3]Champ1)
 ```
 
-## See also 
+## Voir aussi 
 
 [Field](field.md)  
 [Last table number](last-table-number.md)  
 [Table name](table-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 252 |
+| Numéro de commande | 252 |
 | Thread safe | yes |
 
 

@@ -5,65 +5,64 @@ slug: /commands/graph-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphPicture* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *xgrid* : Boolean ; *ygrid* : Boolean ; *title* : Text {; *...title* : Text} )<!-- END REF-->
+<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphImage* ; *xmin* ; *xmax* ; *ymin* ; *ymax* ; *xprop* ; *grilleX* ; *grilleY* ; *titre* {; *titre2* ; ... ; *titreN*} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphPicture | Picture | &#8594;  | Picture variable |
-| xmin | Integer, Date, Time | &#8594;  | Minimum x-axis value for proportional graph (line or scatter plot only) |
-| xmax | Integer, Date, Time | &#8594;  | Maximum x-axis value for proportional graph (line or scatter plot only) |
-| ymin | Integer | &#8594;  | Minimum y-axis value |
-| ymax | Integer | &#8594;  | Maximum y-axis value |
-| xprop | Boolean | &#8594;  | TRUE for proportional x-axis; FALSE for normal x-axis (line or scatter plot only) |
-| xgrid | Boolean | &#8594;  | TRUE for x-axis grid; FALSE for no x-axis grid (only if xprop is TRUE) |
-| ygrid | Boolean | &#8594;  | TRUE for y-axis grid; FALSE for no y-axis grid |
-| title | Text | &#8594;  | Title(s) for graph legend(s) |
+| graphImage | Picture | &#8594;  | Variable image |
+| xmin | Integer, Date, Time | &#8594;  | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| xmax | Integer, Date, Time | &#8594;  | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| ymin | Integer | &#8594;  | Valeur minimale de l'échelle des Y |
+| ymax | Integer | &#8594;  | Valeur maximale de l'échelle des Y |
+| xprop | Boolean | &#8594;  | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
+| grilleX | Boolean | &#8594;  | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
+| grilleY | Boolean | &#8594;  | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
+| titre | Text | &#8594;  | Titre(s) pour les titre(s) des série(s) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|14 R5|Modified|
-|14|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|15 R4|Modifié|
+|14 R5|Modifié|
+|14|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS changes the graph settings for graph displayed in a form.<!-- END REF--> The graph must have already been defined using the [GRAPH](graph.md) command. GRAPH SETTINGS has no effect on a pie chart. This command must be called in the same process as the form.
+<!--REF #_command_.GRAPH SETTINGS.Summary-->La commande **GRAPH SETTINGS** permet de paramétrer les échelles et les grilles d'un graphe placé dans un formulaire.<!-- END REF--> Le graphe doit déjà avoir été défini à l'aide de la commande [GRAPH](graph.md). **GRAPH SETTINGS** ne fait rien s'il s'agit d'un graphe de type secteurs. Cette commande doit impérativement être appelée dans le même process que le formulaire.
 
-**Note:** You must not call this command if the graph was generated using the [GRAPH](graph.md) command with the [Object](# "Data structured as a native 4D object") type *graphSettings* parameter. Refer to the description of the [GRAPH](graph.md) command for more information.
+**Note :** Vous ne devez pas appeler cette commande si le graphe a été généré par la commande [GRAPH](graph.md) avec le paramètre *graphParams* de type [Objet](# "Données structurées sous forme d'objet natif 4D"). Reportez-vous à la description de la commande [GRAPH](graph.md) pour plus d'informations.
 
-The *xmin*, *xmax*, *ymin*, and *ymax* parameters all set the minimum and maximum values for their respective axes of the graph. If the value of any pair of these parameters is a null value (0, ?00:00:00?, or !00/00/00!, depending on the data type), the default graph values will be used. The *xmin* and *xmax* parameters are only taken into account for proportional graphs (*xprop* is **True**).
+Les paramètres *xmin*, *xmax*, *ymin* et *ymax* fixent les valeurs minimales et maximales pour les axes des X ou Y. Si la valeur des deux paramètres correspondants au même axe est nulle (0, ?00:00:00? ou !00/00/00! selon le type de données), les valeurs de graphe par défaut seront utilisées. Les paramètres *xmin* et *xmax* ne sont pris en compte que pour les graphes proportionnels (*xprop* est **Vrai**).  
+Le paramètre *xprop* fixe l'axe des X comme proportionnel (sont concernés par cette option les graphes de type 4, 5 et 6). Lorsque ce paramètre est Vrai, chaque point sera placé sur l'axe des X par rapport aux valeurs des points si elles sont de type numérique, heure ou date.
 
-The *xprop* parameter turns on proportional plotting for line graphs (type 4), area graphs (type 5) and scatter graphs (type 6). When TRUE, it will plot each point on the x-axis according to the point’s value, and then only if the values are numeric, time, or date.
+Les paramètres *grilleX* et *grilleY* montrent ou cachent les grilles. Une grille pour l'axe des X sera affichée s'il s'agit d'un graphe en points ou en lignes proportionnel.
 
-The *xgrid* and *ygrid* parameters display or hide grid lines. A grid for the x-axis will be displayed only when the plot is a proportional scatter or line graph.
+Le(s) paramètre(s) *titre* spécifient les titres des légendes.
 
-The *title* parameter(s) labels the legend.
+## Exemple 
 
-## Example 
+Reportez-vous à l'exemple de la commande GRAPHE.
 
-See example for the [GRAPH](graph.md) command.
-
-## See also 
+## Voir aussi 
 
 [GRAPH](graph.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 298 |
+| Numéro de commande | 298 |
 | Thread safe | no |
 
 

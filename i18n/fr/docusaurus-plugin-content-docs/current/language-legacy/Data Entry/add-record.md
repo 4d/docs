@@ -5,86 +5,86 @@ slug: /commands/add-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( *aTable* : Table {; *} )<br/>**ADD RECORD** ( * )<!-- END REF-->
+<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*laTable*}{;}{*} )<!-- END REF-->
 <!--REF #_command_.ADD RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to use for data entry, or Default table, if omitted |
-| * | Operator |  &#8594;  | Hide scroll bars |
+| laTable | Table | &#8594;  | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
+| * | Operator |  &#8594;  | Cacher les barres de défilement |
 </div>
 <!-- END REF-->
 
-## Compatibility 
+## Compatibilité 
 
-<!--REF #_command_.ADD RECORD.Summary-->*This command was implemented in 4D's early releases and is still useful for prototyping or basic developments.<!-- END REF--> However, to build customized and modern interfaces, it is now recommended to use generic forms based upon the [DIALOG](./commands/dialog) command which provide advanced features and better control over the data flow.*
+<!--REF #_command_.ADD RECORD.Summary-->*Cette commande est apparue dans les premières versions de 4D et reste toujours utile pour créer des prototypes ou effectuer des développements simples.<!-- END REF--> Toutefois, pour construire des interfaces modernes et personnalisées, il est désormais recommandé d'utiliser des formulaires génériques basés sur la commande [DIALOG](../commands/dialog.md) qui fournit des fonctionnalités avancées et un meilleur contrôle du flux de données.* 
 
 ## Description 
 
-The **ADD RECORD** command lets the user add a new record to the database for the table *aTable* or for the default table, if you omit the *aTable* parameter. 
+La commande **ADD RECORD** permet à l'utilisateur de créer un nouvel enregistrement dans *laTable* ou dans la table par défaut si ce paramètre est omis.
 
-**ADD RECORD** creates a new record, makes the new record the current record for the current process, and displays the current input form. In the Application environment, after the user has accepted the new record, the new record is the only record in the current selection. 
+**ADD RECORD** crée un nouvel enregistrement pour *laTable*, en fait l'enregistrement courant pour le process courant et l'affiche dans le formulaire entrée courant. En mode Application, une fois que l'utilisateur a validé le nouvel enregistrement, la sélection courante est réduite à ce seul enregistrement. 
 
-The following figure shows a typical data entry form. 
+L'écran suivant présente un formulaire typiquement utilisé pour la saisie de données :
 
-![](../assets/en/commands/pict2804768.en.png)
+![](../assets/en/commands/pict2804768.fr.png)
 
-The form is displayed in the frontmost window of the process. The window has scroll bars and a size box. Specifying the optional *\** parameter causes the window to be drawn without scroll bars and the form window can no longer be reduced:
+Le formulaire est affiché dans la fenêtre se trouvant au premier plan du process. Elle comporte des barres de défilement et une case de contrôle de taille. Si vous passez le paramètre optionnel astérisque (\*), les barres de défilement n'apparaissent pas et la fenêtre du formulaire ne peut être réduite :
 
-![](../assets/en/commands/pict2804770.en.png)
+![](../assets/en/commands/pict2804770.fr.png)
 
-**ADD RECORD** displays the form until the user accepts or cancels the record. If the user is adding several records, the command must be executed once for each new record.
+**ADD RECORD** affiche le formulaire jusqu'à ce que l'utilisateur valide ou annule l'enregistrement. Si l'utilisateur ajoute plusieurs enregistrements, la commande doit être appelée pour chaque nouvel enregistrement. 
 
-The record is saved (accepted) if the user clicks an Accept button or presses the Enter key (numeric keypad), or if the [ACCEPT](accept.md) command is executed. 
+L'enregistrement est sauvegardé si l'utilisateur clique sur un bouton du type Valider ou appuie sur la touche Entrée, ou encore si la commande [ACCEPT](accept.md) est exécutée. 
 
-The record is not saved (canceled) if the user clicks a Cancel button or presses the cancel key combination (Ctrl-Period on Windows, Command-Period on Macintosh), or if the [CANCEL](cancel.md) command is executed. 
+L'enregistrement n'est pas sauvegardé si l'utilisateur clique sur un bouton du type **Annuler** ou appuie sur la touche d'annulation (**Echap** sous Windows, **Esc** sous Mac OS), ou encore si la commande [CANCEL](cancel.md) est exécutée. 
 
-**Note:** This command does not require *aTable* to be in read/write mode. It can be used even when the table is in read-only mode (see *Record Locking*). 
+**Note :** Cette commande ne nécessite pas que *laTable* soit en mode lecture/écriture. Elle peut être utilisée même lorsque la table est en mode lecture seulement (cf. section *Verrouillage d'enregistrements*). 
 
-After a call to **ADD RECORD**, OK is set to 1 if the record is accepted, to 0 if canceled.
+Après un appel à **ADD RECORD**, la variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s'il est annulé.
 
-**Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](save-record.md) is executed before the current record pointer is changed. 
+**Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé avec la commande [SAVE RECORD](save-record.md) si celle-ci est exécutée avant que le pointeur d'enregistrement courant ne soit modifié.
 
-## Example 1 
+## Exemple 1 
 
-The following example is a loop commonly used to add new records to a database: 
+L'exemple suivant est une boucle souvent utilisée pour créer des enregistrements dans une base : 
 
 ```4d
- FORM SET INPUT([Customers];"Std Input") // Set input form for [Customers] table
- Repeat // Loop until the user cancels
-    ADD RECORD([Customers];*) // Add a record to the [Customers] table
- Until(OK=0) // Until the user cancels
+ FORM SET INPUT([Clients];"SaisieClients") // Désigner le formulaire entrée de la table [Clients]
+ Repeat // Boucle jusqu'à ce que l'utilisateur annule
+    ADD RECORD([Clients];*) // Ajouter un enregistrement dans la table [Clients]
+ Until(OK=0) // Jusqu'à ce que l'utilisateur annule
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example queries the database for a customer. Depending on the results of the search, one of two things may happen. If no customer is found, then the user is allowed to add a new customer with **ADD RECORD**. If at least one customer is found, the user is presented with the first record found, which can be modified with [MODIFY RECORD](modify-record.md): 
+L'exemple suivant permet de rechercher un client dans la base. Le déroulement de la méthode dépend du résultat de la recherche. Si aucun client n'a été trouvé, l'utilisateur est autorisé à créer un nouveau client à l'aide de la commande **ADD RECORD**. Si au moins un client a été trouvé, le premier enregistrement est affiché pour modification, à l'aide de la commande [MODIFY RECORD](modify-record.md) :
 
 ```4d
- READ WRITE([Customers])
- FORM SET INPUT([Customers];"Input") // Set the input form
- vlCustNum:=Num(Request("Enter Customer Number:")) // Get the customer number
+ READ WRITE([Clients])
+ FORM SET INPUT([Clients];"Entrée1") // Désigner le formulaire entrée
+ vlClientNo:=Num(Request("Saisissez un numéro de client :") // On récupère le numéro du client
  If(OK=1)
-    QUERY([Customers];[Customers]CustNo=vlCustNum) // Look for the customer
-    If(Records in selection([Customers])=0) // If no customer is found…
-       ADD RECORD([Customers]) // Add a new customer
+    QUERY([Clients];[Clients]ClientNo=vlClientNo) // Recherche du client
+    If(Records in selection([Clients])=0) // Si aucun client n'a été trouvé…
+       ADD RECORD([Clients]) //Ajout d'un nouveau client
     Else
-       If(Not(Locked([Customers])))
-          MODIFY RECORD([Customers]) // Modify the record
-          UNLOAD RECORD([Customers])
+       If(Not(Locked([Clients])))
+          MODIFY RECORD([Clients]) //Modifier l'enregistrement
+          UNLOAD RECORD([Clients])
        Else
-          ALERT("The record is currently being used.")
+          ALERT("Cet enregistrement est en train d'être modifié.")
        End if
     End if
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-Accepting the record sets the OK system variable to 1; canceling it sets the OK system variable to 0\. The OK system variable is set only after the record is accepted or canceled.
+La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s'il est annulé.
 
-## See also 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [CANCEL](cancel.md)  
@@ -92,16 +92,15 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 [MODIFY RECORD](modify-record.md)  
 [SAVE RECORD](save-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 56 |
+| Numéro de commande | 56 |
 | Thread safe | no |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
-| Forbidden on the server ||
-
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
+| Interdite sur le serveur ||
 
 

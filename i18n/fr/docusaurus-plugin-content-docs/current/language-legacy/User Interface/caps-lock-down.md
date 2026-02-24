@@ -9,31 +9,31 @@ displayed_sidebar: docs
 <!--REF #_command_.Caps lock down.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | State of the Caps Lock key |
+| Résultat | Boolean | &#8592; | Etat de la touche Verrouillage Majuscule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Caps lock down.Summary-->Caps lock down returns TRUE if the Caps Lock key is pressed.<!-- END REF-->
+<!--REF #_command_.Caps lock down.Summary-->**Caps lock down** retourne Vrai si la touche **Verrouillage Majuscule** est enfoncée.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-See example for the [Shift down](shift-down.md) command.
+Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 
-## See also 
+## Voir aussi 
 
 [Macintosh command down](macintosh-command-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -42,11 +42,11 @@ See example for the [Shift down](shift-down.md) command.
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 547 |
+| Numéro de commande | 547 |
 | Thread safe | yes |
 
 

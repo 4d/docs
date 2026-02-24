@@ -5,58 +5,58 @@ slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *text* : Text )<!-- END REF-->
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texte* )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | Text to be put into the pasteboard |
+| texte | Text | &#8594;  | Texte à placer dans le conteneur de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** clears the pasteboard and then puts a copy of the text you passed in *text* into the pasteboard.<!-- END REF--> 
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** place une copie du texte que vous avez passé dans *texte* dans le conteneur de données.<!-- END REF--> Les données éventuellement présentes dans le conteneur sont auparavant effacées. 
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard 
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-After you have put some text into the pasteboard, you can retrieve it using the [Get text from pasteboard](get-text-from-pasteboard.md) command or by calling for example [GET PASTEBOARD DATA](get-pasteboard-data.md) ("com.4d.private.text.native";...).
+Vous pouvez récupérer le texte collé dans le conteneur de données à l'aide de la fonction [Get text from pasteboard](get-text-from-pasteboard.md) ou en appelant par exemple [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.text.native";...).
 
-4D text expressions can contain up to 2 GB of text*.* 
+Les expressions de type Texte de 4D peuvent contenir jusqu'à 2 Go de texte. 
 
-**Note:** The pasteboard is read only during the On Drag Over form event. It is not possible to use this command in this context.
+**Note :** Le conteneur de données est en lecture seule pendant l’événement formulaire On Drag Over. Il n’est pas possible d’utiliser cette commande dans ce contexte.
 
-## Example 
+## Exemple 
 
-See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If a copy of the text is correctly placed in the pasteboard, the OK variable is set to 1\. If there is not enough memory to place a copy of the text in the pasteboard, the OK variable is set to 0, but no error is generated.
+Si la copie du texte est correctement placée dans le conteneur de données, la variable système OK prend la valeur 1\. S'il n'y a pas assez de mémoire pour placer une copie du texte dans le conteneur, la variable système OK prend la valeur 0, mais aucune erreur n'est générée.
 
-## See also 
+## Voir aussi 
 
 [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 523 |
+| Numéro de commande | 523 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

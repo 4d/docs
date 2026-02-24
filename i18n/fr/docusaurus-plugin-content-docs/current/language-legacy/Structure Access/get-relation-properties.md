@@ -5,51 +5,49 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *fieldPtr* : Pointer ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *oneTable* : Integer ; *oneField* : Integer {; *choiceField* : Integer {; *autoOne* : Boolean {; *autoMany* : Boolean}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrChp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<br/>**GET RELATION PROPERTIES** ( *numTable* ; *numChamp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr | Pointer | &#8594;  | Field pointer |
-| tableNum | Integer | &#8594;  | Table number |
-| fieldNum | Integer | &#8594;  | Field number if the table number is passed as first parameter |
-| oneTable | Integer | &#8592; | One table number or 0 if no relation is defined from the field |
-| oneField | Integer | &#8592; | One field number or 0 if no relation is defined from the field |
-| choiceField | Integer | &#8592; | Choice field number or 0 if no choice field |
-| autoOne | Boolean | &#8592; | True = Auto relate one, False = Manual relate one |
-| autoMany | Boolean | &#8592; | True = Auto one to many, False = Manual one to many |
+| ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| tableDest | Integer | &#8592; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
+| champDest | Integer | &#8592; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
+| discriminant | Integer | &#8592; | Numéro du champ discriminant ou 0 si aucun champ discriminant |
+| allerAuto | Boolean | &#8592; | Vrai = Lien aller automatique, Faux = Lien aller manuel |
+| retourAuto | Boolean | &#8592; | Vrai = Lien retour automatique, Faux = Lien retour manuel |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Created|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET RELATION PROPERTIES.Summary-->The GET RELATION PROPERTIES command returns the properties of the relation (if any) which starts from the source field defined by *tableNum* and *fieldNum* or by *fieldPtr*.<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Summary-->La commande **GET RELATION PROPERTIES** retourne les propriétés du lien, s’il y en a un, qui part du champ source, désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->  
+Vous pouvez passer :
 
-You can pass:
+* soit des numéros de table et de champ dans *numTable* et *numChamp*,
+* soit un pointeur vers le champ dans *ptrChp*.
 
-* Either table and field numbers in *tableNum* and *fieldNum*,
-* Or a pointer to the field in *fieldPtr*.
+Après l’exécution de la commande :
 
-Once the command has been executed:
+* Les paramètres *tableDest* et *champDest* contiennent respectivement le numéro de la table et du champ vers lesquels pointe le lien partant du champ source. Si aucun lien ne part du champ, ces paramètres contiennent 0\.
+* Le paramètre *discriminant* contient le numéro du champ discriminant (appartenant à la table cible) défini pour le lien. Si aucun champ discriminant n’a été défini pour le lien ou si aucun lien ne part du champ source, ce paramètre contient 0.
+* Les paramètres *allerAuto* et *retourAuto* retournent Vrai si respectivement les options “Lien aller auto” et “Lien retour auto” ont été cochées pour le lien, Faux sinon.
 
-* The *oneTable* and *oneField* parameters contain respectively the table and field number to which the relation (from the source field) is pointing. If there is no relation starting from the field, these parameters return 0.
-* The *choicefield* parameter contains the choice field number (from the target table) defined within this relation. If no choice field has been set for this relation, or if no relation starts from the source field, this parameter returns 0.
-* The *autoOne* and *autoMany* parameters return **True** if, respectively, the “Auto Relate One” and “Auto One to Many” boxes has been checked for this relation; otherwise, they return **False**.
+**Note :** Les deux derniers paramètres retournent également Vrai si aucun lien ne part du champ source (dans ce cas, leur valeur est non significative). La valeur des paramètres *tableDest* et *champDest* vous permet de vous assurer de l’existence d’un lien.
 
-**Note:** The *autoOne* and *autoMany* parameters will also return **True** if no relation starts from the source field (in this case they return non-significant values). The value of both the *oneTable* and *oneField* parameters allows you to make sure that a relation exists. 
-
-## See also 
+## Voir aussi 
 
 [GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
 [GET FIELD PROPERTIES](get-field-properties.md)  
@@ -57,11 +55,11 @@ Once the command has been executed:
 [SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
 [SET FIELD RELATION](set-field-relation.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 686 |
+| Numéro de commande | 686 |
 | Thread safe | yes |
 
 

@@ -5,45 +5,45 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( * ; *object* : Text ) : Text<br/>**OBJECT Get keyboard layout** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Language code of layout, "" = no layout |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| Résultat | Text | &#8592; | Code de la langue de configuration , "" = pas de configuration |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get keyboard layout.Summary-->The **OBJECT Get keyboard layout** command returns the current keyboard layout associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Summary-->La commande **OBJECT Get keyboard layout** retourne la configuration clavier courante associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas une nom mais une référence.
 
-The command returns a string indicating the language code used, based on RFC3066, ISO639 and ISO3166\. For more information, refer to the description of the [SET DATABASE LOCALIZATION](set-database-localization.md) command. 
+La commande retourne une chaîne indiquant le code de langue utilisé, basé sur les RFC3066, ISO639 et ISO3166\. Pour plus d’informations, reportez-vous à la description de la commande [SET DATABASE LOCALIZATION](set-database-localization.md). 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1180 |
+| Numéro de commande | 1180 |
 | Thread safe | no |
 
 

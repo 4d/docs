@@ -9,28 +9,28 @@ displayed_sidebar: docs
 <!--REF #_command_.Count screens.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of monitors |
+| Résultat | Integer | &#8592; | Nombre d'écrans |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count screens.Summary-->The Count screens command returns the number of screen monitors connected to your machine.<!-- END REF-->
+<!--REF #_command_.Count screens.Summary-->**Count screens** retourne le nombre de moniteurs qui sont connectés à votre machine.<!-- END REF-->
 
-## See also 
+## Voir aussi 
 
 [Menu bar screen](menu-bar-screen.md)  
 [SCREEN COORDINATES](screen-coordinates.md)  
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 [Screen height](screen-height.md)  
 [Screen width](screen-width.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 437 |
+| Numéro de commande | 437 |
 | Thread safe | no |
 
 

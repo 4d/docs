@@ -5,177 +5,257 @@ slug: /commands/query-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*aTable* : Table}{;}{*conjOp* : &, |, # ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* :  Text, >, <, >=, <=, #, =, |, % ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY BY ATTRIBUTE.Syntax-->**QUERY BY ATTRIBUTE** ( {*laTable*}{;}{*opConj* ;} *champObjet* ; *cheminAttribut* ; *opRech* ; *valeur* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY BY ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | &, \|, # | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
-| objectField | Field | &#8594;  | Object field to query attributes |
-| attributePath | Text | &#8594;  | Name or path of attribute |
-| queryOp | Text, >, <, >=, <=, #, =, \|, % | &#8594;  | Query operator (comparator) |
-| value | Text, Real, Date, Time | &#8594;  | Value to compare |
-| * | Operator | &#8594;  | Continue query flag |
+| laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| opConj | Operator | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| champObjet | Field | &#8594;  | Champ objet dont les attributs sont à utiliser pour la recherche |
+| cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut |
+| opRech | Text, Operator | &#8594;  | Opérateur de recherche (comparateur) |
+| valeur | Text, Number, Date, Time | &#8594;  | Valeur à comparer |
+| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R2|Modified|
-|15|Created|
+|16 R2|Modifié|
+|15|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** looks for records matching the query string defined using the *objectField*, *attributePath*, *queryOp* and *value* parameters, and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
+<!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
-The optional *conjOp* parameter is used to join **QUERY BY ATTRIBUTE** calls when defining multiple queries. The conjunction operators available are the same as the ones for the [QUERY](query.md) command:
+Le paramètre optionnel *opConj* est utilisé pour combiner plusieurs appels à **QUERY BY ATTRIBUTE** en cas de recherche multiple. Les opérateurs de conjonction utilisables sont les mêmes que ceux de la commande [QUERY](query.md) :
 
-| **Conjunction** | **Symbol to use with QUERY BY ATTRIBUTE** |
-| --------------- | ----------------------------------------- |
-| AND             | &                                         |
-| OR              | \|                                        |
-| Except          | #                                         |
+| **Conjonction** | **Symbole à utiliser avec QUERY BY ATTRIBUTE** |
+| --------------- | ---------------------------------------------- |
+| ET              | &                                              |
+| OU              | \|                                             |
+| Sauf            | #                                              |
 
-The *conjOp* parameter is not used for the first **QUERY BY ATTRIBUTE** call of a multiple query, or if the query is a simple query. If you omit it within a multiple query, the AND (&) operator is used by default.
+Le paramètre *opConj* n'est pas nécessaire pour le premier appel à **QUERY BY ATTRIBUTE** lors d'une recherche complexe, ou si la recherche ne comporte qu'une ligne. Si vous l'omettez à l'intérieur d'une recherche complexe, le ET (&) est utilisé par défaut.
 
- In *objectField*, pass the Object field whose attribute(s) you want to query. It can come from another table if it is table 1 of a table linked to *aTable* by an automatic or manual link. **QUERY BY ATTRIBUTE** supports 4D Write Pro custom attributes when documents are stored in Object fields. For more information about this point, please refer to the *Storing 4D Write Pro documents in 4D Object fields* section.
+ Dans *champObjet*, passez le champ objet parmi les attributs duquel vous souhaitez effectuer la recherche. Il peut provenir d'une autre table si celle-ci est la table 1 d'une table liée à *laTable* par un lien automatique ou manuel.   
+**QUERY BY ATTRIBUTE** prend en charge les attributs utilisateurs de 4D Write Pro lorsque les documents sont stockés dans des champs de type Objet. Pour plus d'informations sur ce point, reportez-vous à la section *Stocker les documents 4D Write Pro dans des champs objet 4D*. 
 
-In *attributePath*, pass the path of the attribute whose values you want to compare for each record, for example "children.girls.age". If you pass a single name, for example "place", you designate the corresponding attribute found at the first level of the object field. If an attribute "x" is an array, **QUERY BY ATTRIBUTE** will search records which contain an attribute "x" in which at least one element matches the criteria. To search in array attributes, it is necessary to indicate to the **QUERY BY ATTRIBUTE** command that attribute "x" is an array by appending "\[\]" to its name in *attributePath* (see example 3). You can add a letter in the brackets (i.e. "\[b\]") to link arguments (see the *Linking array attribute query arguments* paragraph below).
+Dans *cheminAttribut*, passez le chemin de l'attribut dont vous souhaitez comparer les valeurs pour chaque enregistrement, par exemple "enfants.filles.age". Si vous passez un simple nom, par exemple "lieu", vous désignez l'attribut correspondant situé au premier niveau du champ objet.   
+Si un attribut "x" est un tableau, **QUERY BY ATTRIBUTE** cherchera les enregistrements contenant un attribut "x" dans lequel au moins un élément correspond aux critères. Pour effectuer une recherche parmi les attributs de tableaux, il est nécessaire d'indiquer à la commande **QUERY BY ATTRIBUTE** que l'attribut "x" est un tableau en ajoutant "\[\]" à son nom dans le paramètre *cheminAttribut* (voir exemple 3). Vous pouvez également insérer une lettre à l'intérieur des crochets (par exemple "\[b\]") pour lier des arguments (reportez-vous au paragraphe *Linking array attribute query arguments* ci-dessous). 
 
-**Notes:** 
+**Notes :** 
 
-* Keep in mind that attribute names are case-sensitive: you can have different "MyAtt" and "myAtt" attribute names in the same record.
-* Attribute names are trimmed to eliminate extra spaces. For example, " my first attribute .my second attribute " is interpreted as "my first attribute.my second attribute".
-* You cannot query on attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the query string. For more information, please refer to the *Object property identifiers* paragraph.
+* N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules : il est possible d'avoir deux noms d'attributs différents "MonAtt" et "monAtt" dans le même champ d'un enregistrement.
+* les noms d'attributs sont "nettoyés" afin d'éliminer les espaces superflus. Par exemple, " mon premier attribut .mon second attribut " est interprété "mon premier attribut .mon second attribut".
+* Vous ne pouvez pas rechercher des attributs dont le nom contient des caractères spéciaux tels que "." ou "\[ \]", car ils seront incorrectement interprétés comme des tokens dans la chaine de recherche. Pour plus d'informations, veuillez consulter le paragraphe *Identifiants de propriétés d'objets*.
 
-The *queryOp* parameter is the comparison operator that is applied between *objectField* and *value*. You can pass one of the symbols shown here:
+Le paramètre *opRech* est l'opérateur qui va permettre de comparer *champObjet* et *valeur*. Vous pouvez utiliser l'un des symboles suivants :
 
-| **Comparison**           | **Symbol to use with** **QUERY BY ATTRIBUTE** |
-| ------------------------ | --------------------------------------------- |
-| Equal to                 | \=                                            |
-| Not equal to(\*)         | #                                             |
-| Less than                | <                                             |
-| Greater than             | \>                                            |
-| Less than or equal to    | <=                                            |
-| Greater than or equal to | \>=                                           |
+| **Comparaison**     | **Symbole à utiliser avec QUERY BY ATTRIBUTE** |
+| ------------------- | ---------------------------------------------- |
+| Egal à              | \=                                             |
+| Différent de(\*)    | #                                              |
+| Inférieur à         | <                                              |
+| Supérieur à         | \>                                             |
+| Inférieur ou égal à | <=                                             |
+| Supérieur ou égal à | \>=                                            |
 
-(\*) When used with array elements, the # operator means "does not contain any". 
+(\*) Lorsqu'il est utilisé avec des éléments de tableau, l'opérateur # signifie "ne contient aucun".
 
-**Note:** It is also possible to specify the comparison operator as a text expression instead of a symbol. See the [QUERY](query.md) command description for more information. 
+**Note :** Il est possible de définir le comparateur sous la forme d'une expression texte au lieu d'un symbole. Reportez-vous à la description de la commande [QUERY](query.md) pour plus d'informations. 
 
-*value* is the data against which the *attributePath* will be compared. The value can be any expression that evaluates to the same data type as *attributePath*. The value is evaluated once, at the beginning of the query. The value is not evaluated for each record. To query for a string contained within a string (a "contains" query), use the wildcard symbol (@) in *value* to isolate the string to be searched for as shown in this example: "@Smith@". Note that in this case, the search only partially benefits from the index (compactness of data storage).
+La *valeur* représente ce qui va être comparé au contenu de *cheminAttribut*. La valeur peut être toute expression du même type que *cheminAttribut*. Le type de la valeur n'est évalué qu'une seule fois, au démarrage de la recherche, et ne l'est donc pas pour chaque enregistrement. Si la recherche porte sur le contenu d'une chaîne de caractères, utilisez dans *valeur* le symbole "@" pour isoler le contenu à rechercher, par exemple "@Dupon@". Il est à noter, dans ce cas, que la recherche ne tire que partiellement parti de l'index (compacité du stockage des données).
 
-Here is the structure of a query by attribute:
-
-```4d
- QUERY BY ATTRIBUTE([Table] ;[Table]ObjectField ;"attribute1.attribute2";=;value)
-```
-
-**Note:** An implicit criteria for all operators (except #) is that the Object field contains an attribute. However, for the # operator, it can be undefined (see below). 
-
-### The # operator and Null values 
-
-When querying by attribute using the **#** operator, you must take into account cases where an attribute may not be present in a record. For example, consider the following statement:
+Voici la structure type d'une recherche par attribut :
 
 ```4d
- QUERY BY ATTRIBUTE([People];[People]Animals;"dog.name";#;"Rex")
+ QUERY BY ATTRIBUTE([Table] ;[Table]ChampObjet ;"attribut1.attribut2";=;valeur)
 ```
 
-This query will return records for people who have a dog whose name is not "Rex", but will NOT return records for people who do not have a dog, or who have a dog without a name, *i.e.* records for which the "dog.name" property value is **null**. The underlying concept is: The query engine cannot compare the uncomparable, *i.e.* missing or nonexistent data. Thus, records that cannot be compared to the search criteria are excluded from the query. 
+**Note :** La présence de l'attribut dans le champ objet est un critère implicite pour tous les opérateurs (hormis #). En revanche, pour l'opérateur #, il peut être indéfini (cf. ci-dessous). 
 
-To use a more generic example:
+### Utilisation de l'opérateur # (prise en charge des valeurs Null) 
+
+Lorsque vous effectuez une recherche par attribut à l'aide de l'opérateur #, vous devez prendre en considération les cas où un attribut n'est pas présent dans un enregistrement. Considérons par exemple ce qui suit :   
 
 ```4d
- QUERY BY ATTRIBUTE([Table];[Table]ObjectField;"attribute1.attribute2";#;value)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Animaux;"chien.nom";#;"Médor")
 ```
 
-This query will return all records for which *\[Table\]ObjectField* contains an object with an *attribute1* attribute, which is an object containing an *attribute2* attribute whose value is not *value.* It will NOT return records where:
+Cette recherche retournera les enregistrements des personnes ayant un chien dont le nom n'est pas "Médor", mais ne retournera PAS les les enregistrements des personnes n'ayant pas de chien, ou ayant un chien sans nom, c'est-à-dire les enregistrements pour lesquels la valeur de la proprité "chien.nom" est **null**. Le concept est le suivant : le moteur de recherche ne peut pas comparer l'incomparable, à savoir les données manquantes ou inexistantes. Ainsi, les enregistrements qui ne peuvent pas être comparés aux critères de recherche sont exclus de la recherche.
 
-* the object field does not contain *attribute1*
-* the object field does not contain **attribute1.attribute*2
-* the object field contains **attribute1.attribute*2=null
-
-This principle also applies to array attributes. For example, the query will return records for people who have one or several address(es), but none of them is in Paris.
+Voici un exemple plus générique :   
 
 ```4d
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";#;"paris")
+ QUERY BY ATTRIBUTE([Table];[Table]ChampObjet;"attribut1.attribut2";#;valeur)
+```
+  
+  
+Cette recherche retournera tous les enregistrements pour lesquels *\[Table\]ChampObjet* contient un objet qui contient un attribut *attribut1* qui est lui-même un objet qui contient un attribut *attribut2* dont la valeur n'est pas *valeur.* Elle ne retournera PAS les enregistrements dans lesquels : 
+* le champ objet ne contient pas *attribut1*
+* le champ objet ne contient pas *attribut1.* *attribut2*
+* le champ objet contient *attribut1.* *attribut2=null*
+
+Ce principe s'applique également aux attributs tableaux. Par exemple, la recherche retournera les enregistrements des personnes ayant une ou plusieurs adresses, mais n'ayant aucune adresse à Paris.  
+
+```4d
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";#;"paris")
 ```
 
-**Note:** To specifically obtain records where the attribute is undefined, you can use an empty object (see example 2). Note however that searching for NULL values in array elements is not supported.
+  
+**Note :** Pour obtenir spécifiquement les enregistrements dans lesquels l'attribut est indéfini, vous pouvez utiliser un objet vide (cf. exemple 2). A noter toutefois que la recherche de valeurs NULL dans les éléments de tableaux n'est prise en charge.
 
-### Building multiple queries 
+### Construire des recherches multiples 
 
-Here are the rules for building multiple queries by attribute:
+Voici les règles à observer pour la construction de recherche par attribut à lignes multiples :
 
-* The first query argument must not contain a conjunction.
-* Each successive query argument can begin with a conjunction. If you omit it, the AND (&) operator is used by default.
-* All queries, except the final query, must use the *\** parameter.
-* **QUERY BY ATTRIBUTE** can be mixed with [QUERY](query.md) commands (see example).
-* To perform the query, do not specify the *\** parameter in the last **QUERY BY ATTRIBUTE** command. Alternatively, you can execute the [QUERY](query.md) command without any parameters other than the table.
+* La première ligne ne doit pas contenir d'opérateur de conjonction,
+* Les suivantes peuvent débuter par un opérateur de conjonction. Si vous l'omettez, l'opérateur ET (&) est utilisé par défaut.
+* Toutes les lignes, à l'exception de la dernière, doivent s'achever par le symbole *\**.
+* **QUERY BY ATTRIBUTE** peut être combiné à des commandes [QUERY](query.md) classiques (voir exemple).
+* Pour lancer la recherche, ne passez pas le paramètre *\** dans la dernière ligne. Autre solution : vous pouvez exécuter la commande [QUERY](query.md) sans autre paramètre que la table.
 
-**Note:** Each table maintains its own currently-built query. This means that you can create multiple queries simultaneously, one for each table. 
+**Note :** Chaque table maintient sa propre construction de recherche courante. Cela signifie que vous pouvez créer de multiples recherches simultanément, une pour chaque table. 
 
-No matter which way a query has been defined:
+Quelle que soit la manière dont la recherche a été définie :
 
-* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress meter. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md)  commands. If a progress meter is displayed, the user can click on the **Stop** button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
-* If any indexed object fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible.
+* Si l'exécution d'une recherche nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ce type de message peut être désactivé à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton Stop pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
+* Si des champs objet indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération.
 
-### Date values in the object 
+### Valeurs date dans l'objet 
 
-Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
+Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
 
 ```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
 ```
 
-This setting is also taken into account during queries, so you do not have to worry about it if you always use your database at the same place and if settings are the same on all machines that access the data. In this case, the following query will correctly return records whose Birthday attribute equals !1973-05-22! (saved as "1973-05-21T23:00:00.00Z"):
+Ce paramétrage est également respecté durant les recherches, donc vous n'avez pas à vous en préoccuper si vous utilisez toujours votre base dans la même zone et si les paramètres sont identiques sur chaque machine qui accède aux données. Dans ce contexte, la recherche suivante retournera bien les enregistrements dont l'attribut Anniversaire est égal à !1973-05-22! (stocké "1973-05-21T23:00:00.00Z") :
 
 ```4d
- QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1973-05-22!)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;!1973-05-22!)
 ```
 
-If you do not want to use the GMT settings, you can modify these settings using the following instruction:
+Si vous ne souhaitez pas utiliser le paramétrage GMT, vous pouvez exécuter l'instruction suivante :
 
 ```4d
- SET DATABASE PARAMETER(JSON use local time;0)
+ SET DATABASE PARAMETER(JSON use local time;0)
 ```
 
-Keep in mind that the scope of this setting is the process only. If you execute this instruction, then October 1st, 1965 will be stored "1965-10-01T00:00:00.000Z" but you will need to set the same parameter before launching your queries:
+Attention, la portée de ce paramètre est limitée au process. Si vous exécutez cette instruction, le 1er Octobre 1965 sera stocké "1965-10-01T00:00:00.000Z" mais vous devrez fixer le même paramètre avant de lancer vos recherches :
 
 ```4d
- SET DATABASE PARAMETER(JSON use local time;0)
- QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"Birthday";=;!1976-11-27!)
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
 ```
 
-### Using the virtual length property 
+### Utilisation de la propriété virtuelle length 
 
-You can use the virtual "length" property with this command. This property is available automatically for all array type attributes and returns the size of the array, i.e. the number of elements it contains. It can be used in the context of executing the **QUERY BY ATTRIBUTE** command (see example 4).
+Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle peut être utilisée dans le contexte de l'exécution de la commande **QUERY BY ATTRIBUTE** (cf. exemple 4).
 
-### Linking array attribute query arguments 
+### Lier les critères pour les recherches dans les éléments de tableau 
 
-(New in 4D v16 R2) When searching in array attributes with multiple query arguments joined by the AND operator, you may want to make sure that only records containing elements that match all arguments are returned, and not records where arguments can be found in different elements. To do this, you need to *link* query arguments to array elements, so that only single elements containing linked arguments are found. 
+(Nouveauté 4D v16 R2) Lorsque vous effectuez des recherches multiples combinées via l'opérateur "ET" parmi des éléments de tableaux, vous pouvez souhaiter que seuls les enregistrements dont au moins un élément de tableau répond à tous les critères soient trouvés, et non ceux répondant à tous les critères mais dans différents éléments. Pour cela, vous devez *lier* les critères de recherche afin que seuls les éléments individuels contenant tous les critères liés soient trouvés. 
 
-For example, with the following two records:
+Par exemple, avec les deux enregistrements suivants :
 
-*Record 1:*  
-\[People\]name: "martin"  
-\[People\]OB\_Field:   
+*Enregistrement 1 :*  
+\[Personnes\]nom : "Martin"  
+\[Personnes\]OB\_Field :   
  "locations" : \[ {  
  "kind":"home",  
+ "city":"Paris"   
+ } \]
+
+*Enregistrement 2 :*  
+\[Personnes\]nom : "Smith"  
+\[Personnes\]OB\_Field :   
+ "locations" : \[ {  
+ "kind":"home",  
+ "city":"Lyon"   
+ } , {  
+ "kind":"office",  
+ "city":"Paris"   
+ } \]
+
+Vous souhaitez trouver les personnes qui ont un type d'adresse "home" dans la ville "Paris". Si vous écrivez : 
+
+```4d
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"Paris";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home")
+```
+
+... la recherche retournera "Martin" et "Smith" car "Smith" a un élément "locations" dont le "kind" est "home" et un (autre) élément "locations" dont la "city" est "Paris".
+
+ Si vous souhaitez uniquement récupérer les enregistrements correspondant aux critères mais dans un même élément, vous devez **lier les critères**. Pour lier des critères de recherche :
+
+* Ajoutez une lettre entre les \[\] dans le premier chemin à lier et répétez la même lettre dans tous les critères liés. Par exemple : **locations\[a\].city** et **locations\[a\].kind**. Vous pouvez utiliser toute lettre de l'alphabet Latin (majuscules/minuscules indifférenciées).
+* Pour ajouter d'autres critères liés dans la même recherche, utilisez une autre lettre (voir exemple ci-dessous). Vous pouvez donc créer jusqu'à 26 combinaisons de critères liés dans une seule recherche.
+
+Avec les mêmes enregistrements que précédemment, si vous écrivez :
+
+```4d
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].city";=;"Paris";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].kind";=;"home")
+```
+
+... la recherche retournera uniquement "Martin" car il a un élément "locations" dont le "kind" est "home" et dont la "city" est "Paris". La recherche ne retournera pas "Smith" car les valeurs "Paris" et "home" ne se trouvent pas dans le même élément de tableau. Reportez-vous ci-dessous pour plus d'exemples d'utilisations de cette fonctionnalité. 
+
+**Note :** Utiliser la syntaxe liée dans une ligne de recherche unique donnera les mêmes résultats qu'une recherche standard, hormis avec l'opérateur "#" : dans ce cas, des résultats invalides peuvent être retournés. Par conséquent, cette syntaxe spécifique n'est pas prise en charge. 
+
+## Exemple 1 
+
+Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous souhaitons trouver les personnes dont l'âge est situé entre 20 et 29\. Les deux premières lignes interrogent l'attribut en tant qu'entier (>=20 et < 30) et les suivantes interrogent l'attribut en tant que chaîne (débute par "2" mais est différent de "2").
+
+```4d
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"age";>=;20;*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";<;30;*)
+ QUERY BY ATTRIBUTE([Personnes];|;[Personnes]OB_Info;"age";=;"2@";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";#;"2") //pas de * final pour lancer l'exécution
+```
+
+## Exemple 2 
+
+La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enregistrements dans lesquels certains attributs sont définis (ou non définis). Pour cela, vous devez utiliser un objet vide : 
+
+```4d
+  //Trouver les enregistrements où l'email est défini dans le champ objet
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"email";#;$undefined)
+```
+
+```4d
+  //Trouver les enregistrements où le zip code n'est PAS défini dans le champ objet
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"zip code";=;$undefined)
+```
+
+**Note :** Cette syntaxe spécifique n'est pas prise en charge avec les attributs de type tableau. La recherche de valeurs NULL dans les attributs de tableau donne des résultats invalides. 
+
+## Exemple 3 
+
+Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux enregistrements suivants :
+
+*Enregistrement 1 :*  
+\[Personnes\]nom : "martin"  
+\[Personnes\]OBFied :   
+ "locations" : \[ {  
+ "kind":"office",  
  "city":"paris"   
  } \]
 
-*Record 2:*  
-\[People\]name: "smith"  
-\[People\]OB\_Field:   
+*Enregistrement 2 :*   
+\[Personnes\]nom : "smith"  
+\[Personnes\]OBFied :   
  "locations" : \[ {  
  "kind":"home",  
  "city":"lyon"   
@@ -184,250 +264,173 @@ For example, with the following two records:
  "city":"paris"   
  } \]
 
-You want to find people with a "home" location kind in the city "paris". If you write: 
+... **QUERY BY ATTRIBUTE** trouvera les personnes ayant une localisation à "paris" par cette recherche :
 
 ```4d
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris";*)
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home")
+  //on indique l'attribut tableau avec la syntaxe "[]"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"paris")
+  //trouve "martin" et "smith"
 ```
 
-... the query will return "martin" and "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
-
- If you want to only get records where matching arguments are in the same element, you need to **link arguments**. To link query arguments:
-
-* Add a letter between the \[\] in the first path to link and repeat the same letter in all linked arguments. For example: **locations\[a\].city** and **locations\[a\].kind**. You can use any letter of the Latin alphabet (not case sensitive).
-* To add different linked criteria in the same query, use another letter (see examples below). You can create up to 26 combinations of criteria in a single query.
-
-With the above records, if you write:
+**Note :** Si vous avez défini plusieurs critères sur le même attribut tableau, les critères correspondants ne s'appliqueront pas nécessairement au même élément de tableau. Dans l'exemple ci-dessous, la recherche retournera "smith" car l'attribut a un élément "locations" dont le "kind" est "home" et un élément "locations" dont le "city" est "paris", même s'il ne s'agit pas du même élément :
 
 ```4d
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].city";=;"paris";*)
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[a].kind";=;"home")
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Field;"locations[].city";=;"paris")
+  //trouve "smith"
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same array element. See the examples below for more illustrations of this feature. 
+## Exemple 4 
 
-**Note:** Using a linked syntax in a single query line will give the same results as a standard query, except when using the "#" operator: in this case, invalid results may be returned. This specific syntax is therefore not supported. 
-
-## Example 1 
-
-In this example, the "age" attribute is either a string or an integer and we want to find people whose age is between 20 and 29\. The first two lines query the attribute as an integer (>=20 and < 30) and the last ones query the field as a string (starts with "2" but is different from "2".)
-
-```4d
- QUERY BY ATTRIBUTE([Persons];[Persons]OB_Info;"age";>=;20;*)
- QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";<;30;*)
- QUERY BY ATTRIBUTE([Persons];|;[Persons]OB_Info;"age";=;"2@";*)
- QUERY BY ATTRIBUTE([Persons];&;[Persons]OB_Info;"age";#;"2") //no final * to launch execution
-```
-
-## Example 2 
-
-The **QUERY BY ATTRIBUTE** command can be used to find records where certain attributes are defined (or are not defined). To do this, you have to use an empty object.
-
-```4d
-  //Find records where e-mail is defined in the object field
- var $undefined : Object
- QUERY BY ATTRIBUTE([Persons];[Persons]Info;"e-mail";#;$undefined)
-```
-
-```4d
-  //Find records where zip code is NOT defined in the object field
- var $undefined : Object
- QUERY BY ATTRIBUTE([Persons];[Persons]Info;"zip code";=;$undefined)
-```
-
-**Note:** This specific syntax is not supported with array type attributes. Searching for NULL values in array elements will give invalid results.
-
-## Example 3 
-
-You want to search a field containing array attributes. With the following two records:
-
-*Record1:*  
-\[People\]name: "martin"  
-\[People\]OB\_Field:  
- "locations" : \[ {  
- "kind":"office",  
- "city":"paris"   
- } \]
-
-*Record2:* 
-\[People\]name: "smith"  
-\[People\]OB\_Field:  
- "locations" : \[ {  
- "kind":"home",  
- "city":"lyon"   
- } , {  
- "kind":"office",  
- "city":"paris"   
- } \]
-
- ... **QUERY BY ATTRIBUTE** will find people with a location in "paris" using this statement:
-
-```4d
-  //flag the array attribute with "[]" syntax
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].city";=;"paris")
-  //selects "martin" and "smith"
-```
-
-**Note:** If you defined several criteria on the same array attribute, the matched criteria will not necessarily apply to the same array element. In the following example, the query returns "smith" because it has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even if it's not the same element:
-
-```4d
- QUERY BY ATTRIBUTE([People];[People]OB_Field;"locations[].kind";=;"home";*)
- QUERY BY ATTRIBUTE([People];&;[People]OB_Field;"locations[].city";=;"paris")
-  //selects "smith"
-```
-
-## Example 4 
-
-This example illustrates the use of the virtual "length" property. Your database has a \[Customer\]full\_Data object field with the following data:
+Cet exemple illustre l'utilisation de la propriété virtuelle "length". Votre base de données comporte un champ objet \[Customer\]full\_Data avec les données suivantes :
 
 ![](../assets/en/commands/pict2994114.en.png)
 
-You want to get the records for any customers who have two or more children. To do this, you can write:
+Vous souhaitez obtenir les enregistrements des clients qui ont deux enfants ou plus. Vous pouvez écrire :
 
 ```4d
- QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
+ QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
-## Example 5 
+## Exemple 5 
 
-These examples illustrate the various available combinations of linked query arguments on arrays. Assuming you have the following records:
+Ces exemples illustrent les différentes combinaisons de liaisons de critères disponibles avec les tableaux. Soit une base contenant les enregistrements suivants :
 
-*Record1:*  
-\[Person\]Name: "Sam"  
-\[Person\]ObjectField:   
- "Children": \[ {  
- "Name": "Harry",  
+*Enregistrement 1 :*  
+\[Personnes\]Nom : "Sam"  
+\[Personnes\]OBField :   
+ "Enfants": \[ {  
+ "Nom": "Harry",  
  "Age": "15",  
- "Toy": \[ {  
- "Name": "Car",  
- "Color": "Blue"   
+ "Jouets": \[ {  
+ "Nom": "Voiture",  
+ "Coul": "Bleu"   
  }, {  
- "Name": "Teddy Bear",  
- "Color": "Brown"   
+ "Nom": "Teddy Bear",  
+ "Coul": "Marron"   
  } \]  
  }, {  
- "Name": "Betty",  
+ "Nom": "Betty",  
  "Age": "9",  
- "Toy": \[ {  
- "Name": "Car",  
- "Color": "Green"   
+ "Jouets": \[ {  
+ "Nom": "Voiture",  
+ "Coul": "Vert"   
  }, {  
- "Name": "Puzzle",  
- "Color": "Blue"   
+ "Nom": "Puzzle",  
+ "Coul": "Bleu"   
  } \]  
  } \]
 
-*Record2:*  
-\[Person\]Name: "Louis"  
-\[Person\]ObjectField:  
- "Children": \[ {  
- "Name": "Harry",  
+*Enregistrement 2 :*  
+\[Personnes\]Nom : "Louis"  
+\[Personnes\]OBField :   
+ "Enfants": \[ {  
+ "Nom": "Harry",  
  "Age": "15",  
- "Toy": \[ {  
- "Name": "Water gun",  
- "Color": "Blue"   
+ "Jouets": \[ {  
+ "Nom": "Pistolet à eau",  
+ "Coul": "Bleu"   
  } \]  
  }, {  
- "Name": "Betty",  
+ "Nom": "Betty",  
  "Age": "3",  
- "Toy": \[ {  
- "Name": "Car",  
- "Color": "Blue"   
+ "Jouets": \[ {  
+ "Nom": "Voiture",  
+ "Coul": "Bleu"   
  }, {  
- "Name": "Puzzle",  
- "Color": "Green"   
+ "Nom": "Puzzle",  
+ "Coul": "Vert"   
  } \]  
  } \]
 
-*Record3:*  
-\[Person\]Name: "Victor"  
-\[Person\]ObjectField:   
- "Children": \[ {  
- "Name": "Harry",  
+*Enregistrement 3 :*  
+\[Personnes\]Nom : "Victor"  
+\[Personnes\]OBField :   
+ "Enfants": \[ {  
+ "Nom": "Harry",  
  "Age": "9",  
- "Toy": \[ {  
- "Name": "Doll",  
- "Color": "Pink"   
+ "Jouets": \[ {  
+ "Nom": "Poupée",  
+ "Coul": "Rose"   
  }, {  
- "Name": "Puzzle",  
- "Color": "Blue"   
+ "Nom": "Puzzle",  
+ "Coul": "Bleu"   
  } \]  
  }, {  
- "Name": "Betty",  
+ "Nom": "Betty",  
  "Age": "15",  
- "Toy": \[ {  
- "Name": "Water gun",  
- "Color": "Blue"   
+ "Jouets": \[ {  
+ "Nom": "Pistolet à eau",  
+ "Coul": "Bleu"   
  } \]  
  } \]
 
-To find people who have a child named "Betty" who is 15 years old:
+Recherche des personnes qui ont un enfant de 15 ans nommé "Betty" :
 
 ```4d
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15")
-  //returns "Victor"
- 
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15")
-  //returns "Sam", "Louis" and "Victor"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15")
+  //retourne "Victor"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15")
+  //retourne "Sam", "Louis" et "Victor"
 ```
 
-To find people who have a child named "Betty", 15 years old, and a child named "Harry" who is 9 years old:
+Recherche des personnes qui ont un enfant de 15 ans nommé "Betty" et un enfant de 9 ans nommé "Harry" :
 
 ```4d
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Betty";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[b].Name";=;"Harry";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[b].Age";=;"9")
-  //returns "Victor"
- 
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Betty";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"9")
-  //returns "Sam" and "Victor"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[b].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[b].Age";=;"9")
+  //retourne "Victor"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"9")
+  //retourne "Sam" et "Victor"
 ```
 
-To find people who have a 15 year-old child named "Harry" who has a "blue car" toy (searching in an array of arrays):
+Recherche des personnes qui ont un enfant de 15 ans nommé "Harry" qui a une voiture bleue en jouet (recherche dans un tableau de tableaux):
 
 ```4d
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[a].Name";=;"Harry";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Name";=;"Car";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[a].Toy[b].Color";=;"Blue")
-  //returns "Sam"
- 
- QUERY BY ATTRIBUTE([Person];[Person]ObjectField;"Children[].Name";=;"Harry";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Name";=;"Car";*)
- QUERY BY ATTRIBUTE([Person];&;[Person]ObjectField;"Children[].Toy[].Color";=;"Blue")
-  //returns "Sam" and "Louis"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Nom";=;"Voiture";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Coul";=;"Bleu")
+  //retourne "Sam"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Nom";=;"Voiture";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Coul";=;"Bleu")
+  //retourne "Sam" et "Louis"
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the query is carried out correctly, the OK system variable is set to 1.  
-The OK variable is set to 0 if:
+Si la recherche est correctement effectuée, la variable système OK prend la valeur 1.  
+La variable OK prend la valeur 0 si :
 
-* the user clicks on the **Cancel**/**Stop** button,
-* in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
+* l'utilisateur clique sur le bouton **Annuler** / **Stop**,
+* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
-## See also 
+## Voir aussi 
 
   
 [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
-*Structure of 4D language objects*  
+*Structure des objets de langage 4D*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1331 |
+| Numéro de commande | 1331 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

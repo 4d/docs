@@ -5,36 +5,36 @@ slug: /commands/dom-set-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *elementRef* : Text ; *elementName* : Text )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *refElément* ; *nomElément* )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| elementName | Text | &#8594;  | New name of element |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElément | Text | &#8594;  | Nouveau nom de l’élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->The DOM SET XML ELEMENT NAME command modifies the name of the element set by *elementRef*.<!-- END REF--> 
+<!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->La commande **DOM SET XML ELEMENT NAME** permet de modifier le nom de l’élément désigné par *refElément*.<!-- END REF--> 
 
-Pass the reference of the element to rename in *elementRef* and the new name of the element in *elementName*. The command also takes charge of updating the open and close tags of the element. 
+Passez dans *refElément* la référence de l’élément à renommer et dans *nomElément* le nouveau nom de l’élément. Bien entendu, la commande se charge de modifier les balises d’ouverture et de fermeture de l’élément. 
 
-## Example 
+## Exemple 
 
-In the following XML source:
+Soit la source XML suivante :
 
 ```XML
 <Book>
@@ -42,13 +42,13 @@ In the following XML source:
 </Book>
 ```
 
-If the following code is executed, with *vElemRef* containing the reference to the ‘Book’ element:
+Si le code suivant est exécuté, en admettant que *vRefElem* contienne la référence de l’élément ‘Book’ :
 
 ```4d
- DOM SET XML ELEMENT NAME(vElemRef;"BestSeller")
+ DOM SET XML ELEMENT NAME(vRefElem;"BestSeller")
 ```
 
-We get:
+Nous obtenons :
 
 ```XML
 <BestSeller>
@@ -56,27 +56,27 @@ We get:
 </BestSeller>
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## Error management 
+## Gestion des erreurs 
 
-An error is generated when:
+Une erreur est générée lorsque :
 
-* The element reference is invalid
-* The new name of the element to create is invalid (for example, if it starts with a number).
+* la référence de l’élément n’est pas valide
+* le nouveau nom d’élément n’est pas valide (par exemple, s’il débute par un chiffre).
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 867 |
+| Numéro de commande | 867 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

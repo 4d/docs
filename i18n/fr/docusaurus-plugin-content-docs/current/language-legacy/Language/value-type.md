@@ -5,114 +5,115 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* : Expression ) : Integer<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | Expression whose resulting value to be tested |
-| Function result | Integer | &#8592; | Data type number |
+| expression | Expression | &#8594;  | Expression dont la valeur résultante doit être testée |
+| Résultat | Integer | &#8592; | Numéro du type de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Created|
+|16 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Value type.Summary-->The Value type command returns the type of the value resulting from the evaluation of the *expression* you passed as parameter.<!-- END REF-->
+<!--REF #_command_.Value type.Summary-->La commande **Value type** retourne le type de la valeur résultant de l'évaluation de l'*expression* passée en paramètre.<!-- END REF--> 
 
-The command returns a numeric value that can be compared with one of the following constants of the *Field and Variable Types* theme: 
+La commande retourne une valeur numérique qui peut être comparée aux constantes suivantes du thème *Types champs et variables* : 
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| \_o\_Is float | Integer | 35    |
-| Is BLOB       | Integer | 30    |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is date       | Integer | 4     |
-| Is longint    | Integer | 9     |
-| Is null       | Integer | 255   |
-| Is object     | Integer | 38    |
-| Is picture    | Integer | 3     |
-| Is pointer    | Integer | 23    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Is time       | Integer | 11    |
-| Is undefined  | Integer | 5     |
-| Is variant    | Integer | 12    |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| \_o\_Is float | Entier long | 35     |
+| Is BLOB       | Entier long | 30     |
+| Is Boolean    | Entier long | 6      |
+| Is collection | Entier long | 42     |
+| Is date       | Entier long | 4      |
+| Is longint    | Entier long | 9      |
+| Is null       | Entier long | 255    |
+| Is object     | Entier long | 38     |
+| Is picture    | Entier long | 3      |
+| Is pointer    | Entier long | 23     |
+| Is real       | Entier long | 1      |
+| Is text       | Entier long | 2      |
+| Is time       | Entier long | 11     |
+| Is undefined  | Entier long | 5      |
+| Is variant    | Entier long | 12     |
+| Object array  | Entier long | 39     |
 
-This command is designed to return the type of a scalar expression, *i.e.* the value stored in or returned by the *expression* parameter. In particular, it can be applied to the following 4D expressions:
+Cette commande est destinée à retourner le type des expressions *scalaires*, c'est-à-dire des valeurs stockées dans ou retournées par le paramètre *expression*. En particulier, elle peut être appliquée aux expressions 4D suivantes :
 
-* object properties (*emp.name*),
-* collection elements (*myCol\[5\]*).
+* propriétés d'objets (*emp.name*),
+* éléments de collections (*myCol\[5\]*).
 
-**Note:** Numerical object properties are always considered real values:
+**Note :** Les propriétés d'objets numériques ont toujours le type réel :
 
 ```4d
  var $o : Object
  $o:=New object("value";42)
- $vType:=Value type($o.value) //$vType=Is real
+ $vType:=Value type($o.value) //$vType=Est un réel
 ```
 
-**Value type** can be applied to any valid 4D expression, including fields, variables, and parameters. In this case, unlike the [Type](type.md) command, **Value type** returns the *internal* type of the value resulting from the evaluation of *expression*, and not its *declared* type. Since the 4D language converts some value types internally, the **Value type** result can differ from the declared type. For example, 4D internally converts the "*Integer 64 bits*" type field values. This provides the following results:
+**Value type** peut être appliquée à toute expression 4D valide, y compris les champs, les variables ou les paramètres. Dans ce cas, à la différence de la commande [Type](type.md), **Value type** retourne le type *interne* de la valeur résultant de l'évaluation de l'*expression*, et non son type *declaré*. Comme le langage de 4D convertit certains types de valeurs en interne, le résultat de **Value type** peut différer du type déclaré. Par exemple, 4D convertit en interne les valeurs des champs de type "*Entier 64 bits*". Vous pouvez obtenir les résultats suivants :
 
 ```4d
- $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits
- $vType2:=Value type([myTable]Long64field) //$vType=Is real (in interpreted mode)
+ $vType1:=Type([myTable]Long64field) //$vType=Est un entier 64 bits
+ $vType2:=Value type([myTable]Long64field) //$vType=Est un numérique (en mode interprété)
 ```
 
-Other differences are related to arrays (evaluation of an array returns the current element index) and compiled mode. The following table lists these differences:
+D'autres différences relatives aux tableaux (l'évaluation d'un tableau retourne l'indice de l'élément courant) et au mode compilé sont à noter. Le tableau suivant liste ces différences :
 
-| **Declared type**       | [Type](type.md) **result** | **Value type result (interpreted)** | **Value type result (compiled)** | **Comment**                                                                                 |
-| ----------------------- | -------------------------- | ----------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------- |
-| ARRAY TEXT($t;1)        | Text array                 | Is real                             | Is longint                       | $t contains the current element index, which is a number                                    |
-| *Alpha* field           | Is alpha field             | Is text                             | Is text                          | 4D internally handles all strings as texts                                                  |
-| *Integer* field         | Is integer                 | Is real                             | Is longint                       | For optimization reasons, in interpreted mode all numeric values are considered real and... |
-| *Long Integer* field    | Is longint                 | Is real                             | Is longint                       | ... in compiled mode, all integer values are considered longint(\*)                         |
-| *Integer 64 bits* field | Is integer 64 bits         | Is real                             | Is longint                       |                                                                                             |
+| **Type déclaré**       | **Résultat de** [Type](type.md) | **Résultat de Value type (interprété)** | **Résultat de Value type (compilé)** | **Commentaire**                                                                                                          |
+| ---------------------- | ------------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| TABLEAU TEXTE($t;1)    | Text array                      | Is real                                 | Is longint                           | $t contient l'indice de l'élément courant, qui est un numérique                                                          |
+| Champ *Alpha*          | Is alpha field                  | Is text                                 | Is text                              | 4D manipule en interne toutes les chaînes en texte                                                                       |
+| Champ *Entier*         | Is integer                      | Is real                                 | Is longint                           | Pour des raisons d'optimisation, en mode interprété toutes les valeurs numériques sont considérées comme des réels et... |
+| Champ *Entier long*    | Is longint                      | Is real                                 | Is longint                           | ... en mode compilé, toutes les valeurs entières sont considérées comme des entiers longs(\*)                            |
+| Champ *Entier 64 bits* | Is integer 64 bits              | Is real                                 | Is longint                           |                                                                                                                          |
 
-(\*)If you want to write a test for a numeric type value that is valid for both compiled and interpreted modes, you may consider using a code such as:
+(\*)Si vous voulez effectuer un test de valeur numérique qui soit valide pour les modes interprété et compilé, vous devez écrire un code du type :
 
 ```4d
- If(Value type($myValue)=Is longint)|(Value type($myValue)=Is real)
+ If(Value type($myValue)=Is longint)|(Value type($myValue)=Est un réel)
 ```
 
-**Compatibility Note:** Starting with 4D v16 R6, dates are stored in object properties either with date type or as text in ISO date format. For more information, please refer to the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+**Note de compatibilité :** A compter de 4D v16 R6, les dates sont stockées dans les propriétés d'objets soit avec le type date, soit en texte au format date ISO. Pour plus d'informations, reportez-vous à la description du sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 
-## Example 1 
+## Exemple 1 
 
-You want to handle the various possible types of an object property value:
+Vous souhaitez gérer les divers types possibles de valeurs d'une propriété d'objet :
 
 ```4d
  Case of
     :(Value type($o.value)=Is real)
-  //handle a numeric value
+  //valeur de type numérique
     :(Value type($o.value)=Is text)
-  //handle a text
+  //valeur de type texte
     :(Value type($o.value)=Is object)
-  //handle a sub-object
+  //valeur de type sous-objet
        ...
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to sum up all numeric values in a collection:
+Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une collection :
 
 ```4d
  var $col : Collection
  var $sum : Real
  $col:=New collection("Hello";20;"World2";15;50;Current date;True;10)
- For($i;0;$col.length-1) //-1 since collections start at 0
+ For($i;0;$col.length-1) //-1 car les collections débutent à 0
     If(Value type($col[$i])=Is real)
        $sum:=$sum+$col[$i]
     End if
@@ -120,16 +121,16 @@ You want to sum up all numeric values in a collection:
  ALERT(String($sum)) //95
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Get type](ob-get-type.md)  
 [Type](type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1509 |
+| Numéro de commande | 1509 |
 | Thread safe | yes |
 
 

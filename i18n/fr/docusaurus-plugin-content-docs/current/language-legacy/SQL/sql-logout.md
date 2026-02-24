@@ -9,39 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL LOGOUT.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL LOGOUT.Summary-->The SQL LOGOUT command closes the connection with an ODBC source that is open in the current process (if applicable).<!-- END REF--> If there is no ODBC connection open, the command does nothing. 
+<!--REF #_command_.SQL LOGOUT.Summary-->La commande **SQL LOGOUT** referme la connexion avec une source ODBC ouverte dans le process courant (le cas échéant).<!-- END REF--> S’il n’y a pas de connexion ODBC ouverte, la commande ne fait rien. 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the logout is performed properly, the system variable OK is set to 1; otherwise, it is set to 0\. You can intercept this error with an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+Si la connexion a été correctement refermée, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les éventuelles erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [SQL LOGIN](sql-login.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 872 |
+| Numéro de commande | 872 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

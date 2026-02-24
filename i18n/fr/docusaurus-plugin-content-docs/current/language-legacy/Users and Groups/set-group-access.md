@@ -5,63 +5,63 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *groups* : Collection })<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *groupes* )}<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groups | Collection | &#8594;  | Name of group(s) to which the 4D user account must belong during the session |
+| groupes | Collection | &#8594;  | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R4|Created|
+|18 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET GROUP ACCESS.Summary-->The **SET GROUP ACCESS** command modifies the memberships of the 4D user account for the current session.<!-- END REF--> It resets any former group membership and sets the new memberships to the listed *groups*. 
+<!--REF #_command_.SET GROUP ACCESS.Summary-->La commande **SET GROUP ACCESS** modifie l'adhésion du compte utilisateur pour la session courante.<!-- END REF--> Elle redéfinit les groupes précédents et définit les nouvelles adhésions dans les *groupes* listés. 
 
-**Notes:** 
+**Notes :** 
 
-* The scope of this command is the current session. Calling [CHANGE CURRENT USER](change-current-user.md) afterwards for example would reset defined memberships.
-* This command can only be called from 4D remote or 4D single-user applications. It is not allowed on 4D Server.
+* La portée de cette commande est la session courante. L'appel à la commande [CHANGE CURRENT USER](change-current-user.md) par la suite, redéfinit par exemple les adhésions.
+* Cette commande peut être appelée uniquement depuis un 4D distant ou des applications 4D monopostes. Elle n'est pas autorisée sur 4D Server.
 
-Pass in the *groups* parameter a collection of existing group name(s) to which the 4D user account must belong (if a group name does not exist, it is ignored). If you pass an empty collection, the 4D user account will no longer belong to any group. 
+Dans *groupes*, passez une collection de nom(s) de groupe(s) existant(s) au(x)quel(s) le compte l'utilisateur 4D appartient (si un nom de groupe n'existe pas, il est ignoré). Si vous passez une collection vide, le compte utilisateur 4D n'appartiendra plus à aucun groupe.
 
-If you omit the *groups* parameter, the memberships of the 4D user account are reset to the group memberships stored on disk.
+Si vous omettez le paramètre *groupes*, les adhésions du compte utilisateur 4D sont redéfinies sur les adhésions stockées sur disque.
 
-**Note:** When a group membership provides access to a "serialized" feature (e.g. a plug-in), a corresponding license is used and will remain attached to the 4D user account until the end of the session, even if the **SET GROUP ACCESS** command is called and group membership cancelled. 
+**Note:** Lorsqu'une adhésion à un groupe fournit un accès à une fonctionnalité "sérialisé" (ex : un plug-in), une licence correspondante est utilisée et demeurera associée au compte utilisateur 4D jusqu'à la fin de la session, même si la commande **SET GROUP ACCESS** est appelée et si l'adhésion au groupe est annulée.
 
-## Example 
+## Exemple 
 
-You want to promote the current user to the "admin" and "plugins" groups for the session:
+Vous souhaitez ajouter l'utilisateur courant aux groupes "admin" et "plugins" dans la session :
 
 ```4d
  $groups:=New collection("admin";"plugins")
  SET GROUP ACCESS($groups)
 ```
 
-## See also 
+## Voir aussi 
 
 [Get group access](get-group-access.md)  
 [Get plugin access](get-plugin-access.md)  
 [SET PLUGIN ACCESS](set-plugin-access.md)  
 [SET USER ALIAS](set-user-alias.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1737 |
+| Numéro de commande | 1737 |
 | Thread safe | yes |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

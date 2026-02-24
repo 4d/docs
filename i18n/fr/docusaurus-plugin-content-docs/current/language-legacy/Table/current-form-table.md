@@ -9,80 +9,75 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form table.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &#8592; | Pointer to the table of the currently displayed form |
+| Résultat | Pointer | &#8592; | Pointeur vers la table à laquelle appartient le formulaire actuellement affiché |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current form table.Summary-->The Current form table command returns the pointer to the table of the form being displayed or printed in the current process.<!-- END REF-->
+<!--REF #_command_.Current form table.Summary-->La fonction **Current form table** retourne un pointeur vers la table à laquelle appartient le formulaire affiché à l'écran ou imprimé dans le process courant.<!-- END REF--> 
 
-The function returns [Is nil pointer](is-nil-pointer.md) in the following cases:
+La fonction retourne Nil dans les cas suivants :
 
-* There is no form being displayed or printed in the current process,
-* The current form is a project form.
+* il n'y a pas de formulaire affiché ou en cours d'impression dans le process courant,
+* le formulaire courant est un formulaire projet.
 
-If there are several windows open for the current process (which means that the window opened last is the current active window), the command returns the pointer to the table of the form displayed in the active window.
+Si plusieurs fenêtres sont ouvertes simultanément dans le process courant (ce qui signifie que la dernière fenêtre ouverte est la fenêtre courante active), la fonction retourne un pointeur vers la table du formulaire affiché dans la fenêtre active. 
 
-If the currently displayed form is the Detail form for a subform area, you are in data entry and you double-clicked on a record or a subrecord of a double-clickable subform area. In this case, the command returns:
+Si le formulaire affiché est le formulaire détaillé d'une zone de sous-formulaire (c'est-à-dire que pendant la saisie de données, l'utilisateur a double-cliqué sur un enregistrement ou un sous-enregistrement dans une zone de sous-formulaire "double-cliquable"), la fonction retourne :
 
-* The pointer to the table shown in the subform area, if the subform displays a table.
-* A non-significant pointer, if the subform area displays a subtable.
+* un pointeur vers la table de la zone de sous-formulaire, si cette dernière affiche une table.
+* un pointeur non significatif si la zone de sous-formulaire affiche une sous-table.
 
-## Example 
+## Exemple 
 
-Throughout your application, you use the following convention when displaying a record:  
-If the variable *vsCurrentRecord* is present in a form, it displays “New Record” if you are working with a new record. If you are working with the 56th record of a selection composed of 5200 records, it displays “56 of 5200”.
-
-To do so, use the object method to create the variable *vsCurrentRecord*, then copy and paste it into all of your forms:
+Dans votre application, vous utilisez la convention suivante : au moment de l'affichage d'un enregistrement, la variable *vsEnrCourant*, si elle est présente dans un formulaire, affiche "Nouvel enregistrement" si vous créez un nouvel enregistrement, ou par exemple "56 parmi 5200" si vous ouvrez le 56e enregistrement d'une sélection en comportant 5200\. Pour cela, vous pouvez créer une fois la variable *vsEnrCourant* et lui associer la méthode objet décrite ci-dessous, puis la copier et la coller dans tous les formulaires que vous voulez :
 
 ```4d
-  // vsCurrentRecord non-enterable variable object method
+  //Méthode objet de la variable non saisissable vsEnrCourant
  Case of
     :(Form event code=On Load)
-       C_STRING(31;vsCurrentRecord)
-       var $vpParentTable : Pointer
-       var $vlRecordNum : Integer
-       $vpParentTable:=Current form table
-       $vlRecordNum:=Record number($vpParentTable->)
+       C_STRING(31;vsEnrCourant)
+       var $vpTableParente : Pointer
+       var $vlNumEnr : Integer
+       $vpTableParente:=Current form table
+       $vlNumEnr:=Record number($vpTableParente->)
        Case of
-          :($vlRecordNum=-3)
-             vsCurrentRecord:="New Record"
-          :($vlRecordNum=-1)
-             vsCurrentRecord:="No Record"
-          :($vlRecordNum>=0)
-             vsCurrentRecord:=String(Selected record number($vpParentTable->))+" of "+
-             String(Records in selection($vpParentTable->))
+          :($vlNumEnr=-3)
+             vsEnrCourant:="Nouvel enregistrement"
+          :($vlNumEnr=-1)
+             vsEnrCourant:="Pas d'enregistrement"
+          :($vlNumEnr>=0)
+             vsEnrCourant:=String(Numero dans selection($vpTableParente->))+" parmi "+Chaine(Enregistrements trouves($vpTableParente->))
        End case
  End case
 ```
 
-## See also 
+## Voir aussi 
 
-[DIALOG](./commands/dialog)  
+[DIALOG](../commands/dialog.md)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 627 |
+| Numéro de commande | 627 |
 | Thread safe | no |
-
 
 

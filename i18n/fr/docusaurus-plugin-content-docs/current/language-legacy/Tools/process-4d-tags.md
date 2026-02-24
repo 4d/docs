@@ -5,61 +5,61 @@ slug: /commands/process-4d-tags
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *inputTemplate* : Text ; *outputResult* : Text {; *...param* : Expression} )<!-- END REF-->
+<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* ; *résultatSortie* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| inputTemplate | Text | &#8594;  | Data containing tags to process |
-| outputResult | Text | &#8592; | Result from template execution |
-| param | Expression | &#8594;  | Parameter(s) passed to template being executed |
+| templateEntrée | Text | &#8594;  | Données contenant des balises à traiter |
+| résultatSortie | Text | &#8592; | Résultat de l'exécution du template |
+| param | Expression | &#8594;  | Paramètre(s) à passer au template en exécution |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14 R4|Modified|
-|13|Renamed|
-|12|Modified|
-|11 SQL|Modified|
-|2004|Created|
+|16 R4|Modifié|
+|14 R4|Modifié|
+|13|Renommé|
+|12|Modifié|
+|11 SQL|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PROCESS 4D TAGS.Summary-->The **PROCESS 4D TAGS** command causes the processing of 4D transformation tags contained in the *inputTemplate* parameter while (optionally) inserting value(s) using the *param* parameters and returns the result in *outputResult*.<!-- END REF--> For a complete description of these tags, refer to the [**4D Transformation Tags**](../Tags/transformation-tags.md) section.
+<!--REF #_command_.PROCESS 4D TAGS.Summary-->La commande **PROCESS 4D TAGS** provoque le traitement des balises de transformation 4D contenues dans le paramètre *templateEntrée* en leur injectant optionnellement des valeurs via le(s) paramètre(s) *param* et retourne le résultat dans *résultatSortie*.<!-- END REF--> Pour une description complète de ces balises, veuillez vous reporter à la section [**Balises de transformation**](../Tags/transformation-tags.md).
 
-This command lets you execute a "template" type text containing tags and references to 4D expressions and/or variables, and to produce a result depending on the execution context and/or the values passed as parameters.   
-For example, you can use this command to generate and save HTML pages based on **semi-dynamic pages** containing 4D transformation tags (without it being necessary for 4D's Web server to be started). You can use it to send e-mail messages in HTML format that contain processing of and/or references to data contained in the database via the 4D Internet Commands. It is possible to process any type of data based on text, such as XML, SVG or multi-style text.
+Cette commande permet d'exécuter un texte de type "template" contenant des balises et des références à des expressions ou des variables 4D et de produire un résultat dépendant du contexte d'exécution et/ou des valeurs passées en paramètre.   
+Par exemple, vous pouvez utiliser cette commande pour générer et stocker des pages HTML à partir de **pages semi-dynamiques** contenant des balises de transformation 4D (sans qu’il soit nécessaire que le serveur Web de 4D soit démarré). Vous pouvez l’employer pour envoyer via 4D Internet Commands des courriels au format HTML contenant des traitements et/ou des références à des données contenues dans la base. Il est possible de traiter tout type de données basées sur du texte, comme le XML, le SVG ou encore le texte multistyle.
 
-Pass the data containing the tags to be processed in the *inputTemplate* parameter. This parameter can be a field or variable of the Text type. 
+Passez les données contenant les balises à traiter dans le paramètre *templateEntrée*. Ce paramètre peut être un champ ou une variable de type Texte. 
 
-All the transformation tags of 4D are supported (*4DTEXT*, *4DHTML, 4DSCRIPT*, *4DLOOP*, *4DEVAL*, etc.).
+Toutes les balises de transformation de 4D sont prises en charge (*4DTEXT*, *4DHTML, 4DSCRIPT*, *4DLOOP*, *4DEVAL*, etc.).
 
-**Note:** When using the *4DINCLUDE* tag outside the framework of the Web server (Web process):
+**Note :** En cas d’utilisation de la balise *4DINCLUDE* hors du cadre du serveur Web (process Web) :
 
-* with 4D in local mode or 4D Server, the default folder is the folder containing the database structure file,
-* with 4D in remote mode, the default folder is the folder containing the 4D application.
+* avec 4D en mode local et 4D Server, le dossier par défaut est le dossier contenant le fichier de structure de la base,
+* avec 4D en mode distant, le dossier par défaut est le dossier contenant l’application 4D.
 
-The **PROCESS 4D TAGS** command supports an indefinite number of *param* parameters that can be inserted into the executed code. As with project methods, these parameters can contain scalar values of varied types (text, date, time, longint, real, boolean), as well as pointers, objects and collections. You can also use arrays, by means of array pointers. Inside the code processed by the 4D tags, these parameters can be accessed by means of standard arguments ($1, $2, etc.), just like in 4D methods (see example).  
-A dedicated set of local variables is defined in the execution context of the **PROCESS 4D TAGS** command. These variables can be written or read during processing.
+La commande **PROCESS 4D TAGS** prend en charge un nombre indéfini de paramètres *param* à injecter dans le code exécuté. Tout comme pour les méthodes projet, ces paramètres peuvent contenir des valeurs scalaires de type varié (texte, date, heure, entier long, réel, booléen) ainsi que des pointeurs, des objets et des collections. Vous pouvez également utiliser des tableaux, par l'intermédiaire de pointeurs de tableaux. A l'intérieur du code traité par les balises 4D, ces paramètres sont accessibles via les arguments standard $1, $2..., comme dans les méthodes 4D (voir exemple).  
+Un ensemble dédié de variables locales est défini dans le contexte d'exécution de la commande **PROCESS 4D TAGS**. Ces variables peuvent être lues ou écrites pendant le traitement.
 
-After command execution, the *outputResult* parameter receives the execution result of the *inputTemplate* parameter, along with the result of the processing of any 4D tags that it contains, when applicable. If *inputTemplate* does not contain any 4D tags or produces an empty string, the contents of *outputResult* is identical to that of *inputTemplate*.
+Après l’exécution de la commande, le paramètre *résultatSortie* reçoit le résultat de l'exécution de *templateEntrée* incluant le traitement des balises 4D qu’il contenait, le cas échéant. Si *templateEntrée* ne contient pas de balises 4D ou s'il génère une chaîne vide, le contenu de *résultatSortie* est identique à celui de *templateEntrée*.
 
-The *outputResult* parameter may be a field or a variable of the Text type.
+Le paramètre *résultatSortie* peut être un champ ou une variable de type Texte.
 
-**Note:** This command never calls the [On Web Authentication database method](on-web-authentication-database-method.md).
+**Note :** Cette commande ne provoque jamais l'appel de la [On Web Authentication database method](on-web-authentication-database-method.md).
 
-## Example 1 
+## Exemple 1 
 
-This example loads a 'template' type document, processes the tags it contains and then stores it:
+Cet exemple charge un document de type 'template', traite les balises qu'il contient puis le stocke :
 
 ```4d
  var $inputText_t : Text
@@ -70,9 +70,9 @@ This example loads a 'template' type document, processes the tags it contains an
  TEXT TO DOCUMENT(File("/PACKAGE/myfile.txt").platformPath;$outputText_t)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example generates a text using data of the arrays:
+Cet exemple permet de générer un texte à l'aide de données dans des tableaux :
 
 ```4d
 ARRAY TEXT($array; 2)
@@ -84,17 +84,18 @@ $input:=$input+"<!--#4DEVAL $2->{$2->}--> "
 $input:=$input+"<!--#4DENDLOOP-->"
 PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 // $output = "elements = hello world"
+
 ```
 
-## See also 
+## Voir aussi 
 
-[**4D Transformation Tags**](../Tags/transformation-tags.md)  
+[**Balises de transformation**](../Tags/transformation-tags.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 816 |
+| Numéro de commande | 816 |
 | Thread safe | yes |
 
 

@@ -5,96 +5,94 @@ slug: /commands/font-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* : Text array {; *listType* : Integer } )<br/>**FONT LIST** ( *fonts* : Text array {; *} )<!-- END REF-->
+<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *polices* {; *typeListe* } )<br/>**FONT LIST** ( *polices* {; *} ) <!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fonts | Text array | &#8592; | Array of font names |
-| listType | Integer | &#8594;  | Font type list to return |
-| * | Operator | &#8594;  | Return font names under macOS |
+| polices | Text array | &#8592; | Tableau des noms des polices vectorielles disponibles |
+| typeListe &#124; * | Entier long, Opérateur | &#8594;  | Type de liste de police à retourner ou * pour retourner des noms de police sous macOS |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Modified|
-|14|Modified|
-|12.1|Modified|
-|6|Created|
+|15 R4|Modifié|
+|14|Modifié|
+|12.1|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FONT LIST.Summary-->The **FONT LIST** command populates the *fonts* text array with the names of scalable fonts available on your system.<!-- END REF-->
+<!--REF #_command_.FONT LIST.Summary-->La commande   **FONT LIST** remplit le tableau Texte *polices* avec les noms des polices vectorielles disponibles dans votre système.<!-- END REF-->
 
-The *listType* parameter lets you designate the type of font list you want to get. To do so, you can pass one of the following constants in the *listType* parameter, available in the "*Font Type List*" theme:
+Le paramètre *typeListe* vous permet de désigner le type de liste de police à obtenir. Pour cela, vous pouvez passer dans le paramètre *typeListe* l’une des constantes suivantes, placées dans le thème "*Type de liste des polices*" :
 
-| Constant       | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Favorite fonts | Integer | 1     | *fonts* contains the list of favorite fonts.<br/>- Under Windows: list of active font family names.<br/>- Under macOS: list of font family names found in the control panel, entitled "Favorites" in English, "Favoris" in French, "Favoriten" in German, and so on . This collection may be blank if the user has not added any favorite fonts.<br/> |
-| Recent fonts   | Integer | 2     | *fonts* contains the list of recent fonts (the ones used during the 4D session). This list is used in particular by multi-style text areas.                                                                                                                                                                                                                                  |
-| System fonts   | Integer | 0     | *fonts* contains the list of all the system fonts. Default option when *listType* is omitted.                                                                                                                                                                                                                                                                                |
+| Constante      | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------- | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Favorite fonts | Entier long | 1      | *polices* contient la liste des polices favorites.<br/>- Sous Windows : liste des noms de famille des polices actives.<br/>- Sous macOS : liste des noms de famille des polices présente dans le panneau de configuration nommé "Favorites" en anglais, "Favoris" en français", "Favoriten" en allemand, etc. Cette collection peut être vide si l’utilisateur n’a ajouté aucune police favorite. |
+| Recent fonts   | Entier long | 2      | *polices* contient la liste des polices récentes (liste des polices utilisées lors de la session 4D). Cette liste est notamment utilisée par les zones de texte multistyle.                                                                                                                                                                                                                                      |
+| System fonts   | Entier long | 0      | *polices* contient la liste de toutes les polices système. Option par défaut si *typeListe* est omis.                                                                                                                                                                                                                                                                                                            |
 
-Under macOS, when you pass the optional *\** parameter, the command populates the *fonts* array with the names of the fonts themselves, and not with the names of the font families. The default operation simplifies programmed management of rich text areas, which use font families. If you pass the *\** parameter, font names, for example, "Arial bold", "Arial italic", "Arial narrow italic," are returned instead of families, such as "Arial", "Arial black" or "Arial narrow".  
-Under Windows, the *\** parameter has no effect. The command still returns the font families.
+Si vous passez le paramètre optionnel *\**, sous macOS la commande remplira le tableau *polices* avec les noms des polices elles-mêmes et non avec les noms des famillesde police. Le fonctionnement par défaut simplifie la gestion programmée des zones de texte multistyle, qui utilisent des familles de police. Si vous passez le paramètre *\**, les noms de police, par exemple "Arial bold", "Arial italic", "Arial narrow italic", seront retournés au lieu des familles "Arial", "Arial black" ou "Arial narrow".  
+Sous Windows, le paramètre *\** n’a aucun effet. La commande retourne toujours les familles de police.
 
-**Note:** Under macOS, if you use the result of this command with [ST SET ATTRIBUTES](st-set-attributes.md) in a multi-style text area, you must not pass the *\** parameter (only font families are supported as Attribute font name). This limitation does not apply to 4D Write Pro areas, which accept either font or font family names. 
+**Note :** Sous macOS, si vous utilisez le résultat de cette commande avec la commande [ST SET ATTRIBUTES](st-set-attributes.md) dans une zone de texte multistyle, il est impératif de ne pas passer le paramètre *\** (seuls les noms de familles sont acceptés comme Attribute font name). Cette limitation ne s'applique pas aux zones 4D Write Pro, qui acceptent des noms de polices ou des noms de familles. 
 
-### About scalable fonts 
+### A propos des polices vectorielles 
 
-This command returns only scalable fonts. Using non-scalable fonts (i.e. bitmap fonts) to design interfaces is not recommended since they are based on an outdated technology and suffer from limitations regarding size variations. They are not supported in cutting-edge features of 4D such as 4D Write Pro areas .
+Cette commande ne retourne que les polices vectorielles. En effet, l'utilisation de polices non vectorielles (i.e. polices bitmap) pour dessiner des interfaces est déconseillé car elles sont basées sur une technologie dépassée et souffrent de limitations quant aux variations de taille. Elles ne sont pas prises en charge dans les fonctionnalités les plus récentes de 4D telles que les zones 4D Write Pro.
 
-Under macOS, this principle has been in effect since macOS 10.4 (*QuickDraw* bitmap fonts are obsolete beginning with this version).
+Sous macOS, ce principe est appliqué depuis macOS 10.4 (les polices bitmap *QuickDraw* sont obsolètes à compter de cette version).
 
-Under Windows, this principle is applied beginning with 4D v15 R4\. In order to help developers select only modern fonts for their interfaces, only "trueType" or "openType" scalable fonts are listed. For example, "ASI\_Mono", "MS Sans Serif" and "System" fonts are no longer available. In addition, GDI names are also ignored; only DirectWrite font family names are supported. For example, "Arial Black" or "Segoe UI Black" font families are not in the list; only "Arial" and "Segoe" are returned. 
+Sous Windows, ce principe est appliqué à compter de 4D v15 R4 afin d'aider les développeurs 4D à ne sélectionner que des polices modernes pour leurs interfaces. Seules les polices vectorielles "trueType" ou "openType" sont listées. Par exemple, "ASI\_Mono", "MS Sans Serif" ou encore "System" ne sont pas proposées. De plus, les noms GDI sont également ignorés ; seuls les noms de familles de police DirectWrite sont pris en charge. Par exemple, les familles "Arial Black" ou "Segoe UI Black" ne sont pas dans la liste ; seuls "Arial" et "Segoe" sont retournés. 
 
-**Compatibility notes for Windows:**
+**Notes de compatibilité Windows :**
 
-* Bitmap fonts can still be used in your 4D forms (except in 4D Write Pro areas). They are just removed from the list returned by this command. However, to ensure compatibility with future versions of 4D and Windows, we recommend using only DirectWrite font families.
-* Since bitmap fonts are filtered from the *fonts* parameter on Windows, the resulting list is different in 4D v15 R4 applications and higher, compared to previous releases. Please make sure to adapt your code if you were using this command to select a non-scalable font.
+* Les polices bitmap peuvent toujours être utilisées dans vos formulaires 4D (à l'exception des zones 4D Write Pro). Elles sont uniquement supprimées de la liste retournée par cette commande. Cependant, pour assurer la compatibilité de vos applications avec les versions futures de 4D et de Windows, nous recommandons dès à présent d'utiliser uniquement les familles de police DirectWrite.
+* Comme les polices bitmap sont filtrées dans le paramètre *polices* sous Windows, la liste résultante est différente dans les applications 4D v15 R4 et suivantes par rapport aux versions précédentes. Pensez à adapter votre code si vous utilisiez cette commande pour sélectionner une police non vectorielle.
 
-## Example 1 
+## Exemple 1 
 
-In a form, you want a drop-down list that displays a list of the fonts available on your system. The method of the drop-down list is as follows:
+Dans un formulaire, vous voulez obtenir une liste déroulante qui affiche les polices disponibles dans le système. Ecrivez la méthode suivante pour votre objet liste déroulante :
 
 ```4d
  Case of
     :(FORM Event.code=On Load)
-       ARRAY TEXT(asFont;0)
-       FONT LIST(asFont)
+       ARRAY TEXT(taPolices;0)
+       FONT LIST(taPolices)
   // ...
- 
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to get a list of recent fonts:
+Vous souhaitez obtenir la liste des polices récentes :
 
 ```4d
- FONT LIST($arrFonts;Recent fonts)
+ FONT LIST($tabPolices;Recent fonts)
 ```
 
-## See also 
+## Voir aussi 
 
 [FONT STYLE LIST](font-style-list.md)  
-*Font Type List*  
 [OBJECT SET FONT](object-set-font.md)  
 [SET RECENT FONTS](set-recent-fonts.md)  
 [ST SET ATTRIBUTES](st-set-attributes.md)  
+*Type de liste des polices*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 460 |
+| Numéro de commande | 460 |
 | Thread safe | yes |
 
 

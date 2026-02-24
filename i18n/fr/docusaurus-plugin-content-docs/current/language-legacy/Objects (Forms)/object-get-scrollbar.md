@@ -5,65 +5,65 @@ slug: /commands/object-get-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT GET SCROLLBAR** ( *object* : Variable, Field ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( {* ;} *objet* ; *horizontale* ; *verticale* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| horizontal | Boolean, Integer | &#8592; | Visibility of horizontal scrollbar |
-| vertical | Boolean, Integer | &#8592; | Visibility of vertical scrollbar |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable ou champ (si * omis) |
+| horizontale | Boolean, Integer | &#8592; | Visibilité de la barre horizontale |
+| verticale | Boolean, Integer | &#8592; | Visibilité de la barre verticale |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|12|Created|
+|14|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->The OBJECT GET SCROLLBAR command is used to find out the displayed/hidden status of the horizontal and vertical scrollbars of the object or group of objects designated by *object*.<!-- END REF--> 
+<!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->La commande **OBJECT GET SCROLLBAR** permet de connaître le statut affiché/masqué des barres de défilement horizontale et verticale de l'objet ou du groupe d'objets désigné par *objet*.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-In the *horizontal* and *vertical* parameters, you can pass Boolean or longint type variables:
+Vous pouvez passer dans *horizontale* et *verticale* des variables de type booléen ou entier long :
 
-* When you pass Boolean variables, the value returned reflects the **current** state of the scrollbar:  
-   * If the scrollbar has been defined as hidden, the parameter receives False,  
-   * If the scrollbar has been defined as displayed, the parameter receives True,  
-   * If the scrollbar has been set to automatic mode, the parameter receives either True or False depending on the current display state of the object.
-* When you pass longint variables, the value returned reflects the visibility defined for the scrollbar:  
-   * If the scrollbar has been defined as hidden, the parameter receives 0,  
-   * If the scrollbar has been defined as displayed, the parameter receives 1,  
-   * If the scrollbar has been set to automatic mode, the parameter receives 2.
+* si vous passez des variables booléennes, la valeur retournée reflètera le statut **courant** de la barre de défilement :  
+   * si la barre de défilement a été définie comme masquée, le paramètre reçoit Faux,  
+   * si la barre de défilement a été définie comme affichée, le paramètre reçoit Vrai,  
+   * si la barre de défilement a été définie en mode automatique, le paramètre reçoit Vrai ou Faux en fonction de l'affichage courant de l'objet.
+* si vous passez des variables entier long, la valeur retournée reflètera la visibilité définie pour la barre de défilement :  
+   * si la barre de défilement a été définie comme masquée, le paramètre reçoit 0,  
+   * si la barre de défilement a été définie comme affichée, le paramètre reçoit 1,  
+   * si la barre de défilement a été définie en mode automatique, le paramètre reçoit 2.
 
-This command can be used with the following form objects:
+Cette commande est utilisable avec les objets de formulaire suivants :
 
-* Picture or text object fields and variables
-* List boxes,
-* Hierarchical lists,
-* Subforms.
+* Champs et variables objet texte ou image,
+* List box,
+* Listes hiérarchiques,
+* Sous-formulaires.
 
-For more information, refer to the description of the [OBJECT SET SCROLLBAR](object-set-scrollbar.md) command.
+Pour plus d'informations, reportez-vous à la description de la commande [OBJECT SET SCROLLBAR](object-set-scrollbar.md).
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1076 |
+| Numéro de commande | 1076 |
 | Thread safe | no |
 
 

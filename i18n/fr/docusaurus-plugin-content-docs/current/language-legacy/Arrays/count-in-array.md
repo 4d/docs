@@ -5,50 +5,50 @@ slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* : Array ; *value* : Expression ) : Integer<!-- END REF-->
+<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *tableau* ; *valeur* ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array where count should occur |
-| value | Expression | &#8594;  | Value to count |
-| Function result | Integer | &#8592; | Number of instances found |
+| tableau | Array | &#8594;  | Tableau dans lequel effectuer le comptage |
+| valeur | Expression | &#8594;  | Valeur à compter |
+| Résultat | Integer | &#8592; | Nombre d’occurrences trouvées |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Count in array.Summary-->The Count in array command returns the number of times *value* is found in *array*.<!-- END REF-->
+<!--REF #_command_.Count in array.Summary-->La commande **Count in array** retourne le nombre d’occurrences de *valeur* dans *tableau*.<!-- END REF-->
 
-This command can be used with the following array types: Text, number, Date, Pointer, Object, and Boolean. The *array* and *value* parameters must be the same type or compatible.
+Cette commande peut être utilisée avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type ou d’un type compatible.
 
-**Note:** With Object arrays, you can only use object references in the *value* parameter. 
+**Note :** Avec les tableaux d'objets, vous ne pouvez utiliser que des références d'objets dans le paramètre valeur. 
 
-If no element in *array* matches *value*, the command returns 0.
+Si aucun élément de *tableau* ne correspond à *valeur*, la commande retourne 0.
 
-## Example 1 
+## Exemple 1 
 
-The following example allows displaying the number of selected lines in a list box: 
+L’exemple suivant permet d’afficher le nombre de lignes sélectionnées dans une list box : 
 
 ```4d
-  //tBList is the name of a List box column array
- ALERT(String(Count in array(tBList;True))+" line(s) selected in the list box")
+  //tBList est le nom d’un tableau de colonne List box
+ ALERT(String(Compter dans tableau(tBList;Vrai))+" ligne(s) sélectionnée(s) dans la list box")
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to count object references in an object array:
+Vous voulez compter les références d'objets dans un tableau d'objets :
 
 ```4d
  ARRAY OBJECT($objects;100)
@@ -65,16 +65,16 @@ You want to count object references in an object array:
  $n:=Count in array($objects;$o2) // n = 0
 ```
 
-## See also 
+## Voir aussi 
 
 [Find in array](find-in-array.md)  
 [Find in sorted array](find-in-sorted-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 907 |
+| Numéro de commande | 907 |
 | Thread safe | yes |
 
 

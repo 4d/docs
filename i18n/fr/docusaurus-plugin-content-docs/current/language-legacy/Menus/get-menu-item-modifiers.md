@@ -5,69 +5,65 @@ slug: /commands/get-menu-item-modifiers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* ; *ligneMenu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item modifiers.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| process | Integer | &#8594;  | Process number |
-| Function result | Integer | &#8592; | Modification key(s) associated with menu item |
+| menu | Integer, Text | &#8594;  | Référence de menu ouNuméro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| process | Integer | &#8594;  | Numéro de process |
+| Résultat | Integer | &#8592; | Touche(s) de modification associée(s) à la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu item modifiers.Summary-->The **Get menu item modifiers** command returns any additional modifier(s) associated with the standard shortcut of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
+<!--REF #_command_.Get menu item modifiers.Summary-->La commande **Get menu item modifiers** retourne le ou les modificateur(s) additionnel(s) associé(s) au raccourci standard de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
+Le raccourci standard est composé de la touche **Commande** (macOS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) et [Get menu item key](get-menu-item-key.md).
 
-The standard shortcut is composed of the Command (macOS) or Ctrl (Windows) key plus a custom key. The standard shortcut is managed using the [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) and [Get menu item key](get-menu-item-key.md) commands.
+Les modificateurs additionnels sont la touche **Majuscule** et la touche **Option** (macOS) / **Alt** (Windows). Ces modificateurs ne sont utilisables que si un raccourci standard a été défini au préalable. 
 
-The additional modifiers are the Shift key and the Option (macOS) /Alt (Windows) key. These modifiers can only be used when a standard shortcut has been specified beforehand.
+La valeur numérique retournée par la commande correspond au code de la ou des touche(s) de modification additionnelles. Les codes des touches sont les suivants :
 
-The number value returned by the command corresponds to the codeof the additional modifier key(s). The key codes are as follows:
+* **Majuscule** \= 512
+* **Option** (macOS) ou **Alt** (Windows) = 2048  
+Si les deux touches sont utilisées, leur valeur est cumulée.
 
-* **Shift**\= 512
-* **Option** (macOS) or **Alt** (Windows) = 2048  
-If both keys are used, their values are combined.
+**Note :** Vous pouvez évaluer la valeur retournée à l’aide des constantes Shift key mask et Option key mask du thème “*Evénements (Modifiers)*”.
 
-**Note:** You can evaluate the value returned using the Shift key mask and Option key mask constants of the “*Events (Modifiers)*” theme.
+Si la ligne de menu n’a pas de touche de modification associée, la commande retourne 0\.   
+Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
 
-If the menu item does not have an associated modifier key, the command returns 0.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu.  
+Si vous passez un identifiant unique, le paramètre *process* est inutile et sera ignoré s’il est passé.  
+Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
+## Exemple 
 
-In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) or a menu number. 
+Reportez-vous à l'exemple de la commande [Get menu item key](get-menu-item-key.md). 
 
-If you pass a menu reference, the *process* parameter serves no purpose and will be ignored if it is passed. 
-
-If you pass a menu number, the command will take the corresponding menu in the main menu bar of the current process into account. If you want to designate another process, pass its number in the optional *process* parameter.
-
-## Example 
-
-Refer to the example of the [Get menu item key](get-menu-item-key.md) command. 
-
-## See also 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 980 |
+| Numéro de commande | 980 |
 | Thread safe | no |
 
 

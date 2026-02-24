@@ -5,69 +5,69 @@ slug: /commands/set-blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* : Blob ; *size* : Integer {; *filler* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* ; *taille* {; *remplisseur*} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB field or variable |
-| size | Integer | &#8594;  | New size of the BLOB |
-| filler | Integer | &#8594;  | ASCII code of filler character |
+| blob | Blob | &#8594;  | Champ ou variable de type BLOB |
+| taille | Integer | &#8594;  | Nouvelle taille de BLOB |
+| remplisseur | Integer | &#8594;  | Code du caractère de remplissage |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET BLOB SIZE.Summary-->SET BLOB SIZE resizes the BLOB *blob* according to the value passed in *size*.<!-- END REF-->
+<!--REF #_command_.SET BLOB SIZE.Summary-->**SET BLOB SIZE** redimensionne *blob* selon la valeur passée dans le paramètre *taille*.<!-- END REF-->
 
-If you want to allocate new bytes to a BLOB and want to have those bytes initialized to a specific value, pass the value (0..255) into the *filler* optional parameter.
+Si vous souhaitez que les nouveaux octets réservés (s'il y en a) pour le BLOB soient initialisés avec une valeur particulière, passez cette valeur (comprise entre 0 et 255) dans le paramètre optionnel *remplisseur*.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## Error Handling 
+## Gestion des erreurs 
 
-If you cannot resize a BLOB due to insufficient memory, the error -108 is generated. You can trap this error using an [ON ERR CALL](on-err-call.md) interruption method.
+Si vous ne pouvez pas redimensionner le BLOB parce qu'il n'y a pas assez de mémoire, l'erreur –*108* est générée. Vous pouvez installer une méthode avec la commande [ON ERR CALL](on-err-call.md) pour interrompre la méthode lorsqu'une erreur survient.
 
-## Example 1 
+## Exemple 1 
 
-When you are through with a large process or interprocess BLOB, it is good idea to free the memory it occupies. To do so, write:
+Lorsque vous n'avez plus besoin d'un BLOB process ou interprocess, il est préférable de libérer la mémoire qu'il occupe. Pour cela, écrivez le code suivant :
 
 ```4d
- SET BLOB SIZE(aProcessBLOB;0)
- SET BLOB SIZE(◊anInterprocessBLOB;0)
+ SET BLOB SIZE(vProcessBLOB;0)
+ SET BLOB SIZE(◊vInterprocessBLOB;0)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example creates a BLOB of 16K filled of 0xFF:
+L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 0xFF :
 
 ```4d
  var vxData : Blob
  SET BLOB SIZE(vxData;16*1024;0xFF)
 ```
 
-## See also 
+## Voir aussi 
 
 [BLOB size](blob-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 606 |
+| Numéro de commande | 606 |
 | Thread safe | yes |
 
 

@@ -5,52 +5,52 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* : Text array ; *nativeTypes* : Text array {; *formatNames* : Text array} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *signatures4D* ; *typesNatifs* {; *nomsFormats*} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| 4Dsignatures | Text array | &#8592; | 4D signatures of data types |
-| nativeTypes | Text array | &#8592; | Native data types |
-| formatNames | Text array | &#8592; | Format names or descriptions |
+| signatures4D | Text array | &#8592; | Signatures 4D des types de données |
+| typesNatifs | Text array | &#8592; | Types de données natifs |
+| nomsFormats | Text array | &#8592; | Noms ou descriptions des formats|
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->The **GET PASTEBOARD DATA TYPE** command gets the list of data types present in the pasteboard.<!-- END REF--> This command should generally be used in the context of a drag and drop operation, within the On Drop or On Drag Over form events of the destination object. More particularly, it allows the pasteboard to be checked for the presence of a specific type of data.
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->La commande **GET PASTEBOARD DATA TYPE** permet d’obtenir la liste des types de données présents dans le conteneur.<!-- END REF--> Cette commande doit généralement être utilisée dans le contexte d'un glisser-déposer, dans le cadre des événements formulaire On Drop ou On Drag Over de l’objet de destination. Elle permet notamment de vérifier la présence d’un type de données spécifique dans le conteneur.
 
-This command returns the data types in several different forms via two (or three) arrays:
+Cette commande retourne les types de données sous plusieurs formes différentes via deux (ou trois) tableaux :
 
-* The *4Dsignatures* array contains the data types expressed using the internal 4D signature (for example, “com.4d.private.picture.gif”). If a data type found is not recognized by 4D, an empty string (“”) is returned in the array.
-* The *nativeTypes* array contains the data types expressed using their native types. The format of native types differs between Mac OS and Windows.  
-   * Under Mac OS, native types are expressed as UTIs (Uniform Type Identifier).  
-   * Under Windows, native types are expressed as numbers, with each number being associated with a format name. The *nativeTypes* array contains these numbers in the form of strings (“3”, “12”, and so on). If you want to use more explicit labels, it is recommended to use the optional *formatNames* array, which contains the format names of the native types under Windows.  
-The *nativeTypes* array lets any type of data found in the pasteboard to be supported, including data whose type is not referenced by 4D.
-* You can also pass the *formatNames* array, which receives the names or descriptions of the data types found in the pasteboard. The values returned in this array can be used, for example, to build a format selection pop-up menu.
+* le tableau *signatures4D* contient les types de données exprimés à l’aide de leur signature 4D interne (par exemple “com.4d.private.picture.gif”). Si un type de données présent n’est pas reconnu par 4D, une chaîne vide (“”) est retournée dans le tableau.
+* le tableau *typesNatifs* contient les types de données exprimés à l’aide de leur type natif. Le format des types natifs diffère entre Mac OS et Windows :  
+   * Sous Mac OS, les types natifs sont exprimés sous forme d’UTI (UniformType Identifier).  
+   * Sous Windows, les types natifs sont exprimés sous forme de numéros, chaque numéro étant associé à un nom de format. Le tableau *typesNatifs* contient ces numéros sous forme de chaîne (“3”, “12”, etc.). Si vous souhaitez utiliser des libellés plus explicites, il est recommandé d’utiliser le tableau facultatif *nomsFormats*, qui contient le nom de format des types natifs sous Windows.  
+Le tableau *typesNatifs* permet de prendre en charge tout type de données présent dans le conteneur, y compris des données dont le type n’est pas référencé par 4D.
+* Vous pouvez également passer le tableau *nomsFormats*, qui reçoit les noms ou les descriptions des types de données présents dans le conteneur. Les valeurs retournées dans ce tableau peuvent être utilisées par exemple pour construire un pop up menu de sélection de format. 
 
-For more information about the data types supported, please refer to the *Managing Pasteboards* section. 
+Pour plus d’informations sur les types de données pris en charge, reportez-vous à la section *Gestion du conteneur de données*. 
 
-## See also 
+## Voir aussi 
 
-*Managing Pasteboards*  
+*Gestion du conteneur de données*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 958 |
+| Numéro de commande | 958 |
 | Thread safe | no |
 
 

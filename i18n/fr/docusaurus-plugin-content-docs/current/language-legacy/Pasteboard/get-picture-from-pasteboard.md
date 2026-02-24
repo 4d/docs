@@ -5,61 +5,61 @@ slug: /commands/get-picture-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *picture* : Picture )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *image* )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8592; | Picture extracted from pasteboard |
+| image | Picture | &#8592; | Image extraite du conteneur de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD returns the picture present in the pasteboard in the *picture* field or variable.<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->**GET PICTURE FROM PASTEBOARD** retourne l'image présente dans le conteneur de données dans le champ ou la variable *image*.<!-- END REF--> 
 
-**Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard.
+**Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-## Example 
+## Exemple 
 
-The following button’s object method assigns the picture (jpeg or gif format) present in the pasteboard (if any) to the field \[Employees\]Photo:
+Ci-dessous, la méthode objet d'un bouton affecte l'image au format jpeg ou gif présente dans le conteneur de données, s'il y en a une, au champ \[Employés\]Photo :
 
 ```4d
- If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
-    GET PICTURE FROM PASTEBOARD([Employees]Photo)
+ If((Pasteboard data size("com.4d.private.picture.jfif")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
+    GET PICTURE FROM PASTEBOARD([Employés]Photo)
  Else
-    ALERT("The pasteboard does not contain any pictures.")
+    ALERT("Le Presse-papiers ne contient pas d'image.")
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the picture is correctly extracted, OK is set to 1; otherwise OK is set to 0.
+Si l'image est correctement extraite, OK prend la valeur 1\. Sinon, OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [GET PASTEBOARD DATA](get-pasteboard-data.md)  
 [Get text from pasteboard](get-text-from-pasteboard.md)  
 [Pasteboard data size](pasteboard-data-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 522 |
+| Numéro de commande | 522 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

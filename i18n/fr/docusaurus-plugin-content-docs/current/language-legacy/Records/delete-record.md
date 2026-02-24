@@ -5,63 +5,63 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table where the current record will be deleted, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle supprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** deletes the current record of *aTable* in the process.<!-- END REF--> If there is no current record for *aTable* in the process, **DELETE RECORD** has no effect. In a form, you can create a Delete Record button instead of using this command.
+<!--REF #_command_.DELETE RECORD.Summary-->**DELETE RECORD** supprime de *laTable* l'enregistrement courant du process en cours.<!-- END REF--> S'il n'y a pas d'enregistrement courant pour *laTable* dans le process, **DELETE RECORD** ne fait rien. Dans un formulaire, vous pouvez créer un bouton 'Supprimer enregistrement' et lui assigner l'action automatique correspondante, plutôt que d'utiliser cette commande.
 
-**Notes:**
+**Notes :**
 
-* If the current record is unloaded from memory before calling **DELETE RECORD** (for example, subsequent to an [UNLOAD RECORD](unload-record.md)), the current selection of *table* is empty after the deletion occurs.
-* The **DELETE RECORD** command does nothing when the table is in [READ ONLY](read-only.md) mode, regardless of whether the record to be deleted is locked or not.
+* Si l'enregistrement courant est déchargé de la mémoire avant l'appel à **DELETE RECORD** (par exemple suite à un [UNLOAD RECORD](unload-record.md)), la sélection courante de *laTable* est vide à l'issue de la suppression.
+* La commande **DELETE RECORD** ne fait rien si la table est en mode [READ ONLY](read-only.md), indépendamment de l'état verrouillé ou non de l'enregistrement à supprimer.
 
-Deleting records is a permanent operation and cannot be undone (except when it is executed during a transaction, see *Using Transactions*).
+La suppression d'enregistrements est une opération définitive et ne peut être annulée (sauf lorsqu'elle est exécutée durant une transaction, consultez *Utiliser des transactions*).
 
-If a record is deleted, the record number will be reused when new records are created. Do not use the record number as the record identifier if you will ever delete records from the database.
+Lorsqu'un enregistrement est supprimé, son numéro interne est réutilisé lors de la création de nouveaux enregistrements. Par conséquent, n'utilisez pas ces numéros comme identifiants de vos enregistrements si votre base permet la suppression d'enregistrements.
 
-## Example 
+## Exemple 
 
-The following example deletes an employee record. The code asks the user what employee to delete, searches for the employee’s record, and then deletes it:
+L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthode demande à l'utilisateur le numéro de l'employé à supprimer, recherche l'enregistrement correspondant puis le supprime :
 
 ```4d
- vFind:=Request("Employee ID to delete:") // Get an employee ID
+ vCherch:=Request("Numéro de l'employé à supprimer :") //On récupère un numéro d'identification
  If(OK=1)
-    QUERY([Employee];[Employee]ID =vFind) // Find the employee
-    DELETE RECORD([Employee]) // Delete the employee
+    QUERY([Employés];[Employés]Numéro=vCherch) //Trouver l'employé
+    DELETE RECORD([Employés]) //Suppression de l'enregistrement
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Locked](locked.md)  
-*Triggers*  
+*Présentation des triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 58 |
+| Numéro de commande | 58 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

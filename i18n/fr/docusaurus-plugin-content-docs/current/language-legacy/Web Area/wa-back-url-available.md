@@ -5,44 +5,44 @@ slug: /commands/wa-back-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( * ; *object* : Text ) : Boolean<br/>**WA Back URL available** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Back URL available.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True if there is a previous URL in the sequence of URLs opened;otherwise, False |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai s’il existe un URL précédent dans la séquence d’URLs ouverts, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Back URL available.Summary-->The WA Back URL available command finds out whether there is a previous URL available in the sequence of URLs opened in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA Back URL available.Summary-->La commande **WA Back URL available** permet de savoir s’il existe un URL précédent disponible dans la séquence d’URLs ouverts dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->  
+  
+La commande retourne Vrai si un URL existe et Faux sinon. Cette commande permet notamment, dans la cadre d’une interface personnalisée, d’activer ou d’inactiver des boutons de navigation.
 
-The command returns **True** if a URL exists and **False** otherwise. More particularly, this command can be used, in a custom interface, to enable or disable navigation buttons.
-
-## See also 
+## Voir aussi 
 
 [WA Forward URL available](wa-forward-url-available.md)  
 [WA OPEN BACK URL](wa-open-back-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1026 |
+| Numéro de commande | 1026 |
 | Thread safe | no |
 
 

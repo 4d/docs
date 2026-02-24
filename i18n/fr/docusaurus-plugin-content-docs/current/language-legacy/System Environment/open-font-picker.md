@@ -9,57 +9,57 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN FONT PICKER.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN FONT PICKER.Summary-->The **OPEN FONT PICKER** command displays the system font picker dialog box.<!-- END REF-->
+<!--REF #_command_.OPEN FONT PICKER.Summary-->La commande **OPEN FONT PICKER** affiche la boîte de dialogue de sélection de police du système.<!-- END REF-->
 
-**Note:** This is a modal dialog box under Windows but not under macOS.
+**Note :** Cette boîte de dialogue est modale sous Windows mais pas sous macOS.
 
-When the user selects a font and/or a style and validates the dialog box, the changes are applied to the current text selection in the object with the focus, if the "Allow Font/Color Picker" property is checked for this object (see the *Design Reference* manual). Otherwise, the command does nothing.
+Si l’utilisateur sélectionne une police et/ou un style et valide la boîte de dialogue, les modifications sont appliquées à la sélection courante de texte dans l’objet ayant le focus, si la propriété "Autoriser sélecteur couleur/police" est cochée pour cet objet (cf. manuel *Mode Développement*). Dans le cas contraire, la commande ne fait rien.
 
-If the font was changed, the On After Edit form event is generated for the object . 
+Si la police a été modifiée, l’événement formulaire On After Edit est généré pour l’objet. 
 
-## Example 
+## Exemple 
 
-In a form, you want to add a button to display the font picker in order to allow users to modify the font or style of a Text variable area. Make sure that:
+Dans un formulaire, vous souhaitez ajouter un bouton affichant le sélecteur de police afin de permettre à l'utilisateur de modifier la police ou le style d'une zone de variable texte. Assurez-vous que :
 
-* the Text variable has the "Allow font/color picker" property checked .
-* the "Focusable" property for the button has been unchecked.
+* la variable texte dispose de la propriété "Autoriser sélecteur couleur/police".
+* la propriété "Focusable" est désélectionnée pour le bouton.
 
-Here is the button code:
+Le code du bouton est le suivant :
 
 ```4d
  Case of
     :(FORM Event.code=On Clicked)
-       GOTO OBJECT(textVar) //gives the variable the focus
+       GOTO OBJECT(textVar) //donner le focus à la variable
        OPEN FONT PICKER
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [OPEN COLOR PICKER](open-color-picker.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1303 |
+| Numéro de commande | 1303 |
 | Thread safe | no |
 
 

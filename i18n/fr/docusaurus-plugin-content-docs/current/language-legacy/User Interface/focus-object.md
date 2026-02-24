@@ -9,60 +9,61 @@ displayed_sidebar: docs
 <!--REF #_command_.Focus object.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Pointer | &#8592; | Pointer to the object having the focus |
+| Résultat | Pointer | &#8592; | Pointeur vers l’objet ayant le focus |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Compatibility Note 
+## Note de compatibilité 
 
-<!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
+<!--REF #_command_.Focus object.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](object-get-pointer.md).
 
 ## Description 
 
-**Focus object** returns a pointer to the object having the focus in the current form. If no object has the focus, the command returns [Is nil pointer](is-nil-pointer.md). You can use **Focus object** to perform an action on a form area without having to know which object is currently selected. Be sure to test that the object is the correct data type, using [Type](type.md), before performing an action on it. 
+**Focus object** retourne un pointeur vers l’objet ayant le focus dans le formulaire courant. Si aucun objet n’a le focus, la commande retourne [Is nil pointer](is-nil-pointer.md). Vous pouvez utiliser **Focus object** pour effectuer une action dans un formulaire sans savoir quel objet est actuellement sélectionné. N'oubliez pas auparavant de tester si l'objet est du type voulu, à l'aide de la fonction [Type](type.md). 
 
-**Note:** When it is used with a list box, the **Focus object** function returns a pointer to the list box or the column of the list box depending on the context. For more information, please refer to the *Managing List Box Objects* section.
+**Note :** Lorsqu’elle est utilisée avec une list box, la fonction **Focus object** retourne un pointeur vers la list box ou la colonne de la list box en fonction du contexte. Pour plus d'informations, reportez-vous à la section *Gestion programmée des objets de type List box*. 
 
-This command cannot be used with fields in subforms.
+Cette commande ne peut pas être utilisée sur les champs dans les sous-formulaires.
 
-**Note:** This command is to be used only in a data entry context; otherwise it will return errors.
+**Note :** Cette commande n'a de sens qu'en cours de saisie. Son utilisation hors de ce contexte génère des messages d'erreur.
 
-## Example 
+## Exemple 
 
-The following example is an object method for a button. The object method changes the data in the current object to uppercase. The object must be a text or string data type (type 0 or 24):
+L'exemple suivant est une méthode objet pour un bouton. Cette méthode passe les données de l'objet courant en majuscules. L'objet doit être de type Texte ou Alpha (type 0 ou 24) :
 
 ```4d
- $vp :=Focus object //Save the pointer to the last area
+ $pointeur :=Focus object //Obtenir le pointeur vers le dernier objet
  Case of
-    :(Nil($vp)) //No object has the focus
+    :(Nil($pointeur)) //Aucun objet n'a le focus
        ...
-    :((Type($vp->)=Is alpha field)|(Type($vp->)=Is string var)) //If it is a string or text area
-       $vp->:=Uppercase($vp->) //Change the area to uppercase
+    :((Type($pointeur->)=Is alpha field)|(Type($pointeur->)=Est une variable chaîne))
+  //S'il s'agit d'un objet de type Texte ou Alpha
+       $pointeur->:=Uppercase($pointeur->) //Mettre les données en majuscules
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get pointer](object-get-pointer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 278 |
+| Numéro de commande | 278 |
 | Thread safe | no |
 
 

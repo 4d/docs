@@ -5,51 +5,51 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* : Boolean array {; *set* : Text} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *tabBooléen* {; *ensemble*} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| booleanArr | Boolean array | &#8592; | Array to indicate if a record is in the set or not |
-| set | Text | &#8594;  | Name of the set or UserSet if this parameter is omitted |
+| tabBooléen | Boolean array | &#8592; | Tableau d'appartenance des enregistrements à l’ensemble |
+| ensemble | Text | &#8594;  | Nom de l’ensemble ou Ensemble UserSet si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->The BOOLEAN ARRAY FROM SET command fills an array of Booleans indicating if each record in the table is or is not in *set*.<!-- END REF--> 
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->La commande **BOOLEAN ARRAY FROM SET** remplit un tableau de booléens indiquant si chaque enregistrement de la table à laquelle appartient *ensemble* fait ou non partie de l’ensemble.<!-- END REF-->
 
-The elements in the array are ordered in the order in which the records are created in the table (absolute record numbers). If N is the number of records in the table, element 0 of the array corresponds to record number 0, element 1 of the array corresponds to record number 1, etc. 
+Les éléments du tableau sont ordonnés en fonction de l’ordre de création des enregistrements dans la table (numéros absolus). Si N est le nombre d’enregistrements de la table, l’élément 0 du tableau correspond à l’enregistrement n° 0, l’élément 1 du tableau correspond à l’enregistrement n° 1, etc. 
 
-Each element of the array is:
+Chaque élément du tableau est mis à :
 
-* [True](true.md "True") if the corresponding record belongs to the set.
-* [False](false.md "False") if the corresponding record does not belong to the set.
+* Vrai si l’enregistrement correspondant fait partie de l’ensemble,
+* Faux si l’enregistrement correspondant ne pas partie de l’ensemble.
 
-**Warning:** The total number of elements in the *booleanArr* array is not significant. For structural reasons, this number can be different from the number of records actually present in the table. Possible extra elements are set to [False](false.md).
+Attention, le nombre total d’éléments du tableau *tabBooléen* n’est pas significatif. En effet, pour des raisons structurelles, il peut être différent du nombre d’enregistrements effectivement présents dans la table. Les éventuels éléments supplémentaires sont mis à Faux.
 
-If you don’t pass the *set* parameter, the command will use UserSet in the current process.
+Si vous ne passez pas le paramètre *ensemble*, la commande utilisera l’ensemble système UserSet du process courant.
 
-## See also 
+## Voir aussi 
 
 [CREATE SET FROM ARRAY](create-set-from-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 646 |
+| Numéro de commande | 646 |
 | Thread safe | yes |
 
 

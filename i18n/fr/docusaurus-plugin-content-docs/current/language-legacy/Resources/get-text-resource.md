@@ -5,62 +5,62 @@ slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
+<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | Resource ID number |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Text | &#8592; | Contents of the TEXT resource |
+| resNum | Integer | &#8594;  | Numéro de ressource |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
+| Résultat | Text | &#8592; | Contenu de la ressource TEXT |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get text resource.Summary-->The **Get text resource** command returns the text stored in the text (“TEXT”) resource whose ID is passed in *resID*.<!-- END REF-->
+<!--REF #_command_.Get text resource.Summary-->La commande **Get text resource** retourne le texte stocké dans la ressource texte ("TEXT") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
 
-If the resource is not found, empty text is returned, and the OK variable is set to 0 (zero).
+Si la ressource n'est pas trouvée, un texte vide est retourné et la variable système OK prend la valeur 0 (zéro).
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource est recherchée dans ce fichier uniquement. Si vous ne passez pas le paramètre *resFichier*, c'est la première occurrence de la ressource rencontrée dans la chaîne des fichiers de ressources qui sera retournée. 
 
-**Note:** A text resource can contain up to 32,000 characters.
+**Note :** Une ressource texte peut contenir jusqu'à 32 000 caractères.
 
-## Example 
+## Exemple 
 
-The following example displays the contents of the text resource ID=20800, which must be located in at least one of the currently open resource files:
+L'exemple suivant affiche le contenu de la ressource texte d'ID=20800 qui doit se trouver dans au moins un des fichiers de ressources ouverts :
 
 ```4d
  ALERT(Get text resource(20800))
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-## See also 
+## Voir aussi 
 
-[Get indexed string](get-indexed-string.md)  
+[Get indexed string](../commands/get-indexed-string)  
 [Get string resource](get-string-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 504 |
+| Numéro de commande | 504 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

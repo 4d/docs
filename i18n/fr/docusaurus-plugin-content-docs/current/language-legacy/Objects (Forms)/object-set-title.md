@@ -5,92 +5,92 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *object* : Text ; *title* : Text )<br/>**OBJECT SET TITLE** ( *object* : Variable, Field ; *title* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *objet* ; *libellé* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an Object Name (String) If omitted, object is a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| title | Text | &#8594;  | New title for the object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| libellé | Text | &#8594;  | Nouveau libellé de l'objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|6|Modified|
-|<6|Created|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET TITLE.Summary-->The OBJECT SET TITLE command changes the title of the object(s) specified by *object* to the value you pass in *title*.<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Summary-->La commande **OBJECT SET TITLE** change le libellé du ou des objets(s) spécifié(s) dans le paramètre *objet* et le remplace par la valeur définie dans le paramètre *libellé* *.<!-- END REF-->*
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the section *Object Properties*.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable (variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-OBJECT SET TITLE can be applied to any simple objects that display a title: 
+**OBJECT SET TITLE** peut s'appliquer à tous les types d'objets simples contenant un libellé : 
 
-* buttons and 3D buttons,
-* check boxes and 3D check boxes,
-* radio buttons and 3D radio buttons,
-* list box headers,
-* static text areas,
-* group boxes.
+* boutons et boutons 3D,
+* cases à cocher et cases à cocher 3D,
+* boutons radio et boutons radio 3D,
+* en-têtes de list box,
+* textes statiques,
+* zones de groupe.
 
-Usually, you will apply this command to one object at a time. The object title area must be big enough to hold the text; otherwise, the text is truncated. 
+Généralement, cette commande s'applique à un objet à la fois. La zone de libellé de l'objet doit être assez grande pour pouvoir accueillir le texte ; sinon, le texte est tronqué. 
 
-Do not use carriage returns in *title*.
+N'utilisez pas de retours chariot dans *libellé*. 
 
-If you want to set a title on more than one line, use the "\\" character ("\\\\" in the code editor) as a line return. This is permitted for 3D buttons, 3D check boxes, 3D radio buttons and list box headers.
+Si vous souhaitez définir un libellé sur plusieurs lignes, utilisez le caractère "\\" ("\\\\" dans l'éditeur de code) comme retour à la ligne. Cette possibilité est permise pour les boutons 3D, cases à cocher 3D, boutons radio 3D et les en-têtes de list box.
 
-**Note:** Pass "\\\\\\" when you want to use the "\\" character in the title.
+**Note :** Passez "\\\\\\" si vous souhaitez utiliser le caractère "\\" dans le libellé.
 
-## Example 1 
+## Exemple 1 
 
-The following example is the object method of a search button located in the footer area of an output form displayed using [MODIFY SELECTION](modify-selection.md). The method searches a table; depending on the search results, it enables or disables a button labeled *bDelete* and changes its title:
+L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la zone de pied de page d'un formulaire sortie affiché par la commande [MODIFY SELECTION](modify-selection.md). La méthode effectue une recherche dans une table et active ou inactive le bouton intitulé *bSuppr* et change son titre, en fonction des résultats de la recherche :
 
 ```4d
- QUERY([People];[People]Name=vName)
+ QUERY([Personnes];[Personnes]Nom=vNom)
  Case of
-    :(Records in selection([People])=0) // No people found
-       OBJECT SET TITLE(bDelete;" Delete")
-       OBJECT SET ENABLED(bDelete;False)
-    :(Records in selection([People])=1) // One person found
-       OBJECT SET TITLE(bDelete;"Delete Person")
-       OBJECT SET ENABLED(bDelete;True)
-    :(Records in selection([People])>1) // Many people found
-       OBJECT SET TITLE(bDelete;"Delete People")
-       OBJECT SET ENABLED(bDelete;True)
+    :(Records in selection([Personnes])=0) // Personne n'a été trouvé
+       OBJECT SET TITLE(bSuppr;" Supprimer")
+       OBJECT SET ENABLED(bSuppr;False)
+    :(Records in selection([Personnes])=1) // Une personne a été trouvée
+       OBJECT SET TITLE(bSuppr;"Supprimer la personne")
+       OBJECT SET ENABLED(bSuppr;True)
+    :(Records in selection([Personnes])>1) // Plusieurs personnes ont été trouvées
+       OBJECT SET TITLE(bSuppr;"Supprimer les personnes")
+       OBJECT SET ENABLED(bSuppr;True)
  End case
 ```
 
-## Example 2 
+## Exemple 
 
-You want to insert titles on two lines:
+Vous souhaitez insérer des libellés sur deux lignes :
 
 ```4d
- OBJECT SET TITLE(*;"header1";"Ascending sort \\\ \\Descending sort")
- OBJECT SET TITLE(*;"button1";"Click here \\to print")
+ OBJECT SET TITLE(*;"entete1";"Tri ascendant \\\ \\Tri descendant")
+ OBJECT SET TITLE(*;"bouton1";"Cliquez ici \\pour imprimer")
 ```
 
-![](../assets/en/commands/pict1242273.en.png)
+![](../assets/en/commands/pict1242273.fr.png)
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get title](object-get-title.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 194 |
+| Numéro de commande | 194 |
 | Thread safe | no |
 
 

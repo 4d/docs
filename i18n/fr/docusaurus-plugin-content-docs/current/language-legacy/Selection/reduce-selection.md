@@ -5,68 +5,69 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* : Table ;} *number* : Integer )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* ;} *nombre* )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to reduce the selection, or Default table, if omitted |
-| number | Integer | &#8594;  | Number of records to keep selected |
+| laTable | Table | &#8594;  | Table de laquelle réduire la sélection ou Table par défaut si ce paramètre est omis |
+| nombre | Integer | &#8594;  | Nombre d'enregistrements à conserver |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.REDUCE SELECTION.Summary-->**REDUCE SELECTION** creates a new selection of records for *aTable*.<!-- END REF--> The command reduces the current selection of *aTable* to the first *number* records. **REDUCE SELECTION** is applied to the current selection of *aTable* in the current process. It changes the current selection of *aTable* for the current process; the first record of the new selection is the current record.
+<!--REF #_command_.REDUCE SELECTION.Summary-->La commande **REDUCE SELECTION** crée une nouvelle sélection d'enregistrements pour *laTable*.<!-- END REF--> La commande réduit la sélection de *laTable* aux *nombre* premiers enregistrements. **REDUCE SELECTION** s'applique à la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection courante devient l'enregistrement courant.
 
-**Note:** If the statement **REDUCE SELECTION**(aTable;0) is executed, there is no longer any selection nor any current records in the table. 
+**Note :** Si l'instruction **REDUCE SELECTION**(laTable;0) est exécutée, il n'y a plus de sélection ni d'enregistrement courants dans la table. 
 
-## Example 
+## Exemple 
 
-The following example first finds the correct statistics for a worldwide contest among the dealers in over 20 countries. For each country, the 3 best dealers who have sold product worth more than $50,000 and who are among the 100 best dealers in the world are awarded a prize. With a few lines of code, this complex request can be executed by using indexed searches:
+L'exemple suivant établit des statistiques pour une compétition mondiale parmi les revendeurs dans plus de 20 pays. Pour chaque pays, les trois meilleurs revendeurs qui ont vendu plus de 50 000 Euros de produits font partie des 100 meilleurs revendeurs dans le monde et sont recompensés. Avec peu de lignes de code, cette requête complexe peut être effectuée en utilisant des recherches indexées :
 
 ```4d
- CREATE EMPTY SET([Dealers];"Winners") // Create an empty set
- SCAN INDEX([Dealers]Sales amount;100;<) // Scan from the end of the index
- CREATE SET([Dealers];"100 best Dealers") // Put the selected records in a set
- For($Country;1;Records in table([Countries])) // For each Country
-  // Search for the dealers in this country
-    QUERY([Dealers];[Dealers]Country=[Countries]Name;*) // ...who sold for more than $50,000
-    QUERY([Dealers];&;[Dealers]Sales amount>=50000)
-    CREATE SET([Dealers];"WinnerDealers") // Put them in a set
-  // They should be in the group of 100 best dealers
-    INTERSECTION("WinnerDealers";"100 best Dealers";"WinnerDealers")
-    USE SET("WinnerDealers") // Potential winners for the country
-  // Sort them by the results in descending order
-    ORDER BY([Dealers];[Dealers]Sales amount;<)
-    REDUCE SELECTION([Dealers];3) // Take the 3 best Dealers
-    CREATE SET([Dealers];"WinnerDealers") // The winners for the country
-  // Put them in the worldwide winners list
-    UNION("WinnerDealers";"TheWinners";"TheWinners")
+ CREATE EMPTY SET([Revendeurs];"Gagnants") // Créer un ensemble vide
+ SCAN INDEX([Revendeurs]Montant;100;<) // Chercher à la fin de l'index
+ CREATE SET([Revendeurs];"100 Meilleurs Revendeurs")
+  // Placer les enregistrements sélectionnés dans un ensemble
+ For($Pays;1;Records in table([Pays])) // pour chaque pays
+  // Chercher les revendeurs dans ce pays
+    QUERY([Revendeurs];[Revendeurs]Pays=NomPays;*) // ...qui ont vendu plus de 50000
+    QUERY([Revendeurs];&;[Revendeurs]Montant vendu>=50000)
+    CREATE SET([Revendeurs];"GagnantsRevendeurs") // Les placer dans un ensemble
+  // Ils doivent être placés dans le groupe des 100 meilleurs revendeurs
+    INTERSECTION("GagnantsRevendeurs";"100 Meilleurs Revendeurs";"GagnantsRevendeurs")
+    USE SET("GagnantsRevendeurs") // Gagnants potentiels pour le pays
+  // Trier les résultats en ordre décroissant
+    ORDER BY([Revendeurs];[Revendeurs]Montant vendu;<)
+    REDUCE SELECTION([Revendeurs];3) // Garder les trois meilleurs
+    CREATE SET([Revendeurs];"GagnantsRevendeurs") // Les gagnants pour le pays
+  // Les placer dans un ensemble des gagnants mondiaux
+    UNION("GagnantsRevendeurs";"LesGagnants";"LesGagnants")
  End for
- CLEAR SET("100 best Dealers") // Don't need this set anymore
- CLEAR SET("WinnerDealers") // Don't need this set anymore
- USE SET("The Winners") // Here you have the Winners
- CLEAR SET("The Winners") // Don't need this set anymore
- OUTPUT FORM([Dealers];"Prize letter") // Select the letter
- PRINT SELECTION([Dealers]) // Print the letters
+ CLEAR SET("100 Meilleurs Revendeurs") // Nous n'avons plus besoin de cet ensemble
+ CLEAR SET("GagnantsRevendeurs") // Nous n'avons plus besoin de cet ensemble
+ USE SET("LesGagnants") // Voici les gagnants
+ CLEAR SET("LesGagnants") // Nous n'avons plus besoin de cet ensemble
+ OUTPUT FORM([Revendeurs];"Lettre des gagnants") // Sélectionner la lettre
+ PRINT SELECTION([Revendeurs]) // Imprimer les lettres
 ```
 
-## See also 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
+*Présentation des ensembles*  
 [QUERY](query.md)  
 [SCAN INDEX](scan-index.md)  
-*Sets*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 351 |
+| Numéro de commande | 351 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

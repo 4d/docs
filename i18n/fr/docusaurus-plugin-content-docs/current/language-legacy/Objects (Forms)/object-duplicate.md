@@ -5,125 +5,122 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Variable, Field {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *objet* {; *nouvNom* {; *nouvVar* {; *reliéA* {; *dépH* {; *dépV* {; *redimH* {; *redimV*}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| newName | Text | &#8594;  | Name of new object |
-| newVar | Pointer | &#8594;  | Pointer to variable of new object |
-| boundTo | Text | &#8594;  | Name of previous enterable object (or radio button) |
-| moveH | Integer | &#8594;  | Horizontal shift of new object (>0 = to the right, <0 = to the left) |
-| moveV | Integer | &#8594;  | Vertical shift of new object (>0 = downwards, <0 = upwards) |
-| resizeH | Integer | &#8594;  | Value of the horizontal resize of the object |
-| resizeV | Integer | &#8594;  | Value of the vertical resize of the object |
-| * | Operator | &#8594;  | If specified= absolute coordinates<br/>If omitted= relative coordinates |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| nouvNom | Text | &#8594;  | Nom du nouvel objet |
+| nouvVar | Pointer | &#8594;  | Pointeur vers la variable du nouvel objet |
+| reliéA | Text | &#8594;  | Nom de l’objet saisissable (ou du bouton radio) précédent |
+| dépH | Integer | &#8594;  | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &#8594;  | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &#8594;  | Valeur de redimensionnement horizontal du nouvel objet |
+| redimV | Integer | &#8594;  | Valeur de redimensionnement vertical du nouvel objet |
+| * | Opérateur | &#8594;  | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT DUPLICATE.Summary-->The **OBJECT DUPLICATE** command is used to create a copy of the object designated by the *object* parameter in the context of the form being executed (Application mode).<!-- END REF--> The source form, generated in Design mode, is not modified. 
+<!--REF #_command_.OBJECT DUPLICATE.Summary-->La commande **OBJECT DUPLICATE** permet de créer une copie de l’objet désigné par le paramètre *objet* dans le contexte du formulaire en cours d’exécution (mode Application).<!-- END REF--> Le formulaire d’origine, généré en mode Développement, n’est pas modifié. 
 
-By default, all the options specified in the Property list for the source object are applied to the copy (size, resizing options, color, etc.), including any associated object method.   
-However, the following exceptions should be noted:
+Par défaut, toutes les options définies dans la Liste des propriétés pour l’objet source sont appliquées à la copie (taille, options de redimensionnement, couleur, etc.), y compris la méthode objet éventuellement associée. Les exceptions suivantes sont toutefois à noter :
 
-* Default button: there can only be one default button in a form. When you duplicate a button having the "Default button" property, this property is assigned to the copy and is removed from the source object.
-* Keyboard equivalents: the keyboard shortcut associated with a source object is not duplicated. This property is left blank in the copy.
-* Object names: there cannot be several objects with the same name in a form. If you do not pass the *newName* parameter, the name of the source object is automatically incremented in the new object (see below).
+* Bouton par défaut : il ne peut y avoir qu’un seul bouton par défaut dans un formulaire. Lorsque vous dupliquez un bouton ayant la propriété "Bouton par défaut", cette propriété est attribuée à la copie et est supprimée de l’objet d’origine.
+* Equivalents clavier : le raccourci clavier associé à un objet source n’est pas dupliqué. Cette propriété est laissée vide dans la copie.
+* Noms d’objet : il ne peut pas y avoir plusieurs objets de même nom dans un formulaire. Si vous ne passez pas le paramètre *nouvNom*, le nom de l’objet source est automatiquement incrémenté dans le nouvel objet (cf. ci-dessous).
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string.  
-If you pass a field or variable reference and if the form contains several objects that use the same reference, the first occurrence found will be used. In this case, in order to avoid any ambiguity, it is recommended to work with object names, that are unique.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* désigne le nom d’un objet (une chaîne). Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objet* désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables objets uniquement).  
+Si vous passez une référence de champ ou de variable et si le formulaire contient plusieurs objets utilisant la même référence, la première occurrence trouvée est utilisée. Dans ce cas, pour éviter toute ambiguïté, il est conseillé de travailler avec les noms d’objets, qui sont uniques.
 
-Pass the name assigned to the copy of the object in the *newName* parameter. This name must be in keeping with the rules for naming objects and be unique in the form. If it is not valid or already used by another object, the command does nothing and the *OK* variable returns 0\.   
-If you omit this parameter or pass an empty string, the new name is automatically generated by incrementing the source object name (if this name is not already used). For example:  
+Passez dans le paramètre *nouvNom* le nom attribué à la copie de l’objet. Ce nom doit être conforme aux règles de nommage des objets et être unique dans le formulaire. S’il est invalide ou est déjà utilisé par un autre objet, la commande ne fait rien et la variable *OK* retourne 0\.   
+Si vous omettez ce paramètre ou passez une chaîne vide, le nouveau nom est automatiquement généré par incrémentation du nom de l’objet source (si ce nom n’est pas déjà utilisé). Par exemple :  
 
-| **Source name** | **Name of copy**                    |
-| --------------- | ----------------------------------- |
-| Button          | Button1                             |
-| Button20        | Button21                            |
-| Button21        | Button23 if Button22 already exists |
+| **Nom d’origine** | **Nom de la copie**              |
+| ----------------- | -------------------------------- |
+| Bouton            | Bouton 1                         |
+| Bouton20          | Bouton21                         |
+| Bouton21          | Bouton23 si Bouton22 existe déjà |
 
-Pass a pointer to the variable to be associated with the new object in *newVar*. As a rule, you must point to a variable of the same type as the that of the source object but certain kinds of "retyping" are possible. The command provides automatic functions to facilitate writing generic code:
+Passez dans *nouvVar* un pointeur vers la variable à associer au nouvel objet. Vous devez en principe pointer vers une variable du même type que celle de l’objet d’origine mais certains "retypages" sont possibles. La commande propose des automatismes facilitant l’écriture de code générique :
 
-* Usually, all "enterable" variables can be retyped; for example, an object displaying a Date or Longint can be duplicated and used with a variable of the Text type. Any compatible properties will be kept. The command also permits changing types between Text objects and Picture objects. Note that a text object that is duplicated and associated with a Boolean variable or field will automatically appear as a check box.
-* It is usually possible to dynamically transform a variable into a field and vice versa.  
-On the other hand, graphic objects (buttons, check boxes, and so on) cannot be transformed into other types of controls.
+* De manière générale, toutes les variables "saisissables" peuvent être retypées ; par exemple, un objet affichant une Date ou un Entier long peut être dupliqué et utilisé avec une variable de type Texte. Les propriétés compatibles sont maintenues. La commande permet également les changements de type entre des objets Texte et des objets Image. A noter qu’un objet texte dupliqué et associé à une variable ou un champ booléen aura automatiquement l’apparence d’une case à cocher.
+* Il est généralement possible de transformer dynamiquement une variable en champ et inversement.  
+En revanche, les objets graphiques (boutons, cases à cocher...) ne peuvent pas être tranformés en d’autres types de contrôles.
 
-If the variable type is not compatible with the object, the command does nothing and the *OK* variable is set to 0\. If you omit this parameter, the variable is [created dynamically](../FormObjects/properties_Object.md#dynamic-variables) by 4D. If you duplicate a static object (lines, rectangle, static picture, etc.), this parameter is ignored. Pass a Nil (->\[\]) pointer if you want to be able to use the other parameters. 
+Si le type de la variable est incompatible avec l’objet, la commande ne fait rien et la variable *OK* prend la valeur 0\. Si vous omettez ce paramètre, la [variable est créée dynamiquement par 4D](../FormObjects/properties_Object.md#variables-dynamiques) Si vous dupliquez un objet statique (ligne, rectangle, image statique...) ce paramètre est ignoré. Passez un pointeur Nil (->\[\]) si vous souhaitez pouvoir utiliser les autres paramètres. 
 
-You use the *boundTo* parameter in two cases:
+Vous utilisez le paramètre *reliéA* dans deux cas :
 
-* update of entry order: in this case, in *boundTo*, pass the name of the enterable object located just before the duplicated object. If you want for the new object to become the first object in the entry order of the page, pass the new Object First in entry order constant (see the [OBJECT Get pointer](object-get-pointer.md) command).
-* association with a group of radio buttons: radio buttons function in a coordinated fashion when they are grouped. If the duplicated object is a radio button, in *boundTo* pass the name of a radio button of the group to which you want to attach the new object.
+* mise à jour de l’ordre de saisie : dans ce cas, passez dans *reliéA* le nom de l’objet saisissable situé juste avant l’objet dupliqué. Si vous souhaitez que le nouvel objet devienne le premier objet dans l’ordre de saisie de la page, passez la constante Object First in entry order (cf. commande [OBJECT Get pointer](object-get-pointer.md)).
+* association à un groupe de boutons radio : les boutons radios fonctionnent de façon coordonnée lorsqu’ils sont groupés. Si l’objet dupliqué est un bouton radio, passez dans *reliéA* le nom d’un bouton radio du groupe auquel rattacher le nouvel objet.
 
-If you omit this parameter or pass an empty string, the new object becomes the last enterable object of the form page. 
+Si vous omettez ce paramètre ou passez une chaîne vide, le nouvel objet devient le dernier objet saisissable de la page du formulaire. Dans le cas d’un bouton radio, l’objet est rattaché au groupe du bouton source. 
 
-The new object can be moved and resized via the *moveH*, *moveV*, *resizeH* and *resizeV* parameters. As with the [OBJECT MOVE](object-move.md) command, the direction of the move or the resizing is specified by the sign of the values passed in the *moveH* and *moveV* parameters:
+Le nouvel objet peut être déplacé et redimensionné via les paramètres *dépH*, *dépV*, *redimH* et *redimV*. Comme pour la commande [OBJECT MOVE](object-move.md), le sens du déplacement ou du redimensionnement est défini par le signe des valeurs passées dans les paramètres *dépH* et *dépV* :
 
-* If the value is positive, the move or resizing is carried out, respectively, to the right or downwards.
-* If the value is negative, the move or resizing is carried out, respectively, to the left or upwards.
+* Si la valeur est positive, le déplacement ou le redimensionnement s’effectue respectivement vers la droite ou vers le bas.
+* Si la valeur est négative, le déplacement ou le redimensionnement s’effectue respectivement vers la gauche ou vers le haut.
 
-By default, the values of *moveH*, *moveV*, *resizeH* and *resizeV* modify the coordinates of the object in relation to its previous position. If you want for these parameters to specify absolute coordinates, pass the optional final *\** parameter.  
-If you omit these parameters, the new object is superimposed on top of the source object. 
+Par défaut, les valeurs de *dépH*, *dépV*, *redimH* et *redimV* modifient les coordonnées de l’objet relativement à sa position précédente. Si vous souhaitez que ces paramètres définissent des coordonnées absolues, passez le dernier paramètre optionnel *\**.  
+Si vous omettez ces paramètres, le nouvel objet se superpose à l’objet d’origine. 
 
-This command must be used in the context of the display of a form. It will generally be called in the On Load form event or following a user action (On Clicked event). 
+Cette commande doit être utilisée dans le contexte de l’affichage d’un formulaire. Elle sera généralement appelée dans l’événement On Load du formulaire ou suite à une action utilisateur (événement On Clicked). 
 
-**Note:** If the On Load form event is associated with the source object, it is generated for the duplicated object when the command is executed. This allows, for example, the value of the object to be initialized. 
+**Note :** Si l’événement On Load est associé à l’objet d’origine, il est généré pour l’objet dupliqué au moment de l’exécution de la commande. Ce principe permet par exemple d’initialiser la valeur de l’objet. 
 
-For technical and logical reasons, **OBJECT DUPLICATE** cannot be called within the certain form events, in particular:
+Pour des raisons techniques et logiques, **OBJECT DUPLICATE** ne peut pas être appelée dans le cadre de certains événements formulaire, notamment :
 
-* On Load event generated in an object method
-* On Unload event
-* Event related to printing context (On Header, On Printing Detail, etc.). To print an object several times, you must use the [Print object](print-object.md) command.
+* Evénement On Load généré dans une méthode objet
+* Evénement On Unload.
+* Evénement lié à un contexte d’impression (On Header, On Printing Detail, etc.). Pour imprimer plusieurs fois un objet, vous devez utiliser la commande [Print object](print-object.md).
 
-When the command is called in a context that is not supported,the object is not duplicated and the *OK* variable is set to 0\. If it is called in a printing context, the error -10601 is generated as well.
+Lorsque la commande est appelée dans un contexte non pris en charge, l’objet n’est pas dupliqué et la variable OK prend la valeur 0\. Si elle est appelée dans un contexte d’impression, l’erreur -10601 est en outre générée.
 
-If the command was executed correctly, the *OK* variable is set to 1\. Otherwise, it is set to 0\. 
+Si la commande est exécutée correctement, la variable *OK* prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-## Example 1 
+## Exemple 1 
 
-Creation of a new button named "CancelButton" on top of the existing "OKButton" object and association with the *vCancel* variable:
+Création d’un nouveau bouton nommé "BoutonAnnul" au-dessus de l’objet existant "BoutonOK" et association à la variable *vAnnul* :
 
 ```4d
- OBJECT DUPLICATE(*;"OKButton";"CancelButton";vCancel)
+ OBJECT DUPLICATE(*;"BoutonOK";"BoutonAnnul";vAnnul)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Creation of a new radio button "bRadio6" based on the existing radio button "bRadio5". This button will be associated with the variable <>r6, integrated with the group of the "bRadio5" button and placed 20 pixels above it:
+Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio existant "bRadio5". Ce bouton sera associé à la variable <>r6, intégré au groupe du bouton "bRadio5" et placé 20 pixels au-dessous :
 
 ```4d
  OBJECT DUPLICATE(*;"bRadio5";"bRadio6";<>r6;"bRadio5";0;20)
 ```
 
-## See also 
+## Voir aussi 
 
-*Form Objects (Access)*  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT MOVE](object-move.md)  
-[OBJECT SET DATA SOURCE FORMULA](./commands/object-set-data-source-formula)
+*Objets de formulaire (Accès)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1111 |
+| Numéro de commande | 1111 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

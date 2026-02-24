@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB Get current session ID.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Session UUID |
+| Résultat | Text | &#8592; | UUID de la session |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB Get current session ID.Summary-->The **WEB Get current session ID** command returns the ID of the session open for the Web request.<!-- END REF--> This ID is generated automatically by 4D as an UUID. 
+<!--REF #_command_.WEB Get current session ID.Summary-->La commande **WEB Get current session ID** retourne l’ID de la session ouverte pour la requête Web.<!-- END REF--> Cet ID a été généré automatiquement par 4D sous la forme d’un UUID. 
 
-If this command is called outside of the context of a Web session, it returns an empty string "". 
+Si cette commande est appelée hors du contexte d’une session Web, elle retourne une chaîne vide "". 
 
-## See also 
+## Voir aussi 
 
+*Gestion des sessions Web*  
 [WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
-*Web Sessions Management (Legacy)*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1162 |
+| Numéro de commande | 1162 |
 | Thread safe | yes |
 
 

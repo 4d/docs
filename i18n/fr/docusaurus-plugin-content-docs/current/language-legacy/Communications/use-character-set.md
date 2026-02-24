@@ -5,54 +5,53 @@ slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *map* : Text, Operator {; *mapInOut* : Integer} )<!-- END REF-->
+<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *filtre* {; *typeFiltre*} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| map | Text, Operator | &#8594;  | Name of character set  to use, or * to reset to default character set |
-| mapInOut | Integer | &#8594;  | 0 = Output map 1 = Input map, If omitted, output map |
+| filtre | Text, * | &#8594;  | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
+| typeFiltre | Integer | &#8594;  | 0 = Filtre d'exportation, 1 = Filtre d'importation |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.USE CHARACTER SET.Summary-->**USE CHARACTER SET** modifies the character set used by 4D during data transfer between the database and a document or a serial port for the current process.<!-- END REF--> Transfer operations include the import and export of text, DIF, and SYLK files. A character map also works on data transferred with [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for text type packets) and [RECEIVE BUFFER](receive-buffer.md). It has no effect on transfers of data done with [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), [RECEIVE PACKET](receive-packet.md) (for BLOB type packets) and [RECEIVE VARIABLE](receive-variable.md). 
+<!--REF #_command_.USE CHARACTER SET.Summary-->La commande **USE CHARACTER SET** permet de modifier le jeu de caractères utilisé par 4D pour toutes les opérations de transfert entre la base et un document ou un port série pour le process courant.<!-- END REF--> Cela inclut les données transférées par les commandes d'import/export Texte, SYLK et DIF, ainsi que celles envoyées par les commandes [SEND PACKET](send-packet.md) et [RECEIVE PACKET](receive-packet.md) (paquets de type texte) et [RECEIVE BUFFER](receive-buffer.md). Les filtres n'ont pas d'effet sur les données transférées par les commandes [SEND RECORD](send-record.md), [SEND VARIABLE](send-variable.md), [RECEIVE RECORD](receive-record.md), [SEND PACKET](send-packet.md), et [RECEIVE PACKET](receive-packet.md) (paquets de type BLOB) et [RECEIVE VARIABLE](receive-variable.md).
 
-The *map* parameter must correspond to the “IANA” name of the character set to be used, or to one of its aliases. For example, the names “iso-8859-1” or “utf-8” are both valid names, as well as the aliases “latin1” or “l1”. For more information about these names, please refer to the following address: *http://www.iana.org/assignments/character-sets*. Examples if IANA names are also provided in the description of the [CONVERT FROM TEXT](convert-from-text.md) command. 
+Le paramètre *filtre* doit correspondre au nom “IANA” du jeu de caractères à utiliser, ou l’un de ses alias. Par exemple, les noms “iso-8859-1” ou “utf-8” sont des noms valides, ainsi que les alias “latin1” ou “l1”. Pour plus d’informations sur ces noms, reportez-vous à l’adresse <http://www.iana.org/assignments/character-sets>. Des exemples de noms IANA sont également fournis dans la description de la commande [CONVERT FROM TEXT](convert-from-text.md). 
 
-If *mapInOut* is 0, the map is set for exporting. If *mapInOut* is 1, the map is set for importing. If you do not pass the *mapInOut* parameter, the export map is used by default.
+Si *typeFiltre* est égal à 0, le filtre est défini pour l'exportation. Si *typeFiltre* est égal à 1, il est défini pour l'importation. Si vous ne passez pas le paramètre *typeFiltre*, le filtre d'exportation est utilisé par défaut.
 
-When the *\** parameter is passed, the default character set is restored (import or export map depending on the value of *mapInOut*).   
-In 4D, the default character set is UTF-8\. 
+Lorsque le paramètre *\** est passé, le jeu de caractères par défaut est rétabli (filtre d'importation ou d'exportation, en fonction de la valeur de *typeFiltre*. Dans 4D, le jeu de caractères par défaut est UTF-8\. 
 
-## Example 
+## Exemple 
 
-The following example (Unicode mode) uses the UTF-16 character set to export a text, then the default character set is restored:
+L'exemple suivant (mode Unicode) utilise le jeu de caractères UTF-16 pour exporter un texte, puis le jeu de caractères par défaut est rétabli :
 
 ```4d
- USE CHARACTER SET("UTF-16LE";0) // Use the UTF-16 'Little Endian' character set
- EXPORT TEXT([MyTable];"MyText") // Export data through the map
- USE CHARACTER SET(*;0) // Restore the default character set
+ USE CHARACTER SET("UTF-16LE";0) // Use le jeu de caractères UTF-16 'Little Endian'
+ EXPORT TEXT([Ma Table];"Mon Texte") // Exporter les données avec le filtre
+ USE CHARACTER SET(*;0) // Rétablir le jeu par défaut
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it is set to 0.
+La variable système OK prend la valeur 1 si le filtre est correctement chargé, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
@@ -64,12 +63,12 @@ The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it
 [RECEIVE PACKET](receive-packet.md)  
 [SEND PACKET](send-packet.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 205 |
+| Numéro de commande | 205 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

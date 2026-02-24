@@ -5,76 +5,76 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *object* : Text ; *entryFilter* : Text )<br/>**OBJECT SET FILTER** ( *object* : Variable, Field ; *entryFilter* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( {* ;} *objet* ; *filtreSaisie* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| entryFilter | Text | &#8594;  | New data entry filter for the enterable area |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| filtreSaisie | Text | &#8594;  | Nouveau filtre de saisie pour la zone saisissable |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|6|Modified|
-|<6|Created|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** sets the entry filter for the objects specified by *object* to the filter you pass in *entryFilter*.<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Summary-->**OBJECT SET FILTER** remplace le filtre de saisie pour *objet* par *filtreSaisie* dans le formulaire courant affiché à l'écran.<!-- END REF--> 
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the *Object Properties* section.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-**OBJECT SET FILTER** can be used for input and dialog forms and can be applied to fields and enterable variables that accept an entry filter in the Design environment.
+La commande **OBJECT SET FILTER** peut être utilisée dans des formulaires entrée et des dialogues et peut être appliquée aux champs et variables saisissables acceptant les filtres de saisie en mode Développement. 
 
-Passing an empty string in *entryFilter* removes the current entry filter for the objects.
+Pour enlever un filtre, passez une chaîne vide dans le paramètre *filtreSaisie*. 
 
-**Note:** This command cannot be used with fields located in a subform’s list form.
+**Note :** Cette commande ne peut pas être utilisée avec des champs situés dans le formulaire "liste" d'un sous-formulaire.
 
-**Note:** In *entryFilter*, to use entry filters you may have predefined using the Tool Box, prefix the name of the filter with a vertical bar (|). 
+**Note :** Pour pouvoir exploiter les filtres de saisie que vous avez créés dans la Boîte à outils, préfixez le nom du filtre, dans le paramètre *filtreSaisie*, d'une barre verticale (|). 
 
-## Example 1 
+## Exemple 1 
 
-The following example sets the entry filter for a postal code field. If the address is in the U.S., the filter is set to ZIP codes. Otherwise, it is set to allow any entry: 
+L'exemple suivant définit le filtre de saisie pour le champ code postal. Si l'adresse se trouve en France, le filtre est paramétré pour les codes postaux français. Sinon, le filtre peut accepter toute valeur saisie :   
 
 ```4d
- If([Companies]Country="US") // Set the filter to a ZIP code format
-    OBJECT SET FILTER([Companies]ZIP Code;"&9###")
- Else // Set the filter to accept alpha and numeric and uppercase the alpha
-    OBJECT SET FILTER([Companies]ZIP Code;"~@")
+ If(Pays="France") // Fixer le filtre au format du code postal français
+    OBJECT SET FILTER([Sociétés]Code postal;"&###")
+ Else // Fixer le filtre pour qu'il accepte toute valeur alphanumérique
+    OBJECT SET FILTER([Sociétés]Code postal;"~@")
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example allows only the letters “a,” “b,” “c,” or “g” to be entered in two places in the field Field: 
+L'exemple suivant autorise uniquement la saisie des lettres “a”, “b”, “c” ou “g” dans un champ comportant deux lettres : 
 
 ```4d
- OBJECT SET FILTER([Table]Field ;"&"+Char(Double quote)+"a;b;c;g"+Char(Double quote)+"##")
+ OBJECT SET FILTER([Table]Champ;"&"+Char(Double quote)+"a;b;c;g"+Char(Double quote)+"##")
 ```
 
-**Note:** This example sets the entry filter to *&"a;b;c;g"##*.
+**Note :** Cet exemple définit le filtre de saisie *&"a;b;c;g"##*.
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get filter](object-get-filter.md)  
 [OBJECT SET FORMAT](object-set-format.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 235 |
+| Numéro de commande | 235 |
 | Thread safe | no |
 
 

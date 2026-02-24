@@ -5,57 +5,53 @@ slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *area* : Integer ; *type* : Integer )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *zone* ; *type* )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| type | Integer | &#8594;  | Type of the report |
+| zone | Integer | &#8594;  | Référence de la zone |
+| type | Integer | &#8594;  | Type d'état |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET REPORT KIND.Summary-->The **QR SET REPORT KIND** command sets the report *type* for the area whose reference was passed in *area*.<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Summary-->La commande **QR SET REPORT KIND** permet de définir le *type* de l'état rapide présent dans la *zone*.<!-- END REF-->
 
-* If *type* equals 1, the report type is list.
-* If *type* equals 2, the report type is cross-table.
+Vous pouvez passer dans le paramètre *type* une des constantes du thème *QR Types d'états* :
 
-You can also use the constants of the *QR Report Types* theme:
+| Constante       | Type        | Valeur |
+| --------------- | ----------- | ------ |
+| qr cross report | Entier long | 2      |
+| qr list report  | Entier long | 1      |
 
-| Constant        | Type    | Value |
-| --------------- | ------- | ----- |
-| qr cross report | Integer | 2     |
-| qr list report  | Integer | 1     |
+Si vous définissez à l'aide de cette commande un nouveau *type* pour un état existant, les paramétrages précédents sont supprimés et un nouvel état vide est créé. 
 
-  
-If you set a new type for an existing current report, it removes the previous settings and creates a new empty report, ready to be set. 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *type* value, the error -9852 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR Get report kind](qr-get-report-kind.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 738 |
+| Numéro de commande | 738 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

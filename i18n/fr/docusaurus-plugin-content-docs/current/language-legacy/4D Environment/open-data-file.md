@@ -5,74 +5,74 @@ slug: /commands/open-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* : Text )<!-- END REF-->
+<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *cheminAccès* )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| accessPath | Text | &#8594;  | Name or complete access path of the data file to open |
+| cheminAccès | Text | &#8594;  | Nom ou chemin d’accès complet du fichier de données à ouvrir |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|6.8|Created|
+|13|Modifié|
+|6.8|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN DATA FILE.Summary-->The **OPEN DATA FILE** command allows changing the data file opened by the 4D application on-the-fly.<!-- END REF--> 
+<!--REF #_command_.OPEN DATA FILE.Summary-->La commande **OPEN DATA FILE** permet de changer à la volée le fichier de données ouvert par l’application 4D.<!-- END REF-->
 
-Pass the name or the full access path of the data file to open (file with a ".4DD" suffix) in the *accessPath* parameter. If you pass only the file name, it must be placed next to the structure file of the database.
+Vous passez dans le paramètre *cheminAccès* le nom ou le chemin d’accès complet du fichier de données à ouvrir (fichier suffixé ".4DD"). Si vous passez uniquement un nom de fichier, il doit être placé à côté du fichier de structure de la base.
 
-If the access path sets a valid data file, 4D quits the database in progress and re-opens it with the specified data file. In single-user mode, the [On Exit database method](on-exit-database-method.md) and the [On Startup database method](on-startup-database-method.md) are successively called.
+Si ce chemin d’accès désigne un fichier de données valide, 4D quitte la base en cours et la rouvre avec le fichier de données spécifié. En mode monoposte, la [On Exit database method](on-exit-database-method.md) et la [On Startup database method](on-startup-database-method.md) sont successivement appelées.
 
-**Warning:** Since this command causes the application to quit before re-opening with the specified data file, it must be used with precaution in the [On Exit database method](on-exit-database-method.md) or in a method called by this database method, so as to avoid generating an infinite loop.
+**Attention :** Comme cette commande provoque la fermeture préalable de l'application, elle doit être utilisée avec précaution dans la [On Exit database method](on-exit-database-method.md) ou une méthode appelée par cette méthode base afin de ne pas générer de boucle sans fin.
 
-The command is executed in an asynchronous manner: after its call, 4D continues executing the rest of the method. Then, the application behaves as if the **Quit** command was selected in the **File** menu: open dialog boxes are cancelled, any open processes have 10 seconds to finish before being terminated, etc.
+La commande est exécutée de manière asynchrone : après son appel, 4D continue d’exécuter le reste de la méthode. Ensuite, l’application se comporte comme si la commande **Quitter** avait été sélectionnée dans le menu **Fichier** : les boîtes de dialogue ouvertes sont annulées, les process ouverts ont 10 secondes pour se terminer avant d’être tués, etc.
 
-Before launching the operation, the command checks the validity of the specified data file. Also, if the file was already open, the command verifies that it corresponds to the current structure.
+Avant de lancer l’opération, la commande teste la validité du fichier de données spécifié. En outre, si le fichier a déjà été ouvert, la commande vérifie qu’il correspond bien à la structure courante.
 
-If you pass an empty string in *accessPath*, the command will re-open the database without changing the data file.
+Si vous passez une chaîne vide dans *cheminAccès*, la commande rouvre la base sans changer de fichier de données.
 
-**4D Server:** Beginning with 4D v13, this command can be executed with 4D Server. In this context, it makes an internal call to [QUIT 4D](quit-4d.md) on the server (which causes a dialog box to appear on each remote machine indicating that the server is in the process of quitting) before opening the designated file.
+**4D Server :** A compter de 4D v13, cette commande peut être exécutée avec 4D Server. Dans ce contexte, elle effectue en interne un appel à [QUIT 4D](quit-4d.md) sur le serveur (entraînant l’apparition, sur chaque poste distant, d’une boîte de dialogue signalant que le serveur est en train de quitter) avant d'ouvrir le fichier désigné.
 
-## Example 
+## Exemple 
 
-In the context of deploying a merged application, you want to open or create the user data file in the On Startup database method. This example uses the default data file (see *Data file management in final applications*):
+Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ouvrir ou créer le fichier de données utilisateur dans la méthode base Sur ouverture. Cet exemple utilise le fichier de données par défaut (cf. *Gestion du fichier de données dans les applications finales*) :
 
 ```4d
  If(Data file="@default.4dd")
-    If(Version type?? Merged application)
+    If(Version type?? Application fusionnée)
        If(Is data file locked)
           $dataPath:=Get 4D folder(Active 4D Folder)+"data.4dd"
-  //If a local data file already exists
+  //Si un fichier de données local existe déjà
           If(Test path name($dataPath)=Is a document)
-             OPEN DATA FILE($dataPath) //open it
+             OPEN DATA FILE($dataPath) // on l'ouvre
           Else
-             CREATE DATA FILE($dataPath) //create it
+             CREATE DATA FILE($dataPath) //on le crée
           End if
        End if
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [CREATE DATA FILE](create-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 312 |
+| Numéro de commande | 312 |
 | Thread safe | yes |
 
 

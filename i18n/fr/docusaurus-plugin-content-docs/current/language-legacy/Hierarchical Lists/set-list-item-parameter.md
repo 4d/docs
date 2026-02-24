@@ -5,54 +5,53 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *liste* ; *refElément* ; *sélecteur* ; *valeur* )<br/>**SET LIST ITEM PARAMETER** ( * ; *liste* ; * ; *sélecteur* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| selector | Text | &#8594;  | Parameter constant |
-| value | Text, Boolean, Real | &#8594;  | Value of the parameter |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| sélecteur | Text | &#8594;  | Constante de paramètre |
+| valeur | Text, Boolean, Real | &#8594;  | Valeur de paramètre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|11 SQL|Created|
+|16 R4|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->The **SET LIST ITEM PARAMETER** command modifies the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Summary-->La commande **SET LIST ITEM PARAMETER** permet de modifier le paramètre *sélecteur* pour l’élément *réfElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF-->
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and the second *\** is passed, the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using *Hierarchical Lists*).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l’aide de *Listes hiérarchiques*).   
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to the current item of the list. If several items are selected manually, the current item is the last one that was selected. If no item is selected, the command does nothing.
+Dans le paramètre *sélecteur*, vous pouvez passer :
 
-In *selector*, you can pass either:
+* une des constantes suivantes du thème "*Listes hiérarchiques*" :  
 
-* one of the following constants (found in the “*Hierarchical Lists*” theme):
-  
-| Constant                   | Type   | Value                      | Comment                                                                                                                                                                                                                                                                                 |  
-| -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| Additional text            | Text | 4D\_additional\_text       | This constant is used to add text to the right of the *itemRef* item. This additional title will always be displayed in the right part of the list, even when the user moves the horizontal scrolling cursor. When you use this constant, pass the text to be displayed in *value*.     |  
-| Associated standard action | Text | 4D\_standard\_action\_name | Associate a standard action with the *itemRef*. In this case, you must pass in the *value* parameter a standard action name with a parameter, for example "fontSize?value=10pt". For more information, please refer to the *Standard actions* section in the *Design Reference* manual. |
-* or a **custom selector**: You can also pass custom text and associate it with a value of the Text, Number or Boolean type in *selector*. This value will be stored with the list item and may be retrieved using the [GET LIST ITEM PARAMETER](get-list-item-parameter.md) command. This lets you set up any type of interface associated with hierarchical lists. For example, in a list of customer names, you can store the age of each person and only display it when the corresponding item is selected.
+| Constante                  | Type   | Valeur                     | Comment                                                                                                                                                                                                                                                                                                               |  
+| -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
+| Additional text            | Chaîne | 4D\_additional\_text       | Cette constante permet d’ajouter un texte à droite de l’élément *réfElément*. Ce libellé supplémentaire reste toujours affiché dans la partie droite de la liste, même si l’utilisateur déplace le curseur de défilement horizontal. Lorsque vous utilisez cette constante, passez dans *valeur* le texte à afficher. |  
+| Associated standard action | Chaîne | 4D\_standard\_action\_name | Associe une action standard à l'élément *refElément*. Dans ce cas, vous devez passer dans le paramètre *valeur* un nom d'action standard avec un paramètre, par exemple "fontSize?value=10pt". Pour plus d'informations, veuillez vous reporter à la section *Actions standard* dans le manuel *Mode Développement*.  |
+* ou une **valeur personnalisée** : vous pouvez passer dans *sélecteur* tout texte personnalisé et lui associer une valeur de type texte, numérique ou booléen. Cette valeur sera stockée avec l’élément et pourra être récupérée via la commande [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Ce principe permet de mettre en place tout type d’interface associée aux listes hiérarchiques. Par exemple, dans une liste stockant des noms de personnes, vous pouvez stocker l’âge de chaque personne et ne l’afficher que lorsque l’élément correspondant est sélectionné.
 
-## Example 
+## Exemple 
 
-You want to set as choice list of a hierarchical pop up menu a custom list of font size values using the standard actions feature:
+Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une liste personnalisée de valeurs de tailles de police, à l'aide de la fonctionnalité des actions standard :
 
 ```4d
  $myList:=New list
@@ -67,7 +66,7 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 
 ![](../assets/en/commands/pict3372004.en.png)
 
-## See also 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [Action info](action-info.md)  
@@ -75,11 +74,11 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 [GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
 [INSERT IN LIST](insert-in-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 986 |
+| Numéro de commande | 986 |
 | Thread safe | no |
 
 

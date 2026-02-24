@@ -5,88 +5,88 @@ slug: /commands/st-compute-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )<!-- END REF-->
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|14|Created|
+|16 R5|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->The **ST COMPUTE EXPRESSIONS** command updates the dynamic 4D expressions found in the multi-style or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> 
+<!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->La commande **ST COMPUTE EXPRESSIONS** met à jour les expressions 4D dynamiques situées dans le champ ou la variable de texte multistyle ou de 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](st-insert-expression.md) command.
+Pour plus d’informations sur les expressions 4D utilisables dans les zone de texte multistyle ou une zone 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](st-insert-expression.md).
 
- The command re-evaluates the result of expressions found in the *object* based on the current context and displays the result obtained. For example, if the expression inserted is the time, the value will be modified each time the **ST COMPUTE EXPRESSIONS** command is called. Expressions are also computed:
+ La commande réévalue le résultat des expressions présentes dans l’*objet* en fonction du contexte courant et affiche le résultat obtenu. Par exemple, si l’expression insérée est l’heure, la valeur sera modifiée à chaque appel de la commande **ST COMPUTE EXPRESSIONS**. Les expressions sont également calculées :
 
-* when they are inserted
-* when the object is loaded
-* when they are "frozen" using the [ST FREEZE EXPRESSIONS](st-freeze-expressions.md) command, if the second *\** parameter is passed.
+* au moment de leur insertion
+* au chargement de l’objet
+* lorsqu’elles sont "figées" à l’aide de la commande [ST FREEZE EXPRESSIONS](st-freeze-expressions.md), si le deuxième paramètre \* est passé.
 
-**ST COMPUTE EXPRESSIONS** does not modify styled text (containing *span* tags) but only plain text displayed in *object*. The values computed are not stored in the styled text, only their reference is stored there. 
+**ST COMPUTE EXPRESSIONS** ne modifie pas le texte stylé (contenant les balises *span*) mais uniquement le texte brut affiché dans *objet*. Les valeurs calculées ne sont pas stockées dans le texte stylé, seule leur référence y est stockée. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous passez une référence de champ ou de variable et non une chaîne. 
 
-It is not necessary for the *object* to have the focus. However, if the *object* designates a multi-style text area, it must be included in a form or else the **ST COMPUTE EXPRESSIONS** command has no effect.
+Il n’est pas nécessaire que *objet* ait le focus. En revanche, si *objet* désigne une zone de texte multistyle, il doit être inclus dans un formulaire, sinon la commande **ST COMPUTE EXPRESSIONS** n’a pas d’effet. 
 
-**Note:** If the *object* designates a 4D Write Pro document, it will be computed by the command even if it is not opened in a form object (see also *Picture expressions*). 
+**Note :** Si *objet* désigne un document 4D Write Pro, il sera analysé par la commande même s'il n'est pas ouvert dans un objet de formulaire (voir également *Expressions image*). 
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags or references that may be present. Note that a reference is equivalent to a single character. 
+Les paramètres optionnels *débutSél* et *finSél* vous permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style ou des références éventuellement présentes. A noter qu’une référence équivaut à un seul caractère. 
 
-* If you pass *startSel* and *endSel*, **ST COMPUTE EXPRESSIONS** only updates the expressions located within this selection.
-* If you only pass *startSel* or if the value of *endSel*is greater than the total number of characters in object, all the expressions between *startSel* and the end of the text are computed.
-* If you omit *startSel* and *endSel*, all the expressions included in the user selection of the *object* are computed.
+* Si vous passez *débutSél* et *finSél*, **ST COMPUTE EXPRESSIONS** met à jour uniquement les expressions situées à l’intérieur de cette sélection.
+* Si vous passez uniquement *débutSél* ou si la valeur de *finSél* est supérieure au nombre total de caractères dans l’objet, toutes les expressions entre *débutSél* et la fin du texte sont calculées.
+* Si vous omettez *débutSél* et *finSél*, toutes les expressions incluses dans la sélection utilisateur de *objet* sont calculées.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0\. 
 
-## Example 
+## Exemple 
 
-You want to update the references included in the selection of text:
+Vous souhaitez mettre à jour les références incluses dans la sélection de texte :
 
 ```4d
- ST COMPUTE EXPRESSIONS(*;"myText";ST Start highlight;ST End highlight)
+ ST COMPUTE EXPRESSIONS(*;"monTexte";ST Start highlight;ST End highlight)
 ```
 
-## See also 
+## Voir aussi 
 
 [ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1285 |
+| Numéro de commande | 1285 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

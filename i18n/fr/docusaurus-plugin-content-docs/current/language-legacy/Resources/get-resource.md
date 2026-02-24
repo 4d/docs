@@ -5,64 +5,68 @@ slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* : Text ; *resID* : Integer ; *resData* : Blob {; *resFile* : Time} )<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resNum* ; *resDonnées* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4-character resource type |
-| resID | Integer | &#8594;  | Resource ID number |
-| resData | Blob | &#8596;  | *in:* BLOB field or variable to receive the data <br/>*out:* Contents of the resource |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
+| resType | Text | &#8594;  | Type de ressource (4 caractères) |
+| resNum | Integer | &#8594;  | Numéro de ressource |
+| resDonnées | Blob | &#8594;  | Champ ou variable BLOB devant recevoir les données |
+| &#8592; | Contenu de la ressource |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou Tous les fichiers de ressources ouverts si omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET RESOURCE.Summary-->The **GET RESOURCE** command returns in the BLOB field or variable *resData* the contents of the resource whose type and ID is passed in *resType* and *resID*.<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Summary-->La commande **GET RESOURCE** retourne dans le champ ou la variable BLOB *resDonnées* le contenu de la ressource dont le type et le numéro sont passés dans *resType* et *resNum*.<!-- END REF-->
 
-**Important:** You must pass a 4-character string in *resType*.
+**Important :** Vous devez passer une chaîne de 4 caractères dans *resType*.
 
-If the resource is not found, the *resData* parameter is left unchanged and the OK variable is set to 0 (zero). 
+Si la ressource n'est pas trouvée, le paramètre *resDonnées* est laissé inchangé et la variable OK prend la valeur 0 (zéro). 
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource sera recherchée dans ce fichier seulement. Si ne passez pas le paramètre *resFichier*, la première occurrence de la ressource trouvée en remontant la chaîne des fichiers de ressources sera retournée.
 
-**Note:** A resource can be at least several megabytes in size.
+**Note :** La taille d'une ressource peut atteindre plusieurs méga-octets.
 
-## Platform independence 
+## Indépendance de plate-forme 
 
- Remember that you are working with macOS-based resources. No matter what the platform, internal resource data such as Long Integer is stored using Macintosh byte ordering. On Windows, the data for standard resources (such as string list and pictures resources) is automatically byte swapped when necessary. On the other hand, if you create and use your own internal data structures, it is up to you to byte swap the data you extract from the BLOB (i.e., passing Macintosh byte ordering to a command such as [BLOB to longint](blob-to-longint.md)).
+ Rappelez-vous que vous travaillez avec des ressources issues de Mac OS. Quelle que soit la plate-forme utilisée, les valeurs internes des ressources comme des entiers longs sont stockées avec l'ordre d'octets ("byte ordering") Mac OS. Sous Windows, pour les données des ressources standard (telles que les ressources listes de chaînes et les ressources images) l'ordre des octets est automatiquement inversé ("byte swapping") si nécessaire. D'un autre côté, si vous créez et utilisez vos propres structures internes de données, c'est à vous d'effectuer l'inversion d'octets des données lorsque vous les extrayez d'un BLOB (par exemple en passant Macintosh byte ordering à une commande telle que [BLOB to longint](blob-to-longint.md)).
 
+## Exemple 
 
-## System variables and sets 
+Reportez-vous à l'exemple de la commande .
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+## Variables et ensembles système 
 
-## Error management 
+Si la ressource est trouvée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 (zéro).
 
-If there is not enough memory to load the resource, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+## Gestion des erreurs 
 
-## See also 
+S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-*Resources*  
+## Voir aussi 
 
-## Properties
+*Ressources*  
+
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 508 |
+| Numéro de commande | 508 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

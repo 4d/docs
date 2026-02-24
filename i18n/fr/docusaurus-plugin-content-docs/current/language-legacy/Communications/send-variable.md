@@ -5,41 +5,41 @@ slug: /commands/send-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* : Variable )<!-- END REF-->
+<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* )<!-- END REF-->
 <!--REF #_command_.SEND VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable to send |
+| variable | Variable | &#8594;  | Variable à envoyer |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SEND VARIABLE.Summary-->SEND VARIABLE sends *variable* to the document or serial port previously opened by [SET CHANNEL](set-channel.md).<!-- END REF--> The variable is sent with a special internal format that can be read only by [RECEIVE VARIABLE](receive-variable.md). SEND VARIABLE sends the complete variable (including its type and value).
+<!--REF #_command_.SEND VARIABLE.Summary-->**SEND VARIABLE** envoie *variable* vers le document ou le port série préalablement ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> La variable est envoyée dans un format interne spécial qui ne peut être relu que par la commande [RECEIVE VARIABLE](receive-variable.md). **SEND VARIABLE** envoie la totalité de la variable (y compris son type et sa valeur).
 
-**Notes:**
+**Notes :**
 
-1. If you send a variable to a document using this command, the document must have been opened using the [SET CHANNEL](set-channel.md) command. You cannot use SEND VARIABLE with a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md).
-2. This command does not support array variables. If you want to send and receive arrays from a document or over a serial port, use the *BLOB Commands*.
+1. Si vous envoyez une variable à un document avec cette commande, le document doit avoir été ouvert par la commande [SET CHANNEL](set-channel.md). Vous ne pouvez pas utiliser **SEND VARIABLE** avec un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md).
+2. Cette commande ne fonctionne pas avec les variables de type tableau. Si vous voulez envoyer et recevoir des tableaux via un document ou un port série, utilisez les *Commandes du thème BLOB*.
 
-## Example 
+## Exemple 
 
-See example for the [RECEIVE RECORD](receive-record.md) command.
+Reportez-vous à l'exemple de la commande [RECEIVE RECORD](receive-record.md).
 
-## See also 
+## Voir aussi 
 
 [RECEIVE RECORD](receive-record.md)  
 [RECEIVE VARIABLE](receive-variable.md)  
 [SEND RECORD](send-record.md)  
 [SET CHANNEL](set-channel.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 80 |
+| Numéro de commande | 80 |
 | Thread safe | yes |
 
 

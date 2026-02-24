@@ -5,80 +5,76 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* : Field {; *pageBreak* : Integer} ) : Real<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valeurs* {; *sautPage*} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| data | Field | &#8594;  | Numeric field or variable to return subtotal |
-| pageBreak | Integer | &#8594;  | Break level for which to cause a page break |
-| Function result | Real | &#8592; | Subtotal of data |
+| valeurs | Field | &#8594;  | Champ ou variable numérique dont vous voulez calculer le sous-total |
+| sautPage | Integer | &#8594;  | Niveau de rupture auquel effectuer un saut de page |
+| Résultat | Real | &#8592; | Sous-total de valeurs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Subtotal.Summary-->**Subtotal** returns the subtotal for *data* for the current or last break level.<!-- END REF--> **Subtotal** works only when a sorted selection is being printed with [PRINT SELECTION](print-selection.md) or when printing using Print in the Design environment. The *data* parameter must be of type real, integer, or long integer. Assign the result of the **Subtotal** function to a variable placed in the Break area of the form.
+<!--REF #_command_.Subtotal.Summary-->**Subtotal** retourne le sous-total de *valeurs* pour le niveau de rupture courant ou précédent.<!-- END REF--> **Subtotal** ne fonctionne que dans le cadre d'une sélection triée imprimée par l'intermédiaire de la commande [PRINT SELECTION](print-selection.md) ou de la commande de menu **Imprimer** du mode Développement. Le paramètre *valeurs* doit être de type numérique, entier ou entier long. Vous devez assigner le résultat de la fonction **Subtotal** à une variable placée dans la zone de rupture du formulaire.
 
-**Warning:** You **must** execute [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md) before every form report for which you want to do break processing and calculate subtotals. See discussion at the end of the description of this command.
+**Attention :** Vous **devez** utiliser les commandes [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md) avant d'imprimer un état sur lequel vous voulez traiter les niveaux de rupture et calculer des sous-totaux. Reportez-vous au paragraphe situé à la fin de cette section.
 
-The second, optional, argument to **Subtotal** is used to cause page breaks during printing. If *pageBreak* is 0, **Subtotal** does not issue a page break. If *pageBreak* equals 1, **Subtotal** issues a page break for each level 1 break. If *pageBreak* equals 2, **Subtotal** issues a page break for each level 1 and level 2 break, and so on.
+Le second paramètre (optionnel) de la fonction **Subtotal** est utilisé pour provoquer des sauts de page lors de l'impression. Si *sautPage* vaut 0, **Subtotal** ne génère aucun saut de page. Si *sautPage* vaut 1, **Subtotal** génère un saut de page pour chaque niveau de rupture 1\. Si *sautPage* vaut 2, **Subtotal** génère un saut de page pour chaque niveau de rupture 1 et 2, etc.
 
-**Tip:** If you execute **Subtotal** from within an output form displayed at the screen, an error will be generated, triggering an infinite loop of updates between the form and the error window. To get out of this loop, press Alt+Shift (Windows) or Option-Shift (Macintosh) when you click on the Abort button in the Error window (you may have to do so several times). This temporarily stops the updates for the form’s window. Select another form as the output form so the error will occur again. Go back to the Design Environment and isolate the call to **Subtotal** into a test [Form event code](./commands/form-event-code)\= On Printing Break if you use the form both for display and printing.
+**Conseil :** Si vous faites appel à la fonction **Subtotal** dans le formulaire sortie affiché à l'écran, 4D va afficher un message d'erreur. La fermeture du dialogue d'erreur va provoquer un rafraîchissement de l'écran, donc de nouveau l'exécution de la méthode qui fait appel à **Subtotal**, donc de nouveau un message d'erreur, etc. Pour sortir de ce cercle vicieux, appuyez sur les touche **Alt** + **Maj** (Windows) ou **Option**+**Maj** (Macintosh) et cliquez sur le bouton **Arrêter** dans la fenêtre d'erreur : cela met provisoirement fin aux rafraîchissements d'écran. Choisissez un autre formulaire de sortie pour éviter que le problème ne se répète. Passez en mode Structure pour isoler l'appel à la fonction **Subtotal** par un test ([Form event code](../commands/form-event-code.md) \= On Printing Break) si vous avez l'intention d'utiliser le même formulaire de sortie pour l'écran et l'imprimante.
 
-## Example 
+## Exemple 
 
-The following example is a one-line object method in a Break area of a form (B0, the area above the B0 marker). The *vSalary* variable is placed in the Break area. The variable is assigned the subtotal of the Salary field for this break level. Break processing must have been activated beforehand using the [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md) commands.
+L'exemple suivant est la méthode objet d'une variable intitulée *vSalaire*, placée dans une zone de rupture d'un formulaire (R0, la zone située au-dessus du marqueur R0). La variable prend la valeur du sous-total du champ Salaire pour ce niveau de rupture. Le traitement des ruptures doit avoir été auparavant activé par les commandes [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md).
 
 ```4d
  Case of
     :(FORM Event.code=On Printing Break)
-       vSalary:=Subtotal([Employees]Salary)
+       vSalaire:=Subtotal([Employés]Salaire)
  End case
 ```
 
-For more information about designing forms with header and break areas, see the 4D Design Reference manual.
+Reportez-vous au chapitre "Les formulaires de sortie et les états" du manuel Mode Développement pour plus d'informations sur la construction de formulaires avec des niveaux de ruptures.
 
-## Activating Break Processing in Form Reports 
+## Traitement de niveaux de rupture dans les formulaires d'état 
 
-In order to generate reports with breaks, break processing in form reports can be activated by calling the [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md) commands. 
+Pour pouvoir générer des états avec ruptures, vous devez déclencher le traitement des ruptures en appelant les commandes [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md). Il faut que ces deux commandes soient appelées avant l'impression du formulaire. L'appel à la fonction **Subtotal** est nécessaire pour afficher les calculs de niveaux intermédiaires. Il est obligatoire de trier sur au moins le nombre de niveaux de ruptures désiré.
 
-You must execute both of these commands before printing a form report. The **Subtotal** function is still required in order to display values on a form. You must sort on at least as many levels as you need to break on.
+Dans le cadre de l'utilisation des commandes [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md), les étapes à suivre sont :  
+1\. Sélectionner les enregistrements à imprimer,  
+2\. Trier les enregistrements sur autant de niveaux que de niveaux de ruptures,  
+3\. Appeler les commandes [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md),  
+4\. Imprimer l'état avec la commande [PRINT SELECTION](print-selection.md).
 
-When using [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md), the process to print a report is typically like this: 
+La commande **Subtotal** permet d'afficher des calculs de sous-totaux dans des formulaires.
 
-1. Select the records to be printed.
-2. Sort the records using [ORDER BY](order-by.md). Sort on at least the same number of levels as breaks.
-3. Execute [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md).
-4. Print the report using [PRINT SELECTION](print-selection.md).
-
-The **Subtotal** function is necessary in order to display values on a form.
-
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 97 |
+| Numéro de commande | 97 |
 | Thread safe | no |
-
 
 

@@ -5,50 +5,50 @@ slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* : Time ; *encoding* : Text ; *version* : Text ; *standalone* : Boolean )<!-- END REF-->
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* ; *encodage* ; *version* ; *autonome* )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| encoding | Text | &#8592; | XML document character set |
-| version | Text | &#8592; | XML version |
-| standalone | Boolean | &#8592; | True = document is standalone, otherwise False |
+| document | Time | &#8594;  | Référence du document ouvert |
+| encodage | Text | &#8592; | Jeu de caractères du document XML |
+| version | Text | &#8592; | Version du XML |
+| autonome | Boolean | &#8592; | Vrai=le document est autonome, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->The **SAX GET XML DOCUMENT VALUES** command gets basic information from the XML header of the XML document referenced in the *document* parameter.<!-- END REF--> 
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->La commande **SAX GET XML DOCUMENT VALUES** extrait des informations élémentaires de l’en-tête XML du document XML référencé par *document*.<!-- END REF--> 
 
-The command returns the type of encoding, version and the “standalone” property of the document respectively in the *encoding*, *version* and *standalone* parameters. This command must be used with the SAX event XML Start Document. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+La commande retourne respectivement le type d’encodage, la version et la propriété “autonome” du document dans les paramètres *encodage*, *version* et *autonome*. Cette commande doit être utilisée dans le contexte de l’événement SAX XML start document. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [SAX Get XML node](sax-get-xml-node.md)  
 [SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 873 |
+| Numéro de commande | 873 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

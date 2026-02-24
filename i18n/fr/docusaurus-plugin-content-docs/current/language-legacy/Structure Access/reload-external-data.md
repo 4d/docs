@@ -5,45 +5,45 @@ slug: /commands/reload-external-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *aField* : Text, Blob, Picture, Object )<!-- END REF-->
+<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture, Object | &#8594;  | Field for which to set the storage location |
+| leChamp | Text, Blob, Picture, Object | &#8594;  | Champ pour lequel recharger les données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->The **RELOAD EXTERNAL DATA** command reloads the contents in memory of an external storage file associated with a BLOB, Picture, or Text type field.<!-- END REF-->
+<!--REF #_command_.RELOAD EXTERNAL DATA.Summary-->La commande **RELOAD EXTERNAL DATA** vous permet de recharger en mémoire le contenu d’un fichier de stockage externe associé à un champ de type Blob, Image ou Texte.<!-- END REF-->
 
-This command is useful when the field of a record already loaded in memory is modified on the disk by another application (external storage files for fields are always writable). For example, a picture used in a Picture field can be modified by a graphic editor then saved on disk.
+Cette commande est utile dans le cas où le champ d’un enregistrement déjà chargé en mémoire est modifié sur le disque par une autre application (les fichiers de stockage externe des champs sont toujours accessibles en écriture). Par exemple, une image utilisée dans un champ image est modifiée par un éditeur graphique puis sauvegardée sur disque.
 
-You then need to reload the data using the **RELOAD EXTERNAL DATA** command to update the contents of the field if it displayed in a form.
+Il est alors nécessaire de demander le rechargement des données à l'aide de la commande **RELOAD EXTERNAL DATA** pour mettre à jour le contenu du champ s’il est affiché dans un formulaire.
 
-**Note:** The **RELOAD EXTERNAL DATA** command only works on a local 4D or on 4D Server. You cannot reload a field individually with 4D in remote mode. In this context, you have to reload all the records (using the [LOAD RECORD](load-record.md) command for example).
+**Note :** La commande **RELOAD EXTERNAL DATA** fonctionne uniquement sur 4D local ou 4D Server. Il n’est pas possible de recharger individuellement un champ avec 4D en mode distant. Il est nécessaire dans ce contexte de recharger l’ensemble de l’enregistrement (à l’aide de la commande [LOAD RECORD](load-record.md) par exemple).
 
-## See also 
+## Voir aussi 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1135 |
+| Numéro de commande | 1135 |
 | Thread safe | yes |
 
 

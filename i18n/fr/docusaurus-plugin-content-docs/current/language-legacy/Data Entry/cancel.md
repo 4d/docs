@@ -9,68 +9,65 @@ displayed_sidebar: docs
 <!--REF #_command_.CANCEL.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Modified|
-|<6|Created|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-The **CANCEL** command is used in form or object methods (or in a subroutine) to:
+La commande **CANCEL** doit être employée dans une méthode objet ou formulaire (ou une sous-routine) pour : 
 
-* cancel a new or modified record, for which data entry has been initiated using [ADD RECORD](add-record.md) or [MODIFY RECORD](modify-record.md).
-* cancel a form displayed with the [DIALOG](./commands/dialog) command.
-* exit a form displaying a selection of records, using [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md).
-* cancel the printing of a form that is about to be printed using the [Print form](./commands/print-form) command (see below).
+* annuler la création ou la modification d'un enregistrement ou un sous-enregistrement — dont les données ont été saisies à la suite d'un [ADD RECORD](add-record.md), [MODIFY RECORD](modify-record.md), *\_o\_ADD SUBRECORD* ou *\_o\_MODIFY SUBRECORD*.
+* annuler un formulaire affiché par l'intermédiaire de la commande [DIALOG](../commands/dialog.md).
+* quitter un formulaire affichant une sélection d'enregistrements — à l'aide de [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
+* annuler l'impression d'une ligne sur le point d’être imprimée à l'aide de la commande [Print form](../commands/print-form.md) (voir ci-dessous).
 
-<!--REF #_command_.CANCEL.Summary-->In the context of data entry, **CANCEL** performs the same action as if the user had pressed the cancel key (**Esc**).<!-- END REF-->
+<!--REF #_command_.CANCEL.Summary-->Dans le contexte de la saisie, **CANCEL** effectue la même action que lorsque l'utilisateur utilise la touche d'annulation (**Esc**).<!-- END REF-->   
+**CANCEL** est fréquemment exécutée à la suite de la sélection d'une commande de menu. **CANCEL** est également souvent appelée dans la méthode objet d'un bouton auquel la propriété "Pas d'action" a été associée.
 
-**CANCEL** is commonly executed as a result of a menu command being chosen. **CANCEL** is also commonly used in the object method of a “no action” button.
+Cette commande peut également être placée dans la méthode de la case de fermeture (optionnelle) d'une fenêtre créée par la commande [Open window](open-window.md). Si la fenêtre comporte une case de menu Système, **CANCEL** et [ACCEPT](accept.md) peuvent être appelées dans la méthode à exécuter lorsque l'utilisateur double-clique sur la case du menu Système ou sélectionne la commande de menu **Fermeture**.  
+Il n'est pas possible d'enchaîner plusieurs **CANCEL**. En d'autres termes, l'exécution consécutive de deux commandes **CANCEL** dans une méthode en réponse à un événement aura le même résultat que l'exécution d'une seule. 
 
-It is also often used in the optional close box method for the [Open window](./commands/open-window) command. If there is a Control-menu box on a window, [ACCEPT](accept.md) or **CANCEL** can be called, in the method to be executed, when the Control-menu box is double-clicked or the **Close** menu command is chosen.
+Enfin, cette commande peut être utilisée dans l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md). Dans ce contexte, la commande **CANCEL** suspend l’impression de la ligne sur le point d’être imprimée, puis la reprend page suivante. Ce mécanisme permet de gérer le manque de place ou les sauts de page lors des impressions des lignes. 
 
-**CANCEL** cannot be queued up. Executing two **CANCEL** commands in a row from within a method in response to an event would have the same effect as executing only one.
+**Note :** Ce fonctionnement est différent de celui de l’instruction [PAGE BREAK](page-break.md)(\*) qui provoque l’annulation de TOUTES les lignes en attente d’impression. 
 
-Finally, this command can be used in the On Printing Detail form event, when using the [Print form](./commands/print-form) command. In this context, the **CANCEL** command suspends the printing of the form that is about to be printed, then resumes it on the next page. This mechanism can be used to manage form printing when there is a lack of space or if a page break is required.
+### Mode headless 
 
-**Note:** This operation differs from that of the [PAGE BREAK](page-break.md)(\*) command that cancels ALL the forms waiting to be printed.
+La commande **CANCEL** est autorisée en mode headless, dans le contexte des zones hors écran créées par *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
 
-### Headless mode 
+## Exemple 
 
-The **CANCEL** command is allowed in headless mode, in the context of offscreen areas created by *VP Run offscreen area* or [WA Run offscreen area](wa-run-offscreen-area.md). 
+Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-## Example 
+## Variables et ensembles système 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
+Lorsque la commande [CANCEL](cancel.md) est exécutée (formulaire annulé ou annulation d'impression), la variable système OK prend la valeur 0.
 
-## System variables and sets 
-
-When the [CANCEL](cancel.md) command is executed (form or printing cancelled), the system variable OK is set to 0.
-
-## See also 
+## Voir aussi 
 
 [ACCEPT](accept.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 270 |
+| Numéro de commande | 270 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

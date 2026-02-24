@@ -5,104 +5,104 @@ slug: /commands/list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *list* : Text, Integer ; *array* : Array {; *itemRefs* : Array} )<!-- END REF-->
+<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *liste* ; *tableau* {; *réfEléments*} )<!-- END REF-->
 <!--REF #_command_.LIST TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Text, Integer | &#8594;  | Name or Reference of list from which to copy the first level items |
-| array | Array | &#8592; | Array to which to copy the list items |
-| itemRefs | Array | &#8592; | List item reference numbers |
+| liste | Text, Integer | &#8594;  | Nom ou référence de la liste de laquelle copier les éléments du premier niveau |
+| tableau | Array | &#8592; | Tableau dans lequel copier les éléments de la liste |
+| réfEléments | Array | &#8592; | Numéros de référence des éléments de la liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|<6|Created|
+|14|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LIST TO ARRAY.Summary-->The LIST TO ARRAY command creates or overrides the array *array* with the first level items of the list or choice list designated by *list*.<!-- END REF--> 
+<!--REF #_command_.LIST TO ARRAY.Summary-->La commande **LIST TO ARRAY** crée ou remplace le tableau *tableau* avec les éléments du premier niveau de la liste ou de l'énumération *liste*.<!-- END REF-->
 
-In the list parameter, you can pass either the name of a choice list (string), or a reference to a hierarchical list ([ListRef](# "A Longint reference to a hierachical list")).
+Vous pouvez passer dans le paramètre *liste* soit un nom d'énumération (une chaîne) soit une référence de liste hiérarchique ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")).
 
-If you do not set the array as an Alpha or Text type beforehand, LIST TO ARRAY creates a new Text array by default. 
+Si vous n'avez pas préalablement défini le tableau comme tableau de type Alpha ou Texte, **LIST TO ARRAY** crée un tableau de type Texte par défaut. 
 
-**Note:** In compiled mode, the *array* must have been defined previously and cannot be retyped.
+**Note :** En mode compilé, le *tableau* doit avoir été préalablement défini et ne peut pas être retypé.
 
-The optional *itemRefs* parameter (a numeric array) returns the list item reference numbers. 
+Le paramètre optionnel *réfEléments* (un tableau de type numérique) retourne les numéros de référence des éléments de la liste. 
 
-You can use LIST TO ARRAY to build an array based on the first level items of a list. However, this command does not allow you to work with any of the list's child items. When working with hierarchical lists, we recommend that you use the hierarchical lists commands, in particular [Load list](load-list.md).
+Vous pouvez utiliser **LIST TO ARRAY** pour construire un tableau basé sur les éléments de premier niveau d'une liste. Cependant, cette commande ne vous donne pas les moyens de travailler avec les éléments des sous-listes. Pour exploiter pleinement les listes hiérarchiques, il est préférable d'utiliser les commandes de listes hiérarchiques, notamment [Load list](load-list.md).
 
-## Example 1 
+#### Exemple 1 
 
-The following example copies the items of a list called Regions into an array called *atRegions*:
+L'exemple suivant recopie les éléments de l'énumération Régions dans le tableau *tabRégions* :
 
 ```4d
- LIST TO ARRAY("Regions";atRegions)
+ LIST TO ARRAY("Régions";tabRégions)
 ```
 
-## Example 2 
+#### Exemple 2 
 
-Given a hierarchical list created as follows:
+Soit une liste hiérarchique créée de la manière suivante :
 
 ```4d
- myList2:=New list
- APPEND TO LIST(myList2;"Scotland";1)
- APPEND TO LIST(myList2;"England";2)
- APPEND TO LIST(myList2;"Wales";3)
+ MyList2:=New list
+ APPEND TO LIST(myList2;"Ecosse";1)
+ APPEND TO LIST(myList2;"Angleterre";2)
+ APPEND TO LIST(myList2;"Pays de Galles";3)
  myList1:=New list
  APPEND TO LIST(myList1;"France";1)
- APPEND TO LIST(myList1;"Germany";2)
- APPEND TO LIST(myList1;"Spain";3)
- APPEND TO LIST(myList1;"Great Britain";4;myList2;True)
+ APPEND TO LIST(myList1;"Allemagne";2)
+ APPEND TO LIST(myList1;"Espagne";3)
+ APPEND TO LIST(myList1;"Grande-Bretagne";4;MyList2;True)
  APPEND TO LIST(myList1;"Portugal";5)
- APPEND TO LIST(myList1;"Belgium";6)
- APPEND TO LIST(myList1;"Italy";7)
- APPEND TO LIST(myList1;"Netherlands";8)
- APPEND TO LIST(myList1;"Ireland";9)
+ APPEND TO LIST(myList1;"Belgique";6)
+ APPEND TO LIST(myList1;"Italie";7)
+ APPEND TO LIST(myList1;"Pays-Bas";8)
+ APPEND TO LIST(myList1;"Irlande";9)
 ```
 
-This list can be represented as:
+Cette liste peut être représentée ainsi :
 
-![](../assets/en/commands/pict1214045.en.png)
+![](../assets/en/commands/pict1214045.fr.png)
 
-If you execute the following statement:
+Si vous exécutez l’instruction :
 
 ```4d
- LIST TO ARRAY(myList1;$MyArray)
+ LIST TO ARRAY(myList1;$MonTab)
 ```
 
-...you get
+...vous obtenez :
 
 ```4d
- $MyArray{1}="France"
- $MyArray{2}="Germany"
- $MyArray{3}="Spain"
- $MyArray{4}="Great Britain"
- $MyArray{5}="Portugal"
+ $MonTab{1}="France"
+ $MonTab{2}="Allemagne"
+ $MonTab{3}="Espagne"
+ $MonTab{4}="Grande-Bretagne"
+ $MonTab{5}="Portugal"
  ...
 ```
 
-## See also 
+#### Voir aussi 
 
 [ARRAY TO LIST](array-to-list.md)  
 [Load list](load-list.md)  
 [SAVE LIST](save-list.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 288 |
+| Numéro de commande | 288 |
 | Thread safe | no |
 
 

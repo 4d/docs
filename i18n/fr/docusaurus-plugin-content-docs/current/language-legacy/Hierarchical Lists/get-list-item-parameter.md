@@ -5,55 +5,54 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Variable )<br/>**GET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Variable )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *liste* ; *refElément* ; *sélecteur* ; *valeur* )<br/>**GET LIST ITEM PARAMETER** ( * ; *liste* ; * ; *sélecteur* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| selector | Text | &#8594;  | Parameter constant |
-| value | Variable | &#8592; | Current value of parameter (variable of type Text, Boolean, Real) |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| sélecteur | Text | &#8594;  | Constante de paramètre |
+| valeur | Text, Boolean, Real | &#8592; | Valeur courante du paramètre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|11 SQL|Created|
+|16 R4|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->The **GET LIST ITEM PARAMETER** command is used to find out the current *value* of the *selector* parameter for the *itemRef* item of the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->La commande **GET LIST ITEM PARAMETER** permet de connaître la *valeur* courante du paramètre *sélecteur* pour l’élément *réfElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second*\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and the second *\** is passed, the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists that match this name, the **GET LIST ITEM PARAMETER** command will be applied to the first object whose name corresponds.
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM PARAMETER** s'appliquera au premier objet dont le nom correspond.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien. 
 
-Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to the current item of the list. If several items are selected manually, the current item is the last one that was selected. If no item is selected, the command does nothing.
+Vous pouvez passer dans *sélecteur* la constante Additional text ou Associated standard action (placées dans le thème “*Listes hiérarchiques*”) ou toute valeur personnalisée. Pour plus d’informations sur les paramètres *sélecteur* et *valeur*, reportez-vous à la description de la commande [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
 
-In *selector*, you can pass the Additional text or Associated standard action constants (found in the “*Hierarchical Lists*” theme) or any custom value. For more information about the *selector* and *value* parameters, please refer to the description of the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
+## Voir aussi 
 
-## See also 
-
-[Hierarchical Lists](../FormObjects/list_overview.md)
+*Listes hiérarchiques*  
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 985 |
+| Numéro de commande | 985 |
 | Thread safe | no |
 
 

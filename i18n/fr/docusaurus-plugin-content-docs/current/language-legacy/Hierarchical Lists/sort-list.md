@@ -5,74 +5,74 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; order : >, < } )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *liste* {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | List reference number |
-| order | >, < | &#8594;  | Sorting order: > to sort in ascending order, or < to sort in descending order |
+| liste | Integer | &#8594;  | Numéro de référence de liste |
+| > ou < | Opérateur | &#8594;  | Ordre de tri : > pour trier la liste dans l'ordre croissant ou < pour trier la liste dans l'ordre décroissant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SORT LIST.Summary-->The **SORT LIST** command sorts the list whose reference number is passed in *list*.<!-- END REF-->
+<!--REF #_command_.SORT LIST.Summary-->La commande **SORT LIST** effectue un tri sur la liste dont vous avez passé le numéro de référence dans le paramètre *liste*.<!-- END REF-->
 
-To sort in ascending *order*, pass *\>*. To sort in descending *order*, pass <. If you omit the sorting order parameter, **SORT LIST** sorts in ascending order by default.
+Pour effectuer un tri dans l'ordre croissant, passez *\>* comme deuxième paramètre. Pour effectuer un tri dans l'ordre décroissant, passez *<* comme deuxième paramètre. Si vous omettez ce paramètre, **SORT LIST** effectue par défaut un tri croissant. 
 
-**SORT LIST** sorts all levels of the list; it first sorts the items of the list, then it sorts the items in each sublist (if any), and so on, through all the levels of the list. This is why you will usually apply **SORT LIST** to a list in a form. Sorting a sublist is of little interest because the order will be changed by a call to a higher level.
+**SORT LIST** trie tous les niveaux de la liste : les éléments de la liste, puis les sous-éléments de chaque sous-liste, puis des sous-listes suivantes, etc., sont triés. C'est pourquoi généralement vous utiliserez la commande **SORT LIST** avec une liste affichée dans un formulaire. Le tri d'une sous-liste a moins d'intérêt car son ordre sera modifié dès qu'un appel à une liste se produira à un niveau supérieur. 
 
-**SORT LIST** does not change the current list item nor the current expanded/collapsed state of the list and sublists. However, because the current item can be moved by the sorting operation, [Selected list items](selected-list-items.md) may return a different position before and after the sort.
+**SORT LIST** ne modifie pas l'état courant déployé/contracté de la liste et de ses éventuelles sous-listes, ni l'élément courant. Cependant, comme l'élément courant peut être déplacé à la suite du tri, [Selected list items](selected-list-items.md) peut retourner une position différente avant et après le tri. 
 
-## Example 
+## Exemple 
 
-Given the list named *hList,* shown here in the Application environment:
+Voici la liste nommée *hList*, affichée ici en mode Application :
 
-![](../assets/en/commands/pict23037.en.png)
+![](../assets/en/commands/pict23037.fr.png)
 
- After the execution of this code:
+Après l'exécution du code suivant :
 
 ```4d
-  // Sort the list and it sublists in ascending order
+  // Trier la liste et ses sous-listes dans l'ordre croissant
  SORT LIST(hList;>)
 ```
 
-The list looks like:
+... la liste apparaît ainsi :
 
-![](../assets/en/commands/pict23038.en.png)
+![](../assets/en/commands/pict23038.fr.png)
 
-After the execution of this code:
+Après l'exécution du code suivant :
 
 ```4d
-  // Sort the list and it sublists in descending order
+  // Trier la liste et ses sous-listes dans l'ordre décroissant
  SORT LIST(hList;<)
 ```
 
-The list looks like:
+... la liste apparaît ainsi :
 
-![](../assets/en/commands/pict23039.en.png)
+![](../assets/en/commands/pict23039.fr.png)
 
-## See also 
+## Voir aussi 
 
 [Selected list items](selected-list-items.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 391 |
+| Numéro de commande | 391 |
 | Thread safe | no |
 
 

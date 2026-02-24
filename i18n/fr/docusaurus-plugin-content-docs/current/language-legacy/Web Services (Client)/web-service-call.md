@@ -5,180 +5,171 @@ slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *accessURL* : Text ; *soapAction* : Text ; *methodName* : Text ; *nameSpace* : Text {; *complexType* : Integer {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAccès* ; *soapAction* ; *nomMéthode* ; *nameSpace* {; *typeComposé* {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| accessURL | Text | &#8594;  | Access URL to Web Service |
-| soapAction | Text | &#8594;  | Contents of SOAPAction field |
-| methodName | Text | &#8594;  | Name of the method |
-| nameSpace | Text | &#8594;  | Namespace |
-| complexType | Integer | &#8594;  | Configuration of complex types (simple types if omitted) |
-| * | Operator | &#8594;  | Do not close connection |
+| urlAccès | Text | &#8594;  | URL d’accès au Web Service |
+| soapAction | Text | &#8594;  | Contenu du champ SOAPAction |
+| nomMéthode | Text | &#8594;  | Nom de la méthode |
+| nameSpace | Text | &#8594;  | Espace de nommage |
+| typeComposé | Integer | &#8594;  | Configuration de types composés (types simples si omis) |
+| * | Opérateur | &#8594;  | Ne pas fermer la connexion |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|14|Modifié|
+|13|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command. 
+<!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
 
-Any subsequent call to the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command will cause the creation of a new request. The execution of the WEB SERVICE CALL command also erases any result from a previously-called Web Service and replaces it with the new result(s). 
+Tout appel ultérieur à la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) provoquera la construction d’une nouvelle requête. L’exécution d’une commande **WEB SERVICE CALL** efface également tout éventuel résultat de Web Service précédemment appelé et le remplace par le(s) nouveau(x) résultats. 
 
-In *accessURL*, pass the complete URL allowing access to the Web Service (do not confuse this URL with that of the WSDL file, which describes the Web Service). 
+Passez dans *urlAccès* l’URL complet permettant d’accéder au Web Service (ne confondez pas cet URL avec celui du fichier WSDL, décrivant le Web Service). 
 
-* **Access in secure mode (SSL)**: If you want to use a Web Service in secure mode using SSL, pass https:// in front of the URL instead of http://. This configuration automatically enables connection in secure mode.  
-Note that this command can use a server certificate (see the [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) command). If this certificate is not valid (expired or revoked), the OK system variable is set to 0 and error 901 "Invalid server certificate" is returned. You can intercept this error using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+* **Accès en mode sécurisé (SSL)** : Si vous souhaitez utiliser le Web Service en mode sécurisé (SSL), passez simplement https:// en tête de l’URL au lieu de http://. Ce paramétrage active automatiquement la connexion en mode sécurisé.  
+A noter que cette commande peut utiliser un certificat serveur (cf. commande [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)). Si le certificat n’est pas valide (expiré ou révoqué), la variable système OK prend la valeur 0 et l’erreur 901 "Certificat serveur invalide" est retournée. Vous pouvez intercepter cette erreur à l’aide d’une méthode d’appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
 
-In *soapAction*, pass the contents of the SOAPAction field of the request. This field generally contains the value “ServiceName#MethodName”. 
+Passez dans le paramètre *soapAction* le contenu du champ SOAPAction de la requête. Ce champ contient généralement la valeur “NomService#NomMéthode”. 
 
-In *methodName*, pass the name of the remote method (belonging to the Web Service) that you want to execute. 
+Passez dans le paramètre *nomMéthode* le nom de la méthode distante (appartenant au Web Service) que vous souhaitez exécuter. 
 
-In *namespace*, pass the XML namespace used for the SOAP request. For more information about XML namespaces, refer to the Design Mode manual of 4D.
+Passez dans le paramètre *nameSpace* l’espace de nommage XML utilisé pour la requête SOAP. Pour plus d’informations sur l’espace de nommage XML, reportez-vous au manuel *Mode Développement* de 4D.
 
-The optional *complexType* parameter specifies the configuration of the Web Service parameters sent or received (defined using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) and [WEB SERVICE GET RESULT](web-service-get-result.md) commands). 
+Le paramètre optionnel *typeComposé* permet d'indiquer la configuration des paramètres Web Service envoyés ou reçus (définis à l’aide des commandes [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) et [WEB SERVICE GET RESULT](web-service-get-result.md)). La valeur du paramètre *typeComposé* dépend du mode de publication du Web Service (DOC ou RPC, cf. manuel *Mode Développement*) et de ses paramètres.   
+Vous devez passer dans *typeComposé* l’une des constantes suivantes, placées dans le thème *Web Services (Client)* :
 
-The value of the *complexType* parameter depends on the publication mode of the Web Service (DOC or RPC, see the Design Reference manual of 4D) and on its own parameters.   
-In *complexType*, you must pass one of the following constants, located in the theme *Web Services (Client)*:
+| Constante              | Type        | Valeur |
+| ---------------------- | ----------- | ------ |
+| Web Service dynamic    | Entier long | 0      |
+| Web Service manual     | Entier long | 3      |
+| Web Service manual in  | Entier long | 1      |
+| Web Service manual out | Entier long | 2      |
 
-| Constant               | Type    | Value |
-| ---------------------- | ------- | ----- |
-| Web Service dynamic    | Integer | 0     |
-| Web Service manual     | Integer | 3     |
-| Web Service manual in  | Integer | 1     |
-| Web Service manual out | Integer | 2     |
+Chaque constante correspond à une “configuration” de Web Services. Une configuration représente une combinaison entre le mode de publication (RPC/DOC) et les types de paramètres entrée/sortie simples ou composés (aussi appelés “complexes”) mis en oeuvre. 
+
+**Note :** La caractéristique “entrée” ou “sortie” des paramètres s’évalue du point de vue de la méthode proxy/du Web Service :   
+• un paramètre “entrée” est une valeur passée à la méthode proxy et donc au Web Service,  
+• un paramètre “sortie” est retourné par le Web Service et donc par la méthode proxy (généralement via $0). 
+
+Le tableau suivant fournit les configurations possibles et les constantes correspondantes : 
+
+| **Paramètres entrée** |                              |                                 |
+| --------------------- | ---------------------------- | ------------------------------- |
+| **Paramètres sortie** | **Simples**                  | **Composés**                    |
+| **Simples**           | RPC / Web Service dynamic    | RPC / Web Service manual in     |
+| **Composés**          | RPC / Web Service manual out | RPC ou DOC / Web Service manual |
   
   
-Each constant corresponds to a Web Services “configuration”. A configuration represents the combination of a publication mode (RPC/DOC) and the types of parameters (input/output, simple or complex) implemented. 
+Les cinq configurations décrites ci-dessous peuvent donc être mises en oeuvre. Dans tous les cas, 4D se charge de formater la requête SOAP à envoyer au Web Service ainsi que son enveloppe. Il vous appartient de formater le contenu de cette requête suivant la configuration utilisée. 
 
-**Note:** Remember that the “input” or “output” characteristic of parameters is evaluated from the point of view of the proxy method/Web Service: 
+**Note :** Bien qu’étant des types XML composés, les tableaux de données sont gérés par 4D comme des types simples. 
 
-* an “input” parameter is a value passed to the proxy method and thus to the Web Service,
-* an “output” parameter is returned by the Web Service and thus by the proxy method (generally via $0).
+### Mode RPC, entrée et sortie simples 
 
-The following table shows all the possible configurations as well as the corresponding constants: 
+Cette configuration est la plus simple à utiliser. Dans ce cas, le paramètre *typeComposé* contient la constante Web Service dynamic ou est omis.   
+Les paramètres envoyés et les réponses reçues peuvent être manipulés directement, sans traitement préalable.   
+Reportez-vous à l’exemple de la commande [WEB SERVICE GET RESULT](web-service-get-result.md).
 
-| **Input parameters**  |                        |                       |
-| --------------------- | ---------------------- | --------------------- |
-| **Output parameters** | **Simple**             | **Complex**           |
-| **Simple**            | Web Service dynamic    | Web Service manual in |
-| | (RPC mode)          | (RPC mode)             |
-| **Complex**           | Web Service manual out | Web Service manual    |
-| | (RPC mode)            | (RPC or DOC mode)      |  
+### Mode RPC, entrée composée et sortie simple 
 
-The five configurations described below can therefore be implemented. In all cases, 4D will handle the formatting of the SOAP request to be sent to the Web Service as well as its envelope. It is up to you to format the contents of this request according to the configuration used. 
+Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual in. Avec cette configuration, vous devez passer “manuellement” au Web Service chaque élément xml source sous la forme d'un BLOB, à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).  
+Il vous appartient de formater le BLOB initial sous forme d’élément xml valide. Ce BLOB doit contenir comme premier élément le premier élément “fils” supposé de l’élément <Body> de la requête finale. 
 
-**Note:** Despite the fact that they are complex XML types, data arrays are handled by 4D as simple types. 
-
-### RPC mode, simple input and output 
-
-This configuration is the easiest to use. In this case, the *complexType* contains the Web Service dynamic constant or is omitted.   
-  
-The parameters sent and responses received can be handled directly, without prior processing.   
-  
-Refer to the example of the command [WEB SERVICE GET RESULT](web-service-get-result.md).
-
-### RPC mode, complex input and simple output 
-
-In this case, the *complexType* parameter contains the Web Service manual in constant. With this configuration, you must “manually” pass each XML source element in the form of a BLOB to the Web Service, using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command.   
-  
-It is up to you to format the initial BLOB as a valid XML element. As its first element, this BLOB must contain the first apparent “child” element of the <Body> element of the final request.   
-  
-**Example**  
+* Exemple
 
 ```4d
  #DECLARE($param : Blob) -> $result : Boolean 
 
- WEB SERVICE SET PARAMETER("MyXMLBlob";$param)
- WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual in)
- WEB SERVICE GET RESULT($result;"MyOutputVar";*)
+ WEB SERVICE SET PARAMETER("MonBlobXML";$param)
+ WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual in)
+ WEB SERVICE GET RESULT($result;"MaVarSortie";*)
 ```
 
-### RPC mode, simple input and complex output 
+### Mode RPC, entrée simple et sortie composée 
 
-In this case, the *complexType* parameter contains the Web Service manual out constant. Each output parameter will be returned by the Web Service in the form of an XML element stored in a BLOB. You retrieve this parameter using the [WEB SERVICE GET RESULT](web-service-get-result.md) command. You can then parse the contents of the BLOB received using the XML commands of 4D.   
-  
-**Example**  
+Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual out. Chaque paramètre de sortie sera retourné par le Web Service sous forme d’élément xml stocké dans un BLOB. Vous récupérez ce paramètre à l’aide de la commande [WEB SERVICE GET RESULT](web-service-get-result.md). Vous pourrez ensuite analyser le contenu du BLOB reçu à l’aide des commandes XML de 4D. 
+
+* Exemple
 
 ```4d
  #DECLARE($param : Blob) -> $result : Blob 
- WEB SERVICE SET PARAMETER("MyInputVar";$param)
- WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual out)
- WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
+ WEB SERVICE SET PARAMETER("MaVarEntree";$param)
+ WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual out)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
-### RPC mode, complex input and output 
+### Mode RPC, entrée et sortie composées 
 
-In this case, the *complexType* parameter contains the Web Service manual constant. Each input and output parameter must be stored in the form of XML elements in BLOBs, as described in the two previous configurations.   
-  
-**Example**  
+Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual. Chaque paramètre d’entrée et de sortie devra être stocké sous forme d’élément xml dans des BLOBs, comme décrit dans les deux configurations précédentes. 
+
+* Exemple
 
 ```4d
  #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MyXMLInputBlob";$param)
- WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
+ WEB SERVICE SET PARAMETER("MonBlobXMLEntree";$param)
+ WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
-### DOC mode 
+### Mode DOC 
 
-A proxy calling method for a DOC Web Service is similar to a proxy calling method for an RPC Web Service using complex type input and output parameters.  
-  
-The only difference between these two configurations lies at the level of the XML content of BLOB parameters sent and received. From 4D’s point of view, the building and sending of the SOAP request are identical.   
-  
-**Example**  
+Une méthode proxy d’appel d’un Web Service DOC est semblable à une méthode proxy d’appel d’un Web Service RPC utilisant des paramètres d’entrée et de sortie composés.  
+La seule différence entre ces deux configurations se situe au niveau du contenu xml des paramètres BLOB passés et reçus. Du point de vue de 4D, la construction et l’envoi de la requête SOAP sont identiques. 
+
+* Exemple
 
 ```4d
  #DECLARE($param : Blob) -> $result : Blob
  
- WEB SERVICE SET PARAMETER("MyXMLInput";$param)
- WEB SERVICE CALL("http://my.domain.com/my_service";"MySoapAction";"TheMethod";"http://my.namespace.com/";Web Service manual)
- WEB SERVICE GET RESULT($result;"MyXMLOutput";*)
+ WEB SERVICE SET PARAMETER("MonXMLEntree";$param)
+ WEB SERVICE CALL("http://my.domain.com/mon_service";"MonSoapAction";"LaMethode";"http://my.namespace.com/";Web Service manual)
+ WEB SERVICE GET RESULT($result;"MonXMLSortie";*)
 ```
 
-**Note:** In the case of DOC Web Services, the value of the strings (“MyXMLInput” and “MyXMLOutput” above) passed as parameters is of no importance; it is even possible to pass empty strings "". In fact, these values are not used in the SOAP request containing the XML document. It is, nevertheless, mandatory to pass these parameters. 
+**Note :** Dans le cas des Web Services DOC, la valeur des chaînes (ci-dessus “MonXMLEntree” et “MonXMLSortie”) passées en paramètres n’a pas d’importance ; il est même possible de passer des chaînes vides (""). En effet, ces valeurs ne sont pas utilisées dans la requête SOAP contenant le document xml. Il est toutefois obligatoire de passer ces paramètres. 
 
-To use a Web Service published in DOC mode (or in RPC mode with complex types), it is advisable to proceed as follows:
+Pour utiliser un Web Service publié en mode DOC (ou en mode RPC avec types composés), il est conseillé de procéder de la manière suivante :
 
-* Generate the proxy method using the Client Web Services Wizard.  
-The proxy method will be called in the following manner: *$XMLresultBlob:=$DOCproxy\_Method($XMLparamBlob)*
-* Familiarize yourself with the contents of SOAP requests to be sent to the Web Service using an on-line test (for instance, *http://soapclient.com/soaptest.html*). This type of tool is used to generate HTML test forms based on the WSDL of the Web Service.
-* Copy the XML contents generated from the first child element of *<body>*.
-* Write the method enabling you to place the real parameter values into the XML code; this code must then be placed in the *$XMLparamBlob* BLOB.
-* To parse the response, you can also use an on-line test, or make use of the WSDL that specifies the returned elements.
+* Générer la méthode proxy à l’aide de l’Assistant Client Web Services.  
+La méthode proxy sera appelée de la manière suivante : *$BlobXMLresult:=$proxy\_MethodeDOC($BlobXMLparam)*
+* Prendre connaissance du contenu des requêtes SOAP à envoyer au Web Service à l’aide d’un outil de test en ligne (par exemple *http://soapclient.com/soaptest.html*). Ce type d’outil permet, à partir du WSDL du Web Service, de générer des formulaires HTML de test.
+* Copier le contenu xml généré à partir du premier fils de *<body>*.
+* Ecrire la méthode permettant de placer les valeurs réelles des paramètres dans le code xml ; ce code doit ensuite être placé dans le BLOB *$BlobXMLparam*.
+* Pour l’analyse de la réponse, vous pouvez également utiliser un outil de test en ligne, ou tirer parti du WSDL qui spécifie les éléments retournés.
 
-The *\** parameter can be used to optimize calls. When it is passed, the command does not close the connection used by the process at the end of its execution. In this case, the next call to **WEB SERVICE CALL** will reuse this same connection if the \* parameter is passed, and so on. To close the connection, simply execute the command without the \* parameter. This mechanism can be used to noticeably accelerate the processing of successive calls of several different Web Services on the same server, in particular in a WAN configuration (via the Internet, for example). Note that this mechanism depends on the “keep-alive” setting of the Web server. This setting generally defines a maximum number of requests via the same connection, and can even deny requests. If the **WEB SERVICE CALL** requests following each other in the same connection reach this maximum number, or if keep-alive connections are not allowed, 4D will create a new connection for each request.
+Le paramètre *\** permet d'optimiser les appels. Lorsqu'il est passé, la commande ne referme pas la connexion utilisée par le process à l’issue de son exécution. Dans ce cas, l’appel suivant à [WEB SERVICE CALL](web-service-call.md) réutilise cette même connexion si le paramètre \* est passé, et ainsi de suite. Pour refermer la connexion, il suffit d’exécuter la commande [WEB SERVICE CALL](web-service-call.md) sans le paramètre \*. Ce mécanisme permet d’accélérer sensiblement les traitements en cas d’appels successifs de plusieurs Web Services sur le même serveur, notamment en configuration WAN (via Internet par exemple). A noter que ce mécanisme s’appuie sur le paramétrage “keep-alive” du serveur Web. Ce paramétrage définit généralement un nombre maximal de requêtes via une même connexion, et peut même les interdire. Si les requêtes [WEB SERVICE CALL](web-service-call.md) enchaînées dans la même connexion atteignent ce nombre maximal ou si les connexions keep-alive ne sont pas autorisées, 4D créera une nouvelle connexion pour chaque requête.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the request has been correctly routed and the Web Service has accepted it, the system variable OK is set to 1\. Otherwise, it is set to 0 and an error is returned.
+Si la requête est correctement acheminée et que le Web Service l’a acceptée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0 et une erreur est retournée.
 
-## See also 
+## Voir aussi 
 
 [WEB SERVICE GET RESULT](web-service-get-result.md)  
 [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 778 |
+| Numéro de commande | 778 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

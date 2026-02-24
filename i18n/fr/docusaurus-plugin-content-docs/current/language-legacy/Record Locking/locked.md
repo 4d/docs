@@ -5,43 +5,43 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to check for locked current record, or Default table, if omitted |
-| Function result | Boolean | &#8592; | Record is locked (TRUE), or Record is unlocked (FALSE) |
+| laTable | Table | &#8594;  | Table de l'enregistrement dont vous voulez tester le verrouillage ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | L'enregistrement est verrouillé (Vrai) ou L'enregistrement n'est pas verrouillé (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Locked.Summary-->**Locked** tests whether or not the current record of *aTable* is locked.<!-- END REF--> Use this function to find out whether or not the record is locked; then take appropriate action, such as giving the user the choice of waiting for the record to be free or skipping the operation.
+<!--REF #_command_.Locked.Summary-->**Locked** teste si l'enregistrement courant de *laTable* est verrouillé.<!-- END REF--> Cette fonction vous permet de savoir si un enregistrement est verrouillé ou non, et donc de réagir de manière appropriée, par exemple en laissant à l'utilisateur le choix d'attendre que l'enregistrement soit libéré ou d'annuler l'opération.
 
-If **Locked** returns TRUE, then the record cannot be saved because it is locked by another user or another process, or it is stacked in the current process. In this case, use [LOAD RECORD](load-record.md) to reload the record until **Locked** returns FALSE.
+Si **Locked** retourne Vrai, l'enregistrement ne peut être sauvegardé car il est verrouillé par un autre utilisateur, un autre process ou est empilé dans le process courant. La commande [LOCKED BY](locked-by.md) indique l'utilisateur ou le numéro du process à l'origine du verrouillage. Dans ce cas, vous devez appeler la commande [LOAD RECORD](load-record.md) pour tenter à nouveau de charger l'enregistrement, jusqu'à ce que **Locked** retourne Faux. 
 
-If **Locked** returns FALSE, then the record is unlocked, meaning that the record is locked for all other users. Only the local user or current process can modify and save the record. A table must be in read/write state in order for you to modify the record.
+Si **Locked** retourne Faux, l'enregistrement n'est pas verrouillé, ce qui signifie qu'il est verrouillé pour tous les autres utilisateurs. Seul l'utilisateur ayant chargé l'enregistrement ou le process courant peut modifier et sauvegarder l'enregistrement. Une table doit être en mode lecture/écriture si vous voulez modifier les enregistrements qu'elle contient.
 
-If you try to load a record that has been deleted, **Locked** continues to return TRUE. To avoid waiting for a record that does not exist anymore, use the [LOCKED BY](locked-by.md) command. If the record has been deleted, the [LOCKED BY](locked-by.md) command returns -1 in the process parameter.
+Lorsque vous tentez de charger un enregistrement qui a été supprimé, **Locked** continue de retourner Vrai. Pour éviter d'attendre un enregistrement qui n'existe plus, appelez la commande [LOCKED BY](locked-by.md). Cette commande retourne -1 dans le paramètre *process* si l'enregistrement a été supprimé. 
 
-**Note:** **Locked** returns False when there is no current record in *table*, in other words, when [Record number](record-number.md) returns -1.
+**Note :** **Locked** retourne Faux lorsqu'il n'y a pas d'enregistrement courant dans *table*, c'est-à-dire lorsque [Record number](record-number.md) retourne -1.
 
-During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are often used to test record availability. If a record is locked, it is common to cancel the transaction. 
+Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont souvent appelées pour tester la disponibilité des enregistrements. Si un enregistrement est verrouillé, il suffit d'annuler la transaction.
 
-## See also 
+## Voir aussi 
 
 [Locked records info](locked-records-info.md)  
 [LOAD RECORD](load-record.md)  
 [LOCKED BY](locked-by.md)  
-*Record Locking*  
+*Verrouillage d'enregistrements*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 147 |
+| Numéro de commande | 147 |
 | Thread safe | yes |
 
 

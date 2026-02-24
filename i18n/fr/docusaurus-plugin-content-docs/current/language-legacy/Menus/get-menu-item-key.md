@@ -5,47 +5,47 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *ligneMenu* {; *process*} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| menuItem | Integer | &#8594;  | Menu item number or -1 for the last item added |
-| process | Integer | &#8594;  | Process reference number |
-| Function result | Integer | &#8592; | Character code of standard shortcut key associated with the menu item |
+| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de la ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594;  | Numéro de référence de process |
+| Résultat | Integer | &#8592; | Code de caractère de de la touche de raccourci standard associée à la ligne de menu |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu item key.Summary-->The **Get menu item key** command returns the code of the **Ctrl** (Windows) or **Command** (Macintosh) shortcut for the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
+<!--REF #_command_.Get menu item key.Summary-->La commande **Get menu item key** retourne le code de la touche **Ctrl** (sous Windows) ou **Commande** (macOS) utilisée comme raccourci clavier pour la commande de menu dont le numéro ou la référence de menu et le numéro de ligne ont été passés dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. 
 
-If you omit the *process* parameter, **Get menu item key** applies to the menu bar for the current process. Otherwise, **Get menu item key** applies to the menu bar for the process whose reference number is passed in *process*. 
+Si vous ne passez pas le paramètre *process*, **Get menu item key** est appliquée à la barre de menus du process courant. Sinon, **Get menu item key** est appliquée à la barre de menus du process dont la référence est passée dans *process*. 
 
-**Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
+**Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *menu*, le paramètre *process* est inutile et sera ignoré.
 
-If the menu item has no associated shortcut or if the *menuItem* parameter designates a hierarchical submenu, **Get menu item key** returns *0* (zero).
+Si la ligne de menu n'a pas de touche de raccourci associée ou si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, **Get menu item key** retourne *0* (zéro).
 
-## Example 
+## Exemple 
 
-To obtain the shortcut associated with a menu item, it is useful to implement a programming structure of the following type:
+Pour obtenir le raccourci clavier associé à une ligne de menu, il est utile de mettre en place une structure de programmation du type suivant :
 
 ```4d
- If(Get menu item key(mymenu;1)#0)
-    $modifiers:=Get menu item modifiers(mymenu;1)
+ If(Get menu item key(monmenu;1)#0)
+    $modifiers:=Get menu item modifiers(monmenu;1)
     Case of
        :($modifiers=Option key mask)
           ...
@@ -57,17 +57,17 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Get menu item key](get-menu-item-key.md)  
 [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 424 |
+| Numéro de commande | 424 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

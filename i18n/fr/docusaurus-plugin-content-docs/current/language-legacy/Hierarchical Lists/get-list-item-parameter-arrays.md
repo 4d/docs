@@ -5,93 +5,93 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *arrSelection* : Text array {; *arrValues* : Text array} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( {*list* : Integer ; *itemRef* : Integer, Operator ; *arrSelection* : Text array {; *arrValues* : Text array} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *liste* ; *refElément* ; *tabSélecteurs* {; *tabValeurs*} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *liste* ; * ; *tabSélecteurs* {; *tabValeurs*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string)If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) orName of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
-| arrSelection | Text array | &#8592; | Array of parameter names |
-| arrValues | Text array | &#8592; | Array of parameter values |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne)Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ouNom d'objet de type liste (si * passé) |
+| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou0 pour le dernier élément ajouté à la liste ou* pour l’élément courant de la liste |
+| tabSélecteurs | Text array | &#8592; | Tableau des noms de paramètres |
+| tabValeurs | Text array | &#8592; | Tableau des valeurs de paramètres |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->The **GET LIST ITEM PARAMETER ARRAYS** command lets you retrieve all the parameters in a single call (as well as, optionally, their values) that are associated with the *itemRef* item in the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->La commande **GET LIST ITEM PARAMETER ARRAYS** permet de récupérer en un seul appel l’ensemble des paramètres (ainsi que, optionnellement, leurs valeurs) associés à l’élément *refElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF--> 
 
-Parameters associated with items store additional information about each item. They are set using the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
+Les paramètres associés aux éléments permettent de stocker des informations supplémentaires sur chaque élément. Ils sont définis à l’aide de la commande [SET LIST ITEM PARAMETER](set-list-item-parameter.md). 
 
-If you pass the first optional *\** parameter, this indicates that *list* is an object name (string) corresponding to a list representation in the form. If you do not pass this parameter, this indicates that *list* is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you use a single list representation or work with structural items (second *\** omitted), you can use either syntax. However, if you use several representations of the same list and work with the current item (second *\** passed), you must use the syntax based on the object name because each representation may have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-**GET LIST ITEM PARAMETER ARRAYS** returns parameters set for the *itemRef* item in the *arrSelectors* text array. When the *arrValues* text array is passed, the command uses it to return the values associated with these parameters.
+**GET LIST ITEM PARAMETER ARRAYS** retourne les paramètres définis pour l’élément *réfElément* dans le tableau texte *tabSélecteurs*. Si le tableau texte *tabValeurs* est passé, la commande retourne les valeurs associées à chaque paramètre dans ce tableau.
 
-*arrValues* must be a text type array. If you have associated values that are not Text (number or Boolean), they are converted to strings (True="1", False="0").
+Le tableau *tabValeur* doit être de type texte. Si vous avez associé des valeurs non-textuelles (type numérique ou booléen), elles sont converties en chaînes (vrai="1", faux="0").
 
-## Example 
+## Exemple 
 
-Given the following hierarchical list: 
+Soit la liste hiérarchique suivante : 
 
 ```4d
  <>HL:=New list
  $ID:=30
  APPEND TO LIST(<>HL;"Martin";$ID)
-  //5 parameters
+     //5 paramètres
  SET LIST ITEM PARAMETER(<>HL;$ID;"Firstname";"Phil")
- SET LIST ITEM PARAMETER(<>HL;$ID;"Birthday";"01/02/1978")
- SET LIST ITEM PARAMETER(<>HL;$ID;"Male";True) //Boolean
- SET LIST ITEM PARAMETER(<>HL;$ID;"Age";33) //number
- SET LIST ITEM PARAMETER(<>HL;$ID;"City";"Dallas")
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Birthday";"15/02/1978")
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Male";True)   //booléen
+ SET LIST ITEM PARAMETER(<>HL;$ID;"Age";32)   //numérique
+ SET LIST ITEM PARAMETER(<>HL;$ID;"City";"Nantes")
 ```
 
-For more simplicity, the list was associated with a list object having the same name ("<>HL").  
-When the item "Martin" is selected in the list, you can retrieve its parameters by executing the following code:
+Pour plus de simplicité, la liste a été associée à un objet liste de même nom ("<>HL").  
+ Lorsque l’élément "Martin" est sélectionné dans la liste, on peut lire ses paramètres en exécutant le code suivant :
 
 ```4d
- ARRAY TEXT(arrParamNames;0)
- GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames)
-  // arrParamNames{1} contains "Firstname"
-  // arrParamNames{2} contains "Birthday"
-  // arrParamNames{3} contains "Male"
-  // arrParamNames{4} contains "Age"
-  // arrParamNames{5} contains "City"
+ ARRAY TEXT(tNomsParams;0)
+ GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;tNomsParams)
+     // tNomsParams{1} contient "Firstname"
+     // tNomsParams{2} contient "Birthday"
+     // tNomsParams{3} contient "Male"
+     // tNomsParams{4} contient "Age"
+     // tNomsParams{5} contient "City"
 ```
 
-If you want to get the parameter values as well, you write:
+Si on souhaite récupérer également les valeurs des paramètres, on peut écrire :
 
 ```4d
- ARRAY TEXT(arrParamNames;0)
- ARRAY TEXT(arrParamValues;0)
- GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;arrParamNames;arrParamValues)
-  // arrParamValues{1} contains "Phil"
-  // arrParamValues{2} contains "01/02/1978"
-  // arrParamValues{3} contains "1"
-  // arrParamValues{4} contains "33"
-  // arrParamValues{5} contains "Dallas"
+ ARRAY TEXT(tNomsParams;0)
+ ARRAY TEXT(tValeursParams;0)
+ GET LIST ITEM PARAMETER ARRAYS(*;"<>HL";*;tNomsParams;tValeursParams)
+     // tValeursParams{1} contient "Phil"
+     // tValeursParams{2} contient "15/02/1978"
+     // tValeursParams{3} contient "1"
+     // tValeursParams{4} contient "32"
+     // tValeursParams{5} contient "Nantes"
 ```
 
-## See also 
+## Voir aussi 
 
 [SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1195 |
+| Numéro de commande | 1195 |
 | Thread safe | no |
 
 

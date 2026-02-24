@@ -5,68 +5,68 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *body* : Blob, Text )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corps* )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| body | Blob, Text | &#8592; | Body of the HTTP request |
+| corps | Blob, Text | &#8592; | Champ corps (Body) de la requête HTTP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2004|Created|
+|13|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB GET HTTP BODY.Summary-->The **WEB GET HTTP BODY** command returns the body of the HTTP request being processed.<!-- END REF--> The HTTP body is returned as is, without processing or parsing. 
+<!--REF #_command_.WEB GET HTTP BODY.Summary-->La commande **WEB GET HTTP BODY** retourne le corps (body) de la requête HTTP en cours de traitement.<!-- END REF--> Le corps HTTP est retourné tel quel, sans traitement ni analyse. 
 
-This command can be called using a Web database method ([On Web Authentication](./on-web-authentication-database-method.md), [On Web Connection](./on-web-connection-database-method.md)) or any Web method. 
+Cette commande peut être appelée depuis la *Méthode base Sur authentification Web*, la [On Web Connection](./on-web-connection-database-method.md) ou toute méthode Web. 
 
-In *body*, you can pass a variable or a field of the BLOB or Text type. The Text type is generally sufficient (the *body* parameter can receive up to 2 GB of text).
+Vous pouvez passer dans le paramètre *corps* une variable ou un champ de type BLOB ou Texte. Le type Texte sera généralement suffisant (le paramètre *corps* peut recevoir jusqu'à 2 Go de texte). 
 
-This command allows you, for example, to carry out queries in the body of requests. It also permits advanced users to set up a WebDAV server within a 4D database.
+Cette commande permet par exemple d’effectuer des recherches dans le corps des requêtes. Elle permet également aux utilisateurs avancés de mettre en place un serveur WebDAV au sein d’une base 4D.
 
-## Example 
+## Exemple 
 
-In this example, a simple request is sent to the 4D Web server and the contents of the HTTP body are displayed in the debugger. Here is the form sent to the 4D Web server, as well as the corresponding HTML code:
+Dans cet exemple, une requête simple est envoyée au serveur Web de 4D et le contenu du champ HTTP corps est visualisé dans le débogueur. Voici le formulaire envoyé au serveur Web de 4D, ainsi que le code HTML correspondant :
 
-![](../assets/en/commands/pict38463.en.png)
+![](../assets/en/commands/pict38463.fr.png)
 
-Here is the Test4D2004 method:
+Voici la méthode Test4D2004 :
 
 ```4d
- var $request : Blob
- var $requestText : Text
+ var $requete : Blob
+ var $texteRequete : Text
  
- WEB GET HTTP BODY($request)
- $requestText:=BLOB to text($request;UTF8 text without length)
+ WEB GET HTTP BODY($requete)
+ $texteRequete:=BLOB to text($requete;UTF8 text without length)
  WEB SEND FILE("page.html")
 ```
 
-**Note:** This method is declared “Available through 4D HTML tags and URLs (4DACTION...)” in its properties. 
+**Note :** Cette méthode a été déclarée “Disponible via les balises HTML et les URLs 4D (4DACTION...)” dans ses propriétés. 
 
-When the form is submitted to the Web server, the $requestText variable receives the text of the HTTP request body.
+Lorsque le formulaire est soumis au serveur Web, la variable $texteRequete reçoit le texte du champ body de la requête HTTP, soit "*vnom=Dupont*".
 
-## See also 
+## Voir aussi 
 
 [WEB GET BODY PART](web-get-body-part.md)  
 [WEB GET HTTP HEADER](web-get-http-header.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 814 |
+| Numéro de commande | 814 |
 | Thread safe | yes |
 
 

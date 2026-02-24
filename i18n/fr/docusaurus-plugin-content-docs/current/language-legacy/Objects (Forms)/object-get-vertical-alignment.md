@@ -5,61 +5,61 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *object* : Variable, Field ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Integer | &#8592; | Type of alignment |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Type d’alignement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get vertical alignment.Summary-->The **OBJECT Get vertical alignment** command returns a value indicating the type of vertical alignment applied to the object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Summary-->La commande **OBJECT Get vertical alignment** retourne une valeur indiquant le type d’alignement vertical appliqué à l’objet désigné par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-**Note:** If you apply this command to a set of objects, only the alignment value for the last object is returned. 
+**Note :** Si vous appliquez la commande à un ensemble d’objets, seule la valeur d’alignement du dernier objet est retournée. 
 
-The value returned corresponds to one of the following constants, found in the *Form Objects (Properties)* theme:
+La valeur retournée correspond à l’une des constantes suivantes du thème *Objets de formulaire (Propriétés)* :
 
-| Constant     | Type    | Value |
-| ------------ | ------- | ----- |
-| Align bottom | Integer | 4     |
-| Align center | Integer | 3     |
-| Align top    | Integer | 2     |
+| Constante    | Type        | Valeur | Comment       |
+| ------------ | ----------- | ------ | ------------- |
+| Align bottom | Entier long | 4      | <br/> |
+| Align center | Entier long | 3      | <br/> |
+| Align top    | Entier long | 2      | <br/> |
 
-Vertical alignment can be applied to the following types of form objects:
+Les objets de formulaire auxquels un alignement vertical peut être appliqué sont les suivants :
 
-* list boxes,
-* list box columns,
-* list box headers and footers.
+* list box,
+* colonnes de list box,
+* en-tête et pieds de list box.
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 [OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1188 |
+| Numéro de commande | 1188 |
 | Thread safe | no |
 
 

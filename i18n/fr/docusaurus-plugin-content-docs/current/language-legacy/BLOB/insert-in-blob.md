@@ -5,50 +5,50 @@ slug: /commands/insert-in-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *blob* : Blob ; *offset* : Integer ; *len* : Integer {; *filler* : Integer} )<!-- END REF-->
+<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *blob* ; *décalage* ; *nombre* {; *remplisseur*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB into which bytes will be inserted |
-| offset | Integer | &#8594;  | Starting position where bytes will be inserted |
-| len | Integer | &#8594;  | Number of bytes to be inserted |
-| filler | Integer | &#8594;  | Default byte value (0x00..0xFF) 0x00 if omitted |
+| blob | Blob | &#8594;  | BLOB dans lequel insérer les octets |
+| décalage | Integer | &#8594;  | Position de début d'insertion des octets |
+| nombre | Integer | &#8594;  | Nombre d'octets à insérer |
+| remplisseur | Integer | &#8594;  | Valeur d'octet par défaut (0x00..0xFF) 0x00 si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INSERT IN BLOB.Summary-->The INSERT IN BLOB command inserts the number of bytes specified by *len* into the BLOB *blob* at the position specified by *offset*.<!-- END REF--> The BLOB then becomes *len* bytes larger.
+<!--REF #_command_.INSERT IN BLOB.Summary-->**INSERT IN BLOB** insère le nombre d'octets spécifié par *nombre* dans le BLOB *blob* à la position spécifiée par *décalage*.<!-- END REF--> La taille du BLOB est augmentée de *nombre* d'octets.
 
-If you do not specify the optional *filler* parameter, the bytes inserted into the BLOB are set to *0x00*. Otherwise, the bytes are set to the value you pass in *filler* (modulo 256 — 0..255).
+Si vous ne passez pas le paramètre optionnel *remplisseur*, la valeur des octets insérés dans le BLOB est fixée à *0x00*. Sinon, les octets prennent la valeur passée dans *remplisseur* (modulo 256 — 0..255).
 
-Before the call, you pass in the *offset* parameter the position of the insertion relative to the beginning of the BLOB. 
+Vous passez dans le paramètre *décalage* la position (relative à l'origine du BLOB) de l'insertion. 
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## See also 
+## Voir aussi 
 
 [DELETE FROM BLOB](delete-from-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 559 |
+| Numéro de commande | 559 |
 | Thread safe | yes |
 
 

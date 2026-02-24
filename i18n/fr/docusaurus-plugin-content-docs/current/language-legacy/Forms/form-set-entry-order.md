@@ -5,71 +5,71 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : Integer} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomsObjets* {; *numPage*} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectNames | Text array | &#8594;  | Array of object names in their expected entry order |
-| pageNumber | Integer | &#8594;  | Number of the page to set the entry order (current page if omitted) |
+| nomsObjets | Text array | &#8594;  | Tableau des noms d'objets dans l'ordre de saisie souhaité |
+| numPage | Integer | &#8594;  | Numéro de la page dont vous voulez fixer l'ordre de saisie (page courante si omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Created|
+|16 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Summary-->The **FORM SET ENTRY ORDER** command allows to set dynamically the entry order of the current form for the current process based upon the *objectNames* array.<!-- END REF--> 
+<!--REF #_command_.FORM SET ENTRY ORDER.Summary-->La commande **FORM SET ENTRY ORDER** permet de fixer dynamiquement l'ordre de saisie du formulaire courant pour le process en cours, basé sur le tableau *nomsObjets*.<!-- END REF--> 
 
-Pass in *objectNames* an array containing the names of form objects to include in the entry order. The order of objects in the array defines the form entry order. Any valid form objects belonging to the current form can be listed. An object is valid if:
+Passez dans *nomsObjets* un tableau contenant les noms des objets du formulaire à inclure dans l'ordre de saisie. L'ordre des objets dans le tableau définit l'ordre de saisie. Tout objet valide du formulaire sur le formulaire courant peut être listé. Un objet est valide si :
 
-* it has the focusable property(**Note:** The command ignores the **Tabbable** object property),
-* it exists in the form (its name is defined),
-* it is used on the current page (or the *pageNumber* page, see below). Keep in mind that a form page includes page 0 objects and inherited form objects.
+* il a la propriété **focusable** (**Note :** La commande ignore la propriété **Tabulable** des objets),
+* il existe sur le formulaire (son nom est défini),
+* il est utilisé sur la page courante (ou sur la page *numPage*, voir ci-dessous). Gardez à l'esprit qu'une page de formulaire inclut les objets de la page 0 et les objets du formulaire hérité.
 
-If an invalid object is detected at runtime, it is simply ignored and 4D will try to use the next valid object in the *objectNames* array. You can know the actual entry order of the current page (based upon valid objects) using the [FORM GET ENTRY ORDER](form-get-entry-order.md) command with the \* parameter. 
+Si un objet invalide est détecté à l'utilisation, il est simplement ignoré et 4D essaiera d'utiliser l'objet valide suivant dans le tableau *nomsObjets*. Vous pouvez connaitre l'ordre de saisie actuel de la page courante (basé sur les objets valides) en utilisant la commande [FORM GET ENTRY ORDER](form-get-entry-order.md) avec le paramètre \*. 
 
-Optionnally, you can pass the *pageNumber* for which to set the entry order. If omitted, the command is applied to the current page. 
+Optionnellement, vous pouvez passer le *numPage* de la page pour laquelle vous fixez l'ordre de saisie. Si omis, la commande s'applique à la page courante. 
 
-**Notes:** 
+**Notes :** 
 
-* The entry order of a subform is defined in the subform itself. You have to call the **FORM SET ENTRY ORDER** command in the subform context.
-* This command does not define the first focused object in the form at runtime. If you want to set a first object in the entry order, you need to use the [GOTO OBJECT](goto-object.md) command in the On Load event of the form. If you used the [OBJECT DUPLICATE](object-duplicate.md) command, you can set the duplicated object as the first one by passing the Object First in entry order constant in the *boundTo* parameter.
+* L'ordre de saisie d'un sous-formulaire est défini dans le sous-formulaire lui-même. Vous devez appeler la commande **FORM SET ENTRY ORDER** dans le contexte du sous-formulaire.
+* Cette commande ne définit pas le premier objet ciblé sur le formulaire à l'utilisation. Si vous souhaitez fixer un premier objet dans l'ordre de saisie, vous devez utiliser la commande [GOTO OBJECT](goto-object.md) dans l'événement formulaire Sur chargement. Si vous utilisez la commande [OBJECT DUPLICATE](object-duplicate.md), vous pouvez fixer l'objet dupliqué en première position en passant la constante Objet Premier ordre saisie dans le paramètre *reliéA*.
 
-**About the data entry order**  
-The data entry order is the order in which fields, subforms, and all other active objects are selected as the user hits the **Tab** or the **Carriage return** key in a form. Reverse data entry order is also available by pressing the **Shift+Tab** or **Shift+Carriage return** keys. Entry order can be set by default or modified in the Form editor. For more information, please refer to the *Modifying data entry order* section in the *Design Reference* manual. 
+**A propos de l'ordre de saisie des données**  
+L'ordre de saisie des données est l'ordre dans lequel les champs, les sous-formulaires et tous les autres objets actifs, sont sélectionnés quand l'utilisateur utilise la touche **Tabulation** ou le Retour chariot sur le formulaire. L'ordre de saisie inversé est également disponible en appuyant sur les touches **Maj+Tabulation** ou **Maj+Retour chariot**. L'ordre de saisie peut être défini par défaut ou modifié dans l'Editeur de formulaire. Pour plus d'informations, référez-vous à la section *Modifier l'ordre de saisie* dans le manuel *Mode Développement*. 
 
-## Example 
+## Exemple 
 
-You want to set the entry order of objects in the form based upon their names:
+Vous souhaitez fixer l'ordre de saisie des objets du formulaire en vous basant sur leur nom :
 
 ```4d
  ARRAY TEXT(tabNames;0)
  
- FORM GET OBJECTS(tabNames;Form current page+Form inherited) //get form object names
- SORT ARRAY(tabNames;>) //sort the names in ascending order
- FORM SET ENTRY ORDER(tabNames) //use the alphabetical order for entry order
-  //non-focusable objects are ignored
+ FORM GET OBJECTS(tabNames;Form current page+Form inherited) //on récupère les noms des objets du formulaire
+ SORT ARRAY(tabNames;>) //on trie les noms par ordre alphabétique ascendant
+ FORM SET ENTRY ORDER(tabNames) //on utilise cet ordre alphabétique comme ordre de saisie
+  //les objets non-focusables sont ignorés
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM GET ENTRY ORDER](form-get-entry-order.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1468 |
+| Numéro de commande | 1468 |
 | Thread safe | no |
 
 

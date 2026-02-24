@@ -5,100 +5,99 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *message* : Text {; *defaultResponse* : Text {; *OKButtonTitle* : Text {; *CancelButtonTitle* : Text}}} )  : Text<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *réponseDéfaut* {; *titreBoutonOK* {; *titreBoutonAnn*}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message to display in the request dialog box |
-| defaultResponse | Text | &#8594;  | Default data for the enterable text area |
-| OKButtonTitle | Text | &#8594;  | OK button title |
-| CancelButtonTitle | Text | &#8594;  | Cancel button title |
-| Function result | Text | &#8592; | Value entered by user |
+| message | Text | &#8594;  | Message à afficher dans la boîte de dialogue |
+| réponseDéfaut | Text | &#8594;  | Valeur par défaut dans la zone de saisie de texte |
+| titreBoutonOK | Text | &#8594;  | Libellé du bouton OK |
+| titreBoutonAnn | Text | &#8594;  | Libellé du bouton Annuler |
+| Résultat | Text | &#8592; | Valeur saisie par l'utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Request.Summary-->The **Request** command displays a request dialog box composed of a message, a text input area, an **OK** button, and a **Cancel** Button.<!-- END REF-->
+<!--REF #_command_.Request.Summary-->La fonction **Request** affiche une boîte de dialogue de demande d'informations composée d'un message, d'une zone de saisie de texte, d'un bouton **OK** et d'un bouton **Annuler**.<!-- END REF--> 
 
-You pass the message to be displayed in the *message* parameter. If the message does not fit in the display area (usually around 50 characters, but it varies depending on the System and the font used), it can appear truncated.
+Vous passez le message à afficher dans le paramètre *message*. Si la taille du message excède les capacités de la zone d'affichage (aux alentours de 50 caractères, variant en fonction du Système et de la police utilisée), il peut apparaître tronqué.
 
-By default, the title of the **OK** button is “OK” and that of the **Cancel** button is “Cancel.” To change the titles of these buttons, pass the new custom titles into the optional parameters OKButtonTitle and CancelButtonTitle. If necessary, the width of the buttons is resized toward the left, according to the width of the custom titles you pass.
+Par défaut, le libellé du bouton OK est “OK” et celui du bouton Annuler est “Annuler”. Si vous voulez modifier ces libellés, passez d'autres valeurs dans les paramètres optionnels *titreBoutonOK* et *titreBoutonAnn*. Si nécessaire, les boutons sont agrandis vers la gauche, en fonction de la taille des libellés que vous avez saisis.
 
-The **OK** button is the default button. If you click the **OK** button or press **Enter** to accept the dialog box, the OK system variable is set to 1\. If you click the **Cancel** button to cancel the dialog box, the OK system variable is set to 0\. 
+Le bouton OK est le bouton par défaut. L'utilisateur peut cliquer sur le bouton OK ou appuyer sur la touche Entrée pour valider la boîte de dialogue, mettant ainsi la variable système OK à 1\. Il peut également cliquer sur le bouton Annuler pour annuler la boîte de dialogue, mettant ainsi la variable système OK à 0\. 
 
-The user can enter text into the text input area. To specify a default value, pass the default text in the *defaultResponse* parameter. If the user clicks **OK**, **Request** returns the text. If the user clicks **Cancel**, **Request** returns an empty string (""). If the response should be a numeric or a date value, convert the string returned by **Request** to the proper type with the [Num](./commands/num) or [Date](date.md) functions.
+L'utilisateur peut taper des caractères dans la zone de saisie de texte. Pour définir une valeur par défaut, passez le texte par défaut dans le paramètre *réponseDéfaut*. Si l'utilisateur clique sur le bouton OK, **Request** retourne le texte. Si l'utilisateur clique sur le bouton Annuler, **Request** retourne une chaîne vide (""). Si la réponse doit être une valeur numérique ou une date, convertissez la chaîne retournée par **Request** dans le type souhaité à l'aide des fonctions [Num](../commands/num.md) et [Date](../commands/date).
 
-**Tip:** Do not call the **Request** command from the section of a form or object method that handles the On Activate or On Deactivate form event; this will cause an endless loop.
+**Note :** N'appelez pas la fonction **Request** dans une méthode formulaire ou objet qui gère l'événement On Activate ou On Deactivate car cela provoquerait une boucle sans fin.
 
-**Tip:** If you need to get several pieces of information from the user, design a form and present it with [DIALOG](./commands/dialog), rather than presenting a succession of **Request** dialog boxes.
+**Conseil :** Si vous voulez récupérer plusieurs informations de l'utilisateur, construisez un formulaire approprié et appelez-le avec la commande [DIALOG](../commands/dialog.md), plutôt que d'afficher une succession de boîtes de dialogue du type **Request**.
 
-## Example 1 
+## Exemple 1 
 
-The line:
+La ligne de code :
 
 ```4d
- $vsPrompt:=Request("Please enter your name:")
+ $vsPrompt:=Request("Veuillez saisir votre nom :")
 ```
 
-will display the request dialog box (on Windows) shown here:
+... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225119.en.png)
+![](../assets/en/commands/pict4225119.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-The line:
+Le code suivant :
 
 ```4d
- vsPrompt:=Request("Name of the Employee:";"";"Create Record";"Cancel")
+ vsPrompt:=Request("Nom de l'employé:";"";"Creer un enregistrement";"Annuler")
  If(OK=1)
-    ADD RECORD([Employees])
-  //Note: vsPrompt is then copied into the field [Employees]Last name
-  //during the On Load event in the form method
+    ADD RECORD([Employes])
+  //Note: vsPrompt est alors copiée dans le champ [Employés]Nom 
+  //lors de l'événement formulaire Sur chargement de la méthode formulaire
  End if
 ```
 
-will display the request dialog box (on Windows) shown here:
+... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225137.en.png)
+![](../assets/en/commands/pict4225137.fr.png)
 
-## Example 3 
+## Exemple 3 
 
-The line:
+La ligne de code :
 
 ```4d
- $vdPrompt:=Date(Request("Enter the new date:";String(Current date)))
+ $vdPrompt:=Date(Demander("Veuillez saisir la nouvelle date :";Chaine(Date du jour)))
 ```
 
-will display the request dialog box (on Windows) shown here:
+... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225146.en.png)
+![](../assets/en/commands/pict4225146.fr.png)
 
-## See also 
+## Voir aussi 
 
 [ALERT](alert.md)  
 [CONFIRM](confirm.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 163 |
+| Numéro de commande | 163 |
 | Thread safe | yes |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

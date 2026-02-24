@@ -5,75 +5,77 @@ slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *object* : Text {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *object* : Variable {; *X* : Real ; *Y* : Real }; *column* : Integer ; *row* : Integer {; *colVar* : Pointer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( {* ;} *objet* {; *x* ; *y* }; *colonne* ; *ligne* {; *varCol*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| X | Real | &#8594;  | Horizontal coordinate of mouse |
-| Y | Real | &#8594;  | Vertical coordinate of mouse |
-| column | Integer | &#8592; | Column number |
-| row | Integer | &#8592; | Row number |
-| colVar | Pointer | &#8592; | Pointer to column variable |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne)<br/> Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| x | Real | &#8594;  | Coordonnée horizontale de la souris |
+| y | Real | &#8594;  | Coordonnée verticale de la souris |
+| colonne | Integer | &#8592; | Numéro de colonne |
+| ligne | Integer | &#8592; | Numéro de ligne |
+| varCol | Pointer | &#8592; | Pointeur sur la variable de colonne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|12|Renamed|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|16 R5|Modifié|
+|12|Renommé|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->The **LISTBOX GET CELL POSITION** command returns the numbers of the *column* and the *row* that correspond to the location in the listbox (designated by *\** and *object*) of the last mouse click, last selection made via the keyboard, or the horizontal and vertical coordinates of the mouse.<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic, de la dernière action de sélection effectuée ou des coordonnées horizontale et verticale de la souris dans la list box désignée par *\** et objet.<!-- END REF-->   
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (a string). If you omit this parameter, you indicate that the *object* parameter is a variable.
+Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. 
 
-If the *X* and *Y* parameters are passed, this command returns the column and row numbers corresponding to the mouse coordinates, otherwise this command returns the column and row numbers of a click or a selection action. The command will return valid values even when data entry is not allowed in the list box.
+Si les paramètres *x* et *y* sont omis, la commande retourne les coordonnées du clic ou de l'action de sélection. Si les paramètres *x* et *y* sont passés, la commande retourne les numéros de colonne et de ligne correspondant aux coordonnées de la souris. Dans les deux cas, la commande retourne des valeurs valides même lorsque la saisie n'est pas autorisée dans la list box.
 
-**Notes:** 
+**Notes :** 
+- Le numéro retourné dans le paramètre *ligne* ne tient pas compte de l'éventuel statut masqué/affiché des lignes de la list box. Il peut également valoir 0 si le clic ou la position y est situé(e) au-delà de la dernière ligne. 
+- Si le clic ou la position *x* correspond à une cellule d'une fausse colonne, le paramètre *ligne* contient "n+1", où *n* est le nombre de colonnes de la list box (une fausse colonne peut être automatiquement ajoutée lorsque l'option "Redimensionnement colonnes auto" est sélectionnée.
+- Dans une list box hiérarchique, la valeur de la *colonne* prend en compte la ou les colonnes fusionnées pour représenter la hiérarchie.
 
-* The value returned in the *row* parameter does not take into account any hidden/displayed states of list box rows. It may also return a value of 0 if the click or *Y* position is below the last row.
-* If a cell in a fake column is clicked or corresponds to the *X* position, the *column* parameter returns "N+1", where N is the number of existing columns. A fake column can be added automatically when the "Column Auto-Resizing" option is selected; for more information refer to the *Resizing Options theme* paragraph.
-* In a hierachical list box, the *column* value takes into account the column(s) merged to represent the hierarchy, as explained in the *Management of selections and positions* paragraph.
+Le paramètre facultatif *varCol* retourne un pointeur sur la variable (c’est-à-dire le tableau) associée à la colonne. 
 
-The optional *colVar* parameter returns a pointer to the variable (*i.e.* array) associated with the column.
+Lorsque les paramètres *x* et *y* ne sont pas utilisés, cette commande peut être appelée uniquement dans le cadre d’une list box générant l’un des événements formulaire suivants :
 
-When the *X* and *Y* parameters are not used, this command can only be called in the framework of a list box that generates one of the following form events:
-
-* On Clicked and On Double Clicked
-* On Before Keystroke and On After Keystroke
+* On Clicked et On Double Clicked
+* On Before Keystroke et On After Keystroke
 * On After Edit
-* On Getting Focus and On Losing Focus
+* On Getting Focus et On Losing Focus
 * On Data Change
 * On Selection Change
 * On Before Data Entry
 
-If the command is called outside of this context, **LISTBOX GET CELL POSITION** returns 0 in both *column* and *row*.
+Lorsqu’elle est appelée en dehors de ce contexte, **LISTBOX GET CELL POSITION** retourne 0 dans *colonne* et *ligne*. 
 
-This command takes into account any selection or deselection actions whether by mouse click, via keyboard keys, or using the [EDIT ITEM](edit-item.md) command (which can generate the On Getting Focus event). If the selection is modified using the arrow keys of the keyboard, *column* returns 0\. In this case, if it is passed, the *colVar* parameter returns [Is nil pointer](is-nil-pointer.md).
+Cette commande tient compte des actions de sélection ou de désélection effectuées via la souris, les touches du clavier et la commande [EDIT ITEM](edit-item.md) (qui génère l’événement On Getting Focus).
 
-## See also 
+Si la sélection est modifiée via les touches fléchées du clavier, *colonne* retourne 0. Dans ce cas, s’il est passé, le paramètre *varCol* retourne [Is nil pointer](is-nil-pointer.md). 
+
+
+## Voir aussi 
 
 [LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
 [LISTBOX SELECT BREAK](listbox-select-break.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 971 |
+| Numéro de commande | 971 |
 | Thread safe | no |
 
 

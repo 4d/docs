@@ -4,88 +4,83 @@ title: Folder
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
-|---|---|
-|19 R8 |Support of `fk home folder`|
-|17 R5|Added|
+| Release | Modifications                       |
+| ------- | ----------------------------------- |
+| 19 R8   | Prise en charge de `fk home folder` |
+| 17 R5   | Ajout                               |
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
-
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
-<div class="no-index">
 
-|Parameter|Type||Description|
-|---------|--- |:---:|------|
-|path|Text|&#8594; |Folder path|
-|folderConstant|Integer|&#8594; |4D folder constant|
-|pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|Operator|&#8594; |* to return folder of host database|
-|Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
-</div>
+| Paramètres     | Type                                               |                             | Description                                                           |
+| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Chemin du dossier                                                     |
+| folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*             | operator                                           | &#8594; | \* pour retourner le dossier de la base hôte                          |
+| Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
+
 <!-- END REF -->
 
 ## Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
-**Folder ( path { ; pathType } { ; * } )**
+**Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre *pathType*. Les constantes suivantes sont disponibles :
 
-|Constant|Value|Comment|
-|---|---|---|
-|fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
-|fk posix path|0|Path expressed with POSIX syntax (default)
+| Constante        | Valeur | Commentaire                                                                                                                  |
+| ---------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1      | Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme) |
+| fk posix path    | 0      | Chemin exprimé avec la syntaxe POSIX (par défaut)                                                         |
 
-**Folder ( folderConstant { ; * } )**
+**Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier système, à l'aide d'une des constantes suivantes :
 
-|Constant|Value|Comment|
-|---|---|---|
-|fk applications folder|116||
-|fk data folder|9|Associated filesystem: "/DATA"|
-|fk database folder|4|Associated filesystem: "/PACKAGE"|
-|fk desktop folder|115||
-|fk documents folder|117|Document folder of the user|
-|fk home folder|118|Current home folder of the user (usually `/Users/<username>/`)|
-|fk licenses folder|1|Folder containing the machine's 4D license files|
-|fk logs folder|7|Associated filesystem: "/LOGS"|
-|fk mobileApps folder|10||
-|fk remote database folder|3|4D database folder created on each 4D remote machine|
-|fk resources folder|6|Associated filesystem: "/RESOURCES"|
-|fk system folder|100||
-|fk user preferences folder|0|4D folder that stores user preference files within the user home folder|
-|fk web root folder|8|Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path|
+| Constante                  | Valeur | Commentaire                                                                                                                                 |
+| -------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| fk applications folder     | 116    |                                                                                                                                             |
+| fk data folder             | 9      | Filesystem associé : "/DATA"                                                                                                |
+| fk database folder         | 4      | Filesystem associé : "/PACKAGE"                                                                                             |
+| fk desktop folder          | 115    |                                                                                                                                             |
+| fk documents folder        | 117    | Dossier Documents de l'utilisateur                                                                                                          |
+| fk home folder             | 118    | Dossier personnel courant de l'utilisateur (généralement `/Users/<username>/`)                                           |
+| fk licenses folder         | 1      | Dossier contenant les fichiers de licence 4D de la machine                                                                                  |
+| fk logs folder             | 7      | Filesystem associé : "/LOGS"                                                                                                |
+| fk mobileApps folder       | 10     |                                                                                                                                             |
+| fk remote database folder  | 3      | Dossier de la base de données 4D créé sur chaque machine 4D distante                                                                        |
+| fk resources folder        | 6      | Filesystem associé : "/RESOURCES"                                                                                           |
+| fk system folder           | 100    |                                                                                                                                             |
+| fk user preferences folder | 0      | Dossier 4D qui stocke les fichiers de préférences de l'utilisateur dans le dossier personnel de l'utilisateur                               |
+| fk web root folder         | 8      | Dossier racine web courant du projet : "/PACKAGE/chemin" si son emplacement se trouve dans le package, sinon chemin complet |
 
-If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.  
+Si la commande est appelée à partir d'un composant, passez le paramètre optionnel `*` pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre `*`, un objet null est systématiquement retourné.
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
 
+## Voir également
 
-## See also 
+[classe `4D.Folder`](../API/FolderClass.md)
+[File](file.md)\
+[Object to path](../commands-legacy/object-to-path.md)\
+[Path to object](../commands-legacy/path-to-object.md)
 
-[`4D.Folder` class](../API/FolderClass.md)
-[File](file.md)  
-[Object to path](./commands/object-to-path)  
-[Path to object](./commands/path-to-object)  
+## Propriétés
 
-
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1567 |
-| Thread safe | yes |
-
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1567 |
+| Thread safe        | oui  |
 
 

@@ -5,58 +5,56 @@ slug: /commands/qr-get-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
+<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *zone* ; *gauche* ; *haut* {; *droite* {; *bas*}} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| left | Integer | &#8592; | Left boundary |
-| top | Integer | &#8592; | Top boundary |
-| right | Integer | &#8592; | Right boundary |
-| bottom | Integer | &#8592; | Bottom boundary |
+| zone | Integer | &#8594;  | Référence de la zone |
+| gauche | Integer | &#8592; | Limite gauche |
+| haut | Integer | &#8592; | Limite supérieure |
+| droite | Integer | &#8592; | Limite droite |
+| bas | Integer | &#8592; | Limite inférieure |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET SELECTION.Summary-->The QR GET SELECTION command returns the coordinates of the cell that is selected.<!-- END REF-->
+<!--REF #_command_.QR GET SELECTION.Summary-->La commande **QR GET SELECTION** retourne les coordonnées de la sélection courante de la *zone*.<!-- END REF--> 
 
-*left* returns the number of the column that is the left boundary of the selection. If *left* equals 0, the entire row is selected.
+*gauche* retourne le numéro de la colonne représentant la limite gauche de la sélection. Si *gauche* vaut 0, la ligne entière est sélectionnée.  
+*haut* retourne le numéro de la ligne représentant la limite supérieure de la sélection. Si *haut* vaut 0, la colonne entière est sélectionnée.
 
-*top* returns the number of the row that is the top boundary of the selection. If *top* equals 0, the entire column is selected.
+**Note :** Si les paramètres *gauche* and *haut* valent 0, la totalité de la zone est sélectionnée. 
 
-**Note:** If both *left* and *top* equal 0, the entire area is highlighted.
+*droite* retourne le numéro de la colonne représentant la limite droite de la sélection.  
+*bas* retourne le numéro de la ligne représentant la limite inférieure de la sélection.
 
-*right* is the number of the column that is the right boundary of the selection.
+**Note :** Si la *zone* ne contient aucune sélection, les paramètres *gauche*, *haut*, *droite* et *bas* retournent -1.
 
-*bottom* is the number of the row that is the top boundary of the selection.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-**Note:** If there is no selection, *left*, *top*, *right* and *bottom* are set to -1.
-
-If you pass an invalid *area* number, the error -9850 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR SET SELECTION](qr-set-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 793 |
+| Numéro de commande | 793 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

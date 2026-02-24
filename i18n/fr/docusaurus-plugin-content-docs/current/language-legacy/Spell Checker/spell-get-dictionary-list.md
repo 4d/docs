@@ -5,71 +5,71 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFiles* : Text array ; *langNames* : Text array )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* ; *langFichiers* ; *langNoms* )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| langID | Integer array | &#8592; | Unique ID of languages |
-| langFiles | Text array | &#8592; | Names of language files installed |
-| langNames | Text array | &#8592; | Local names of languages |
+| langID | Integer array | &#8592; | ID uniques des langues |
+| langFichiers | Text array | &#8592; | Noms des fichiers de langue installés |
+| langNoms | Text array | &#8592; | Noms locaux des langues |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13|Created|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->The **SPELL GET DICTIONARY LIST** command returns, in the *langID*, *langFiles* and *langNames* arrays, the IDs, file names and language names corresponding to the Hunspell dictionary files installed on the machine.<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->La commande **SPELL GET DICTIONARY LIST** retourne dans les tableaux *langID*, *langFichiers* et *langNoms* les IDs, les noms de fichiers et les noms des langues correspondant aux fichiers de dictionnaires Hunspell installés sur la machine.<!-- END REF--> 
 
-**Note:** For more information about Hunspell dictionaries, refer to the *Spell checking* section in the *Design Reference* manual. 
+**Note :** Pour plus d'informations sur les dictionnaires Hunspell, reportez-vous à la section *Correction orthographique* dans le manuel *Mode Développement*. 
 
-* *langID* receives the ID numbers generated automatically and used with the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.  
-Note that the IDs are unique and based on the file names. This command is mainly useful during development; you do not have to regenerate the IDs each time the database is executed.
-* *langFiles* receives the names of the dictionary files (without extensions) installed on the machine.
-* *langNames* receives the names of the languages expressed in the current application language. For example, for a French dictionary, the value "français (France)" is returned on a machine configured in French and "French (France)" on an English system. The language name is followed by "- Hunspell". This field is only valid for files "known" by 4D. For unknown files (for example, custom files), the name "N/A - Hunspell" is returned. This does not prevent you from using the dictionary (if the file concerned is valid), the ID returned may be passed to the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.
+* *langID* reçoit les numéros d’ID générés automatiquement et utilisables avec la commande [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).  
+A noter que les IDs sont uniques et basés sur les noms de fichiers. Cette commande est donc principalement utile en phase de développement, il n’est pas nécessaire de regénérer des IDs à chaque exécution de la base.
+* *langFichiers* reçoit les noms des fichiers de dictionnaires (sans extensions) installés sur le poste.
+* *langNoms* reçoit les noms des langues exprimés dans la langue courante de l’application. Par exemple, pour un dictionnaire français, la valeur "français (France)" sera retournée sur une machine configurée en français et "French (France)" sur un système anglais. Le nom de la langue est suivi de "- Hunspell". Ce champ n’est valide que pour les fichiers "connus" de 4D. Pour les fichiers non connus (par exemple les fichiers personnalisés), le nom "N/A - Hunspell" est retourné. Ce principe n’empêche pas d’utiliser le dictionnaire (si le fichier concerné est valide), l’ID retourné pourra être passé à la commande [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
 
-## Example 
+## Exemple 
 
-You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "fr-dentist.aff" and "fr-dentist.dic" into the Hunspell directory:
+Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic" ainsi que "fr-dentiste.aff" et "fr-dentiste.dic" dans le répertoire Hunspell :
 
 ```4d
  ARRAY LONGINT($langID;0)
  ARRAY TEXT($dicName;0)
  ARRAY TEXT($langDesc;0)
- SPELL GET DICTIONARY LIST($langID;$dictName;$langDesc)
+ SPELL GET DICTIONARY LIST($langID;$dicName;$langDesc)
 ```
 
-| **$langID** | **$dictName**         | **$langDesc**              |
-| ----------- | --------------------- | -------------------------- |
-| 65536       | en\_GB                | English (UK)               |
-| 65792       | en\_US                | English (USA)              |
-| 131072      | de\_DE                | German (Germany)           |
-| 196608      | es\_ES                | Spanish                    |
-| 262144      | fr\_FR                | French (France)            |
-| 589824      | nb\_NO                | Norwegian Bokmal (Norway)  |
-| 1074036166  | fr-classic+reform1990 | French (France) - Hunspell |
-| 1073901273  | fr-dentist            | No description - Hunspell  |
+| **$langID** | **$dicName**             | **$langDesc**                |
+| ----------- | ------------------------ | ---------------------------- |
+| 65536       | en\_GB                   | anglais (Royaume-Uni)        |
+| 65792       | en\_US                   | anglais (Etats-Unis)         |
+| 131072      | de\_DE                   | allemand (Allemagne)         |
+| 196608      | es\_ES                   | espagnol                     |
+| 262144      | fr\_FR                   | français (France)            |
+| 589824      | nb\_NO                   | norvégien bokmal (Norvege)   |
+| 1074036166  | fr-classique+reforme1990 | français (France) - Hunspell |
+| 1073901273  | fr-dentiste              | No description - Hunspell    |
 
-## See also 
+## Voir aussi 
 
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1204 |
+| Numéro de commande | 1204 |
 | Thread safe | no |
 
 

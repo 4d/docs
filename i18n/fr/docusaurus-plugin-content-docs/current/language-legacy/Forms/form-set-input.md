@@ -5,110 +5,106 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text {; *}} )<!-- END REF-->
+<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*laTable* ;} *formulaire* {; *formUtilisateur* {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to set the input form, or Default table, if omitted |
-| form | Text, Object | &#8594;  | Name (string) of table form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| userForm | Text | &#8594;  | Name of user form to use |
-| * | Operator |  &#8594;  | Automatic window size |
+| laTable | Table | &#8594;  | Table pour laquelle définir le formulaire entrée ou Table par défaut si ce paramètre est omis |
+| formulaire | Text, Object | &#8594;  | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formUtilisateur | Text | &#8594;  | Nom du formulaire utilisateur à utiliser |
+| * | Operator |  &#8594;  | Taille de fenêtre automatique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|12|Renamed|
-|11 SQL|Modified|
-|<6|Created|
+|16 R6|Modifié|
+|12|Renommé|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM SET INPUT.Summary-->The **FORM SET INPUT** command sets the current input form for *aTable* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
+<!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** désigne *formulaire* ou *formUtilisateur* comme formulaire entrée courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.
 
-The scope of this command is the current process. Each table has its own input form in each process. 
+La portée de cette commande est le process courant. Chaque table dispose d'un formulaire entrée courant pour chaque process. 
 
-In the *form* parameter, you can pass:
+Dans le paramètre *formulaire*, vous pouvez passer :
 
-* the name of a form;
-* the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
-* an object containing a description of the form.
+* le nom d'un formulaire (table) à utiliser,
+* le chemin (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser (voir *Chemin d'accès du formulaire*),
+* un objet contenant la description du formulaire à utiliser.
 
-**Note:** For structural reasons, this command is not compatible with project forms.  
-  
-**FORM SET INPUT** does not display the form; it just designates which form is used for data entry, import, or operation by another command. For information about creating forms, see the 4D *Design Reference* manual.
+**Note :** Pour des raisons structurelles, cette commande n'est pas compatible avec les formulaires projets. 
 
-The default input form is defined in the Explorer window for each table. This default input form is used if the **FORM SET INPUT** command is not used to specify an input form, or if you specify a form that does not exist.
+La commande **FORM SET INPUT** n'affiche pas de formulaire ; elle désigne juste celui qui sera affiché ou utilisé par d'autres commandes. Pour plus d'informations sur la création de formulaires, reportez-vous au manuel *Mode Développement* de 4D.
 
-Input forms are also used automatically by standard actions such as ak edit subrecord or ak add subrecord.
+Pour chaque table de la base, un formulaire entrée par défaut est défini dans la fenêtre de l'Explorateur. Ce formulaire est utilisé si la commande **FORM SET INPUT** n'est pas appelée, ou si le paramètre *formulaire* est invalide.
 
-The optional *userForm* parameter lets you specify a user form (coming from *form*) as the default input form. If you pass a valid user form name, this form will be used by default instead of the input form in the current process. This allows you to have several different custom user forms simultaneously (generated using the *\_o\_CREATE USER FORM* command) and to use the one that suits according to the context. 
+Le paramètre facultatif *formUtilisateur* permet de désigner un formulaire utilisateur (issu du *formulaire*) comme formulaire entrée par défaut. Si vous passez un nom de formulaire utilisateur valide, ce formulaire sera utilisé par défaut en lieu et place du formulaire entrée dans le process courant. Ce principe permet de disposer simultanément de différents formulaires utilisateurs personnalisés (générés à l’aide de la commande *\_o\_CREATE USER FORM*) et d’utiliser celui qui convient en fonction du contexte.   
+Pour plus d’informations sur les formulaires utilisateurs, reportez-vous à la section *Présentation des formulaires utilisateurs*. 
 
-For more information about user forms, refer to the *Overview of user forms* section. 
-
-Input forms are displayed by a number of commands, which are generally used to allow the user to enter new data or modify old data. The following commands display an input form for data entry or query purposes:
+Le formulaire entrée est affiché par de nombreuses commandes. Ces commandes sont généralement utilisées pour la saisie ou la modification de valeurs. Les commandes suivantes affichent un formulaire entrée : 
 
 * [ADD RECORD](add-record.md)
 * [DISPLAY RECORD](display-record.md)
 * [MODIFY RECORD](modify-record.md)
 * [QUERY BY EXAMPLE](query-by-example.md)
+Les commandes [DISPLAY SELECTION](display-selection.md) et [MODIFY SELECTION](modify-selection.md) affichent une liste d'enregistrements dans le formulaire sortie. Chacune d'entre elles permet ensuite à l'utilisateur de double-cliquer sur un enregistrement, qui s'affiche alors dans le formulaire entrée.
 
-The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-selection.md) commands display a list of records using the output form. The user can double-click on a record in the list, which displays the input form.
+Le formulaire entrée est aussi utilisé par les commandes d'import [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) et [IMPORT DIF](import-dif.md).
 
-The import commands [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) and [IMPORT DIF](import-dif.md) use the current input form for importing records.
+Le paramètre optionnel *\** est destiné à être utilisé conjointement avec les propriétés du formulaire, que vous définissez en mode Développement dans la fenêtre des Propriétés du formulaire, et avec la commande [Open window](open-window.md). En passant le paramètre \*, vous indiquez à 4D d'utiliser les propriétés du formulaire pour redimensionner automatiquement la fenêtre lors de l'utilisation ultérieure de la fenêtre comme formulaire entrée ou comme dialogue. Reportez-vous à la description de la commande [Open window](open-window.md) pour plus d'informations sur ce point.
 
-The optional *\** parameter is used in conjunction with the form properties you set in the Design environment's Form Properties window and the command [Open window](./commands/open-window). Specifying the \* parameter tells 4D to use the form properties to automatically resize the window for the next use of the form (as an input form or as a dialog box). See [Open window](./commands/open-window) for more information.
+**Note :** Que vous passiez ou non le paramètre \*, **FORM SET INPUT** change le formulaire entrée pour la table. 
 
-**Note:** Whether or not you pass the optional *\** parameter, **FORM SET INPUT** changes the input form for the table.
+## Exemple 1 
 
-## Example 1 
-
-The following example shows a typical use of FORM SET INPUT: 
+L'exemple suivant illustre une utilisation typique de **FORM SET INPUT**. A noter que, si dans cet exemple **FORM SET INPUT** est appelé juste avant que le formulaire soit utilisé, cela n'est absolument pas nécessaire. **FORM SET INPUT** peut en fait être exécuté dans une tout autre méthode, du moment qu'elle est exécutée avant celle-ci : 
 
 ```4d
- FORM SET INPUT([Companies];"New Comp") // Form for adding new companies
- ADD RECORD([Companies]) // Add a new company
+ FORM SET INPUT([Sociétés];"Nouvelle Sté") // Formulaire pour les nouvelles sociétés
+ ADD RECORD([Sociétés]) // Ajout d'une nouvelle société
 ```
 
-## Example 2 
+## Exemple 2 
 
-In an invoicing database managing several companies, the creation of an invoice must be carried out using the corresponding user form: 
+Dans une base de facturation gérant plusieurs sociétés, la création d’une facture doit s’effectuer dans le formulaire utilisateur correspondant : 
 
 ```4d
  Case of
-    :(company="4D SAS")
-       FORM SET INPUT([Invoices];"Input";"4D_SAS")
-    :(company="4D Inc")
-       FORM SET INPUT([Invoices];"Input";"4D_Inc")
-    :(company="Acme")
-       FORM SET INPUT([Invoices];"Input";"ACME")
+    :(société="4D SAS")
+       FORM SET INPUT([Factures];"Saisie";"4D_SAS")
+    :(société="4D Inc")
+       FORM SET INPUT([Factures];"Saisie";"4D_Inc")
+    :(société="Acme")
+       FORM SET INPUT([Factures];"Saisie";"ACME")
  End case
  ADD RECORD([Factures])
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example uses a .json file describing a form to enter the records in an employee list: 
+L'exemple suivant utilise un fichier .json de description de formulaire pour la saisie des enregistrements des employés :
 
 ```4d
  FORM SET INPUT([Personnel];"/RESOURCES/PersonnelForm.json")
  ADD RECORD([Personnel])
 ```
 
-which displays:
+Résultat :  
 
 ![](../assets/en/commands/pict3687432.en.png)
 
-## See also 
+## Voir aussi 
 
 [ADD RECORD](add-record.md)  
 [DISPLAY RECORD](display-record.md)  
@@ -119,15 +115,14 @@ which displays:
 [IMPORT TEXT](import-text.md)  
 [MODIFY RECORD](modify-record.md)  
 [MODIFY SELECTION](modify-selection.md)  
-[Open window](./commands/open-window)  
+[Open window](open-window.md)  
 [QUERY BY EXAMPLE](query-by-example.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 55 |
+| Numéro de commande | 55 |
 | Thread safe | no |
-
 
 

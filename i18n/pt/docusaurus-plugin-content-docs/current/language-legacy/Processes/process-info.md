@@ -1,6 +1,7 @@
 ---
 id: process-info
 title: Process info
+slug: /commands/process-info
 displayed_sidebar: docs
 ---
 

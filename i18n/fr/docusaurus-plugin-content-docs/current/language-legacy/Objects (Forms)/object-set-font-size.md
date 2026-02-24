@@ -5,70 +5,70 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *object* : Text ; *size* : Integer )<br/>**OBJECT SET FONT SIZE** ( *object* : Variable, Field ; *size* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( {* ;} *objet* ; *taille* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| size | Integer | &#8594;  | Font size in points |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| taille | Integer | &#8594;  | Taille de police en points |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|6|Modified|
-|<6|Created|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** sets the form objects specified by *object* to be displayed using the font size you pass in *size*.<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Summary-->**OBJECT SET FONT SIZE** définit la taille de la police du ou des objet(s) de formulaire spécifié(s) par *objet*.<!-- END REF--> 
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the *Object Properties* section.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-The *size* is any integer between 1 and 255\. If the exact font size does not exist, characters are scaled.
+La *taille* peut être tout Entier compris entre 1 et 255\. Si la taille exacte n'existe pas, les caractères sont proportionnellement redimensionnés.
 
-The area for the object, as defined in the form, must be large enough to display the data in the new size. Otherwise, the text may be truncated or not displayed at all.
+La zone de l'objet, telle qu'elle a été définie dans le formulaire, doit être suffisamment grande pour afficher les données dans la nouvelle taille. Autrement, le texte peut être tronqué ou pas du tout affiché.
 
-**Note:** If you use this command on an *object* that was using a style sheet, the reference to the style sheet is automatically deleted from the object -- even if you assign the same attributes as those of the style sheet.
+**Remarque** : Si vous utilisez cette commande sur un objet qui utilise une feuille de style, la référence à la feuille de style est automatiquement supprimée de l'objet -- même si vous assignez les mêmes attributs que ceux de la feuille de style.
 
-## Example 1 
+## Exemple 1 
 
-The following example sets the font size for a variable named *vtInfo*: 
+L'exemple suivant définit la taille de police de la variable appelée *vInfo* : 
 
 ```4d
- OBJECT SET FONT SIZE(vtInfo;14)
+ OBJECT SET FONT SIZE(vInfo;14)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example sets the font size for all the form objects whose name starts with "hl": 
+L'exemple suivant définit la taille de police de tous les objets de formulaire dont le nom débute par "hl" : 
 
 ```4d
  OBJECT SET FONT SIZE(*;"hl@";14)
 ```
 
-## See also 
+## Voir aussi 
 
+*Notes de programmation*  
 [OBJECT Get font size](object-get-font-size.md)  
 [OBJECT SET FONT](object-set-font.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
-*Programming Notes*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 165 |
+| Numéro de commande | 165 |
 | Thread safe | no |
 
 

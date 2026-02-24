@@ -5,58 +5,57 @@ slug: /commands/form-goto-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *pageNumber* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numéroPage* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pageNumber | Integer | &#8594;  | Form page to display |
-| * | Operator | &#8594;  | Change page of current subform |
+| numéroPage | Integer | &#8594;  | Numéro de la page à afficher |
+| * | Opérateur | &#8594;  | Changer la page du sous-formulaire courant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|12|Renamed|
-|2004.3|Modified|
-|<6|Created|
+|13|Modifié|
+|12|Renommé|
+|2004.3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
+<!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** change la page courante du formulaire pour afficher la page désignée par *numéroPage*.<!-- END REF-->
 
-If no form is displayed or loaded by the [FORM LOAD](./commands/form-load) command, or if *pageNumber* corresponds to the current page of the form, **FORM GOTO PAGE** does nothing. If *pageNumber* is greater than the number of pages, the last page is displayed. If *pageNumber* is less than one, the first page is displayed.
+Si aucun formulaire n'est affiché ou chargé via la commande [FORM LOAD](../commands/form-load.md), ou si *numéroPage* correspond à la page courante du formulaire, **FORM GOTO PAGE** ne fait rien. Si *numéroPage* est supérieur au nombre de pages du formulaire, la dernière page est affichée. Si *numéroPage* est inférieur à 1, la première page est affichée.
 
-The *\** parameter is useful when the command is called in the context of a page type subform containing several pages. In this case, when you pass this parameter, the command changes the page of the current subform (the one that called the command). By default, when the *\** parameter is omitted, the command is always applied to the parent form.
+Le paramètre *\** est utile lorsque la commande est appelée dans le contexte d’un sous-formulaire en page contenant plusieurs pages. Dans ce cas, si vous passez ce paramètre, la commande change la page du sous-formulaire courant (celui qui a appelé la commande). Par défaut, si le paramètre *\** est omis, la commande s’applique toujours au formulaire parent. 
 
-### About form page management commands 
+### A propos des commandes de gestion des pages 
 
-Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) and **FORM GOTO PAGE** commands that you can apply to objects such as tab controls, drop-down list boxes, and so on. Whenever appropriate, use automatic action buttons instead of commands. 
+4D vous fournit des actions automatiques pour les boutons qui effectuent les mêmes tâches que les commandes [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md), [FORM GOTO PAGE](form-goto-page.md) que vous pouvez associer aux objets tels que les onglets, les listes déroulantes, etc. A chaque fois que c'est possible, utilisez les actions automatiques pour les boutons plutôt que ces commandes.   
+Les commandes de gestion des pages peuvent être utilisées avec des formulaires entrée ou des formulaires affichés dans des boîtes de dialogue. Les formulaires sortie n'utilisent que la première page. Un formulaire comprend toujours au minimum une page, la première. Notez bien que quel que soit le nombre de pages qu'il contient, un formulaire ne peut être associé qu'à une seule méthode formulaire. 
 
-Page commands can be used with input forms or with forms displayed in dialogs. Output forms use only the first page. A form always has at least one page—the first page. Remember that regardless of the number of pages a form has, only one form method exists for each form. 
+* Vous pouvez utiliser la commande [FORM Get current page](form-get-current-page.md) pour savoir quelle page est affichée à l'écran.
+* Vous pouvez utiliser l'[Form event code](../commands/form-event-code.md) On Page Change qui est généré à chaque fois que le formulaire change de page courante.
 
-* Use the [FORM Get current page](form-get-current-page.md) command to find out which page is being displayed.
-* Use the On Page Change [Form event code](./commands/form-event-code) that is generated each time the current page of the form changes.
+**Note :** Pendant que vous construisez un formulaire, vous pouvez utiliser les pages 1 à N du formulaire ainsi que la page 0 (zéro), dans laquelle vous placez les objets que vous voulez faire apparaître sur toutes les pages. Lors de l'utilisation du formulaire, et donc lorsque les commandes de gestion des pages sont appelées, seules les pages 1 à N sont accessibles : la page 0 est automatiquement combinée à la page affichée à l'écran.
 
-**Note:** When **designing** a form, you can work with pages 1 through X, as well as with page 0, in which you put objects that will appear in all of the pages. When **using** a form, and therefore when calling page commands, you work with pages 1 through X; page 0 is automatically combined with the page being displayed.
+## Exemple 
 
-## Example 
-
-The following example is an object method for a button. It displays a specific page, page 3: 
+L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formulaire :
 
 ```4d
  FORM GOTO PAGE(3)
 ```
 
-## See also 
+## Voir aussi 
 
 [FORM FIRST PAGE](form-first-page.md)  
 [FORM Get current page](form-get-current-page.md)  
@@ -64,12 +63,11 @@ The following example is an object method for a button. It displays a specific p
 [FORM NEXT PAGE](form-next-page.md)  
 [FORM PREVIOUS PAGE](form-previous-page.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 247 |
+| Numéro de commande | 247 |
 | Thread safe | no |
-
 
 

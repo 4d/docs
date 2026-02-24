@@ -5,45 +5,45 @@ slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *picture* : Picture ; *fileName* : Text )<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *image* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Picture for which to set the default name |
-| fileName | Text | &#8594;  | Default picture name |
+| image | Picture | &#8594;  | Image dont vous souhaitez fixer le nom par défaut |
+| nomFichier | Text | &#8594;  | Nom par défaut de l’image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PICTURE FILE NAME.Summary-->The **SET PICTURE FILE NAME** command sets or changes the default file name for the picture passed as parameter.<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Summary-->La commande **SET PICTURE FILE NAME** vous permet de définir ou de modifier le nom de fichier par défaut de l’image passée en paramètre.<!-- END REF-->
 
-This name may have been set automatically based on the original name of the picture file imported into the picture field or variable or during a prior call to **SET PICTURE FILE NAME**. 
+Ce nom peut avoir été défini automatiquement à partir du nom d’origine du fichier image importé dans le champ ou la variable image, ou lors d'un appel précédent à **SET PICTURE FILE NAME**. 
 
-The default name is used as the file name when the picture is exported in a disk file. If the contents of the field are copied into a varaible or into another field, the default name is also copied. For more information, refer to the *Design Reference* manual. 
+Le nom par défaut est utilisé comme nom de fichier en cas d’exportation de l’image dans un fichier disque. Si le contenu du champ est copié dans une variable ou dans un autre champ, le nom par défaut est également copié. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
-## See also 
+## Voir aussi 
 
 [Get picture file name](get-picture-file-name.md)  
 [WRITE PICTURE FILE](write-picture-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1172 |
+| Numéro de commande | 1172 |
 | Thread safe | yes |
 
 

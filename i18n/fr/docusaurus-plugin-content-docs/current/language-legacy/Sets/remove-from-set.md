@@ -5,41 +5,41 @@ slug: /commands/remove-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
+<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*laTable* ;} *ensemble* )<!-- END REF-->
 <!--REF #_command_.REMOVE FROM SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Current record's table, or Default table, if omitted |
-| set | Text | &#8594;  | Name of the set from which to remove the current record |
+| laTable | Table | &#8594;  | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom de l'ensemble duquel supprimer l'enregistrement courant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REMOVE FROM SET.Summary-->REMOVE FROM SET removes the current record of *aTable* from *set*.<!-- END REF--> The set must already exist; if it does not, an error occurs. If a current record does not exist for *aTable*, the command has no effect.
+<!--REF #_command_.REMOVE FROM SET.Summary-->**REMOVE FROM SET** supprime l'enregistrement courant de *laTable* de l'ensemble *ensemble*.<!-- END REF--> L'ensemble doit déjà exister ; s'il n'existe pas, une erreur est générée. S'il n'y a pas d'enregistrement courant dans *laTable*, **REMOVE FROM SET** ne fait rien.
 
-## See also 
+## Voir aussi 
 
 [ADD TO SET](add-to-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 561 |
+| Numéro de commande | 561 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

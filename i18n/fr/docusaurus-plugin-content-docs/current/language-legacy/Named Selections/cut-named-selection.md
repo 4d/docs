@@ -5,46 +5,46 @@ slug: /commands/cut-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
+<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*laTable* ;} *nom* )<!-- END REF-->
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to cut selection, or Default table, if omitted |
-| name | Text | &#8594;  | Name of the named selection to create |
+| laTable | Table | &#8594;  | Table de la sélection ou Table par défaut si ce paramètre est omis |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à créer |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** creates a named selection *name* and moves the current selection of *aTable* to it.<!-- END REF--> This command differs from [COPY NAMED SELECTION](copy-named-selection.md) in that it does not copy the current selection, but moves the current selection of *table* itself.
+<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** crée la sélection temporaire *nom* et y place la sélection courante de *laTable*.<!-- END REF--> A la différence de [COPY NAMED SELECTION](copy-named-selection.md), cette commande ne copie pas la sélection, mais la déplace.
 
-After the command has been executed, the current selection of *aTable* in the current process becomes empty. Therefore, **CUT NAMED SELECTION** should not be used while a record is being modified.
+Après l'exécution de cette commande, la sélection courante de *laTable* dans le process courant est vide. En conséquence, **CUT NAMED SELECTION** ne doit pas être utilisée lorsqu'un enregistrement est en cours de modification.
 
-**CUT NAMED SELECTION** is more memory efficient than [COPY NAMED SELECTION](copy-named-selection.md). With [COPY NAMED SELECTION](copy-named-selection.md), 4 bytes times the number of selected records is duplicated in memory. With **CUT NAMED SELECTION**, only the reference to the list is moved.
+En termes d'utilisation de la mémoire, **CUT NAMED SELECTION** est plus économique que [COPY NAMED SELECTION](copy-named-selection.md). En effet, [COPY NAMED SELECTION](copy-named-selection.md) utilise 4 octets de mémoire pour chaque enregistrement de la sélection. Avec **CUT NAMED SELECTION**, seule la référence à la sélection est déplacée.
 
-## Example 
+## Exemple 
 
-The following method empties the current selection of a table *\[Customers\]*:
+La méthode suivante vide la sélection courante de la table *\[Clients\]* :
 
 ```4d
- CUT NAMED SELECTION([Customers];"ToBeCleared")
- CLEAR NAMED SELECTION("ToBeCleared")
+ CUT NAMED SELECTION([Clients];"AEffacer")
+ CLEAR NAMED SELECTION("AEffacer")
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 334 |
+| Numéro de commande | 334 |
 | Thread safe | yes |
-| Changes current selection ||
+| Change la sélection courante ||
 
 

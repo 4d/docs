@@ -5,51 +5,51 @@ slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *object* : Text ; *selector* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *object* : Variable ; *selector* : Integer ; *info* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( {* ;} *objet* ; *sélecteur* ; *info* )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| selector | Integer | &#8594;  | Information to get |
-| info | Integer | &#8592; | Current value |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| sélecteur | Integer | &#8594;  | Information à obtenir |
+| info | Integer | &#8592; | Valeur courante |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->The **LISTBOX GET PRINT INFORMATION** command returns the current information relative to the printing of the list box object designated by the *object* and *\** parameters.<!-- END REF--> This command can be used to control the printing of the list box contents.
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->La commande [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) retourne des informations courantes relatives à l’impression de l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF--> Cette commande permet de contrôler l’impression du contenu de la list box.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-This command must be called in the context of the printing of a list box via the [Print object](print-object.md) command. Outside of this context, it will not return significant values.
+Cette commande doit être appelée dans le contexte de l’impression d’une list box via la commande [Print object](print-object.md). Hors de ce contexte, elle ne retourne pas de valeurs significatives.
 
-Pass a value indicating the information you want to find out in *selector* and a variable of the number or BLOB type in *info*. In *selector*, you can pass one of the following constants, found in the "*List Box*" theme:
+Passez dans *sélecteur* une valeur indiquant l’information à connaître et dans *info* une variable de type numérique ou BLOB. Vous pouvez passer dans *sélecteur* une des constantes suivantes, placées dans le thème *List box* :
 
-| Constant                   | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk last printed row number | Integer | 0     | Returns in *info* the number of the last row printed. Lets you find out the number of the next row to be printed. <br/>The number returned may be greater than the number of rows actually printed if the list box contains invisible rows or if the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command has been called. For example, if rows 1, 18 and 20 have been printed, *info* is 20\. |
-| lk printed height          | Integer | 3     | Returns in *info* the height in pixels of the object actually printed (including headers, lines, etc.). Remember that if the number of rows to print is less than the "capacity" of the list box, its height is automatically reduced.                                                                                                                                                                                |
-| lk printed rows            | Integer | 1     | Returns in *info* the number of rows actually printed during the last call to the [Print object](print-object.md) command. This number includes any break rows added in the case of a hierarchical list box. For example, *info* is 10 if the list box contains 20 rows and the odd-numbered rows were hidden.                                                                                                        |
-| lk printing is over        | Integer | 2     | Returns in *info* a Boolean indicating whether the last (visible) row of the list box has actually been printed. True = row has been printed; Otherwise, False.                                                                                                                                                                                                                                                       |
+| Constante                  | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk last printed row number | Entier long | 0      | Retourne dans *info* le numéro de la dernière ligne imprimée. Permet de connaître le numéro de la prochaine ligne à imprimer. Le numéro retourné peut être supérieur au nombre de lignes effectivement imprimées si la list box contient des lignes invisibles ou si la commande [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) a été appelée. Par exemple, si les lignes 1, 18 et 20 ont été imprimées, *info* vaut 20\. |
+| lk printed height          | Entier long | 3      | Retourne dans *info* la hauteur en pixels de l’objet effectivement imprimé (inclut les en-têtes, filets, etc.). Souvenez-vous que si le nombre de lignes à imprimer est inférieur à la "capacité" de la list box, sa hauteur est automatiquement réduite.                                                                                                                                                                              |
+| lk printed rows            | Entier long | 1      | Retourne dans *info* le nombre de lignes effectivement imprimées lors du dernier appel à la commande [Print object](print-object.md). Ce nombre inclut les éventuelles lignes de ruptures ajoutées dans le cadre d’une list box hiérarchique. Par exemple, *info* vaut 10 si la list box contient 20 lignes et que les lignes impaires ont été masquées.                                                                               |
+| lk printing is over        | Entier long | 2      | Retourne dans *info* un booléen indiquant si la dernière ligne (visible) de la list box a été effectivement imprimée. Vrai = la ligne a été imprimée, Faux sinon.                                                                                                                                                                                                                                                                      |
 
-For more information about the principles of printing list boxes, please refer to *Printing list boxes*.
+Pour plus d’informations sur les principes d’impression des list box, reportez-vous au paragraphe *Gestion des impressions*.
 
-## Example 1 
+#### Exemple 1 
 
-Printing until all the rows have been printed:
+Impression jusqu’à ce que toutes les lignes soient imprimées :
 
 ```4d
  OPEN PRINTING JOB
@@ -57,34 +57,34 @@ Printing until all the rows have been printed:
  
  $Over:=False
  Repeat
-    $Total:=Print object(*;"mylistbox")
-    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printing is over;$Over)
+    $Total:=Print object(*;"malistbox")
+    LISTBOX GET PRINT INFORMATION(*;"malistbox";lk printing is over;$Over)
     PAGE BREAK
  Until($Over)
  
  CLOSE PRINTING JOB
 ```
 
-## Example 2 
+#### Exemple 2 
 
-Printing at least 500 rows of the list box, knowing that certain rows are hidden:
+Impression d’au moins 500 lignes de la list box, sachant que certaines lignes sont masquées :
 
 ```4d
  $GlobalPrinted:=0
  Repeat
-    $Total:=Print object(*;"mylistbox")
-    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printed rows;$Printed)
+    $Total:=Print object(*;"malistbox")
+    LISTBOX GET PRINT INFORMATION(*;"malistbox";lk printed rows;$Printed)
     $GlobalPrinted:=$GlobalPrinted+$Printed
     PAGE BREAK
  Until($GlobalPrinted>=500)
 ```
 
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1110 |
+| Numéro de commande | 1110 |
 | Thread safe | no |
 
 

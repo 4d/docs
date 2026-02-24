@@ -5,72 +5,78 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( * ; *list* : Text ; *itemPos* : Integer, Operator ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**GET LIST ITEM** ( *list* : Integer ; *itemPos* : Integer, Operator ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *liste* ; positionElém ; *réfElément* ; *libelléElément* {; sous_Liste ; *déployée*} )<br/>**GET LIST ITEM** ( {* ;} *liste* ; * ; *réfElément* ; *libelléElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string). If omitted, list is a list reference number |
-| list | Text, Integer | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemPos | Integer, Operator | &#8594;  | Position of item in expanded/collapsed list(s) or * for the current item in the list |
-| itemRef | Integer | &#8592; | Item reference number |
-| itemText | Text | &#8592; | Text of the list item |
-| sublist | Integer | &#8592; | Sublist list reference number (if any) |
-| expanded | Boolean | &#8592; | If a sublist is attached: TRUE = sublist is currently expanded FALSE = sublist is currently collapsed |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| positionElém &#124; * | Opérateur, Entier long | &#8594;  | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
+| réfElément | Integer | &#8592; | Numéro de référence de l'élément |
+| libelléElément | Text | &#8592; | Libellé de l'élément |
+| sous_Liste | Integer | &#8592; | Numéro de référence de sous-liste (s'il y en a) |
+| déployée | Boolean | &#8592; | Si une sous-liste est rattachée à l'élément : Vrai = la sous-liste est déployée Faux = la sous-liste est contractée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST ITEM.Summary-->The **GET LIST ITEM** command returns information about the item specified by *itemPos* of the list whose reference number or object name is passed in *list*.<!-- END REF--> 
+<!--REF #_command_.GET LIST ITEM.Summary-->La commande **GET LIST ITEM** retourne des informations sur l'élément désigné par le paramètre *positionElém* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference integer. If you only use a single representation of the list, you can use either syntax. Conversely, if you use several representations of the same list, the syntax based on the object name is required since each representation can have its own expanded/collapsed configuration and its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste, vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste, la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de sa propre configuration déployée/contractée et de son propre élément courant. 
 
-**Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the **GET LIST ITEM** command will only apply to the first object whose name corresponds. 
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM** s'appliquera au premier objet dont le nom correspond. 
 
-The position must be expressed relatively, using the current expanded/collapsed state of the list and its sublist. You pass a position value between 1 and the value returned by [Count list items](count-list-items.md). If you pass a value outside this range, **GET LIST ITEM** returns empty values (0, "", etc.).
+La position doit être exprimée relativement à l'état déployé/contracté de la liste et de ses sous-listes. Vous devez passer une valeur de position comprise entre 1 et la valeur retournée par [Count list items](count-list-items.md). Si vous passez une valeur située hors de cet intervalle, **GET LIST ITEM** retourne des valeurs vides (0, "", etc.).  
+Si vous passez \* dans *positionElém*, la commande s’applique à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande retourne des valeurs vides. 
 
-After the call, you retrieve:
+Après l'appel, vous récupérez :
 
-* The item reference number of the item in *itemRef*.
-* The text of the item in *itemText*.
+* Le numéro de référence de l'élément dans *réfElément*.
+* Le libellé de l'élément dans *libelléElém*.
 
-If you passed the optional parameters *sublist* and *expanded*:
+Si vous passez les paramètres optionnels *sous\_Liste* et *déployée* :
 
-* *subList* returns the list reference number of the sublist attached to the item. If the item has no sublist, *subList* returns zero (0).
-* If the item has a sublist, *expanded* returns TRUE if the sublist is currently expanded, and FALSE if it is collapsed.
+* *sous\_Liste* contient le numéro de référence de la sous-liste rattachée à l'élément. Si l'élément n'a pas de sous-liste associée, *sous\_Liste* retourne zéro.
+* Si l'élément comporte une sous-liste, *déployée* retourne Vrai si la sous-liste est déployée, et Faux sinon.
 
-## Example 1 
+## Exemple 1 
 
-*hList* is a list whose items have unique reference numbers. The following code programmatically toggles the expanded/collapsed state of the sublist, if any, attached to the current selected item:
+En partant de l'hypothèse que *hList* est une liste dont les éléments ont des numéros de référence uniques, le code suivant inverse automatiquement l'état déployé/contracté de la sous-liste, si elle existe, rattachée à l'élément sélectionné : 
 
 ```4d
- $vlItemPos:=Selected list items(hList)
- If($vlItemPos>0)
-    GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
-    If(Is a list($hSublist))
-       SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;Not($vbExpanded))
+ var $vbDéployé : Boolean
+ var $hSousListe;$vlElemRef : Integer
+ C_STRING(31;$vsElemText)
+  //La déclaration de ces variables est nécessaire si vous souhaitez compiler la méthode
+ 
+ $vlElemPos:=Selected list items(hList)
+ If($vlElemPos>0)
+    GET LIST ITEM(hList;$vlElemPos;$vlElemRef;$vsElemText;$hSousListe;$vbDéployé)
+    If(Is a list($hSousListe))
+       SET LIST ITEM(hList;$vlElemRef;$vsElemText;$hSousListe;Not($vbDéployé))
     End if
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [List item parent](list-item-parent.md)  
@@ -79,11 +85,11 @@ Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 378 |
+| Numéro de commande | 378 |
 | Thread safe | no |
 
 

@@ -1,91 +1,94 @@
 ---
 id: form
-title: Form
+title: Formulaire
 displayed_sidebar: docs
 ---
 
 <!--REF #_command_.Form.Syntax-->**Form**  : Object<!-- END REF-->
+
 <!--REF #_command_.Form.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| Function result | Object | &#8592; | Form data of the current form |
-</div>
+| Paramètres | Type   |                             | Description                  |
+| ---------- | ------ | --------------------------- | ---------------------------- |
+| Résultat   | Object | &#8592; | Données du formulaire actuel |
+
 <!-- END REF-->
-<details><summary>History</summary>
 
-|Release|Changes|
-|---|---|
-|20 R8|Form class support|
+<details><summary>Historique</summary>
+
+| Release | Modifications                      |
+| ------- | ---------------------------------- |
+| 20 R8   | Support des classes de formulaires |
 
 </details>
 
-## Description 
+## Description
 
-<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->La commande **Form** renvoie l'objet associé au formulaire courant (instancié à partir du paramètre *formData* ou de la classe utilisateur attribuée dans l'éditeur de formulaire).<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
-* the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
-* the current form is a subform,
-* a table form is currently displayed on screen.
+- le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
+- le formulaire courant est un sous-formulaire,
+- un formulaire table est actuellement affiché à l'écran.
 
-### Commands (DIALOG...) 
+### Commandes (DIALOG...)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** renvoie soit :
 
-- the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
-- or, an empty object. 
+- l'objet *formData* passé en paramètre à cette commande, le cas échéant,
+- ou un objet instancié de la [classe utilisateur associée au formulaire](../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
+- ou un objet vide.
 
-### Subform 
+### Sous-formulaire
 
-If the current form is a subform, the returned object depends on the parent container variable:
+Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la variable du conteneur parent :
 
-* If the variable associated to the parent container has been typed as an object, **Form** returns the value of this variable.  
-In this case, the object returned by **Form** is the same as the one returned by the following expression:  
-```4d  
+- **Form** retourne l'objet associé au formulaire table affiché à l'écran.  
+  Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
+
+```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
-* If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
 
-For more information, please refer to the *Page subforms* section.
+- Si la variable associée au conteneur parent n'a pas été typée en tant qu'objet, **Form** renvoie un objet vide, géré par 4D dans le contexte du sous-formulaire.
 
-### Table form 
+Pour plus d'informations, veuillez vous référer à la section *Sous-formulaires en page*.
 
-**Form** returns the object associated with the table form displayed on screen. In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: 
+### Formulaire table
 
-| **Property** | **Type** | **Description**                           |
-| ------------ | -------- | ----------------------------------------- |
-| parentForm   | object   | **Form** object of the parent output form |
+**Form** retourne l'objet associé au formulaire table affiché à l'écran. Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
 
-## Example 
+| **Propriété** | **Type** | **Description**                               |
+| ------------- | -------- | --------------------------------------------- |
+| parentForm    | object   | Objet **Form** du formulaire de sortie parent |
 
-In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
+## Exemple
+
+Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
 ![](../assets/en/commands/pict3542015.en.png)
 
-**Note:** The "Children" object field is represented only to show its structure for this example.
+**Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
-In the verification form, you have assigned some Form object properties to inputs:
+Dans le formulaire de vérification, vous avez attribué certaines propriétés de l'objet Form aux objets de saisie :
 
 ![](../assets/en/commands/pict3541682.en.png)
 
-Here is the code for the "Check children" button:
+Voici le code du bouton "Check Children" :
 
 ```4d
  var $win;$n;$i : Integer
  var $save : Boolean
  ARRAY OBJECT($children;0)
- OB GET ARRAY([Person]Children;"children";$children) //get the children collection
- $save:=False //initialize the save variable
+ OB GET ARRAY([Person]Children ; "children" ;$children) //obtient la collection d'enfants
+ $save:=False //initialise la variable de sauvegarde
  
  $n:=Size of array($children)
  If($n>0)
     $win:=Open form window("Edit_Children";Movable form dialog box)
-    SET WINDOW TITLE("Check children for "+[Person]Name)
-    For($i;1;$n) //for each child
-       DIALOG("Edit_Children";$children{$i}) //displays dialog filled with values
-       If(OK=1) //the user clicked OK
+    SET WINDOW TITLE("Vérifier les enfants pour "+[Person]Name")
+    For($i;1 ;$n) //pour chaque enfant
+       DIALOG("Edit_Children" ;$children{$i}) //affiche la boîte de dialogue remplie de valeurs
+       If(OK=1) //l'utilisateur a cliqué sur OK
           $save:=True
        End if
     End for
@@ -98,22 +101,21 @@ Here is the code for the "Check children" button:
  End if
 ```
 
-The form displays information for each child:
+Le formulaire affiche des informations pour chaque enfant :
 
 ![](../assets/en/commands/pict3515152.en.png)
 
-If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
+Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
-## See also 
+## Voir également
 
+[DIALOG](dialog.md)
 
-[DIALOG](dialog.md)  
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1466 |
-| Thread safe | no |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1466 |
+| Thread safe        | non  |
 
 

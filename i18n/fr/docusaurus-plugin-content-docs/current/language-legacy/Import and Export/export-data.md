@@ -5,61 +5,62 @@ slug: /commands/export-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
+<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *nomFichier* {; *projet* {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | Full path name of the export file |
-| project | Text, Blob | &#8596;  | *in:* Contents of the export project<br/>*out:* New contents of the export project (if the * parameter has been passed) |
-| * | Operator | &#8594;  | Displays the export dialog box and updates the project |
+| nomFichier | Text | &#8594;  | Chemin d’accès et nom du fichier d’export |
+| projet | Text, Blob | &#8594;  | Contenu du projet d’export (XML ou référence d'élément DOM ou BLOB) |
+| &#8592; | Nouveau contenu du projet d’export (si le paramètre * a été passé) |
+| * | Opérateur | &#8594;  | Affichage de la boîte de dialogue d’export et mise à jour du projet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|2003|Modified|
-|<6|Created|
+|12|Modifié|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXPORT DATA.Summary-->The **EXPORT DATA** command exports data in the *fileName* file.<!-- END REF-->4D can export data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 
+<!--REF #_command_.EXPORT DATA.Summary-->La commande **EXPORT DATA** permet d’exporter des données dans le fichier *nomFichier*.<!-- END REF--> 4D peut exporter des données au format Texte, Texte de longueur fixe, XML, SYLK, DIF, DBF (dBase), et 4D. 
 
-If you pass an empty string in *fileName*, **EXPORT DATA** displays the standard save file dialog box, allowing the user to define the name, type, and location of the export file. Once the dialog box has been accepted, the **Document** system variable contains the access path and the name of the file. If the user clicks **Cancel**, the execution of the command is stopped and the **OK** system variable is equal to 0.
+Si vous passez une chaîne vide dans le *nomFichier*, **EXPORT DATA** provoque l’affichage d’une boîte de dialogue standard d’enregistrement de fichiers, permettant à l’utilisateur de définir le nom, le type et l’emplacement du fichier d’export. Une fois la boîte de dialogue validée, la variable système Document contient le chemin d’accès et le nom de ce fichier. Si l’utilisateur clique sur le bouton **Annuler**, l’exécution est stoppée et la variable système OK prend la valeur 0.
 
-The optional *project* parameter lets you use a project to export data. When you pass this parameter, the export is carried out directly, without any user intervention (unless you use the *\** option, see below). If you don’t pass this parameter, the export dialog box is displayed. The user can define the export parameters or load an existing export project.
+Le paramètre optionnel *projet* vous permet d'utiliser un projet pour l'export des données. Lorsque vous passez ce paramètre, l’export s’effectue directement, sans intervention de l’utilisateur (sauf si vous utilisez l'option *\**, cf. ci-dessous). Si vous ne passez pas ce paramètre, la boîte de dialogue de paramétrage d’export s’affiche, permettant à l’utilisateur de définir ses paramètres d’export ou de charger un projet d’export existant. 
 
-An export project contains all the export parameters such as the tables and fields to export, delimiters, etc. In the *project* parameter, you can pass either a Text variable containing XML or a Text variable containing a reference to a pre-existing DOM element, or a BLOB. Projects may have been created by programming (XML format projects only) or by loading parameters that were previously defined in the export dialog box.In the latter case, you have two solutions available:
+Un projet d’export contient tous les paramètres de l’export, tels que les tables et champs exportés, les délimiteurs, etc. Vous pouvez passer dans *projet* soit une variable texte contenant du XML, soit une variable texte contenant la référence à un élément DOM préexistant, soit un BLOB. Les projets peuvent avoir été créés par programmation (projets au format XML uniquement) ou être issus du chargement de paramètres préalablement définis dans la boîte de dialogue d’export. Dans ce dernier cas, vous disposez de deux solutions :
 
-* Use the **EXPORT DATA** command with an empty *project* parameter and the optional *\** parameter, then store the resulting *project* parameter in a Text or BLOB type field (see below). This solution allows you to save the project with the data file.
-* Save the project to disk, then load it for example by using the [DOM Parse XML source](dom-parse-xml-source.md) command, and pass its reference in the *project* parameter
+* utiliser la commande **EXPORT DATA** avec un paramètre *projet* vide et le paramètre optionnel *\** (cf. ci-dessous), puis stocker le paramètre *projet* résultant dans un champ Texte ou BLOB. Cette solution permet notamment de conserver le projet avec le fichier de données.
+* sauvegarder le projet sur disque, puis le charger par exemple à l’aide de la commande [DOM Parse XML source](dom-parse-xml-source.md) et passer sa référence dans le paramètre *projet*.
 
-**Compatibility note:** Beginning with version 12 of 4D, export projects are encoded in XML. 4D can open export projects generated with previous 4D versions (BLOB format) but any projects created starting with v12 can no longer be opened with v11 or earlier versions. We now recommend that you use Text variables for handling export files. 
+**Note de compatibilité :** A compter de la version 12 de 4D, les projets d'export sont encodés en XML. 4D peut ouvrir les projets d'export générés avec des versions précédentes de 4D (format BLOB), mais les projets créés à compter de la v12 ne peuvent plus être rouverts avec une v11 ou antérieure. Il est désormais conseillé d'utiliser des variables Texte pour manipuler les fichiers d'export. 
 
-The optional parameter *\**, if it is specified, forces the display of the export dialog box with the parameters defined in *project*. This feature allows you to use a predefined project, while still having the possibility to modify one or more of the parameters. Furthermore, the project parameter contains, after closing the export dialog box, the parameters of the “new” project. You can then store the new project in a Text field, on disk, etc. 
+Le paramètre optionnel *\**, s’il est est spécifié, provoque l’affichage de la boîte de dialogue de paramétrage d’export avec les paramétrages définis dans le projet. Ce fonctionnement permet d’utiliser un projet prédéfini, tout en ayant la possibilité de modifier un ou plusieurs paramètres. En outre, le paramètre projet contient, après la fermeture de la boîte de dialogue d’export, les paramètres du “nouveau” projet au format XML. Vous pouvez alors le stocker dans un champ Texte, dans un fichier sur disque, etc. 
 
-If the export was successful, the **OK** system variable is set to 1.
+Si l’export se déroule correctement, la variable système OK prend la valeur 1.
 
-## Example 1 
+## Exemple 1 
 
-This example illustrates the use of the EXPORT DATA command to export data in binary format.
+Cet exemple illustre l'utilisation de la commande **EXPORT DATA** pour exporter en format binaire les données d'une base.
 
-* This method makes a loop on all the database tables and calls the ExportBinary method:
+* Cette méthode effectue une boucle sur toutes les tables de la base et appelle la méthode ExportBinary :
 
 ```4d
  var $ExportPath : Text
  var $i : Integer
- $ExportPath:=Select folder("Please select the export folder:")
+ $ExportPath:=Select folder("Veuillez sélectionner le dossier d'export :")
  If(Ok=1)
-    For($i;1;Last table number
+    For($i;1;Last table number)
        If(Is table number valid($i))
           ExportBinary(Table($i);$ExportPath+Table name($i);True)
        End if
@@ -67,16 +68,18 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
  End if
 ```
 
-* Here is the code for the ExportBinary method:
+* Voici le code de la méthode ExportBinary :
 
 ```4d
-#DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean)
+ #DECLARE ($tablePtr : Pointer ; $path : Text ; $all : Boolean) //table
+  //chemin du fichier de destination
+ //exporter tous les enregistrements
  var $i : Integer
  var $ref : Text
  $ref:=DOM Create XML Ref("settings-import-export")
-  // Export the table "$tablePtr" in '4D' binary format, all the records or only the current selection
+  // Exporter la table "$1" au format binaire '4D', tous les enregistrements ou uniquement la sélection courante
  DOM SET XML ATTRIBUTE($ref;"table_no";Table($tablePtr);"format";"4D";"all_records";$all)
-  // Definition of fields to export
+  // Définition des champs à exporter
  For($i;1;Last field number($tablePtr))
     If(Is field number valid($tablePtr;$i))
        $elt:=DOM Create XML element($ref;"field";"table_no";Table($tablePtr);"field_no";$i)
@@ -84,37 +87,37 @@ This example illustrates the use of the EXPORT DATA command to export data in bi
  End for
  EXPORT DATA($path;$ref)
  If(Ok=0)
-    ALERT("Error during export of table "+Table name($tablePtr))
+    ALERT("Erreur lors de l'export de la table "+Table name($tablePtr))
  End if
  DOM CLOSE XML($ref)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example creates an empty project and stores the parameters set by the user in the export dialog box there: 
+Cet exemple crée un projet vide et y stockera les paramètres définis par l'utilisateur dans la boîte de dialogue d’export : 
 
 ```4d
  var $exportParams : Text
- EXPORT DATA("DocExport.txt";$exportParams;*) //Display of the export dialog box
+ EXPORT DATA("DocExport.txt";$exportParams;*) //Affichage de la boîte de dialogue d'export
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user clicks **Cancel** in the standard open file dialog box or in the export dialog box, the OK system variable is equal to 0\. If the export was successful, the OK system variable is equal to 1.
+Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (d'enregistrement de projet ou de paramétrage d'export), la variable système OK prend la valeur 0\. Si l’export se déroule correctement, la variable système OK prend la valeur 1.
 
-## See also 
+## Voir aussi 
 
 [EXPORT DIF](export-dif.md)  
 [EXPORT SYLK](export-sylk.md)  
 [EXPORT TEXT](export-text.md)  
 [IMPORT DATA](import-data.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 666 |
+| Numéro de commande | 666 |
 | Thread safe | no |
-| Modifies variables | OK, Document |
+| Modifie les variables | OK, Document |
 
 

@@ -1,0 +1,202 @@
+﻿[
+    {
+        "ID":  "ds",
+        "Title":  "ds"
+    },
+    {
+        "ID":  "open-datastore",
+        "Title":  "Open datastore"
+    },
+    {
+        "ID":  "new-log-file",
+        "Title":  "New log file"
+    },
+    {
+        "ID":  "select-log-file",
+        "Title":  "SELECT LOG FILE"
+    },
+    {
+        "ID":  "new-collection",
+        "Title":  "Nueva colecciÃ³n"
+    },
+    {
+        "ID":  "new-shared-collection",
+        "Title":  "New shared collection"
+    },
+    {
+        "ID":  "dialog",
+        "Title":  "DIALOG"
+    },
+    {
+        "ID":  "form-edit",
+        "Title":  "FORM EDIT"
+    },
+    {
+        "ID":  "file",
+        "Title":  "File"
+    },
+    {
+        "ID":  "folder",
+        "Title":  "Folder"
+    },
+    {
+        "ID":  "zip-create-archive",
+        "Title":  "ZIP Create archive"
+    },
+    {
+        "ID":  "zip-read-archive",
+        "Title":  "ZIP Read archive"
+    },
+    {
+        "ID":  "form",
+        "Title":  "Formulario"
+    },
+    {
+        "ID":  "form-load",
+        "Title":  "FORM LOAD"
+    },
+    {
+        "ID":  "form-theme",
+        "Title":  "FORM theme"
+    },
+    {
+        "ID":  "formula-from-string",
+        "Title":  "Formula from string"
+    },
+    {
+        "ID":  "4d",
+        "Title":  "4D"
+    },
+    {
+        "ID":  "cs",
+        "Title":  "cs"
+    },
+    {
+        "ID":  "super",
+        "Title":  "Super"
+    },
+    {
+        "ID":  "this",
+        "Title":  "This"
+    },
+    {
+        "ID":  "license-info",
+        "Title":  "License info"
+    },
+    {
+        "ID":  "listbox-get-property",
+        "Title":  "LISTBOX Get property"
+    },
+    {
+        "ID":  "listbox-set-property",
+        "Title":  "LISTBOX SET PROPERTY"
+    },
+    {
+        "ID":  "imap-new-transporter",
+        "Title":  "IMAP New transporter"
+    },
+    {
+        "ID":  "mail-convert-from-mime",
+        "Title":  "MAIL Convert from MIME"
+    },
+    {
+        "ID":  "mail-convert-to-mime",
+        "Title":  "MAIL Convert to MIME"
+    },
+    {
+        "ID":  "mail-new-attachment",
+        "Title":  "MAIL New attachment"
+    },
+    {
+        "ID":  "pop3-new-transporter",
+        "Title":  "POP3 New transporter"
+    },
+    {
+        "ID":  "smtp-new-transporter",
+        "Title":  "SMTP New transporter"
+    },
+    {
+        "ID":  "object-get-data-source-formula",
+        "Title":  "OBJECT Get data source formula"
+    },
+    {
+        "ID":  "object-set-data-source-formula",
+        "Title":  "OBJECT SET DATA SOURCE FORMULA"
+    },
+    {
+        "ID":  "print-form",
+        "Title":  "Print form"
+    },
+    {
+        "ID":  "new-signal",
+        "Title":  "New signal"
+    },
+    {
+        "ID":  "process-activity",
+        "Title":  "Process activity"
+    },
+    {
+        "ID":  "process-info",
+        "Title":  "Process info"
+    },
+    {
+        "ID":  "session",
+        "Title":  "Session"
+    },
+    {
+        "ID":  "session-info",
+        "Title":  "Session info"
+    },
+    {
+        "ID":  "session-storage",
+        "Title":  "Session storage"
+    },
+    {
+        "ID":  "create-entity-selection",
+        "Title":  "Create entity selection"
+    },
+    {
+        "ID":  "use-entity-selection",
+        "Title":  "USE ENTITY SELECTION"
+    },
+    {
+        "ID":  "trim",
+        "Title":  "Trim"
+    },
+    {
+        "ID":  "trim-end",
+        "Title":  "Trim end"
+    },
+    {
+        "ID":  "trim-start",
+        "Title":  "Trim start"
+    },
+    {
+        "ID":  "wa-get-context",
+        "Title":  "WA Get context"
+    },
+    {
+        "ID":  "wa-set-context",
+        "Title":  "WA SET CONTEXT"
+    },
+    {
+        "ID":  "web-event",
+        "Title":  "Web Event"
+    },
+    {
+        "ID":  "web-form",
+        "Title":  "Web Form"
+    },
+    {
+        "ID":  "web-server",
+        "Title":  "WEB Server"
+    },
+    {
+        "ID":  "web-server-list",
+        "Title":  "WEB Server list"
+    },
+    {
+        "ID":  "set-window-document-icon",
+        "Title":  "SET WINDOW DOCUMENT ICON"
+    }
+]

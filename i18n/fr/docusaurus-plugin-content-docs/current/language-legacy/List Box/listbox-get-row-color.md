@@ -5,54 +5,54 @@ slug: /commands/listbox-get-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( * ; *object* : Text ; *row* : Integer {; *colorType* : Integer} )  : Text<br/>**LISTBOX Get row color** ( *object* : Variable ; *row* : Integer {; *colorType* : Integer} )  : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *objet* ; *ligne* {; *typeCouleur*} )  : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &#8594;  | Row number |
-| colorType | Integer | &#8594;  | List box font color (default) or list box background color |
-| Function result | Text | &#8592; | Color value |
+| * | Opérateur | &#8594;  | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| typeCouleur | Integer | &#8594;  | Couleur de police de la listbox (par défaut) ou couleur de fond de la listbox |
+| Résultat | Text | &#8592; | Valeur de la couleur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Created|
+|17 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get row color.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color.Summary-->**Note :** Cette commande ne fonctionne qu'avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX Get row color** command returns the color of a row or a cell in the list box designated by the *object* and *\** parameters as a CSS string.
+La commande **LISTBOX Get row color** retourne la couleur d'une ligne ou d'une cellule dans la list box désignée par les paramètres *objet* et *\** en tant que chaîne CSS.
 
-**Note:** If you want to get the color as a 4-byte longint format, you need to use the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. For more information on color formats, please refer to the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command description. 
+**Note :** Si vous souhaitez lire la couleur au format entier long de 4 octets, vous devez utiliser la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Pour plus d'informations sur les formats de couleur, veuillez consulter la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter:
+Le paramètre optionnel *\** indique que le paramètre *objet* est un nom d'objet (chaîne). Si vous ne passez pas ce paramètre, il indique que le paramètre *objet* est une variable. Dans ce cas, vous passez une référence de variable au lieu d'une chaine. Vous pouvez désigner une list box ou une colonne de list box dans le paramètre *objet* :
 
-* When *object* designates a list box, the command returns the color of the row.
-* When *object* designates a list box column, the command returns the color of the cell.
+* Lorsque le paramètre *objet* désigne une list box, la commande retourne la couleur de la ligne.
+* Lorsque le paramètre *objet* désigne une colonne de list box, la commande retourne la couleur de la cellule.
 
-In *row*, pass the number of the row whose color you want to get. 
+Dans *ligne,* passez le numéro de la ligne dont vous souhaitez lire la couleur. 
 
-**Note:** The command does not take any hidden/visible states of the list box rows into account.
+**Note :** La commande ne tient pas compte des états caché/visible des lignes de la list box.
 
-In the *colorType* parameter, you can pass either the `lk background color`  or `lk font color`  constant ("*List Box*" theme) in order to find out the background or font color for the row. If you omit this parameter, the font color is returned.
+Dans le paramètre *typeCouleur*, vous pouvez passer la constante lk couleur de fond ou lk couleur de police (thème "*List box*") afin d'identifier la couleur de fond ou de police de la ligne. Si vous omettez ce paramètre, la couleur de la police est retournée.
 
-**Warning:** A color assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
+**Attention :** Une couleur affectée à une ligne ne s'affiche pas nécessairement dans chaque cellule de la ligne (voir l'exemple). Si des valeurs de couleurs qui sont en conflit sont paramétrées à l'aide des propriétés des list box ou des colonnes de list box, un ordre de priorité est appliqué. Pour plus d'informations, veuillez consulter le manuel *Mode Développement*.
 
-## Example 
+## Exemple 
 
-Given the following list box:
+Considérons la list box suivante :
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
@@ -61,20 +61,20 @@ Given the following list box:
  $vtColor:=LISTBOX Get row color(*;"Col5";3)
  $vtColor2:=LISTBOX Get row color(*;"List Box";3)
  $vtColor3:=LISTBOX Get row color(*;"List Box";3;lk background color)
-  // $vtColor contains "#FFFF00" (yellow)
-  // $vtColor2 contains "#0000FF" (blue)
-  // $vtColor3 contains "#FF0000" (red)
+  // $vtColor contient "#FFFF00" (jaune)
+  // $vtColor2 contient "#0000FF" (bleu)
+  // $vtColor3 contient "#FF0000" (rouge)
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1658 |
+| Numéro de commande | 1658 |
 | Thread safe | no |
 
 

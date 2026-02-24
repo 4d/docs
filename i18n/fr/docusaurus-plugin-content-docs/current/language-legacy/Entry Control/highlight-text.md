@@ -5,89 +5,82 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer )<br/>**HIGHLIGHT TEXT** ( *object* : Variable, Field ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *objet* ; *débutSél* ; *finSél* )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) <br/>If omitted, object is a field or variable |
-| object | Text, Field, Variable | &#8594;  | Object name (if * is specified) or Enterable field or variable (if * is omitted) |
-| startSel | Integer | &#8594;  | New text selection starting position |
-| endSel | Integer | &#8594;  | New text selection ending position |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
+| objet | Field, Variable, any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
+| débutSél | Integer | &#8594;  | Nouvelle position de début de sélection de texte |
+| finSél | Integer | &#8594;  | Nouvelle position de fin de sélection de texte |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|<6|Created|
+|12|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-<details><summary>History</summary>
-|Release|Changes|
-|---|---|
-|21|Support in subforms|
-
-</details>
-
 ## Description 
 
-<!--REF #_command_.HIGHLIGHT TEXT.Summary-->The `HIGHLIGHT TEXT` command highlights a section of the text in *object*.<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Summary-->La commande **HIGHLIGHT TEXT** sélectionne une partie du texte dans *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass the *\** parameter, you indicate that the *object* parameter is a field or variable. In this case, you pass the field or variable reference (form fields or variables only) instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* désigne le nom d’un objet (une chaîne). Si vous ne passez pas le paramètre *\**, vous indiquez que le paramètre *objet* désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables de formulaire uniquement).
 
-If *object* is not the object currently being edited, it gets the focus.
+Si *objet* n'est pas l'objet en cours de modification, il récupère le focus.
 
-The `HIGHLIGHT TEXT` command can be used in the context of a subform. When it is called from a subform, it first looks for the object in the subform, then, if the search does not find anything there, it extends the search to objects of the parent form.
+La commande HIGHLIGHT TEXT peut être utilisée dans le contexte d’un sous-formulaire. Lorsqu’elle est appelée depuis un sous-formulaire, elle recherche en premier lieu *objet* dans le sous-formulaire puis, si la recherche n’aboutit pas, elle étend la recherche aux objets du formulaire parent.
 
-*startSel* is the first character position to be highlighted, and *lastSel* is the last character plus one to be highlighted. If *startSel* and *lastSel* are equal, the insertion point is positioned before the character specified by *startSel*, and no characters are highlighted.
+Le paramètre *débutSél* représente la position du premier caractère à sélectionner, et le paramètre *finSél* représente la position du dernier caractère à sélectionner plus un. Si *débutSél* et *finSél* sont identiques, le point d'insertion est placé devant le caractère spécifié par *débutSél* et aucun caractère n'est sélectionné.
 
-If *lastSel* is greater than the number of characters in *object*, then all characters between *startSel* and the end of the text are highlighted.
+Si *finSél* est supérieur au nombre de caractères présents dans l'objet, tous les caractères compris entre *débutSél* et la fin du texte sont sélectionnés.
 
-## Example 1 
+## Exemple 1 
 
-The following example selects all the characters of the enterable field *\[Products\]Comments*:
-
-```4d
- HIGHLIGHT TEXT([Products]Comments;1;Length([Products]Comments)+1)
-```
-
-## Example 2 
-
-The following example moves the insertion point to the beginning of the enterable field *\[Products\]Comments*:
+L'exemple suivant sélectionne tous les caractères dans le champ saisissable *\[Produits\]Notes* :
 
 ```4d
- HIGHLIGHT TEXT([Products]Comments;1;1)
+ HIGHLIGHT TEXT([Produits]Notes;1;Length([Produits]Notes)+1)
 ```
 
-## Example 3 
+## Exemple 2 
 
-The following example moves the insertion point to the end of the enterable field *\[Products\]Comments*:
+L'exemple suivant place le point d'insertion au début du champ *\[Produits\]Notes* :
 
 ```4d
- $vLen:=Length([Products]Comments)+1
- HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
+ HIGHLIGHT TEXT([Produits]Notes;1;1)
 ```
 
-## Example 4 
+## Exemple 3 
 
-See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+L'exemple suivant place le point d'insertion à la fin du champ *\[Produits\]Notes* :
 
-## See also 
+```4d
+ $vLen:=Length([Produits]Notes)+1
+ HIGHLIGHT TEXT([Produits]Notes;$vLen;$vLen)
+```
+
+## Exemple 4 
+
+Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
+
+## Voir aussi 
 
 [GET HIGHLIGHT](get-highlight.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 210 |
+| Numéro de commande | 210 |
 | Thread safe | no |
 
 

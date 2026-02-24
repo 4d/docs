@@ -5,77 +5,76 @@ slug: /commands/set-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *gauche* ; *haut* ; *droit* ; *bas* )<!-- END REF-->
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &#8594;  | Left margin |
-| top | Integer | &#8594;  | Top margin |
-| right | Integer | &#8594;  | Right margin |
-| bottom | Integer | &#8594;  | Bottom margin |
+| gauche | Integer | &#8594;  | Marge gauche |
+| haut | Integer | &#8594;  | Marge supérieure |
+| droit | Integer | &#8594;  | Marge droite |
+| bas | Integer | &#8594;  | Marge inférieure |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->The **SET PRINTABLE MARGIN** command sets the values of various printing margins by using the [Print form](./commands/print-form), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->La commande **SET PRINTABLE MARGIN** permet de fixer les valeurs des différentes marges d’impression lors de l’utilisation des commandes [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->
 
-You can pass one of the following values in the *left*, *top*, *right* and *bottom* parameters:
+Vous pouvez passer dans les paramètres *gauche*, *haut*, *droite* et *bas* une des valeurs suivantes :
 
-* 0 = use paper margins
-* \-1 = use printer margins
-* value > 0 = margin in pixels (remember that 1 pixel in 72 dpi represents approximately 0.4 mm)
+* 0 = utiliser les marges papier
+* \-1 = utiliser les marges imprimante
+* valeur > 0 = marge en pixels (rappelons qu’1 pixel en 72 dpi représente approximativement 0,4 mm)
 
-The values of the *right* and *bottom* parameters relate to the right and bottom edges of the paper respectively. 
+Les valeurs des paramètres *droite* et *bas* sont relatives à la droite et au bas du papier. 
 
-**Note:** For more information regarding Printing management and terminology in 4D, refer to the [GET PRINTABLE MARGIN](get-printable-margin.md) command description. 
+Par défaut, 4D base ses impressions sur les marges imprimante. Une fois la commande **SET PRINTABLE MARGIN** exécutée, les paramètres modifiés seront conservés dans le même process pour toute la session.
 
-By default, 4D bases its printouts on the printer margins. Once the **SET PRINTABLE MARGIN** command is executed, the modified parameters are retained in the same process for the entire session. 
+**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
 
-## Example 1 
+## Exemple 1 
 
-The following example gets the size of the dead margin: 
-
-```4d
- SET PRINTABLE MARGIN(-1;-1;-1;-1) //Sets the printer margin
- GET PRINTABLE MARGIN($l;$t;$r;$b)
-  //$l, $t, $r and $b correspond to the dead margins of the sheet
-```
-
-## Example 2 
-
-The following example gets the paper size: 
+L’exemple suivant permet d’obtenir la taille de la marge morte :
 
 ```4d
- SET PRINTABLE MARGIN(0;0;0;0) //Sets the paper margin
- GET PRINTABLE AREA($height;$width)
-  //For size A4: $height=842 ; $width=595 pixels
+ SET PRINTABLE MARGIN(-1;-1;-1;-1) //Fixe la marge imprimante
+ GET PRINTABLE MARGIN($g;$h;$d;$b)
+  //$g, $h, $d et $b correspondent aux marges mortes de la feuille
 ```
 
-## See also 
+## Exemple 2 
+
+L’exemple suivant permet d’obtenir la taille du papier :
+
+```4d
+ SET PRINTABLE MARGIN(0;0;0;0) //Fixe la marge papier
+ GET PRINTABLE AREA($hauteur;$largeur)
+  //Pour du A4 : $hauteur=842 ; $largeur=595 pixels
+```
+
+## Voir aussi 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
 [Get printed height](get-printed-height.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 710 |
+| Numéro de commande | 710 |
 | Thread safe | no |
-
 
 

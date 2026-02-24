@@ -5,98 +5,98 @@ slug: /commands/listbox-expand
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *object* : Variable {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( {* ;} *objet* {; *récursive* {; *sélecteur* {; *ligne* {; *colonne*}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| recursive | Boolean | &#8594;  | True = expand sublevels<br/>False = do not expand sublevels |
-| selector | Integer | &#8594;  | Part of list box to expand |
-| line | Integer | &#8594;  | Number of break row to expand or <br/>Number of list box level to expand |
-| column | Integer | &#8594;  | Number of break column to expand |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| récursive | Boolean | &#8594;  | Vrai = déployer les sous-niveaux, Faux = ne pas déployer les sous-niveaux |
+| sélecteur | Integer | &#8594;  | Partie de la list box à déployer |
+| ligne | Integer | &#8594;  | Numéro de ligne de la rupture à déployer ou Numéro de niveau de la list box à déployer |
+| colonne | Integer | &#8594;  | Numéro de colonne de la rupture à déployer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX EXPAND.Summary-->The LISTBOX EXPAND command is used to expand the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX EXPAND.Summary-->La commande **LISTBOX EXPAND** vous permet de provoquer le déploiement des lignes de rupture de l’objet list box affiché en mode hiérarchique désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-If the list box is not configured in hierarchical mode, the command does nothing. For more information about hierarchical list boxes, please refer to the *Hierarchical list boxes* section.
+Si la list box n’est pas configurée en mode hiérarchique, la commande ne fait rien. Pour plus d’informations sur les list box hérarchiques, reportez-vous à la section *List box hiérarchiques*.
 
- The optional *recursive* parameter is used to configure the expanding of the hierarchical sublevels of the list box. Pass True or omit this parameter for the command to expand all the levels and all the sublevels. If you pass False, only the first level specified will be expanded. 
+ Le paramètre optionnel *récursive* vous permet de paramétrer le déploiement des sous-niveaux hiérarchiques de la list box. Passez Vrai ou omettez ce paramètre pour que la commande provoque le déploiement de tous les niveaux et tous les sous-niveaux. Si vous passez Faux, seul le premier niveau désigné sera déployé. 
 
-The optional *selector* parameter is used to specify the scope of the command. You can pass one of the following constants, found in the *List Box* theme, in this parameter:
+Le paramètre optionnel *sélecteur* vous permet de définir la portée de la commande. Vous pouvez passer dans ce paramètre l’une des constantes suivantes, placées dans le thème *List box* :
 
-| Constant     | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                 |
-| ------------ | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk all       | Integer | 0     | The command affects all sub-levels (default value, used when parameter is omitted).                                                                                                                                                                                                                                                     |
-| lk selection | Integer | 1     | The command affects selected sub-levels.                                                                                                                                                                                                                                                                                                |
-| lk break row | Integer | 2     | The command affects the sub-level to which the "cell" designated by the *row* and *column* parameters belongs. Note that these parameters represent the row and column numbers in the list box in standard mode and not in its hierarchical representation. If the *row* and *column* parameters are omitted, the command does nothing. |
-| lk level     | Integer | 3     | The command affects all the break rows corresponding to the *level* column. This parameter designates a column number in the list box in standard mode and not in its hierarchical representation. If the *level* parameter is omitted, the command does nothing.                                                                       |
+| Constante    | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                  |
+| ------------ | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk all       | Entier long | 0      | La commande agit sur tous les sous-niveaux (valeur par défaut, utilisée si le paramètre est omis).                                                                                                                                                                                                                                                       |
+| lk selection | Entier long | 1      | La commande agit sur les sous-niveaux sélectionnés.                                                                                                                                                                                                                                                                                                      |
+| lk break row | Entier long | 2      | La commande agit sur le sous-niveau auquel appartient la "cellule" désignée par les paramètres *ligne* et *colonne*. A noter que ces paramètres représentent les numéros de ligne et de colonne dans la listbox en mode standard et non dans sa représentation hiérarchique. Si les paramètres *ligne* et *colonne* sont omis, la commande ne fait rien. |
+| lk level     | Entier long | 3      | La commande agit sur toutes les lignes de rupture correspondant à la colonne *niveau*. Ce paramètre désigne un numéro de colonne dans la listbox en mode standard et non dans sa représentation hiérarchique. Si le paramètre *niveau* est omis, la commande ne fait rien.                                                                               |
 
-The command does not select break rows. 
+La commande ne sélectionne pas les lignes de rupture. 
 
-If the selection or list box does not contain a break row or if all the break rows are already expanded, the command does nothing.
+Si la sélection ou la list box ne contient pas de ligne de rupture, ou si toutes les lignes de rupture sont déjà déployées, la commande ne fait rien.
 
-## Example 
+## Exemple 
 
-This example illustrates different ways of using the command. Given the following arrays shown in a list box:
+Cet exemple illustre différents modes d’utilisation de la commande. Soient les tableaux suivants représentés dans une list box :
 
-![](../assets/en/commands/pict175844.en.png)
-
-```4d
-  //Expand all the break rows and subrows of the list box
- LISTBOX EXPAND(*;"MyListbox")
-```
-
-![](../assets/en/commands/pict175849.en.png)
+![](../assets/en/commands/pict175844.fr.png)
 
 ```4d
-  //Expand the first level of break rows of the selection
- LISTBOX EXPAND(*;"MyListbox";False;lk selection)
-  //If the "Belgium" row was selected
+  //Déployer toutes les lignes et sous-lignes de rupture de la list box
+ LISTBOX EXPAND(*;"MaListbox")
 ```
 
-![](../assets/en/commands/pict175851.en.png)
+![](../assets/en/commands/pict175849.fr.png)
 
 ```4d
-  //Expand the Brittany break row with recursion
- LISTBOX EXPAND(*;"MyListbox";False;lk break row;1;2)
+  //Déployer le premier niveau de lignes de rupture de la sélection
+ LISTBOX EXPAND(*;"MaListbox";False;lk selection)
+  //Si la ligne "Belgique" était sélectionnée
 ```
 
-![](../assets/en/commands/pict175853.en.png)
+![](../assets/en/commands/pict175851.fr.png)
 
 ```4d
-  //Expand all the first columns (countries) without recursion
- LISTBOX EXPAND(*;"MyListbox";False;lk level;1)
+  //Déployer la ligne de rupture Bretagne sans récursivité
+ LISTBOX EXPAND(*;"MaListbox";False;lk break row;1;2)
 ```
 
-![](../assets/en/commands/pict175855.en.png)
+![](../assets/en/commands/pict175853.fr.png)
 
-## See also 
+```4d
+  //Déployer toutes les premières colonnes (pays) sans récursivité
+ LISTBOX EXPAND(*;"MaListbox";False;lk level;1)
+```
+
+![](../assets/en/commands/pict175855.fr.png)
+
+## Voir aussi 
 
 [LISTBOX COLLAPSE](listbox-collapse.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1100 |
+| Numéro de commande | 1100 |
 | Thread safe | no |
 
 

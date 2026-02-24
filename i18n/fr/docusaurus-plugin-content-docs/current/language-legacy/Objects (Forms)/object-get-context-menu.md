@@ -5,47 +5,47 @@ slug: /commands/object-get-context-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get context menu** ( *object* : Variable, Field ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get context menu.Syntax-->**OBJECT Get context menu** ( {* ;} *objet* ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get context menu.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Boolean | &#8592; | True = context menu enabled, False = context menu disabled |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Boolean | &#8592; | Vrai = menu contextuel activé, <br/>Faux = menu contextuel désactivé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get context menu.Summary-->The **OBJECT Get context menu** command returns the current state of the "Context Menu" option for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get context menu.Summary-->La commande **OBJECT Get context menu** retourne le statut courant de l’option "Menu contextuel" de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-You can set the "Context Menu" option in Design mode using the Property List, or using the [OBJECT SET CONTEXT MENU](object-set-context-menu.md) command.
+L’option "Menu contextuel" d’un objet peut avoir été définie en mode Développement via la Liste des propriétés, ou à l’aide de la commande [OBJECT SET CONTEXT MENU](object-set-context-menu.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, this indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-The command returns **True** if the context menu is enabled for the object and **False** otherwise. 
+La commande retourne **Vrai** si le menu contextuel est activé pour l’objet et **Faux** dans le cas contraire. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1252 |
+| Numéro de commande | 1252 |
 | Thread safe | no |
 
 

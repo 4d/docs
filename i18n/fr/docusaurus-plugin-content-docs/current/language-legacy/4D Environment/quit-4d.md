@@ -5,87 +5,84 @@ slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** ({ *time* : Integer })<!-- END REF-->
+<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *délai* )}<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| time | Integer | &#8594;  | Time (sec) before quitting the server |
+| délai | Integer | &#8594;  | Délai (secondes) avant que le serveur ne quitte |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8|Modified|
-|<6|Created|
+|6.8|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUIT 4D.Summary-->The QUIT 4D command exits the current 4D application and returns to the Desktop.<!-- END REF--> 
+<!--REF #_command_.QUIT 4D.Summary-->La commande **QUIT 4D**  vous permet de quitter l'application 4D courante et de retourner sur le Bureau du système d'exploitation.<!-- END REF--> 
 
-The command processing is different whether it is executed on 4D (local or remote mode) or on 4D Server. 
+Le mécanismes mis en jeu par la commande sont différents suivant qu'elle est exécutée sur 4D (mode local ou distant) ou 4D Server (procédure stockée). 
 
-### With 4D local mode and remote mode 
+### Avec 4D en mode local ou distant 
 
-After you call QUIT 4D, the current process stops its execution, then 4D acts as follows:
+Après un appel à **QUIT 4D**, l'exécution du process courant est stoppée, puis 4D effectue les opérations suivantes :
 
-* If there is an [On Exit database method](on-exit-database-method.md), 4D starts executing this method within a newly created local process. For example, you can use this database method to inform other processes, via interprocess communication, that they must close (data entry) or stop the execution of operations started by the [On Startup database method](on-startup-database-method.md) (connection from 4D to another database server). Note that 4D will eventually quit; the [On Exit database method](on-exit-database-method.md) can perform all the cleanup or closing operations you wish, but cannot refuse the quit and will at some point end.
-* If there is no [On Exit database method](on-exit-database-method.md), 4D aborts each running process one by one, without distinction.
+* Si une [On Exit database method](on-exit-database-method.md) existe, 4D l'exécute dans un nouveau process local. Par exemple, vous pouvez utiliser cette méthode base pour informer les autres process, via la communication interprocess, qu'ils doivent être fermés (s'ils sont en saisie de données) ou stopper l'exécution des opérations démarrées dans la [On Startup database method](on-startup-database-method.md) (connexion de 4D à un autre serveur de bases de données). Notez que 4D quittera dans tous les cas : la [On Exit database method](on-exit-database-method.md) peut assurer le nettoyage et la fermeture de toutes les opérations que vous voulez, mais la fermeture de la base est inéluctable.
+* S'il n'existe pas de [On Exit database method](on-exit-database-method.md), 4D ferme tous les process un par un, sans distinction.
 
-If the user is performing data entry, the records will be cancelled and not saved.
+Si l'utilisateur est en saisie de données, les enregistrements seront annulés et non validés.   
+Si vous voulez permettre à l'utilisateur de sauvegarder ses modifications effectuées dans les fenêtres du process courant, vous pouvez utiliser la communication interprocess pour indiquer à tous les autres process utilisateur que la base est sur le point d'être quittée. Pour cela, vous pouvez adopter deux stratégies :
 
-If you want to let the user save data entry modifications made in the current open windows, you can use interprocess communication to signal all the other user processes that the database is going to be exited. To do so, you can adopt two strategies:
+* Effectuer ces opérations depuis le process courant avant d'appeler **QUIT 4D**.
+* Traiter ces opérations depuis la [On Exit database method](on-exit-database-method.md).
 
-* Perform these operations from within the current process before calling QUIT 4D
-* Handle these operations from within the [On Exit database method](on-exit-database-method.md).
+Une troisième stratégie est également possible. Avant d'appeler **QUIT 4D**, vous testez si une fenêtre nécessite une validation. Si c'est le cas, vous demandez à l'utilisateur de valider ou d'annuler cette fenêtre puis de choisir Quitter de nouveau. Cependant, du point de vue purement "interface utilisateur", les deux premières solutions sont préférables.
 
-A third strategy is also possible. Before calling QUIT 4D, you check whether a window will need validation; if that is the case, you ask the user to validate or cancel these windows and then to choose Quit again. However, from a user interface standpoint, the first two strategies are preferable.
+**Note :** Le paramètre *délai* n'est pas utilisable avec 4D en mode local ou distant.
 
-**Note:** The *time* parameter cannot be used with 4D in local or remote mode.
+### Avec 4D Server (procédure stockée) 
 
-### With 4D Server (Stored procedure) 
+La commande **QUIT 4D** peut être exécutée sur le poste serveur, dans une procédure stockée.   
+Dans ce cas, elle admet le paramètre optionnel *délai*. Ce paramètre permet d’allouer à 4D Server un délai d’attente avant que l’application ne quitte réellement, laissant ainsi aux postes clients le temps de se déconnecter. Vous devez passer dans *délai* une valeur en secondes.   
+Ce paramètre n’est pris en compte que dans le cadre d’une exécution sur le poste serveur. Avec 4D en mode local ou distant, il est ignoré.   
+Si vous ne passez pas le paramètre *délai*, 4D Server attendra que tous les postes clients soient déconnectés avant de quitter.   
+A la différence de 4D, le traitement de **QUIT 4D** par 4D Server est asynchrone : la méthode dans laquelle la commande est appelée n’est pas interrompue après son exécution. 
 
-The QUIT 4D command can be executed on the server machine, in a stored procedure. In this case, it accepts the *time* optional parameter.  
-  
-The *time* parameter allows setting a timeout to the 4D Server before the application actually quits, allowing client machines the time to disconnect. You must pass a value in seconds in *time*. This parameter is only taken into consideration during an execution on the server machine. With 4D in local or remote mode, it is ignored.  
-  
-If you do not pass a parameter for *time*, 4D Server will wait until all client machines are disconnected before quitting. 
+Si une *On Server Shutdown Database Method* existe, elle est exécutée à l’issue du délai défini par le paramètre *délai*, ou de la déconnexion de tous les clients, suivant vos paramétrages. 
 
-Unlike 4D, the processing of QUIT 4D by 4D Server is asynchronous: the method where the command is called is not interrupted after is has been executed.
+L’action de la commande **QUIT 4D** utilisée dans une procédure stockée est équivalente à celle de la commande **Quitter** du menu **Fichier** de 4D Server : elle provoque l’apparition, sur chaque poste client, d’une boîte de dialogue signalant que le serveur est sur le point de quitter. 
 
-If there is an *On Server Shutdown Database Method*, it is executed after the delay set by the *time* parameter, or after all clients have disconnected, depending on your parameters.
+## Exemple 
 
-The action of the QUIT 4D command used in a stored procedure is the same as the one for the Quit command of the 4D Server File menu: it causes a dialog box to appear on each client machine indicating that the server is about to quit.
-
-## Example 
-
-The project method listed here is associated with the Quit or Exit menu item in the File menu.
+La méthode projet suivante est associée à la commande **Quitter** du menu **Fichier**.
 
 ```4d
-  // M_FILE_QUIT Project Method
+  // Méthode projet M_QUITTER
  
- CONFIRM("Are you sure that you want to quit?")
+ CONFIRM("Etes-vous certain de vouloir quitter ?")
  If(OK=1)
     QUIT 4D
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [On Exit database method](on-exit-database-method.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 291 |
+| Numéro de commande | 291 |
 | Thread safe | yes |
 
 

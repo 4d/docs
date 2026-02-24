@@ -5,51 +5,45 @@ slug: /commands/wa-zoom-in
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *object* : Text )<br/>**WA ZOOM IN** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( {* ;} *objet* )<!-- END REF-->
 <!--REF #_command_.WA ZOOM IN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Renamed|
-|11 SQL Release 2|Created|
+|19 R5|Renommé|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA ZOOM IN.Summary-->The WA ZOOM IN command increases the size of the contents displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA ZOOM IN.Summary-->La commande **WA ZOOM IN** augmente la taille du texte affiché dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> 
 
-Under macOS, the scope of this command is the 4D session: the configuration carried out by this command is not retained after the 4D application is closed.
+Sous Mac OS, la portée de cette commande est la session 4D : le paramétrage effectué n’est pas conservé après la fermeture de l’application 4D. 
 
-Under Windows, the scope of this command is global: the configuration is retained after the 4D application is closed.
+Sous Windows, la portée de cette commande est globale : le paramétrage est conservé après la fermeture de l’application 4D.
 
-:::note Compatibility
-
-This command does nothing on Windows with the [Web system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. 
-
-:::
-
-## See also 
+## Voir aussi 
 
 [WA ZOOM OUT](wa-zoom-out.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1039 |
+| Numéro de commande | 1039 |
 | Thread safe | no |
 
 

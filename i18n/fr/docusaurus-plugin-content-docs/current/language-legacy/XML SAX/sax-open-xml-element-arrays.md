@@ -5,74 +5,73 @@ slug: /commands/sax-open-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *document* : Time ; *tag* : Text {; ...(*attribNamesArray* : Text array ; *attribValuesArray* : Array)} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Syntax-->**SAX OPEN XML ELEMENT ARRAYS** ( *document* ; *balise* {; *tabNomsAttributs* ; *tabValeursAttributs*} {; *tabNomsAttributs2* ; *tabValeursAttributs2* ; ... ; *tabNomsAttributsN* ; *tabValeursAttributsN*} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| tag | Text | &#8594;  | Name of element to open |
-| attribNamesArray | Text array | &#8594;  | Array of attribute names |
-| attribValuesArray | Array | &#8594;  | Array of attribute values |
+| document | Time | &#8594;  | Référence du document ouvert |
+| balise | Text | &#8594;  | Nom de l’élément à ouvrir |
+| tabNomsAttributs | Text array | &#8594;  | Tableau de noms d’attributs |
+| tabValeursAttributs | Text array, Integer array, Date array, Real array, Picture array, Boolean array | &#8594;  | Tableau de valeurs d’attributs |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|2004|Created|
+|12|Modifié|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->The **SAX OPEN XML ELEMENT ARRAYS** command is used to add a new element in the XML document whose reference is passed in *document* as well as, optionally, attributes and their values in the form of arrays.<!-- END REF--> 
+<!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->La commande **SAX OPEN XML ELEMENT ARRAYS** permet d’ajouter un nouvel élément dans le document XML référencé par *document* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF--> 
 
-Except for the support of arrays (see below), this command is identical to [SAX OPEN XML ELEMENT](sax-open-xml-element.md). Please refer to the description of this command for more information about its operation. 
+Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [SAX OPEN XML ELEMENT](sax-open-xml-element.md). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
 
-**SAX OPEN XML ELEMENT ARRAYS** accepts arrays of the text, date, number, Boolean and picture type as *attribValuesArray* parameter(s). 4D automatically carries out the necessary conversions; you can configure these conversions using the [XML SET OPTIONS](xml-set-options.md) command. 
+**SAX OPEN XML ELEMENT ARRAYS** accepte des tableaux de type date, numérique, booléen et image comme paramètre(s) *tabValeursAttributs*. 4D effectue automatiquement les conversions nécessaires, vous pouvez paramétrer ces conversions à l’aide de la commande [XML SET OPTIONS](xml-set-options.md). 
 
-Optionally, the **SAX OPEN XML ELEMENT ARRAYS** command can be used to pass pairs of attributes and attribute values in the form of arrays in the *attribNamesArray* and *attribValuesArray* parameters. 
+Facultativement, la commande **SAX OPEN XML ELEMENT ARRAYS** permet de passer plusieurs couples d’attributs et de valeurs d’attributs sous forme de tableaux dans les paramètres *tabNomsAttributs* et *tabValeursAttributs*.   
+Les tableaux doivent avoir été créés au préalable et fonctionner par paires. Vous pouvez passer autant de couples de tableaux et autant d’éléments dans chaque couple que vous voulez. 
 
-The arrays must have been created previously and operate in attribute/attribute value pairs. You can pass as many pairs of arrays, and as many items in each pair, as you want. 
+## Exemple 
 
-## Example 
-
-The following method:
+La méthode suivante :
 
 ```4d
- ARRAY STRING(80;tAttrNames;2)
- ARRAY STRING(80;tAttrValues;2)
+ ARRAY STRING(80;tNomsAtt;2)
+ ARRAY STRING(80;tValeursAtt;2)
  vElement:="Book"
- tAttrNames{1}:="Font"
- tAttrValues{1}:="Arial"
- tAttrNames{2}:="Style"
- tAttrValues{2}:="Bold"
- SAX OPEN XML ELEMENT ARRAYS($DocRef;vElement;tAttrNames;tAttrValues)
+ tNomsAtt{1}:="Font"
+ tValeursAtt{1}:="arial"
+ tNomsAtt{2}:="Style"
+ tValeursAtt{2}:="Bold"
+ SAX OPEN XML ELEMENT ARRAYS($RefDoc;vElement;tNomsAtt;tValeursAtt)
 ```
 
-... will write in the document: 
+... inscrira cette ligne dans le document : 
 
 ```XML
-<Book Font="Arial" Style="Bold">
+<Book Font="arial" Style="Bold">
 ```
 
-## See also 
+## Voir aussi 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 921 |
+| Numéro de commande | 921 |
 | Thread safe | yes |
 
 

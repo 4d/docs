@@ -5,36 +5,36 @@ slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* : Integer ; *arrNames* : Text array ; *arrValues* : Real array ; *arrCount* : Real array )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *typeInfo* ; *tabNoms* ; *tabValeurs* ; *tabNombre* )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| infoType | Integer | &#8594;  | Type of requested info (always 1) |
-| arrNames | Text array | &#8592; | Information titles |
-| arrValues | Real array | &#8592; | Information values |
-| arrCount | Real array | &#8592; | Number of objects concerned (if available) |
+| typeInfo | Integer | &#8594;  | Sélecteur d’information à obtenir |
+| tabNoms | Text array | &#8592; | Libellés des informations |
+| tabValeurs | Real array | &#8592; | Valeurs des informations |
+| tabNombre | Real array | &#8592; | Nombre d’objets concernés (si disponible) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.MEMORY STATISTICS.Summary-->The **MEMORY STATISTICS** command recovers information related to the use of the data cache by 4D.<!-- END REF--> This information can be used to analyze the functioning of the application. 
+<!--REF #_command_.MEMORY STATISTICS.Summary-->La commande **MEMORY STATISTICS** permet de récupérer des informations relatives à l’utilisation du cache de données par 4D.<!-- END REF--> Ces informations peuvent être utiles à l’analyse du fonctionnement de l’application. 
 
-The *infoType* parameter specifies the type of requested information. In current 4D versions, there is only one supported type (*infoType*\=1) 
+Le paramètre *typeInfo* indique le type d'informations que vous souhaitez obtenir. Dans les versions 4D actuelles, un seul type est pris en charge (*typeInfo* \=1)
 
-After the command has been executed, the statistics are provided in the *arrNames*, *arrValues* and *arrCount* arrays. This information is also available via the Runtime Explorer: size of physical, virtual, free and used memory, stack memory and free stack memory, etc. For more information about advanced interpretation of this data, please contact your local Technical Service department.
+A l’issue de l’exécution de la commande, les statistiques demandées sont fournies dans les tableaux *tabNoms*, *tabValeurs* et *tabNombre*. Ces informations sont également disponibles via l’Explorateur d’exécution : taille de mémoire physique, virtuelle, libre, occupée, mémoire pile (stack memory) et mémoire pile disponible (free stack memory). Pour plus d’informations sur l’interprétation avancée de ces données, veuillez contacter le service technique de 4D SAS.
 
-## See also 
+## Voir aussi 
 
 [Cache info](cache-info.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1118 |
+| Numéro de commande | 1118 |
 | Thread safe | yes |
 
 

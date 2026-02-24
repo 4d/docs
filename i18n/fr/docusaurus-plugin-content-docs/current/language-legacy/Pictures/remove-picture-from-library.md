@@ -5,24 +5,23 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Text )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *refImage* )<br/>**REMOVE PICTURE FROM LIBRARY** ( *nomImage* )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picRef | Integer | &#8594;  | Reference number of Picture Library graphic |
-| picName | Text | &#8594;  | Name of Picture Library graphic |
+| refImage &#124; nomImage | Entier long, Chaîne | &#8594;  | Numéro de référence ou Nom d'une image de la bibliothèque d'images |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
@@ -31,53 +30,50 @@ displayed_sidebar: docs
 
 :::warning
 
-This command cannot be used in projects because the Picture library is only available in binary databases. 
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
 
 :::
 
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->La commande **REMOVE PICTURE FROM LIBRARY** supprime de la bibliothèque d’images l’image dont vous avez passé le numéro de référence dans *refImage* ou le nom dans *nomImage*.<!-- END REF-->  
+Si ce numéro de référence ou ce nom ne correspond à aucune image, la commande ne fait rien.
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->The REMOVE PICTURE FROM LIBRARY command removes from the Picture Library the picture whose reference number is passed in *picRef* or whose name is passed in *picName*.<!-- END REF--> 
+**4D Server :** **REMOVE PICTURE FROM LIBRARY** ne peut pas être utilisée dans une méthode exécutée sur le poste serveur (procédure stockée ou trigger). Si vous appelez **REMOVE PICTURE FROM LIBRARY** sur le serveur, il ne se passe rien, l’appel est ignoré.
 
+**Attention :** Les objets de structure (éléments de liste hiérarchique, lignes de menu, etc.) peuvent se référer à une image de la bibliothèque. Soyez prudent lorsque vous supprimez par programmation une image de la bibliothèque d’images.
 
-If there is no picture with that reference number or name, the command does nothing.
+## Exemple 1 
 
-**4D Server:** REMOVE PICTURE FROM LIBRARY cannot be used from within a method executed on the server machine (stored procedure or trigger). If you call REMOVE PICTURE FROM LIBRARY on a server machine, nothing happens—the call is ignored.
-
-**Warning:** Design objects (hierarchical list items, menu items, etc.) may refer to Picture Library graphics. Use caution when deleting a Picture Library graphic programmatically.
-
-## Example 1 
-
-The following example deletes the picture #4444 from the Picture Library.
+L’exemple suivant supprime l’image n°4444 de la bibliothèque d’images :
 
 ```4d
  REMOVE PICTURE FROM LIBRARY(4444)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example deletes from the Picture Library any pictures whose names begin with a dollar sign (*$*):
+L’exemple suivant supprime de la bibliothèque d’images celles dont le nom commence par le symbole dollar ($) : 
 
 ```4d
- PICTURE LIBRARY LIST($alPicRef;$asPicName)
- For($vlPicture;1;Size of array($alPicRef))
-    If($asPicName{$vlPicture}="$@")
-       REMOVE PICTURE FROM LIBRARY($alPicRef{$vlPicture})
+ PICTURE LIBRARY LIST($alRefImage;$asNomImage)
+ For($vlImage;1;Size of array($alRefImage))
+    If($asNomImage{$vlImage}="$@")
+       REMOVE PICTURE FROM LIBRARY($alRefImage{$vlImage})
     End if
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 567 |
+| Numéro de commande | 567 |
 | Thread safe | no |
-| Forbidden on the server ||
+| Interdite sur le serveur ||
 
 

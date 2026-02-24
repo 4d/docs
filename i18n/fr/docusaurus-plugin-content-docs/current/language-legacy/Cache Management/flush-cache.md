@@ -5,52 +5,51 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ({ size })<br/>**FLUSH CACHE** ({ * })<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( taille )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| size | Real | &#8594;  | Number of bytes to free in cache |
-| * | Operator | &#8594;  | Completely free cache memory |
+| taille &#124; * | Réel, Opérateur | &#8594;  | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Renamed|
-|16|Modified|
-|<6|Created|
+|16|Renommé|
+|16|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FLUSH CACHE.Summary-->The FLUSH CACHE command immediately saves the data buffers to disk.<!-- END REF--> All changes that have been made to the database are stored on disk.
+<!--REF #_command_.FLUSH CACHE.Summary-->La commande **FLUSH CACHE** sauvegarde immédiatement le cache de données sur le disque.<!-- END REF--> Toutes les modifications apportées à la base sont alors stockées sur disque.
 
-By default, the current cache memory is left untouched, which means that its data continues to be used for subsequent reading accesses. Optionally, you can pass a parameter to modify its contents:
+Par défaut, cette commande n'affecte pas le contenu courant du cache, ce qui signifie que les données qu'il contient restent utilisables lors des accès en lecture ultérieurs. Optionnellement, vous pouvez passer un paramètre pour le modifier :
 
-* pass *\** to save the cache and free up entire cache memory.
-* pass a *size* value to save the cache and free up only the *size* number of bytes from the cache.
+* passez *\** pour sauvegarder le cache et vider entièrement le cache de la mémoire,
+* passez une valeur pour sauvegarder le cache et libérer au minimum le nombre *taille* d'octets dans le cache.
 
-**Note:** Passing a parameter to this command is reserved for testing purposes. For performance reasons, it is not recommended to free up the cache in the production environment.
+**Note :** Passer un paramètre à cette commande est à envisager uniquement pour effectuer des tests. Pour des raisons de performances, il est fortement déconseillé de vider le cache en environnement de production.
 
-In normal cases, you should not call this command, as 4D saves data modifications on a regular basis. The **Flush Cache every X Seconds (Minutes)** option on the [Database page](../settings/database.md#memory-page) of the Database Settings, which specifies how often to save, is typically used to control cache flushing. We recommend using the default value of 20 seconds. Note also that the Cache flush periodicity parameter can be set and read using the [SET DATABASE PARAMETER](set-database-parameter.md) and [Get database parameter](get-database-parameter.md) commands.
+En temps normal, vous n'avez pas à appeler cette commande, car 4D sauvegarde régulièrement les modifications. Il est préférable d'utiliser l'option **Ecriture cache toutes les X mn**/**secondes** (option de la page [Base de données](../settings/database.md) des Propriétés de la base), qui spécifie les intervalles de sauvegarde des données, afin de contrôler l'écriture du cache de données sur le disque. Il est recommandé d'utiliser la valeur par défaut, qui est de 20 secondes. Notez également que le paramètre Cache flush periodicity peut être utilisé avec les commandes [SET DATABASE PARAMETER](set-database-parameter.md) et [Get database parameter](get-database-parameter.md) pour fixer ou lire cet intervalle.
 
-## See also 
+## Voir aussi 
 
 [Get database parameter](get-database-parameter.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 297 |
+| Numéro de commande | 297 |
 | Thread safe | yes |
 
 

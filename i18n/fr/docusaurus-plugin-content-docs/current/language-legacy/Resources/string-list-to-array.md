@@ -5,67 +5,66 @@ slug: /commands/string-list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resID* : Integer ; *strings* : Text array {; *resFile* : Time} )<!-- END REF-->
+<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* ; *tabChaînes* {; *resFichier*} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | Resource ID number or 'id' attribute of the 'group' element (XLIFF) |
-| strings | Text array | &#8592; | Strings from the STR# resource or Strings from the 'group' element (XLIFF) |
-| resFile | Time | &#8594;  | Resource file reference number If omitted: all the XLIFF files or open resources files |
+| resNum | Integer | &#8594;  | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
+| tabChaînes | Text array | &#8592; | Chaînes de la ressource STR# ou Chaînes de l'élément 'group' (XLIFF) |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.STRING LIST TO ARRAY.Summary-->The **STRING LIST TO ARRAY** command populates the array *strings*<!-- END REF--> with:
+<!--REF #_command_.STRING LIST TO ARRAY.Summary-->La commande **STRING LIST TO ARRAY** remplit le tableau *chaînes*<!-- END REF--> avec : 
 
-* Either the strings stored in the string list ("STR#") resource whose ID is passed in *resID*.
-* Or a string stored in an open XLIFF file whose 'id' attribute of the 'group' element is passed in *resID* (see "Compatibility with XLIFF architecture" below).
+* soit les chaînes stockées dans la ressource de type liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*.
+* soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").
 
-If the resource is not found, the array *strings* is left unchanged and the OK variable is set to 0 (zero).
+Si la ressource n'est pas trouvée, le tableau *chaînes* reste inchangé et la variable système OK prend la valeur 0 (zéro).
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource est recherchée dans ce fichier uniquement. Si vous ne passez pas le paramètre *resFichier*, c'est la première occurrence de la ressource rencontrée dans la chaîne des fichiers de ressources qui sera retournée. 
 
-Before calling **STRING LIST TO ARRAY**, you can predeclare the array *strings* as a String or Text array. If you do not predeclare the array, the command creates *strings* as a Text array. 
+Si vous ne pré-déclarez pas le tableau *chaînes* avant d'appeler **STRING LIST TO ARRAY**, la commande crée un tableau de type Texte. Si vous pré-déclarez le tableau, vous pouvez lui assigner le type Alpha ou Texte.
 
-**Note:** Each string of a string list resource can contain up to 255 characters. 
+**Note :** Chaque chaîne d'une ressource liste de chaînes peut contenir jusqu'à 255 caractères.
 
-**Tip:** Limit your use of string list resources to those up to 32K in total size, and a maximum of a few hundred strings per resource.
+**Conseil :** Lorsque vous utilisez des ressources listes de chaînes, limitez-vous à des ressources de 32 Ko maximum et quelques centaines de chaînes par ressource.
 
-## Compatibility with XLIFF architecture 
+## Compatibilité avec l'architecture XLIFF 
 
-The **STRING LIST TO ARRAY** command is compatible with the XLIFF architecture of 4D v11: the command first looks for values corresponding to *resID* and *strID* in all the open XLIFF files (when the *resFile* parameter is omitted) and fills the *strings* array with the corresponding values. In this case, *resID* specifies the **id** attribute of the **group** element and the *strings* array contains all the strings of the element. If the value is not found, the command continues searching in the open resources files.  
-For more information about XLIFF architecture in 4D, refer to the Design Reference manual.
+La commande **STRING LIST TO ARRAY** est compatible avec l’architecture XLIFF de 4D v11 : la commande recherche dans un premier temps la valeur correspondant à *resNum* dans tous les fichiers XLIFF ouverts (si le paramètre *resFichier* est omis) et remplit le tableau *chaînes* avec les valeurs correspondantes. Dans ce cas, *resNum* désigne l’attribut **id** de l’élément **group** et le tableau *chaînes* contient toutes les chaînes de l’élément. Si la valeur n’est pas trouvée, la commande poursuit la recherche dans les fichiers de ressources ouverts.  
+Pour plus d'informations sur l'architecture XLIFF dans 4D, reportez-vous au manuel Mode Développement.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-## See also 
+## Voir aussi 
 
-[Get indexed string](get-indexed-string.md)  
-[Get string resource](get-string-resource.md)  
+[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
 [Get text resource](get-text-resource.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 511 |
+| Numéro de commande | 511 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

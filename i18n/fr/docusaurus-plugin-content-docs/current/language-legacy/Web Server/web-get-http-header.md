@@ -5,115 +5,113 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* : Text )<br/>**WEB GET HTTP HEADER** ( *fieldArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *entête* )<br/>**WEB GET HTTP HEADER** ( *tabChamps* ; *tabValeurs* )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| header | Text | &#8592; | Request HTTP header |
-| fieldArray | Text array | &#8592; | HTTP header fields |
-| valueArray | Text array | &#8592; | HTTP header fields content |
+| entête &#124; tabChamps | Texte, Tableau texte | &#8592; | En-tête HTTP de la requête ou Champs de l’en-tête HTTP |
+| tabValeurs | Text array | &#8592; | Contenu des champs de l’en-tête HTTP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|6.7|Created|
+|13|Renommé|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB GET HTTP HEADER.Summary-->The **WEB GET HTTP HEADER** command returns either a string or two arrays, containing the HTTP header used for the currently processed request.<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Summary-->La commande **WEB GET HTTP HEADER** retourne, soit sous forme de chaîne, soit sous forme de deux tableaux, l’en-tête HTTP de la requête en cours de traitement.<!-- END REF-->
 
-This command can be called from within any method ([On Web Authentication](./on-web-authentication-database-method.md), [On Web Connection](./on-web-connection-database-method.md)), method called by "*/4DACTION*") executed in a Web process... 
+Cette commande peut être appelée depuis toute méthode (*Méthode base Sur authentification Web*, [On Web Connection](./on-web-connection-database-method.md), méthode appelée par "*/4DACTION*"...) exécutée dans un process Web.
 
-* **First syntax:** **WEB GET HTTP HEADER** **(header)**
-When this syntax is used, the result returned in the *header* variable is as follows: 
+* **Première syntaxe :** **WEB GET HTTP HEADER** **(entête)**
+
+Lorsque vous utilisez cette syntaxe, le résultat retourné dans la variable *entête* est du type suivant :  
 
 ```4d
  "GET /page.html HTTP\1.0"+Char(13)+Char(10)+"User-Agent: browser"+Char(13)+Char(10)+"Cookie: C=HELLO"
 ```
 
-Each header field is separated by a CR+LF (Carriage return+Line feed) sequence under Windows and Mac OS.
+Chaque champ d’en-tête est séparé par une séquence CR+LF (Retour chariot+Retour à la ligne), sous Windows et Mac OS. 
 
-* **Second syntax:** **WEB GET HTTP HEADER** **(fieldArray; valueArray)**
+* **Seconde syntaxe :** **WEB GET HTTP HEADER** **(tabChamps; tabValeurs)**
+Lorsque vous utilisez cette syntaxe, les résultats retournés dans les tableaux *tabChamps* et *tabValeurs* sont du type suivant :
 
-When this syntax is used, the returned results in the *fieldArray* and *valueArray* are as follows:
-
-| *fieldArray{1} = "X-METHOD"*   | *valueArray{1} = "GET" \**        |
-| ------------------------------ | --------------------------------- |
-| *fieldArray{2} = "X-URL"*      | *valueArray{2} = "/page.html" \** |
-| *fieldArray{3} = "X-VERSION"*  | *valueArray{3} = "HTTP/1.0" \**   |
-| *fieldArray{4} = "User-Agent"* | *valueArray{4} = "browser"*       |
-| *fieldArray{5} = "Cookie"*     | *valueArray{5} = "C=HELLO"*       |
+| *tabChamps{1} = "X-METHOD"*   | *tabValeurs{1} = "GET" \**        |
+| ----------------------------- | --------------------------------- |
+| *tabChamps{2} = "X-URL"*      | *tabValeurs{2} = "/page.html" \** |
+| *tabChamps{3} = "X-VERSION"*  | *tabValeurs{3} = "HTTP/1.0" \**   |
+| *tabChamps{4} = "User-Agent"* | *tabValeurs{4} = "browser"*       |
+| *tabChamps{5} = "Cookie"*     | *tabValeurs{5} = "C=HELLO"*       |
 
   
-\* These first three items are not HTTP fields. They are part of the first line of the request.
+*\** Ces trois premiers éléments ne correspondent pas à des champs HTTP. Ils constituent la première ligne de la requête.
 
-To comply with the HTTP standard, field names are always written in English.
+Conformément à la norme HTTP, les noms des champs sont toujours libellés en anglais.
 
-Here is a list of some HTTP fields that can be used in a request:
+A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être présents dans une requête :
 
-* **Accept**: content allowed by the browser.
-* **Accept-Language**: language(s) that can be used by the browser (for information). Allows to select a web page using the language defined in the browser.
-* **Cookie**: cookies list
-* **From**: browser user email address.
-* **Host**: server name or address (for example using an URL, http://mywebserver/mypage.html, **Host** takes the «mywebserver» value). Allows to manage several names pointing towards the same IP address (virtual hosting).
-* **Referer**: request origin (for example http://mywebserver/mypage1.html), i.e. the page which is displayed when clicking on the **Previous** button.
-* **User-Agent**: browser or proxy name and version.
+* [Accept](accept.md "Accept") : ce que le navigateur est susceptible d’accepter comme contenu.
+* Accept-Language : la ou les langue(s) acceptée(s) par le navigateur (pour information). Permet de choisir une page d’accueil en fonction de la langue préférée du navigateur.
+* Cookie : liste des cookies.
+* From : adresse e-mail de l’utilisateur du navigateur.
+* Host : nom ou adresse du serveur (par exemple, dans le cas de l’URL http://monserveurweb/mapage.html, Host prend la valeur "monserveurweb"). Permet de gérer les cas où plusieurs noms pointent vers la même adresse IP (virtual hosting).
+* Referer : provenance de la requête (par exemple http://monserveurweb/mapage1.html), c’est-à-dire la page que l’utilisateur affiche s’il clique sur le bouton **Précédent** de son navigateur.
+* User-Agent : nom et version du navigateur ou du proxy.
 
-## Example 
+## Exemple 
 
-The following method allows getting any HTTP request header field content: 
+* Cette méthode permet de récupérer le contenu de tout champ d’en-tête de requête HTTP :
 
 ```4d
-  // Project method GetHTTPField
-  // GetHTTPField (Text) -> Text
-  // GetHTTPField (HTTP header name) -> HTTP header content
- 
-#DECLARE ($hName : Text) -> $hContent : Text
- var $vlItem : Integer
- ARRAY TEXT($names;0)
- ARRAY TEXT($values;0)
- $hContent:=""
- WEB GET HTTP HEADER($names;$values)
- $vlItem:=Find in array($names;$hName)
- If($vlItem>0)
-    $hContent:=$values{$vlItem}
+  // Méthode projet GetHTTPField
+  // GetHTTPField ( Texte ) -> Texte
+  // GetHTTPField ( Nom en-tête HTTP ) -> Contenu en-tête HTTP
+ var $0;$1 : Text
+ var $vlElem : Integer
+ ARRAY TEXT($noms;0)
+ ARRAY TEXT($valeurs;0)
+ $0:=""
+ WEB GET HTTP HEADER($noms;$valeurs)
+ $vlElem:=Find in array($noms;$1)
+ If($vlElem>0)
+    $0:=$valeurs{$vlElem}
  End if
 ```
 
-* Once this project method has been written, it can be called as follows:
+* Une fois que cette méthode projet est écrite, vous pouvez l’appeler ainsi :
 
 ```4d
-  // Cookie header content
+  // Contenu de l’en-tête Cookie
  $cookie:=GetHTTPField("Cookie")
 ```
 
-* You can send different pages according to the language set in the browser (for example in the [On Web Connection](./on-web-connection-database-method.md) database method)):
+* Vous pouvez également envoyer des pages différentes en fonction de la langue du navigateur (par exemple dans la [On Web Connection](./on-web-connection-database-method.md)) :
 
 ```4d
- $language:=GetHTTPField("Accept-Language")
+ $langue:=GetHTTPField("Accept-Language")
  Case of
-    :($language="@fr@") //French (see list ISO 639)
+    :($langue="@fr@") //Français (cf. liste ISO 639)
        WEB SEND FILE("index_fr.html")
-    :($language="@sp@") //Spanish (see list ISO 639)
+    :($langue="@es@") //Espagnol (cf. liste ISO 639)
        WEB SEND FILE("index_es.html")
     Else
        WEB SEND FILE("index.html")
  End case
 ```
 
-**Note:** Web browsers allow defining several languages by default. They are listed in the "Accept-Language" field, separated by a ";". Their priority is defined according to their position within the string; therefore it is a good idea to test language positions in the string.
+**Note :** Les navigateurs Web permettent de définir plusieurs langues par défaut. Elles sont listées dans le champ “Accept-Language”, séparées par des ";". Leur priorité est définie par leur position au sein de la chaîne ; il peut donc être utile de tester la position des langues dans la chaîne. 
 
-* Here is an example of virtual hosts. The following names "home\_site.com", "home\_site1.com" and "home\_site2.com" are directed towards the same IP address, for example 192.1.2.3.
+* Exemple de gestion des hôtes virtuels (par exemple dans la [On Web Connection](./on-web-connection-database-method.md)). Les trois noms “home\_site.com”, “home\_site1.com” et “home\_site2.com” pointent vers la même adresse IP, par exemple 192.1.2.3.
 
 ```4d
  $host:=GetHTTPField("Host")
@@ -127,16 +125,16 @@ The following method allows getting any HTTP request header field content:
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB SET HTTP HEADER](web-set-http-header.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 697 |
+| Numéro de commande | 697 |
 | Thread safe | yes |
 
 

@@ -5,61 +5,61 @@ slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* : Integer, Text ; *menuItem* : Integer ; *param* : Text )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *ligneMenu* ; *param* )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| param | Text | &#8594;  | String to associate as parameter |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| param | Text | &#8594;  | Chaîne à associer en tant que paramètre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->The **SET MENU ITEM PARAMETER** command associates a custom character string with a menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->La commande **SET MENU ITEM PARAMETER** vous permet d’associer une chaîne de caractères personnalisée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> 
 
-This parameter is mainly used by the [Dynamic pop up menu](dynamic-pop-up-menu.md) command.
+Ce paramètre sera principalement utilisé par la commande [Dynamic pop up menu](dynamic-pop-up-menu.md).
 
-## Example 
+## Exemple 
 
-This code provides a menu including the names of the open windows and lets you get the number of the window chosen:
+Ce code permet de proposer un menu comportant le libellé des fenêtres ouvertes et de récupérer le numéro de la fenêtre choisie :
 
 ```4d
- WINDOW LIST($alWindow)
- $tMenuRef:=Create menu
- For($i;1;Size of array($alWindow))
-    APPEND MENU ITEM($tMenuRef;Get window title($alWindow{$i})) // Title of menu item
-    SET MENU ITEM PARAMETER($tMenuRef;-1;String($alWindow{$i})) // Value returned by menu item
+ WINDOW LIST($alFenetre)
+ $tRefMenu:=Create menu
+ For($i;1;Size of array($alFenetre))
+    APPEND MENU ITEM($tRefMenu;Get window title($alFenetre{$i}))  //Libellé de la ligne du menu
+    SET MENU ITEM PARAMETER($tRefMenu;-1;String($alFenetre{$i}))  //Valeur retournée par la ligne du menu
  End for
- $tWindowRef:=Dynamic pop up menu($tMenuRef)
- RELEASE MENU($tMenuRef)
+ $tRefFenetre:=Dynamic pop up menu($tRefMenu)
+ RELEASE MENU($tRefMenu)
 ```
 
-## See also 
+## Voir aussi 
 
 [Dynamic pop up menu](dynamic-pop-up-menu.md)  
 [Get menu item parameter](get-menu-item-parameter.md)  
 [Get selected menu item parameter](get-selected-menu-item-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1004 |
+| Numéro de commande | 1004 |
 | Thread safe | no |
 
 

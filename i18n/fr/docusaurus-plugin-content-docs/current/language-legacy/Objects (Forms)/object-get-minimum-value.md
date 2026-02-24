@@ -5,46 +5,46 @@ slug: /commands/object-get-minimum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET MINIMUM VALUE.Syntax-->**OBJECT GET MINIMUM VALUE** ( * ; *object* : Text ; *minValue* : Date, Time, Real )<br/>**OBJECT GET MINIMUM VALUE** ( *object* : Variable, Field ; *minValue* : Date, Time, Real )<!-- END REF-->
+<!--REF #_command_.OBJECT GET MINIMUM VALUE.Syntax-->**OBJECT GET MINIMUM VALUE** ( {* ;} *objet* ; *valeurMini* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| minValue | Date, Time, Real | &#8592; | Current minimum value for object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| valeurMini | Date, Time, Number | &#8592; | Valeur minimale actuelle de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->The **OBJECT GET MINIMUM VALUE** command returns, in the *minValue* variable, the current minimum value of the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->La commande **OBJECT GET MINIMUM VALUE** retourne dans la variable *valeurMini* la valeur minimum courante de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-You can set the "Minimum Value" property using the Property List in Design mode, or using the [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md) command.
+La propriété "Valeur minimum" peut être définie via la Liste des propriétés en mode Développement ou via la commande [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-## See also 
+## Voir aussi 
 
 [OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
 [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1243 |
+| Numéro de commande | 1243 |
 | Thread safe | no |
 
 

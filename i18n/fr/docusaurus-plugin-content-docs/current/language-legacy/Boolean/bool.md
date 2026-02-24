@@ -5,67 +5,66 @@ slug: /commands/bool
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Bool.Syntax-->**Bool** ( *expression* : Expression ) : Boolean<!-- END REF-->
+<!--REF #_command_.Bool.Syntax-->**Bool** ( *expression* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Bool.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | Expression for which to return the boolean form |
-| Function result | Boolean | &#8592; | Boolean form of the expression |
+| expression | Expression | &#8594;  | Expression à retourner sous forme de booléen |
+| Résultat | Boolean | &#8592; | Expression sous forme booléenne |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Created|
+|16 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Bool.Summary-->The **Bool** command returns the boolean form of the expression you passed in *expression*.<!-- END REF--> 
+<!--REF #_command_.Bool.Summary-->La commande **Bool** retourne l'expression que vous avez passée dans *expression* sous une forme booléenne.<!-- END REF-->
 
-The command can return the following values, depending on the *expression* result type:
+La commande peut retourner les valeurs suivantes, en fonction du type du résultat de l'évaluation de *expression* :
 
-| **Expression result type** | **Return of the Bool command** |
-| -------------------------- | ------------------------------ |
-| Undefined                  | False                          |
-| Null                       | False                          |
-| Boolean                    | False if false, otherwise True |
-| Number                     | False if 0, other True         |
-| Other types                | False                          |
+| **Type de résultat de expression** | **Résultat de la commande Bool**        |
+| ---------------------------------- | --------------------------------------- |
+| Indéfini                           | Faux                                    |
+| Null                               | Faux                                    |
+| Booléen                            | Faux si faux, Vrai sinon                |
+| Numérique                          | Faux si 0, Vrai pour les autres valeurs |
+| Autres types                       | Faux                                    |
 
-This command is useful when the code expects a boolean value, and when the evaluation of the expression could result in a different type (e.g. if it evaluates to **null** or **undefined**). 
+Cette commande est utile lorsque le code attend toujours un booléen et que l'évaluation de *expression* peut parfois aboutir à un type différent (notamment **null** ou **indéfini**). 
 
-## Example 
+## Exemple 
 
-You select a value depending on the contents of an object field attribute, anticipating the case where the attribute is missing:
+Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en anticipant la possibilité que l'attribut ne soit pas présent :
 
 ```4d
  var $married : Text
- $married:=Choose(Bool([Person]data.married);"Married";"Single")
-  //"Single" if the "married" attribute is not found in the field
- ALERT("This person is "+$married)
+ $married:=Choose(Bool([Person]data.married);"Marié(e)";"Célibataire")
+  //"Célibataire" s'il n'y a pas d'attribut "married" dans le champ
+ ALERT("Le statut de cette personne est "+$married)
 ```
 
-## See also 
+## Voir aussi 
 
-[Date](date.md)  
-[Num](./commands/num)  
-[String](./commands/string)  
+[Date](../commands/date)  
+[Num](../commands/num.md)  
+[String](../commands/string.md)  
 [Time](time.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1537 |
+| Numéro de commande | 1537 |
 | Thread safe | yes |
-
 
 

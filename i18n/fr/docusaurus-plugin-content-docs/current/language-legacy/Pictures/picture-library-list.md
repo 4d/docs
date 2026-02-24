@@ -5,23 +5,23 @@ slug: /commands/picture-library-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *picRefs* : Integer array ; *picNames* : Text array )<!-- END REF-->
+<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImages* ; *nomsImages* )<!-- END REF-->
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picRefs | Integer array | &#8592; | Reference numbers of the Picture Library graphics |
-| picNames | Text array | &#8592; | Names of the Picture Library graphics |
+| refsImages | Integer array | &#8592; | Numéros de référence des images stockées dans la bibliothèque d'images |
+| nomsImages | Text array | &#8592; | Noms des images stockées dans la bibliothèque d'images |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
@@ -30,94 +30,93 @@ displayed_sidebar: docs
 
 :::warning
 
-This command cannot be used in projects because the Picture library is only available in binary databases. 
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
 
 :::
 
+<!--REF #_command_.PICTURE LIBRARY LIST.Summary-->La commande **PICTURE LIBRARY LIST** retourne les numéros de référence et le nom des images stockées dans la bibliothèque d’images de la base de données.<!-- END REF--> 
 
-<!--REF #_command_.PICTURE LIBRARY LIST.Summary-->The **PICTURE LIBRARY LIST** command returns the reference numbers and names of the pictures currently stored in the Picture Library of the database.<!-- END REF-->
 
+Après l’appel, vous récupérez les numéros de référence des images dans le tableau *refsImages* et leurs noms dans le tableau *nomsImages*. Les deux tableaux sont synchronisés : le nième élément de *refsImages* est le numéro de référence de l'image de la bibliothèque dont le nom est retourné dans le nième élément de *nomsImages*.
 
-After the call, you retrieve the reference numbers in the array *picRefs* and the names in the array *picNames*. The two arrays are synchronized: the nth element of *picRefs* is the reference number of the Picture Library graphic whose name is returned in the nth element of *picNames*.
+Si nécessaire, la commande crée et dimensionne automatiquement les tableaux *refsImages* et *nomsImages*. 
 
-If necessary, the command automatically creates and sizes the *picRefs* and *picNames* arrays.
+La longueur maximale du nom d’une image de la bibliothèque est de 255 caractères.
 
-The maximum length of a Picture Library graphic name is 255 characters.
+Si la bibliothèque d’images est vide, les deux tableaux retournés seront vides.
 
-If there are no pictures in the Picture Library, both arrays are returned empty.
+Pour obtenir le nombre d’images contenues dans la bibliothèque, il vous suffit de tester la taille d’un des deux tableaux à l'aide de la fonction [Size of array](size-of-array.md).
 
-To obtain the number of pictures currently stored in the Picture Library, use the [Size of array](size-of-array.md) command to get the size of one of the two arrays.
+## Exemple 1 
 
-## Example 1 
-
-The following code returns the catalog of the Picture Library in the arrays *alPicRef* and *asPicName*:
+Le code suivant retourne le contenu de la bibliothèque d'images dans les tableaux *telRefImage* et *taNomImage* :
 
 ```4d
- PICTURE LIBRARY LIST(alPicRef;asPicName)
+ PICTURE LIBRARY LIST(telRefImage;taNomImage)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example tests whether or not the Picture Library is empty:
+L’exemple suivant teste si la bibliothèque d’images est vide ou non :
 
 ```4d
- PICTURE LIBRARY LIST(alPicRef;asPicName)
- If(Size of array(alPicRef)=0)
-    ALERT("The Picture Library is empty.")
+ PICTURE LIBRARY LIST(telRefImage;taNomImage)
+ If(Size of array(telRefImage)=0)
+    ALERT("La bibliothèque d’images est vide.")
  Else
-    ALERT("The Picture Library contains "+String(Size of array(alPicRef))+" pictures.")
+    ALERT("La bibliothèque d’images contient "+String(Taille tableau(tlRefImage))+" images.")
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example exports the Picture Library to a document on disk:
+L'exemple suivant exporte la Bibliothèque d’Images vers un document stocké sur disque :
 
 ```4d
- PICTURE LIBRARY LIST($alPicRef;$asPicName)
- $vlNbPictures:=Size of array($alPicRef)
- If($vlNbPictures>0)
+ PICTURE LIBRARY LIST($alRefImage;$asNomImage)
+ $vlNbImages:=Size of array($alRefImage)
+ If($vlNbImages>0)
     SET CHANNEL(12;"")
     If(OK=1)
        $vsTag:="4DV6PICTURELIBRARYEXPORT"
        SEND VARIABLE($vsTag)
-       SEND VARIABLE($vlNbPictures)
+       SEND VARIABLE($vlNbImages)
        gError:=0
-       For($vlPicture;1;$vlNbPictures)
-          $vlPicRef:=$alPicRef{$vlPicture}
-          $vsPicName:=$asPicName{$vlPicture}
-          GET PICTURE FROM LIBRARY($alPicRef{$vlPicture};$vgPicture)
+       For($vlImage;1;$vlNbImages)
+          $vlRefImage:=$alRefImage{$vlImage}
+          $vsNomImage:=$asNomImage{$vlImage}
+          GET PICTURE FROM LIBRARY($alRefImage{$vlImage};$vgImage)
           If(OK=1)
-             SEND VARIABLE($vlPicRef)
-             SEND VARIABLE($vsPicName)
-             SEND VARIABLE($vgPicture)
+             SEND VARIABLE($vlRefImage)
+             SEND VARIABLE($vsNomImage)
+             SEND VARIABLE($vgImage)
           Else
-             $vlPicture:=$vlPicture+1
+             $vlImage:=$vlImage+1
              gError:=-108
           End if
        End for
        SET CHANNEL(11)
        If(gError#0)
-          ALERT("The Picture Library could not be exported, retry with more memory.")
+          ALERT("La bibliothèque d'images n'a pas pu être exportée, recommencez avec davantage de mémoire.")
           DELETE DOCUMENT(Document)
        End if
     End if
  Else
-    ALERT("The Picture Library is empty.")
+    ALERT("La bibliothèque d'images est vide.")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 [SET PICTURE TO LIBRARY](set-picture-to-library.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 564 |
+| Numéro de commande | 564 |
 | Thread safe | no |
 
 

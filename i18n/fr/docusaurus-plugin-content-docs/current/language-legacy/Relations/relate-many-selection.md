@@ -5,55 +5,55 @@ slug: /commands/relate-many-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *aField* : Field )<!-- END REF-->
+<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Many table field (from which the relation starts) |
+| leField | Field | &#8594;  | Champ de la table N (d'où part le lien) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RELATE MANY SELECTION.Summary-->The RELATE MANY SELECTION command generates a selection of records in the Many table, based on a selection of records in the One table, and loads the first record of the Many table as the current record.<!-- END REF-->RELATE MANY SELECTION changes the current record for the One table.
+<!--REF #_command_.RELATE MANY SELECTION.Summary-->La commande **RELATE MANY SELECTION** crée une sélection d'enregistrements dans la table N basée sur la sélection courante de la table 1, et charge le premier enregistrement de la table N comme enregistrement courant.<!-- END REF-->**RELATE MANY SELECTION** modifie l'enregistrement courant de la table 1.
 
-## Example 
+## Exemple 
 
-This example selects all invoices made to the customers whose credit is greater than or equal to $1,000\. The \[Invoices\] table field *\[Invoices\]Customer ID* relates to the \[Customer\] table field *\[Customers\]ID Number*. 
+Prenons l'exemple d'une base de données comportant une table *\[Factures\]* dont le champ *\[Factures\]IDClient* est lié au champ *\[Clients\]NoID* de la table *\[Clients\]*. L'exemple suivant sélectionne toutes les factures adressées aux clients dont le crédit est supérieur ou égal à 5710 Euros :
 
 ```4d
-  // Select the Customers
- QUERY([Customers];[Customers]Credit>=1000)
-  // Find all invoices related to any of these customers
- RELATE MANY SELECTION([Invoices]Customer ID)
+  // Sélectionner les clients
+ QUERY([Clients];[Clients]Credit>=5710)
+  //Trouver toutes les factures liées à chacun de ces clients
+ RELATE MANY SELECTION([Factures]IDClient)
 ```
 
-## See also 
+## Voir aussi 
 
 [QUERY](query.md)  
 [RELATE ONE](relate-one.md)  
 [RELATE ONE SELECTION](relate-one-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 340 |
+| Numéro de commande | 340 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

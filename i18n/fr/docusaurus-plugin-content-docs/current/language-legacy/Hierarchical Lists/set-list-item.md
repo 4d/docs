@@ -5,85 +5,83 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( * ; *list* : Text ; *itemRef* : Integer,  Operator ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**SET LIST ITEM** ( *list* : Integer ; *itemRef* : Integer,  Operator ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *liste* ; *refElément* ; *libelléElément* ; *nouvelRéf* {; sous_Liste ; *déployée*} )<br/>**SET LIST ITEM** ( * ; *liste* ; * ; *libelléElément* ; *nouvelRéf* {; sous_Liste ; *déployée*} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number, or 0 for last item appended to the list, or * for the current item in the list |
-| newItemText | Text | &#8594;  | New item text |
-| newItemRef | Integer | &#8594;  | New item reference number |
-| sublist | Integer | &#8594;  | New sublist attached to item, or 0 for no sublist (detaching current one, if any), or -1 for no change |
-| expanded | Boolean | &#8594;  | Indicates if the optional sublist will be expanded or collapsed |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| libelléElément | Text | &#8594;  | Nouveau libellé d'élément |
+| nouvelRéf | Integer | &#8594;  | Nouveau numéro de référence d'élément |
+| sous_Liste | Integer | &#8594;  | Nouvelle sous-liste rattachée à l'élément ou 0 = pas de sous-liste (détacher sous-liste courante) ou -1 = pas de changement |
+| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée/contractée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST ITEM.Summary-->The **SET LIST ITEM** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
+<!--REF #_command_.SET LIST ITEM.Summary-->La commande **SET LIST ITEM** modifie l'élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d'objet dans *liste*.<!-- END REF--> 
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If there is no item with the item reference number you passed, the command does nothing. You can optionally pass *0* in *itemRef* to designate the last item added to the list using [APPEND TO LIST](append-to-list.md).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien.   
+Vous pouvez également passer *0* dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la section *Gestion des listes hiérarchiques*.
 
-If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section.
+Vous pouvez passer le nouveau libellé de l'élément dans le paramètre *libelléElément*. Si vous souhaitez changer le numéro de référence de l'élément, passez la nouvelle valeur dans le paramètre *nouvelRéf*, sinon passez la même valeur que dans *réfElément*.
 
-You pass the new text for the item in *newItemText*. To change the item reference number, pass the new value in *newItemRef*; otherwise, pass the same value as *itemRef*.
+Si vous voulez associer une sous-liste à l'élément, passez le numéro de référence de la sous-liste dans le paramètre *sous\_Liste*. Dans ce cas, vous devez également spécifier si la nouvelle sous-liste devra apparaître déployée ou contractée en passant respectivement Vrai ou Faux dans le paramètre *déployée*.
 
-To attach a list to the item, pass the list reference number in *subList*. In this case, you also specify if the newly sublist is expanded by passing TRUE in *expanded*; otherwise, pass FALSE.
+Si vous voulez dissocier de l'élément une sous-liste qui lui est actuellement rattachée, passez *0* (zéro) dans *sous\_Liste*. Dans ce cas, il est conseillé d'avoir préalablement obtenu le numéro de référence de cette liste à l'aide de la commande [APPEND TO LIST](append-to-list.md), afin de pouvoir effacer la sous-liste avec la commande [CLEAR LIST](clear-list.md) si vous n'en avez plus besoin.
 
-To detach a sublist already attached to the item, pass *0* (zero) in *sublist*. In this case, it is a good idea to have previously obtained the reference number of that list using [APPEND TO LIST](append-to-list.md), so you can later delete the sublist using [CLEAR LIST](clear-list.md), if you no longer need it.
+Si vous ne souhaitez pas modifier les propriétés de sous-liste de l'élément, passez *\-1* dans le paramètre *sous\_Liste*.
 
-If you do not want to change the sublist property of the item, pass *\-1* in *sublist*.
+## Exemple 1 
 
-**Note:** Even if they are optional, both the *sublist* and *expanded* parameters must be passed jointly.
-
-## Example 1 
-
-*hList* is a list whose items have unique reference numbers. The following object method for a button adds a child item to the current selected list item.
+Nous supposons que *hList* est une liste dont les éléments ont des numéros de référence uniques. La méthode objet suivante d'un bouton ajoute une sous-liste à l'élément actuellement sélectionné dans la liste *hList* :  
 
 ```4d
  $vlItemPos:=Selected list items(hList)
  If($vlItemPos>0)
-    GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
-    $vbNewSubList:=Not(Is a list($hSublist))
-    If($vbNewSubList)
-       $hSublist:=New list
+    GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSouslist;$vbExpanded)
+    $vbNouvSousList:=Not(Is a list($hSouslist))
+    If($vbNouvSousList)
+       $hSouslist:=New list
     End if
     vlUniqueRef:=vlUniqueRef+1
-    APPEND TO LIST($hSubList;"New Item";vlUniqueRef)
-    If($vbNewSubList)
-       SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;True)
+    APPEND TO LIST($hSousList;"Nouvel élément";vlUniqueRef)
+    If($vbNouvSousList)
+       SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSouslist;True)
     End if
     SELECT LIST ITEMS BY REFERENCE(hList;vlUniqueRef)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-See example for the [GET LIST ITEM](get-list-item.md) command.
+Reportez-vous à l'exemple de la commande [GET LIST ITEM](get-list-item.md).   
 
-## Example 3 
+## Exemple 3 
 
-See example for the [APPEND TO LIST](append-to-list.md) command.
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM](get-list-item.md)  
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
@@ -91,11 +89,11 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 385 |
+| Numéro de commande | 385 |
 | Thread safe | no |
 
 

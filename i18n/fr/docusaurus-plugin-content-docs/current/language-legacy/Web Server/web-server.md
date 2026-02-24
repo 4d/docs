@@ -5,47 +5,45 @@ displayed_sidebar: docs
 ---
 
 <!-- REF #_command_.WEB Server.Syntax -->**WEB Server** : 4D.WebServer<br/>**WEB Server**( *option* : Integer ) : 4D.WebServer<!-- END REF -->
-<!--REF #_command_.WEB Server.Params-->
-<div class="no-index">
 
-| Parameter | Type |  | Description |
-| --- | --- | --- | --- |
-| option | Integer | &#8594;  | Web server to get (default if omitted = `Web server database`) |
-| Function result | 4D.WebServer | &#8592; | Web server object |
-</div>
+<!--REF #_command_.WEB Server.Params-->
+
+| Paramètres | Type                         |                             | Description                                                                          |
+| ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------ |
+| option     | Integer                      | &#8594; | Serveur Web à référencer (défaut si omis = `Web server database`) |
+| Résultat   | 4D.WebServer | &#8592; | Objet Serveur Web                                                                    |
+
 <!-- END REF-->
 
+<details><summary>Historique</summary>
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|18 R3|Added|
-|19|support for .sessionCookieSameSite|
+| Release | Modifications                                             |
+| ------- | --------------------------------------------------------- |
+| 18 R3   | Ajout                                                     |
+| 19      | prise en charge de .sessionCookieSameSite |
 
 </details>
 
+## Description
 
-## Description 
+La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'objet Web server par défaut, ou l'objet Web server défini via le paramètre *option*<!-- END REF -->.
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+Par défaut, si le paramètre *option* est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre *option* :
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+| Constante                      | Valeur | Commentaire                                                                 |
+| ------------------------------ | ------ | --------------------------------------------------------------------------- |
+| `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
+| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
+| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
 
-|Constant|Value|Comment|
-|---|---|---|
-|`Web server database`|1|Web server of the project from which the command is called (default if omitted)|
-|`Web server host database`|2|Web server of the host database of a component|
-|`Web server receiving request`|3|Web server that received the request (target Web server)|
+L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+## Exemple
 
-## Example  
-
-From your component, you want to know if the Web server of the host database is started:
+L'objet Web server retourné contient les valeurs courantes des propriétés du serveur Web.
 
 ```4d
-  // Method of a component
+  // Méthode d'un composant
  var $hostWS : 4D.WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
@@ -53,17 +51,16 @@ From your component, you want to know if the Web server of the host database is 
  End if
 ```
 
+## Voir également
 
-## See also 
+[WEB Server list](web-server-list.md)\
+[webServer.stop()](../API/WebServerClass.md#stop)
 
-[WEB Server list](web-server-list.md)  
-[webServer.stop()](../API/WebServerClass.md#stop)  
+## Propriétés
 
-## Properties
-
-|  |  |
-| --- | --- |
-| Command number | 1674 |
-| Thread safe | no |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1674 |
+| Thread safe        | non  |
 
 

@@ -9,38 +9,39 @@ displayed_sidebar: docs
 <!--REF #_command_.RESUME TRANSACTION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R4|Created|
+|15 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESUME TRANSACTION.Summary-->The **RESUME TRANSACTION** command resumes the transaction that was paused using [SUSPEND TRANSACTION](suspend-transaction.md) at the corresponding level in the current process.<!-- END REF--> Any operations that are executed after this command are carried out under transaction control (except when several suspended transactions are nested). 
+<!--REF #_command_.RESUME TRANSACTION.Summary-->La commande **RESUME TRANSACTION** réactive la transaction qui a été suspendue à l'aide de la commande [SUSPEND TRANSACTION](suspend-transaction.md) au niveau correspondant dans le process courant.<!-- END REF--> Toute opération effectuée après l'appel de cette commande retourne sous le contrôle de la transaction (hormis si plusieurs transactions suspendues sont imbriquées). 
 
-For more information, please refer to the [Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions) section. 
+Pour plus d'informations, veuillez vous référer à la section [Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
+.
 
-## See also 
+## Voir aussi 
 
 [Active transaction](active-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
-[Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions)
+[Suspendre des transactions](../Develop-legacy/transactions.md#suspending-transactions)
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1386 |
+| Numéro de commande | 1386 |
 | Thread safe | yes |
 
 

@@ -1,6 +1,7 @@
 ---
 id: form
 title: Form
+slug: /commands/form
 displayed_sidebar: docs
 ---
 

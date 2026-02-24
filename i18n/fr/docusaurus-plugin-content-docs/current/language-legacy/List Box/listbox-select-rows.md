@@ -5,102 +5,103 @@ slug: /commands/listbox-select-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( * ; *object* : Text ; *selection* : Object, Collection {; *action* : Integer} )<br/>**LISTBOX SELECT ROWS** ( *object* : Variable ; *selection* : Object, Collection {; *action* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( {* ;} *objet* ; *sélection* {; *action*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| selection | Object, Collection | &#8594;  | Object or collection describing the rows to select |
-| action | Integer | &#8594;  | lk replace selection (default if omitted), lk add to selection, lk remove from selection |
+| * | Opérateur | &#8594;  | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable. |
+| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou Variable (si * est spécifié) |
+| sélection | Object, Collection | &#8594;  | Objet ou collection décrivant les lignes à sélectionner |
+| action | Integer | &#8594;  | lk remplacer sélection (omis par défaut), lk ajouter à sélection, lk supprimer de sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SELECT ROWS.Summary-->The **LISTBOX SELECT ROWS** command selects the rows of an entity selection or collection list box that correspond to the entities or objects in the *selection* parameter.<!-- END REF--> 
+<!--REF #_command_.LISTBOX SELECT ROWS.Summary-->La commande **LISTBOX SELECT ROWS**  provoque la sélection des lignes d'une list box entity selection ou une list box collection correspondant aux entités ou objets contenus dans le paramètre *sélection*.<!-- END REF--> 
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Si vous passez un paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d'objet, reportez-vous à la section *Objets de formulaires*.
 
-In the *selection* parameter, pass an [Object](# "Data structured as a native 4D object") or a [Collection](# "Array of object property values") depending on the list box type:
+Dans le paramètre sélection, passez un [Objet](# "Données structurées sous forme d'objet natif 4D") ou une [Collection](# "Tableau de valeurs de propriétés d'objets") en fonction du type de list box :
 
-**Entity selection list box**
+**List box e** **ntity selection** 
 
-For an **entity selection list box**, pass an entity selection object containing entities of the same dataclass as the list box. If *selection* is an entity selection object from a different dataclass than the list box, an error is returned. 
+Pour une List box entity selection, passez un objet entity selection contenant des entités de la même dataclass que la list box. Si sélection est un objet entity selection d'une dataclass différente de la list box, une erreur est retournée.
 
-**Collection list box**
+**List box c** **ollection**
 
-For a **collection list box**, pass a subcollection of objects belonging to the list box. If your list box contains scalar values, pass a subcollection of values. 
+Pour une **list box** collection, passez une sous-collection d'objets appartenant à la list box. Si votre list box contient des valeurs scalaires, passez une sous-collection de valeurs.
 
-**Notes:**
+**Notes :**
 
-* If *selection* is not a valid entity selection object / collection, an error is returned.
-* If *selection* is an empty entity selection / collection, by default (with "replace" action, see below) all the rows of the list box are deselected. For other actions, the command does nothing.
-* If *selection* contains entities / elements that are not displayed in the list box, they are ignored.
+* Si *sélection* n'est pas un objet entity selection / collection valide, une erreur est retournée.
+* Si *sélection* est une entity selection / collection vide, par défaut (avec l'action "remplacer" ci-dessous) toutes les lignes de la list box sont déselectionnées. Pour les autres actions, la commande ne fait rien.
+* Si *sélection* contient des entités / éléments qui ne s'affichent pas dans la list box, ils sont ignorés.
 
-The optional *action* parameter, if passed, is used to define the selection action to execute when a selection of rows already exists in the list box. You can pass a value or one of the following constants (located in the “*List Box*” theme):
+Si le paramètre optionnel *action* est passé, il permet de définir l'action de sélection à exécuter lorsqu'une sélection de lignes existe déjà dans la list box. Vous pouvez passez une valeur ou l'une des constantes suivantes (du thème “*List box*”) :
 
-| Constant                 | Type    | Value | Comment                                                                                                                                                                                                                                                       |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk add to selection      | Integer | 1     | The row selected is added to the existing selection. If the row specified already belongs to the existing selection, the command does nothing.                                                                                                                |
-| lk remove from selection | Integer | 2     | The row selected is removed from the existing selection. If the row specified does not belong to the existing selection, the command does nothing.                                                                                                            |
-| lk replace selection     | Integer | 0     | The row selected becomes the new selection and replaces the existing selection. The command has the same effect as a user click on a row (however, the On Clicked event is not generated). This is the default action (if the *action* parameter is omitted). |
+| Constante                | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk add to selection      | Entier long | 1      | La ligne sélectionnée est ajoutée à la sélection existante. Si la ligne désignée appartient déjà à la sélection existante, la commande ne fait rien.                                                                                                                                                                         |
+| lk remove from selection | Entier long | 2      | La ligne sélectionnée est supprimée de la sélection existante. Si la ligne désignée n’appartient pas à la sélection existante, la commande ne fait rien.                                                                                                                                                                     |
+| lk replace selection     | Entier long | 0      | La ligne sélectionnée devient la nouvelle sélection et remplace la sélection existante. La commande produit le même effet qu’un clic de l’utilisateur sur une ligne de la list box (l'événement Sur clic n'est toutefois pas généré). Cette action est effectuée par défaut (lorsque le paramètre *action* n’est pas passé). |
 
-By default, if the *action* parameter is omitted, the command replaces the row(s) defined by the *selection* parameter. 
+*Par défaut, si le paramètre action est omis, la commande remplace la ou les lignes définie(s) par le paramètre sélection*. 
 
-**Note:** The command assumes that each object or entity is displayed only once in the list box. 
+**Note :** La commande s'attend à ce que chaque objet ou entity s'affiche une seule fois uniquement dans la list box.
 
-## Example 1 
+## Exemple 1 
 
-This code allows you to select invoices in an entity selection using only a single server request:
+Ce code vous permet de sélectionner les factures d'une entity selection à l'aide d'une requête de serveur :
 
 ```4d
-  //On the On Load event of the form we have: Form.invoices:=ds.Invoices.all()
-  //The ListBox "Invoices" displays the entity selection Form.invoices
+  //Dans l'événement Sur chargement du formulaire, nous avons :
+ Form.invoices:=ds.Invoices.all()
+  //La ListBox "Factures" affiche l'entity selection Form.invoices  
  
  var $cash : Object
  var $card : Object
  
-  //Select invoices paid with cash
- $cash:=Form.invoices.query("paymentMethod=:1";"Cash")
- LISTBOX SELECT ROWS(*;"Invoices";$cash;lk replace selection)
+  //Sélectionner les factures ayant été réglées en liquide
+ $cash:=Form.invoices.query("paymentMethod=:1";"Liquide")
+ LISTBOX SELECT ROWS(*;"Factures";$cash;lk replace selection)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Example with a collection of objects:
+Exemple avec une collection d'objets :
 
 ```4d
  var $name : Text
- $name:=Request("Enter a name")
+ $name:=Request("Veuillez saisir un nom")
  If(OK=1)
-  // Form.studentsColl is a collection of objects
+  // Form.studentsColl est une collection d'objets
     $selection:=Form.studentsColl.query("lastname = :1";$name)
-    LISTBOX SELECT ROWS(*;"LBStudents";$selection;lk add selection)
+    LISTBOX SELECT ROWS(*;"LBStudents";$selection;lk ajouter à sélection)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SELECT ROW](listbox-select-row.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1715 |
+| Numéro de commande | 1715 |
 | Thread safe | no |
 
 

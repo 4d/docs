@@ -5,105 +5,106 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* : Text ; *url* : Text ; *contents* : Text, Blob, Picture, Object ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| httpMethod | Text | &#8594;  | HTTP method for request |
-| url | Text | &#8594;  | URL to which to send the request |
-| contents | Text, Blob, Picture, Object | &#8594;  | Contents of request body |
-| response | Text, Blob, Picture, Object | &#8592; | Result of request |
-| headerNames | Text array | &#8596;  | *in:* Header names of the request<br/>*out:* Returned header names |
-| headerValues | Text array | &#8596;  | *in:* Header values of the request<br/>*out:* Returned header values |
-| * | Operator | &#8594;  | If passed, connection is maintained (keep-alive)If omitted, connection is closed automatically |
-| Function result | Integer | &#8592; | HTTP status code |
+| méthodeHTTP | Text | &#8594;  | Méthode HTTP pour la requête |
+| url | Text | &#8594;  | URL auquel envoyer la requête |
+| contenu | Text, Blob, Picture, Object | &#8594;  | Contenu du corps (body) de la requête |
+| réponse | Text, Blob, Picture, Object | &#8592; | Résultat de la requête |
+| nomsEnTêtes | Text array | &#8594;  | Noms des en-têtes de la requête |
+| &#8592; | Noms d’en-têtes retournés |
+| valeursEnTêtes | Text array | &#8594;  | Valeurs d’en-têtes de la requête |
+| &#8592; | Valeurs d’en-têtes retournées |
+| * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| Résultat | Integer | &#8592; | Code de statut HTTP |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Modified|
-|13|Created|
+|16 R4|Modifié|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
-:::info Compatibility
+:::info Compatibilité
 
-This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
 
 :::
 
 ## Description 
 
-<!--REF #_command_.HTTP Request.Summary-->The **HTTP Request** command enables all types of HTTP requests to be sent to a specific URL and processes the HTTP server response.<!-- END REF-->
+<!--REF #_command_.HTTP Request.Summary-->La commande **HTTP Request** permet d’envoyer tout type de requête HTTP vers un URL spécifique et de traiter la réponse du serveur HTTP.<!-- END REF-->
 
-Pass the HTTP method of the request in the *httpMethod* parameter. You can use one of the following constants, found in the *HTTP Client* theme:
+Passez dans le paramètre *méthodeHTTP* la méthode HTTP de la requête. Vous pouvez utiliser une des constantes suivantes, placées dans le thème *Client HTTP* :
 
-| Constant            | Type   | Value   | Comment                                                        |
-| ------------------- | ------ | ------- | -------------------------------------------------------------- |
-| HTTP DELETE method  | Text | DELETE  | See *RFC 2616*                                                 |
-| HTTP GET method     | Text | GET     | See *RFC 2616*. Same as using [HTTP Get](http-get.md) command. |
-| HTTP HEAD method    | Text | HEAD    | See *RFC 2616*                                                 |
-| HTTP OPTIONS method | Text | OPTIONS | See *RFC 2616*                                                 |
-| HTTP POST method    | Text | POST    | See *RFC 2616*                                                 |
-| HTTP PUT method     | Text | PUT     | See *RFC 2616*                                                 |
-| HTTP TRACE method   | Text | TRACE   | See *RFC 2616*                                                 |
+| Constante           | Type   | Valeur  | Comment                                                                     |
+| ------------------- | ------ | ------- | --------------------------------------------------------------------------- |
+| HTTP DELETE method  | Chaîne | DELETE  | Voir la *RFC 2616*                                                          |
+| HTTP GET method     | Chaîne | GET     | Voir la *RFC 2616*. Equivaut à utiliser la commande [HTTP Get](http-get.md) |
+| HTTP HEAD method    | Chaîne | HEAD    | Voir la *RFC 2616*                                                          |
+| HTTP OPTIONS method | Chaîne | OPTIONS | Voir la *RFC 2616*                                                          |
+| HTTP POST method    | Chaîne | POST    | Voir la *RFC 2616*                                                          |
+| HTTP PUT method     | Chaîne | PUT     | Voir la *RFC 2616*                                                          |
+| HTTP TRACE method   | Chaîne | TRACE   | Voir la *RFC 2616*                                                          |
 
-Pass the URL where you want the request sent in the *url* parameter. The syntax to use is:  
+Passez dans le paramètre *url* l’URL auquel adresser la requête. La syntaxe à utiliser est :  
 
-```
+```RAW
 http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-For example, you can pass the following strings:  
+Par exemple, les chaînes suivantes peuvent être passées :  
 
-```
+```RAW
     http://www.myserver.com    http://www.myserver.com/path    http://www.myserver.com/path?name="jones"    https://www.myserver.com/login (*)    http://123.45.67.89:8083    http://john:smith@123.45.67.89:8083    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]    http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
-*(\*)* During HTTPS requests, authority of the certificate is not checked.   
-*(\*\*)* For more information about IPv6 addresses in urls, please refer to the [RFC 2732](https://www.ietf.org/rfc/rfc2732.txt).
+*(\*)* Lors des requêtes https, l’autorité du certificat n’est pas vérifiée.  
+*(\*\*)* Pour plus d'informations sur les adresses IPv6 dans les urls, veuillez vous référer à la [RFC 2732](https://www.ietf.org/rfc/rfc2732.txt).
 
-Pass the body of the request in the *contents* parameter. Data passed in this parameter depends on the HTTP method of the request.   
-You can send data of the Text, BLOB, Picture or Object type. When the *content-type* is not specified, the following types are used:
+Passez dans le paramètre *contenu* le corps (*body*) de la requête. Les données à passer dans ce paramètre dépendent de la méthode HTTP de la requête.   
+Vous pouvez envoyer des données de type texte, BLOB, image ou objet. Lorsque le *content-type* n’est pas spécifié, les types suivants sont utilisés :
 
-* for text: text/plain - UTF8
-* for BLOBs: application/byte-stream
-* for pictures: known MIME type (best for Web).
-* for objects: application/json
+* pour les textes : text/plain - UTF8
+* pour les BLOB : application/octet-stream
+* pour les images : type mime connu (*best for Web*)
+* pour les objets : application/json
 
-After command execution, the *response* parameter receives the result of the request returned by the server. This result corresponds to the body of the response, with no headers.   
-You can pass different types of variables in *response*:
+Après exécution de la commande, le paramètre *réponse* récupère le résultat de la requête retourné par le serveur. Ce résultat correspond à la partie "corps" (*body*) de la réponse, sans les "en-têtes" (*headers*). Vous pouvez passer des variables de différents types dans *réponse* :
 
-* Text: When the result is expected to be text (see note below).
-* BLOB: When the result is expected to be in binary
-* Picture: When the result is expected to be a picture.
-* Object: When the result is expected to be an object.
+* Texte : lorsque le résultat est attendu sous forme de texte (cf. note ci-dessous).
+* BLOB : lorsque le résultat est attendu sous forme binaire.
+* Image : lorsque le résultat est attendu sous forme d’image.
+* Objets : lorsque le résultat est attendu sous forme d'objet.
 
-**Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](convert-to-text.md).
+**Note :** Lorsqu'une variable texte est passée dans *réponse*, 4D tente de décoder les données retournées par le serveur. Le programme essaie d'abord de récupérer le charset depuis l'en-tête *content-type*, ou à défaut via la BOM de la page ; en dernier lieu 4D recherche tout attribut *http-equiv charset* (dans le contenu html) ou *encoding* (pour le xml). Si aucun charset ne peut être détecté, 4D décode la réponse en ANSI. Si la conversion échoue, le texte résultant est vide. Si vous n'êtes pas sûr que le serveur retourne une information de charset ou une BOM, mais si vous connaissez l'encodage, il est préférable de passer un BLOB dans *réponse* et d'utiliser la commande [Convert to text](convert-to-text.md).
 
-When you pass an object type variable in the *response* parameter, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object. Otherwise, a *4D.Blob* object is returned.
+Si vous passez une variable de type objet dans le paramètre *réponse* et si la requête retourne un résultat ayant le content-type texte, 4D tentera d’analyser le contenu en tant que JSON et retournera le résultat analysé sous forme d'objet. Sinon, un objet *4D.Blob* sera retourné.
 
-If the result returned by the server does not correspond to the *response* variable type, it is left blank.
+Si le résultat retourné par le serveur ne correspond pas au type de la variable *réponse*, elle est laissée vide. 
 
-In *headerNames* and *headerValues*, you pass arrays containing the names and values of the request headers.   
-After this method is executed, these arrays contain the names and values of headers returned by the HTTP server. More specifically, this lets you manage cookies. 
+Vous pouvez passer dans les paramètres *nomsEnTêtes* et *valeursEnTêtes* des tableaux contenant respectivement les noms et les valeurs des en-têtes de la requête.   
+A l’issue de l’exécution de la méthode, ces tableaux contiendront les noms et valeurs des en-têtes retournés par le serveur HTTP. Ce principe permet notamment de gérer des cookies. 
 
-The *\** parameter enables the keep-alive mechanism for the server connection. By default, if this parameter is omitted, keep-alive is not enabled.
+Le paramètre *\** permet d’activer le mécanisme de *keep-alive* pour la connexion au serveur. Par défaut, si ce paramètre est omis, le *keep-alive* n’est pas activé. 
 
-The command returns a standard HTTP status code (200=OK and so on) as returned by the server. The list of HTTP status codes is provided in *RFC 2616*.   
-If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+La commande retourne le code de statut HTTP standard (200=OK...) tel que renvoyé par le serveur. La liste des codes de statut HTTP est fournie dans la *RFC 2616*.   
+Si la connexion au serveur est impossible pour une raison liée au réseau (*DNS Failed*, *Server not reachable*...) la commande retourne 0 et une erreur est générée. Vous pouvez intercepter les erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-## Example 1 
+## Exemple 1 
 
-Requesting for a record deletion from a remote database:
+Demande de suppression d’un enregistrement dans une base distante :
 
 ```4d
  var $response : Text
@@ -111,11 +112,11 @@ Requesting for a record deletion from a remote database:
  $httpStatus_l:=HTTP Request(HTTP DELETE method;"database.example.com";$body_t;$response)
 ```
 
-**Note:** You have to process the request appropriately on the remote server, **HTTP Request** only handles the request and the returned result.
+**Note :** Il vous appartient de traiter la demande de manière appropriée au niveau du serveur distant, la commande **HTTP Request** gère uniquement la requête et le résultat retourné.
 
-## Example 2 
+## Exemple 2 
 
-Requesting to add a record to a remote database:
+Demande d'ajout d’un enregistrement dans une base distante :
 
 ```4d
  var $response : Text
@@ -123,27 +124,27 @@ Requesting to add a record to a remote database:
  $httpStatus_l:=HTTP Request(HTTP PUT method;"database.example.com";$body_t;$response)
 ```
 
-**Note:** You have to process the request appropriately on the remote server, **HTTP Request** only handles the request and the returned result.
+**Note :** Il vous appartient de traiter la demande de manière appropriée au niveau du serveur distant, la commande **HTTP Request** gère uniquement la requête et le résultat retourné.
 
-## Example 3 
+## Exemple 3 
 
-Request to add a record in JSON to a remote database::
+Demande d’ajout d’enregistrement en JSON dans une base distante :
 
 ```4d
  var $content : Object
- OB SET($content;"lastname";"Doe";"firstname";"John")
+ OB SET($content;"nom";"Doe";"prénom";"John")
  $result:=HTTP Request(HTTP PUT method;"database.example.com";$content;$response)
 ```
 
-## See also 
+## Voir aussi 
 
 [HTTP Get](http-get.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1158 |
+| Numéro de commande | 1158 |
 | Thread safe | yes |
 
 

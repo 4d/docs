@@ -5,40 +5,40 @@ slug: /commands/arctan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Tangent for which to calculate the angle |
-| Function result | Real | &#8592; | Angle in radians |
+| nombre | Real | &#8594;  | Tangente pour laquelle vous souhaitez calculer l'angle en radians |
+| Résultat | Real | &#8592; | Angle en radians |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Arctan.Summary-->Arctan returns the angle, expressed in radians, of the tangent *number*.<!-- END REF-->4D provides the predefined constants Pi, Degree, and Radian. Pi returns the Pi number (3.14159...), Degree returns one degree expressed in radians (0.01745...), and Radian returns one radian expressed in degrees (57.29577...).
+<!--REF #_command_.Arctan.Summary-->**Arctan** retourne en radians la valeur de l'angle dont la tangente est spécifiée par *nombre*.<!-- END REF-->4D fournit les constantes prédéfinies Pi, Degree et Radian. Pi retourne le nombre Pi (3,14159...), Degree retourne la valeur en radians d'un degré (0,01745...) et Radian retourne la valeur en degrés d'un radian (57,29577...).
 
-## Example 
+## Exemple 
 
-The following example shows the value of Pi:
+Cet exemple permet d'afficher la valeur de Pi :
 
 ```4d
- ALERT("Pi is equal to: "+String(Arctan(1)*4))
+ ALERT("Pi est égal à : "+String(Arctan(1)*4))
 ```
 
-## See also 
+## Voir aussi 
 
 [Cos](cos.md)  
 [Sin](sin.md)  
 [Tan](tan.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 20 |
+| Numéro de commande | 20 |
 | Thread safe | yes |
 
 

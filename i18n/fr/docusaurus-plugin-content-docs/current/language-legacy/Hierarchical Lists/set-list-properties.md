@@ -5,80 +5,79 @@ slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* ; *apparence* {; *icône* {; *hauteurLigne* {; *doubleClic* {; *multiSélection* {; *modifiable*}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | List reference number |
-| appearance | Integer | &#8594;  | *** Deprecated, must always be 0 *** |
-| icon | Integer | &#8594;  | *** Deprecated, must always be 0 *** |
-| lineHeight | Integer | &#8594;  | Minimal line height expressed in pixels |
-| doubleClick | Integer | &#8594;  | Expand/Collapse sublist on double-click 0 = Yes, 1= No |
-| multiSelections | Integer | &#8594;  | Multiple selections: 0 = No (default), 1 = Yes |
-| editable | Integer | &#8594;  | 0 = List is not editable by user, 1 = List is editable by user (default) |
+| liste | Integer | &#8594;  | Numéro de référence de la liste |
+| apparence | Integer | &#8594;  | *** paramètre obsolète, toujours passer 0 *** |
+| icône | Integer | &#8594;  | *** Paramètre obsolète, toujours passer 0 *** |
+| hauteurLigne | Integer | &#8594;  | Hauteur minimale de la ligne (pixels) |
+| doubleClic | Integer | &#8594;  | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
+| multiSélection | Integer | &#8594;  | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
+| modifiable | Integer | &#8594;  | Enumération modifiable 0 = non, 1 = oui (défaut) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST PROPERTIES.Summary-->The **SET LIST PROPERTIES** command sets the line height and selection properties of the hierarchical list whose list reference you pass in *list*.<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Summary-->La commande **SET LIST PROPERTIES** définit la hauteur de ligne et le fonctionnement de la liste hiérarchique dont la référence est passée dans le paramètre *liste*.<!-- END REF-->
 
-**Compatibility note:** *appearance* and *icon* parameters are deprecated, you must pass 0 for them. 
+**Note de compatibilité :** Les paramètres *apparence* et *icône* sont obsolètes, ils doivent toujours prendre la valeur 0\. 
 
-**Note:** If you want to customize the icon of each item in the list, use the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+**Note :** Si vous voulez personnaliser l'icône de chaque élément d'une liste hiérarchique, utilisez la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md). 
 
-If you do not pass the parameter *lineHeight*, the line height of a hierarchical list is determined by the font and font size used for the object. You can also pass in the parameter *lineHeight* the minimal line height of the hierarchical list. If the value you pass is greater than the line height derived from the font and font size used, the line height of the hierarchical list will be forced to the value you pass. Pass 0 to set the default height.
+Si vous ne passez pas le paramètre *hauteurLigne*, la hauteur de ligne d'une liste hiérarchique sera déterminée par la police et la taille de police utilisées pour l'objet. Vous pouvez également passer dans le paramètre *hauteurLigne* la hauteur minimale des lignes de la liste hiérarchique. Si la valeur que vous passez est supérieure à la hauteur des lignes définie par la police et la taille de police, elle sera utilisée pour fixer la hauteur des lignes. Passez 0 pour utiliser la hauteur par défaut.
 
-The optional parameter *doubleClick* allows you to define that a double-click on a parent list item will not provoke the sublist to expand or to collapse. By default, a double-click on a parent list item provokes its child list to expand or to collapse. However, some user interfaces may need to deactivate this behavior. To do this, the *doubleClick* parameter should be set to 1.  
-Only double-click will be deactivated. Users will still be able to expand or collapse sublists by clicking on the list node.  
-If you omit the *doubleClick* parameter or pass 0, default behavior will be applied. 
+Le paramètre facultatif *doubleClic* permet d’empêcher que le double-clic sur un élément de la liste ne provoque le déploiement ou la contraction de sa sous-liste.  
+Par défaut, une sous-liste est déployée ou contractée en cas de double-clic sur l’élément parent. Certains types d’interfaces peuvent toutefois nécessiter une désactivation de ce mécanisme. Pour cela, passez 1 dans le paramètre *doubleClic*. A noter que seul le double-clic sera désactivé. Les sous-listes pourront toujours être déployées ou contractées par un clic sur l’icône de déploiement.  
+Si vous passez 0 ou omettez ce paramètre, le fonctionnement par défaut est appliqué.
 
-The optional *multiSelections* parameter lets you indicate whether the list must accept multiple selections.   
-By default, as in previous versions of 4D, you cannot simultaneously select several items of a hierarchical list. If you would like this function to be available for the list, pass the value 1 in the *multiSelections* parameter. In that case, multiple selections can be used:
+Le paramètre facultatif *multiSélection* permet d’indiquer si la liste doit accepter les sélections multiples.   
+Par défaut, il n’est pas possible de sélectionner simultanément plusieurs éléments d’une liste hiérarchique. Si vous souhaitez que cette fonction soit disponible pour la liste, passez la valeur 1 dans le paramètre *multiSélection*. Dans ce cas, les sélections multiples peuvent être effectuées :  
+\- manuellement, à l’aide des combinaisons de touches **Maj**+**clic** pour une sélection continue ou **Ctrl**+**clic** (Windows) / **Commande**+**clic** (macOS) pour une sélection discontinue,  
+\- par programmation, à l’aide des commandes [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) et [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
+Si vous passez 0 ou omettez le paramètre *multiSélection*, le fonctionnement par défaut est appliqué. 
 
-* manually, using the **Shift**+**click** key combination for a continuous selection or **Ctrl**+**click** (Windows) / **Command**+**click** (macOS) for a discontinuous selection,
-* by programming, using the [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) and [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) commands.  
-If you pass 0 or omit the *multiSelections* parameter, the default behavior will be applied.
+Le paramètre facultatif *modifiable* permet d’indiquer si la liste sera modifiable par l’utilisateur lorsqu’elle sera affichée sous forme d’énumération associée à un champ ou une variable en saisie. Lorsque l’énumération est modifiable, un bouton **Modifier** est inséré dans la fenêtre d’énumération et l’utilisateur peut ajouter, supprimer et trier les valeurs via un éditeur spécifique.   
+Si vous passez 1 ou omettez le paramètre *modifiable*, l’énumération sera modifiable par l’utilisateur ; si vous passez 0, elle ne sera pas modifiable.
 
-The optional *editable* parameter lets you indicate whether the list must be editable by the user when it is displayed as a choice list associated with a field or a variable during data entry. When the list is editable, a **Modify** button is added in the choice list window and the user can add, delete and sort the values through a specific editor.   
-If you pass 1 or omit the *editable* parameter, the list will be editable; if you pass 0, it will not be editable.
+## Exemple 
 
-## Example 
-
-You want to disallow the expand/collapse sublist on double-click. You can write in the form method: 
+Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouvez écrire dans la méthode du formulaire :
 
 ```4d
  Case of
     :(FORM Event.code=On Load)
-       hlCities:=Load list("Cities") //load the Cities choice list in the hlCities form object
-       SET LIST PROPERTIES(hlCities;0;0;0;1) //disallow double-click to expand/collapse
+       hlVilles:=Load list("Villes") //charger l'énumération Villes dans l'objet hlVilles
+       SET LIST PROPERTIES(hlVilles;0;0;0;1) //pas de déploiement sur double-clic
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [GET LIST PROPERTIES](get-list-properties.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 387 |
+| Numéro de commande | 387 |
 | Thread safe | no |
 
 

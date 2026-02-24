@@ -5,81 +5,81 @@ slug: /commands/array-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* : Array ; *list* : Text, Integer {; *itemRefs* : Array} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *tableau* ; *liste* {; *réfEléments*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array from which to copy array elements |
-| list | Text, Integer | &#8594;  | Name or reference of list into which to copy array elements |
-| itemRefs | Array | &#8594;  | Numeric array of item reference numbers |
+| tableau | Array | &#8594;  | Tableau duquel copier les éléments |
+| liste | Text, Integer | &#8594;  | Nom ou référence de la liste dans laquelle copier les éléments du tableau |
+| réfEléments | Array | &#8594;  | Tableau numérique des numéros de référence des éléments |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|<6|Created|
+|14|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*
+<!--REF #_command_.ARRAY TO LIST.Summary-->La commande **ARRAY TO LIST** crée ou remplace la liste hiérarchique ou l'énumération *liste* en utilisant les éléments du tableau *tableau*.<!-- END REF-->
 
-In the *list* parameter, you can either pass a choice list (string) or a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). In the latter case, this list must have already been created previously (for example using the [New list](new-list.md) command) in order for this command to work.
+Vous pouvez passer dans le paramètre *liste* soit un nom d'énumération (une chaîne) soit une référence de liste hiérarchique ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Dans ce deuxième cas, la liste doit déjà avoir été créée (par exemple via la commande [New list](new-list.md)) pour que la commande fonctionne.
 
-The optional *itemRefs* parameter, if specified, must be a numeric array synchronized with the array *array*. Each element, then, indicates the list item reference number for the corresponding element in *array*. If you omit this parameter, 4D automatically sets the list item reference numbers to 1, 2... N.
+Le paramètre optionnel *réfEléments*, s'il est passé, doit être un tableau de type numérique synchronisé avec le tableau *tableau*. Chaque élément de ce tableau indique le numéro de référence de l'élément de la liste correspondant dans *tableau*. Si ce paramètre est omis, 4D affecte automatiquement aux éléments de la liste les numéros de référence 1, 2... N.
 
-**Compatibility Note:** The **ARRAY TO LIST** command must be used with caution because of the following limitations:
+**Note de compatibilité :** La commande **ARRAY TO LIST** doit être utilisée avec précaution du fait des limitations suivantes :
 
-* This command only lets you set first-level items of the list.
-* When you use this command with a choice list, it modifies the structure of the application (lists are saved in the structure file), so any modifications made locally are lost when the structure file is updated in production.
-* This command cannot be used with a choice list in a structure loaded in **read only**, such as a .4dz project (which includes [remote projects](../Desktop/clientServer.md)) or a component.
+* cette commande permet de définir seulement les éléments du premier niveau de la liste.
+* lorsque vous l'utilisez avec une énumération, cette commande modifie la structure de l'application (les énumérations sont stockées dans le fichier de structure), les modifications effectuées en local seront donc perdues lors de mise à jour du fichier de structure en production.
+* cette commande ne peut pas être utilisée avec une énumération dans une structure chargée en lecture seule, telle qu'un projet .4dz ou un composant.
 
-You can use ARRAY TO LIST to build a list based on the elements of an array. However, to free yourself from these restrictions and make full use of the lists of values, we recommend using the commands of the *Hierarchical Lists* theme.
+Vous pouvez utiliser **ARRAY TO LIST** pour construire une liste basée sur les éléments d'un tableau. Cependant, pour vous affranchir de ces contraintes et exploiter pleinement les listes de valeurs, il est conseillé d'utiliser les commandes du thème *Listes hiérarchiques*.
 
-## Example 
+## Exemple 
 
-The following example copies the array *atRegions* to the list called “Regions:”
+L'exemple suivant copie le tableau *tabRégions* dans l'énumération "Régions" :
 
 ```4d
- ARRAY TO LIST(atRegions;"Regions")
+ ARRAY TO LIST(tabRégions;"Régions")
 ```
 
-## Example 
+## Exemple 
 
-You want to put the distinct values of a field into a list, for example to create a hierarchical pop-up menu. You can write:
+Vous souhaitez placer les valeurs distinctes d’un champ dans une liste, par exemple pour créer un pop up menu hiérarchique. Vous pouvez écrire :
 
 ```4d
  ALL RECORDS([Company])
- DISTINCT VALUES([Company]country;$arrCountries)
- CountryList:=New list
- ARRAY TO LIST($arrCountries;CountryList)
+ DISTINCT VALUES([Company]country;$tabPays)
+ listePays:=New list
+ ARRAY TO LIST($tabPays;listePays)
 ```
 
-## Error management 
+## Gestion des erreurs 
 
-An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is currently being edited in the Design environment List Editor. You can catch this error using an [ON ERR CALL](on-err-call.md "ON ERR CALL") project method.
+La commande **ARRAY TO LIST** génère l'erreur *\-9957* lorsqu'elle est appliquée à une énumération en cours de modification en mode Développement. Vous pouvez intercepter cette erreur à l'aide d'une méthode projet de gestion des erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
 [LIST TO ARRAY](list-to-array.md)  
 [Load list](load-list.md)  
 [ON ERR CALL](on-err-call.md)  
 [SAVE LIST](save-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 287 |
+| Numéro de commande | 287 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

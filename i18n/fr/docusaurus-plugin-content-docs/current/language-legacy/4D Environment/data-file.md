@@ -5,52 +5,52 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** ( { *segment* : Integer } ) : Text<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** {( *segment* )} : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| segment | Integer | &#8594;  | Obsolete, do not use |
-| Function result | Text | &#8592; | Long name of the data file for the database |
+| segment | Integer | &#8594;  | Obsolète, ne pas utiliser |
+| Résultat | Text | &#8592; | Nom long du fichier de données de la base |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Data file.Summary-->The Data file command returns the long name of the data file for the database with which you are currently working.<!-- END REF-->
+<!--REF #_command_.Data file.Summary-->La fonction **Data file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier de données de la base avec laquelle vous êtes en train de travailler.<!-- END REF-->
 
-Starting with version 11 of 4D, data segments are no longer supported. The *segment* parameter is now ignored and must no longer be used. 
+Depuis la version 11 de 4D, les segments de données ne sont plus pris en charge. Le paramètre *segment* est désormais ignoré, il ne doit plus être utilisé. 
 
-*On Windows*  
-If, for example, you are working with the database MyCDs located at \\DOCS\\MyCDs on the volume G, a call to **Data file** returns G:\\DOCS\\MyCDs\\MyCDs.4DD (provided that you accepted the default location and name proposed by 4D when you created the database).
+*Sous Windows*   
+Si, par exemple, vous travaillez avec la base MesCDs qui se trouve à l'emplacement \\DOCS\\MesCDs sur le volume G, **Data file** retournera G:\\DOCS\\MesCDs\\MesCDs.4DD (si vous avez choisi l'emplacement proposé par défaut par 4D lorsque vous avez créé la base).
 
-*On Macintosh*  
-If, for example, you are working with the database located in the folder Documents:MyCDsƒ: on the disk Macintosh HD, a call to **Data file** returns Macintosh HD:Documents:MyCDsƒ:MyCDs.data (provided that you accepted the default location and name proposed by 4D when you created the database).
+*Sous Mac OS*   
+Si, par exemple, vous travaillez avec la base MesCDs qui se trouve dans le dossier Documents:MesCDsƒ: sur le disque Macintosh HD, **Data file** retournera Macintosh HD:Documents:MesCDsƒ:MesCDs.data (si vous avez choisi l'emplacement proposé par défaut par 4D lorsque vous avez créé la base).
 
-**WARNING:** If you call this command from 4D in remote mode, only the name of the data file is returned, not the long name.
+**ATTENTION :** Si vous appelez cette fonction depuis 4D en mode distant, seul le nom du fichier de données est retourné, pas le nom long. 
 
-## See also 
+## Voir aussi 
 
 [Application file](application-file.md)  
 [Structure file](structure-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 490 |
+| Numéro de commande | 490 |
 | Thread safe | yes |
 
 

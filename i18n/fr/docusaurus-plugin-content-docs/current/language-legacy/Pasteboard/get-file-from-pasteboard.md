@@ -5,60 +5,60 @@ slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *indiceN* ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| xIndex | Integer | &#8594;  | Xth file included in drag action |
-| Function result | Text | &#8592; | Pathname of file extracted from pasteboard |
+| indiceN | Integer | &#8594;  | Nième fichier inclus dans le glisser |
+| Résultat | Text | &#8592; | Chemin d'accès de fichier extrait du conteneur de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get file from pasteboard.Summary-->The Get file from pasteboard command returns the absolute pathname of a file included in a drag and drop operation.<!-- END REF--> Several files can be selected and moved simultaneously. The *xIndex* parameter is used to designate a file from among the set of files selected.
+<!--REF #_command_.Get file from pasteboard.Summary-->La commande **Get file from pasteboard** retourne le chemin d’accès absolu d’un fichier inclus dans une opération de glisser-déposer.<!-- END REF--> Plusieurs fichiers pouvant être sélectionnés et déplacés simulanément, le paramètre *indiceN* permet de désigner un fichier parmi l’ensemble des fichiers sélectionnés.
 
-If there is no Xth file in the pasteboard, the command returns an empty string.
+S’il n’y a pas de Nième fichier dans le conteneur de données, la commande retourne une chaîne vide.
 
-## Example 
+## Exemple 
 
-The following example can be used to retrieve in an array all the pathnames of the files included in a drag and drop operation:
+L’exemple suivant permet de récupérer dans un tableau tous les chemins d’accès des fichiers inclus dans le glisser-déposer :
 
 ```4d
- ARRAY TEXT($filesArray;0)
- var $vfileArray : Text
+ ARRAY TEXT($tabFichiers;0)
+ var $vtfichier : Text
  var $n : Integer
  $n:=1
  Repeat
-    $vfileArray:=Get file from pasteboard($n)
-    If($vfileArray#"")
-       APPEND TO ARRAY($filesArray;$vfileArray)
+    $vtfichier:=Get file from pasteboard($n)
+    If($vtfichier#"")
+       APPEND TO ARRAY($tabFichiers;$vtfichier)
        $n:=$n+1
     End if
- Until($vfileArray="")
+ Until($vtfichier="")
 ```
 
-## See also 
+## Voir aussi 
 
 [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 976 |
+| Numéro de commande | 976 |
 | Thread safe | no |
 
 

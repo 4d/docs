@@ -5,42 +5,42 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *formatDesc* ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| descFormat | Integer | &#8594;  | Description format (Text or XML) |
-| Function result | Text | &#8592; | Description of last executed query path |
+| formatDesc | Integer | &#8594;  | Format de description (Texte ou XML) |
+| Résultat | Text | &#8592; | Description du chemin de la dernière recherche exécutée |
 </div>
 <!-- END REF-->
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Last query path.Summary-->The **Last query path** command returns the detailed internal description of the actual path of the last query carried out on the data.<!-- END REF--> For more information about query descriptions, please refer to the documentation of the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command. 
+<!--REF #_command_.Last query path.Summary-->La commande **Last query path** retourne la description interne détaillée du chemin réel de la dernière recherche effectuée sur les données.<!-- END REF--> Pour plus d’informations sur les descriptions de recherches, reportez-vous à la documentation de la commande [DESCRIBE QUERY EXECUTION](describe-query-execution.md). 
 
-This description is returned in Text or XML format depending on the value passed in the *descFormat* parameter. You can pass one of the following constants, found in the “*Queries*” theme: 
+Cette description est retournée au format Texte ou XML en fonction de la valeur passée dans le paramètre *formatDesc*. Vous pouvez passer une des constantes suivantes, placées dans le thème “*Recherches*” : 
 
-| Constant                   | Type    | Value |
-| -------------------------- | ------- | ----- |
-| Description in text format | Integer | 0     |
-| Description in XML format  | Integer | 1     |
+| Constante                  | Type        | Valeur |
+| -------------------------- | ----------- | ------ |
+| Description in text format | Entier long | 0      |
+| Description in XML format  | Entier long | 1      |
 
-This command returns a significant value if the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command has been executed during the session. 
+Cette commande retourne une valeur significative si la commande [DESCRIBE QUERY EXECUTION](describe-query-execution.md) a été exécutée au cours de la session. 
 
-The description of the last query path can be compared to the description of the query plan provided for the last query (obtained using the [Last query plan](last-query-plan.md) command) for optimization purposes.
+La description du chemin de la dernière recherche peut être comparée à la description du plan prévu de la dernière recherche (obtenue à l’aide de la commande [Last query plan](last-query-plan.md)) à des fins d’optimisations.
 
-## See also 
+#### Voir aussi 
 
 [DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
 [Last query plan](last-query-plan.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1045 |
+| Numéro de commande | 1045 |
 | Thread safe | yes |
 
 

@@ -5,103 +5,104 @@ slug: /commands/character-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Character code.Syntax-->**Character code** ( *character* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Character code.Syntax-->**Character code** ( *unCaractère* ) : Integer<!-- END REF-->
 <!--REF #_command_.Character code.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| character | Text | &#8594;  | Character for which you want to get the code |
-| Function result | Integer | &#8592; | Character code |
+| unCaractère | Text | &#8594;  | Caractère dont vous voulez obtenir le code |
+| Résultat | Integer | &#8592; | Code du caractère |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Character code.Summary-->The **Character code** command returns the Unicode UTF-16 code (included between 1 and 65535) of *character*.<!-- END REF-->
+<!--REF #_command_.Character code.Summary-->La commande **Character code** retourne le code Unicode UTF-16 (compris entre 1 et 65535) de *unCaractère*.<!-- END REF-->
 
-If there is more than one character in the string, **Character code** returns only the code of the first character.
+Si la chaîne *unCaractère* comporte plus d'un caractère, **Character code** retourne uniquement le code du premier caractère.
 
-The [Char](char.md) function is the counterpart of **Character code**. It returns the character that the UTF-16 code represents. 
+La fonction **Character code** est l'inverse de [Char](char.md). Elle retourne le caractère désigné par un code UTF-16.
 
-## Example 1 
+## Exemple 1 
 
-Uppercase and lowercase characters are considered equal within a comparison. You can use Character code to differentiate between uppercase and lowercase characters. Thus, this line returns True:
+Les caractères majuscules et minuscules ne sont pas différenciés lors d'une comparaison ou d'une recherche. Vous pouvez utiliser la fonction Code de caractere si vous souhaitez établir une distinction entre les caractères majuscules et les minuscules.  
+En effet, cette ligne retourne VRAI :
 
 ```4d
  ("A"="a")
 ```
 
-On the other hand, this line returns False:
+En revanche, cette ligne retourne FAUX :
 
 ```4d
  (Character code("A")=Character code("a"))
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example returns the code of the first character of the string *"ABC"*:
+L'exemple suivant retourne le code du premier caractère de la chaîne *"ABC"* :
 
 ```4d
- GetCode:=Character code("ABC") // GetCode gets 65, the character code of A
+ RécupCode:=Character code("ABC") // RécupCode prend la valeur 65, le code de caractère de A
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example tests for carriage returns and tabs:
+Le code suivant :
 
 ```4d
- For($vlChar;1;Length(vtText))
+ For($vlCar;1;Length(vtText))
     Case of
-       :(vtText[[$vlChar]]=Char(Carriage return))
-  // Do something
-       :(vtText[[$vlChar]]=Char(Tab))
-  // Do something else
+       :(vtText[[$vlCar]]=Char(Carriage return))
+  // Faire quelque chose
+       :(vtText[[$vlCar]]=Char(Tab))
+  // Faire autre chose
        :(...)
   // ...
     End case
  End for
 ```
 
-When executed multiple times on large texts, this test will run faster when compiled if it is written this way:
+... lorsqu'il est utilisé de nombreuses fois avec des textes de taille importante, s'exécutera plus vite, une fois compilé, s'il est écrit ainsi :
 
 ```4d
- For($vlChar;1;Length(vtText))
-    $vlCode:=Character code(vtText[[$vlChar]])
+ For($vlCar;1;Length(vtText))
+    $vlCode:=Character code(vtText[[$vlCar]])
     Case of
        :($vlCode=Carriage return)
-  // Do something
+  // Faire quelque chose
        :($vlCode=Tab)
-  // Do something else
+  // Faire autre chose
        :(...)
   // ...
     End case
  End for
 ```
 
-The second piece of code runs faster for two reasons: it does only one character reference by iteration and uses LongInt comparisons instead of string comparisons to test for carriage returns and tabs. Use this technique when working with common codes such as CR and TAB.
+... et ce, pour deux raisons principales : il ne référence un caractère qu'une seule fois par itération, et compare des entiers longs et non des chaînes de caractères lorsqu'il teste la présence de retours chariot et de tabulations. Nous vous conseillons d'employer cette technique lorsque vous travaillez avec des caractères standard tels que des Retours chariot et des Tabulations. 
 
-## See also 
+## Voir aussi 
 
 [Char](char.md)  
-*Character Reference Symbols*  
+*Symboles d'indice de chaîne*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 91 |
+| Numéro de commande | 91 |
 | Thread safe | yes |
 
 

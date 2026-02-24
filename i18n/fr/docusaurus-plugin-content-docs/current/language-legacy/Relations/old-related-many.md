@@ -5,34 +5,34 @@ slug: /commands/old-related-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *aField* : Field )<!-- END REF-->
+<!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.OLD RELATED MANY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | One field |
+| leField | Field | &#8594;  | Champ recevant un lien |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.OLD RELATED MANY.Summary-->**OLD RELATED MANY** operates the same way [RELATE MANY](relate-many.md) does, except that **OLD RELATED MANY** uses the old value in the one field to establish the relation.<!-- END REF-->**OLD RELATED MANY** uses the old value of the many field as returned by the [Old](old.md) function. For more information, see the description of the [Old](old.md) command.
+<!--REF #_command_.OLD RELATED MANY.Summary-->**OLD RELATED MANY** fonctionne comme la commande [RELATE MANY](relate-many.md), à la différence près que **OLD RELATED MANY** utilise l'ancienne valeur du champ pour activer le lien.<!-- END REF-->**OLD RELATED MANY** utilise l'ancienne valeur du champ N, telle qu'elle est retournée par la fonction [Old](old.md). Reportez-vous à la description de cette fonction pour plus d'informations.
 
-**OLD RELATED MANY** changes the selection of the related table, and selects the first record of the selection as the current record.
+**OLD RELATED MANY** modifie la sélection de la table liée. La commande sélectionne le premier enregistrement de la sélection courante et en fait l'enregistrement courant. 
 
-## See also 
+## Voir aussi 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 263 |
+| Numéro de commande | 263 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

@@ -5,60 +5,60 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *defaultColor* : Integer {; *message* : Text} ) : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *coulDefaut* {; *message*} )} : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| defaultColor | Integer | &#8594;  | Preselected RGB color |
-| message | Text | &#8594;  | Title of selection window |
-| Function result | Integer | &#8592; | RGB color |
+| coulDefaut | Integer | &#8594;  | Couleur RVB présélectionnée |
+| message | Text | &#8594;  | Titre de la fenêtre de sélection |
+| Résultat | Integer | &#8592; | Couleur RVB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Select RGB color.Summary-->The Select RGB color command displays the system color selection window and returns the RGB value of the color selected by the user.<!-- END REF-->
+<!--REF #_command_.Select RGB color.Summary-->La commande **Select RGB color** affiche la fenêtre système de sélection de couleur et retourne la valeur RVB de la couleur sélectionnée par l’utilisateur.<!-- END REF-->
 
-The system color selection window appears as follows:   
+La fenêtre système de sélection de couleur a l’apparence suivante :   
 
 | **Macintosh**                                | **Windows**                                 |
 | -------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43385.en.png) |
+| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43386.fr.png) |
 
-The optional *defaultColor* parameter preselects a color in the window. This parameter can be used, for example, to restore by default the last color set by the user. Pass an RGB-format color value in this parameter (for more information, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command). You can use one of the constants in the *SET RGB COLORS* theme. If the *defaultColor* parameter is omitted or if you pass 0, the color black is selected when the dialog box is opened. 
+Le paramètre facultatif *coulDéfaut* vous permet de pré-sélectionner une couleur dans la fenêtre. Ce paramètre vous permet par exemple de restituer par défaut la dernière couleur définie par l’utilisateur. Passez dans ce paramètre une valeur de couleur au format RVB (pour plus d’informations, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md)). Vous pouvez utiliser l’une des constantes du thème *FIXER COULEUR RVB*. Si le paramètre *coulDéfaut* est omis ou si vous passez 0, la couleur noir est sélectionnée à l’ouverture de la boîte de dialogue.
 
-The optional *message* parameter customizes the title of the system window. By default, if this parameter is omitted, the title “Colors” is displayed.
+Le paramètre facultatif *message* vous permet de personnaliser le titre de la fenêtre système. Par défaut, si ce paramètre est omis, le libellé “Couleurs” est affiché. 
 
-The effect of validating this dialog box differs depending on the platform:
+La prise en compte de la validation de la boîte de dialogue diffère selon la plate-forme :
 
-* Under Windows, when the user clicks on **OK**, the command returns the value of the color selected in RGB format and the system variable *OK* is set to 1\. If the user cancels the dialog box, the command returns -1 and the system variable *OK* is set to 0.
-* Under Mac OS, you can only close this dialog box by clicking on the close box or by pressing on the **Esc** key. In both cases, the system variable *OK* is set to 1, regardless of the user actions in the window. The command returns the value of the color selected in RGB format. If the user did not select a color, the value returned is the one passed in *defaultColor* (if any) or 0 if *defaultColor* is not passed.
+* Sous Windows, si l’utilisateur clique sur le bouton **OK**, la commande retourne la valeur de couleur sélectionnée au format RVB et la variable système *OK* prend la valeur 1\. Si l’utilisateur annule la boîte de dialogue, la commande retourne -1 et la variable système *OK* prend la valeur 0.
+* Sous Mac OS, la boîte de dialogue peut uniquement être refermée via un clic sur la case de fermeture ou en appuyant sur la touche **Echap**. Dans les deux cas, la variable système *OK* prend la valeur 1, quelles que soient les actions utilisateur dans la fenêtre. La commande retourne la valeur de couleur sélectionnée au format RVB. Si l'utilisateur n'a pas sélectionné de couleur, la valeur retournée est la valeur éventuellement passée dans *coulDefaut* ou 0 si vous n'avez pas passé ce paramètre.
 
-**Note:** This command must not be executed on the server machine nor within a Web process.
+**Note :** Cette commande ne doit pas être exécutée sur le poste serveur ni dans le cadre d’un process Web.
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 956 |
+| Numéro de commande | 956 |
 | Thread safe | no |
-| Modifies variables | OK |
-| Forbidden on the server ||
+| Modifie les variables | OK |
+| Interdite sur le serveur ||
 
 

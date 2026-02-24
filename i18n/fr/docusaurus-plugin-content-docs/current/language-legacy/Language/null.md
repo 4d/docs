@@ -9,43 +9,43 @@ displayed_sidebar: docs
 <!--REF #_command_.Null.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Null | &#8592; | Null value |
+| Résultat | Null | &#8592; | Valeur Null |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Created|
+|16 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Null.Summary-->**Null** returns the Null type value **null**.<!-- END REF-->
+<!--REF #_command_.Null.Summary-->**Null** retourne la valeur **null**, de type Null.<!-- END REF-->
 
-This function allows you to assign or compare the **null** value to the following language elements:
+Cette fonction vous permet d'affecter ou de comparer la valeur **null** aux élements du langage 4D suivants :
 
-| **Language elements**                                   | **Comments**                                                                                                                                                                                                                                                       |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| object property values                                  | Comparing **Null** to an object property returns true if the property value is null, and false otherwise. To simplify code, comparing **Null** also returns true if the property does not exist in the object (i.e. is [Undefined](undefined.md)), see example 4\. |
-| collection elements                                     | When a collection is expanded by adding non-adjacent elements, any intermediary elements get automatically the **null** value.                                                                                                                                     |
-| object variables             | See (\*) below                                                                                                                                                                                                                                                     |
-| collection variables | See (\*) below                                                                                                                                                                                                                                                     |
-| pointer variables         | See (\*) below                                                                                                                                                                                                                                                     |
-| picture variables          | (\*) Assigning the **null** value to such a variable type clears its contents. In this case, it has the same effect as calling the [CLEAR VARIABLE](clear-variable.md) command.                                                                                    |
-| variant variables          |                                                                                                                                                                                                                                                                    |
+| **Eléments du langage 4D**                                      | **Commentaire**                                                                                                                                                                                                                                                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Valeurs de propriétés d'objets                                  | La comparaison de **Null** avec une propriété d'objet vaut Vrai si la valeur de la propriété est null et Faux dans les autres cas. Par soucis de simplicité, comparer **Null** sera également Vrai si la propriété n'existe pas dans l'objet (i.e. est [Undefined](undefined.md)), voir exemple 4\. |
+| Eléments de collections                                         | Lorsqu'une collection est étendue automatiquement par l'ajout d'éléments non adjacents, tous les éléments intermédiaires ajoutés prennent la valeur **null** par défaut.                                                                                                                            |
+| Variables de type objet (*C\_OBJECT*)              | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
+| Variables de type collection (*C\_COLLECTION*) | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
+| Variables de type pointeur (*C\_POINTER*)         | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
+| Variables de type image (*C\_PICTURE*)            | (\*) Affecter la valeur **null** à une variable de ce type efface son contenu. Cela a le même effet qu'appeler la commande [CLEAR VARIABLE](clear-variable.md)                                                                                                                                      |
+| variables variant (*C\_VARIANT*)                  |                                                                                                                                                                                                                                                                                                     |
 
-**Note:** This command cannot be used with scalar database fields. Null values in database fields are managed by the SQL engine, and are handled through the [Is field value Null](is-field-value-null.md) and [SET FIELD VALUE NULL](set-field-value-null.md) commands,
+**Note :** Cette commande ne peut pas être utilisée avec les champs scalaires de la base de données. Les valeurs Null dans les champs de la base sont prises en charge par le moteur SQL, et sont gérés via les commandes [Is field value Null](is-field-value-null.md) et [SET FIELD VALUE NULL](set-field-value-null.md),
 
-## Example 1 
+## Exemple 1 
 
-You want to assign and test the **null** value to an object property:
+Exemples d'affectation et de test de la valeur **null** avec des propriétés d'objets :
 
 ```4d
  var vEmp : Object
@@ -53,73 +53,75 @@ You want to assign and test the **null** value to an object property:
  vEmp.name:="Smith"
  vEmp.children:=Null
  
- If(vEmp.children=Null) //true
+ If(vEmp.children=Null) //vrai
  End if
- If(vEmp.name=Null) //false
+ If(vEmp.name=Null) //faux
  End if
- If(vEmp.parent=Null) //true
+ If(vEmp.parent=Null) //vrai
  End if
 ```
 
-**Note:** This example requires that the object notation is activated in the database. 
+**Note :** Cet exemple requiert que la notation objet soit activée dans la base. 
 
-## Example 2 
+## Exemple 2 
 
-You want to assign and compare the **null** value to a collection element:
+Exemple d'affectation et de test de la valeur **null** avec une collection d'éléments :
 
 ```4d
  var myCol : Collection
  myCol:=New collection(10;20;Null)
  ...
  If(myCol[2]=Null)
-  // if the 3rd element is null
+  // si le 3e élément est null
     ...
  End if
 ```
 
-## Example 3 
+**Note :** Cet exemple requiert que la notation objet soit activée dans la base. 
 
-These examples show the various ways to assign or compare the **null** value to variables: 
+## Exemple 3 
+
+Ces exemples illustrent les diverses manières d'affecter ou de comparer la valeur **null** à des variables : 
 
 ```4d
-  //Object variable
+  //Variable objet
  var $o : Object
  $o:=New object
- $o:=Null //equivalent to CLEAR VARIABLE($o)
- If($o#Null) //equivalent to If (OB Is defined($o))
+ $o:=Null //équivaut à EFFACER VARIABLE($o)
+ If($o#Null) //équivaut à If(OB Est defini($o))
  End if
 ```
 
 ```4d
-  //Collection variable
+  //Variable collection
  var $c : Collection
  $c:=New collection
- $c:=Null //equivalent to CLEAR VARIABLE($c)
+ $c:=Null //équivaut à EFFACER VARIABLE($c)
  If($c#Null)
  End if
 ```
 
 ```4d
-  //Pointer variable
+  //Variable pointeur
  var $p : Pointer
  $p:=->$v
- $p:=Null //equivalent to CLEAR VARIABLE($p)
- If($p=Null) //equivalent to If (Is Nil pointer($p))
+ $p:=Null //équivaut à EFFACER VARIABLE($p)
+ If($p=Null) //équivaut à If(Pointeur nil($p))
  End if
 ```
 
 ```4d
-  //Picture variable
+  //Variable image
  var $i : Picture
  $i:=$vpicture
- $i:=Null //equivalent to CLEAR VARIABLE($i)
- If($i#Null) //equivalent to If (Picture size($i)#0)
+ $i:=Null //équivaut à EFFACER VARIABLE($i)
+ If($i#Null) //équivaut à If(Taille image($i)#0)
  End if
 ```
 
-## Example 4 
+## Exemple 4 
 
-Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
+Cet exemple compare les différents résultats de la commande [Undefined](undefined.md) et de la commande [Null](null.md) appliquées aux propriétés d'objets, en fonction du contexte :
 
 ```4d
  var vEmp : Object
@@ -127,27 +129,27 @@ Here are the different results of the [Undefined](undefined.md) command as well 
  vEmp.name:="Smith"
  vEmp.children:=Null
  
- $undefined:=Undefined(vEmp.name) // False
- $null:=(vEmp.name=Null) //False
+ $undefined:=Undefined(vEmp.name) // Faux
+ $null:=(vEmp.name=Null) // Faux
  
- $undefined:=Undefined(vEmp.children) // False
- $null:=(vEmp.children=Null) //True
+ $undefined:=Undefined(vEmp.children) // Faux
+ $null:=(vEmp.children=Null) // Vrai
  
- $undefined:=Undefined(vEmp.parent) // True
- $null:=(vEmp.parent=Null) //True
+ $undefined:=Undefined(vEmp.parent) // Vrai
+ $null:=(vEmp.parent=Null) // Vrai
 ```
 
-## See also 
+## Voir aussi 
 
 [Is field value Null](is-field-value-null.md)  
 [OB SET NULL](ob-set-null.md)  
 [SET FIELD VALUE NULL](set-field-value-null.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1517 |
+| Numéro de commande | 1517 |
 | Thread safe | yes |
 
 

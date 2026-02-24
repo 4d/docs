@@ -5,78 +5,77 @@ slug: /commands/object-set-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( * ; *object* : Text ; *visible* : Boolean )<br/>**OBJECT SET VISIBLE** ( *object* : Variable, Field ; *visible* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( {* ;} *objet* ; *visible* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object parameter is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| visible | Boolean | &#8594;  | True for visible, False for invisible |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est passé) ou Champ ou Variable (si * est omis) |
+| visible | Boolean | &#8594;  | Vrai = visible, Faux = invisible |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Renamed|
-|6|Created|
+|12|Renommé|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET VISIBLE.Summary-->The **OBJECT SET VISIBLE** command shows or hides the objects specified by *object*.<!-- END REF-->
+<!--REF #_command_.OBJECT SET VISIBLE.Summary-->La commande **OBJECT SET VISIBLE** affiche ou masque le ou les objet(s) défini(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string. For more information about object names, see the section *Object Properties*.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* désigne le nom d'un objet (une chaîne). Si vous ne passez pas le paramètre \*, vous indiquez que le paramètre *objet* désigne un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne de caractères mais la référence du champ ou de la variable (champs ou variables objets uniquement). Pour plus d'informations sur les noms d'objets, reportez-vous à la section *Objets de formulaires*.
 
-If you pass *visible* equal to **TRUE**, the objects are shown. If you pass *visible* equal to **FALSE**, the objects are hidden.
+Si vous passez la valeur **VRAI** dans le paramètre *visible*, le ou les objet(s) sont affichés. Si vous passez **FAUX** dans *visible*, les objets sont masqués.
 
-## Example 
+## Exemple 
 
-Here is a typical form in the Design environment:
+Voici un formulaire tel qu'il apparaît en mode Développement :
 
-![](../assets/en/commands/pict27188.en.png)
+![](../assets/en/commands/pict27188.fr.png)
 
-The objects in the **Employer Information** group box each have an object name that contains the expression “employer” (including the group box). When the **Currently Employed** check box is checked, the objects must be visible; when the check box is unchecked, the objects must be invisible.   
-Here is the object method of the check box:
+Les objets dans la zone de groupe **Employer Information** ont tous un nom qui contient l'expression “employer” (y compris la zone de groupe). Lorsque l'option **Currently Employed** est cochée, les objets doivent être visibles, lorsqu'elle est désélectionnée les objets doivent être invisibles. Voici la méthode projet de la case à cocher :
 
 ```4d
-  // cbCurrentlyEmployed Check Box Object Method
+    // Méthode objet Case à cocher cbCurrentlyEmployed
  Case of
     :(FORM Event.code=On Load)
        cbCurrentlyEmployed:=1
  
     :(FORM Event.code=On Clicked)
-  // Hide or Show all the objects whose name contains "emp"
-       OBJECT SET VISIBLE(*;"@emp@";cbCurrentlyEmployed#0)
-  // But always keep the check box itself visible
+  // Cacher ou montrer tous les objets dont le nom contient "emp"
+       OBJECT SET VISIBLE(*;"@emp@";cbCurrentlyEmployed # 0)
+  // Mais toujours conserver la case à cocher visible
        OBJECT SET VISIBLE(cbCurrentlyEmployed;True)
  End case
 ```
 
-Therefore, when executed, the form looks like:
+En exécution, le formulaire apparaîtra ainsi :
 
-![](../assets/en/commands/pict27189.en.png)
+![](../assets/en/commands/pict27189.fr.png)
 
-or:
+ou ainsi :
 
-![](../assets/en/commands/pict27190.en.png)
+![](../assets/en/commands/pict27190.fr.png)
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get visible](object-get-visible.md)  
 [OBJECT SET ENTERABLE](object-set-enterable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 603 |
+| Numéro de commande | 603 |
 | Thread safe | no |
 
 

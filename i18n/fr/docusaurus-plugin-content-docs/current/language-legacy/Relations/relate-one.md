@@ -5,112 +5,107 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* : Table )<br/>**RELATE ONE** ( *manyField* : Field {; *choiceField* : Field} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *tableN* {; *discriminant*} )<br/>**RELATE ONE** ( *champN* {; *discriminant*} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable | Table | &#8594;  | Table for which to establish all automatic relations |
-| manyField | Field | &#8594;  | Field with manual relation to one table |
-| choiceField | Field | &#8594;  | Choice field from the one table |
+| tableN &#124; champN | Table, Champ | &#8594;  | Table pour laquelle définir tous les liens automatiques ou Champ avec lien manuel partant vers la table 1 |
+| discriminant | Field | &#8594;  | Champ discriminant de la table 1 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** has two forms.<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Summary-->**RELATE ONE** accepte deux syntaxes.<!-- END REF-->
 
-The first form, **RELATE ONE**(manyTable), establishes all automatic Many-to-One relations for *manyTable* in the current process. This means that for each field in *manyTable* that has an automatic Many-to-One relation, the command will select the related record in each related table. This changes the current record in the related tables for the process.
+La première syntaxe de la commande, **RELATE ONE**(tableN), active tous les liens aller automatiques (de N vers 1) pour la table *tableN* dans le process courant. Cela signifie que pour chaque champ de la *tableN* d'où part un lien aller automatique, la commande sélectionnera l'enregistrement lié dans chaque table liée. Cela peut donc modifier l'enregistrement courant dans la (les) table(s) liée(s) du process courant.
 
-The second form, **RELATE ONE**(manyField{;choiceField}), looks for the record related to *manyField*. The relation does not need to be automatic. If it exists, **RELATE ONE** loads the related record into memory, making it the current record and current selection for its table.
+La seconde syntaxe, **RELATE ONE**(champN{;discriminant}), recherche l'enregistrement lié au champ *champN*. Il n'est pas nécessaire que le lien soit automatique. S'il existe, **RELATE ONE** charge en mémoire l'enregistrement lié, et en fait l'enregistrement et la sélection courants de la table à laquelle il appartient.
 
-The optional *choiceField* parameter must be a field in the related table. It can only be an Alpha, Text, Numeric, Date, Time, or Boolean field. More specifically, it cannot be a Picture or BLOB type field. 
+Le paramètre optionnel *discriminant* doit être un champ de la table liée. Il peut être uniquement de type Alpha, Texte, numérique, Date, Heure ou Booléen. En particulier, il ne peut pas être de type Image ou Blob. Si *champN* est spécifié, et si plus d'un enregistrement est trouvé dans la table liée, **RELATE ONE** affiche une liste des enregistrements qui correspondent à la valeur de *champN*, permettant à l'utilisateur de sélectionner un enregistrement. Dans cette liste, la colonne de gauche affiche les valeurs des champs liés, la colonne de droite affiche les valeurs de *discriminant*.
 
-If *choiceField* is specified and more than one record is found in the related table, **RELATE ONE** displays a list of records that match the value in *manyField* so that the user can select a record. In this list, the left column displays related field values, and the right column displays *choiceField* values.
+Généralement, plusieurs enregistrements sont trouvés lorsque *champN* se termine par le caractère Joker (@). S'il n'y en a qu'un seul, la liste de sélection n'apparaît pas. 
 
-More than one record may be found if *manyField* ends with the wildcard character (@). If there is only one match, the list does not appear. 
+Dans l'écran ci-dessous, un enregistrement est en train d'être saisi et une liste de sélection s'affiche au premier plan.
 
-In the screen below, a record is being entered and a selection list is displayed in the foreground.
+![](../assets/en/commands/pict2287719.fr.png)
 
-![](../assets/en/commands/pict2287719.en.png)
-
-The following command is used to make the selection list appear: 
+La commande suivante a fait apparaître la liste de sélection : 
 
 ```4d
- RELATE ONE([Personnel]Company;[Companies]Region)
+ RELATE ONE([Personnes]Société;[Sociétés]Région)
 ```
 
-A user entered LLC@ to see a list of companies whose names begin with LLC, as well as their region.
+L'utilisateur a saisi SARL@ pour visualiser la liste de toutes les sociétés dont le nom commence par SARL, ainsi que leur région.
 
-Specifying *choiceField* is the same as specifying a wildcard choice when establishing the table relation. For information about specifying a wildcard choice, refer to the *4D Design Reference* manual.
+Spécifier un champ dans *discriminant* est la même opération que celle qui consiste à définir un champ discriminant dans la boîte de dialogue de définition des propriétés d'un lien en mode Développement. Pour plus d'informations sur la définition d'un champ discriminant, reportez-vous au manuel *Mode Développement* de 4D.
 
 ### 
 
-**Note:** This command does not support Object type fields.
+**Note :** Cette commande ne prend pas en charge les champs de type Objet.
 
-## Example 
+## Exemple 
 
-Let’s say you have an *\[Invoice\]* table related to a *\[Customers\]* table with two non-automatic relations. One relation is from *\[Invoice\]Bill to* to *\[Customers\]Number*, and the other relation is from *\[Invoice\]Ship to* to *\[Customers\]Number*.
+Dans l'exemple suivant, la table \[Factures\] est reliée à la table \[Clients\] par deux liens manuels. Un lien part du champ \[Factures\]AuNomDe et va vers le champ \[Clients\]Numéro, l'autre lien va de \[Factures\]ExpédierA à \[Clients\]Numéro.
 
-![](../assets/en/commands/pict2287721.en.png)
+![](../assets/en/commands/pict2287721.fr.png)
 
-Here is the form for the \[Invoice\] table displaying the "Bill to" and "Send to" information:
+Voici le formulaire de la table \[Factures\] affichant les informations "AuNomDe" et "ExpédierA".
 
-![](../assets/en/commands/pict2287723.en.png)
+![](../assets/en/commands/pict2287723.fr.png)
 
-Since both relations are to the same table, *\[Customers\]*, you cannot obtain the billing and shipment information at the same time. Therefore, displaying both addresses in a form should be performed using variables and calls to **RELATE ONE**. If the *\[Customers\]* fields were displayed instead, data from only one of the relations would be displayed.
+Comme les deux liens pointent vers la même table, \[Clients\], l'information qu'ils récupèrent doit être affichée dans des variables. Si le formulaire contenait les champs de \[Clients\], seules les valeurs issues du second lien seraient affichées. 
 
-The following two methods are the object methods for the *\[Invoice\]Bill to* and *\[Invoice\]Ship to* fields. They are executed when the fields are entered. 
-
-Here is the object method for the *\[Invoice\]Bill to* field:
+Les deux méthodes suivantes sont les méthodes objet des champs \[Factures\]ExpédierA et \[Factures\]AuNomDe. Voici la méthode objet du champ \[Factures\]AuNomDe :
 
 ```4d
- RELATE ONE([Invoice]Bill to)
- vAddress1:=[Customers]Address
- vCity1:=[Customers]City
- vState1:=[Customers]State
- vZIP1:=[Customers]ZIP
+ RELATE ONE([Factures]AuNomDe;[Clients]Adresse)
+ vAdresse1:=[Clients]Adresse
+ vVille1:=[Clients]Ville
+ vPays1:=[Clients]Pays
+ vCP1:=[Clients]Code postal
 ```
 
-Here is the object method for the *\[Invoice\]Ship to* field:
+Voici la méthode objet du champ \[Factures\]ExpédierA :
 
 ```4d
- RELATE ONE([Invoice]Ship to)
- vAddress2:=[Customers]Address
- vCity2:=[Customers]City
- vState2:=[Customers]State
- vZIP2:=[Customers]ZIP
+ RELATE ONE([Factures]ExpédierA;[Clients]Adresse)
+ vAdresse2:=[Clients]Adresse
+ vVille2:=[Clients]Ville
+ vPays2:=[Clients]Pays
+ vCP2:=[Clients]Code postal
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly and if the related records have been loaded, the OK system variable is set to 1\. If the user clicked on **Cancel** in the record selection dialog box (that appears when the related record has been modified), the OK variable is set to 0\. 
+Si la commande a été correctement exécutée et si les enregistrements liés ont bien été chargés, la variable système OK prend la valeur 1\. Si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue de choix d'enregistrement (qui apparaît si l'enregistrement lié avait été modifié), la variable OK prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [OLD RELATED ONE](old-related-one.md)  
 [RELATE MANY](relate-many.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 42 |
+| Numéro de commande | 42 |
 | Thread safe | no |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

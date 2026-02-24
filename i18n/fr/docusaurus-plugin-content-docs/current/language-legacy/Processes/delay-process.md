@@ -5,59 +5,58 @@ slug: /commands/delay-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *process* : Integer ; *duration* : Real )<!-- END REF-->
+<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *process* ; *durée* )<!-- END REF-->
 <!--REF #_command_.DELAY PROCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number |
-| duration | Real | &#8594;  | Duration expressed in ticks |
+| process | Integer | &#8594;  | Numéro de process |
+| durée | Real | &#8594;  | Durée exprimée en ticks |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R3|Modified|
-|<6|Created|
+|14 R3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELAY PROCESS.Summary-->DELAY PROCESS delays the execution of a *process* for a number of ticks (1 tick = 1/60th of a second).<!-- END REF--> During this period, *process* does not take any processing time. Even though the execution of a process may be delayed, it is still in memory.
+<!--REF #_command_.DELAY PROCESS.Summary-->**DELAY PROCESS** permet d'endormir un *process* pour un certain nombre de ticks (1 tick = 1/60ème de seconde).<!-- END REF--> Pendant cette période, le process endormi n'utilise pas de temps machine. Il reste cependant toujours en mémoire.
 
-You can delay a process for less than one tick. For example, if you pass 0.5 in *duration*, the process will be delayed for a 1/2 tick, i.e. 1/120th of a second.
+Vous pouvez endormir un process sur une durée inférieure à un tick. Par exemple, si vous passez 0,5 dans *durée*, le process sera endormi pour 1/2 tick, soit 1/120e de seconde. 
 
-If the process is already delayed, this command delays it again. The *duration* parameter is not added to the time remaining, but replaces it. Therefore pass zero (0) for *duration* if you no longer want to delay a process.
+Si le process est déjà endormi, cette commande l'endort à nouveau. Le paramètre *durée* n'est pas ajouté au temps restant mais le remplace. Vous pouvez passer zéro (0) dans *durée* si vous ne voulez plus endormir le process.
 
-If the process does not exist, the command does nothing.
+Si le process n'existe pas, la commande ne fait rien.
 
-**Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
+**Note :** Vous ne pouvez pas utiliser cette commande à partir d'un poste client pour affecter une procédure stockée sur le poste serveur (*process*<0).
 
-## Example 1 
+## Exemple 1 
 
-See example in *Record Locking*.
+Reportez-vous aux exemples de la section *Verrouillage d'enregistrements*.
 
-## Example 2 
+## Exemple 2 
 
-See example for the command [Process number](./commands/process-number).
+Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
 
-## See also 
+## Voir aussi 
 
 [HIDE PROCESS](hide-process.md)  
 [PAUSE PROCESS](pause-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 323 |
+| Numéro de commande | 323 |
 | Thread safe | yes |
-
 
 

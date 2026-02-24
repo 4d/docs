@@ -5,112 +5,114 @@ slug: /commands/distinct-attribute-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *objectField* : Field ; *path* : Text ; *valuesArray* : Array )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *champObjet* ; *cheminAttribut* ; *tabValeurs* )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objectField | Field | &#8594;  | Object field from which to get the list of distinct attribute values |
-| path | Text | &#8594;  | Path of attribute whose distinct values you want to get |
-| valuesArray | Array | &#8592; | Distinct values in attribute path |
+| champObjet | Field | &#8594;  | Champ objet à utiliser |
+| cheminAttribut | Text | &#8594;  | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
+| tabValeurs | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Tableau des valeurs distinctes dans l'attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->The **DISTINCT ATTRIBUTE VALUES** command creates and populates the *valuesArray* with non-repeated (unique) values coming from the *path* attribute in the *objectField* field for the current selection of the table to which this field belongs.<!-- END REF--> Note that *objectField* must be of the Object type, otherwise an error is returned. The command can be used with indexed or non-indexed fields. 
+<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->La commande **DISTINCT ATTRIBUTE VALUES** crée et remplit le tableau *tabValeurs* avec les valeurs uniques présentes dans l'attribut *cheminAttribut* du champ objet *champObjet* et ce, pour la sélection courante de la table à laquelle appartient le champ.<!-- END REF--> Notez que le champ *champObjet* doit être type Objet, sinon une erreur est retournée. La commande peut être utilisée avec des champs indexés ou non indexés. 
 
-Pass a valid attribute path in *path*. Use the standard dot notation to define paths to nested attributes, for example "company.address.number". Keep in mind that object attribute names are case-sensitive.
+Passez un chemin valide d'attribut dans *cheminAttribut*. Utilisez la notation à points standard pour désigner le chemin d'attributs imbriqués, par exemple "société.adresse.numéro". Attention, gardez à l'esprit que les noms d'attributs d'objets tiennent compte de la casse des caractères. 
 
-The array you passed in *valuesArray* must be of the same type as the values stored in the attribute *path*. Values must be scalar and can be of the Text, number, Boolean, Date, or Time type (pointers, objects, BLOBs or images are not supported). Make sure that all field attribute values are of the same type; otherwise, an error is returned. For example, if the *path* attribute contains "Monday" in one record and 10125 in another record, an error will be returned. 
+Le tableau que vous passez dans *tabValeurs* doit être du même type que les valeurs stockées dans l'attribut *cheminAttribut*. Ces valeurs doivent être scalaires et peuvent être de type texte, numérique, booléen, date ou heure (les pointeurs, objets, BLOBs et images ne sont pas pris en charge). Assurez-vous que toutes les valeurs d'attributs du champ soient bien du même type, autrement une erreur est retournée. Par exemple, si l'attribut *cheminAttribut* contient "Lundi" dans un enregistrement et 10125 dans un autre enregistrement, **DISTINCT ATTRIBUTE VALUES** retournera une erreur. 
 
-If the command is called from within a transaction, records created during the transaction are taken into account. 
+Si la commande est appelée pendant une transaction, les enregistrements créés dans la transation sont pris en compte.
 
-After the call, the size of the array is equal to the number of distinct values found in the selection. The command does not change the current selection or the current record. 
+Après l'exécution de la commande, la taille du tableau *tabValeurs* est égale au nombre de valeurs différentes trouvées dans la sélection. 
 
-### Using the .length virtual property 
+La commande ne modifie pas la sélection courante ni l'enregistrement courant. 
 
-You can use the "length" virtual property with this command. It is automatically available for all attributes of the array type, and provides the size of the array, i.e. the number of elements it contains. This property is designed to be used in queries (see [QUERY BY ATTRIBUTE](query-by-attribute.md)). You can also use it with the **DISTINCT ATTRIBUTE VALUES** command to get the different array sizes for an attribute.
+### Utilisation de la propriété virtuelle length 
 
-## Example 
+Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle est destinée à une utilisation avec la commande [QUERY BY ATTRIBUTE](query-by-attribute.md) mais est également disponible pour **DISTINCT ATTRIBUTE VALUES** afin d'obtenir les différentes tailles de tableaux pour un attribut.
 
-Your database contains a \[Customer\]full\_Data object field with 15 records:
+## Exemple 
+
+Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements :
 
 ![](../assets/en/commands/pict2994114.en.png)
 
-If you execute this code:
+Si vous exécutez ce code :
 
 ```4d
  ARRAY LONGINT(aLAges;0)
  ARRAY LONGINT(aLAgesChild;0)
  ARRAY LONGINT(aLChildNum;0)
  ALL RECORDS([Customer])
-  //get the distinct values for the "age" attribute
+  //obtenir les valeurs distinctes de l'attribut "age"
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
-  //get the distinct values for the "age" attribute within the "Children" array
+  //obtenir les valeurs distinctes de l'attribut dans le tableau Children"
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
-  //get the distinct numbers of children by using the length virtual property
+  //obtenir les différents nombres d'enfants à l'aide de la propriété virtuelle length
  DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
 ```
 
-The *aLAges* array receives the following elements:
+Le tableau *aLAges* reçoit les éléments suivants :
 
-| **Element** | **Value** |
-| ----------- | --------- |
-| 1           | 33        |
-| 2           | 35        |
-| 3           | 36        |
-| 4           | 40        |
-| 5           | 42        |
-| 6           | 44        |
-| 7           | 52        |
-| 8           | 54        |
-| 9           | 60        |
+| **Elément** | **Valeur** |
+| ----------- | ---------- |
+| 1           | 33         |
+| 2           | 35         |
+| 3           | 36         |
+| 4           | 40         |
+| 5           | 42         |
+| 6           | 44         |
+| 7           | 52         |
+| 8           | 54         |
+| 9           | 60         |
 
-The *aLAgesChild* array receives the following elements:
+Le tableau *aLAgesChild* reçoit les éléments suivants :
 
-| **Element** | **Value** |
-| ----------- | --------- |
-| 1           | 2         |
-| 2           | 3         |
-| 3           | 4         |
-| 4           | 5         |
-| 5           | 6         |
-| 6           | 10        |
-| 7           | 12        |
-| 8           | 14        |
-| 9           | 15        |
-| 10          | 16        |
+| **Elément** | **Valeur** |
+| ----------- | ---------- |
+| 1           | 2          |
+| 2           | 3          |
+| 3           | 4          |
+| 4           | 5          |
+| 5           | 6          |
+| 6           | 10         |
+| 7           | 12         |
+| 8           | 14         |
+| 9           | 15         |
+| 10          | 16         |
 
-The *aLChildNum* array receives the following elements:
+Le tableau *aLChildNum* reçoit les éléments suivants :
 
-| **Element** | **Value** |
-| ----------- | --------- |
-| 1           | 1         |
-| 2           | 2         |
-| 3           | 3         |
+| **Elément** | **Valeur** |
+| ----------- | ---------- |
+| 1           | 1          |
+| 2           | 2          |
+| 3           | 3          |
 
-## See also 
+## Voir aussi 
 
   
 [DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1397 |
+| Numéro de commande | 1397 |
 | Thread safe | yes |
 
 

@@ -5,72 +5,72 @@ slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* : Time ; *tag* : Text {; ...(*attribName* : Text ; *attribValue* : Text)} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* ; *balise* {; *nomAttribut* ; *valeurAttribut*} {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| tag | Text | &#8594;  | Name of element to open |
-| attribName | Text | &#8594;  | Attribute name |
-| attribValue | Text | &#8594;  | Attribute value |
+| document | Time | &#8594;  | Référence du document ouvert |
+| balise | Text | &#8594;  | Nom de l’élément à ouvrir |
+| nomAttribut | Text | &#8594;  | Nom d’attribut |
+| valeurAttribut | Text | &#8594;  | Valeur d’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->The **SAX OPEN XML ELEMENT** command adds a new element in the XML document referenced by *document* as well as, optionally, attributes and their values.<!-- END REF--> 
+<!--REF #_command_.SAX OPEN XML ELEMENT.Summary-->La commande **SAX OPEN XML ELEMENT** permet d’ajouter un nouvel élément dans le document XML référencé par *document* ainsi que, facultativement, des attributs et leurs valeurs.<!-- END REF--> 
 
-The added element is “open” in the document (the end tag is not added). To close an element created using this command, you must either:
+L’élément ajouté est “ouvert” dans le document (la balise de fin n’est pas ajoutée). Pour refermer un élément créé à l’aide de cette commande, vous devez soit :
 
-* Use the [SAX CLOSE XML ELEMENT](sax-close-xml-element.md) command, or
-* Close the XML document. In this case, 4D will automatically add the necessary XML end tags.
+* utiliser la commande [SAX CLOSE XML ELEMENT](sax-close-xml-element.md),
+* refermer le document XML. Dans ce cas, 4D ajoute automatiquement les balises XML de fermeture nécessaires.
 
-In *tag*, pass the name of the element to be created. This name may only contain letters, numbers and the characters “.”, “-“,”\_” and “:”. If an invalid character is passed in *tag*, an error will be generated. 
+Passez dans *balise* le nom de l’élément à créer. Ce nom peut contenir uniquement des lettres, des chiffres, ainsi que les caractères “.”, “-“,”\_” et “:”. Si un caractère invalide est passé dans *balise*, une erreur est générée. 
 
-Optionally, the command can pass one or more attribute/value pairs (in the form of variables, fields or literal values) using the *attribName* and *attribValue* parameters. You can pass as many attribute/value pairs as you want. 
+Facultativement, la commande permet de passer un ou plusieurs couple(s) attributs/valeurs (sous forme de variables, champs ou valeur littérales) via les paramètres *nomAttribut* et *valeurAttribut*. Vous pouvez passer autant de couples attribut/valeur que vous voulez. 
 
-## Example 
+## Exemple 
 
-The following statement:
+L’instruction suivante :
 
 ```4d
  vElement:="Book"
- SAX OPEN XML ELEMENT($DocRef;vElement)
+ SAX OPEN XML ELEMENT($RefDoc;vElement)
 ```
 
-... writes the following line in the document: 
+... inscrira cette ligne dans le document : 
 
 ```XML
 <Book
 ```
 
-## Error management 
+## Gestion des erreurs 
 
-If an invalid character is passed in *tag*, an error is generated. 
+Si un caractère invalide est passé dans *balise*, une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
 [SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 853 |
+| Numéro de commande | 853 |
 | Thread safe | yes |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

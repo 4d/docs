@@ -5,52 +5,53 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return the number of the current record, or Default table, if omitted |
-| Function result | Integer | &#8592; | Current record number |
+| laTable | Table | &#8594;  | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &#8592; | Numéro d'enregistrement courant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Record number.Summary-->**Record number** returns the physical record number for the current record of *aTable*.<!-- END REF--> If there is no current record, such as when the record pointer is before or after the current selection, **Record number** returns -1 (`No current record` constant). If the record is a new record that has not been saved, **Record number** returns -3 (`New record` constant).
+<!--REF #_command_.Record number.Summary-->**Record number** retourne le numéro de l'enregistrement courant de *laTable*.<!-- END REF--> S'il n'y a pas d'enregistrement courant, par exemple si le pointeur d'enregistrement se trouve avant ou après la sélection courante, **Record number** retourne -1 (constante `No current record`). S'il s'agit d'un nouvel enregistrement qui n'a pas encore été sauvegardé, **Record number** retourne -3 (constante `New record`).
 
-Record numbers can change. The record numbers of deleted records are reused.
+Les numéros d'enregistrements peuvent varier. Par exemple, les numéros des enregistrements supprimés sont réutilisés. 
 
-**4D Server:** This command returns a different result for the On Validate form event depending on whether it is executed on 4D in local mode or 4D in remote mode. In local mode, the command returns a record number (the record is considered as already created). In remote mode, the command returns -3 (`New record` constant) because, in this case, the record is already created on the server but the information has not yet been sent to the client.
+**4D Server :** Cette commande retourne un résultat différent dans le contexte de l'événement formulaire On Validate suivant qu'elle est exécutée sur 4D en mode local ou 4D en mode distant. En mode local, la commande retourne un numéro d'enregistrement (l'enregistrement est considéré comme déjà créé). En mode distant, la commande retourne -3 (constante `New record`) car dans ce cas, l'enregistrement est également déjà créé sur le serveur mais l'information n'a pas encore été envoyée au client.
 
-**Note:** It is recommended to use the [Is new record](is-new-record.md) command to check whether a record is in the process of being created. 
+**Note :** Il est fortement conseillé d'utiliser la commande [Is new record](is-new-record.md) pour vérifier si un enregistrement est en cours de création. 
 
-## Example 
+## Exemple 
 
-The following example saves the current record number and then searches for any other records that have the same data:
+L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche dans la table si un autre enregistrement a la même valeur : 
 
 ```4d
- $RecNum:=Record number([People]) // Get the record number
- QUERY([People];[People]Last =[People]Last) // Anyone else with the last name?
-  // Display an alert with the number of people with the same last name
- ALERT("There are "+String(Records in selection([People])+" with that name.")
- GOTO RECORD([People];$RecNum) // Go back to the same record
+ $NumEnreg :=Record number([Personnes]) // Obtenir le numéro d'enregistrement
+  // Est-ce que quelqu'un d'autre a le même nom ?
+ QUERY([Personnes];[Personnes]Nom=[Personnes]Nom)
+  // Afficher une alerte avec le nombre de personnes qui ont le même nom
+ ALERT("Il existe "+String(Enregistrements trouves([Personnes])+" personnes du même nom.")
+ GOTO RECORD([Personnes];$NumEnreg) // Retourner à l'enregistrement original
 ```
 
-## See also 
+## Voir aussi 
 
-*About Record Numbers*  
+*A propos des numéros d'enregistrements*  
 [GOTO RECORD](goto-record.md)  
 [Is new record](is-new-record.md)  
 [Selected record number](selected-record-number.md)  
 [Sequence number](sequence-number.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 243 |
+| Numéro de commande | 243 |
 | Thread safe | yes |
 
 

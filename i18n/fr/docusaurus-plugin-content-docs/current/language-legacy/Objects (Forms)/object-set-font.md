@@ -5,82 +5,82 @@ slug: /commands/object-set-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *object* : Text ; *font* : Text )<br/>**OBJECT SET FONT** ( *object* : Variable, Field ; *font* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( {* ;} *objet* ; *police* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, Object is an Object Name (String) If omitted, Object is a Field or a Variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| font | Text | &#8594;  | Font name |
+| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| police | Text | &#8594;  | Nom de police de caractères |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|12|Renamed|
-|6|Modified|
-|<6|Created|
+|14|Modifié|
+|12|Renommé|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET FONT.Summary-->OBJECT SET FONT displays the *object* using the font specified in the *font* parameter.<!-- END REF--> The *font* parameter must contain a valid font name.
+<!--REF #_command_.OBJECT SET FONT.Summary-->**OBJECT SET FONT** affiche *objet* avec la police définie dans le paramètre *police*.<!-- END REF--> Le paramètre *police* doit contenir un nom de police valide.
 
-If you specify the optional *\** parameter, you indicate an object name (a string) in *object*. If you omit the optional \* parameter, you indicate a field or a variable in *object*. In this case, you specify a field or variable reference (field or variable objects only) instead of a string.
+Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-**Note:** If you use this command on an *object* that was using a style sheet, the reference to the style sheet is automatically deleted from the object -- even if you assign the same attributes as those of the style sheet.
+**Note** : Si vous utilisez cette commande sur un objet qui utilisait une feuille de style, la référence à la feuille de style est automatiquement supprimée de l'objet -- même si vous attribuez les mêmes attributs que ceux de la feuille de style.
 
-## Example 1 
+## Exemple 1 
 
-The following example sets the font for a button named *bOK*: 
+L'exemple suivant définit la police d'un bouton nommé *bOK*. La police est Arial, une police système sous Windows : 
 
 ```4d
- OBJECT SET FONT(bOK;"Arial")
+ OBJECT SET FONT(bOK;"Arial") // Modification de la police de MonBouton
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example sets the font for all the form objects whose name contains "info": 
+L'exemple suivant définit la police de tous les objets d'un formulaire dont le nom contient "info". 
 
 ```4d
  OBJECT SET FONT(*;"@info@";"Times")
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example uses the special *%password* option, designed for entry and display of “password” type fields. When you pass "%password" in the *font* parameter:
+L'exemple suivant utilise l'option spéciale *%password*, destinée à la saisie et l'affichage des champs de type “mots de passe”. Lorsque vous passez "%password" dans le paramètre *police* pour un *objet* :
 
-* every character entered in the object is displayed with the same symbol,
-* "copy" and "cut" actions are disabled in the object.
+* chaque caractère saisi dans l'objet est représenté par un même symbole,
+* les actions "copier" et "couper" sont désactivées dans l'objet.
 
-**Note:** You can use the *%password* option with field, variable and combo box type objects.
+**Note :** L'option *%password* est utilisable avec les objets de type champ, variable et combo box.
 
 ```4d
- OBJECT SET FONT([Users]Password;"%password")
+ OBJECT SET FONT([Utilisateurs]MotPasse;"%password")
 ```
 
-## See also 
+## Voir aussi 
 
 [Font file](font-file.md)  
 [FONT LIST](font-list.md)  
+*Notes de programmation*  
 [OBJECT Get font](object-get-font.md)  
 [OBJECT SET FONT SIZE](object-set-font-size.md)  
 [OBJECT SET FONT STYLE](object-set-font-style.md)  
-*Programming Notes*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 164 |
+| Numéro de commande | 164 |
 | Thread safe | no |
 
 

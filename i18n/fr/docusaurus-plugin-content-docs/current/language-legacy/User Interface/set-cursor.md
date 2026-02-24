@@ -5,41 +5,41 @@ slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ({ *cursor* : Integer })<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** {( *curseur* )}<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cursor | Integer | &#8594;  | Cursor resource number |
+| curseur | Integer | &#8594;  | Numéro de curseur système |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET CURSOR.Summary-->The SET CURSOR command changes the mouse cursor to the system cursor whose ID number you pass in *cursor*.<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Summary-->La commande **SET CURSOR** remplace le pointeur (graphique) de la souris par le pointeur système dont vous avez passé le numéro d'ID dans le paramètre *curseur*.<!-- END REF-->
 
-This command must be called in the context of the On Mouse Move [Form event code](./commands/form-event-code). 
+Cette commande doit être appelée dans le contexte de l'[Form event code](../commands/form-event-code.md) On Mouse Move.
 
-To restore the standard mouse cursor, call the command without any parameter.
+Pour restaurer le pointeur de souris standard, appelez la commande sans paramètre. 
 
-Here are the cursors that can be passed in the *cursor* parameter:
+Voici les curseurs disponibles :
 
-| **Number** | **Cursor**                                    |
+| **Numéro** | **Curseur**                                   |
 | ---------- | --------------------------------------------- |
-| 1          | ![](../assets/en/commands/pict14679.en.png)   |
-| 2          | ![](../assets/en/commands/pict14680.en.png)   |
+| 1          | ![](../assets/en/commands/pict14679.fr.png)   |
+| 2          | ![](../assets/en/commands/pict14680.fr.png)   |
 | 4          | ![](../assets/en/commands/pict2478657.en.png) |
 | 9000       | ![](../assets/en/commands/pict2478660.en.png) |
 | 9001       | ![](../assets/en/commands/pict2478662.en.png) |
@@ -61,11 +61,11 @@ Here are the cursors that can be passed in the *cursor* parameter:
 | 559        | ![](../assets/en/commands/pict2478698.en.png) |
 | 560        | ![](../assets/en/commands/pict2478696.en.png) |
 
-**Note:** Cursor availability and appearance may vary depending on the operating system.
+**Note :** La disponibilité et l'apparence des curseurs varie en fonction du système d'exploitation. 
 
-## Example 
+## Exemple 
 
-You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.en.png) when the mouse moves over a variable area in the form. In the object method of the variable, you can write:
+Vous souhaitez que le curseur se transforme en ![](../assets/en/commands/pict2478692.en.png) lorsque la souris survole une variable du formulaire. Dans la méthode de la variable, vous pouvez écrire :
 
 ```4d
  If(Form event code=On Mouse Move)
@@ -74,12 +74,11 @@ You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.e
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 469 |
+| Numéro de commande | 469 |
 | Thread safe | no |
-
 
 

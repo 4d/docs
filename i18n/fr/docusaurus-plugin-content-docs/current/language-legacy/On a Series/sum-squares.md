@@ -5,78 +5,78 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* : Field, Array ) : Real<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *séries* ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Data for which to return the sum of squares |
-| Function result | Real | &#8592; | Sum of squares of series |
+| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir la somme des carrés |
+| Résultat | Real | &#8592; | Somme des carrés de séries |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Modified|
-|<6|Created|
+|13|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Sum squares.Summary-->**Sum squares** returns the sum of the squares of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the sum of the squares.
+<!--REF #_command_.Sum squares.Summary-->**Sum squares** retourne la somme des carrés de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul. 
 
-You can pass an array (one or two dimensions) in *series*. In this case, the array must be of the Integer, Longint or Real type.
+Vous pouvez passer dans *séries* un tableau (à une ou deux dimensions). Dans ce cas, le tableau doit être de type Entier, Entier long ou Réel.
 
-## Example 1 
+## Exemple 1 
 
-The following example is an object method for the variable *vSquares*. The object method assigns the sum of squares for a data series to *vSquares*. The *vSquares* variable is printed in the last break of the report:
+L'exemple suivant est la méthode objet d'une variable appelée Carrés. La méthode assigne la somme des carrés d'une série de valeurs à Carrés. La méthode est imprimée dans la dernière rupture de l'état :
 
 ```4d
- vSquares:=Sum squares([Table1]DataSeries)
+ Carrés:=Sum squares([Table1]SérieValeurs)
 ```
 
-The following method is called to print the records in the selection and to activate break processing:
+La méthode suivante est appelée pour imprimer les enregistrements de la sélection et activer la phase de rupture :
 
 ```4d
  ALL RECORDS([Table1])
- ORDER BY([Table1];[Table1]DataSeries;>)
+ ORDER BY([Table1];[Table1]SérieValeurs;>)
  BREAK LEVEL(1)
- ACCUMULATE([Table1]DataSeries)
- OUTPUT FORM([Table1];"PrintForm")
+ ACCUMULATE([Table1]SérieValeurs)
+ OUTPUT FORM([Table1];"FormImpression")
  PRINT SELECTION([Table1])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
-## Example 2 
+## Exemple 2 
 
-This example gets the sum of the squares of the values placed in an array:
+Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées dans un tableau : 
 
 ```4d
- ARRAY REAL($ArrGrades;0)
+ ARRAY REAL($TabNote;0)
  QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vSumSquares:=Sum squares($ArrGrades)
+ SELECTION TO ARRAY([Exams]Exam_Note;$TabNote)
+ vSommeCarres:=Sum squares($TabNote)
 ```
 
-## See also 
+## Voir aussi 
 
 [Average](average.md)  
 [Std deviation](std-deviation.md)  
 [Sum](sum.md)  
 [Variance](variance.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 28 |
+| Numéro de commande | 28 |
 | Thread safe | yes |
 
 

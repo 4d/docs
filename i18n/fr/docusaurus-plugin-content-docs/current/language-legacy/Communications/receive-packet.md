@@ -5,122 +5,120 @@ slug: /commands/receive-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *stopChar* : Text )<br/>**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *numBytes* : Integer )<!-- END REF-->
+<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* ;} *réceptVar* ; *stopChar* )<br/>**RECEIVE PACKET** ( {*docRef* ;} *réceptVar* ; *numBytes* )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Document reference number, or Current channel (serial port or document) |
-| receiveVar | Text, Blob | &#8592; | Variable to receive data |
-| stopChar | Text | &#8594;  | Character(s) at which to stop receiving|
-| numBytes | Integer | &#8594;  | Number of bytes to receive |
+| docRef | Time | &#8594;  | Numéro de référence de document ou canal courant (port série ou document) |
+| réceptVar | Text, Blob | &#8592; | Variable devant recevoir les données |
+| stopCar &#124; nbOctets | Chaîne, Entier long | &#8594;  | Caractère(s) au(x)quel(s) stopper la réception des données ou Nombre d'octets à recevoir |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RECEIVE PACKET.Summary-->**RECEIVE PACKET** reads characters from a serial port or from a document.<!-- END REF-->
+<!--REF #_command_.RECEIVE PACKET.Summary-->La commande **RECEIVE PACKET** lit des caractères depuis un port série ou un document.<!-- END REF-->
 
-If *docRef* is specified, this command retrieves data from a document opened using [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md). If *docRef* is omitted, this command retrieves data from the serial port or the document opened using [SET CHANNEL](set-channel.md).
+Si *docRef* est spécifié, la commande récupère des données depuis un document ouvert par la fonction [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md). Si *docRef* est omis, la commande récupère des données depuis un port série ou un document ouvert par la commande [SET CHANNEL](set-channel.md). 
 
-Whatever the source, the characters read are returned in *receiveVar*, which must be a Text, String or BLOB variable. If the characters have been sent by the [SEND PACKET](send-packet.md) command, the type must correspond to that of the packet sent. 
+Dans tous les cas, les caractères lus sont retournés dans la variable *réceptVar*, qui doit être une variable de type Texte, Alpha ou BLOB. Si les données ont été envoyées par la commande [SEND PACKET](send-packet.md), le type doit correspondre à celui du paquet envoyé.
 
-**Notes:**
+**Notes**
 
-* When the package received is of the BLOB type, the command does not take into account any character set defined by the [USE CHARACTER SET](use-character-set.md) command. The BLOB is returned without any modification.
-* When the package received is of the Text type, the RECEIVE PACKET command supports Byte Order Marks (BOMs). In this case, if the current character set is of the Unicode type (UTF-8, UTF-16 or UTF-32), 4D attempts to identify a BOM among the first bytes received. If one is detected, it is filtered out of the *receiveVar* variable and 4D uses the character set that it defines instead of the current character set.
+* Si le paquet reçu est de type BLOB, la commande ne tient pas compte du jeu de caractères éventuellement défini par la commande [USE CHARACTER SET](use-character-set.md). Le BLOB est retourné sans aucune modification.
+* Si le paquet reçu est de type texte, la commande **RECEIVE PACKET** prend en charge les BOM (Byte Order Mark). Dans ce cas, si le jeu de caractères courant est de type Unicode (UTF-8, UTF-16 ou UTF-32), 4D tente d’identifier une BOM parmi les premiers octets reçus. Si elle est détectée, elle est filtrée de la variable *réceptVar* et 4D utilise le jeu de caractères qu’elle définit au lieu du jeu de caractères courant.
 
-To read a particular number of characters, pass this number in *numBytes*. If the *receiveVar* variable is of the Text type, in a single call you can read up to 2 GB of text (theoretical value).
+Si vous voulez recevoir un nombre prédéfini d'octets, passez ce nombre dans le paramètre *nbOctets*. Si la variable *réceptVar* est de type Texte, vous pouvez lire en un seul appel jusqu'à 2 Go de texte (limite théorique). 
 
-To receive data until a particular string (composed of one or more characters) is encountered, pass this string in *stopChar* (the string is not returned in *receiveVar*).
+Si vous voulez recevoir des données jusqu'à ce qu'une chaîne de caractères (comportant un ou plusieurs caractères) soit lue, passez-la dans le paramètre *stopCar* (la chaîne n'est pas retournée dans *réceptVar*).   
+Dans ce cas, si la chaîne de caractères spécifiée par *stopCar* n'est pas trouvée :
 
-In this case, if the character string specified by *stopChar* is not found:
+* lorsque **RECEIVE PACKET** lit un document, l'exécution de la commande se terminera à la fin du document.
+* lorsque **RECEIVE PACKET** lit des données en provenance du port série, la commande s'exécutera indéfiniment jusqu'à ce que le délai d'attente (s'il est fixé) soit écoulé (cf. la commande [SET TIMEOUT](set-timeout.md)) ou que l'utilisateur interrompe la réception (voir ci-dessous).
 
-* When RECEIVE PACKET is reading a document, it will stop reading at the end of the document.
-* When RECEIVE PACKET is reading from a serial port, it will attempt to wait indefinitely until the timeout (if any) has elapsed (see [SET TIMEOUT](set-timeout.md)) or until the user interrupts the reception (see below).
+Pendant l'exécution d'un **RECEIVE PACKET**, l'utilisateur peut interrompre l'opération en appuyant sur les touches **Ctrl**+**Alt**+**Maj** (sous Windows) ou **Commande**+**Option**+**Maj** (sous Mac OS). Cette interruption génère une erreur -9994 que vous pouvez intercepter à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Généralement, vous devez gérer les interruptions d'une réception uniquement lors d'une communication série. 
 
-During execution of RECEIVE PACKET, the user can interrupt the reception by pressing **Ctrl-Alt-Shift** (Windows) or **Command-Option-Shift** (Macintosh). This interruption generates an error -9994 that you can catch with an error-handling method installed using [ON ERR CALL](on-err-call.md). Usually, you will only have to handle interruption of a reception when communicating over a serial port.
+Lors de la lecture d'un document, le premier **RECEIVE PACKET** commence par lire le début du document. La lecture des paquets suivants débute au caractère situé immédiatement après le dernier octet lu.
 
-When reading a document, the first RECEIVE PACKET begins reading at the beginning of the document. The reading of each subsequent packet begins at the character following the last byte read.
+**Note :** Ce fonctionnement est valide avec un document ouvert par [SET CHANNEL](set-channel.md). Cependant, pour un document ouvert par [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md), vous pouvez aussi utiliser les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md)pour connaître et modifier la position à laquelle, dans le document, la prochaine écriture ([SEND PACKET](send-packet.md)) ou lecture (**RECEIVE PACKET**) aura lieu.
 
-**Note:** This command is useful for document opened with [SET CHANNEL](set-channel.md). On the other hand, for a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md), you can use the [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) commands to get and change the location in the document where the next writing ([SEND PACKET](send-packet.md)) or reading (RECEIVE PACKET) will occur.
+En cas de tentative de lecture après la fin d'un document, **RECEIVE PACKET** retourne les données lues jusqu'à ce point et la variable système OK prend la valeur 1\. Les **RECEIVE PACKET** suivants retourneront une chaîne vide et OK prendra la valeur zéro.
 
-When attempting to read past the end of a file, RECEIVE PACKET will return with the data read up to that point and the variable OK will be set to 1\. Then, the next RECEIVE PACKET will return an empty string and set the OK variable to zero.
+## Exemple 1 
 
-## Example 1 
-
-The following example reads 20 characters from a serial port into the variable *getTwenty*:
+L'exemple suivant lit 20 caractères depuis un port série et les place dans la variable RécupVingt :
 
 ```4d
- RECEIVE PACKET(getTwenty;20)
+ RECEIVE PACKET(RécupVingt;20)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example reads data from the document referenced by the variable *myDoc* into the variable *vData*. It reads until it encounters a carriage return:
+L'exemple suivant lit des données depuis le document référencé par la variable MonDoc et les place dans la variable *vData*. La commande récupère les données jusqu'à ce qu'elle rencontre un retour chariot :
 
 ```4d
- RECEIVE PACKET(myDoc;vData;Char(Carriage return))
+ RECEIVE PACKET(MonDoc;vData;Char(Carriage return))
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example reads data from the document referenced by the variable *myDoc* into the variable *vData*. It reads until it encounters the *</TD>* (end of table cell) HTML tag:
+L'exemple suivant lit des données du document référencé par la variable MonDoc et les place dans la variable *vData*. La commande récupère les données jusqu'à ce qu'elle rencontre une balise HTML de fin de tableau (*</TD>*) : 
 
 ```4d
- RECEIVE PACKET(myDoc;vData;"")
+ RECEIVE PACKET(MonDoc;vData;"")
 ```
 
-## Example 4 
+## Exemple 4 
 
-The following example reads data from a document into fields. The data is stored as fixed-length fields. The method calls a subroutine to strip any trailing spaces (spaces at the end of the string). The subroutine follows the method: 
+L'exemple suivant lit des données d'un document et les place dans des champs. Les données sont stockées dans des champs de longueur fixe. La méthode fait appel à une sous-routine pour éliminer les espaces superflus (situés derrière les valeurs). Le code de la sous-routine est présenté après la méthode : 
 
 ```4d
- $vhDocRef :=Open document("";"TEXT") // Open a TEXT document
- If(OK=1) // If the document was opened
-    Repeat // Loop until no more data
-       RECEIVE PACKET($vhDocRef;$Var1;15) // Read 15 characters
-       RECEIVE PACKET($vhDocRef;$Var2;15) // Do same as above for second field
-       If(($Var1#"")|($Var2#"")) // If at least one of the fields is not empty
-          CREATE RECORD([People]) // Create a new record
-          [People]First :=Strip($Var1) // Save the first name
-          [People]Last :=Strip($Var2) // Save the last name
-          SAVE RECORD([People]) // Save the record
+ $Doc :=Open document("";"TEXT") // Ouverture d'un document de type Texte
+ If(OK=1) // Si le document est ouvert…
+    Repeat // Boucle jusqu'à ce qu'il n'y ait plus de données
+       RECEIVE PACKET($Doc;$Var1;15) // Lecture de 15 caractères
+       RECEIVE PACKET($Doc;$Var2;15) // Même chose pour le second champ
+       If(OK=1) // Si ce n'est pas la fin du document…
+          CREATE RECORD([Personnes]) // Créer un nouvel enregistrement
+          [Personnes]Prénom:=Elimine($Var1) // Sauvegarder le prénom
+          [Personnes]Nom:=Elimine($Var2) // Sauvegarder le nom
+          SAVE RECORD([Personnes]) // Sauvegarder l'enregistrement
        End if
     Until(OK=0)
-    CLOSE DOCUMENT($vhDocRef) // Close the document
+    CLOSE DOCUMENT($Doc) // Fermeture du document
  End if
 ```
 
-The spaces at the end of the data are stripped by the following method, called Strip:
+Les espaces superflus derrière les valeurs sont éliminés par la méthode suivante, appelée Elimine : 
 
 ```4d
- For($i;Length($1);1;-1) // Loop from end of string to start
-    If($1[[$i]]#" ") // If it is not a space…
-       $i :=-$i  // Force the loop to end
+ For($i;Length($1);1;-1) // Boucle sur la fin de la chaîne d'où démarrer
+    If($1[[$i]]#" ") // Si ce n'est pas un espace…
+       $i :=-$i  // Forcer la boucle à stopper
     End if
  End for
- $0:=Delete string($1;-$i;Length($1)) // Delete the spaces
+ $0:=Delete string($1;-$i;Length($1)) // Suppression des espaces
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the packet is received without error. Otherwise, the OK system variable is set to 0.
+Après un appel à **RECEIVE PACKET**, la variable système OK prend la valeur 1 si le paquet est reçu sans erreur. Sinon, OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [Get document position](get-document-position.md)  
 [RECEIVE BUFFER](receive-buffer.md)  
@@ -129,12 +127,12 @@ After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the pa
 [SET TIMEOUT](set-timeout.md)  
 [USE CHARACTER SET](use-character-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 104 |
+| Numéro de commande | 104 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,61 +5,60 @@ slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *userSession* : Text )<!-- END REF-->
+<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sessionUtilisateur* )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| userSession | Text | &#8594;  | User's session ID |
+| sessionUtilisateur | Text | &#8594;  | ID de la session de l'utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R4|Created|
+|17 R4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DROP REMOTE USER.Summary-->The **DROP REMOTE USER** command disconnects a specific user remotely connected to the 4D Server.<!-- END REF--> 
+<!--REF #_command_.DROP REMOTE USER.Summary-->La commande **DROP REMOTE USER** permet de déconnecter un utilisateur distant spécifique connecté à 4D Server.<!-- END REF--> 
 
-In *userSession*, pass the session ID of the user you want to disconnect from the server. You can retrieve the session ID with the [Process activity](./commands/process-activity) command.
+Dans *userSession*, passez l'ID de la session de l'utilisateur que vous souhaitez déconnecter du serveur. Vous pouvez récupérer l'ID de la session à l'aide de la commande [Process activity](../commands/process-activity.md).
 
-**Note:** This command is executed asynchronously and can only be executed on 4D Server. If the method calling the command is executed locally on a remote client or in 4D single user, **DROP REMOTE USER** does nothing.
+**Note :** Cette commande est exécutée de manière asynchrone et uniquement sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **DROP REMOTE USER** ne fait rien.
 
-## Example 
+## Exemple 
 
-You want to drop a specific remote user:
+Vous souhaitez supprimer un utilisateur distant spécifique :
 
 ```4d
-  // Method to be executed on server
+  // Méthode à exécuter sur le serveur
  var $userCol : Collection
  var $element : Object
  
-  //disconnect the remote user Vanessa Talbot
+  //déconnectez l'utilisateur distant Vanessa
  $userCol:=Get process activity(Sessions only).sessions.query("systemUserName = :1";"Vanessa")
  For each($element;$userCol)
     DROP REMOTE USER($element.ID)
  End for each
 ```
 
-## See also 
+## Voir aussi 
 
 [REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
 [SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1633 |
+| Numéro de commande | 1633 |
 | Thread safe | yes |
-
 
 

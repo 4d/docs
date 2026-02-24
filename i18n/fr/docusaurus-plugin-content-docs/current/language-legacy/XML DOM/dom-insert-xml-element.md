@@ -5,93 +5,93 @@ slug: /commands/dom-insert-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *targetElementRef* : Text ; *sourceElementRef* : Text ; *childIndex* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElémentCible* ; *refElémentSource* ; *indexEnfant* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Insert XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetElementRef | Text | &#8594;  | Parent XML element reference |
-| sourceElementRef | Text | &#8594;  | XML element reference to insert |
-| childIndex | Integer | &#8594;  | Index of child of target element above which the new element must be inserted |
-| Function result | Text | &#8592; | Reference of new XML element |
+| refElémentCible | Text | &#8594;  | Référence de l’élément XML parent |
+| refElémentSource | Text | &#8594;  | Référence de l’élément XML à insérer |
+| indexEnfant | Integer | &#8594;  | Index de l’enfant de l’élément cible avant lequel le nouvel élément doit être inséré |
+| Résultat | Text | &#8592; | Référence du nouvel élément XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Insert XML element.Summary-->The DOM Insert XML element command can be used to insert a new XML element among the child elements of the XML element whose reference is passed in the *targetElementRef* parameter.<!-- END REF--> 
+<!--REF #_command_.DOM Insert XML element.Summary-->La commande **DOM Insert XML element** permet d’insérer un nouvel élément XML parmi les enfants de l’élément XML dont la référence est passée dans le paramètre *refElémentCible*.<!-- END REF--> 
 
-Pass the element to be inserted in *sourceElementRef*. This element must be passed as the reference of an existing XML element in a DOM tree. 
+Passez dans *refElémentSource* l’élément à insérer. Cet élément doit être passé en tant que référence d’un élément XML existant dans un arbre DOM. 
 
-The *childIndex* parameter can be used to designate the child of the parent element before which the new element must be inserted. Pass an index number in this parameter. If the value is not valid (for example, there is no child element having this index), the new element will be added before the first child of the parent element. 
+Le paramètre *indexEnfant* permet de désigner l’enfant de l’élément parent avant lequel le nouvel élément doit être inséré. Passez un numéro d’index dans ce paramètre. Si la valeur est invalide (par exemple s’il n’existe pas d’élément enfant de cet index), le nouvel élément sera ajouté avant le premier enfant de l’élément parent. 
 
-The command returns the reference of the XML element obtained.
+La commande retourne la référence de l’élément XML obtenu.
 
-## Example 
+## Exemple 
 
-In the following structure, we would like to invert the first and second book:
+Dans la structure suivante, nous souhaitons inverser le premier et le deuxième livre :
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <BookCatalog>
   <Book>
-          <Title>Open Source Web Services</Title>
-          <Author>Collective</Author>
+          <Title>Services Web Open Source</Title>
+          <Author>Collectif</Author>
           <Date>2003</Date>
           <ISBN>2-7440-1507-5</ISBN>
           <Publisher>Wrox</Publisher>
     </Book>
 <Book>
-          <Title>Building XML Web services</Title>
+          <Title>Construire des services Web XML</Title>
           <Author>Scott Short</Author>
           <Date>2002</Date>
           <ISBN>2-10-006476-2</ISBN>
           <Publisher>Microsoft Press</Publisher>
     </Book>
-</BookCatalog> 
+</BookCatalog>
 ```
 
-To do this, simply execute the following code:
+Pour cela, il suffit d’exécuter le code suivant :
 
 ```4d
- var $rootRef : Text
- $rootRef:=DOM Parse XML source("") //selection of XML document
+ var $refRoot : Text
+ $refRoot:=DOM Parse XML source("") //sélection du document XML
  If(OK=1)
     var $newStruct : Text
     $newStruct:=DOM Create XML Ref("BookCatalog")
  
-    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[1]")
-    $newElementRef:=DOM Append XML element($newStruct;$bookRef)
+    $refBook:=DOM Find XML element($refRoot;"/BookCatalog/Book[1]")
+    $refNewElement:=DOM Append XML element($newStruct;$refBook)
  
-    $bookRef:=DOM Find XML element($rootRef;"/BookCatalog/Book[2]")
-    var $newElementRef : Text
-    $newElementRef:=DOM Insert XML element($newStruct;$bookRef;1)
+    $refBook:=DOM Find XML element($refRoot;"/BookCatalog/Book[2]")
+    var $refNewElement : Text
+    $refNewElement:=DOM Insert XML element($newStruct;$refBook;1)
  
     DOM CLOSE XML($newStruct)
-    DOM CLOSE XML($rootRef)
+    DOM CLOSE XML($refRoot)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [DOM Append XML element](dom-append-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1083 |
+| Numéro de commande | 1083 |
 | Thread safe | yes |
 
 

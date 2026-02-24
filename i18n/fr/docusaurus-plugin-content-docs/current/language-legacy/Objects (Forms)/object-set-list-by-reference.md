@@ -5,146 +5,146 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *object* : Text {; *listType* : Integer}; *list* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *object* : Variable, Field {; *listType* : Integer}; *list* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( {* ;} *objet* {; *typeListe*}; *liste* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
-| list | Integer | &#8594;  | List reference number |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| liste | Integer | &#8594;  | Numéro de référence de liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->The **OBJECT SET LIST BY REFERENCE** command defines or replaces the list associated with the object(s) designated by the *object* and *\** parameters, with the hierarchical list referenced in the *list* parameter.<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Summary-->La commande **OBJECT SET LIST BY REFERENCE** définit ou remplace l’énumération associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**, avec la liste hiérarchique référencée dans le paramètre *liste*.<!-- END REF-->
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-By default, if you omit the *listType* parameter, the command defines a source choice list (choice of values) for the object. You can designate any type of list in the *listType* parameter. To do this, you just need to pass one of the following constants found in the "*Form Objects (Properties)*" theme:
+Par défaut, si vous omettez le paramètre *typeListe*, la commande définit une énumération source (choix de valeurs) pour l’objet. Le paramètre *typeListe* vous permet de désigner tout type d’énumération. Pour cela, il vous suffit de passer dans ce paramètre une des constantes suivantes du thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant      | Type    | Value | Comment                                                                                    |
-| ------------- | ------- | ----- | ------------------------------------------------------------------------------------------ |
-| Choice list   | Integer | 0     | Simple list of values to choose from ("Choice List" option in the Property List) (default) |
-| Excluded list | Integer | 2     | Lists values not accepted for entry ("Excluded List" option in the Property List)          |
-| Required list | Integer | 1     | Lists only values accepted for entry ("Required List" option in the Property List)         |
+| Constante     | Type        | Valeur | Comment                                                                                               |
+| ------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| Choice list   | Entier long | 0      | Liste simple de choix de valeurs (option "Enumération" dans la Liste des propriétés) (défaut)         |
+| Excluded list | Entier long | 2      | Liste de valeurs non acceptées pour la saisie (option "Exclusions" dans la Liste des propriétés)      |
+| Required list | Entier long | 1      | Liste des seules valeurs acceptées pour la saisie (option "Obligations" dans la Liste des propriétés) |
 
-In *list*, pass the reference number of the hierarchical list that you want to associated with the object. This list must have been generated using the [Copy list](copy-list.md), [Load list](load-list.md) or [New list](new-list.md) command.
+Passez dans *liste* le numéro de référence de la liste hiérarchique que vous souhaitez associer à l’objet. Cette liste doit avoir été générée à l’aide de la commande [Copy list](copy-list.md), [Load list](load-list.md) ou [New list](new-list.md). 
 
-To end the association of a *list* with an *object*, you can just pass 0 in the *list* parameter for the type of list concerned. Removing a list association does not delete the list reference from memory. Remember to call the [CLEAR LIST](clear-list.md) command when you no longer need the list.
+Pour mettre fin à l’association d’une *liste* à un *objet*, il suffit de passer 0 dans le paramètre *liste* pour le type de liste concerné. Supprimer une association de liste ne supprime pas la référence de liste en mémoire. N’oubliez pas d’appeler la commande [CLEAR LIST](clear-list.md) lorsque vous n’avez plus besoin d’une liste. 
 
-Existing list of values are replaced depending on how the list is associated to the form object:
+La liste de valeurs existante est remplacée en fonction de la manière dont la liste est associée à l'objet de formulaire:
 
-* using a choice list: the list itself is replaced.
-* using an array: the list is copied in array elements.
-* using an object (*not supported in binary databases*): the list is copied as collection elements in the *values* property of the object.
+* à l'aide d'une énumération : la liste elle-même est remplacée.
+* à l'aide d'un tableau : la liste est copiée dans les éléments du tableau.
+* à l'aide d'un objet (non pris en charge dans les bases binaires) : la liste est copiée en tant qu'éléments de collection dans la propriété *values* de l'objet.
 
-This command is particularly interesting in the context of a drop-down or combo box associated with a variable or a field. In this case, the association is dynamic and any change in the list is copied to the form. When the object is associated with an array or an object, the list is copied into the array or the object and any changes to the list are not available automatically (see example 5).
+Cette commande est particulièrement intéressante dans le cas d'une liste déroulante ou d'une combo box associée à une variable ou à un champ. Dans ce cas, l'association est dynamique et toute modification apportée à la liste est copiée dans le formulaire. Lorsque l'objet est associé à un tableau ou à un objet, la liste est copiée dans le tableau ou l'objet et les modifications apportées à la liste ne sont pas disponibles automatiquement (voir exemple 5).
 
-## Example 1 
+## Exemple 1 
 
-Associating a simple choice list (default list type) to a text field:
+Association d’une énumération simple (type de liste par défaut) à un champ texte :
 
 ```4d
- vCountriesList:=New list
- APPEND TO LIST(vCountriesList;"Spain";1)
- APPEND TO LIST(vCountriesList;"Portugal";2)
- APPEND TO LIST(vCountriesList;"Greece";3)
- OBJECT SET LIST BY REFERENCE([Contact]Country;vCountriesList)
+ vListCountries:=New list
+ APPEND TO LIST(vListCountries;"Espagne";1)
+ APPEND TO LIST(vListCountries;"Portugal";2)
+ APPEND TO LIST(vListCountries;"Grèce";3)
+ OBJECT SET LIST BY REFERENCE([Contact]Country;vListCountries)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Associating the "vColor" list as a simple choice list with the "DoorColor" pop-up/drop-down list:
+Associer la liste "vColor" en tant qu’énumération simple au pop up/Liste déroulante "CoulPorte" :
 
 ```4d
  vColor:=New list
- APPEND TO LIST(vColor;"Blue";1)
- APPEND TO LIST(vColor;"Green";2)
- APPEND TO LIST(vColor;"Red";3)
- APPEND TO LIST(vColor;"Yellow";4)
- OBJECT SET LIST BY REFERENCE(*;"DoorColor";Choice list;vColor)
+ APPEND TO LIST(vColor;"Bleu";1)
+ APPEND TO LIST(vColor;"Vert";2)
+ APPEND TO LIST(vColor;"Jaune";3)
+ APPEND TO LIST(vColor;"Rose";4)
+ OBJECT SET LIST BY REFERENCE(*;"CoulPorte";Choice list;vColor)
 ```
 
-## Example 3 
+## Exemple 3 
 
-Now you want to associate the "vColor" list with a combo box named "WallColor". Since this combo box is enterable, you want to make sure certain colors, such as "black," "purple," etc., cannot be used. These colors are placed in the "vReject" list:
+Vous souhaitez maintenant associer la liste "vColor" à une combo box "CoulMur". Comme la combo box est saisissable, vous souhaitez que certaines couleurs telles que "noir", "violet"... ne puissent pas être utilisées. Ces couleurs sont placées dans la liste "vRejet" :
 
 ```4d
- OBJECT SET LIST BY REFERENCE(*;"WallColor";Choice list;vColor)
- vReject:=New list
- APPEND TO LIST(vReject;"Black";1)
- APPEND TO LIST(vReject;"Gray";2)
- APPEND TO LIST(vReject;"Purple";3)
- OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;vReject)
+ OBJECT SET LIST BY REFERENCE(*;"CoulMur";Choice list;vColor)
+ vRejet:=New list
+ APPEND TO LIST(vRejet;"Noir";1)
+ APPEND TO LIST(vRejet;"Gris";2)
+ APPEND TO LIST(vRejet;"Violet";3)
+ OBJECT SET LIST BY REFERENCE(*;"CoulMur";Excluded list;vRejet)
 ```
 
-## Example 4 
+## Exemple 4 
 
-You want to remove the list associations:
+Vous souhaitez supprimer des associations de listes :
 
 ```4d
- OBJECT SET LIST BY REFERENCE(*;"WallColor";Choice list;0)
- OBJECT SET LIST BY REFERENCE(*;"WallColor";Required list;0)
- OBJECT SET LIST BY REFERENCE(*;"WallColor";Excluded list;0)
+ OBJECT SET LIST BY REFERENCE(*;"CoulMur";Choice list;0)
+ OBJECT SET LIST BY REFERENCE(*;"CoulMur";Required list;0)
+ OBJECT SET LIST BY REFERENCE(*;"CoulMur";Excluded list;0)
 ```
 
-## Example 5 
+## Exemple 5 
 
-This example illustrates the difference in how the command works when applied to a pop-up menu associated with a text array or one associated with a text variable. There are two pop-up menus in a form:
+Cet exemple illustre la différence de fonctionnement de la commande selon qu’elle est appliquée à un pop up menu associé à un tableau texte ou à une variable texte. Dans un formulaire se trouvent deux pop up menus :
 
-![](../assets/en/commands/pict1207955.en.png)
+![](../assets/en/commands/pict1207955.fr.png)
 
-The contents of these pop-up menus is set using the *<>vColor* list (containing color values). The following code is executed when the form is loaded:
+Le contenu des pop up menus est défini par la liste *<>vColor* (contenant des valeurs de couleurs). Le code suivant est exécuté au chargement du formulaire :
 
 ```4d
- ARRAY TEXT(arr1;0) //arr1 pop up
- var text1 : Text //text1 pop up
- OBJECT SET LIST BY REFERENCE(*;"arr1";<>vColor)
+ ARRAY TEXT(tab1;0) //pop up tab1
+ var text1 : Text //pop up text1
+ OBJECT SET LIST BY REFERENCE(*;"tab1";<>vColor)
  OBJECT SET LIST BY REFERENCE(*;"text1";<>vColor)
 ```
 
-During execution, both menus propose the same values:
+A l’exécution, les deux menus proposent alors les mêmes valeurs :
 
-![](../assets/en/commands/pict1207957.en.png)  
-(*Montage showing contents of menus simultaneously*)
+![](../assets/en/commands/pict1207957.fr.png)  
+(*Montage montrant simultanément le contenu des menus*)
 
-Then you run the following code, for example by means of a button:
+Vous exécutez alors le code suivant, par exemple via un bouton :
 
 ```4d
- APPEND TO LIST(<>vColor;"White";5)
- APPEND TO LIST(<>vColor;"Black";6)
+ APPEND TO LIST(<>vColor;"Blanc";5)
+ APPEND TO LIST(<>vColor;"Noir";6)
 ```
 
-Only the menu associated with the Text field is updated (by means of the dynamic reference):
+Seul le menu associé au champ texte est mis à jour (via la référence dynamique) :
 
-![](../assets/en/commands/pict1207959.en.png)
+![](../assets/en/commands/pict1207959.fr.png)
 
-In order to update the list associated with the pop-up managed by array, you need to call the **OBJECT SET LIST BY REFERENCE** command again to copy the contents of the list.
+Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il est nécessaire de rappeler la commande **OBJECT SET LIST BY REFERENCE** afin de recopier le contenu de la liste. 
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get list reference](object-get-list-reference.md)  
 [OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1266 |
+| Numéro de commande | 1266 |
 | Thread safe | no |
 
 

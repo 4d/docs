@@ -5,65 +5,65 @@ slug: /commands/insert-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* : Array ; *where* : Integer {; *howMany* : Integer} )<!-- END REF-->
+<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *tableau* ; *positionDépart* {; *combien*} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Name of the array |
-| where | Integer | &#8594;  | Where to insert the elements |
-| howMany | Integer | &#8594;  | Number of elements to be inserted, or 1 element if omitted |
+| tableau | Array | &#8594;  | Nom du tableau dans lequel insérer des éléments |
+| positionDépart | Integer | &#8594;  | Position de départ du ou des élément(s) à insérer |
+| combien | Integer | &#8594;  | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.INSERT IN ARRAY.Summary-->The INSERT IN ARRAY command inserts one or more elements into the array *array*.<!-- END REF--> The new elements are inserted before the element specified by *where*, and are initialized to the empty value for the array type. All elements beyond *where* are consequently moved within the array by an offset of one or the value you pass in *howMany*.
+<!--REF #_command_.INSERT IN ARRAY.Summary-->**INSERT IN ARRAY** insère un ou plusieurs éléments ou "lignes" dans le tableau *tableau*.<!-- END REF--> Les nouveaux éléments sont insérés avant l'élément spécifié par *positionDépart*, et initialisés à la valeur vide du type du tableau. Tous les éléments situés au-delà de *positionDépart* sont décalés vers le bas d'un offset ou de la valeur spécifiée par *combien*.
 
-If *where* is greater than the size of the array, the elements are added to the end of the array.
+Si *positionDépart* est supérieur à la taille du tableau, les éléments sont insérés à la fin du tableau.
 
-The *howMany* parameter is the number of elements to insert. If *howMany* is not specified, then one element is inserted. The size of the array grows by *howMany*.
+Le paramètre *combien* représente le nombre de lignes à insérer. Si *combien* n'est pas spécifié, un seul élément est inséré. La taille du tableau est augmentée de *combien*.
 
-## Example 1 
+## Exemple 1 
 
-The following example inserts five new elements, starting at element 10:
-
-```4d
- INSERT IN ARRAY(anArray;10;5)
-```
-
-## Example 2 
-
-The following example appends an element to an array:
+L'exemple suivant insère cinq nouveaux éléments à partir de l'élément 10 :
 
 ```4d
- $vlElem:=Size of array(anArray)+1
- INSERT IN ARRAY(anArray;$vlElem)
- anArray{$vlElem}:=...
+ INSERT IN ARRAY(unTableau;10;5)
 ```
 
-## See also 
+## Exemple 2 
+
+L'exemple suivant ajoute un élément à un tableau :
+
+```4d
+ $vlElem:=Size of array(unTableau)+1
+ INSERT IN ARRAY(unTableau;$vlElem)
+ unTableau{$vlElem}:=...
+```
+
+## Voir aussi 
 
 [DELETE FROM ARRAY](delete-from-array.md)  
 [Size of array](size-of-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 227 |
+| Numéro de commande | 227 |
 | Thread safe | yes |
 
 

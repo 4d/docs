@@ -5,64 +5,64 @@ slug: /commands/qr-on-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* : Integer ; *methodName* : Text )<!-- END REF-->
+<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *zone* ; *nomMéthode* )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| methodName | Text | &#8594;  | Name of the replacement method |
+| zone | Integer | &#8594;  | Référence de la zone |
+| nomMéthode | Text | &#8594;  | Nom de la méthode à appeler |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Modified|
-|14|Modified|
-|2003|Created|
+|16|Modifié|
+|14|Modifié|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR ON COMMAND.Summary-->The **QR ON COMMAND** command executes the 4D method passed in *methodName* when a Quick Report command is invoked by the user, by the selection of a menu command or by a click on a button.<!-- END REF-->
+<!--REF #_command_.QR ON COMMAND.Summary-->La commande **QR ON COMMAND** exécute la méthode projet 4D dont le nom est passé dans le paramètre *nomMéthode* lorsqu'une commande de l'éditeur d'états rapides est appelée via la sélection d'un menu ou le clic sur un bouton.<!-- END REF-->
 
-If *area* equals zero, *methodName* will apply to each Quick Report area until the database is closed or until the following call to the command is made: **QR ON COMMAND**(0;"").
+Si le paramètre *zone* vaut 0 (zéro), la méthode *nomMéthode* sera appelée pour toutes les zones de l'éditeur d'états rapides jusqu'à ce que la base soit refermée ou que l'instruction suivante soit exécutée : **QR ON COMMAND**(0;"").
 
-*methodName* receives two parameters:
+La méthode *nomMéthode* reçoit deux paramètres :
 
-* *$1* is the reference of the area (Longint).
-* *$2* is the command number of the command that was selected (Longint). You can compare this value with the following constants of the *QR Commands* theme:
-  
-| Constant             | Type    | Value | Comment                                        |  
-| -------------------- | ------- | ----- | ---------------------------------------------- |  
-| qr cmd generate      | Integer | 2008  | Use of command [QR RUN](qr-run.md) recommended |  
-| qr cmd page setup    | Integer | 2006  |                                                |  
-| qr cmd print preview | Integer | 2007  |                                                |
+* *$1* contient la référence de la zone (Entier long).
+* *$2* contient le numéro de la commande sélectionnée (Entier long). Vous pouvez comparer cette valeur aux constantes suivantes du thème *QR Commandes* :  
 
-**Note:** When planning on compiling the database, it is necessary to declare both *$1* and *$2* as Longints, even if you do not use them.
+| Constante            | Type        | Valeur | Comment                                                   |  
+| -------------------- | ----------- | ------ | --------------------------------------------------------- |  
+| qr cmd generate      | Entier long | 2008   | Utilisation de la commande [QR RUN](qr-run.md) conseillée |  
+| qr cmd page setup    | Entier long | 2006   |                                                           |  
+| qr cmd print preview | Entier long | 2007   |                                                           |
 
-If you want the initial command to be executed, you need to include the following in the called method: [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2).
+**Note :** Si vous souhaitez compiler votre base à l'aide du *Compilateur*, vous devez déclarer explicitement les paramètres $1 et $2 en entiers longs, même si vous ne les utilisez pas.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si vous souhaitez que la commande initiale choisie par l'utilisateur soit exécutée, utilisez l'instruction suivante dans la méthode *nomMéthode* : [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2).
 
-## See also 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-*QR Commands*  
+## Voir aussi 
+
+*QR Commandes*  
 [QR EXECUTE COMMAND](qr-execute-command.md)  
 [QR Get command status](qr-get-command-status.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 790 |
+| Numéro de commande | 790 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

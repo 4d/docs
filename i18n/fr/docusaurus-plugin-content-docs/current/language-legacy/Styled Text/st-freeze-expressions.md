@@ -5,86 +5,85 @@ slug: /commands/st-freeze-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *object* : Variable, Field {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<!-- END REF-->
+<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( {* ;} *objet* {; *débutSél* {; *finSél*}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
-| * | Operator | &#8594;  | If passed = update expressions before freezing them |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594;  | Si passé = mettre à jour les expressions avant de les figer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|14|Created|
+|16 R5|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->The **ST FREEZE EXPRESSIONS** command "freezes" the contents of expressions found in the multi-style text or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> This action converts dynamic expressions into static text or (4D Write Pro areas only) images and removes the associated references from the *object*. 
+<!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->La commande **ST FREEZE EXPRESSIONS** "gèle" le contenu des expressions situées dans le champ ou la variable texte multistyle ou 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> Cette action convertit les expressions dynamiques en textes statiques ou (zones 4D Write Pro uniquement) en images et supprime de l’*objet* les références associées. 
 
-For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](st-insert-expression.md) command.
+Pour plus d’informations sur les expressions 4D utilisables dans les zones de texte multistyle et les zones 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](st-insert-expression.md).
 
-The **ST FREEZE EXPRESSIONS** command stores the computed value of an expression at a given time. This operation is necessary particularly before each use of the *object* outside of the area (exports, storage in a disk file, printing, etc.) since only the reference of the expression is kept in the area itself. 
+La commande **ST FREEZE EXPRESSIONS** vous permet de stocker la valeur calculée d’une expression à un instant donné. Cette opération est nécessaire notamment avant chaque utilisation de l’*objet* en-dehors de la zone (exportation, stockage dans un fichier disque, impression...) car seule la référence de l’expression est conservée dans la zone. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags or references that may be present.
+Les paramètres optionnels *débutSél* et *finSél* vous permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style ou des références éventuellement présentes.
 
-* If you pass *startSel* and *endSel*, **ST FREEZE EXPRESSIONS** only freezes the expressions located within this selection.
-* If you only pass *startSel* or if the value of *endSel* is greater than the total number of characters in the *object*, all the expressions between *startSel* and the end of the text are frozen.
-* If you omit *startSel* and *endSel*, all the expressions included in the user selection of the *object* are frozen.
+* Si vous passez *débutSél* et *finSél*, **ST FREEZE EXPRESSIONS** fige uniquement les expressions situées à l’intérieur de cette sélection.
+* Si vous passez uniquement *débutSél* ou si la valeur de *finSél* est supérieure au nombre total de caractères dans l’objet, toutes les expressions entre *débutSél* et la fin du texte sont figées.
+* Si vous omettez *débutSél* et *finSél*, toutes les expressions incluses dans la sélection utilisateur de *objet* sont figées.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters.   
-These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel*is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-By default, expressions are not re-evaluated before they are frozen. If you want the expression to be recomputed and then frozen, you can pass the second *\** parameter.
+Par défaut, les expressions ne sont pas réévaluées avant d’être figées. Si vous souhaitez que les expressions soient recalculées puis figées, passez le second paramètre *\**.
 
-**Note:** **ST FREEZE EXPRESSIONS** does not freeze 4D Write Pro expressions containing *$wp\_pageNumber* or *$wp\_pageCount*. For more information, please refer to the *Managing formulas* section. 
+**Note :** **ST FREEZE EXPRESSIONS** ne fige pas les expressions 4D Write Pro contenant *$wp\_pageNumber* ou *$wp\_pageCount*. Pour plus d'informations, veuillez consulter la section *Gérer des formules*.
 
-## Example 
+## Exemple 
 
-You want to insert the current time at the start of the text and then freeze it before saving the record:
+Vous souhaitez insérer l’heure courante au début du texte et la figer avant de stocker l’enregistrement :
 
 ```4d
-  //Inserting the time at the start of the text
- ST INSERT EXPRESSION(*;StyledText_t;"Current time";1)
-  //We freeze the expression
+     //Insertion de l’heure au début du texte
+ ST INSERT EXPRESSION(*;"StyledText_t";"Heure courante";1)
+     //On fige l’expression
  ST FREEZE EXPRESSIONS(*;"StyledText_t";1)
 ```
 
-## See also 
+## Voir aussi 
 
 [ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1282 |
+| Numéro de commande | 1282 |
 | Thread safe | no |
 
 

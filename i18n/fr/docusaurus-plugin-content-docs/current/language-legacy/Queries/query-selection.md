@@ -5,66 +5,66 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( *aTable* : Table {; *queryArgument* : Expression {; *} )<br/>**QUERY SELECTION** ( *queryArgument* : Expression {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*laTable* }{;}{ *critère* {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table, if omitted |
-| queryArgument | Expression | &#8594;  | Query argument |
-| * | Operator | &#8594;  | Continue query flag |
+| laTable | Table | &#8594;  | Table dans laquelle effectuer la recherche ou ou Table par défaut si ce paramètre est omis |
+| critère | Expression | &#8594;  | Lignes de recherche |
+| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Modified|
-|<6|Created|
+|6.5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** looks for records in *aTable*.<!-- END REF--> The **QUERY SELECTION** command changes the current selection of *table* for the current process and makes the first record of the new selection the current record.
+<!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** recherche des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
 
-**QUERY SELECTION** works and performs the same actions as [QUERY](query.md). The difference between the two commands is the scope of the query:
+**QUERY SELECTION** a un fonctionnement et des effets proches de ceux de [QUERY](query.md). La différence entre ces deux commandes est la portée de la recherche :
 
-* [QUERY](query.md) looks for records among all the records in the table.
-* **QUERY SELECTION** looks for records among the records currently selected in the table.
+* [QUERY](query.md) recherche des enregistrements dans la table.
+* **QUERY SELECTION** recherche des enregistrements parmi la sélection courante de la table.
 
-For more information, see the description of the [QUERY](query.md) command.
+Pour plus d'informations, reportez-vous à la description de la commande [QUERY](query.md).
 
-The **QUERY SELECTION** command is useful when a query cannot be defined using a sequence of [QUERY](query.md) calls joined with the *\** parameter. Typically, it is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
+La commande **QUERY SELECTION** est utile lorsqu'une recherche ne peut pas être exprimée via une séquence d'appels à [QUERY](query.md) reliés à l'aide du paramètre *\**. Typiquement, c'est le cas lorsque vous souhaitez effectuer une recherche dans une sélection courante qui ne résulte pas d'une précédente recherche, mais de l'exécution d'une commande telle que [USE SET](use-set.md). 
 
-## Example 
+## Exemple 
 
-You want to query the records that have been previously highlighted by the user in a list form. You can write:
+Vous souhaitez effectuer une recherche parmi les enregistrements préalablement surlignés par l'utilisateur dans un formulaire liste. Vous pouvez écrire :
 
 ```4d
- USE SET("UserSet") //replace the current selection with the highlighted records
- QUERY SELECTION([Company];[Company]City="New York City";*)
- QUERY SELECTION([Company]Type Business="Stock Exchange")
+ USE SET("UserSet") //remplace la sélection courante par les enregistrements surlignés
+ QUERY SELECTION([Sociétés];[Sociétés]Ville="Paris";*)
+ QUERY SELECTION([Sociétés];[Sociétés]Activité="Affaires boursières")
 ```
 
-You will find all companies located in New York City, with a Stock Exchange activity, among the initial user selection. 
+Vous trouvez donc toutes les sociétés basées à Paris, dont l'activité est boursière, parmi la sélection initiale de l'utilisateur.
 
-## See also 
+## Voir aussi 
 
 [QUERY](query.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 341 |
+| Numéro de commande | 341 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
-| Changes current selection ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

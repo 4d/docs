@@ -1,6 +1,7 @@
 ---
 id: object-set-data-source-formula
 title: OBJECT SET DATA SOURCE FORMULA
+slug: /commands/object-set-data-source-formula
 displayed_sidebar: docs
 ---
 

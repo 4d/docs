@@ -9,84 +9,83 @@ displayed_sidebar: docs
 <!--REF #_command_.License usage.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Collection | &#8592; | A collection of objects with information on the retained licenses. |
+| Résultat | Collection | &#8592; | Une collection d'objets contenant des informations sur les licences utilisées |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.License usage.Summary-->The **License usage** command returns a collection of objects containing information on the retained licenses.<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->La commande **License usage** retourne une collection d'objets contenant des informations sur les licences utilisées<!-- END REF-->.
 
 :::note
 
-This command can only be executed on 4D Server. It returns `null` when called from another context. 
+Cette commande est destinée à 4D Server. Elle retourne null si elle est exécutée depuis un autre contexte.
 
 :::
 
-Each object in the returned collection has the following attributes:
+Chaque objet de la collection retournée possède les attributs suivants :
 
-| **Property name**      | **Type** | **Description**                                                                                |
-| ---------------------- | -------- | ---------------------------------------------------------------------------------------------- |
-| productId              | Number   | ID of the license type                                                                         |
-| productName            | Text     | Name of the license type                                                                       |
-| productUsedCount       | Number   | Number of retained licenses (including this one) when the license was retained                 |
-| productBalance         | Number   | Number of remaining licenses for the product (just after the action)                           |
-| globalProductUsedCount | Number   | When several servers are running on the same machine, shows the retained count for all of them |
-| token                  | Number   | Operation's unique ID                                                                          |
-| time                   | Text     | Timestamp that indicates when the license was retained, in ISO 8601 format                     |
-| reason                 | Text     | The reason/caller of this license usage                                                        |
-| session                | Object   | Contains specific information about the retained license's session                             |
+| **Nom de la propriété** | **Type**  | **Description**                                                                                                                           |
+| ----------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| productId               | Numérique | ID du type de licence                                                                                                                     |
+| productName             | Texte     | Nom du type de licence                                                                                                                    |
+| productUsedCount        | Numérique | Nombre de licences utilisées (y compris celle-ci) lorsque la licence a été utilisée.                                                      |
+| productBalance          | Numérique | Nombre de licences restantes pour le produit (juste après l'action)                                                                       |
+| globalProductUsedCount  | Numérique | Lorsque plusieurs serveurs fonctionnent sur la même machine, la propriété indique le nombre de licences utilisées pour tous ces serveurs. |
+| token                   | Numérique | ID unique de l'opération                                                                                                                  |
+| time                    | Texte     | Horodatage indiquant la période d'utilisation de la licence, au format ISO 8601                                                           |
+| reason                  | Texte     | Le motif/l'appelant de cette utilisation de licence                                                                                       |
+| session                 | Objet     | Contient des informations spécifiques sur la session de la licence utilisée.                                                              |
 
-Depending on the type of session (4D client or REST for example), the contents of the *session* object in the above table will vary. See below for details.
+Selon le type de session (client 4D ou REST par exemple), le contenu de l'objet *session* dans le tableau ci-dessus varie. Voir ci-dessous pour plus de détails.
 
-## session object for 4D client sessions 
+## Objet session pour les sessions 4D clientes 
 
-Inside the returned collection for 4D sessions, each element contains a session object identical to the one returned by the [Process activity](./commands/process-activity) command:
+Dans la collection retournée pour les sessions 4D, chaque élément contient un objet session identique à celui retourné par la commande [Process activity](../commands/process-activity.md) :
 
-| **Property name** | **Type**      | **Description**                                                           |
-| ----------------- | ------------- | ------------------------------------------------------------------------- |
-| type              | Text (enum)   | Session type. Possible values: "remote", "storedProcedure", "web", "rest" |
-| userName          | Text          | User name                                                                 |
-| machineName       | Text          | Name of the remote machine                                                |
-| systemUserName    | Text          | Name of the system session opened on the remote machine                   |
-| IPAddress         | Text          | IP address of the remote machine                                          |
-| hostType          | Text (enum)   | Host type. Possible values: "windows", "mac", "browser"                   |
-| creationDateTime  | Date ISO 8601 | Date and time of connection of the remote machine                         |
-| state             | Text (enum)   | Session state. Possible values: "active", "postponed", "sleeping"         |
-| ID                | Text          | Session UUID                                                              |
-| persistentID      | Text          | Session's persistent ID                                                   |
+| **Nom de la propriété** | **Type**      | **Description**                                                                 |
+| ----------------------- | ------------- | ------------------------------------------------------------------------------- |
+| type                    | Texte (enum)  | Type de session. Valeurs possibles : "remote", "storedProcedure", "web", "rest" |
+| userName                | Texte         | Nom d'utilisateur                                                               |
+| machineName             | Texte         | Nom de la machine distante                                                      |
+| systemUserName          | Texte         | Nom de la session du système ouverte sur la machine distante                    |
+| IPAddress               | Texte         | Adresse IP de la machine distante                                               |
+| hostType                | Texte (enum)  | Type d'hôte. Valeurs possibles : "windows", "mac", "browser"                    |
+| creationDateTime        | Date ISO 8601 | Date et heure de connexion de la machine distante                               |
+| state                   | Texte (enum)  | Etat de la session. Valeurs possibles : "active", "postponed", "sleeping"       |
+| ID                      | Texte         | UUID de la session                                                              |
+| persistentID            | Texte         | ID persistant de la session                                                     |
 
-## session object for SQL sessions 
+## Objet session pour les sessions SQL 
 
-This table details the contents of the session object for SQL sessions:
+Ce tableau détaille le contenu de l'objet session des sessions SQL : 
 
-| **Property name** | **Type** | **Description**           |
-| ----------------- | -------- | ------------------------- |
-| IPAddress         | Text     | IP address of the session |
-| userAgent         | Text     | User Agent                |
-| userName          | Text     | User Name                 |
-| userId            | Number   | User ID                   |
+| **Nom de la propriété** | **Type** | **Description**          |
+| ----------------------- | -------- | ------------------------ |
+| IPAddress               | Text     | Adresse IP de la session |
+| userAgent               | Text     | Agent utilisateur        |
+| userName                | Text     | Nom d'utilisateur        |
+| userId                  | Number   | ID utilisateur           |
 
-## session object for REST sessions 
+## Objet session pour les sessions REST 
 
-This table details the contents of the session object for REST sessions:
+Ce tableau détaille le contenu de l'objet session des sessions REST :
 
-| **Property name** | **Type** | **Description**                                  |
-| ----------------- | -------- | ------------------------------------------------ |
-| userName          | Text     | User Name                                        |
-| sessionID         | Text     | REST session ID                                  |
-| IPAddress         | Text     | ID of the client that initiated the REST session |
-| isDatastore       | Boolean  | True if the REST request comes from a datastore  |
+| **Nom de la propriété** | **Type** | **Description**                                 |
+| ----------------------- | -------- | ----------------------------------------------- |
+| userName                | Texte    | Nom d'utilisateur                               |
+| sessionID               | Texte    | ID sessions REST                                |
+| IPAddress               | Texte    | ID du client ayant initié la session REST       |
+| isDatastore             | Booléen  | Vrai si la requête REST provient d'un datastore |
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1782 |
+| Numéro de commande | 1782 |
 | Thread safe | no |
-
 
 

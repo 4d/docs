@@ -5,50 +5,50 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* : Text, Blob, Picture ) : Text<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *leChamp* ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture | &#8594;  | Field whose storage location you want to get |
-| Function result | Text | &#8592; | Full pathname of external storage file |
+| leChamp | Text, Blob, Picture | &#8594;  | Champ dont vous souhaitez obtenir le lieu de stockage |
+| Résultat | Text | &#8592; | Chemin d’accès complet du fichier de stockage externe |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get external data path.Summary-->The **Get external data path** command returns the full pathname of the external storage file for the data of the field passed in the *aField* parameter, for the current record.<!-- END REF--> You must pass fields of the Text, BLOB or Picture type in the parameter. The command returns the pathname of the storage file even if the file does not exist or is not accessible.
+<!--REF #_command_.Get external data path.Summary-->La commande **Get external data path** retourne le chemin d’accès complet du fichier de stockage externe des données du champ passé dans le paramètre *leChamp*, pour l’enregistrement courant.<!-- END REF--> Le champ passé en paramètre doit être de type Texte, Blob ou Image. La commande retourne le chemin d'accès du fichier de stockage même si le fichier n'existe pas ou n'est pas accessible.
 
-More particularly, this command lets you recopy the external file.
+Cette commande vous permet notamment de recopier le fichier externe.
 
-**Note:** For more information about external storage, refer to the *Design Reference* manual.
+**Note :** Pour plus d’informations sur le stockage externe de données, reportez-vous au manuel *Mode Développement*.
 
- This command returns an empty string in the following cases:
+ Cette commande retourne une chaîne vide dans les cas suivants :
 
-* The field is not stored outside of the data file.
-* The field has a Null value (and does not contain a pathname).
-* The command is executed from a remote 4D.
+* le champ n’est pas stocké en-dehors du fichier de données,
+* le champ a une valeur Null (et ne contient pas de chemin d'accès),
+* la commande est exécutée depuis un 4D distant.
 
-## See also 
+## Voir aussi 
 
 [SET EXTERNAL DATA PATH](set-external-data-path.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1133 |
+| Numéro de commande | 1133 |
 | Thread safe | yes |
 
 

@@ -9,36 +9,36 @@ displayed_sidebar: docs
 <!--REF #_command_.End SQL.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.End SQL.Summary-->**End SQL** is a keyword indicating the end of a sequence of SQL commands in the Method editor.<!-- END REF--> 
+<!--REF #_command_.End SQL.Summary-->**End SQL** est un mot-clé indiquant dans l'éditeur de méthodes la fin d'une séquence de commandes SQL.<!-- END REF--> 
 
-A sequence of SQL statements must be enclosed with the [Begin SQL](begin-sql.md) and **End SQL** keywords. For more information, refer to the description of the [Begin SQL](begin-sql.md) keyword.
+Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin SQL](begin-sql.md) et **End SQL**. Pour plus d'informations, reportez-vous à la description du mot-clé [Begin SQL](begin-sql.md). 
 
-## See also 
+## Voir aussi 
 
 [Begin SQL](begin-sql.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 949 |
+| Numéro de commande | 949 |
 | Thread safe | yes |
 
 

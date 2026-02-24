@@ -9,73 +9,72 @@ displayed_sidebar: docs
 <!--REF #_command_.Current form name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Name of current project form or current table form in the process |
+| Résultat | Text | &#8592; | Nom du formulaire projet courant ou du formulaire table courant dans le process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Current form name.Summary-->The **Current form name** command returns the name of the current form defined for the process.<!-- END REF--> The current form can be a project form or a table form. 
+<!--REF #_command_.Current form name.Summary-->La commande **Current form name** retourne le nom du formulaire courant défini pour le process.<!-- END REF--> Le formulaire courant peut être un formulaire projet ou un formulaire table. 
 
-By default, if you have not called the [FORM LOAD](./commands/form-load) command in the current process, the current form is the one being displayed or printed. If you have called the [FORM LOAD](./commands/form-load) command in the process, the current form is the one set by this command and it remains so until you call [FORM UNLOAD](form-unload.md) (or [CLOSE PRINTING JOB](close-printing-job.md)).
+Par défaut, si vous n’avez pas appelé la commande [FORM LOAD](../commands/form-load.md) dans le process courant, le formulaire courant est le formulaire en cours d’affichage ou d’impression. Si vous avez appelé la commande [FORM LOAD](../commands/form-load.md) dans le process, le formulaire courant reste celui défini par cette commande jusqu’à l’appel de [FORM UNLOAD](form-unload.md) (ou [CLOSE PRINTING JOB](close-printing-job.md)).
 
-The command returns:
+La commande retourne :
 
-* the form name, or
-* the filename without the extension if the current form is created by a .json file, or
-* the "name" attribute if the current form is created by an object, or
-* an empty string if there is no current form defined for the process.
+* le nom du formulaire s'il a été défini dans l'éditeur de formulaires de 4D, ou
+* le nom du fichier sans extension si le formulaire a été créé à partir d'un fichier .json, ou
+* la valeur de l'attribut "name" si le formulaire a été créé à partir d'un objet 4D, ou
+* une chaîne vide s’il n’y a pas de formulaire courant défini pour le process.
 
-## Example 1 
+## Exemple 1 
 
-In an input form, place the following code in a button:
+Dans un formulaire de saisie, vous placez le code suivant dans un bouton :
 
 ```4d
  var $FormName : Text
- $win:=Open form window([Members];"Input";Plain form window)
- DIALOG([Members];"Input")
+ $fen:=Open form window([Adhérents];"Entrée";Plain form window)
+ DIALOG([Adhérents];"Entrée")
  $FormName:=Current form name
-  // $FormName = "Input"
- FORM LOAD([Members];"Drag")
+     // $FormName = "Entrée"
+ FORM LOAD([Adhérents];"Drag")
  $FormName:=Current form name
-  // $FormName = "Drag"
-  //...
+     // $FormName = "Drag"
+     //...
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to get the current form if it is a project form:
+Vous souhaitez obtenir le formulaire courant si c’est un formulaire projet :
 
 ```4d
  $PointerTable:=Current form table
- If(Nil($PointerTable)) // this is a project form
-    $FormName:=Current form name
-    ... // processing
+ If(Nil($PointerTable)) //il s’agit d’un formulaire projet
+       $FormName:=Current form name
+       ... // traitement
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[FORM LOAD](./commands/form-load)  
+[FORM LOAD](../commands/form-load.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1298 |
+| Numéro de commande | 1298 |
 | Thread safe | no |
-
 
 

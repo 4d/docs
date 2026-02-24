@@ -9,34 +9,34 @@ displayed_sidebar: docs
 <!--REF #_command_.True.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True |
+| Résultat | Boolean | &#8592; | Vrai |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.True.Summary-->True returns the Boolean value True.<!-- END REF-->
+<!--REF #_command_.True.Summary-->**True** retourne la valeur booléenne Vrai.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The following example sets the variable *vbOptions* to True:
+L'exemple suivant met la variable *vbOptions* à Vrai :
 
 ```4d
  vbOptions:=True
 ```
 
-## See also 
+## Voir aussi 
 
 [False](false.md)  
 [Not](not.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 214 |
+| Numéro de commande | 214 |
 | Thread safe | yes |
 
 

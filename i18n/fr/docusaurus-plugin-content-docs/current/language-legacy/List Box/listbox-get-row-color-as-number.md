@@ -5,79 +5,76 @@ slug: /commands/listbox-get-row-color-as-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *object* : Text ; *row* : Integer {; *colorType* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *object* : Variable ; *row* : Integer {; *colorType* : Integer} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( {* ;} *objet* ; *ligne* {; *typeCouleur*} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object name (if * is specified) or<br/>Variable (if * is omitted) |
-| row | Integer | &#8594;  | Row number |
-| colorType | Integer | &#8594;  | List box font color (default) or list box background color |
-| Function result | Integer | &#8592; | Color value |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594;  | Numéro de ligne |
+| typeCouleur | Integer | &#8594;  | lk couleur de police (défaut) ou lk couleur de fond |
+| Résultat | Integer | &#8592; | Valeur de couleur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Renamed|
-|14|Created|
+|17 R6|Renommé|
+|14|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX Get row color as number.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color as number.Summary-->**Note :** Cette commande fonctionne uniquement avec les list box de type tableau.<!-- END REF-->
 
-The **LISTBOX Get row color as number** command returns the color of a row or a cell in the list box designated by the *object* and *\** parameters as a number in 0x00rrggbb format.
+La commande **LISTBOX Get row color as number** retourne la couleur d’une ligne ou d’une cellule de la list box désignée par les paramètres *objet* et *\**. 
 
-**Note:** If you want to get the color as a CSS string, you need to use the [LISTBOX Get row color](listbox-get-row-color.md) command. For more information on color formats, please refer to the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command description. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box :
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter:
+* si *objet* désigne une list box, la commande retourne la couleur de la ligne
+* si *objet* désigne une colonne, la commande retourne la couleur de la cellule
 
-* When *object* designates a list box, the command returns the color of the row.
-* When *object* designates a list box column, the command returns the color of the cell.
+Passez dans *ligne* le numéro de la ligne dont vous souhaitez obtenir la couleur. 
 
-In *row*, pass the number of the row whose color you want to get. 
+**Note :** La commande ne tient pas compte de l’éventuel statut masqué/affiché des lignes de la list box.
 
-**Note:** The command does not take any hidden/visible states of the list box rows into account.
+Passez la constante `lk background color`  ou `lk font color`  (thème "*List box*") dans le paramètre *typeCouleur* selon que vous souhaitez connaître la couleur de fond ou la couleur de police de la ligne. Si vous omettez ce paramètre, la couleur de police est retournée.
 
-In the *colorType* parameter, you can pass either the `lk background color`  or `lk font color`  constant ("*List Box*" theme) in order to find out the background or font color for the row. If you omit this parameter, the font color is returned.
+**Attention**, une couleur affectée à une ligne n’est pas forcément affichée dans toutes les cellules de ligne (cf. exemple). Si des valeurs de couleur contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-**Warning:** a color assigned to a row is not necessarily displayed in every cell of the row (see example). If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
+#### Exemple 
 
-## Example 
-
-Given the following list box:
+Soit la list box suivante :
 
 ![](../assets/en/commands/pict1205393.fr.png)
 
 ```4d
- var $vLColor;$vLColor2;$vLColor3 : Integer
- $vLColor:=LISTBOX Get row color as number(*;"Col5";3)
- $vLColor2:=LISTBOX Get row color as number(*;"List Box";3)
- $vLColor3:=LISTBOX Get row color as number(*;"List Box";3;lk background color)
-  // $vLColor contains 0xFFFF00 (yellow)
-  // $vLColor2 contains 0x00FF (blue)
-  // $vLColor3 contains 0x00FF0000 (red)
+ vCoul:=LISTBOX Get row color(*;"Col5";3)
+ vCoul2:=LISTBOX Get row color(*;"List Box";3)
+ vCoul3:=LISTBOX Get row color(*;"List Box";lk background color)
+     // vCoul contient 0xFFFF00 (jaune)
+     // vCoul2 contient 0x00FF (bleu)
+     // vCoul3 contient 0x00FF0000 (rouge)
 ```
 
-## See also 
+#### Voir aussi 
 
-*List Box*  
+*List box*  
 [LISTBOX Get row color](listbox-get-row-color.md)  
 [LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1271 |
+| Numéro de commande | 1271 |
 | Thread safe | no |
 
 

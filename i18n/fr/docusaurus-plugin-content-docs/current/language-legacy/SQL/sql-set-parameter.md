@@ -5,97 +5,97 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objet* ; *typeParam* )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 4D object to be used (variable, array or field) |
-| paramType | Integer | &#8594;  | Type of parameter |
+| objet | Object | &#8594;  | Objet 4D à utiliser (variable, tableau ou champ) |
+| typeParam | Integer | &#8594;  | Type du paramètre |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL SET PARAMETER.Summary-->The SQL SET PARAMETER command allows the use of a 4D variable, array or field value in SQL requests.<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Summary-->La commande **SQL SET PARAMETER** permet d’utiliser la valeur d’une variable, d’un tableau ou d’un champ 4D dans les requêtes SQL.<!-- END REF-->
 
-**Note:** It is also possible to directly insert the name of a 4D object to be used (variable, array or field) between the *<<* and *\>>* characters in the text of the request (see example 1). For more information about this, please refer to the *Overview of SQL Commands* section.
+**Note :** Il est également possible d’insérer directement le nom d'un objet 4D à utiliser (variable, tableau ou champ) entre les caractères *<<* et *\>>* dans le texte de la requête (cf. exemple 1). Pour plus d'informations sur ce point, reportez-vous à la section *Présentation des commandes du thème SQL*. 
 
-* In the *object* parameter, pass the 4D object (variable, array or field) to be used in the request.
-* In the *paramType* parameter, pass the SQL type of the parameter. You can pass a value or use one of the following constants, located in the “*SQL*” theme:
-  
-| Constant         | Type    | Value | Comment                                                                                                  |  
-| ---------------- | ------- | ----- | -------------------------------------------------------------------------------------------------------- |  
-| SQL param in     | Integer | 1     |                                                                                                          |  
-| SQL param in out | Integer | 2     | Usable only in the context of an SQL stored procedure (in-out parameter defined in the stored procedure) |  
-| SQL param out    | Integer | 4     | Usable only in the context of an SQL stored procedure (out parameter defined in the stored procedure)    |
+* Passez dans le paramètre *objet* l’objet 4D (variable, tableau ou champ) à utiliser dans la requête.
+* Passez dans le paramètre *typeParam* le type SQL du paramètre. Vous pouvez passer une valeur ou utiliser l’une des constantes suivantes, placées dans le thème "*SQL*" :  
 
-The value of the 4D object replaces the *?* character in the SQL request (standard syntax). If the request contains more than one *?* character, several calls to SQL SET PARAMETER will be necessary. The values of the 4D objects will be assigned sequentially in the request, in accordance with the execution order of the commands. 
+| Constante        | Type        | Valeur | Comment                                                                                                                       |  
+| ---------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |  
+| SQL param in     | Entier long | 1      |                                                                                                                               |  
+| SQL param in out | Entier long | 2      | Utilisable uniquement dans le contexte d'une procédure stockée SQL (paramètre entrée-sortie défini dans la procédure stockée) |  
+| SQL param out    | Entier long | 4      | Utilisable uniquement dans le contexte d'une procédure stockée SQL (paramètre sortie défini dans la procédure stockée)        |
 
-**Warning:** This command is used for handling *parameters* passed to the SQL request. It is not possible to use the SQL param out type to associate a 4D object with the *result* of an SQL request. SQL request results are retrieved, for example, using the *boundObj* parameter of the [SQL EXECUTE](sql-execute.md) command (see the *Overview of SQL Commands*). The **SQL SET PARAMETER** command is mainly intended for setting parameters passed to the request (SQL param in); the SQL param out and SQL param in out types are reserved for use in the context of SQL stored procedures that could return parameters. 
+La valeur de l’objet 4D est substituée au caractère *?* dans la requête SQL (syntaxe standard). Si la requête comporte plusieurs caractères *?*, plusieurs appels à **SQL SET PARAMETER** seront nécessaires. Les valeurs des objets 4D seront affectées séquentiellement dans la requête, dans l’ordre d’exécution des commandes. 
 
-## Example 1 
+**Attention :** Cette commande permet de manipuler les *paramètres* passés à la requête SQL. Il n'est pas possible d'utiliser le type SQL param out pour associer un objet 4D au *résultat* d'une requête SQL. Le résultat d'une requête SQL est récupéré par exemple via le paramètre *objetLié* de la commande [SQL EXECUTE](sql-execute.md) (cf. section *Présentation des commandes du thème SQL*). La commande **SQL SET PARAMETER** est généralement utilisée pour définir des paramètres passés à la requête (SQL param in) ; les types SQL param out et SQL param in out sont réservés à une utilisation dans le contexte de procédures stockées SQL pouvant retourner des paramètres. 
 
-This example is used to execute an SQL request which calls the associated 4D variables directly:
+## Exemple 1 
+
+Cet exemple permet d’exécuter une requête SQL faisant directement appel à des variables 4D associées :
 
 ```4d
- var MyText : Text
- var MyLongint : Integer
+ var MonTexte : Text
+ var MonEntierLong : Integer
  
  SQL LOGIN("mysql";"root";"")
  SQLStmt:="insert into app_testTable (alpha_field, longint_field) VALUES (<>, <>)"
  For(vCounter;1;10)
-    MyText:="Text"+String(vCounter)
-    MyLongint:=vCounter
+    MonTexte:="Texte"+String(vCounter)
+    MonEntierLong:=vCounter
     SQL EXECUTE(SQLStmt)
     SQL CANCEL LOAD
  End for
  SQL LOGOUT
 ```
 
-## Example 2 
+## Exemple 2 
 
-Same example as the previous one, but using the SQL SET PARAMETER command:
+Même exemple que le précédent, mais en utilisant la commande **SQL SET PARAMETER** :
 
 ```4d
- var MyText : Text
- var MyLongint : Integer
+ var MonTexte : Text
+ var MonEntierLong : Integer
  
  SQL LOGIN("mysql";"root";"")
  SQLStmt:="insert into app_testTable (alpha_field, longint_field) VALUES (?,?)"
  For(vCounter;1;10)
-    MyText:="Text"+String(vCounter)
-    MyLongint:=vCounter
-    SQL SET PARAMETER(MyText;SQL param in)
-    SQL SET PARAMETER(MyLongint;SQL param in)
+    MonTexte:="Texte"+String(vCounter)
+    MonEntierLong:=vCounter
+    SQL SET PARAMETER(MonTexte;SQL param in)
+    SQL SET PARAMETER(MonEntierLong;SQL param in)
     SQL EXECUTE(SQLStmt)
     SQL CANCEL LOAD
  End for
  SQL LOGOUT
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 823 |
+| Numéro de commande | 823 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

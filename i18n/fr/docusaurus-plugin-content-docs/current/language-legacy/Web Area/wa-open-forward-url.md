@@ -5,43 +5,43 @@ slug: /commands/wa-open-forward-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( * ; *object* : Text )<br/>**WA OPEN FORWARD URL** ( *object* : Variable, Field )<!-- END REF-->
+<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( {* ;} *objet* )<!-- END REF-->
 <!--REF #_command_.WA OPEN FORWARD URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA OPEN FORWARD URL.Summary-->The **WA OPEN FORWARD URL** command loads the next URL in the sequence of URLs opened into the Web area designated by the *\** and *object* parameters.<!-- END REF--> 
+<!--REF #_command_.WA OPEN FORWARD URL.Summary-->La commande **WA OPEN FORWARD URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL suivant dans la séquence d’URLs ouverts.<!-- END REF--> 
 
-If there is no next URL (in other words, if the user has never returned to a previous URL), the command does nothing. You can test whether a next URL is available using the [WA Forward URL available](wa-forward-url-available.md) command.
+S’il n’y a pas d’URL suivant (c’est-à-dire si l’utilisateur n’a jamais effectué de retour à l’URL précédent), la commande ne fait rien. Vous pouvez tester la disponibilité d’un URL suivant à l’aide de la commande [WA Forward URL available](wa-forward-url-available.md).
 
-## See also 
+## Voir aussi 
 
 [WA OPEN BACK URL](wa-open-back-url.md)  
 [WA OPEN URL](wa-open-url.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1022 |
+| Numéro de commande | 1022 |
 | Thread safe | no |
 
 

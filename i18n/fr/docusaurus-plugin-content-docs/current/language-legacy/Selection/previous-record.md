@@ -5,23 +5,23 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to move to the previous selected record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table dans laquelle se placer sur l'enregistrement précédent de la sélection courante ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.PREVIOUS RECORD.Summary-->**PREVIOUS RECORD** moves the current record pointer to the previous record in the current selection of *aTable* for the current process.<!-- END REF--> If the current selection is empty, or if [Before selection](before-selection.md) or [End selection](end-selection.md) is TRUE, **PREVIOUS RECORD** has no effect.
+<!--REF #_command_.PREVIOUS RECORD.Summary-->**PREVIOUS RECORD** place le pointeur d'enregistrement courant sur l'enregistrement précédent dans la sélection courante de *laTable* pour le process courant.<!-- END REF--> Si la sélection courante est vide, ou si [Before selection](before-selection.md) ou [End selection](end-selection.md) renvoie Vrai, **PREVIOUS RECORD** ne fait rien.
 
-If **PREVIOUS RECORD** moves the current record pointer before the current selection, [End selection](end-selection.md) returns TRUE, and there is no current record. If [End selection](end-selection.md) returns TRUE, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md) to move the current record pointer back into the current selection.
+Si **PREVIOUS RECORD** place le pointeur d'enregistrement courant avant la sélection courante, [End selection](end-selection.md) retourne Vrai, et il n'y a plus d'enregistrement courant. Dans ce cas, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md) pour replacer le pointeur d'enregistrement courant dans la sélection courante.
 
-## See also 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -29,12 +29,12 @@ If **PREVIOUS RECORD** moves the current record pointer before the current selec
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 110 |
+| Numéro de commande | 110 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

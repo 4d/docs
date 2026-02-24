@@ -5,71 +5,70 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to test if record pointer is beyond the last selected record, or Default table, if omitted |
-| Function result | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
+| laTable | Table | &#8594;  | Table pour laquelle tester si le pointeur d'enregistrement courant est au-delà du dernier enregistrement de la sélection courante ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | Oui (Vrai), Non (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.End selection.Summary-->**End selection** returns TRUE when the current record pointer is beyond the last record of the current selection of *aTable*.<!-- END REF-->is commonly used to check whether or not [NEXT RECORD](next-record.md) has moved the current record pointer past the last record. If the current selection is empty, **End selection** returns TRUE.
+<!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](next-record.md) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
 
-To move the current record pointer back into the selection, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) does not move the pointer back into the selection.
+Pour replacer le pointeur d'enregistrement courant dans la sélection, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) ne replace pas le pointeur dans la sélection.
 
-**End selection** also returns TRUE in the last footer when a report is being printed with [PRINT SELECTION](print-selection.md) or from the Print menu. You can use the following code to test for the last footer and print a special footer for the last page:
+**End selection** retourne également Vrai lors de l'impression du dernier pied de page d'un état, déclenchée par la commande [PRINT SELECTION](print-selection.md) ou le menu **Imprimer**. Vous pouvez utiliser l'instruction suivante pour intercepter le dernier pied de page et insérer une mention particulière :
 
 ```4d
-  // Method of a form being used as output form for a summary report
+  // Méthode d'un formulaire sortie utilisé pour imprimer un état
  $vpFormTable:=Current form table
  Case of
   // ...
     :(Form event code=On Printing Footer)
-  // A footer is about to be printed
+  // Un pied
        If(End selection($vpFormTable->))
-  // Code for the last footer goes here
+  // Le code pour le dernier pied de page doit être placé ici
        Else
-  // Code for a footer goes here
+  // Le code pour le pied de page doit être placé ici
        End if
  End case
 ```
 
-## Example 
+## Exemple 
 
-This form method is used during the printing of a report. It sets the variable *vFooter* to print in the Footer area on the last page:
+La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d'un état. Elle crée la variable VPied, à imprimer dans le pied de page de la dernière page :
 
 ```4d
-  // [Finances];"Summary" Form Method
+  // Méthode formulaire [Finances];"Tableau"
  Case of
   // ...
     :(Form event code=On Printing Footer)
        If(End selection([Finances]))
-          vFooter:="©2001 Acme Corp." // Set the footer for the last page
+          VPied:="©1997 SARL Dupont" // Définir le pied de page de la dernière page
        Else
-          vFooter:="" // Clear the footer for all other pages
+          VPied:="" // Effacer le pied de page pour toutes les autres pages
        End if
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [LAST RECORD](last-record.md)  
 [NEXT RECORD](next-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 36 |
+| Numéro de commande | 36 |
 | Thread safe | yes |
-
 
 

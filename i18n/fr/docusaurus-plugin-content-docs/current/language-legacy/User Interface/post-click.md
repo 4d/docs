@@ -5,47 +5,47 @@ slug: /commands/post-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* : Integer ; *mouseY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
+<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *sourisX* ; *sourisY* {; *process*} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mouseX | Integer | &#8594;  | Horizontal coordinate |
-| mouseY | Integer | &#8594;  | Vertical coordinate |
-| process | Integer | &#8594;  | Destination process reference number, or Application event queue, if omitted, or 0 |
-| * | Operator |  &#8594;  | If specified, global coordinate system is used If omitted, local coordinate system is used |
+| sourisX | Integer | &#8594;  | Coordonnée horizontale |
+| sourisY | Integer | &#8594;  | Coordonnée verticale |
+| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
+| * | Operator |  &#8594;  | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.POST CLICK.Summary-->The POST CLICK command simulates a mouse click.<!-- END REF--> Its effect as if the user actually clicked the mouse button.
+<!--REF #_command_.POST CLICK.Summary-->La commande **POST CLICK** simule un clic souris.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur clique réellement avec le bouton de la souris.
 
-You pass the horizontal and vertical coordinates of the click in *mouseX* and *mouseY*. If you pass the *\** parameter, you express these coordinates relative to the screen. If you omit the *\** parameter, you express these coordinates relative to the frontmost window of the process whose process number you pass in *process*. 
+Vous passez les coordonnées horizontale et verticale du clic dans *sourisX* et *sourisY*. Si vous passez le paramètre *\**, vous exprimez ces coordonnées par rapport à l'écran. Si vous omettez le paramètre *\**, vous exprimez ces coordonnées par rapport à la fenêtre de premier plan du process dont le numéro est passé dans *process*.
 
-If you specify the *process* parameter, the click is sent to the process whose process number you pass in *process*. If you pass *0* (zero) or if you omit the parameter, the click is sent at the application level, and the 4D scheduler will dispatch it to the appropriate process.
+Si vous passez le paramètre *process*, le clic est envoyé au process dont vous avez passé le numéro. Si vous passez *0* (zéro) ou si vous omettez ce paramètre, le clic est envoyé au niveau de l'application et le gestionnaire de 4D l'affectera au process approprié.
 
-## See also 
+## Voir aussi 
 
 [POST EVENT](post-event.md)  
 [POST KEY](post-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 466 |
+| Numéro de commande | 466 |
 | Thread safe | no |
 
 

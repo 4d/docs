@@ -5,65 +5,65 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *object* : Variable, Field ; *arrEvents* : Integer array )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *objet* ; *tabEvénements* )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name or "" to designate the form (if * is specified), or<br/>Variable or field (if * is omitted) |
-| arrEvents | Integer array | &#8592; | Array of enabled events |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet ou "" pour désigner le formulaire (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tabEvénements | Integer array | &#8592; | Tableau des événements activés |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET EVENTS.Summary-->The **OBJECT GET EVENTS** command gets the current configuration of the form events for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.OBJECT GET EVENTS.Summary-->La commande **OBJECT GET EVENTS** vous permet de d’obtenir la configuration courante des événements formulaire du formulaire, de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Form events can be enabled/disabled either using the Property List, or using the [OBJECT SET EVENTS](object-set-events.md) command if it is called in the current process.
+Les événements formulaire peuvent avoir été activés/désactivés soit via la Liste des propriétés, soit via la commande [OBJECT SET EVENTS](object-set-events.md) si elle a été appelée dans le process courant.
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).  
-To get the configuration of events for the form itself, pass the optional *\** parameter and an empty string "" in object: in this case, you designate the current form. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).  
+Pour obtenir la configuration des événements du formulaire lui-même, passez le paramètre optionnel *\** et une chaîne vide "" dans *objet* : dans ce cas, vous désignez le formulaire courant. 
 
-**Note:** If you want to get events for a subform related to a table, you can only use the syntax based on the object name.
+**Note :** Si vous souhaitez obtenir les événements d’un sous-formulaire lié à une table, seule la syntaxe basée sur le nom d’objet peut être utilisée.
 
-Pass a longint array in the *arrEvents* parameter. When the command is executed, this array is automatically sized and receives all the predefined or custom form events that are enabled for the object or the form. You can compare the values received with the constants of the "*Form Events*" theme.
+Passez dans le paramètre *tabEvénements* un tableau Entier long. A l’exécution de la commande, ce tableau est automatiquement dimensionné et reçoit tous les événements formulaire prédéfinis ou personnalisés activés pour l’objet ou le formulaire. Vous pouvez comparer les valeurs reçues aux constantes du thème "*Evénements formulaire*".
 
-Note that the *arrEvents* array is returned empty if no object method is associated with the object or if no form method is associated with the form. 
+Attention, le tableau *tabEvénements* est retourné vide si aucune méthode objet n’est associée à l’*objet* ou si aucune méthode formulaire n’est associée au formulaire. 
 
-## Example 
+## Exemple 
 
-You want to enable two events and get the list of events for an object:
+Vous souhaitez activer deux événements et obtenir la liste des événements pour un objet :
 
 ```4d
- ARRAY LONGINT($ArrCurrentEvents;0)
- ARRAY LONGINT($ArrEnabled;2)
- $ArrEnabled{1}:=On Header Click
- $ArrEnabled{2}:=On Footer Click
- OBJECT SET EVENTS(*;"Col1";$ArrEnabled;Enable events others unchanged)
- OBJECT GET EVENTS(*;"Col1";$ArrCurrentEvents)
+ ARRAY LONGINT($TabCurEvents;0)
+ ARRAY LONGINT($TabActiv;2)
+ $TabActiv{1}:=On Header Click
+ $TabActiv{2}:=On Footer Click
+ OBJECT SET EVENTS(*;"Col1";$TabActiv;Enable events others unchanged)
+ OBJECT GET EVENTS(*;"Col1";$TabCurEvents)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET EVENTS](object-set-events.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1238 |
+| Numéro de commande | 1238 |
 | Thread safe | no |
 
 

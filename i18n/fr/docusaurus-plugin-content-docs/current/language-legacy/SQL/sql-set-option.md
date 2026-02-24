@@ -5,66 +5,65 @@ slug: /commands/sql-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *option* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.SQL SET OPTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | Number of option to set |
-| value | Integer, Text | &#8594;  | New value of option |
+| option | Integer | &#8594;  | Numéro d’option à définir |
+| valeur | Integer, Text | &#8594;  | Nouvelle valeur de l’option |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 4|Modified|
-|<6|Created|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL SET OPTION.Summary-->The **SQL SET OPTION** command modifies the *value* of the option passed in *option*.<!-- END REF--> 
+<!--REF #_command_.SQL SET OPTION.Summary-->La commande **SQL SET OPTION** permet de modifier la *valeur* de l’option passée dans le paramètre *option*.<!-- END REF--> 
 
-*option* can have one of the following values, located in the “*SQL*” theme:
+Vous pouvez passer dans *option* l’une des constantes suivantes, placées dans le thème *SQL* :
 
-| Constant               | Value | Comment                                                                                                                                                                                                                                                                                            |
-| ---------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SQL asynchronous       | 1     | 0 = Synchronous connection (default value), 1 (or value other than 0) = Asynchronous connection                                                                                                                                                                                                    |
-| SQL charset            | 100   | Text encoding used for requests sent to external sources (via the SQL pass-through). The modification is carried out for the current process and the current connection.<br/>Possible values: MIBEnum identifier (see note 2) or value -2 (see note 3)<br/>By default: 106 (UTF-8) |
-| SQL connection timeout | 5     | Maximum timeout awaiting response when executing the [SQL LOGIN](sql-login.md) command. This value must be set before opening the connection in order to be taken into account<br/>Possible values: time in seconds<br/>By default: no timeout                                     |
-| SQL data chunk size    | 6     | Size of data chunk to be sent to the server. This option is mainly useful with Sybase ODBC driver which does not support actual data chunk. Setting a value greater than the default one allows larger data to be sent at a time. Value: size in bytes<br/>By default: 8000                |
-| SQL max data length    | 3     | Maximum length of data returned                                                                                                                                                                                                                                                                    |
-| SQL max rows           | 2     | Maximum number of rows in resulting group (used for previews)                                                                                                                                                                                                                                      |
-| SQL query timeout      | 4     | Maximum timeout awaiting response when executing the [SQL EXECUTE](sql-execute.md) command. <br/>Values: time in seconds<br/>By default: no timeout                                                                                                                                |
+| Constante              | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                               |
+| ---------------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SQL asynchronous       | Entier long | 1      | 0 = connexion synchrone (valeur par défaut), 1 (ou valeur différente de 0) = connexion asynchrone                                                                                                                                                                                                                     |
+| SQL charset            | Entier long | 100    | Encodage du texte utilisé pour les requêtes envoyées aux sources externes (via le SQL pass-through). La modification est effective pour le process courant et la connexion courante. <br/>Valeurs possibles : identifiant MIBEnum (cf. note 2) ou valeur -2 (cf. note 3)<br/>Par défaut : 106 (UTF-8) |
+| SQL connection timeout | Entier long | 5      | Durée maximale d’attente lors de l’exécution de la commande SQL LOGIN. Cette valeur doit être fixée avant l’ouverture de la connexion pour être prise en compte<br/>Valeurs possibles : durée en secondes<br/>Par défaut : pas de timeout                                                             |
+| SQL max data length    | Entier long | 3      | Longueur maximale des données retournées                                                                                                                                                                                                                                                                              |
+| SQL max rows           | Entier long | 2      | Nombre maximum de lignes dans l’ensemble résultant (utilisé pour les prévisualisations)                                                                                                                                                                                                                               |
+| SQL query timeout      | Entier long | 4      | Durée maximale d’attente de la réponse lors de l’exécution de la commande SQL EXECUTER. <br/>Valeurs : durée en secondes<br/>Par défaut : pas de timeout                                                                                                                                              |
 
-**Notes:**
+**Notes :**  
+1\. Lorsque vous travaillez avec le moteur SQL interne de 4D, l’option SQL Asynchronous est inutile. En effet, ce type de connexion est toujours synchrone.  
+2\. Les numéros MIBEnum sont référencés à l’adresse suivante : <http://www.iana.org/assignments/character-sets>.  
+3\. Lorsque vous passez -2 comme *valeur* à SQL Charset, l’encodage utilisé par le serveur SQL de 4D est automatiquement adapté à la plate-forme d’exécution (encodage non-UTF) :
 
-1. When you work with the internal SQL kernel of 4D, the SQL Asynchronous option serves no purpose due to the fact that this type of connection is always synchronous.
-2. MIBEnum numbers are referenced at the following address: *https://www.iana.org/assignments/character-sets.xhtml*.
-3. When you pass -2 as the *value* to SQL Charset, the encoding used by the 4D SQL server is automatically adapted to the running platform (non-UTF encoding):  
-   * Under Windows, ISO8859-1 is used,  
-   * Under Mac OS, MAC-ROMAN is used.
+* sous Windows, ISO8859-1 est utilisé,
+* sous Mac OS, MAC-ROMAN est utilisé.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command was properly executed, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SQL GET OPTION](sql-get-option.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 818 |
+| Numéro de commande | 818 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

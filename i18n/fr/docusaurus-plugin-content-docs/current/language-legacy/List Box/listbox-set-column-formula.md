@@ -5,61 +5,60 @@ slug: /commands/listbox-set-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *object* : Text ; *formula* : Text ; *dataType* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *object* : Variable ; *formula* : Text ; *dataType* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( {* ;} *objet* ; *formule* ; *typeDonnées* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Object Name (if * is specified) or  Variable (if * is omitted) |
-| formula | Text | &#8594;  | 4D formula associated with column |
-| dataType | Integer | &#8594;  | Type of formula result |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| formule | Text | &#8594;  | Formule 4D associée à la colonne |
+| typeDonnées | Integer | &#8594;  | Type de résultat de la formule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->The **LISTBOX SET COLUMN FORMULA** command modifies the *formula* associated with the column of the list box designated by the *object* and *\** parameters.<!-- END REF--> Formulas can only be used when the “Data Source” property of the list box is either **Current Selection**, **Named Selection**, or **Collection or Entity Selection**.
+<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->La commande **LISTBOX SET COLUMN FORMULA** permet de modifier la *formule* associée à la colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> Les formules ne peuvent être utilisées que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection**.
 
-**Note:** You can use the [OBJECT SET DATA SOURCE](object-set-data-source.md) command to define the data source of an array type list box. 
+**Note :** Vous pouvez utiliser la commande [OBJECT SET DATA SOURCE](object-set-data-source.md) pour définir la source de données d'une list box de type tableau. 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. This parameter must designate a list box column.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Ce paramètre doit désigner une colonne de la listbox.
 
-The *formula* parameter can contain any valid expression, i.e.:
+Le paramètre *formule* peut contenir toute expression valide, soit :
 
-* an instruction,
-* a formula generated using the formula editor,
-* a call to a 4D command,
-* a call to a project method.
+* une instruction,
+* une formule générée à l’aide de l’éditeur de formules,
+* un appel à une commande 4D,
+* un appel à une méthode projet.
 
-When the command is called, the formula is parsed and then executed.
+Au moment de l’appel de la commande, la formule est analysée puis exécutée.
 
-**Note:** Use the [Command name](./commands/command-name) command to specify formulas independent from the application language (when they call 4D commands).
+**Note :** Utilisez la commande [Command name](../commands/command-name.md) afin de définir des formules indépendantes de la langue de l’application (lorsqu’elles font appel à des commandes 4D).
 
-The *dataType* parameter designates the type of data resulting from the execution of the formula. In this parameter, you pass one of the constants from the *Field and Variable Types* theme. If the formula result does not match the expected data type, an error is generated.
+Le paramètre *typeDonnées* permet de désigner le type des données issues de l’exécution de la formule. Vous devez passer dans ce paramètre une des constantes du thème *Types champs et variables*. Si le résultat de la formule ne correspond pas au type de données attendu, une erreur est générée.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get column formula](listbox-get-column-formula.md)  
 [OBJECT SET DATA SOURCE](object-set-data-source.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1203 |
+| Numéro de commande | 1203 |
 | Thread safe | no |
-
 
 

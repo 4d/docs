@@ -5,52 +5,53 @@ slug: /commands/load-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*aTable* : Table ;} *set* : Text ; *document* : Text )<!-- END REF-->
+<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* ;} *ensemble* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to which the set belongs, or Default table, if omitted |
-| set | Text | &#8594;  | Name of the set to be created in memory |
-| document | Text | &#8594;  | Document holding the set |
+| laTable | Table | &#8594;  | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594;  | Nom de l'ensemble à créer en mémoire |
+| nomFichier | Text | &#8594;  | Document disque contenant l'ensemble |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** loads a set from *document* that was saved with the [SAVE SET](save-set.md) command.<!-- END REF-->
+<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** charge un ensemble depuis le fichier *nomFichier*, créé à l'aide de la commande [SAVE SET](save-set.md).<!-- END REF-->
 
-The set that is stored in *document* must be from *aTable*. The set created in memory is overwritten if it already exists.
+L'ensemble stocké dans *nomFichier* doit s'appliquer à *laTable*. Si *ensemble* existait déjà en mémoire, il est réécrit.
 
-The *document* parameter is the name of the disk document containing the set. The document need not have the same name as the set. If you supply an empty string for *document*, an Open File dialog box appears so that the user can choose the set to load.
+Le paramètre *nomFichier* est le nom du fichier disque contenant l'ensemble. Il n'est pas nécessaire que ce fichier ait le même nom que l'ensemble. Si vous passez une chaîne vide dans *nomFichier*, une boîte de dialogue standard d'ouverture de fichiers s'affiche, permettant à l'utilisateur de choisir l'ensemble à charger.
 
-Remember that a set is a representation of a selection of records at the moment that the set is created. If the records represented by the set change, the set may no longer be accurate. Therefore, a set loaded from disk should represent a group of records that does not change frequently. A number of things can make a set invalid: modifying a record of the set, deleting a record of the set, or changing the criteria that determined a set.
+**ATTENTION :** Rappelez-vous qu'un ensemble est l'image d'une sélection d'enregistrements au moment précis où l'ensemble est créé. Si les enregistrements représentés par l'ensemble sont modifiés, celui-ci devient obsolète. En conséquence, vous devez stocker et charger des ensembles avec des enregistrements dont le contenu varie peu. De multiples événements peuvent rendre un ensemble obsolète : modification ou suppression d'un enregistrement de l'ensemble, ou encore modification des critères ayant déterminé la création de l'ensemble.
 
-## Example 
+## Exemple 
 
-The following example uses LOAD SET to load a set of the Acme locations in New York:
+L'exemple suivant utilise **LOAD SET** pour charger l'ensemble des locaux de l'entreprise Dupont SARL à Paris :
 
 ```4d
- LOAD SET([Companies];"NY Acme";"NYAcmeSt") // Load the set into memory
- USE SET("NY Acme") // Change current selection to NY Acme
- CLEAR SET("NY Acme") // Clear the set from memory
+  // Charger l'ensemble en mémoire
+ LOAD SET([Entreprises];"Paris Dupont SARL";"PaDupontEns")
+ USE SET("Paris Dupont SARL") // Modifier la sélection courante avec l'ensemble
+ CLEAR SET("Paris Dupont SARL") // Effacer l'ensemble de la mémoire
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user clicks Cancel in the Open File dialog box, or there is an error during the load operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
+Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fichiers, ou si une erreur se produit pendant le chargement, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
-## See also 
+## Voir aussi 
 
 [SAVE SET](save-set.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 185 |
+| Numéro de commande | 185 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

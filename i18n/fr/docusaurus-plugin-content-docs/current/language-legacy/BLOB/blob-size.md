@@ -5,48 +5,48 @@ slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* : Blob ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *blob* ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB field or variable |
-| Function result | Integer | &#8592; | Size in bytes of the BLOB |
+| blob | Blob | &#8594;  | Champ ou variable de type BLOB |
+| Résultat | Integer | &#8592; | Taille en octets du BLOB |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB size.Summary-->BLOB sizereturns the size of *blob* expressed in bytes.<!-- END REF-->
+<!--REF #_command_.BLOB size.Summary-->**BLOB size** retourne la taille de *blob* exprimée en octets.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The line of code adds 100 bytes to the BLOB *myBlob*:
+La ligne de code suivante ajoute 100 octets au BLOB *monBlob* :
 
 ```4d
- SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
+ SET BLOB SIZE(monBlob;BLOB size(monBlob)+100)
 ```
 
-## See also 
+## Voir aussi 
 
 [SET BLOB SIZE](set-blob-size.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 605 |
+| Numéro de commande | 605 |
 | Thread safe | yes |
 
 

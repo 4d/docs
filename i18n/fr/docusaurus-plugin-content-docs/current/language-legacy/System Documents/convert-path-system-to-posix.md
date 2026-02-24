@@ -5,80 +5,80 @@ slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *systemPath* : Text {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| systemPath | Text | &#8594;  | Relative or absolute pathname expressed in system syntax |
-| * | Operator | &#8594;  | Encoding option |
-| Function result | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
+| cheminSystème | Text | &#8594;  | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
+| * | Opérateur | &#8594;  | Option d’encodage |
+| Résultat | Text | &#8592; | Chemin d’accès absolu exprimé en syntaxe POSIX |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Convert path system to POSIX.Summary-->The Convert path system to POSIX command converts a pathname expressed with the system syntax as a pathname expressed with the POSIX (Unix) syntax.<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Summary-->La commande **Convert path system to POSIX** convertit un chemin d’accès exprimé avec la syntaxe système en chemin d’accès exprimé avec la syntaxe POSIX (Unix).<!-- END REF--> 
 
-Pass the pathname for a file or folder in the *systemPath* parameter, expressed with the system syntax (Mac OS or Windows). This path may be absolute or relative to the database folder (folder containing the database structure file). It is not mandatory that the elements of the path actually exist on the disk at the time the command is executed (the command does not test the validity of the pathname). 
+Passez dans le paramètre *cheminSystème* le chemin d’accès à un fichier ou un dossier, exprimé avec la syntaxe système (Mac OS ou Windows). Ce chemin peut être absolu ou relatif au dossier de la base (dossier contenant le fichier de structure de la base). Il n’est pas obligatoire que les éléments du chemin existent réellement sur le disque au moment de l’exécution de la commande (la commande ne teste pas la validité du chemin d’accès). 
 
-The command returns the complete pathname of the file or folder expressed in the POSIX syntax. The command always returns an absolute pathname, regardless of the type of path passed in *systemPath*. If you passed a relative pathname in *systemPath*, 4D completes the value returned by adding the pathname of the database folder. 
+La commande retourne le chemin d’accès complet du fichier ou du dossier exprimé dans la syntaxe POSIX. La commande retourne toujours un chemin d’accès absolu, quel que soit le type de chemin passé dans *cheminSystème*. Si vous avez passé un chemin relatif dans *cheminSystème*, 4D complète la valeur retournée en ajoutant le chemin d’accès au dossier de la base. 
 
-The optional *\** parameter can be used to specify the encoding of the POSIX path. By default, Convert path system to POSIX does not encode the special characters of the POSIX path. If you pass the \* parameter, the special characters are translated (for example, "My folder" becomes "My%20folder").
+Le paramètre optionnel *\** permet de définir l’encodage du chemin POSIX. Par défaut, **Convert path system to POSIX** n’encode pas les caractères spéciaux du chemin POSIX. Si vous passez le paramètre *\**, les caractères seront traduits (par exemple, "Mon dossier" devient "Mon%20dossier").
 
-## Example 1 
+## Exemple 1 
 
-Examples under macOS
-
-```4d
- $path:=Convert path system to POSIX("machd:file 2.txt")
-  //machd is the startup disk
-  //returns "/file 2.txt"
- $path:=Convert path system to POSIX("disk2:file 2.txt")
-  //disk2 is an additional disk (not the startup)
-  //returns "/Volumes/disk2/file 2.txt"
- $path:=Convert path system to POSIX("machd:file 2.txt";*)
-  //returns "/file%202.txt"
- $path:=Convert path system to POSIX(":resources:images") //relative path
-  //returns "/User/mark/Documents/videodatabase/resources/images"
- $path:=Convert path system to POSIX("resources:images") //absolute path
-  //returns "/resources/images"
-```
-
-## Example 2 
-
-Example under Windows
+Exemples sous macOS
 
 ```4d
- $path:=Convert path system to POSIX("c:\docs\file 2.txt")
-  //returns "c:/docs/file 2.txt"
- $path:=Convert path system to POSIX("\\srv\tempo\file.txt")
-  //returns "//srv/tempo/file.txt"
+ $chemin:=Convert path system to POSIX("machd:file 2.txt")
+     //machd est le disque de démarrage
+     //retourne "/file 2.txt"
+ $chemin:=Convert path system to POSIX("disk2:file 2.txt")
+     //disk2 est un disque additionnel (pas de démarrage)
+     //retourne "/Volumes/disk2/file 2.txt"
+ $chemin:=Convert path system to POSIX("machd:file 2.txt";*)
+     //retourne "/file%202.txt"
+ $chemin:=Convert path system to POSIX(":resources:images") //chemin relatif
+     //retourne "/User/marc/Documents/basevideo/resources/images"
+ $chemin:=Convert path system to POSIX("resources:images") //chemin absolu
+     //retourne "/resources/images"
 ```
 
-## See also 
+## Exemple 2 
+
+Exemple sous Windows
+
+```4d
+ $chemin:=Convert path system to POSIX("c:\docs\file 2.txt")
+     //retourne "c:/docs/file 2.txt"
+ $chemin:=Convert path system to POSIX("\\srv\tempo\file.txt")
+     //retourne "//srv/tempo/file.txt"
+```
+
+## Voir aussi 
 
 [Convert path POSIX to system](convert-path-posix-to-system.md)  
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 [Test path name](test-path-name.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1106 |
+| Numéro de commande | 1106 |
 | Thread safe | yes |
 
 

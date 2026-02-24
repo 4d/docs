@@ -9,29 +9,29 @@ displayed_sidebar: docs
 <!--REF #_command_.START TRANSACTION.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.START TRANSACTION.Summary-->START TRANSACTION starts a [transaction](../Develop-legacy/transactions.md) in the current process.<!-- END REF--> All changes to the data (records) of the database within the transaction are stored temporarily until the transaction is accepted (validated) or canceled.
+<!--REF #_command_.START TRANSACTION.Summary-->**START TRANSACTION** débute une transaction dans le process courant.<!-- END REF--> Toutes les modifications effectuées sur les données (enregistrements) de la base à l'intérieur de la transaction seront stockées temporairement jusqu'à ce que la transaction soit validée ou annulée.
 
-You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all the sub-transactions are cancelled as well, regardless of their result.
+A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transaction ou sous-transaction doit être finalement annulée ou validée. A noter que si la transaction principale est annulée, toutes les sous-transactions sont annulées, quels que soient leurs résultats.
 
-## See also 
+## Voir aussi 
 
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
@@ -39,11 +39,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 [Transactions](../Develop-legacy/transactions.md)
 [VALIDATE TRANSACTION](validate-transaction.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 239 |
+| Numéro de commande | 239 |
 | Thread safe | yes |
 
 

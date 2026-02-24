@@ -5,66 +5,66 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* ; *commentaire* )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| comment | Text | &#8594;  | Comment to be added |
+| document | Time | &#8594;  | Référence du document ouvert |
+| commentaire | Text | &#8594;  | Commentaire à ajouter |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX ADD XML COMMENT.Summary-->The SAX ADD XML COMMENT command adds a *comment* in the XML document referenced by *document*.<!-- END REF--> 
+<!--REF #_command_.SAX ADD XML COMMENT.Summary-->La commande **SAX ADD XML COMMENT** ajoute un *commentaire* dans le document XML référencé par *document*.<!-- END REF--> 
 
-An XML comment is a text whose contents will not be parsed by the XML interpreter. XML comments must be enclosed between the <!-- and --> characters. 
+Un commentaire XML est un texte dont le contenu ne sera pas analysé par l’interpréteur XML. Les commentaires XML sont encadrés par les caractères <!-- et -->. 
 
-## Example 
+## Exemple 
 
-The following statement:
+L’instruction suivante :
 
 ```4d
- vComment:="Created by 4D"
- SAX ADD XML COMMENT($DocRef;vComment)
+ vCommentaire:="Créé par 4D"
+ SAX ADD XML COMMENT($RefDoc;vCommentaire)
 ```
 
-... will write the following line in the document: 
+... inscrira cette ligne dans le document : 
 
 ```xml
- <!--Created by 4D-->
+ <!--Créé par 4D-->
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## Error management 
+## Gestion des erreurs 
 
-In the event of an error, the command returns an error which can be intercepted using an error-handling method.
+En cas d’erreur, la commande retourne une erreur qui peut être interceptée via une méthode d’appel sur erreur.
 
-## See also 
+## Voir aussi 
 
 [SAX ADD XML DOCTYPE](sax-add-xml-doctype.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 852 |
+| Numéro de commande | 852 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

@@ -5,64 +5,64 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* : Variable )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable to clear |
+| variable | Variable | &#8594;  | Nom de la variable à effacer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE resets *variable* to its default type value (*i.e.*, empty string for Text variables, *0* for numeric variables, no elements for arrays, etc.).<!-- END REF--> The variable still exists in memory. 
+<!--REF #_command_.CLEAR VARIABLE.Summary-->**CLEAR VARIABLE** réinitialise *variable* à la valeur par défaut de son type (par exemple chaîne vide pour les types Texte, 0 — zéro — pour les variables numériques, aucun élément pour un tableau etc.).<!-- END REF--> La variable existe toujours en mémoire.
 
-**Note:** For more information on default type values, please refer to the *Default values* paragraph.
+**Note :** Pour plus d'informations sur les valeurs par défaut du type, veuillez consulter le paragraphe *Valeurs par défaut*.
 
-The variable you pass in *variable* can be a local, process or interprocess variable.
+La variable passée dans *variable* peut être une variable locale, process ou interprocess.
 
-**Note:** You do not need to clear process variables when a process ends; 4D clears them automatically. Similarly, each local variable is automatically cleared when the method in which it was created completes execution.
+**Note :** Il n'est pas nécessaire d'effacer les variables process à la fin de l'exécution d'un process, 4D s'en charge automatiquement. De même, chaque variable locale est automatiquement effacée à la fin de l'exécution de la méthode dans laquelle elle a été créée.
 
-## Example 
+## Exemple 
 
-In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is user interface. In other words, you use that array during data entry, but once you are done with the form, you will no longer use that array. Consequently, during the On Unload event, you just get rid of the array:
+Dans un formulaire, vous utilisez une liste déroulante appelée *asMalListeD* n'ayant qu'un rôle d'interface utilisateur. Autrement dit, vous exploitez ce tableau lors de la saisie de données, mais une fois que le formulaire est refermé, vous n'en avez plus besoin. Par conséquent, lors de l'événement On Unload, vous effacez simplement le tableau :
 
 ```4d
-  //asMyDropDown drop-drop list object method
+  // Méthode objet liste déroulante asMalListeD
  Case of
     :(Form event code=On Load)
-  //Initialize the array one way or another
-       ARRAY TEXT(asMyDropDown;...)
+  // Initialiser le tableau comme vous le souhaitez...
+       ARRAY TEXT(63;asMalListeD;...)
   // ...
-    :(Form event code=On Unload)
-  //No longer need the array
-       CLEAR VARIABLE(asMyDropDown)
+    :(Form event code=Sur libération)
+  // Vous n'avez plus besoin du tableau
+       CLEAR VARIABLE(asMalListeD)
   // ...
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Undefined](undefined.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 89 |
+| Numéro de commande | 89 |
 | Thread safe | yes |
 
 

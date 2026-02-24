@@ -5,63 +5,65 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
-| byteOrder | Integer | &#8594;  | 0 = Native byte ordering, 1 = Macintosh byte ordering, 2 = PC byte ordering |
-| offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
-|||| New offset after reading |
-| Function result | Integer | &#8592; | 4-byte Long Integer value |
+| blob | Blob | &#8594;  | BLOB duquel extraire la valeur de type Entier long |
+| ordreOctet | Integer | &#8594;  | 0 = Ordre d'octets natif 1 = Ordre d'octets Macintosh 2 = Ordre d'octets PC |
+| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
+| ||| Nouvel offset après lecture |
+| Résultat | Integer | &#8592; | Valeur de type Entier long (4 octets) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BLOB to longint.Summary-->The BLOB to longint command returns a 4-byte Long Integer value read from the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Summary-->La fonction **BLOB to longint** retourne une valeur de type Entier long (4 octets) lue dans le BLOB *blob*.<!-- END REF-->
 
-The *byteOrder* parameter fixes the byte ordering of the 4-byte Long Integer value to be read. You pass one of the following predefined constants provided by 4D:
+Le paramètre *ordreOctet* fixe l'ordre des octets ("byte ordering") de la valeur Entier long à lire. Vous passez une des constantes fournies par 4D :
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Macintosh byte ordering | Integer | 1     |
-| Native byte ordering    | Integer | 0     |
-| PC byte ordering        | Integer | 2     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Macintosh byte ordering | Entier long | 1      |
+| Native byte ordering    | Entier long | 0      |
+| PC byte ordering        | Entier long | 2      |
 
-**Note regarding Platform Independence:** If you exchange BLOBs between Macintosh and PC platforms, it is up to you to manage byte swapping issues while using this command.
+**Note sur l'indépendance de plate-forme :** Si vous échangez des BLOBs entre les plates-formes Macintosh et PC, il vous incombe de traiter les conversions d'octets ("byte swapping") lorsque vous utilisez cette fonction. 
 
-If you specify the optional *offset* variable parameter, the 4-byte Long Integer is read at the offset (starting from zero) within the BLOB. If you do not specify the optional *offset* variable parameter, the first four bytes of the BLOB are read.
+Si vous ne passez pas de variable dans le paramètre optionnel *offset*, les quatre premiers octets de BLOB sont lus.
 
-**Note:** You should pass an offset value between *0* (zero) and the size of the BLOB minus 4\. If you do not do so, an error -111 is generated.
+Si vous passez une variable dans le paramètre optionnel *offset*, l'entier long sur 4 octets est lu depuis l'offset exprimé en octets (à partir de zéro) du BLOB. 
 
-After the call, the variable is incremented by the number of bytes read. Therefore, you can reuse that same variable with another BLOB reading command to read another value.
+**Note :** Vous devez passer un offset compris entre 0 (zéro) et la taille du BLOB moins 4\. Sinon, une erreur -111 est générée. 
 
-## Example 
+Après l'exécution de la commande, la variable *offset* est incrémentée du nombre d'octets qui a été lu. Vous pouvez donc réutiliser la même variable avec une autre commande de lecture de BLOBs pour lire une autre valeur placée juste après celle que vous venez de lire.
 
-The following example reads 20 Long Integer values from a BLOB, starting at the offset 0x200:
+## Exemple 
+
+L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de l'offset 0x200 :
 
 ```4d
  $vlOffset:=0x200
- For($viLoop;0;19)
-    $vlValue:=BLOB to longint(vxSomeBlob;PC byte ordering;$vlOffset)
-  // Do something with $vlValue
+ For($viBoucle;0;19)
+    $vlValeur:=BLOB to longint(vxUnBlob;PC byte ordering;$vlOffset)
+  // Faire quelque chose avec $vlValeur
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to real](blob-to-real.md)  
@@ -71,11 +73,11 @@ The following example reads 20 Long Integer values from a BLOB, starting at the 
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 551 |
+| Numéro de commande | 551 |
 | Thread safe | yes |
 
 

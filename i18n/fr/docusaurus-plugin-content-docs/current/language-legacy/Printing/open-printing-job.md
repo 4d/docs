@@ -9,52 +9,52 @@ displayed_sidebar: docs
 <!--REF #_command_.OPEN PRINTING JOB.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OPEN PRINTING JOB.Summary-->The **OPEN PRINTING JOB** command opens a print job and stacks all the subsequent printing orders there until the [CLOSE PRINTING JOB](close-printing-job.md) command is called.<!-- END REF--> This command lets you control the print jobs and, more particularly, ensure that no other unexpected print job can be inserted into a printing sequence.
+<!--REF #_command_.OPEN PRINTING JOB.Summary-->La commande **OPEN PRINTING JOB** ouvre une tâche d’impression (print job) et y empile tous les ordres d’impression exécutés par la suite, tant que la commande [CLOSE PRINTING JOB](close-printing-job.md) n’est pas appelée.<!-- END REF--> Cette commande vous permet de contrôler les tâches d’impression, et notamment de vous assurer qu’aucune tâche d’impression “parasite” ne puisse s’intercaler dans une séquence d’impressions.
 
-The **OPEN PRINTING JOB** command can be used with all the 4D printing commands, the quick report commands, and the printing commands of 4D Write Pro. 
+La commande **OPEN PRINTING JOB** peut être utilisée avec toutes les commandes d’impression de 4D, les commandes de l’éditeur d’états rapides ainsi que les commandes d’impression de 4D Write Pro. 
 
-The print job is local to the process, each process has its own printing settings (print options,current printer,etc.). Several print jobs can be open at the same time in 4D.
+La tâche d'impression est locale au process, chaque process a ses propres paramètres d'impression (options d'impression, imprimante actuelle, etc.). Plusieurs tâches d'impression peuvent être ouvertes en même temps dans 4D.
 
-You must call the [CLOSE PRINTING JOB](close-printing-job.md) command to terminate the print job and send the print document to the printer. If you omit this command, the print document will remain in the stack.
+Vous devez appeler la commande [CLOSE PRINTING JOB](close-printing-job.md) pour terminer la tâche et envoyer le document d’impression à l’imprimante. Si vous omettez cette commande, le document d’impression restera dans la pile.
 
-**OPEN PRINTING JOB** uses the current print settings (default settings or set using the [SET PRINT OPTION](set-print-option.md) command). The commands that modify the print settings must be called before **OPEN PRINTING JOB**, otherwise an error is generated (exception: the Orientation option can be called by the [SET PRINT OPTION](set-print-option.md) command within a print job).
+**OPEN PRINTING JOB** utilise les paramètres d’impression courants (paramètres par défaut ou définis via la commande [SET PRINT OPTION](set-print-option.md)). Les commandes modifiant les paramètres d’impression doivent être appelées avant **OPEN PRINTING JOB**. Dans le cas contraire, une erreur est générée (exception : la constante Orientation option peut être appelée par la commande [SET PRINT OPTION](set-print-option.md) dans une tâche d'impression).
 
-**Compatibility Note:** Starting with 4D v20 R4, printing jobs are non-blocking in new projects. For more information, please refer to the [Non-blocking printing option](../settings/compatibility.md) documentation in the Compatibility settings.
+**Note de compatibilité :** À partir de 4D v20 R4, les tâches d'impression sont non-bloquantes dans les nouveaux projets. Pour plus d'informations, veuillez consulter la documentation sur l'[option d'impression non-bloquante](../settings/compatibility.md) dans les paramètres de compatibilité.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK system variable is set to 1 if the print job has been successfully open. Otherwise, it is set to 0, for example in the following cases:
+La variable système OK est définie sur 1 si la tâche d'impression a été ouverte avec succès. Sinon, elle est défini sur 0, par exemple dans les cas suivants :
 
-* the print job has been canceled by the user
-* on Windows, the selected print preview format is not available
+* la tâche d'impression a été annulée par l'utilisateur
+* sous Windows, le format d'aperçu avant impression sélectionné n'est pas disponible
 
-## See also 
+## Voir aussi 
 
 [CLOSE PRINTING JOB](close-printing-job.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 995 |
+| Numéro de commande | 995 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

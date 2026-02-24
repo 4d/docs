@@ -5,58 +5,57 @@ slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is new record.Syntax-->**Is new record** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is new record.Syntax-->**Is new record** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Is new record.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the record to examine or Default table if this parameter is omitted |
-| Function result | Boolean | &#8592; | True if the record is being created, False otherwise |
+| laTable | Table | &#8594;  | Table de l’enregistrement à examiner ou Table par défaut si ce paramètre est omis |
+| Résultat | Boolean | &#8592; | Vrai si l’enregistrement est en cours de création, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.Is new record.Summary-->The **Is new record** command returns True when *aTable*’s current record is being created and has not yet been saved in the current process.<!-- END REF-->You can obtain the same information by using the existing [Record number](record-number.md) command, and by testing if it returns -3\.   
-However, we strongly advise you to use **Is new record** instead of [Record number](record-number.md) in this case. In fact, the **Is new record** command ensures compatibility with future versions of 4D.
+<!--REF #_command_.Is new record.Summary-->La commande **Is new record** retourne Vrai lorsque l’enregistrement courant de *laTable* est en cours de création et n’a pas encore été sauvegardé dans le process courant.<!-- END REF-->Il est possible d’obtenir la même information avec la commande existante [Record number](record-number.md), en testant si elle retourne -3\. Toutefois, il est vivement conseillé d’utiliser dans ce cas **Is new record** plutôt que [Record number](record-number.md). En effet, la commande **Is new record** assure une meilleure compatibilité avec les futures versions de 4D.
 
-**4D Server:** This command returns a different result for the On Validate form event depending on whether it is executed on 4D in local mode or 4D in remote mode. In local mode, the command returns False (the record is considered as already created). In remote mode, the command returns True because, in this case, the record is already created on the server but the information has not yet been sent to the client.
+**4D Server :** Cette commande retourne un résultat différent dans le contexte de l'événement formulaire On Validate suivant qu'elle est exécutée sur 4D en mode local ou 4D en mode distant. En mode local, la commande retourne Faux (l'enregistrement est considéré comme déjà créé). En mode distant, la commande retourne Vrai car dans ce cas, l'enregistrement est également déjà créé sur le serveur mais l'information n'a pas encore été envoyée au client.
 
-## Example 
+#### Exemple 
 
-The following two statements are identical. The second one is strongly advised so that the code will be compatible with future versions of 4D:
+Les deux instructions suivantes sont identiques, la seconde est conseillée pour que le code reste compatible avec les prochaines versions de 4D :
 
 ```4d
- If(Record number([Table])=-3) //Not advised
+ If(Record number([Table])=-3) //Déconseillé
   // ...
  End if
  
- If(Is new record([Table])) //Strongly advised
+ If(Is new record([Table])) //Conseillé
   // ...
  End if
 ```
 
-## See also 
+#### Voir aussi 
 
 [Modified record](modified-record.md)  
 [Record number](record-number.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 668 |
+| Numéro de commande | 668 |
 | Thread safe | yes |
 
 

@@ -5,64 +5,64 @@ slug: /commands/delete-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *array* : Array ; *where* : Integer {; *howMany* : Integer} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *tableau* ; *positionDépart* {; *combien*} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array from which to delete elements |
-| where | Integer | &#8594;  | Element at which to begin deletion |
-| howMany | Integer | &#8594;  | Number of elements to delete, or 1 element if omitted |
+| tableau | Array | &#8594;  | Tableau dans lequel supprimer des lignes |
+| positionDépart | Integer | &#8594;  | Elément de départ de la suppression |
+| combien | Integer | &#8594;  | Nombre d'éléments à supprimer ou 1 élément si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DELETE FROM ARRAY.Summary-->The DELETE FROM ARRAY command deletes one or more elements from *array*.<!-- END REF--> Elements are deleted starting at the element specified by *where*.
+<!--REF #_command_.DELETE FROM ARRAY.Summary-->La commande **DELETE FROM ARRAY** supprime un ou plusieurs élément(s) de *tableau*.<!-- END REF--> Les éléments sont supprimés à partir de l'élément spécifié par *positionDépart*.
 
-The *howMany* parameter is the number of elements to delete. If *howMany* is not specified, then one element is deleted. The size of the array shrinks by *howMany*.
+Le paramètre *combien* est le nombre d'éléments à supprimer. Si *combien* n'est pas spécifié, un seul élément est supprimé. La taille du tableau est réduite de *combien*.
 
-## Example 1 
+## Exemple 1 
 
-The following example deletes three elements, starting at element 5:
+L'exemple suivant supprime trois éléments en commençant à l'élément 5 :
 
 ```4d
- DELETE FROM ARRAY(anArray;5;3)
+ DELETE FROM ARRAY(unTableau;5;3)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example deletes the last element from an array, if it exists:
+L'exemple suivant supprime le dernier élément d'un tableau, s'il existe :
 
 ```4d
- $vlElem:=Size of array(anArray)
+ $vlElem:=Size of array(unTableau)
  If($vlElem>0)
-    DELETE FROM ARRAY(anArray;$vlElem)
+    DELETE FROM ARRAY(unTableau;$vlElem)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [INSERT IN ARRAY](insert-in-array.md)  
 [Size of array](size-of-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 228 |
+| Numéro de commande | 228 |
 | Thread safe | yes |
 
 

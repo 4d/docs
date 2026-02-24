@@ -5,47 +5,47 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; *firstChar* : Integer {; *numChars* : Integer} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; àPartirDe {; *nbCars*} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | String from which to get substring |
-| firstChar | Integer | &#8594;  | Position of first character |
-| numChars | Integer | &#8594;  | Number of characters to get |
-| Function result | Text | &#8592; | Substring of source |
+| source | Text | &#8594;  | Chaîne de laquelle extraire une sous-chaîne |
+| àPartirDe | Integer | &#8594;  | Position du premier caractère |
+| nbCars | Integer | &#8594;  | Nombre de caractères à extraire |
+| Résultat | Text | &#8592; | Sous-chaîne de source |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Substring.Summary-->The **Substring** command returns the portion of *source* defined by *firstChar* and *numChars*.<!-- END REF--> 
+<!--REF #_command_.Substring.Summary-->La fonction **Substring** retourne la partie de *source* délimitée par les paramètres *àPartirDe* et *nbCars*.<!-- END REF--> 
 
-The *firstChar* parameter points to the first character in the string to return, and *numChars* specifies how many characters to return.
+Le paramètre *àPartirDe* indique le premier caractère de la chaîne à retourner, et *nbCars* définit le nombre de caractères à retourner.
 
-If *firstChar* plus *numChars* is greater than the number of characters in the string, or if *numChars* is not specified, **Substring** returns the last character(s) in the string, starting with the character specified by *firstChar*. If *firstChar* is greater than the number of characters in the string, **Substring** returns an empty string ("").
+Si *nbCars* n'est pas défini ou si le total de *àPartirDe* plus *nbCars* est supérieur au nombre de caractères de la chaîne *source*, **Substring** retourne tous les caractères de la chaîne à partir du caractère spécifié par *àPartirDe*. Si *àPartirDe* est supérieur au nombre de caractères de la chaîne, **Substring** retourne une chaîne vide ("").
 
-**Warning:** When you use this command in a multi-style context, you need to convert any Window end-of-line characters ('\\r\\n') into single ('\\r') characters in order for processing to be valid. This is due to the mechanism which normalizes 4D line endings to ensure multi-platform compatibility for texts. For more information, refer to *Automatic normalization of line endings*. 
+**Attention :** Si vous utilisez cette commande dans un contexte de texte multistyle, il est nécessaire de convertir les éventuels caractères de fin de ligne Windows ('\\r\\n') en caractères de fin de ligne simples ('\\r') afin que les traitements soient valides. Ce principe est lié au mécanisme de normalisation des fins de lignes de 4D assurant la compatibilité de multi-plate-forme des textes. Pour plus d'informations, reportez-vous au paragraphe *Normalisation automatique des fins de lignes*.
 
-## Example 1 
+## Exemple 1 
 
-This example illustrates the use of Substring. The results, described in the comments, are assigned to the variable *vsResult*.
+L'exemple suivant illustre l'utilisation de **Substring**. Les résultats sont assignés à la variable *vRésultat*. Les commentaires fournissent la valeur de *vRésultat* :
 
 ```4d
- vsResult:=Substring("08/04/62";4;2) // vsResult gets "04"
- vsResult:=Substring("Emergency";1;6) // vsResult gets "Emerge"
- vsResult:=Substring(var;2) // vsResult gets all characters except ` the first
+ vRésultat:=Substring("08/04/62";4;2) // vRésultat prend la valeur "04"
+ vRésultat:=Substring("Important";1;6) // vRésultat prend la valeur "Import"
+ vRésultat:=Substring(var;2) // vRésultat retourne tous les caractères sauf le premier
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following project method appends the paragraphs found in the text (passed as first parameter) to a string or text array (the pointer of which is passed as second parameter):
+La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le pointeur est passé en second paramètre, les paragraphes tirés du texte passé en premier paramètre :
 
 ```4d
-  // EXTRACT PARAGRAPHS
-  // EXTRACT PARAGRAPHS ( text ; Pointer )
-  // EXTRACT PARAGRAPHS ( Text to parse ; -> Array of ¶s )
+  // EXTRAIRE PARAGRAPHES
+  // EXTRAIRE PARAGRAPHES ( Texte ; Pointeur )
+  // EXTRAIRE PARAGRAPHES ( Texte à étudier ; -> Tableau de paragraphes )
  
 #DECLARE($text : Text ; $arrParaPtr : Pointer) 
  $vlElem:=Size of array($arrParaPtr->)
@@ -62,15 +62,15 @@ The following project method appends the paragraphs found in the text (passed as
  Until($text="")
 ```
 
-## See also 
+## Voir aussi 
 
 [Position](position.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 12 |
+| Numéro de commande | 12 |
 | Thread safe | yes |
 
 

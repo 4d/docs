@@ -5,70 +5,70 @@ slug: /commands/dom-get-xml-attribute-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *elementRef* : Text ; *attribName* : Text ; *attribValue* : Variable )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *refElément* ; *nomAttribut* ; *valeurAttribut* )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| attribName | Text | &#8594;  | Attribute name |
-| attribValue | Variable | &#8592; | Attribute value |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomAttribut | Text | &#8594;  | Nom d’attribut |
+| valeurAttribut | Variable | &#8592; | Valeur de l’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Modified|
-|<6|Created|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->The DOM GET XML ATTRIBUTE BY NAME command gets the value of an attribute specified by name.<!-- END REF--> 
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->La commande **DOM GET XML ATTRIBUTE BY NAME** permet de connaître la valeur d’un attribut désigné par son nom.<!-- END REF-->
 
-Pass the reference of an XML element in *elementRef* and the name of the attribute that you want to know the value of in *attribName*. The value is returned in the *attribValue* parameter. 4D attempts to convert the value obtained into the same type as that of the variable passed as parameter. If the variable type is not defined, the value is returned in text type by default. 
+Passez dans *refElément* la référence d’un élément XML et dans *nomAttribut* le nom d’attribut dont vous voulez connaître la valeur. La valeur est retournée dans le paramètre *valeurAttribut*. 4D tentera de convertir la valeur obtenue dans le type de la variable passée en paramètre. Si le type de la variable n'est pas défini, la valeur est retournée par défaut en type texte.
 
-If no *attribName* attribute exists in the XML element, an error is returned. If several attributes of the XML element have the same name as that specified, only the value of the first attribute is returned.
+Si aucun attribut *nomAttribut* n’existe dans l’élément XML, une erreur est retournée. Si plusieurs attributs de l’élément XML portent le nom spécifié, seule la valeur du premier attribut est retournée.
 
-## Example 
+## Exemple 
 
-This method is used to retrieve the value of an XML attribute using its name:
+Cette méthode permet de récupérer une valeur d’attribut XML à l’aide de son nom :
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var $LineNum : Integer
+ var maVarBlob : Blob
+ var $ref_XML_Parent;$ref_XML_Enfant : Text
+ var $NumLigne : Integer
  
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- DOM GET XML ATTRIBUTE BY NAME($xml_Child_Ref;"N";$LineNum)
+ $ref_XML_Parent:=DOM Parse XML variable(maVarBlob)
+ $ref_XML_Enfant:=DOM Get first child XML element($ref_XML_Parent)
+ DOM GET XML ATTRIBUTE BY NAME($ref_XML_Enfant;"N";$NumLigne)
 ```
 
-If this method is applied to the example below, $LineNum contains the value 1:
+Si cette méthode est appliquée à l’exemple ci-dessous, $NumLigne contient la valeur 1 :
 
-![](../assets/en/commands/pict40184.en.png)
+![](../assets/en/commands/pict40184.fr.png)
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK is set to 1\. If an error occurs, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Si une erreur se produit, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
 [DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 728 |
+| Numéro de commande | 728 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

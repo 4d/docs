@@ -5,44 +5,44 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *liste* ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | Reference to list to be copied |
-| Function result | Integer | &#8592; | List reference number to duplicated list |
+| liste | Integer | &#8594;  | Numéro de référence de la liste à copier |
+| Résultat | Integer | &#8592; | Numéro de référence de la nouvelle liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Copy list.Summary-->The **Copy list** command duplicates the list whose reference number you pass in *list,* and returns the list reference number of the new list.<!-- END REF-->
+<!--REF #_command_.Copy list.Summary-->La commande **Copy list** duplique la liste dont vous passez le numéro de référence dans le paramètre *liste* et retourne le numéro de référence de la nouvelle liste.<!-- END REF-->
 
-After you have finished with the new list, call [CLEAR LIST](clear-list.md) to delete it.
+Le contenu de la liste copiée est entièrement dupliqué. Une fois que vous en avez terminé avec la copie de la liste, appelez la commande [CLEAR LIST](clear-list.md) pour l'effacer.
 
-## See also 
+## Voir aussi 
 
 [CLEAR LIST](clear-list.md)  
 [Load list](load-list.md)  
 [New list](new-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 626 |
+| Numéro de commande | 626 |
 | Thread safe | no |
 
 

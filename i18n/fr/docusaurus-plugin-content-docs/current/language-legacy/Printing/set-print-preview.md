@@ -5,56 +5,56 @@ slug: /commands/set-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *preview* : Boolean )<!-- END REF-->
+<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| preview | Boolean | &#8594;  | Preview on screen (TRUE), or No preview (FALSE) |
+| aperçu | Boolean | &#8594;  | Impression à l'écran (Vrai) ou non (Faux) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.5|Modified|
-|<6|Created|
+|2004.5|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** allows you to programmatically check or uncheck the Preview on Screen option of the Print dialog box.<!-- END REF--> If you pass TRUE in *preview*, Preview on Screen will be checked, if you pass FALSE in *preview*, Preview on Screen will be unchecked. This setting is local to a process and does not affect the printing of other processes or users.
+<!--REF #_command_.SET PRINT PREVIEW.Summary-->La commande **SET PRINT PREVIEW** vous permet de sélectionner ou de désélectionner l'option d'**aperçu** dans la boîte de dialogue standard d'impression.<!-- END REF--> Si vous passez Vrai dans *aperçu*, l'option "à l'écran" sera cochée. Si vous passez Faux, elle ne sera pas cochée. Ce paramétrage est local au process et n'affecte pas les autres process ou utilisateurs.
 
-**Note:** On Windows, you can define the print preview format using the [SET PRINT OPTION](set-print-option.md) command.
+**Note :** Sous Windows, vous pouvez définir le format de l'aperçu avant impression à l'aide de la commande [SET PRINT OPTION](set-print-option.md).
 
-## Example 
+## Exemple 
 
-The following example turns on the Preview on Screen option to display the results of a query on screen, and then turns it off.
+L'exemple suivant sélectionne l'option **A l'écran** pour afficher le résultat d'une recherche de clients à l'écran, puis la désélectionne.
 
 ```4d
- QUERY([Customers])
+ QUERY([Clients])
  If(OK=1)
     SET PRINT PREVIEW(True)
-    PRINT SELECTION([Customers] ;*)
+    PRINT SELECTION([Clients];*)
     SET PRINT PREVIEW(False)
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Get print preview](get-print-preview.md)  
 [Is in print preview](is-in-print-preview.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 364 |
+| Numéro de commande | 364 |
 | Thread safe | no |
 
 

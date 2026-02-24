@@ -5,40 +5,40 @@ slug: /commands/pause-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *process* : Integer )<!-- END REF-->
+<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *process* )<!-- END REF-->
 <!--REF #_command_.PAUSE PROCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.PAUSE PROCESS.Summary-->**PAUSE PROCESS** suspends the execution of *process* until it is reactivated by the [RESUME PROCESS](resume-process.md) command.<!-- END REF--> During this period, *process* does not take any time on your machine. Even though a process may be paused, the process is still in memory.
+<!--REF #_command_.PAUSE PROCESS.Summary-->**PAUSE PROCESS** suspend l'exécution de *process* jusqu'à ce qu'il soit remis en action par la comande [RESUME PROCESS](resume-process.md).<!-- END REF--> Pendant ce temps, *process* n'utilise pas de temps machine. Lorsqu'un process est suspendu, il existe toujours en mémoire.
 
-If *process* is already paused, **PAUSE PROCESS** does nothing. If the process has been delayed using the [DELAY PROCESS](delay-process.md) command, the process is paused. [RESUME PROCESS](resume-process.md) resumes the process immediately.
+Si *process* est déjà suspendu, **PAUSE PROCESS** ne fait rien. Si le process est endormi à l'aide de [DELAY PROCESS](delay-process.md), le process est suspendu. S'il reçoit l'ordre [RESUME PROCESS](resume-process.md), le process redevient actif immédiatement.
 
-While process execution is suspended, the windows belonging to this process are not enterable. In this case, to avoid confusing the user, consider hiding the process. If *process* does not exist, the command does nothing.
+Lorsqu'un process est suspendu, les fenêtres qui lui appartiennent ne sont pas saisissables. Dans ce cas, si vous ne voulez pas dérouter l'utilisateur, il faut auparavant cacher le process. Si *process* n'existe pas, cette commande ne fait rien.
 
-**Warning:** Use **PAUSE PROCESS** only in processes that you have started. It will not affect the main process.
+**Attention :** Utilisez **PAUSE PROCESS** seulement avec les process que vous avez créés. **PAUSE PROCESS** n'a aucun effet sur le process principal.
 
-**Note:** You cannot use this command to assign a stored procedure on the server machine from a client machine (*process*<0).
+**Note :** Vous ne pouvez pas utiliser cette commande à partir d'un poste client pour affecter une procédure stockée sur le poste serveur (*process*<0).
 
-## See also 
+## Voir aussi 
 
 [ABORT PROCESS BY ID](abort-process-by-id.md)  
 [DELAY PROCESS](delay-process.md)  
 [HIDE PROCESS](hide-process.md)  
 [RESUME PROCESS](resume-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 319 |
+| Numéro de commande | 319 |
 | Thread safe | yes |
 
 

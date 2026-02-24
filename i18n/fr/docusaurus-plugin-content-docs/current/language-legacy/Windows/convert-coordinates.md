@@ -5,65 +5,69 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *from* : Integer ; *to* : Integer )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* ; *coordY* ; *depuis* ; *vers* )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| xCoord | Integer | &#8596;  | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
-| yCoord | Integer | &#8596;  | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
-| from | Integer | &#8594;  | Coordinates system to convert from |
-| to | Integer | &#8594;  | Coordinates system to convert to |
+| coordX | Integer | &#8594;  | Coordonnée horizontale d'un point (initiale) |
+| &#8592; | Coordonnée horizontale d'un point (convertie) |
+| coordY | Integer | &#8594;  | Coordonnée verticale d'un point (initiale) |
+| &#8592; | Coordonnée verticale d'un point (convertie) |
+| depuis | Integer | &#8594;  | Système de coordonnées d'origine |
+| vers | Integer | &#8594;  | Système de coordonnées dans lequel convertir le point |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R3|Created|
+|15 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CONVERT COORDINATES.Summary-->The **CONVERT COORDINATES** command converts the (x;y) coordinates of a point from one coordinate system to another.<!-- END REF--> The input and output coordinate systems supported are forms (and subforms), windows, and the screen. For example, you can use this command to get the coordinates in the main form of an object belonging to a subform. This makes it easy to create a context menu at any custom position. 
+<!--REF #_command_.CONVERT COORDINATES.Summary-->La commande **CONVERT COORDINATES** permet de convertir les coordonnées (x;y) d'un point depuis un système de coordonnées vers un autre système de coordonnées.<!-- END REF--> Les systèmes de coordonnées pris en charge sont les formulaires (ainsi que les sous-formulaires), les fenêtres et l'écran. Par exemple, vous pouvez utiliser cette commande pour obtenir les coordonnées, dans le formulaire principal, d'un objet appartenant à un sous-formulaire. Ce principe facilite notamment la création de menus contextuels à des emplacements personnalisés. 
 
-In *xCoord* and *yCoord*, pass as variables the (x;y) coordinates of the point you want to convert. After the command is executed, these variables will contain the converted values.
+Dans *coordX* et *coordY*, passez des variables contenant les coordonnées (x;y) du point que vous voulez convertir. Après exécution de la commande, ces variables contiendront les valeurs converties.
 
-In the *from* parameter, pass the initial coordinate system the input point is using, and in the *to* parameter, pass the coordinate system into which it must be converted. Both parameters can take one of the following constant values, added to the "*Windows*" theme:
+Dans le paramètre *depuis*, passez le système d'origine dans lequel sont exprimées les coordonnées du point, et dans le paramètre *vers*, passez le système de coordonnées dans lequel elles doivent être converties. Chaque paramètre peut avoir pour valeur l'une des constantes suivantes, présentes dans le thème "*Fenêtre*" :
 
-| Constant          | Type    | Value | Comment                                                                                                     |
-| ----------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------- |
-| XY Current form   | Integer | 1     | Origin is top left corner of current form                                                                   |
-| XY Current window | Integer | 2     | Origin is top left corner of current window                                                                 |
-| XY Main window    | Integer | 4     | On Windows: origin is top left corner of main window; on macOS: same as XY Screen                            |
-| XY Screen         | Integer | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](screen-coordinates.md) command). |
+| Constante         | Type        | Valeur | Comment                                                                                                                   |
+| ----------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| XY Current form   | Entier long | 1      | L'origine est le coin supérieur gauche du formulaire courant                                                              |
+| XY Current window | Entier long | 2      | L'origine est le coin supérieur gauche de la fenêtre courante                                                             |
+| XY Main window    | Entier long | 4      | Windows : L'origine est le coin supérieur gauche de la fenêtre principale ; macOS : identique à XY Screen                  |
+| XY Screen         | Entier long | 3      | L'origine est le coin supérieur de l'écran principal (comme pour la commande [SCREEN COORDINATES](screen-coordinates.md)) |
 
-When this command is called from the method of a subform or a subform's object, and if one of the selectors is XY Current form, then the coordinates are relative to the subform itself, not to its parent form.
+Lorsque cette commande est appelée depuis la méthode d'un sous-formulaire ou d'un objet du sous-formulaire, si l'un des sélecteurs est XY Current form, les coordonnées correspondantes sont relatives au sous-formulaire lui-même, et non celles de son formulaire parent. 
 
-When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](./commands/open-form-window)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
+Lorsque vous effectuez une conversion depuis/vers la position d'une fenêtre de formulaire (par exemple une conversion depuis les résultats de [GET WINDOW RECT](get-window-rect.md), ou vers des valeurs passées à [Open form window](open-form-window.md)), le sélecteur XY Main window doit être utilisé car il s'agit du système de coordonnées utilisé par les commandes de gestion des fenêtres sous Windows. Ce sélecteur peut également être utilisé dans ce but sous macOS, où il est équivalent à XY Screen.
 
-When *from* is XY Current form and the point is in the body section of a list form, the result depends on the calling context of the command:
+Lorsque le sélecteur *depuis* contient XY Current form et que le point à convertir est situé dans la zone de corps d'un formulaire liste, le résultat dépend du contexte d'appel de la commande : 
 
-* If the command is called in the On Display Detail event, the resulting point is located in the display of the record being drawn on screen.
-* If the command is called outside of an On Display Detail event but while a record is being edited, the resulting point is located in the display of the record being edited.
-* Otherwise, the resulting point is located in the display of the first record.
+* Si la commande est appelée dans l'événement On Display Detail, le point résultant est situé dans le périmètre d'affichage de l'enregistrement affiché à l'écran.
+* Si la commande est appelée en-dehors de l'événement On Display Detail mais qu'un enregistrement est en cours de modification, le point résultant est situé dans le périmètre d'affichage de l'enregistrement en cours d'édition.
+* Sinon, le point résultant est situé dans le périmètre d'affichage du premier enregistrement.
 
-## Example 1 
+## Exemple 1 
 
-You want to open a pop-up menu at the bottom left corner of the "MyObject" object.
+Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "MonObjet" :
 
 ```4d
-  // OBJECT GET COORDINATES works in the current form coordinate system
-  // Dynamic pop-up menu uses the current window coordinate system
-  // We need to convert the values
+  // OBJECT GET COORDINATES / OBJET LIRE COORDONNEES utilise
+  // le système de coordonnées du formulaire courant
+  // Dynamic pop up menu / Pop up menu dynamique utilise
+  // le système de coordonnées de la fenêtre courante
+  // Il faut donc convertir les valeurs
  var $left;$top;$right;$bottom : Integer
  var $menu : Text
- OBJECT GET COORDINATES(*;"MyObject";$left;$top;$right;$bottom)
+ OBJECT GET COORDINATES(*;"MonObjet";$left;$top;$right;$bottom)
  CONVERT COORDINATES($left;$bottom;XY Current form;XY Current window)
  $menu:=Create menu
  APPEND MENU ITEM($menu;"Right here")
@@ -74,9 +78,9 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
 
 ![](../assets/en/commands/pict2678144.en.png)
 
-## Example 2 
+## Exemple 2 
 
-You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [MOUSE POSITION](mouse-position.md) (with the \* parameter) returns values based on the position of the MDI window:
+Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la souris. Sous Windows, vous devez convertir les coordonnées car [MOUSE POSITION](mouse-position.md) (avec le paramètre \*) retourne des valeurs basées sur la position de la fenêtre MDI :
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
@@ -88,19 +92,18 @@ You want to open a pop-up window at the position of the mouse cursor. On Windows
  CLOSE WINDOW($window)
 ```
 
-## See also 
+## Voir aussi 
 
 [GET WINDOW RECT](get-window-rect.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT SET COORDINATES](object-set-coordinates.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1365 |
+| Numéro de commande | 1365 |
 | Thread safe | no |
-
 
 

@@ -5,54 +5,53 @@ slug: /commands/sql-get-last-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* : Integer ; *errText* : Text ; *errODBC* : Text ; *errSQLServer* : Integer )<!-- END REF-->
+<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* ; *errTexte* ; *errODBC* ; *errSQLServer* )<!-- END REF-->
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| errCode | Integer | &#8592; | Error code |
-| errText | Text | &#8592; | Error text |
-| errODBC | Text | &#8592; | ODBC error code |
-| errSQLServer | Integer | &#8592; | SQL server native error code |
+| errCode | Integer | &#8592; | Code de l’erreur |
+| errText | Text | &#8592; | Texte de l’erreur |
+| errODBC | Text | &#8592; | Code d’erreur ODBC |
+| errSQLServer | Integer | &#8592; | Code d’erreur native serveur SQL |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL GET LAST ERROR.Summary-->The SQL GET LAST ERROR command returns information related to the last error encountered during the execution of an ODBC command.<!-- END REF--> The error may come from the 4D application, the network, the ODBC source, etc. 
+<!--REF #_command_.SQL GET LAST ERROR.Summary-->La commande **SQL GET LAST ERROR** retourne des informations relatives à la dernière erreur rencontrée lors de l’exécution d’une commande ODBC.<!-- END REF--> L’erreur peut provenir de l’application 4D, du réseau, de la source ODBC, etc. 
 
-This command must generally be called in the context of an error-handling method installed using the [ON ERR CALL](on-err-call.md) command.
+Cette commande doit généralement être appelée dans le contexte d’une méthode de gestion des erreurs installée à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
-* The *errCode* parameter returns the error code.
-* The *errText* parameter returns the error text.
+* Le paramètre *errCode* retourne le code de l’erreur.
+* Le paramètre *errTexte* retourne le libellé de l’erreur.
 
-The last two parameters are only filled when the error comes from the ODBC source; otherwise, they are returned empty. 
+Les deux derniers paramètres ne sont remplis que si l’erreur provient de la source ODBC. Dans le cas contraire, ils sont retournés vides. 
 
-* The *errODBC* parameter returns the ODBC error code (SQL state).
-* The *errSQLServer* parameter returns the SQL server native error code.
+* Le paramètre *errODBC* retourne le code d’erreur ODBC (SQL state).
+* Le paramètre *errSQLServer* retourne le code de l’erreur native du serveur SQL.
 
-## See also 
+## Voir aussi 
 
-[Last errors](./commands/last-errors)   
+[Last errors](../commands/last-errors.md)   
 [ON ERR CALL](on-err-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 825 |
+| Numéro de commande | 825 |
 | Thread safe | no |
-
 
 

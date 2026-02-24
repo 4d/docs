@@ -5,72 +5,71 @@ slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( { *languageType* : Integer {; * }}) : Text<br/>**Get database localization** ( * ) : Text<!-- END REF-->
+<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*typeLangue*}{;}{*} )} : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| languageType | Integer | &#8594;  | Type of language |
-| * | Operator | &#8594;  | Return information about host database |
-| Function result | Text | &#8592; | Current language of the database |
+| typeLangue | Integer | &#8594;  | Type de langue |
+| * | Opérateur | &#8594;  | Return information about host database |
+| Résultat | Text | &#8592; | Code de la langue utilisée |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|12|Renamed|
-|11 SQL|Created|
+|12|Modifié|
+|12|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
-<h2 data-noindex>Description</h2>
+## Description 
 
+<!--REF #_command_.Get database localization.Summary-->La commande **Get database localization** retourne la langue par défaut de la base ou la langue désignée par *typeLangue*, exprimée dans la norme définie par la RFC 3066\.<!-- END REF--> Typiquement, la commande retourne “fr” pour le français “es” pour l’espagnol, etc. Pour plus d’informations sur cette norme et sur les valeurs retournées par cette commande, reportez-vous à l'*Annexe B : Architecture XLIFF* dans le manuel *Mode Développement*.
 
-<!--REF #_command_.Get database localization.Summary-->The Get database localization command returns the database default language or the language specified by the *languageType*, expressed in the standard defined by the RFC 3066\.<!-- END REF--> Typically, the command returns “en” for English, “es” for Spanish, etc. For more information about this standard and the values returned by this command, please refer to *Appendix B: XLIFF architecture* in the *Design Reference* manual.
+Plusieurs paramétrages de langues différents peuvent être utilisés simultanément dans l’application. Pour désigner le paramétrage à obtenir, passez dans *typeLangue* une des constantes suivantes, placées dans le thème *Environnement 4D* :
 
-Several different language settings can be used simultaneously in the application. To designate the setting to be obtained, in *languageType* you can pass one of the following constants, found in the *4D Environment* theme:
+| Constante                | Type        | Valeur | Comment                                                                                                                                           |
+| ------------------------ | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Current localization     | Entier long | 1      | Langue courante de l’application : langue par défaut ou langue définie via la commande [SET DATABASE LOCALIZATION](set-database-localization.md). |
+| Default localization     | Entier long | 0      | Langue définie automatiquement par 4D au démarrage en fonction du dossier Resources et de l’environnement système (non modifiable).               |
+| Internal 4D localization | Entier long | 3      | Langue utilisée par 4D pour les tris et les comparaisons de textes (définie dans les Préférences de l’application).                               |
+| User system localization | Entier long | 2      | Langue définie par l’utilisateur courant du système.                                                                                              |
 
-| Constant                 | Type    | Value | Comment                                                                                                                                          |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current localization     | Integer | 1     | Current language of the application: default language or language set via the [SET DATABASE LOCALIZATION](set-database-localization.md) command. |
-| Default localization     | Integer | 0     | Language set automatically by 4D on startup according to the Resources folder and the system environment (not modifiable).                       |
-| Internal 4D localization | Integer | 3     | Language used by 4D for sorts and text comparisons (set in the Preferences of the application).                                                  |
-| User system localization | Integer | 2     | Language set by the current user of the system.                                                                                                  |
+Par défaut, si vous omettez le paramètre *typeLangue*, la commande retourne la langue par défaut (0). 
 
-By default, if you omit the *languageType* parameter, the command returns the default language (0). 
+Le paramètre optionnel \* est utile dans une architecture utilisant des composants : il peut êtr utilisé pour définir la base (hôte ou composante) dont vous souhaitez connaître la langue.
 
-The optional *\** parameter is useful in the case of an architecture using components: it can be used to determine the database (host or component) for which you want to find out the language.
+* Lorsque la commande est appelée depuis un composant :
+   * Si le paramètre \* est passé, la commande retourne la configuration de la langue de la base hôte.
+   * Si le paramètre \* n'est pas passé, la commande retourne la configuration de la langue de la base composante.
+* Lorsque la commande est appelée depuis une méthode de la base hôte, elle retourne toujours la configuration de la langue de la base hôte (\* est ignoré).
 
-* When the command is called from a component:  
-   * If the *\** parameter is passed, the command returns the language configuration of the host database.  
-   * If the *\** parameter is not passed, the command returns the language configuration of the component database.
-* When the command is called from a method of the host database, it always returns the language configuration of the host database (*\** is ignored).
+La langue courante de la base définit le dossier .lproj dans lequel le programme va chercher les éléments localisés de la base de données. 4D détermine automatiquement la langue courante au démarrage de la base en fonction du contenu du dossier **Resources** et de l’environnement système. Le principe est que 4D charge le premier dossier .lproj de la base correspondant à la langue de référence, dans l’ordre de priorité suivant :
 
-The current language of the database determines the .lproj folder where the program will look for the localized items of the database. 4D automatically selects the current language on database startup according to the contents of the **Resources** folder and the system environment. How it works is that 4D loads the first .lproj folder of the database that corresponds to the reference language, with the following order of priority:
+1. Langue du système (sous Mac OS, plusieurs langues peuvent être définies avec un ordre de préférence, 4D utilise ce paramétrage).
+2. Langue de l’application 4D.
+3. Anglais
+4. Première langue trouvée dans le dossier **Resources**.
 
-1. System language (under Mac OS, several languages can be set by order of preference, 4D uses this setting).
-2. Language of the 4D application.
-3. English
-4. First language found in the **Resources** folder.
+**Note :** Si la base ne contient aucun dossier .lproj, 4D applique l'ordre de priorité suivant : 1\. Langue du système, 2\. Anglais (si la langue du système n'a pas pu être identifiée).
 
-**Note:** If the database does not have an .lproj folder, 4D applies the following order of priority: 1\. System language, 2\. English (if the system language cannot be identified).
-
-<h2 data-noindex>See also</h2>
+## Voir aussi 
 
 [Localized document path](localized-document-path.md)  
 [SET DATABASE LOCALIZATION](set-database-localization.md)  
 
-<h2 data-noindex>Properties</h2>
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1009 |
+| Numéro de commande | 1009 |
 | Thread safe | yes |
 
 

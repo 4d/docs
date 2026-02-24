@@ -5,79 +5,78 @@ slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *manyTable* : Table ; *oneTable* : Table )<!-- END REF-->
+<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tableN* ; *table1* )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| manyTable | Table | &#8594;  | Many table name (from which the relation starts) |
-| oneTable | Table | &#8594;  | One table name (to which the relation refers) |
+| tableN | Table | &#8594;  | Nom de la table N (d'où part le lien) |
+| table1 | Table | &#8594;  | Nom de la table 1 (où arrive le lien) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Modified|
-|<6|Created|
+|6|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RELATE ONE SELECTION.Summary-->The **RELATE ONE SELECTION** command creates a new selection of records for the table *oneTable*, based on the selection of records in the table *manyTable* and loads the first record of the new selection as the current record.<!-- END REF--> 
+<!--REF #_command_.RELATE ONE SELECTION.Summary-->La commande **RELATE ONE SELECTION** crée une nouvelle sélection d'enregistrements dans *table1* à partir de la sélection d'enregistrements de la *tableN* qui lui est liée et charge le premier enregistrement de la nouvelle sélection en tant qu'enregistrement courant.<!-- END REF--> 
 
-This command can only be used if there is a relation from *manyTable* to *oneTable*. **RELATE ONE SELECTION** can work across several levels of relations. There can be several related tables between *manyTable* and *oneTable*. 
+Cette commande ne peut être utilisée que s'il existe un lien de N vers *1*. **RELATE ONE SELECTION** peut opérer au travers de plusieurs niveaux de liens. Il peut y avoir plusieurs tables liées entre la table N et la table *1*. Les liens peuvent être manuels ou automatiques.
 
-The relations can be manual or automatic. When automatic relations exist, they are always used first by **RELATE ONE SELECTION**. When several paths are possible from the starting table to the destination table, **RELATE ONE SELECTION** takes the shortest one, using automatic relations (if any). If there are existing paths of the same size and you want to control the used path, or if you want to "force" the use of manual relations, you need to use the [`SET FIELD RELATION`](set-field-relation.md) command. 
+**RELATE ONE SELECTION** utilise le chemin "le plus court" pour passer de la table de départ à la table d'arrivée. Si plusieurs chemins existants sont de taille équivalente, vous devez faire appel à la commande [SET FIELD RELATION](set-field-relation.md) si vous souhaitez contrôler le chemin emprunté. 
 
-## Example 
+## Exemple 
 
-The following example finds all the clients whose invoices are due today. 
-
-Here is one way of creating a selection in the *\[Customers\]* table, given a selection of records in the *\[Invoices\]* table:
+Nous souhaitons trouver tous les clients dont les factures arrivent à échéance aujourd'hui.   
+L'exemple suivant propose une méthode pour créer une sélection dans la table *\[Clients\]* à partir d'une sélection d'enregistrements de la table *\[Factures\]* :
 
 ```4d
- CREATE EMPTY SET([Customers];"Payment Due")
- QUERY([Invoices];[Invoices]DueDate=Current date)
- While(Not(End selection([Invoices])))
-    RELATE ONE([Invoices]CustID)
-    ADD TO SET([Customers];"Payment Due")
-    NEXT RECORD([Invoices])
+ CREATE EMPTY SET([Clients];"Paiement Du")
+ QUERY([Factures]; [Factures]PaiementDu=Current date)
+ While(Not(End selection([Factures])))
+    RELATE ONE([Factures]ClientID)
+    ADD TO SET([Clients];"Paiement Du")
+    NEXT RECORD([Factures])
  End while
 ```
 
-The following technique uses **RELATE ONE SELECTION** to accomplish the same result:
+L'exemple suivant parvient au même résultat que le précédent :
 
 ```4d
- QUERY([Invoices];[Invoices]DueDate=Current date)
- RELATE ONE SELECTION([Invoices];[Customers])
+ QUERY([Factures];[Factures]PaiementDu=Current date)
+ RELATE ONE SELECTION([Factures];[Clients])
 ```
 
-**Note:** Since version 11, this code can be written as follows without any loss of performance:  
+**Note :** Depuis la version 11, ce code peut également être écrit de la manière suivante sans perte de performances :  
 
 ```4d
- QUERY([Customers];[Invoices]DueDate=Current date)
+ QUERY([Clients];[Factures]PaiementDu=Current date)
 ```
 
-## See also 
+## Voir aussi 
 
+*Présentation des ensembles*  
 [QUERY](query.md)  
 [RELATE MANY SELECTION](relate-many-selection.md)  
 [RELATE ONE](relate-one.md)  
-*Sets*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 349 |
+| Numéro de commande | 349 |
 | Thread safe | yes |
-| Changes current record ||
-| Changes current selection ||
+| Change l'enregistrement courant ||
+| Change la sélection courante ||
 
 

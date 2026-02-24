@@ -5,219 +5,219 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ({*folder* : Integer {; *options* : Object}} {; *}) : Text<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *dossier* {; *options*} {; *})} : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folder | Integer | &#8594;  | Folder type (if omitted = active 4D folder) |
-| options | Object | &#8594;  | 4D Client database folder path configuration |
-| * | Operator | &#8594;  | Return folder of host database |
-| Function result | Text | &#8592; | Pathname to 4D Folder |
+| dossier | Integer | &#8594;  | Type de dossier (si omis=dossier 4D actif) |
+| options | Object | &#8594;  | Configuration du chemin du dossier base 4D Client |
+| * | Opérateur | &#8594;  | Retourne le dossier de la base hôte |
+| Résultat | Text | &#8592; | Chemin d'accès du dossier désigné |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20|Modified|
-|17 R2|Modified|
-|16|Modified|
-|13|Modified|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|20|Modifié|
+|17 R2|Modifié|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.
+<!--REF #_command_.Get 4D folder.Summary-->La commande **Get 4D folder** renvoie le chemin d'accès du dossier 4D actif de l'application courante, ou du dossier de l'environnement 4D spécifié par les paramètres *dossier* et *options*, s'ils sont passés.<!-- END REF-->  
+Cette commande vous permet d'obtenir avec certitude le chemin d'accès réel des dossiers utilisés par l'application. En utilisant cette commande, vous êtes certain que votre code fonctionnera correctement sur toute plate-forme, quelles que soient la langue du système et l'application 4D.
 
-In *folder*, you can pass one of the following constants, which are located in the "*4D Environment*" theme (you will find below a description of each folder):
+Vous pouvez passer dans *dossier* une des constantes suivantes, placées dans le thème *Environnement 4D* (voir ci-dessous pour une description de chacun de ces dossiers) :
 
-| Constant                    | Type    | Value |
-| --------------------------- | ------- | ----- |
-| 4D Client database folder   | Integer | 3     |
-| Active 4D Folder            | Integer | 0     |
-| Current resources folder    | Integer | 6     |
-| Data folder                 | Integer | 9     |
-| Database folder             | Integer | 4     |
-| Database folder Unix syntax | Integer | 5     |
-| HTML Root folder            | Integer | 8     |
-| Licenses folder             | Integer | 1     |
-| Logs folder                 | Integer | 7     |
-| MobileApps folder           | Integer | 10    |
+| Constante                   | Type        | Valeur |
+| --------------------------- | ----------- | ------ |
+| 4D Client database folder   | Entier long | 3      |
+| Active 4D Folder            | Entier long | 0      |
+| Current resources folder    | Entier long | 6      |
+| Data folder                 | Entier long | 9      |
+| Database folder             | Entier long | 4      |
+| Database folder Unix syntax | Entier long | 5      |
+| HTML Root folder            | Entier long | 8      |
+| Licenses folder             | Entier long | 1      |
+| Logs folder                 | Entier long | 7      |
+| MobileApps folder           | Entier long | 10     |
 
-The *options* parameter allows you to customize the local resources folder path. It is only taken into account when using the 4D Client database folder constant (see below). 
+Le paramètre *options* vous permet de personnaliser le chemin du dossier de ressources local. Il est uniquement pris en compte lors de l'utilisation de la constante 4D Client database folder (voir ci-dessous). 
 
-**Note:** If the **Get 4D folder** command is called from a remote 4D, the path returned is that of the remote machine, not that of 4D Server.
+**Note :** Si la commande **Get 4D folder** est appelée depuis un 4D distant, le chemin retourné est celui sur la machine distante, pas sur 4D Server.
 
-### Active 4D Folder 
+### Dossier 4D actif 
 
-The 4D environment uses a specific folder to store the following information:
+Les applications de l'environnement 4D utilisent un dossier spécifique pour stocker les informations suivantes :
 
-* Preferences files used by the 4D environment applications
-* Shortcuts.xml file (custom keyboard shortcuts)
-* Macros v2 folder (macro commands of Method editor)
-* Favorites v1x folder, for example Favorites v13 (pathnames for local and remote databases that have been opened)
-* Logs folder for maintenance logs and when the data is read-only
+* Fichiers de préférences utilisés par les applications 4D
+* Fichier shortcuts.xml (raccourcis clavier personnalisés)
+* Dossier Macros v2 (macros commandes de l'éditeur de méthodes)
+* Dossiers Favorites v1x, par exemple Favorites v13 (chemins d'accès des bases locales et distantes ayant été ouvertes)
+* Dossier Logs pour les journaux de maintenance et lorsque les données sont en lecture seule
 
-The active 4D folder is created by default at the following location:
+Le dossier 4D actif se trouve par défaut à l'emplacement suivant :
 
-* On Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
-* On macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
+* Sous Windows: *{Disk}:\\Users\\{userName}\\AppData\\Roaming\\{applicationName}*
+* Sous macOS: *{Disk}:Users:{userName}:Library:Application Support:{applicationName}*
 
-### Licenses Folder 
 
-Folder containing the Licenses files of the machine.
+### Dossier Licenses 
 
-**Note:** In the case of an application merged with 4D Volume Desktop, the licenses folder is included in the package of the application.
+Dossier contenant les fichiers de licences de la machine.
 
-### Data Folder 
+Note : Dans le cas d'une application fusionnée avec 4D Volume Desktop, le dossier des licences est inclus dans le package de l'application.
 
-Path of the folder containing the current data file. The pathname is expressed using the standard syntax of the current platform. 
+### Dossier données 
 
-### 4D Client Database Folder 
+Dossier contenant le fichier de données courant. Le chemin du dossier est exprimé avec la syntaxe standard de la plate-forme courante. 
 
-Path of the 4D folder automatically created on 4D remote machines for storing files and folders related to the database (resources, plug-ins, Resources folder, etc.). The command can return:
+### Dossier base 4D Client 
 
-* the path for the current application when it is called on a remote machine and the *options* parameter is omitted,
-* the path for any application when the *options* parameter is used (in which case **Get 4D folder** can be called on any machine).
+Dossier 4D créé automatiquement sur chaque machine 4D cliente pour stocker les fichiers et dossiers liés à la base de données (ressources, plug-ins, dossier Ressources, etc.). La commande peut retoruner :
 
-By default, the path is: 
+* le chemin de l'application courante lorsqu'elle est appelée sur une machine distante et que le paramètre *options* est omis,
+* le chemin de n'importe quelle application lorsque le paramètre *options* est utilisé (auquel cas **Get 4D folder** peut être appelée sur n'importe quelle machine).
 
-* On Windows: {**Disk}:\\Users\\{UserAccount}\\AppData\\Local\\{ApplicationName}\\{StructureName\_IP\_Port\_key}*  
-eg: C:\\Users\\John Doe\\AppData\\Local\\myApp\\myApp\_192\_168\_2\_134\_19813\_157
-* On macOS: *{Disk}:Users:{UserAccount}:Library:Caches:{ApplicationName} Client:{StructureName\_IP\_Port\_key}.*  
-eg: :Users:John Doe:Library:Caches:myApp Client:myApp\_192\_168\_2\_134\_19813\_933
+Par défaut, le chemin est : 
 
-Different folders are used if multiple *instances of the client application are launched simultaneously on the same machine* *.* 
+* Sous Windows: {**Disk}:\\Users\\{UserAccount}\\AppData\\Local\\{ApplicationName}\\{StructureName\_IP\_Port\_key}*  
+ex: C:\\Users\\John Doe\\AppData\\Local\\myApp\\myApp\_192\_168\_2\_134\_19813\_157
+* Sous macOS: *{Disk}:Users:{UserAccount}:Library:Caches:{ApplicationName} Client:{StructureName\_IP\_Port\_key}.*  
+ex: :Users:John Doe:Library:Caches:myApp Client:myApp\_192\_168\_2\_134\_19813\_933
 
-**Note: O**n Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used. 
+Différents dossiers sont utilisés si plusieurs instances de l'application *cliente sont lancées simultanément sur la même machine* *.* 
 
-**Using 4D Client Database Folder with *options* parameter**
+**Note :** Sous Windows, dans les projets clients fusionnés, l'emplacement de ce dossier est modifié si la clé xml BuildApp *ShareLocalResourcesOnWindowsClient* est utilisée.
 
-You can use the *options* parameter if you want to compute any *4D database local folder path.* In this case, the path is built upon information you provided in the *options* object, and the command can be used of a 4D, 4D Server, or remote application. Thanks to this feature, you can precompute your resource folder paths, for example to preload contents. 
+**Utilisation de Dossier base 4D Client avec le paramètre** *options*
 
-You can pass the following properties in the *options* object:
+Vous pouvez utiliser le paramètre *options* si vous voulez calculer le chemin du dossier local pour n'importe quelle base *4D. Dans ce cas, le chemin est construit selon les informations que vous fournissez dans l'objet* *options* et la commande peut être utilisée sur 4D, 4D Server ou une application distante. Grâce à cette fonctionnalité, vous pouvez précalculer les chemins de vos dossiers de ressources locaux, afin notamment de précharger leur contenu. 
 
-| **Property**                       | **Type** | **Description**                                                                                                                                                 |
-| ---------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| remoteAppPath                      | Text     | Optional - Remote application executable system path. Default is current application executable path.                                                           |
-| buildApplicationName               | Text     | Optional - Name of the application (same as the *BuildApplicationName* BuildApp xml key value). Default is name of the current application.                     |
-| structureName                      | Text     | Mandatory except if the *clientServerSystemFolderName* attribute is defined - Name of the structure.                                                            |
-| ipAddress                          | Text     | Mandatory except if the *clientServerSystemFolderName* attribute is defined - IP address of the server (same as the *IPAddress* BuildApp xml key value).        |
-| portNumber                         | Number   | Mandatory except if the *clientServerSystemFolderName* attribute is defined - Publication port of the server (same as the *PortNumber* BuildApp xml key value). |
-| clientServerSystemFolderName       | Text     | Optional - Custom name of the local resources final folder (same as the *ClientServerSystemFolderName* BuildApp xml key value).                                 |
-| shareLocalResourcesOnWindowsClient | Boolean  | Optional - Shared local resources folder (same as the *ShareLocalResourcesOnWindowsClient* BuildApp xml key value).                                             |
+Vous pouvez passer les propriétés suivantes dans l'objet *options* :
 
-**Note:** The returned path is expressed using the system syntax of the machine running the command. 
+| **Propriété**                      | **Type**  | **Description**                                                                                                                                                        |
+| ---------------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| remoteAppPath                      | Texte     | Optionnel - Chemin système de l'exécutable de l'application distante. Par défaut, le chemin de l'exécutable de l'application courante.                                 |
+| buildApplicationName               | Texte     | Optionnel - Nom de application (identique à la valeur de la clé xml BuildApp *BuildApplicationName*). Par défaut, le nom de l'application courante.                    |
+| structureName                      | Texte     | Obligatoire sauf si l'attribut *clientServerSystemFolderName* est défini - Nom de la structure.                                                                        |
+| ipAddress                          | Texte     | Obligatoire sauf si l'attribut *clientServerSystemFolderName* est défini - Adresse IP du serveur (identique à la valeur de la clé xml BuildApp *IPAddress*).           |
+| portNumber                         | Numérique | Obligatoire sauf si l'attribut *clientServerSystemFolderName* est défini - Port de publication du serveur (identique à la valeur de la clé xml BuildApp *PortNumber*). |
+| clientServerSystemFolderName       | Texte     | Optionnel - Nom personnalisé du dossier local des ressources (identique à la valeur de la clé xml BuildApp *ClientServerSystemFolderName*).                            |
+| shareLocalResourcesOnWindowsClient | Booléen   | Optionnel - Dossier partagé des ressources local (identique à la valeur de la clé xml BuildApp *ShareLocalResourcesOnWindowsClient*).                                  |
 
-### Database Folder 
+**Note :** Le chemin retourné est exprimé à l'aide de la syntaxe système de la machine qui exécute la commande. 
 
-Folder containing the database structure file. The pathname is expressed using the standard syntax of the current platform.   
-With the 4D Client application, this constant is strictly equivalent to the previous 4D Client database folder constant: the command returns the pathname of the folder created locally.
+### Dossier base 
 
-### Database Folder Unix Syntax 
+Dossier contenant le fichier de structure de la base. Le chemin d’accès est exprimé avec la syntaxe standard de la plate-forme courante.   
+Avec l'application 4D Client, cette constante équivaut strictement à la constante précédente 4D Client database folder : la commande retourne le chemin d’accès du dossier créé en local.
 
-Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under macOS.
+### Dossier base syntaxe Unix 
 
-### Current Resources folder 
+Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous macOS. 
 
-Resources folder of the database. This folder contains the additional items (pictures, texts) used for the database interface. A component can have its own Resources folder. 
+### Dossier Resources courant 
 
-In client/server mode, this folder can be used to organize the transfer of custom data (pictures, files, subfolders, etc.) between the server machine and the client machines. The contents of this folder are automatically updated on each client machine when it connects. All referencing mechanisms associated with the Resources folder are supported in client/server mode (.lproj folder, XLIFF, pictures, and so on). In addition, 4D provides various tools that can be used to manage and update this folder dynamically, more particularly a resources explorer.
+Dossier Resources de la base. Ce dossier contient les éléments additionnels (images, textes) utilisés pour l'interface de la base. Un composant peut disposer de son propre dossier Resources. Le dossier Resources est situé à côté du fichier de structure de la base.  
+En mode client/serveur, ce dossier permet d'organiser le transfert de données personnalisées (images, fichiers, sous-dossiers...) entre le poste serveur et les postes clients. Le contenu de ce dossier est mis à jour automatiquement sur chaque client au moment de sa connexion. Tous les mécanismes de référencement associé au dossier Resources sont pris en charge en mode client/serveur (dossier .lproj, XLIFF, images...) . En outre, 4D fournit divers outils permettant de gérer et de mettre à jour dynamiquement ce dossier, notamment un Explorateur de ressources.
 
-**Notes:** 
+**Note :** Si le dossier *Resources* n'existe pas pour la base, l'exécution de la commande **Get 4D folder** avec la constante Current resources folder provoque sa création. 
 
-* If the Resources folder does not exist for the database, executing the Get 4D folder command with the Current resources folder constant will create it.
-* On Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used.
+### Dossier Logs 
 
-### Logs Folder 
+Dossier Logs de la base. Ce dossier centralise les fichiers d’historique de la base courante. Il est créé au même niveau que le fichier de structure. Le dossier Logs contient les fichiers d’historique suivants :
 
-The Logs folder of the database, located at the same level as the data file. This folder centralizes the following log files of the current database:
+* conversion de la base,
+* requêtes du serveur Web,
+* vérification et réparation des données,
+* vérification et réparation de la structure,
+* journal d'activités sauvegarde/restitution,
+* débogage des commandes,
+* requêtes 4D Server (généré sur les clients et sur le serveur)..
 
-* database conversion,
-* Web server requests,
-* backup/restore activities journal,
-* command debugging,
-* 4D Server requests (generated on client machines and on the server).
+**Note :** Si le dossier Logs n'existe pas pour la base, l'exécution de la commande **Get 4D folder** avec la constante Logs folder provoque sa création. 
 
-**Notes**: 
+### Dossier racine HTML 
 
-* An additional Logs folder, located in the system user preferences folder (Active 4D Folder), is used for maintenance log files (compact, verify, repair). It recommended to call [Get 4D file](get-4d-file.md)(Compacting log file) for example when you want to access such log files. This Logs folder is also used in cases where regular Logs folder cannot be written.
-* If the Logs folder does not exist for the database, executing the **Get 4D folder** command with the Logs folder constant will create it in the appropriate location.
+Dossier racine HTML courant de la base. Le chemin d’accès retourné est exprimé avec la syntaxe standard de la plate-forme courante. Le dossier racine HTML est le dossier dans lequel le serveur Web de 4D va chercher les pages et fichiers Web demandés. Par défaut, il est nommé **DossierWeb** et est placé à côté de fichier de structure (ou de sa copie locale dans le cas de 4D en mode distant). Son emplacement peut être défini dans la page Web/Configuration des Propriétés de la base ou dynamiquement via la commande [WEB SET ROOT FOLDER](web-set-root-folder.md).
 
-### HTML Root Folder 
+Remarque : sous Windows, dans les projets clients fusionnés, l'emplacement de ce dossier est modifié si la clé BuildApp *ShareLocalResourcesOnWindowsClient* est utilisée.   
+  
+### Dossier MobileApps 
 
-Current HTML root folder of the database. The pathname returned is expressed with the standard syntax of the current platform. The HTML root folder is the folder in which the 4D Web server looks for the requested Web pages and files. By default, it is named **WebFolder** and is placed next to the structure file (or its local copy in the case of 4D in remote mode). Its location can be set on the Web/Configuration page of the Preferences or dynamically via the [WEB SET ROOT FOLDER](web-set-root-folder.md) command.
+Dossier contenant tous les fichiers de session existants (.json) utilisés par l'application 4D pour référencer les sessions des utilisateurs d'applications mobiles (c'est-à-dire les sessions ouvertes par des apps 4D for iOS). Les fichiers de sessions sont groupés par sous-dossier d'applications et sont créés automatiquement. Pour plus d'informations, veuillez vous reporter à la [go mobile documentation](https://developer.4d.com/go-mobile/).
 
-**Note:** On Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used. 
-
-### MobileApps Folder 
-
-Folder containing all existing session files (.json) used by the 4D application to reference mobile app user sessions (i.e. sessions from 4D for iOS or 4D for Android apps). Session files are grouped in application subfolders and are automatically created. For more information, please refer to the [go mobile documentation](https://developer.4d.com/go-mobile/).
-
-This folder is located at the same level as the current 4D data file.
+Ce dossier est situé au même niveau que le fichier de données courant.
 
 ### 
 
-The optional *\** parameter is useful in the case of an architecture using components: it can be used to determine the database (host or component) for which you want to get the folder pathname. This parameter is only valid for Database folder, Database folder UNIX syntax and Current resources folder folders. It is ignored in all other cases.
+Le paramètre optionnel \* est utile dans le cas d'une architecture utilisant des composants : il peut être utilisé pour déterminer la base de données (hôte ou composant) pour laquelle vous souhaitez obtenir le chemin du dossier. Ce paramètre est uniquement valable pour les dossiers Database folder, Database folder UNIX syntax et Current resources folder. Il est ignoré dans tous les autres cas.
 
-When the command is called from a component:
+Lorsque la commande est appelée depuis un composant :
 
-* If the *\** parameter is passed, the command returns the pathname of the host database folder,
-* If the *\** parameter is not passed, the command returns the pathname of the component folder.  
-The database folder (Database folder and Database folder UNIX syntax) returned differs according to the type of the component architecture:  
-   * In the case of a .4dbase folder/package, the command returns the pathname of the .4dbase folder/package,  
-   * In the case of a .4db or .4dc file, the command returns the pathname of the “Components” folder,  
-   * In the case of an alias or shortcut, the command returns the pathname of the folder containing the original matrix database. The result differs according to the format of this database (.4dbase folder/package or .4db/.4dc file), as described above.  
- When the command is called from the host database, it always returns the pathname of the host database folder, regardless of whether or not the *\** parameter is passed.
+* Si le paramètre \* est passé, la commande renvoie le nom de chemin du dossier de la base de données hôte,
+* Si le paramètre \* n'est pas passé, la commande renvoie le nom de chemin du dossier du composant.
 
-## Example 1 
+Le dossier de la base de données (Database folder et Database folder syntaxe UNIX) renvoyé diffère selon le type d'architecture du composant :
 
-During the startup of a single-user database, you want to load (or create) your own settings in a file located in the 4D folder. To do so, in the [On Startup database method](on-startup-database-method.md), you can write code similar to this:
+* Dans le cas d'un dossier/package .4dbase, la commande renvoie le nom de chemin du dossier/package .4dbase,
+* Dans le cas d'un fichier .4db ou .4dc, la commande renvoie le chemin d'accès au dossier "Components",
+* Dans le cas d'un alias ou d'un raccourci, la commande renvoie le chemin du dossier contenant la base de données matricielle originale. Le résultat diffère selon le format de cette base de données (dossier/package .4dbase ou fichier .4db/.4dc), comme décrit ci-dessus.
+
+Lorsque la commande est appelée depuis la base de données hôte, elle renvoie toujours le nom du chemin d'accès au dossier de la base de données hôte, que le paramètre \* soit passé ou non.
+
+## Exemple 1 
+
+Pendant le démarrage d'une base mono-utilisateur, vous voulez charger (ou créer) vos propres paramètres et les stocker dans un dossier 4D. Pour cela, dans la [On Startup database method](on-startup-database-method.md), vous pouvez écrire les lignes de code similaires aux lignes suivantes :
 
 ```4d
- $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Build pathname to the Preferences file
-  // Check if the file exists
- If(Test path name($vsPrefDocName)#Is a document)
-    $vtPrefDocRef:=Create document($vsPrefDocName.prf) //If not, create it
+ $vsNomDocPref:=Get 4D folder+"MesPrefs.prf" // Construire le chemin d'accès au fichier Préférences
+  // Vérifier si le fichier existe
+ If(Test path name($vsNomDocPref)#Is a document)
+    $vtRefDocPref:=Create document($vsNomDocPref.prf) // Si non, il faut le créer
  Else
-    $vtPrefDocRef:=Open document($vsPrefDocName.prf) //If so, open it
+    $vtRefDocPref:=Open document($vsNomDocPref.prf) // Si oui, il faut l'ouvrir
  End if
  If(OK=1)
-  //Process document contents
-    CLOSE DOCUMENT($vtPrefDocRef)
+  // Traiter le contenu du document
+    CLOSE DOCUMENT($vtRefDocPref)
  Else
-  //Handle error
+  // Gérer l'erreur
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example illustrates the use of the Database folder UNIX syntax constant under Mac OS to list the contents of the database folder:
+Cet exemple illustre l’emploi de la constante Database folder UNIX syntax sous Mac OS pour lister le contenu du dossier de la base :
 
 ```4d
- $posixpath:="\""+Get 4D folder(Database folder Unix syntax)+"\""
- $myfolder:="ls -l "+$posixpath
+ $cheminposix:="\""+Get 4D folder(Database folder Unix syntax)+"\""
+ $mondossier:="ls -l "+$cheminposix
  $in:=""
  $out:=""
  $err:=""
- LAUNCH EXTERNAL PROCESS($myfolder;$in;$out;$err)
+ LAUNCH EXTERNAL PROCESS($mondossier;$in;$out;$err)
 ```
 
-**Note:** Under Mac OS, it is necessary to put pathnames in quotes when they contain the names of files or folders with spaces in them. The escape sequence "\\" can be used to insert the quotation mark character into the string. You can also use the statement Char(Double quote). 
+**Note :** Sous Mac OS, il est nécessaire d’encadrer les chemins d’accès avec des guillemets lorsqu’ils contiennent des noms de fichiers ou de dossiers comportant des espaces. La séquence d’échappement "\\" permet d’insérer le caractère guillemets dans la chaîne. Vous pouvez également utiliser l’instruction [Char](char.md)(Double quote). 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the *folder* parameter is invalid or if the pathname returned is empty, the OK system variable is set to 0.
+Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est vide, la variable système OK prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [COMPONENT LIST](component-list.md)  
 [System folder](system-folder.md)  
@@ -225,12 +225,12 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 [Test path name](test-path-name.md)  
 [WEB SET ROOT FOLDER](web-set-root-folder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 485 |
+| Numéro de commande | 485 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

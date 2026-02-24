@@ -9,44 +9,44 @@ displayed_sidebar: docs
 <!--REF #_command_.New list.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | List reference number |
+| Résultat | Integer | &#8592; | Numéro de référence de liste |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.New list.Summary-->**New list** creates a new, empty hierarchical list in memory and returns its unique list reference number.<!-- END REF-->
+<!--REF #_command_.New list.Summary-->La commande **New list** crée une nouvelle liste hiérarchique vide en mémoire et retourne son numéro de référence unique.<!-- END REF-->
 
-**WARNING:** Hierarchical lists are held in memory. When you are finished with a hierarchical list, it is important to dispose of it and free the memory, using the command [CLEAR LIST](clear-list.md).
+**ATTENTION :** Les listes hiérarchiques résident en mémoire. Une fois que vous en avez terminé avec une liste hiérarchique, il est important que vous l'effaciez à l'aide de la commande [CLEAR LIST](clear-list.md). Ainsi, vous libérez la mémoire occupée par la liste hiérarchique dont vous n'avez plus besoin.
 
-Several other commands allow you to create hierarchical lists:
+D'autres commandes vous permettent de créer des listes hiérarchiques :
 
-* [Copy list](copy-list.md) duplicates a list from an existing list.
-* [Load list](load-list.md) creates a list by loading a Choice List created (manually or programmatically) in the Design enviornment List Editor.
-* [BLOB to list](blob-to-list.md) creates a list from the contents of a BLOB in which a list was previously saved.
+* [Copy list](copy-list.md) crée une nouvelle liste en dupliquant une liste existante.
+* [Load list](load-list.md) crée une nouvelle liste en chargeant une énumération créée (manuellement ou par programmation) dans l'éditeur d'énumérations du mode Développement.
+* [BLOB to list](blob-to-list.md) crée une nouvelle liste à partir du contenu d'un BLOB dans lequel une liste avait été préalablement stockée.
 
-After you have created a hierarchical list using **New list**, you can:
+Une fois que vous avez créé une liste hiérarchique à l'aide de la commande **New list**, vous pouvez :
 
-* Add items to that list, using the command [APPEND TO LIST](append-to-list.md) or [INSERT IN LIST](insert-in-list.md).
-* Delete items from that list, using the command [DELETE FROM LIST](delete-from-list.md).
+* Ajouter des éléments à la liste à l'aide des commandes [APPEND TO LIST](append-to-list.md) et [INSERT IN LIST](insert-in-list.md).
+* Supprimer des éléments de cette liste à l'aide de la commande [DELETE FROM LIST](delete-from-list.md).
 
-## Example 
+## Exemple 
 
-See example for the [APPEND TO LIST](append-to-list.md) command.
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 
-## See also 
+## Voir aussi 
 
 [APPEND TO LIST](append-to-list.md)  
 [BLOB to list](blob-to-list.md)  
@@ -57,11 +57,11 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 [LIST TO BLOB](list-to-blob.md)  
 [Load list](load-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 375 |
+| Numéro de commande | 375 |
 | Thread safe | no |
 
 

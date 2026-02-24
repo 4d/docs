@@ -5,73 +5,70 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *buildAppSettings* : Text })<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *nomProjet* )}<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| buildAppSettings | Text | &#8594;  | Full access path of the settings file to use |
+| nomProjet | Text | &#8594;  | Chemin d’accès complet du projet à utiliser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.BUILD APPLICATION.Summary-->The BUILD APPLICATION command launches the application generation process.<!-- END REF--> It takes into account parameters set in the current build application settings file or the settings file set in the *buildAppSettings* parameter. 
+<!--REF #_command_.BUILD APPLICATION.Summary-->La commande **BUILD APPLICATION** lance le processus de génération d’application en prenant en compte les paramètres définis dans le fichier de configuration d’application courant ou le fichier de configuration défini dans le paramètre *buildAppSettings*.<!-- END REF-->
 
-**Note:** This command can only work with 4D Developer (single-user). It cannot be called from 4D Server, 4D in remote mode, or a merged application. 
+**Note :** Cette commande fonctionne uniquement avec 4D Developer (monoposte). Elle ne peut pas être appelée depuis 4D Server, 4D en mode distant ou depuis une application fusionnée.
 
-A build application settings file is an XML file that contains all the parameters used to generate an application. Most parameters can be seen in the [Build Application dialog box](../Desktop/building.md).
+Un fichier de configuration d'application est un fichier XML contenant tous les paramétrages utilisés pour générer une application. La plupart de ces paramétrages sont visibles dans la boîte de dialogue du Générateur d’application (pour plus d'informations sur le Générateur d'application, reportez-vous à la section *Générateur d'applications* dans le manuel Mode Développement de 4D).   
+Par défaut, 4D crée pour chaque base de données un fichier de configuration d’application par défaut “buildApp.4DSettings”, placé dans le dossier Settings de la base.
 
-By default, 4D creates a build application settings file named “buildApp.4DSettings” for each database and places it in the Settings folder of the database.
+Si la base n’a pas été compilée ou si le code compilé n’est pas à jour, la commande lance au préalable le processus de compilation. Dans ce cas, la fenêtre du compilateur n’apparaît pas (sauf en cas d’erreur), seule une barre de progression est affichée.   
+Vous pouvez éviter l'affichage de cette barre de progression à l'aide de la commande [MESSAGES OFF](messages-off.md).
 
-If the database has not yet been compiled or if the compiled code is outdated, the command will first launch the compiler process. In this case, the compiler window does not appear (unless an error occurs), only a progress bar is displayed. You can hide this progress bar using the [MESSAGES OFF](messages-off.md) command.
+Si vous ne passez pas le paramètre facultatif buildAppSettings, la commande affiche une boîte de dialogue standard d'ouverture de document, vous permettant de désigner un fichier de configuration d'application. La variable système Document contiendra le chemin d'accès complet du fichier sélectionné. Si vous passez le chemin d’accès et le nom d’un fichier XML de projet d’application valide (encodage UTF-8), la commande utilisera les paramètres définis dans le fichier. Pour plus d’informations sur la structure et les clés utilisables dans un fichier de configuration d’application, reportez-vous au manuel *4D Clés XML BuildApplication*.
 
-If you do not pass the optional *buildAppSettings* parameter, the command displays a standard open file dialog box, so that you can designate a build application settings file. When the dialog box has been validated, the system variable Document contains the full pathname of the open settings file.
+## Exemple 
 
-If you pass the access path and name of an XML file for a valid application project (UTF-8 encoding), the command will use the parameters defined in the file. For more information on the structure and the keys that can be used in the build application settings file, refer to the *4D XML Keys BuildApplication* manual.
-
-## Example 
-
-This example builds two applications in a single method:
+Génération de deux applications dans une seule méthode :
 
 ```4d
- BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
+ BUILD APPLICATION("c:\\dossier\\buildApp\\monclientApp.xml")
  If(OK=1)
-    BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
+    BUILD APPLICATION(Folder(Fichier de configuration d'application).platformPath) // paramètres par défaut
  End if
 ```
 
-## System Variables or Sets 
+## Variables et ensembles système 
 
-The system variable OK is set to 1 if the command has been correctly executed. Otherwise, it is set to 0\. The system variable Document contains the full pathname of the open settings file.
+La variable système OK prend la valeur 1 si la commande a été correctement exécutée, sinon elle prend la valeur 0\. La variable système Document prend le chemin d'accès complet du fichier de paramètres ouvert.
 
-## Error Handling 
+## Gestion des erreurs 
 
-If the command fails, an error is generated that you can intercept using the [ON ERR CALL](on-err-call.md) command.
+Si la commande échoue, une erreur est générée, que vous pouvez intercepter à l’aide de la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
-[Compile project](./commands/compile-project)  
+[Compile project](../commands/compile-project.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 871 |
+| Numéro de commande | 871 |
 | Thread safe | no |
-| Modifies variables | OK, Document, error |
-| Forbidden on the server ||
-
+| Modifie les variables | OK, Document, error |
+| Interdite sur le serveur ||
 
 

@@ -5,68 +5,66 @@ slug: /commands/array-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY REAL.Syntax-->**ARRAY REAL** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
+<!--REF #_command_.ARRAY REAL.Syntax-->**ARRAY REAL** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
 <!--REF #_command_.ARRAY REAL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | Name of the array |
-| size | Integer | &#8594;  | Number of elements in the array or Number of rows if size2 is specified |
-| size2 | Integer | &#8594;  | Number of columns in a two-dimensional array |
+| nomArray | Array | &#8594;  | Nom du tableau |
+| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.ARRAY REAL.Summary-->The ARRAY REAL command creates and/or resizes an array of [Real](# "Number between ±1.7e±308 (15 digits)") elements in memory.<!-- END REF--> 
+<!--REF #_command_.ARRAY REAL.Summary-->La commande **ARRAY REAL** crée et/ou redimensionne un tableau d'éléments de type Réel en mémoire.<!-- END REF-->est le nom du tableau.
+* Le paramètre *taille* est le nombre d'éléments du tableau.
+* Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande crée un tableau à deux dimensions. Dans ce cas, taille spécifie le nombre de lignes et *taille2* spécifie le nombre de colonnes de chaque tableau. Chaque ligne dans un tableau à deux dimensions peut être traitée à la fois comme un élément et comme un tableau. Cela signifie que vous pouvez insérer et supprimer des tableaux entiers dans un tableau à deux dimensions, par l'intermédiaire des autres commandes de ce thème, lorsque vous travaillez avec la première dimension du tableau.
 
-* The arrayName parameter is the name of the array.
-* The *size* parameter is the number of elements in the array.
-* The *size2* parameter is optional; if *size2* is specified, the command creates a two-dimensional array. In this case, *size* specifies the number of rows and *size2* specifies the number of columns in each array. Each row in a two-dimensional array can be treated as both an element and an array. This means that while working with the first dimension of the array, you can use other array commands to insert and delete entire arrays in a two-dimensional array.
+Lorsque vous appliquez la commande **ARRAY REAL** à un tableau existant :
 
-While applying ARRAY REAL to an existing array:
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à 0.
+* Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-* If you enlarge the array size, the existing elements are left unchanged, and the new elements are initialized to 0.
-* If you reduce the array size, the last elements deleted from the array are lost.
+## Exemple 1 
 
-## Example 1 
-
-This example creates a process array of 100 Real elements:
+Cet exemple crée un tableau process contenant 100 éléments de type [Réel](# "Number between ±1.7e±308 (15 digits)") :
 
 ```4d
- ARRAY REAL(arValues;100)
+ ARRAY REAL(tabRéel;100)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example creates a local array of 100 rows of 50 Real elements:
+Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments de type Réel : 
 
 ```4d
- ARRAY REAL($arValues;100;50)
+ ARRAY REAL($tabRéel;100;50)
 ```
 
-## Example 3 
+## Exemple 3 
 
-This example creates an interprocess array of 50 Real elements and sets each element to its element number:
+Cet exemple crée un tableau interprocess de 50 éléments de type [Réel](# "Number between ±1.7e±308 (15 digits)") et affecte à chaque élément son numéro :
 
 ```4d
- ARRAY REAL(◊arValues;50)
- For($vlElem;1;50)
-    ◊arValues{$vlElem}:=$vlElem
+ ARRAY REAL(◊tabRéel;50)
+ For($vElem;1;50)
+    ◊tabRéel{$vElem}:=$vElem
  End for
 ```
 
-## See also 
+## Voir aussi 
 
 [ARRAY INTEGER](array-integer.md)  
 [ARRAY LONGINT](array-longint.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 219 |
+| Numéro de commande | 219 |
 | Thread safe | yes |
 
 

@@ -5,106 +5,106 @@ slug: /commands/create-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *aTable* : Table ; *fieldsArray* : Pointer array ; *indexType* : Integer ; *indexName* : Text {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *laTable* ; *tabChamps* ; *typeIndex* ; *nomIndex* {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to create an index |
-| fieldsArray | Pointer array | &#8594;  | Pointer(s) to field(s) to be indexed |
-| indexType | Integer | &#8594;  | Type of index to create: -1 = Keywords, 0 = default, 1 = Standard B-Tree, 3 = Cluster B-Tree |
-| indexName | Text | &#8594;  | Name of index to create |
-| * | Operator | &#8594;  | If passed = asynchronous indexing |
+| laTable | Table | &#8594;  | Table pour laquelle créer un index |
+| tabChamps | Pointer array | &#8594;  | Pointeur(s) vers le(s) champ(s) à indexer |
+| typeIndex | Integer | &#8594;  | Type d’index à créer : -1 = Mots-clés, 0 = par défaut, 1 = B-Tree standard, 3 = BTree cluster |
+| nomIndex | Text | &#8594;  | Nom de l'index à créer |
+| * | Opérateur | &#8594;  | Si passé = indexation asynchrone |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-The **CREATE INDEX** command creates:
+La commande **CREATE INDEX** permet de créer :
 
-* A <!--REF #_command_.CREATE INDEX.Summary-->standard index on one or more fields (composite index)<!-- END REF--> or
-* A keyword index on a field.
+* un <!--REF #_command_.CREATE INDEX.Summary-->index standard sur un ou plusieurs champs (index composite)<!-- END REF--> ou
+* un index de mots-clés sur un champ.
 
-The index is created for the *aTable* table by using one or more fields designated by the *fieldsArray* pointer array. This array contains a single row when you want to create a simple index and two or more rows when you want to create a composite index (except in the case of a keyword index). In the case of composite indexes, the order of the fields in the array is important when the index is being built.
+L’index est créé pour la table *laTable* en utilisant le ou les champ(s) désigné(s) par le tableau de pointeurs *tabChamps*. Ce tableau contient une seule ligne si vous souhaitez créer un index simple et deux ou plusieurs lignes si vous souhaitez créer un index composite (sauf index de mots-clés). Dans le cas d’index composites, l’ordre des champs dans le tableau est important lors de la construction de l’index.
 
-The *indexType* parameter sets the type of index to be created. You can pass one of the following constants, found in the *Index Type* theme:
+Le paramètre *typeIndex* vous permet de définir le type d’index à créer. Vous pouvez passer une des constantes suivantes, placées dans le thème *Type index* :
 
-| Constant             | Type    | Value | Comment                                                                                                                                                                             |
-| -------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cluster BTree index  | Integer | 3     | B-Tree type index using clusters. This type of index is optimized when the index contains few keywords, i.e. when the same values occur frequently in the data.                     |
-| Default index type   | Integer | 0     | 4D specifies the index type (excluding keywords indexes) that is the most optimized according to the contents of the field.                                                         |
-| Keywords index       | Integer | \-1   | Permits word-by-word indexing of field contents. This type of index can only be used with fields of the Text, Alpha or Picture type. Warning: Keywords indexes cannot be composite. |
-| Standard BTree index | Integer | 1     | Standard B-Tree type index. This multi-purpose index type is used in previous versions of 4D                                                                                        |
+| Constante            | Type        | Valeur | Comment                                                                                                                                                                                            |
+| -------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cluster BTree index  | Entier long | 3      | Index de type B-Tree utilisant des clusters. Ce type d’index est optimisé lorsque l’index contient peu de clés, c’est-à-dire lorsque les mêmes valeurs reviennent souvent dans les données.        |
+| Default index type   | Entier long | 0      | 4D définit le type d’index (hors index de mots-clés) le plus optimisé en fonction du contenu du champ.                                                                                             |
+| Keywords index       | Entier long | \-1    | Permet l’indexation mot à mot du contenu du champ. Ce type d’index est utilisable avec les champs de type Texte, Alpha et Image. Attention, les index de mots-clés ne peuvent pas être composites. |
+| Standard BTree index | Entier long | 1      | Index de type B-Tree classique. Ce type d’index polyvalent est utilisé dans les versions précédentes de 4D                                                                                         |
 
-**Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
+**Note :** Un index B-Tree associé à un champ de type texte stocke au maximum les 1024 premiers caractères du champ. Par conséquent dans ce contexte, les recherches sur des chaînes contenant plus de 1024 caractères ne pourront aboutir. 
 
-In the *indexName* parameter, you pass the name of the index to be created. Naming the index is necessary if several different types of indexes can be associated with the same field and if you want to be able to delete them individually using the [DELETE INDEX](delete-index.md) command. If the *indexName* index already exists, the command does nothing.
+Passez dans *nomIndex* le nom de l’index à créer. Nommer les index est nécessaire si plusieurs index de types différents peuvent être associés à un même champ et si vous souhaitez pouvoir les supprimer individuellement à l'aide de la commande [DELETE INDEX](delete-index.md). Si l’index *nomIndex* existe déjà, la commande ne fait rien.
 
-The optional *\** parameter, when it is passed, performs indexing in asynchronous mode. In this mode, the original method continues its execution after the call from the command, regardless of whether or not the indexing is finished.
+Le paramètre facultatif *\**, lorsqu’il est passé, permet d’effectuer l’indexation en mode asynchrone. Dans ce mode, la méthode d’origine poursuit son exécution après l’appel de la commande, que l’indexation soit terminée ou non.
 
-If the **CREATE INDEX** command encounters any locked records, they will not be indexed and the command will wait for them to be unlocked.
+Si la commande **CREATE INDEX** rencontre des enregistrements verrouillés, elle ne les indexe pas et attend qu’ils soient libérés. 
 
-If a problem occurs during command execution (non-indexed field, attempt to create a keyword index on more than one field, etc.), an error is generated. This error can be intercepted using an error-handling method.
+Si une erreur se produit durant l’exécution de la commande (champ non indexable, tentative de création d’index de mots-clés sur plusieurs champs, etc.), une erreur est générée. Cette erreur peut être interceptée à l’aide d’une méthode d’appel sur erreur.
 
-## Note for deployment 
+## Note pour le déploiement 
 
-Since this command modifies the database structure, it cannot be used in the context of a read-only packaged application (.4dc file installed in the *Program Files* folder or .4dz file). 
+Étant donné que cette commande modifie la structure de la base de données, elle ne peut pas être utilisée dans une application packagée en lecture seule (fichier .4dc installé dans le dossier Program Files ou fichier .4dz).
 
-## Example 1 
+## Exemple 1 
 
-Creation of two standard indexes on the “Last Name” and “Telephone”fields of the \[Customers\] table:
-
-```4d
- ARRAY POINTER(fieldPtrArr;1)
- fieldPtrArr{1}:=->[Customers]LastName
- CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustLNameIdx")
- fieldPtrArr{1}:=->[Customers]Telephone
- CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CustTelIdx")
-```
-
-## Example 2 
-
-Creation of a keywords index on the “Observations” field of the \[Customers\] table:
+Création de deux index standard sur les champs “Nom” et “Téléphone” de la table \[Clients\] :
 
 ```4d
- ARRAY POINTER(fieldPtrArr;1)
- fieldPtrArr{1}:=->[Customers]Observations
- CREATE INDEX([Customers];fieldPtrArr;Keywords Index;"CustObsIdx")
+ ARRAY POINTER(tabPtrChp;1)
+ tabPtrChp{1}:=->[Clients]Nom
+ CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"IdxCltNom")
+ tabPtrChp{1}:=->[Clients]Téléphone
+ CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"IdxCltTel")
 ```
 
-## Example 3 
+## Exemple 2 
 
-Creation of a composite index on the “City” and “Zipcode” fields of the \[Customers\] table:
+Création d’un index de mots-clés sur le champ “Observations” de la table \[Clients\] :
 
 ```4d
- ARRAY POINTER(fieldPtrArr;2)
- fieldPtrArr{1}:=->[Customers]City
- fieldPtrArr{2}:=->[Customers]Zipcode
- CREATE INDEX([Customers];fieldPtrArr;Standard BTree Index;"CityZip")
+ ARRAY POINTER(tabPtrChp;1)
+ tabPtrChp{1}:=->[Clients]Observations
+ CREATE INDEX([Clients];tabPtrChp;Keywords Index;"IdxCltObs")
 ```
 
-## See also 
+## Exemple 3 
+
+Création d’un index composite sur les champs “CodePostal” et “Ville” de la table \[Clients\] :
+
+```4d
+ ARRAY POINTER(tabPtrChp;2)
+ tabPtrChp{1}:=->[Clients]CodePostal
+ tabPtrChp{2}:=->[Clients]Ville
+ CREATE INDEX([Clients];tabPtrChp;Standard BTree Index;"CPVille")
+```
+
+## Voir aussi 
 
 [DELETE INDEX](delete-index.md)  
 [RESUME INDEXES](resume-indexes.md)  
 [SET INDEX](set-index.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 966 |
+| Numéro de commande | 966 |
 | Thread safe | yes |
 
 

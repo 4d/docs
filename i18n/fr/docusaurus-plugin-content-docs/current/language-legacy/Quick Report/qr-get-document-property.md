@@ -5,53 +5,53 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* : Integer ; *property* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *zone* ; *propriété* ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| property | Integer | &#8594;  | 1 = Print Dialog, 2 = Document unit |
-| Function result | Integer | &#8592; | Value for the property |
+| zone | Integer | &#8594;  | Référence de la zone |
+| propriété | Integer | &#8594;  | 1=Dialogue d'impression, 2=Unité du document |
+| Résultat | Integer | &#8592; | Valeur de la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR Get document property.Summary-->The **QR Get document property** command retrieves the display status for the print dialog box or the unit used for the document that are present in *area*.<!-- END REF-->
+<!--REF #_command_.QR Get document property.Summary-->La commande **QR Get document property** vous permet de connaître la valeur courante de la *propriété* d'affichage de la boîte de dialogue d'impression ou de l'unité du document présent dans la *zone*.<!-- END REF--> 
 
-In *property*, you can use the following constants, located in the *QR Document Properties* constant theme:
+Vous pouvez passer dans le paramètre *propriété* une des constantes du thème *QR Propriétés de document* : 
 
-| Constant            | Type    | Value | Comment                                                                                                                                                                                       |
-| ------------------- | ------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| qr field separator  | Integer | 3     | Character code of the field separator. Default value is the system variable FldDelimit (Tab by default).                                                                                      |
-| qr printing dialog  | Integer | 1     | Display of the print dialog box:<br/>If value = 0, the print dialog is not displayed prior to printing.If value = 1, the print dialog is displayed prior to printing (default value). |
-| qr record separator | Integer | 4     | Character code of the record separator. Default value is the system variable RecDelimit (Carriage Return by default).                                                                         |
-| qr unit             | Integer | 2     | Document unit: <br/>If value = 0, the document unit is points.If value = 1, the document unit is centimeters.If value = 2, the document unit is inches.                               |
+| Constante           | Type        | Valeur | Comment                                                                                                                                                                                                                                                     |
+| ------------------- | ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| qr field separator  | Entier long | 3      | Code de caractère du délimiteur de champ. La valeur par défaut est la variable système FldDelimit (Tab par défaut).                                                                                                                                         |
+| qr printing dialog  | Entier long | 1      | Affichage de la boîte de dialogue d'impression :<br/>Si valeur \= 0, la boîte de dialogue d'impression n'est pas affichée avant l'impression.Si valeur \= 1, la boîte de dialogue d'impression est affichée avant l'impression (valeur par défaut). |
+| qr record separator | Entier long | 4      | Code de caractère du délimiteur d'enregistrement. La valeur par défaut est la variable système RecDelimit (Retour chariot par défaut).                                                                                                                      |
+| qr unit             | Entier long | 2      | Unité du document : <br/>Si valeur \= 0, l'unité du document est le point.Si valeur \= 1, l'unité du document est le centimètre.Si valeur \= 2, l'unité du document est le pouce.                                                                   |
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *property* value, the error -9852 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si la valeur du paramètre *propriété* est incorrecte, l’erreur -9852 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 773 |
+| Numéro de commande | 773 |
 | Thread safe | no |
 
 

@@ -5,52 +5,52 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *componentsArray* : Text array )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *tabComposants* )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| componentsArray | Text array | &#8592; | Names of the components |
+| tabComposants | Text array | &#8592; | Noms des composants |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.COMPONENT LIST.Summary-->The COMPONENT LIST command sizes and fills the *componentsArray* array with the names of the components loaded by the 4D application for the current host database.<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Summary-->La commande **COMPONENT LIST** dimensionne et remplit le tableau *tabComposants* avec les noms des composants chargés par l’application 4D pour la base hôte courante.<!-- END REF-->
 
-When a database is opened, 4D loads the valid components found in the Components folder(s):
+A l’ouverture d’une base, 4D charge les composants valides situés dans le(s) dossier(s) Components :
 
-* the Components folder that is next to the structure file (if any),
-* the Components folder that is next to the 4D application executable file.
+* le dossier Components situé à côté du fichier de structure (s'il y en a un),
+* le dossier Components situé à côté de l'application 4D exécutable.
 
-**Reminder:** If the same component is placed in both locations, 4D will only load the one located next to the structure.
+**Rappel :** Si un même composant est placé aux deux endroits, 4D charge uniquement celui situé à côté de la structure. 
 
-This command can be called from the host database or from a component. If the database does not use any components, the *componentsArray* array is returned empty.
+Cette commande peut être appelée depuis la base hôte ou depuis un composant. Si la base n’utilise pas de composant, le tableau *tabComposants* est retourné vide. 
 
-The names of the components are the names of the structure files of the matrix databases (.4db, .4dc or .4dbase). This command can be used for setting up architectures and modular interfaces that offer additional functionalities according to the presence of components.
+Les noms des composants sont les noms des fichiers de structure des bases matrices (.4db, .4dc ou .4dbase). Cette commande permet de mettre en place des architectures et des interfaces modulaires proposant des fonctionnalités supplémentaires en fonction de la présence des composants.
 
-For more information about 4D components, please refer to the Design Reference manual.
+Pour plus d'informations sur les composants 4D, reportez-vous au manuel *Mode Développement*.
 
-## See also 
+## Voir aussi 
 
 [PLUGIN LIST](plugin-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1001 |
+| Numéro de commande | 1001 |
 | Thread safe | yes |
 
 

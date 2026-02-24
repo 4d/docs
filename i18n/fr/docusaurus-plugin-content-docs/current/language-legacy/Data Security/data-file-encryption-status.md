@@ -5,62 +5,62 @@ slug: /commands/data-file-encryption-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( *structurePath* : Text ; *dataPath* : Text ) : Object<!-- END REF-->
+<!--REF #_command_.Data file encryption status.Syntax-->**Data file encryption status** ( cheminStructure , cheminDonnées ) : Object<!-- END REF-->
 <!--REF #_command_.Data file encryption status.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | Pathname of 4D structure file to be checked |
-| dataPath | Text | &#8594;  | Pathname of 4D data file to be checked |
-| Function result | Object | &#8592; | Information about the encryption of the data file and of each table |
+| cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure à vérifier |
+| cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données 4D à vérifier |
+| Résultat | Object | &#8592; | Informations sur le chiffrement du fichier de données et de chaque table |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R5|Created|
+|17 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Data file encryption status.Summary-->The **Data file encryption status** command returns an object providing the encryption status for the data file designated by the *structurePath* and *dataPath* parameters.<!-- END REF--> The status for each table is also provided.
+<!--REF #_command_.Data file encryption status.Summary-->La commande **Data file encryption status** retourne un objet qui fournit le statut de chiffrement du fichier de données indiqué par les paramètres *cheminStructure* et *cheminDonnées*.<!-- END REF--> Le statut de chiffrement de chaque table est également fourni.
 
-*dataPath* designates a 4D data file (.4dd). It must correspond to the structure file defined by the *structurePath* parameter. You can designate the current structure file but the data file must not be the current (open) file.
+Le paramètre cheminDonnées indique un fichier de données 4D (.4dd) qui doit correspondre au fichier de structure défini par le paramètre *cheminStructure*. Vous pouvez indiquer le fichier de structure courant mais le fichier de données doit être différent du fichier courant (ouvert).
 
-**Note:** Use the *ds.encryptionStatus( )* method to determine the encryption status of the current data file.
+**Note :** Utilisez la méthode *ds.encryptionStatus( )* pour déterminer le statut de chiffrement du fichier de données courant.
 
-**Returned value**
+**Valeur retournée**
 
-The returned object contains the following properties:
+L'objet retourné contient les propriétés suivantes :
 
-| **Property**    | **Type** | **Description**                                                                        |
-| --------------- | -------- | -------------------------------------------------------------------------------------- |
-| isEncrypted     | Boolean  | True if the data file is encrypted                                                     |
-| keyProvided     | Boolean  | True if the encryption key matching the encrypted data file is in the 4D keychain(\*). |
-| tables          | Object   | Object containing as many properties as there are *encryptable* or *encrypted* tables. |
-| <*table name*\> | Object   | Encryptable or Encrypted table                                                         |
-| name            | Text     | Name of the table                                                                      |
-| num             | Number   | Table number                                                                           |
-| isEncryptable   | Boolean  | True if the table is declared encryptable in the structure file                        |
-| isEncrypted     | Boolean  | True if the records of the table are encrypted in the data file                        |
+| **Propriété**   | **Type**  | **Description**                                                                                         |
+| --------------- | --------- | ------------------------------------------------------------------------------------------------------- |
+| isEncrypted     | Booléen   | Vrai si le fichier de données est chiffré                                                               |
+| keyProvided     | Booléen   | Vrai si la clé de chiffrement correspondant au fichier de données chiffré est dans le trousseau 4D(\*). |
+| tables          | Objet     | Objet contenant autant de propriétés que de tables *chiffrables* ou *chiffrées*.                        |
+| <*table name*\> | Objet     | Table chiffrable ou chiffrée                                                                            |
+| name            | Texte     | Nom de la table                                                                                         |
+| num             | Numérique | Numéro de la table                                                                                      |
+| isEncryptable   | Booléen   | Vrai si la table est dite chiffrable dans le fichier de structure                                       |
+| isEncrypted     | Booléen   | Vrai si les enregistrements de la table sont chiffrés dans le fichier de données                        |
 
-(\*) The encryption key may have been provided:
+(\*) La clé de chiffrement peut avoir déjà été fournie :
 
-* previously:  
-   * before this data file was opened, using a connected device,  
-   * with the *ds.provideDataKey( )* command when this data file was opened,  
-   * after the data file was opened, with the [Discover data key](discover-data-key.md) command
-* using the [Register data key](register-data-key.md) command
+* précédemment :  
+   * avant l'ouverture de ce fichier de données, sur un appareil connecté,  
+   * via la commande *ds.provideDataKey( )* à l'ouverture de ce fichier de données,  
+   * après l'ouverture du fichier de données, via la commande [Discover data key](discover-data-key.md)
+* via la commande [Register data key](register-data-key.md)
 
-## Example 
+## Exemple 
 
-You want to know the encryption status of a data file that corresponds to the current structure file:
+Vous souhaitez connaitre le statut de chiffrement d'un fichier de données correspondant au fichier de structure courant :
 
 ```4d
  var $status : Object
@@ -68,24 +68,24 @@ You want to know the encryption status of a data file that corresponds to the cu
  $status:=Data file encryption status(Structure file;"D:\\Invoices\\Data_2019\\Invoices.4dd")
  Case of
     :(Not($status.isEncrypted))
-       ALERT("The data file is not encrypted")
+       ALERT("Le fichier de données n'est pas chiffré")
     :($status.isEncrypted&(Not($status.keyProvided))
-       ALERT("The data file is encrypted and the encryption key is not in the keychain. You will not have access to encrypted data.")
+       ALERT("Le fichier de données est chiffré et la clé de chiffrement n'est pas dans le trousseau. Vous n'aurez pas accès aux données chiffrées.")
     :($status.isEncrypted&$status.keyProvided)
-       ALERT("The data file is encrypted and the encryption key is in the keychain. You will have access to encrypted data.")
+       ALERT("Le fichier de données est chiffré et la clé de chiffrement est dans le trousseau. Vous aurez accès aux données chiffrées.")
  End case
 ```
 
-## See also 
+## Voir aussi 
 
-[4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
+  
 [Encrypt data file](encrypt-data-file.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1609 |
+| Numéro de commande | 1609 |
 | Thread safe | yes |
 
 

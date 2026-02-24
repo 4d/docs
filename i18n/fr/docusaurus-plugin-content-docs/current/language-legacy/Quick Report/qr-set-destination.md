@@ -5,70 +5,74 @@ slug: /commands/qr-set-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *area* : Integer ; *type* : Integer {; *specifics* : Text, Variable} )<!-- END REF-->
+<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *zone* ; *type* {; *spécificités*} )<!-- END REF-->
 <!--REF #_command_.QR SET DESTINATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| type | Integer | &#8594;  | Type of the report |
-| specifics | Text, Variable | &#8594;  | Specifics linked to the output type |
+| zone | Integer | &#8594;  | Référence de la zone |
+| type | Integer | &#8594;  | Type d'état |
+| spécificités | Text, Variable | &#8594;  | Spécificités du type de destination |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|2003|Created|
+|14|Modifié|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET DESTINATION.Summary-->The **QR SET DESTINATION** command sets the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF-->
+<!--REF #_command_.QR SET DESTINATION.Summary-->La commande **QR SET DESTINATION** permet de définir le *type* de destination de sortie de l'état rapide contenu dans la *zone*.<!-- END REF-->
 
-In the *type* parameter, you can pass one of the constants of the *QR Output Destination* theme. The contents of the *specifics* parameter depends on the value of *type*. The following table describes the values that can be passed in both *type* and *specifics* parameters:
+Passez dans le paramètre *type* une des constantes du thème *QR Destination de sortie*. Le contenu du paramètre *spécificités* dépend de la valeur de *type*. Le tableau suivant liste les valeurs qui peuvent être passées dans les paramètres *type* et *spécificités*.
 
-| Constant     | Type    | Value | Comment                                            |
-| ------------ | ------- | ----- | -------------------------------------------------- |
-| qr HTML file | Integer | 5     | *specifics*: Pathname to the file.                 |
-| qr printer   | Integer | 1     | *specifics*: "\*" to remove the print dialog boxes |
-| qr text file | Integer | 2     | *specifics*: Pathname to the file.                 |
+| Constante             | Type        | Valeur | Comment                                                                  |
+| --------------------- | ----------- | ------ | ------------------------------------------------------------------------ |
+| \_o\_qr 4D Chart area | Entier long | 4      | \*\*\* Constante obsolète \*\*\*                                         |
+| \_o\_qr 4D View area  | Entier long | 3      | \*\*\* Constante obsolète \*\*\*                                         |
+| qr HTML file          | Entier long | 5      | *spécificités* : Chemin d'accès du fichier.                              |
+| qr printer            | Entier long | 1      | *spécificités* : "\*" pour supprimer les boîtes de dialogue d'impression |
+| qr text file          | Entier long | 2      | *spécificités* : Chemin d'accès du fichier.                              |
 
-*qr printer* (1): If you pass a string containing a star ("\*") in the *specifics* parameter, no dialog box will be displayed during printing and the current print settings will be used automatically. This setting is necessary when you want to print the report on the server.
+*qr printer* (1) : Si vous passez une chaîne contenant une étoile ("\*") dans le paramètre *spécificités*, aucune boîte de dialogue ne sera affichée lors de l'impression, les paramètres d'impression courants seront automatiquement utilisés. Ce paramétrage est nécessaire si vous souhaitez imprimer l'état sur le serveur. 
 
-*qr text file* (2): If you pass an empty string in the *specifics* parameter, a Save file dialog is displayed; otherwise the file is saved at the location indicated by the path.  
-The default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter system variables: FldDelimit and RecDelimit. If under Windows, FldDelimit equals 13, a char 10 (line feed) will be appended after the carriage return. Be aware that these variables are used by other commands such as [IMPORT TEXT](import-text.md) for example. Changing them for the Quick Report editor, changes them everywhere in the application.
+*qr text file* (2) : Si vous passez une chaîne vide dans le paramètre *spécificités*, une boîte de dialogue standard d'enregistrement de fichiers apparaît. Si vous passez un chemin d'accès valide, l'état rapide sera enregistré à l'emplacement indiqué.   
+Par défaut, le délimiteur de champ est le caractère Tabulation (code 9) et le délimiteur d'enregistrement est le caractère Retour chariot (code 13). Vous pouvez modifier ces caractères par défaut en changeant la valeur des variables système FldDelimit et RecDelimit. Sous Windows, si FldDelimit vaut 13, un caractère 10 (Saut de ligne) sera ajouté après le Retour chariot. Tenez compte du fait que ces variables sont utilisées par d'autres commandes, par exemple [IMPORT TEXT](import-text.md). Toute modification de ces variables est répercutée sur l'ensemble de l'application.
 
-*qr HTML file* (5): An HTML file is created using the template set by [QR SET HTML TEMPLATE](qr-set-html-template.md). For detailed information on how the translation is performed, please refer to the Design Reference manual.
+*qr 4D View area* (3) : Si l'utilisateur courant dispose du plug-in 4D View, une fenêtre externe 4D View est créée et affiche les résultats des paramètres courants de la zone d'état rapide. 
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If the value of the destination *type* is incorrect, the error -9852 will be generated.
+*qr HTML file* (5) : Un fichier HTML est généré d'après les paramètres courants de la zone d'état rapide. Le fichier HTML est basé sur le modèle défini par la commande [QR SET HTML TEMPLATE](qr-set-html-template.md). Pour plus d'informations sur le mode de conversion des données, veuillez vous référer au manuel Mode Développement. 
 
-## Example 
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si la valeur de *type* de destination est incorrecte, l’erreur -9852 est générée.
 
-The following code sets the destination as being the text file "Mydoc.txt" and executes the Quick Report: 
+## Exemple 
+
+L'exemple suivant définit le fichier texte "MonDoc.txt" comme type de destination de l'état puis l'exécute : 
 
 ```4d
- QR SET DESTINATION(MyArea;qr text file;"MyDoc.txt")
- QR RUN(MyArea)
+ QR SET DESTINATION(MaZone;qr text file;"MonDoc.txt")
+ QR RUN(MaZone)
 ```
 
-## See also 
+## Voir aussi 
 
 [QR GET DESTINATION](qr-get-destination.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 745 |
+| Numéro de commande | 745 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

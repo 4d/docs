@@ -5,31 +5,31 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *aTable* : Table })<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *laTable* )}<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to move to the first selected record, or Default table, if omitted |
+| laTable | Table | &#8594;  | Table de laquelle charger le premier enregistrement de la sélection courantes ou Table par défaut si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.FIRST RECORD.Summary-->**FIRST RECORD** makes the first record of the current selection of *aTable* the current record, and loads the record from disk.<!-- END REF--> All query, selection, and sorting commands also set the current record to the first record. If the current selection is empty or if the current record is already the first record of the selection, **FIRST RECORD** has no effect. 
+<!--REF #_command_.FIRST RECORD.Summary-->**FIRST RECORD** charge en mémoire le premier enregistrement de la sélection courante de *laTable* et en fait l'enregistrement courant.<!-- END REF--> Toutes les commandes de recherche, de sélection et de tri font également du premier enregistement l'enregistrement courant. Si la sélection courante est vide ou si l'enregistrement courant est déjà le premier enregistrement de la sélection, **FIRST RECORD** ne fait rien.
 
-This command is most often used after the [USE SET](use-set.md) command to begin looping through a selection of records from the first record. However, you can also call it from a subroutine if you are not sure whether or not the current record is actually the first.
+Cette commande est principalement utilisée après un appel à [USE SET](use-set.md), pour débuter une boucle dans la sélection d'enregistrements à partir du premier enregistrement. Cependant, il est tout à fait envisageable de l'appeler depuis une sous-routine lorsque vous souhaitez vous assurer que l'enregistrement est bien le premier.
 
-## Example 
+## Exemple 
 
-The following example makes the first record of the \[Customers\] table the first record:
+L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
 
 ```4d
- FIRST RECORD([Customers])
+ FIRST RECORD([Clients])
 ```
 
-## See also 
+## Voir aussi 
 
 [Before selection](before-selection.md)  
 [End selection](end-selection.md)  
@@ -37,12 +37,12 @@ The following example makes the first record of the \[Customers\] table the firs
 [NEXT RECORD](next-record.md)  
 [PREVIOUS RECORD](previous-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 50 |
+| Numéro de commande | 50 |
 | Thread safe | yes |
-| Changes current record ||
+| Change l'enregistrement courant ||
 
 

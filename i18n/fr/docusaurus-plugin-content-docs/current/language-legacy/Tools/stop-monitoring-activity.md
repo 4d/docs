@@ -9,41 +9,41 @@ displayed_sidebar: docs
 <!--REF #_command_.STOP MONITORING ACTIVITY.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Created|
+|18 R3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->The **STOP MONITORING ACTIVITY** command stops tracking activity started with the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> After the execution of this command, any activity record in memory is emptied.
+<!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->La commande **STOP MONITORING ACTIVITY** arrête le suivi des activités lancées avec la commande [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Une fois que cette commande est exécutée, toute activité enregistrée ne figure plus dans la mémoire.
 
-This command can be called and executed on 4D remote, 4D Server, and 4D standalone applications.
+Cette commande peut être appelée et exécutée sur un 4D distant, un 4D Server et sur des applications 4D autonomes.
 
-## Example 
+## Exemple 
 
-See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
+Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 
-## See also 
+## Voir aussi 
 
 [Monitored activity](monitored-activity.md)  
 [START MONITORING ACTIVITY](start-monitoring-activity.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1721 |
+| Numéro de commande | 1721 |
 | Thread safe | yes |
 
 

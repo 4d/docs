@@ -5,34 +5,34 @@ slug: /commands/save-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *aField* : Field )<!-- END REF-->
+<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *leChamp* )<!-- END REF-->
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Many field |
+| leField | Field | &#8594;  | Champ N |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SAVE RELATED ONE.Summary-->**SAVE RELATED ONE** saves the record related to *aField*.<!-- END REF--> Execute this command to update a record created with [CREATE RELATED ONE](create-related-one.md), or to save modifications to a record loaded with [RELATE ONE](relate-one.md).
+<!--REF #_command_.SAVE RELATED ONE.Summary-->**SAVE RELATED ONE** sauvegarde l'enregistrement lié à *leChamp*.<!-- END REF--> Vous pouvez exécuter une commande **SAVE RELATED ONE** pour mettre à jour un enregistrement créé par [CREATE RELATED ONE](create-related-one.md), ou bien lorsque vous voulez sauvegarder des modifications apportées à un enregistrement chargé par [RELATE ONE](relate-one.md). 
 
-**SAVE RELATED ONE** will not save a locked record. When using this command, you must first be sure that the record is unlocked. If the record is locked, the command is ignored, the record is not saved, and no error is returned.
+**SAVE RELATED ONE** ne sauvegardera pas un enregistrement verrouillé. Lorsque vous appelez cette commande, vous devez tout d'abord vous assurer que l'enregistrement n'est pas verrouillé. S'il est verrouillé, la commande est ignorée, l'enregistrement n'est pas sauvegardé et aucune erreur ne vous est retournée. 
 
-## See also 
+## Voir aussi 
 
 [CREATE RELATED ONE](create-related-one.md)  
 [Locked](locked.md)  
+*Présentation des triggers*  
 [RELATE ONE](relate-one.md)  
-*Triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 43 |
+| Numéro de commande | 43 |
 | Thread safe | yes |
 
 

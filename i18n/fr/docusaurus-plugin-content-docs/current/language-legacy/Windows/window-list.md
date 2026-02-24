@@ -5,43 +5,43 @@ slug: /commands/window-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *windows* : Array {; *} )<!-- END REF-->
+<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *fenêtres* {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| windows | Array | &#8592; | Array of window reference numbers |
-| * | Operator | &#8594;  | If specified, take floating windows into account If omitted, ignore floating windows |
+| fenêtres | Array | &#8592; | Tableau des numéros de référence des fenêtres |
+| * | Opérateur | &#8594;  | Si omis, ignorer fenêtres flottantes Si spécifié, tenir compte des fenêtres flottantes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WINDOW LIST.Summary-->The WINDOW LIST command populates the array *windows* with the window reference numbers of the windows currently open in all running processes (kernel or user processes).<!-- END REF--> Only "visible" windows (i.e. windows that are not hidden) are returned. 
+<!--REF #_command_.WINDOW LIST.Summary-->La commande **WINDOW LIST** remplit le tableau *fenêtres* avec les numéros de référence des fenêtres actuellement ouvertes dans tous les process (process moteur et process utilisateur).<!-- END REF--> Seules les fenêtres "visibles" (i.e. non cachées) sont retournées. 
 
-If you do not pass the optional *\** parameter, floating windows are ignored.
+Si vous ne passez pas le paramètre optionnel *\**, les fenêtres flottantes sont ignorées.
 
-## Example 
+## Exemple 
 
-The following project method tiles all the current open window, except floating windows and dialog boxes:
+La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (à l'exception des fenêtres flottantes et des boîtes de dialogue) :
 
 ```4d
-  // TILE WINDOWS project method
+  // Méthode projet Mosaïque
  
  WINDOW LIST($alWnd)
  $vlLeft:=10
- $vlTop:=80 // Leave enough room for the Tool bar
+ $vlTop:=80 // Laissons de la place à la barre d'outils
  For($vlWnd;1;Size of array($alWnd))
     If(Window kind($alWnd{$vlWnd})#Modal dialog)
        GET WINDOW RECT($vlWL;$vlWT;$vlWR;$vlWB;$alWnd{$vlWnd})
@@ -56,18 +56,18 @@ The following project method tiles all the current open window, except floating 
  End for
 ```
 
-**Note:** This method could be improved by adding tests on the size of the main window (on Windows) or the size and location of the screens (on Macintosh).
+**Note :** Cette méthode pourrait être améliorée par l'ajout de tests sur la taille de la fenêtre principale (sous Windows) ou sur la taille et l'emplacement du ou des écran(s) (sous Mac OS).
 
-## See also 
+## Voir aussi 
 
 [Window kind](window-kind.md)  
 [Window process](window-process.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 442 |
+| Numéro de commande | 442 |
 | Thread safe | no |
 
 

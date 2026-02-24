@@ -5,58 +5,58 @@ slug: /commands/intersection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
+<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| set1 | Text | &#8594;  | First set |
-| set2 | Text | &#8594;  | Second set |
-| resultSet | Text | &#8594;  | Resulting set |
+| ensemble1 | Text | &#8594;  | Premier ensemble |
+| ensemble2 | Text | &#8594;  | Second ensemble |
+| résultat | Text | &#8594;  | Ensemble résultant |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.INTERSECTION.Summary-->**INTERSECTION** compares *set1* and *set2* and selects only the records that are in both.<!-- END REF--> The following table lists all possible results of a set Intersection operation.
+<!--REF #_command_.INTERSECTION.Summary-->**INTERSECTION** compare *ensemble1* et *ensemble2* et sélectionne uniquement les enregistrements se trouvant à la fois dans *ensemble1* et dans *ensemble2*.<!-- END REF--> Le tableau suivant liste les résultats possibles d'une opération d'intersection d'ensembles.
 
-| **Set1** | **Set2** | **Result Set** |
-| -------- | -------- | -------------- |
-| Yes      | No       | No             |
-| Yes      | Yes      | Yes            |
-| No       | Yes      | No             |
-| No       | No       | No             |
+| **Ensemble1** | **Ensemble2** | **Ensemble résultant** |
+| ------------- | ------------- | ---------------------- |
+| Oui           | Non           | Non                    |
+| Oui           | Oui           | Oui                    |
+| Non           | Oui           | Non                    |
+| Non           | Non           | Non                    |
 
-The graphical result of an Intersection operation is displayed here. The shaded area is the result set.
+Le schéma ci-dessous est la représentation graphique de l'intersection de deux ensembles. La zone colorée est l'ensemble résultant.
 
-![](../assets/en/commands/pict32963.en.png)
+![](../assets/en/commands/pict32963.fr.png)
 
-The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*. If the same current record is set in both *set1* and *set2*, it remains memorized in the *resultSet*. Otherwise, *resultSet* does not have a current record. 
+L'ensemble *résultat* est créé par **INTERSECTION**. Il remplace tout ensemble du même nom existant déjà, y compris *ensemble1* et *ensemble2*. Les ensembles de départ *ensemble1* et *ensemble2* doivent appartenir à la même table. L'ensemble *résultat* appartient à la même table que *ensemble1* et *ensemble2*. Si le même enregistrement courant était défini dans *ensemble1* et *ensemble2*, il reste mémorisé dans l'ensemble *résultat*. Sinon, l'ensemble *résultat* ne comporte pas d'enregistrement courant. 
 
-**4D Server:** In Client/Server mode, sets are "visible" depending on their type (interprocess, process and local) and where they were created (server or client). **INTERSECTION** requires all three sets to be visible on the same machine. See the *4D Server, Sets and Named Selections* section in the 4D Server Reference manual for more information.
+**4D Server :** En mode client/serveur, les ensembles sont "visibles" en fonction de leur type (interprocess, process et local) et de leur lieu de création (serveur ou client). **INTERSECTION** requiert que les trois ensembles soient visibles sur la même machine. Pour plus d'informations sur ce point, reportez-vous à la section *4D Server, ensembles et sélections* dans le manuel de référence de 4D Server.
 
-## Example 
+## Exemple 
 
-The following example finds the customers who are served by two sales representatives, Joe and Abby. Each sales representative has a set that represents his or her customers. The customers that are in both sets are represented by both Joe and Abby:
+L'exemple suivant recherche les clients en contact avec deux représentants, Jean et Grégoire. Chaque représentant dispose d'un ensemble regroupant ses clients. Les clients se trouvant dans les deux ensembles sont en contact avec Jean et Grégoire :
 
 ```4d
- INTERSECTION("Joe";"Abby";"Both") // Put customers in both sets in Both
- USE SET("Both") // Use the set
- CLEAR SET("Both") // Clear this set but save the others
- DISPLAY SELECTION([Customers]) // Display customers served by both
+ INTERSECTION("Jean";"Grégoire";"Doublon") // Doublon reçoit les clients appartenant aux 2 ensembles
+ USE SET("Doublon") // Modification de la sélection courante
+ CLEAR SET("Doublon") // Effacement de cet ensemble mais sauvegarde des autres
+ DISPLAY SELECTION([Clients]) // Affichage des clients en contact avec les deux commerciaux
 ```
 
-## See also 
+## Voir aussi 
 
 [DIFFERENCE](difference.md)  
 [UNION](union.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 121 |
+| Numéro de commande | 121 |
 | Thread safe | yes |
 
 

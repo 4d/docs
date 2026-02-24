@@ -5,65 +5,65 @@ slug: /commands/st-insert-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST INSERT URL** ( *object* : Variable, Field ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *objet* ; *texteURL* ; *adresseURL* {; *débutSél* {; *finSél*}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| urlText | Text | &#8594;  | Visible text of URL |
-| urlAddress | Text | &#8594;  | URL address |
-| startSel | Integer | &#8594;  | Start of selection |
-| endSel | Integer | &#8594;  | End of selection |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| texteURL | Text | &#8594;  | Libellé visible de l’URL |
+| adresseURL | Text | &#8594;  | Adresse de l’URL |
+| débutSél | Integer | &#8594;  | Début de la sélection |
+| finSél | Integer | &#8594;  | Fin de la sélection |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ST INSERT URL.Summary-->The **ST INSERT URL** command inserts a URL link in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 
+<!--REF #_command_.ST INSERT URL.Summary-->La commande **ST INSERT URL** insère un lien URL dans le champ ou la variable de texte stylé désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *urlText* parameter, pass the visible text of the URL, as it should appear in the object. For example, text labels such as "4D Web Site" or "Follow this link for more information" can be used. You can also use the address itself, for instance "http://www.4d.com".
+Passez dans le paramètre *texteURL* le libellé visible de l’URL, tel qu’il doit apparaître dans l’objet. Par exemple, des libellés comme "Site Web de 4D" ou "Suivez ce lien pour plus d’informations" peuvent être utilisés. Vous pouvez également utiliser l’adresse elle-même, par exemple "http://www.4d.com". 
 
-In the *urlAddress* parameter, pass the complete address you want the browser page to connect to, for example "http://www.4D.com".
+Passez dans le paramètre *adresseURL* l’adresse complète à laquelle connecter la page du navigateur, par exemple "http://www.4D.com". 
 
-The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags that may be present. 
+Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. 
 
-* If you only pass *startSel*, *urlText* is inserted at the specified location.
-* If you omit *startSel* and *endSel*, *urlText* is inserted at the location of the cursor.
-* If you pass *startSel* and *endSel*, **ST INSERT URL** replaces the text in this selection with the *urlText*. If the value of *endSel* is greater than the total number of characters in the object, all the characters between *startSel* and the end of the text are replaced with the *urlText*.
+* Si vous passez uniquement *débutSél*, *texteURL* est inséré à l'emplacement spécifié.
+* Si vous omettez *débutSél* et *finSél*, *texteURL* est inséré à l’emplacement du curseur.
+* Si vous passez *débutSél* et *finSél*, **ST INSERT URL** remplace le texte situé à l’intérieur de cette sélection par *texteURL*. Si la valeur de *finSél* est supérieure au nombre total de caractères dans l’objet, tous les caractères entre *débutSél* et la fin du texte sont remplacés par *texteURL*.
 
-4D provides predefined constants so that you can designate the selection limits automatically in the *startSel* and *endSel* parameters. These constants are found in the "*Multistyle Text*" theme: 
+4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
 
-| Constant           | Type    | Value  | Comment                                                             |
-| ------------------ | ------- | ------ | ------------------------------------------------------------------- |
-| ST End highlight   | Integer | \-1001 | Designates last character of current text selection in object (\*)  |
-| ST End text        | Integer | 0      | Designates last character of text contained in object               |
-| ST Start highlight | Integer | \-1000 | Designates first character of current text selection in object (\*) |
-| ST Start text      | Integer | 1      | Designates first character of text contained in object              |
+| Constante          | Type        | Valeur | Comment                                                                          |
+| ------------------ | ----------- | ------ | -------------------------------------------------------------------------------- |
+| ST End highlight   | Entier long | \-1001 | Désigne le dernier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST End text        | Entier long | 0      | Désigne le dernier caractère du texte contenu dans l’objet                       |
+| ST Start highlight | Entier long | \-1000 | Désigne le premier caractère de la sélection courante de texte dans l’objet (\*) |
+| ST Start text      | Entier long | 1      | Désigne le premier caractère du texte contenu dans l’objet                       |
 
-(\*) You must pass an object name in *object* to be able to use this constant. If you pass a reference to a field or variable, the command is applied to all the text of the object.
+(\*) Vous devez passer un nom d’objet dans *objet* pour pouvoir utiliser cette constante. Si vous passez une référence de variable ou de champ, la commande s’appliquera à l’ensemble du texte de l’objet.
 
-**Note:** If *startSel* is greater than *endSel* (except when *endSel* is 0), the command does nothing and the *OK* variable is set to 0.
+**Note :** Si *débutSél* est supérieur à *finSél* (hormis si *finSél* vaut 0), la commande ne fait rien et la variable *OK* prend la valeur 0.
 
-Once the link is inserted, it is active: using **Ctrl+click** (Windows) or **Command+click** (macOS) on its label opens a page of the default browser at the address specified in the *urlAddress* parameter.
+Une fois le lien inséré, il est actif : l’action **Ctrl+clic** (Windows) ou **Commande+clic** (macOS) sur le lien ouvre une page du navigateur par défaut à l’adresse définie dans le paramètre *adresseURL*.
 
-## Example 
+## Exemple 
 
-You want to insert a link to the 4D Web site to replace the text selected in the object:
+Vous souhaitez insérer un lien vers le site Web de 4D à la place de la sélection de texte dans l’objet "myText" :
 
 ```4d
  vTitle:="4D Web Site"
@@ -71,17 +71,17 @@ You want to insert a link to the 4D Web site to replace the text selected in the
  ST INSERT URL(*;"myText";vTitle;vURL;ST Start highlight;ST End highlight)
 ```
 
-## See also 
+## Voir aussi 
 
 [ST GET URL](st-get-url.md)  
 [ST INSERT EXPRESSION](st-insert-expression.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1280 |
+| Numéro de commande | 1280 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,24 +5,24 @@ slug: /commands/set-picture-to-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *picture* : Picture ; *picRef* : Integer ; *picName* : Text )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *image* ; *refImage* ; *nomImage* )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | New picture |
-| picRef | Integer | &#8594;  | Reference number of Picture Library graphic |
-| picName | Text | &#8594;  | New name of the picture |
+| image | Picture | &#8594;  | Nouvelle image |
+| refImage | Integer | &#8594;  | Numéro de référence de l'image dans la bibliothèque d'images |
+| nomImage | Text | &#8594;  | Nouveau nom de l’image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
@@ -31,93 +31,93 @@ displayed_sidebar: docs
 
 :::warning
 
-This command cannot be used in projects because the Picture library is only available in binary databases. 
+Cette commande ne peut pas être utilisée dans les projets car la bibliothèque d'images est disponible uniquement dans les bases de données binaires. 
 
 :::
 
-<!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->The **SET PICTURE TO LIBRARY** command creates a new picture or replaces a picture in the Picture Library.<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->La commande **SET PICTURE TO LIBRARY** crée une nouvelle image ou remplace une image existante dans la bibliothèque d’images.<!-- END REF-->
 
-Before the call, you pass:
+Avant l’appel, vous passez :
 
-* the picture reference number in *picRef* (range 1...32767 )
-* the picture itself in *picture*.
-* the name of the picture in *picName* (maximum length: 255 characters).
+* le numéro de référence de l’image dans *refImage* (compris entre 1 et 32767)
+* l’image elle-même dans *image*.
+* Le nom de l’image dans *nomImage* (longueur maximale : 255 caractères).
 
-If there is an existing Picture Library graphic with the same reference number, the picture contents are replaced and the picture is renamed according to the values passed in *picture* and *picName.*  
-  
-If there is no Picture Library graphic with the reference number passed in *picRef*, a new picture is added to the Picture Library.
+S’il existe déjà dans la bibliothèque une image possédant le même numéro de référence, son contenu est remplacé et elle est renommée avec les valeurs que vous avez passées dans *image* et *nomImage*.
 
-**4D Server:** **SET PICTURE TO LIBRARY** cannot be used from within a method executed on the server machine (stored procedure or trigger). If you call **SET PICTURE TO LIBRARY** on a server machine, nothing happens—the call is ignored.
+Si aucune image ne possède le numéro de référence que vous avez passé dans *refImage*, une nouvelle image est créée dans la bibliothèque d’images.
 
-**Warning:** Design objects (hierarchical list items, menu items, etc.) may refer to Picture Library graphics. Use caution when modifying a Picture Library graphic programmatically.
+**4D Server :** **SET PICTURE TO LIBRARY** ne peut pas être utilisée dans une méthode exécutée sur le poste serveur (procédure stockée ou trigger). Si vous appelez **SET PICTURE TO LIBRARY** sur le serveur, la commande ne fait rien, l’appel est ignoré.
 
-**Note:** If you pass an empty picture in *picture* or a negative or null value in *picRef*, the command does nothing.
+**Attention :** Les objets de structure (éléments de listes hiérarchiques, lignes de menu, etc.) peuvent se référer à une image de la bibliothèque. Soyez prudent lorsque vous modifiez par programmation une image de la bibliothèque d’images.
 
-## Example 1 
+**Note :** Si vous passez une image vide dans *image*, ou une valeur négative ou nulle dans *refImage*, la commande ne fait rien. 
 
-No matter what the current contents of the Picture Library, the following example adds a new picture to the Picture Library by first looking for a unique picture reference number:
+## Exemple 1 
+
+Quel que soit le contenu courant de la bibliothèque d’images, l’exemple suivant ajoute une nouvelle image dans la bibliothèque en cherchant d’abord un numéro de référence d’image unique :
 
 ```4d
- PICTURE LIBRARY LIST($alPicRef;$asPicNames)
+ PICTURE LIBRARY LIST($alRefImage;$asNomImage)
  Repeat
-    $vlPicRef:=1+Abs(Random)
- Until(Find in array($alPicRef;$vlPicRef)<0)
- SET PICTURE TO LIBRARY(vgPicture;$vlPicRef;"New Picture")
+    $vlRefImage:=1+Abs(Random)
+ Until(Find in array($alRefImage;$vlRefImage)<0)
+ SET PICTURE TO LIBRARY(vgImage;$vlRefImage;"Nouvelle Image")
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example imports into the Picture Library the pictures (stored in a document on disk) created by the third example for the command [PICTURE LIBRARY LIST](picture-library-list.md):
+L’exemple suivant importe dans la bibliothèque des images stockées dans un document sur disque, créé par le troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md) :
 
 ```4d
  SET CHANNEL(10;"")
  If(OK=1)
     RECEIVE VARIABLE($vsTag)
-    If($vsTag="4DV6PICTURELIBRARYEXPORT")
-       RECEIVE VARIABLE($vlNbPictures)
-       If($vlNbPictures>0)
-          For($vlPicture;1;$vlNbPictures)
-             RECEIVE VARIABLE($vlPicRef)
+    If($vsTag="4DV6BIBLIOTHEQUEIMAGEEXPORT")
+       RECEIVE VARIABLE($vlNbImages)
+       If($vlNbImages>0)
+          For($vlImage;1;$vlNbImages)
+             RECEIVE VARIABLE($vlRefImage)
              If(OK=1)
-                RECEIVE VARIABLE($vsPicName)
+                RECEIVE VARIABLE($vsNomImage)
              End if
              If(OK=1)
-                RECEIVE VARIABLE($vgPicture)
+                RECEIVE VARIABLE($vgImage)
              End if
              If(OK=1)
-                SET PICTURE TO LIBRARY($vgPicture;$vlPicRef;$vsPicName)
+                SET PICTURE TO LIBRARY($vgImage;$vlRefImage;$vsNomImage)
              Else
-                $vlPicture:=$vlNbPictures+1
-                ALERT("This file looks like being damaged.")
+                $vlImage:=$vlNbImages+1
+                ALERT("Ce fichier semble endommagé.")
              End if
           End for
        Else
-          ALERT("This file looks like being damaged.")
+          ALERT("Ce fichier semble endommagé.")
        End if
     Else
-       ALERT("The file “"+Document+"” is not a Picture Library export file.")
+       ALERT("Le fichier “"+Document+"” n’est pas un export de la bibliothèque d’images.")
     End if
     SET CHANNEL(11)
-    End
+ End if
 ```
 
-## Error management 
+## Gestion des erreurs 
 
-If there is not enough memory to add the picture to the Picture Library, an error -108 is generated. Note that I/O errors may also be returned (i.e., the structure file is locked). You can catch these errors using an error-handling method.
+S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est générée. Notez que des erreurs d’E/S peuvent également être générées (si par exemple le fichier de structure est verrouillé). Vous pouvez intercepter ces erreurs avec une méthode de gestion d'erreurs.
 
-## See also 
+## Voir aussi 
 
 [GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
 [PICTURE LIBRARY LIST](picture-library-list.md)  
 [REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 566 |
+| Numéro de commande | 566 |
 | Thread safe | no |
-| Modifies variables | error |
-| Forbidden on the server ||
+| Modifie les variables | error |
+| Interdite sur le serveur ||
 
 

@@ -5,123 +5,121 @@ slug: /commands/semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *semaphore* : Text {; *tickCount* : Integer} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Semaphore.Syntax-->**Semaphore** ( *sémaphore* {; *nbTicks*} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Semaphore.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | Text | &#8594;  | Semaphore to test and set |
-| tickCount | Integer | &#8594;  | Maximum waiting time |
-| Function result | Boolean | &#8592; | Semaphore has been successfully set (FALSE) or Semaphore was already set (TRUE) |
+| sémaphore | Text | &#8594;  | Sémaphore à tester et à positionner |
+| nbTicks | Integer | &#8594;  | Temps d’attente maximum |
+| Résultat | Boolean | &#8592; | sémaphore a été correctement créé (Faux) ou sémaphore était déjà créé (Vrai) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Semaphore.Summary-->A semaphore is a flag shared among workstations or among processes on the same workstation.<!-- END REF--> A semaphore simply exists or does not exist. The methods that each user is running can test for the existence of a semaphore. A semaphore can only be removed by the client workstation or process that created it. By creating and testing semaphores, methods can communicate between workstations. You do not use semaphores to protect record access. This is automatically done by 4D and 4D Server. Use semaphores to prevent several users from performing the same operation at the same time.
+<!--REF #_command_.Semaphore.Summary-->Un sémaphore est un drapeau visible par chaque poste client ou chaque process sur un même poste.<!-- END REF--> Un sémaphore a simplement pour rôle d'exister ou de ne pas exister. Chaque méthode exécutée par un utilisateur peut tester la présence d'un sémaphore. Un sémaphore ne peut être effacé que par le poste client ou le process qui l'a créé. En créant et en testant des sémaphores, vous permettez aux méthodes de communiquer entre les postes clients et les process. Les sémaphores ne servent pas à protéger l'accès aux enregistrements — cette gestion est effectuée automatiquement par 4D et 4D Server. Les sémaphores ont pour but d'éviter que plusieurs utilisateurs ou process effectuent la même opération en même temps. 
 
-The **Semaphore** function returns TRUE and does nothing if *semaphore* already exists. If *semaphore* does not exist, **Semaphore** creates it and returns FALSE. Only one user at a time can create a semaphore. If **Semaphore** returns FALSE, it means that the semaphore did not exist, but it also means that the semaphore has been set for the process in which the call has been made.
+La fonction **Semaphore** retourne Vrai et ne fait rien si *sémaphore* existe. Si *sémaphore* n'existe pas, **Semaphore** le crée et retourne Faux. Un seul utilisateur à la fois peut créer un sémaphore. Si **Semaphore** retourne Faux, cela indique que *sémaphore* n'existait pas, mais cela signifie également que *sémaphore* a été créé et positionné dans le process d'où l'appel a été effectué.
 
-**Semaphore** returns FALSE if the semaphore was not set. It also returns FALSE if the semaphore is already set by the same process in which the call has been made. 
+**Semaphore** retourne Faux si le *sémaphore* n'existait pas. La fonction retourne également Faux si le sémaphore avait été déjà positionné par le process d'où l'appel a été effectué. 
 
-A semaphore is limited to 255 characters, including prefix ($). If you pass a longer string, the semaphore will be tested with the truncated string. Keep in mind that semaphore names are case-sensitive in 4D (for example, the program considers that "MySemaphore" is different from "mysemaphore").
+Un sémaphore est limité à 255 caractères, métacaractère ($) inclus. Si vous passez une chaîne plus longue, elle est tronquée. Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
 
-The optional parameter *tickCount* allows you to specify a waiting time (in ticks) if *semaphore* is already set. In this case, the function will wait either for the semaphore to be freed or the waiting time to expire before returning **True**.
+Le paramètre optionnel *nbTicks* vous permet de spécifier un délai d’attente en ticks (1 tick = 1/60ème de seconde) si *sémaphore* est déjà positionné. Dans ce cas, avant de retourner Vrai, la fonction attend, dans la limite du temps fixé, que *sémaphore* se libère (auquel cas elle retourne Faux). Si le délai expire sans que *sémaphore* ait été libéré, **Semaphore** retourne Vrai.
 
-There are two types of semaphores in 4D: local semaphores and global semaphores.
+Il y a deux types de sémaphores dans 4D : les sémaphores locaux et les sémaphores globaux. 
 
-* A local semaphore is accessible by all processes on the same workstation and only on the workstation. A local semaphore can be created by prefixing the name of the semaphore with a dollar sign ($). You use local semaphores to monitor operations among processes executing on the same workstation. For example, a local semaphore can be used to monitor access to an interprocess array shared by all the processes in your single-user database or on the workstation.
-* A global semaphore is accessible to all users and all their processes. You use global semaphores to monitor operations among users of a multi-user database.
+* Un sémaphore local est visible par tous les process d'un même poste et seulement sur ce poste. Vous déclarez un sémaphore local en préfixant son nom avec le signe dollar ($). Les sémaphores locaux permettent de contrôler des opérations entre les différents process exécutés sur le même poste. Par exemple, un sémaphore local peut être utilisé pour gérer les accès à un tableau interprocess appelé par tous les process d'une base de données mono-utilisateur ou d'un poste client.
+* Un sémaphore global est visible par tous les utilisateurs et tous les process. Les sémaphores globaux permettent de contrôler des opérations entre les postes clients d'une base multi-utilisateurs.
 
-Global and local semaphores are identical in their logic. The difference resides in their scope.
+Le principe de fonctionnement des sémaphores globaux et locaux est identique. Leur différence réside uniquement dans leur portée, c'est-à-dire leur visibilité. En client-serveur, les sémaphores globaux sont visibles pour tous les process de tous les postes clients et du serveur. Un sémaphore local n'est visible que pour les process du poste sur lequel il a été créé. 
 
-In client-server mode, global semaphores are shared among all the processes running on all clients and servers. A local semaphore is only shared among the processes running on the machine where it has been created.
+Avec 4D, les sémaphores globaux et locaux ont la même portée car il n'y a qu'un seul utilisateur. Cependant, si votre base est utilisée dans les deux environnements, n'hésitez pas à employer des sémaphores globaux et locaux, en fonction de vos besoins. 
 
-In 4D, global or local semaphores have the same scope because you are the only user. However, if your database is being used in both setups, make sure to use global or local semaphores depending on what you want to do.
+**Note :** Les sémaphores locaux sont recommandés lorsque l'usage d'un sémaphore est nécessaire pour gérer un aspect local à un client de l'application, comme par exemple l'interface ou un tableau de valeurs interprocess. L'utilisation d'un sémaphore global provoquerait dans ce cas non seulement des échanges réseau inutiles, mais en plus pourrait affecter inutilement d'autres postes clients. Le sémaphore local évitera ces effets indésirables.
 
-**Note:** We recommend using local semaphores when you need a semaphore to manage a local aspect for a client of the application, such as the interface or an array of interprocess variables. If you use a global semaphores in this case, it would not only cause unnecessary network exchanges but could also affect other client machines unnecessarily. Using a local semaphore would avoid these undesirable side effects.
+## Exemple 1 
 
-## Example 1 
-
-Here is typical code for using a semaphore:
+Le code type d'utilisation d'un sémaphore est le suivant :
 
 ```4d
- While(Semaphore("MySemaphore";300))
+ While(Semaphore("MonSemaphore";300))
     IDLE
  End while
-  // place code protected by semaphore here
- CLEAR SEMAPHORE("MySemaphore")
+  // placer ici le code protégé par le sémaphore
+ CLEAR SEMAPHORE("MonSemaphore")
 ```
 
-## Example 2 
+## Exemple 2 
 
-In this example, you want to prevent two users from doing a global update of the prices in a Products table. The following method uses semaphores to manage this:
+Dans l'exemple suivant, vous souhaitez empêcher que deux utilisateurs effectuent simultanément une mise à jour globale des prix dans une table \[Produits\]. Pour cela, des sémaphores sont utilisés :
 
 ```4d
- If(Semaphore("UpdatePrices")) // Try to create the semaphore
-    ALERT("Another user is already updating prices. Retry later.")
+ If(Semaphore("MAJPrix")) // Essai de création du sémaphore
+    ALERT("Un autre utilisateur est déjà en train de mettre à jour les prix. Essayez plus tard.")
  Else
-    DoUpdatePrices // Update all the prices
-    CLEAR SEMAPHORE("UpdatePrices")) // Clear the semaphore
+    MAJdesPrix // Méthode de mise à jour des prix
+    CLEAR SEMAPHORE("MAJPrix")) // Effacer le sémaphore
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-The following example uses a local semaphore. In a database with several processes, you want to maintain a To Do list. You want to maintain the list in an interprocess array and not in a table. You use a semaphore to prevent simultaneous access. In this situation, you only need to use a local semaphore, because your To Do list is only for your use.
+L'exemple suivant illustre l'utilisation d'un sémaphore local. Dans une base comportant plusieurs process, vous souhaitez maintenir une liste de "Choses à faire". Vous envisagez de la maintenir à jour dans un tableau interprocess et non dans une table. Vous devez empêcher les accès simultanés à l'aide d'un sémaphore. Dans ce cas, il vous suffit d'utiliser un sémaphore local car la liste "Choses à faire" est pour votre utilisation personnelle.
 
-The interprocess array is initialized in the Startup method:
+Le tableau interprocess est initialisé dans la méthode base Sur ouverture :
 
 ```4d
- ARRAY TEXT(<>ToDoList;0) // The To Do list is initially empty
+ ARRAY TEXT(<>ListeAFaire;0) // La liste de choses à faire est vide
 ```
 
-Here is the method used for adding items to the To Do list:
+Voici la méthode utilisée pour ajouter des éléments à la "liste des choses à faire" :
 
 ```4d
-  // ADD TO DO LIST project method
-  // ADD TO DO LIST ( Text )
-  // ADD TO DO LIST ( To do list item )
- #DECLARE($item : Text)
- If(Not(Semaphore("$AccessToDoList";300)))
-  // Wait 5 seconds if the semaphore already exists
-    $vlElem:=Size of array(<>ToDoList)+1
-    INSERT IN ARAY(<>ToDoList;$vlElem)
-    <>ToDoList{$vlElem}:=$item
-    CLEAR SEMAPHORE("$AccessToDoList") // Clear the semaphore
- End if
-```
-
-You can call the above method from any process.
-
-## Example 4 
-
-This method allows you to not execute a method when a semaphore is present; the method alerts the calling method with an error code and plain text.
-
-Syntax:   
-
-```4d
- $L_Error:=Semaphore_proof(->$T_Text_error)
-```
-
-```4d
-  // Protective structure using semaphores
- #DECLARE($errorPtr : Pointer) -> $result : Integer
- // error message
+  // Méthode projet AJOUTER LISTE A FAIRE
+  // AJOUTER LISTE A FAIRE (Texte)
+  // AJOUTER LISTE A FAIRE (Elément la liste à faire)
  
-  // Start of method
+ #DECLARE($item : Text) // Paramètre passé à la commande
+ If(Not(Semaphore("$AccèsListe";300))) // Attendre 5 secondes si un sémaphore existe déjà
+    $vlElem:=Size of array(<>ListeAFaire)+1
+    INSERT IN ARRAY(<>ListeAFaire;$vlElem)
+    <>ListeAFaire{$vlElem}:=$item
+    CLEAR SEMAPHORE("$AccèsListe") // Effacer le sémaphore
+ End if
+```
+
+Vous pouvez appeler cette méthode depuis n'importe quel process. 
+
+## Exemple 4 
+
+Cette méthode permet de ne pas exécuter une méthode si le sémaphore est posé ; la méthode informe la méthode d'appel avec un code d'erreur et un texte en clair.
+
+Syntaxe :   
+
+```4d
+ $L_Erreur:=Semaphore_proof(->$T_Text_error)
+```
+
+```4d
+  // Structure de protection par sémaphore
+ #DECLARE($errorPtr : Pointer) -> $result : Integer
+ // message d'erreur
+ 
+   // Début de la méthode
  var $L_MyError : Integer
  $L_MyError:=1
  
@@ -129,46 +127,46 @@ Syntax:
  $T_Sema_local:="$tictac"
  
  If(Semaphore($T_Sema_local;300))
-  // We expected 300 ticks but the semaphore
-  // was not released by the one that placed it:
-  // we end up here
+      // On a attendu 300 ticks mais le sémaphore
+      // n'a pas été libéré par celui qui l'avait posé :
+      // on arrive ici
     $L_MyError:=-1
  
  Else
  
-  // This method is only run by one process at a time
+        // Cette méthode n'est exécutée que par un process à la fois
  
-  // We placed the semaphore as we entered
-  // so we're the only ones that can remove it
+        // Nous avons posé le sémaphore en même temps que nous entrions
+        // il n'y a que nous qui pouvons le supprimer
  
-  // Do something
-    ...
-  // Then finish by removing the semaphore
+        // Faire quelque chose
+          ...
+        // Finir en effaçant le sémaphore
     CLEAR SEMAPHORE($T_Sema_local)
  End if
  
  var $T_Message : Text
  If($L_MyError=-1)
-    $T_Message:="The semaphore "+$T_Sema_local+" has blocked access to the rest of the code"
+    $T_Message:="Le sémaphore "+$T_Sema_local+" a bloqué l'accès à la suite du code"
  Else
     $T_Message:="OK"
  End if
  
  $result:=$L_MyError
- $errorPtr->:=$T_Message  // The calling method receives an error code and an explanation in plain text
+ $errorPtr->:=$T_Message  // la méthode d'appel reçoit un code d'erreur et une explication en clair
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
-*Semaphores and signals*  
+*Sémaphores et signaux*  
 [Test semaphore](test-semaphore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 143 |
+| Numéro de commande | 143 |
 | Thread safe | yes |
 
 

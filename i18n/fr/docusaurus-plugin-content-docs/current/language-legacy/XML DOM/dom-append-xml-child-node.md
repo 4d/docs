@@ -5,164 +5,164 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* : Text ; *childType* : Integer ; *childValue* : Text, Blob ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElément* ; *typeEnfant* ; *valeurEnfant* ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| childType | Integer | &#8594;  | Type of child to append |
-| childValue | Text, Blob | &#8594;  | Text or variable (Text or BLOB) whose value must be inserted as child node |
-| Function result | Text | &#8592; | Reference of child XML element |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| typeEnfant | Integer | &#8594;  | Type d’enfant à ajouter |
+| valeurEnfant | Text, Blob | &#8594;  | Texte ou variable (Texte ou BLOB) dont la valeur doit être insérée en tant que noeud enfant |
+| Résultat | Text | &#8592; | Référence de l’élément XML enfant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Append XML child node.Summary-->The DOM Append XML child node command is used to append the *childValue* value to the XML node designated by *elementRef*.<!-- END REF--> 
+<!--REF #_command_.DOM Append XML child node.Summary-->La commande **DOM Append XML child node** permet d’ajouter la valeur *valeurEnfant* au noeud XML désigné par *refElément*.<!-- END REF--> 
 
-The type of node created is specified by the *childType* parameter. In this parameter you can pass one of the following constants, located in the "*XML*" theme:  
+Le type de noeud créé est défini par le paramètre *typeEnfant*. Passez dans ce paramètre l’une des constantes suivantes, placées dans le thème *XML* :  
 
-| Constant                   | Type    | Value |
-| -------------------------- | ------- | ----- |
-| XML CDATA                  | Integer | 7     |
-| XML comment                | Integer | 2     |
-| XML DATA                   | Integer | 6     |
-| XML DOCTYPE                | Integer | 10    |
-| XML ELEMENT                | Integer | 11    |
-| XML processing instruction | Integer | 3     |
+| Constante                  | Type        | Valeur |
+| -------------------------- | ----------- | ------ |
+| XML CDATA                  | Entier long | 7      |
+| XML comment                | Entier long | 2      |
+| XML DATA                   | Entier long | 6      |
+| XML DOCTYPE                | Entier long | 10     |
+| XML ELEMENT                | Entier long | 11     |
+| XML processing instruction | Entier long | 3      |
 
-In *childValue*, pass the data to be inserted. You can pass a string or a 4D variable (string or BLOB). The contents of this parameter will always be converted into text. 
+Passez dans *valeurEnfant* les données à insérer. Vous pouvez passer une chaîne ou une variable 4D (chaîne ou BLOB). Le contenu de ce paramètre sera toujours converti en texte. 
 
-**Note:** If the *elementRef* parameter designates the Document node (top level node), the command inserts a "Doctype" node before any other node. The same goes for processing instructions and comments, which are always inserted before the root node (but after the Doctype node). 
+**Note :** Si le paramètre *refElément* désigne le noeud Document (noeud de plus haut niveau), la commande insère un noeud "Doctype" avant tout autre noeud. Il en va de même pour les instructions de traitement et les commentaires, qui sont toujours insérés avant le noeud racine (mais après le noeud Doctype). 
 
-## Example 1 
+## Exemple 1 
 
-Adding a text type node:
+Ajout d’un noeud de type texte :
 
 ```4d
- Reference:=DOM Create XML element(elementRef;"myElement")
- DOM SET XML ELEMENT VALUE(Reference;"Hello")
+ Reference:=DOM Create XML element(refElement;"monElement")
+ DOM SET XML ELEMENT VALUE(Reference ;"Bonjour")
+ temp:=DOM Create XML element(Reference ;"br")
+ temp:=DOM Append XML child node(Reference;XML DATA;"La")
  temp:=DOM Create XML element(Reference;"br")
- temp:=DOM Append XML child node(Reference;XML DATA;"New")
- temp:=DOM Create XML element(Reference;"br")
- temp:=DOM Append XML child node(Reference;XML DATA;"York")
+ temp:=DOM Append XML child node(Reference;XML DATA;"France")
 ```
 
-Result:  
+Résultat :  
 
 ```XML
-<myElement>Hello<br/>New<br/>York</myElement>
+<monElement>Bonjour<br/>La<br/>France</monElement> 
 ```
 
-## Example 2 
+## Exemple 2 
 
-Adding a processing instruction type node:
+Ajout d’un noeud de type instruction de traitement :
 
 ```4d
  $Txt_instruction:="xml-stylesheet type = \"text/xsl\" href=\"style.xsl\""
- Reference:=DOM Append XML child node(elementRef;XML Processing Instruction;$Txt_instruction)
+ Reference:=DOM Append XML child node(refElement;XML Processing Instruction;$Txt_instruction )
 ```
 
-Result (inserted before first element):  
+Résultat (inséré avant le premier élément) :  
 
 ```XML
-<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?> 
 ```
 
-## Example 3 
+## Exemple 3 
 
-Adding a comment type node:
+Ajout d’un noeud de type commentaire :
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML Comment;"Hello world")
+ Reference:=DOM Append XML child node(refElement;XML Comment;"Hello world")
 ```
 
-Result:  
+Résultat :  
 
 ```XML
 <!--Hello world-->
 ```
 
-## Example 4 
+## Exemple 4 
 
-Adding a CDATA type node:
+Ajout d’un noeud de type CDATA :
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML CDATA;"12 < 18")
+ Reference:=DOM Append XML child node(refElement;XML CDATA;"12 < 18")
 ```
 
-Result:  
+Résultat :  
 
 ```XML
 <element><![CDATA[12 < 18]]></element>
 ```
 
-## Example 5 
+## Exemple 5 
 
-Adding or replacing a Doctype declaration type node:
+Ajout ou remplacement d’un noeud de type déclaration Doctype :
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML DOCTYPE;"Books SYSTEM \"Book.DTD\"")
+ Reference:=DOM Append XML child node(refElement;XML DOCTYPE;"Books SYSTEM \"Book.DTD\"")
 ```
 
-Result (inserted before first element):  
+Résultat (inséré avant le premier élément) :  
 
 ```XML
-<!DOCTYPE Books SYSTEM  "Book.DTD">
+<!DOCTYPE Books SYSTEM "Book.DTD">
 ```
 
-## Example 6 
+## Exemple 6 
 
-Adding or replacing an Element type node.
+Ajout ou remplacement d’un noeud de type Elément.
 
-* if the *childValue* parameter is an XML fragment, it is inserted as child nodes:  
+* si le paramètre *valeurEnfant* est un fragment XML, il est inséré en tant que noeuds enfants :  
 ```4d  
- Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"simoneva")  
+ Reference:=DOM Append XML child node(refElement;XML ELEMENT;"simoneva")  
 ```  
     
-Result:  
+Résultat :  
 ```XML  
 <parent>  
     <child>simon</child>  
     <child>eva</child>  
 </parent>  
 ```
-* otherwise, a new blank child element is appended:  
+* sinon, un nouvel élément enfant vide est ajouté :  
 ```4d  
- Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"tbreak")  
+ Reference:=DOM Append XML child node(refElement;XML ELEMENT;"tbreak")  
 ```  
     
-Result:  
+Résultat :  
 ```XML  
 <parent>  
      <tbreak/>  
  </parent>  
 ```
 
-If the contents of *childValue* are not valid, an error is returned. 
+Si le contenu de *valeurEnfant* est invalide, une erreur est retournée. 
 
-## See also 
+## Voir aussi 
 
 [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
 [DOM Get XML document ref](dom-get-xml-document-ref.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1080 |
+| Numéro de commande | 1080 |
 | Thread safe | yes |
 
 

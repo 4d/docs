@@ -5,117 +5,116 @@ slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; ...(*attribName* : Text ; *attribValue* : Text, Integer) {; *})<br/>**SVG SET ATTRIBUTE** (  *pictureObject* : Variable, Field; *element_ID* : Text ;...(*attribName* : Text ; *attribValue* : Text, Integer) {; *})<!-- END REF-->
+<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetImage* ; id_Element ; *nomAttribut* ; *valeurAttribut* {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
-| element_ID | Text | &#8594;  | ID of element where one or more attributes are set |
-| attribName | Text | &#8594;  | Attribute to be specified |
-| attribValue | Text, Integer | &#8594;  | New value of attribute |
-| * | Operator | &#8594;  | If passed = modify SVG image itself |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est une variable ou un champ |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Variable ou champ (si * omis) |
+| id_Element | Text | &#8594;  | ID de l'élément dont un ou plusieurs attribut(s) sont à définir |
+| nomAttribut | Text | &#8594;  | Attribut à définir |
+| valeurAttribut | Text, Integer | &#8594;  | Nouvelle valeur d’attribut |
+| * | Opérateur | &#8594;  | Si passé = modifier l'arbre DOM interne de l'image SVG (variable uniquement) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12.3|Modified|
-|12|Created|
+|12.3|Modifié|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Summary-->The **SVG SET ATTRIBUTE** command is used to modify the value of an existing attribute in the SVG rendering tree of a displayed image or in the internal DOM tree of an image.<!-- END REF--> 
+<!--REF #_command_.SVG SET ATTRIBUTE.Summary-->La commande **SVG SET ATTRIBUTE** permet de modifier la valeur d’un attribut existant dans l’arbre de rendu SVG d’une image affichée ou dans l'arbre DOM interne d'une image.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). In this case, the command applies to the parameters of the rendered image attached to the object (note that the parameters and therefore the rendered image of the object are only created if the **SVG SET ATTRIBUTE** command is called at least once).   
-If you do not pass the *\** parameter, you indicate that the *pictureObject* parameter is a variable or a field. Therefore, you pass a variable (object variable only) or field reference instead of a string. In this case, the command applies to the rendered images of all the objects that use the variable or the field.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Dans ce cas, la commande s’applique aux paramètres de l’image de rendu attachée à l’objet (à noter que les paramètres et donc l’image de rendu de l’objet ne sont créés que si la commande **SVG SET ATTRIBUTE** est appelée au moins une fois).   
+Si vous ne passez pas le premier paramètre *\**, vous indiquez que le paramètre *objetImage* est une variable ou un champ. Vous ne passez alors pas une chaîne mais une référence de variable (variable objet uniquement) ou de champ. Dans ce cas, la commande s’applique aux images de rendu de tous les objets qui utilisent la variable ou le champ.
 
-By default, this command modifies only the rendered image in the form object(s) matching *pictureObject* in the form context, and does nothing if no object uses it. If you pass the second *\** as the last parameter, the command modifies the SVG picture itself, even if no form object uses it. In this case, all existing or future form objects that use the SVG picture will be modified, in all contexts. 
+Par défaut, cette commande modifie uniquement l'image de rendu dans les objets formulaires correspondant à *objetImage* dans le contexte du formulaire, et ne fait rien si aucun objet ne l'utilise. Si vous passez le deuxième *\** en dernier paramètre, la commande modifie elle-même l'image SVG, même si aucun objet formulaire ne l'utilise. Dans ce cas, tous les objets formulaires existants ou futurs qui utilisent l'image SVG seront modifiés, dans tous les contextes. 
 
-**Notes:**
+**Notes :**
 
-* The last \* is useless if the *pictureObject* parameter is an object name, it is taken into account only if *pictureObject* is a variable or field.
-* To change the data source of an SVG image, you can also use the *XML DOM* commands or the **4D SVG component** provided by 4D.
+* Le dernier \* est inutile si le paramètre *objetImage* est un nom d'objet, il est pris en compte uniquement si *objetImage* est une variable ou un champ.
+* Pour modifier la source de données d'une image SVG, vous pouvez également utiliser les commandes *XML DOM* ou le composant **4D SVG** fourni par 4D.
 
-The *element\_ID* parameter is used to specify the ID ("id" or "xml:id" attribute) of the element whose attribute(s) you want to modify.
+Le paramètre *id\_Element* permet de définir l'ID (attribut "id" ou "xml:id") de l’élément dont vous souhaitez modifier un ou plusieurs attribut(s).
 
-In the *attribName* and *attribValue* parameters, pass, respectively, the attribute to set and its value (as variables, fields or literal values). You can pass as many attribute/value pairs as you want. 
+Passez dans les paramètres *nomAttribut* et *valeurAttribut* respectivement l'attribut à écrire et sa valeur (sous forme de variables, champs ou valeurs littérales). Vous pouvez passer autant de couples attribut/valeur que vous voulez. 
 
-The **SVG SET ATTRIBUTE** command is used to modify (but not to add or delete) most of the SVG attributes, such as, for instance, 'fill', 'opacity', 'font-family', and so on. For a complete definition of the SVG attributes, please refer to the reference documents available on the Internet, for example: *http://www.w3.org/TR/SVG11/attindex.html*. The rendered image is updated immediately; the modifications are transferred on to the child elements for inherited styles. 
+La commande **SVG SET ATTRIBUTE** vous permet de modifier (mais pas d’ajouter ou de supprimer) la plupart des attributs SVG, comme par exemple 'fill', 'opacity', 'font-family', etc. Pour une définition complète des attributs SVG, reportez-vous aux documents de référence disponibles sur Internet, par exemple *http://www.w3.org/TR/SVG11/attindex.html*. La mise à jour de l’image de rendu est immédiate, les modifications sont reportées en cascade sur les éléments enfants pour les styles héritables. 
 
-Note that for technical reasons, the attributes of certain elements as well as certain attributes cannot be modified. The following table lists the elements that can be modified, and those that cannot, as well as the attributes that cannot be modified:
+A noter que pour des raisons techniques, les attributs de certains éléments ainsi que certains attributs ne sont pas modifiables. Le tableau suivant liste les éléments modifiables, les éléments non modifiables ainsi que les attributs non modifiables :
 
-**Elements whose attributes can be modified**   
+**Eléments dont les attributs sont modifiables**   
 
-|Elements|Comments|
-|---|----|
-| svg   | Restrictions: <ul><li>"width" and "height" cannot be modified(1)</li><li>"viewBox" can only be modified if "width" and "height" are specified in the original document </li></ul>| |
-| g |  |
-|defs |  |
-| use| |
-| filter  | Restriction: fe\_xxx child elements cannot be modified |
+|Eléments | Commentaires|
+|---|---|
+| svg | Restrictions: <ul><li>"width" et "height" ne sont pas modifiables (1) </li><li>"viewBox" n'est modifiable que si "width" et "height" sont définis dans le document d’origine </li></ul>|
+g |  |
+| defs  |  |
+| use   |  |
+| filter  | Restriction : les éléments enfants fe\_xxx ne sont pas modifiables                                                        |
 | circle  |  |
-|ellipse  | |
-| line   | |
-| polyline ||
+| ellipse |  |
+| line  |  |
+| polyline  |  |
 | polygon  |  |
-| path |  |
+| path  |   |
 | rect | |
-| text, tspan, textArea  | The specific "4d-text" attribute is used to modify the text of a "text", "tspan" or "textArea" element (see the example) |
-| Image  |                                                                                                                          |
+| text, tspan, textArea | L’attribut spécifique "4d-text" vous permet de modifier le texte d’un élément "text", "tspan" ou "textArea" (cf. exemple) |
+| Image  |  |
 
-**Elements whose attributes cannot be modified**   
+**Eléments dont les attributs ne sont pas modifiables**   
 
-|Elements|Comments|
-|---|----|
-| linearGradient, radialGradient, Stop, solidColor, marker, symbol, clipPath, filter et les éléments commençant par fe, style, pattern | This group designates all the elements that can be referenced or contained in an element that can be referenced. This means that it is not possible, for example, to redefine the attributes of a gradient (but it is possible to change the gradient used). Similarly, to change a black color marker to a red marker, it is necessary to define both markers in the SVG document (one black and one red) and to select one of them. It is not possible either for example to modify the color of a rectangle if its parent is a symbol or marker element |
+|Eléments|Commentaire|
+|---|---|
+| linearGradient, radialGradient, Stop, solidColor, marker, symbol, clipPath, filter et les éléments commençant par fe, style, pattern | Cet ensemble désigne tous les éléments référençables ou contenus dans un élément référençable. Cela signifie qu’il n’est pas possible par exemple de redéfinir les attributs d’un gradient (mais il est possible de changer le gradient utilisé). De même, pour changer un marqueur de couleur noire en marqueur rouge, il faudra définir deux marqueurs dans le document SVG (un noir et un rouge) et sélectionner l’un ou l’autre. Il n’est pas possible non plus par exemple de modifier la couleur d'un rectangle s’il a pour parent un élément symbol ou marker |
 
 
-**Attributes that cannot be modified**  
+**Attributs non modifiables**  
 
-|Attributes|Comments|
-|---|----|
-| id or xml:id | |
-| lang or xml:lang   |   |
-| class or xml:class |  |
-| width, height   | Concerns the attributes of the 'svg' element only(1) |
+|Attribut|Commentaire|
+|---|---|
+| id ou xml:id       |      
+| lang ou xml:lang   |                                                          |
+| class ou xml:class |                                                          |
+| width, height      | Concerne les attributs de l’élément 'svg' uniquement (1) |
+(1) Ces attributs ne peuvent être modifiés car ils définissent et structurent l’image résultante. Les attributs *width* et *height* de l’élément *svg* servent à définir les dimensions initiales de l’image dans 4D et ces dimensions doivent rester constantes après la création de l’image (il est toutefois possible de modifier les dimensions de l’image résultante avec la commande [TRANSFORM PICTURE](transform-picture.md) de 4D).
 
-(1) These attributes cannot be modified because they define and structure the resulting image. The *width* and *height* attributes of the *svg* element are used to define the initial dimensions of the picture in 4D and these dimensions must remain constant after the picture is created (it is however possible to modify the dimensions of the resulting picture with the [TRANSFORM PICTURE](transform-picture.md) command of 4D).
+Reportez-vous également à la description de la commande [SVG GET ATTRIBUTE](svg-get-attribute.md) pour obtenir la liste des attributs 4D réservés et dédiés à l’animation.
 
-You can also refer to the description of the [SVG GET ATTRIBUTE](svg-get-attribute.md) command to see the list of 4D attributes that are reserved and dedicated to animation.
+Si vous tentez de modifier un attribut d’un élément non pris en charge ou l’un de ses enfants, la commande ne fait rien et aucune erreur n’est générée.
 
-If you attempt to modify the attribute of an element that is not supported or one of its child elements, the command does nothing and no error is generated.
+Si la commande est exécutée en-dehors du contexte d'un formulaire ou si un *objetImage* invalide est passé, la variable OK prend la valeur 0\. Si la commande a été exécutée correctement, elle prend la valeur 1.
 
-If the command is not executed in the context of a form or if an invalid *pictureObject* is passed, the *OK* variable is set to 0\. If the command has been executed correctly, it is set to 1.
+## Exemple 
 
-## Example 
-
-Modification of the contents of a Text type element:
+Modification du contenu d’un élément de type texte :
 
 ```4d
- SVG SET ATTRIBUTE(*;picture_object_name;text_element_ID;"4d-text";"This is a text")
+ SVG SET ATTRIBUTE(*;nom_objet_image;text_element_ID;"4d-text";"Ceci est un texte")
 ```
 
-**Note:** There is no namespace in order that the attribute could be used in a CSS style sheet without risk of conflict. 
+**Note :** Il n’y a pas de *namespace* pour que l’attribut puisse être utilisé dans une feuille de style CSS sans risque de conflit. 
 
-## See also 
+## Voir aussi 
 
 [SVG GET ATTRIBUTE](svg-get-attribute.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1055 |
+| Numéro de commande | 1055 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

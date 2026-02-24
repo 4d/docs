@@ -9,67 +9,67 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL CANCEL LOAD.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL CANCEL LOAD.Summary-->The **SQL CANCEL LOAD** command ends the current SELECT request and initializes the parameters.<!-- END REF--> 
+<!--REF #_command_.SQL CANCEL LOAD.Summary-->La commande **SQL CANCEL LOAD** met fin à la requête SELECT courante et initialise les paramètres du curseur.<!-- END REF--> 
 
-This command is used to execute several SELECT requests within the same connection (i.e. the same cursor) initiated by the [SQL LOGIN](sql-login.md) command. 
+Cette commande permet d’exécuter plusieurs requêtes SELECT au sein d’une même connexion (c’est-à-dire un même curseur) initiée par la commande [SQL LOGIN](sql-login.md). 
 
-## Example 
+## Exemple 
 
-In this example, two requests are executed in the same connection: 
+Dans cet exemple, deux requêtes sont exécutées dans la même connexion : 
 
 ```4d
- var Myblob : Blob
- var MyText : Text
+ var Monblob : Blob
+ var MonTexte : Text
  SQL LOGIN("mysql";"root";"")
  
  SQLStmt:="SELECT blob_field FROM app_testTable"
- SQL EXECUTE(SQLStmt;Myblob)
+ SQL EXECUTE(SQLStmt;Monblob)
  While(Not(SQL End selection))
     SQL LOAD RECORD
  End while
  
-  //Resetting of cursor
+  //Réinitialisation du curseur
  SQL CANCEL LOAD
  
  SQLStmt:="SELECT Name FROM Employee"
- SQL EXECUTE(SQLStmt;MyText)
+ SQL EXECUTE(SQLStmt;MonTexte)
  While(Not(SQL End selection))
     SQL LOAD RECORD
  End while
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been correctly executed, the system variable OK returns 1\. Otherwise, it returns 0.
+Si la commande a été correctement exécutée, la variable système OK retourne 1, sinon elle retourne 0.
 
-## See also 
+## Voir aussi 
 
 [SQL LOAD RECORD](sql-load-record.md)  
 [SQL LOGIN](sql-login.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 824 |
+| Numéro de commande | 824 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

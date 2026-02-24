@@ -5,66 +5,66 @@ slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* : Time ; *docType* : Text )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* ; *docType* )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| docType | Text | &#8594;  | DocType to be added |
+| document | Time | &#8594;  | Référence du document ouvert |
+| docType | Text | &#8594;  | DocType à ajouter |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->The SAX ADD XML DOCTYPE command adds a DocType statement set by the *docType* parameter in the XML document referenced by *document*.<!-- END REF--> 
+<!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->La commande **SAX ADD XML DOCTYPE** ajoute l'instruction DocType définie par le paramètre *docType* dans le document XML référencé par *document*.<!-- END REF--> 
 
-The DocType statement lets you indicate the type of XML in which the document has been written and to specify the Document Type Declaration (DTD) used. A DocType statement generally takes the following form: .
+Une instruction DocType permet d’indiquer le type de XML dans lequel le document a été écrit et de désigner la Déclaration de type de document (DTD) utilisée. Une instruction DocType est généralement de la forme .
 
-## Example 
+## Exemple 
 
-The following statement:
+L’instruction suivante :
 
 ```4d
- vDocType:="SYSTEM Books \"Book.DTD\""
- SAX ADD XML DOCTYPE($DocRef;vDocType)
+ vDocType:="Livres SYSTEM \"Livre.DTD\""
+ SAX ADD XML DOCTYPE($RefDoc;vDocType)
 ```
 
-... will write the following line in the document: 
+... inscrira cette ligne dans le document : 
 
 ```xml
- <!DOCTYPE SYSTEM Books"Book.DTD">
+ <!DOCTYPE Livres SYSTEM "Livre.DTD">
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0\. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. 
 
-## Error management 
+## Gestion des erreurs 
 
-In the event of an error, the the command returns an error which can be intercepted using an error-handling method.
+En cas d’erreur, la commande retourne une erreur qui peut être interceptée via une méthode d’appel sur erreur.
 
-## See also 
+## Voir aussi 
 
 [SAX ADD XML COMMENT](sax-add-xml-comment.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 851 |
+| Numéro de commande | 851 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

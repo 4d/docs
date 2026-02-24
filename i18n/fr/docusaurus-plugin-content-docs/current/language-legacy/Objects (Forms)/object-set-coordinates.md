@@ -5,74 +5,73 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<br/>**OBJECT SET COORDINATES** ( *object* : Variable, Field ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *objet* ; *gauche* ; *haut* {; *droite* ; *bas*} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| left | Integer | &#8594;  | Left coordinate of object in pixels |
-| top | Integer | &#8594;  | Top coordinate of object in pixels |
-| right | Integer | &#8594;  | Right coordinate of object in pixels |
-| bottom | Integer | &#8594;  | Bottom coordinate of object in pixels |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | Integer | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| gauche | Integer | &#8594;  | Coordonnée gauche de l’objet en pixels |
+| haut | Integer | &#8594;  | Coordonnée supérieure de l’objet en pixels |
+| droite | Integer | &#8594;  | Coordonnée droite de l’objet en pixels |
+| bas | Integer | &#8594;  | Coordonnée inférieure de l’objet en pixels |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET COORDINATES.Summary-->The **OBJECT SET COORDINATES** command modifies the location and, optionally, the size of the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Summary-->La commande **OBJECT SET COORDINATES** permet de modifier l’emplacement et, optionnellement, la taille de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
 
-**Note:** This command is the equivalent of using the [OBJECT MOVE](object-move.md) command and passing its 2nd *\** parameter. 
+**Note :** Cette commande équivaut à utiliser la commande [OBJECT MOVE](object-move.md) en passant le 2e paramètre *\**. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *left* and *top* parameters, pass the new absolute coordinates of the object in the form. These coordinates must be expressed in pixels with respect to the top left corner of the form. 
+Passez dans les paramètres *gauche* et *haut* les nouvelles coordonnées absolues de l’objet dans le formulaire. Ces coordonnées doivent être exprimées en pixels par rapport à l’angle supérieur gauche du formulaire. 
 
-You can also pass absolute coordinate values in the *right* and *bottom* parameters, indicating the bottom right corner of the object. If this corner does not correspond to the corner of the object after application of the *left* and *top* parameters, the object is resized accordingly. 
+Vous pouvez également passer des valeurs de coordonnées absolues dans les paramètres *droite* et *bas*, indiquant l’angle inférieur droit de l’objet. Si cet angle ne correspond pas à celui de l’objet après application des paramètres *gauche* et *haut*, l’objet est redimensionné en conséquence. 
 
-**Note:** If you want to move an object relative to its initial position, we recommend using the existing [OBJECT MOVE](object-move.md) command.
+**Note :** Si vous souhaitez déplacer un objet relativement à sa position initiale, il est préférable d’utiliser la commande existante [OBJECT MOVE](object-move.md). 
 
-This command only functions in the following contexts:
+Cette commande fonctionne uniquement dans les contextes suivants :
 
-* Input forms in entry mode,
-* Forms displayed using the [DIALOG](./commands/dialog) command,
-* Headers and footers of output forms displayed by the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) command,
-* Forms being printed.
+* Formulaires entrée en mode saisie,
+* Formulaires affichés via la commande [DIALOG](../commands/dialog.md),
+* En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
+* Formulaires en cours d'impression.
 
-## Example 
+## Exemple 
 
-The following statement places the "button\_1" object at the (10,20) (30,40) coordinates:
+L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (30,40) :
 
 ```4d
- OBJECT SET COORDINATES(*;"button_1";10;20;30;40)
+ OBJECT SET COORDINATES(*;"bouton_1";10;20;30;40)
 ```
 
 ![](../assets/en/commands/pict1207497.fr.png)
 
-## See also 
+## Voir aussi 
 
 [CONVERT COORDINATES](convert-coordinates.md)  
 [OBJECT GET COORDINATES](object-get-coordinates.md)  
 [OBJECT MOVE](object-move.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1248 |
+| Numéro de commande | 1248 |
 | Thread safe | no |
-
 
 

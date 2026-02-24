@@ -5,53 +5,53 @@ slug: /commands/get-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
+<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *sélecteur* ; *paramTexte* )<!-- END REF-->
 <!--REF #_command_.GET MACRO PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Selection to use |
-| textParam | Text | &#8592; | Returned text |
+| sélecteur | Integer | &#8594;  | Sélection à utiliser |
+| paramText | Text | &#8592; | Texte récupéré |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET MACRO PARAMETER.Summary-->The **GET MACRO PARAMETER** command returns, in the *paramText* parameter, all or part of the text of the method from which it was called.<!-- END REF-->
+<!--REF #_command_.GET MACRO PARAMETER.Summary-->La commande **GET MACRO PARAMETER** retourne dans *paramTexte* une partie ou la totalité du texte de la méthode depuis laquelle elle a été appelée.<!-- END REF-->
 
-The *selector* parameter can be used to set the type of information to be returned. You can pass one of the following constants, added to the “*4D Environment*” theme:
+Le paramètre *sélecteur* permet de définir le type d’information à récupérer. Vous pouvez passer l’une des constantes suivantes, placées dans le thème “*Environnement 4D*” :
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Full method text        | Integer | 1     |
-| Highlighted method text | Integer | 2     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Full method text        | Entier long | 1      |
+| Highlighted method text | Entier long | 2      |
 
-If you pass Full method text in *selector*, all of the text of the method will be returned in *paramText*. If you pass Highlighted method text in *selector*, only the text selected in the method will be returned in *paramText*.
+Si vous passez Full method text dans *sélecteur*, la totalité du texte de la méthode sera retourné dans *paramTexte*. Si vous passez Highlighted method text dans *sélecteur*, seul le texte sélectionné dans la méthode sera retourné dans *paramTexte*.
 
-## Example 
+## Exemple 
 
-Refer to the example of the [SET MACRO PARAMETER](set-macro-parameter.md) command.
+Reportez-vous à l'exemple de [SET MACRO PARAMETER](set-macro-parameter.md).
 
-## See also 
+## Voir aussi 
 
 [SET MACRO PARAMETER](set-macro-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 997 |
+| Numéro de commande | 997 |
 | Thread safe | no |
 
 

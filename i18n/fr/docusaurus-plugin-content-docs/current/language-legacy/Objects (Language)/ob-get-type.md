@@ -5,74 +5,73 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *object* : Object ; *property* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* ; *propriété* ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Property name |
-| Function result | Integer | &#8592; | Property value type |
+| objet | Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété |
+| Résultat | Integer | &#8592; | Type de valeur de la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R4|Modified|
-|15|Modified|
-|14|Created|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Get type.Summary-->The **OB Get type** command returns the type of value associated with the *property* of the language *object*.<!-- END REF-->can be an object varialble or a 4D object field.. 
+<!--REF #_command_.OB Get type.Summary-->La commande **OB Get type** retourne le type de la valeur associée à la *propriété* de l'*objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-In the *property* parameter, pass the label of the property whose type you want to find out.   
-Note that the *property* parameter is case sensitive. 
+Passez dans le paramètre *propriété* le libellé de la propriété dont vous souhaitez connaître le type. Attention, le paramètre *propriété* tient compte des majuscules/minuscules.
 
-The command returns a longint indicating the type of value. You can compare this value with the following constants, found in the "*Field and Variable Types*" theme:
+La commande retourne un entier long indiquant le type de valeur. Vous pouvez comparer cette valeur aux constantes suivantes du thème *Types champs et variables* :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is date       | Integer | 4     |
-| Is null       | Integer | 255   |
-| Is object     | Integer | 38    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Is undefined  | Integer | 5     |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Is Boolean    | Entier long | 6      |
+| Is collection | Entier long | 42     |
+| Is date       | Entier long | 4      |
+| Is null       | Entier long | 255    |
+| Is object     | Entier long | 38     |
+| Is real       | Entier long | 1      |
+| Is text       | Entier long | 2      |
+| Is undefined  | Entier long | 5      |
 
-**Note:** For picture attributes, the command returns Is object. 
+**Note :** Pour les propriétés d'une image, la commande retourne Est un objet. 
 
-## Example 
+## Exemple 
 
-We want to get the type of standard values:
+On souhaite obtenir le type de valeurs standard :
 
 ```4d
  var $ref : Object
- OB SET($ref;"name";"smith";"age";42)
- $type:=OB Get type($ref;"name") //$type returns 2
- $type2:=OB Get type($ref;"age") //$type2 returns 1
+ OB SET($ref;"nom";"smith";"age";42)
+ $type:=OB Get type($ref;"nom") //$type retourne 2
+ $type2:=OB Get type($ref;"age") //$type2 retourne 1
 ```
 
-## See also 
+## Voir aussi 
 
 [OB GET PROPERTY NAMES](ob-get-property-names.md)  
 [Value type](value-type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1230 |
+| Numéro de commande | 1230 |
 | Thread safe | yes |
 
 

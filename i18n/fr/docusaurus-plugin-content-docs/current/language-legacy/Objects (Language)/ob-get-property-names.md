@@ -5,117 +5,117 @@ slug: /commands/ob-get-property-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *object* : Object ; *arrProperties* : Text array {; *arrTypes* : Integer array} )<!-- END REF-->
+<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *objet* ; *tabPropriétés* {; *tabTypes*} )<!-- END REF-->
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Structured object |
-| arrProperties | Text array | &#8592; | Property names |
-| arrTypes | Integer array | &#8592; | Property types |
+| objet | Object | &#8594;  | Objet structuré |
+| tabPropriétés | Text array | &#8592; | Noms des propriétés |
+| tabTypes | Integer array | &#8592; | Types des propriétés |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|15|Modified|
-|14|Created|
+|16 R4|Modifié|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->The **OB GET PROPERTY NAMES** command returns, in *arrProperties*, the names of the properties contained in the language object designated by the *object* parameter.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB GET PROPERTY NAMES.Summary-->La commande **OB GET PROPERTY NAMES** retourne dans *tabPropriétés* les noms des propriétés contenues dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-Pass a text array in the *arrProperties* parameter. If the array does not exist, the command creates and sizes it automatically. 
+Passez dans le paramètre *tabPropriétés* un tableau texte. Si le tableau n’existe pas, la commande le crée et le dimensionne automatiquement. 
 
-Optionally, you can also pass a longint array in *arrTypes*. For each element of *arrProperties*, the command returns, in *arrTypes*, the type of value stored in the property. You can compare the values received with the following constants, found in the "*Field and Variable Types*" theme:
+Optionnellement, vous pouvez passer dans *tabTypes* un tableau entier long. Pour chaque élément de *tabPropriétés*, la commande retournera dans *tabTypes* le type de la valeur stockée dans la propriété. Vous pouvez comparer les valeurs reçues aux constantes suivantes du thème *Types champs et variables* :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is null       | Integer | 255   |
-| Is object     | Integer | 38    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Object array  | Integer | 39    |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Is Boolean    | Entier long | 6      |
+| Is collection | Entier long | 42     |
+| Is null       | Entier long | 255    |
+| Is object     | Entier long | 38     |
+| Is real       | Entier long | 1      |
+| Is text       | Entier long | 2      |
+| Object array  | Entier long | 39     |
 
-**Note:** For array attributes, the command returns Is collection. 
+**Note :** Pour les propriétés d'un tableau, la commande retourne Est une collection.
 
-## Example 1 
+## Exemple 1 
 
-You want to test that an object is not empty:
+Vous souhaitez tester qu’un objet n’est pas vide :
 
 ```4d
- ARRAY TEXT(arrNames;0)
- ARRAY LONGINT(arrTypes;0)
+ ARRAY TEXT(tabNoms;0)
+ ARRAY LONGINT(tabTypes;0)
  var $ref_richard : Object
- OB SET($ref_richard;"name";"Richard";"age";7)
- OB GET PROPERTY NAMES($ref_richard;arrNames;arrTypes)
-  // arrNames{1}="name", arrNames{2}="age"
-  // arrTypes{1}=2, arrTypes{2}=1
- If(Size of array(arrNames)#0)
-  // ...
+ OB SET($ref_richard;"nom";"Richard";"age";7)
+ OB GET PROPERTY NAMES($ref_richard;tabNoms;tabTypes)
+     //tabNoms{1}="nom", tabNoms{2}="age"
+     //tabTypes{1}=2, tabTypes{2}=1
+ If(Size of array(tabNoms)#0)
+        //...
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-Using an object array element:
+Utilisation d’un élément de tableau d’objets :
 
 ```4d
  var $Children;$ref_richard;$ref_susan;$ref_james : Object
  ARRAY OBJECT($arrayChildren;0)
  
- OB SET($ref_richard;"name";"Richard";"age";7)
+ OB SET($ref_richard;"nom";"Richard";"age";7)
  APPEND TO ARRAY($arrayChildren;$ref_richard)
- OB SET($ref_susan;"name";"Susan";"age";4;"girl";True) //additional attribute
+ OB SET($ref_susan;"nom";"Susan";"age";4;"fille";True) //attribut supplémentaire
  APPEND TO ARRAY($arrayChildren;$ref_susan)
- OB SET($ref_james;"name";"James")
- OB SET NULL($ref_james;"age") //null attribute
+ OB SET($ref_james;"nom";"James")
+ OB SET NULL($ref_james;"age") //attribut null
  APPEND TO ARRAY($arrayChildren;$ref_james)
  
- OB GET PROPERTY NAMES($arrayChildren{1};$arrNames;$arrTypes)
-  // $arrayChildren{1} = {"name":"Richard","age":7}
-  // $arrNames{1}="name"
-  // $arrNames{2}="age"
-  // $arrTypes{1}=2
-  // $arrTypes{2}=1
+ OB GET PROPERTY NAMES($arrayChildren{1};$tabNoms;$tabTypes)
+  // $arrayChildren{1} = {"nom":"Richard","age":7}
+  // $tabNoms{1}="nom"
+  // $tabNoms{2}="age"
+  // $tabTypes{1}=2
+  // $tabTypes{2}=1
  
- OB GET PROPERTY NAMES($arrayChildren{2};$arrNames;$arrTypes)
-  // $arrayChildren{3} = {"name":"Susan","age":4,"girl":true}
-  // $arrNames{1}="name"
-  // $arrNames{2}="age"
-  // $arrNames{3}="girl"
-  // $arrTypes{1}=2
-  // $arrTypes{2}=1
-  // $arrTypes{3}=6
+ OB GET PROPERTY NAMES($arrayChildren{2};$tabNoms;$tabTypes)
+  // $arrayChildren{3} = {"nom":"Susan","age":4,"fille":true}
+  // $tabNoms{1}="nom"
+  // $tabNoms{2}="age"
+  // $tabNoms{3}="fille"
+  // $tabTypes{1}=2
+  // $tabTypes{2}=1
+  // $tabTypes{3}=6
  
- OB GET PROPERTY NAMES($arrayChildren{3};$arrNames;$arrTypes)
-  // $arrayChildren{3} = {"name":"James","age":null}
-  // $arrNames{1}="name"
-  // $arrNames{2}="age"
-  // $arrTypes{1}=2
-  // $arrTypes{2}=255
+ OB GET PROPERTY NAMES($arrayChildren{3};$tabNoms;$tabTypes)
+  // $arrayChildren{3} = {"nom":"James","age":null}
+  // $tabNoms{1}="nom"
+  // $tabNoms{2}="age"
+  // $tabTypes{1}=2
+  // $tabTypes{2}=255
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Get type](ob-get-type.md)  
 [OB SET NULL](ob-set-null.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1232 |
+| Numéro de commande | 1232 |
 | Thread safe | yes |
 
 

@@ -5,40 +5,40 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *number* : Real ) : Real<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *nombre* ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | Number for which to return the log |
-| Function result | Real | &#8592; | Log of number |
+| nombre | Real | &#8594;  | Nombre dont vous voulez obtenir le logarithme népérien |
+| Résultat | Real | &#8592; | Logarithme népérien de nombre |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Log.Summary-->Log returns the natural (Napierian) log of *number*.<!-- END REF--> Log is the inverse function of [Exp](exp.md).
+<!--REF #_command_.Log.Summary-->**Log** retourne le logarithme népérien de *nombre*.<!-- END REF-->est la fonction inverse de [Exp](exp.md). 
 
-**Note:** 4D provides the predefined constant *e number* (2.71828...).
+**Note :** 4D fournit la constante prédéfinie e number (2,71828...).
 
-## Example 
+## Exemple 
 
-The following line displays 1:
+L'exemple suivant affiche 1 :
 
 ```4d
  ALERT(String(Log(Exp(1)))
 ```
 
-## See also 
+## Voir aussi 
 
 [Exp](exp.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 22 |
+| Numéro de commande | 22 |
 | Thread safe | yes |
 
 

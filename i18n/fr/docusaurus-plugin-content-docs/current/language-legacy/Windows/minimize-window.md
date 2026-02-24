@@ -5,66 +5,66 @@ slug: /commands/minimize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** {( *fenêtre* )}<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Window reference number or if omitted, all the current process frontmost windows (Windows) or current process frontmost window (macOS) |
+| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (macOS) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.MINIMIZE WINDOW.Summary-->The MINIMIZE WINDOW command sets the size of the window whose number is passed as *window* to the size it was before being maximized.<!-- END REF--> If *window* is omitted, the command applies to each window of the application (Windows) or to the frontmost window of the process (on Mac OS).
+<!--REF #_command_.MINIMIZE WINDOW.Summary-->La commande **MINIMIZE WINDOW** provoque un zoom arrière de la fenêtre dont vous avez passé le numéro de référence dans *fenêtre* ou, si ce paramètre est omis, de toutes les fenêtres de l'application (sous Windows) ou de la fenêtre de premier plan du process courant (sous Mac OS).<!-- END REF-->
 
-This command has the same effect as one click on the reduction box of the 4D application: 
+Cette commande produit le même effet qu'un clic sur la case de réduction d'une fenêtre de l'application 4D ayant été préalablement maximisée : 
 
-### On Windows 
+### Sous Windows 
 
-The size of the window is set to its initial size, i.e., its size before being maximized. If the *window* parameter is omitted, all the application windows are set to their initial sizes.
+La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont redimensionnées à leur taille initiale.
 
-![](../assets/en/commands/pict39369.en.png)  
-Reduction box on Windows
+![](../assets/en/commands/pict39369.fr.png)
 
-### On Mac OS 
+Case de réduction sous Windows
 
-The size of the window is set to its initial size (i.e. its size before being maximized). If the window parameter is omitted, the frontmost window of the current process is set to its initial size. 
+### Sous Mac OS 
 
-![](../assets/en/commands/pict39370.en.png)  
-Reduction/zoom box on Mac OS
+La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre de premier plan du process courant est minimisée.   
+![](../assets/en/commands/pict39370.fr.png)
 
-If the windows to which the command is applied were not previously maximized (manually or using [MAXIMIZE WINDOW](maximize-window.md)), or if the window type does not include a zoom box, the command has no effect. For more information on window types, refer to the *Window Types (compatibility)* section. 
+Case de zoom/réduction sous Mac OS 
 
-**Note:** This function is not to be confused with minimizing a window to a button (Windows) or in the Dock (macOS), which is triggered by a click on the button shown:
+Si la ou les fenêtres concernées n'ont pas été préalablement maximisées (manuellement ou à l'aide de [MAXIMIZE WINDOW](maximize-window.md)), la commande ne fait rien. De même, si le type de *fenêtre* ne comporte pas de case de zoom, la commande ne fait rien (pour plus d'informations sur ce point, reportez-vous à la section *Types de fenêtres (compatibilité)*). 
 
-![](../assets/en/commands/pict39371.en.png)  
+**Note :** Ne confondez pas cette fonction avec la réduction de la fenêtre sous forme d'icône (Windows) ou dans le Dock (macOS), accessible par l'intermédiaire du bouton suivant :  
+![](../assets/en/commands/pict39371.fr.png)  
 Windows
 
-![](../assets/en/commands/pict39372.en.png)  
+![](../assets/en/commands/pict39372.fr.png)  
 Mac OS
 
-## See also 
+## Voir aussi 
 
 [MAXIMIZE WINDOW](maximize-window.md)  
 [REDUCE RESTORE WINDOW](reduce-restore-window.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 454 |
+| Numéro de commande | 454 |
 | Thread safe | no |
 
 

@@ -5,71 +5,71 @@ slug: /commands/ob-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *object* : Object ; *property* : Text ; *array* : Array )<!-- END REF-->
+<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objet* ; *propriété* ; *tableau* )<!-- END REF-->
 <!--REF #_command_.OB GET ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Name of property to read |
-| array | Array | &#8592; | Value array of property |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à lire |
+| tableau | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | Tableau valeur de la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|14|Created|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB GET ARRAY.Summary-->The **OB GET ARRAY** command retrieves, in *array*, the array of values stored in the *property* of the language object designated by the *object* parameter.<!-- END REF-->can be an object variable or a 4D object field.
+<!--REF #_command_.OB GET ARRAY.Summary-->La commande **OB GET ARRAY** récupère dans *tableau* le tableau de valeurs stocké dans la *propriété* de l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive.
+Passez dans le paramètre *propriété* le libellé de la propriété à lire. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-## Example 1 
+## Exemple 1 
 
-Given an object array defined in the example of the [OB SET ARRAY](ob-set-array.md) command:
+Soit le tableau objet défini dans l’exemple de la commande [OB SET ARRAY](ob-set-array.md) :
 
-![](../assets/en/commands/pict1211436.en.png)
+![](../assets/en/commands/pict1211436.fr.png)
 
-We want to retrieve these values:
+On souhaite récupérer ces valeurs :
 
 ```4d
  ARRAY OBJECT($result;0)
- OB GET ARRAY($Children;"Children";$result)
+ OB GET ARRAY($Enfants;"Enfants";$result)
 ```
 
-![](../assets/en/commands/pict1213151.en.png)
+![](../assets/en/commands/pict1213151.fr.png)
 
-## Example 2 
+## Exemple 2 
 
-We want to change a value in the first element of the array:
+On souhaite changer une valeur dans le premier élément du tableau :
 
 ```4d
-  // Change the value of "age":
+     //Changer la valeur de "age" :
  ARRAY OBJECT($refs)
  OB GET ARRAY($refEmployees;"__ENTITIES";$refs)
  OB SET($refs{1};"age";25)
 ```
 
-## See also 
+## Voir aussi 
 
+*Conversions de type entre les collections et les tableaux 4D*  
 [OB SET ARRAY](ob-set-array.md)  
-*Type conversions between collections and 4D arrays*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1229 |
+| Numéro de commande | 1229 |
 | Thread safe | yes |
 
 

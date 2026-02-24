@@ -9,31 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.Outside call.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if the execution cycle is an outside call |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est appel extérieur |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Outside call.Summary-->**Outside call** returns True for the After execution cycle.<!-- END REF--> 
+<!--REF #_command_.Outside call.Summary-->**Outside call** retourne Vrai pour le cycle d'exécution Appel extérieur.<!-- END REF--> 
 
-In order for the **Outside call** execution cycle to be generated, make sure that the On Outside Call event property for the form and/or the objects has been selected in the Design environment.
+Si vous voulez que le cycle d'exécution **Outside call** soit généré, vérifiez que la propriété d'événement On Outside Call du formulaire et/ou des objets est sélectionnée en mode Développement. 
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Outside Call event.
+**Note :** Cette fonction équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne un événement tel que On Outside Call.
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 328 |
+| Numéro de commande | 328 |
 | Thread safe | no |
-
 
 

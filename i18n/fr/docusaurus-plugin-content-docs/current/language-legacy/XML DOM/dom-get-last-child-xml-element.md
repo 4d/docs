@@ -5,63 +5,63 @@ slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *refElément* {; *nomElémentEnf* {; *valeurElémentEnf*}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML element reference |
-| childElemName | Text | &#8592; | Name of child element |
-| childElemValue | Text | &#8592; | Value of child element |
-| Function result | Text | &#8592; | XML element reference |
+| refElément | Text | &#8594;  | Référence d’élément XML |
+| nomElémentEnf | Text | &#8592; | Nom de l’élément enfant |
+| valeurElémentEnf | Text | &#8592; | Valeur de l’élément enfant |
+| Résultat | Text | &#8592; | Référence de l’élément XML |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.2|Created|
+|2004.2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.DOM Get last child XML element.Summary-->The DOM Get last child XML element command returns an XML reference to the last “child” of the XML element passed as reference in *elementRef*.<!-- END REF--> This reference may be used with the other XML parsing commands.
+<!--REF #_command_.DOM Get last child XML element.Summary-->La commande **DOM Get last child XML element** retourne une référence XML vers le dernier “enfant” de l’élément XML passé en référence dans *refElément*.<!-- END REF--> Cette référence pourra être utilisée avec les autres commandes d’analyse XML.
 
-The optional *childElemName* and *childElemValue* parameters, when passed, receive respectively the name and value of the “child” element.
+Les paramètres *nomElémentEnf* et *valeurElémentEnf*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément enfant.
 
-## Example 
+## Exemple 
 
-Recovery of the reference of the last XML element of the parent root. The XML structure (C:\\\\import.xml) is loaded into a BLOB beforehand: 
+Récupération de la référence du dernier élément XML du parent racine. La structure XML (C:\\\\import.xml) est préalablement chargée dans un BLOB : 
 
 ```4d
- var myBlobVar : Blob
- var $ref_XML_Parent;$ref_XML_Child : Text
- var $childName;$childValue : Text
+ var maVarBlob : Blob
+ var $ref_XML_Parent;$ref_XML_Enfant : Text
+ var $nomEnfant;$valeurEnfant : Text
  
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $ref_XML_Parent:=DOM Parse XML variable(myBlobVar)
- $ref_XML_Child:=DOM Get last child XML element($ref_XML_Parent;$childName;$childValue)
+ DOCUMENT TO BLOB("c:\\import.xml";maVarBlob)
+ $ref_XML_Parent:=DOM Parse XML variable(maVarBlob)
+ $ref_XML_Enfant:=DOM Get last child XML element($ref_XML_Parent;$nomEnfant;$valeurEnfant)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1\. Otherwise, it is set to 0.
+Si la commande a été correctement exécutée, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [DOM Get first child XML element](dom-get-first-child-xml-element.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 925 |
+| Numéro de commande | 925 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

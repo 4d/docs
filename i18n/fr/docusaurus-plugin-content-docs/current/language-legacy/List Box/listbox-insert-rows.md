@@ -5,56 +5,56 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *object* : Text ; *rowPosition* : Integer {; *numRows* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *object* : Variable ; *rowPosition* : Integer {; *numRows* : Integer} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *objet* ; *positionLigne* {; *nbLignes*} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| rowPosition | Integer | &#8594;  | Position of the row to insert |
-| numRows | Integer | &#8594;  | Number of rows to insert |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#8594;  | Emplacement de la ligne à insérer |
+| nbLignes | Integer | &#8594;  | Nombre de lignes à insérer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|13|Modified|
-|12|Renamed|
-|2004|Created|
+|13|Renommé|
+|13|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Summary-->The **LISTBOX INSERT ROWS** command inserts one or several new row(s) in the list box set in the *object* and *\** parameters.<!-- END REF--> 
+<!--REF #_command_.LISTBOX INSERT ROWS.Summary-->La commande **LISTBOX INSERT ROWS** insère une ou plusieurs nouvelle(s) ligne(s) dans l’objet list box désigné par les paramètres *objet* et *\**.<!-- END REF-->
 
-**Note:** This command only works with list boxes based on arrays. When this command is used with a list box based on a selection of records/entities or a collection, it does nothing and the OK system variable is set to 0.
+**Note :** Cette commande fonctionne uniquement avec les list box basées sur des tableaux. Lorsque cette commande est utilisée avec une list box basée sur une sélection d'entités/d'enregistrements ou une collection, elle ne fait rien et la variable système OK retourne 0.
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*.
 
-By default, if *numRows* is omitted, only one row is inserted. Otherwise, the command inserts the number of rows defined in this parameter.
+Par défaut, si le paramètre *nbLignes* est omis, une seule ligne est insérée. Sinon, la commande insère le nombre de lignes défini dans ce paramètre.
 
-This command inserts the row(s) at the position set by the *rowPosition* parameter and these row(s) are automatically added at this position in all the arrays used by the list box columns, whatever their type and their visibility.
+La ou les ligne(s) est (sont) insérée(s) à l’emplacement défini par le paramètre *positionLigne* et est (sont) automatiquement ajoutée(s) à cet emplacement dans tous les tableaux composant la list box, quel que soit leur type, y compris dans les tableaux (colonnes) masqués.
 
-If the *rowPosition* value is higher than the total number of rows in the list box, the command adds the row(s) at the end of each array. If it is equal to 0, the command adds the row(s) at the beginning of each array. If it contains a negative value, the command does nothing.
+Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux de la list box, la commande effectue l'ajout à la fin de chaque tableau. S'il est égal à 0, la commande effectue l'ajout au début de chaque tableau. S'il contient une valeur négative, la commande ne fait rien.
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX DELETE ROWS](listbox-delete-rows.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 913 |
+| Numéro de commande | 913 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

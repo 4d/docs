@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.Discover data key.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if a valid encryption key for the currently open data file has been found, else False |
+| Résultat | Boolean | &#8592; | Vrai si une clé de chiffrement valide a été trouvée pour le fichier de données courant, sinon Faux |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R5|Created|
+|17 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Discover data key.Summary-->The **Discover data key** command searches for a valid encryption key corresponding to the currently opened data file at the root level of all connected devices and returns **True** if successful.<!-- END REF--> 
+<!--REF #_command_.Discover data key.Summary-->La commande **Discover data key** recherche, à la racine de tous les appareils connectés, une clé de chiffrement valide correspondant au fichier de données courant et retourne **Vrai** si l'opération est réussie.<!-- END REF--> 
 
-Connected devices to be searched include USB keys or external disks. A valid encryption key is necessary to allow read/write access to an encrypted database. This command can be called, for example, at database startup, after the user has been invited to connect a USB key.
+Les appareils connectés à rechercher incluent les clés USB ou les disques externes. Une clé de chiffrement valide est nécessaire pour l'accès en lecture/écriture à la base chiffrée. Cette commande peut être appelée, par exemple, au démarrage de la base, une fois que l'utilisateur a été invité à se connecter à la clé USB.
 
-Key files (".4DKeyChain" extension files) must be stored at the top level of connected devices (the search will not go through the folder hierarchy). Encryption keys must be saved in JSON format (see *Storing data encryption keys in files* in the *4D Design Reference*).
+Les fichiers de clés (fichiers d'extension ".4DKeyChain") doivent être stockés à la racine des appareils connectés (la recherche ne s'effectuera pas via l'arborescence du dossier). Les clés de chiffrement doivent être sauvegardées au format JSON (voir *Sauvegarder les clés de chiffrement des données dans des fichiers* dans le manuel *4D Mode Développement*).
 
-**Returned value**
+**Valeur retournée**
 
-* **True** if a valid encryption key is found for the current opened data file, in which case:  
-   * the encryption key is applied if necessary so that encrypted data is usable (access to read / write operations).  
-   * the encryption key is added to the 4D keychain.
-* **False** if no valid encryption key is found for the current opened data file, thus access to the data is not possible.
+* **Vrai** si une clé de chiffrement valide a été trouvée pour le fichier de données courant, auquel cas :  
+   * la clé de chiffrement est appliquée si nécessaire, afin que les données chiffrées soient utilisables (opérations d'accès en lecture/écriture).  
+   * la clé de chiffrement est ajoutée au trousseau 4D.
+* **Faux** si une clé de chiffrement valide n'a pas été trouvée pour le fichier de données courant, auquel cas l'accès aux données est impossible.
 
-## Example 
+## Exemple 
 
 ```4d
  var $status : Object
@@ -48,25 +48,25 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
  
  $status:=ds.encryptionStatus()
  
- If(($status.isEncrypted)&(Not($status.keyProvided))) //no key is available
-  // thus access to encrypted data is not allowed
+ If(($status.isEncrypted)&(Not($status.keyProvided))) //aucune clé n'est disponible
+  // l'accès aux données chiffrées n'est donc pas autorisé
     $keyFound:=Discover data key
     If($keyFound=True)
-       ALERT("A valid encryption key has been found.")
+       ALERT("Une clé de chiffrement valide a été trouvée.")
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
+  
 [New data key](new-data-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1639 |
+| Numéro de commande | 1639 |
 | Thread safe | yes |
 
 

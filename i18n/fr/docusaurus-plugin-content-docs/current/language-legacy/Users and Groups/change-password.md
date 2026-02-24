@@ -5,51 +5,51 @@ slug: /commands/change-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *password* : Text )<!-- END REF-->
+<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *motDePasse* )<!-- END REF-->
 <!--REF #_command_.CHANGE PASSWORD.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| password | Text | &#8594;  | New password |
+| motDePasse | Text | &#8594;  | Nouveau mot de passe |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.CHANGE PASSWORD.Summary-->CHANGE PASSWORD changes the password of the current user.<!-- END REF--> This command replaces the current password with the new password you pass in *password*. 
+<!--REF #_command_.CHANGE PASSWORD.Summary-->**CHANGE PASSWORD** permet de changer le mot de passe de l'utilisateur courant.<!-- END REF--> Cette commande remplace le mot de passe courant par le nouveau mot de passe que vous passez dans *motDePasse*. 
 
-**Warning:** Password are case-sensitive.
+**Attention :** Les mots de passe différencient les caractères majuscules et minuscules.
 
-## Example 
+## Exemple 
 
-The following example allows the user to change his or her password.
+L'exemple suivant permet à l'utilisateur de modifier son mot de passe :
 
 ```4d
- CHANGE CURRENT USER // Present user with password dialog
+ CHANGE CURRENT USER // Afficher la boîte de dialogue des mots de passe
  If(OK=1)
-    $pw1:=Request("Enter new password for "+Current user)
-  // The password should be at least five characters long
+    $pw1:=Request("Saisissez le nouveau mot de passe pour "+Current user)
+  // Le mot de passe doit comporter au moins cinq caractères
     If(((OK=1)&($pw1#""))&(Length($pw1)>5))
-  // Make sure the password has been entered correctly
-       $pw2:=Request("Enter password again")
+  // Vérifier qu'un mot de passe valide a été saisi
+       $pw2:=Request("Saisissez de nouveau le mot de passe")
        If((OK=1)&($pw1=$pw2))
-          CHANGE PASSWORD($pw2) // Change the password
+          CHANGE PASSWORD($pw2) // Modifier le mot de passe
        End if
     End if
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [CHANGE CURRENT USER](change-current-user.md)  
 [OBJECT SET FONT](object-set-font.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 186 |
+| Numéro de commande | 186 |
 | Thread safe | no |
 
 

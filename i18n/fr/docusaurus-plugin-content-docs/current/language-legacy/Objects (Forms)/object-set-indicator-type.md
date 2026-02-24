@@ -5,53 +5,53 @@ slug: /commands/object-set-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( * ; *object* : Text ; *indicator* : Integer )<br/>**OBJECT SET INDICATOR TYPE** ( *object* : Variable, Field ; *indicator* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( {* ;} *objet* ; *indicateur* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| indicator | Integer | &#8594;  | Indicator type |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| indicateur | Integer | &#8594;  | Type d’indicateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->The **OBJECT SET INDICATOR TYPE** command modifies the type of progress indicator for the thermometer(s) designated by the *object* and *\** parameters in the current process.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET INDICATOR TYPE.Summary-->La commande **OBJECT SET INDICATOR TYPE** vous permet de modifier le type d’indicateur de progression du ou des thermomètre(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-The indicator type defines the display variant of the thermometer. For more information, refer to *Indicators* in the *Design Reference* manual. 
+Le type d’indicateur définit la variante d’affichage du thermomètre. Pour plus d’informations, reportez-vous à la section *Jauges* dans le manuel *Mode Développement*. 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-In the *indicator* parameter, pass the type of indicator you want to display. You can use one of the following constants, found in the "*Form Objects (Properties)*" theme:
+Passez dans le paramètre *indicateur* le type d’indicateur à afficher. Vous pouvez utiliser une des constantes suivantes, placées dans le thème "*Objets de formulaire (Propriétés)*" :
 
-| Constant                  | Type    | Value | Comment                                            |
-| ------------------------- | ------- | ----- | -------------------------------------------------- |
-| Asynchronous progress bar | Integer | 3     | Circular indicator displaying continuous animation |
-| Barber shop               | Integer | 2     | Bar displaying continuous animation                |
-| Progress bar              | Integer | 1     | Standard progress bar                              |
+| Constante                 | Type        | Valeur | Comment                                                |
+| ------------------------- | ----------- | ------ | ------------------------------------------------------ |
+| Asynchronous progress bar | Entier long | 3      | Indicateur circulaire affichant une animation continue |
+| Barber shop               | Entier long | 2      | Barre affichant une animation continue                 |
+| Progress bar              | Entier long | 1      | Barre de progression standard                          |
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get indicator type](object-get-indicator-type.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1246 |
+| Numéro de commande | 1246 |
 | Thread safe | no |
 
 

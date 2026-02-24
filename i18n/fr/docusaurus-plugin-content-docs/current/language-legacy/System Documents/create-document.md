@@ -5,93 +5,89 @@ slug: /commands/create-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
+<!--REF #_command_.Create document.Syntax-->**Create document** ( *nomFichier* {; *typeFichier*} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | Document name or Full document pathname or Empty string for standard file dialog box |
-| fileType | Text | &#8594;  | List of types of documents to be screened, or "*" to not screen the documents |
-| Function result | Time | &#8592; | Document reference number |
+| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès complet de document ou Chaîne vide pour afficher la boîte de dialogue standard d'enregistrement de fichiers |
+| typeFichier | Text | &#8594;  | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| Résultat | Time | &#8592; | Numéro de référence du document |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Create document.Summary-->The**Create document** command creates a new document and returns its document reference number.<!-- END REF--> 
+<!--REF #_command_.Create document.Summary-->La commande **Create document** crée un document et retourne son numéro de référence de document.<!-- END REF-->
 
-Pass the name or full pathname of the new document in *document*. If *document* already exists on the disk, it is overwritten. However, if *document* is locked or already open, an error is generated.
+Vous passez le nom ou le chemin d'accès complet du nouveau document dans *document*. Si *document* existe déjà, il est remplacé. Cependant, si le document est verrouillé ou est déjà ouvert, une erreur est générée.
 
-If you pass an empty string in *document*, the Save As dialog box appears and you can then enter the name of the document you want to create. If you cancel the dialog, no document is created; **Create document** returns a null DocRef and sets the OK variable to 0.
+Si vous passez une chaîne vide dans *document*, une boîte de dialogue standard d'enregistrement de fichiers apparaît et l'utilisateur peut spécifier le nom du document. Si dans ce cas l'utilisateur clique sur le bouton **Annuler**, **Create document** retourne une référence de document nulle, et la variable OK prend la valeur 0.
 
-If the document is correctly created and opened, **Create document** returns its document reference number and sets the OK variable to 1\. The system variable Document is updated and returns the complete access path of the created document.
+**Create document** crée par défaut un document de type TEXT (macOS) ou .TXT (Windows). Pour créer un autre type de document, passez un type dans le paramètre optionnel *typeFichier*.
 
-Whether or not you use the Save As dialog box, **Create document** creates a .TXT (Windows) or TEXT (Macintosh) document by default. If you want to create another type of document, pass the *fileType* parameter.
+Si vous utilisez la boîte de dialogue standard d'enregistrement de fichiers, vous pouvez passer dans le paramètre *typeFichier* un ou plusieurs type(s) de fichier(s) afin de configurer la liste des types autorisés dans la boîte de dialogue. Vous pouvez passer une liste de plusieurs types séparés par un ; (point virgule). Pour chaque type défini, une ligne sera ajoutée dans le menu de choix de type de la boîte de dialogue.   
+Sous Mac OS, vous pouvez passer soit type Mac OS classique (TEXT, APPL, etc.), soit un type UTI (Uniform Type Identifier). Les types UTIs ont été définis par Apple afin de répondre aux besoins d'uniformisation des types de fichiers. Par exemple, "public.text" est le type UTI des fichiers de type texte. Pour plus d'informations sur les UTIs, reportez-vous à l'adresse *https://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html* (documentation en anglais).   
+Sous Windows, vous pouvez également passer un type de fichier classique Mac OS — 4D effectue la correspondance en interne — ou l’extension des fichiers (.txt, .exe, etc.). A noter que sous Windows, l’utilisateur aura la possibilité de “forcer” l’affichage de tous les types de fichiers en saisissant \*.\* dans la boîte de dialogue. Toutefois dans ce cas, 4D effectuera une vérification supplémentaire des types des fichiers sélectionnés : si l’utilisateur sélectionne un type de fichier non autorisé, la commande retourne une erreur.   
+Si vous ne souhaitez pas restreindre les fichiers affichés à un ou plusieurs types, passez la chaîne "\*" (étoile) ou ".\*" dans *typeFichier*.   
+Sous Windows, vous pouvez passer une extension de fichier Windows ou un type de fichier Mac OS associé à l'aide de la commande *\_o\_MAP FILE TYPES*. Si vous souhaitez créer un document sans extension, un document comportant plusieurs extensions, ou un document comportant une extension de plus de trois caractères, n'utilisez pas le paramètre *typeFichier* et passez le nom complet dans *document* (cf. exemple 2). 
 
-In the *fileType* parameter, pass the type(s) of file(s) that can be selected in the opening dialog box. You can pass a list of several types separated by a ; (semi-colon). For each type set, an item will be added to the menu used for choosing the type in the dialog box. 
+Si le document est correctement créé et ouvert, **Create document** retourne sa référence de document et la variable système OK prend la valeur 1\. La variable système Document est mise à jour et retourne le chemin d’accès complet du document créé. 
 
-Under Mac OS, you can pass either a standard Mac OS type (TEXT, APPL, etc.), or a UTI (Uniform Type Identifier) type. UTIs are defined by Apple in order to meet standardization needs for file types. For example, "public.text" is the UTI type of text type files. For more information about UTIs, refer to the following address: *https://developer.apple.com/library/mac/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html*. 
+Une fois que vous avez créé et ouvert un document, vous pouvez écrire ou lire des valeurs dans ce document à l'aide des commandes [RECEIVE PACKET](receive-packet.md) et [SEND PACKET](send-packet.md), que vous pouvez combiner avec les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md) pour accéder directement à certains endroits du document. 
 
-Under Windows, you can also pass a standard Mac OS file type — 4D makes the correspondence internally — or file extensions (.txt, .exe, etc.). Note that under Windows, the user can “force” the display of all file types by entering \*.\* in the dialog box. However, in this case, 4D will carry out an additional check of the selected file types: if the user selects an unauthorized file type, the command returns an error. 
+N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](close-document.md) pour le document. 
 
-If you do not want to restrict the displayed files to one or more types, pass the "\*" (star) string or ".\*" in *fileType*. 
+## Exemple 1 
 
-On Windows you pass a Windows file extension or Macintosh file type mapped through the *\_o\_MAP FILE TYPES* mechanism. If you want to create a document without an extension, a document containing several extensions, or a document containing an extension with more than three characters, do not use the *type* parameters and pass the full name in *document* (see example2).
-
-Once you have created and opened a document, you can write and read the document using the [RECEIVE PACKET](receive-packet.md) and [SEND PACKET](send-packet.md) commands that you can combine with the [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) commands in order to directly access any part of the document.
-
-Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the document.
-
-## Example 1 
-
-The following example creates and opens a new document called Note, writes the string “Hello” into it, and closes the document:
+L'exemple suivant crée et ouvre un nouveau document qui s'appelle “Note”, écrit la chaîne “Bonjour” et le referme :
 
 ```4d
- var vhDoc : Time
- vhDoc:=Create document("Note.txt") // Create new document called Note
+ var vDoc : Time
+ vDoc:=Create document("Note.txt") // Créer un nouveau document qui s'appelle Note
  If(OK=1)
-    SEND PACKET(vhDoc;"Hello") // Write one word in the document
-    CLOSE DOCUMENT(vhDoc) // Close the document
+    SEND PACKET(vDoc;"Bonjour") // Ecrire un mot dans le document
+    CLOSE DOCUMENT(vDoc) // Fermer le document
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-The following example creates documents with non-standard extensions under Windows:
+L'exemple suivant crée sous Windows des documents avec des extensions non standard : 
 
 ```4d
- $vtMyDoc:=Create document("Doc.ext1.ext2") //Several extensions
- $vtMyDoc:=Create document("Doc.shtml") //Long extension
- $vtMyDoc:=Create document("Doc.") //No extension (the period "." is mandatory)
+ $vhMonDoc:=Create document("LeDoc.ext1.ext2") //Plusieurs extensions
+ $vhMonDoc:=Create document("LeDoc.shtml") //Extension longue
+ $vhMonDoc:=Create document("LeDoc.") //Pas d’extension (le point "." est obligatoire)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the document has been created correctly, the system variable OK is set to 1 and the system variable Document contains the full pathname and the name of *document*. 
+Si le document est correctement créé, la variable système OK prend la valeur 1 et la variable système Document contient le chemin d’accès et le nom du fichier *document*. 
 
-## See also 
+## Voir aussi 
 
 [Append document](append-document.md)  
 [Open document](open-document.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 266 |
+| Numéro de commande | 266 |
 | Thread safe | yes |
-| Modifies variables | OK, Document, error |
+| Modifie les variables | OK, Document, error |
 
 

@@ -5,55 +5,55 @@ slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( * ; *object* : Text ) : Text<br/>**OBJECT Get placeholder** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get placeholder.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Placeholder text associated with object |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| Résultat | Text | &#8592; | Texte d’exemple associé à l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get placeholder.Summary-->The **OBJECT Get placeholder** command returns the placeholder text associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> If there is no placeholder text associated with the object, the command returns an empty string.
+<!--REF #_command_.OBJECT Get placeholder.Summary-->La commande **OBJECT Get placeholder** retourne le texte d’exemple associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Si aucun texte d’exemple n’est associé à l’objet, la commande retourne une chaîne vide.
 
-You can define the placeholder text either using the Property List, or using the [OBJECT SET PLACEHOLDER](object-set-placeholder.md) command. 
+Un texte d’exemple peut avoir été défini soit via la Liste des propriétés, soit via la commande [OBJECT SET PLACEHOLDER](object-set-placeholder.md). 
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
-If the placeholder is an xliff reference defined using the Property List, the command returns the original reference in the form ":xliff:*resname*", and not its calculated value.
+Si le texte d’exemple est une référence xliff définie via la Liste des propriétés, la commande retourne la référence d’origine sous la forme ":xliff:*resname*" et non sa valeur calculée.
 
-## Example 
+## Exemple 
 
-You want to get the field placeholder text:
+Vous souhaitez lire le texte exemple d’un champ :
 
 ```4d
- $txt:=OBJECT Get placeholder([People]LastName)
+ $txt:=OBJECT Get placeholder([Personnes]Nom)
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1296 |
+| Numéro de commande | 1296 |
 | Thread safe | no |
 
 

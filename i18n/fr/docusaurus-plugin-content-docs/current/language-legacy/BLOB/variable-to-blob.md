@@ -5,75 +5,75 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; offset : Variable } )<br/>**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *blob* {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* ; *blob* {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable to store in the BLOB |
-| Blob | Blob | &#8594;  | BLOB to receive the variable |
-| offset | Variable | &#8596; | Offset within the BLOB (expressed in bytes) <br/> New offset after writing if not * |
-| * | Operator | &#8594; | Append the value |
+| variable | Variable | &#8594;  | Variable à stocker dans le BLOB |
+| blob | Blob | &#8594;  | BLOB devant recevoir la variable |
+| offset &#124; * | Variable, Opérateur | &#8596; | Offset de la variable (en octets) dans BLOB ou * pour ajouter la variable à la fin du BLOB |
+|||| Nouvel offset après écriture si * omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|14|Modified|
-|6|Created|
+|16 R4|Modifié|
+|14|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VARIABLE TO BLOB.Summary-->The VARIABLE TO BLOB command stores the variable *variable* in the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Summary-->**VARIABLE TO BLOB** stocke la variable *variable* dans le BLOB *blob*.<!-- END REF-->
 
-If you specify the \* optional parameter, the variable is appended to the BLOB and the size of the BLOB is extended accordingly. Using the \* optional parameter, you can sequentially store any number of variables or lists (see other BLOB commands) in a BLOB, as long as the BLOB fits into memory. 
+Si vous passez le paramètre optionnel \*, la *variable* est ajoutée à la fin de *blob* et la taille du BLOB est redimensionnée en conséquence. A l'aide du paramètre optionnel \*, vous pouvez stocker les unes derrière les autres autant de variables ou de listes (cf. les autres commandes BLOB) que vous voulez dans un BLOB, la seule limite étant celle de la mémoire disponible. 
 
-If you do not specify the \* optional parameter or the *offset* variable parameter, the variable is stored at the beginning of the BLOB, overriding its previous contents; the size of the BLOB is adjusted accordingly.
+Si vous ne passez pas le paramètre optionnel *\** ni de variable dans le paramètre *offset*, *variable* est stockée à partir du début du BLOB en écrasant son contenu précédent. La taille du BLOB est redimensionnée en conséquence.
 
-If you pass the *offset* variable parameter, the variable is written at the offset (starting from zero) within the BLOB. No matter where you write the variable, the size of the BLOB is increased according to the location you passed (plus the size of the variable, if necessary). Newly allocated bytes, other than the ones you are writing, are initialized to zero.
+Si vous passez la variable *offset* en paramètre, la *variable* est écrite dans le BLOB à l'offset (à partir de zéro) spécifié par *offset*. Quel que soit l'endroit où vous placez la variable, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (ainsi que de la taille de la variable). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therefore, you can reuse that same variable with another BLOB writing command to write another variable or list.
+Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre variable ou liste juste après celle que vous venez d'écrire.
 
-VARIABLE TO BLOB accepts any type of variable (including other BLOBs), except the following:
+**VARIABLE TO BLOB** accepte tous les types de variables (y compris d'autres BLOBs), à l'exception des types suivants :
 
-* Pointer
-* Array of pointers
+* Pointeurs
+* Tableaux de pointeurs
 
-Note that:
+A noter que :
 
-* if you store a Long Integer variable that is a reference to a hierarchical list (ListRef), VARIABLE TO BLOB stores the Long Integer variable, not the list. To store and retrieve hierarchical lists in and from a BLOB, use the [LIST TO BLOB](list-to-blob.md) and [BLOB to list](blob-to-list.md) commands.
-* if you pass an object or a collection in the *variable* parameter, the command places a copy (and not a reference) of it in the BLOB. If the object or collection contains pointers, their dereferenced values are stored in the BLOB, not the pointers themselves.
+* si vous stockez une variable de type Entier long qui est une référence à une liste hiérarchique (ListRef), **VARIABLE TO BLOB** stockera la variable Entier long, pas la liste. Pour stocker et récupérer des listes hiérarchiques dans un BLOB, utilisez les commandes [LIST TO BLOB](list-to-blob.md) et [BLOB to list](blob-to-list.md).
+* si vous passez dans le paramètre *variable* un objet ou une collection, la commande en place une copie (et non une référence) dans le BLOB. Si l’objet ou la collection contient des pointeurs, leur valeurs dépointées sont stockées dans le BLOB, pas les pointeurs eux-mêmes.
 
-**WARNING:** If you use a BLOB for storing variables, you must later use the command [BLOB TO VARIABLE](blob-to-variable.md) for reading back the contents of the BLOB, because variables are stored in BLOBs using a 4D internal format.
+**ATTENTION :** Si vous utilisez un BLOB pour stocker les variables, utilisez par la suite la commande [BLOB TO VARIABLE](blob-to-variable.md) pour récupérer le contenu du BLOB car les variables sont stockées dans les BLOBs avec un format interne à 4D.
 
-After the call, if the variable has been successfully stored, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, there was not enough memory.
+La variable OK prend la valeur 1 si la variable a été correctement stockée. Si l'opération n'a pas pu être effectuée à cause d'un manque de mémoire, la variable OK prend la valeur 0.
 
-**Note regarding Platform Independence:** VARIABLE TO BLOB and [BLOB TO VARIABLE](blob-to-variable.md) use a 4D internal format for handling variables stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms while using these two commands. In other words, a BLOB created on Windows using either of these commands can be reused on Macintosh, and vice-versa.
+**Note sur l'indépendance de plate-forme :** **VARIABLE TO BLOB** et [BLOB TO VARIABLE](blob-to-variable.md) utilisent un format interne à 4D pour gérer les variables stockées dans les BLOBs. Vous n'avez donc pas besoin de vous préoccuper de la conversion des octets ("byte swapping") entre les différentes plates-formes lors de l'utilisation de ces deux commandes. Un BLOB créé sous Windows à l'aide de ces deux commandes peut être réutilisé sans la moindre manipulation sous Mac OS et vice-versa.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK variable is set to 1 if the variable has been successfully stored, otherwise it is set to 0.
+La variable OK prend la valeur 1 si la variable a été correctement stockée, sinon elle prend la valeur 0.
 
-## Example 1 
+## Exemple 1 
 
-The two following project methods allow you to quickly store and retrieve any set of variables into and from a BLOB:
+Les deux méthodes projet suivantes vous permettent de stocker et de récupérer des variables dans un BLOB :
 
 ```4d
-  //STORE VARIABLES INTO BLOB project method
-  //STORE VARIABLES INTO BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
-  //STORE VARIABLES INTO BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
+  // Méthode projet STOCKER VARIABLES DANS BLOB
+  // STOCKER VARIABLES DANS BLOB ( Pointeur { ; Pointeur ... { ; Pointeur } } )
+  // STOCKER VARIABLES DANS BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
  #DECLARE(... : Pointer)
  var $vlParam : Integer
  
@@ -83,9 +83,9 @@ The two following project methods allow you to quickly store and retrieve any se
  End for
  
  
-  //RETRIEVE VARIABLES FROM BLOB project method
-  //RETRIEVE VARIABLES FROM BLOB ( Pointer { ; Pointer ... { ; Pointer } } )
-  //RETRIEVE VARIABLES FROM BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
+  // Méthode projet RECUPERER VARIABLES DANS BLOB
+  // RECUPERER VARIABLES DANS BLOB ( Pointeur { ; Pointeur ... { ; Pointeur } } )
+  // RECUPERER VARIABLES DANS BLOB ( BLOB { ; Var1 ... { ; Var2 } } )
  #DECLARE(... : Pointer)
  var $vlParam;$vlOffset : Integer
  
@@ -95,62 +95,62 @@ The two following project methods allow you to quickly store and retrieve any se
  End for
 ```
 
-After these methods have been added to your application, you can write:
+Lorsque ces méthodes ont été ajoutées à votre application, vous pouvez écrire :
 
 ```4d
- STORE VARIABLES INTO BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
+ STOCKER VARIABLES DANS BLOB(->vxBLOB;->vgImage;->taTableau1;->taTableau2)
   // ...
- RETRIEVE VARIABLES FROM BLOB(->vxBLOB;->vgPicture;->asAnArray;->alAnotherArray)
+ RECUPERER VARIABLES DANS BLOB(->vxBLOB;->vgImage;->taTableau1;->taTableau2)
 ```
 
-## Example 2 
+## Exemple 2 
 
-The two following project methods allow you to quickly store and retrieve arrays into and from documents on disk:
+Les méthodes projet suivantes vous permettent de stocker et de récupérer rapidement des variables dans les documents sur disque :
 
 ```4d
-  // SAVE ARRAY project method
-  // SAVE ARRAY (Text ; Pointer)
-  // SAVE ARRAY (Document ; -> Array)
+  // Méthode projet STOCKER VARIABLES
+  // STOCKER VARIABLES ( Texte ; Pointeur )
+  // STOCKER VARIABLES ( Document ; -> Tableau )
  #DECLARE($doc : Text ; $ptrArray : Pointer)
- var $vxArrayData : Blob
- VARIABLE TO BLOB($ptrArray->;$vxArrayData) // Store the array in the BLOB
- COMPRESS BLOB($vxArrayData) // Compress the BLOB
- BLOB TO DOCUMENT($doc;$vxArrayData) // Save the BLOB on disk
+ var $vxDonnéesTableau : Blob
+ VARIABLE TO BLOB($ptrArray->;$vxDonnéesTableau) // Stocker le tableau dans le BLOB
+ COMPRESS BLOB($vxDonnéesTableau) // Compresser le BLOB
+ BLOB TO DOCUMENT($doc;$vxDonnéesTableau) // Enregistrer le BLOB sur disque
 ```
 
 ```4d
-  // LOAD ARRAY project method
-  // LOAD ARRAY (Text ; Pointer)
-  // LOAD ARRAY (Document ; -> Array)
+  // Méthode projet CHARGER VARIABLES
+  // CHARGER VARIABLES ( Texte ; Pointeur )
+  // CHARGER VARIABLES ( Document ; -> Tableau )
  #DECLARE($doc : Text ; $ptrArray : Pointer)
- var $vxArrayData : Blob
- DOCUMENT TO BLOB($doc;$vxArrayData) // Load the BLOB from the disk
- EXPAND BLOB($vxArrayData) // Expand the BLOB
- BLOB TO VARIABLE($vxArrayData;$ptrArray->) // Retrieve the array from the BLOB
+ var $vxDonnéesTableau : Blob
+ DOCUMENT TO BLOB($doc;$vxDonnéesTableau) // Charger le BLOB du disque
+ EXPAND BLOB($vxDonnéesTableau) // Décompresser le BLOB
+ BLOB TO VARIABLE($vxDonnéesTableau;$ptrArray->) // Récupérer le tableau du BLOB
 ```
 
-After these methods have been added to your application, you can write:
+Lorsque ces méthodes ont été ajoutées à votre application, vous pouvez écrire :
 
 ```4d
- ARRAY TEXT(...;asAnyArray;...)
+ ARRAY TEXT(...;taToutTableau;...)
   //  ...
- SAVE ARRAY($vsDocName;->asAnyArray)
+ STOCKER VARIABLES($vaNomDoc;->taToutTableau)
   //  ...
- LOAD ARRAY($vsDocName;->asAnyArray)
+ CHARGER VARIABLES($vaNomDoc;->taToutTableau)
 ```
 
-## See also 
+## Voir aussi 
 
 [BLOB to list](blob-to-list.md)  
 [BLOB TO VARIABLE](blob-to-variable.md)  
 [LIST TO BLOB](list-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 532 |
+| Numéro de commande | 532 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

@@ -5,83 +5,84 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* : Table ; *statement* : Expression )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *laTable* ; *formule* )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to apply statement |
-| statement | Expression | &#8594;  | One line of code or a method |
+| laTable | Table | &#8594;  | Table dans laquelle appliquer la formule |
+| formule | Expression | &#8594;  | Ligne de code ou méthode |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Modified|
-|<6|Created|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** applies *statement* to each record in the current selection of *aTable*.<!-- END REF--> The *statement* can be a statement or a method. If *statement* modifies a record of *aTable*, the modified record is saved. If *statement* does not modify a record, the record is not saved. If the current selection is empty, **APPLY TO SELECTION** has no effect. If the relation is automatic, the *statement* can contain a field from a related table.
+<!--REF #_command_.APPLY TO SELECTION.Summary-->La commande **APPLY TO SELECTION** applique *formule* à chaque enregistrement de la sélection courante de *laTable*.<!-- END REF--> La *formule* peut être une ligne d'instructions ou une méthode (dans ce cas, le nom de la méthode doit être saisi sans ""). Si *formule* entraîne la modification d'un enregistrement de *laTable*, l'enregistrement modifié est sauvegardé. Si *formule* ne modifie pas d'enregistrement, aucune sauvegarde n'est réalisée. Si la sélection courante est vide, **APPLY TO SELECTION** ne fait rien. La *formule* peut faire appel à un champ d'une table liée si le lien est automatique.
 
-**Warning:** Parameters ($1...$n) are not supported in the *statement*. 
+**Attention :** Les paramètres ($1...$n) ne sont pas pris en charge par *formule*. 
 
-**APPLY TO SELECTION** can be used to gather information from the selection of records (for example, a total), or to modify a selection (for example, changing the first letter of a field to uppercase). If this command is used within a transaction, all changes can be undone if the transaction is canceled.
+La commande **APPLY TO SELECTION** peut être utilisée pour récupérer et traiter des informations sur une sélection d'enregistrements (par exemple, calcul d'un total), ou pour modifier une sélection (par exemple, mettre en majuscule la première lettre d'un champ). Si cette commande est utilisée à l'intérieur d'une transaction, toutes les opérations réalisées pourront être annulées si la transaction n'est pas validée.
 
-**4D Server:** The server does not execute any of the commands that may be passed in *statement*. Every record in the selection will be sent back to the local workstation to be modified.
+**4D Server :** Le serveur n'exécute aucune des commandes passées dans *formule*. Chaque enregistrement de la sélection est renvoyé sur le poste client pour traitement et modification.
 
-The progress thermometer is displayed while **APPLY TO SELECTION** is executing. To hide it, use [MESSAGES OFF](messages-off.md) prior to the call to **APPLY TO SELECTION**. If the progress thermometer is displayed, the user can cancel the operation.
+Un thermomètre de progression s'affiche pendant l'exécution d'un **APPLY TO SELECTION**. Un appel préalable à la commande [MESSAGES OFF](messages-off.md) permet de supprimer ce thermomètre. Lorsque le thermomètre de progression est affiché, l'utilisateur peut annuler l'opération.
 
-## Example 1 
+## Exemple 1 
 
-The following example changes all the names in the table \[Employees\] to uppercase:
-
-```4d
- APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
-```
-
-## Example 2 
-
-If a record is locked during execution of **APPLY TO SELECTION** and that record is modified, the record will not be saved. Any locked records that are encountered are put in a set called LockedSet. After **APPLY TO SELECTION** has executed, test LockedSet to see if any records were locked. The following loop will execute until all records have been modified:
+L'exemple suivant met en majuscule tous les noms de la table : 
 
 ```4d
- Repeat
-    APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
-    USE SET("LockedSet") // Select only locked records
- Until(Records in set("LockedSet")=0) // Done when there are no locked records
+ APPLY TO SELECTION([Emp];[Emp]Nom:=Uppercase([Emp]Nom))
 ```
 
-## Example 3 
+## Exemple 2 
 
-This example uses a method:
+Lorsque **APPLY TO SELECTION** rencontre un enregistrement verrouillé et le modifie, celui-ci n'est pas sauvegardé. Tous les enregistrements verrouillés rencontrés par la commande sont placés dans un ensemble système appelé LockedSet. Après l'exécution d'un **APPLY TO SELECTION**, il est recommandé de tester l'ensemble LockedSet pour vérifier la présence d'enregistrements verrouillés. La boucle suivante s'exécute jusqu'à ce que tous les enregistrements aient été modifiés :
 
 ```4d
- ALL RECORDS([Employees])
- APPLY TO SELECTION([Employees];M_Cap)
+ Repeat // For each enregistrement verrouillé
+    APPLY TO SELECTION([Emp];[Emp]Nom:=Uppercase([Emp]Nom))
+    USE SET("LockedSet") // Sélection des enregistrements verrouillés uniquement
+  // Jusqu'à ce qu'il n'y ait plus d'enregistrement verrouillé
+ Until(Records in set("LockedSet")=0)
 ```
 
-## System variables and sets 
+## Exemple 3 
 
-If the user clicks the Stop button in the progress thermometer, the OK system variable is set to 0\. Otherwise, the OK system variable is set to 1.
+Cet exemple utilise une méthode : 
 
-## See also 
+```4d
+ ALL RECORDS([Emp])
+ APPLY TO SELECTION([Emp];Capitales)
+```
+
+## Variables et ensembles système 
+
+Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
+
+## Voir aussi 
 
 [EDIT FORMULA](edit-formula.md)  
-*Sets*  
+*Présentation des ensembles*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 70 |
+| Numéro de commande | 70 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

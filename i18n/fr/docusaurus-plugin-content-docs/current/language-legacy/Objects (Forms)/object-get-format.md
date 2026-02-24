@@ -5,87 +5,87 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *object* : Text ) : Text<br/>**OBJECT Get format** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a field or a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Object display format |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou variable (si * omis) |
+| Résultat | Text | &#8592; | Format d’affichage de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|20 R4|Modified|
-|20 R4|Modified|
-|20|Modified|
-|15 R5|Modified|
-|12|Renamed|
-|2004|Created|
+|20 R4|Modifié|
+|20 R4|Modifié|
+|20|Modifié|
+|15 R5|Modifié|
+|12|Renommé|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get format.Summary-->The **OBJECT Get format** command returns the current display format applied to the object specified in the *object* parameter.<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Summary-->La commande **OBJECT Get format** retourne le format d’affichage courant appliqué à l’objet spécifié par le paramètre *objet*.<!-- END REF-->
 
-If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (in this case, pass a string in *object*). If you do not pass this parameter, you indicate that the *object* parameter is a field or variable. In this case, you do not pass a string, but a field or variable reference.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (dans ce cas, passez une chaîne dans *objet*). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable.
 
-This command returns the current display format of the object; in other words, the format as defined in the Design environment or using the [OBJECT SET FORMAT](object-set-format.md) command. **OBJECT Get format** works with all types of form objects (fields or variables) that accept a display format: Boolean, date, time, picture, string, number, as well as button grids, dials, thermometers, rulers, picture pop-up menus, picture buttons, 3D buttons, and list box headers. For more information on the display formats of these objects, refer to the documentation for the [OBJECT SET FORMAT](object-set-format.md) command.
+Cette commande retourne le format d’affichage courant de l’objet, c’est-à-dire le format défini en mode Développement ou à l’aide de la commande [OBJECT SET FORMAT](object-set-format.md). **OBJECT Get format** fonctionne avec tous les types d’objets de formulaire (champs ou variables) acceptant un format d’affichage : booléen, date, heure, image, chaîne, numérique, ainsi que les grilles de boutons, cadrans, thermomètres, règles, pop up menus image, boutons image, boutons 3D et en-têtes de list box. Pour plus d’informations sur les formats d’affichage de ces objets, reportez-vous à la documentation de la commande [OBJECT SET FORMAT](object-set-format.md).
 
-**Note:** If you apply the command to a set of objects, the form of the last object selected is returned.
+**Note :** Si vous appliquez la commande à un ensemble d’objets, seul le formatage du dernier objet pris en compte est retourné.
 
-When the **OBJECT Get format** command is applied to objects whose format has been set using a longint constant (date, time or picture objects), the string returned corresponds to the character code of the constant. To obtain the value of the constant, simply apply the [Character code](character-code.md) function to the result (see below).
+Lorsque la commande **OBJECT Get format** est appliquée à des objets dont le format a été défini à l'aide d'une constante longint (objets date, heure ou image), la chaîne retournée correspond au code de caractère de la constante. Pour obtenir la valeur de la constante, il suffit d'appliquer la fonction [Character code](character-code.md) au résultat (voir ci-dessous).
 
-## Example 1 
+## Exemple 1 
 
-This example allows you to obtain the value of the format constant applied to the picture variable named “myphoto”: 
+Cet exemple permet d’obtenir la valeur de la constante de formatage appliquée à la variable image dont le nom d’objet est “maphoto” :
 
 ```4d
- var $format : Text
- OBJECT SET FORMAT(*;"myphoto";Char(On background))
-  //Apply background format (value = 3)
- $format:=OBJECT Get format(*;"myphoto")
- ALERT("Format number:"+String(Character code($format)))
-  //Display value "3"
+ var $format : Texte
+ OBJECT SET FORMAT(*;"maphoto";Char(On background))
+  //Application du format sur fond (value = 3)
+ $format:=OBJECT Get format(*;"maphoto")
+ ALERT("Format numéro :"+String(Code de caractere($format)))
+  //Affichage de la valeur "3"
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example allows you to obtain the format applied to the Boolean field \[Members\]Marital\_status: 
+Cet exemple permet d’obtenir le formatage appliqué au champ booléen \[Adhérents\]Etat\_civil : 
 
 ```4d
- var $format : Text
- $format:=OBJECT Get format([Members]Marital_status)
- ALERT($format) //Display format, for example "Married;Single"
+ var $format : Texte
+ $format:=OBJECT Get format([Adhérents]Etat_civil)
+ ALERT($format) //Affichage du format, par exemple "Marié;Célibataire"
 ```
 
-## Example 3 
+## Exemple 3 
 
-Customized formats are returned untouched:
+Les formats personnalisés sont retournés inchangés :
 
 ```4d
- var $format : Text
- OBJECT SET FORMAT(*;"timeinput";":m") //":" is required for single-char patterns
+ var $format : Texte
+ OBJECT SET FORMAT(*;"timeinput";":m") //":" est nécessaire pour les modèles à un seul caractère
  $format:=OBJECT Get format(*;"timeinput") // ":m"
 ```
 
-## See also 
+## Voir aussi 
 
 [OBJECT SET FORMAT](object-set-format.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 894 |
+| Numéro de commande | 894 |
 | Thread safe | no |
 
 

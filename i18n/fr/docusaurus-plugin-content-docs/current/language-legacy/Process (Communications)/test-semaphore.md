@@ -5,61 +5,64 @@ slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaphore* : Text ) : Boolean<!-- END REF-->
+<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *sémaphore* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| semaphore | Text | &#8594;  | Name of the semaphore to test |
-| Function result | Boolean | &#8592; | True = the semaphore exists, False = the semaphore doesn’t exist |
+| sémaphore | Text | &#8594;  | Nom du sémaphore à tester |
+| Résultat | Boolean | &#8592; | Vrai = le sémaphore existe, Faux = le sémaphore n’existe pas |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5|Created|
+|6.5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Test semaphore.Summary-->The **Test semaphore** command tests for the existence of a semaphore.<!-- END REF-->
+<!--REF #_command_.Test semaphore.Summary-->La commande **Test semaphore** permet de tester l’existence d’un sémaphore.<!-- END REF--> 
 
-The difference between the [Semaphore](semaphore.md) function and the **Test semaphore** function is that **Test semaphore** doesn’t create the *semaphore* if it doesn’t exist. If the *semaphore* exists, the function returns **True**. Otherwise, it returns **False**. 
+A la différence de la fonction [Semaphore](semaphore.md), **Test semaphore** ne crée pas le sémaphore s’il n’existe pas.   
+Si le sémaphore existe, la fonction retourne **Vrai**, s’il n’existe pas elle retourne **Faux**.
 
-## Example 
+**Note :** Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
 
-The following example allows you to know the state of a process (in our case, while modifying the code) without modifying *semaphore*:
+## Exemple 
+
+Cet exemple permet de connaître l’état d’un traitement (en l’occurrence, la modification d’un code) sans modifier le sémaphore :
 
 ```4d
- $Win:=Open window(x1;x2;y1;y2;-Palette window)
+ Open window(x1;x2;y1;y2;-Palette window)
  Repeat
-    If(Test semaphore("Encrypting code"))
-       POSITION MESSAGE($x3;$y3)
-       MESSAGE("Encrypting code being modified.")
+    If(Test semaphore("Code d’encryptage"))
+       GOTO XY($x3;$y3)
+       MESSAGE("Code d'encryptage en cours de modification.")
     Else
-       POSITION MESSAGE($x3;$y3)
-       MESSAGE("Modification of the encrypting code authorized.")
+       GOTO XY($x3;$y3)
+       MESSAGE("Modification du code d'encryptage autorisée.")
     End if
  Until(StopInfo)
  CLOSE WINDOW
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR SEMAPHORE](clear-semaphore.md)  
 [Semaphore](semaphore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 652 |
+| Numéro de commande | 652 |
 | Thread safe | yes |
 
 

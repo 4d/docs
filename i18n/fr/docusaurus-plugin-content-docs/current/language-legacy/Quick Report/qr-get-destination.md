@@ -5,54 +5,54 @@ slug: /commands/qr-get-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET DESTINATION.Syntax-->**QR GET DESTINATION** ( *area* : Integer ; *type* : Integer {; *specifics* : Text, Variable} )<!-- END REF-->
+<!--REF #_command_.QR GET DESTINATION.Syntax-->**QR GET DESTINATION** ( *zone* ; *type* {; *spécificités*} )<!-- END REF-->
 <!--REF #_command_.QR GET DESTINATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| type | Integer | &#8592; | Type of the report |
-| specifics | Text, Variable | &#8592; | Specifics linked to the output type |
+| zone | Integer | &#8594;  | Référence de la zone |
+| type | Integer | &#8592; | Type d'état |
+| spécificités | Text, Variable | &#8592; | Spécificités de la destination |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET DESTINATION.Summary-->The **QR GET DESTINATION** command retrieves the output *type* of the report for the area whose reference was passed in *area*.<!-- END REF--> 
+<!--REF #_command_.QR GET DESTINATION.Summary-->La commande **QR GET DESTINATION** retourne le *type* de destination de l'état rapide contenu dans la *zone*.<!-- END REF--> 
 
-You can compare the value of the *type* parameter with the constants of the *QR Output Destination* theme.
+Vous pouvez comparer la valeur obtenue dans le paramètre *type* avec les constantes du thème *QR Destination de sortie*. Le tableau suivant décrit les valeurs qui peuvent être retournées dans les paramètres *type* et *spécificités* :
 
-The following table describes the values that can be retrieved in both *type* and *specifics* parameters:
+| Constante             | Type        | Valeur | Comment                                                                  |
+| --------------------- | ----------- | ------ | ------------------------------------------------------------------------ |
+| \_o\_qr 4D Chart area | Entier long | 4      | \*\*\* Constante obsolète \*\*\*                                         |
+| \_o\_qr 4D View area  | Entier long | 3      | \*\*\* Constante obsolète \*\*\*                                         |
+| qr HTML file          | Entier long | 5      | *spécificités* : Chemin d'accès du fichier.                              |
+| qr printer            | Entier long | 1      | *spécificités* : "\*" pour supprimer les boîtes de dialogue d'impression |
+| qr text file          | Entier long | 2      | *spécificités* : Chemin d'accès du fichier.                              |
 
-| Constant     | Type    | Value | Comment                                            |
-| ------------ | ------- | ----- | -------------------------------------------------- |
-| qr HTML file | Integer | 5     | *specifics*: Pathname to the file.                 |
-| qr printer   | Integer | 1     | *specifics*: "\*" to remove the print dialog boxes |
-| qr text file | Integer | 2     | *specifics*: Pathname to the file.                 |
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR SET DESTINATION](qr-set-destination.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 756 |
+| Numéro de commande | 756 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

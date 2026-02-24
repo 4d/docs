@@ -5,77 +5,75 @@ slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* : Text {; *silentErrors* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *cheminDossier* {; *erreursDiscrètes*} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | Pathname of folder (package under macOS) containing updated application |
-| silentErrors | Boolean | &#8594;  | False (default) = report errors visibly, <br/>True = do not report them |
+| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
+| erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Created|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET UPDATE FOLDER.Summary-->The **SET UPDATE FOLDER** command specifies the folder containing the update of the current merged 4D application.<!-- END REF--> This information is stored in the 4D session until the [RESTART 4D](restart-4d.md) method is called. If the application is exited manually, this information is not kept.
+<!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si l’application est quittée manuellement, cette information n'est pas conservée.
 
-This command is intended to be used in an automatic update process for a merged application (server or single-user). For more information, refer to the *Finalizing and deploying final applications* section in the *Design Reference* manual.
+Cette commande est destinée à être utilisée dans un processus de mise à jour automatique d’une application fusionnée (serveur ou monoposte). Pour plus d’informations, reportez-vous à la section *Finaliser et déployer les applications finales* dans le manuel *Mode Développement*.
 
-**Note:** This command only works with 4D Server or a single-user application merged with 4D Volume Desktop. 
+**Note :** La commande fonctionne uniquement avec 4D Server ou une application monoposte fusionnée avec 4D Volume Desktop. 
 
-In the *folderPath* parameter, pass the complete pathname for the folder of the new version of the merged application (folder containing the *my4DApp.exe* application under Windows or the *my4DApp* *.app* package under macOS), created by the 4D application builder. 
+Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossier de la nouvelle version de l’application fusionnée (dossier contenant l’application *monApp4D.exe* sous Windows et package *monApp4D.app* sous macOS), créée par le générateur d’applications de 4D. 
 
-**Note:** We recommend that you use the same names for the files in the new version of the application as the ones in the original, since the application folder is replaced during the update. If you use different names for these files, any stored shortcuts and/or paths will no longer work. 
+**Note :** Il est fortement conseillé d’utiliser pour les fichiers des nouvelles versions des applications le même nom que ceux des applications elles-mêmes, car le processus de mise à jour remplace le dossier de l’application. Si vous utilisez des noms différents, les raccourcis et chemins mémorisés ne fonctionneront plus. 
 
-If the parameters are valid, the update is placed "on hold" in the session until the [RESTART 4D](restart-4d.md) command is called. If you executed **SET UPDATE FOLDER** several times before calling [RESTART 4D](restart-4d.md), the last valid call is taken into account. 
+Si les paramètres sont valides, la mise à jour est placée "en attente" dans la session jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si vous exécutez plusieurs fois **SET UPDATE FOLDER** avant [RESTART 4D](restart-4d.md), le dernier appel valide est pris en compte. 
 
-In case of anomaly, an error is generated; the *silentErrors* parameter determines whether or not these errors are displayed (see below). 
+Vous pouvez passer une chaîne vide ("") dans *cheminDossier* pour réinitialiser les informations de mise à jour pour la session courante. 
 
-You can pass an empty string ("") in the *folderPath* parameter to reset the update information for the current session. 
+Le paramètre optionnel *erreursDiscrètes* permet de définir le mode de report des erreurs lors de la mise à jour :
 
-The optional *silentErrors* parameter specifies how errors are reported during the update:
+* si vous passez **Faux** ou si ce paramètre est omis, les erreurs sont inscrites dans le journal des mises à jour et affichées dans une boîte de dialogue d’alerte.
+* si vous passez **Vrai**, les erreurs sont uniquement inscrites dans le journal des mises à jour.
 
-* When you pass **False** or when this parameter is omitted, errors are recorded in the update journal and displayed in a warning dialog box.
-* If you pass **True**, errors are simply recorded in the update journal.
+Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](last-update-log-path.md).
 
-Exception: if the journal file cannot be created, a warning dialog box is displayed, regardless of the value of the *silentErrors* parameter. For more information, refer to the description of the [Last update log path](last-update-log-path.md) command.
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
 
-If the command is executed correctly, the OK system variable is set to 1; otherwise, it is set to 0\. You can intercept any errors generated by the command using a method installed using the [ON ERR CALL](on-err-call.md) command. 
+## Exemple 
 
-## Example 
-
-You created a "MyUpdates" folder on your disk, where you placed a new version of the "MyApp" application. You do not want to display errors. To prepare the update, you write:
+Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous avez placé une nouvelle version de l’application "MonAppli". Vous ne souhaitez pas afficher les erreurs. Pour préparer la mise à jour, vous écrivez :
 
 ```4d
-  // Windows syntax
- SET UPDATE FOLDER("C:\\MyUpdates"+Folder separator+"MyApp"+Folder separator;True)
+     // Syntaxe Windows
+ SET UPDATE FOLDER("C:\\MesMisesAJour"+Folder separator+"MonAppli"+Folder separator;True)
  
-  // macOS syntax
- SET UPDATE FOLDER("MacHD:MyUpdates"+Folder separator+"MyApp.app"+Folder separator;True)
+     // Syntaxe macOS
+ SET UPDATE FOLDER("MacHD:MesMisesAJour"+Folder separator+"MonAppli.app"+Folder separator;True)
 ```
 
-## See also 
+## Voir aussi 
 
-[Last update log path](last-update-log-path.md)  
+[Get last update log path](last-update-log-path.md)  
 [RESTART 4D](restart-4d.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1291 |
+| Numéro de commande | 1291 |
 | Thread safe | no |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

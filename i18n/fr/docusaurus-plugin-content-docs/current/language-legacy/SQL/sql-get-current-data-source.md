@@ -9,32 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.SQL Get current data source.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Name of current data source being used |
+| Résultat | Text | &#8592; | Nom de la source de données en cours d’utilisation |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19 R5|Renamed|
-|11 SQL|Created|
+|19 R5|Renommé|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL Get current data source.Summary-->The SQL Get current data source command returns the name of the current data source of the application.<!-- END REF--> The current data source receives the SQL queries executed within **Begin SQL/End SQL** structures.
+<!--REF #_command_.SQL Get current data source.Summary-->La commande **SQL Get current data source** retourne le nom de la source de données courante de l’application.<!-- END REF--> La source de données courante reçoit les requêtes SQL exécutées au sein de structures [Begin SQL](begin-sql.md)/[End SQL](end-sql.md).  
+Lorsque la source de données courante est la base 4D locale, la commande retourne la chaîne “;DB4D\_SQL\_LOCAL;”, correspondant à la valeur de la constante SQL\_INTERNAL (thème "*SQL*").  
+Cette commande vous permet de contrôler la source de données courante, généralement avant d’exécuter une requête SQL.
 
-When the current data source is the local 4D database, the command returns the string “;DB4D\_SQL\_LOCAL;”, which corresponds to the value of the SQL\_INTERNAL constant ("*SQL*" theme).
-
-This command lets you check the current data source, generally before executing an SQL query.
-
-## See also 
+## Voir aussi 
 
 [Begin SQL](begin-sql.md)  
 [End SQL](end-sql.md)  
@@ -42,11 +40,11 @@ This command lets you check the current data source, generally before executing 
 [SQL LOGIN](sql-login.md)  
 [SQL LOGOUT](sql-logout.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 990 |
+| Numéro de commande | 990 |
 | Thread safe | no |
 
 

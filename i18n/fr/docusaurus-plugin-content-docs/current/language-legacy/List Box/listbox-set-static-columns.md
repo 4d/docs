@@ -5,46 +5,46 @@ slug: /commands/listbox-set-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( * ; *object* : Text ; *numColumn* : Integer )<br/>**LISTBOX SET STATIC COLUMNS** ( *object* : Variable ; *numColumn* : Integer )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( {* ;} *objet* ; *nbColonnes* )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| numColumn | Integer | &#8594;  | Number of columns to make static |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| nbColonnes | Integer | &#8594;  | Nombre de colonnes à rendre statiques |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->The **LISTBOX SET STATIC COLUMNS** command sets *numColumns* columns as static (starting from the first on the left) in the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Summary-->La commande **LISTBOX SET STATIC COLUMNS** permet de rendre statiques les *nbColonnes* premières colonnes gauches de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Static columns cannot be moved within the list box.
+Les colonnes statiques (ou colonnes fixes) ne peuvent pas être déplacées dans la list box.
 
-**Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual.
+**Note :** Les colonnes statiques et les colonnes verrouillées sont deux fonctionnalités indépendantes. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-## See also 
+## Voir aussi 
 
 [LISTBOX Get static columns](listbox-get-static-columns.md)  
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1153 |
+| Numéro de commande | 1153 |
 | Thread safe | no |
 
 

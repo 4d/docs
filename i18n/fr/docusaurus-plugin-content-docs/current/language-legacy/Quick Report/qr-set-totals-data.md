@@ -5,116 +5,115 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer )<br/>**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *value* : Text )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *opérateur* )<br/>**QR SET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *valeur* )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| colNum | Integer | &#8594;  | Column number |
-| breakNum | Integer | &#8594;  | Break number |
-| operator | Integer | &#8594;  | Operator value for the cell |
-| value | Text | &#8594;  | Cell content |
+| zone | Integer | &#8594;  | Référence de la zone |
+| numColonne | Integer | &#8594;  | Numéro de colonne |
+| numRupture | Integer | &#8594;  | Numéro de rupture |
+| opérateur &#124; valeur | Entier long, Chaîne | &#8594;  | Opérateur pour la cellule ou Contenu de la cellule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note:** This command cannot create a subtotal.<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Summary-->**Note :** Cette commande ne crée pas de sous-total.<!-- END REF-->
 
-### List Mode 
+### Etat en liste 
 
-The **QR SET TOTALS DATA** command sets the details of a specific break (total or subtotal). 
+La commande **QR SET TOTALS DATA** permet de définir le contenu d'une ligne de rupture spécifique (sous-total ou total général). 
 
-*area* is the reference of the Quick Report area.
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*colNum* is the column number of the cell whose data is going to be set.
+Passez dans *numColonne* le numéro de colonne de la cellule que vous souhaitez définir.
 
-*breakNum* is the number of the break whose data will be set (subtotal or grand total). For a Subtotal, *breaknum* is the sort number. For the Grand total, *breaknum* equals -3 or the constant qr grand total of the *QR Operators* theme.
+Passez dans *numRupture* le numéro de la ligne de rupture à modifier (sous-total ou total général). Pour une ligne de sous-total, *numRupture* correspond au numéro d'ordre de la rupture. Pour le total général, *numRupture* vaut -3 (vous pouvez également utiliser la constante *qr total général* du thème *QR Lignes pour Propriétés*). 
 
-*operator* is an addition of all the operators present in the cell. You can use the constants of the *QR Operators* theme to set the value:
+Le paramètre *opérateur* contient la valeur cumulée de tous les opérateurs à placer dans la cellule. Utilisez les constantes du thème *QR Opérateurs* pour définir ce paramètre :
 
-| Constant              | Type    | Value |
-| --------------------- | ------- | ----- |
-| qr average            | Integer | 2     |
-| qr count              | Integer | 16    |
-| qr max                | Integer | 8     |
-| qr min                | Integer | 4     |
-| qr standard deviation | Integer | 32    |
-| qr sum                | Integer | 1     |
+| Constante             | Type        | Valeur |
+| --------------------- | ----------- | ------ |
+| qr average            | Entier long | 2      |
+| qr count              | Entier long | 16     |
+| qr max                | Entier long | 8      |
+| qr min                | Entier long | 4      |
+| qr standard deviation | Entier long | 32     |
+| qr sum                | Entier long | 1      |
+  
+  
+Si vous ne souhaitez utiliser aucun opérateur, passez 0 dans le paramètre *opérateur*. 
 
-If *operator* is 0, there is no operator.
+Si vous choisissez d'insérer du texte dans la cellule, passez-le dans le paramètre *valeur*. 
 
-*value* is the text to be placed in the cell.
+**Note :** Les paramètres *opérateur* et *valeur* sont mutuellement exclusifs, vous pouvez passer soit une combinaison de valeurs numériques, soit du texte. 
 
-**Note:** Operator/value is mutually exclusive, so you either set an operator or a text.
+Si vous souhaitez saisir à la fois du texte et des opérateurs, vous pouvez utiliser les codes suivants dans le paramètre *valeur* :  
+\- # pour la valeur provoquant la rupture ou le sous-total  
+\- ##S sera remplacé par la somme.  
+\- ##A sera remplacé par la moyenne.  
+\- ##C sera remplacé par le nombre  
+\- ##X sera remplacé par le maximum.  
+\- ##N sera remplacé par le minimum.  
+\- ##D sera remplacé par l'écart type.  
+\- ##xx, où xx est un numéro de colonne. Ce code sera remplacé par la valeur de la colonne désignée, dans son propre formatage. Si la colonne n'existe pas, le code apparaît dans l'état. 
 
-You can pass the following values:  
-\- # for the value that triggered the break or subtotal  
-\- ##S will be replaced by the sum.  
-\- ##A will be replaced by the Average.  
-\- ##C will be replaced by the Count  
-\- ##X will be replaced by the Max.  
-\- ##N will be replaced by the Min.  
-\- ##D will be replaced by the Standard deviation.  
-\- ##xx, where xx is a column number. This will be replaced by that column’s value, using its formatting. If this column does not exist, then it will not be replaced. 
+### Etat tableau croisé 
 
-### Cross-table Mode 
+La commande **QR SET TOTALS DATA** vous permet de définir le contenu d'une cellule spécifique.
 
-The **QR SET TOTALS DATA** command sets the details of a specific cell. 
+Passez dans *zone* la référence de la zone d'état rapide.
 
-*area* is the reference of the Quick Report area.
+Passez dans *numColonne* le numéro de colonne de la cellule que vous souhaitez définir.
 
-*colNum* is the column number of the cell whose data is going to be set.
+Passez dans *numRupture* le numéro de ligne de la cellule que vous souhaitez définir.
 
-*breakNum* is the row number of the cell whose data is going to be set.
+Le paramètre *opérateur* contient la valeur cumulée de tous les opérateurs à placer dans la cellule. Utilisez les constantes du thème *QR Opérateurs* pour définir ce paramètre (cf. paragraphe précédent).   
+Le paramètre alternatif *valeur* permet de définir le texte à insérer dans la cellule. 
 
-*operator* is an addition of all the operators present in the cell. You can use the constants of the *QR Operators* theme to set the value (see above). 
+L'illustration suivante précise la manière dont les paramètres *numColonne* et *numRupture* sont combinés dans un tableau croisé :
 
-*value* is the text to be placed in the cell.
+![](../assets/en/commands/pict31186.fr.png)
 
-Here is a depiction of how the parameters column and break have to be combined in cross-table mode:
+### Types de données acceptés 
 
-![](../assets/en/commands/pict31186.en.png)
+Vous pouvez passer deux types de données : des libellés et des opérateurs.
 
-### Supported Types of Data 
+* Libellés  
+Un libellé est une chaîne de caractères passée via le paramètre *valeur*. Cette valeur ne peut être utilisée qu'avec les cellules suivantes : *numColonne=3*,*numRupture=1* et *numColonne=1*,*numRupture=3*.
+* Opérateurs  
+Un opérateur ou un cumul d'opérateurs (cf. paragraphe précédent) peut être passé via le paramètre *opérateur* aux cellules suivantes :  
+*numColonne=2,numRupture=2*  
+*numColonne=3,numRupture=2*  
+*numColonne=2,numRupture=3*  
+Notez que ces deux dernières valeurs affectent également la cellule (colonne 3,ligne 3). En effet, si par exemple un calcul est effectué dans la cellule (colonne 2,ligne 3), le contenu de la cellule (colonne 3/ligne 3) sera modifié en conséquence.
 
-The types of data that you can pass are of two basic kinds:
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  
+Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
-* Title  
-A title is passed through the parameter *value*. The value is actually a string and can be passed only for the following cells: *colNum=3 breakNum=1* and *colNum=1* *breakNum=3*.
-* Operator  
-An operator or a combination of operators (as described above) can be passed for the following cells:  
-*colNum*\=2, *breakNum*\=2  
-*colNum*\=3, *breakNum*\=2  
-*colNum*\=2, *breakNum*\=3  
-Please note that these last two values affect the cell (Column 3; Row 3) as well. If a computation is defined in the cell (Column 2; Row 3), the contents of this cell (Column 2; Row 3) always define the contents of the cell (Column 3; Row 3).
-
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *colNum* number, the error -9852 will be generated.  
-If you pass an invalid *breakNum* number, the error -9853 will be generated.
-
-## See also 
+## Voir aussi 
 
 [QR GET TOTALS DATA](qr-get-totals-data.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 767 |
+| Numéro de commande | 767 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,57 +5,57 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *object* : Text ; *helpTip* : Text )<br/>**OBJECT SET HELP TIP** ( *object* : Variable, Field ; *helpTip* : Text )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( {* ;} *objet* ; *messageAide* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| helpTip | Text | &#8594;  | Contents of help message |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| messageAide | Text | &#8594;  | Contenu du message d’aide |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|16 R4|Modified|
-|13|Created|
+|16 R5|Modifié|
+|16 R4|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET HELP TIP.Summary-->The **OBJECT SET HELP TIP** command sets or dynamically modifies the help tip associated with the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Summary-->La commande **OBJECT SET HELP TIP** permet de définir ou de modifier dynamiquement le message d’aide associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is a form object's name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet de formulaire (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In the *helpTip* parameter, pass a character string for the contents of the message. If you pass an empty string "" , the help tip will be removed.
+Passez dans le paramètre *messageAide* une chaîne de caractères contenant le message à afficher. Si vous passez une chaîne vide "", l'infobulle est supprimée.
 
-When the form is executed, messages appear as help tips when the cursor moves over the field or object. The display delay and maximum duration of help tips can be controlled using the Tips delay and Tips duration selectors of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+Lorsque le formulaire est exécuté, les messages d'aide apparaissent sous forme d'infobulle à chaque fois que le curseur de la souris survole le champ ou l'objet. Le délai d'affichage et la durée maximum d'affichage des messages d'aide peuvent être contrôlés en utilisant les sélecteurs Tips delay et Tips duration de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 
-You can use this command with a list box object to add help tips to list box rows and cells. For example, a list box object can have a different help tip per row. In this case, you would first need to determine the position of the cursor with the [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) command. This is shown in an example below.
+Note : Vous pouvez utiliser cette commande avec une list box afin d'associer des infobulles aux lignes et cellules de la list box. Par exemple, un objet list box peut comporter une infobulle différente par ligne. Ce cas nécessite de déterminer au préalable la position du curseur à l'aide de la commande [LISTBOX GET CELL POSITION](listbox-get-cell-position.md). Ce principe est présenté dans un exemple ci-dessous.
 
-When a help tip is already displayed, calling the **OBJECT SET HELP TIP** command closes it, opens a new tip at the mouse location and restarts the Tips duration counter, allowing dynamic handling of tips. 
+Lorsqu'un message d'aide est déjà affiché, l'utilisation de la commande **OBJECT SET HELP TIP** le ferme, ouvre un nouveau message d'aide à l'endroit où se trouve la souris et redémarre le compteur Tips duration, permettant une gestion dynamique des messages d'aide.
 
-**Notes:** 
+**Notes :** 
 
-* Help tip contents can also be set using the Form editor (see *Data entry controls and assistance*) and the Structure editor (see *Field properties*) in Design mode.
-* Help tips can be globally disabled for the application using the Tips enabled selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+* Les messages d'aide peuvent également être définis via l'éditeur de formulaires (voir *Contrôles et aides à la saisie*) et l'éditeur de structure (voir *Propriétés des champs*) en mode Développement.
+* Les messages d'aide peuvent être globalement désactivés pour l'application en utilisant le sélecteur Tips enabled de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
 
-## Example 1 
+## Exemple 1 
 
-In this form, a help tip is displayed and changes dynamically when the mouse hovers over different parts of a picture button:
+Dans ce formulaire, un message d'aide est affiché et change dynamiquement lorsque la souris survole des zones différentes du bouton-image :
 
-![](../assets/en/commands/pict3351402.en.png)
+![](../assets/en/commands/pict3424849.fr.png)
 
 ```4d
-  //"myFlag" object method
+  //Méthode objet du bouton-image nommé "myFlag"
  
  var $x;$y;oldX;oldY : Real
  var $left;$right;$top;$bottom : Real
@@ -67,29 +67,29 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
  Case of
     :(FORM Event.code=On Load)
        oldTip:=""
-       SET DATABASE PARAMETER(Tips enabled;1) //To make sure tips are enabled
-       SET DATABASE PARAMETER(Tips delay;0) // Tip displayed immediately at mouse stop
-       SET DATABASE PARAMETER(Tips duration;60*10) // 10 seconds max display
+       SET DATABASE PARAMETER(Message aide activation;1) //Pour être sûr que les messages d'aide sont activés
+       SET DATABASE PARAMETER(Message aide délai;0) // Le message est affiché dès que la souris s'arrête
+       SET DATABASE PARAMETER(Message aide durée;60*10) // Affichage de 10 secondes
     :(FORM Event.code=On Mouse Move)
        MOUSE POSITION($x;$y;$b)
        OBJECT GET COORDINATES(*;"myFlag";$left;$top;$right;$bottom)
        $x:=$x-$left
        $y:=$y-$top
-       Case of //each part of the flag is 76 pixels
+       Case of //chaque zone du drapeau fait 76 pixels
           :($x<76)
-             $tip:="Green color"
+             $tip:="Couleur verte"
           :($x<152)
-             $tip:="White color"
-          Else
-             $tip:="Orange color"
+             $tip:="Couleur blanche"
+             sinon
+             $tip:="Couleur rouge"
        End case
  
-       $doRefresh:=($tip#oldtip) //true if different tip
-       If(Not($doRefresh)) //Same contents
-          $doRefresh:=((Abs($x-oldX)>30)|(Abs($y-oldY)>30)) //true if cursor moved
+       $doRefresh:=($tip#oldtip) //Vrai si le message d'aide est différent
+       If(Not($doRefresh)) //contenus identiques
+          $doRefresh:=((Abs($x-oldX)>30)|(Abs($y-oldY)>30)) //Vrai si le curseur a bougé
        End if
  
-       If($doRefresh) //display another tip
+       If($doRefresh) //Affiche un autre message
           OBJECT SET HELP TIP(*;"myFlag";$tip)
           oldX:=$x
           oldY:=$y
@@ -99,9 +99,9 @@ In this form, a help tip is displayed and changes dynamically when the mouse hov
  End case
 ```
 
-## Example 2 
+## Exemple 2 
 
-You have a list box, "Commands List", containing a list and you want to set a help tip displaying the description for each list item. The description is in the \[Documentation\] table. 
+Vous avez défini une list box "liste de commandes" et vous souhaitez proposer des infobulles affichant la description de chaque élément de la liste. La description se trouve dans la table \[Documentation\]. 
 
 ```4d
  var $mouseX;$mouseY;$mouseZ : Real
@@ -110,44 +110,39 @@ You have a list box, "Commands List", containing a list and you want to set a he
  Case of
  
     :(FORM Event.code=On Mouse Enter)
- 
-       SET DATABASE PARAMETER(Tips delay;1) // make the tip appear quickly
+       SET DATABASE PARAMETER(Tips delay;1) // l'infobulle doit s'afficher rapidement
  
     :(FORM Event.code=On Mouse Move)
- 
-  //#1 : find which row is hovered
- 
+  //#1 : trouver quelle ligne est survolée
        MOUSE POSITION($mouseX;$mouseY;$mouseZ)
        LISTBOX GET CELL POSITION(*;"Commands List";$mouseX;$mouseY;$col;$row)
  
-  //#2 : setup the matching help tip
- 
+  //#2 : définir l'infobulle à afficher
        If($row#0)
           GOTO SELECTED RECORD([Documentation];$row)
-          OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // the full description will be used as "help tip" when (if) the mouse stops moving.
+          OBJECT SET HELP TIP(*;"Commands List";[Documentation]Description) // la description complète sera utilisée comme message d'aide lorsque (si) la souris est immobile
        End if
  
     :(FORM Event.code=On Mouse Leave)
- 
-       SET DATABASE PARAMETER(Tips delay;3) // make the tip appear normaly
+       SET DATABASE PARAMETER(Tips delay;3) //Retour délai normal
  
  End case
 ```
 
-The result is...
+Résultat :
 
 ![](../assets/en/commands/pict3529022.en.png)
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get help tip](object-get-help-tip.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1181 |
+| Numéro de commande | 1181 |
 | Thread safe | no |
 
 

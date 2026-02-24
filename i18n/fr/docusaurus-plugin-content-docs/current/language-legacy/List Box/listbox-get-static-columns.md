@@ -5,50 +5,49 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *object* : Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Integer | &#8592; | Number of static columns |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Nombre de colonnes statiques |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LISTBOX Get static columns.Summary-->The **LISTBOX Get static columns** command returns the number of static columns in the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Summary-->La commande **LISTBOX Get static columns** retourne le nombre de colonnes statiques dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-Static columns can be set through the Property List or using the [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md) command.
+Les colonnes statiques peuvent avoir été définies via la Liste des propriétés ou à l’aide de la commande [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md). 
 
-If a column is inserted or deleted by programming within a set of static columns, the number of columns returned by this command takes this change into account.   
-However, the command does not take into account the visible/invisible status of columns.
+Si une colonne a été insérée ou supprimée par programmation à l’intérieur d’un ensemble de colonnes statiques, le nombre de colonnes retourné par cette commande tient compte de cette modification. En revanche, la commande ne tient pas compte du statut visible/invisible des colonnes.
 
-**Note:** Static columns and locked columns are two independent functions. For more information, refer to the *Design Reference* manual. 
+**Note :** Les colonnes statiques et les colonnes verrouillées sont deux fonctionnalités indépendantes. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
-## See also 
+## Voir aussi 
 
 [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1154 |
+| Numéro de commande | 1154 |
 | Thread safe | no |
 
 

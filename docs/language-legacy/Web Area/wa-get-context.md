@@ -1,6 +1,7 @@
 ---
 id: wa-get-context
 title: WA Get context
+slug: /commands/wa-get-context
 displayed_sidebar: docs
 ---
 

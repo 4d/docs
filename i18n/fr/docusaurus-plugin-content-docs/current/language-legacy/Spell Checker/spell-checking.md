@@ -9,48 +9,48 @@ displayed_sidebar: docs
 <!--REF #_command_.SPELL CHECKING.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SPELL CHECKING.Summary-->The **SPELL CHECKING** command triggers the spell check of the field or variable having the focus in the currently displayed form.<!-- END REF--> The object checked must be of the string or text type.
+<!--REF #_command_.SPELL CHECKING.Summary-->La commande **SPELL CHECKING** déclenche la vérification de l’orthographe du champ ou de la variable ayant le focus dans le formulaire affiché à l’écran.<!-- END REF--> L’objet vérifié doit être de type Alpha ou Texte.
 
-**Note:** If you want to trigger the spellcheck by clicking a button in the form, make sure that this button does not have the "Focusable" property set.
+**Note :** Si vous souhaitez déclencher la correction orthographique à partir d’un bouton dans le formulaire, assurez-vous qu’il ne dispose pas de la propriété “Focusable”.
 
-Spell checking starts with the first word of the field or variable. If an unknown word is detected, the spell check dialog box appears (for more information, refer to the Design Reference manual of 4D). 4D uses the current dictionary (corresponding to the language of the application) unless you have used the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.
+La vérification débute par le premier mot du champ ou de la variable. Si un mot inconnu est détecté, la boîte de dialogue de correction apparaît (pour plus d’informations, reportez-vous au manuel Mode Développement de 4D). 4D utilise le dictionnaire courant (correspondant à la langue de l’application) sauf si vous avez utilisé la commande [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
 
-**Warning:** The **SPELL CHECKING** command affects the text that is being entered in the form, and not the associated data source (field or variable). This means that if you call this command from the On Data Change or On Losing Focus form events (not recommended), it will not affect the stored text since 4D has already assigned the entered text to the data source at this point. In this case, you need to assign the edited result to the data source yourself, using the [Get edited text](get-edited-text.md) command. For example:  
+**Attention :** La commande **SPELL CHECKING** agit sur le texte en cours de saisie dans le formulaire, et non sur sa source de données associée (variable ou champ). Ce principe implique que si la commande est appelée depuis les événements formulaire On Data Change ou On Losing Focus (non recommandé), elle n'aura pas d'effet sur le texte stocké car à ce moment, 4D a déjà assigné le texte saisi à la source de données. Dans ce cas, vous devez alors assigner vous-même le résultat modifié à la source de données, via la commande [Get edited text](get-edited-text.md). Par exemple :  
 
 ```4d
- If(Form event code=On Data Change)
+ If(Form event code=Sur données modifiées)
     SPELL CHECKING
     theVariable:=Get edited text
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [SPELL CHECK TEXT](spell-check-text.md)  
 [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 900 |
+| Numéro de commande | 900 |
 | Thread safe | no |
 
 

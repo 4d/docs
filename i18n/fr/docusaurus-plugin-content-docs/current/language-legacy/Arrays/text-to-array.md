@@ -5,77 +5,77 @@ slug: /commands/text-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* : Text ; *arrText* : Text array ; *width* : Integer ; *fontName* : Text ; *fontSize* : Integer {; *fontStyle* : Integer {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varTexte* ; *tabTexte* ; *largeur* ; *nomPolice* ; *taillePolice* {; *stylePolice* {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| varText | Text | &#8594;  | Original text to be divided |
-| arrText | Text array | &#8592; | Array containing the text divided into words or lines |
-| width | Integer | &#8594;  | Maximum width of string (in pixels) |
-| fontName | Text | &#8594;  | Name of font |
-| fontSize | Integer | &#8594;  | Size of font |
-| fontStyle | Integer | &#8594;  | Style of font |
-| * | Operator | &#8594;  | If passed = interpret text as multistyle |
+| varText | Text | &#8594;  | Texte original à découper |
+| tabTexte | Text array | &#8592; | Tableau contenant le texte découpé en mots ou lignes |
+| largeur | Integer | &#8594;  | Largeur maximale de la chaîne (en pixels) |
+| nomPolice | Text | &#8594;  | Nom de police |
+| taillePolice | Integer | &#8594;  | Taille de police |
+| stylePolice | Integer | &#8594;  | Style de police |
+| * | Opérateur | &#8594;  | Si passé = interpréter le texte en multistyle |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.TEXT TO ARRAY.Summary-->The **TEXT TO ARRAY** command transforms a text variable into a text array.<!-- END REF--> The original varText text (styled or not) is divided and each part becomes an element of the *arrText* array that is returned by the command. This command can be used for example to fill pages or columns with text of a set size.
+<!--REF #_command_.TEXT TO ARRAY.Summary-->La commande **TEXT TO ARRAY** permet de transformer une variable texte en tableau texte.<!-- END REF--> Le texte d’origine (stylé ou non) est découpé et chaque morceau devient un élément du tableau *tabTexte* qui est retourné par la commande. Cette commande peut être utilisée par exemple pour remplir des pages ou des colonnes de texte de taille fixe.
 
-The original text is divided into "words" based on a line size defined by the command parameters and which takes any styles used into account. 
+Le découpage du texte original est effectué en "mots" à partir d’une taille de ligne définie par les paramètres de la commande et tenant compte des styles utilisés. 
 
-In the *varText* parameter, you pass the text to be divided into array elements. This text may or may not be multistyle. Some parameters are ignored when the text is multistyle.
+Passez dans *varTexte* le texte à découper en éléments de tableaux. Ce texte peut être multistyle ou non. Certains paramètres seront ignorés si le texte est multistyle.
 
-In the *arrText* parameter, you pass the name of the array to be filled by the divided text.
+Passez dans *tabTexte* le nom du tableau qui sera rempli par le texte découpé.
 
-In the *width* parameter, you pass a size in pixels indicating the maximum line length to measure when dividing the text. For the entire text, the command evaluates the maximum number of words that can "fit" into this width based on the graphic attributes of the text (font, style). 
+Passez dans *largeur* une taille en pixels indiquant la longueur maximum de ligne à mesurer pour découper le texte. Pour l’ensemble du texte, la commande évaluera le nombre maximum de mots pouvant "tenir" dans cette largeur en fonction des attributs graphiques du texte (police, style). 
 
-* If it is multistyle text, the styles of the original text are taken into account and the following parameters are ignored if they are passed. In this case, the lines of text in the resulting array keep their original styles (so that they can be printed one by one through a text or string variable for example).
-* If it is raw text (no styles), you must pass all the parameters so that the command is able to calculate the length of the lines.
+* Si le texte est multistyle, les styles du texte original seront pris en compte et les paramètres suivants seront ignorés s’ils sont passés. Dans ce cas, les lignes de texte dans le tableau résultant conserveront leurs styles (afin de pouvoir être imprimées une par une via une variable texte ou alpha par exemple).
+* Si le texte est brut (sans styles), vous devez passer tous les paramètres afin que la commande puisse calculer la longueur des lignes.
 
-Each array element must contain at least one word. If the *width* passed is too small for the dividing rule to be strictly respected, the array is filled as close as possible according to the parameters and the OK variable is set to 0\. For example, if you pass a width of 3 pixels, it is probable that most of the words will be bigger than this length. In this case, the OK variable is set to 0\.   
-This also means that the theoretical maximum size of the array returned is equal to the number of words found in *varText*.
+Chaque élément du tableau doit contenir au moins un mot. Si la *largeur* passée est trop faible pour que la règle de découpage soit entièrement respectée, le tableau sera rempli de la façon la plus proche possible des paramètres et la variable OK prendra la valeur 0\. Par exemple, si vous passez une largeur de 3 pixels, il est probable que la taille de la plupart des mots sera au-delà de cette longueur. Dans ce cas, la variable OK prendra la valeur 0\.   
+Ce principe implique également que la taille théorique maximale du tableau retourné est égale au nombre de mots présents dans *varTexte*. 
 
-In the *fontName* and *fontSize* parameters, you pass the font name and size with which *varText* must be evaluated by the command in order to divide it. These parameters are mandatory in the case of raw text. 
+Passez dans *nomPolice* et *taillePolice* le nom et la taille de la police de caractères avec laquelle *varTexte* doit être évalué par la commande pour effectuer le découpage. Ces paramètres sont obligatoires dans le cas d’un texte brut. 
 
-In the *fontStyle* parameter, you pass one or more constants from the *Font Styles* theme:
+Passez dans *stylePolice* une ou une combinaison de constante(s) du thème *Styles de caractères* :
 
-| Constant  | Type    | Value |
-| --------- | ------- | ----- |
-| Bold      | Integer | 1     |
-| Italic    | Integer | 2     |
-| Plain     | Integer | 0     |
-| Underline | Integer | 4     |
+| Constante | Type        | Valeur |
+| --------- | ----------- | ------ |
+| Bold      | Entier long | 1      |
+| Italic    | Entier long | 2      |
+| Plain     | Entier long | 0      |
+| Underline | Entier long | 4      |
 
-This parameter is optional; when it is omitted, the Plain style is used. 
+Ce paramètre est optionnel ; s’il est omis, le style Plain est utilisé. 
 
-The optional *\** parameter, if passed, forces the *fontName*, *fontSize* and/or *fontStyle* parameters to be taken into account for multistyle text when these parameters are not defined in the original text. However, if these parameters are defined in the original text, then the parameters passed to the command are ignored in all cases.
+Le paramètre optionnel *\**, s’il est passé, permet de forcer la prise en compte des paramètres *nomPolice*, *taillePolice* et/ou *stylePolice* pour les textes multistyles lorsque ces paramètres ne sont pas définis dans le texte d’origine. S’ils sont définis dans le texte, les paramètres passés à la commande sont ignorés dans tous les cas. 
 
-## Example 1 
+## Exemple 1 
 
-We want to divide a multistyle text into lines with a maximum size of 200 pixels:
+Nous souhaitons découper un texte multistyle en lignes d’une taille maximale de 200 pixels : 
 
 ```4d
- TEXT TO ARRAY(theText;TextArray;200;"Arial";20;Plain;*)
-  // the Arial, 20, and Normal attributes are only taken into account if they are not defined in the text
+ TEXT TO ARRAY(leTexte;leTabTexte;200;"Arial";20;Plain;*)
+  // les attributs Arial, 20, Normal ne seront pris en compte que s’ils ne sont pas définis dans le texte
 ```
 
-## Example 2 
+## Exemple 2 
 
-We want to divide raw text into lines with a maximum size of 350 pixels in Bodoni Bold font, size 14\. Since the command does not work correctly if the font is not available, it is important to check for its presence:
+Nous souhaitons découper un texte brut en lignes d’une taille maximale de 350 pixels en police Bodoni gras 14\. Comme la commande ne fonctionne pas correctement si la police n’est pas disponible, il est utile de vérifier sa présence :
 
 ```4d
  ARRAY TEXT($FontList;0)
@@ -83,48 +83,48 @@ We want to divide raw text into lines with a maximum size of 350 pixels in Bodon
  $Font:="Bodoni"
  $p:=Find in array($FontList;$Font)
  If($p>0)
-    TEXT TO ARRAY(theText;TextArray;350;"Bodoni";14;Bold)
+    TEXT TO ARRAY(leTexte;leTabTexte;350;"Bodoni";14;Bold)
  Else
-  // use another font
+  // utiliser une autre police.
  End if
 ```
 
-## Example 3 
+## Exemple 3 
 
-Multistyle text must be printed without any styles in Arial Normal font, size 12 with a maximum width of 600 pixels:
+Un texte multistyle doit être imprimé sans style dans la police Arial normal 12 avec une largeur maximale de 600 pixels : 
 
 ```4d
-  // we transform the multistyle text into raw text
- $RawText:=OBJECT Get plain text(vText)
-  // we fill the array
- TEXT TO ARRAY($RawText;TextArray;600;"Arial";12)
+  // on transforme le texte multistyle en texte brut
+ $RawText:=OBJECT Get plain text(vText)  
+  // on remplit le tableau
+ TEXT TO ARRAY($RawText;tabTexte;600;"Arial";12)
 ```
 
-## Example 4 
+## Exemple 4 
 
-You need to print in a 400-pixel wide area, a text with a maximum of 80 lines and using the largest font possible (without exceeding 24 points). You can write:
+Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum de 80 lignes et ce, avec la plus grande taille de police possible (ne devant pas dépasser 24 points). Vous pouvez écrire : 
 
 ```4d
- ARRAY TEXT(TextArray;0)
- $Size:=24
+ ARRAY TEXT(tabTexte;0)
+ $Taille:=24
  Repeat
-    TEXT TO ARRAY($RawText;TextArray;400;"Arial";$Size)
-    $Size:=$Size-1
-    $n:=Size of array(TextArray)
+    TEXT TO ARRAY($RawText;tabTexte;400;"Arial";$Taille)
+    $Taille:=$Taille-1
+    $n:=Size of array(tabTexte)
  Until($n<=80)
 ```
 
-## See also 
+## Voir aussi 
 
-[Split string](split-string.md)  
+[Split string](../commands/split-string  
 [ST Get plain text](st-get-plain-text.md)  
 [ST Get text](st-get-text.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1149 |
+| Numéro de commande | 1149 |
 | Thread safe | no |
 
 

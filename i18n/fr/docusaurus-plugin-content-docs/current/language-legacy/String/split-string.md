@@ -5,43 +5,43 @@ slug: /commands/split-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Split string.Syntax-->**Split string** ( *stringToSplit* : Text ; *separator* : Text {; *options* : Integer} ) : Collection<!-- END REF-->
+<!--REF #_command_.Split string.Syntax-->**Split string** ( *chaîneASéparer* ; *séparateur* {; *options*} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| stringToSplit | Text | &#8594;  | String value |
-| separator | Text | &#8594;  | String at which stringToSplit splits. If empty string (""), each character of stringToSplit is a substring |
-| options | Integer | &#8594;  | Option(s) regarding empty strings and spaces |
-| Function result | Collection | &#8592; | Collection of substrings |
+| chaîneASéparer | Text | &#8594;  | Chaîne d'origine à découper |
+| séparateur | Text | &#8594;  | Chaîne à laquelle chaîneASéparer doit être découpée. Si chaîne vide (""), chaque caractère de chaîneASéparer sera un élément de la collection |
+| options | Integer | &#8594;  | Option(s) relative(s) aux chaînes vides et espaces |
+| Résultat | Collection | &#8592; | Collection de sous-chaînes |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Split string.Summary-->The **Split string** command returns a collection of strings, created by splitting *stringToSplit* into substrings at the boundaries specified by the *separator* parameter.<!-- END REF--> The substrings in the returned collection do not include *separator* itself.
+<!--REF #_command_.Split string.Summary-->La commande **Split string** retourne une collection de chaînes, créée à partir du découpage de *chaîneASéparer* en sous-chaînes aux limites définies par le paramètre *séparateur*.<!-- END REF--> Les sous-chaînes dans la collection retournée n'incluent pas le *séparateur* lui-même.
 
-If no *separator* is found in *stringToSplit*, **Split string** returns a collection containing a single element, *stringToSplit*. If you passed an empty string in *separator*, **Split string** returns a collection of each character of *stringToSplit*.
+Si aucun *séparateur* n'est trouvé dans *chaîneASéparer*, **Split string** retourne une collection contenant un seul élément, *chaîneASéparer*. Si vous passez une chaîne vide dans *séparateur*, **Split string** retourne une collection de chaque caractère de *chaîneASéparer*.
 
-In the *options* parameter, you can pass one or a combination of the following constants from the *Strings* theme:
+Dans le paramètre *options*, vous pouvez passer une ou une combinaison des constantes suivantes du thème *Chaînes* :
 
-| Constant                | Type    | Value | Comment                                                               |
-| ----------------------- | ------- | ----- | --------------------------------------------------------------------- |
-| sk ignore empty strings | Integer | 1     | Remove empty strings from the resulting collection (they are ignored) |
-| sk trim spaces          | Integer | 2     | Trim space characters at the beginning and end of substrings          |
+| Constante               | Type        | Valeur | Comment                                                                       |
+| ----------------------- | ----------- | ------ | ----------------------------------------------------------------------------- |
+| sk ignore empty strings | Entier long | 1      | Supprimer les chaînes vides de la collection résultante (elles sont ignorées) |
+| sk trim spaces          | Entier long | 2      | Retirer les espaces au début et à la fin des sous-chaînes                     |
 
-## Example 1 
+## Exemple 1 
 
 ```4d
  var $vt : Text
@@ -54,9 +54,9 @@ In the *options* parameter, you can pass one or a combination of the following c
  $col:=Split string($vt;";";sk ignore empty strings+sk trim spaces) //["John","Doe","120 jefferson st.","Riverside","NJ","08075"]
 ```
 
-## Example 2 
+## Exemple 2 
 
-The *separator* parameter can be a multiple-character string: 
+Le paramètre *séparateur* peut être une chaîne de plusieurs caractères : 
 
 ```4d
  var $vt : Text
@@ -66,15 +66,15 @@ The *separator* parameter can be a multiple-character string:
   //$col=["Name","Smith","age","40"]
 ```
 
-## See also 
+## Voir aussi 
 
 [TEXT TO ARRAY](text-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1554 |
+| Numéro de commande | 1554 |
 | Thread safe | yes |
 
 

@@ -5,44 +5,44 @@ slug: /commands/save-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* : Integer ; *listName* : Text )<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *liste* ; *nomListe* )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | List reference number |
-| listName | Text | &#8594;  | Name of the list as it will appear in the Design environment List Editor |
+| liste | Integer | &#8594;  | Numéro de référence de liste |
+| nomListe | Text | &#8594;  | Nom de la liste tel qu'il doit apparaître dans l'éditeur d'énumérations en mode Développement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAVE LIST.Summary-->The SAVE LIST command saves the list whose reference number you pass in *list*, within the Design environment List Editor, under the name you pass in *listName*.<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Summary-->La commande **SAVE LIST** sauvegarde la liste dont vous avez passé le numéro de référence dans *liste*, sous le nom que vous avez passé dans *nomListe*.<!-- END REF--> La liste est stockée en tant qu'énumération dans l'éditeur d'énumérations du mode Développement.
 
-If there is already a list with this name, its contents are replaced.
+Si une énumération de même nom existe déjà, son contenu est remplacé.
 
-**Note:** This command cannot be used in a structure loaded in **read only**, such as a .4dz project (which includes [remote projects](../Desktop/clientServer.md)) or a component.
+**Note** : Cette commande ne peut pas être utilisée dans une structure chargée en **lecture seule**, telle qu'un projet .4dz ou un composant.
 
-## See also 
+## Voir aussi 
 
 [Load list](load-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 384 |
+| Numéro de commande | 384 |
 | Thread safe | no |
 
 

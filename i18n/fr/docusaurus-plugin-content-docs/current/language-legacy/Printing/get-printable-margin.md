@@ -5,65 +5,61 @@ slug: /commands/get-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| left | Integer | &#8592; | Left margin |
-| top | Integer | &#8592; | Top margin |
-| right | Integer | &#8592; | Right margin |
-| bottom | Integer | &#8592; | Bottom margin |
+| gauche | Integer | &#8592; | Marge gauche |
+| haut | Integer | &#8592; | Marge supérieure |
+| droite | Integer | &#8592; | Marge droite |
+| bas | Integer | &#8592; | Marge inférieure |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.8.1|Created|
+|6.8.1|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->The GET PRINTABLE MARGIN command returns the current values of the different margins defined using the [Print form](./commands/print-form), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.<!-- END REF--> 
+<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->La commande **GET PRINTABLE MARGIN** retourne les valeurs courantes des différentes marges définies lors de l’utilisation des commandes [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->
 
-The values are returned in pixels with respect to the paper edges. 
+Les valeurs sont retournées en pixels par rapport au bord du papier. 
 
-It is possible to obtain the paper size as well as to calculate the printable area using the [GET PRINTABLE AREA](get-printable-area.md) function.
+Il est possible d’obtenir la taille du papier à l’aide de la fonction [GET PRINTABLE AREA](get-printable-area.md), et ainsi de calculer la zone imprimable.
 
-### About Printable Margin Management 
+### Gestion des marges d’impression 
 
-By default, the printing calculation in 4D is based on “printable margins”. The advantage of this system is that the forms adapt themselves automatically to the new printers (since they are positioned in the printable area). On the other hand, in the case of pre-printed forms, it was not possible to position the elements to be printed precisely because changing the printer can modify the printable margins.
+Par défaut, dans 4D le calcul des impressions est effectué sur la base des “marges imprimante”. L’avantage de ce système est que les formulaires s’adaptent automatiquement aux nouvelles imprimantes (puisque positionnés dans la partie imprimable). En revanche, dans le cas des formulaires pré-imprimés, il n’est pas possible de positionner précisément les éléments à imprimer car un changement d’imprimante peut modifier les marges imprimante.
 
-It is possible to base the form printing carried out using the [Print form](./commands/print-form), [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands on a fixed margin which is identical on each printer: the paper margins, i.e. the physical limits of the sheet. To do this, simply use the [GET PRINTABLE MARGIN](get-printable-margin.md), [SET PRINTABLE MARGIN](set-printable-margin.md) and [GET PRINTABLE AREA](get-printable-area.md) commands.
+Il est possible de baser l’impression des formulaires effectuée à l’aide des commandes [Print form](../commands/print-form.md), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md) sur une marge fixe et identique sur chaque imprimante : la marge papier, c’est-à-dire les limites physiques de la feuille. Pour cela, il suffit d’utiliser les commandes [GET PRINTABLE MARGIN](get-printable-margin.md), [SET PRINTABLE MARGIN](set-printable-margin.md) et [GET PRINTABLE AREA](get-printable-area.md).
 
-## About Printing Terminology 
+## Terminologie des impressions 
 
-**Paper margin**: the paper margin corresponds to the physical limits of the sheet.  
-  
-**Printer margin**: the printer margin is the margin beyond which the printer is incapable of printing (for material reasons: print rollers, printer head end-of-travel...). It varies from one printer to another and from one format to another.  
-  
-**Dead margin**:this refers to the area located between the paper margin and the printer margin. 
+* **Marge papier** : la marge papier correspond aux limites physiques de la feuille.
+* **Marge imprimante** : la marge imprimante est la marge au-dela de laquelle l’imprimante est incapable d’imprimer (pour des raisons physiques : galets d’impression, fin de course de la tête d’impression...). Elle varie d’une imprimante à l’autre et d’un format à l’autre.
+* **Marge morte** : c’est la zone située entre la marge papier et la marge imprimante.  
+![](../assets/en/commands/pict28491.fr.png)
 
-![](../assets/en/commands/pict28491.en.png)
-
-## See also 
+## Voir aussi 
 
 [GET PRINTABLE AREA](get-printable-area.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 [SET PRINTABLE MARGIN](set-printable-margin.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 711 |
+| Numéro de commande | 711 |
 | Thread safe | no |
-
 
 

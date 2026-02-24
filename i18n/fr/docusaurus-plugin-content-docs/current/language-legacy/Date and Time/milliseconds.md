@@ -9,33 +9,33 @@ displayed_sidebar: docs
 <!--REF #_command_.Milliseconds.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Number of milliseconds elasped since the machine was started |
+| Résultat | Integer | &#8592; | Nombre de millisecondes (1000ème de seconde) écoulées depuis le démarrage de la machine |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Milliseconds.Summary-->Milliseconds returns the number of milliseconds (1000th of a second) elapsed since the machine was started.<!-- END REF-->
+<!--REF #_command_.Milliseconds.Summary-->**Milliseconds** retourne le nombre de millisecondes (1 milliseconde = 1/1000ème de seconde) écoulées depuis le démarrage de la machine.<!-- END REF-->
 
-The returned value is a signed longint, up to 2^31 (around 2 billion milliseconds or 24 days). When the machine has been running for more than 24 days, the number becomes negative.
+La valeur retournée est un entier long signé allant jusqu'à 2^31 (environ 2 milliards de millisecondes ou 24 jours). Lorsque la machine est lancée depuis plus de 24 jours, la valeur devient négative.
 
-The purpose of the command is to measure short periods of time with a high precision. A 24-day range is more than large enough for comparisons, but you need to be careful. When comparing values, always work with the difference between two values. Never compare the values directly since one could be negative and the other positive.
+Le but de la commande est de mesurer de courtes périodes de temps avec une très grande précision. Une plage de 24 jours est suffisamment longue pour effectuer des comparaisons, mais il est important de prendre des précautions. Lors de la comparaison de valeurs, travaillez systématiquement avec les différences entre les valeurs. Ne comparez jamais les valeurs directement, l'une d'elles pouvant être négative et l'autre positive.
 
-## Example 
+## Exemple 
 
-The following code waits up to 5 seconds for a locked record to become unlocked or it ends:
+Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouillé : 
 
 ```4d
  If(Locked([Table_1]))
@@ -44,27 +44,27 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
        DELAY PROCESS(Current process;15)
        LOAD RECORD([Table_1])
        $waittime:=Milliseconds-$starttime
-    Until(Not(Locked([Table_1]))|(Process aborted)|($waittime>5000)) //wait 5 seconds max
+    Until(Not(Locked([Table_1]))|(Process aborted)|($waittime>5000)) //patientez 5 secondes maximum
  End if
 ```
 
-**Note:** Always compare the difference between two calls of **Milliseconds** as shown above, never compare directly, *e.g.*:  
+**Note :** Pensez à toujours comparer la différence entre deux appels de **Milliseconds** tel qu'indiqué ci-dessus, et à ne jamais faire de comparaison directe, comme par exemple :   
 
 ```4d
- (Milliseconds>($starttime+5000)) //never do it like this, as one could be positive, one negative
+ (Milliseconds>($starttime+5000)) // ne suivez jamais cet exemple, l'une des valeurs pouvant être positive et l'autre négative
 ```
 
-## See also 
+## Voir aussi 
 
 [Current time](current-time.md)  
 [Tickcount](tickcount.md)  
-[Timestamp](timestamp.md)  
+[Timestamp](../commands/timestamp)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 459 |
+| Numéro de commande | 459 |
 | Thread safe | yes |
 
 

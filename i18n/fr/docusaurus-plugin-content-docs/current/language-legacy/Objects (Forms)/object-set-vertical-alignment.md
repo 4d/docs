@@ -5,60 +5,60 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *object* : Variable, Field ; *alignment* : Integer )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( {* ;} *objet* ; *alignement* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| alignment | Integer | &#8594;  | Alignment code |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| alignement | Integer | &#8594;  | Code d’alignement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->The **OBJECT SET VERTICAL ALIGNMENT** command modifies the type of vertical alignment applied to the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->La commande **OBJECT SET VERTICAL ALIGNMENT** vous permet de modifier par programmation le type d’alignement vertical appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-In *alignment*, you pass one of the following constants found in the *Form Objects (Properties)* theme: 
+Passez dans le paramètre *alignement* une des constantes suivantes du thème *Objets de formulaire (Propriétés)* :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Align bottom  | Integer | 4     |
-| Align center  | Integer | 3     |
-| Align default | Integer | 1     |
-| Align top     | Integer | 2     |
+| Constante     | Type        | Valeur | Comment       |
+| ------------- | ----------- | ------ | ------------- |
+| Align bottom  | Entier long | 4      | <br/> |
+| Align center  | Entier long | 3      | <br/> |
+| Align default | Entier long | 1      |               |
+| Align top     | Entier long | 2      | <br/> |
 
-Vertical alignment can be applied to the following form objects:
+Les objets de formulaire auxquels un alignement vertical peut être appliqué sont les suivants :
 
-* list boxes,
-* list box columns,
-* list box headers and footers.
+* list box,
+* colonnes de list box,
+* en-tête et pieds de list box.
 
-## See also 
+## Voir aussi 
 
 [OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
 [OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
 [OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1187 |
+| Numéro de commande | 1187 |
 | Thread safe | no |
 
 

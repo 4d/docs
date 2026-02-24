@@ -5,72 +5,72 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to test if record pointer is before the first selected record, or Default table, if omitted |
-| Function result | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
+| laTable | Table | &#8594;  | Table pour laquelle vous testez si le pointeur se trouve avant la sélection |
+| Résultat | Boolean | &#8592; | Avant sélection (Vrai) sinon (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Before selection.Summary-->**Before selection** returns TRUE when the current record pointer is before the first record of the current selection of *table*.<!-- END REF-->is commonly used to check whether or not [PREVIOUS RECORD](previous-record.md) has moved the current record pointer before the first record. If the current selection is empty, **Before selection** returns TRUE.
+<!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](previous-record.md) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
 
-To move the current record pointer back into the selection, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) does not move the pointer back into the selection.
+Pour replacer le pointeur d'enregistrement courant dans la sélection courante, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) ne replace pas le pointeur d'enregistrement courant dans la sélection courante.
 
-**Before selection** also returns TRUE in the first header when a report is being printed with [PRINT SELECTION](print-selection.md) or from the Print menu. You can use the following code to test for the first header and print a special header for the first page:
+**Before selection** retourne Vrai dans l'en-tête lorsqu'un état est en cours d'impression à l'aide de la commande [PRINT SELECTION](print-selection.md) ou à partir de la commande de menu Imprimer. Vous pouvez utiliser le code suivant pour tester le premier en-tête et imprimer un en-tête spécial pour la première page :
 
 ```4d
-  // Method of a form being used as output form for a summary report
+  // Méthode d'un formulaire sortie utilisé pour un état
  $vpFormTable:=Current form table
  Case of
   // ...
-    :(Form event code=On Header)
-  // A header area is about to be printed
+    :(Form event code=Sur entête)
+  // La zone en-tête va être imprimée
        Case of
           :(Before selection($vpFormTable->))
-  // Code for the first break header goes here
+  // Le code pour la première rupture d'en-tête doit être placé ici
   // ...
        End case
  End case
 ```
 
-## Example 
+## Exemple 
 
-This form method is used during the printing of a report. It sets a variable, *vTitle*, to print in the Header area on the first page:
+La méthode formulaire suivante est utilisée pendant l'impression d'un état. Elle définit une variable *vTitre* à imprimer dans la zone d'en-tête sur la première page :
 
 ```4d
-  // [Finances];"Summary" Form Method
+  // Méthode formulaire [Finances];"Tableau"
  Case of
   // ...
-    :(Form event code=On Header)
+    :(Form event code=Sur entête)
+  // La zone en-tête va être imprimée
        Case of
-          :(Before selection([Finances))
-             vTitle:="Corporate Report 1997" // Set the title for the first page
+          :(Before selection([Finances]))
+             vTitre:="Etat des finances pour 1997" // Définir le titre pour la première page
           Else
-             vTitle:="" // Clear the title for all other pages
+             vTitre:="" // Effacer le titre pour les autres pages
        End case
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [End selection](end-selection.md)  
 [FIRST RECORD](first-record.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [PREVIOUS RECORD](previous-record.md)  
 [PRINT SELECTION](print-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 198 |
+| Numéro de commande | 198 |
 | Thread safe | yes |
-
 
 

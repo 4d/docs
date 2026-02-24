@@ -1,6 +1,7 @@
 ---
 id: mail-convert-to-mime
 title: MAIL Convert to MIME
+slug: /commands/mail-convert-to-mime
 displayed_sidebar: docs
 ---
 

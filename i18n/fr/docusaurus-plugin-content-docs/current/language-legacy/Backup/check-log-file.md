@@ -9,50 +9,50 @@ displayed_sidebar: docs
 <!--REF #_command_.CHECK LOG FILE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.4|Created|
+|2004.4|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CHECK LOG FILE.Summary-->The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window)<!-- END REF-->:
+<!--REF #_command_.CHECK LOG FILE.Summary-->La commande **CHECK LOG FILE** affiche la boîte de dialogue de visualisation du fichier d’historique courant de la base (également accessible via la fenêtre du Centre de sécurité et de maintenance) <!-- END REF-->:
 
-![](../assets/en/commands/pict4835044.en.png)
+![](../assets/en/commands/pict4835044.fr.png)
 
-This dialog box includes the **Rollback** button that can be used to cancel operations carried out on the data of the database. For more information about this dialog box, please refer to the Design Reference manual of 4D.
+Cette boîte de dialogue comporte le bouton **Revenir en arrière**, permettant d’annuler des opérations effectuées sur les données de la base. Pour plus d’informations sur cette boîte de dialogue, reportez-vous au manuel Mode Développement de 4D.
 
-**Note:** Since the rollback function is relatively powerful, it is recommended that access to the CHECK LOG FILE command be restricted to the database administrators.
+**Note :** La fonction de retour en arrière étant relativement puissante, il est conseillé de restreindre l’accès à la commande **CHECK LOG FILE** aux administrateurs de la base.
 
-This command can only be used in the context of single-user applications. More particularly, it allows access to the rollback function from 4D Volume Desktop applications (applications with no Design mode). If it is called within a client/server application, the command has no effect and the error 1421 is returned.
+Cette commande est utilisable dans le contexte d’une application monoposte uniquement. Elle permet notamment d'accéder à la fonction de retour en arrière depuis les applications 4D Volume Desktop (applications sans mode Développement). Si elle est appelée dans une application client/serveur, elle ne fait rien et l’erreur 1421 est retournée.
 
-## Error Handling 
+## Gestion des erreurs 
 
-* If this command is executed in a database operating without a log file, it does nothing and the error 1403 is returned.
-* If this command is executed in a client/server database, it does nothing and the error 1421 is returned.  
-You can intercept these errors using an error-handling method installed with the [ON ERR CALL](on-err-call.md) command.
+* Si cette commande est exécutée dans une base de données fonctionnant sans fichier d’historique, elle ne fait rien et l’erreur 1403 est retournée.
+* Si cette commande est exécutée sur une base client/serveur, elle ne fait rien et l’erreur 1421 est retournée.  
+Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md).
 
-## See also 
+## Voir aussi 
 
-*Backup Manager Errors (1401 -> 1421)*  
+*Erreurs du gestionnaire de sauvegarde (1401 -> 1421)*  
 [RESTORE](restore.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 799 |
+| Numéro de commande | 799 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

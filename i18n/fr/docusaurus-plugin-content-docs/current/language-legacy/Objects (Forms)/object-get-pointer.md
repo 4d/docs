@@ -5,74 +5,72 @@ slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** ( *selector* : Integer {; *objectName* : Text {; *subformName* : Text}}) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *sélecteur* {; *nomObjet* {; *nomSousFormulaire*}})} : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Object category |
-| objectName | Text | &#8594;  | Object name |
-| subformName | Text | &#8594;  | Subform object name |
-| Function result | Pointer | &#8592; | Pointer to object variable |
+| sélecteur | Integer | &#8594;  | Catégorie d’objet |
+| nomObjet | Text | &#8594;  | Nom d'objet |
+| nomSousFormulaire | Text | &#8594;  | Nom d'objet sous-formulaire |
+| Résultat | Pointer | &#8592; | Pointeur sur la variable de l’objet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get pointer.Summary-->The **OBJECT Get pointer** command returns a pointer to the variable of a form object.<!-- END REF--> 
+<!--REF #_command_.OBJECT Get pointer.Summary-->La commande **OBJECT Get pointer** retourne un pointeur vers la variable d’un objet de formulaire.<!-- END REF--> 
 
-This command can be used to designate different objects according to the value of the *selector* parameter. You can pass one of the following constants (found in the "*Form Objects (Access)*" theme) in this parameter:
+Cette commande permet de désigner différents types d'objets en fonction du paramètre *sélecteur*. Vous pouvez passer dans ce paramètre l’une des constantes suivantes (placées dans le thème *Objets de formulaire (Accès)*) :
 
-* Object current or *selector* omitted: If you omit the *selector* parameter or pass this selector, the command returns a pointer to the variable associated with the current object (object whose method is executing).  
-**Note:** This is strictly equivalent to the previous functioning of the [Self](self.md) command. This command is only kept for compatibility reasons.
-* Object with focus: If you pass this selector, the command returns a pointer to the variable associated with the object that has the focus in the form. The last two optional parameters are ignored if they are passed.  
-**Note:** This is strictly equivalent to the functioning of the [Focus object](focus-object.md) command. This command is now obsolete beginning with 4D v12\.
-* Object subform container: If you pass this selector, the command returns a pointer to the variable bound with the subform container. The last two optional parameters are ignored if they are passed. This selector can therefore only be used in the context of a form used as a subform, so as to access the variable bound with the container object.
-* Object named: If you pass this selector, you must also pass the second parameter, *objectName*. In this case, the command returns a pointer to the variable associated with the object whose name was passed in this parameter.  
-**Note:** If *objectName* corresponds to a subform and the "Output subform" option is checked, the command returns a pointer to the table of the subform if a source table is specified; otherwise it returns Nil.
+* Object current ou *sélecteur* omis : Si vous omettez le paramètre *sélecteur* ou passez ce sélecteur, la commande retourne un pointeur vers la variable associée à l’objet courant (objet dont la méthode est en cours d’exécution).  
+**Note :** Ce fonctionnement équivaut strictement à celui de la commande historique [Self](self.md). La commande [Self](self.md) est conservée pour des raisons de compatibilité uniquement.
+* Object with focus : Si vous passez ce sélecteur, la commande retourne un pointeur vers la variable associée à l’objet ayant le focus dans le formulaire. Les deux derniers paramètres optionnels sont ignorés s’ils sont passés.  
+**Note :** Ce fonctionnement équivaut strictement à celui de la commande [Focus object](focus-object.md). La commande [Focus object](focus-object.md) est obsolète à compter de 4D v12\.
+* Object subform container : Si vous passez ce sélecteur, la commande retourne un pointeur vers la variable liée au conteneur du sous-formulaire. Les deux derniers paramètres optionnels sont ignorés s’ils sont passés. Ce sélecteur ne peut donc être utilisé que dans le contexte d’un formulaire utilisé comme sous-formulaire, afin d’accéder à la variable liée à l’objet conteneur.
+* Object named : Si vous passez ce sélecteur, vous devez également passer le deuxième paramètre, *nomObjet*. Dans ce cas, la commande retourne un pointeur vers la variable associée à l’objet dont vous avez passé le nom dans ce paramètre.  
+**Note :** Si *nomObjet* correspond à un sous-formulaire et que l’option "Sous-formulaire liste" est cochée, la commande retourne un pointeur vers la table du sous-formulaire si une table source est définie et Nil dans le cas contraire.
 
-**Note:** When it is used in the context of a list box, **OBJECT Get pointer** with Object current or Object with focus selectors returns a pointer to the list box, the column, or the header, depending on the context. For more information, please refer to the *Managing List Box Objects* page.
+Le paramètre optionnel *nomSousFormulaire* vous permet de récupérer un pointeur vers un objet *nomObjet* n’appartenant pas au contexte courant, c’est-à-dire au formulaire parent. Pour pouvoir utiliser ce paramètre, vous devez avoir passé le sélecteur Object named.   
+ Lorsque le paramètre *nomSousFormulaire* est passé, la commande **OBJECT Get pointer** recherche dans un premier temps l’objet sous-formulaire nommé *nomSousFormulaire* dans le formulaire courant, puis recherche à l’intérieur de ce sous-formulaire un objet nommé *nomObjet*. Si cet objet est trouvé, elle retourne un pointeur vers la variable de cet objet.
 
-The optional *subformName* parameter lets you retrieve a pointer to an *objectName* object that does not belong to the current context, in other words, in the parent form. To be able to use this parameter, you must have passed the Object named selector.   
-When the *subformName* parameter is passed, the **OBJECT Get pointer** command first looks for the subform object named *subformName* in the current form, then looks inside this subform for an object named *objectName*. If this object is found, it returns a pointer to the variable of this object.
+## Exemple 
 
-## Example 
-
-Given a form "SF" used twice as a subform in the same parent form. The subform objects are named "SF1" and "SF2". The "SF" form contains an object named *CurrentValue*. In the "On Load" form event of the form method of the parent form, we want to initialize the *CurrentValue* object of SF1 to "January" and that of SF2 to "February": 
+Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même formulaire parent. Les objets sous-formulaires sont nommés "SF1" et "SF2". Le formulaire "SF" contient un objet nommé *ValeurCourante*. Dans l’événement "Sur chargement" de la méthode formulaire du formulaire parent, nous souhaitons initialiser l’objet *ValeurCourante* de SF1 à "Janvier" et celui de SF2 "Février" : 
 
 ```4d
  var $Ptr : Pointer
- $Ptr:=OBJECT Get pointer(Object named;"CurrentValue";"SF1")
- $Ptr->:="January"
- $Ptr:=OBJECT Get pointer(Object named;"CurrentValue";"SF2")
- $Ptr->:="February"
+ $Ptr:=OBJECT Get pointer(Object named;"ValeurCourante";"SF1")
+ $Ptr->:="Janvier"
+ $Ptr:=OBJECT Get pointer(Object named;"ValeurCourante";"SF2")
+ $Ptr->:="Février"
 ```
 
-## See also 
+## Voir aussi 
 
 [Focus object](focus-object.md)  
-*Form Objects (Access)*  
 [OBJECT Get name](object-get-name.md)  
 [OBJECT Get subform container value](object-get-subform-container-value.md)  
-*Objects (Forms)*  
+*Objets (Formulaires)*  
+*Objets de formulaire (Accès)*  
 [Self](self.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1124 |
+| Numéro de commande | 1124 |
 | Thread safe | no |
 
 

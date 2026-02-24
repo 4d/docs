@@ -5,55 +5,53 @@ slug: /commands/create-selection-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *aTable* : Table ; *recordArray* : Integer, Boolean array {; *selectionName* : Text} )<!-- END REF-->
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *laTable* ; *tabEnrg* {; *nom*} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table from which to create the selection |
-| recordArray | Integer, Boolean array | &#8594;  | Array of record numbers, or Array of booleans (True = the record is in the selection, False = the record is not in the selection) |
-| selectionName | Text | &#8594;  | Name of the named selection to create, or Apply the command to the current selection if the parameter is omitted |
+| laTable | Table | &#8594;  | Table de la sélection |
+| tabEnrg | Integer, Boolean array | &#8594;  | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans la sélection, Faux = il n’est pas dans la sélection) |
+| nom | Text | &#8594;  | Nom de la sélection temporaire à créer, ou Appliquer la commande à la sélection courante si ce paramètre est omis ou vide |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->The **CREATE SELECTION FROM ARRAY** command creates the named selection *selectionName*<!-- END REF--> from:
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->La commande **CREATE SELECTION FROM ARRAY** construit la sélection temporaire *nom*<!-- END REF--> à partir :
 
-* either an array of absolute record numbers *recordArray* from *aTable*,
-* or an array of Booleans. In this case, the values of the array indicate the belonging (**True**) or not (**False**) of each record in *table* to *selectionName*.
+* soit du tableau de numéros d’enregistrements absolus *tabEnrg* de *laTable*,
+* soit du tableau de booléens *tabEnrg* ; dans ce cas, les valeurs du tableau indiquent l’appartenance (Vrai) ou non (Faux) de chaque enregistrement de *laTable* à la sélection *nom*. Une sélection nommée est créée et chargée en mémoire. Par conséquent, assurez-vous que vous disposez de suffisamment de mémoire avant d'exécuter cette commande.
 
-**Warning:** A named selection is created and loaded into memory. Therefore, make sure that you have enough memory before executing this command.
+Si vous ne passez pas le paramètre *nom* ou si vous passez une chaîne vide, la commande s’appliquera à la sélection courante de *laTable*, qui sera donc mise à jour.
 
-If you don’t pass *selectionName* or if you pass an empty string, the command will be applied to the current selection, which will then be updated.
+Lorsque vous utilisez la commande avec un tableau d’entiers longs, tous les numéros du tableau représentent la liste des numéros d’enregistrements qui feront partie de la sélection *nom*. Si un numéro est invalide (enregistrement non créé), l’erreur -10503 est générée.
 
-When you use a Longint array with this command, all the numbers of the array represent the list of record numbers in *selectionName*. If a number is incorrect (record not created), error -10503 is generated.
+**Note :** Attention, vous devez veiller à ce que le tableau ne contienne pas d'éléments ayant la même valeur, sinon la sélection résultante sera incorrecte.
 
-**Note:** Be careful, you must make sure that the array does not contain any lines that have the same value, otherwise the resulting selection will be incorrect.
+Lorsque vous utilisez la commande avec un tableau de booléens, le Nième élément du tableau représente l’intégration (Vrai) ou non (Faux) de l’enregistrement numéro N dans la sélection *nom*. En principe, le nombre d’éléments du tableau doit être égal au nombre d’enregistrements de *laTable*. Si le tableau est plus petit que le nombre d’enregistrements, seuls les enregistrements définis par le tableau pourront faire partie de la sélection.
 
-When you use a Boolean array with this command, the Xth element of the array indicates if the record number X is (**True**) or is not (**False**) in *selectionName*. The number of elements in *recordArray* must be equal to the number of records in *table*. If the array is smaller than the number of records, only the records defined by the array can make up the selection.
+**Note :** Avec un tableau de booléens, la commande utilise les éléments du numéro 0 au numéro N-1.
 
-**Note:** With an array of booleans, the command uses elements from numbers 0 to X-1.
+**Attention** : N'oubliez pas qu'un numéro d'enregistrement peut être réutilisé si l'enregistrement est supprimé et qu'un autre enregistrement est créé (voir *A propos des numéros d'enregistrements*).
 
-**Warning:** Keep in mind that a record number can be reused if the record is deleted and another record is created (see *About Record Numbers*). 
+## Gestion des erreurs 
 
-## Error management 
+Si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
 
-If a record number is invalid (record not created), the error -10503 is generated. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
-
-## See also 
+## Voir aussi 
 
 [CLEAR NAMED SELECTION](clear-named-selection.md)  
 [COPY NAMED SELECTION](copy-named-selection.md)  
@@ -62,13 +60,13 @@ If a record number is invalid (record not created), the error -10503 is generate
 [SELECTION TO ARRAY](selection-to-array.md)  
 [USE NAMED SELECTION](use-named-selection.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 640 |
+| Numéro de commande | 640 |
 | Thread safe | yes |
-| Modifies variables | error |
-| Changes current selection ||
+| Modifie les variables | error |
+| Change la sélection courante ||
 
 

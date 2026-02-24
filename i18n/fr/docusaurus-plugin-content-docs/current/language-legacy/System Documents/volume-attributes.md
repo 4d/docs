@@ -5,85 +5,87 @@ slug: /commands/volume-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* : Text ; *size* : Real ; *used* : Real ; *free* : Real )<!-- END REF-->
+<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* ; *taille* ; *utilisé* ; *libre* )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| volume | Text | &#8594;  | Volume name |
-| size | Real | &#8592; | Volume size expressed in bytes |
-| used | Real | &#8592; | Used space expressed in bytes |
-| free | Real | &#8592; | Free space expressed in bytes |
+| volume | Text | &#8594;  | Nom du volume |
+| taille | Real | &#8592; | Taille du volume exprimée en octets |
+| utilisé | Real | &#8592; | Place utilisée sur le volume exprimée en octets |
+| libre | Real | &#8592; | Place libre sur le volume exprimée en octets |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->The VOLUME ATTRIBUTES command returns, expressed in bytes, the size, the used space and the free space for the volume whose name you pass in *volume*.<!-- END REF-->If *volume* indicates a non-mounted remote volume, the OK variable is set to 0 and the three parameters return -1\. 
+<!--REF #_command_.VOLUME ATTRIBUTES.Summary-->La commande **VOLUME ATTRIBUTES** retourne la taille, la place utilisée et la place libre sur le volume dont le nom est passé dans *volume*.<!-- END REF--> Ces valeurs sont exprimées en octets.
 
-## Example 
+**Note :** Si *volume* indique un volume distant non monté, la variable OK prend la valeur 0 et les trois paramètres retournent -1\. 
 
-Your application includes some batch operations running the night or the week-end that store huge temporary files on disk. To make this process as automatic and flexible as possible, you write a routine that will automatically find the first volume whose free space is sufficient for your temporary files. You might write the following project method:
+## Exemple 
+
+Votre application comprend des opérations par lots qui sont exécutées la nuit ou pendant le week-end. Ces opérations stockent des fichiers temporaires sur disque. Pour que cette méthode soit aussi autonome et souple que possible, vous écrivez une routine qui va automatiquement chercher et utiliser le premier volume ayant de la place disponible pour les fichiers temporaires. Voici la méthode :
 
 ```4d
-  // Find volume for space Project Method
-  // Find volume for space ( Real ) -> String
-  // Find volume for space ( Space needed in bytes ) -> Volume name or Empty string
+  // Méthode projet Chercher volume pour place
+  // Chercher volume pour place ( Reel ) -> Alpha
+  // Chercher volume pour place ( Place nécessaire en octets ) -> Nom du volume ou chaîne vide
  
  #DECLARE($space : Real) -> $result : Text
- var $vsDocName : Text
+ C_STRING(255;$vaNomDoc)
  var $vlNbVolumes;$vlVolume : Integer
- var $vlSize;$vlUsed;$vlFree : Real
+ var $vlTaille;$vlUtilisé;$vlLibre : Real
  var $vhDocRef : Time
  
-  // Initialize function result
+  // Initialiser le résultat de la fonction
  $result:=""
-  // Protect all I/O operations with an error interruption method
- ON ERR CALL("ERROR METHOD")
-  // Get the list of the volumes
- ARRAY STRING(31;$asVolumes;0)
- gError:=0
- VOLUME LIST($asVolumes)
- If(gError=0)
-  // If running on windows, skip the (usual) two floppy drives
-    If(On Windows)
-       $vlVolume:=Find in array($asVolumes;"A:\\")
+  // Protéger toutes les opérations d'entrée/sortie par une méthode d'interruption d'erreur
+ ON ERR CALL("METHODE ERREUR")
+  // Obtenir la liste des volumes
+ ARRAY STRING(31;$taVolumes;0)
+ gErreur:=0
+ VOLUME LIST($taVolumes)
+ If(gErreur=0)
+  // Si nous sommes sous Windows, ignorer les deux lecteurs de disquettes
+    If(Sous Windows)
+       $vlVolume:=Find in array($taVolumes;"A:\\")
        If($vlVolume>0)
-          DELETE FROM ARRAY($asVolumes;$vlVolume)
+          DELETE FROM ARRAY($taVolumes;$vlVolume)
        End if
-       $vlVolume:=Find in array($asVolumes;"B:\\")
+       $vlVolume:=Find in array($taVolumes;"B:\\")
        If($vlVolume>0)
-          DELETE FROM ARRAY($asVolumes;$vlVolume)
+          DELETE FROM ARRAY($taVolumes;$vlVolume)
        End if
     End if
-    $vlNbVolumes:=Size of array($asVolumes)
+    $vlNbVolumes:=Size of array($taVolumes)
   // For each volume
     For($vlVolume;1;$vlNbVolumes)
-  // Get the size, used space and free space
-       gError:=0
-       VOLUME ATTRIBUTES($asVolumes{$vlVolume};$vlSize;$vlUsed;$vlFree)
-       If(gError=0)
-  // Is the free space large enough (plus an extra 32K) ?
-          If($vlFree>=($space+32768))
-  // If so, check if the volume is unlocked...
-             $vsDocName:=$asVolumes{$vlVolume}+Char(Directory symbol)+"XYZ"+String(Random)+".TXT"
-             $vhDocRef:=Create document($vsDocName)
+  // Obtenir la taille, la place utilisée et la place libre
+       gErreur:=0
+       VOLUME ATTRIBUTES($taVolumes{$vlVolume};$vlTaille;$vlUtilisé;$vlLibre)
+       If(gErreur=0)
+  // Est-ce que la place libre est suffisante (plus 32K) ?
+          If($vlLibre>=($space+32768))
+  // Si oui, vérifier que le volume n'est pas verrouillé...
+             $vaNomDoc:=$taVolumes{$vlVolume}+Char(Symbole séparateur)+"XYZ"+String(Hasard)+".TXT"
+             $vhDocRef:=Create document($vaNomDoc)
              If(OK=1)
                 CLOSE DOCUMENT($vhDocRef)
-                DELETE DOCUMENT($vsDocName)
-  // If everything's fine, return the name of the volume
-                $result:=$asVolumes{$vlVolume}
+                DELETE DOCUMENT($vaNomDoc)
+  // Si tout est ok, retourner le nom du volume
+                $result:=$taVolumes{$vlVolume}
                 $vlVolume:=$vlNbVolumes+1
              End if
           End if
@@ -93,27 +95,27 @@ Your application includes some batch operations running the night or the week-en
  ON ERR CALL("")
 ```
 
-Once this project method is added to your application, you can for instance write:
+ cette méthode projet est ajoutée à votre application, vous pouvez écrire :
 
 ```4d
- $vsVolume:=Find volume for space(100*1024*1024)
- If($vsVolume#"")
-  // Continue
+ $vaVolume:=Chercher volume pour place(100*1024*1024)
+ If($vaVolume#"")
+  // Continuer
  Else
-    ALERT("A volume with at least 100 MB of free space is required!")
+    ALERT("Un volume avec au moins 100 Mo d'espace libre est nécessaire !")
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [VOLUME LIST](volume-list.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 472 |
+| Numéro de commande | 472 |
 | Thread safe | yes |
-| Modifies variables | OK, error |
+| Modifie les variables | OK, error |
 
 

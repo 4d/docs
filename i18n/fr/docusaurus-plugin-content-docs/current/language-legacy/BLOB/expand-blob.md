@@ -5,52 +5,53 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* : Blob )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB to expand |
+| blob | Blob | &#8594;  | BLOB à décompresser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.5.3|Modified|
-|<6|Created|
+|6.5.3|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.EXPAND BLOB.Summary-->The **EXPAND BLOB** command expands the BLOB *blob* that was previously compressed using the [COMPRESS BLOB](compress-blob.md) command*.<!-- END REF-->*
+<!--REF #_command_.EXPAND BLOB.Summary-->**EXPAND BLOB** décompresse le BLOB *blob* préalablement compressé à l'aide de la commande [COMPRESS BLOB](compress-blob.md).<!-- END REF-->
 
-After the call, the OK variable is set to 1 if the BLOB has been expanded. If the expansion could not be performed, the OK variable is set to 0.
+Après l'appel de la commande, la variable système OK prend la valeur 1 si le BLOB a été correctement décompressé. 
 
-If the expansion could not be performed because of a lack of memory, no error is generated and the method resumes its execution.   
-In any other case (i.e. the BLOB has not been compressed or is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](on-err-call.md) command. 
+Si la décompression n'a pas pu être effectuée, OK prend la valeur 0\.   
+Dans ce cas, si l'erreur provient du fait que la mémoire disponible est insuffisante pour effectuer l'opération, aucune erreur n'est générée et la méthode poursuit son exécution.   
+En revanche, si l'erreur est causée par un problème plus important (le BLOB n'avait pas été compressé ou le BLOB est endommagé), l'erreur -10600 est générée. Cette erreur peut être interceptée à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). 
 
-To check if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properties.md) command.
+De manière générale, il est préférable d'appeler la commande [BLOB PROPERTIES](blob-properties.md) pour savoir si le BLOB a été compressé avant d'exécuter **EXPAND BLOB**.
 
-## Example 1 
+## Exemple 1 
 
-This example tests if the BLOB *vxMyBlob* is compressed and, if so, expands it:
+L'exemple suivant teste si le BLOB *vxMonBlob* est compressé et, si oui, le décompresse :
 
 ```4d
- BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
- If($vlCompressed#Is not compressed)
-    EXPAND BLOB(vxMyBlob)
+ BLOB PROPERTIES(vxMonBlob;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
+ If($vlCompressé#Is not compressed)
+    EXPAND BLOB(vxMonBlob)
  End if
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example allows you to select a document and then expand it, if it is compressed:
+L'exemple suivant vous permet de sélectionner un document et puis de le décompresser s'il était compressé :
 
 ```4d
  $vhDocRef :=Open document("")
@@ -58,8 +59,8 @@ This example allows you to select a document and then expand it, if it is compre
     CLOSE DOCUMENT($vhDocRef)
     DOCUMENT TO BLOB(Document;vxBlob)
     If(OK=1)
-       BLOB PROPERTIES(vxBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
-       If($vlCompressed#Is not compressed)
+       BLOB PROPERTIES(vxBlob;$vlCompressé;$vlTailleDécompressée;$vlTailleCourante)
+       If($vlCompressé#Is not compressed)
           EXPAND BLOB(vxBlob)
           If(OK=1)
              BLOB TO DOCUMENT(Document;vxBlob)
@@ -69,21 +70,21 @@ This example allows you to select a document and then expand it, if it is compre
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK variable is set to 1 if the BLOB has been successfully expanded, otherwise it is set to 0.
+La variable OK prend la valeur 1 si le BLOB a été correctement décompressé, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [BLOB PROPERTIES](blob-properties.md)  
 [COMPRESS BLOB](compress-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 535 |
+| Numéro de commande | 535 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

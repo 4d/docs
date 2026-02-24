@@ -5,58 +5,58 @@ slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *triggerLevel* : Integer ; *dbEvent* : Integer ; *tableNum* : Integer ; *recordNum* : Integer )<!-- END REF-->
+<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* ; *evenementBase* ; *numTable* ; *numEnreg* )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| triggerLevel | Integer | &#8594;  | Trigger execution cycle level |
-| dbEvent | Integer | &#8592; | Database event |
-| tableNum | Integer | &#8592; | Involved table number |
-| recordNum | Integer | &#8592; | Involved record number |
+| niveauTrigger | Integer | &#8594;  | Niveau d'exécution du trigger |
+| evenementBase | Integer | &#8592; | Evénement de base de données |
+| numTable | Integer | &#8592; | Numéro de la table |
+| numEnreg | Integer | &#8592; | Numéro de l'enregistrement |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.TRIGGER PROPERTIES.Summary-->The **TRIGGER PROPERTIES** command returns information about the trigger execution level you pass in *triggerLevel*.<!-- END REF--> You use this command in conjunction with [Trigger level](trigger-level.md) to perform different actions depending on the cascading of trigger execution levels. For more information, see *Triggers*.
+<!--REF #_command_.TRIGGER PROPERTIES.Summary-->La commande **TRIGGER PROPERTIES** fournit des informations sur le niveau d'exécution du trigger que vous avez passé dans *niveauTrigger*.<!-- END REF--> Vous devez utiliser conjointement **TRIGGER PROPERTIES** et [Trigger level](trigger-level.md) pour effectuer différentes actions en fonction de la cascade du trigger. Reportez-vous à la description des triggers en cascade dans la section *Présentation des triggers*.
 
-If you pass a non-existing trigger execution level, the command returns 0 (zero) in all parameters.
+Si vous passez un niveau d'exécution de trigger inexistant, la commande retourne 0 (zéro) dans chaque paramètre.
 
-The nature of the database event for the trigger execution level is returned in *dbEvent*. The following predefined constants are provided in the *Trigger Events* theme:
+La nature de l'événement de base de données pour le niveau d'exécution du trigger est retournée dans *evenementBase*. Les constantes prédéfinies suivantes sont fournies dans le thème "*Evénements trigger*" : 
 
-| Constant                        | Type    | Value |
-| ------------------------------- | ------- | ----- |
-| On Deleting Record Event        | Integer | 3     |
-| On Saving Existing Record Event | Integer | 2     |
-| On Saving New Record Event      | Integer | 1     |
+| Constante                       | Type        | Valeur |
+| ------------------------------- | ----------- | ------ |
+| On Deleting Record Event        | Entier long | 3      |
+| On Saving Existing Record Event | Entier long | 2      |
+| On Saving New Record Event      | Entier long | 1      |
 
-The table number and record number for the record involved by the database event for the trigger execution level are returned in *tableNum* and *recordNum*.
+Le numéro de table et d'enregistrement pour l'enregistrement concerné par l'événement de base de données pour le niveau d'exécution du trigger sont retournés dans *numTable* et *numEnreg*.
 
-## See also 
+## Voir aussi 
 
-*About Record Numbers*  
+*A propos des numéros d'enregistrements*  
+*Présentation des triggers*  
 [Trigger event](trigger-event.md)  
 [Trigger level](trigger-level.md)  
-*Triggers*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 399 |
+| Numéro de commande | 399 |
 | Thread safe | yes |
 
 

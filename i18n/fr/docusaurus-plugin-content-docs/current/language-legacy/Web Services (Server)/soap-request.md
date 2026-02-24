@@ -9,38 +9,38 @@ displayed_sidebar: docs
 <!--REF #_command_.SOAP Request.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if the request is SOAP; otherwise, False |
+| Résultat | Boolean | &#8592; | Vrai si la requête est SOAP, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Renamed|
-|2003|Created|
+|13|Renommé|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SOAP Request.Summary-->The **SOAP Request** command returns **[True](true.md "True")** if the code being executed is part of a SOAP request.<!-- END REF--> 
+<!--REF #_command_.SOAP Request.Summary-->La commande **SOAP Request** retourne Vrai si le code en cours d’exécution fait partie d’une requête SOAP.<!-- END REF--> 
 
-This command can be used for security reasons in the *On Web Authentication Database Method* in order to determine the nature of the received requests.
+Cette commande peut être utilisée pour des raisons de sécurité dans la *Méthode base Sur authentification Web* afin de déterminer la nature des requêtes reçues.
 
-## See also 
+## Voir aussi 
 
 [SOAP DECLARATION](soap-declaration.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 783 |
+| Numéro de commande | 783 |
 | Thread safe | yes |
 
 

@@ -5,86 +5,86 @@ slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *path* : Text, Text array ; *code* : Text, Text array {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *chemin* ; *code* {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
-| code | Text, Text array | &#8594;  | Code of designated method(s) |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| code | Text, Text array | &#8594;  | Code de(s) méthode(s) désignée(s) |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|18 R3|Modified|
-|15|Modified|
-|14|Modified|
-|13|Created|
+|18 R3|Modifié|
+|15|Modifié|
+|14|Modifié|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD SET CODE.Summary-->The **METHOD SET CODE** command modifies the code of the method(s) designated by the *path* parameter with the contents passed in the *code* parameter.<!-- END REF--> 
+<!--REF #_command_.METHOD SET CODE.Summary-->La commande **METHOD SET CODE** modifie le code de la ou des méthode(s) désignée(s) par le paramètre *chemin* avec le contenu passé dans le paramètre *code*.<!-- END REF--> 
 
-The command can access the existing code of all types of methods: database methods, class definitions, triggers, project methods, form methods and object methods.
+La commande peut accéder au code existant de tous les types de méthodes : méthodes bases, définitions de classes, triggers, méthodes projets, méthodes formulaires et méthodes objets. 
 
-If a method does not exist, it is created with the *code* contents.
+Si une méthode n’existe pas, elle est créée avec le contenu de code.
 
-**Note for projects:** 
+**Note pour les projets :** 
 
-* Creating a new method with this command is only possible for database methods, triggers, and project methods.
-* The code is saved with or without tokens in newly created projects depending on the *Include tokens in project source files* option in the Preferences.
+* La création d'une nouvelle méthode avec cette commande n'est possible que pour les méthodes base, les triggers et les méthodes projet.
+* Le code est enregistré avec ou sans tokens dans les projets nouvellement créés en fonction de l'option *Inclure les tokens dans les fichiers sources du projet* dans les Préférences.
 
-You can use two types of syntaxes, based either on text arrays, or text variables:
+Vous pouvez utiliser deux types de syntaxes, basées soit sur des tableaux texte, soit sur des variables texte :
 
 ```4d
- var tVpath : Text // text variables
- var tVcode : Text
- METHOD SET CODE(tVpath;tVcode) // code of a single method
+ var vTchemin : Text // variables texte
+ var vTcode : Text
+ METHOD SET CODE(vTchemin;vTcode) // code d’une seule méthode
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrCodes;0)
- METHOD SET CODE(arrPaths;arrCodes) // code of several methods
+ ARRAY TEXT(tabChemins;0) // tableaux texte
+ ARRAY TEXT(tabCodes;0)
+ METHOD SET CODE(tabChemins;tabCodes) // codes de plusieurs méthodes
 ```
 
-You cannot mix the two syntaxes.
+Il n’est pas possible de mixer les deux syntaxes.
 
-If you pass an invalid pathname, the command does nothing.
+Si un chemin d’accès passé est invalide, la commande ne fait rien. 
 
-When **METHOD SET CODE** is called, the method attributes are reset by default. However, if the first line of the method *code* contains valid metadata (expressed in JSON), they are used to specify the method attributes and the first line is not inserted. Example of metadata:
+Lors de l'appel de **METHOD SET CODE**, par défaut les attributs des méthodes sont réinitialisés. Cependant, si la première ligne du *code* d’une méthode contient des métadonnées valides (exprimées en JSON), elles sont utilisées pour définir les attributs de la méthode et la première ligne n’est pas insérée. Exemple de métadonnées :
 
 ```4d
   // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
 ```
 
-**Note:** These metadata are generated automatically by the [METHOD GET CODE](method-get-code.md) command. For more information about supported attributes, refer to the description of the [METHOD SET ATTRIBUTES](method-set-attributes.md) command.
+**Note :** Ces métadonnées sont générées automatiquement par la commande [METHOD GET CODE](method-get-code.md). Pour plus d'informations sur les attributs pris en charge, reportez-vous à la description de la commande [METHOD SET ATTRIBUTES](method-set-attributes.md).
 
-Concerning the "folder" property of the metadata:
+Concernant la propriété "folder" des métadonnées :
 
-* When this property is present and corresponds to a valid folder, the method is placed in its parent folder,
-* If this property is not present or if the folder does not exist, the command makes no changes at the parent folder level,
-* When this property contains an empty string, the method is placed at the root level.
+* si cette propriété est présente et correspond à un dossier valide, la méthode sera placée dans le dossier parent,
+* si cette propriété n’est pas présente ou si le dossier n’existe pas, la commande ne change rien au niveau du dossier parent,
+* si cette propriété est présente et contient une chaîne vide, la méthode sera placée au niveau racine.
 
-You can execute this command from a component, but in this case, you must pass the *\** parameter because access to the component code is read-only. If you omit the *\** parameter in this context, the error -9763 is generated.
+Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous devez passer le paramètre *\** car l’accès en écriture au code du composant n’est pas possible. Si vous omettez le paramètre *\** dans ce contexte, l’erreur -9763 est générée.
 
-## Example 
+## Exemple 
 
-This example exports and imports all the project methods of an application:
+Cet exemple permet d’exporter et d’importer la totalité des méthodes projet d’une application :
 
 ```4d
  $root_t:=Get 4D folder(Database folder)+"methods"+Folder separator
  ARRAY TEXT($fileNames_at;0)
- CONFIRM("Import or export methods?";"Import";"Export")
+ CONFIRM("Import ou export des méthodes ?";"Import";"Export")
  
  If(OK=1)
     DOCUMENT LIST($root_t;$fileNames_at)
@@ -109,15 +109,15 @@ This example exports and imports all the project methods of an application:
  SHOW ON DISK($root_t)
 ```
 
-## See also 
+## Voir aussi 
 
 [METHOD GET CODE](method-get-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1194 |
+| Numéro de commande | 1194 |
 | Thread safe | no |
 
 

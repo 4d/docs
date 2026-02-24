@@ -5,59 +5,59 @@ slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrNames* : Text array {; *filter* : Text}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *tabNoms* {; *filtre*}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrNames | Text array | &#8592; | Array of project method names |
-| filter | Text | &#8594;  | Name filter |
-| * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
+| tabNoms | Text array | &#8592; | Tableau des noms de méthodes projet |
+| filtre | Text | &#8594;  | Filtrage des noms |
+| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.METHOD GET NAMES.Summary-->The **METHOD GET NAMES** command fills the *arrNames* array with the names of project methods created in the application.<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Summary-->La commande **METHOD GET NAMES** remplit le tableau *tabNoms* avec les noms des méthodes projet créées dans l’application.<!-- END REF--> 
 
-By default, all methods are listed. You can restrict this list by passing a comparison string in the *filter* parameter: in this case, the command only returns methods whose name matches the filter. You must use the @ character in order to set filters of the "starts with", "ends with" or "contains" type. 
+Par défaut, toutes les méthodes sont listées. Vous pouvez restreindre cette liste en passant une chaîne de comparaison dans le paramètre *filtre* : dans ce cas, seules les méthodes dont le nom correspond au filtre seront retournées. Vous devez utiliser le caractère @ afin de définir des filtres de type "commence par", "se termine par" ou "contient". 
 
-If this command is executed from a component, it returns by default the names of the component project methods. If you pass the *\** parameter, the array contains the host database project methods.
+Si la commande est exécutée depuis un composant, elle retourne par défaut les noms des méthodes projet du composant. Si vous passez le paramètre *\**, le tableau contiendra les méthodes projet de la base hôte.
 
-**Note:** Methods placed in the trash are not listed. 
+**Note :** Les méthodes placées dans la corbeille ne sont pas listées. 
 
-## Example 
+## Exemple 
 
-Here are a few typical examples of use:
+Exemples d’utilisations types :
 
 ```4d
-  // List of all project methods of the database
- METHOD GET NAMES(t_Names)
+  // Liste de toutes les méthodes projet de la base
+ METHOD GET NAMES(t_Noms)
  
-  //  List of project methods beginning with a specific string
- METHOD GET NAMES(t_Names;"web_@")
+  // Liste des méthodes projet débutant par une chaîne spécifique
+ METHOD GET NAMES(t_Noms;"web_@")
  
-  // List of project methods in the host database beginning with a specific string
- METHOD GET NAMES(t_Names;"web_@";*)
+  // Liste des méthodes projet de la base hôte débutant par une chaîne spécifique
+ METHOD GET NAMES(t_Noms;"web_@";*)
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1166 |
+| Numéro de commande | 1166 |
 | Thread safe | yes |
 
 

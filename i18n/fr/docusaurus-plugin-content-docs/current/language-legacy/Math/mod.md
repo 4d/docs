@@ -5,45 +5,42 @@ slug: /commands/mod
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* : Integer ; *number2* : Integer ) : Real<!-- END REF-->
+<!--REF #_command_.Mod.Syntax-->**Mod** ( *nombre1* ; *nombre2* ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| number1 | Integer | &#8594;  | Number to divide |
-| number2 | Integer | &#8594;  | Number to divide by |
-| Function result | Real | &#8592; | Returns the remainder |
+| nombre1 | Integer | &#8594;  | Nombre à diviser (numérateur) |
+| nombre2 | Integer | &#8594;  | Nombre diviseur (dénominateur) |
+| Résultat | Real | &#8592; | Reste de la division entière de nombre1 par nombre2 |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Mod.Summary-->The **Mod** command returns the remainder of the Integer division of *number1* by *number2*.<!-- END REF-->
+<!--REF #_command_.Mod.Summary-->La fonction **Mod** divise *nombre1* par *nombre2* et retourne le reste sous forme d'un nombre entier.<!-- END REF-->
+* **Mod** accepte des expressions de type Entier, Entier long et Réel (numérique). Cependant, si *nombre1* et/ou *nombre2* sont des nombres réels, ils sont arrondis avant le calcul du **Mod**.
+* La fonction **Mod** est à utiliser avec précaution avec des nombres réels de grande taille (au-delà de 2^31). Dans ce cas en effet, son fonctionnement peut se heurter aux limites des capacités de calcul des processeurs standard.
 
-* **Mod** accepts Integer, Long Integer, and Real expressions. However, if *number1* or *number2* are real numbers, the numbers are first rounded and then **Mod** is calculated.
-* Be careful when using **Mod** with real numbers of a large size (above 2^31) since, in this case, its operation may reach the limits of the calculation capacities of standard processors.
+Vous pouvez également utiliser l'opérateur "%" pour calculer le reste d'une division (reportez-vous à la section *C\_TIME*). Toutefois, cet opérateur retourne des résultats valides uniquement avec des expressions de type Entier et Entier long. Si vous voulez calculer le modulo de nombres réels, vous devez utiliser la commande **Mod**. 
 
-You can also use the *%* operator to calculate the remainder.
+## Exemple 
 
-**WARNING:** The *%* operator returns valid results with Integer and Long Integer expressions. To calculate the modulo of real values, you must use the **Mod** command.
-
-## Example 
-
-The following example illustrates how the Mod function works with different arguments. Each line assigns a number to the *vlResult* variable. The comments describe the results:
+L'exemple suivant illustre le fonctionnement de **Mod** dans différents cas de figure. A chaque ligne, un nombre est assigné à la variable *vRésultat*. Les commentaires fournissent le résultat obtenu :
 
 ```4d
- vlResult:=Mod(3;2) // vlResult gets 1
- vlResult:=Mod(4;2) // vlResult gets 0
- vlResult:=Mod(3.5;2) // vlResult gets 0
+ vRésultat:=Mod(3;2) // vRésultat prend la valeur 1
+ vRésultat:=Mod(4;2) // vRésultat prend la valeur 0
+ vRésultat:=Mod(3,5;2) // vRésultat prend la valeur 0
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 98 |
+| Numéro de commande | 98 |
 | Thread safe | yes |
 
 

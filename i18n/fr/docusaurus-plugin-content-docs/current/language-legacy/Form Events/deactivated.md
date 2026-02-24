@@ -9,31 +9,30 @@ displayed_sidebar: docs
 <!--REF #_command_.Deactivated.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | Returns TRUE if the execution cycle is a deactivation |
+| Résultat | Boolean | &#8592; | Vrai si le cycle d'exécution est en désactivation |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Deactivated.Summary-->The **Deactivated** command returns True in a form or object method when the frontmost window of the frontmost process, containing the form, moves to the back.<!-- END REF-->
+<!--REF #_command_.Deactivated.Summary-->**Deactivated** retourne Vrai dans une méthode formulaire ou méthode objet lorsque la fenêtre appartenant au process du premier plan, contenant le formulaire, passe à l'arrière-plan.<!-- END REF-->
 
-In order for the **Deactivated** execution cycle to be generated, make sure that the On Deactivate event property of the form and/or the objects has been selected in Design environment. 
+Si vous voulez que le cycle d'exécution **Deactivated** soit généré, vérifiez que la propriété d'événement On Deactivate du formulaire et/ou des objets est sélectionnée en mode Développement. 
 
-**Note:** This command is equivalent to using [Form event code](./commands/form-event-code) and testing whether it returns the On Deactivate event.
+**Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code.md) et tester si elle retourne l'événement On Deactivate.
 
-## See also 
+## Voir aussi 
 
 [Activated](activated.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 347 |
+| Numéro de commande | 347 |
 | Thread safe | no |
-
 
 

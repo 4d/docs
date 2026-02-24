@@ -5,51 +5,51 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *laTable* )} : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table to test if current record has been modified, or Default table, if omitted |
-| Function result | Boolean | &#8592; | Record has been modified (True), or Record has not been modified (False) |
+| laTable | Table | &#8594;  | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
+| Résultat | Boolean | &#8592; | L'enregistrement a été modifié (Vrai) ou L'enregistrement n'a pas été modifié (Faux) |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Modified record.Summary-->**Modified record** returns True if the current record of *aTable* has been modified but not saved; otherwise it returns False.<!-- END REF--> This function allows the designer to quickly test whether or not the record needs to be saved. It is especially valuable in input forms to check whether or not to save the current record before proceeding to the next one. This function always returns True for a new record.
+<!--REF #_command_.Modified record.Summary-->**Modified record** retourne Vrai si l'enregistrement courant de *laTable* a été modifié et non encore stocké.<!-- END REF--> Sinon, elle retourne Faux. Cette fonction vous permet de déterminer rapidement s'il faut stocker l'enregistrement. Dans les formulaires entrée, vous pouvez effectuer le test avant d'aller à l'enregistrement suivant. 
 
-Note that this function always returns True in the following contexts:
+A noter que cette fonction retourne toujours Vrai dans les contextes suivants :
 
-* the current record is a new record,
-* after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands,
-* as soon as a value has been assigned to a field of the record, even if it is the same value as the former one. For example, **Modified record** returns True after the following statement is executed:  
+* l'enregistrement courant est un nouvel enregistrement,
+* après l'exécution des commandes [PUSH RECORD](push-record.md) et [POP RECORD](pop-record.md),
+* dès qu'une valeur a été affectée à un champ de l'enregistrement, même s'il s'agit d'une valeur identique à la précédente. Par exemple, **Modified record** retourne Vrai après l'exécution de l'instruction suivante :  
 ```4d  
- [Table_1]Field_1:=[Table_1]Field_1  
+ [Table_1]Champ_1:=[Table_1]Champ_1  
 ```
 
-## Example 
+## Exemple 
 
-The following example shows a typical use for **Modified record**:
+L'exemple suivant montre une utilisation typique de **Modified record** :
 
 ```4d
- If(Modified record([Customers]))
-    SAVE RECORD([Customers])
+ If(Modified record([Clients]))
+    SAVE RECORD([Clients])
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Modified](modified.md)  
 [Old](old.md)  
 [SAVE RECORD](save-record.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 314 |
+| Numéro de commande | 314 |
 | Thread safe | yes |
 
 

@@ -5,66 +5,67 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->***ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; *order* : >, <} {; ...(*formula* : Expression {; *order* : >, <})} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *laTable* ; *formule* {; > ou <}{; *formule2* ; > ou <2 ; ... ; *formuleN* ; > ou <N} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to order selected records |
-| formula | Expression | &#8594;  | Expression on which to set the order for each level (can be of type Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean) |
-| order | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| laTable | Table | &#8594;  | Table de laquelle trier la sélection d'enregistrements |
+| formule | Expression | &#8594;  | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
+| > ou < | Opérateur | &#8594;  | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Modified|
-|<6|Created|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record. **Note**: you must specify *aTable*. You cannot use a default table.
+<!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** trie (réordonne) les enregistrements de la sélection courante de *laTable* pour le process courant sur le critère de tri défini par *formule*.<!-- END REF--> Une fois le tri effectué, le premier enregistrement de la sélection courante devient le nouvel enregistrement courant.
 
-You can sort the selection on one or several levels. For each sort level, you specify an expression in *formula* and the sorting *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.
+Notez que vous devez spécifier *laTable*. Vous ne pouvez pas utiliser une table par défaut.
 
-The *formula* parameter can be of type: Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean.
+Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau, vous passez une expression dans *expression* et un ordre de tri dans *\> ou <*. Si vous passez le symbole “supérieur à” (*\>*), l'ordre est croissant. Si vous passez le symbole “inférieur à” (*<*), l'ordre est décroissant. Si vous ne passez pas ce paramètre, l'ordre est par défaut croissant.
 
-**Warning:** Parameters ($1...$n) are not supported in the *formula*. 
+Le paramètre *formule* peut être de type Alpha, Réel, Entier, Entier long, Date, Heure ou Booléen.
 
-**Note:** If **ORDER BY FORMULA** is used in conjunction with [PRINT SELECTION](print-selection.md), [BREAK LEVEL](break-level.md) and a local variable, the three commands must be executed *from the same method*, otherwise an error will be generated. This is because [PRINT SELECTION](print-selection.md) needs to reevaluate the *formula* to compute break values. For example, if you execute **ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) from a method, the sort is done and the method ends. Any subsequent call to [PRINT SELECTION](print-selection.md) and [BREAK LEVEL](break-level.md) will fail because *$value* no longer exists and the *formula* cannot be evaluated. 
+**Attention :** Les paramètres ($1...$n) ne sont pas pris en charge par *formule*. 
 
-No matter how a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress indicator. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress indicator is displayed, the user can click the **Stop** button to interrupt the sort. If the sort is completed, OK is set to 1\. Otherwise, if the sort is interrupted, OK is set to 0 (zero).
+Si **ORDER BY FORMULA** est utilisé avec [PRINT SELECTION](print-selection.md), [BREAK LEVEL](break-level.md) et une variable locale, les trois commandes doivent être exécutées *depuis la même méthode*, sinon une erreur sera générée. En effet, [PRINT SELECTION](print-selection.md) doit réévaluer la formule pour calculer les valeurs de rupture. Par exemple, si vous exécutez **ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) à partir d'une méthode, le tri est effectué et la méthode se termine. Tout appel ultérieur à [PRINT SELECTION](print-selection.md) et [BREAK LEVEL](break-level.md) échouera car *$value* n'existe plus et la formule ne peut pas être évaluée.
 
-**4D Server:** This command is executed on the server, which optimizes its execution. Note that when variables are called directly in the *formula*, the sort order is calculated with the value of the variable on the client machine. For example, the statement **ORDER BY FORMULA(\[mytable\];\[mytable\]myfield\*myvariable)** will be executed on the server but with the contents of the client machine's myvariable.
+Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
 
-> **Compatibility note:** Until 4D Server v11, this command was executed on the client machine. For reverse compatibility, this behavior is maintained in converted databases. However, a compatibility property or a selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command enables server-side execution in converted databases.
+**4D Server :** Cette commande est exécutée sur le serveur, ce qui optimise son exécution. A noter qu’en cas d’appel direct de variables dans la *formule*, la requête est calculée avec la valeur de la variable sur le poste client. Par exemple, l’instruction **ORDER BY FORMULA(\[matable\];\[matable\]monchamp\*mavariable)** sera exécutée sur le serveur mais avec le contenu de la variable *mavariable* du client.   
+**Note de compatibilité :** Jusqu'à 4D Server v11, cette commande était exécutée sur le poste client. Par compatibilité, ce fonctionnement est maintenu dans les bases de données converties. Toutefois, une propriété de compatibilité et un sélecteur de la commande [SET DATABASE PARAMETER](set-database-parameter.md) permettent d'adopter l'exécution sur serveur dans les bases de données converties.
 
-## Example 
+## Exemple 
 
-This example orders the records of the \[People\] table in descending order, based on the length of each person’s last name. The record for the person with the longest last name will be first in the current selection:
+L'exemple suivant trie les enregistrements de la table \[Personnes\] dans l'ordre décroissant par rapport à la longueur du nom de famille de chaque personne. L'enregistrement de la personne qui a le nom le plus long sera le premier enregistrement de la sélection courante :
 
 ```4d
- ORDER BY FORMULA([People];Length([People]Last Name);<)
+ ORDER BY FORMULA([Personnes];Length([Personnes]Nom);<)
 ```
 
-## See also 
+## Voir aussi 
 
 [ORDER BY](order-by.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 300 |
+| Numéro de commande | 300 |
 | Thread safe | yes |
-| Modifies variables | OK |
-| Changes current record ||
+| Modifie les variables | OK |
+| Change l'enregistrement courant ||
 
 

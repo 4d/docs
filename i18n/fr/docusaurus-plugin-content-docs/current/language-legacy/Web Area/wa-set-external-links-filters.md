@@ -5,93 +5,91 @@ slug: /commands/wa-set-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA SET EXTERNAL LINKS FILTERS** ( *object* : Variable, Field ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
+<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| filtersArr | Text array | &#8594;  | Filters array |
-| allowDenyArr | Boolean array | &#8594;  | Allow-deny array |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabFiltres | Text array | &#8594;  | Tableau de filtres |
+| tabAutorisRefus | Boolean array | &#8594;  | Tableau autoriser-refuser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->The **WA SET EXTERNAL LINKS FILTERS** command sets up one or more external link filters for the Web area designated by the *\** and *object* parameters.<!-- END REF--> External link filters determine whether a URL associated with the current page via a link must be opened in the Web area or in the default Web browser of the machine.
+<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->La commande **WA SET EXTERNAL LINKS FILTERS** permet de mettre en place un ou plusieurs filtre(s) de liens externes pour la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Les filtres de liens externes déterminent si un URL associé à la page courante via un lien doit être ouvert dans la zone Web ou dans le navigateur Web par défaut de la machine.
 
-When the user clicks on a link in the current page, 4D consults the list of external link filters in order to check whether the URL requested must be opened in the browser of the machine. If so, the page corresponding to the URL is displayed in the Web browser and the On Open External Link form event is generated. Otherwise (default operation), the page corresponding to the URL is displayed in the Web area. The evaluation of the URL is based on the contents of the *filtersArr* and *allowDenyArr* arrays. 
+Lorsque l’utilisateur clique sur un lien dans la page courante, 4D consulte la liste des filtres de liens externes afin de vérifier si l’URL demandé doit être ouvert dans le navigateur de la machine. Si c’est le cas, la page correspondant à l’URL est affichée dans le navigateur Web et l’événement formulaire On Open External Link est généré (cf. commande [Form event code](../commands/form-event-code.md)). Sinon (fonctionnement par défaut), la page correspondant à l’URL est affichée dans la zone Web. L’évaluation de l’URL est basée sur le contenu des tableaux *tabFiltres* et t*abAutorisRefus*. 
 
-The *filtersArr* and *allowDenyArr* arrays must be synchronized. 
+Les tableaux *tabFiltres* et *tabAutorisRefus* doivent être synchronisés. 
 
-* Each element of the *filtersArr* array must contain a URL to be filtered. You can use the *\** as a wildcard to replace one or more characters.
-* Each corresponding element in the *allowDenyArr* array must contain a Boolean indicating whether the URL must be opened in the Web area ([True](true.md "True")) or in the Web browser ([False](false.md "False")).
+* Chaque ligne du tableau *tabFiltres* doit contenir un URL devant être filtré. Vous pouvez utiliser le \* comme joker de remplacement pour un ou plusieurs caractère(s).
+* Chaque ligne correspondante dans le tableau *tabAutorisRefus* doit contenur un booléen indiquant si l’URL doit être ouvert dans la zone Web (Vrai) ou dans le navigateur Web (Faux).
 
-If there is a contradiction at the configuration level (the same URL is both allowed and denied), the last setting is the one taken into account. 
+En cas de contradiction au niveau des paramétrages (autorisation et refus d’un même URL), le paramétrage pris en compte est le dernier. 
 
-To disable URL filtering, call the command and pass empty arrays or pass, respectively, the values "*\**" and [True](true.md "True") in the last elements of the *filtersArr* and *allowDenyArr* arrays.
+Pour désactiver le filtrage des URLs, appelez la commande en lui passant des tableaux vides ou en passant respectivement les valeurs "*\**" et Vrai dans la dernière ligne des tableaux *tabFiltres* et *tabAutorisRefus*. 
 
-**Important:** The filtering established by the [WA SET URL FILTERS](wa-set-url-filters.md) command is taken into account before that of the **WA SET EXTERNAL LINKS FILTERS** command. This means that if a URL is denied because of a [WA SET URL FILTERS](wa-set-url-filters.md) command filter, it cannot be opened in the browser even if it is explicitly specified by the **WA SET EXTERNAL LINKS FILTERS** command (see example 2).
+**Important :** Le filtrage établi par la commande [WA SET URL FILTERS](wa-set-url-filters.md) est pris en compte avant celui de **WA SET EXTERNAL LINKS FILTERS**. Cela signifie que si un URL est refusé à cause d’un filtre de la commande [WA SET URL FILTERS](wa-set-url-filters.md), il ne pourra pas être ouvert dans un navigateur même s’il est explicitement défini par la commande **WA SET EXTERNAL LINKS FILTERS** (cf. exemple 2).
 
-## Example 1 
+## Exemple 1 
 
-This example causes sites to be opened in external browsers:
+Cet exemple provoquera l’ouverture de sites dans des navigateurs externes :
 
 ```4d
  ARRAY STRING(0;$filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
  
- APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
- APPEND TO ARRAY($AllowDeny;False)
-  //False: this link will be opened in an external browser
+ APPEND TO ARRAY($filters;"*www.google.*") //Sélectionner "google"
+ APPEND TO ARRAY($AllowDeny;False) //Faux : ce lien sera ouvert dans un navigateur externe
  APPEND TO ARRAY($filters;"*www.apple.*")
- APPEND TO ARRAY($AllowDeny;False)
-  //False: this link will be opened in an external browser
- WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
+ APPEND TO ARRAY($AllowDeny;False) //Faux : ce lien sera ouvert dans un navigateur externe
+ WA SET EXTERNAL LINKS FILTERS(MaZoneW;$filters;$AllowDeny)
 ```
 
-## Example 2 
+## Exemple 2 
 
-This example combines the filtering of both sites and external links:
+Cet exemple combine des filtrages de sites et de liens externes :
 
 ```4d
  ARRAY STRING(0;$filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
- APPEND TO ARRAY($AllowDeny;False) //Deny this link
- WA SET URL FILTERS(MyWArea;$filters;$AllowDeny)
+ APPEND TO ARRAY($filters;"*www.google.*") //Sélectionner "google"
+ APPEND TO ARRAY($AllowDeny;False) //Interdire ce lien
+ WA SET URL FILTERS(MaZoneW;$filters;$AllowDeny)
  
  ARRAY STRING(0;$filters;0)
  ARRAY BOOLEAN($AllowDeny;0)
- APPEND TO ARRAY($filters;"*www.google.*") //Select "google"
+ APPEND TO ARRAY($filters;"*www.google.*") //Sélectionner "google"
  APPEND TO ARRAY($AllowDeny;False)
-  //False: this link should be opened in an external browser but this setting
-  //has no effect because the link will be blocked by the URL filtering.
- WA SET EXTERNAL LINKS FILTERS(MyWArea;$filters;$AllowDeny)
+  //Faux : ce lien devrait être ouvert dans un navigateur externe, mais ce paramétrage est sans effet car le lien sera bloqué
+  //du fait du filtrage d’URL.
+ WA SET EXTERNAL LINKS FILTERS(MaZoneW;$filters;$AllowDeny)
 ```
 
-## See also 
+## Voir aussi 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1032 |
+| Numéro de commande | 1032 |
 | Thread safe | no |
 
 

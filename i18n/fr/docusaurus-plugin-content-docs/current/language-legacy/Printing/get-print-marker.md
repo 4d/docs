@@ -5,82 +5,79 @@ slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *markNum* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numTaquet* ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| markNum | Integer | &#8594;  | Marker number |
-| Function result | Integer | &#8592; | Position of the marker |
+| numTaquet | Integer | &#8594;  | Numéro de taquet |
+| Résultat | Integer | &#8592; | Position du taquet |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Modified|
-|<6|Created|
+|2003|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get print marker.Summary-->The **Get print marker** command enables you to get the current position of a marker during printing.<!-- END REF--> 
+<!--REF #_command_.Get print marker.Summary-->La commande **Get print marker** permet de récupérer la position courante d’un taquet lors d’une impression.<!-- END REF--> Les coordonnées sont retournées en pixels (1 pixel = 1/72 pouce). 
 
-This command can be used in two contexts:
+Cette commande peut être appelée dans deux contextes :
 
-* During the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
-* During the On Printing Detail form event, in the context of the [Print form](./commands/print-form) command.
+* lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
+* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md).
 
-The coordinates are returned in pixels (1 pixel = 1/72 inch). 
+Passez dans le paramètre *numTaquet* une des constantes du thème "*Zone de formulaire*" :
 
-Pass one of the constants of the *Form Area* theme in the *markNum* parameter:
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Form break0   | Entier long | 300    |
+| Form break1   | Entier long | 301    |
+| Form break2   | Entier long | 302    |
+| Form break3   | Entier long | 303    |
+| Form break4   | Entier long | 304    |
+| Form break5   | Entier long | 305    |
+| Form break6   | Entier long | 306    |
+| Form break7   | Entier long | 307    |
+| Form break8   | Entier long | 308    |
+| Form break9   | Entier long | 309    |
+| Form detail   | Entier long | 0      |
+| Form footer   | Entier long | 100    |
+| Form header   | Entier long | 200    |
+| Form header1  | Entier long | 201    |
+| Form header10 | Entier long | 210    |
+| Form header2  | Entier long | 202    |
+| Form header3  | Entier long | 203    |
+| Form header4  | Entier long | 204    |
+| Form header5  | Entier long | 205    |
+| Form header6  | Entier long | 206    |
+| Form header7  | Entier long | 207    |
+| Form header8  | Entier long | 208    |
+| Form header9  | Entier long | 209    |
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Form break0   | Integer | 300   |
-| Form break1   | Integer | 301   |
-| Form break2   | Integer | 302   |
-| Form break3   | Integer | 303   |
-| Form break4   | Integer | 304   |
-| Form break5   | Integer | 305   |
-| Form break6   | Integer | 306   |
-| Form break7   | Integer | 307   |
-| Form break8   | Integer | 308   |
-| Form break9   | Integer | 309   |
-| Form detail   | Integer | 0     |
-| Form footer   | Integer | 100   |
-| Form header   | Integer | 200   |
-| Form header1  | Integer | 201   |
-| Form header10 | Integer | 210   |
-| Form header2  | Integer | 202   |
-| Form header3  | Integer | 203   |
-| Form header4  | Integer | 204   |
-| Form header5  | Integer | 205   |
-| Form header6  | Integer | 206   |
-| Form header7  | Integer | 207   |
-| Form header8  | Integer | 208   |
-| Form header9  | Integer | 209   |
+## Exemple 
 
-## Example 
+Reportez-vous à l’exemple de la commande [SET PRINT MARKER](set-print-marker.md). 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command. 
-
-## See also 
+## Voir aussi 
 
 [OBJECT MOVE](object-move.md)  
 [SET PRINT MARKER](set-print-marker.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 708 |
+| Numéro de commande | 708 |
 | Thread safe | no |
-
 
 

@@ -5,84 +5,86 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* : Table {; *} )<br/>**PRINT SELECTION** ( *aTable* : Table {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *laTable* {;* })<br/>**PRINT SELECTION** ( *laTable* {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to print the selection, or Default table, if omitted |
-| *  | Operator | &#8594;  | Suppress the printing dialog box |
-| > | > | &#8594;  | Do not reinitialize print settings |
+| laTable | Table | &#8594;  | Table à laquelle appartient la sélection à imprimer ou Table par défaut si ce paramètre est omis |
+| * &#124; > | Opérateur | &#8594;  | * pour supprimer les boîtes de dialogue d'impression ou > pour ne pas réinitialiser les paramètres d'impression |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|2004|Modified|
-|<6|Created|
+|15 R5|Modifié|
+|2004|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** prints the current selection of *aTable*.<!-- END REF--> The records are printed with the current output form of the table in the current process. **PRINT SELECTION** performs the same action as the **Print** menu command in the Design environment. If the selection is empty, **PRINT SELECTION** does nothing.
+<!--REF #_command_.PRINT SELECTION.Summary-->La commande **PRINT SELECTION** imprime la sélection courante de *laTable*.<!-- END REF--> Les enregistrements sont imprimés dans le formulaire sortie courant de la table du process en cours. **PRINT SELECTION** a le même effet que la commande **Imprimer...** du mode Développement. Si la sélection courante est vide, **PRINT SELECTION** ne fait rien.  
+  
+Par défaut, **PRINT SELECTION** affiche les boîtes de dialogue d'impression. Si l'utilisateur annule une des deux boîtes de dialogue, l'exécution de la commande est stoppée et l'état n'est pas imprimé.   
+Vous pouvez supprimer leur affichage en utilisant soit le paramètre optionnel astérisque (\*), soit le paramètre optionnel “supérieur à” (>). 
 
-By default, **PRINT SELECTION** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the report is not printed. You can suppress this dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
+* Le paramètre *\** provoque une impression avec les paramètres d'impression courants (paramètres par défaut ou définis par les commandes *\_o\_PAGE SETUP* et/ou [SET PRINT OPTION](set-print-option.md)).
+* Le paramètre *\>* provoque en outre l’impression sans réinitialisation des paramètres d’impression. Ce paramètre est utile lorsque vous souhaitez exécuter successivement plusieurs appels à **PRINT SELECTION** (par exemple à l'intérieur d’une boucle) tout en conservant des paramètres d’impression personnalisés préalablement définis.
 
-* The *\** parameter causes a print job using the current print parameters (default parameters or those defined by the *\_o\_PAGE SETUP* and/or [SET PRINT OPTION](set-print-option.md) commands).
-* Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT SELECTION** (e.g., inside a loop) while maintaining previously set customized print parameters. For an example of the use of this parameter, refer to the [PRINT RECORD](print-record.md) command description.
+Pendant l'impression, la méthode du formulaire sortie et les méthodes objet du formulaire sont exécutées en fonction des événements sélectionnés dans les propriétés des formulaires et des objets, en mode Développement, ainsi que des événements effectivement générés :
 
-During printing, the output form method and/or the form’s object methods are executed depending on the events that are enabled for the form and objects using the Property List window in the Design environment, as well as on the events actually occurring:
+* Un événement On Header est généré juste avant que la zone d'en-tête soit imprimée.
+* Un événement On Printing Detail est généré juste avant que l'enregistrement soit imprimé.
+* Un événement On Printing Break est généré juste avant qu'une zone de rupture soit imprimée.
+* Un événement On Printing Footer est généré juste avant que la zone de pied de page soit imprimée.
 
-* An On Header event is generated just before a header area is printed.
-* An On Printing Detail event is generated just before a record is printed.
-* An On Printing Break event is generated just before a break area is printed.
-* An On Printing Footer event is generated just before a footer is printed.
+Vous pouvez savoir si **PRINT SELECTION** est sur le point d'imprimer le premier en-tête en testant [Before selection](before-selection.md) pendant un événement On Header. Vous pouvez également savoir si **PRINT SELECTION** est sur le point d'imprimer le dernier pied de page, en testant [End selection](end-selection.md) pendant un événement On Printing Footer.  
+Pour plus d'informations, reportez-vous à la description de ces commandes ainsi qu'aux commandes [Form event code](../commands/form-event-code.md) et [Level](level.md).
 
-You can check whether **PRINT SELECTION** is printing the first header by testing [Before selection](before-selection.md) during an On Header event. You can also check for the last footer, by testing [End selection](end-selection.md) during an On Printing Footer event. For more information, see the description of these commands, as well as those of [Form event code](./commands/form-event-code) and [Level](level.md).
+Si **PRINT SELECTION** est appelée au même moment par deux process différents, l'impression déclenchée par le second process attendra que le premier ait terminé.
 
-To print a sorted selection with subtotals or breaks using **PRINT SELECTION**, you must first sort the selection. Then, in each Break area of the report, include a variable with an object method that assigns the subtotal to the variable. You can also use statistical and arithmetical functions like [Sum](sum.md) and [Average](average.md) to assign values to variables. For more information, see the descriptions of [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) and [ACCUMULATE](accumulate.md).
+Pour imprimer une sélection triée avec des sous-totaux ou des ruptures à l'aide de la commande **PRINT SELECTION**, vous devez d'abord trier la sélection. Puis vous devez inclure, dans chaque zone de rupture de l'état, une variable associée à une méthode objet assignant le sous-total à la variable. Vous pouvez aussi utiliser des fonctions statistiques ou arithmétiques telles que [Sum](sum.md) et [Average](average.md) pour assigner des valeurs aux variables. Pour plus d'informations, reportez-vous à la description des commandes [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) et [ACCUMULATE](accumulate.md).
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with the **PRINT SELECTION** command. [PAGE BREAK](page-break.md) is to be used with the [Print form](./commands/print-form) command.
+**Attention :** N'utilisez pas la commande [PAGE BREAK](page-break.md) avec **PRINT SELECTION**. [PAGE BREAK](page-break.md) est exclusivement réservée à une utilisation combinée avec la commande [Print form](../commands/print-form.md).
 
-After a call to **PRINT SELECTION**, the OK variable is set to 1 if the printing has been completed. If the printing was interrupted, the OK variable is set to 0 (zero) (i.e., the user clicked Cancel in the printing dialog box).
+Après un appel à **PRINT SELECTION**, la variable OK prend la valeur 1 si l'impression s'est déroulée correctement. Si l'impression a été interrompue (par exemple l'utilisateur a cliqué sur un bouton Annuler dans les boîtes de dialogue d'impression), la variable OK prend la valeur *0* (zéro).
 
-**4D Server:** This command can be executed on 4D Server in a stored procedure. In this context:
+**4D Server :** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
-* Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
-* In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
+* Veillez à ce qu’aucune boîte de dialogue n’apparaisse sur le poste serveur (sauf besoin spécifique). Pour cela, il est nécessaire d’appeler la commande avec le paramètre *\** ou *\>*.
+* En cas de problème sur l’imprimante (plus de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
-## Example 
+## Exemple 
 
-The following example selects all the records in the \[People\] table. It then uses the [DISPLAY SELECTION](display-selection.md) command to display the records and allows the user to highlight the records to print. Finally, it uses the selected records with the [USE SET](use-set.md) command, and prints them with **PRINT SELECTION**:
+L'exemple suivant sélectionne la totalité des enregistrements de la table \[Personnes\]. La commande [DISPLAY SELECTION](display-selection.md) est alors appelée pour afficher les enregistrements et permettre à l'utilisateur de sélectionner ceux qu'il souhaite imprimer. Enfin, les enregistrements choisis sont récupérés à l'aide de la commande [USE SET](use-set.md) et imprimés par **PRINT SELECTION** :
 
 ```4d
- ALL RECORDS([People]) // Select all records
- DISPLAY SELECTION([People];*) // Display the records
- USE SET("UserSet") // Use only records picked by user
- PRINT SELECTION([People]) // Print the records that the user picked
+ ALL RECORDS([Personnes]) // Sélection de tous les enregistrements
+ DISPLAY SELECTION([Personnes];*) // Affichage des enregistrements
+ USE SET("UserSet") // Use uniquement les enregistrements sélectionnés par l'utilisateur
+ PRINT SELECTION([Personnes]) // Imprimer les enregistrements sélectionnés
 ```
 
-## See also 
+## Voir aussi 
 
 [ACCUMULATE](accumulate.md)  
 [BREAK LEVEL](break-level.md)  
 [Level](level.md)  
 [Subtotal](subtotal.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 60 |
+| Numéro de commande | 60 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

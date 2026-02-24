@@ -9,184 +9,179 @@ displayed_sidebar: docs
 <!--REF #_command_.Keystroke.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Character entered by user |
+| Résultat | Text | &#8592; | Caractère saisi par l'utilisateur |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Keystroke.Summary-->**Keystroke** returns the character entered by the user into a field or an enterable area.<!-- END REF--> 
+<!--REF #_command_.Keystroke.Summary-->**Keystroke** retourne le caractère tapé par l'utilisateur dans un champ ou une zone saisissable.<!-- END REF--> 
 
-Usually, you will call **Keystroke** within a form or object method while handling an On Before Keystroke or On After Keystroke form event. To detect keystroke events, use the command [Form event code](./commands/form-event-code). 
+En général, vous appelez **Keystroke** dans une méthode formulaire ou objet, lors de la gestion des événements formulaire On Before Keystroke et On After Keystroke. Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code.md). 
 
-To replace the character actually entered by the user with another character, use the command [FILTER KEYSTROKE](filter-keystroke.md).
+Si vous voulez remplacer un caractère saisi par l'utilisateur par un autre, utilisez la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-**Note:** The **Keystroke** function does not work in subforms.
+**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (si l'utilisateur appuie sur la touche Tabulation, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, ou utilisez la commande [Get edited text](get-edited-text.md). Vous devez procéder ainsi si vous souhaitez connaître la valeur courante du texte pour effectuer des actions spéciales.
 
-**IMPORTANT NOTE:** If you want to perform some “on the fly” operations depending on the current value of the enterable area being edited, as well as the new character to be entered, remember that the text you see on screen is NOT YET the value of the data source field or variable for the area being edited. The data source field or variable is assigned the entered value after the data entry for the area is validated (e.g., tabulation to another area, click on a button, and so on). It is therefore up to you to “shadow” the data entry into a variable and then to work with this shadow value. You must do so if you need to know the current text value for executing any particular actions. You can also use the function [Get edited text](get-edited-text.md).
+Vous pouvez utiliser la commande **Keystroke** pour :
 
-You will use the command **Keystroke** for:
+* effectuer un filtrage personnalisé des caractères
+* créer un filtre de saisie non disponible en standard, par exemple dans les filtres de saisie
+* implémenter des zones de recherche ou de pré-saisie dynamiques.
 
-* Filtering characters in a customized way
-* Filtering data entry in a way that you cannot produce using data entry filters
-* Implement dynamic lookup or autocomplete areas
+**Note :** Vous ne pouvez pas utiliser la fonction **Keystroke** dans les sous-formulaires.
 
-## Example 1 
+## Exemple 1 
 
-See examples for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+Référez-vous aux exemples de la commande [FILTER KEYSTROKE](filter-keystroke.md).
 
-## Example 2 
+## Exemple 2 
 
-When you process an On Before Keystroke event, you are dealing with the editing of the current text area (the one where the cursor is), not with the “future value” of the data source (field or variable) for this area. The Handle keystroke project method allows to shadow any text area data entry into a second variable, which you can use to perform the actions while entering characters into the area. You pass a pointer to the area’s data source as the first parameter and a pointer to the shadow variable as second parameter. The method returns the new value of the text area in the shadow variable, and returns **True** if the value is different from it what was before the last entered character was inserted.
+Lorsque vous traitez un événement On Before Keystroke, vous gérez la modification de la zone de texte courante (celle qui contient le curseur), et non la “valeur future” de la source de données (champ ou variable) de cette zone. La méthode Gérer frappe clavier décrite ci-dessous vous permet de placer dans une seconde variable les caractères saisis dans une zone de texte. Vous pouvez alors utiliser cette variable pour effectuer différentes actions pendant la saisie des caractères dans la zone. Vous passez comme premier paramètre un pointeur vers la source des données de la zone, et comme second paramètre un pointeur vers cette seconde variable. La méthode renvoie la nouvelle valeur de la zone de texte dans la seconde variable et retourne Vrai si cette valeur est différente de ce qu'elle était avant la saisie du dernier caractère. 
 
 ```4d
-  // Handle keystroke project method
-  // Handle keystroke ( Pointer ; Pointer ) -> Boolean
-  // Handle keystroke ( -> srcArea ; -> curValue ) -> Is new value
+  // Méthode projet Gérer frappe clavier
+  // Gérer frappe clavier ( Pointeur ; Pointeur ) -> Booléen
+  // Gérer frappe clavier ( -> zoneSource ; -> valeurCourante ) -> Est-ce une nouvelle valeur
  
  #DECLARE ($srcArea : Pointer ; $curValue : Pointer) -> $newValue : Boolean
- var $vtNewValue : Text
+ var $vtNouvValeur : Text
  
-  // Get the text selection range within the enterable area
- GET HIGHLIGHT($srcArea->;$vlStart;$vlEnd)
-  // Start working with the current value
- $vtNewValue:=$curValue->
-  // Depending on the key pressed or the character entered,
-  // Perform the appropriate actions
+  // Récupérer le texte sélectionné dans la zone saisissable
+ GET HIGHLIGHT($srcArea->;$vlDébut;$vlFin)
+  // Commencer à travailler avec la valeur courante
+ $vtNouvValeur:=$curValue->
+  // Selon la touche appuyée ou le caractère saisi, effectuer les actions appropriées
  Case of
  
-  // The Backspace (Delete) key has been pressed
-    :(Character code(Keystroke)=Backspace)
-  // Delete the selected characters or the character at the left of the text cursor
-       $vtNewValue:=Substring($vtNewValue;1;$vlStart-1-Num($vlStart=$vlEnd))\
-       +Substring($vtNewValue;$vlEnd)
+  // La touche Retour arrière a été enfoncée
+    :(Character code(Keystroke)=Backspace key)
+  // Supprimer les caractères sélectionnés ou le caractère à gauche du curseur
+       $vtNouvValeur:=Substring($vtNouvValeur;1;$vlDébut-1-Num($vlDébut=$vlFin))
+       +Substring($vtNouvValeur;$vlFin)
  
-  // An acceptable character has been entered
+  // Un caractère acceptable a été saisi
     :(Position(Keystroke;"abcdefghjiklmnopqrstuvwxyz -0123456789")>0)
-       If($vlStart#$vlEnd)
-  // One or several characters are selected, the keystroke is going to override them
-          $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)\
-          +Keystroke+Substring($vtNewValue;$vlEnd)
+       If($vlDébut#$vlFin)
+  // Un ou plusieurs caractères sont sélectionnés, la frappe clavier va les effacer
+          $vtNouvValeur:=Substring($vtNouvValeur;1;$vlDébut-1)+Keystroke+Substring($vtNouvValeur;$vlFin)
        Else
-  // The text selection is the text cursor
+  // La sélection de texte est le curseur
           Case of
-  // The text cursor is currently at the begining of the text
-             :($vlStart<=1)
-  // Insert the character at the begining of the text
-                $vtNewValue:=Keystroke+$vtNewValue
-  // The text cursor is currently at the end of the text
-             :($vlStart>=Length($vtNewValue))
-  // Append the character at the end of the text
-                $vtNewValue:=$vtNewValue+Keystroke
+  // Le curseur est actuellement au début du texte
+             :($vlDébut<=1)
+  // Insertion du caractère au début du texte
+                $vtNouvValeur:=Keystroke+$vtNouvValeur
+  // Le curseur est actuellement à la fin du texte
+             :($vlDébut>=Length($vtNouvValeur))
+  // Ajouter le caractère à la fin du texte
+                $vtNouvValeur:=$vtNouvValeur+Keystroke
              Else
-  // The text cursor is somewhere in the text, insert the new character
-                $vtNewValue:=Substring($vtNewValue;1;$vlStart-1)+Keystroke\
-                +Substring($vtNewValue;$vlStart)
+  // Le curseur se trouve dans le texte, insérer le nouveau caractère
+                $vtNouvValeur:=Substring($vtNouvValeur;1;$vlDébut-1)+Keystroke
+                +Substring($vtNouvValeur;$vlDébut)
           End case
        End if
  
-  // An Arrow key has been pressed
-  // Do nothing, but accept the keystroke
+  // Une touche flèche a été enfoncée
+  // Ne rien faire, mais valider la frappe clavier
     :(Character code(Keystroke)=Left arrow key)
     :(Character code(Keystroke)=Right arrow key)
     :(Character code(Keystroke)=Up arrow key)
     :(Character code(Keystroke)=Down arrow key)
   `
     Else
-  // Do not accept characters other than letters, digits, space and dash
+  // Il ne faut pas accepter des caractères autres que des lettres, chiffres, espaces et tirets
        FILTER KEYSTROKE("")
  End case
-  // Is the value now different?
- $newValue:=($vtNewValue#$curValue->)
-  // Return the value for the next keystroke handling
- $curValue->:=$vtNewValue
+  // Est-ce que la valeur est maintenant différente ?
+ $newValue:=($vtNouvValeur#$curValue->)
+  // Retourner la valeur pour la gestion de la prochaine frappe clavier
+ $curValue->:=$vtNouvValeur
 ```
 
-After this project method is added to your application, you can use it as follows:
+Une fois que vous avez ajouté cette méthode projet à votre application, vous pouvez l'utiliser ainsi :
 
 ```4d
-  // myObject enterable area object method
+  // Méthode objet de la zone saisissable MonObjet
  Case of
     :(FORM Event.code=On Load)
-       MyObject:=""
-       MyShadowObject:=""
+       MonObjet:=""
+       MonObjetCaché:=""
     :(FORM Event.code=On Before Keystroke)
-       If(Handle keystroke(->MyObject;->MyShadowObject))
-  // Perform appropriate actions using the value stored in MyShadowObject
+       If(Gérer frappe clavier(->MonObjet;->MonObjetCaché))
+  // Effectuer des actions appropriées par rapport à la valeur stockée dans MonObjetCaché
        End if
  End case
 ```
 
-Let’s examine the following part of a form:
+Examinons par exemple le formulaire suivant :
 
-![](../assets/en/commands/pict21523.en.png)
+![](../assets/en/commands/pict21523.fr.png)
 
-It is composed of the following objects: an enterable area *vsLookup*, a non-enterable area *vsMessage*, and a scrollable area *asLookup*. While entering characters in *vsLookup*, the method for that object performs a query on a \[US Zip Codes\] table, allowing the user to find US cities by typing only the first characters of the city names. 
-
-The *vsLookup* object method is listed here:
+Il est composé des objets suivants : une zone saisissable *vaRecherche*, une zone non-saisissable *vaMessage* et une zone de défilement *taRecherche*. Lorsque l'utilisateur saisit des caractères dans *vaRecherche*, la méthode objet effectue une recherche sur la table \[Codes postaux\] permettant d'afficher des villes américaines en saisissant seulement les premiers caractères de leur nom. Voici la méthode objet de *vaRecherche* :
 
 ```4d
-  // vsLookup enterable area object method
+  // Méthode objet de la zone saisissable vaRecherche
  Case of
     :(FORM Event.code=On Load)
-       vsLookup:=""
-       vsResult:=""
-       vsMessage:="Enter the first characters of the city you are looking for."
-       CLEAR VARIABLE(asLookup)
+       vaRecherche:=""
+       vaRésultat:=""
+       vaMessage:="Saisissez les premiers caractères de la ville que vous cherchez."
+       CLEAR VARIABLE(taRecherche)
     :(FORM Event.code=On Before Keystroke)
-       If(Handle keystroke(->vsLookup;->vsResult))
-          If(vsResult#"")
-             QUERY([US Zip Codes];[US Zip Codes]City=vsResult+"@")
+       If(Gérer frappe clavier(->vaRecherche;->vaRésultat))
+          If(vaRésultat#"")
+             QUERY([Codes postaux];[Codes postaux]Ville=vaRésultat+"@")
              MESSAGES OFF
-             DISTINCT VALUES([US Zip Codes]City;asLookup)
+             DISTINCT VALUES([Codes postaux]Ville;taRecherche)
              MESSAGES ON
-             $vlResult:=Size of array(asLookup)
+             $vlRésultat:=Size of array(taRecherche)
              Case of
-                :($vlResult=0)
-                   vsMessage:="No city found."
-                :($vlResult=1)
-                   vsMessage:="One city found."
+                :($vlRésultat=0)
+                   vaMessage:="Aucune ville trouvée."
+                :($vlRésultat=1)
+                   vaMessage:="Une ville trouvée."
                 Else
-                   vsMessage:=String($vlResult)+" cities found."
+                   vaMessage:=String($vlRésultat)+" villes trouvées."
              End case
           Else
-             DELETE FROM ARRAY(asLookup;1;Size of array(asLookup))
-             vsMessage:="Enter the first characters of the city you are looking for."
+             DELETE FROM ARRAY(taRecherche;1;Size of array(taRecherche))
+             vaMessage:="Saisissez les premières lettres de la ville que vous cherchez."
           End if
        End if
  End case
 ```
 
-Here is the form being executed:
+Voici le formulaire en exécution :
 
-![](../assets/en/commands/pict21524.en.png)
+![](../assets/en/commands/pict21524.fr.png)
 
-Using the interprocess communication capabilities of 4D, you can similarily build user interfaces in which Lookup features are provided in floating windows that communicate with processes in which records are listed or edited.
+A l'aide des possibilités de communication interprocess de 4D, vous pouvez construire une interface dans laquelle les recherches se construisent dans des palettes flottantes communiquant avec les process dans lesquels les enregistrements sont affichés ou modifiés.
 
-## See also 
+## Voir aussi 
 
 [FILTER KEYSTROKE](filter-keystroke.md)  
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 [Get edited text](get-edited-text.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 390 |
+| Numéro de commande | 390 |
 | Thread safe | no |
-
 
 

@@ -5,39 +5,39 @@ slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *numsArray* : Integer array ; *namesArray* : Text array )<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *tabNums* ; *tabNoms* )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numsArray | Integer array | &#8592; | Numbers of choice lists |
-| namesArray | Text array | &#8592; | Names of choice lists |
+| tabNums | Integer array | &#8592; | Numéros des énumérations |
+| tabNoms | Text array | &#8592; | Noms des énumérations |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Summary-->The LIST OF CHOICE LISTS command returns, in the synchronized *numsArr* and *namesArr* arrays, the numbers and names of the choice lists defined by the list editor in Design mode.<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Summary-->La commande **LIST OF CHOICE LISTS** retourne dans les tableaux synchronisés *tabNums* et *tabNoms* les numéros et les noms des énumérations définies dans l’éditeur d’énumérations en mode Développement.<!-- END REF--> 
 
-The numbers of choice lists correspond to their order of creation. In the list editor, choice lists are displayed in alphabetical order.
+Les numéros des énumérations correspondent à leur ordre de création. Dans l’éditeur d’énumérations, les énumérations sont affichées par ordre alphabétique. 
 
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 957 |
+| Numéro de commande | 957 |
 | Thread safe | no |
 
 

@@ -5,87 +5,87 @@ slug: /commands/create-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *targetPath* : Text ; *aliasPath* : Text )<!-- END REF-->
+<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *cheminCible* ; *cheminAlias* )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| targetPath | Text | &#8594;  | Name or access path of the alias/shortcut target |
-| aliasPath | Text | &#8594;  | Name or full pathname for the alias or shortcut |
+| cheminCible | Text | &#8594;  | Nom ou chemin d’accès de la cible de l’alias/du raccourci |
+| cheminAlias | Text | &#8594;  | Nom ou chemin d’accès complet de l’alias/du raccourci à créer |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Created|
+|6.7|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.CREATE ALIAS.Summary-->The CREATE ALIAS command creates an alias (named “shortcut” under Windows) for the target file or folder passed in *targetPath*.<!-- END REF--> The name and location are defined by the *targetPath* parameter.
+<!--REF #_command_.CREATE ALIAS.Summary-->La commande **CREATE ALIAS** crée un alias (appelé “raccourci” sous Windows) du fichier ou dossier cible désigné par le paramètre *cheminCible*, avec le nom et l’emplacement définis dans le paramètre *cheminAlias*.<!-- END REF--> 
 
-An alias can be made for any kind of document or folder. The alias icon will be the same as the target item. The icon contains a small arrow at the bottom left side. Under Mac OS, the icon name is also displayed in italics characters.
+Vous pouvez créer un alias de tout type de document ou de dossier. L’icône de l’alias sera identique à celle de l’élément cible. Elle comportera en outre une petite flèche et, sous Mac OS, le libellé de l’alias apparaîtra en caractères italiques. 
 
-This command does not assign a name by default, the name has to be passed in the *aliasPath* parameter. If just a name is passed in this parameter, the alias is created in the current working folder (usually the folder containing the structure file).
+La commande n’affecte pas de libellé par défaut à l’alias, vous devez passer un nom dans le paramètre *cheminAlias*. Si vous passez uniquement un nom dans ce paramètre, l’alias est créé dans le dossier actif courant (généralement, le dossier contenant le fichier de structure de la base). 
 
-**Note:** Under Windows, the shortcuts are designated by a “.LNK” extension (invisible). If this extension is not passed, it is automatically added by the command.
+**Note :** Sous Windows, les raccourcis sont des fichiers dont l’extension est “.LNK”. Si vous ne passez pas cette extension, la commande l’ajoute automatiquement. 
 
-If an empty string is passed in the *targetPath*, the command does nothing.
+Si vous passez une chaîne vide dans *cheminCible*, la commande ne fait rien.
 
-## Example 
+## Exemple 
 
-Your database generates text files called “Report Number” sorted in the database folder. The user would like to create shortcuts to these reports and to store them at a convenient location:
+Votre base génère des fichiers texte intitulés “RapportNuméro”, stockés dans le dossier de la base. Vous souhaitez permettre à l’utilisateur de créer des raccourcis vers ces rapports et de les stocker où il le souhaite :
 
 ```4d
-  //Method CREATE_REPORT
- var $vtRport : Text
- C_STRING(250;$vtpath)
- C_STRING(80;$vaname)
+  //Méthode CREER_RAPPORT
+ var $vtRapport : Text
+ C_STRING(250;$vtChemin)
+ C_STRING(80;$vaNom)
  var vDoc : Time
- C_INTEGER($ReportNber)
+ C_INTEGER($NumRapport)
  
- $vTReport:=... //Create report
- $ReportNber:=... //Compute the report number
- $vaName:="Report"+String($ReportNber)+".txt" //File name
- vDoc:=Create document($vaName)
+ $vTRapport:=... //Edition du rapport
+ $NumRapport:=... //Calcul du numéro du rapport
+ $vaNom:="Rapport"+String($NumRapport)+".txt" //Nom du fichier
+ vDoc:=Create document($vaNom)
  If(OK=1)
-    SEND PACKET(vDoc;$vTReport)
+    SEND PACKET(vDoc;$vTRapport)
     CLOSE DOCUMENT(vDoc)
-  //Add the alias
-    CONFIRM("Create an alias for this report?")
+  //Ajout de l’alias
+    CONFIRM("Créer un alias pour ce rapport ?)
     If(OK=1)
-       $vtPath:=Select folder("Where do you want the alias to be created?")
+       $vtChemin:=Select folder("Où souhaitez-vous créer l’alias ?")
        If(OK=1)
-          CREATE ALIAS($vaName;$vtPath+$vaName)
+          CREATE ALIAS($vaNom;$vtChemin+$vaNom)
           If(OK=1)
-             SHOW ON DISK($vtPath+$vaName)
-  //Show the alias location
+             SHOW ON DISK($vtChemin+$vaNom)
+  //Visualisation de l'emplacement de l'alias
           End if
        End if
     End if
  End if
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-The OK system variable is set to 1 if the command execution was successful; otherwise it is set to 0.
+La variable système OK prend la valeur 1 si la commande a été correctement exécutée, sinon elle prend la valeur 0.
 
-## See also 
+## Voir aussi 
 
 [RESOLVE ALIAS](resolve-alias.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 694 |
+| Numéro de commande | 694 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

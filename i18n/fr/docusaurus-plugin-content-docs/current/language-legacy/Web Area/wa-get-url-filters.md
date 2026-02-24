@@ -5,45 +5,45 @@ slug: /commands/wa-get-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA GET URL FILTERS** ( *object* : Variable, Field ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
+<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
 <!--REF #_command_.WA GET URL FILTERS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| filtersArr | Text array | &#8592; | Filters array |
-| allowDenyArr | Boolean array | &#8592; | Allow-deny array |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabFiltres | Text array | &#8592; | Tableau de filtres |
+| tabAutorisRefus | Boolean array | &#8592; | Tableau autoriser-refuser |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA GET URL FILTERS.Summary-->The **WA GET URL FILTERS** command returns, in the *filtersArr* and *allowDenyArr* arrays, the filters that are active in the Web area designated by the *\** and *object* parameters.<!-- END REF--> If no filter is active, the arrays are returned empty. 
+<!--REF #_command_.WA GET URL FILTERS.Summary-->La commande **WA GET URL FILTERS** retourne dans les tableaux *tabFiltres* et *tabAutorisRefus* les filtres actifs dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF--> Si aucun filtre n’est actif, les tableaux sont retournés vides. 
 
-The filters are installed by the [WA SET URL FILTERS](wa-set-url-filters.md) command. If the arrays are reinitialized during the session, the **WA GET URL FILTERS** command can be used to find out the current settings
+Les filtres sont installés par la commande [WA SET URL FILTERS](wa-set-url-filters.md). Si les tableaux ont été réinitialisés au cours de la session, la commande **WA GET URL FILTERS** vous permet de connaître le paramétrage courant. 
 
-## See also 
+## Voir aussi 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1031 |
+| Numéro de commande | 1031 |
 | Thread safe | no |
 
 

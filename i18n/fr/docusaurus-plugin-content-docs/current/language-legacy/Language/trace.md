@@ -9,52 +9,53 @@ displayed_sidebar: docs
 <!--REF #_command_.TRACE.Params-->
 <div class="no-index">
 
-| Does not require any parameters |  |
+| Ne requiert pas de paramètre |  |
 | --- | --- |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.TRACE.Summary-->You use **TRACE** to trace methods during the development of a database.<!-- END REF-->
+<!--REF #_command_.TRACE.Summary-->La commande **TRACE** est utilisée, lors du développement des bases, pour tracer des méthodes, c'est-à-dire contrôler leur exécution pas à pas.<!-- END REF-->
 
-The **TRACE** command turns on the 4D debugger for the current process. The *Debugger* window is displayed before the next line of code is executed, and continues to be displayed for each line of code that is executed. You can also turn on the debugger by pressing **Alt+Shift+right-click** (Windows) or **Control+Option+Command+click** (Macintosh) while code is executing.
+La commande **TRACE** affiche le débogueur de 4D dans le process courant. La fenêtre du *Débogueur* apparaît dès que la commande est appelée, avant l'exécution de la ligne de code suivante, et reste affichée pour l'exécution de chaque ligne de code. Vous pouvez également appeler manuellement le débogueur en utilisant la combinaison **Alt+Maj+clic droit** sous Windows ou **Control+Option+Commande+clic** sous Mac OS pendant l'exécution du code. 
 
-The **TRACE** command is ignored when the executing code is compiled. 
+Dans les bases compilées, cette commande est ignorée.
 
-**4D Server:** If you call **TRACE** from a project method executed within the context of a Stored Procedure, the debugger window appears on the Server machine.
+**4D Server :** Si vous appelez **TRACE** depuis une méthode projet exécutée en tant que Procédure stockée, la fenêtre du débogueur apparaîtra sur le poste serveur.
 
-**Tip:** Do not place **TRACE** calls when using a form whose On Activate and On Deactivate events have been enabled. Each time the debugger window appears, these events will be invoked; you will then loop infinitely between these events and the debugger window. If you end up in this situation, **Shift+click** on the **No Trace**  button of the debugger in order to get out of it. Any subsequent calls to **TRACE** within the process will be ignored.
+**Conseil :** N'appelez pas **TRACE** lorsque vous utilisez un formulaire pour lequel les événements On Activate et On Deactivate ont été sélectionnés. En effet, chaque fois que la fenêtre du débogueur apparaîtra, les événements formulaire seront activés et cela créera une boucle sans fin entre les événements et le débogueur. De même, si vous appelez la commande **TRACE** depuis une méthode formulaire ou objet exécutée pendant la mise à jour du formulaire à l'écran, vous devrez également faire face à un problème de répétition sans fin de la séquence mises à jour du formulaire/apparitions de la fenêtre du débogueur.   
+Si vous vous retrouvez dans une telle situation, pour en sortir, utilisez la combinaison **Maj+clic** sur le bouton **Reprendre exécution** du débogueur. Tous les appels ultérieurs à **TRACE** dans le process seront ignorés. 
 
-## Example 
+## Exemple 
 
-The following code expects the process variable BUILD\_LANG to be equal to “US” or “FR”. If this is not the case, it calls the project method DEBUG:
+Dans le code suivant, la variable process *CREER\_LANG* doit être égale à “US” ou “FR”. Si ce n'est pas le cas, la méthode projet DEBUG est appelée :
 
 ```4d
   // ...
  Case of
-    :(BUILD_LANG="US")
-       vsBHCmdName:=[Commands]CM US Name
-    :(BUILD_LANG="FR")
-       vsBHCmdName:=[Commands]CM FR Name
+    :(CREER_LANG="US")
+       vsBHCmdNom:=[Commandes]CM US Nom
+    :(CREER_LANG="FR")
+       vsBHCmdNom:=[Commandes]CM FR Nom
     Else
-       DEBUG("Unexpected BUILD_LANG value")
+       DEBUG("Valeur de CREER_LANG incorrecte")
  End case
 ```
 
-The DEBUG project method is listed here:
+La méthode projet DEBUG est listée ci-dessous :
 
 ```4d
-  // DEBUG Project Method
-  // DEBUG (Text)
-  // DEBUG (Optional Debug Information)
+  // Méthode projet DEBUG
+  // DEBUG (Texte)
+  // DEBUG (Informations supplémentaires de débogage)
  
  #DECLARE($debugInfo : Text)
  
- If(<>vbDebugOn) // Interprocess variable set in the On Startup Method
+ If(<>vbDebugOn) // Variable interprocess définie dans la méthode base Sur ouverture
     If(Is compiled mode)
        If(Count parameters>=1)
-          ALERT($debugInfo+Char(13)+"Call Designer at x911")
+          ALERT($debugInfo+Char(13)+"Appelez le concepteur au 05 05 05 05")
        End if
     Else
        TRACE
@@ -63,11 +64,11 @@ The DEBUG project method is listed here:
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 157 |
+| Numéro de commande | 157 |
 | Thread safe | yes |
 
 

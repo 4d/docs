@@ -5,75 +5,75 @@ slug: /commands/get-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinationType* : Integer ; *destinationObject* : Text ; *destinationPtr* : Pointer )<!-- END REF-->
+<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinationType* ; *destinationObjet* ; *destinationPtr* )<!-- END REF-->
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| destinationType | Integer | &#8592; | 0=current selection, 1=set, 2=named selection, 3=variable |
-| destinationObject | Text | &#8592; | Name of the set or Name of the named selection or Empty string |
-| destinationPtr | Pointer | &#8592; | Pointer to local variable if destinationType=3 |
+| destinationType | Integer | &#8592; | 0 = sélection courante, 1 = ensemble, 2 = sélection temporaire, 3 = variable |
+| destinationObjet | Text | &#8592; | Nom de l'ensemble ou Nom de la sélection temporaire ou Chaîne vide |
+| destinationPtr | Pointer | &#8592; | Pointeur vers variable locale si destinationType = 3 |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](set-query-destination.md) command.
+<!--REF #_command_.GET QUERY DESTINATION.Summary-->La commande **GET QUERY DESTINATION** retourne la destination courante des résultats des recherches pour le process en cours.<!-- END REF--> Par défaut, les résultats des recherches modifient la sélection courante, mais vous pouvez modifier ce fonctionnement l’aide de la commande [SET QUERY DESTINATION](set-query-destination.md).
 
-In the *destinationType* parameter, 4D returns a value indicating the current destination of queries and in the *destinationObject* parameter it returns the name of the destination (if applicable). You can compare the value of the *destinationType* parameter with the constants of the *Queries* theme:
+4D retourne dans le paramètre *destinationType* une valeur indiquant la destination courante des recherches et dans *destinationObjet* le nom de la destination (le cas échéant). Vous pouvez comparer la valeur du paramètre *destinationType* aux constantes du thème *Recherches* :
 
-| Constant               | Type    | Value |
-| ---------------------- | ------- | ----- |
-| Into current selection | Integer | 0     |
-| Into named selection   | Integer | 2     |
-| Into set               | Integer | 1     |
-| Into variable          | Integer | 3     |
+| Constante              | Type        | Valeur |
+| ---------------------- | ----------- | ------ |
+| Into current selection | Entier long | 0      |
+| Into named selection   | Entier long | 2      |
+| Into set               | Entier long | 1      |
+| Into variable          | Entier long | 3      |
 
-The value returned in the *destinationObject* parameter depends on the value of the *destinationType* parameter:
+La valeur retournée dans le paramètre *destinationObjet* dépend de la valeur du paramètre *destinationType* :
 
-| **destinationType parameter** | **destinationObject parameter**                                             |
-| ----------------------------- | --------------------------------------------------------------------------- |
-| 0 (current selection )        | *destinationObject* is an empty string                                      |
-| 1 (set)                       | *destinationObject* contains the name of the set                            |
-| 2 (named selection )          | *destinationObject* contains the name of the selection                      |
-| 3 (variable)                  | *destinationObject* is an empty string (use the *destinationPtr* parameter) |
+| **Paramètre destinationType** | **Paramètre** **destinationObjet**                                              |
+| ----------------------------- | ------------------------------------------------------------------------------- |
+| 0 (sélection courante)        | *destinationObjet* est une chaîne vide                                          |
+| 1 (ensemble)                  | *destinationObjet* contient le nom de l’ensemble                                |
+| 2 (sélection temporaire)      | *destinationObjet* contient le nom de la sélection temporaire                   |
+| 3 (variable)                  | *destinationObjet* est une chaîne vide (utiliser le paramètre *destinationPtr*) |
 
- When the query destination is a local variable (*destinationType* returns 3), 4D returns a pointer to this variable in the *destinationPtr* parameter.
+Lorsque la destination des recherches est une variable (*destinationType* retourne 3), 4D retourne dans le paramètre *destinationPtr* un pointeur vers cette variable.
 
-## Example 
+## Exemple 
 
-We want to modify the query destination temporarily and then restore the previous parameters:
+Nous souhaitons modifier temporairement la destination de recherche, et rétablir ensuite les paramètres précédents :
 
 ```4d
- GET QUERY DESTINATION($vType;$vName;$ptr)
-  //retrieval of current parameters
- SET QUERY DESTINATION(Into set;"$temp")
-  //temporary modification of destination
- QUERY(...) //query
- SET QUERY DESTINATION($vType;$vName;$ptr)
-  //restoring parameters
+ GET QUERY DESTINATION($vType;$vNom;$ptr)
+  //récupération des paramètres courants
+ SET QUERY DESTINATION(Into set;"$tempo")
+  //modification temporaire de la destination
+ QUERY(...) //recherche
+ SET QUERY DESTINATION($vType;$vNom;$ptr)
+  //rétablissement des paramètres
 ```
 
-## See also 
+## Voir aussi 
 
 [SET QUERY DESTINATION](set-query-destination.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1155 |
+| Numéro de commande | 1155 |
 | Thread safe | yes |
 
 

@@ -9,58 +9,58 @@ displayed_sidebar: docs
 <!--REF #_command_.FORM Get color scheme.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Text | &#8592; | Color scheme of current form: "light" or "dark" |
+| Résultat | Text | &#8592; | Schéma de couleur du formulaire courant : "light" ou "dark" |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|19|Created|
+|19|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
+<!--REF #_command_.FORM Get color scheme.Summary-->La commande **FORM Get color scheme** retourne le nom du schéma de couleurs du formulaire actuellement affiché .<!-- END REF--> S'il n'existe pas de formulaire courant, la commande retourne une chaîne vide.
 
-**Note**: On Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows), this command always returns "light".
+**Note** : sous Windows, cette commande retourne toujours «light».
 
-The actual color scheme of a form is defined by:
+Le schéma de couleurs d'un formulaire est défini :
 
-* the ["Color Scheme" form property](../FormEditor/properties_FormProperties.md#color-scheme);
-* if "Color Scheme" set to "inherited", a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
-* if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) not called or called with "inherited" parameter value, the Settings (host database Settings in case of a component);
-* if Settings set to "inherited", the OS user preferences.
+* par la propriété de formulaire "Color Scheme" (voir [*colorScheme*](../FormEditor/properties_FormProperties.md#color-scheme));
+* si "Color Scheme" est défini sur "inherited", la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) est appelée;
+* si [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) n'est pas appelée ou appelée avec une valeur de paramètre "inherited", les Paramètres (paramètres de la base hôte dans le cas d'un composant);
+* si les Paramètres sont définis sur "inherited", les préférences utilisateur du système d'exploitation.
 
-Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command for details about color scheme names. 
+Veuillez vous reporter à la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) pour plus de détails sur les noms de schémas de couleurs.
 
-## Example 
+## Exemple 
 
-You want to load a picture depending on the form current scheme:
+Vous souhaitez charger une image en fonction du schéma courant du formulaire :
 
 ```4d
  $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
  READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
 ```
 
-**Note:** It is recommended to use *css* to adapt form objects design to the current scheme. 
+**Note :** Il est recommandé d'utiliser *css* pour adapter la conception des objets de formulaire au schéma courant.
 
-## See also 
+## Voir aussi 
 
 [Get Application color scheme](get-application-color-scheme.md)  
 [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1761 |
+| Numéro de commande | 1761 |
 | Thread safe | no |
 
 

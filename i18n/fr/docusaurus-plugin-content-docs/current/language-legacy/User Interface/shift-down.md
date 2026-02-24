@@ -9,53 +9,53 @@ displayed_sidebar: docs
 <!--REF #_command_.Shift down.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | State of the Shift key |
+| Résultat | Boolean | &#8592; | Etat de la touche Majuscule |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Shift down.Summary-->Shift down returns TRUE if the Shift key is pressed.<!-- END REF-->
+<!--REF #_command_.Shift down.Summary-->**Shift down** retourne Vrai si la touche **Majuscule** est enfoncée.<!-- END REF-->
 
-## Example 
+## Exemple 
 
-The following object method for the button *bAnyButton* performs different actions, depending on which modifier keys are pressed when the button is clicked:
+La méthode objet du bouton *bUnBouton* effectue des actions différentes en fonction de la ou des touche(s) de modification enfoncée(s) au moment du clic :
 
 ```4d
-  // bAnyButton Object Method
+  // Méthode objet bUnBouton
  Case of
-  // Other multiple key combinations could be tested here
+  // Diverses autres combinaisons de touches peuvent être testées ici
   // ...
     :(Shift down&Windows Ctrl down)
-  // Shift and Windows Ctrl (or Macintosh Command) keys are pressed
-       DO ACTION1
+  // Les touches Majuscule et Ctrl Windows (ou Commande Mac OS) sont enfoncées
+       FAIRE ACTION1
   // ...
     :(Shift down)
-  // Only Shift key is pressed
-       DO ACTION2
+  // Seule Majuscule est enfoncée
+       FAIRE ACTION2
   // ...
     :(Windows Ctrl down)
-  // Only Windows Ctrl (or Macintosh Command) key is pressed
-       DO ACTION3
+  // Seule Ctrl Windows (ou Commande Mac OS) est enfoncée
+       FAIRE ACTION3
   // ...
-  // Other individual keys could be tested here
+  // D'autres touches peuvent être testées individuellement ici
   // ...
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh command down](macintosh-command-down.md)  
@@ -64,11 +64,11 @@ The following object method for the button *bAnyButton* performs different actio
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 543 |
+| Numéro de commande | 543 |
 | Thread safe | yes |
 
 

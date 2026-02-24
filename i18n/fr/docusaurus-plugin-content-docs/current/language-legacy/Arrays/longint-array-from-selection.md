@@ -5,55 +5,55 @@ slug: /commands/longint-array-from-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *aTable* : Table ; *recordArray* : Integer array {; *selection* : Text} )<!-- END REF-->
+<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *laTable* ; *tabEnrg* {; *tempo*} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table of the current selection |
-| recordArray | Integer array | &#8592; | Array of record numbers |
-| selection | Text | &#8594;  | Name of the named selection or the current selection if this parameter is omitted |
+| laTable | Table | &#8594;  | Table de la sélection courante |
+| tabEnrg | Integer array | &#8592; | Tableau de numéros d’enregistrements |
+| tempo | Text | &#8594;  | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6.7|Modified|
-|<6|Created|
+|6.7|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->The LONGINT ARRAY FROM SELECTION command fills the *recordArray* array with the (absolute) record numbers that are in *selection*.<!-- END REF-->
+<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->La commande **LONGINT ARRAY FROM SELECTION** remplit le tableau *tabEnrg* avec les numéros (absolus) des enregistrements faisant partie de la sélection temporaire *tempo*.<!-- END REF-->
 
-If you do not pass the *selection* parameter, the command will use the current selection of *aTable*. 
+Si vous ne passez pas le paramètre *tempo*, la commande utilise la sélection courante de la table *table*. 
 
-**Note:** The array element number 0 is initialized to -1.
+**Note :** L’élément n° 0 du tableau *tabEnrg* est initialisé à -1.
 
-## Example 
+## Exemple 
 
-You want to retrieve the numbers of the records in the current selection:
+Vous voulez récupérer les numéros des enregistrements de la sélection courante :
 
 ```4d
- ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
- LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
+ ARRAY LONGINT($_tRecNum;0) //obligatoire pour le mode compilé
+ LONGINT ARRAY FROM SELECTION([Clients];$_tRecNum)
 ```
 
-## See also 
+## Voir aussi 
 
 [CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 647 |
+| Numéro de commande | 647 |
 | Thread safe | yes |
 
 

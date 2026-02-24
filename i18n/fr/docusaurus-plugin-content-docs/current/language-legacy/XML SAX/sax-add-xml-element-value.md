@@ -5,72 +5,73 @@ slug: /commands/sax-add-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* : Time ; *data* : Text, Variable {; *} )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* ; *données* {; *} )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Reference of open document |
-| data | Text, Variable | &#8594;  | Text or variable to insert in the document |
-| * | Operator | &#8594;  | If passed: encoding of special characters If omitted: no encoding |
+| document | Time | &#8594;  | Référence du document ouvert |
+| données | Text, Variable | &#8594;  | Texte ou variable à insérer dans le document |
+| * | Opérateur | &#8594;  | Si passé = Encoder les caractères spéciaux en mode 'XML Données brutes' |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|12|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->In the XML document referenced by *document*, the **SAX ADD XML ELEMENT VALUE** command adds *data* directly without converting them.<!-- END REF--> This command is equivalent, for instance, to inserting an attachment in the body of an e-mail. 
+<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->La commande **SAX ADD XML ELEMENT VALUE** ajoute directement dans le document XML référencé par *document* des *données* sans les convertir.<!-- END REF--> Cette commande équivaut par exemple à insérer une pièce jointe dans le corps (body) d’un email. 
 
-In *data*, you can either pass a character string directly, or a 4D variable. The variable contents will be converted into text before being included in the XML document. If *data* is evaluated to *undefined*, 4D uses an empty string. If you want to encode the contents of *data*, you must use the [BASE64 ENCODE](base64-encode.md) command. In this case, of course, you must passs a BLOB in *data*.
+Vous pouvez passer dans le paramètre *données* soit directement une chaîne de caractères, soit une variable 4D. Le contenu de la variable sera converti en texte pour pouvoir être inséré dans le document XML.   
+Si vous souhaitez encoder le contenu de *données*, vous devez utiliser la commande [BASE64 ENCODE](base64-encode.md). Dans ce cas bien entendu, vous devez passer un BLOB dans *données*. 
 
-By default, the command encodes special characters (< > ” ’...) contained in the *data* parameter unless you have disabled this mechanism for the current process using the [XML SET OPTIONS](xml-set-options.md) command by passing the XML raw data value to the XML string encoding option. For example:  
+Par défaut, la commande encode les caractères spéciaux (< > ” ’...) contenus dans le paramètre *données*, sauf si vous avez désactivé ce mécanisme pour le process courant à l'aide de la commande [XML SET OPTIONS](xml-set-options.md) en passant la valeur XML raw data à l'option XML string encoding. Par exemple :  
 
 ```4d
- XML SET OPTIONS($docRef;XML string encoding;XML raw data)
+ XML SET OPTIONS($refDoc;XML string encoding;XML raw data)
 ```
 
   
-In this context, to force the encoding of special parameters when calling **SAX ADD XML ELEMENT VALUE**, you must pass the optional *\** parameter. 
+ Dans ce contexte, pour forcer l'encodage des caractères spéciaux lors de l'appel de **SAX ADD XML ELEMENT VALUE**, il est nécessaire de passer le paramètre facultatif *\**. 
 
-In order for this command to operate correctly, an element must be open. Otherwise, an error will be generated.
+Pour que cette commande fonctionne, un élément doit être ouvert. Dans le cas contraire, une erreur est générée.
 
-## Example 
+## Exemple 
 
-This example inserts the *whitepaper.pdf* file into the open XML element:
+Cet exemple insère le fichier *whitepaper.pdf* dans l’élément XML ouvert :
 
 ```4d
- var vBMyBLOB : Blob
- DOCUMENT TO BLOB("c:\\whitepaper.pdf";vBMyBLOB)
- SAX ADD XML ELEMENT VALUE($DocRef;vBMyBLOB)
+ var vBMonBLOB : Blob
+ DOCUMENT TO BLOB("c:\\whitepaper.pdf";vBMonBLOB)
+ SAX ADD XML ELEMENT VALUE($RefDoc;vBMonBLOB)
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the command has been executed correctly, the system variable OK is set to 1; otherwise, it is set to 0 and an error is generated. 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et une erreur est générée. 
 
-## See also 
+## Voir aussi 
 
 [SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
 [XML SET OPTIONS](xml-set-options.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 855 |
+| Numéro de commande | 855 |
 | Thread safe | yes |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

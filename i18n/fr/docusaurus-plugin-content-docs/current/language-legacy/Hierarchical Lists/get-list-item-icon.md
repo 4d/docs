@@ -5,56 +5,56 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( * ; *list* : Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( *list* : Integer ; *itemRef* : Operator, Integer ; *icon* : Picture )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *liste* ; *refElément* ; *icône* )<br/>**GET LIST ITEM ICON** ( {* ;} *liste* ; * ; *icône* )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Operator, Integer | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| icon | Picture | &#8592; | Icon associated with item |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Opérateur, Entier long | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| icône | Picture | &#8592; | Icône associée à l'élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET LIST ITEM ICON.Summary-->The **GET LIST ITEM ICON** command returns, in *icon*, the icon associated with the item whose reference number is passed in *itemRef* in the list whose reference number or object name is passed in *list*.<!-- END REF-->  
-  
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+<!--REF #_command_.GET LIST ITEM ICON.Summary-->La commande **GET LIST ITEM ICON** retourne dans *icône* l’icône associée à l’élément dont vous avez passé le numéro de référence dans *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
-**Note:** If you use the @ character in the object name of the list and the form contains several lists that match this name, the **GET LIST ITEM ICON** command will be applied to the first object whose name corresponds.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using [APPEND TO LIST](append-to-list.md)).   
-Lastly, you can pass *\** in *itemRef:* in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
+**Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM ICON** s'appliquera au premier objet dont le nom correspond.
 
-Pass a picture variable in *icon*. After the command is executed, it will contain the icon associated with the item, regardless of the source of the icon (static picture, resource or picture expression). 
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-If no icon is associated with the item, the icon variable is returned empty.
+Passez dans *icône* une variable image. A l’issue de l’exécution de la commande, elle contiendra l’icône associée à l’élément, quelle que soit la source de l’icône (image statique, ressource ou expression image). 
 
-**Note:** When the icon associated with an item has been defined via a static reference (resource references or pictures from the picture library), it is possible to find out its number using the [GET LIST ITEM PROPERTIES](get-list-item-properties.md) command*.*
+Si aucune icône n’est associée à l’élément, la variable icône est retournée vide.
 
-## See also 
+**Note :** Lorsque l'icône associée à un élément a été définie via une référence statique (références de ressources ou images de la bibliothèque), il est possible de connaître son numéro à l’aide de la commande [GET LIST ITEM PROPERTIES](get-list-item-properties.md).
+
+## Voir aussi 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 951 |
+| Numéro de commande | 951 |
 | Thread safe | no |
 
 

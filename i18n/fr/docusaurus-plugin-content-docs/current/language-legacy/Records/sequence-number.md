@@ -5,78 +5,76 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *laTable* )} : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to return the sequence number, or Default table, if omitted |
-| Function result | Integer | &#8592; | Sequence number |
+| laTable | Table | &#8594;  | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
+| Résultat | Integer | &#8592; | Numéro automatique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004.1|Modified|
-|<6|Created|
+|2004.1|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Sequence number.Summary-->**Sequence number** returns the next sequence number for *aTable*.<!-- END REF--> The sequence number is unique for each table. It is a non-repeating number that is incremented(\*) for each new record created for the table.
+<!--REF #_command_.Sequence number.Summary-->**Sequence number** retourne le prochain numéro automatique de *laTable*.<!-- END REF--> Ce numéro est unique pour chaque table. C'est une valeur qui ne se répète pas et qui est incrémentée à chaque enregistrement nouvellement créé dans la table(\*). 
 
-(\*) For optimization reasons, the incrementation is started only at the first call of the **Sequence number** command or of a feature that gets access to the sequence number (see below). In addition, the numbering can be modified using the [SET DATABASE PARAMETER](set-database-parameter.md) command. Consequently, the returned value should not be considered as the count of records created in the *aTable*. 
+(\*) Pour des raisons d'optimisation, la numérotation automatique est activée uniquement au premier appel de la commande **Sequence number** ou d'une des fonctions qui y accèdent (cf. ci-dessous). De plus, le compteur peut être réinitialisé via [SET DATABASE PARAMETER](set-database-parameter.md). Par conséquent, la valeur retournée ne correspond pas nécessairement au nombre d'enregistrements ayant été créés dans *laTable*. 
 
-By default, the numbering starts at 1\. You can change the numbering for a table using the [SET DATABASE PARAMETER](set-database-parameter.md) command. 
+Par défaut, la numérotation commence à 1 ; vous pouvez toutefois modifier la numérotation automatique des enregistrements de *laTable* à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). 
 
-**Note:** If there is no current record and the numbering has been modified via the [SET DATABASE PARAMETER](set-database-parameter.md) command, this number is in fact reserved for the next record creation but it will only be returned by the **Sequence number** function when the [SAVE RECORD](save-record.md) command has actually been called. 
+**Note :** S'il n'y a pas d'enregistrement courant et que la numérotation a été modifiée via la commande [SET DATABASE PARAMETER](set-database-parameter.md), le numéro est bien réservé pour la prochaine création d'enregistrement mais ne sera retourné par la fonction **Sequence number** que lorsque la commande [SAVE RECORD](save-record.md) sera effectivement appelée. 
 
-The **Sequence number** function is useful in the following cases:
+Le numéro retourné par cette fonction pour *laTable* est identique à celui généré si vous avez coché l'option **Incrémentation auto** dans l'Inspecteur de Structure pour un champ de *laTable* ou si vous fixez #N comme valeur par défaut pour un champ de *laTable* dans un formulaire (référez-vous au manuel *Mode Développement* de 4D). 
 
-* The sequence number needs an increment greater than 1
-* The sequence number is part of a code, for example a part number code.
+**Note :** L'incrémentation automatique peut également être définie via l'attribut SQL AUTO\_INCREMENT.
 
-To store the sequence number by means of a method, create a long integer field in the table and assign the sequence number to the field.
+La fonction **Sequence number** est utile dans les cas suivants :
 
-The sequence number returned by this function for the *aTable* is the same number as the one generated when you check the **Autoincrement** option for a field of the table using the Structure inspector, or as the one assigned by using the *#N* symbol as the default value for a field of the *table* in a form (see the 4D Design Reference manual).
+* Si la numérotation doit s'incrémenter d'un nombre supérieur à 1
+* Si le numéro doit reprendre une partie d'un code
 
-**Note:** Automatic incrementation can also be set via the SQL AUTO\_INCREMENT attribute.
-
-If the sequence number needs to start at a number other than 1, just add the difference to **Sequence number**. For example, if the sequence number must start at 1000, you would use the following statement to assign the number:
+Pour stocker ce numéro à l'aide d'une méthode, il faut créer un champ de type Entier long dans la table et y affecter la numérotation automatique.  
+Si la numérotation doit débuter à une valeur différente de 1, ajoutez simplement la différence à la fonction **Sequence number**. Par exemple, si le numéro doit commencer à 1000, vous pouvez utiliser la ligne de code suivante pour affecter le numéro :
 
 ```4d
- [Table1]Seq Field :=Sequence number([Table1])+999
+ [Table1]NumAuto:=Sequence number([Table1])+999
 ```
 
-## Example 
+## Exemple 
 
-The following example is part of a form method. It tests to see if this is a new record; i.e., if the invoice number is an empty string. If it is a new record, the method assigns an invoice number. The invoice number is formed from two pieces of information: the sequence number, and the operator’s ID, which was entered when the database was opened. The sequence number is formatted as a 5-character string:
+L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code testent s'il s'agit d'un nouvel enregistrement (si le numéro de facture est égal à une chaîne vide). Si l'enregistrement est nouveau, un numéro est affecté à la facture. Ce numéro de facture est construit avec deux informations : le numéro unique et le numéro de référence de l'utilisateur, qui était saisi à l'ouverture de la base. Le numéro unique est formaté en tant que chaîne avec une longueur de cinq caractères :
 
 ```4d
-  // If this is a new part number, create a new invoice number
- If([Invoices]Invoice No="")
-  // The invoice number is a string that ends with the operator’s ID.
-    [Invoices]Invoice No:=String(Sequence number;"00000")+[Invoices]OpID
+ If([Factures]NumFacture="") // S'il s'agit d'une nouvelle facture, créer un numéro de facture
+  // Le numéro de facture est une chaîne qui se termine par le numéro de référence de l'utilisateur
+    [Factures]NumFacture:=String(Numerotation automatique;"00000")+[Factures]Utilisateur
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-*About Record Numbers*  
+*A propos des numéros d'enregistrements*  
 [Record number](record-number.md)  
 [Selected record number](selected-record-number.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 244 |
+| Numéro de commande | 244 |
 | Thread safe | yes |
 
 

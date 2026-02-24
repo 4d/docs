@@ -5,63 +5,64 @@ slug: /commands/set-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *iconRef* : Text, Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* ; *ligneMenu* ; *refIcône* {; *process*} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Menu reference or Menu number |
-| menuItem | Integer | &#8594;  | Number of menu item or -1 for the last item added to the menu |
-| iconRef | Text, Integer | &#8594;  | Name or number of picture to be associated with menu item |
-| process | Integer | &#8594;  | Process number |
+| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| refIcône | Text, Integer | &#8594;  | Nom ou numéro de l’image à associer à la ligne de menu |
+| process | Integer | &#8594;  | Numéro de process |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R6|Modified|
-|11 SQL|Created|
+|17 R6|Modifié|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MENU ITEM ICON.Summary-->The **SET MENU ITEM ICON** command modifies the icon associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->  
-You can pass -1 in *menuItem* in order to specify the last item added to *menu*.
+<!--REF #_command_.SET MENU ITEM ICON.Summary-->La commande **SET MENU ITEM ICON** permet de modifier l’icône associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->
 
-In *menu*, you can pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) or a menu number. If you pass a menu reference, the command will apply to all the instances of the menu in all the processes. In this case, the *process* parameter is ignored if it is passed. If you pass a menu number, the command will take the corresponding menu in the main menu bar of the current process into account. If you want to designate another process, pass its number in the optional *process* parameter.
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu. Si vous passez un identifiant unique, la commande s’appliquera à toutes les instances du menu dans tous les process. Dans ce cas, le paramètre *process* est ignoré s’il est passé. Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-In *iconRef*, you can pass the picture to be used as the icon. You can use a a picture file reference or (binary databases only) a library picture.
+Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au menu.
 
-* Picture file reference. Two patterns are supported:  
-   * **path:<filesystem>** (*recommended*), for example "path:/RESOURCES/icon.png". For more information, refer to the [Filesystem pathnames](../Concepts/paths.md#filesystem-pathnames) paragraph.  
-   * **file:<relativePathname>** (*deprecated*), for example "file:icon.png". The picture must be located in the **Resources** folder of the database.
-* Library picture (binary databases only): You can pass either the name or number of the picture. It is generally preferable to use its number rather than its name since picture numbers are unique IDs, which is not the case with names.
+Passez dans le paramètre *refIcône* l'image devant être utilisée comme icône. Vous pouvez utiliser une référence de fichier image ou (base de données binaires uniquement) une image issue de la bibliothèque.
 
-**Note:** Use of a picture file path is recommended since the Picture library is deprecated and is not supported in 4D project databases. In addition, the *file:<relativePathname>* pattern is deprecated, using *path:<filesystem>* pattern is recommended.
+* Référence de fichier image. Deux syntaxes sont prises en charge :  
+   * **path:<filesystem>** *(recommandé),* par exemple "path:/RESOURCES/icon.png". Pour plus d'informations, reportez-vous au pragraphe *Chemins des filesystem*.  
+   * **file:<relativePathname>** *(obsolète),* par exemple "file:icon.png". L'image doit se trouver dans le dossier **Resources** de la base.
+* Image de la bibliothèque (bases de données binaires uniquement) : vous pouvez passer soit le nom soit le numéro de l' image. Il est généralement préférable d’utiliser le numéro plutôt que le nom, car les numéros d’images sont des identifiants uniques, ce qui n’est pas le cas des noms.
 
-## Example 
+**Note :** Il est recomandé d'utiliser des chemins vers des fichiers image, étant donné que la bibliothèque d'images est obsolète et n'est plus supportée dans les projets 4D. De plus, la syntaxe *file:<relativePathname>* est obsolète, il est donc recommandé d'utiliser le chemin *path:<filesystem>.*
 
-Use of a picture located in the Resources folder of the database:
+## Exemple 
+
+Utilisation d'une image se trouvant dans le dossier Resources de la base :
 
 ```4d
- SET MENU ITEM ICON($MenuRef;2;"Path:/RESOURCES/english.lproj/spot.png")
+ SET MENU ITEM ICON($RefMenu;2;"Path:/RESOURCES/french.lproj/spot.png")
 ```
 
-## See also 
+## Voir aussi 
 
 [GET MENU ITEM ICON](get-menu-item-icon.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 984 |
+| Numéro de commande | 984 |
 | Thread safe | no |
 
 

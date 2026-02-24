@@ -1,6 +1,7 @@
 ---
 id: form-load
 title: FORM LOAD
+slug: /commands/form-load
 displayed_sidebar: docs
 ---
 

@@ -5,144 +5,144 @@ slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *object* : Object ; *property* : Text ; *value* : Expression {; ...(*property* : Text ; *value* : Expression)} )<!-- END REF-->
+<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objet* ; *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Name of property to set |
-| value | Expression | &#8594;  | New value of property |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à définir |
+| valeur | Expression | &#8594;  | Nouvelle valeur de la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R4|Modified|
-|15 R4|Modified|
-|15|Modified|
-|14|Created|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|15 R4|Modifié|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF-->must be an object variable or designate a 4D object field.
+<!--REF #_command_.OB SET.Summary-->La commande **OB SET** permet de créer ou de modifier une ou plusieurs paires propriété/valeur dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D. 
 
-In the *property* parameter, pass the label of the property to be created or modified. If the property already exists in *object*, its value is updated. If it does not exist, it is created.   
+**Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP SET ATTRIBUTES* (cf. exemple 11). Toutefois, à la différence de *WP SET ATTRIBUTES*, **OB SET** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
-Note that the *property* parameter is case sensitive. 
+Passez dans le paramètre *propriété* le libellé de la propriété à créer ou à modifier. Si la propriété existe déjà dans *objet*, sa valeur sera mise à jour. Si elle n’existe pas, elle est créée.   
+Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-In the *value* parameter, pass the value you want to set for the property. Several data types are supported. Note that:
+Passez dans le paramètre *valeur* la valeur de la propriété à définir. Plusieurs types de données sont pris en charge. A noter que :
 
-* if you pass a pointer, it is kept as is; it is evaluated using the [JSON Stringify](json-stringify.md) command.
-* if you pass a date, it will be stored with date type or as text in ISO format depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). 
-* if you pass a time, it is stored as a number of seconds (Real) in *object*.
-* if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
-* starting with 4D v16 R4, you can pass a picture of any supported type (see *Native Formats Supported* ).
+* si vous passez un pointeur, il est conservé tel quel, il est évalué à l’aide de la commande [JSON Stringify](json-stringify.md),
+* les dates sont stockées au format "YYYY-MM-DDTHH:mm:ss.SSSZ". Lors de la conversion d'une date 4D en texte avant stockage dans l'objet, par défaut le programme tient compte du fuseau horaire local. Vous pouvez modifier ce fonctionnement à l'aide du sélecteur JSON use local time de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+* si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (réel) dans *objet*.
+* si vous passez un objet de langage, la commande utilise la référence de l’objet et non une copie.
 
-## Example 1 
+## Exemple 1 
 
-Creating an object and adding a text type property:
-
-```4d
- var $Object : Object
- OB SET($Object ;"FirstName";"John";"LastName";"Smith")
-  // $Object = {"FirstName":"John","LastName":"Smith"}
-```
-
-## Example 2 
-
-Creating an object and adding a Boolean type property:
+Création d’un objet et ajout d’une propriété de type texte :
 
 ```4d
  var $Object : Object
- OB SET($Object ;"LastName";"smith";"age";42;"client";True)
-  // $Object = {"LastName":"smith","age":42,"client":true}
+ OB SET($Object ;"prénom";"John";"nom";"Smith")
+     //$Object = {"prénom":"John","nom":"Smith"}
 ```
 
-## Example 3 
+## Exemple 2 
 
-Modifying a property:
-
-```4d
-  // $Object = {"FirstName":"John","LastName":"Smith"}
- OB SET($Object ;"FirstName";"Paul")
-  // $Object = {"FirstName":"Paul","LastName":"Smith"}
-```
-
-## Example 4 
-
-Adding a property:
-
-```4d
-  // $Object = {"FirstName":"John","LastName":"Smith"}
- OB SET($Object ;"department";"Accounting")
-  // $Object = {"FirstName":"Paul","LastName":"Smith","department":"Accounting"}
-```
-
-## Example 5 
-
-Renaming a property:
+Création d’un objet et ajout d’une propriété de type booléen :
 
 ```4d
  var $Object : Object
- OB SET($Object ;"LastName";"James";"age";35)
-  // $Object = {"LastName":"James","age":35}
- OB SET($Object ;"FirstName";OB Get($Object ;"LastName"))
-  // $Object = {"FirstName":""James","nom":"James","age":35}
- OB REMOVE($Object ;"LastName")
-  // $Object = {"FirstName":""James","age":35}
+ OB SET($Object ;"nom";"smith";"age";42;"client";True)
+     //$Object = {"nom":"smith","age":42,"client":true}
 ```
 
-## Example 6 
+## Exemple 3 
 
-Using a pointer:
+Modification d’une propriété :
 
 ```4d
-  // $Object = {"FirstName":"Paul","LastName":"Smith"}
- var $LastName : Text
- OB SET($Object ;"LastName";->$LastName)
-  // $Object = {"FirstName":"Paul","LastName":"->$LastName"}
+     //$Object = {"prénom":"John","nom":"Smith"}
+ OB SET($Object ;"prénom";"Paul")
+     //$Object = {"prénom":"Paul","nom":"Smith"}
+```
+
+## Exemple 4 
+
+Ajout d’une propriété :
+
+```4d
+     //$Object = {"prénom":"John","nom":"Smith"}
+ OB SET($Object ;"service";"Comptabilité")
+     //$Object = {"prénom":"Paul","nom":"Smith","service":"Comptabilité"}
+```
+
+## Exemple 5 
+
+Renommage d’une propriété :
+
+```4d
+ var $Object : Object
+ OB SET($Object ;"nom";"James";"age";35)
+     //$Object = {"nom":"James","age":35}
+ OB SET($Object ;"prénom";OB Get($Object ;"nom"))
+     //$Object = {"prénom":""James","nom":"James","age":35}
+ OB REMOVE($Object ;"nom")
+     //$Object = {"prénom":""James","age":35}
+```
+
+## Exemple 6 
+
+Utilisation d’un pointeur :
+
+```4d
+     //$Object = {"prénom":"Paul","nom":"Smith"}
+ var $nom : Text
+ OB SET($Object ;"nom";->$nom)
+     //$Object = {"prénom":"Paul","nom":"->$nom"}
  $JsonString:=JSON Stringify($Object)
-  // $JsonString="{"FirstName":"Paul","LastName":""}
- $LastName:="Wesson"
+     //$JsonString="{"prénom":"Paul","nom":""}
+ $nom:="Wesson"
  $JsonString:=JSON Stringify($Object)
-  // $JsonString="{"FirstName":"Paul","LastName":"Wesson"}
+     //$JsonString="{"prénom":"Paul","nom":"Wesson"}
 ```
 
-## Example 7 
+## Exemple 7 
 
-Using an object:
+Utilisation d’un objet :
 
 ```4d
  var $ref_smith : Object
- OB SET($ref_smith ;"name";"Smith")
+ OB SET($ref_smith ;"nom";"Smith")
  var $ref_emp : Object
- OB SET($ref_emp ;"employee";$ref_smith)
+ OB SET($ref_emp ;"employé";$ref_smith)
  $Json_string :=JSON Stringify($ref_emp)
-  // $ref_emp = {"employee":{"name":"Smith"}} (object)
-  // $Json_string = "{"employee":{"name":"Smith"}}" (string)
+     // $ref_emp = {"employé":{"nom":"Smith"}} (objet)
+     // $Json_string = "{"employé":{"nom":"Smith"}}" (chaîne)
 ```
 
-You can also change a value on the fly:
+Vous pouvez également changer une valeur à la volée :
 
 ```4d
- OB SET($ref_smith ;"name";"Smyth")
-  // $ref_smith = {"employee":{"name":"Smyth"}}
- $string:=JSON Stringify($ref_emp)
-  // $string = "{"employee":{"name":"Smyth"}}"
+ OB SET($ref_smith ;"nom";"Smyth")
+     // $ref_smith = {"employé":{"nom":"Smyth"}}
+ $string :=JSON Stringify($ref_emp) 
+     // $string = "{"employee":{"nom":"Smyth"}}"
 ```
 
-## Example 8 
+## Exemple 8 
 
-If you have defined the \[Rect\]Desc field as an object field, you can write:
+Si vous avez défini le champ \[Rect\]Desc en tant que champ objet, vous pouvez écrire :
 
 ```4d
  CREATE RECORD([Rect])
@@ -151,22 +151,22 @@ If you have defined the \[Rect\]Desc field as an object field, you can write:
  SAVE RECORD([Rect])
 ```
 
-## Example 9 
+## Exemple 9 
 
-You want to export data in JSON that contains a 4D date that you want to be converted into a string without time zone information. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
+Vous souhaitez exporter des données en JSON contenant une date 4D que vous souhaitez convertir en chaîne sans fuseau horaire. A noter que la conversion a lieu au moment du stockage de la date dans l’objet, il faut donc appeler la commande [SET DATABASE PARAMETER](set-database-parameter.md) avant [OB SET](ob-set.md) : 
 
 ```4d
  var $o : Object
- $vDateSetting:=Get database parameter(Dates inside objects) //save the current setting
- SET DATABASE PARAMETER(Dates inside objects;String type without time zone)
- OB SET($o ;"myDate";Current date) // JSON conversion
+ $vDateParam:=Get database parameter(Dates dans objets) //on garde le paramétrage courant
+ SET DATABASE PARAMETER(Dates dans objets;String type without time zone)
+ OB SET($o ;"maDate";Current date) // conversion JSON
  $json:=JSON Stringify($o)
- SET DATABASE PARAMETER(Dates inside objects;$vDateSetting)
+ SET DATABASE PARAMETER(Dates dans objets;$vDateParam)
 ```
 
-## Example 10 
+## Exemple 10 
 
-In the method of a form containing a 4D Write Pro area, you can write:
+Dans la méthode d'un formulaire contenant une zone 4D Write Pro, vous pouvez écrire :
 
 ```4d
  If(FORM Event.code=On Validate)
@@ -175,28 +175,28 @@ In the method of a form containing a 4D Write Pro area, you can write:
  End if
 ```
 
-You can also read custom attributes of the documents:
+Vous pouvez également lire les attributs personnalisés des documents :
 
 ```4d
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-## Example 11 
+## Exemple 11 
 
-You want to set a collection as a property value. You can write:
+Vous souhaitez assigner une collection en tant que valeur d'une propriété. Vous pouvez écrire :
 
 ```4d
  var $person : Object
  var $myCol : Collection
  
- $person:=OB New
+ $person:=New object
  $myCol:=New collection("Mike";25;"Denis";12;"Henry";4;True)
  OB SET($person;"Name";"Jones";"Children";$myCol)
 ```
 
-## Example 12 
+## Exemple 12 
 
-You want to store a picture in an object field. You can write:
+Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
 
 ```4d
  var $vPict : Picture
@@ -206,18 +206,18 @@ You want to store a picture in an object field. You can write:
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Get](ob-get.md)  
 [OB REMOVE](ob-remove.md)  
 [OB SET ARRAY](ob-set-array.md)  
 [OB SET NULL](ob-set-null.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1220 |
+| Numéro de commande | 1220 |
 | Thread safe | yes |
 
 

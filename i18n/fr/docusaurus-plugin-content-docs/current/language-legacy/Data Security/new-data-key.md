@@ -5,74 +5,74 @@ slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* : Text ) : Object<!-- END REF-->
+<!--REF #_command_.New data key.Syntax-->**New data key** ( *phraseSecrète* ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| passPhrase | Text | &#8594;  | Passphrase to use to generate the AES data encryption key |
-| Function result | Object | &#8592; | Object containing the key (encodedKey property) |
+| phraseSecrète | Text | &#8594;  | Phrase secrète à utiliser pour générer la clé de chiffrement des données AES |
+| Résultat | Object | &#8592; | Objet contenant la clé (propriété encodedKey) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|17 R5|Created|
+|17 R5|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.New data key.Summary-->The **New data key** command generates a binary data encryption key from the text passed in the *passPhrase* parameter.<!-- END REF-->
+<!--REF #_command_.New data key.Summary-->La commande **New data key** génère une clé de chiffrement des données binaires à partir du texte passé dans le paramètre *phraseSecrète*.<!-- END REF-->
 
-The encoded key can be saved locally, in order to be stored on an removable device, like an USB key (see *Storing data encryption keys in files* in the *4D Design Reference*). Connecting this device to the machine that hosts the encrypted database will automatically allow the user to access the encrypted data.
+La clé chiffrée peut être sauvegardée localement, afin d'être stockée sur un appareil amovible, tel qu'une clé USB (voir *Sauvegarder les clés de chiffrement des données dans des fichiers* dans le manuel *4D Mode Développement*). Connecter cet appareil au poste qui héberge la base chiffrée permettra automatiquement à l'utilisateur d'accéder aux données chiffrées. 
 
-You can pass any character in *passPhrase*. The same *passPhrase* will always produce the same data encryption key.
+Vous pouvez passer n'importe quel caractère dans le paramètre *phraseSecrète*. Ce même paramètre génèrera toujours la même clé de chiffrement des données.
 
-**Returned value**
+**Valeur retournée**
 
-The returned object contains the following property:
+L'objet retourné contient la propriété suivante :
 
-| **Property** | **Type** | **Description**                                                  |
-| ------------ | -------- | ---------------------------------------------------------------- |
-| encodedKey   | Text     | AES encryption key (SHA 256-bit) generated from the *passPhrase* |
+| **Propriété** | **Type** | **Description**                                                           |
+| ------------- | -------- | ------------------------------------------------------------------------- |
+| encodedKey    | Texte    | Clé de chiffrement AES (SHA 256 bits) générée à partir de *phraseSecrète* |
 
-If an empty string was passed in *passPhrase*, the command returns *null*.
+Si une chaîne vide est passée dans *phraseSecrète*, la commande retourne *null*.
 
-## Example 
+## Exemple 
 
-You want to save an encryption key in a .4DKeyChain file:
+Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
 
 ```4d
  var $dataKey : Object
  var $passphrase : Text
  
- $passphrase:=Request("Enter the passphrase:")
+ $passphrase:=Request("Saisissez la phrase secrète :")
  If(OK=1)
     $dataKey:=New data key($passphrase)
     TEXT TO DOCUMENT("generatedKey.4DKeyChain";JSON Stringify($dataKey))
  End if
 ```
 
-## See also 
+## Voir aussi 
 
-[4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
+  
 [Decrypt data BLOB](decrypt-data-blob.md)  
 [Discover data key](discover-data-key.md)  
 [Encrypt data BLOB](encrypt-data-blob.md)  
 [Encrypt data file](encrypt-data-file.md)  
 [Register data key](register-data-key.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1611 |
+| Numéro de commande | 1611 |
 | Thread safe | yes |
 
 

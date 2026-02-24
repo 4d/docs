@@ -9,61 +9,61 @@ displayed_sidebar: docs
 <!--REF #_command_.Version type.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Integer | &#8592; | Information about the version type (bitfield) |
+| Résultat | Integer | &#8592; | Informations sur le type de version (champ de bits) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14|Modified|
-|13.2|Modified|
-|12|Modified|
-|6|Created|
+|14|Modifié|
+|13.2|Modifié|
+|12|Modifié|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Version type.Summary-->The Version type command returns a numeric value that denotes the type of 4D or 4D Server version that you are running.<!-- END REF--> 4D provides the following predefined constants, found in the *4D Environment* theme:
+<!--REF #_command_.Version type.Summary-->La commande **Version type** retourne une valeur numérique qui représente le type de version de 4D ou de 4D Server que vous utilisez.<!-- END REF--> 4D vous fournit les constantes prédéfinies suivantes, placées dans le thème *Environnement 4D* :
 
-| Constant           | Type    | Value | Comment                                                 |
-| ------------------ | ------- | ----- | ------------------------------------------------------- |
-| 64 bit version     | Integer | 1     |                                                         |
-| Demo version       | Integer | 0     |                                                         |
-| Merged application | Integer | 2     | Version is an application merged with 4D Volume Desktop |
+| Constante          | Type        | Valeur | Comment                                                         |
+| ------------------ | ----------- | ------ | --------------------------------------------------------------- |
+| 64 bit version     | Entier long | 1      |                                                                 |
+| Demo version       | Entier long | 0      |                                                                 |
+| Merged application | Entier long | 2      | La version est une application fusionnée avec 4D Volume Desktop |
 
-**Note:** In current versions of 4D, the demo mode is not available.
+**Note :** Dans les versions actuelles de 4D, le mode démonstration n'est pas disponible.
 
-Version type returns a value in the form of a *bit field*; it is necessary to use bitwise operators to interpret it (see the example).
+**Version type** retourne une valeur sous forme de *champ de bits*, il est nécessaire d'utiliser les opérateurs sur les bits pour l'interpréter (cf. exemples).
 
-## Example 
+## Exemple 
 
-This test lets you run different code depending on whether the version is a merged application or a database opened by 4D / 4D Server:
+Ce test permet d’exécuter du code différent selon que la version est une application fusionnée ou une base ouverte par 4D / 4D Server :
 
 ```4d
- If(Version type?? Merged application)
-  // We are in a merged application
+ If(Version type?? Application fusionnée)
+        // Nous sommes dans une application fusionnée
  Else
-  // We are in a database executed by 4D
+        // Nous sommes dans une base de données exécutée par 4D
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Application type](application-type.md)  
 [Application version](application-version.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 495 |
+| Numéro de commande | 495 |
 | Thread safe | yes |
 
 

@@ -5,52 +5,52 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *missingTables* : Text array )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabManquantes* )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| missingTables | Text array | &#8592; | Names of missing tables in the database |
+| tabManquantes | Text array | &#8592; | Noms des tables manquantes dans la base |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Summary-->The **GET MISSING TABLE NAMES** command returns the names of all the missing tables of the current database in the *missingTables* array.<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Summary-->La commande **GET MISSING TABLE NAMES** retourne dans le tableau *tabManquantes* les noms de toutes les tables manquantes de la base courante.<!-- END REF-->
 
-Missing tables are tables whose data are present in the data file but that do not exist at the level of the current structure. This can happen when a data file is opened with different versions of the structure. 
+Les tables manquantes sont des tables dont les données sont présentes dans le fichier de données mais qui n’existent pas au niveau de la structure courante. Ce cas se produit lorsqu’un fichier de données est ouvert avec des versions différentes de la structure. 
 
-Typically, the scenario is as follows:
+Typiquement, le scénario est le suivant :
 
-* The developer provides a structure containing tables A, B and C,
-* The user adds the custom tables D and E, using, for example, the integrated *SQL* commands of 4D, and stores data in these tables,
-* The developer provides a new version of the structure. It does not contain tables D and E.  
-In this case, the user version of the database still contains data from tables D and E, but it cannot be accessed. The **GET MISSING TABLE NAMES** command will return the names "D" and "E".
+* le développeur fournit une structure contenant les tables A, B et C,
+* l’utilisateur ajoute des tables personnalisées D et E à l’aide, par exemple, des commandes *SQL* intégrées de 4D, et stocke des données dans ces tables,
+* le développeur fournit une nouvelle version de la structure. Elle ne contient pas les tables D et E.  
+Dans ce cas, la version utilisateur de la base contient toujours les données des tables D et E, mais elles ne sont plus accessibles. La commande **GET MISSING TABLE NAMES** retournera les noms "D" et "E".
 
-Once you have identified the missing tables of the database, you can reactivate them via the [REGENERATE MISSING TABLE](regenerate-missing-table.md) command.
+Une fois que vous avez identifié les tables manquantes de la base, vous pouvez les réactiver via la commande [REGENERATE MISSING TABLE](regenerate-missing-table.md).
 
-**Note:** The data of missing tables are erased when the data file is compacted (if the tables have not been regenerated). 
+**Note :** Les données des tables manquantes sont effacées en cas de compactage du fichier de données (si les tables n’ont pas été regénérées entre-temps). 
 
-## See also 
+## Voir aussi 
 
 [REGENERATE MISSING TABLE](regenerate-missing-table.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1125 |
+| Numéro de commande | 1125 |
 | Thread safe | yes |
 
 

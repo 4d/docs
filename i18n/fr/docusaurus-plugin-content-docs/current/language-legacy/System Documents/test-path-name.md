@@ -5,48 +5,48 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* : Text ) : Integer<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *cheminAccès* ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | Pathname to directory, folder or document |
-| Function result | Integer | &#8592; | 1, pathname refers to an existing document 0, pathname refers to an existing directory or folder <0, invalid pathname, OS file manager error code |
+| cheminAccès | Text | &#8594;  | Chemin d'accès à un dossier ou un document |
+| Résultat | Integer | &#8592; | 1= cheminAccès est un document existant 0 = cheminAccès est un dossier existant <0 = chemin d'accès invalide, code d'erreur du gestionnaire de fichiers du système |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Test path name.Summary-->The **Test path name** function checks if a document or folder whose name or pathname you pass in *pathname* is present on the disk.<!-- END REF--> You can pass either a relative or absolute pathname, expressed in the syntax of the current system.
+<!--REF #_command_.Test path name.Summary-->La fonction **Test path name** vérifie si le document ou le dossier dont vous avez passé le chemin d'accès et le nom dans *cheminAccès* est présent sur le disque.<!-- END REF--> Vous pouvez passer un chemin d'accès relatif ou absolu, exprimé dans la syntaxe du système courant. 
 
-If a document is found, **Test path name** returns 1\. If a folder found, **Test path name** returns 0.
+Si un document est trouvé, **Test path name** retourne 1\. Si un dossier est trouvé, **Test path name** retourne 0.
 
-The following predefined constants are provided by 4D:
+4D propose les constantes prédéfinies suivantes :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is a document | Integer | 1     |
-| Is a folder   | Integer | 0     |
+| Constante     | Type        | Valeur |
+| ------------- | ----------- | ------ |
+| Is a document | Entier long | 1      |
+| Is a folder   | Entier long | 0      |
 
-If no document nor folder is found, **Test path name** returns a negative value (i.e. -43 for File not found).
+Si aucun document ou dossier n'est trouvé, **Test path name** retourne une valeur négative (par exemple -43 pour "Fichier non trouvé").
 
-## Example 
+## Exemple 
 
-The following tests if the document “Journal” is present in the folder of the database, then creates it if it was not found: 
+L'exemple suivant teste la présence du document “Journal” dans le dossier de la base et le crée s'il n'existe pas :
 
 ```4d
- If(Test path name("Journal")#Is a document)
+ If(Test path name("Journal") # Is a document)
     $vhDocRef:=Create document("Journal")
     If(OK=1)
        CLOSE DOCUMENT($vhDocRef)
@@ -54,7 +54,7 @@ The following tests if the document “Journal” is present in the folder of th
  End if
 ```
 
-## See also 
+## Voir aussi 
 
 [Convert path system to POSIX](convert-path-system-to-posix.md)  
 [Create document](create-document.md)  
@@ -62,11 +62,11 @@ The following tests if the document “Journal” is present in the folder of th
 [Object to path](object-to-path.md)  
 [Path to object](path-to-object.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 476 |
+| Numéro de commande | 476 |
 | Thread safe | yes |
 
 

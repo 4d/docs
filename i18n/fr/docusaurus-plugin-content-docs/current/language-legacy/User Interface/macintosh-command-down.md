@@ -9,31 +9,31 @@ displayed_sidebar: docs
 <!--REF #_command_.Macintosh command down.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | State of the Macintosh Command key (Ctrl key on Windows) |
+| Résultat | Boolean | &#8592; | Etat de la touche Commande Macintosh ou Etat de la touche Ctrl Windows |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Macintosh command down.Summary-->**Macintosh command down** returns TRUE if the Macintosh command key is pressed.<!-- END REF-->When called on a Windows platform, **Macintosh command down** returns TRUE if the Windows Ctrl key is pressed.
+<!--REF #_command_.Macintosh command down.Summary-->**Macintosh command down** retourne Vrai si la touche **Commande** Macintosh est enfoncée.<!-- END REF-->Lorsqu'elle est appelée sous Windows, la fonction **Macintosh command down** retourne Vrai si la touche **Ctrl** Windows est enfoncée.
 
-## Example 
+## Exemple 
 
-See example for the [Shift down](shift-down.md) command.
+Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 
-## See also 
+## Voir aussi 
 
 [Caps lock down](caps-lock-down.md)  
 [Macintosh control down](macintosh-control-down.md)  
@@ -42,11 +42,11 @@ See example for the [Shift down](shift-down.md) command.
 [Windows Alt down](windows-alt-down.md)  
 [Windows Ctrl down](windows-ctrl-down.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 546 |
+| Numéro de commande | 546 |
 | Thread safe | yes |
 
 

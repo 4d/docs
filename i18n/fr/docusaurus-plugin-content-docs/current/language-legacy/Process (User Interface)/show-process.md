@@ -5,41 +5,41 @@ slug: /commands/show-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* : Integer )<!-- END REF-->
+<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* )<!-- END REF-->
 <!--REF #_command_.SHOW PROCESS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Process number of process to be shown |
+| process | Integer | &#8594;  | Numéro du process dont les fenêtres doivent être affichées |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** displays all the windows belonging to *process*.<!-- END REF--> This command does not bring the windows of *process* to the frontmost level. To do this, use the [BRING TO FRONT](bring-to-front.md) command.
+<!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** fait apparaître l'ensemble des fenêtres appartenant à *process*.<!-- END REF--> Cette commande ne passe pas les fenêtres de *process* au premier plan, utilisez pour cela la commande [BRING TO FRONT](bring-to-front.md).
 
-If the process was already displayed, the command has no effect.
+Si les fenêtres de *process* sont déjà affichées, cette commande ne fait rien.
 
-## Example 
+## Exemple 
 
-The following example displays a process called Customers, if it has been previously hidden. The process reference to the Customers process is stored in the interprocess variable *◊Customers*:
+L'exemple suivant affiche le process "Clients", s'il était caché auparavant. Le numéro de process est stocké dans la variable interprocess *<>Clients* :
 
 ```4d
- SHOW PROCESS(◊Customers)
+ SHOW PROCESS(<>Clients)
 ```
 
-## See also 
+## Voir aussi 
 
 [BRING TO FRONT](bring-to-front.md)  
 [HIDE PROCESS](hide-process.md)  
 [Process state](process-state.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 325 |
+| Numéro de commande | 325 |
 | Thread safe | no |
 
 

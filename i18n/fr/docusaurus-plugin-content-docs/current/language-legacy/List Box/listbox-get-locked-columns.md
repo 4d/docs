@@ -5,49 +5,49 @@ slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get locked columns** ( *object* : Variable ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable |
-| object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
-| Function result | Integer | &#8592; | Number of locked columns |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| Résultat | Integer | &#8592; | Nombre de colonnes verrouillées |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
-## Description 
+#### Description 
 
-<!--REF #_command_.LISTBOX Get locked columns.Summary-->The **LISTBOX Get locked columns** command returns the number of locked columns in the list box designated by the *object* and *\** parameters.<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Summary-->La commande **LISTBOX Get locked columns** retourne le nombre de colonnes verrouillées dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-Columns can be locked through the Property List or using the [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md) command. For more information, refer to the *Design Reference* manual.
+Les colonnes peuvent avoir été verrouillées via la Liste des propriétés ou à l’aide de la commande [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md). Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
-If a column is inserted or deleted by programming within the locked area, the number of columns returned by this command takes this change into account. For example, if you delete a locked column, the number of locked columns is decreased by 1\. Similarly, if you insert a column by programming into a locked area, this column is locked automatically and the number of locked columns is increased by 1\. 
+Si une colonne a été insérée ou supprimée par programmation à l’intérieur de la zone de verrouillage, le nombre de colonnes retourné par cette commande tient compte de cette modification. Par exemple, si vous supprimez une colonne verrouillée, le nombre de colonnes verrouillées sera diminué de 1\. De même, si une colonne est insérée par programmation dans la zone de verrouillage, elle est automatiquement verrouillée et le nombre de colonnes verrouillées sera augmenté de 1\. 
 
-However, the command does not take into account the visible/invisible status of columns.
+En revanche, la commande ne tient pas compte du statut visible/invisible des colonnes.
 
-## See also 
+#### Voir aussi 
 
 [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
 
-## Properties
+#### Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1152 |
+| Numéro de commande | 1152 |
 | Thread safe | no |
 
 

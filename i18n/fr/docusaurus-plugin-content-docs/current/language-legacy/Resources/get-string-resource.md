@@ -5,62 +5,62 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* {; *resFichier*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | Resource ID number |
-| resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
-| Function result | Text | &#8592; | Contents of the STR  resource |
+| resNum | Integer | &#8594;  | Numéro de ressource |
+| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
+| Résultat | Text | &#8592; | Contenu de la ressource STR |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get string resource.Summary-->The **Get string resource** command returns the string stored in the string (“STR ”) resource whose ID is passed in *resID*.<!-- END REF-->
+<!--REF #_command_.Get string resource.Summary-->La commande **Get string resource** retourne la chaîne stockée dans la ressource chaîne ("STR ") dont vous avez passé le numéro d'ID dans *resNum*.<!-- END REF-->
 
-If the resource is not found, an empty string is returned and the OK variable is set to 0 (zero).
+Si la ressource n'est pas trouvée, une chaîne vide est retournée et la variable système OK prend la valeur 0 (zéro).
 
-If you pass a valid resource file reference number in *resFile*, the resource is searched for in that file only. If you do not pass *resFile*, the first occurrence of the resource found in the resource files chain is returned.
+Si vous passez un numéro de référence de fichier de ressources valide dans *resFichier*, la ressource est recherchée dans ce fichier uniquement. Si vous ne passez pas le paramètre *resFichier*, c'est la première occurrence de la ressource rencontrée dans la chaîne des fichiers de ressources qui sera retournée. 
 
-**Note:** A string resource can contain up to 255 characters.
+**Note :** Une ressource chaîne peut contenir jusqu'à 255 caractères.
 
-## Example 
+## Exemple 
 
-The following example displays the contents of the string resource ID=20911, which must be located in at least one of the currently open resource files:
+L'exemple suivant affiche le contenu de la ressource chaîne d'ID=20911 qui doit se trouver dans au moins un des fichiers de ressources ouverts :
 
 ```4d
  ALERT(Get string resource(20911))
 ```
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
+La variable système OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 (zéro).
 
-## See also 
+## Voir aussi 
 
-[Get indexed string](get-indexed-string.md)  
+[Get indexed string](../commands/get-indexed-string)
 [Get text resource](get-text-resource.md)  
 [STRING LIST TO ARRAY](string-list-to-array.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 506 |
+| Numéro de commande | 506 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

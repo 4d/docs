@@ -5,72 +5,72 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( * ; *pictureObject* : Text ; *x* : Integer ; *y* : Integer ) : Text<br/>**SVG Find element ID by coordinates** ( *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetImage* ; *x* ; *y* ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, pictureObject is an object name (string) If omitted, pictureObject is a field or variable |
-| pictureObject | Text, Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
-| x | Integer | &#8594;  | X coordinate in pixels |
-| y | Integer | &#8594;  | Y coordinate in pixels |
-| Function result | Text | &#8592; | ID of element found at the location X, Y |
+| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d’objet (chaîne) Si omis, objetImage est un champ ou une variable |
+| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#8594;  | Coordonnée X en pixels |
+| y | Integer | &#8594;  | Coordonnée Y en pixels |
+| Résultat | Text | &#8592; | ID de l’élément se trouvant à l’emplacement x,y |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 3|Created|
+|11 SQL Release 3|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG Find element ID by coordinates.Summary-->The **SVG Find element ID by coordinates** command returns the ID ("id" or "xml:id" attribute) of the XML element found at the location set by the coordinates (x,y) in the SVG picture designated by the *pictureObject* parameter.<!-- END REF--> This command can be used more particularly to create interactive graphic interfaces using SVG objects.
+<!--REF #_command_.SVG Find element ID by coordinates.Summary-->La commande **SVG Find element ID by coordinates** retourne l’ID (attribut "id" ou "xml:id") de l’élément XML situé à l’emplacement défini par les coordonnées (*x*,*y*) dans l’image SVG désignée par le paramètre *objetImage*.<!-- END REF--> Cette commande permet notamment de créer des interfaces graphiques interactives utilisant des objets SVG. 
 
-**Note:** For more information about the SVG format, refer to the *Overview of XML Utilities Commands* section. 
+**Note :** Pour plus d'informations sur le format SVG, reportez-vous à la section *Présentation des commandes XML génériques*. 
 
-If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). If you do not pass this parameter, you indicate that the *pictureObject* parameter is a field or variable. In this case, you do not pass a string but a field or variable reference (field or variable object only). 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objetImage* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement). 
 
-Note that it is not mandatory for the picture to be displayed in a form. In this case, the "object name" type syntax is not valid and you must pass a field or variable name.
+A noter qu’il n’est pas obligatoire que l’image soit affichée dans un formulaire. Dans ce cas, la syntaxe de type "nom d’objet" n’est pas valide, vous devez passer un nom de champ ou de variable.
 
-The coordinates passed in the *x* and *y* parameters must be expressed in pixels relative to the top left corner of the picture (0,0). In the context of a picture displayed in a form, you can use the values returned by the MouseX and MouseY system variables. These variables are updated in the On Clicked, On Double Clicked and On Mouse Up form events, as well as in the On Mouse Enter and On Mouse Move form events. 
+Les coordonnées passées dans les paramètres *x* et *y* doivent être exprimées en pixels relativement à l’angle supérieur gauche de l’image (0,0). Dans le contexte d’une image affichée dans un formulaire, vous pouvez utiliser les valeurs retournées par les *variables système* MouseX et MouseY. Ces variables sont mises à jour dans les événements formulaire On Clicked, On Double Clicked et On Mouse Up ainsi que On Mouse Enter et On Mouse Move. 
 
-**Note:** In the picture coordinate system, MouseX and MouseY always specify the same point of the picture, regardless of the picture display format (except in the case of the "Replicated" format), even when the picture has been scrolled or zoomed.
+**Note :** Dans le système de coordonnées des images, MouseX et MouseY définissent toujours le même point de l'image, quel que soit son format d’affichage (hormis pour le format "mosaïque"), même si l'image a défilé ou a été zoomée. 
 
-The point taken into account is the first point reached. For example, in the case below, the command will return the ID of the circle if the coordinates of point A are passed and that of the rectangle if the coordinates of point B are passed:
+Le point pris en compte est le premier point atteint. Par exemple, dans le cas ci-dessous, la commande retournera l’ID du cercle si les coordonnées du point A sont passées et celui du rectangle si les coordonnées du point B sont passées :
 
-![](../assets/en/commands/pict41094.en.png)
+![](../assets/en/commands/pict41094.fr.png)
 
-When the coordinates correspond to superimposed or composite objects, the command returns the ID of the first object having a valid ID attribute by going back, if necessary, among the parent elements.
+Si les coordonnées correspondent à des objets superposés ou composites, la commande retourne l’ID du premier objet disposant d’un attribut ID valide en remontant si nécessaire parmi les éléments parents.
 
-The command returns an empty string if:
+La commande retourne une chaîne vide si :
 
-* the root is reached without an "id" attribute having been found,
-* the coordinates point does not belong to any object,
-* the "id" attribute is an empty string.
+* la racine est atteinte sans qu’un attribut "id" ait été trouvé,
+* le point de coordonnées n’appartient à aucun objet,
+* l’attribut "id" est une chaîne vide.
 
-**Note:** This command cannot detect objects whose opacity value ("fill-opacity" attribute) is less than 0.01\. 
+**Note :** Cette commande ne permet pas de détecter des objets dont la valeur d'opacité (attribut "fill-opacity") est inférieure à 0,01 
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If *pictureObject* does not contain a valid SVG picture, the command returns an empty string and the OK system variable is set to 0\. Otherwise, if the command has been executed correctly, the OK system variable is set to 1\. 
+Si *objetImage* ne contient pas une image SVG valide, la commande retourne une chaîne vide et la variable système OK prend la valeur 0\. Sinon, si la commande a été exécutée correctement, la variable système OK prend la valeur 1\. 
 
-## See also 
+## Voir aussi 
 
 [SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1054 |
+| Numéro de commande | 1054 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

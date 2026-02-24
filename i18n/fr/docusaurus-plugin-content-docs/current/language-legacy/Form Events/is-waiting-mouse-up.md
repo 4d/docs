@@ -9,66 +9,65 @@ displayed_sidebar: docs
 <!--REF #_command_.Is waiting mouse up.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Boolean | &#8592; | True if the object is waiting for a mouse up event, False otherwise |
+| Résultat | Boolean | &#8592; | Vrai si l'objet est en attente d'un relâchement souris, Faux sinon |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16|Created|
+|16|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Is waiting mouse up.Summary-->The **Is waiting mouse up** command returns **True** if the current object has been clicked and the mouse button has not been released, while the parent window has the focus.<!-- END REF--> Otherwise, it returns **False**, in particular if the parent window has lost the focus before the mouse button was released. 
+<!--REF #_command_.Is waiting mouse up.Summary-->La commande **Is waiting mouse up** retourne **Vrai** si l'objet courant a été cliqué et que le bouton de la souris n'a pas été relâché, alors que la fenêtre contenant l'objet a le focus.<!-- END REF--> Sinon la commande retourne **Faux**, en particulier si la fenêtre contenant l'objet a perdu le focus avant que le bouton soit relâché. 
 
- The command must be called in the context of the current object. It is designed to be used in conjunction with the On Mouse Up form event which is available for picture fields and variables. It allows your code to handle the cases where the user clicked and started to move something within a form object picture, and this action is interrupted by an external event, such as an alert dialog box. In this case, the internal state of the object can be suspended indefinitely because it is waiting for a mouse up event which will never occur. To prevent this issue, you must protect your mouse moving code within a **Is waiting mouse up** command which makes you sure that it is executed in a valid context. 
+ Cette commande doit être appelée dans le contexte de l'objet courant. Elle est destinée à être utilisée conjointement avec l'événement formulaire On Mouse Up, disponible pour les champs et variables Image. Elle permet de gérer par programmation les cas où l'utilisateur clique et commence à effectuer un glisser dans une zone image (champ ou variable), et que cette action est interrompue par un événement extérieur, comme par exemple l'affichage d'une boîte de dialogue d'alerte. Dans ce cas, l'état interne de l'objet peut être suspendu indéfiniment car il attend l'événement On Mouse Up qui n'arrive jamais. Pour éviter ce problème, vous devez protéger votre code de déplacement de souris à l'aide de la commande **Is waiting mouse up** qui vous assure de son exécution dans un contexte valide.
 
-## Example 
+## Exemple 
 
-The following code can be used to manage a mouse tracking feature in a picture object:
+Le code suivant peut être utilisé pour gérer le suivi de la souris dans un objet image :
 
 ```4d
-  //Object method of the picture object
- var vLtracking : Integer //flag for tracking mode
+  //Méthode objet de l'objet image
+ var vLtracking : Integer //drapeau du mode Suivi
  Case of
     :(Form event code=On Clicked)
-       If(Is waiting mouse up) //the mouse button is still not released
-          vLtracking:=1 //we are in tracking mode
-  //... Write here initialization code for the tracking feature
+       If(Attente relâchement clic) // le bouton de la souris n'a pas été relâché
+          vLtracking:=1 //nous sommes en mode Suivi
+  //... Ecrivez ici le code d'initialisation pour la fonction de Suivi
        End if
     :(Form event code=On Mouse Move)
-       If(vLtracking=1) //we are in tracking mode
-          If(Not(Is waiting mouse up)) //we'll never have the mouse up
-             vLtracking:=0 //stop the tracking mode
-  //... Write here the code for handling or canceling user tracking action
-          Else //the object is still waiting for a mouse up
-  //... Write here the code for the tracking
+       If(vLtracking=1) //nous sommes en mode Suivi
+          If(Not(Is waiting mouse up)) // on n'aura jamais le relâchement de la souris
+             vLtracking:=0 // on stoppe le mode Suivi
+  //... Ecrivez ici le code pour le traitement ou l'annulation de l'action de suivi
+          Else //l'objet est toujours en attente du relâchement de la souris
+  //... Ecrivez ici le code pour le suivi
           End if
        End if
-    :(Form event code=On Mouse Up) //the mouse button was released
-  //... Write here the code to complete the tracking action
-       vLtracking:=0 //end of the tracking mode
+    :(Form event code=Sur relâchement bouton) // le bouton de la souris a été relâché
+  //... Ecrivez ici le code pour le suivi du relâchement souris
+       vLtracking:=0 //Fin du suivi
  End case
 ```
 
-## See also 
+## Voir aussi 
 
-[Form event code](./commands/form-event-code)  
+[Form event code](../commands/form-event-code.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1422 |
+| Numéro de commande | 1422 |
 | Thread safe | no |
-
 
 

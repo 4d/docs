@@ -5,86 +5,85 @@ slug: /commands/qr-get-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *area* : Integer ; *selector* : Integer ; *leftTitle* : Text ; *centerTitle* : Text ; *rightTitle* : Text ; *height* : Integer {; *picture* : Picture {; *pictAlignment* : Integer}} )<!-- END REF-->
+<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *zone* ; *sélecteur* ; *titreGauche* ; *titreCentre* ; *titreDroit* ; *hauteur* {; *image* {; *alignementImage*}} )<!-- END REF-->
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| selector | Integer | &#8594;  | 1 = Header, 2 = Footer |
-| leftTitle | Text | &#8592; | Text displayed on the left side |
-| centerTitle | Text | &#8592; | Text displayed in the middle |
-| rightTitle | Text | &#8592; | Text displayed on the right side |
-| height | Integer | &#8592; | Header or footer height |
-| picture | Picture | &#8592; | Picture to display |
-| pictAlignment | Integer | &#8592; | Alignment attribute for the picture |
+| zone | Integer | &#8594;  | Référence de la zone |
+| sélecteur | Integer | &#8594;  | 1 = En-tête, 2 = Pied de page |
+| titreGauche | Text | &#8592; | Texte affiché sur le côté gauche |
+| titreCentre | Text | &#8592; | Texte affiché au centre |
+| titreDroit | Text | &#8592; | Texte affiché sur le côté droit |
+| hauteur | Integer | &#8592; | Hauteur de l'en-tête ou du pied de page |
+| image | Picture | &#8592; | Image à afficher |
+| alignementImage | Integer | &#8592; | Alignement de l'image |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->The QR GET HEADER AND FOOTER command retrieves the contents and size of the header or footer.<!-- END REF-->
+<!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->La commande **QR GET HEADER AND FOOTER** vous permet de récupérer le contenu et la taille de l'en-tête et du pied de page de la *zone*.<!-- END REF--> 
 
-*selector* allows you to select the header or the footer:
+Le paramètre *sélecteur* vous permet de définir la zone à lire : 
 
-* if *selector* equals 1, the header information will be retrieved;
-* if *selector* equals 2, the footer information will be retrieved.
+* si *sélecteur* vaut 1, les informations de l''en-tête seront récupérées ;
+* si *sélecteur* vaut 2, les informations du pied de page seront récupérées.
 
-*leftTitle*, *centerTitle* and *rightTitle* returns the values for, respectively, the left, center and right header/footer.
+Les paramètres *titreGauche*, *titreCentre* et *titreDroite* retournent le contenu des en-têtes ou pieds de page situés respectivement à gauche, au centre et à droite. 
 
-*height* returns the height of the header/footer, expressed in the unit selected for the report.
+Le paramètre *hauteur* retourne la hauteur de l'en-tête ou du pied de page, exprimée dans l'unité courante de l'état rapide. 
 
-*picture* returns a picture that is displayed in the header or footer.
+Le paramètre *image* retourne le cas échéant l'image affichée dans l'en-tête ou le pied de page.   
+Le paramètre *alignementImage* retourne la propriété d'alignement de l'image :
 
-*pictAlignment* is the alignment attribute for the picture displayed in the header/footer.
+* si *alignementImage* vaut 1, l'image est alignée sur la gauche.
+* si *alignementImage* vaut 2, l'image est centrée.
+* si *alignementImage* vaut 3, l'image est alignée sur la droite.
 
-* If *pictAlignment* returns 1, the picture is aligned to the left.
-* If *pictAlignment* returns 2, the picture is centered.
-* If *pictAlignment* returns 3, the picture is aligned to the right.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
+Si le paramètre *sélecteur* est incorrect, l’erreur -9852 est générée.
 
-If you pass an invalid *area* number, the error -9850 will be generated.  
-If you pass an invalid *selector* value, the error -9852 will be generated.
+## Exemple 
 
-## Example 
-
-The following code retrieves the values of the header titles as well as the header size and displays them in alerts:
+La méthode suivante affiche le contenu et la hauteur des libellés des en-têtes :
 
 ```4d
- QR GET HEADER AND FOOTER(MyArea;1;$LeftText;$CenterText;$RightText;$height)
+ QR GET HEADER AND FOOTER(MaZone;1;$TexteGauche;$TexteCentre;$TexteDroite;$Hauteur)
  Case of
-    :($LeftText #"")
-       ALERT("The left title is "+Char(34)+$LeftText+Char(34))
-    :($CenterText #"")
-       ALERT("The center title is "+Char(34)+$CenterText+Char(34))
-    :($RightText #"")
-       ALERT("The right title is "+Char(34)+$RightText+Char(34))
+    :($TexteGauche #"")
+       ALERT("Libellé de l'en-tête de gauche : "+Char(34)+$TexteGauche+Char(34))
+    :($TexteCentre #"")
+       ALERT("Libellé de l'en-tête du centre : "+Char(34)+$TexteCentre+Char(34))
+    :($TexteDroite #"")
+       ALERT("Libellé de l'en-tête de droite : "+Char(34)+$TexteDroite+Char(34))
     Else
-       ALERT("No header title in this report.")
+       ALERT("Aucun libellé d'en-tête dans cet Etat.")
  End case
- ALERT("The height of the header is "+String($height))
+ ALERT("Hauteur des en-têtes : "+String($Hauteur))
 ```
 
-## See also 
+## Voir aussi 
 
 [QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 775 |
+| Numéro de commande | 775 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

@@ -5,52 +5,52 @@ slug: /commands/web-get-body-part
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *part* : Integer ; *contents* : Blob, Text ; *name* : Text ; *mimeType* : Text ; *fileName* : Text )<!-- END REF-->
+<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* ; *contenuPartie* ; *nomPartie* ; *typeMime* ; *nomFichier* )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| part | Integer | &#8594;  | Part number |
-| contents | Blob, Text | &#8592; | Contents of part |
-| name | Text | &#8592; | Name of "input" variable |
-| mimeType | Text | &#8592; | Mime type of submitted file |
-| fileName | Text | &#8592; | Name of submitted file |
+| partie | Integer | &#8594;  | Numéro de partie |
+| contenuPartie | Blob, Text | &#8592; | Contenu de la partie |
+| nomPartie | Text | &#8592; | Nom de la variable "input" |
+| typeMime | Text | &#8592; | Type mime du fichier |
+| nomFichier | Text | &#8592; | Nom du fichier posté |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WEB GET BODY PART.Summary-->The **WEB GET BODY PART** command, when called in the context of a Web process, parses the "body" part of a multi-part request.<!-- END REF-->
+<!--REF #_command_.WEB GET BODY PART.Summary-->La commande **WEB GET BODY PART**, appelée dans le contexte d’un process Web, permet d’analyser la partie "corps" d’une requête multi-part.<!-- END REF--> 
 
-In the *part* parameter, pass the number of the part to be parsed. You can get the total number of parts using the [WEB Get body part count](web-get-body-part-count.md) command.
+Passez dans le paramètre *partie* le numéro de la partie à analyser. Vous pouvez obtenir le nombre total de parties à l’aide de la commande [WEB Get body part count](web-get-body-part-count.md).
 
-The *contents* parameter receives the contents of the part. When the parts to be retrieved are files, you must pass a BLOB type parameter. In the case of TEXT variables submitted in a Web form, you can pass a Text type parameter. 
+Le paramètre *contenuParti*e récupère le contenu de la partie. Lorsque les parties à récupérer sont des fichiers, vous devez passer un paramètre de type BLOB. Dans le cas de variables TEXT postées dans un formulaire Web, vous pouvez passer un paramètre de type texte. 
 
-The *name* parameter receives the variable name of the HTTP input field.
+Le paramètre *nomPartie* récupère le nom de la variable du champ input HTTP.
 
-The *mimeType* and *name* parameters receive the Mime type and the name of the original file, if any. A *name* is only received when the file was submitted as **<input type="file">**.  
-*mimeType* and *name* are optional but must be passed together. 
+Les paramètres *typeMime* et *nomFichier* permettent de récupérer le type Mime et le nom du fichier d’origine, le cas échéant. *nomFichier* n’est renseigné que dans le cas où le fichier a été posté dans **<input type="file">**.  
+*typeMime* et *nomFichier* sont optionnels mais ne peuvent pas être passés séparément. 
 
-**Note:** In the context of a multi-part request, the first array of the [WEB GET VARIABLES](web-get-variables.md) command returns all parts of the form, in the same order as the **WEB GET BODY PART** command. You can use it in order to get the position of the parts of the form directly. 
+**Note :** Dans le cadre d’une requête multi-part, le premier tableau de la commande [WEB GET VARIABLES](web-get-variables.md) retourne toutes les parties du formulaire, dans le même ordre que la commande **WEB GET BODY PART**. Vous pouvez l’utiliser par exemple afin d’obtenir directement la position d'une partie du formulaire. 
 
-## Example 
+## Exemple 
 
-In this example, a Web form downloads several pictures using a browser onto the HTTP server and displays them in the page. Here is the Web form:
+Dans cet exemple, un formulaire Web permet de télécharger sur le serveur HTTP plusieurs images depuis un navigateur et de les afficher dans la page. Voici le formulaire Web :
 
-![](../assets/en/commands/pict864606.en.png)
+![](../assets/en/commands/pict864606.fr.png)
 
-Here is the code for the <body> part of the page:
+Voici le code la partie <body> de la page :
 
 ```HTML
 <body>
@@ -68,48 +68,48 @@ Here is the code for the <body> part of the page:
 </body>
 ```
 
-Two 4D methods are called by the page:
+Deux méthodes 4D sont appelées par la page :
 
-* galleryInit on loading (4DSCRIPT tag), displays the pictures found in the destination folder.
-* GetFile when sending data (4DACTION URL of multi-part form), processes the submission.
+* galleryInit au chargement (balise 4DSCRIPT), permettant d’afficher les images présentes dans le dossier de destination.
+* GetFile au moment de l’envoi des données (url 4DACTION du formulaire multi-part), permettant de traiter l’envoi.
 
-Here is the code for galleryInit:
+Voici le code de la méthode galleryInit :
 
 ```4d
  var $vDestinationFolder : Text
  ARRAY TEXT(aFileNames;0)
  var $i : Integer
- $vDestinationFolder:=Get 4D folder(HTML Root folder)+"photos"+Folder separator //"WebFolder/photos" folder
+ $vDestinationFolder:=Get 4D folder(HTML Root folder)+"photos"+Folder separator //"DossierWeb/photos" par exemple
  DOCUMENT LIST($vDestinationFolder;aFileNames)
 ```
 
-Here is the code for GetFile:
+Voici le code de la méthode GetFile :
 
 ```4d
  var $vPartName;$vPartMimeType;$vPartFileName;$vDestinationFolder : Text
  var $vPartContentBlob : Blob
  var $i : Integer
  $vDestinationFolder:=Get 4D folder(HTML Root folder)+"photos"+Folder separator
- For($i;1;WEB Get body part count) //for each part
+ For($i;1;WEB Get body part count) //pour chaque partie
     WEB GET BODY PART($i;$vPartContentBlob;$vPartName;$vPartMimeType;$vPartFileName)
     If($vPartFileName#"")
        BLOB TO DOCUMENT($vDestinationFolder+$vPartFileName;$vPartContentBlob)
     End if
  End for
- WEB SEND HTTP REDIRECT("/") // return to page
+ WEB SEND HTTP REDIRECT("/") // retour à la page
 ```
 
-## See also 
+## Voir aussi 
 
 [WEB Get body part count](web-get-body-part-count.md)  
 [WEB GET HTTP BODY](web-get-http-body.md)  
 [WEB GET VARIABLES](web-get-variables.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1212 |
+| Numéro de commande | 1212 |
 | Thread safe | yes |
 
 

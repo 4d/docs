@@ -5,65 +5,64 @@ slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *icon* : Picture )<br/>**SET LIST ITEM ICON** (*list* : Integer ; *itemRef* : Integer, Operator ; *icon* : Picture )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *liste* ; *réfElément* ; *icône* )<br/>**SET LIST ITEM ICON** ( * ; *liste* ; * ; *icône* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM ICON.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
-| list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
-| itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item added to the list or * for the current item of the list |
-| icon | Picture | &#8594;  | Icon to be associated with item |
+| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| réfElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| icône | Picture | &#8594;  | Icône à associer à l'élément |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET LIST ITEM ICON.Summary-->The **SET LIST ITEM ICON** command modifies the icon associated with the item specified by the *itemRef* parameter of the list whose reference number or object name is passed in *list*.<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Summary-->La commande **SET LIST ITEM ICON** permet de modifier l’icône associée à l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
-**Note:** You can also modify the icon associated with an item using the [SET LIST ITEM PROPERTIES](set-list-item-properties.md) command. However, this command only accepts static picture references (resource references or pictures from the picture library).
+**Note :** Il est possible de modifier l’icône associée à un élément à l’aide de la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md). Toutefois, [SET LIST ITEM PROPERTIES](set-list-item-properties.md) accepte uniquement des références d’images statiques (références de ressources ou images de la bibliothèque).
 
-If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
+Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).  
+Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
-Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to the current item of the list. If several items are selected manually, the current item is the last one that was selected. If no item is selected, the command does nothing.
+Passez dans le paramètre *icône* une expression image 4D valide (champ, variable, pointeur, etc.). L’image sera placée à gauche de l’élément. 
 
-Pass a valid 4D picture expression (field, variable, pointer, etc.) in the *icon* parameter. The picture will be placed to the left of the item. 
+## Exemple 
 
-## Example 
-
-We want to assign the same picture to two different items. The following code is optimized since the picture is only loaded into memory once:
+Affectation d'une même image à deux éléments différents. Ce code est optimisé car l'image est chargée une seule fois en mémoire :
 
 ```4d
- var $picture : Picture
- READ PICTURE FILE("myPict.png";$picture)
- SET LIST ITEM ICON(mylist;ref1;$picture)
- SET LIST ITEM ICON(mylist;ref2;$picture)
+ var $image : Picture
+ READ PICTURE FILE("monImage.png";$image)
+ SET LIST ITEM ICON(maliste;ref1;$image)
+ SET LIST ITEM ICON(maliste;ref2;$image)
 ```
 
-## See also 
+## Voir aussi 
 
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM FONT](set-list-item-font.md)  
 [SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 950 |
+| Numéro de commande | 950 |
 | Thread safe | no |
 
 

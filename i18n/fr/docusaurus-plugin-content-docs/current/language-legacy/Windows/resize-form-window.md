@@ -5,64 +5,66 @@ slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *width* : Integer ; *height* : Integer )<!-- END REF-->
+<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largeur* ; *hauteur* )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| width | Integer | &#8594;  | Pixels to add to or remove from the current form window width |
-| height | Integer | &#8594;  | Pixels to add to or remove from the current form window height |
+| largeur | Integer | &#8594;  | Pixels à ajouter ou soustraire à la largeur courante de la fenêtre formulaire |
+| hauteur | Integer | &#8594;  | Pixels à ajouter ou soustraire à la hauteur courante de la fenêtre formulaire |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2004|Created|
+|2004|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.RESIZE FORM WINDOW.Summary-->The **RESIZE FORM WINDOW** command lets you change the size of the current form window.<!-- END REF--> 
+<!--REF #_command_.RESIZE FORM WINDOW.Summary-->La commande **RESIZE FORM WINDOW** permet de modifier la taille de la fenêtre du formulaire courant.<!-- END REF--> 
 
-Pass the number of pixels that you would like to add to the current window size in the *width* and *height* parameters. Pass 0 in either parameter if you do not wish to change the current size. To reduce the size, pass a negative value in the *width* and *height* parameters. 
+Passez dans les paramètres *largeur* et *hauteur* le nombre de pixels que vous souhaitez ajouter aux dimensions courantes de la fenêtre. Pour ne pas modifier une dimension, passez 0 dans le paramètre correspondant. Pour réduire une dimension, passez une valeur négative dans *largeur* et *hauteur*. 
 
-This command produces the exact same result as a manual window resize using the resize box (if the window type allows it). As a result, the command takes into consideration resize properties for objects and size limitations defined in the form properties. If, for example, the command resizes a window to a size greater than what is allowed in the form, the command will have no effect. 
+Cette commande produit exactement le même résultat qu’un redimensionnement manuel de la fenêtre à l’aide de la case de redimensionnement (si le type de fenêtre le permet). Par conséquent, la commande tient compte des propriétés de redimensionnement des objets et des contraintes de taille définies dans les propriétés du formulaire : si par exemple la commande entraîne un redimensionnement de la fenêtre supérieur à la taille maximale du formulaire, elle n’a pas d’effet. 
 
-Please note that this behavior is different than that of the [SET WINDOW RECT](set-window-rect.md) command, which does not take form properties nor content into account when resizing the window. Also, note that this command does not necessarily modify the form size. To modify the size of a form by programming, please see the [FORM SET SIZE](form-set-size.md) command.
+A noter que ce fonctionnement est différent de celui de la commande [SET WINDOW RECT](set-window-rect.md), qui ne tient pas compte des propriétés du formulaire ni de son contenu en cas de redimensionnement de la fenêtre. 
 
-## Example 
+A noter également que cette commande ne modifie pas forcément les dimensions du formulaire lui-même. Pour modifier par programmation la taille d’un formulaire, reportez-vous à la description de la commande [FORM SET SIZE](form-set-size.md).
 
-Given the following window (the fields and frame have the “Grow” property for horizontal resizing):
+## Exemple 
 
-![](../assets/en/commands/pict39548.en.png)
+Soit la fenêtre suivante (les champs et l'encadrement ont pour propriété de redimensionnement horizontal “Agrandir”) :
 
-After execution of this line:
+![](../assets/en/commands/pict39548.fr.png)
+
+Après l'exécution de cette ligne :
 
 ```4d
  RESIZE FORM WINDOW(25;0)
 ```
 
-... the window appears as follows:
+... la fenêtre a l'apparence suivante :
 
-![](../assets/en/commands/pict39549.en.png)
+![](../assets/en/commands/pict39549.fr.png)
 
-## See also 
+## Voir aussi 
 
 [FORM GET PROPERTIES](form-get-properties.md)  
 [FORM SET SIZE](form-set-size.md)  
 [SET WINDOW RECT](set-window-rect.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 890 |
+| Numéro de commande | 890 |
 | Thread safe | no |
 
 

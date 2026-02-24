@@ -5,58 +5,58 @@ slug: /commands/open-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* : Text )<!-- END REF-->
+<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *cheminFichier* )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| filePath | Text | &#8594;  | File name (.4db, .4dc, .4dbase, .4dproject, .4dz, or .4dlink) or complete access path of database to open |
+| cheminFichier | Text | &#8594;  | Nom ou chemin d'accès complet du fichier de base de données à ouvrir (.4db, .4dc, .4dbase ou .4dlink) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|14 R3|Created|
+|14 R3|Créé|
 
 </details>
 </div>
 
 ## Note 
 
-<!--REF #_command_.OPEN DATABASE.Summary-->The **OPEN DATABASE** command closes the current 4D database and opens on-the-fly the database defined by *filePath*.<!-- END REF--> This command is useful for automatic testing purposes, to reopen a database automatically after a compilation, or to allow a merged 4D remote application to select the a database server to connect.
+<!--REF #_command_.OPEN DATABASE.Summary-->La commande **OPEN DATABASE** referme la base de données 4D courante et ouvre à la volée la base désignée par le paramètre *cheminFichier*.<!-- END REF--> Cette commande est utile dans le cadre de tests automatiques, pour rouvrir une base après compilation, ou pour permettre à une application 4D fusionnée de sélectionner le serveur de la base auquel se connecter.
 
-In the *filePath* parameter, pass the name or full access path of the database to be opened. You can use files having one of the following extensions:
+Dans le paramètre *filePath*, passez le nom le chemin d'accès complet de la base de données à ouvrir. Vous pouvez utiliser un fichier ayant l'une des extensions suivantes :
 
-* .4db (interpreted structure file),
-* .4dc (compiled structure file),
-* .4dbase (macOS package),
-* .4dproject (project database file)
-* .4dz (deployment file for project databases)
-* .4dlink (shortcut file).
+* .4db (fichier de structure interprété),
+* .4dc (fichier de structure compilé),
+* .4dbase (package macOS),
+* .4dproject (fichier de la base projet)
+* .4dz (fichier de déploiement des bases projets)
+* .4dlink (fichier de raccourci).
 
-If you pass only a file name, this file must be placed at the same level as the structure file of the current database.
+Si vous passez uniquement un nom de fichier, il doit être placé au même niveau que le fichier de structure de la base courante. 
 
-If the access path defines a valid database, 4D quits the database that is already open and then opens the specified database. In single-user mode, the [On Exit database method](on-exit-database-method.md) of the database being closed and the [On Startup database method](on-startup-database-method.md) (or the [On Server Open Connection database method](on-server-open-connection-database-method.md)) of the database being opened are called successively.
+Si le chemin d'accès est valide, 4D quitte la base ouverte et ouvre la base spécifiée. En mode monoposte, la [On Exit database method](on-exit-database-method.md) de la base refermée et la [On Startup database method](on-startup-database-method.md) (ou la [On Server Open Connection database method](on-server-open-connection-database-method.md)) de la base ouverte sont successivement appelées.
 
-**Warning:** Since this command causes the application to quit before re-opening with the specified database, it is usually not recommended to use it in the [On Startup database method](on-startup-database-method.md) or in a method called by this database method. 
+**Attention :** Comme la commande entraîne la fermeture de l'application courant avant d'ouvrir la base spécifiée, il est généralement déconseillé de l'appeler dans la ou dans une méthode appelée par cette méthode base.
 
-The command is executed in an asynchronous manner: after its call, 4D continues executing the rest of the method. Then, the application behaves as if the **Quit** command was selected in the **File** menu: open dialog boxes are cancelled, any open processes have 10 seconds to finish before being terminated, and so on.
+La commande est exécutée de manière asynchrone : après son appel, 4D continue d'exécuter le reste de la méthode. Ensuite, l'application se comporte comme si la commande **Quitter** du menu **Fichier** avait été sélectionnée : les boîtes de dialogue d'ouverture sont annulées, tous les process ouverts sont tenus de se terminer en moins de dix secondes, etc.
 
-If the target database file is not found or is invalid, a standard file system error is returned and 4D does nothing.
+Si le fichier de base cible n'est pas trouvé ou est invalide, une erreur système standard du gestionnaire de fichiers est retournée et 4D ne fait rien.
 
-## Example 1 
+## Exemple 1 
 
 ```4d
  OPEN DATABASE("C:\\databases\\Invoices\\Invoices.4db")
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to select a server at startup from a single-user application. You could execute this code from a process launched by the [On Startup database method](on-startup-database-method.md):
+Vous souhaitez sélectionner un serveur au démarrage, à partir d'une application monoposte. Vous pouvez exécuter ce code avec un process lancé par la [On Startup database method](on-startup-database-method.md) :
 
 ```4d
  var $xml : Text
@@ -65,7 +65,7 @@ You want to select a server at startup from a single-user application. You could
  $IP:="192.168.6.7:19813"
  
  If(Shift down)
-    $IP:=Request("IP address to connect to "+$databaseName;$IP)
+    $IP:=Request("Adresse IP à connecter à "+$databaseName;$IP)
  Else
     ok:=1
  End if
@@ -83,11 +83,11 @@ You want to select a server at startup from a single-user application. You could
 ```
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1321 |
+| Numéro de commande | 1321 |
 | Thread safe | yes |
 
 

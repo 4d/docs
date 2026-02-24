@@ -5,65 +5,65 @@ slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* : Integer ; *aColumns* : Real array {; *aOrders* : Real array} )<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *zone* ; *tabColonnes* {; *tabTris*} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| aColumns | Real array | &#8594;  | Columns |
-| aOrders | Real array | &#8594;  | Sort orders |
+| zone | Integer | &#8594;  | Référence de la zone |
+| tabColonnes | Real array | &#8594;  | Colonnes |
+| tabTris | Real array | &#8594;  | Ordres de tris |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|2003|Created|
+|2003|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.QR SET SORTS.Summary-->The QR SET SORTS command sets the sort orders for the columns in the report whose reference is passed in *area*.<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Summary-->La commande **QR SET SORTS** vous permet de définir l'ordre de tri de chaque colonne de l'état rapide dont la référence est passée dans *zone*.<!-- END REF--> 
 
-*aColumns*: in this array, you need to store the column numbers of columns to which you want to assign a sort order.
+*tabColonnes* : vous devez stocker dans ce tableau le numéro de chaque colonne pour laquelle vous souhaitez définir un ordre de tri.
 
-*aOrders*: each element of this array must contain the sort orders for the matching column in the *aColumns* array. 
+*tabTris* : chaque élément de ce tableau doit contenir l'ordre de tri pour la colonne correspondante référencée dans le tableau *tabColonnes*. 
 
-* If *aOrders{$i}* is 1, the sort order is ascending.
-* If *aOrders{$i}* is -1, the sort order is descending.
+* Si *tabTris{$i}* vaut 1, le tri est croissant.
+* Si *tabTris{$i}* vaut -1, le tri est décroissant.
 
-### Cross-table mode 
+### Etats tableaux croisés 
 
-In the case of cross-table mode, you cannot have more than two items in the array. You can only sort columns (1) and rows (2). The data (that are the intersection of columns and rows) cannot be sorted.
+Avec ce type d'état, le tableau ne peut pas comporter plus de deux éléments. Vous pouvez uniquement trier les colonnes (1) et les lignes (2). Les données (situées à l'intersection des colonnes et des lignes) ne peuvent pas être triées via cette commande. 
 
-Here is the code to sort only the rows in the case of a cross-table report:
+Voici le code permettant de trier les lignes uniquement dans un état tableau croisé :
 
 ```4d
- ARRAY REAL($aColumns;1)
- $aColumns{1}:=2
- ARRAY REAL($aOrders;1)
- $aOrders{1}:=-1 //Alphabetic sort for rows
- QR SET SORTS(qr_area;$aColumns;$aOrders)
+ ARRAY REAL($tabColonnes;1)
+ $tabColonnes{1}:=2
+ ARRAY REAL($tabTris;1)
+ $tabTris{1}:=-1 //Tri décroissant des lignes
+ QR SET SORTS(qr_zone;$tabColonnes;$tabTris)
 ```
 
-If you pass an invalid *area* number, the error -9850 will be generated.
+Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
-## See also 
+## Voir aussi 
 
 [QR GET SORTS](qr-get-sorts.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 752 |
+| Numéro de commande | 752 |
 | Thread safe | no |
-| Modifies variables | error |
+| Modifie les variables | error |
 
 

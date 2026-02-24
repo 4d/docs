@@ -5,73 +5,72 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *timeValue* : Text, Integer ) : Time<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *valHeure* ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| timeValue | Text, Integer | &#8594;  | Value to return as a time |
-| Function result | Time | &#8592; | Time specified by timeValue |
+| valHeure | Text, Integer | &#8594;  | Valeur à retourner sous forme d'heure |
+| Résultat | Time | &#8592; | Heure définie par valHeure |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R5|Modified|
-|14|Modified|
-|<6|Created|
+|16 R5|Modifié|
+|14|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Time.Summary-->The Time command returns a time expression equivalent to the time specified in the *timeValue* parameter.<!-- END REF-->
+<!--REF #_command_.Time.Summary-->La fonction **Time** retourne, sous la forme d'une expression de type Heure, l'heure définie dans le paramètre *valHeure*.<!-- END REF-->
 
-The *timeValue* parameter can contain either:
+Le paramètre *valHeure* peut contenir soit :
 
-* a string containing a time expressed in one of the 4D standard time formats corresponding to the language of your system (for more information, refer to the description of the [String](./commands/string) command).
-* a longint that represents the number of seconds elapsed since 00:00:00.
+* une chaîne contenant une heure exprimée dans l'un des formats d'heure standard de 4D correspondant à la langue de votre système (pour plus d'informations, reportez-vous à la description de la commande [String](../commands/string.md)).
+* un entier long représentant un nombre de secondes écoulées depuis 00:00:00.
 
-**Note:** If the *timeValue* expression evaluates to undefined, **Time** returns an empty time (00:00:00). This is useful when you expect the result of an expression (e.g. an object attribute) to be a time, even if it can be undefined.
+Note : Si l'évaluation de l'expression *valHeure* donne une valeur indéfinie, **Time** retourne une heure vide (00:00:00). Ce fonctionnement est utile lorsque le code attend toujours une heure alors que l'évaluation de *valHeure* peut parfois aboutir au type **indéfini** (cas par exemple des attributs d'objets).
 
-## Example 1 
+## Exemple 1 
 
-The following example displays an alert box with the message “1:00 P.M. = 13 hours 0 minute”:
-
-```4d
- ALERT("1:00 P.M. = "+String(Time("13:00:00");Hour Min))
-```
-
-## Example 2 
-
-You can express any numerical value as a time:
+L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “1:00 P.M. = 13 heures 0 minute.” :
 
 ```4d
- vTime:=Time(10000)
-  //vTime is 02:46:40
- vTime2:=Time((60*60)+(20*60)+5200)
-  //vTime2 is 02:46:40
+ ALERT("1:00 P.M. = "+String(Heure("13:00:00");Heures Minutes))
 ```
 
-## See also 
+## Exemple 2 
+
+Vous pouvez exprimer toute valeur numérique sous forme d’heure :
+
+```4d
+ vHeure:=Time(10000)
+     //vHeure vaut 02:46:40
+ vHeure2:=Time((60*60)+(20*60)+5200)
+     //vHeure2 vaut 02:46:40
+```
+
+## Voir aussi 
 
 [ARRAY TIME](array-time.md)  
-[Bool](bool.md)  
-[String](./commands/string)  
-[Time string](time-string.md)  
-[Timestamp](timestamp.md)  
+[Bool](../commands/bool)  
+[String](../commands/string.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 179 |
+| Numéro de commande | 179 |
 | Thread safe | yes |
-
 
 

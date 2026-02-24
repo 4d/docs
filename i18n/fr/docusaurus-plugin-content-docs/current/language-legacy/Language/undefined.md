@@ -5,55 +5,53 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* : Expression ) : Boolean<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | Expression whose resulting value to be evaluated |
-| Function result | Boolean | &#8592; | True = undefined, False = not undefined |
+| expression | Expression | &#8594;  | Expression à tester |
+| Résultat | Boolean | &#8592; | Vrai = Variable actuellement indéfinie Faux = Variable actuellement définie |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R4|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|16 R4|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Undefined.Summary-->Undefined returns True if the result of the evaluation of *expression* is not a defined value, and False otherwise.<!-- END REF-->
+<!--REF #_command_.Undefined.Summary-->La commande **Undefined** retourne Vrai si le résultat de l'évaluation d'*expression* n'est pas une valeur définie, sinon elle retourne Faux si *expression* a été définie.<!-- END REF-->retourne Faux pour toutes les variables.
+* Une propriété d'objet est indéfinie si elle n'existe pas dans l'objet.
+* La commande **Undefined** retourne toujours Faux pour les champs.
 
-* A variable is defined if it has been created via a compilation directive or if a value is assigned to it. It is undefined in all other cases. If the database has been compiled, the Undefined function returns False for all variables.
-* An object property is undefined if it does not exist in the object.
-* Undefined always returns False for field references.
-
-**Note:** Keep in mind that **Undefined** evaluates *expression*. The following statements are equivalent:  
+**Note :** A noter que **Undefined** évalue expression. Les instructions suivantes sont équivalentes :  
 
 ```4d
  $result:=Undefined($exp)
-  // same result:
- $result:=(Value type($exp)=Is undefined)
+  // résultat identique :
+ $result:=(Value type($exp)=Est une variable indéfinie)
 ```
 
   
-In some cases, you may not want the parameter to be evaluated (for example, when you use a pointer to a variable to check if the variable is defined). Then, you need to write:  
+Dans certains cas, il est possible que vous ne souhaitiez pas évaluer le paramètre (par exemple, lorsque vous utilisez un pointeur vers une variable pour véifier si la variable est définie). Vous devez alors écrire :  
 
 ```4d
- $result:=(Type($ptr->)=Is undefined) //true if the pointed variable does not exist (no error)
+ $result:=(Type($ptr->)=Est une variable indéfinie) //vrai si la variable pointée n'existe pas (pas d'erreur)
 ```
 
-## Example 
+## Exemple 
 
-Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
+Cet exemple compare les différents résultats de la commande [Undefined](undefined.md) et de la commande [Null](null.md) appliquées aux propriétés d'objets, en fonction du contexte :
 
 ```4d
  var vEmp : Object
@@ -61,25 +59,25 @@ Here are the different results of the [Undefined](undefined.md) command as well 
  vEmp.name:="Smith"
  vEmp.children:=Null
  
- $undefined:=Undefined(vEmp.name) // False
- $null:=(vEmp.name=Null) //False
+ $undefined:=Undefined(vEmp.name) // Faux
+ $null:=(vEmp.name=Null) // Faux
  
- $undefined:=Undefined(vEmp.children) // False
- $null:=(vEmp.children=Null) //True
+ $undefined:=Undefined(vEmp.children) // Faux
+ $null:=(vEmp.children=Null) // Vrai
  
- $undefined:=Undefined(vEmp.parent) // True
- $null:=(vEmp.parent=Null) //True
+ $undefined:=Undefined(vEmp.parent) // Vrai
+ $null:=(vEmp.parent=Null) // Vrai
 ```
 
-## See also 
+## Voir aussi 
 
 [CLEAR VARIABLE](clear-variable.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 82 |
+| Numéro de commande | 82 |
 | Thread safe | yes |
 
 

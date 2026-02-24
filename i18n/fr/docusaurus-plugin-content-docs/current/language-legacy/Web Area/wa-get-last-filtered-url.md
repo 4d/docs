@@ -5,52 +5,52 @@ slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *object* : Text ) : Text<br/>**WA Get last filtered URL** ( *object* : Variable, Field ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *objet* ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| Function result | Text | &#8592; | Last filtered URL |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| Résultat | Text | &#8592; | Dernier URL filtré |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL Release 2|Created|
+|11 SQL Release 2|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.WA Get last filtered URL.Summary-->The **WA Get last filtered URL** command returns the last URL that was filtered in the Web area designated by the *\** and *object* parameters.<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Summary-->La commande **WA Get last filtered URL** retourne le dernier URL ayant été filtré dans la zone Web désignée par les paramètres *\** et *objet*.<!-- END REF-->
 
-The URL may have been filtered for one of the following reasons:
+L’URL peut avoir été filtré pour l’une des raisons suivantes :
 
-* The URL was denied because of a filter ([WA SET URL FILTERS](wa-set-url-filters.md) command),
-* The link is open in the default browser ([WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md) command),
-* The URL attempts to open a pop-up window.
+* l’URL est interdit à cause d’un filtre (commande [WA SET URL FILTERS](wa-set-url-filters.md)),
+* le lien est ouvert dans le navigateur par défaut (commande [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)),
+* l’URL tentait d’ouvrir une fenêtre pop up.
 
-It is advisable to call this command in the context of the On URL Filtering, On Open External Link and On Window Opening Denied form events in order to find out the URL that was filtered.
+Il est judicieux d’appeler cette commande dans le contexte des événements formulaire On URL Filtering, On Open External Link et On Window Opening Denied afin de connaître l’URL filtré. Pour plus d’informations, reportez-vous à la description de la commande [Form event code](../commands/form-event-code.md).
 
-## See also 
+## Voir aussi 
 
 [WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
 [WA GET URL FILTERS](wa-get-url-filters.md)  
 [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
 [WA SET URL FILTERS](wa-set-url-filters.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1035 |
+| Numéro de commande | 1035 |
 | Thread safe | no |
 
 

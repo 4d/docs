@@ -5,58 +5,58 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* : Text array )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| volumes | Text array | &#8592; | Names of the volumes currently mounted |
+| volumes | Text array | &#8592; | Noms des volumes actuellement montés |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.VOLUME LIST.Summary-->The VOLUME LIST command populates the text array *volumes* with the names of the volumes currently defined (Windows) or mounted (Macintosh) on your machine.<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Summary-->**VOLUME LIST** remplit le tableau *volumes*, de type texte, avec les noms des volumes définis (Windows) ou montés (macOS) sur votre machine.<!-- END REF-->
 
-* On Macintosh, it returns the list of the volumes visible at the Finder level. Only the names of the volumes are returned (for example "MacHD", "BootCamp", etc.).
-* On Windows, it returns the list of the volumes currently defined whether or not each volume is physically present (i.e. the volume E:\\ will be returned whether or not a CD or DVD is actually present in the drive). The names of the volumes are followed by the folder separator character ("C:\\").
+* Sous Mac OS, elle retourne la liste des volumes visibles au niveau du Finder. Seuls les noms des volumes sont retournés (par exemple "MacHD", "BootCamp"...).
+* Sous Windows, elle retourne la liste des volumes couramment définis, même si le volume n'est pas physiquement présent (par exemple un volume "E:\\" sera retourné même s'il n'y a pas de CD ou de DVD dans le lecteur). Les noms des volumes sont suivis du caractère séparateur de dossiers ("C:\\").
 
-## Example 
+## Exemple 
 
-Using a scrollable area named *atVolumes* you want to display the list of the volumes defined or mounted on your machine, you write:
+A l'aide de la zone de défilement *ttVolumes*, vous voulez afficher la liste des volumes définis ou montés sur votre machine :
 
 ```4d
  Case of
     :(Form event code=On Load)
-       ARRAY TEXT(atVolumes;0)
-       VOLUME LIST(atVolumes)
+       ARRAY TEXT(ttVolumes;0)
+       VOLUME LIST(ttVolumes)
  
-  //...
+  // ...
  End case
 ```
 
-## See also 
+## Voir aussi 
 
 [DOCUMENT LIST](document-list.md)  
 [FOLDER LIST](folder-list.md)  
 [VOLUME ATTRIBUTES](volume-attributes.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 471 |
+| Numéro de commande | 471 |
 | Thread safe | yes |
 
 

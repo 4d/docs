@@ -5,63 +5,62 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *dialType* : Integer })<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *typeDial* )}<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dialType | Integer | &#8594;  | Dialog box to be displayed |
+| typeDial | Integer | &#8594;  | Boîte(s) de dialogue à afficher |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15 R5|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|15 R5|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](./commands/print-form) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
+<!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form.md) ou la commande [OPEN PRINTING JOB](open-printing-job.md).
 
-The optional *dialType* parameter can be used to configure the display of the printing dialog box. You can use one of the following constants from the *Print Options* theme:
+Le paramètre facultatif *typeDial* permet de configurer l’affichage de la boîte de dialogue d’impression. Vous pouvez utiliser l'une des constantes suivantes du thème *Options d'impression* :
 
-| Constant          | Value | Comment                                               |
-| ----------------- | ----- | ----------------------------------------------------- |
-| Page setup dialog | 1     | Display the Page setup dialog box                     |
-| Print dialog      | 2     | Display the Print job dialog box (default if omitted) |
+| Constante         | Valeur | Comment                                                             |
+| ----------------- | ------ | ------------------------------------------------------------------- |
+| Page setup dialog | 1      | Affichage de la boîte de dialogue Format d'impression               |
+| Print dialog      | 2      | Affichage de la boîte de dialogue d'impression (par défaut si omis) |
 
-**Note:** The Print Job dialog box contains a **Preview on Screen** check box that allows the user to preview their print job. You can preset or reset this option by calling [SET PRINT PREVIEW](set-print-preview.md) before calling **PRINT SETTINGS**.
+**Note :** La boîte de dialogue d'impression comporte l'option **Imprimer à l'écran** permettant à l'utilisateur de visualiser son impression à l'écran. Vous pouvez présélectionner ou désélectionner cette option par un appel préalable à la commande [SET PRINT PREVIEW](set-print-preview.md).
 
-## Example 
+## Exemple 
 
-See example for the command [Print form](./commands/print-form).
+Reportez-vous à l'exemple de la commande [Print form](../commands/print-form.md).
 
-## System variables and sets 
+## Variables et ensembles système 
 
-If the user clicks OK in both dialog boxes, the OK system variable is set to 1\. Otherwise, the OK system variable is set to 0\. 
+Si l'utilisateur clique sur le bouton OK dans chaque boîte de dialogue, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0\. 
 
-## See also 
+## Voir aussi 
 
 [OPEN PRINTING JOB](open-printing-job.md)  
 [PAGE BREAK](page-break.md)  
-[Print form](./commands/print-form)  
+[Print form](../commands/print-form.md)  
 [SET PRINT PREVIEW](set-print-preview.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 106 |
+| Numéro de commande | 106 |
 | Thread safe | no |
-| Modifies variables | OK |
-
+| Modifie les variables | OK |
 
 

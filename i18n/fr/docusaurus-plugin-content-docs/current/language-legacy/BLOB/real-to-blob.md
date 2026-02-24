@@ -5,137 +5,138 @@ slug: /commands/real-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; offset : Variable } )<br/>**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; *} )<!-- END REF-->
+<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *réel* ; *blob* ; *formatRéel* {; offset } )<br/>**REAL TO BLOB** ( *réel* ; *blob* ; *formatRéel* {; *} )<!-- END REF-->
 <!--REF #_command_.REAL TO BLOB.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| real | Real | &#8594;  | Real value to write into the BLOB |
-| Blob | Blob | &#8594;  | BLOB to receive the Real value |
-| realFormat | Integer | &#8594;  | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
-| offset | Variable | &#8596; | Offset within the BLOB (expressed in bytes) <br/>New offset after writing if not *  |
-| * | Operator | &#8594; | Append the value |
+| réel | Real | &#8594;  | Valeur de type Réel à écrire dans le BLOB |
+| blob | Blob | &#8594;  | BLOB devant recevoir la valeur Réel |
+| formatRéel | Integer | &#8594;  | 0=Format réel natif, 1=Format réel étendu, 2=Format réel double Macintosh, 3=Format réel double Windows |
+| offset &#124; * | Variable, Opérateur | &#8596;  | Offset (en octets) dans le BLOB ou  * pour ajouter la valeur à la fin du BLOB |
+| ||| Nouvel offset après l'écriture si * omis |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|6|Created|
+|6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.REAL TO BLOB.Summary-->The REAL TO BLOB command writes the Real value *real* into the BLOB *blob*.<!-- END REF-->
+<!--REF #_command_.REAL TO BLOB.Summary-->La commande **REAL TO BLOB** écrit la valeur de type Réel *réel* dans le BLOB *blob*.<!-- END REF-->
 
-The *realFormat* parameter fixes the internal format and byte ordering of the Real value to be written. You pass one of the following predefined constants provided by 4D:
+Le paramètre *formatRéel* fixe le format interne et l'ordre des octets ("byte ordering") de la valeur de type Réel à écrire. Vous passez une des constantes fournies par 4D :
 
-| Constant                     | Type    | Value |
-| ---------------------------- | ------- | ----- |
-| Extended real format         | Integer | 1     |
-| Macintosh double real format | Integer | 2     |
-| Native real format           | Integer | 0     |
-| PC double real format        | Integer | 3     |
+| Constante                    | Type        | Valeur |
+| ---------------------------- | ----------- | ------ |
+| Extended real format         | Entier long | 1      |
+| Macintosh double real format | Entier long | 2      |
+| Native real format           | Entier long | 0      |
+| PC double real format        | Entier long | 3      |
 
-**Platform Independence Note:** If you exchange BLOBs between Macintosh and PC platforms, it is up to you to manage real formats and byte swapping issues when using this command.
+  
+**Note sur l'indépendance de plate-forme :** Si vous échangez des BLOBs entre les plates-formes Macintosh et PC, il vous incombe de traiter les conversions d'octets ("byte swapping") lorsque vous utilisez cette fonction. 
 
-If you specify the \* optional parameter, the Real value is appended to the BLOB; the size of the BLOB is extended accordingly. Using the \* optional parameter, you can sequentially store any number of Integer, Long Integer, Real or Text values (see other BLOB commands) in a BLOB, as long as the BLOB fits into memory. 
+Si vous passez le paramètre optionnel \*, la valeur réelle est ajoutée à la fin du BLOB et la taille de *blob* est modifiée en conséquence. Ainsi, à l'aide du paramètre optionnel \*, vous pouvez stocker les unes derrière les autres autant de valeurs de type Entier, Entier long, Numérique ou Texte (référez-vous aux autres commandes sur les BLOBs) que vous voulez dans un BLOB, la seule limite étant celle de la mémoire disponible. 
 
-If you do not specify the \* optional parameter or the *offset* variable parameter, the Real value is stored at the beginning of the BLOB, overriding its previous contents; the size of the BLOB is adjusted accordingly.
+Si vous ne passez pas le paramètre optionnel \* ni de variable dans le paramètre *offset*, la valeur réelle est stockée au début de *blob* en remplaçant son contenu précédent, et la taille du BLOB est modifiée en conséquence.
 
-If you pass the *offset* variable parameter, the Real value is written at the offset (starting from zero) within the BLOB. No matter where you write the Real value, the size of the BLOB is increased according to the location you passed (plus up to 8 or 10 bytes, if necessary). New allocated bytes, other than the ones you are writing, are initialized to zero.
+Si vous passez une variable dans le paramètre *offset*, le réel est écrit à partir de l'offset *offset*, exprimé en octets (à partir de zéro), du BLOB. Quel que soit l'endroit où vous placez la valeur, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (plus jusqu'à 8 ou 10 octets le cas échéant). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therefore, you can reuse that same variable with another BLOB writing command to write another value.
+Après l'exécution de la commande, la variable du paramètre *offset* est incrémentée du nombre d'octets ayant été écrits. Vous pouvez par conséquent réutiliser la même variable avec une autre commande d'écriture de BLOB afin de placer une autre valeur juste après celle que vous venez d'écrire.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Note de compatibilité :** Etant donné que cette commande modifie le blob passé comme paramètre, elle ne prend pas en charge les objets blob (de type 4D.Blob). Reportez-vous à la page *Passer des blobs et objets blobs à des commandes 4D* sur developer.4d.com.
 
-## Example 1 
+## Exemple 1 
 
-After executing this code:
-
-```4d
- var vrValue : Real
- vrValue:=...
- REAL TO BLOB(vrValue;vxBlob;Extended real format)
-```
-
-* On all platforms, the size of *vxBlob* is 10 bytes
-
-## Example 2 
-
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
- var vrValue : Real
- vrValue:=...
- REAL TO BLOB(vrValue;vxBlob;Native real format)
+ var vrValeur : Real
+ vrValeur:=...
+ REAL TO BLOB(vrValeur;vxBlob;Extended real format)
 ```
 
-* On all platforms, the size of *vxBlob* is 8 bytes
+* Sur toutes les plates-formes, la taille de *vxBlob* est 10 octets
 
-## Example 3 
+## Exemple 2 
 
-After executing this code:
+Après l'exécution de ce code :
+
+```4d
+ var vrValeur : Real
+ vrValeur:=...
+ REAL TO BLOB(vrValeur;vxBlob;Native real format)
+```
+
+* Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
+
+## Exemple 3 
+
+Après l'exécution de ce code :
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
- var vrValue : Real
- vrValue:=...
- INTEGER TO BLOB(vrValue;vxBlob;PC double real format) // or Macintosh double real format
+ var vrValeur : Real
+ vrValeur:=...
+ REAL TO BLOB(vrValeur;vxBlob;PC double real format) // ou Format réel double Macintosh
 ```
 
-* On all platforms, the size of *vxBlob* is 8 bytes
+* Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
 
-## Example 4 
+## Exemple 4 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
- var vrValue : Real
- vrValue:=...
+ var vrValeur : Real
+ vrValeur:=...
  vlOffset:=50
- REAL TO BLOB(vrValue;vxBlob;PC double real format;vlOffset) // or Macintosh double real format
+ REAL TO BLOB(vrValeur;vxBlob;PC double real format;vlOffset) // ou Format réel double Macintosh
 ```
 
-* On all platforms, the size of *vxBlob* is 100 bytes
-* On all platforms, the real value is stored in the bytes #50 to #57
-* The other bytes of the BLOB are left unchanged
-* The variable *vlOffset* has been incremented by 8 (and is now equal to 58)
+* Sur toutes les plates-formes, la taille de *vxBlob* est 100 octets
+* Sur toutes les plates-formes, la valeur numérique est stockée dans les octets #50 à #57
+* Les autres octets du BLOB restent inchangés
+* La variable *vlOffset* est incrémentée de 8 (et est alors égale à 58)
 
-## Example 5 
+## Exemple 5 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
- var vrValue : Real
- vrValue:=...
- REAL TO BLOB(vrValue;vxBlob;Macintosh double real format) // or Windows double real format
+ var vrValeur : Real
+ vrValeur:=...
+ REAL TO BLOB(vrValeur;vxBlob;Macintosh double real format) // ou Format réel double PC
 ```
 
-* On all platforms, the size of *vxBlob* is 8 bytes
+* Sur toutes les plates-formes, la taille de *vxBlob* est 8 octets
 
-## Example 6 
+## Exemple 6 
 
-After executing this code:
+Après l'exécution de ce code :
 
 ```4d
  SET BLOB SIZE(vxBlob;100)
- REAL TO BLOB(vrValue;vxBlob;Extended real format;*)
+ REAL TO BLOB(vrValeur;vxBlob;Extended real format;*)
 ```
 
-* On all platforms, the size of *vxBlob* is 110 bytes
-* On all platforms, the real value is stored at the bytes #100 to #109
-* The other bytes of the BLOB are left unchanged
+* Sur toutes les plates-formes, la taille de *vxBlob* est 110 octets
+* Sur toutes les plates-formes, la valeur numérique est stockée dans les octets #100 à #109
+* Les autres octets du BLOB restent inchangés
 
-## See also 
+## Voir aussi 
 
 [BLOB to integer](blob-to-integer.md)  
 [BLOB to longint](blob-to-longint.md)  
@@ -145,11 +146,11 @@ After executing this code:
 [LONGINT TO BLOB](longint-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 552 |
+| Numéro de commande | 552 |
 | Thread safe | yes |
 
 

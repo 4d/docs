@@ -5,75 +5,75 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *sélecteur* ; *paramTexte* )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Selection to use |
-| textParam | Text | &#8594;  | Text sent |
+| sélecteur | Integer | &#8594;  | Sélection à utiliser |
+| paramText | Text | &#8594;  | Texte envoyé |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SET MACRO PARAMETER.Summary-->The **SET MACRO PARAMETER** command inserts the *paramText* text into the method from which it has been called.<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Summary-->La commande **SET MACRO PARAMETER** insère le texte *paramTexte* dans la méthode depuis laquelle elle a été appelée.<!-- END REF-->
 
-If text has been selected in the method, the *selector* parameter can be used to set whether the *paramText* text must replace all of the method text or only the selected text. In selector, you can pass one of the following constants, added to the “*4D Environment*” theme:
+Si du texte était sélectionné dans la méthode, le paramètre *sélecteur* permet de définir si le texte *paramTexte* doit remplacer la totalité de la méthode ou uniquement le texte sélectionné. Vous pouvez passer dans *sélecteur* l’une des constantes suivantes, placées dans le thème “*Environnement 4D*” :
 
-| Constant                | Type    | Value |
-| ----------------------- | ------- | ----- |
-| Full method text        | Integer | 1     |
-| Highlighted method text | Integer | 2     |
+| Constante               | Type        | Valeur |
+| ----------------------- | ----------- | ------ |
+| Full method text        | Entier long | 1      |
+| Highlighted method text | Entier long | 2      |
 
-If no text has been selected, *paramText* is inserted into the method.
+Si aucun texte n’était sélectionné, *paramTexte* est inséré dans la méthode.
 
 ## Note 
 
- In order for the [GET MACRO PARAMETER](get-macro-parameter.md) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
+ Pour que les commandes [GET MACRO PARAMETER](get-macro-parameter.md) et **SET MACRO PARAMETER** fonctionnent correctement, l'attribut “version” doit être déclaré dans la macro elle-même, de la façon suivante :
 
 ```xml
-<macro name="MyMacro" version="2">
---- Text of macro ---
+<macro name="MaMacro" version="2">
+--- Texte de la macro ---
 </macro>
 ```
 
-## Example 
+## Exemple 
 
-This macro builds a new text that will be returned to the calling method:
+Cette macro construit un nouveau texte qui sera retourné à la méthode appelante
 
 ```4d
- var $input_text : Text
- var $output_text : Text
- GET MACRO PARAMETER(Highlighted method text;$input_text)
-  //Suppose that the selected text is a table, i.e. “[Customers]”
- $output_text:=""
- $output_text:=$output_text+Command name(47)+"("+$input_text+")" // Select all ([Customers])
- $output_text:=$output_text+"$i:="+Command name(76)+"("+$input_text+")" // $i:=Records in selection([Customers])
- SET MACRO PARAMETER(Highlighted method text;$output_text)
-  //Replaces the selected text by the new code
+ var $texte_entrée : Text
+ var $texte_sortie : Text
+ GET MACRO PARAMETER(Highlighted method text;$texte_entrée)
+  //Supposons que le texte sélectionné est une table, i.e. “[Clients]”
+ $texte_sortie:=""
+ $texte_sortie:=$texte_sortie+Command name(47)+"("+$texte_entrée+")" // Tout sélectionner ([Clients])
+ $texte_sortie:=$texte_sortie+"$i:="+Command name(76)+"("+$texte_entrée+")" // $i:=Enregistrements trouves([Clients])
+ SET MACRO PARAMETER(Highlighted method text;$texte_sortie)
+  //On remplace le texte sélectionné par le nouveau code
 ```
 
-## See also 
+## Voir aussi 
 
 [GET MACRO PARAMETER](get-macro-parameter.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 998 |
+| Numéro de commande | 998 |
 | Thread safe | no |
 
 

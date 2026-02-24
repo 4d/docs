@@ -1,6 +1,7 @@
 ---
 id: zip-read-archive
 title: ZIP Read archive
+slug: /commands/zip-read-archive
 displayed_sidebar: docs
 ---
 

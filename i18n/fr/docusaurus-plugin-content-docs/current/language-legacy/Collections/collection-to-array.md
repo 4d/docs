@@ -5,42 +5,42 @@ slug: /commands/collection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
+<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* ; *tableau* {; *nomPropriété*}{; *tableau2* ; *nomPropriété2* ; ... ; *tableauN* ; *nomPropriétéN*} )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| collection | Collection | &#8594;  | Collection to copy in array(s) |
-| array | Array | &#8592; | Array to receive the elements of the collection; if propertyName passed, array to receive the values of propertyName in the collection |
-| propertyName | Text | &#8594;  | Object property name whose values to copy in array ("" for all elements) |
+| collection | Collection | &#8594;  | Collection à copier dans un ou des tableau(x) |
+| tableau | Array | &#8592; | Tableau reçevant les éléments de la collection ; si le paramètre nomPropriété est passé, le tableau reçoit les valeurs correspondantes à nomPropriété dans la collection. |
+| nomPropriété | Text | &#8594;  | Nom de la propriété de l'objet dont les valeurs sont à copier dans le tableau ("" pour tous les éléments) |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Created|
+|16 R6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.COLLECTION TO ARRAY.Summary-->The **COLLECTION TO ARRAY** command fills one or more *array*(s) with elements or *propertyName* values from the *collection* into the *array*(s).<!-- END REF-->
+<!--REF #_command_.COLLECTION TO ARRAY.Summary-->La commande **COLLECTION TO ARRAY** remplit un ou plusieurs *tableau*(x) avec les éléments ou les valeurs *nomPropriété* de la *collection* dans le ou les *tableau*(x).<!-- END REF-->
 
-This command can work with a *collection* that contains values or a *collection* that contains objects, in which case the *propertyName* parameter(s) are mandatory. 
+Cette commande peut être utilisée avec une *collection* qui contient des valeurs ou une *collection* qui contient des objets, dans ce cas le ou les paramètre(s) *nomPropriété* est (sont) obligatoire(s). 
 
-* If you omit the *propertyName* parameter, the command copies all *collection* elements to *array*. After the command is executed, the size of *array* is identical to the *collection* length.
-* If you pass one or more *propertyName*(s) parameter, *collection* must be a collection of objects (other elements are ignored). In this case, each *propertyName* parameter indicates the name of a property within each object of the collection whose value(s) you want to copy in the corresponding *array*. You can pass any *propertyName* / *array* pairs you want, mixing array types. After the command is executed, each size of *array* is identical to the *collection* length.
+* Si vous omettez le paramètre *nomPropriété*, la commande copie tous les éléments de la *collection* dans le *tableau*. Après l'exécution de la commande, la taille du *tableau* est identique à la longueur de la *collection*.
+* Si vous passez un ou plusieurs paramètre(s *nomPropriété*, *collection* doit être une collection d'objets (les autres éléments sont ignorés). Dans ce cas, chaque paramètre *nomPropriété* indique le nom d'une propriété dans chaque objet de la collection dont vous voulez copier la valeur dans le *tableau* correspondant. Vous pouvez passer toutes les paires *nomPropriété* /*tableau* que vous voulez, en mélangeant les types de tableau. Après l'exécution de la commande, chaque taille de tableau est identique à la longueur de la collection.
 
-In all cases, 4D converts the collection elements or values according to the type of *array* (if necessary). Conversion rules are detailed in the *Type conversions between collections and 4D arrays* page.
+Dans tous les cas, 4D convertit les éléments de la collection ou les valeurs selon le type du *tableau* (si nécessaire). Les règles de conversion sont détaillées dans la page *Conversions de type entre les collections et les tableaux 4D*.
 
-## Example 1 
+## Exemple 1 
 
-You want to copy a collection of strings in a text array:
+Vous souhaitez copier une collection de chaînes dans un tableau texte :
 
 ```4d
  var $fruits : Collection
@@ -52,9 +52,9 @@ You want to copy a collection of strings in a text array:
   //...
 ```
 
-## Example 2 
+## Exemple 2 
 
-You want to copy different property values from a collection of objects in different arrays:
+Vous voulez copier différentes valeurs de propriété d'une collection d'objets dans différents tableaux :
 
 ```4d
  var $col : Collection
@@ -73,16 +73,16 @@ You want to copy different property values from a collection of objects in diffe
   //...
 ```
 
-## See also 
+## Voir aussi 
 
 [ARRAY TO COLLECTION](array-to-collection.md)  
-*Type conversions between collections and 4D arrays*  
+*Conversions de type entre les collections et les tableaux 4D*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1562 |
+| Numéro de commande | 1562 |
 | Thread safe | yes |
 
 

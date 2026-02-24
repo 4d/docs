@@ -5,171 +5,163 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* : Object, Object ; *property* : Text {; *type* : Integer} ) : any<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objet* ; *propriété* {; *type*} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | Structured object |
-| property | Text | &#8594;  | Name of property to read |
-| type | Integer | &#8594;  | Type to which to convert the value |
-| Function result | any | &#8592; | Current value of property |
+| objet | Object, Object | &#8594;  | Objet structuré |
+| propriété | Text | &#8594;  | Nom de la propriété à lire |
+| type | Integer | &#8594;  | Type dans lequel convertir la valeur |
+| Résultat | any | &#8592; | Valeur courante de la propriété |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|16 R6|Modified|
-|16 R4|Modified|
-|15 R4|Modified|
-|15|Modified|
-|14|Created|
+|16 R6|Modifié|
+|16 R4|Modifié|
+|15 R4|Modifié|
+|15|Modifié|
+|14|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.
+<!--REF #_command_.OB Get.Summary-->La commande **OB Get** retourne la valeur courante de la *propriété* de l’*objet*, convertie optionnellement dans le *type* défini.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.
 
-**Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the [WP GET ATTRIBUTES]((../WritePro/commands/wp-get-attributes.md) command (see example 9). 
+**Note :** Cette commande prend en charge les définitions d'attributs dans les *objets* 4D Write Pro, comme la commande *WP GET ATTRIBUTES* (cf. exemple 9). Toutefois, à la différence de *WP GET ATTRIBUTES*, **OB Get** ne permet pas de manipuler directement une variable ou un champ image comme valeur d'attribut.
 
-In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive. 
+Passez dans le paramètre *propriété* le libellé de la propriété à lire. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
-By default, 4D returns the value of the property in its original type. You can "force" the typing of the value returned using the optional *type* parameter. To do this, in *type* you pass one of the following constants found in the *Field and Variable Types* theme:
+Par défaut, 4D retournera la valeur de la propriété dans son type d’origine. Vous pouvez "forcer" le typage de la valeur retournée à l’aide du paramètre optionnel *type*. Pour cela, vous pouvez passer dans *type* une des constantes suivantes, placées dans le thème *Types champs et variables* :
 
-| Constant      | Type    | Value |
-| ------------- | ------- | ----- |
-| Is Boolean    | Integer | 6     |
-| Is collection | Integer | 42    |
-| Is date       | Integer | 4     |
-| Is longint    | Integer | 9     |
-| Is null       | Integer | 255   |
-| Is object     | Integer | 38    |
-| Is picture    | Integer | 3     |
-| Is pointer    | Integer | 23    |
-| Is real       | Integer | 1     |
-| Is text       | Integer | 2     |
-| Is time       | Integer | 11    |
+| Constante  | Type        | Valeur |
+| ---------- | ----------- | ------ |
+| Is Boolean | Entier long | 6      |
+| Is date    | Entier long | 4      |
+| Is longint | Entier long | 9      |
+| Is object  | Entier long | 38     |
+| Is pointer | Entier long | 23     |
+| Is real    | Entier long | 1      |
+| Is text    | Entier long | 2      |
+| Is time    | Entier long | 11     |
 
-The command returns the value of the *property*. Several types of data are supported. Note that:
+La commande retourne la valeur de la *propriété*. Plusieurs types de données sont pris en charge. A noter que :
 
-* a pointer is returned as such; it can be evaluated using the [JSON Stringify](json-stringify.md) command.
-* depending on your [database date settings](./set-database-parameter.md#dates-inside-objects-85), dates in object attributes are stored either with date type or text type. In order for **OB Get** to correctly interpret a date stored as a text, you need to use the `Is date` constant (see example 5).
-* in real values, the decimal separator is always a period "."
-* times are returned as a number. Times are stored in seconds by default in objects (see compatibility note below). Use the Is time constant to get a 4D formatted time value.
+* un pointeur est retourné tel quel, il peut être évalué à l’aide de la commande [JSON Stringify](json-stringify.md),
+* les dates sont retournées au format "YYYY-MM-DDTHH:mm:ss.SSSZ"
+* dans les valeurs réelles, le séparateur décimal est toujours le point "."
+* les heures sont retournées sous forme d’un nombre. A noter que [OB SET](ob-set.md) stocke les heures sous forme de millisecondes, conformément au standard javascript, tandis que 4D attend un nombre de secondes. Pour une interprétation correcte par **OB Get** d'une heure stockée, vous devez utiliser la constante Is time.
 
-**Compatibility Notes:**
+## Exemple 1 
 
-* In versions prior to v17, times were stored in milliseconds inside objects. For compatibility needs, this previous behavior can be restored using the Times inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command. Whatever the setting, the result will be correct when the Is time constant is passed.
-* (*4D Write Pro*) In versions prior to v16 R6, when *property* defined a 4D Write Pro image attribute (such as wk image), a text value containing a data URI was always returned. Starting with 4D v16 R6, 4D Write Pro image attributes are always returned as picture values. You must use a specific *property* like wk image url to get a data URI.
-* In versions prior to v16 R4, when *property* contains a null value and if the *type* parameter is not used, 4D returns an empty string. For 4D v16 R4 and higher versions, the Is null constant is returned in this case. To preserve compatibilty, this change takes effect only if the "Use object notation to access objects properties (Unicode required)" option is enabled in the database (see the *Compatibility page*).
-
-## Example 1 
-
-Retrieving a text type value:
+Récupération d’une valeur de type texte :
 
 ```4d
  var $ref : Object
- var $FirstName : Text
- OB SET($ref;"FirstName";"Harry")
- $FirstName:=OB Get($ref;"FirstName") // $FirstName = "Harry" (text)
+ var $prénom : Text
+ OB SET($ref;"Prénom";"Harry")
+ $prénom:=OB Get($ref;"Prénom")  // $prénom = "Harry" (texte)
 ```
 
-## Example 2 
+## Exemple 2 
 
-Retrieving a real number value converted into a longint:
+Récupération d’une valeur numérique convertie en entier long :
 
 ```4d
  OB SET($ref ;"age";42)
- $age:=OB Get($ref ;"age") // $age is a real number (default)
- $age:=OB Get($ref ;"age";Is longint) // $age is a longint
+ $age:=OB Get($ref ;"age") // $age est un réel (défaut)
+ $age:=OB Get($ref ;"age";Is longint) // $age est un entier long
 ```
 
-## Example 3 
+## Exemple 3 
 
-Retrieving the values of an object:
+Récupération des valeurs d’un objet :
 
 ```4d
  var $ref1;$ref2 : Object
- OB SET($ref1;"LastName";"Smith") // $ref1={"LastName":"Smith"}
- OB SET($ref2;"son";$ref1) // $ref2={"son":{"LastName":"Smith"}}
- $son:=OB Get($ref2;"son") // $son={"LastName":"john"} (object)
- $sonsName:=OB Get($son ;"name") // $sonsName="john" (text)
+ OB SET($ref1;"nom";"Smith") //$ref1={"nom":"Smith"}
+ OB SET($ref2;"fils";$ref1) //$ref2={"fils":{"nom":"Smith"}}
+ $fils:=OB Get($ref2;"fils") //$fils={"name":"john"} (objet)
+ $nomfils:=OB Get($fils ;"nom") //$nomfils="john" (texte)
 ```
 
-## Example 4 
+## Exemple 4 
 
-Modifying the age of an employee twice:
+Modifications de l’âge d’un employé :
 
 ```4d
  var $ref_john;$ref_jim : Object
- OB SET($ref_john;"name";"John";"age";35)
- OB SET($ref_jim;"name";"Jim";"age";40)
- APPEND TO ARRAY($myArray;$ref_john) // we create an object array
+ OB SET($ref_john;"nom";"John";"age";35)
+ OB SET($ref_jim;"nom";"Jim";"age";40)
+ APPEND TO ARRAY($myArray;$ref_john) // on crée un tableau objet
  APPEND TO ARRAY($myArray;$ref_jim)
-  // we change the age for John from 35 to 25
+     // on passe l’âge de John de 35 à 25
  OB SET($myArray{1};"age";25)
-  // We replace the age of "John" in the array
+     // On remplace l’âge de "John" dans le tableau
  For($i;1;Size of array($myArray))
-    If(OB Get($myArray{$i};"name")="John")
-       OB SET($myArray{$i};"age";36) // instead of 25
-  // $ref_john={"name":"John","age":36}
-    End if
+       If(OB Get($myArray{$i};"nom")="John")
+          OB SET($myArray{$i};"age";36)  //au lieu de 25
+              // $ref_john={"nom":"John","age":36}
+       End if
  End for
 ```
 
-## Example 5 
+## Exemple 5 
 
-When retrieving a date, the resulting value depends on the [current database date settings](./set-database-parameter.md#dates-inside-objects-85).
+Lorsque vous récupérez une date, la valeur résultante dépend du paramétrage courant de la base. 
 
-* By default (or `Date type` selected):
-
-```4d
- var $object : Object
- var $birthday : Date
- OB SET($object;"Birthday";!30/01/2010!)
- $birthday:=OB Get($object;"Birthday") //30/01/10, no need for Is date
-```
-
-* If `String type with time zone` is selected:
+* Si l'option "Utiliser le type date au lieu du format ISO dans les objets" n'est pas cochée :
 
 ```4d
  var $object : Object
- var $birthday : Date
- var $birthdayString : Text
- OB SET($object;"Birthday";!30/01/2010!)
- $birthday:=OB Get($object;"Birthday";Is date) //30/01/10
- $birthdayString:=OB Get($object;"Birthday") //"2010-01-29T23:00:00.000Z" (Paris time zone)
+ var $anniv : Date
+ var $chainAnniv : Text
+ OB SET($object;"Anniversaire";!30/01/2010!)
+ $anniv:=OB Get($object;"Anniversaire";Is date) //30/01/10
+ $chainAnniv:=OB Get($object;"Anniversaire") //"2010-01-29T23:00:00.000Z" (Paris)
 ```
 
+* Si l'option "Utiliser le type date au lieu du format ISO dans les objets" est cochée :
 
-## Example 6 
+```4d
+ var $object : Object
+ var $anniv : Date
+ OB SET($object;"Anniversaire";!30/01/2010!)
+ $anniv:=OB Get($object;"Anniversaire") //30/01/10, pas besoin de Is date
+```
 
-Using nested objects:
+**Note :** Pour plus d'informations sur ce paramétrage, reportez-vous à la *Page Compatibilité*.
+
+## Exemple 6 
+
+Utilisation d'objets imbriqués :
 
 ```4d
  var $ref1;$child;$children : Object
  var $childName : Text
  OB SET($ref1;"firstname";"John";"lastname";"Monroe")
-  //{"firstname":"john","lastname";"Monroe"}
+     //{"firstname":"john","lastname";"Monroe"}
  OB SET($children;"children";$ref1)
  $child:=OB Get($children;"children")
-  //$son = {"firstname":"John","lastname":"Monroe"} (object)
+     //$son = {"firstname":"John","lastname":"Monroe"} (objet)
  $childName:=OB Get($child;"lastname")
-  //$childName = "Monroe" (text)
-  //or
+     //$childName = "Monroe" (texte)
+     //ou bien
  $childName:=OB Get(OB Get($children;"children");"lastname")
-  // $childName = "Monroe" (text)
+     // $childName = "Monroe" (texte)
 ```
 
-## Example 7 
+## Exemple 7 
 
-Recovery in 4D of a time stored in an object:
+Récupération dans 4D d'une heure stockée dans un objet :
 
 ```4d
  var $obj_o : Object
@@ -178,28 +170,28 @@ Recovery in 4D of a time stored in an object:
  $set_h:=?01:00:00?+1
  OB SET($obj_o;"myHour";$set_h)
   // $obj_o = {"myHour":3601}
-  // The time is stored in seconds
+  // L'heure est stockée en secondes
  $get_h:=OB Get($obj_o;"myHour";Is time)
   // $get_h = ?01:00:01?
 ```
 
-## Example 8 
+## Exemple 8 
 
-Examples of working with 4D object fields:
+Exemples de manipulation de champs objet 4D :
 
 ```4d
-  // Define a value
- OB SET([People]Identity_OB;"First name";$firstName)
- OB SET([People]Identity_OB;"Last name";$lastName)
+  // Définir une valeur
+ OB SET([Personnes]Identity_OB;"Prénom";$firstName)
+ OB SET([Personnes]Identity_OB;"Nom";$lastName)
  
-  // Get a value
- $firstName:=OB Get([People]Identity_OB;"First name")
- $lastName:=OB Get([People]Identity_OB;"Last name")
+  // Lire une valeur
+ $firstName:=OB Get([Personnes]Identity_OB;"Prénom")
+ $lastName:=OB Get([Personnes]Identity_OB;"Nom")
 ```
 
-## Example 9 
+## Exemple 9 
 
-In the method of a form containing a 4D Write Pro area, you can write:
+Dans la méthode d'un formulaire contenant une zone 4D Write Pro, vous pouvez écrire :
 
 ```4d
  If(FORM Event.code=On Validate)
@@ -208,38 +200,39 @@ In the method of a form containing a 4D Write Pro area, you can write:
  End if
 ```
 
-You can also read custom attributes of the documents:
+Vous pouvez également lire les attributs personnalisés des documents :
 
 ```4d
  vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Last edition by")
 ```
 
-## Example 10 
+## Exemple 10 
 
-You want to know the size of a picture stored in an object attribute:
+Vous voulez connaître la taille d'une image stockée dans un objet :
 
 ```4d
  var $vSize : Integer
  $vSize:=Picture size(OB Get($object;"photo";Is picture))
 ```
 
-**Note:** If you assign the result of the command to a picture variable, the Is picture constant is not necessary. Example:  
+**Note :** si vous assignez le résultat de la commande à une variable image, la constante Est une image n'est pas nécessaire. Exemple :  
 
 ```4d
  var $vPict : Picture
- $vPict:=OB Get($object;"photo") //"is picture" is useless in this case
+ $vPict:=OB Get($object;"photo") //"Est une image" est inutile dans ce cas
 ```
 
-## See also 
+## Voir aussi 
 
 [OB Copy](ob-copy.md)  
 [OB SET](ob-set.md)  
+*Types champs et variables*  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1224 |
+| Numéro de commande | 1224 |
 | Thread safe | yes |
 
 

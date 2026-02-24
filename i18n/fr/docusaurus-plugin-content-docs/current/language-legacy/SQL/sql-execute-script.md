@@ -5,77 +5,77 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* : Text ; *errorAction* : Integer {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text ; *attribValue* : Text)} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *cheminScript* ; *actionErreur* {; *nomAttribut* ; *valAttribut*} {; *nomAttribut2* ; *valAttribut2* ; ... ; *nomAttributN* ; *valAttributN*} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| scriptPath | Text | &#8594;  | Complete pathname of file containing SQL script to execute |
-| errorAction | Integer | &#8594;  | Action to carry out in case of error during script execution |
-| attribName | Text | &#8594;  | Name of attribute to use |
-| attribValue | Text | &#8594;  | Value of attribute |
+| cheminScript | Text | &#8594;  | Chemin d'accès complet du fichier contenant le script SQL à exécuter |
+| actionErreur | Integer | &#8594;  | Action à effectuer en cas d’erreur durant l’exécution du script |
+| nomAttribut | Text | &#8594;  | Nom d’attribut à utiliser |
+| valAttribut | Text | &#8594;  | Valeur de l’attribut |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|12|Created|
+|12|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->The **SQL EXECUTE SCRIPT** command is used to execute a series of SQL statements placed in the script file designated by *scriptPath*.<!-- END REF--> This command can only be executed on a local machine (local 4D or stored procedure on 4D Server). It works with the current database (internal or external database).
+<!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->La commande **SQL EXECUTE SCRIPT** vous permet d’exécuter une suite d’instructions SQL placées dans le fichier de script désigné par *cheminScript*.<!-- END REF--> Cette commande ne peut être exécutée que sur un poste local (4D local ou procédure stockée sur 4D Server). Elle fonctionne avec la base courante (base interne ou base externe). 
 
-**Note:** This command cannot be used with an external connection that is opened directly or via ODBC. 
+**Note :** Cette commande ne peut pas être utilisée avec une connexion externe ouverte directement ou via ODBC. 
 
-Pass the complete pathname of the text file containing the SQL statements to be executed in the *scriptPath* parameter. The pathname must be expressed using the syntax of the current system. If you pass an empty string ("") in *scriptPath*, a standard Open document dialog box will be displayed so that the user can select the script file to be executed. 
+Passez dans le paramètre *cheminScript* le chemin d’accès complet du fichier texte contenant les instructions SQL à exécuter. Le chemin d’accès doit être exprimé à l’aide de syntaxe du système courant. Si vous passez une chaîne vide ("") dans *cheminScript*, une boîte de dialogue standard d’ouverture de documents s’affiche, permettant à l’utilisateur de sélectionner le fichier de script à exécuter. 
 
-**Note:** The [SQL EXPORT DATABASE](sql-export-database.md) and [SQL EXPORT SELECTION](sql-export-selection.md) commands automatically generate this script file.
+**Note :** Les commandes [SQL EXPORT DATABASE](sql-export-database.md) et [SQL EXPORT SELECTION](sql-export-selection.md) génèrent automatiquement ce fichier de script.
 
-The *errorAction* parameter is used to configure the functioning of the command when an error occurs during script execution. You can pass one of the three following constants, placed in the *SQL* theme:
+Le paramètre *actionErreur* vous permet de paramétrer le fonctionnement de la commande lorsqu’elle rencontre une erreur au cours de l’exécution du script. Vous pouvez passer l’une des trois constantes ci-dessous, placées dans le thème *SQL* :
 
-| Constant              | Type    | Value | Comment                                                                                                                                  |
-| --------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| SQL On error abort    | Integer | 1     | In the event of an error, 4D immediately stops script execution.                                                                         |
-| SQL On error confirm  | Integer | 2     | In the event of an error, 4D displays a dialog box describing the error and allowing the user to interrupt or continue script execution. |
-| SQL On error continue | Integer | 3     | In the event of an error, 4D ignores it and continues script execution.                                                                  |
+| Constante             | Type        | Valeur | Comment                                                                                                                                                   |
+| --------------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SQL On error abort    | Entier long | 1      | En cas d’erreur, 4D stoppe immédiatement l’exécution du script.                                                                                           |
+| SQL On error confirm  | Entier long | 2      | En cas d’erreur, 4D affiche une boîte de dialogue détaillant l’erreur et permettant à l’utilisateur d’interrompre ou de poursuivre l’exécution du script. |
+| SQL On error continue | Entier long | 3      | En cas d’erreur, 4D l’ignore et poursuit l’exécution du script.                                                                                           |
 
-The *attribName* and *attribValue* parameters must be passed by pairs. These parameters are intended to be used to specify specific attributes for the script execution. In the current version of 4D, a single attribute can be passed in *attribName*, available via the following constant, placed in the *SQL* theme:
+Les paramètres *nomAttribut* et *valAttribut* doivent être passés par paires. Ces paramètres sont destinés à permettre de définir des attributs spécifiques pour l’exécution du script. Dans la version actuelle de 4D, un seul attribut peut être passé dans *nomAttribut*, disponible via la constante suivante, placée dans le thème *SQL* :
 
-| Constant              | Type   | Value                    | Comment                                                                                                                                                                                                                                                                                                                                                                |
-| --------------------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SQL use access rights | Text | SQL\_Use\_Access\_Rights | Used to restrict the access rights to be applied during execution of the SQL commands of the script. When you use this attribute, you must pass 0 or 1 in *attribValue*: <br/>*attribValue* \= 1: 4D uses the access rights of the current 4D user.*attribValue* \= 0 (or attribute not specified): 4D does not restrict access, the Designer rights are used. |
+| Constante             | Type   | Valeur                   | Comment                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SQL use access rights | Chaîne | SQL\_Use\_Access\_Rights | Permet de restreindre les droits d’accès à appliquer lors de l’exécution des commandes SQL du script. Lorsque vous utilisez cet attribut, vous devez passer 0 ou 1 dans *valAttribut* :<br/>*valAttribut* \= 1 : 4D utilise les droits d’accès de l’utilisateur 4D courant. *valAttribut* \= 0 (ou attribut non défini) : 4D ne restreint pas les accès, les droits du Super\_Utilisateur sont utilisés. |
 
-If the 4D log file is activated (via the selectors 28 or 45 of the [SET DATABASE PARAMETER](set-database-parameter.md) command), each SQL command executed will generate an entry with the following information:
+Si le fichier d’enregistrement des requêtes de 4D est activé (via les sélecteurs 28 ou 45 de la commande [SET DATABASE PARAMETER](set-database-parameter.md)), chaque commande SQL exécutée génèrera une entrée avec les informations suivantes :
 
-* Type of SQL command
-* Number of records affected by the command
-* Duration of command execution
-* For each error encountered:  
-   * the error code  
-   * the error text if available
+* Type de commande SQL
+* Nombre d’enregistrements affectés par la commande
+* Durée d’exécution de la commande
+* Pour chaque erreur rencontrée :  
+   * le code d’erreur  
+   * le texte de l’erreur s’il est disponible
 
-If the script is executed correctly (no error occurs), the *OK* system variable is set to 1\. In the event of an error, the *OK* system variable is set to 0 or not according to the *errorAction* parameter: 
+Si le script est correctement exécuté (aucune erreur rencontrée), la variable système *OK* prend la valeur 1\. En cas d’erreur, la variable système *OK* prend ou non la valeur 0 en fonction du paramètre *actionErreur* : 
 
-* If *errorAction* is SQL On error abort (value 1), *OK* is set to 0.
-* If *errorAction* is SQL On error confirm (value 2), the *OK* variable is set to 0 if the user chooses to stop the operation and 1 if they choose to continue .
-* If *errorAction* is SQL On error continue (value 3), the *OK* variable is always 1\.
+* Si *actionErreur* vaut SQL On error abort (valeur 1), *OK* prend la valeur 0.
+* Si *actionErreur* vaut SQL On error confirm (valeur 2), la variable *OK* prend la valeur 0 si l’utilisateur choisit de stopper l’opération et 1 s’il choisit de la poursuivre.
+* Si *actionErreur* vaut SQL On error continue (valeur 3), la variable *OK* vaut toujours 1\.
 
-**Note:** If you use this command to execute memory-consuming actions such as massive data imports, you can consider calling the *ALTER DATABASE* SQL command in order to temporarily disable the SQL options.
+**Note :** Si vous utilisez cette commande pour exécuter des actions consommatrices de mémoire telles que l’importation massive de données, vous pouvez envisager de faire appel à la nouvelle commande SQL *ALTER DATABASE* afin de désactiver temporairement des options SQL.
 
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1089 |
+| Numéro de commande | 1089 |
 | Thread safe | no |
-| Modifies variables | OK |
+| Modifie les variables | OK |
 
 

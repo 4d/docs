@@ -5,58 +5,58 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** ( { *process* : Integer } ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *process* )} : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Reference number of process |
-| Function result | Text | &#8592; | Menu bar ID |
+| process | Integer | &#8594;  | Numéro de référence du process |
+| Résultat | Text | &#8592; | Identifiant de la barre de menus |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.Get menu bar reference.Summary-->The **Get menu bar reference** command returns the ID of the current menu bar or the menu bar of a specific process.<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Summary-->La commande **Get menu bar reference** renvoie l’identifiant unique de la barre de menus courante ou de la barre de menus d’un process spécifique.<!-- END REF-->
 
-If the menu bar was created by the [Create menu](create-menu.md) command, this ID corresponds to the reference ID of the menu created. Otherwise, the command returns a specific internal ID(\*). In all cases, this [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") ID may be used to reference the menu bar by all the other commands of the theme.
+Si la barre de menus a été créée par la commande [Create menu](create-menu.md), cet identifiant correspond à la référence unique du menu créé. Sinon, la commande retourne un identifiant interne spécifique(\*). Dans tous les cas, cet identifiant [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") pourra être utilisé pour référencer la barre de menus par toutes les autres commandes du thème.
 
-(\*)This specific ID is temporary and becomes invalid as soon as another menu bar is called with [SET MENU BAR](set-menu-bar.md). If you want to keep the reference of a menu created in the menu editor, you need to copy it in memory using [Create menu](create-menu.md). For example:  
+(\*) Cet identifiant spécifique est temporaire et devient invalide dès qu'une autre barre de menus est appelée avec [SET MENU BAR](set-menu-bar.md). Si vous voulez conserver la référence d'un menu créé dans l'éditeur de menus, vous devez la copier en mémoire à l'aide de [Create menu](create-menu.md). Par exemple :  
 
 ```4d
- $vEditorRef:=Get menu bar reference(Frontmost process) //menu from the menu bar editor
- $vMenuRef:=Create menu($vEditorRef) //copy the menu in memory
- SET MENU BAR(2) //install another menu bar
- ... // execute code
- SET MENU BAR($vMenuRef) //back to the initial menu bar
+ $vEditorRef:=Get menu bar reference(Frontmost process) //menu créé dans l'éditeur de menus
+ $vMenuRef:=Create menu($vEditorRef) //copier le menu en mémoire
+ SET MENU BAR(2) //installer une autre barre de menus
+ ... // exécuter code
+ SET MENU BAR($vMenuRef) //retour à la barre de menus d'origine
 ```
 
-The *process* parameter can be used to designate the process where you want to get the current menu bar ID. If you omit this parameter, the command returns the menu bar ID of the current process.
+Le paramètre *process* permet de désigner le process duquel vous souhaitez obtenir l’identifiant de la barre de menus courante. Si vous omettez ce paramètre, la commande retourne l’identifiant de la barre de menus du process courant.
 
-## Example 
+## Exemple 
 
-Refer to the example of the [GET MENU ITEMS](get-menu-items.md) command.
+Reportez-vous à l'exemple de la commande [GET MENU ITEMS](get-menu-items.md).
 
-## See also 
+## Voir aussi 
 
 [SET MENU BAR](set-menu-bar.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 979 |
+| Numéro de commande | 979 |
 | Thread safe | no |
 
 

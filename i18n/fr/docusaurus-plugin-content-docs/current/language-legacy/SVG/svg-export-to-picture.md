@@ -5,70 +5,71 @@ slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* : Text ; *pictVar* : Picture {; *exportType* : Integer} )<!-- END REF-->
+<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *refElément* ; *vVarImage* {; *typeExport*} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Root XML element reference |
-| pictVar | Picture | &#8594;  | Picture variable to receive XML tree (SVG picture) |
-| exportType | Integer | &#8594;  | 0 = Do not store data source, 1 = Copy data source (default), 2 = Own data source |
+| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| vVarPicture | Picture | &#8594;  | Variable image devant recevoir l’arbre XML (image SVG) |
+| typeExport | Integer | &#8594;  | 0=Ne pas stocker la source de données, 1=Copier la source de données  (par défaut), 2 = Prendre possession de la source de données |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|11 SQL|Created|
+|11 SQL|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->The **SVG EXPORT TO PICTURE** command saves an SVG format picture contained in an XML tree in the picture field or variable indicated by the *pictVar* parameter.<!-- END REF-->For more information about the SVG format, refer to the *Overview of XML Utilities Commands* section. 
+<!--REF #_command_.SVG EXPORT TO PICTURE.Summary-->La commande **SVG EXPORT TO PICTURE** permet de sauvegarder dans la variable ou le champ image désigné(e) par le paramètre *vVarImage* une image au format SVG contenue dans un arbre XML.<!-- END REF-->Pour plus d'informations sur le format SVG, reportez-vous à la section *Présentation des commandes XML génériques*. 
 
-Pass the root XML element reference that contains the SVG picture in *elementRef*.
+Passez dans *refElément* la référence de l’élément XML racine contenant l’image SVG. 
 
-Pass the name of the 4D picture field or variable that will contain the SVG picture in *pictVar*. The picture is exported in its native format (XML description) and is redrawn via the SVG rendering engine when it is displayed.
+Passez dans *vVarImage* le nom de la variable image ou du champ image 4D devant contenir l’image SVG. L’image est exportée dans son format natif (description XML) et est dessinée via le moteur de rendu SVG au moment de l’affichage. 
 
-The optional *exportType* parameter specifies the way the XML data source is to be handled by the command. You can pass one of the following constants, found in the “*XML*” theme, in this parameter:
+Le paramètre facultatif *typeExport* vous permet de définir la manière dont la source de données XML doit être prise en charge par la commande. Vous pouvez passer dans ce paramètre une des constantes suivantes, placées dans le thème “*XML*” :
 
-| Constant             | Type    | Value | Comment                                                                                                                                                                                                                                                    |
-| -------------------- | ------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Copy XML data source | Integer | 1     | 4D keeps a copy of the DOM tree with the picture, which means the picture can be saved in a picture field of the database and then redisplayed or exported at any time. This is the default mode for exporting when the *exportType* parameter is omitted. |
-| Get XML data source  | Integer | 0     | 4D only reads the XML data source; it is not kept with the picture. This noticeably increases command execution speed; however, because the DOM tree is not kept, it is not possible to store or export the picture.                                       |
-| Own XML data source  | Integer | 2     | 4D exports the DOM tree with the picture. The picture can be stored or exported and command execution is fast. However, the *elementRef* XML reference can then no longer be used by other 4D commands.                                                    |
+| Constante            | Type        | Valeur | Comment                                                                                                                                                                                                                                                              |
+| -------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Copy XML data source | Entier long | 1      | 4D conserve une copie de l’arbre DOM avec l’image, ce qui permet de la sauvegarder dans un champ image de la base de données et de la réafficher ou de l’exporter à tout moment. Ce mode d’exportation est utilisé par défaut si le paramètre *typeExport* est omis. |
+| Get XML data source  | Entier long | 0      | 4D lit uniquement la source de données XML, elle n’est pas conservée avec l’image. Ce paramétrage accélère sensiblement l’exécution de la commande, toutefois l’arbre DOM n’étant pas conservé, il ne sera pas possible de stocker ni d’exporter l’image.            |
+| Own XML data source  | Entier long | 2      | 4D exporte l’arbre DOM avec l’image. L’image pourra être stockée ou exportée et l’exécution de la commande est rapide. Toutefois, la référence XML *refElément* n’est alors plus utilisable par les autres commandes 4D.                                             |
 
-## Example 
+## Exemple 
 
-The following example can be used to display “Hello World” in a 4D picture:  
-
+L’exemple suivant permet d’afficher “Hello World” dans une image 4D :  
+  
 ```4d
- var vpict : Picture
+ var vImage : Picture
  $svg:=DOM Create XML Ref("svg";"http://www.w3.org/2000/svg")
  $ref:=DOM Create XML element($svg;"text";"font-size";26;"fill";"red")
  DOM SET XML ATTRIBUTE($ref;"y";"1em")
  DOM SET XML ELEMENT VALUE($ref;"Hello World")
- SVG EXPORT TO PICTURE($svg;vpict;Copy XML data source)
+ SVG EXPORT TO PICTURE($svg;vImage;Copy XML data source)
  DOM CLOSE XML($svg)
 ```
+  
+  
+![](../assets/en/commands/pict14520.fr.png)  
 
-![](../assets/en/commands/pict14520.en.png)
-
-## See also 
+## Voir aussi 
 
 [DOM EXPORT TO FILE](dom-export-to-file.md)  
 [DOM EXPORT TO VAR](dom-export-to-var.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1017 |
+| Numéro de commande | 1017 |
 | Thread safe | yes |
 
 

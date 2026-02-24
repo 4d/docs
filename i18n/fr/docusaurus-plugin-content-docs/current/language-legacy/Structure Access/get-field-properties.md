@@ -5,96 +5,95 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* : Pointer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* : Integer ; *fieldNum* : Integer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* |; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* ; *numChamp* ; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fieldPtr | Pointer | &#8594;  | Field pointer |
-| tableNum | Integer | &#8594;  | Table number |
-| fieldNum | Integer | &#8594;  | Field number if Table number is passed |
-| fieldType | Integer | &#8592; | Type of field |
-| fieldLength | Integer | &#8592; | Length of field, if Alphanumeric |
-| indexed | Boolean | &#8592; | True = Indexed, False = Non indexed |
-| unique | Boolean | &#8592; | True = Unique, False = Non unique |
-| invisible | Boolean | &#8592; | True = Invisible, False = Visible |
+| ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| champType | Integer | &#8592; | Type de champ |
+| champLong | Integer | &#8592; | Longueur du champ (si alphanumérique) |
+| indexé | Boolean | &#8592; | Vrai = Indexé, Faux = Non indexé |
+| unique | Boolean | &#8592; | Vrai = Unique, Faux = Non unique |
+| invisible | Boolean | &#8592; | Vrai = Invisible, Faux = Visible |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|15|Modified|
-|11 SQL|Modified|
-|<6|Created|
+|15|Modifié|
+|11 SQL|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.GET FIELD PROPERTIES.Summary-->The **GET FIELD PROPERTIES** command returns information about the field specified by *fieldPtr* or by *tableNum* and *fieldNum*.<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Summary-->La commande **GET FIELD PROPERTIES** retourne des informations sur le champ désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->
 
-You either pass:
+Vous pouvez soit passer :
 
-* the table and field numbers in *tableNum* and *fieldNum*, or
-* a pointer to the field in *fieldPtr*.
+* les numéros de table et de champ dans *numTable* et *numChamp*
+* ou un pointeur vers le champ dans *ptrChp*.
 
-After the call:
+Après l'appel :
 
-* *fieldType* returns the type of the field. The *fieldType* variable parameter can take a value provided by the following predefined constants (*Field and Variable Types* theme):
-  
-| Constant           | Type    | Value |  
-| ------------------ | ------- | ----- |  
-| Is alpha field     | Integer | 0     |  
-| Is BLOB            | Integer | 30    |  
-| Is Boolean         | Integer | 6     |  
-| Is date            | Integer | 4     |  
-| Is float           | Integer | 35    |  
-| Is integer         | Integer | 8     |  
-| Is integer 64 bits | Integer | 25    |  
-| Is longint         | Integer | 9     |  
-| Is object          | Integer | 38    |  
-| Is picture         | Integer | 3     |  
-| Is real            | Integer | 1     |  
-| Is subtable        | Integer | 7     |  
-| Is text            | Integer | 2     |  
-| Is time            | Integer | 11    |
-* The *fieldLen* parameter returns the length of the field, if the field is Alphanumeric (i.e., *fieldType*\=Is alpha field). The value of *fieldLen* is meaningless for the other field types.
-* The *indexed* parameter returns True is the field is indexed, and False if not. The value of *indexed* is meaningful only for Alphanumeric, Integer, Long Integer, Real, Date, Time, and Boolean fields.
-* The *unique* parameter returns True if the field is set to “Unique”, else False.
-* The *invisible* parameter returns True if the field is set to “Invisible”, else False. The Invisible attribute can be used to hide a given field in 4D standard editor (label, charts...).
+* Le paramètre *champType* retourne le type du champ. Le paramètre variable *champType* reçoit l'une des valeurs prédéfinies par les constantes de 4D (thème *Types champs et variables*) :  
 
-## Example 1 
+| Constante          | Type        | Valeur |  
+| ------------------ | ----------- | ------ |  
+| Is alpha field     | Entier long | 0      |  
+| Is BLOB            | Entier long | 30     |  
+| Is Boolean         | Entier long | 6      |  
+| Is date            | Entier long | 4      |  
+| Is float           | Entier long | 35     |  
+| Is integer         | Entier long | 8      |  
+| Is integer 64 bits | Entier long | 25     |  
+| Is longint         | Entier long | 9      |  
+| Is object          | Entier long | 38     |  
+| Is picture         | Entier long | 3      |  
+| Is real            | Entier long | 1      |  
+| Is subtable        | Entier long | 7      |  
+| Is text            | Entier long | 2      |  
+| Is time            | Entier long | 11     |
+* Le paramètre *champLong* retourne la longueur du champ si celui-ci est de type Alpha (ce qui signifie que vous obtenez *champType=*Is alpha field). La valeur de *champLong* n'est pas significative pour les autres types de champ.
+* Le paramètre *indexé* retourne Vrai si le champ est indexé, Faux sinon. La valeur de *indexé* est significative pour les champs de type Alphanumérique, Entier, Entier long, Réel, Date, Heure et Booléen.
+* Le paramètre *unique* retourne Vrai si le champ dispose de l’attribut “Unique”, Faux sinon.
+* Le paramètre *invisible* retourne Vrai si le champ dispose de l’attribut “Invisible”, Faux sinon. L’attribut Invisible permet de masquer le champ dans les éditeurs standard de 4D (étiquettes, graphes...).
 
-This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the third field of the first table:
+## Exemple 1 
 
-```4d
- GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
-```
-
-## Example 2 
-
-This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the field named \[Table3\]Field2:
+Dans l'exemple suivant, les variables *vType*, *vLong*, *vIndex*, *vUnique* et *vInvisible* prennent pour valeur les propriétés du troisième champ de la première table :
 
 ```4d
- GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
+ GET FIELD PROPERTIES(1;3;vType;vLong;vIndex;vUnique;vInvisible)
 ```
 
-## See also 
+## Exemple 2 
+
+L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUnique* et *vInvisible* les propriétés du champ \[Table3\]Champ2 :
+
+```4d
+ GET FIELD PROPERTIES(->[Table3]Champ2;vType;vLong;vIndex;vUnique;vInvisible)
+```
+
+## Voir aussi 
 
 [Field](field.md)  
 [Field name](field-name.md)  
 [SET INDEX](set-index.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 258 |
+| Numéro de commande | 258 |
 | Thread safe | yes |
 
 

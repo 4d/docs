@@ -5,52 +5,50 @@ slug: /commands/object-set-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *object* : Text ; *autoSpellcheck* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *object* : Variable, Field ; *autoSpellcheck* : Boolean )<!-- END REF-->
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( {* ;} *objet* ; *correctionAuto* )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
 <div class="no-index">
 
-| Parameter | Type |  | Description |
+| Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string ; if omitted, object is a variable or a field |
-| object | Text, Variable, Field | &#8594;  | Object name (if * is specified) or <br/>Variable or field (if * is omitted) |
-| autoSpellcheck | Boolean | &#8594;  | True = automatic spell-checking,False= no automatic spell-checking |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| correctionAuto | Boolean | &#8594;  | Vrai = correction automatique, Faux = pas de correction automatique |
 </div>
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-|Release|Changes|
+|Version|Changements|
 |---|---|
-|13|Created|
+|13|Créé|
 
 </details>
 </div>
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->The **OBJECT SET AUTO SPELLCHECK** command sets or dynamically modifies the status of the **Auto spellcheck** option for the object(s) designated by the *object* and *\** parameters for the current process.<!-- END REF--> This option enables or disables the automatic spellcheck when data is entered for the object.
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->La commande **OBJECT SET AUTO SPELLCHECK** permet de définir ou de modifier dynamiquement le statut de l’option **Correction orthographique** du ou des objet(s) désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> Cette option permet d’activer ou non la correction orthographique automatique lors de la saisie pour l’objet.
 
-This command supports objects of the following types:
+Cette commande prend en charge les objets de type:
 
-- Text-based [inputs](../FormObjects/input_overview.md)
-- [4D Write Pro areas](../FormObjects/writeProArea_overview.md).
+- [input](../FormObjects/input_overview.md) de type texte uniquement,
+- [zone 4D Write Pro](../FormObjects/writeProArea_overview.md).
 
+Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas un nom mais une référence.
 
-If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a reference instead of a name.
+Passez **Vrai** dans *correctionAuto* pour activer la correction automatique pour *objet*, et **Faux** pour la désactiver. 
 
-
-Pass **True** in *autoSpellcheck* to enable this function for the object, and **False** to disable it.
-
-## See also 
+## Voir aussi 
 
 [OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  
 
-## Properties
+## Propriétés
 
 |  |  |
 | --- | --- |
-| Command number | 1173 |
+| Numéro de commande | 1173 |
 | Thread safe | no |
 
 
