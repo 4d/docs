@@ -82,4 +82,4 @@ title: メンテナンスページ
 
 ログが停止されると、ボタンのタイトルが **ログを再開する** に変わり、これを押すことでログの記録を再開することができます。
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
+> You can pause and resume logging using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) command.

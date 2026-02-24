@@ -7,7 +7,7 @@ title: Fondo y borde
 
 Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
 
 #### Gramática JSON
 
@@ -21,7 +21,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Comandos
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 ---
 
@@ -31,7 +31,7 @@ Define el color de fondo de un objeto.
 
 En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
 
 #### Gramática JSON
 
@@ -45,7 +45,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Comandos
 
-[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 #### Ver también
 
@@ -57,9 +57,9 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 `List box de tipo colección y de tipo selección de entidades`
 
-Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) en el *Manual de Referencia del Lenguaje 4D*.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) en el *Manual de Referencia del Lenguaje 4D*.
 
-También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) con la constante `lk background color expression`.
+También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) con la constante `lk background color expression`.
 
 > Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -75,7 +75,7 @@ También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PRO
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -95,7 +95,7 @@ Permite definir un estilo estándar para el borde del objeto.
 
 #### Comandos
 
-[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md)
+[`OBJECT Get border style`](../commands-legacy/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style)
 
 ---
 
@@ -137,7 +137,7 @@ Puede eliminar estas líneas vacías seleccionando esta opción. La parte inferi
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -150,7 +150,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVA - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
 
 #### Gramática JSON
 
@@ -166,7 +166,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Comandos
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 ---
 
@@ -192,7 +192,7 @@ Designa el grosor de una línea.
 
 El nombre de un array para aplicar un color de fondo personalizado a cada línea o columna del list box.
 
-Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Debe introducirse el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 Por ejemplo, dado un list box en el que las líneas tienen un color gris/gris claro alternado, definido en las propiedades del list box. También se ha definido para el list box un array de color de fondo con el fin de cambiar a naranja claro el color de las líneas en las que al menos un valor es negativo:
 
@@ -214,7 +214,7 @@ A continuación, quiere colorear las celdas con valores negativos en naranja osc
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) y [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md). Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
+Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style) y [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color). Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
 
 #### Gramática JSON
 
@@ -228,7 +228,7 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays)
 
 ---
 
@@ -248,7 +248,7 @@ Define el fondo del list box como "Transparent". Cuando se define, se ignora cua
 
 #### Comandos
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 #### Ver también
 

@@ -130,7 +130,7 @@ Until(OK=0) //fin des commandes existantes
 
 ## Voir également
 
-[EXECUTE FORMULA](../commands-legacy/execute-formula.md)\
+[EXECUTE FORMULA](../commands-legacy/execute-formula)\
 [Preemptive Processes](../Develop/preemptive.md)
 
 ## Propriétés

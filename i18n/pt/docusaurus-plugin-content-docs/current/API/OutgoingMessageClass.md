@@ -153,7 +153,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique-se de chamar esta função depois da chamada para [`setBody()`](#setbody), porque `setBody()` preenche automaticamente este cabeçalho. Para obter uma lista de valores de cabeçalho "Content-Type", por favor, consulte a [documentação do `WEB SEND BLOB`](../commands-legacy/web-send-blob.md).
+Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique-se de chamar esta função depois da chamada para [`setBody()`](#setbody), porque `setBody()` preenche automaticamente este cabeçalho. Para obter uma lista de valores de cabeçalho "Content-Type", por favor, consulte a [documentação do `WEB SEND BLOB`](../commands-legacy/web-send-blob).
 
 :::
 

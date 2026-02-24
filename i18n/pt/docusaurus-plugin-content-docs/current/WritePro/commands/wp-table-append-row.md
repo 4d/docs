@@ -117,5 +117,5 @@ In a billing application, you want to create a table automatically filled with r
 
 ## Veja também
 
-[WP Insert table](../commands-legacy/wp-insert-table.md)</br>
-[WP Table get rows](../commands-legacy/wp-table-get-rows.md)
+[WP Insert table](../commands-legacy/wp-insert-table)</br>
+[WP Table get rows](../commands-legacy/wp-table-get-rows)

@@ -56,8 +56,8 @@ Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en antic
 ## Voir aussi 
 
 [Date](../commands/date)  
-[Num](../commands/num.md)  
-[String](../commands/string.md)  
+[Num](../commands/num)  
+[String](../commands/string)  
 [Time](time.md)  
 
 ## Propriétés

@@ -50,7 +50,7 @@ Cette méthode, associée à une zone de défilement, permet de changer la valeu
 
 ## Voir aussi 
 
-[Form event code](../commands/form-event-code.md)  
+[Form event code](../commands/form-event-code)  
 [Right click](right-click.md)  
 
 ## Propriétés

@@ -197,7 +197,7 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ### Événements de formulaire pris en charge {#supported-form-events}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -271,7 +271,7 @@ Vous pouvez définir des propriétés standard (texte, couleur de fond, etc.) po
 
 ### Événements formulaire pris en charge {#supported-form-events-1}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event) pour les propriétés principales)                                                                         | Commentaires                                                                                                                                                                       |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                   |                                                                                                                                                                                    |
@@ -532,11 +532,11 @@ La prise en charge du tri standard dépend du type de list box :
 
 ### Tri personnalisé
 
-Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
+Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
 
 Les tris personnalisés vous permettent de :
 
-- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
+- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns),
 - utiliser des fonctions telles que [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) pour trier les colonnes en fonction de critères complexes.
 
 #### Exemple
@@ -578,7 +578,7 @@ La valeur de la [variable associée à l’en-tête d’une colonne](properties_
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
-> La commande [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
+> La commande [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
 
 ## Gestion des styles et des couleurs
 
@@ -673,7 +673,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 - Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaires (ou éditer le formulaire JSON).
 - Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
-- Utilisez les commandes [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) et [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md).
+- Utilisez les commandes [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy) et [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy).
 
 #### Propriété List box hiérarchique
 
@@ -865,7 +865,7 @@ La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ### Configurer une colonne tableau d'objets
 
-Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
+Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 

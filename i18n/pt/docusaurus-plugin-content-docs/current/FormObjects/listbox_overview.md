@@ -197,7 +197,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 ### Supported Form Events {#supported-form-events}
 
-| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                                                                     |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                                                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                                                                 |
@@ -271,7 +271,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ### Supported Form Events {#supported-form-events-1}
 
-| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                         |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event) para obter as propriedades principais)                                                                    | Comentários                                                                                                                                                         |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                                      |                                                                                                                                                                     |
@@ -531,11 +531,11 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 ### Ordenação personalizada
 
-O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) e/ou combinação dos eventos de formulário [`On Header Click`](../Events/onHeaderClick) e [`On After Sort`](../Events/onAfterSort) e comandos 4D relevantes.
+O desenvolvedor pode configurar tipos personalizados, por exemplo, usando o comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) e/ou combinação dos eventos de formulário [`On Header Click`](../Events/onHeaderClick) e [`On After Sort`](../Events/onAfterSort) e comandos 4D relevantes.
 
 As ordenações personalizadas permitem-lhe:
 
-- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md),
+- realizar classificações em vários níveis em várias colunas, graças ao comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns),
 - utilize funções como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para classificar colunas com base em critérios complexos.
 
 #### Exemplo
@@ -577,7 +577,7 @@ O valor da [variável de cabeçalho de coluna](properties_Object.md#variable-or-
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
-> O comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) oferece suporte específico para ícones em cabeçalhos de list box, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
+> O comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) oferece suporte específico para ícones em cabeçalhos de list box, o que pode ser útil quando você deseja trabalhar com um ícone de classificação personalizado.
 
 ## Gerenciar cores linha, estilos e exibição
 
@@ -672,7 +672,7 @@ Para definir uma list box hierárquica há várias possibilidades:
 
 - Configurar manualmente os elementos hierárquicos usando a lista Propriedade no editor de formulário (ou editar o formulário JSON).
 - Gerar visualmente a hierarquia usando o menu emergente de gestão de list box no editor de formulários.
-- Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
+- Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy) commands.
 
 #### Propriedades de List Box hierárquico
 
@@ -864,7 +864,7 @@ A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ### Configuração de uma coluna de matriz de objectos
 
-Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
+Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -1134,7 +1134,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands-legacy/new-list.md).
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands-legacy/new-list).
 - "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:

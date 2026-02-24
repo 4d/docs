@@ -114,7 +114,7 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 
   
 [CALL WORKER](call-worker.md)  
-[DIALOG](../commands/dialog.md)  
+[DIALOG](../commands/dialog)  
 
 ## Propriétés
 

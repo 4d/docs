@@ -34,7 +34,7 @@ displayed_sidebar: docs
 Cette commande peut être appelée dans deux contextes :
 
 * lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
-* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form.md).
+* lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form).
 
 Passez dans le paramètre *numTaquet* une des constantes du thème "*Zone de formulaire*" :
 

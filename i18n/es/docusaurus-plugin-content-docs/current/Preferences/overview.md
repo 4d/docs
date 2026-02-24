@@ -21,7 +21,7 @@ También puede mostrar el cuadro de diálogo de Preferencias en el modo Aplicaci
 
 ## Storage
 
-Los ajustes realizados en la caja de diálogo Preferencias se guardan en un archivo de preferencias en formato XML llamado **4D Preferences vXX.4DPreferences** que se almacena en la carpeta 4D activa del usuario actual, tal y como lo devuelve el comando [`Get 4D folder`](../commands-legacy/get-4d-folder.md):
+Los ajustes realizados en la caja de diálogo Preferencias se guardan en un archivo de preferencias en formato XML llamado **4D Preferences vXX.4DPreferences** que se almacena en la carpeta 4D activa del usuario actual, tal y como lo devuelve el comando [`Get 4D folder`](../commands-legacy/get-4d-folder):
 
 - Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
 - macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`

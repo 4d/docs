@@ -66,7 +66,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 ## Voir également
 
 [New collection](new-collection.md)\
-[New shared object](../commands-legacy/new-shared-object.md)\
+[New shared object](../commands-legacy/new-shared-object)\
 *Shared objects and shared collections*
 
 ## Propriétés

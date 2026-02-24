@@ -35,7 +35,7 @@ Para o segundo parâmetro opcional, você também pode passar:
 
 :::note
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands/picture-codec-list). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
 
 :::
 
@@ -49,7 +49,7 @@ Por padrão, a imagem adicionada é:
 
 O local, camada (inline, front-behind de texto), visibilidade e quaisquer propriedades da imagem podem ser modificadas usando o comando [WP SET ATTRIBUTES](wp-set-attributes.md) ou através de ações padrão (veja *Usando ações 4D Write Pro padrão*).
 
-**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range.md) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto imagem verificando o atributo `wk type`:
+**Nota:** o comando [WP Selection range](../commands-legacy/wp-selection-range) retorna um objeto *referência de imagem* se uma imagem ancorada for selecionada e um objeto *alcance* se uma imagem em linha for selecionada. Você pode determinar se um objeto selecionado é um objeto imagem verificando o atributo `wk type`:
 
 - **Value = 2**: o objeto selecionado é um objeto imagem.
 - **Value = 0**: o objeto selecionado é um objeto intervalo.
@@ -103,5 +103,5 @@ Se quiser usar uma expressão de campo para adicionar uma imagem ancorada para u
 
 ## Veja também
 
-[WP DELETE PICTURE](../commands-legacy/wp-delete-picture.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP DELETE PICTURE](../commands-legacy/wp-delete-picture)</br>
+[WP Picture range](../commands-legacy/wp-picture-range)

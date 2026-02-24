@@ -23,9 +23,9 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 ## Predictable vs unpredictable errors {#predictable-vs-unpredictable-errors}
 
-Muchas funciones de clase de 4D, como [`entity.save()`](../API/EntityClass.md#save) o [`transporter.send()`](../API/SMTPTransporterClass.md#send), devuelven un objeto que contiene información de *status*. Este objeto se utiliza para almacenar errores**predecibles** en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no requieren detener la ejecución del programa. Esta categoría de errores, también llamados **errores silenciosos**, pueden ser manejados por código normal. Cuando estos errores se producen en un contexto de intercepción de errores, es decir, un [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) o un [método de gestión de errores](#installing-an-error-handling-method), no interrumpen la ejecución y no activan el tratamiento de errores (por ejemplo, la parte `Catch` del [`Try/Catch`](#trycatchend-try) no se ejecuta). No aparecen en la colección [`Last errors`](../commands/last-errors.md). El error sólo se devuelve en las propiedades `status` y `statusText` del objeto devuelto. Puede ser procesado de acuerdo a su lógica de negocio.
+Muchas funciones de clase de 4D, como [`entity.save()`](../API/EntityClass.md#save) o [`transporter.send()`](../API/SMTPTransporterClass.md#send), devuelven un objeto que contiene información de *status*. Este objeto se utiliza para almacenar errores**predecibles** en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no requieren detener la ejecución del programa. Esta categoría de errores, también llamados **errores silenciosos**, pueden ser manejados por código normal. Cuando estos errores se producen en un contexto de intercepción de errores, es decir, un [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) o un [método de gestión de errores](#installing-an-error-handling-method), no interrumpen la ejecución y no activan el tratamiento de errores (por ejemplo, la parte `Catch` del [`Try/Catch`](#trycatchend-try) no se ejecuta). No aparecen en la colección [`Last errors`](../commands/last-errors). El error sólo se devuelve en las propiedades `status` y `statusText` del objeto devuelto. Puede ser procesado de acuerdo a su lógica de negocio.
 
-La otra categoría de errores son los errores **imprevisibles**, también denominados **errores graves**. Incluyen error de escritura del disco, fallo de red o en general cualquier interrupción inesperada. Esta categoría de errores genera excepciones definidas por [un *code*, un *message* y una *signature*](#error-codes). Interrumpen la ejecución y activan el procesamiento de errores de las funciones [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) o [error-handling method](#installing-an-error-handling-method). Aparecen en la colección [`Last errors`](../commands/last-errors.md). Tenga en cuenta que los errores graves también pueden devolver valores en las propiedades `status` y `statusText`, por ejemplo, `dk status serious error` - "Other error".
+La otra categoría de errores son los errores **imprevisibles**, también denominados **errores graves**. Incluyen error de escritura del disco, fallo de red o en general cualquier interrupción inesperada. Esta categoría de errores genera excepciones definidas por [un *code*, un *message* y una *signature*](#error-codes). Interrumpen la ejecución y activan el procesamiento de errores de las funciones [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) o [error-handling method](#installing-an-error-handling-method). Aparecen en la colección [`Last errors`](../commands/last-errors). Tenga en cuenta que los errores graves también pueden devolver valores en las propiedades `status` y `statusText`, por ejemplo, `dk status serious error` - "Other error".
 
 ## Instalación de un método de gestión de errores
 
@@ -33,7 +33,7 @@ En 4D, todos los errores pueden ser detectados y manejados por métodos proyecto
 
 Una vez instalados, los manejadores de errores son llamados automáticamente en modo interpretado o compilado en caso de error en la aplicación 4D o en uno de sus componentes. Se puede llamar a un manejador de errores diferente en función del contexto de ejecución (ver abajo).
 
-Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) con el nombre del método proyecto y (opcionalmente) el alcance como parámetros. Por ejemplo:
+Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](../commands-legacy/on-err-call) con el nombre del método proyecto y (opcionalmente) el alcance como parámetros. Por ejemplo:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Instala un método local de gestión de errores
@@ -45,7 +45,7 @@ Para dejar de interceptar los errores en un contexto de ejecución y devolver la
 ON ERR CALL("";ek local) //devuelve el control al proceso local
 ```
 
-El comando [`Method called on error`](../commands-legacy/method-called-on-error.md) le permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+El comando [`Method called on error`](../commands-legacy/method-called-on-error) le permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -97,7 +97,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
 4D mantiene automáticamente una serie de variables denominadas [**variables sistema**](variables.md#system-variables), que responden a diferentes necesidades.
 :::
 
-- el comando [`Last errors`](../commands/last-errors.md) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
+- el comando [`Last errors`](../commands/last-errors) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D.
 - el comando `Call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 #### Ejemplo
@@ -153,7 +153,7 @@ Try (expression) : any | Undefined
 
 Si se produce un error durante su ejecución, se intercepta y no se muestra ningún diálogo de error, si un [método de gestión de errores](#installing-an-error-handling-method) fue instalado o no antes de la llamada a `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Define`.
 
-Puede manejar los errores utilizando el comando [`Last errors`](../commands/last-errors.md). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
+Puede manejar los errores utilizando el comando [`Last errors`](../commands/last-errors). Si *expression* arroja un error dentro de una pila de llamadas `Try()`, el flujo de ejecución se detiene y devuelve a la última ejecución `Try()` (la primera encontrada de nuevo en la pila de llamadas).
 
 :::note
 
@@ -240,11 +240,11 @@ Si se lanza un error *diferido* fuera del bloque `Try`, la ejecución del códig
 
 :::info
 
-Para más información sobre errores *diferidos* y *no diferidos*, por favor consulte la descripción del comando [`throw`](../commands-legacy/throw.md).
+Para más información sobre errores *diferidos* y *no diferidos*, por favor consulte la descripción del comando [`throw`](../commands-legacy/throw).
 
 :::
 
-En el bloque de código `Catch`, puede gestionar los errores utilizando los comandos estándar de gestión de errores. La función [`Last errors`](../commands/last-errors.md) contiene la colección de los últimos errores. En este bloque de código puede declarar [un método de gestión de errores](#installing-an-error-handling-method), en cuyo caso se llama en caso de error (de lo contrario se muestra el diálogo de error de 4D).
+En el bloque de código `Catch`, puede gestionar los errores utilizando los comandos estándar de gestión de errores. La función [`Last errors`](../commands/last-errors) contiene la colección de los últimos errores. En este bloque de código puede declarar [un método de gestión de errores](#installing-an-error-handling-method), en cuyo caso se llama en caso de error (de lo contrario se muestra el diálogo de error de 4D).
 
 :::note
 
@@ -287,12 +287,12 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Códigos de error
 
-Excepciones que interrumpen la ejecución de código son devueltas por 4D pero pueden tener diferentes orígenes como el sistema operativo, un dispositivo, el núcleo 4D, un [`throw`](../commands-legacy/throw.md) en su código, etc. Por lo tanto, tres elementos definen un error:
+Excepciones que interrumpen la ejecución de código son devueltas por 4D pero pueden tener diferentes orígenes como el sistema operativo, un dispositivo, el núcleo 4D, un [`throw`](../commands-legacy/throw) en su código, etc. Por lo tanto, tres elementos definen un error:
 
-- una **firma del componente**, que es el origen del error (ver [`Last errors`](../commands/last-errors.md) para tener una lista de firmas)
+- una **firma del componente**, que es el origen del error (ver [`Last errors`](../commands/last-errors) para tener una lista de firmas)
 - un **mensaje**, que explica por qué se ha producido el error
 - un **código**, que es un número arbitrario devuelto por el componente
 
 La [caja de diálogo de error 4D](../Debugging/basics.md) muestra el código y el mensaje al usuario.
 
-Para tener una descripción completa de un error y especialmente su origen, necesita llamar al comando [`Last errors`](../commands/last-errors.md). Cuando intercepta y maneja errores usando un [método de gestión de errores](#installing-an-error-handling-method) en sus aplicaciones finales, use [`Last errors`](../commands/last-errors.md) y asegúrese de registrar todas las propiedades del objeto *error* ya que los códigos de error dependen de los componentes.
+Para tener una descripción completa de un error y especialmente su origen, necesita llamar al comando [`Last errors`](../commands/last-errors). Cuando intercepta y maneja errores usando un [método de gestión de errores](#installing-an-error-handling-method) en sus aplicaciones finales, use [`Last errors`](../commands/last-errors) y asegúrese de registrar todas las propiedades del objeto *error* ya que los códigos de error dependen de los componentes.

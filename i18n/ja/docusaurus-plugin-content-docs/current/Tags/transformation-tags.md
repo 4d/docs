@@ -39,7 +39,7 @@ title: 変換タグ
 
 *テンプレート* ソースの解析は、2つのコンテキストでおこなわれます:
 
-- [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンド使用時: このコマンドは *テンプレート* に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
+- [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) コマンド使用時: このコマンドは *テンプレート* に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
 
 - 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。
 
@@ -157,10 +157,10 @@ End if
 
 4DCODE タグの機能は以下の通りです:
 
-- [`TRACE`](../commands-legacy/trace.md) コマンドはサポートされており、実行されると [4D デバッガー](../Debugging/debugger.md) が起動するため、テンプレートコードをデバッグすることができます。
+- [`TRACE`](../commands-legacy/trace) コマンドはサポートされており、実行されると [4D デバッガー](../Debugging/debugger.md) が起動するため、テンプレートコードをデバッグすることができます。
 - エラーは標準のエラーダイアログを表示します。 これを使って、ユーザーはコードの実行を中止したりデバッグモードに入ったりすることができます。
 - `<!--#4DCODE` と `-->` の間のテキストは改行され、どのような改行コードでも受け取ります (cr、lf、または crlf)。
-- テキストは、[`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) を呼び出したデータベースのコンテキストでトークナイズドされます。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
+- テキストは、[`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) を呼び出したデータベースのコンテキストでトークナイズドされます。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
 - テキストが常に English-US設定であったとしても、4Dのバージョン間においてコマンドや定数名が改名されることによる問題を避けるため、コマンド名や定数名はトークンシンタックスを使用することが推奨されいます。
 
 > 4DCODE タグがあらゆる 4Dランゲージコマンドおよびプロジェクトメソッドを呼び出せるという事実は、とくにデータベースが HTTP経由で使用可能な場合等に、セキュリティ上の問題になり得ます。 しかしながら、タグはサーバー側のコードをテンプレートファイルから実行するため、タグそのものはセキュリティ上の問題になりません。 このようなコンテキストにおいては、あらゆる Webサーバーと同様に、セキュリティは主にサーバーファイルへのリモートアクセスレベルにおいて管理されています。
@@ -256,7 +256,7 @@ End if
     </table>
 ```
 
-#### [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)を使用した例
+#### [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags)を使用した例
 
 ```4d
 var customers : cs.CustomersSelection
@@ -429,7 +429,7 @@ No name has been found.
 
 `<!--#4DINCLUDE -->` コメントで挿入されたページは、URLで呼ばれたページや `WEB SEND FILE` コマンドで送信されたページと同じように、Webサーバーキャッシュにロードされます。
 
-*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..)  を使用します (HTMLシンタックス)。  [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンドで `4DINCLUDE` タグを使用する場合のデフォルトフォルダーはプロジェクトフォルダーです。
+*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..)  を使用します (HTMLシンタックス)。  [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) コマンドで `4DINCLUDE` タグを使用する場合のデフォルトフォルダーはプロジェクトフォルダーです。
 
 > `4DINCLUDE` タグで使用されるデフォルトフォルダーは [`<!--#4DBASE -->`](#4dbase) タグを使って変更できます。
 
@@ -506,7 +506,7 @@ No name has been found.
 
 このシンタックスでは、メソッドが `true` を返す間ループがおこなわれます。 メソッドは、倍長整数タイプの引数を受け取ります。 まずメソッドは引数 0 を渡されます。これは (必要に応じて) 初期化ステージとして使用できます。その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。
 
-セキュリティのため、Webプロセス内では、[`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) データベースメソッドが初期化ステージ (引数に0が渡されて実行される) の前に一度呼び出されます。 認証に成功すると、初期化に進みます。
+セキュリティのため、Webプロセス内では、[`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) データベースメソッドが初期化ステージ (引数に0が渡されて実行される) の前に一度呼び出されます。 認証に成功すると、初期化に進みます。
 
 以下のコードは:
 
@@ -575,7 +575,7 @@ No name has been found.
 
 この場合、`4DLOOP` タグは配列のときと同じように振るまいます: ポインターによって参照された配列の要素ごとにループを繰り返します。 カレントの配列要素は、コードが繰り返される度に増加していきます。
 
-このシンタックスは [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンドに対して配列ポインターを渡した場合に有用です。
+このシンタックスは [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) コマンドに対して配列ポインターを渡した場合に有用です。
 
 例:
 
@@ -609,7 +609,7 @@ No name has been found.
 
 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `Param` を文字列として受け取って実行されます。
 
-> タグが Webプロセスのコンテキストにおいて呼び出された場合、Webページがロードされると、4Dは [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) データベースメソッドを (存在すれば) 呼び出します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。
+> タグが Webプロセスのコンテキストにおいて呼び出された場合、Webページがロードされると、4Dは [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) データベースメソッドを (存在すれば) 呼び出します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。
 
 メソッドはテキストを返す必要があります。 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。
 

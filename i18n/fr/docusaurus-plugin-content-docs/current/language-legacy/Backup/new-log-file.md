@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Description
 
-**Note préliminaire:** Cette commande ne fonctionne qu'avec 4D Server. Elle ne peut être exécutée que via la commande [Execute on server](../commands-legacy/execute-on-server.md) ou via une procédure stockée.
+**Note préliminaire:** Cette commande ne fonctionne qu'avec 4D Server. Elle ne peut être exécutée que via la commande [Execute on server](../commands-legacy/execute-on-server) ou via une procédure stockée.
 
 <!--REF #_command_.New log file.Summary-->La commande **New log file** referme le fichier journal courant, le renomme et en crée un nouveau avec le même nom et le même emplacement que le précédent<!-- END REF-->. Cette commande est destinée à la mise en place d'un système de sauvegarde utilisant un miroir logique (voir la section *Mise en place d'un miroir logique* dans le [manuel de référence de 4D Server](https://doc/4d.com)). 
 
@@ -35,7 +35,7 @@ Un fichier journal doit toujours être associé à un fichier de données. Si vo
 
 ## Gestion des erreurs
 
-En cas d'erreur, la commande génère un code qui peut être intercepté à l'aide de la commande [ON ERR CALL](../commands-legacy/on-err-call.md).
+En cas d'erreur, la commande génère un code qui peut être intercepté à l'aide de la commande [ON ERR CALL](../commands-legacy/on-err-call).
 
 ## Voir également
 

@@ -30,15 +30,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Summary-->La commande `Process number` retourne le numéro du process dont le nom *name* ou l'*id* est passé en premier paramètre<!-- END REF-->. Si aucun process n'est trouvé, `Process number` renvoie 0.
 
-Le paramètre optionnel \* permet de récupérer, à partir d'un 4D distant, le numéro d'un process exécuté sur le serveur. Dans ce cas, la valeur retournée est négative. Cette option est particulièrement utile lors de l'utilisation des commandes [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) et [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
+Le paramètre optionnel \* permet de récupérer, à partir d'un 4D distant, le numéro d'un process exécuté sur le serveur. Dans ce cas, la valeur retournée est négative. Cette option est particulièrement utile lors de l'utilisation des commandes [GET PROCESS VARIABLE](../commands-legacy/get-process-variable), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable) et [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable).
 
 Si la commande est exécutée avec le paramètre \* à partir d'un process sur la machine serveur, la valeur renvoyée est positive.
 
 ## Voir également
 
-[GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md)\
-[Process state](../commands-legacy/process-state.md)\
-[SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md)
+[GET PROCESS VARIABLE](../commands-legacy/get-process-variable)\
+[Process state](../commands-legacy/process-state)\
+[SET PROCESS VARIABLE](../commands-legacy/set-process-variable)
 
 ## Propriétés
 

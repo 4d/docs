@@ -34,8 +34,8 @@ Vous ne pouvez pas utiliser d'opérateurs sur les blobs.
 
 ## Vérifier si une variable contient un blob scalaire ou un `4D.Blob`
 
-La commande [Value type](../commands-legacy/value-type.md) permet de déterminer si une valeur est de type Blob ou Objet.
-Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](../commands-legacy/ob-instance-of.md) :
+La commande [Value type](../commands-legacy/value-type) permet de déterminer si une valeur est de type Blob ou Objet.
+Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](../commands-legacy/ob-instance-of) :
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en charge le type `4D.Blob` :
 
-- [DELETE FROM BLOB](../commands-legacy/delete-from-blob.md)
-- [INSERT IN BLOB](../commands-legacy/insert-in-blob.md)
-- [INTEGER TO BLOB](../commands-legacy/integer-to-blob.md)
-- [LONGINT TO BLOB](../commands-legacy/longint-to-blob.md)
-- [REAL TO BLOB](../commands-legacy/real-to-blob.md)
-- [SET BLOB SIZE](../commands-legacy/set-blob-size.md)
-- [TEXT TO BLOB](../commands-legacy/text-to-blob.md)
-- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob.md)
-- [LIST TO BLOB](../commands-legacy/list-to-blob.md)
-- [SOAP DECLARATION](../commands-legacy/soap-declaration.md)
-- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter.md)
+- [DELETE FROM BLOB](../commands-legacy/delete-from-blob)
+- [INSERT IN BLOB](../commands-legacy/insert-in-blob)
+- [INTEGER TO BLOB](../commands-legacy/integer-to-blob)
+- [LONGINT TO BLOB](../commands-legacy/longint-to-blob)
+- [REAL TO BLOB](../commands-legacy/real-to-blob)
+- [SET BLOB SIZE](../commands-legacy/set-blob-size)
+- [TEXT TO BLOB](../commands-legacy/text-to-blob)
+- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob)
+- [LIST TO BLOB](../commands-legacy/list-to-blob)
+- [SOAP DECLARATION](../commands-legacy/soap-declaration)
+- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter)
 
 ### Passer des blobs et des objets blob aux méthodes
 

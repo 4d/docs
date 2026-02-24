@@ -90,7 +90,7 @@ Pour des raisons de sécurité, cette option est désélectionnée par défaut. 
 
 Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode projet par le moteur SQL de 4D. Elle est désélectionnée par défaut, ce qui signifie que, sauf autorisation explicite, les méthodes projet de 4D sont protégées et ne peuvent pas être appelées par le moteur SQL de 4D.
 
-Cette propriété s'applique à toutes les requêtes SQL internes et externes --- exécutées via le driver ODBC, le code SQL inséré entre les balises [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md) ou la commande [`QUERY BY SQL`](../commands-legacy/query-by-sql.md).
+Cette propriété s'applique à toutes les requêtes SQL internes et externes --- exécutées via le driver ODBC, le code SQL inséré entre les balises [Begin SQL](../commands-legacy/begin-sql)/[End SQL](../commands-legacy/end-sql) ou la commande [`QUERY BY SQL`](../commands-legacy/query-by-sql).
 
 **Notes :**
 

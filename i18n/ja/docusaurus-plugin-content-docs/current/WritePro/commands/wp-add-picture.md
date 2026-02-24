@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 :::note
 
-[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。  [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
+[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。  [PICTURE CODEC LIST](../../commands/picture-codec-list) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
 
 :::
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 位置、レイヤー(インライン、テキストの前/後)、表示状態、その他ピクチャーのあらゆるプロパティは[WP SET ATTRIBUTES](wp-set-attributes.md) コマンド、または標準アクションを使用して変更することができます(*4D Write Pro 標準アクションを使用*を参照してください)。
 
-**注意:** [WP Selection range](../commands-legacy/wp-selection-range.md) コマンドは、アンカーされたピクチャーが選択されていた場合には *ピクチャー参照* を、インラインピクチャーが選択されていた場合には *レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
+**注意:** [WP Selection range](../commands-legacy/wp-selection-range) コマンドは、アンカーされたピクチャーが選択されていた場合には *ピクチャー参照* を、インラインピクチャーが選択されていた場合には *レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
 
 - **Value = 2**: 選択されたオブジェクトはピクチャーオブジェクトです。
 - **Value = 0**: 選択されたオブジェクトはレンジオブジェクトです。
@@ -103,5 +103,5 @@ The result is:
 
 ## 参照
 
-[WP DELETE PICTURE](../commands-legacy/wp-delete-picture.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP DELETE PICTURE](../commands-legacy/wp-delete-picture)</br>
+[WP Picture range](../commands-legacy/wp-picture-range)

@@ -16,7 +16,7 @@ El editor de etiquetas de 4D ofrece una forma práctica de imprimir una amplia v
 
 :::note
 
-Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label.md).
+Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label).
 
 :::
 
@@ -27,7 +27,7 @@ Para abrir el editor de etiquetas:
 
 - En el entorno Diseño, elija **Etiquetas...** en el menú **Herramientas** o en el menú asociado al botón "Herramientas" en la barra de herramientas de 4D.
   O
-- En una aplicación, llame al comando [`PRINT LABEL`](../commands-legacy/print-label.md).
+- En una aplicación, llame al comando [`PRINT LABEL`](../commands-legacy/print-label).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -64,13 +64,13 @@ Utilice esta área para diseñar su zona de etiquetas colocando y posicionando t
   Si mantiene presionada la tecla **Mayús**, se separan con un retorno de carro. Esto le permite crear, por ejemplo, etiquetas de direcciones utilizando varios campos superpuestos (Dirección1, Dirección2, etc.), sin producir una línea vacía cuando una dirección sólo requiere un campo.
 - Puede añadir una fórmula a la etiqueta seleccionando la herramienta **Fórmula** ![](../assets/en/Desktop/label-tool6.png) (o eligiendo **Herramienta>Fórmula** en el menú contextual) y dibujando un área. Aparecerá el **Editor de fórmulas**:
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Por ejemplo, puede aplicar un formato a un campo utilizando el comando [`String`](../commands/string.md):<br/>
+  Por ejemplo, puede aplicar un formato a un campo utilizando el comando [`String`](../commands/string):<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-Tenga en cuenta que sólo puede introducir métodos "permitidos" para la base de datos en el Editor de fórmulas. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
+Tenga en cuenta que sólo puede introducir métodos "permitidos" para la base de datos en el Editor de fórmulas. Los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y del comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods).
 
 :::
 
@@ -143,7 +143,7 @@ Esta página contiene los controles para imprimir etiquetas en función de los r
 - **Intervalos**: defina el espacio vertical y/o horizontal entre las líneas y columnas de las etiquetas.
 - **Método**: permite activar un método específico que se ejecutará al momento de la impresión. Por ejemplo, puede ejecutar un método que publique la fecha y la hora en que se imprimió cada etiqueta. Esta funcionalidad también es útil cuando se imprimen etiquetas usando un formulario tabla dedicado, en cuyo caso se pueden llenar variables a partir de un método.
   Para ser elegible para el procesamiento de etiquetas, un método proyecto debe cumplir con las siguientes condiciones:
-  - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md), de lo contrario no se mostrará en el menú **Aplicación**.
+  - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods), de lo contrario no se mostrará en el menú **Aplicación**.
   - debe tener la opción [Compartido por componentes y base de datos local](../Project/project-method-properties.md#shared-by-components-and-host-database).
     Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
 

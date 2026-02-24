@@ -153,7 +153,7 @@ Al devolver una instancia del objeto 4D.OutgoingMessage, 4D define automáticame
 
 :::note
 
-Si define un *value* para la *key* el encabezado "Content-Type", asegúrese de llamar a esta función después de la llamada a [`setBody()`](#setbody), porque `setBody()` llena automáticamente este encabezado. Para obtener una lista de valores del encabezado "Content-Type", consulte la documentación de [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md).
+Si define un *value* para la *key* el encabezado "Content-Type", asegúrese de llamar a esta función después de la llamada a [`setBody()`](#setbody), porque `setBody()` llena automáticamente este encabezado. Para obtener una lista de valores del encabezado "Content-Type", consulte la documentación de [`WEB SEND BLOB`](../commands-legacy/web-send-blob).
 
 :::
 

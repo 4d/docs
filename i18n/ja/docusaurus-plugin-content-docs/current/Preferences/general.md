@@ -100,7 +100,7 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 > このオプションは、プロジェクトにのみ適用できます (バイナリデータベースでは常にトークンが含まれます)。
 
-> *option* パラメーターに 1 を指定して [`METHOD GET CODE`](../commands-legacy/method-get-code.md) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
+> *option* パラメーターに 1 を指定して [`METHOD GET CODE`](../commands-legacy/method-get-code) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
 
 #### 既存プロジェクトからトークンを除外する
 

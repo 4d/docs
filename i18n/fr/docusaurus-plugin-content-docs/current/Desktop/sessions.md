@@ -31,7 +31,7 @@ Le diagramme suivant montre les différents types de sessions et leur interactio
 
 ## Sessions utilisateurs distants {#remote-user-sessions}
 
-Sur le serveur, dans les "process utilisateur" (c'est-à-dire les process liés aux utilisateurs distants), la commande [`Session`](../commands/session.md) renvoie un objet `session` décrivant la session de l'utilisateur courant. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
+Sur le serveur, dans les "process utilisateur" (c'est-à-dire les process liés aux utilisateurs distants), la commande [`Session`](../commands/session) renvoie un objet `session` décrivant la session de l'utilisateur courant. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
 :::note
 
@@ -74,7 +74,7 @@ Vous pouvez partager des données entre tous les process d'une session de procé
 
 L'objet `session` des procédures stockées est disponible depuis :
 
-- les méthodes projet appelées par la commande [`Execute on Server`](../commands-legacy/execute-on-server.md),
+- les méthodes projet appelées par la commande [`Execute on Server`](../commands-legacy/execute-on-server),
 - les [fonctions ORDA du modèle de données](../ORDA/ordaClasses.md) appelées à partir d'une procédure stockée,
 - les méthodes base telles que [`On Server Startup`](../commands/on-server-startup-database-method) et [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
@@ -104,7 +104,7 @@ Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions
 
 :::note
 
-Lors de la création d'un token OTP en environnement client/serveur, vous devez exécuter le [code de création de l'OTP](../API/SessionClass.md#createotp) **sur le serveur** (l'objet `Session` est Null sur un 4D distant). Vous pouvez par exemple utiliser la méthode base [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md).
+Lors de la création d'un token OTP en environnement client/serveur, vous devez exécuter le [code de création de l'OTP](../API/SessionClass.md#createotp) **sur le serveur** (l'objet `Session` est Null sur un 4D distant). Vous pouvez par exemple utiliser la méthode base [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method).
 
 :::
 

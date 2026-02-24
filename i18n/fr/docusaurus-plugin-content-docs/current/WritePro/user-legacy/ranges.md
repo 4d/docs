@@ -42,7 +42,7 @@ Les plages de lignes, colonnes et cellules de [tables](./handling-tables.md) dis
 
 Plusieurs commandes vous permettent de définir les plages d’un document :
 
-- [WP Text range](../commands-legacy/wp-text-range.md) retourne une nouvelle plage correspondant aux limites que vous avez passées en paramètres.
+- [WP Text range](../commands-legacy/wp-text-range) retourne une nouvelle plage correspondant aux limites que vous avez passées en paramètres.
 - [WP Selection range](../commands-legacy/wp-selection-range) retourne une nouvelle plage correspondant à la sélection utilisateur courante.
 - [WP Picture range](../commands-legacy/wp-picture-range) retourne une nouvelle plage contenant uniquement les images.
 - [WP Paragraph range](../commands-legacy/wp-paragraph-range) retourne une nouvelle plage contenant uniquement les paragraphes.

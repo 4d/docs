@@ -5,7 +5,7 @@ title: Collection
 
 Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の式を扱います。
 
-コレクションは [`New collection`](../commands/new-collection.md) または [`New shared collection`](../commands/new-shared-collection.md) コマンドで初期化されます。
+コレクションは [`New collection`](../commands/new-collection) または [`New shared collection`](../commands/new-shared-collection) コマンドで初期化されます。
 
 ### 例題
 
@@ -2059,7 +2059,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 :::
 
-昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](../commands/formula.md)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
+昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](../commands/formula)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
 
 フォーミュラは以下の引数を受け取ります:
 

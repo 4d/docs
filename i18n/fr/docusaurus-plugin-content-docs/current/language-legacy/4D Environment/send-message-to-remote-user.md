@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Dans *message*, passez le texte du message à afficher. Il sera affiché sous forme d'alerte ou de notification sur l'écran du ou des utilisateur(s) de la session.
 
-Le paramètre optionnel *sessionUtilisateur* peut être utilisé pour désigner un utilisateur spécifique en passant l'ID de sa session. Vous pouvez récupérer l'ID de la session à l'aide de la commande [Process activity](../commands/process-activity.md). Si *sessionUtilisateur* est omis, le message est envoyé à tous les utilisateurs.
+Le paramètre optionnel *sessionUtilisateur* peut être utilisé pour désigner un utilisateur spécifique en passant l'ID de sa session. Vous pouvez récupérer l'ID de la session à l'aide de la commande [Process activity](../commands/process-activity). Si *sessionUtilisateur* est omis, le message est envoyé à tous les utilisateurs.
 
 **Note** : Cette commande ne peut être exécutée que sur 4D Server. Si la méthode appelant la commande est exécutée localement sur un 4D distant ou monoposte, **SEND MESSAGE TO REMOTE USER** ne fait rien.
 

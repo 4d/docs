@@ -7,7 +7,7 @@ A classe `IMAPTransporter` permite-lhe recuperar mensagens a partir de um servid
 
 ### Objecto IMAP Transporter
 
-Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporter](../commands/imap-new-transporter.md). Eles oferecem as propriedades abaixo e funções:
+Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporter](../commands/imap-new-transporter). Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporte
 
 #### Descrição
 
-A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->cria e retorna um novo objeto do tipo `4D.IMAPTransporter`<!-- END REF -->. É idêntico ao comando [`IMAP New transporter`](../commands/imap-new-transporter.md) (atalho).
+A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->cria e retorna um novo objeto do tipo `4D.IMAPTransporter`<!-- END REF -->. É idêntico ao comando [`IMAP New transporter`](../commands/imap-new-transporter) (atalho).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -499,7 +499,7 @@ Pode passar:
 - no parâmetro `msgsIDs`, uma coleção que contém as IDs exclusivas das mensagens específicas a serem excluídas, ou
 - no parâmetro `allMsgs`, a constante `IMAP all` (inteiro) para excluir todas as mensagens da caixa de correio selecionada.
 
-A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+A execução desta função não remove realmente as mensagens. As mensagens com o sinalizador "delete" ainda podem ser encontradas pela função [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter)) is destroyed.
 
 **Objeto devolvido**
 

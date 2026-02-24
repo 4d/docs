@@ -87,7 +87,7 @@ The *$user* and *$pw* parameters receive the user name and password entered by t
 
 The **On Web Connection database method** can be used as the entry point for the 4D Web server using customized command URLs.
 
-**Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog.md), [ALERT](alert.md), etc.) ends the method processing.
+**Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog), [ALERT](alert.md), etc.) ends the method processing.
 
 The **On Web Connection database method** is therefore called in the following cases:
 

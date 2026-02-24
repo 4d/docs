@@ -28,7 +28,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 > El mapeo ORDA no tiene en cuenta:
 >
 > - la opción "Invisible" para las tablas o los campos,
-> - la estructura virtual definida por [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) o [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
+> - la estructura virtual definida por [`SET TABLE TITLES`](../commands-legacy/set-table-titles) o [`SET FIELD TITLES`](../commands-legacy/set-field-titles),
 > - la propiedad "Manual" o "Automática" de las relaciones.
 
 ### Normas de control de acceso remoto

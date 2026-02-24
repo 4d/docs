@@ -46,7 +46,7 @@ Vous pouvez contrôler les sauts de paragraphe automatiques à l'aide des foncti
 * **Éviter le saut de page à l'intérieur** : Lorsque cette option est définie pour un paragraphe, 4D Write Pro empêche ce paragraphe d'être divisé en parties sur deux pages ou plus.
 * **Paragraphe solidaire :** Lorsque cette option est définie pour un paragraphe, ce paragraphe ne peut pas être séparé de celui qui le suit par un saut automatique. Voir wk keep with next et l'[action standard](./defining-a-4d-write-pro-area.md#standard-actions) correspondante *keepWithNext*.
 
-Ces options peuvent être définies à l'aide du menu contextuel, ou des [attributs](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou des [actions standard](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled* et *avoidPageBreakInsidev*).
+Ces options peuvent être définies à l'aide du menu contextuel, ou des [attributs](../commands-legacy/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou des [actions standard](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled* et *avoidPageBreakInsidev*).
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -61,7 +61,7 @@ L'arrière-plan (le fond) des documents et des éléments de documents de 4D Wri
 * rectangle d'application
 * répétition
 
-Ces [attributs](../commands-legacy/4d-write-pro-attributes.md) peuvent être définis par programmation pour le fond des éléments individuels dans la page et/ou de l'ensemble du document via la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) ou les [actions standard](./defining-a-4d-write-pro-area.md#standard-actions). 
+Ces [attributs](../commands-legacy/4d-write-pro-attributes) peuvent être définis par programmation pour le fond des éléments individuels dans la page et/ou de l'ensemble du document via la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) ou les [actions standard](./defining-a-4d-write-pro-area.md#standard-actions). 
 
 Les utilisateurs peuvent modifier les attributs d'arrière-plan à l'aide du menu contextuel de la zone : 
 
@@ -287,7 +287,7 @@ Les colonnes peuvent être définies au niveau du document (elles sont alors aff
 Les colonnes peuvent être définies via :
 
 * le sous-menu **Colonnes** du menu contextuel de la zone 4D Write Pro,
-* les [attributes](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
+* les [attributes](../commands-legacy/4d-write-pro-attributes) 4D Write Pro,
 * les [actions standard](./using-4d-write-pro-standard-actions.md) 4D Write Pro.
 
 Vous pouvez définir ou lire les propriétés et actions suivantes pour les colonnes :
@@ -332,10 +332,10 @@ Les signets peuvent être utilisés pour référencer des parties d’un documen
 
 Plusieurs commandes vous permettent de créer, supprimer et utiliser les signets :
 
-* [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) pour créer un signet à partir d’une plage
-* [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) pour récupérer tous les signets définis dans le document,
-* [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) pour récupérer une plage depuis un signet existant,
-* [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) pour supprimer un signet
+* [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark) pour créer un signet à partir d’une plage
+* [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks) pour récupérer tous les signets définis dans le document,
+* [WP Bookmark range](../commands-legacy/wp-bookmark-range) pour récupérer une plage depuis un signet existant,
+* [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark) pour supprimer un signet
 
 
 ## Liens
@@ -348,18 +348,18 @@ Les liens hypertexte peuvent également être activés directement depuis les do
 
 | Type de lien | Description |                                                                                                                                                                                                                                                                                                                                 
 |--------------|-------------|
-|`url`         | Crée des liens vers des pages web ou à tout type de document, ou bien ouvre l'application associée lorsqu'il est activé (\*). L'activation d'un lien URL vers un document 4D Write Pro (`.4wp`, `.4w7`) remplace le document courant dans la zone 4D Write Pro.<br>(\*) tout comme la commande [OPEN URL](../../commands-legacy/open-url.md). |
+|`url`         | Crée des liens vers des pages web ou à tout type de document, ou bien ouvre l'application associée lorsqu'il est activé (\*). L'activation d'un lien URL vers un document 4D Write Pro (`.4wp`, `.4w7`) remplace le document courant dans la zone 4D Write Pro.<br>(\*) tout comme la commande [OPEN URL](../../commands/open-url). |
 | `signet`     | Crée des liens vers les signets du document |                                                                                                                                                                                                                                                                                                 
-| `méthode`    | L'association d'un lien à une méthode 4D exécute la méthode (sous réserve d'être enregistrée par la méthode [SET ALLOWED METHODS](../../commands/set-allowed-methods.md)).|                                                                                                                                                            
+| `méthode`    | L'association d'un lien à une méthode 4D exécute la méthode (sous réserve d'être enregistrée par la méthode [SET ALLOWED METHODS](../../commands/set-allowed-methods)).|                                                                                                                                                            
 
 Les liens hypertexte sont gérés via les commandes suivantes :
 
-* [WP FIXER LIEN](../commands-legacy/wp-set-link.md) pour insérer un lien à l'aide de l'objet cible
-* [WP Lire liens](../commands-legacy/wp-get-links.md) pour lire la collection de tous les liens dans un objet cible.
+* [WP FIXER LIEN](../commands-legacy/wp-set-link) pour insérer un lien à l'aide de l'objet cible
+* [WP Lire liens](../commands-legacy/wp-get-links) pour lire la collection de tous les liens dans un objet cible.
 
 :::note
 
-Les liens sont gérés en tant qu'attributs, ils peuvent donc être définis ou lus à l'aide des commandes [WP SET ATTRIBUTES](../commands/wp-set-attributes) et [WP GET ATTRIBUTES](../commands/wp-get-attributes) associées à la constante `wk link url`. Toutefois, il est recommandé d'utiliser les commandes [WP SET LINK](../commands-legacy/wp-set-link.md) et [WP Get links](../commands-legacy/wp-get-links.md, puisqu'elles encodent/décodent automatiquement les liens hypertexte sous forme d'URL. Lorsque les liens sont lus à l'aide de la commande [WP GET ATTRIBUTES](../commands/wp-get-attributes), si l'objet cible contient plusieurs liens, la commande retourne la chaîne du premier lien.
+Les liens sont gérés en tant qu'attributs, ils peuvent donc être définis ou lus à l'aide des commandes [WP SET ATTRIBUTES](../commands/wp-set-attributes) et [WP GET ATTRIBUTES](../commands/wp-get-attributes) associées à la constante `wk link url`. Toutefois, il est recommandé d'utiliser les commandes [WP SET LINK](../commands-legacy/wp-set-link) et [WP Get links](../commands-legacy/wp-get-links.md, puisqu'elles encodent/décodent automatiquement les liens hypertexte sous forme d'URL. Lorsque les liens sont lus à l'aide de la commande [WP GET ATTRIBUTES](../commands/wp-get-attributes), si l'objet cible contient plusieurs liens, la commande retourne la chaîne du premier lien.
 
 :::
 
@@ -392,7 +392,7 @@ ou
 
 ## Utiliser les commandes du thème Objets (Formulaires) 
 
-Les commandes 4D suivantes du thème [Objets (Formulaires)](../../commands/theme/Objects_Forms.md) prennent en charge les objets de formulaire 4D Write Pro :
+Les commandes 4D suivantes du thème [Objets (Formulaires)](../../commands/theme/Objects_Forms) prennent en charge les objets de formulaire 4D Write Pro :
 
 | Commande                                                                        | Commentaire                                                                                              |
 | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |

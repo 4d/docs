@@ -18,7 +18,7 @@ Si está acostumbrado a codificar con **VS Code**, también puede usar este edit
 Hay varias formas de conseguir que el depurador se muestre:
 
 - Haciendo clic en el botón **Trace** en [la ventana de errores de sintaxis](basics.md#syntax-error-window)
-- Utilizando el comando [`TRACE`](../commands-legacy/trace.md)
+- Utilizando el comando [`TRACE`](../commands-legacy/trace)
 - Haciendo clic en el botón **Debug** en la ventana de ejecución del método o seleccionando **Run and debug...** en el Code Editor
 - Utilizando **Alt+Shift+Clic derecho** (Windows) o **Ctrl+Option+Cmd+Clic** (macOS) mientras se ejecuta un método, seleccionando entonces el proceso a rastrear en el menú emergente:
 
@@ -294,7 +294,7 @@ Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el me
 
 Después de desplegar la lista de parámetros, puede arrastrar y soltar los parámetros y los resultados de las funciones en el [Custom Watch Pane](#custom-watch-pane).
 
-También puede utilizar el comando [Call chain](../commands/call-chain.md) para recuperar la cadena de llamadas por programación.
+También puede utilizar el comando [Call chain](../commands/call-chain) para recuperar la cadena de llamadas por programación.
 
 ## Panel de vigilancia personalizado
 
@@ -311,7 +311,7 @@ El panel de control personalizado es útil para evaluar expresiones. Es similar 
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text.md).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](../commands-legacy/blob-to-text).
 
 ### Modo de visualización
 

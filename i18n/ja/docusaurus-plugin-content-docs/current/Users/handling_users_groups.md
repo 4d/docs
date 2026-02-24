@@ -58,7 +58,7 @@ title: 4Dユーザー＆グループの管理
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands-legacy/edit-access.md) command.
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands-legacy/edit-access) command.
 > ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
 ### ユーザーの追加と変更

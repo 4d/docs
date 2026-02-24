@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Los objetos de sesión son devueltos por el comando [`Session`](../commands/session.md). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo contexto web) gestionar [privilegios](../ORDA/privileges.md).
+Los objetos de sesión son devueltos por el comando [`Session`](../commands/session). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo contexto web) gestionar [privilegios](../ORDA/privileges.md).
 
 :::tip Entradas de blog relacionadas
 
@@ -438,7 +438,7 @@ La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificado
 
 :::tip
 
-Puede utilizar esta propiedad para obtener el objeto [`.storage`](#storage) de una sesión gracias al comando [`Session storage`](../commands/session-storage.md).
+Puede utilizar esta propiedad para obtener el objeto [`.storage`](#storage) de una sesión gracias al comando [`Session storage`](../commands/session-storage).
 
 :::
 
@@ -509,8 +509,8 @@ End if
 
 La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión de escritorio o web<!-- END REF -->.
 
-- **Sesiones remotas** y **Sesiones de procedimientos almacenados**: el objeto `.info` es el mismo objeto que el devuelto en la propiedad "session" por el comando [`Process activity`](../commands/process-activity.md).
-- **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info.md).
+- **Sesiones remotas** y **Sesiones de procedimientos almacenados**: el objeto `.info` es el mismo objeto que el devuelto en la propiedad "session" por el comando [`Process activity`](../commands/process-activity).
+- **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info).
 - **Sesiones usuario web**: el objeto `.info` contiene las propiedades disponibles para las sesiones de usuario web.
 
 El objeto `.info` contiene las siguientes propiedades:
@@ -846,7 +846,7 @@ Esta propiedad es **sólo lectura** en sí misma pero devuelve un objeto de lect
 
 :::tip
 
-Puede obtener la propiedad `.storage` de una sesión utilizando el comando [`Session storage`](../commands/session-storage.md).
+Puede obtener la propiedad `.storage` de una sesión utilizando el comando [`Session storage`](../commands/session-storage).
 
 :::
 
@@ -896,8 +896,8 @@ End use
 La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el nombre de usuario asociado a la sesión<!-- END REF -->. Puede utilizarlo para identificar al usuario dentro de su código.
 
 - **Sesiones web**: esta propiedad es una cadena vacía por defecto. Puede definirse mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
-- **Sesiones de procedimiento remoto/almacenado**: esta propiedad devuelve el mismo nombre de usuario que el comando [`Usuario actual`](../commands-legacy/current-user.md).
-- **Sesiones autónomas**: esta propiedad contiene "designer" o el nombre definido con el comando [`SET USER ALIAS`](../commands-legacy/set-user-alias.md).
+- **Sesiones de procedimiento remoto/almacenado**: esta propiedad devuelve el mismo nombre de usuario que el comando [`Usuario actual`](../commands-legacy/current-user).
+- **Sesiones autónomas**: esta propiedad contiene "designer" o el nombre definido con el comando [`SET USER ALIAS`](../commands-legacy/set-user-alias).
 
 Esta propiedad es **sólo de lectura** para las sesiones de escritorio.
 

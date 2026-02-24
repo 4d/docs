@@ -42,7 +42,7 @@ Les seules différences entre ces deux commandes sont les suivantes :
 ## Voir aussi 
 
 [DISPLAY SELECTION](display-selection.md)  
-[Form event code](../commands/form-event-code.md)  
+[Form event code](../commands/form-event-code)  
 *Présentation des ensembles*  
 
 ## Propriétés

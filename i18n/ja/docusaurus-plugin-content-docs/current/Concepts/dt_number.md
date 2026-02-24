@@ -13,7 +13,7 @@ title: 数値(実数、整数)
 通常、整数を使用する場合には、*Long* を扱います(4-バイト整数)。 しかしながら、整数が*Shots* 値(2-バイト整数)として保存される場合が二つあります。その際、範囲は-32,768..32,767 (2^15..(2^15)-1) となります:
 
 - `Integer` 型のデータベースフィールド
-- [`ARRAY INTEGER`](../commands-legacy/array-integer.md) として宣言した配列の要素
+- [`ARRAY INTEGER`](../commands-legacy/array-integer) として宣言した配列の要素
 
 旧式のデータタイプは、4D ランゲージで使用される際に自動的に*Long* へと変換されます。
 
@@ -75,7 +75,7 @@ title: 数値(実数、整数)
 
 :::warning
 
-モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 範囲外の数値に対してモジューロを計算したい場合には、[`Mod`](../commands-legacy/mod.md) コマンドを使用してください。
+モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 範囲外の数値に対してモジューロを計算したい場合には、[`Mod`](../commands-legacy/mod) コマンドを使用してください。
 
 :::
 
@@ -85,11 +85,11 @@ title: 数値(実数、整数)
 
 ### 実数の比較
 
-2つの実数が等しいかどうかを比較するために、4Dランゲージは実際には差の絶対値を *イプシロン値* と比較します。 詳細関しては[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) コマンドを参照してください。
+2つの実数が等しいかどうかを比較するために、4Dランゲージは実際には差の絶対値を *イプシロン値* と比較します。 詳細関しては[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level) コマンドを参照してください。
 
 :::note
 
-一貫性のため、4Dデータベースエンジンは実数型のデータベースフィールドを比較する際には常に *イプシロン値* として 10^-6 の値を使用し、[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) の設定を考慮しません。
+一貫性のため、4Dデータベースエンジンは実数型のデータベースフィールドを比較する際には常に *イプシロン値* として 10^-6 の値を使用し、[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level) の設定を考慮しません。
 
 :::
 

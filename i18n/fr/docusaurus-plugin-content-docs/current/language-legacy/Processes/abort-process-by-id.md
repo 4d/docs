@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ABORT PROCESS BY ID.Summary-->La commande **ABORT PROCESS BY ID** stoppe un process spécifique sur 4D Server.<!-- END REF-->
 
-Dans le paramètre *uniqueID*, passez l'ID unique du process que vous souhaitez stopper sur le serveur. Vous pouvez récupérer l'ID du process à l'aide des commandes [Process activity](../commands/process-activity.md) ou [Process info](../commands/process-info.md).
+Dans le paramètre *uniqueID*, passez l'ID unique du process que vous souhaitez stopper sur le serveur. Vous pouvez récupérer l'ID du process à l'aide des commandes [Process activity](../commands/process-activity) ou [Process info](../commands/process-info).
 
 **Notes** : 
 

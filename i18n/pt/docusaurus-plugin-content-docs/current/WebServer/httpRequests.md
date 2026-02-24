@@ -217,9 +217,9 @@ End if
 
 O servidor Web 4D permite que você recupere dados enviados através de solicitações POST ou GET, usando formulários Web ou URLs.
 
-Quando o servidor web recebe uma solicitação com dados no cabeçalho ou no URL, 4D pode recuperar os valores de qualquer objeto HTML que ele contém. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
+Quando o servidor web recebe uma solicitação com dados no cabeçalho ou no URL, 4D pode recuperar os valores de qualquer objeto HTML que ele contém. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob), where the user enters or modifies values, then clicks on the validation button.
 
-Neste caso, 4D pode recuperar os valores dos objetos HTML encontrados na solicitação usando o [comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md). El comando `WEB GET VARIABLES` recupera los valores como texto.
+Neste caso, 4D pode recuperar os valores dos objetos HTML encontrados na solicitação usando o [comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables). El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere o seguinte código fonte da página HTML:
 
@@ -323,15 +323,15 @@ Tenha em atenção que, com HTML, todos os objetos são objetos texto. Si se uti
 
 O servidor web 4D fornece vários comandos web de baixo nível, permitindo que você desenvolva processamento personalizado de solicitações:
 
-- o comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) retorna o corpo como texto bruto, permitindo qualquer análise necessária
-- o comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) retorna os cabeçalhos da solicitação. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- os comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) e [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analisar a parte do corpo de uma solicitação de várias partes e recuperar valores de texto, mas também arquivos postados, usando BLOBs.
+- o comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body) retorna o corpo como texto bruto, permitindo qualquer análise necessária
+- o comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header) retorna os cabeçalhos da solicitação. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
+- os comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part) e [`WEB Get body part count`](../commands-legacy/web-get-body-part-count) para analisar a parte do corpo de uma solicitação de várias partes e recuperar valores de texto, mas também arquivos postados, usando BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-O servidor 4D oferece suporte a arquivos enviados na codificação de transferência chunked de qualquer cliente web. A codificação de transferência em pedaços é um mecanismo de transferência de dados especificado no HTTP/1.1. Ele permite que os dados sejam transferidos em uma série de "chunks" (partes) sem saber o tamanho final dos dados. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
+O servidor 4D oferece suporte a arquivos enviados na codificação de transferência chunked de qualquer cliente web. A codificação de transferência em pedaços é um mecanismo de transferência de dados especificado no HTTP/1.1. Ele permite que os dados sejam transferidos em uma série de "chunks" (partes) sem saber o tamanho final dos dados. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data)).
 
 ## Método projeto COMPILER_WEB
 

@@ -5,8 +5,8 @@ title: DataStore
 
 Un [Datastore](ORDA/dsMapping.md#datastore) est un objet d'interface fourni par ORDA pour référencer et accéder à une base de données. Les objets `Datastore` sont retournés par les commandes suivantes :
 
-- [ds](../commands/ds.md) : un raccourci vers le datastore principal
-- [Open datastore](../commands/open-datastore.md) : pour ouvrir un datastore distant
+- [ds](../commands/ds) : un raccourci vers le datastore principal
+- [Open datastore](../commands/open-datastore) : pour ouvrir un datastore distant
 
 ### Sommaire
 
@@ -244,7 +244,7 @@ La fonction `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary --
 
 Cette fonction ne peut être appelée que :
 
-- sur le datastore local ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::
@@ -401,7 +401,7 @@ La fonction `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summar
 
 Cette fonction ne peut être appelée que :
 
-- sur le datastore local ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::
@@ -869,7 +869,7 @@ La fonction `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summar
 
 Cette fonction ne peut être appelée que :
 
-- sur le datastore local ([`ds`](../commands/ds.md)).
+- sur le datastore local ([`ds`](../commands/ds)).
 - dans un environnement client/serveur, sur la machine serveur.
 
 :::

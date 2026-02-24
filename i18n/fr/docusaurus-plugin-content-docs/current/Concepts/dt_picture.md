@@ -23,7 +23,7 @@ Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CO
 
 La forme utilisée pour chaque format dépend du mode de déclaration du codec au niveau du système d’exploitation. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.
 
-La plupart des [commandes 4D de gestion d'images](../commands/theme/Pictures.md) peuvent recevoir un Codec ID en paramètre. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODEC LIST`.
+La plupart des [commandes 4D de gestion d'images](../commands/theme/Pictures) peuvent recevoir un Codec ID en paramètre. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODEC LIST`.
 Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST`.
 
 ## Opérateurs sur les images

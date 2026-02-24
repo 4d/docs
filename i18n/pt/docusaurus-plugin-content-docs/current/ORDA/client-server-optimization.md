@@ -12,15 +12,15 @@ title: Otimização cliente/servidor
 
 As arquiteturas cliente/servidor de ORDA que suportam a otimização são:
 
-- Os datastores servidor acessados pelas aplicações 4D remotas através de [**`ds`**](../commands/ds.md),
-- [Dastores remotos](remoteDatastores.md), acessado via [**`Open datastore`**](../commands/open-datastore.md) (solicitações clientes REST).
+- Os datastores servidor acessados pelas aplicações 4D remotas através de [**`ds`**](../commands/ds),
+- [Dastores remotos](remoteDatastores.md), acessado via [**`Open datastore`**](../commands/open-datastore) (solicitações clientes REST).
 
 ## Contexto de otimização
 
 O contexto de otimização é baseado nas seguintes implementações:
 
 - Quando um cliente solicita uma seleção de entidade do servidor, 4D "aprende" automaticamente quais atributos da seleção de entidade são realmente usados no lado do cliente durante a execução do código e constrói um "contexto de otimização" correspondente. Esse contexto é anexado à seleção da entidade e armazena os atributos usados. Será atualizado dinamicamente se outros atributos forem usados depois. Os seguintes métodos e funções accionam a fase de aprendizagem:
-  - [`Create entity selection`](../commands/create-entity-selection.md)
+  - [`Create entity selection`](../commands/create-entity-selection)
   - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   - [`dataClass.all()`](../API/DataClassClass.md#all)
   - [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -43,7 +43,7 @@ O contexto de otimização é baseado nas seguintes implementações:
 
 :::note Nota de compatibilidade
 
-Contextos tratados em conexões estabelecidas através de [`Open datastore`](../commands/open-datastore.md) só podem ser usadas entre versões principais similares de 4D. Por exemplo, uma aplicação remota 4D 20.x pode usar apenas contextos de um servidor 4D Server 20.x datastore.
+Contextos tratados em conexões estabelecidas através de [`Open datastore`](../commands/open-datastore) só podem ser usadas entre versões principais similares de 4D. Por exemplo, uma aplicação remota 4D 20.x pode usar apenas contextos de um servidor 4D Server 20.x datastore.
 
 :::
 

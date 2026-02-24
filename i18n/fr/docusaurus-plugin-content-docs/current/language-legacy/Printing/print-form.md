@@ -29,7 +29,7 @@ Dans le paramètre *form*, vous pouvez passer soit :
 - le chemin d'accès (en syntaxe POSIX) d'un fichier .json valide contenant une description du formulaire à utiliser (voir *Chemin d'accès au fichier de formulaire*), ou
 - un objet contenant la description du formulaire à utiliser.
 
-Comme **Print form** ne génère pas de saut de page après avoir imprimé un formulaire, elle vous permet de combiner facilement différents formulaires sur la même page. Ainsi, **Print form** est idéale pour effectuer des impressions complexes impliquant plusieurs tables et plusieurs formulaires. Pour forcer un saut de page entre les formulaires, utilisez la commande [PAGE BREAK](../commands-legacy/page-break.md). Pour reporter l'impression à la page suivante d'un formulaire dont la hauteur est supérieure à l'espace disponible, appelez la commande [CANCEL](../commands-legacy/cancel.md) avant la commande [PAGE BREAK](../commands-legacy/page-break.md).
+Comme **Print form** ne génère pas de saut de page après avoir imprimé un formulaire, elle vous permet de combiner facilement différents formulaires sur la même page. Ainsi, **Print form** est idéale pour effectuer des impressions complexes impliquant plusieurs tables et plusieurs formulaires. Pour forcer un saut de page entre les formulaires, utilisez la commande [PAGE BREAK](../commands-legacy/page-break). Pour reporter l'impression à la page suivante d'un formulaire dont la hauteur est supérieure à l'espace disponible, appelez la commande [CANCEL](../commands-legacy/cancel) avant la commande [PAGE BREAK](../commands-legacy/page-break).
 
 Trois syntaxes différentes peuvent être utilisées :
 
@@ -97,20 +97,20 @@ Pour des informations détaillées sur l'objet de données formulaire, veuillez 
 
 **Valeur retournée**
 
-La valeur retournée par **Print form** indique la hauteur de la zone d’impression. Cette valeur sera automatiquement prise en compte par la commande [Get printed height](../commands-legacy/get-printed-height.md).
+La valeur retournée par **Print form** indique la hauteur de la zone d’impression. Cette valeur sera automatiquement prise en compte par la commande [Get printed height](../commands-legacy/get-printed-height).
 
 Les boîtes de dialogue standard d'impression n'apparaissent pas lorsque vous utilisez la commande **Print form**. L'état généré ne tient pas compte des paramètres d'impression définis en mode Développement pour le formulaire. Il y a deux manières de définir les paramètres d'impression avant d'effectuer une série d'appels à **Print form** :
 
-- Appeler [PRINT SETTINGS](../commands-legacy/print-settings.md). Dans ce cas, vous laissez l'utilisateur définir ses paramètres dans les boîtes de dialogue d'impression.
-- Appeler [SET PRINT OPTION](../commands-legacy/set-print-option.md) et [GET PRINT OPTION](../commands-legacy/get-print-option.md). Dans ce cas, les paramètres sont définis par programmation.
+- Appeler [PRINT SETTINGS](../commands-legacy/print-settings). Dans ce cas, vous laissez l'utilisateur définir ses paramètres dans les boîtes de dialogue d'impression.
+- Appeler [SET PRINT OPTION](../commands-legacy/set-print-option) et [GET PRINT OPTION](../commands-legacy/get-print-option). Dans ce cas, les paramètres sont définis par programmation.
 
-**Print form** construit chaque page à imprimer en mémoire. Chaque page est imprimée lorsque la page en mémoire est remplie ou lorsque vous appelez [PAGE BREAK](../commands-legacy/page-break.md). Pour vous assurer que la dernière page d'une impression exécutée par l'intermédiaire de **Print form** est effectivement imprimée, il faut terminer par la commande [PAGE BREAK](../commands-legacy/page-break.md) (sauf dans le cadre d'un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), voir note). Sinon, la dernière page, si elle n'est pas remplie, reste en mémoire et n'est pas imprimée.
+**Print form** construit chaque page à imprimer en mémoire. Chaque page est imprimée lorsque la page en mémoire est remplie ou lorsque vous appelez [PAGE BREAK](../commands-legacy/page-break). Pour vous assurer que la dernière page d'une impression exécutée par l'intermédiaire de **Print form** est effectivement imprimée, il faut terminer par la commande [PAGE BREAK](../commands-legacy/page-break) (sauf dans le cadre d'un [OPEN PRINTING JOB](../commands-legacy/open-printing-job), voir note). Sinon, la dernière page, si elle n'est pas remplie, reste en mémoire et n'est pas imprimée.
 
-**Attention :** Si la commande est appelée dans le contexte d'une tâche d'impression ouverte avec [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), vous ne devez PAS appeler [PAGE BREAK](../commands-legacy/page-break.md) pour la dernière page car celle-ci est automatiquement imprimée par la commande [CLOSE PRINTING JOB](../commands-legacy/close-printing-job.md). Si vous appelez [PAGE BREAK](../commands-legacy/page-break.md) dans ce cas, une page vide est imprimée.
+**Attention :** Si la commande est appelée dans le contexte d'une tâche d'impression ouverte avec [OPEN PRINTING JOB](../commands-legacy/open-printing-job), vous ne devez PAS appeler [PAGE BREAK](../commands-legacy/page-break) pour la dernière page car celle-ci est automatiquement imprimée par la commande [CLOSE PRINTING JOB](../commands-legacy/close-printing-job). Si vous appelez [PAGE BREAK](../commands-legacy/page-break) dans ce cas, une page vide est imprimée.
 
 Cette commande permet d'imprimer des zones et des objets externes (par exemple, les zones 4D Write Pro ou 4D View Pro). La zone est réinitialisée à chaque exécution de la commande.
 
-**Attention :** **Print form** n'imprime pas les sous-formulaires. Si vous voulez imprimer uniquement un formulaire comportant de tels objets, utilisez plutôt [PRINT RECORD](../commands-legacy/print-record.md).
+**Attention :** **Print form** n'imprime pas les sous-formulaires. Si vous voulez imprimer uniquement un formulaire comportant de tels objets, utilisez plutôt [PRINT RECORD](../commands-legacy/print-record).
 
 **Print form** ne génère qu'un seul événement [`On Printing Detail`](../Events/onPrintingDetail.md) pour la méthode formulaire.
 
@@ -121,7 +121,7 @@ Cette commande permet d'imprimer des zones et des objets externes (par exemple, 
 
 ## Exemple 1
 
-L'exemple suivant effectue la même chose que ce que ferait la commande [PRINT SELECTION](../commands-legacy/print-selection.md). Cependant, l'état utilise deux formulaires différents suivant le type d'enregistrement (chèque émis ou dépôt) :
+L'exemple suivant effectue la même chose que ce que ferait la commande [PRINT SELECTION](../commands-legacy/print-selection). Cependant, l'état utilise deux formulaires différents suivant le type d'enregistrement (chèque émis ou dépôt) :
 
 ```4d
  QUERY([Register]) // sélectionner les enregistrements
@@ -146,7 +146,7 @@ L'exemple suivant effectue la même chose que ce que ferait la commande [PRINT S
 
 ## Exemple 2
 
-Voir l'exemple de la commande [SET PRINT MARKER](../commands-legacy/set-print-marker.md).
+Voir l'exemple de la commande [SET PRINT MARKER](../commands-legacy/set-print-marker).
 
 ## Exemple 3
 
@@ -178,10 +178,10 @@ Le code qui appelle la boîte de dialogue imprime ensuite le corps :
 
 ## Voir également
 
-[CANCEL](../commands-legacy/cancel.md)\
-[PAGE BREAK](../commands-legacy/page-break.md)\
-[PRINT SETTINGS](../commands-legacy/print-settings.md)\
-[SET PRINT OPTION](../commands-legacy/set-print-option.md)
+[CANCEL](../commands-legacy/cancel)\
+[PAGE BREAK](../commands-legacy/page-break)\
+[PRINT SETTINGS](../commands-legacy/print-settings)\
+[SET PRINT OPTION](../commands-legacy/set-print-option)
 
 ## Propriétés
 

@@ -87,7 +87,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 | ------ | ---------------------------------------------------------------------------------------------------------- |
 | Text   | UTF-8 のテキスト                                                                                                |
 | BLOB   | バイナリデータ                                                                                                    |
-| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands-legacy/json-stringify.md) と同じ結果になります) |
+| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands-legacy/json-stringify) と同じ結果になります) |
 
 <!-- END REF -->
 

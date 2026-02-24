@@ -48,7 +48,7 @@ slug: /WritePro/properties
 * **段落内の改ページを避ける**: このオプションが段落に対してチェックされている場合、4D Write Pro はその段落が 2枚以上のページに分割されないようにします。
 * **次の段落につなげる:** このオプションが段落に対して設定されている場合、その段落は、その後に続く段落と自動ブレークでは分割されなくなります。詳細に関しては`wk keep with next` とそれに対応する[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)を参照して下さい*keepWithNext*.
 
-これらのオプションはコンテキストメニューを使用するか、あるいは[属性](../commands-legacy/4d-write-pro-attributes.md)(`wk avoid widows and orphans`、`wk page break inside paragraph`、または[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)(*widowAndOrphanControlEnabled*、 *avoidPageBreakInside*。
+これらのオプションはコンテキストメニューを使用するか、あるいは[属性](../commands-legacy/4d-write-pro-attributes)(`wk avoid widows and orphans`、`wk page break inside paragraph`、または[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)(*widowAndOrphanControlEnabled*、 *avoidPageBreakInside*。
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -63,7 +63,7 @@ slug: /WritePro/properties
 * 塗りエリア
 * 繰り返し
 
-これらの[属性](../commands-legacy/4d-write-pro-attributes.md)は、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドあるいは[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)によってによって、プログラムによってページ上のそれぞれの要素に対して、あるいはドキュメントの背景全体に対して定義することが可能です。
+これらの[属性](../commands-legacy/4d-write-pro-attributes)は、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドあるいは[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)によってによって、プログラムによってページ上のそれぞれの要素に対して、あるいはドキュメントの背景全体に対して定義することが可能です。
 
 ユーザーは以下のように、コンテキストメニューを通じて背景属性を変更することが可能です:
 
@@ -292,7 +292,7 @@ slug: /WritePro/properties
 カラムは以下の方法を用いて設定することも可能です:
 
 * 4D Write Pro エリアコンテキストメニューの**カラム**サブメニュー
-* 4D Write Pro [属性](../commands-legacy/4d-write-pro-attributes.md)
+* 4D Write Pro [属性](../commands-legacy/4d-write-pro-attributes)
 * 4D Write Pro [標準アクション](./using-4d-write-pro-standard-actions.md)
 
 カラムに対しては、以下のプロパティを設定/取得することができます:
@@ -336,10 +336,10 @@ slug: /WritePro/properties
 
 複数のコマンドを使用して、ブックマークを作成、削除、使用することができます：
 
-- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) はレンジから新しいブックマークを作成します。
-- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) はドキュメント内で定義されている全てのブックマークを取得します。
-- [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) は既存のブックマークからレンジを取得します。
-- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) はブックマークを削除します。
+- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark) はレンジから新しいブックマークを作成します。
+- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks) はドキュメント内で定義されている全てのブックマークを取得します。
+- [WP Bookmark range](../commands-legacy/wp-bookmark-range) は既存のブックマークからレンジを取得します。
+- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark) はブックマークを削除します。
 
 ## リンク
 
@@ -351,18 +351,18 @@ slug: /WritePro/properties
 
 | リンクのタイプ | 詳細 |
 |----------------|------|
-| `url` | Web ページあるいは任意のドキュメントのリンク。実行時には関連づけられたアプリケーションが開始されます。4D Write Pro ドキュメント (`.4wp`, `.4w7`) への URL リンクを活性化すると、エリアの 4D Write Pro ドキュメントが置き換えられます。<br>(*) [OPEN URL](../../commands-legacy/open-url.md) コマンドと同じ動作です。 |
+| `url` | Web ページあるいは任意のドキュメントのリンク。実行時には関連づけられたアプリケーションが開始されます。4D Write Pro ドキュメント (`.4wp`, `.4w7`) への URL リンクを活性化すると、エリアの 4D Write Pro ドキュメントが置き換えられます。<br>(*) [OPEN URL](../../commands/open-url) コマンドと同じ動作です。 |
 | `bookmark` | ドキュメント内のブックマークへのリンクです |
-| `method` | リンクがアクティブになると 4D メソッドが実行されます（実行されるのはあらかじめ登録されているメソッド [SET ALLOWED METHODS](../../commands/set-allowed-methods.md) に限られます）。 |
+| `method` | リンクがアクティブになると 4D メソッドが実行されます（実行されるのはあらかじめ登録されているメソッド [SET ALLOWED METHODS](../../commands/set-allowed-methods) に限られます）。 |
 
 ハイパーリンクは以下のコマンドで管理することができます:
 
-- [WP SET LINK](../commands-legacy/wp-set-link.md) を使用して、ターゲットオブジェクトの指定用にリンクを挿入
-- [WP Get links](../commands-legacy/wp-get-links.md) を使用して、ターゲットオブジェクト内のすべてのリンクのコレクションとして取得
+- [WP SET LINK](../commands-legacy/wp-set-link) を使用して、ターゲットオブジェクトの指定用にリンクを挿入
+- [WP Get links](../commands-legacy/wp-get-links) を使用して、ターゲットオブジェクト内のすべてのリンクのコレクションとして取得
 
 :::note
 
-注: リンクは属性として扱われるため、`wk link url` 定数を用いて [WP SET ATTRIBUTES](../commands/wp-set-attributes) および [WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドで定義・取得することができます。けれども、通常は [WP SET LINK](../commands-legacy/wp-set-link.md) や [WP Get links](../commands-legacy/wp-get-links.md) の使用が推奨されます。これらは自動的に URL としてリンクをエンコード／デコードします。[WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドを使用してリンクを読み取るとき、ターゲットオブジェクトが複数のリンクを含む場合は、最初のリンク文字列のみが返されます。
+注: リンクは属性として扱われるため、`wk link url` 定数を用いて [WP SET ATTRIBUTES](../commands/wp-set-attributes) および [WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドで定義・取得することができます。けれども、通常は [WP SET LINK](../commands-legacy/wp-set-link) や [WP Get links](../commands-legacy/wp-get-links) の使用が推奨されます。これらは自動的に URL としてリンクをエンコード／デコードします。[WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドを使用してリンクを読み取るとき、ターゲットオブジェクトが複数のリンクを含む場合は、最初のリンク文字列のみが返されます。
 
 :::
 
@@ -396,7 +396,7 @@ WP SET LINK($range;New object("url";"http://www.4d.com"))
 
 ## オブジェクト(フォーム)テーマのコマンドの使用
 
-以下の[オブジェクト（フォーム）](../../commands/theme/Objects_Forms.md)テーマの4Dコマンドは、4D Write Proのフォームオブジェクトをサポートします：
+以下の[オブジェクト（フォーム）](../../commands/theme/Objects_Forms)テーマの4Dコマンドは、4D Write Proのフォームオブジェクトをサポートします：
 
 | コマンド | 補足 |
 |---------|------|

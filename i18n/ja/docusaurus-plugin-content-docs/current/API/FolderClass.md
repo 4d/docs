@@ -3,7 +3,7 @@ id: FolderClass
 title: Folder
 ---
 
-`Folder` オブジェクトは [`Folder`](../commands/folder.md) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
+`Folder` オブジェクトは [`Folder`](../commands/folder) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
 ### 例題
 
@@ -67,9 +67,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### 説明
 
-`4D.Folder.new()` 関数は、<!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](../commands/folder.md) コマンドと同一です。
+`4D.Folder.new()` 関数は、<!-- REF #4D.Folder.new().Summary -->`4D.Folder` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`Folder`](../commands/folder) コマンドと同一です。
 
-> `4D.Folder.new()` よりも、短い [`Folder`](../commands/folder.md) コマンドの使用が推奨されます。
+> `4D.Folder.new()` よりも、短い [`Folder`](../commands/folder) コマンドの使用が推奨されます。
 
 <!-- INCLUDE directory.copyTo().Desc -->
 

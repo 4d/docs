@@ -16,7 +16,7 @@ L'éditeur d'étiquettes de 4D offre un moyen pratique d'imprimer une grande var
 
 :::note
 
-Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Utilisez l'éditeur de formulaires pour concevoir des étiquettes spécialisées qui incluent des variables ou profitez des outils de dessin disponibles dans l'éditeur de formulaires et imprimez-les en utilisant l'éditeur d'étiquettes ou la commande [`PRINT LABEL`](../commands-legacy/print-label.md).
+Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Utilisez l'éditeur de formulaires pour concevoir des étiquettes spécialisées qui incluent des variables ou profitez des outils de dessin disponibles dans l'éditeur de formulaires et imprimez-les en utilisant l'éditeur d'étiquettes ou la commande [`PRINT LABEL`](../commands-legacy/print-label).
 
 :::
 
@@ -27,7 +27,7 @@ Pour ouvrir l’éditeur d’étiquettes :
 
 - En mode Développement, sélectionnez **Etiquettes...** dans le menu **Outils** ou dans le menu associé au bouton “Outils” dans la barre d’outils de 4D.
   OU
-- En mode Application, utilisez la commande [`PRINT LABEL`](../commands-legacy/print-label.md) .
+- En mode Application, utilisez la commande [`PRINT LABEL`](../commands-legacy/print-label) .
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -64,13 +64,13 @@ Cette zone vous permet d’insérer tous les éléments que vous souhaitez voir 
   Si vous appuyez sur la touche **Maj**, ils seront séparés par un retour chariot. Ce fonctionnement permet par exemple de créer des étiquettes d’adresses utilisant plusieurs champs superposés (Adresse1, Adresse2, etc.) ne générant pas de ligne vide lorsqu’une adresse ne requiert qu’un champ.
 - Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone. L'**Éditeur de formules** s'affiche alors :
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands/string.md) :<br/>
+  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands/string) :<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-N'oubliez pas que vous ne pouvez saisir que des méthodes "autorisées" pour la base de données dans l'Editeur de formules. Les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
+N'oubliez pas que vous ne pouvez saisir que des méthodes "autorisées" pour la base de données dans l'Editeur de formules. Les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods).
 
 :::
 
@@ -143,7 +143,7 @@ Cette page contient des commandes permettant d'imprimer des étiquettes en fonct
 - **Intervalles** : définit l’espacement horizontal et/ou vertical entre les étiquettes dans la planche.
 - **Méthode** : ce paramètre vous permet de déclencher une méthode particulière lors de l’impression de votre planche d’étiquettes. Par exemple, vous pouvez exécuter une méthode qui enregistre la date et l'heure auxquelles chaque étiquette a été imprimée. Cette fonction est également utile lorsque vous imprimez des étiquettes à l'aide d'un formulaire table dédié, auquel cas vous pouvez remplir des variables à partir d'une méthode.
   Pour être éligible au traitement des étiquettes, une méthode projet doit respecter les conditions suivantes :
-  - elle doit être "autorisée" pour la base de données (les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md)), sinon elle ne sera pas affichée dans le menu **Appliquer**.
+  - elle doit être "autorisée" pour la base de données (les méthodes autorisées dépendent des [paramètres du projet](../settings/security.md#options) et de la commande [`SET ALLOWED METHODS`](../commands/set-allowed-methods)), sinon elle ne sera pas affichée dans le menu **Appliquer**.
   - elle doit avoir l'option [Partagée entre composants et base hôte](../Project/project-method-properties.md#shared-by-components-and-host-database) .
     Voir aussi [cet exemple](#printing-labels-using-forms-and-methods-example) ci-dessous.
 

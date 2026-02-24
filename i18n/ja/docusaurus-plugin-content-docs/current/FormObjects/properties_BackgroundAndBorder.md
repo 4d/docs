@@ -7,7 +7,7 @@ title: 背景色と境界線
 
 奇数番の行/列に使用するための異なる背景色を設定することができます。 デフォルトでは、*自動* が選択されており、リストボックスレベルで設定されている "交互に使用する背景色" を列も使用します。
 
-このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドを使用しても設定することができます。
+このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドを使用しても設定することができます。
 
 #### JSON 文法
 
@@ -21,7 +21,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 ---
 
@@ -31,7 +31,7 @@ title: 背景色と境界線
 
 リストボックスの場合にはデフォルトで、*自動* が選択されており、リストボックスレベルで設定されている背景色を列も使用します。
 
-このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドを使用しても設定することができます。
+このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドを使用しても設定することができます。
 
 #### JSON 文法
 
@@ -45,7 +45,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 #### 参照
 
@@ -57,9 +57,9 @@ title: 背景色と境界線
 
 `セレクションとコレクション型リストボックス`
 
-リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドの説明を参照ください。
+リストボックスの各行にカスタムの背景色を指定するための式または変数 (配列変数は使用不可)。 式または変数は表示行ごとに評価され、RGB値を返さなくてはなりません。 詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドの説明を参照ください。
 
-また、このプロパティは [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) コマンドに `lk background color expression` 定数を指定して設定することもできます。
+また、このプロパティは [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) コマンドに `lk background color expression` 定数を指定して設定することもできます。
 
 > コレクション/エンティティセレクション型リストボックスでは、このプロパティは [メタ情報式](properties_Text.md#メタ情報式) を使用しても設定することができます。
 
@@ -75,7 +75,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -111,7 +111,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md)
+[`OBJECT Get border style`](../commands-legacy/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style)
 
 ---
 
@@ -153,7 +153,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -166,7 +166,7 @@ title: 背景色と境界線
 - 16進数値 - 例: "#ff0000"
 - RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドを使用しても設定することができます。
+このプロパティは[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドを使用しても設定することができます。
 
 #### JSON 文法
 
@@ -182,7 +182,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 ---
 
@@ -208,7 +208,7 @@ title: 背景色と境界線
 
 リストボックスまたはリストボックス列の各行にカスタムの背景色を適用するのに使用する配列名です。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 たとえば、リストボックスプロパティにてグレー/ライトグレーカラーが行の交互背景色として設定されているとします。 同じリストボックスに行背景色配列が指定されており、行内で負の値が一つでもあれば色をオレンジに変えます:
 
@@ -230,7 +230,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-[`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) および [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) コマンドを使用することでも同じ結果を得ることができます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。この場合、これらはコマンドによって動的に作成されます。
+[`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style) および [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color) コマンドを使用することでも同じ結果を得ることができます。 コマンドを使う利点は、スタイル/カラー配列をあらかじめ列に設定する必要がないことです。この場合、これらはコマンドによって動的に作成されます。
 
 #### JSON 文法
 
@@ -244,7 +244,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays)
 
 ---
 
@@ -264,7 +264,7 @@ title: 背景色と境界線
 
 #### コマンド
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
 
 #### 参照
 

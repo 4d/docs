@@ -29,7 +29,7 @@ Référez-vous à l'exemple de [Process state](process-state.md) et [Semaphore](
 
 [Count user processes](count-user-processes.md)  
 [Count users](count-users.md)  
-[Process info](../commands/process-info.md)  
+[Process info](../commands/process-info)  
 [Process state](process-state.md)  
 
 ## Propriétés

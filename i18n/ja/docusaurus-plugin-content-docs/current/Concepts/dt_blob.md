@@ -34,8 +34,8 @@ BLOB に演算子を適用することはできません。
 
 ## 変数がスカラーBLOB と `4D.Blob` のどちらを格納しているかの確認
 
-値がBLOB なのかオブジェクトなのかを判断するためには、[Value type](../commands-legacy/value-type.md) コマンドを使用します。
-オブジェクトがBlob オブジェクト(`4D.Blob`) であるかどうかをチェックするためには、[OB instance of](../commands-legacy/ob-instance-of.md) コマンドを使用します:
+値がBLOB なのかオブジェクトなのかを判断するためには、[Value type](../commands-legacy/value-type) コマンドを使用します。
+オブジェクトがBlob オブジェクト(`4D.Blob`) であるかどうかをチェックするためには、[OB instance of](../commands-legacy/ob-instance-of) コマンドを使用します:
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 4Dコマンドの中には、元の BLOB を変更するものがあり、これらは `4D.Blob` タイプをサポートしていません:
 
-- [DELETE FROM BLOB](../commands-legacy/delete-from-blob.md)
-- [INSERT IN BLOB](../commands-legacy/insert-in-blob.md)
-- [INTEGER TO BLOB](../commands-legacy/integer-to-blob.md)
-- [LONGINT TO BLOB](../commands-legacy/longint-to-blob.md)
-- [REAL TO BLOB](../commands-legacy/real-to-blob.md)
-- [SET BLOB SIZE](../commands-legacy/set-blob-size.md)
-- [TEXT TO BLOB](../commands-legacy/text-to-blob.md)
-- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob.md)
-- [LIST TO BLOB](../commands-legacy/list-to-blob.md)
-- [SOAP DECLARATION](../commands-legacy/soap-declaration.md)
-- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter.md)
+- [DELETE FROM BLOB](../commands-legacy/delete-from-blob)
+- [INSERT IN BLOB](../commands-legacy/insert-in-blob)
+- [INTEGER TO BLOB](../commands-legacy/integer-to-blob)
+- [LONGINT TO BLOB](../commands-legacy/longint-to-blob)
+- [REAL TO BLOB](../commands-legacy/real-to-blob)
+- [SET BLOB SIZE](../commands-legacy/set-blob-size)
+- [TEXT TO BLOB](../commands-legacy/text-to-blob)
+- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob)
+- [LIST TO BLOB](../commands-legacy/list-to-blob)
+- [SOAP DECLARATION](../commands-legacy/soap-declaration)
+- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter)
 
 ### BLOB および BLOBオブジェクトのメソッドへの受け渡し
 

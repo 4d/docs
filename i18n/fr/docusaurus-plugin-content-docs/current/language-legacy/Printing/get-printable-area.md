@@ -49,7 +49,7 @@ Pour connaître la taille totale de la page, vous pouvez :
 ## Voir aussi 
 
 [GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Print form](../commands/print-form.md)  
+[Print form](../commands/print-form)  
 
 ## Propriétés
 

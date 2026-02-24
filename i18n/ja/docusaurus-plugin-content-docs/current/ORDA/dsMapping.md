@@ -28,7 +28,7 @@ ORDA テクノロジーは、その下地となる[データベースストラ�
 > ORDA のデータストアマッピングでは、次のものは考慮されません:
 >
 > - テーブルあるいはフィールドの "非表示" オプション
-> - [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) あるいは [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) を通して定義されたバーチャルストラクチャー
+> - [`SET TABLE TITLES`](../commands-legacy/set-table-titles) あるいは [`SET FIELD TITLES`](../commands-legacy/set-field-titles) を通して定義されたバーチャルストラクチャー
 > - リレーションの "手動" あるいは "自動" プロパティ
 
 ### リモートデータストアの利用

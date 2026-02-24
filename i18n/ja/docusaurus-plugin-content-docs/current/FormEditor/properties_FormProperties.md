@@ -10,7 +10,7 @@ title: フォームプロパティ
 > カラースキームプロパティは、macOS および [Fluent UI テーマの Windows](../settings/interface.md#windows-上でfluent-ui-を使用) に対してのみ適用されます
 > 。
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/get-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/get-application-color-scheme) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 - dark - 暗い背景に明るいテキスト
 - light - 明るい背景に暗いテキスト
@@ -53,7 +53,7 @@ title: フォームプロパティ
 
 - またコードエディター内での[自動補完機能](../code-editor/write-class-method.md#autocomplete-functions) を利用することもできます。
 
-- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form.md) オブジェクトによって返されます。  これにより、[`DIALOG`](../commands/dialog.md)、[`Print form`](../commands/print-form.md)、[`FORM LOAD`](../commands/form-load.md) あるいは [`PRINT SELECTION`](../commands-legacy/print-selection.md) といったコマンドに*formData* オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
+- フォームが実行されると、4D は自動的にユーザークラスのオブジェクトをフォームに対してインスタンス化し、これは[`Form`](../commands/form) オブジェクトによって返されます。  これにより、[`DIALOG`](../commands/dialog)、[`Print form`](../commands/print-form)、[`FORM LOAD`](../commands/form-load) あるいは [`PRINT SELECTION`](../commands-legacy/print-selection) といったコマンドに*formData* オブジェクトを渡さなくても、コードから`Form` コマンドを通してユーザークラスで定義されたクラス関数へと直接アクセスすることができます(例:`Form.message()`) 。
 
 :::note
 

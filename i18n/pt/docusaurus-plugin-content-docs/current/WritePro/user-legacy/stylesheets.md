@@ -43,7 +43,7 @@ O comando [WP Get style sheets](../commands-legacy/wp-get-style-sheets) lhe perm
 Devido a que as folhas de estilo se armazenam como objetos, podem ser facilmente importadas entre a outros documentos 4D Write Pro ou ser mantidas quando são exportadas em múltiplos formatos.
 
 - **Importar** - pode obter todos os objetos de folha de estilo de um documento 4D Write Pro designado e usá-los em um novo documento com o comando [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets).
-- **Exportar** - os comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) ou [WP EXPORT VARIABLE](../commands/wp-export-variable.md) exportam seus documentos com suas folhas de estilo.
+- **Exportar** - os comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) ou [WP EXPORT VARIABLE](../commands/wp-export-variable) exportam seus documentos com suas folhas de estilo.
 
 ## Atributos de folhas de estilo
 

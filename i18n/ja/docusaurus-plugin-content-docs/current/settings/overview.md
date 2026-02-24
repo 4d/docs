@@ -90,7 +90,7 @@ title: Settings
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-これらのダイアログボックスは、[OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
+これらのダイアログボックスは、[OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
 
 ストラクチャー設定ダイアログボックスは、標準の設定ダイアログと同じで、そのすべてのプロパティにアクセスできます (これらの設定はユーザー設定によってオーバーライドできます)。
 
@@ -129,9 +129,9 @@ title: Settings
 
 ### `SET DATABASE PARAMETER` とユーザー設定
 
-一部の設定は、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) コマンドを通しても利用できます。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
+一部の設定は、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) コマンドを通しても利用できます。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
 
-**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
+**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
 
 > `Table sequence number` は例外です。この設定値は常にデータファイル自身に保存されます。
 

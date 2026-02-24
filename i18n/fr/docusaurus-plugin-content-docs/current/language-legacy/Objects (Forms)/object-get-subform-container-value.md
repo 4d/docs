@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Voir aussi 
 
-[Form](../commands/form.md)  
+[Form](../commands/form)  
 [OBJECT Get pointer](object-get-pointer.md)  
 [OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
 

@@ -39,7 +39,7 @@ Em geral, essas tags devem ser inseridas como comentários do tipo HTML (`<!--#T
 
 A análise do conteúdo de uma fonte *template* é feita em dois contextos:
 
-- Using the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
+- Using the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
 
 - Usando o servidor HTTP integrado do 4D: [páginas de modelo](WebServer/templates.md) enviadas por meio dos comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (texto/html tipo BLOB), `WEB SEND TEXT` ou chamadas usando URLs. Nesse último caso, por motivos de otimização, as páginas sufixadas com ".htm" e ".html" NÃO são analisadas. Para analisar páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, <http://www.server.com/dir/page.shtm>).
 
@@ -157,10 +157,10 @@ End if
 
 Eis as características da etiqueta 4DCODE:
 
-- The [`TRACE`](../commands-legacy/trace.md) command is supported and activates the [4D debugger](../Debugging/debugger.md), thus allowing you to debug your template code.
+- The [`TRACE`](../commands-legacy/trace) command is supported and activates the [4D debugger](../Debugging/debugger.md), thus allowing you to debug your template code.
 - Qualquer erro exibirá a caixa de diálogo de erro padrão que permite que o usuário interrompa a execução do código ou entre no modo de depuração.
 - O texto entre `<!--#4DCODE` and `-->` é dividido em linhas que aceitam qualquer convenção de fim de linha (cr, lf ou crlf).
-- The text is tokenized within the context of the database that called [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md). Isto é importante para o reconhecimento dos métodos de projeto, por exemplo. A propriedade de método [Disponível através de tags e URLs 4D (4DACTION ...)](WebServer/allowProject.md) não é tida em conta.
+- The text is tokenized within the context of the database that called [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags). Isto é importante para o reconhecimento dos métodos de projeto, por exemplo. A propriedade de método [Disponível através de tags e URLs 4D (4DACTION ...)](WebServer/allowProject.md) não é tida em conta.
 - Mesmo que o texto sempre use o inglês americano, é recomendável usar a sintaxe de token (:Cxxx) para nomes de comandos e constantes para se proteger contra possíveis problemas por comandos ou constantes serem renomeados de uma versão do 4D para outra.
 
 > Que as etiquetas 4DCODE podem chamar qualquer um dos comandos da linguagem 4D ou métodos do projeto pode ser visto como um problema de segurança, especialmente quando o banco de dados está disponível por HTTP. No entanto, como ele executa o código do servidor chamado a partir dos seus próprios arquivos de modelo, a etiqueta não representa um problema de segurança. Neste contexto, como em qualquer servidor Web, a segurança é manipulada principalmente ao nível de acessos remotos para arquivos de servidor.
@@ -256,7 +256,7 @@ O número de loops é baseado no número de entidades na entity selection. Em ca
     </table>
 ```
 
-#### Example with [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
+#### Example with [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -429,7 +429,7 @@ Ao incluir, independentemente da extensão de nome do arquivo, O 4D analisa a p�
 
 Uma página incluída com o `<! -#4DINCLUDE -->` o comentário é carregado no cache do servidor Web da mesma forma que as páginas chamadas através de uma URL ou enviadas com o comando `WEB SEND FILE`.
 
-Em *path*, coloque o caminho que leva ao documento a ser incluído. Aviso: No caso de uma chamada `4DINCLUDE`, o caminho é relativo ao documento a ser analisado, ou seja, o documento "pai". Use o caractere com a barra (/) como um separador de pastas e os dois pontos (..) para subir um nível (sintaxe HTML). When you use the `4DINCLUDE` tag with the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command, the default folder is the project folder.
+Em *path*, coloque o caminho que leva ao documento a ser incluído. Aviso: No caso de uma chamada `4DINCLUDE`, o caminho é relativo ao documento a ser analisado, ou seja, o documento "pai". Use o caractere com a barra (/) como um separador de pastas e os dois pontos (..) para subir um nível (sintaxe HTML). When you use the `4DINCLUDE` tag with the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) command, the default folder is the project folder.
 
 > Você pode modificar a pasta padrão usada pela tag `4DINCLUDE` na página atual, usando a tag `<!--#4DBASE -->` (veja abaixo).
 
@@ -506,7 +506,7 @@ O seguinte exemplo de código:
 
 Essa sintaxe cria um loop desde que o método retorne `True`. O método utiliza um tipo de parâmetro Long Integer. Primeiro, ele é chamado com o valor 0 para permitir um estágio de inicialização (se necessário); em seguida, é chamado com os valores 1, 2, 3 e assim por diante, desde que retorne `True`.
 
-For security reasons, within a Web process, the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method can be called once just before the initialization stage (method execution with 0 as parameter). Se a autenticação for correta, a fase de inicialização prossegue.
+For security reasons, within a Web process, the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) database method can be called once just before the initialization stage (method execution with 0 as parameter). Se a autenticação for correta, a fase de inicialização prossegue.
 
 O seguinte exemplo de código:
 
@@ -575,7 +575,7 @@ Por exemplo, o seguinte código:
 
 Nesse caso, a tag `4DLOOP` funciona como em uma matriz: ela faz um loop para cada elemento da matriz referenciada pelo ponteiro. O elemento do array atual é aumentado cada vez que a porção de código é repetida.
 
-This syntax is useful when you pass an array pointer as a parameter to the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command.
+This syntax is useful when you pass an array pointer as a parameter to the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) command.
 
 Exemplo:
 
@@ -609,7 +609,7 @@ Podem ser mostradas as seguintes mensagens:
 
 A tag `4DSCRIPT` permite que você execute métodos 4D ao processar o modelo. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method (if it exists). Se retornar True, 4D executa o método.
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) database method (if it exists). Se retornar True, 4D executa o método.
 
 The method must return a text. Se a string começa com o caractere de código 1, ele é considerado HTML (o mesmo princípio é verdadeiro para a tag `4DHTML`).
 

@@ -16,7 +16,7 @@ title: Etiquetas
 
 :::note
 
-As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label.md) command.
+As etiquetas também podem ser criadas usando o [Editor de formulário](../FormEditor/formEditor.md). Use the Form editor to design specialized labels that include variables or take advantage of the drawing tools available in the Form editor and print them using the Label editor or the [`PRINT LABEL`](../commands-legacy/print-label) command.
 
 :::
 
@@ -27,7 +27,7 @@ Para abrir o editor de etiquetas:
 
 - In the Design environment, choose **Labels...** from the **Tools** menu or from the menu associated with the "Tools" button in the 4D tool bar.
   OU
-- Em uma aplicação, chame o comando [`PRINT LABEL`](../commands-legacy/print-label.md).
+- Em uma aplicação, chame o comando [`PRINT LABEL`](../commands-legacy/print-label).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -64,13 +64,13 @@ You use this area to design your label zone by placing and positioning all the i
   If you hold down the **Shift** key, they are separated by a carriage return. This lets you create, for example, address labels using several overlapping fields (Address1, Address2, etc.), without producing a blank row when an address requires only one field.
 - You can add a formula onto the label by selecting the **Formula** tool ![](../assets/en/Desktop/label-tool6.png) (or choosing **Tool>Formula** in the contextual menu) and drawing an area. O **editor de fórmulas** é então exibido:
   ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands/string.md):<br/>
+  Por exemplo, você pode aplicar um formato para um campo usando o comando [`String`](../commands/string):<br/>
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
 :::note
 
-Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Os métodos permitidos dependem das [configurações do projeto](../settings/security.md#options) e do comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md).
+Keep in mind that you can only enter methods that are "allowed" for the database in the Formula editor. Os métodos permitidos dependem das [configurações do projeto](../settings/security.md#options) e do comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods).
 
 :::
 
@@ -143,7 +143,7 @@ The Layout page contains controls for printing labels based on the requirements 
 - **Intervalos**: define a quantidade de espaço vertical e/ou horizontal entre as linhas e colunas das etiquetas.
 - **Método**: permite que você acione um método específico que será executado no momento da impressão. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
   To be eligible for label processing, a project method must comply with the following settings:
-  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md) command), otherwise it will not be displayed in the **Apply** menu.
+  - it must be "allowed" for the database (allowed methods depend on [project settings](../settings/security.md#options) and the [`SET ALLOWED METHODS`](../commands/set-allowed-methods) command), otherwise it will not be displayed in the **Apply** menu.
   - precisa ter a opção [Compartilhada por componentes e banco de dados host](../Project/project-method-properties.md#shared-by-components-and-host-database).
     Veja também [este exemplo](#printing-labels-using-forms-and-methods-example) abaixo.
 

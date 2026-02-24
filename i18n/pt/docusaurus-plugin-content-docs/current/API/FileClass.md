@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-Os objetos `File` são criados com o comando [`File`](../commands/file.md). Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando você executa o comando `File` para criar um arquivo, um objeto `File` válido é criado, mas nada é realmente armazenado no disco até que você chame a função [`file.create( )`](#create).
+Os objetos `File` são criados com o comando [`File`](../commands/file). Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando você executa o comando `File` para criar um arquivo, um objeto `File` válido é criado, mas nada é realmente armazenado no disco até que você chame a função [`file.create( )`](#create).
 
 ### Exemplo
 
@@ -71,9 +71,9 @@ Os objetos `File` suportam vários pathnames, incluindo a sintaxe `filesystems` 
 
 #### Descrição
 
-A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e retorna um novo objeto do tipo `4D.File`<!-- END REF -->. É idêntico ao comando [`File`](../commands/file.md) (atalho).
+A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e retorna um novo objeto do tipo `4D.File`<!-- END REF -->. É idêntico ao comando [`File`](../commands/file) (atalho).
 
-> Recomenda-se usar o comando de atalho [`File`](../commands/file.md) em vez de `4D.File.new()`.
+> Recomenda-se usar o comando de atalho [`File`](../commands/file) em vez de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 

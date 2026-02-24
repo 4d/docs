@@ -43,7 +43,7 @@ Puede declarar gestores de peticiones HTTP:
 WEB Server.start($settings.handlers) //definir reglas al inicio del servidor web
 ```
 
-Si se utiliza tanto un archivo **HTTPHandlers.json** como una llamada al comando [`WEB Server`](../commands/web-server.md) con un `$settings.handlers` válido, el comando `WEB Server` tiene prioridad.
+Si se utiliza tanto un archivo **HTTPHandlers.json** como una llamada al comando [`WEB Server`](../commands/web-server) con un `$settings.handlers` válido, el comando `WEB Server` tiene prioridad.
 
 El archivo json (o el objeto en el parámetro *settings*) contiene todos los modelos URL escuchados, los verbos manejados y el código a llamar.
 

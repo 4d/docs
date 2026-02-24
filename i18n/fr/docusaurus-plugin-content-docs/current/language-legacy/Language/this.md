@@ -175,7 +175,7 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 
 ## Voir également
 
-[Self](../commands-legacy/self.md)\
+[Self](../commands-legacy/self)\
 [Super](super.md)
 
 ## Propriétés

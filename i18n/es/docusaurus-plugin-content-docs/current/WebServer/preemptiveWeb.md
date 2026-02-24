@@ -44,7 +44,7 @@ Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere 
 
 - El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 
-- Básicamente cualquier código procesado por el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) en el contexto web, por ejemplo a través de páginas .shtml
+- Básicamente cualquier código procesado por el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) en el contexto web, por ejemplo a través de páginas .shtml
 
 - Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
 

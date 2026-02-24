@@ -68,7 +68,7 @@ Dans votre application, vous utilisez la convention suivante : au moment de l'af
 
 ## Voir aussi 
 
-[DIALOG](../commands/dialog.md)  
+[DIALOG](../commands/dialog)  
 [FORM SET INPUT](form-set-input.md)  
 [FORM SET OUTPUT](form-set-output.md)  
 [PRINT SELECTION](print-selection.md)  

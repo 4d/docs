@@ -5,9 +5,9 @@ title: WebFormItem
 
 `4D.WebFormItem` クラスを使用すると、Qodly webform コンポーネントの振る舞いを管理できるようになります。
 
-`4D.WebFormItem` オブジェクトは、[`Web Form`](../commands/web-form.md) コマンドによって返される [`4D.WebForm`](WebFormClass.md) オブジェクトのプロパティです。
+`4D.WebFormItem` オブジェクトは、[`Web Form`](../commands/web-form) コマンドによって返される [`4D.WebForm`](WebFormClass.md) オブジェクトのプロパティです。
 
-[`Web Form`](../commands/web-form.md) コマンドを呼び出すと、返された`4D.WebForm` プロキシオブジェクトには[**サーバー側参照**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) を持った、Webフォーム内のコンポーネントと同数の `4D.WebFormItems` が格納されます。
+[`Web Form`](../commands/web-form) コマンドを呼び出すと、返された`4D.WebForm` プロキシオブジェクトには[**サーバー側参照**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) を持った、Webフォーム内のコンポーネントと同数の `4D.WebFormItems` が格納されます。
 
 例えば、 `WebFormObject.myImage` は `myImage` をサーバー側参照として持っている画像コンポーネントを参照します。
 
@@ -126,8 +126,8 @@ exposed Function isHidden()
 
 ## 参照
 
-[Web Form](../commands/web-form.md)</br>
-[Web Event](../commands/web-event.md)</br>
+[Web Form](../commands/web-form)</br>
+[Web Event](../commands/web-event)</br>
 [WebForm class](WebFormClass.md)
 
 

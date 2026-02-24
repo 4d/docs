@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-`WebForm` クラスには、Qodly の Web ページコンポーネントを処理するための関数とプロパティが含まれています。 `4D.WebForm` オブジェクトは [`webForm`](../commands/web-form.md) コマンドによってインスタンス化されます。
+`WebForm` クラスには、Qodly の Web ページコンポーネントを処理するための関数とプロパティが含まれています。 `4D.WebForm` オブジェクトは [`webForm`](../commands/web-form) コマンドによってインスタンス化されます。
 
 <details><summary>履歴</summary>
 
@@ -237,6 +237,6 @@ myForm.setWarning("My warning message")
 
 ## 参照
 
-[Web Form](../commands/web-form.md)</br>
-[Web Event](../commands/web-event.md)</br>
+[Web Form](../commands/web-form)</br>
+[Web Event](../commands/web-event)</br>
 [WebFormItem class](../API/WebFormItemClass.md)

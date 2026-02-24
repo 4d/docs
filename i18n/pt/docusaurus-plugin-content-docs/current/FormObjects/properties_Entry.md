@@ -21,7 +21,7 @@ A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objet
 
 #### Comandos
 
-[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -38,7 +38,7 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo.
   Cuando el usuario modifica un atributo de estilo a través de este menú emergente, 4D genera el evento de formulario `On After Edit`.
 
-Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. É possível controlar o acesso ao menu de contexto por meio do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+Para un [Área Web](webArea_overview.md), el contenido del menú depende del motor de renderizado de la plataforma. É possível controlar o acesso ao menu de contexto por meio do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference).
 
 #### Gramática JSON
 
@@ -52,7 +52,7 @@ Para un [Área Web](webArea_overview.md), el contenido del menú depende del mot
 
 #### Comandos
 
-[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu.md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference)
 
 ---
 
@@ -76,11 +76,11 @@ Quando essa propriedade está desativada, todos os menus pop-up associados a uma
 
 #### Comandos
 
-[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable)
 
 #### Veja também
 
-[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order)
 
 ---
 
@@ -140,7 +140,7 @@ Aqui está uma tabela que explica cada uma das opções de filtro de entrada na 
 
 #### Comandos
 
-[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
+[`OBJECT Get filter`](../commands-legacy/object-get-filter) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter)
 
 ## Focável
 
@@ -166,7 +166,7 @@ Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el u
 
 #### Comandos
 
-[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable)
 
 ---
 
@@ -190,7 +190,7 @@ Por padrão, o objeto utiliza a disposição atual do teclado.
 
 #### Comandos
 
-[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout)
 
 ---
 
@@ -226,7 +226,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 #### Comandos
 
-[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline)
 
 ---
 
@@ -251,7 +251,7 @@ Você pode usar uma referência XLIFF no formulário ":xliff:resname" como um es
 
 Você só passa a referência no campo "Placeholder"; não é possível combinar uma referência com um texto estático.
 
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder) commands.
 
 #### Gramática JSON
 
@@ -269,7 +269,7 @@ Você só passa a referência no campo "Placeholder"; não é possível combinar
 
 #### Comandos
 
-[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder)
 
 ---
 
@@ -318,7 +318,7 @@ Para visualizar uma lista de todos os atalhos usados no ambiente Desenho 4D, con
 
 #### Comandos
 
-[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut)
 
 ---
 
@@ -342,5 +342,5 @@ Quando esta opção não está habilitada, os usuários devem primeiro seleciona
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

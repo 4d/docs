@@ -69,5 +69,5 @@ Para obter o tamanho da fonte, cor de fundo e estilo da borda da área seleciona
 ## Veja também
 
 [4D Write Pro Attributes](../4d-write-pro-attributes)  
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

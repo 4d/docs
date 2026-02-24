@@ -7,7 +7,7 @@ title: POP3Transporter
 
 ### POP3 Transporter オブジェクト
 
-POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
+POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-new-transporter) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-n
 
 #### 説明
 
-`4D.POP3Transporter.new()` 関数は、<!-- REF #4D.POP3Transporter.new().Summary -->新規の `4D.POP3Transporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`POP3 New transporter`](../commands/pop3-new-transporter.md) コマンドと同一です。
+`4D.POP3Transporter.new()` 関数は、<!-- REF #4D.POP3Transporter.new().Summary -->新規の `4D.POP3Transporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`POP3 New transporter`](../commands/pop3-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 

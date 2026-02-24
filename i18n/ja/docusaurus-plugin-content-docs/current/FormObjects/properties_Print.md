@@ -9,7 +9,7 @@ title: 印刷
 
 フォーム内において複数の可変長フレームを隣同士に配置することはできません。 非可変長フレームオブジェクトであれば、可変サイズで印刷されるオブジェクトのどちら側でも配置することができます。ただし、可変長フレームオブジェクトが最低でも横のオブジェクトより一行分長く、すべてのオブジェクトが上揃えで配置されていなければなりません。 この条件が遵守されない場合、可変長フレームオブジェクトの水平方向の部分ごとに、ほかのフィールドのコンテンツが繰り返されます。
 
-> [`Print object`](../commands-legacy/print-object.md) および [`Print form`](../commands/print-form.md) コマンドはこのプロパティをサポートしません。
+> [`Print object`](../commands-legacy/print-object) および [`Print form`](../commands/print-form) コマンドはこのプロパティをサポートしません。
 
 印刷オプションは次の通りです:
 
@@ -19,7 +19,7 @@ title: 印刷
 
 - **固定 (複数レコード)** (サブフォームのみ): サブフォームの初期サイズを維持しますが、4D はすべてのレコードが印刷されるまで複数回にわたってフォームを印刷します。
 
-> このプロパティは、[`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md) コマンドを使用することでプログラミングで設定することができます。
+> このプロパティは、[`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame) コマンドを使用することでプログラミングで設定することができます。
 
 #### JSON 文法
 
@@ -33,4 +33,4 @@ title: 印刷
 
 #### コマンド
 
-[`OBJECT GET PRINT VARIABLE FRAME`](../commands-legacy/object-get-print-variable-frame.md) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md)
+[`OBJECT GET PRINT VARIABLE FRAME`](../commands-legacy/object-get-print-variable-frame) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame)

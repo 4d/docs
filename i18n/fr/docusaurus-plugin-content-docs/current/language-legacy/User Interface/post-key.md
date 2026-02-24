@@ -64,7 +64,7 @@ Si vous passez le paramètre *process*, la frappe clavier est envoyée au proces
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number.md).
+Reportez-vous à l'exemple de la fonction [Process number](../commands/process-number).
 
 ## Voir aussi 
 

@@ -53,7 +53,7 @@ Las peticiones REST se detallan en la sección [Servidor REST](../REST/gettingSt
 
 ## Extensão dos parâmetros
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option) command.
 
 ## Modelos e URLs
 

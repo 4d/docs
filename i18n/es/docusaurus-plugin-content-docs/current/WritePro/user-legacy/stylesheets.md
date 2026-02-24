@@ -43,7 +43,7 @@ El comando [WP Get style sheets](../commands-legacy/wp-get-style-sheets) le perm
 Debido a que las hojas de estilo se almacenan como objetos, pueden importarse fácilmente en otros documentos 4D Write Pro o mantenerse cuando se exportan en múltiples formatos.
 
 - **Importar** - puede obtener todos los objetos de hoja de estilo de un documento 4D Write Pro designado y usarlos en un nuevo documento con el comando [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets).
-- **Exportar** - los comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) o [WP EXPORT VARIABLE](../commands/wp-export-variable.md) exportan sus documentos con hojas de estilo.
+- **Exportar** - los comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) o [WP EXPORT VARIABLE](../commands/wp-export-variable) exportan sus documentos con hojas de estilo.
 
 ## Atributos de hojas de estilo
 

@@ -79,7 +79,7 @@ Chaque objet de la collection `products` peut avoir les propriétés suivantes :
 
 | **Propriété** |                                                                                            | **Type**            | **Description**                                                                  | **Exemple**                                                                                                       |
 | ------------- | ------------------------------------------------------------------------------------------ | ------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| id            |                                                                                            | number              | Numéro de licence                                                                | Pour les valeurs disponibles, voir la commande [Is license available](../commands-legacy/is-license-available.md) |
+| id            |                                                                                            | number              | Numéro de licence                                                                | Pour les valeurs disponibles, voir la commande [Is license available](../commands-legacy/is-license-available) |
 | name          |                                                                                            | string              | Nom de la licence                                                                | "4D Write - 4D Write Pro"                                                                                         |
 | usedCount     |                                                                                            | number              | Nombre de connexions consommées                                                  | 8                                                                                                                 |
 | allowedCount  |                                                                                            | number              | Connexions totales autorisées pour le produit par rapport aux dates d'expiration | 15                                                                                                                |
@@ -135,9 +135,9 @@ Vous souhaitez obtenir des informations sur votre licence 4D Server courante :
 
 ## Voir également
 
-[CHANGE LICENSES](../commands-legacy/change-licenses.md)\
-[Is license available](../commands-legacy/is-license-available.md)\
-[WEB Get server info](../commands-legacy/web-get-server-info.md)
+[CHANGE LICENSES](../commands-legacy/change-licenses)\
+[Is license available](../commands-legacy/is-license-available)\
+[WEB Get server info](../commands-legacy/web-get-server-info)
 
 ## Propriétés
 

@@ -61,7 +61,7 @@ title: インターフェースページ
 
 メインアプリケーションスキームはデフォルトでフォームに適用されます。 その一方で、それを以下の方法で上書きすることもできます:
 
-- by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
+- by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme) command at the working session level;
 - 各フォームレベル (最優先レベル) では、[カラースキーム](../FormEditor/propertiesForm.html#カラースキーム) プロパティを使用できます。 **注記**: 印刷時には、フォームは常に "ライト" スキームを使用します。
 
 ### Windows 上でFluent UI を使用
