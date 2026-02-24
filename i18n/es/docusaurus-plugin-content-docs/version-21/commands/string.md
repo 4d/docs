@@ -83,7 +83,7 @@ El formato se especifica del mismo modo que se haría para una [entrada numéric
 | String(1/0)                                                      | "INF"                             | Número infinito positivo                           |
 | String(-1/0)                                                     | "-INF"                            | Número infinito negativo                           |
 
-(\*) El algoritmo para convertir valores reales en texto se basa en 13 dígitos significativos, ver [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
+(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 

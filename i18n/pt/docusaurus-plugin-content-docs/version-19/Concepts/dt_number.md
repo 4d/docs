@@ -5,7 +5,7 @@ title: Número (Real, Longint, Integer)
 
 Número é um termo genérico que significa:
 
-- Campo real, variável ou expressão. O intervalo para o tipo de dados Real é de ±1,7e±308 (13 dígitos significativos).
+- Campo real, variável ou expressão. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Campo Inteiro Longo, variável ou expressão. O intervalo para o tipo de dados Long Integer (4-byte Integer) é -2^31...(2^31)-1.
 - Campo inteiro, array ou expressão. O intervalo para o tipo de dados Integer (Inteiro 2 bytes) é -32.768...32.767(2^15...(2^25)-1).
 

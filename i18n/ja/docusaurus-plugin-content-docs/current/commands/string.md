@@ -83,7 +83,7 @@ displayed_sidebar: docs
 | String(1/0)                                                      | "INF"                             | 正の無限の数値                             |
 | String(-1/0)                                                     | "-INF"                            | 負の無限の数値                             |
 
-(\*) 実数をテキストへと変換するアルゴリズムは、有効数字13 桁に基づいて計算されています。詳細は[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) を参照してください。
+(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 
