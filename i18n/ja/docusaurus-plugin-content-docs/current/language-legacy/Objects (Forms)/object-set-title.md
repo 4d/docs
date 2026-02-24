@@ -80,7 +80,7 @@ displayed_sidebar: docs
  OBJECT SET TITLE(*;"button1";"Click here \\to print")
 ```
 
-![](../assets/en/commands/pict1242273.en.png)
+![](../../assets/en/commands/pict1242273.en.png)
 
 ## 参照 
 

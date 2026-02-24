@@ -80,7 +80,7 @@ Vous souhaitez insérer des libellés sur deux lignes :
  OBJECT SET TITLE(*;"bouton1";"Cliquez ici \\pour imprimer")
 ```
 
-![](../assets/en/commands/pict1242273.fr.png)
+![](../../assets/en/commands/pict1242273.fr.png)
 
 ## Voir aussi 
 

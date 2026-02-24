@@ -74,14 +74,14 @@ displayed_sidebar: docs
   // ArrCol5Style{3}:=Bold と同様の効果
 ```
 
-![](../assets/en/commands/pict1205512.fr.png)
+![](../../assets/en/commands/pict1205512.fr.png)
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
   // ArrGlobalStyle{3}:=Italic+Underline と同様の効果
 ```
 
-![](../assets/en/commands/pict1205514.fr.png)
+![](../../assets/en/commands/pict1205514.fr.png)
 
 2つ目のコマンドの後、3行目のセルは下線付きのイタリックになりましたが、5列目のセルだけは太字のままになっています(列スタイル配列の方がリストボックス配列より優先されるからです)。
 

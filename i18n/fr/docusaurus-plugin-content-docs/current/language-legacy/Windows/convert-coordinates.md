@@ -76,7 +76,7 @@ Vous souhaitez afficher un pop up menu à l'angle inférieur gauche de l'objet "
  RELEASE MENU($menu)
 ```
 
-![](../assets/en/commands/pict2678144.en.png)
+![](../../assets/en/commands/pict2678144.en.png)
 
 ## Exemple 2 
 

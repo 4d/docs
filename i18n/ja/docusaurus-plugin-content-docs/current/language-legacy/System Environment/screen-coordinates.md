@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 以下の画像は、画面エリア全体と、利用可能なエリアの違いを表しています:
 
-![](../assets/en/commands/pict4800387.en.png) 
+![](../../assets/en/commands/pict4800387.en.png) 
 
 **注**:
 

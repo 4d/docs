@@ -34,19 +34,19 @@ O objeto retornado contém as propriedades abaixo:
 | Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                   |
 | ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type             | Text          | Tipo de sessão: "remote", "storedProcedure", "standalone"                                                                                                                                                   |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor de [`Session.userName`](../API/SessionClass.md#username))                                                                                                              |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor de [`Session.userName`](../../API/SessionClass.md#username))                                                                                                              |
 | machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor. Sessão autônoma: nome da máquina |
 | systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                        |
 | IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                               |
 | hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                            |
 | creationDateTime | Date ISO 8601 | Data e hora de criação da sessão. Sessão autônoma: data e hora da inicialização do aplicativo                                                                                               |
 | state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                            |
-| ID               | Text          | UUID da sessão (o mesmo valor de [`Session.id`](../API/SessionClass.md#id))                                                                                                                              |
+| ID               | Text          | UUID da sessão (o mesmo valor de [`Session.id`](../../API/SessionClass.md#id))                                                                                                                              |
 | persistentID     | Text          | Sessões remotas: ID persistente da sessão                                                                                                                                                                   |
 
 :::note
 
-Este comando retorna a propriedade [`.info`](../API/SessionClass.md#info) da sessão *sessionID*. Para obter informações sobre a sessão atual, você pode chamar diretamente `Session.info`.
+Este comando retorna a propriedade [`.info`](../../API/SessionClass.md#info) da sessão *sessionID*. Para obter informações sobre a sessão atual, você pode chamar diretamente `Session.info`.
 
 :::
 
@@ -81,7 +81,7 @@ Aqui está um exemplo de objeto de saída:
 
 ## Veja também
 
-[`Session` class](../API/SessionClass.md)
+[`Session` class](../../API/SessionClass.md)
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)

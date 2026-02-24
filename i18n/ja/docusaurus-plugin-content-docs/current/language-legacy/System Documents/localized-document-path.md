@@ -52,7 +52,7 @@ displayed_sidebar: docs
 XMLやHTMLファイルを変換する目的で、"log.xsl"変換ファイルを使用したいとします。このファイルはカレント言語により異なるため、どの"log.xsl"ファイルを使用するか決定する必要があります。  
 Resources フォルダの中身は以下のようになっています:
 
-![](../assets/en/commands/pict162129.en.png)
+![](../../assets/en/commands/pict162129.en.png)
 
 カレント言語に適用する.xslファイルを決定するには、以下のコードを使用します:
 

@@ -51,7 +51,7 @@ Vous souhaitez convertir, modifier et afficher un formulaire classique.
 
 Le formulaire initial :
 
-![](../assets/en/commands/pict3977360.en.png)
+![](../../assets/en/commands/pict3977360.en.png)
 
   
 ```4d
@@ -66,7 +66,7 @@ Le formulaire initial :
 Si vous exécutez le code : 
 
   
-![](../assets/en/commands/pict3977362.fr.png)
+![](../../assets/en/commands/pict3977362.fr.png)
 
 ## Voir aussi 
 

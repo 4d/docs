@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 以下の図に、集合交差演算の処理結果を図で示します。塗りつぶした部分が結果のセットです。
 
-![](../assets/en/commands/pict32963.ja.png)
+![](../../assets/en/commands/pict32963.ja.png)
 
 *resultSet*はINTERSECTIONコマンドで作成されます。 *resultSet*と同じ名前のセット (*set1*と*set2*も含めて) が既に存在する場合は*resultSet*に置き換わります。*set1*と*set2*は同じテーブルに属していなければなりません。*resultSet*も*set1*と*set2*と同じテーブルに属します。*set1*と*set2*両方に同じカレントレコードが設定されている場合、そのカレントレコードは*resultSet*に保持されます。カレントレコードが異なる場合、*resultSet*はカレントレコードを保持しません。  
 

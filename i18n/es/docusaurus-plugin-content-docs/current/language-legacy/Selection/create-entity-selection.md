@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->crea y devuelve una nueva entity selection [modificable](../ORDA/entities.md#shareable-or-alterable-entity-selections) relativa a la dataclass correspondiente con la *dsTable* dada, de acuerdo con la selección actual de esta tabla<!-- END REF-->.
+El comando `Create entity selection` <!--REF #_command_.Create entity selection.Summary-->crea y devuelve una nueva entity selection [modificable](../../ORDA/entities.md#shareable-or-alterable-entity-selections) relativa a la dataclass correspondiente con la *dsTable* dada, de acuerdo con la selección actual de esta tabla<!-- END REF-->.
 
-Si la selección actual está ordenada, se crea una entity selection [ordenada](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) (se mantiene el orden de la selección actual). Si la selección actual no está ordenada, se crea una selección de entidades no ordenada.
+Si la selección actual está ordenada, se crea una entity selection [ordenada](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) (se mantiene el orden de la selección actual). Si la selección actual no está ordenada, se crea una selección de entidades no ordenada.
 
 Si *dsTable* no está expuesto en [`ds`](ds.md), se devuelve un error. Este comando no puede utilizarse con un datastore remoto.
 
@@ -29,7 +29,7 @@ En el parámetro opcional *settings*, puede pasar un objeto que contenga la sigu
 
 | Propiedad | Tipo | Descripción                                                                                                                              |
 | --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el [contexto de optimización](../ORDA/client-server-optimization.md) aplicado a la selección de entidades. |
+| context   | Text | Etiqueta para el [contexto de optimización](../../ORDA/client-server-optimization.md) aplicado a la selección de entidades. |
 
 ## Ejemplo
 
@@ -43,7 +43,7 @@ $employees:=Create entity selection([Employee])
 
 ## Ver también
 
-[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
+[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
 
 ## Propiedades
 

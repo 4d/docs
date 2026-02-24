@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](open-form-window.md) コマンドと一緒に呼び出されます:
 
-![](../assets/en/commands/pict3541609.en.png)
+![](../../assets/en/commands/pict3541609.en.png)
 
 表示や取得しなければならない情報が複雑で、[ALERT](../commands/alert)、 [CONFIRM](../commands/confirm) または [Request](../commands/request) などのコマンドで処理しきれない場合、**DIALOG** を代わりに使用して置き換えることができます。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 - *formData* 引数を使用する方法。 *formData* に対してローカル変数を使用することで、呼び出しコンテキストに関係なく、安全にフォームに引数を渡すことができます。 特に、同じフォームが同じプロセス内で他の場所から呼び出された場合、[Form](form.md).myProperty と呼び出すだけで、常にその特定の値にアクセスすることができます。 さらに、オブジェクトは参照によって渡されるため、ユーザーがプロパティの値をフォーム内で変更した場合、その値は自動的にオブジェクト自身内に保存されます。
 
-- [ユーザークラスをフォームに割り当てる](../FormEditor/properties_FormProperties.md#form-class)ことで、4D はフォームがロードされる際に自動的にこのクラスのオブジェクトをインスタンス化します。 オブジェクトプロパティおよび関数は[Form](form.md) から返されるオブジェクト内で自動的に利用可能になります。 例えば、`Form.myFunction()` と書くことができます。
+- [ユーザークラスをフォームに割り当てる](../../FormEditor/properties_FormProperties.md#form-class)ことで、4D はフォームがロードされる際に自動的にこのクラスのオブジェクトをインスタンス化します。 オブジェクトプロパティおよび関数は[Form](form.md) から返されるオブジェクト内で自動的に利用可能になります。 例えば、`Form.myFunction()` と書くことができます。
 
 :::note
 
@@ -87,13 +87,13 @@ displayed_sidebar: docs
 
 人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
 検証フォームにおいて、[Form](form.md) オブジェクトプロパティを変数へと割り当てているものとします:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 "Check children" ボタンの中身のコードは以下のようになります:
 
@@ -125,7 +125,7 @@ displayed_sidebar: docs
 
 フォームはそれぞれの子供についての情報を表示します:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 
@@ -141,7 +141,7 @@ displayed_sidebar: docs
 
 表示は以下のようになります:
 
-![](../assets/en/commands/pict3687439.en.png)
+![](../../assets/en/commands/pict3687439.en.png)
 
 ## 例題 4
 
@@ -159,7 +159,7 @@ displayed_sidebar: docs
 
 変更されたフォームが、新しいタイトル、ロゴ、そして境界線とともに表示されます:
 
-![](../assets/en/commands/pict3688356.en.png)
+![](../../assets/en/commands/pict3688356.en.png)
 
 ## システム変数およびセット
 

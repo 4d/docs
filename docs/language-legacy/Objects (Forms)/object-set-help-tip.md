@@ -52,7 +52,7 @@ When a help tip is already displayed, calling the **OBJECT SET HELP TIP** comman
 
 In this form, a help tip is displayed and changes dynamically when the mouse hovers over different parts of a picture button:
 
-![](../assets/en/commands/pict3351402.en.png)
+![](../../assets/en/commands/pict3351402.en.png)
 
 ```4d
   //"myFlag" object method
@@ -136,7 +136,7 @@ You have a list box, "Commands List", containing a list and you want to set a he
 
 The result is...
 
-![](../assets/en/commands/pict3529022.en.png)
+![](../../assets/en/commands/pict3529022.en.png)
 
 ## See also 
 

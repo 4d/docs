@@ -51,7 +51,7 @@ When you pass this parameter, the item designated by the *itemPos* parameter set
 
 Given the hierarchical list named *hList,* shown here in the Application environment:
 
-![](../assets/en/commands/pict22758.en.png)
+![](../../assets/en/commands/pict22758.en.png)
 
 After the execution of this code:
 
@@ -61,7 +61,7 @@ After the execution of this code:
 
 The last visible list item is selected:
 
-![](../assets/en/commands/pict22759.en.png)
+![](../../assets/en/commands/pict22759.en.png)
 
 After execution of the following lines of code:
 
@@ -78,7 +78,7 @@ After execution of the following lines of code:
 
 ... the 2nd, 3rd and 5th items of the hierarchical list are selected:
 
-![](../assets/en/commands/pict22760.en.png)
+![](../../assets/en/commands/pict22760.en.png)
 
 ## See also 
 

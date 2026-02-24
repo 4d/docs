@@ -51,7 +51,7 @@ Si trabaja con números de referencia de los elementos, asegúrese de construir 
 
 He aquí una lista llamada *hList* mostrada en el entorno Aplicación:
 
-![](../assets/en/commands/pict22613.es.png)
+![](../../assets/en/commands/pict22613.es.png)
 
 Los números de referencia de los elementos son los siguientes:
 

@@ -46,7 +46,7 @@ A variável sistema OK toma o valor 1 se comparam as duas imagens. Em caso de an
 
 No seguinte exemplo, comparamos duas imagens (pict1 e pict2) e mostramos a máscara resultante:
 
-![](../assets/en/commands/pict847365.fr.png)
+![](../../assets/en/commands/pict847365.fr.png)
 
 Este é o código do botão **Compare**:
 

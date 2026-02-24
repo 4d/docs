@@ -35,24 +35,24 @@ Cette commande produit le même effet qu'un clic sur la case de réduction d'une
 
 La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont redimensionnées à leur taille initiale.
 
-![](../assets/en/commands/pict39369.fr.png)
+![](../../assets/en/commands/pict39369.fr.png)
 
 Case de réduction sous Windows
 
 ### Sous Mac OS 
 
 La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre de premier plan du process courant est minimisée.   
-![](../assets/en/commands/pict39370.fr.png)
+![](../../assets/en/commands/pict39370.fr.png)
 
 Case de zoom/réduction sous Mac OS 
 
 Si la ou les fenêtres concernées n'ont pas été préalablement maximisées (manuellement ou à l'aide de [MAXIMIZE WINDOW](maximize-window.md)), la commande ne fait rien. De même, si le type de *fenêtre* ne comporte pas de case de zoom, la commande ne fait rien (pour plus d'informations sur ce point, reportez-vous à la section *Types de fenêtres (compatibilité)*). 
 
 **Note :** Ne confondez pas cette fonction avec la réduction de la fenêtre sous forme d'icône (Windows) ou dans le Dock (macOS), accessible par l'intermédiaire du bouton suivant :  
-![](../assets/en/commands/pict39371.fr.png)  
+![](../../assets/en/commands/pict39371.fr.png)  
 Windows
 
-![](../assets/en/commands/pict39372.fr.png)  
+![](../../assets/en/commands/pict39372.fr.png)  
 Mac OS
 
 ## Voir aussi 

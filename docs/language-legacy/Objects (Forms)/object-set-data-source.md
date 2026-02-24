@@ -35,7 +35,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 The data source is the field or variable whose value is represented by the object when the form is executed. In Design mode, the data source is defined in the Property list, usually through the Source and Source Field (fields) or Variable Name (variables) row: 
 
-![](../assets/en/commands/pict1208291.en.png)
+![](../../assets/en/commands/pict1208291.en.png)
 
 Except for list boxes (see below), all data sources of the form can be modified by this command. It is up to the developer to ensure the consistency of the changes made. 
 

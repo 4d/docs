@@ -37,7 +37,7 @@ The first step in this process consists in deleting the special automatic relati
 
 Let's look for example at the following converted structure: 
 
-![](../assets/en/commands/pict473713.en.png)
+![](../../assets/en/commands/pict473713.en.png)
 
 In 4D, the following code still works but it must be updated:
 

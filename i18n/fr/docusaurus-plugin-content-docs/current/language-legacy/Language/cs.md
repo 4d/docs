@@ -9,7 +9,7 @@ displayed_sidebar: docs
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
 | classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](../Concepts/classes.md#cs).
+Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](../../Concepts/classes.md#cs).
 
 ## Propriétés
 

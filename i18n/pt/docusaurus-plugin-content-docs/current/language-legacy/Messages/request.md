@@ -56,7 +56,7 @@ A linha:
 
 Mostrará a seguinte caixa de diálogo (em Windows):
 
-![](../assets/en/commands/pict4225119.en.png)
+![](../../assets/en/commands/pict4225119.en.png)
 
 ## Exemplo 2 
 
@@ -73,7 +73,7 @@ A linha:
 
 Mostrará a seguinte caixa de diálogo (em Windows):
 
-![](../assets/en/commands/pict4225137.en.png)
+![](../../assets/en/commands/pict4225137.en.png)
 
 ## Exemplo 3 
 
@@ -85,7 +85,7 @@ A linha:
 
 Mostrará a seguinte caixa de diálogo (em Windows):
 
-![](../assets/en/commands/pict4225146.en.png)
+![](../../assets/en/commands/pict4225146.en.png)
 
 ## Ver também 
 

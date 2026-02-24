@@ -85,7 +85,7 @@ Le paramètre alternatif *valeur* permet de définir le texte à insérer dans l
 
 L'illustration suivante précise la manière dont les paramètres *numColonne* et *numRupture* sont combinés dans un tableau croisé :
 
-![](../assets/en/commands/pict31186.fr.png)
+![](../../assets/en/commands/pict31186.fr.png)
 
 ### Types de données acceptés 
 

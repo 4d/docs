@@ -78,7 +78,7 @@ L'exemple suivant remplace la barre de menus courante par la barre de menus n° 
 
 Dans cet exemple complet, nous allons créer par programmation une barre comportant les menus Fichier et Edition suivants : 
 
-![](../assets/en/commands/pict17860.fr.png)
+![](../../assets/en/commands/pict17860.fr.png)
 
 ```4d
   //Méthode de création menu Fichier

@@ -75,7 +75,7 @@ displayed_sidebar: docs
 
 次の例題は、エクスプローラタイプのウィンドウの設定方法を示しています。以下のフォームはデザインモードで作成します:
 
-![](../assets/en/commands/pict21945.ja.png)
+![](../../assets/en/commands/pict21945.ja.png)
 
 フォームのサイズは “自動”です。
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
 
 ウィンドウの右の部分はオプションのクリックにより表示されたり隠されたりします。:
 
-![](../assets/en/commands/pict21946.ja.png)
+![](../../assets/en/commands/pict21946.ja.png)
 
 このボタンに関連付けられたメソッドは以下のようになります:
 

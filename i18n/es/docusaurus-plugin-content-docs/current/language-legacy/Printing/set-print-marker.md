@@ -72,7 +72,7 @@ Si pasa el parámetro opcional *\**, todos los marcadores ubicados debajo del ma
 
 Cuando el parámetro \* se utiliza, es posible posicionar el marcador *markNum* más allá de la posición inicial de los marcadores que le siguen, estos últimos marcadores se moverán simultáneamente.
 
-![](../assets/en/commands/pict28724.es.png)
+![](../../assets/en/commands/pict28724.es.png)
 
 **Notas:**  
   
@@ -85,12 +85,12 @@ Este ejemplo completo permite generar la impresión de un informe de tres column
   
 El formulario de salida utilizado para la impresión es el siguiente:
 
-![](../assets/en/commands/pict28725.es.png)
+![](../../assets/en/commands/pict28725.es.png)
 
 El evento de formulario On Printing Detail fue seleccionado para el formulario (recuerde que sin importar en que área se imprima, el comando [Print form](../commands/print-form.md "Print form") sólo genera este tipo de evento de formulario).   
 Para cada registro, la altura de la línea debe estar adaptada de acuerdo a los contenidos de la columna "Actores" o "Resumen" (columna tiene la mayoría del contenido). Este es el resultado deseado:
 
-![](../assets/en/commands/pict28726.es.png)
+![](../../assets/en/commands/pict28726.es.png)
 
 El método de proyecto de impresión es el siguiente:
 

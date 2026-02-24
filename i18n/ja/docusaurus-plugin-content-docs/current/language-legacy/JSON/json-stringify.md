@@ -98,9 +98,9 @@ displayed_sidebar: docs
 このフォーマティングを使った場合の利点はJSONがWebエリアに表示されれば一目瞭然です。
 
 * 標準フォーマティング:  
-![](../assets/en/commands/pict1205013.fr.png)
+![](../../assets/en/commands/pict1205013.fr.png)
 * 整形フォーマティング:  
-![](../assets/en/commands/pict1205011.fr.png)
+![](../../assets/en/commands/pict1205011.fr.png)
 
 ## 例題 4 
 

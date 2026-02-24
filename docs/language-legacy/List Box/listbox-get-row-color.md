@@ -54,7 +54,7 @@ In the *colorType* parameter, you can pass either the `lk background color`  or 
 
 Given the following list box:
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ```4d
  var $vtColor;$vtColor2;$vtColor3 : Text

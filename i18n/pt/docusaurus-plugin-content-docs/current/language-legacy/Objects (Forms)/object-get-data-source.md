@@ -39,7 +39,7 @@ Passando o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome 
 
 Dado um objeto combo box definido em um formulário:
 
-![](../assets/en/commands/pict1209738.pt.png)![](../assets/en/commands/pict1209740.pt.png)
+![](../../assets/en/commands/pict1209738.pt.png)![](../../assets/en/commands/pict1209740.pt.png)
 
 Executa o seguinte código:
 

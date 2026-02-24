@@ -54,7 +54,7 @@ Pour des raisons de cohérence, le cadre de référence utilisé par la commande
 
 Par exemple, examinez le schéma suivant, dans lequel les coordonnées de la colonne *Capital* sont symbolisées par un rectangle rouge :
 
-![](../assets/en/commands/pict1752174.en.png)
+![](../../assets/en/commands/pict1752174.en.png)
 
 Comme vous pouvez le voir dans la première image, la colonne est plus grande que la list box, donc ses coordonnées dépassent la limite basse de la list box, pied inclus. Dans la seconde image, la list box a défilé, et donc la colonne a également été déplacée "sous" les zones de la colonne *Language* et d'en-tête. Dans tous les cas, pour calculer la partie réellement visible de la colonne (représentée par la zone verte), vous devez soustraire les zones rouges. 
 
@@ -70,7 +70,7 @@ Vous souhaitez obtenir les coordonnées du rectangle formé par tous les objets 
 
 Pour les besoins de votre interface, vous souhaitez entourer d'un rectangle rouge la zone sur laquelle l'utilisateur a cliqué :
 
-![](../assets/en/commands/pict1740373.en.png)
+![](../../assets/en/commands/pict1740373.en.png)
 
 Dans la méthode objet de la list box, vous écrivez :
 
@@ -91,7 +91,7 @@ Dans la méthode objet de la list box, vous écrivez :
 
 La méthode retourne les coordonnées théoriques. Si la list box est redimensionnée, vous pourrez avoir besoin de calculer le détourage afin de savoir quelle partie est visible :
 
-![](../assets/en/commands/pict1740929.en.png)
+![](../../assets/en/commands/pict1740929.en.png)
 
 ## Voir aussi 
 

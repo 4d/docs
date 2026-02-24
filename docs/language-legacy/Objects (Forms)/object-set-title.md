@@ -80,7 +80,7 @@ You want to insert titles on two lines:
  OBJECT SET TITLE(*;"button1";"Click here \\to print")
 ```
 
-![](../assets/en/commands/pict1242273.en.png)
+![](../../assets/en/commands/pict1242273.en.png)
 
 ## See also 
 

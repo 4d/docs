@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 `ZIP Read archive` コマンドは、<!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
-> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブの中身を取り出すためには、[file.copyTo()](../API/Document.md#copyto) や [folder.copyTo()](../API/Directory.md#copyto)などのメソッドを使用する必要があります。
+> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブの中身を取り出すためには、[file.copyTo()](../../API/Document.md#copyto) や [folder.copyTo()](../../API/Directory.md#copyto)などのメソッドを使用する必要があります。
 
 *zipFile* 引数として、圧縮された ZIPアーカイブを参照している `4D.File` オブジェクトを渡します。 ターゲットのアーカイブファイルは `ZIP Read archive` が実行を終えるまで (全コンテンツ/参照が取得/解放されるまで) は開いた状態となり、その後自動的に閉じられます。
 
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **アーカイブオブジェクト**
 
-返されたオブジェクトは単一の[`root`](../API/ZipArchiveClass.md#root) プロパティだけを格納しており、その値は`4D.ZipFolder` オブジェクトです。 このフォルダーは ZIPアーカイブの全コンテンツを表します。
+返されたオブジェクトは単一の[`root`](../../API/ZipArchiveClass.md#root) プロパティだけを格納しており、その値は`4D.ZipFolder` オブジェクトです。 このフォルダーは ZIPアーカイブの全コンテンツを表します。
 
 ## 例題
 
@@ -81,9 +81,9 @@ root フォルダーから取り出します:
 
 ## 参照
 
-[ZipArchive Class](../API/ZipArchiveClass.md)
-[ZipFile Class](../API/ZipFileClass.md)
-[ZipFolder Class](../API/ZipFolderClass.md)
+[ZipArchive Class](../../API/ZipArchiveClass.md)
+[ZipFile Class](../../API/ZipFileClass.md)
+[ZipFolder Class](../../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
 ## プロパティ

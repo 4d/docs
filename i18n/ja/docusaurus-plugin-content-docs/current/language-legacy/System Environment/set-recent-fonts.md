@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 最近使用したフォントの中にフォントを追加したい場合を考えます。
 
-![](../assets/en/commands/pict1202029.en.png)
+![](../../assets/en/commands/pict1202029.en.png)
 
 以下のコードを実行します。
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 メニューの中身は以下の様になります。
 
-![](../assets/en/commands/pict1202031.en.png)
+![](../../assets/en/commands/pict1202031.en.png)
 
 ## 参照 
 

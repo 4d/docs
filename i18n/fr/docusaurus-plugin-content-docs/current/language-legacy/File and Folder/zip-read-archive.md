@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 La commande `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->récupère le contenu de *zipFile* et le renvoie sous forme d'objet `4D.ZipArchive`<!-- END REF -->.
 
-> Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. Pour extraire le contenu d'une archive, vous devez utiliser des méthodes telles que [file.copyTo()](../API/Document.md#copyto) ou [folder.copyTo()](../API/Directory.md#copyto).
+> Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. Pour extraire le contenu d'une archive, vous devez utiliser des méthodes telles que [file.copyTo()](../../API/Document.md#copyto) ou [folder.copyTo()](../../API/Directory.md#copyto).
 
 Passez un objet `4D.File` référençant l'archive ZIP compressée dans le paramètre *zipFile*. Le fichier d'archive cible est ouvert jusqu'à la fin de l'exécution de la commande `ZIP Read archive` et jusqu'à ce que tous les contenus/références soient extrait(e)s/publié(e)s ; il est ensuite fermé automatiquement.
 
@@ -37,7 +37,7 @@ Si le *zipFile* est protégé par un mot de passe, vous devez utiliser le param�
 
 **Objet archive**
 
-L'objet `4D.ZipArchive` retourné contient une seule propriété [`root`](../API/ZipArchiveClass.md#root) dont la valeur est un objet `4D.ZipFolder`. Ce dossier décrit le contenu de l'archive ZIP.
+L'objet `4D.ZipArchive` retourné contient une seule propriété [`root`](../../API/ZipArchiveClass.md#root) dont la valeur est un objet `4D.ZipFolder`. Ce dossier décrit le contenu de l'archive ZIP.
 
 ## Exemple
 
@@ -81,9 +81,9 @@ Pour extraire à partir du dossier root :
 
 ## Voir également
 
-[ZipArchive Class](../API/ZipArchiveClass.md)
-[ZipFile Class](../API/ZipFileClass.md)
-[ZipFolder Class](../API/ZipFolderClass.md)
+[ZipArchive Class](../../API/ZipArchiveClass.md)
+[ZipFile Class](../../API/ZipFileClass.md)
+[ZipFolder Class](../../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
 ## Propriétés

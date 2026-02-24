@@ -36,7 +36,7 @@ Todos los servidores Web disponibles son devueltos por el comando `WEB Server li
 
 > El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. Por otro lado, cada componente servidor web que se quiera utilizar debe ser instanciado utilizando el comando [`WEB Server`](web-server.md).
 
-Puede utilizar la propiedad [.name](../API/WebServerClass.md#name) del objeto servidor Web para identificar el proyecto o el componente al que está adjunto cada objeto servidor Web de la lista.
+Puede utilizar la propiedad [.name](../../API/WebServerClass.md#name) del objeto servidor Web para identificar el proyecto o el componente al que está adjunto cada objeto servidor Web de la lista.
 
 ## Ejemplo
 
@@ -54,7 +54,7 @@ Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 ## Ver también
 
 [Servidor WEB](web-server.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propiedades
 

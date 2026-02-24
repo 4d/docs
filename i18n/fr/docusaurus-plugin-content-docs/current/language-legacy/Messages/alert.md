@@ -49,7 +49,7 @@ L'exemple suivant appelle une boîte de dialogue d'alerte qui affiche des inform
 
 Voici la boîte de dialogue d'alerte affichée (sous Windows) par notre exemple :
 
-![](../assets/en/commands/pict4224938.fr.png)
+![](../../assets/en/commands/pict4224938.fr.png)
 
 ## Exemple 2 
 
@@ -61,7 +61,7 @@ Voici un autre exemple :
 
 Cette instruction affichera (sous Windows) la boîte de dialogue d'alerte suivante :
 
-![](../assets/en/commands/pict4224959.fr.png)
+![](../../assets/en/commands/pict4224959.fr.png)
 
 ## Exemple 3 
 
@@ -73,7 +73,7 @@ Voici un autre exemple :
 
 Ce code affiche la boîte de dialogue d'alerte suivante :
 
-![](../assets/en/commands/pict4224968.fr.png)
+![](../../assets/en/commands/pict4224968.fr.png)
 
 ## Voir aussi 
 

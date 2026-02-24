@@ -51,11 +51,11 @@ In the *value* parameter, you can pass one of the following constants:
 
 Display of values:
 
-![](../assets/en/commands/pict1216069.en.png)
+![](../../assets/en/commands/pict1216069.en.png)
 
 Display of expressions:
 
-![](../assets/en/commands/pict1216065.en.png)
+![](../../assets/en/commands/pict1216065.en.png)
 
 ## Example 
 

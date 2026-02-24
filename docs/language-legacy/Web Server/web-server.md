@@ -39,7 +39,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 |`Web server host database`|2|Web server of the host database of a component|
 |`Web server receiving request`|3|Web server that received the request (target Web server)|
 
-The **returned Web server object** contains the current values of the [Web server properties](../API/WebServerClass.md).
+The **returned Web server object** contains the current values of the [Web server properties](../../API/WebServerClass.md).
 
 ## Example  
 
@@ -58,7 +58,7 @@ From your component, you want to know if the Web server of the host database is 
 ## See also 
 
 [WEB Server list](web-server-list.md)  
-[webServer.stop()](../API/WebServerClass.md#stop)  
+[webServer.stop()](../../API/WebServerClass.md#stop)  
 
 ## Properties
 

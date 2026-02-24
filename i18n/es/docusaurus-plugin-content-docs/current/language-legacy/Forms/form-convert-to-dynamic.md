@@ -51,7 +51,7 @@ Desea convertir un formulario clásico, modificarlo y mostrarlo.
 
 El formulario original:
 
-![](../assets/en/commands/pict3977360.en.png)
+![](../../assets/en/commands/pict3977360.en.png)
 
 ```4d
  var $dynForm : Object
@@ -63,7 +63,7 @@ El formulario original:
 
 Si ejecuta el código:  
 
-![](../assets/en/commands/pict3977362.en.png)
+![](../../assets/en/commands/pict3977362.en.png)
 
 ## Ver también 
 

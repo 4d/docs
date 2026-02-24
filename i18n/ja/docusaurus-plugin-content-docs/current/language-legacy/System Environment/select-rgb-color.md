@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 | **Macintosh**                                | **Windows**                                 |
 | -------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43385.en.png) |
+| ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43385.en.png) |
 
 オプションの引数*defaultColor* を使用して、色を事前に選択できます。例えばこの引数を使用して、ユーザーが最後に設定した色をデフォルトで復元することができます。RGBのフォーマットカラーの値をこの引数に渡します ([OBJECT SET RGB COLORS](object-set-rgb-colors.md)コマンドの説明参照)。*SET RGB COLORS*テーマにある定数の一つを使用できます。  
 引数*defaultColor*を省略したり0を渡すと、ダイアログボックスが開いたときに黒色が選択されます。

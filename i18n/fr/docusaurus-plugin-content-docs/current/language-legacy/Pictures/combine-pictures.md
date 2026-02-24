@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->La commande **COMBINE PICTURES** permet de combiner les images *image1* et *image2* en mode *opérateur* pour en produire une troisième, *imageRésultat*.<!-- END REF--> L’image résultat est de type composé et conserve toutes les caractéristiques des images sources.
 
-**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
+**Note :** Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
 
 Passez dans *opérateur* le type de combinaison à appliquer. Trois types de combinaisons sont proposés, accessibles via des constantes placées dans le thème “*Transformation des images*” :
 
@@ -49,7 +49,7 @@ Si les paramètres facultatifs *décalHoriz* et *décalVert* sont utilisés, une
 
 Soient les images suivantes : 
 
-![](../assets/en/commands/pict27793.fr.png)
+![](../../assets/en/commands/pict27793.fr.png)
 
 ```4d
  COMBINE PICTURES(drapeau;monfond;Superimposition;monrond;50;30)
@@ -57,7 +57,7 @@ Soient les images suivantes :
 
 Résultat :
 
-![](../assets/en/commands/pict27794.fr.png)
+![](../../assets/en/commands/pict27794.fr.png)
 
 ## Voir aussi 
 

@@ -48,21 +48,21 @@ Aplique este comando a una lista mostrada en un formulario.
 Acá tenemos una lista llamada *hList* mostrada en el entorno Aplicación:
 
   
-![](../assets/en/commands/pict22362.es.png)
+![](../../assets/en/commands/pict22362.es.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // en este punto $vlNbItems vale 8
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems también vale 8
 ```
 
-![](../assets/en/commands/pict22363.es.png)
+![](../../assets/en/commands/pict22363.es.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // en este punto $vlNbItems vale 2
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems continúa valiendo 8
 ```
 
-![](../assets/en/commands/pict22364.es.png)
+![](../../assets/en/commands/pict22364.es.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // en este punto $vlNbItems vale 5

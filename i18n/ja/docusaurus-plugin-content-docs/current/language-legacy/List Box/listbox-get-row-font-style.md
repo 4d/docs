@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 以下に与えられたリストボックスについて考えます。 
 
-![](../assets/en/commands/pict1205514.fr.png)
+![](../../assets/en/commands/pict1205514.fr.png)
 
 ```4d
  vStyle:=LISTBOX Get row font style(*;"Col5";3)

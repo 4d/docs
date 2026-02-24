@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 以下の図はデザインモードにおける典型的なフォームです:
 
-![](../assets/en/commands/pict27188.ja.png)
+![](../../assets/en/commands/pict27188.ja.png)
 
 **Employer Information**グループボックスにあるオブジェクトは、（グループボックスを含めて）どれもオブジェクトの名前に “employer”という文字が入っています。**Currently Employed**チェックボックスをオンにすると、オブジェクトが表示されます。チェックボックスをオフにすると、オブジェクトが表示されなくなります。  
 以下は、チェックボックスのオブジェクトメソッドです。
@@ -61,11 +61,11 @@ displayed_sidebar: docs
 
 実行されるとフォームは以下のように表示されます:
 
-![](../assets/en/commands/pict27189.ja.png)
+![](../../assets/en/commands/pict27189.ja.png)
 
 または:
 
-![](../assets/en/commands/pict27190.ja.png)
+![](../../assets/en/commands/pict27190.ja.png)
 
 ## 参照 
 

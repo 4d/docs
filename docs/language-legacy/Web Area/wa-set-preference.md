@@ -49,7 +49,7 @@ For each preference, pass **True** in *value* to activate it and **False** to de
 
 :::note Compatibility
 
-Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. Passing **true** to the `WA enable URL drop` selector is ignored in this context. 
+Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../../FormEditor/forms.md#fluent-ui-rendering) is used. Passing **true** to the `WA enable URL drop` selector is ignored in this context. 
 
 :::
 

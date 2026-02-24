@@ -283,7 +283,7 @@ Você quer encontrar um campo que contém os atributos do array. Com os dois reg
 
  Este exemplo ilustra o uso da propriedade virtual "comprimento". Seu banco de dados tem um campo de objeto \[Customer\]full\_Data com os dados abaixo:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 Se quiser obter os registros para qualquer cliente que tenha duas ou mais crianças, pode escrever:
 

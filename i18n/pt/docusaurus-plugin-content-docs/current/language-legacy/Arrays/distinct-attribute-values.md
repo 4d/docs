@@ -47,7 +47,7 @@ Pode usar a propriedade virtual "comprimento" com este comando. Está automatica
 
 Se seu banco de dados contiver um campo objeto \[Customer\]full\_Data (indexado) com 12 registros:
 
-![](../assets/en/commands/pict2897927.en.png)
+![](../../assets/en/commands/pict2897927.en.png)
 
 Se executar este código:
 

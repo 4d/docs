@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 You pass the text of the item in *itemText*. You can pass a string or text expression of up to 2 billion characters. Starting with 4D v16 R4, if the item is associated with a standard action, you can pass the ak standard action title constant in *itemText* to automatically use the localized action name. For more information, please refer to the *Standard actions* section.
 
-You pass the unique reference number of the item (of the Longint type) in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section for more information about the *itemRef* parameter.
+You pass the unique reference number of the item (of the Longint type) in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the [*Hierarchical List form object*](../../FormObjects/list_overview.md) section for more information about the *itemRef* parameter.
 
 If you also want an item to have child items, pass a valid list reference to the child hierarchical list in *sublist*. In this case, you must also pass the *expanded* parameter. Pass **True** or **False** in this parameter so that the sublist is displayed expanded or collapsed respectively.
 
@@ -52,13 +52,13 @@ The list reference you pass in *sublist* must refer to an existing list. The exi
 
 Here is a partial view of a database structure:
 
-![](../assets/en/commands/pict334094.en.png)
+![](../../assets/en/commands/pict334094.en.png)
 
 The \[Departments\] and \[Employees\] tables contain the following records:
 
-![](../assets/en/commands/pict334096.en.png)
+![](../../assets/en/commands/pict334096.en.png)
 
-![](../assets/en/commands/pict334098.en.png)
+![](../../assets/en/commands/pict334098.en.png)
 
 You want to display a hierarchical list, named *hlList*, that shows the Departments, and for each Department, a child list that shows the Employees working in that Department. The object method of *hlList* is:
 
@@ -160,7 +160,7 @@ Therefore, we made the item reference numbers unique, not because we wanted uniq
 
 When the form is executed, the list will look like this:
 
-![](../assets/en/commands/pict334100.en.png)
+![](../../assets/en/commands/pict334100.en.png)
 
 **Note:** This example is useful for user interface purposes if you deal with a reasonably small number of records. Remember that lists are held in memory—do not build user interfaces with hierarchical lists containing millions of items.
 

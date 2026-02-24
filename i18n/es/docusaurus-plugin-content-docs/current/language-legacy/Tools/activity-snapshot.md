@@ -105,7 +105,7 @@ Este método, ejecutado en un proceso separado en 4D o 4D Server, ofrece una ins
 
 Obtiene arrays del tipo:
 
-![](../assets/en/commands/pict1213741.es.png)
+![](../../assets/en/commands/pict1213741.es.png)
 
 
 ## Propiedades

@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->The **Create deployment license** command creates an embedded license file in the Licenses folder of the *mergedApp* built application.<!-- END REF--> If the Licenses folder does not exist in the *mergedApp* folder, it is created by the command.
 
-In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license.
+In *mergedApp*, pass a [4D.Folder](../../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license.
 
 Depending on the second parameter, you [let 4D select automatically the license to use](#automatic-license-selection) for the target or [designate the license(s) to use](#designating-the-licenses-to-use).
 
 ### Automatic license selection
 
-If you pass the *autoLicenseTarget* parameter, you let 4D find and use the most appropriate license for the specified target. For more information on the automatic license selection, please refer to the [Build application](../Desktop/building.md#application-automatically-embedding-available-licenses) section.
+If you pass the *autoLicenseTarget* parameter, you let 4D find and use the most appropriate license for the specified target. For more information on the automatic license selection, please refer to the [Build application](../../Desktop/building.md#application-automatically-embedding-available-licenses) section.
 
 The following constants are supported in the *autoLicenseTarget* parameter:
 
@@ -51,7 +51,7 @@ If no valid license is found, an error is generated.
 
 ### Designating the license(s) to use
 
-In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
+In *license*, pass a [4D.File](../../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
 
 In the non-automatic mode, if the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications.
 
@@ -62,7 +62,7 @@ The command returns a *status* object containing the following properties:
 | **Propriedade**                                                                    | **Tipo**                                       | **Description**                                                                                                                   |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | success                                                                            | Parâmetros                                     | True if the license file has been generated                                                                                       |
-| file                                                                               | [4D.File](../API/FileClass.md) | The generated license file                                                                                                        |
+| file                                                                               | [4D.File](../../API/FileClass.md) | The generated license file                                                                                                        |
 | statusText                                                                         | Text                                           | Description of the error if any                                                                                                   |
 | errors                                                                             | Collection                                     | Collection of error objects                                                                                                       |
 | \[\].message | Text                                           | Mensagem de erro                                                                                                                  |

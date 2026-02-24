@@ -86,7 +86,7 @@ QR SET TOTALS DATA コマンドを使用し、特定のセルの詳細を設定�
 
 次の図は、クロステーブルモードでカラムとブレーク引数の組み合わせ方について示しています:
 
-![](../assets/en/commands/pict31186.ja.png)
+![](../../assets/en/commands/pict31186.ja.png)
 
 ### Supported Types of Data 
 

@@ -105,7 +105,7 @@ Este método, executado em um processo separado em 4D ou 4D Server, oferece uma 
 
 Obtém arrays do tipo:
 
-![](../assets/en/commands/pict1213741.en.png)
+![](../../assets/en/commands/pict1213741.en.png)
 
 
 ## Propriedades

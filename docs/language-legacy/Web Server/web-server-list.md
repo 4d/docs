@@ -36,7 +36,7 @@ All available Web servers are returned by the `WEB Server list` command, whether
 
 > The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](web-server.md) command.
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+You can use the [.name](../../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 ## Example  
 
@@ -54,7 +54,7 @@ We want to know how many running web servers are available:
 ## See also 
 
 [WEB Server](web-server.md)  
-[webServer.stop()](../API/WebServerClass.md#stop)  
+[webServer.stop()](../../API/WebServerClass.md#stop)  
 
 ## Properties
 

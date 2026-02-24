@@ -36,7 +36,7 @@ All available Web servers are returned by the `WEB Server list` command, whether
 
 > O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. Por outro lado, cada servidor Web de componentes que você deseja usar precisa ser instanciado usando o comando [`WEB Server`](web-server.md).
 
-You can use the [.name](../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+You can use the [.name](../../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
 ## Exemplo
 
@@ -54,7 +54,7 @@ Queremos saber quantos servidores rodando estão disponíveis:
 ## Veja também
 
 [WEB Server](web-server.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriedades
 

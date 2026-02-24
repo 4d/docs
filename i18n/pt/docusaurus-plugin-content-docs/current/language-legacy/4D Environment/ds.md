@@ -28,7 +28,7 @@ Você também pode obter uma referência em um datastore remoto aberto passando 
 
 Se nenhum datastore *localID* for encontrado, o comando retornará **Null**.
 
-Os objetos disponíveis no `cs.Datastore` são mapeados a partir do banco de dados de destino conforme as [regras gerais do ORDA](../ORDA/dsMapping.md#general-rules).
+Os objetos disponíveis no `cs.Datastore` são mapeados a partir do banco de dados de destino conforme as [regras gerais do ORDA](../../ORDA/dsMapping.md#general-rules).
 
 ## Exemplo 1
 

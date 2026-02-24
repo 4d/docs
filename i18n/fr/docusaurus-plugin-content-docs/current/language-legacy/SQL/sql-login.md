@@ -65,7 +65,7 @@ Dans ce cas, le paramètre *source* contient le nom de la source de données tel
 * **chaîne vide**  
 Syntaxe : ***""***  
 Dans ce cas la commande provoque l’affichage de la boîte de dialogue de connexion, permettant de désigner manuellement la source de données à laquelle se connecter :  
-![](../assets/en/commands/pict33536.fr.png)  
+![](../../assets/en/commands/pict33536.fr.png)  
 Cette boîte de dialogue comporte plusieurs pages. La page TCP/IP se compose des éléments suivants :  
    * Nom cible : ce menu est construit à l’aide de deux listes :  
          * la liste des bases ouvertes récemment en connexion directe. Le mécanisme de mise à jour de cette liste est identique à celui de l’application 4D, à la différence près que le dossier contenant les fichiers .4DLink est nommé "Favorites SQL vXX" au lieu de "Favorites vXX".  

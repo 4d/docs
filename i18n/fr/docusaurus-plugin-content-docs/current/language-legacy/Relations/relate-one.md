@@ -41,7 +41,7 @@ Généralement, plusieurs enregistrements sont trouvés lorsque *champN* se term
 
 Dans l'écran ci-dessous, un enregistrement est en train d'être saisi et une liste de sélection s'affiche au premier plan.
 
-![](../assets/en/commands/pict2287719.fr.png)
+![](../../assets/en/commands/pict2287719.fr.png)
 
 La commande suivante a fait apparaître la liste de sélection : 
 
@@ -61,11 +61,11 @@ Spécifier un champ dans *discriminant* est la même opération que celle qui co
 
 Dans l'exemple suivant, la table \[Factures\] est reliée à la table \[Clients\] par deux liens manuels. Un lien part du champ \[Factures\]AuNomDe et va vers le champ \[Clients\]Numéro, l'autre lien va de \[Factures\]ExpédierA à \[Clients\]Numéro.
 
-![](../assets/en/commands/pict2287721.fr.png)
+![](../../assets/en/commands/pict2287721.fr.png)
 
 Voici le formulaire de la table \[Factures\] affichant les informations "AuNomDe" et "ExpédierA".
 
-![](../assets/en/commands/pict2287723.fr.png)
+![](../../assets/en/commands/pict2287723.fr.png)
 
 Comme les deux liens pointent vers la même table, \[Clients\], l'information qu'ils récupèrent doit être affichée dans des variables. Si le formulaire contenait les champs de \[Clients\], seules les valeurs issues du second lien seraient affichées. 
 

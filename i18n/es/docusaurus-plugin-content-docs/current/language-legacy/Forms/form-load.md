@@ -32,8 +32,8 @@ Cuando el comando se ejecuta desde un componente, carga los formularios del comp
 
 ### formData
 
-Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../FormEditor/properties_FormProperties.md#form-class). Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md).
-El objeto de datos del formulario está disponible en el [evento de formulario `On Load`](../Events/onLoad.md).
+Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../../FormEditor/properties_FormProperties.md#form-class). Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md).
+El objeto de datos del formulario está disponible en el [evento de formulario `On Load`](../../Events/onLoad.md).
 
 Para obtener información detallada sobre el objeto de datos del formulario, consulte el comando [`DIALOG`](dialog.md).
 
@@ -43,7 +43,7 @@ Para poder ejecutar este comando, debe abrirse previamente un trabajo de impresi
 
 Si ya se ha cargado previamente un formulario de impresión (mediante una llamada previa al comando **FORM LOAD**), éste se cierra y se sustituye por *form*. Puede abrir y cerrar varios formularios proyecto en la misma sesión de impresión. El cambio del formulario de impresión mediante el comando **FORM LOAD** no genera saltos de página. Corresponde al desarrollador gestionar los saltos de página.
 
-Solo se ejecuta el [evento formulario `On Load`](../Events/onLoad.md) durante la apertura del formulario proyecto, así como todos los métodos objeto del formulario. Otros eventos de formulario son ignorados. El [evento formulario `On Unload`](../Events/onUnload.md) se ejecuta al final de la impresión.
+Solo se ejecuta el [evento formulario `On Load`](../../Events/onLoad.md) durante la apertura del formulario proyecto, así como todos los métodos objeto del formulario. Otros eventos de formulario son ignorados. El [evento formulario `On Unload`](../../Events/onUnload.md) se ejecuta al final de la impresión.
 
 Para preservar la coherencia gráfica de los formularios, se recomienda aplicar la propiedad de apariencia "Impresión" independientemente de la plataforma.
 
@@ -112,7 +112,7 @@ El siguiente ejemplo devuelve el número de objetos de un formulario JSON:
 
 el resultado mostrado es:
 
-![](../assets/en/commands/pict3688480.en.png)
+![](../../assets/en/commands/pict3688480.en.png)
 
 ## Ejemplo 5
 

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 :::info Compatibilité
 
-Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../API/HTTPRequestClass.md).
+Cette commande est maintenue pour des raisons de compatibilité uniquement. Il est maintenant recommandé d'utiliser la classe [`4D.HTTPRequest`](../../API/HTTPRequestClass.md).
 
 :::
 

@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 *childElemName* と *childElemValue* 引数が渡されると、子要素の名前と値がそれぞれ返されます。 
 
-![](../assets/en/commands/pict39972.ja.png)
+![](../../assets/en/commands/pict39972.ja.png)
 
 ## 例題 1 
 

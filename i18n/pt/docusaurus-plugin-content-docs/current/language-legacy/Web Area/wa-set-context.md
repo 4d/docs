@@ -23,7 +23,7 @@ The `WA SET CONTEXT` command <!--REF #_command_.WA SET CONTEXT.Summary--> define
 
 :::note
 
-The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
 
 :::
 

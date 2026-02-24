@@ -120,11 +120,11 @@ Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste 
 
 While entering the following record:
 
-![](../assets/en/commands/pict27501.en.png)
+![](../../assets/en/commands/pict27501.en.png)
 
 If you apply the method SET RECORD TO PASTEBOARD to the \[Employees\] table, the pasteboard will contain the text image of the record, as shown, and also the whole image of the record.
 
-![](../assets/en/commands/pict27502.en.png)
+![](../../assets/en/commands/pict27502.en.png)
 
 You can paste this image of the record to another record, using the method GET RECORD FROM PASTEBOARD, as follows:
 

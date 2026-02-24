@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 ## Description
 
-The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
+The `Create entity selection` command <!--REF #_command_.Create entity selection.Summary-->builds and returns a new, [alterable](../../ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table<!-- END REF-->.
 
-If the current selection is sorted, an [ordered](../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
+If the current selection is sorted, an [ordered](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
 If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. This command cannot be used with a Remote datastore.
 
@@ -30,7 +30,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 
 |Property|Type|Description|
 |---|---|---|
-|context|Text|Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection.|
+|context|Text|Label for the [optimization context](../../ORDA/client-server-optimization.md) applied to the entity selection.|
 
 
 ## Example
@@ -45,7 +45,7 @@ $employees:=Create entity selection([Employee])
 
 ## See also 
 
-[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../API/DataClassClass.md#newselection)
+[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
 
 ## Properties
 

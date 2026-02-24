@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 以下のXML構造において:
 
-![](../assets/en/commands/pict204122.fr.png)
+![](../../assets/en/commands/pict204122.fr.png)
 
 以下のコードは一番目の属性"N=1"を取り除きます: 
 

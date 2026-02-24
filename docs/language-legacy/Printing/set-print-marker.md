@@ -72,7 +72,7 @@ If you pass the optional *\** parameter, all the markers located below the marke
 
 When the \* parameter is used, it is possible to position the *markNum* marker beyond the initial position of the markers that follow it — these latter markers will be moved simultaneously.
 
-![](../assets/en/commands/pict28724.en.png)
+![](../../assets/en/commands/pict28724.en.png)
 
 **Notes:**  
 * This command modifies only the existing marker position. It does not allow the addition of markers. If you designate a marker that does not exist in the form, the command will not do anything.
@@ -83,12 +83,12 @@ When the \* parameter is used, it is possible to position the *markNum* marker b
 This complete example enables you to generate the printing of a three-column report, the height of each row being calculated on the fly according to the contents of the fields.   
 The output form used for printing is as follows:
 
-![](../assets/en/commands/pict28725.en.png)
+![](../../assets/en/commands/pict28725.en.png)
 
 The On Printing Detail form event was selected for the form (keep in mind that no matter what area is printed, the [Print form](../commands/print-form) command only generates this type of form event).   
 For each record, the row height must be adapted according to the contents of the "Actors" or "Summary" column (column having the most content). Here is the desired result:
 
-![](../assets/en/commands/pict28726.en.png)
+![](../../assets/en/commands/pict28726.en.png)
 
 The print project method is as follows:
 

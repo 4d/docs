@@ -36,7 +36,7 @@ If the *aTable* parameter is omitted, the command applies to the default table. 
 
 If you do not specify *queryArgument* or the *\** parameters, **QUERY** displays the Query editor for *aTable* (except when it is the last row of a multiple query, see example 2):
 
-![](../assets/en/commands/pict1581957.en.png)
+![](../../assets/en/commands/pict1581957.en.png)
 
 For more information about using the Query Editor, refer to the 4D Design Reference manual.
 

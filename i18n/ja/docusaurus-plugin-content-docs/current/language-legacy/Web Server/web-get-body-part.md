@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 この例題ではWebフォームからHTTPサーバーに画像を何枚かアップロードし、それらを返されたWebページ上に表示します。Webフォームは以下のように表示されます:
 
-![](../assets/en/commands/pict864606.en.png)
+![](../../assets/en/commands/pict864606.en.png)
 
 HTMLソースは以下の通りです:
 

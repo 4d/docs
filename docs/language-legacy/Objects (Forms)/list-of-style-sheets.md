@@ -43,7 +43,7 @@ This command can only be used in **binary databases**. In **project architecture
 
 In your application, the following style sheets are defined:
 
-![](../assets/en/commands/pict1206954.en.png)
+![](../../assets/en/commands/pict1206954.en.png)
 
 If you execute the following code:
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | classStore | Object | &#8592; | User class store for the project or component |
 
 
-The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).  
+The **cs** keyword is described in the [**Concept page for Classes**](../../Concepts/classes.md#cs).  
 
 
 ## Properties

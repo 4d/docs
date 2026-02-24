@@ -40,7 +40,7 @@ Si *ventana* ya está maximizada, el comando no hace nada.
 
 El tamaño de la ventana se incrementa para coincidir con el tamaño actual de la ventana de la aplicación (modo MDI) o la pantalla (modo SDI). La ventana maximizada pasa al primer plano. Si no pasa el parámetro *ventana*, el comando se aplica a todas las ventanas de la aplicación.
 
-![](../assets/en/commands/pict39344.es.png)
+![](../../assets/en/commands/pict39344.es.png)
 
 Zoom (botón para agrandar) bajo Windows
 
@@ -53,7 +53,7 @@ En casos en que se aplica el comando a una ventana cuyo tamaño está sujeto a r
 
 La ventana se agranda de manera que pueda mostrar la totalidad de su contenido. Si no pasa el parámeto *ventana*, el comando se aplica a la ventana del primer plano del proceso actual. 
 
-![](../assets/en/commands/pict39345.es.png)
+![](../../assets/en/commands/pict39345.es.png)
 
 Zoom en Mac OS
 
@@ -73,7 +73,7 @@ Usted quiere que su formulario se abra en una ventana "abierta totalmente". Para
 
 Este ejemplo ilustra cómo las restricciones de tamaño se manejan en Windows (modo MDI). El siguiente formulario tiene una restricción de tamaño (ancho máximo=400):
 
-![](../assets/en/commands/pict1476223.en.png)
+![](../../assets/en/commands/pict1476223.en.png)
 
 El método del botón contiene únicamente:
 
@@ -83,11 +83,11 @@ El método del botón contiene únicamente:
 
 En este contexto, si el usuario hace clic en el botón:
 
-![](../assets/en/commands/pict1476225.en.png)
+![](../../assets/en/commands/pict1476225.en.png)
 
 ... la ventana no se "maximiza"; sólo aumenta el alto:
 
-![](../assets/en/commands/pict1476363.en.png)
+![](../../assets/en/commands/pict1476363.en.png)
 
 ## Ver también 
 

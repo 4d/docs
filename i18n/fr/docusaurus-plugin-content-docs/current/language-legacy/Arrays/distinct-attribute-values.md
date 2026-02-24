@@ -49,7 +49,7 @@ Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cett
 
 Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements :
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 Si vous exécutez ce code :
 

@@ -23,7 +23,7 @@ La commande `WA Get context`<!--REF #_command_.WA Get context.Summary--> récup�
 
 :::note
 
-La commande n'est utilisable qu'avec une zone web intégrée où les paramètres [**Utiliser le moteur de rendu web intégré**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) et **Accéder aux méthodes 4D** sont fixés à `true`.
+La commande n'est utilisable qu'avec une zone web intégrée où les paramètres [**Utiliser le moteur de rendu web intégré**](../../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) et **Accéder aux méthodes 4D** sont fixés à `true`.
 
 :::
 

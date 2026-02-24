@@ -37,7 +37,7 @@ La première étape de ce processus consiste à supprimer le lien automatique sp
 
 Examinons par exemple la structure (convertie) suivante : 
 
-![](../assets/en/commands/pict473713.fr.png)
+![](../../assets/en/commands/pict473713.fr.png)
 
 Dans 4D, le code suivant continue de fonctionner mais il doit être mis à jour :
 

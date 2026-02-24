@@ -65,7 +65,7 @@ Ejecutar **SET TABLE TITLES** sin parámetros reiniciará toda la estructura vir
 * Usted desarrolla una aplicación 4D que piensa vender internacionalmente. Por lo tanto, usted debe tener en cuenta las necesidades de traducción. Para los editores estándar de 4D que aparecen en modo Aplicación y sus formularios que utilizan nombres dinámicos, puede utilizar una tabla *\[Traducciones\]* y algunos métodos de proyecto para crear y utilizar las traducciones para cada idioma.
 * En su base, cree la siguiente tabla:
 
-![](../assets/en/commands/pict36594.es.png)
+![](../../assets/en/commands/pict36594.es.png)
 
 * Luego, cree el método de proyecto TRADUCIR\_TABLAS\_Y\_CAMPOS. Este método analiza la estructura de su base en la tabla *\[Traducciones\]* y crea los registros correspondientes al idioma pasado como parámetro.
 

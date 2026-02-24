@@ -73,7 +73,7 @@ Soit une liste hiérarchique créée de la manière suivante :
 
 Cette liste peut être représentée ainsi :
 
-![](../assets/en/commands/pict1214045.fr.png)
+![](../../assets/en/commands/pict1214045.fr.png)
 
 Si vous exécutez l’instruction :
 

@@ -38,7 +38,7 @@ displayed_sidebar: docs
 * プロジェクトデータベースではmarkdownテキスト
 * バイナリーデータベースではスタイル付きテキスト
 
-![](../assets/en/commands/pict4968699.en.png)
+![](../../assets/en/commands/pict4968699.en.png)
 
 このドキュメンテーションは、トリガー、プロジェクトメソッド、フォームメソッド、データベースメソッド、クラスに対して生成することができます。
 

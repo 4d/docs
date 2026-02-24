@@ -37,7 +37,7 @@ Si vous omettez le paramètre *laTable*, la commande s'applique à la table par 
 
 Si vous ne passez ni le paramètre *leChamp*, ni les paramètres *\>*, *<* ou *\**, **ORDER BY** affiche la boîte de dialogue de l'Editeur de tri de 4D pour *laTable*. Cet éditeur est présenté ci-dessous :
 
-![](../assets/en/commands/pict2286854.fr.png)
+![](../../assets/en/commands/pict2286854.fr.png)
 
 Pour plus d'informations sur l'utilisation de cet éditeur, reportez-vous au manuel *Mode Développement* de 4D.  
 L'utilisateur construit le tri puis clique sur le bouton **Trier**. Si le tri est correctement effectué, la variable système OK prend la valeur *1*. Si l'utilisateur clique sur **Annuler**, aucun tri n'est effectué et la variable OK prend la valeur *0* (zéro).
@@ -170,7 +170,7 @@ L'exemple suivant effectue un tri indexé sur deux niveaux si un index composite
 Dans un formulaire sortie affiché en mode Application, vous souhaitez permettre aux utilisateurs de trier une colonne par ordre croissant en cliquant simplement sur son en-tête.   
 Si l'utilisateur maintient la touche **Maj** enfoncée et clique ensuite sur plusieurs autres colonnes, le tri est multicritères, c'est-à-dire que les colonnes sont triées sur autant de niveaux qu'il y a de clics : 
 
-![](../assets/en/commands/pict16003.fr.png)
+![](../../assets/en/commands/pict16003.fr.png)
 
 Chaque en-tête de colonne contient un bouton inversé dont la méthode est du type suivant :
 

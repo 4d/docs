@@ -47,7 +47,7 @@ Si vous appelez **Drop position** pendant le traitement d'un événement qui n'e
 
 Dans l’exemple suivant, une liste de sommes doit être ventilée par mois et par personne. L’opération s’effectue par glisser-déposer entre deux list box :
 
-![](../assets/en/commands/pict4091260.en.png)
+![](../../assets/en/commands/pict4091260.en.png)
 
 La méthode objet de la list box de droite (source) contient le code suivant :
 

@@ -41,19 +41,19 @@ displayed_sidebar: docs
  SHOW ON DISK("c:\\MyFolder\\MyFile.txt") //指定されたファイルを表示する。
 ```
 
-![](../assets/en/commands/pict35007.ja.png)
+![](../../assets/en/commands/pict35007.ja.png)
 
 ```4d
  SHOW ON DISK("c:\\MyFolder\\Folder2") //指定されたフォルダを表示する。
 ```
 
-![](../assets/en/commands/pict35008.ja.png)
+![](../../assets/en/commands/pict35008.ja.png)
 
 ```4d
  SHOW ON DISK("c:\\MyFolder\\Folder2";*) //指定されたフォルダの内容を表示する。
 ```
 
-![](../assets/en/commands/pict35009.ja.png)
+![](../../assets/en/commands/pict35009.ja.png)
 
 ## システム変数およびセット 
 

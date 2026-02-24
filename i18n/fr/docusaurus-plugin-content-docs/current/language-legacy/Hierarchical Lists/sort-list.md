@@ -40,7 +40,7 @@ Pour effectuer un tri dans l'ordre croissant, passez *\>* comme deuxième param�
 
 Voici la liste nommée *hList*, affichée ici en mode Application :
 
-![](../assets/en/commands/pict23037.fr.png)
+![](../../assets/en/commands/pict23037.fr.png)
 
 Après l'exécution du code suivant :
 
@@ -51,7 +51,7 @@ Après l'exécution du code suivant :
 
 ... la liste apparaît ainsi :
 
-![](../assets/en/commands/pict23038.fr.png)
+![](../../assets/en/commands/pict23038.fr.png)
 
 Après l'exécution du code suivant :
 
@@ -62,7 +62,7 @@ Après l'exécution du code suivant :
 
 ... la liste apparaît ainsi :
 
-![](../assets/en/commands/pict23039.fr.png)
+![](../../assets/en/commands/pict23039.fr.png)
 
 ## Voir aussi 
 

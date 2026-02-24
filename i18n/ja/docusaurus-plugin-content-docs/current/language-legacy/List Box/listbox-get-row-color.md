@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 以下のリストボックスについてカラーを取得する場合を考えます:
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ```4d
  var $vtColor;$vtColor2;$vtColor3 : Text

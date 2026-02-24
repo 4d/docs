@@ -40,7 +40,7 @@ Este comando permite por exemplo realizar as pesquisas no corpo das solicitaçõ
 
 Neste exemplo, uma petição simples é enviada ao servidor web de 4D e o conteúdo do campo HTTP corpo se visualiza no depurador. Este é o formulário enviado ao servidor web de 4D, assim como o código HTML correspondente:  
   
-![](../assets/en/commands/pict845028.pt.png) 
+![](../../assets/en/commands/pict845028.pt.png) 
 
 Este é o método Test4D2004:
 

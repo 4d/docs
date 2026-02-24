@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 以下のような配列型のリストボックスの中で、 "First Name" の列を複製して入力できるようにしたい場合:
 
-![](../assets/en/commands/pict1205357.en.png)
+![](../../assets/en/commands/pict1205357.en.png)
 
 ボタンのコードは以下のようになります:
 
@@ -89,7 +89,7 @@ displayed_sidebar: docs
 
 ボタンをクリックすると、リストボックスは以下のようになります:
 
-![](../assets/en/commands/pict1205359.en.png)
+![](../../assets/en/commands/pict1205359.en.png)
 
 ## 例題 2 
 

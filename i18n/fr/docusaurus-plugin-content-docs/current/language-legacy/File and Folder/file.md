@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
 | \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
-| Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
+| Résultat     | [4D.File](../../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
 
 <!-- END REF -->
 
 ## Description
 
-La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type [`4D.File`](../API/FileClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `File` <!-- REF #_command_.File.Summary -->crée et retourne un nouvel objet de type [`4D.File`](../../API/FileClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
 **File ( path { ; pathType } { ; \* })**
 
-Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA/myfile.txt").
+Dans le paramètre *path*, passez un chemin de fichier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA/myfile.txt").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `File`.
 
@@ -81,11 +81,11 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Voir également
 
-[classe `4D.File`](../API/FileClass.md)\
+[classe `4D.File`](../../API/FileClass.md)\
 [Folder](folder.md)\
-[Get 4D file](../commands-legacy/get-4d-file)\
-[Object to path](../commands-legacy/object-to-path)\
-[Path to object](../commands-legacy/path-to-object)
+[Get 4D file](../../commands-legacy/get-4d-file)\
+[Object to path](../../commands-legacy/object-to-path)\
+[Path to object](../../commands-legacy/path-to-object)
 
 ## Propriétés
 

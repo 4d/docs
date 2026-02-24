@@ -47,7 +47,7 @@ The optional *screenArea* parameter lets you specify if you want the coordinates
 
 The following images demonstrate the differences between the screen size and the work area:
 
-![](../assets/en/commands/pict4800387.en.png) 
+![](../../assets/en/commands/pict4800387.en.png) 
 
 **Notes**:
 

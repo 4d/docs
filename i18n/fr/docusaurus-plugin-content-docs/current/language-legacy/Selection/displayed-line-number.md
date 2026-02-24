@@ -51,7 +51,7 @@ Cet exemple permet d’appliquer une couleur alternée à un formulaire liste af
  End if
 ```
 
-![](../assets/en/commands/pict32598.fr.png)
+![](../../assets/en/commands/pict32598.fr.png)
 
 ## Voir aussi 
 

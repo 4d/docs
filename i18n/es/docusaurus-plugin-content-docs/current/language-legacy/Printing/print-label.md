@@ -36,7 +36,7 @@ Si no especifica el parámetro *documento*, **PRINT LABEL** imprime la selecció
 
 Si especifica el parámetro *documento*, **PRINT LABEL** le permite tener acceso al Asistente de etiquetas (mostrado a continuación) o imprimir un documento de etiquetas existente almacenado en el disco. Ver el ejemplo a continuación.
 
-![](../assets/en/commands/pict2980390.es.png)
+![](../../assets/en/commands/pict2980390.es.png)
 
 Por defecto, **PRINT LABEL** muestra la caja de diálogo de impresión. Si el usuario cancela una de las cajas de diálogo de impresión, el comando se cancela y las etiquetas no se imprimen.
 

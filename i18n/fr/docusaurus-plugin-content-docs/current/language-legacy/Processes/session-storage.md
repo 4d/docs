@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Summary-->La commande **Session storage** renvoie l'objet de stockage de la session dont l'identifiant unique a été passé dans le paramètre *id*.<!-- END REF--> 
 
-Dans *id*, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le stockage. Il est automatiquement attribué par 4D (4D Server ou, pour les sessions autonomes, 4D monoposte) et est stocké dans la propriété [**.id**](../API/SessionClass.md#id) de l'[objet session](../API/SessionClass.md). Si la session n'existe pas, la commande renvoie **Null**.
+Dans *id*, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le stockage. Il est automatiquement attribué par 4D (4D Server ou, pour les sessions autonomes, 4D monoposte) et est stocké dans la propriété [**.id**](../../API/SessionClass.md#id) de l'[objet session](../../API/SessionClass.md). Si la session n'existe pas, la commande renvoie **Null**.
 
 **Note:** Vous pouvez obtenir les identifiants de session à l'aide de la commande [Process activity](process-activity.md).
 
-L'objet renvoyé est la propriété [**.storage**](../API/SessionClass.md#storage) de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les process de la session.
+L'objet renvoyé est la propriété [**.storage**](../../API/SessionClass.md#storage) de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les process de la session.
 
 ## Exemple
 

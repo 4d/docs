@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 以下の図に、集合差異演算の処理結果を図で示します。塗りつぶした部分が結果のセットです。
 
-![](../assets/en/commands/pict32936.ja.png)
+![](../../assets/en/commands/pict32936.ja.png)
 
 *resultSet*は、DIFFERENCEコマンドで作成されます。*resultSet*と同じ名前のセット (*set*, *subtractSet*も含めて) が既に存在していた場合、*resultSet*に置き換えられます。*set*と*subtractSet*は同じテーブルに属していなければなりません。*resultSet*も*set*と*subtractSet*と同じテーブルに属します。
 

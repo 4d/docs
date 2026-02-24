@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 使用されるポイントは最初に見つかったポイントです。例えば以下のケースでは、Point Aが渡されると円のIDが返され、Point Bが渡されると四角のIDが渡されます:
 
-![](../assets/en/commands/pict41094.ja.png)
+![](../../assets/en/commands/pict41094.ja.png)
 
 座標が重ね合わせまたは複合オブジェクトに対応する場合、コマンドは必要に応じて親要素の間をさかのぼり、有効なID属性を持つ最初のオブジェクトのIDを返します。
 

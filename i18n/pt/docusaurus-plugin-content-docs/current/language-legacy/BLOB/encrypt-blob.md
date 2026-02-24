@@ -45,7 +45,7 @@ Além disso, se chave pública do destinatário opcional foi usada para criptogr
 
 **O princípio da criptografia com chaves públicas e privadas para a troca de mensagens entre duas pessoas, "Alice" e "Bob":** 
 
-![](../assets/en/commands/pict13081.pt.png)
+![](../../assets/en/commands/pict13081.pt.png)
 
 **Nota:** A cifra inclui uma funcionalidade de verificação a fim de evitar qualquer alteração de conteúdo BLOB (deliberadamente ou não). Por conseguinte, um BLOB criptografado não deve ser modificado, de outra forma não poderia ser decifrado.
 

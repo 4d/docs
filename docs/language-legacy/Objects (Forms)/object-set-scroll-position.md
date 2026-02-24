@@ -72,21 +72,21 @@ This example illustrates the difference in the way the command functions dependi
 
 If this statement is applied to a list box displayed in standard mode:
 
-![](../assets/en/commands/pict197489.en.png)
+![](../../assets/en/commands/pict197489.en.png)
 
 ... the rows and columns of the list box actually scroll:
 
-![](../assets/en/commands/pict197491.en.png)
+![](../../assets/en/commands/pict197491.en.png)
 
 On the other hand, if the same statement is applied to a list box displayed in hierarchical mode, the rows scroll but not the columns because the 2nd column is part of the hierarchy:
 
-![](../assets/en/commands/pict197493.en.png)
+![](../../assets/en/commands/pict197493.en.png)
 
 ## Example 2 
 
 You want to scoll a picture that is included in a form variable. This montage shows the visible part of the picture as well as the point to be displayed (166 pixels vertically and 200 pixels horizontally):
 
-![](../assets/en/commands/pict1513843.fr.png)
+![](../../assets/en/commands/pict1513843.fr.png)
 
 To scroll the visible part and display the red point at the origin of the picture variable, you can just write:
 
@@ -96,7 +96,7 @@ To scroll the visible part and display the red point at the origin of the pictur
 
 You then get the following result:
 
-![](../assets/en/commands/pict1513846.fr.png)
+![](../../assets/en/commands/pict1513846.fr.png)
 
 Make sure that you do not omit the second *\** parameter in this case, otherwise the picture will not scroll because the point defined is already displayed. 
 

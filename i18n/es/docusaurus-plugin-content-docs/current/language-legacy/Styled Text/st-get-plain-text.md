@@ -89,7 +89,7 @@ It is now   Go to the 4D site or Open a window
 
 Este texto se muestra:
 
-![](../assets/en/commands/pict1217332.en.png)
+![](../../assets/en/commands/pict1217332.en.png)
 
 Si ejecuta el siguiente código:
 

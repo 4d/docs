@@ -121,12 +121,12 @@ displayed_sidebar: docs
 
 以下のようなレコードを表示させた時:
 
-![](../assets/en/commands/pict27501.ja.png)
+![](../../assets/en/commands/pict27501.ja.png)
 
 SET RECORD TO PASTEBOARD メソッドを\[Employees\] テーブルに適用すると、ペーストボードには以下のようなレコードのテキストイメージとレコード全体のイメージが含まれます。
 
   
-![](../assets/en/commands/pict27502.ja.png)  
+![](../../assets/en/commands/pict27502.ja.png)  
   
 GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメージを他のレコードにペーストできます:  
   

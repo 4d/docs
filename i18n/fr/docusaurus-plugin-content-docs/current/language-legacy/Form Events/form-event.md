@@ -27,7 +27,7 @@ Chaque objet retourné contient les principales propriétés suivantes :
 | ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName    | text     | Nom de l'objet générant l'événement - Non inclus si l'événement est déclenché par le formulaire                                                                                        |
 | code          | integer  | Valeur numérique de l'événement formulaire.                                                                                                                            |
-| Description   | text     | Nom de l'événement de formulaire (par exemple "On After Edit"). Voir la section [**Evénements formulaire**](../Events/overview.md). |
+| Description   | text     | Nom de l'événement de formulaire (par exemple "On After Edit"). Voir la section [**Evénements formulaire**](../../Events/overview.md). |
 
 Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriétés suivantes :
 
@@ -37,8 +37,8 @@ Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriét
 
 L'objet événement peut contenir des propriétés supplémentaires, en fonction de l'objet pour lequel l'événement se produit. Pour les objets *eventObj* générés sur:
 
-- des objets de type list box ou colonne de list box, voir [cette section](../FormObjects/listbox_overview.md#supported-form-events).
-- des zones 4D View Pro, voir événement formumaire [on VP Ready](../Events/onVpReady.md).
+- des objets de type list box ou colonne de list box, voir [cette section](../../FormObjects/listbox_overview.md#supported-form-events).
+- des zones 4D View Pro, voir événement formumaire [on VP Ready](../../Events/onVpReady.md).
 
 **Note:** S'il n'y a pas d'événement courant, **FORM Event** renvoie un objet null.
 
@@ -56,7 +56,7 @@ Vous souhaitez gérer l'événement On Clicked sur un bouton :
 
 Si vous définissez le nom de l'objet colonne avec un véritable nom d'attribut d'une dataclass comme ceci :
 
-![](../assets/en/commands/pict4843820.en.png)
+![](../../assets/en/commands/pict4843820.en.png)
 
 Vous pouvez trier la colonne à l'aide de l'événement On Header Click :
 
@@ -74,7 +74,7 @@ Vous pouvez trier la colonne à l'aide de l'événement On Header Click :
 
 Vous voulez gérer On Display Details sur un objet list box avec une méthode définie dans la propriété *Meta info expression* :
 
-![](../assets/en/commands/pict4843812.en.png)
+![](../../assets/en/commands/pict4843812.en.png)
 
 La méthode *setColor* :
 
@@ -94,11 +94,11 @@ La méthode *setColor* :
 
 La zone de liste résultante lorsque des lignes sont sélectionnées :
 
-![](../assets/en/commands/pict4843808.en.png)
+![](../../assets/en/commands/pict4843808.en.png)
 
 ## Voir également
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [Form event code](form-event-code.md)
 
 ## Propriétés

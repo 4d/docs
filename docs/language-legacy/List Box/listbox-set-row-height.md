@@ -46,7 +46,7 @@ The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified i
 
 You want to change the height of a few rows in the following list box:
 
-![](../assets/en/commands/pict3071133.en.png)
+![](../../assets/en/commands/pict3071133.en.png)
 
 If you execute this code:
 
@@ -58,7 +58,7 @@ If you execute this code:
 
 ... you get the following result:
 
-![](../assets/en/commands/pict3071135.en.png)
+![](../../assets/en/commands/pict3071135.en.png)
 
 ## Example 2 
 

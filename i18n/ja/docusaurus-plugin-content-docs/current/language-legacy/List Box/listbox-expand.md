@@ -57,14 +57,14 @@ displayed_sidebar: docs
 
 以下の例題では、コマンドのさまざまな利用方法を示します。以下の配列がリストボックスに表示されているものとします:
 
-![](../assets/en/commands/pict175844.en.png)
+![](../../assets/en/commands/pict175844.en.png)
 
 ```4d
   //リストボックスのすべてのブレーク行とサブ行を展開する
  LISTBOX EXPAND(*;"MyListbox")
 ```
 
-![](../assets/en/commands/pict175849.en.png)
+![](../../assets/en/commands/pict175849.en.png)
 
 ```4d
   //選択された第一レベルのブレーク行を展開する
@@ -72,21 +72,21 @@ displayed_sidebar: docs
   //"Belgium"行が選択されている場合
 ```
 
-![](../assets/en/commands/pict175851.en.png)
+![](../../assets/en/commands/pict175851.en.png)
 
 ```4d
   //Brittanyブレーク行を展開し、サブレベルは展開しない
  LISTBOX EXPAND(*;"MyListbox";False;lk break row;1;2)
 ```
 
-![](../assets/en/commands/pict175853.en.png)
+![](../../assets/en/commands/pict175853.en.png)
 
 ```4d
   //一番目の列 (国) のみを展開
  LISTBOX EXPAND(*;"MyListbox";False;lk level;1)
 ```
 
-![](../assets/en/commands/pict175855.en.png)
+![](../../assets/en/commands/pict175855.en.png)
 
 ## 参照 
 

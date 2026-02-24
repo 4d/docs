@@ -56,11 +56,11 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
  End if
 ```
 
-![](../assets/en/API/formulaDialog.png)
+![](../../assets/en/API/formulaDialog.png)
 
 ...y ejecuta la fórmula:
 
-![](../assets/en/API/formulaAlert.png)
+![](../../assets/en/API/formulaAlert.png)
 
 ## Ver también
 

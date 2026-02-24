@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ウィンドウサイズが、例えば最大化される前の、元のサイズに設定されます。*window* 引数を渡さないと、コマンドはすべてのアプリケーションウィンドウに適用されます。
 
-![](../assets/en/commands/pict39369.ja.png)
+![](../../assets/en/commands/pict39369.ja.png)
 
   
 Windowsの縮小ボックス
@@ -44,7 +44,7 @@ Windowsの縮小ボックス
 
 ウィンドウサイズが、例えば最大化される前の、元のサイズに設定されます。*window* 引数を渡さないと、コマンドはカレントプロセスの最前面ウィンドウに適用されます。
 
-![](../assets/en/commands/pict39370.ja.png)
+![](../../assets/en/commands/pict39370.ja.png)
 
   
 Mac OS縮小/ズームボックス
@@ -53,10 +53,10 @@ Mac OS縮小/ズームボックス
 
 **Note:** この機能を、最小化と混同しないようにしてください。最小化は以下のボタンをクリックすると、ボタン (Windows) やDock (macOS) にウィンドウが最小化されます:
 
-![](../assets/en/commands/pict39371.ja.png)  
+![](../../assets/en/commands/pict39371.ja.png)  
 Windows
 
-![](../assets/en/commands/pict39372.ja.png)  
+![](../../assets/en/commands/pict39372.ja.png)  
 Mac OS
 
 ## 参照 

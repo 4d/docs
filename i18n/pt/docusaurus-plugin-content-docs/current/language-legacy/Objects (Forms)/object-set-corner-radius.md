@@ -48,7 +48,7 @@ No parâmetro *radio*, passe um novo valor do rádio em píxels a aplicar nas es
 
 Você têm os seguintes retângulos em seu formulário, chamados respectivamente "Rect1" e "Rect2":
 
-![](../assets/en/commands/pict1629574.en.png)
+![](../../assets/en/commands/pict1629574.en.png)
 
 Pode executar o seguinte código para mudar seu rádio:
 
@@ -56,13 +56,13 @@ Pode executar o seguinte código para mudar seu rádio:
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/commands/pict1629576.en.png)
+![](../../assets/en/commands/pict1629576.en.png)
 
 ## Exemplo 2 
 
 You have the following text area in your form, named "required-label":
 
-![](../assets/en/commands/pict6074566.en.png)
+![](../../assets/en/commands/pict6074566.en.png)
 
 If you execute the following code:
 
@@ -70,7 +70,7 @@ If you execute the following code:
  OBJECT SET CORNER RADIUS(*;"required-label";10)
 ```
 
-![](../assets/en/commands/pict6074568.en.png)
+![](../../assets/en/commands/pict6074568.en.png)
 
 Note that for text areas (as well as inputs), unlike for rectangles, the corner roundness is drawn outside the initial area of the object.
 

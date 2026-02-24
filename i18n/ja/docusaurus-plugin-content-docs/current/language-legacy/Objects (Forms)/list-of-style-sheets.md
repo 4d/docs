@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 アプリケーション内に、以下のようにスタイルシートが定義されていたとします:
 
-![](../assets/en/commands/pict1206954.en.png)
+![](../../assets/en/commands/pict1206954.en.png)
 
 下のコードを実行すると、戻り値の配列の要素には以下の様に値が格納されています:
 

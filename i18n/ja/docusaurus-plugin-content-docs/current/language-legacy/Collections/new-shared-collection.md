@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 ## 説明
 
-`New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary -->空の、あるいは値が入った新規共有コレクションを作成し、その参照を返します<!-- END REF -->。 コレクションは、[Collection クラス API](../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。
+`New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary -->空の、あるいは値が入った新規共有コレクションを作成し、その参照を返します<!-- END REF -->。 コレクションは、[Collection クラス API](../../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。
 
-このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます(ただし、[`push()`](../API/CollectionClass.md#push) や [`map()`](../API/CollectionClass.md#map) などの関数を使用して要素を追加する場合は、自動で内部的に *Use...End use* が使用されるため、必要ありません)。 ただし、属性の読み取りは*Use...End use* 構造を使用しなくても可能です。
+このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます(ただし、[`push()`](../../API/CollectionClass.md#push) や [`map()`](../../API/CollectionClass.md#map) などの関数を使用して要素を追加する場合は、自動で内部的に *Use...End use* が使用されるため、必要ありません)。 ただし、属性の読み取りは*Use...End use* 構造を使用しなくても可能です。
 
 :::info
 
-共有コレクションについての詳細は、[共有オブジェクトと共有コレクション](../Concepts/shared.md) のページを参照してください。
+共有コレクションについての詳細は、[共有オブジェクトと共有コレクション](../../Concepts/shared.md) のページを参照してください。
 
 :::
 

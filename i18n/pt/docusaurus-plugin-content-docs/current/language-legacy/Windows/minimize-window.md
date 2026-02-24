@@ -35,7 +35,7 @@ Este comando tem o mesmo efeito que um clique na caixa de redução da aplicaç�
 
 A janela retorna a seu tamanho inicial, ou seja, seu tamanho antes de ser maximizada. Se for omitido o parâmetro janela, todas as janelas da aplicação são redimensionadas a seu tamanho inicial.  
 
-![](../assets/en/commands/pict39369.en.png)
+![](../../assets/en/commands/pict39369.en.png)
 
 Caixa de redução em Windows
 
@@ -43,7 +43,7 @@ Caixa de redução em Windows
 
 O tamanho da janela é reduzido a seu tamanho inicial (seu tamanho antes de ser maximizada). Se o parâmetro janela for omitido, a janela do primeiro plano do processo atual retorna a seu tamanho inicial.  
 
-![](../assets/en/commands/pict39370.en.png)  
+![](../../assets/en/commands/pict39370.en.png)  
   
 Caixa de zoom/redução em Mac OS  
   
@@ -51,11 +51,11 @@ Se as janelas às quais forem aplicados este comando não forem maximizadas prev
   
 **Nota**: esta função não deve se confundir com a redução de uma janela a um botão (Windows) ou no Dock (macOS), a qual é gerada através de um clique no botão abaixo:
 
-![](../assets/en/commands/pict39371.en.png)  
+![](../../assets/en/commands/pict39371.en.png)  
 
 Windows
 
-![](../assets/en/commands/pict39372.en.png)  
+![](../../assets/en/commands/pict39372.en.png)  
 Mac OS
 
 ## Ver também 

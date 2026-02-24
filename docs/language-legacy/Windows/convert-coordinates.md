@@ -72,7 +72,7 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
  RELEASE MENU($menu)
 ```
 
-![](../assets/en/commands/pict2678144.en.png)
+![](../../assets/en/commands/pict2678144.en.png)
 
 ## Example 2 
 

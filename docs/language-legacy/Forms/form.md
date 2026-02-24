@@ -35,7 +35,7 @@ displayed_sidebar: docs
 If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
 
 - the *formData* object passed as parameter to this command, if any,
-- or, an instantiated object of the [user class associated to the form](../FormEditor/properties_FormProperties.md#form-class), if any,
+- or, an instantiated object of the [user class associated to the form](../../FormEditor/properties_FormProperties.md#form-class), if any,
 - or, an empty object. 
 
 ### Subform 
@@ -63,13 +63,13 @@ For more information, please refer to the *Page subforms* section.
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
 In the verification form, you have assigned some Form object properties to inputs:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Here is the code for the "Check children" button:
 
@@ -101,7 +101,7 @@ Here is the code for the "Check children" button:
 
 The form displays information for each child:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 

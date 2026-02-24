@@ -38,7 +38,7 @@ It contains:
 * markdown text in project databases
 * styled text in binary databases
 
-![](../assets/en/commands/pict4968699.en.png)
+![](../../assets/en/commands/pict4968699.en.png)
 
 This documentation can be generated for methods ot type triggers, project methods, form methods, database methods, and classes. 
 

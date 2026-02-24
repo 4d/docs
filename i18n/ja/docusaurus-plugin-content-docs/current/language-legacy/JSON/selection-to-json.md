@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 以下のセレクションを JSON 文字列で表現する場合:
 
-![](../assets/en/commands/pict1205203.en.png)
+![](../../assets/en/commands/pict1205203.en.png)
 
 1) \[Members\] テーブル内の全てのフィールドの値を取り出す場合:  
 

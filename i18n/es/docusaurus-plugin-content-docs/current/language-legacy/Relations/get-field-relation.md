@@ -59,11 +59,11 @@ Puede comparar los valores recibidos en los parámetros *uno* y *muchos* con las
 
 Dada la siguiente estructura:
 
-![](../assets/en/commands/pict31607.es.png)
+![](../../assets/en/commands/pict31607.es.png)
 
 Las propiedades de la relación que une el campo \[Empleados\]Empresa con el campo\[Empresas\]Nombre son las siguientes:
 
-![](../assets/en/commands/pict31608.es.png)
+![](../../assets/en/commands/pict31608.es.png)
 
 El siguiente código ilustra las diferentes posibilidades ofrecidas por los comandos GET FIELD RELATION, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) y [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) así como sus efectos:
 

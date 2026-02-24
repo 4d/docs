@@ -284,7 +284,7 @@ Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux en
 
 Cet exemple illustre l'utilisation de la propriété virtuelle "length". Votre base de données comporte un champ objet \[Customer\]full\_Data avec les données suivantes :
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 Vous souhaitez obtenir les enregistrements des clients qui ont deux enfants ou plus. Vous pouvez écrire :
 

@@ -281,7 +281,7 @@ Usted quiere buscar un campo que contiene los atributos array. Con los dos regis
 
 Este ejemplo ilustra el uso de la propiedad "longitud" virtual. Su base tiene un campo objeto \[Customer\]full\_Data con los siguientes datos:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 Usted quiere obtener los registros de los clientes que tienen dos o más hijos. Para ello, se puede escribir:
 

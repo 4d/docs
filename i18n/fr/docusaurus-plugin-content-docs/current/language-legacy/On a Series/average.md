@@ -79,7 +79,7 @@ Cet exemple vous permet d’obtenir la moyenne des 15 premières notes de la sé
 
 Votre table \[Customer\] comporte un champ objet "full\_Data" contenant les données suivantes :
 
-![](../assets/en/commands/pict2898119.en.png)
+![](../../assets/en/commands/pict2898119.en.png)
 
 Vous pouvez effectuer les calculs suivants :
 

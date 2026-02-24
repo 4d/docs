@@ -58,14 +58,14 @@ Si la selección o el list box no contienen una línea de ruptura o si todas las
 
 Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguientes arrays representados en un list box:
 
-![](../assets/en/commands/pict175844.en.png)
+![](../../assets/en/commands/pict175844.en.png)
 
 ```4d
   //Desplegar todas las líneas y sublíneas de ruptura del list box
  LISTBOX EXPAND(*;"MiListbox")
 ```
 
-![](../assets/en/commands/pict175849.en.png)
+![](../../assets/en/commands/pict175849.en.png)
 
 ```4d
   //Desplegar el primer nivel de líneas de ruptura de la selección
@@ -73,21 +73,21 @@ Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguient
   //Si la línea "Belgium" no fue seleccionada
 ```
 
-![](../assets/en/commands/pict175851.en.png)
+![](../../assets/en/commands/pict175851.en.png)
 
 ```4d
   //Desplegar la línea de ruptura Brittany sin recursividad
  LISTBOX EXPAND(*;"MiListbox";False;lk break row;1;2)
 ```
 
-![](../assets/en/commands/pict175853.en.png)
+![](../../assets/en/commands/pict175853.en.png)
 
 ```4d
   //Desplegar todas las primeras columnas (países) sin recursividad
  LISTBOX EXPAND(*;"MiListbox";False;lk level;1)
 ```
 
-![](../assets/en/commands/pict175855.en.png)
+![](../../assets/en/commands/pict175855.en.png)
 
 ## Ver también 
 

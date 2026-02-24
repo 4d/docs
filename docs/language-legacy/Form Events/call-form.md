@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CALL FORM.Summary-->The **CALL FORM** command executes the 4D code designated in *formula* with the optional *param*(s) in the context of a form displayed in a *window*, regardless of the process owning the window.<!-- END REF-->
 
-Just like in the [worker-based interprocess communication feature](../Develop/processes.md#worker-processes), a message box is associated with the window and can be used when the window displays a form (after the [On Load](../Events/onLoad.md) form event). **CALL FORM** encapsulates the formula and its arguments in a message that is posted in the window's message box. The form then executes the message in its own process. The calling process can be cooperative or preemptive, thus this feature allows a preemptive process to exchange information with forms.
+Just like in the [worker-based interprocess communication feature](../../Develop/processes.md#worker-processes), a message box is associated with the window and can be used when the window displays a form (after the [On Load](../../Events/onLoad.md) form event). **CALL FORM** encapsulates the formula and its arguments in a message that is posted in the window's message box. The form then executes the message in its own process. The calling process can be cooperative or preemptive, thus this feature allows a preemptive process to exchange information with forms.
 
 In *window*, you pass the window reference number of the window displaying the called form.
 
@@ -99,7 +99,7 @@ The *doAddMessage* method only adds a row in the list box in the "FormMessage" f
 
 At runtime, you get the following result:
 
-![](../assets/en/commands/pict2896824.en.png)
+![](../../assets/en/commands/pict2896824.en.png)
 
 You can then add other messages by executing the **CALL FORM** command again:
 
@@ -108,7 +108,7 @@ You can then add other messages by executing the **CALL FORM** command again:
  CALL FORM(formRef2;"doAddMessage";Current process name;"Hello 2 Form 2")
 ```
 
-![](../assets/en/commands/pict2896833.en.png)
+![](../../assets/en/commands/pict2896833.en.png)
 
 ## See also 
 

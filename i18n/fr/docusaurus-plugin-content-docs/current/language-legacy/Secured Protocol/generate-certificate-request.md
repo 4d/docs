@@ -60,7 +60,7 @@ L’ordre dans lequel les codes et les informations sont insérés dans les tabl
 
 Un formulaire “Demande de certificat” comporte les six champs nécessaires à l’établissement d’une demande de certificat standard. Le bouton **Générer** crée un document sur disque contenant la demande de certificat. Le document “Cléprivée.txt” contient la clé privée (générée à l’aide la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)) doit déjà être présent sur le disque.
 
-![](../assets/en/commands/pict32461.fr.png)
+![](../../assets/en/commands/pict32461.fr.png)
 
 ```4d
   // Méthode objet du bouton bGénérer

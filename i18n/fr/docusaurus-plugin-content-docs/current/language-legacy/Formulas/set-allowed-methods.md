@@ -23,8 +23,8 @@ displayed_sidebar: docs
 
 - L'éditeur de formules - les méthodes autorisées apparaissent à la fin de la liste des commandes par défaut et peuvent être utilisées dans les formules (voir la section *Description de l'éditeur de formules*).
 - L'éditeur d'étiquettes - les méthodes autorisées sont listées dans le menu **Appliquer** si elles sont également partagées avec le composant (voir la section *Description de l'éditeur d'étiquettes*).
-- Les formules insérées dans des zones de texte stylées ou dans des documents 4D Write Pro par la commande [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression) - les méthodes non autorisées sont automatiquement rejetées.
-- Les documents 4D View Pro - par défaut, si la commande [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) n'a jamais été appelée au cours de la session, les formules 4D View Pro n'acceptent que les méthodes définies par **SET ALLOWED METHODS**. Cependant, il est recommandé d'utiliser [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Voir [Déclarer une méthode autorisée](../ViewPro/formulas.md#declaring-allowed-methods).
+- Les formules insérées dans des zones de texte stylées ou dans des documents 4D Write Pro par la commande [ST INSERT EXPRESSION](../../commands-legacy/st-insert-expression) - les méthodes non autorisées sont automatiquement rejetées.
+- Les documents 4D View Pro - par défaut, si la commande [`VP SET ALLOWED METHODS`](../../ViewPro/commands/vp-set-allowed-methods.md) n'a jamais été appelée au cours de la session, les formules 4D View Pro n'acceptent que les méthodes définies par **SET ALLOWED METHODS**. Cependant, il est recommandé d'utiliser [`VP SET ALLOWED METHODS`](../../ViewPro/commands/vp-set-allowed-methods.md). Voir [Déclarer une méthode autorisée](../../ViewPro/formulas.md#declaring-allowed-methods).
 
 Par défaut, si vous n'utilisez pas la commande **SET ALLOWED METHODS**, aucune méthode n'est appelable (l'utilisation d'une méthode non autorisée dans une expression provoque une erreur).
 
@@ -34,7 +34,7 @@ Vous pouvez utiliser le caractère "joker" (@) dans les noms des méthodes pour 
 
 Si vous souhaitez que l'utilisateur puisse appeler des commandes 4D non autorisées par défaut ou des commandes de plug-in, vous devez utiliser des méthodes spécifiques chargées d’exécuter ces commandes.
 
-**Note :** Le filtrage des commandes et méthodes peut être désactivé pour tous les utilisateurs ou pour le Super_Utilisateur et l'Administrateur via [une option sur la page "Sécurité" des Paramètres](../settings/security.md#options). Si l'option "Désactivé pour tous" est sélectionnée, la commande **SET ALLOWED METHODS** n'aura aucun effet.
+**Note :** Le filtrage des commandes et méthodes peut être désactivé pour tous les utilisateurs ou pour le Super_Utilisateur et l'Administrateur via [une option sur la page "Sécurité" des Paramètres](../../settings/security.md#options). Si l'option "Désactivé pour tous" est sélectionnée, la commande **SET ALLOWED METHODS** n'aura aucun effet.
 
 :::warning
 
@@ -55,8 +55,8 @@ Cet exemple autorise la saisie de toutes les méthodes commençant par "formula"
 
 ## Voir également
 
-[EDIT FORMULA](../commands-legacy/edit-formula)\
-[GET ALLOWED METHODS](../commands-legacy/get-allowed-methods)
+[EDIT FORMULA](../../commands-legacy/edit-formula)\
+[GET ALLOWED METHODS](../../commands-legacy/get-allowed-methods)
 
 ## Propriétés
 

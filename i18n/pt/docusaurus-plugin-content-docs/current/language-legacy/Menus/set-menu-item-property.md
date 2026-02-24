@@ -46,7 +46,7 @@ No parâmetro *propriedade*, passe a propriedade cujo valor quer modificar e pas
 | -------------------------- | ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Access privileges          | Cadeia | 4D\_access\_group                | Ativar a opção "Iniciar um novo processo"<br/>0 = Não, 1 = Sim                                                                                                                                                          |  
 | Associated standard action | Cadeia | 4D\_standard\_action             | Associar uma ação padrão à linha de menu<br/>Ver as constantes de tema "*Ação estandarte*"                                                                                                                              |  
-| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção [**Execute without validating**](../Menus/properties.md#executar-sem-validar) (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
+| n/a                        | Cadeia | 4D\_execute\_without\_validating | Ativar a opção [**Execute without validating**](../../Menus/properties.md#executar-sem-validar) (para itens de menu associados à ações padrão). <br/>True=ativado, False (padrão)=desativado |  
 | Start a new process        | Cadeia | 4D\_start\_new\_process          | Ativar a opção "Start New Process"<br/>0 = Não, 1 = Sim   |  
     
 Considere que no caso da propriedade Associated Standard Action, pode passar no parâmetro valor um nome de ação padrão.

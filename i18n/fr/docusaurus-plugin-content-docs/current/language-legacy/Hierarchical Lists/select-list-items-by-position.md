@@ -50,7 +50,7 @@ Lorsque vous passez ce paramètre, l’élément désigné par le paramètre *po
 
 Soit une liste hiérarchique nommée *hList* affichée en mode Application :
 
-![](../assets/en/commands/pict22758.fr.png)
+![](../../assets/en/commands/pict22758.fr.png)
 
 Après l'exécution des lignes de code suivantes :
 
@@ -60,7 +60,7 @@ Après l'exécution des lignes de code suivantes :
 
 ... le dernier élément visible est sélectionné :
 
-![](../assets/en/commands/pict22759.fr.png)
+![](../../assets/en/commands/pict22759.fr.png)
 
 Après l'exécution des lignes de code suivantes :
 
@@ -77,7 +77,7 @@ Après l'exécution des lignes de code suivantes :
 
 ... les 2e, 3e et 5e éléments de la liste hiérarchique sont sélectionnés :
 
-![](../assets/en/commands/pict22760.fr.png)
+![](../../assets/en/commands/pict22760.fr.png)
 
 ## Voir aussi 
 

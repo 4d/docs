@@ -72,21 +72,21 @@ Este exemplo ilustra a diferença de funcionamento do comando com um list box mo
 
 Se esta instrução se aplica a um list box mostrado em modo padrão:
 
-![](../assets/en/commands/pict197489.en.png)
+![](../../assets/en/commands/pict197489.en.png)
 
 ... as línhas e as colunas da list box se deslocam:
 
-![](../assets/en/commands/pict197491.en.png)
+![](../../assets/en/commands/pict197491.en.png)
 
 Por outra parte, se a mesma instrução se aplica ao list box mostrado em modo hierárquico, as línhas se deslocam mas não as colunas porque a segunda coluna faz parte da hierarquia:
 
-![](../assets/en/commands/pict197493.en.png)
+![](../../assets/en/commands/pict197493.en.png)
 
 ## Exemplo 2 
 
 Você quer se deslocar por uma imagem que é incluída em uma variável de formulário. Esta montagem mostra a parte visível da imagem, assim como o ponto a mostrar (166 pixels verticalmente e 200 pixels horizontalmente):
 
-![](../assets/en/commands/pict1513843.fr.png)
+![](../../assets/en/commands/pict1513843.fr.png)
 
 Para se deslocar pela parte visível e mostrar o ponto vermelho a origem da variável imagem, pode escrever: 
 
@@ -96,7 +96,7 @@ Para se deslocar pela parte visível e mostrar o ponto vermelho a origem da vari
 
 A continuação, se obtém o seguinte resultado: 
 
-![](../assets/en/commands/pict1513846.fr.png)
+![](../../assets/en/commands/pict1513846.fr.png)
 
 Tenha a certeza de não omitir o segundo parâmetro *\** neste caso, caso contrário a imagem não será deslocada porque o ponto definido já é mostrado.
 

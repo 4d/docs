@@ -131,7 +131,7 @@ After this project method is added to your application, you can use it as follow
 
 Let’s examine the following part of a form:
 
-![](../assets/en/commands/pict21523.en.png)
+![](../../assets/en/commands/pict21523.en.png)
 
 It is composed of the following objects: an enterable area *vsLookup*, a non-enterable area *vsMessage*, and a scrollable area *asLookup*. While entering characters in *vsLookup*, the method for that object performs a query on a \[US Zip Codes\] table, allowing the user to find US cities by typing only the first characters of the city names. 
 
@@ -171,7 +171,7 @@ The *vsLookup* object method is listed here:
 
 Here is the form being executed:
 
-![](../assets/en/commands/pict21524.en.png)
+![](../../assets/en/commands/pict21524.en.png)
 
 Using the interprocess communication capabilities of 4D, you can similarily build user interfaces in which Lookup features are provided in floating windows that communicate with processes in which records are listed or edited.
 

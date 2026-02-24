@@ -57,7 +57,7 @@ The following example processes a selection of records and calls MESSAGE to info
 
 The following window appears and disappears at each MESSAGE call:
 
-![](../assets/en/commands/pict25453.en.png)
+![](../../assets/en/commands/pict25453.en.png)
 
 ## Example 2 
 
@@ -75,7 +75,7 @@ In order to avoid this "blinking" window, you can display the messages in a wind
 
 This provides the following result (shown here on Windows):
 
-![](../assets/en/commands/pict25454.en.png)
+![](../../assets/en/commands/pict25454.en.png)
 
 ## Example 3 
 
@@ -93,7 +93,7 @@ Adding a carriage return makes a better presentation:
 
 This provides the following result (shown here on Windows):
 
-![](../assets/en/commands/pict25455.en.png)
+![](../../assets/en/commands/pict25455.en.png)
 
 ## Example 4 
 
@@ -117,7 +117,7 @@ Using [GOTO XY](goto-xy.md) and writing some additional lines:
 
 This provides the following result (shown here on Windows):
 
-![](../assets/en/commands/pict25456.en.png)
+![](../../assets/en/commands/pict25456.en.png)
 
 ## See also 
 

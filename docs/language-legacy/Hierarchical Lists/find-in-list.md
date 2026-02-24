@@ -55,7 +55,7 @@ If no item corresponds to the *value* searched for, the function returns 0 and t
 
 Given the following hierarchical list:
 
-![](../assets/en/commands/pict22420.en.png)
+![](../../assets/en/commands/pict22420.en.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"P@";1;$arrPos)

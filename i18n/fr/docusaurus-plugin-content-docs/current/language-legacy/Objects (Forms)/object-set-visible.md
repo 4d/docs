@@ -40,7 +40,7 @@ Si vous passez la valeur **VRAI** dans le paramètre *visible*, le ou les objet(
 
 Voici un formulaire tel qu'il apparaît en mode Développement :
 
-![](../assets/en/commands/pict27188.fr.png)
+![](../../assets/en/commands/pict27188.fr.png)
 
 Les objets dans la zone de groupe **Employer Information** ont tous un nom qui contient l'expression “employer” (y compris la zone de groupe). Lorsque l'option **Currently Employed** est cochée, les objets doivent être visibles, lorsqu'elle est désélectionnée les objets doivent être invisibles. Voici la méthode projet de la case à cocher :
 
@@ -60,11 +60,11 @@ Les objets dans la zone de groupe **Employer Information** ont tous un nom qui c
 
 En exécution, le formulaire apparaîtra ainsi :
 
-![](../assets/en/commands/pict27189.fr.png)
+![](../../assets/en/commands/pict27189.fr.png)
 
 ou ainsi :
 
-![](../assets/en/commands/pict27190.fr.png)
+![](../../assets/en/commands/pict27190.fr.png)
 
 ## Voir aussi 
 

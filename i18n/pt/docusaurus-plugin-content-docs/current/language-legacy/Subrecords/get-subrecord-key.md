@@ -37,7 +37,7 @@ El primer paso en este proceso consiste en eliminar las relaciones automáticas 
 
 Veamos por ejemplo la siguiente estructura convertida: 
 
-![](../assets/en/commands/pict473713.pt.png)
+![](../../assets/en/commands/pict473713.pt.png)
 
 En 4D, el siguiente código aún funciona, pero debe actualizarse:
 

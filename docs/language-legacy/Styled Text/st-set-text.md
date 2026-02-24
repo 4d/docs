@@ -76,11 +76,11 @@ You want to replace the styled text selected by the user with the contents of a 
 
 Here is the selected text:
 
-![](../assets/en/commands/pict579068.en.png)
+![](../../assets/en/commands/pict579068.en.png)
 
 The following contents are stored in the field:
 
-![](../assets/en/commands/pict579073.en.png)
+![](../../assets/en/commands/pict579073.en.png)
 
 After executing this code:
 
@@ -92,7 +92,7 @@ After executing this code:
 
 The field and its contents are as follows:
 
-![](../assets/en/commands/pict579075.en.png) ![](../assets/en/commands/pict579077.en.png)
+![](../../assets/en/commands/pict579075.en.png) ![](../../assets/en/commands/pict579077.en.png)
 
 ## Example 2 
 

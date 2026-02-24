@@ -59,7 +59,7 @@ Cuando aparece un mensaje de ayuda, llamando al comando **OBJECT SET HELP TIP** 
 
 En este formulario, un mensaje de ayuda se visualiza y cambia dinámicamente cuando el ratón pasa sobre diferentes partes de un botón de imagen:
 
-![](../assets/en/commands/pict3351402.en.png)
+![](../../assets/en/commands/pict3351402.en.png)
 
 ```4d
   //Método objeto "myFlag"
@@ -143,7 +143,7 @@ Usted tiene un list box, "Commands List", que contiene una lista y desea definir
 
 El resultado es...
 
-![](../assets/en/commands/pict3529022.en.png)
+![](../../assets/en/commands/pict3529022.en.png)
 
 ## Ver también 
 

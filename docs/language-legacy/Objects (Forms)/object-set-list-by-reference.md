@@ -106,7 +106,7 @@ You want to remove the list associations:
 
 This example illustrates the difference in how the command works when applied to a pop-up menu associated with a text array or one associated with a text variable. There are two pop-up menus in a form:
 
-![](../assets/en/commands/pict1207955.en.png)
+![](../../assets/en/commands/pict1207955.en.png)
 
 The contents of these pop-up menus is set using the *<>vColor* list (containing color values). The following code is executed when the form is loaded:
 
@@ -119,7 +119,7 @@ The contents of these pop-up menus is set using the *<>vColor* list (containing 
 
 During execution, both menus propose the same values:
 
-![](../assets/en/commands/pict1207957.en.png)  
+![](../../assets/en/commands/pict1207957.en.png)  
 (*Montage showing contents of menus simultaneously*)
 
 Then you run the following code, for example by means of a button:
@@ -131,7 +131,7 @@ Then you run the following code, for example by means of a button:
 
 Only the menu associated with the Text field is updated (by means of the dynamic reference):
 
-![](../assets/en/commands/pict1207959.en.png)
+![](../../assets/en/commands/pict1207959.en.png)
 
 In order to update the list associated with the pop-up managed by array, you need to call the **OBJECT SET LIST BY REFERENCE** command again to copy the contents of the list.
 

@@ -65,7 +65,7 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
  OBJECT SET LIST BY REFERENCE(*;"popup";Choice list;$myList)
 ```
 
-![](../assets/en/commands/pict3372004.en.png)
+![](../../assets/en/commands/pict3372004.en.png)
 
 ## See also 
 

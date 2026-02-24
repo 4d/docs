@@ -40,10 +40,10 @@ displayed_sidebar: docs
 オプションの引数*message*を指定すると、ダイアログボックス内に表示されます。以下の例では "Select a destination folder" を表示しています。
 
 **Windows**  
-![](../assets/en/commands/pict3881936.en.png)
+![](../../assets/en/commands/pict3881936.en.png)
 
 **macOS** 
-![](../assets/en/commands/pict3881985.en.png)
+![](../../assets/en/commands/pict3881985.en.png)
 
  引数*defaultPath*を使用して、フォルダ選択ダイアログボックスにあるデフォルトフォルダの場所を表示します。3タイプの値をこの引数に渡します:  
 * カレントプラットフォームのシンタックスを使用している有効なフォルダのパス名。
@@ -72,9 +72,9 @@ displayed_sidebar: docs
 
 **Note:** macOSでは、ダイアログボックス内でフォルダの名前を選択しているかどうかで、返ってくるパスは違うものになる場合があります。
 
-![](../assets/en/commands/pict34878.en.png)
+![](../../assets/en/commands/pict34878.en.png)
 
-![](../assets/en/commands/pict34878.ja.png)
+![](../../assets/en/commands/pict34878.ja.png)
 
 **4D Server:** この関数は、クライアントワークステーションに接続されているボリュームを見ることができるようにするものです。ストアードプロシージャからこの関数を呼び出すことはできません。
 

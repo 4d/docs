@@ -267,7 +267,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
+This example formats a date variable and a time variable using [customized formats](../../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -314,7 +314,7 @@ This example formats a date variable and a time variable using [customized forma
  OBJECT SET FORMAT(*;"Header1";vIcon+";"+vPos)
 ```
 
-![](../assets/en/commands/pict2878245.en.png)
+![](../../assets/en/commands/pict2878245.en.png)
 
 ## 例題 7 
 

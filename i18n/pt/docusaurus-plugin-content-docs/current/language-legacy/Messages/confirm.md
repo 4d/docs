@@ -56,7 +56,7 @@ A linha:
 
 Mostrará a caixa de diálogo de confirmação a seguir (em Windows):
 
-![](../assets/en/commands/pict4225029.en.png)
+![](../../assets/en/commands/pict4225029.en.png)
 
 ## Exemplo 2 
 
@@ -68,7 +68,7 @@ A linha:
 
 Mostrará a seguinte caixa de diálogo de confirmação (em Windows):
 
-![](../assets/en/commands/pict4225038.en.png)
+![](../../assets/en/commands/pict4225038.en.png)
 
 ## Exemplo 3 
 
@@ -84,7 +84,7 @@ Imagine que você esteja desenvolvendo uma aplicação 4D para o mercado interna
 
 Mostrará a seguinte caixa de diálogo de confirmação:
 
-![](../assets/en/commands/pict4225048.en.png)
+![](../../assets/en/commands/pict4225048.en.png)
 
 **Nota:** Para saber mais sobre a localização do banco de dados xliff, consulte a seção *Apêndice B: arquitetura XLIFF*.
 
@@ -99,7 +99,7 @@ A linha:
 
 Mostrará a seguinte caixa de diálogo de confirmação (em Macintosh):
 
-![](../assets/en/commands/pict4225058.en.png)
+![](../../assets/en/commands/pict4225058.en.png)
 
 ## Ver também 
 

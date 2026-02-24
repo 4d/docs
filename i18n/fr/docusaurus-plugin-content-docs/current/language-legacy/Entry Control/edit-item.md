@@ -63,7 +63,7 @@ Le code suivant pourrait être la méthode d’un bouton permettant d’insérer
  EDIT ITEM(*;"MaListe")
 ```
 
-![](../assets/en/commands/pict21419.fr.png)
+![](../../assets/en/commands/pict21419.fr.png)
 
 ## Exemple 2 
 
@@ -77,7 +77,7 @@ Soient deux colonnes d’une list box dont les noms de variables associées sont
  EDIT ITEM(Tableau2;$vlNumLigne)
 ```
 
-![](../assets/en/commands/pict21420.fr.png)
+![](../../assets/en/commands/pict21420.fr.png)
 
 ## Voir aussi 
 

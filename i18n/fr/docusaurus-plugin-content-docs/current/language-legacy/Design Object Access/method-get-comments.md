@@ -38,7 +38,7 @@ Elle contient :
 * du texte markdown dans les bases projet
 * du texte stylé dans les bases binaires
 
-![](../assets/en/commands/pict4968699.en.png)
+![](../../assets/en/commands/pict4968699.en.png)
 
 Cette documentation peut être générée pour des méthodes de type triggers, méthodes projet, méthodes formulaire, méthodes base ou les classes.
 

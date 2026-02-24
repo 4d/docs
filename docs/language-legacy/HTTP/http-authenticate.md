@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 :::info Compatibility
 
-This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../../API/HTTPRequestClass.md).
 
 :::
 

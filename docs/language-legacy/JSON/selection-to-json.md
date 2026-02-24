@@ -52,7 +52,7 @@ This command supports Object type fields: the data of these fields is automatica
 
 You want to create a JSON string representing this selection:
 
-![](../assets/en/commands/pict1205203.en.png)
+![](../../assets/en/commands/pict1205203.en.png)
 
 1) You want to include the values of all the fields of the \[Members\] table:  
 

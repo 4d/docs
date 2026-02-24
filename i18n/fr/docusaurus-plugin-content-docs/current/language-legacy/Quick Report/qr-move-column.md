@@ -39,7 +39,7 @@ Les deux paramètres *numColonne* et *nouvPosition* doivent être des numéros d
 
 Vous avez conçu l'état suivant :
 
-![](../assets/en/commands/pict2569470.fr.png)
+![](../../assets/en/commands/pict2569470.fr.png)
 
 Si vous exécutez :
 
@@ -49,7 +49,7 @@ Si vous exécutez :
 
 Vous obtenez :
 
-![](../assets/en/commands/pict2569472.fr.png)
+![](../../assets/en/commands/pict2569472.fr.png)
 
 
 ## Propriétés

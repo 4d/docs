@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 :::info Compatibilidad
 
-Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../../API/HTTPRequestClass.md).
 
 :::
 
@@ -50,7 +50,7 @@ Si la carpeta especificada no existe en la ubicación definida, o si la ruta de 
 
 ## Certificados SSL 
 
-Como se describe en [esta página](../Admin/tls.md), los certificados SSL gestionados por 4D 4D deben estar en **PEM format**. Si su proveedor de certificados (por ejemplo, [startssl](https://www.startssl.com/)) le envía un certificado que está en un formato binario como .crt, .pfx o .p12 (el formato también depende de su navegador), tiene que convertirlo al formato PEM para utilizarlo. Hay sitios web como *sslshopper* donde puede hacer esta conversión en línea.
+Como se describe en [esta página](../../Admin/tls.md), los certificados SSL gestionados por 4D 4D deben estar en **PEM format**. Si su proveedor de certificados (por ejemplo, [startssl](https://www.startssl.com/)) le envía un certificado que está en un formato binario como .crt, .pfx o .p12 (el formato también depende de su navegador), tiene que convertirlo al formato PEM para utilizarlo. Hay sitios web como *sslshopper* donde puede hacer esta conversión en línea.
 
 ## Ejemplo 
 

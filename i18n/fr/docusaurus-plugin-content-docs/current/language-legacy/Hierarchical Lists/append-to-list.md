@@ -52,13 +52,13 @@ La référence de la liste que vous passez dans *sous\_Liste* doit être une lis
 
 Voici une vue partielle de la structure d'une base :
 
-![](../assets/en/commands/pict334094.fr.png)
+![](../../assets/en/commands/pict334094.fr.png)
 
 Les tables \[Départements\] et \[Employés\] contiennent les enregistrements suivants :
 
-![](../assets/en/commands/pict334096.fr.png)
+![](../../assets/en/commands/pict334096.fr.png)
 
-![](../assets/en/commands/pict334098.fr.png)
+![](../../assets/en/commands/pict334098.fr.png)
 
 Vous voulez utiliser une liste hiérarchique, appelée *hlList*, qui affiche les départements, et pour chaque département, une sous-liste contenant les employés travaillant dans ce département. La méthode objet de *hlList* est la suivante:
 
@@ -151,7 +151,7 @@ C'est pourquoi nous avons choisi des numéros de référence d'éléments unique
 
 Dans le formulaire en exécution, la liste apparaîtra ainsi :
 
-![](../assets/en/commands/pict334100.fr.png)
+![](../../assets/en/commands/pict334100.fr.png)
 
 **Note :** Cet exemple est utile dans le cadre de la gestion de l'interface utilisateur, si vous manipulez un nombre limité d'enregistrements. Souvenez-vous que les listes sont conservées en mémoire ; donc, ne construisez pas d'interfaces utilisateur exploitant des listes hiérarchiques comportant des millions d'éléments.
 

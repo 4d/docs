@@ -54,7 +54,7 @@ Para mantener la coherencia, el marco de referencia utilizado es el mismo cuando
 
 Por ejemplo, considere el siguiente gráfico, donde las coordenadas de la columna *Capital* están simbolizadas por un rectángulo rojo:
 
-![](../assets/en/commands/pict1752174.en.png)
+![](../../assets/en/commands/pict1752174.en.png)
 
 Como se puede ver en la primera imagen, la columna es más grande que el listbox, por lo que sus coordenadas van más allá del límite inferior del listbox, incluyendo el pie de página. En la segunda imagen, el listbox se ha desplazado, por lo que la columna también se ha movido "bajo" la columna *Language* y el área de encabezado. En cualquier caso, con el fin de calcular la parte visible real (área verde), es necesario sustraer las áreas rojas.
 
@@ -70,7 +70,7 @@ Asumamos que quiere obtener las coordenadas de un rectángulo formado por todos 
 
 Para las necesidades de su interfaz, usted desea rodear el área en la que el usuario hizo clic con un rectángulo rojo:
 
-![](../assets/en/commands/pict1740373.en.png)
+![](../../assets/en/commands/pict1740373.en.png)
 
 En el método objeto del listbox, puede escribir:
 
@@ -91,7 +91,7 @@ En el método objeto del listbox, puede escribir:
 
 El método devuelve las coordenadas teóricas. Si el listbox es redimensionado, puede necesitar calcular el recorte para saber qué parte es visible:
 
-![](../assets/en/commands/pict1740929.en.png)
+![](../../assets/en/commands/pict1740929.en.png)
 
 ## Ver también 
 

@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 アプリケーションモードで以下のように表示される階層リスト*hList*があります:
 
-![](../assets/en/commands/pict22758.en.png)
+![](../../assets/en/commands/pict22758.en.png)
 
 以下のコードを実行すると: 
 
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 表示されているリスト項目の最後の項目が選択されます:
 
-![](../assets/en/commands/pict22759.en.png)
+![](../../assets/en/commands/pict22759.en.png)
 
 以下のコードを実行すると: 
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 .. 2,3,5番目の項目が選択されます: 
 
-![](../assets/en/commands/pict22760.en.png)
+![](../../assets/en/commands/pict22760.en.png)
 
 ## 参照 
 

@@ -52,7 +52,7 @@ Este comando suporta campos tipo Objeto: os dados desses campos são automaticam
 
 Quer criar uma cadeia JSON que represente esta seleção:
 
-![](../assets/en/commands/pict1205203.en.png)
+![](../../assets/en/commands/pict1205203.en.png)
 
 1) Deseja incluir os valores de todos os campos da tabela \[Members\]:  
 

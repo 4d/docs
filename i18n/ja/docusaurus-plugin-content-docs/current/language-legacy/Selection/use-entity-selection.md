@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 `USE ENTITY SELECTION` コマンドは、<!--REF #_command_.USE ENTITY SELECTION.Summary-->*entitySelection* 引数のデータクラスに合致するテーブルのカレントセレクションを、渡したエンティティセレクションの内容で更新します<!-- END REF-->。
 
-[リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
+[リモートデータストア](../../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
 :::info
 

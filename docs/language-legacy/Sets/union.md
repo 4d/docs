@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 The result of a Union operation is depicted here. The shaded area is the result set.
 
-![](../assets/en/commands/pict33125.en.png)
+![](../../assets/en/commands/pict33125.en.png)
 
 The *resultSet* is created by **UNION**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*. The current record for the *resultSet* is the current record from Set1.
 

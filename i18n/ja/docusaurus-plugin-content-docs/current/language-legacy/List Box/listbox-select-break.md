@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 リストボックスに表示されている以下の配列があります:
 
-![](../assets/en/commands/pict185052.en.png)
+![](../../assets/en/commands/pict185052.en.png)
 
 "Normandy"ブレーク行を選択します:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 以下のような結果になります:
 
-![](../assets/en/commands/pict185059.en.png)
+![](../../assets/en/commands/pict185059.en.png)
 
 ## 参照 
 

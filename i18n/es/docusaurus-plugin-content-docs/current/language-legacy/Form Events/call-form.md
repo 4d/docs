@@ -99,7 +99,7 @@ El método *doAddMessage* sólo añade una línea en un list box en el formulari
 
 En ejecución, obtiene el siguiente resultado:
 
-![](../assets/en/commands/pict2896824.en.png)
+![](../../assets/en/commands/pict2896824.en.png)
 
 Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevamente:
 
@@ -108,7 +108,7 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
  CALL FORM(formRef2;"doAddMessage";Current process name;"Hello 2 Form 2")
 ```
 
-![](../assets/en/commands/pict2896833.en.png)
+![](../../assets/en/commands/pict2896833.en.png)
 
 ## Ver también 
 

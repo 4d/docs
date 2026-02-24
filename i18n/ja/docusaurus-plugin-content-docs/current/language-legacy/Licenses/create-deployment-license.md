@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create deployment license.Summary-->**Create deployment license** コマンドは*mergedApp* 引数のビルドアプリケーションのLicenses フォルダ内に埋め込みライセンスファイルを作成します。<!-- END REF-->*mergedApp* 引数で指定したフォルダ内にLicenses フォルダが存在しない場合、このコマンドによって作成されます。
 
-*mergedApp* 引数には、ライセンスを埋め込みたいビルドアプリケーションを格納しているフォルダへの参照を格納した[4D.Folder](../API/FolderClass.md) オブジェクトを渡します。
+*mergedApp* 引数には、ライセンスを埋め込みたいビルドアプリケーションを格納しているフォルダへの参照を格納した[4D.Folder](../../API/FolderClass.md) オブジェクトを渡します。
 
 第二引数によって、ターゲットに対して[使用するライセンスを4D に自動的に決めさせる](#automatic-license-selection) か、または[使用するライセンスを指定](#designating-the-licenses-to-use) します。
 
 ### 自動ライセンス選択
 
-*autoLicenseTarget* 引数を渡した場合、指定されたターゲットに対して、最適なライセンスを4D に探させて使用します。 自動ライセンス選択についてのより詳細な情報については、[ビルドアプリケーション](../Desktop/building.md#application-automatically-embedding-available-licenses) の章を参照して下さい。
+*autoLicenseTarget* 引数を渡した場合、指定されたターゲットに対して、最適なライセンスを4D に探させて使用します。 自動ライセンス選択についてのより詳細な情報については、[ビルドアプリケーション](../../Desktop/building.md#application-automatically-embedding-available-licenses) の章を参照して下さい。
 
 以下の定数が*autoLicenseTarget* 引数においてサポートされます:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ### 使用するライセンスを指定する
 
-*license* 引数には、埋め込みライセンスを生成するのに使用したライセンスファイルへの参照を格納した[4D.File](../API/FileClass.md) オブジェクトを渡します。
+*license* 引数には、埋め込みライセンスを生成するのに使用したライセンスファイルへの参照を格納した[4D.File](../../API/FileClass.md) オブジェクトを渡します。
 
 非自動モードにおいて、ビルドに特定のOEM ライセンス(*4D OEM XML キー*)が必要で、そのようなライセンスがLicenses フォルダ内にすでにインストールされていない場合には、*oemLicense* 引数を使用してそれを渡す必要があります。 この引数は、アプリケーションのビルドに専用のマシンを用意している場合などに有用です。
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 | **プロパティ**                                                                          | **型**                                          | **Description**                                                                        |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------- |
 | success                                                                            | Boolean                                        | ライセンスファイルが生成された場合にはTrue                                                                |
-| file                                                                               | [4D.File](../API/FileClass.md) | 生成されたライセンスファイル                                                                         |
+| file                                                                               | [4D.File](../../API/FileClass.md) | 生成されたライセンスファイル                                                                         |
 | statusText                                                                         | Text                                           | エラーの詳細(あれば)                                                         |
 | errors                                                                             | Collection                                     | エラーオブジェクトのコレクション                                                                       |
 | \[\].message | Text                                           | エラーメッセージ                                                                               |

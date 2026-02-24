@@ -40,7 +40,7 @@ To sort in ascending *order*, pass *\>*. To sort in descending *order*, pass <. 
 
 Given the list named *hList,* shown here in the Application environment:
 
-![](../assets/en/commands/pict23037.en.png)
+![](../../assets/en/commands/pict23037.en.png)
 
  After the execution of this code:
 
@@ -51,7 +51,7 @@ Given the list named *hList,* shown here in the Application environment:
 
 The list looks like:
 
-![](../assets/en/commands/pict23038.en.png)
+![](../../assets/en/commands/pict23038.en.png)
 
 After the execution of this code:
 
@@ -62,7 +62,7 @@ After the execution of this code:
 
 The list looks like:
 
-![](../assets/en/commands/pict23039.en.png)
+![](../../assets/en/commands/pict23039.en.png)
 
 ## See also 
 

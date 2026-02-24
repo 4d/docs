@@ -70,7 +70,7 @@ En el servidor, el comando `Process activity` devuelve una propiedad adicional "
 
 | Propiedad adicional | Tipo   | Descripción                                                                                                                                                                                   |   |
 | ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-| session             | Object | La propiedad [`.info`](../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined si se pasa el parámetro `Processes only`. |   |
+| session             | Object | La propiedad [`.info`](../../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined si se pasa el parámetro `Processes only`. |   |
 
 ## Ejemplo 1
 

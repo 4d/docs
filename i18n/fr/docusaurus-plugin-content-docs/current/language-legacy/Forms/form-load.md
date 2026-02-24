@@ -32,32 +32,32 @@ Lorsque la commande est exécutée à partir d'un composant, elle charge les for
 
 ### formData
 
-Optionnellement, vous pouvez passer des paramètres au formulaire *form* en utilisant soit l'objet *formData*, soit l'objet de classe de formulaire automatiquement instancié par 4D si vous avez [associé une classe utilisateur au formulaire](../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
+Optionnellement, vous pouvez passer des paramètres au formulaire *form* en utilisant soit l'objet *formData*, soit l'objet de classe de formulaire automatiquement instancié par 4D si vous avez [associé une classe utilisateur au formulaire](../../FormEditor/properties_FormProperties.md#form-class). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
 Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md).
 
 Pour des informations détaillées sur l'objet de données formulaire, veuillez vous référer à la commande [`DIALOG`](dialog.md).
 
 ### Impression des données
 
-Pour pouvoir exécuter cette commande, une tâche d'impression doit être ouverte au préalable à l'aide de la commande [OPEN PRINTING JOB](../commands-legacy/open-printing-job). La commande [OPEN PRINTING JOB](../commands-legacy/open-printing-job) fait un appel implicite à la commande [FORM UNLOAD](../commands-legacy/form-unload), donc dans ce contexte il est nécessaire d'exécuter **FORM LOAD**. Une fois chargé, *form* devient le formulaire d'impression courant. Toutes les commandes de gestion des objets, et en particulier la commande [Print object](../commands-legacy/print-object), fonctionnent avec ce formulaire.
+Pour pouvoir exécuter cette commande, une tâche d'impression doit être ouverte au préalable à l'aide de la commande [OPEN PRINTING JOB](../../commands-legacy/open-printing-job). La commande [OPEN PRINTING JOB](../../commands-legacy/open-printing-job) fait un appel implicite à la commande [FORM UNLOAD](../../commands-legacy/form-unload), donc dans ce contexte il est nécessaire d'exécuter **FORM LOAD**. Une fois chargé, *form* devient le formulaire d'impression courant. Toutes les commandes de gestion des objets, et en particulier la commande [Print object](../../commands-legacy/print-object), fonctionnent avec ce formulaire.
 
 Si un formulaire d'impression avait déjà été chargé au préalable (via un appel précédent à la commande **FORM LOAD**), il est fermé et remplacé par *form*. Vous pouvez ouvrir et fermer plusieurs formulaires projet dans la même session d'impression. Le changement de formulaire d'impression via la commande **FORM LOAD** ne génère pas de sauts de page. Il appartient au développeur de gérer les sauts de page.
 
-Seul l'événement formulaire [`On Load`](../Events/onLoad.md) est exécuté lors de l'ouverture du formulaire projet, ainsi que toutes les méthodes objet du formulaire. Les autres événements formulaire sont ignorés. L'événement formulaire [`On Unload`](../Events/onUnload.md) est exécuté à la fin de l'impression.
+Seul l'événement formulaire [`On Load`](../../Events/onLoad.md) est exécuté lors de l'ouverture du formulaire projet, ainsi que toutes les méthodes objet du formulaire. Les autres événements formulaire sont ignorés. L'événement formulaire [`On Unload`](../../Events/onUnload.md) est exécuté à la fin de l'impression.
 
 Pour préserver la cohérence graphique des formulaires, il est recommandé d'appliquer la propriété d'apparence "Printing" quelle que soit la plate-forme.
 
-Le formulaire d'impression courant est automatiquement fermé lorsque la commande [CLOSE PRINTING JOB](../commands-legacy/close-printing-job) est appelée.
+Le formulaire d'impression courant est automatiquement fermé lorsque la commande [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job) est appelée.
 
 ### Analyse du contenu du formulaire
 
 Cela consiste à charger un formulaire hors écran à des fins d'analyse. Pour cela, il vous suffit d'appeler **FORM LOAD** en dehors du contexte d'une tâche d'impression. Dans ce cas, les événements formulaire ne sont pas exécutés.
 
-**FORM LOAD** peut être utilisé avec les commandes [FORM GET OBJECTS](../commands-legacy/form-get-objects) et [OBJECT Get type](../commands-legacy/object-get-type) afin d'effectuer tout type de traitement sur le contenu du formulaire. Vous devez ensuite appeler la commande [FORM UNLOAD](../commands-legacy/form-unload) pour libérer le formulaire de la mémoire.
+**FORM LOAD** peut être utilisé avec les commandes [FORM GET OBJECTS](../../commands-legacy/form-get-objects) et [OBJECT Get type](../../commands-legacy/object-get-type) afin d'effectuer tout type de traitement sur le contenu du formulaire. Vous devez ensuite appeler la commande [FORM UNLOAD](../../commands-legacy/form-unload) pour libérer le formulaire de la mémoire.
 
-Notez que dans tous les cas, le formulaire à l'écran reste chargé (il n'est pas affecté par la commande **FORM LOAD**) et qu'il n'est donc pas nécessaire de le recharger après avoir appelé [FORM UNLOAD](../commands-legacy/form-unload).
+Notez que dans tous les cas, le formulaire à l'écran reste chargé (il n'est pas affecté par la commande **FORM LOAD**) et qu'il n'est donc pas nécessaire de le recharger après avoir appelé [FORM UNLOAD](../../commands-legacy/form-unload).
 
-**Rappel :** Dans le contexte hors écran, n'oubliez pas d'appeler [FORM UNLOAD](../commands-legacy/form-unload) pour éviter tout risque de saturation de la mémoire.
+**Rappel :** Dans le contexte hors écran, n'oubliez pas d'appeler [FORM UNLOAD](../../commands-legacy/form-unload) pour éviter tout risque de saturation de la mémoire.
 
 ## Exemple 1
 
@@ -112,7 +112,7 @@ L'exemple suivant retourne le nombre d'objets dans un formulaire JSON :
 
 le résultat affiché est :
 
-![](../assets/en/commands/pict3688480.en.png)
+![](../../assets/en/commands/pict3688480.en.png)
 
 ## Exemple 5
 
@@ -157,11 +157,11 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
 
 ## Voir également
 
-[Current form name](../commands-legacy/current-form-name)\
-[FORM UNLOAD](../commands-legacy/form-unload)\
-[LISTBOX GET OBJECTS](../commands-legacy/listbox-get-objects)\
-[OBJECT Get type](../commands-legacy/object-get-type)\
-[Print object](../commands-legacy/print-object)
+[Current form name](../../commands-legacy/current-form-name)\
+[FORM UNLOAD](../../commands-legacy/form-unload)\
+[LISTBOX GET OBJECTS](../../commands-legacy/listbox-get-objects)\
+[OBJECT Get type](../../commands-legacy/object-get-type)\
+[Print object](../../commands-legacy/print-object)
 
 ## Propriétés
 

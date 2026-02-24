@@ -85,7 +85,7 @@ The eight elementary properties all have the same object structure, for example:
    **Note:** By default the array will only contain useful information.  
    Since the maximum size of the array is 200, if the database is used intensively (e.g., something is read every second on the disk), the maximum length of the history will be 200 seconds. On the other hand, if almost nothing happens except, for example, once every 3 minutes, the length of the history will be 600 minutes (3\*200).  
    This example can be represented in the following diagram:  
-   ![](../assets/en/commands/pict1510781.en.png)
+   ![](../../assets/en/commands/pict1510781.en.png)
 
 ### dataSegment1 and indexSegment 
 

@@ -147,21 +147,21 @@ Syntax using *graphNumber*: The following example shows the different types of g
 The following figures show the resulting graph.
 
 * With *vType* equal to 1, you obtain a **Column** graph:  
-![](../assets/en/commands/pict847107.fr.png)
+![](../../assets/en/commands/pict847107.fr.png)
 * With *vType* equal to 2, you obtain a **Proportional Column** graph:  
-![](../assets/en/commands/pict847109.fr.png)
+![](../../assets/en/commands/pict847109.fr.png)
 * With *vType* equal to 3, you obtain a **Stacked Column** graph:  
-![](../assets/en/commands/pict847111.fr.png)
+![](../../assets/en/commands/pict847111.fr.png)
 * With *vType* equal to 4, you obtain a **Line** graph:  
-![](../assets/en/commands/pict847114.fr.png)
+![](../../assets/en/commands/pict847114.fr.png)
 * With *vType* equal to 5, you obtain a **Area** graph:  
-![](../assets/en/commands/pict847118.fr.png)
+![](../../assets/en/commands/pict847118.fr.png)
 * With *vType* equal to 6, you obtain a **Scatter** graph:  
-![](../assets/en/commands/pict847120.fr.png)
+![](../../assets/en/commands/pict847120.fr.png)
 * With *vType* equal to 7, you obtain a **Pie** graph:  
-![](../assets/en/commands/pict847122.en.png)
+![](../../assets/en/commands/pict847122.en.png)
 * With *vType* equal to 8, you obtain a **Picture** graph:  
-![](../assets/en/commands/pict847124.fr.png)
+![](../../assets/en/commands/pict847124.fr.png)
 
 ## Example 2 
 
@@ -196,7 +196,7 @@ Syntax using *graphSettings*: In the following example, you draw a simple line g
  GRAPH(vGraph;vSettings;X;A;B) //Draw graph
 ```
 
-![](../assets/en/commands/pict2603210.en.png)
+![](../../assets/en/commands/pict2603210.en.png)
 
 ## Example 3 
 
@@ -237,7 +237,7 @@ With the same values, you can add custom settings to obtain a different view:
  GRAPH(vGraph;vSettings;X;A;B) //Draw the graph
 ```
 
-![](../assets/en/commands/pict2603212.en.png)
+![](../../assets/en/commands/pict2603212.en.png)
 
 ## Example 4 
 
@@ -286,7 +286,7 @@ In this example, we customize a few settings:
  GRAPH(vGraph;vSettings;X;A;B) //Draw the graph
 ```
 
-![](../assets/en/commands/pict2648517.en.png)
+![](../../assets/en/commands/pict2648517.en.png)
 
 ## See also 
 

@@ -41,7 +41,7 @@ displayed_sidebar: docs
 4D Webサーバーに簡単なリクエストを送り、HTTPボディの内容をデバッガーで表示します。  
 以下は4D Webサーバーに送られたフォームと対応するHTMLコードです。
 
-![](../assets/en/commands/pict38463.ja.png)
+![](../../assets/en/commands/pict38463.ja.png)
 
 次はTest4Dv11メソッドです。
 

@@ -76,11 +76,11 @@ Vous souhaitez remplacer le texte multistyle sélectionné par l’utilisateur a
 
 Voici le texte sélectionné :
 
-![](../assets/en/commands/pict579068.fr.png)
+![](../../assets/en/commands/pict579068.fr.png)
 
 Le contenu stocké dans le champ est le suivant :
 
-![](../assets/en/commands/pict579073.fr.png)
+![](../../assets/en/commands/pict579073.fr.png)
 
 Après exécution de ce code :
 
@@ -92,7 +92,7 @@ Après exécution de ce code :
 
 Le champ et son contenu sont les suivants :
 
-![](../assets/en/commands/pict579075.fr.png) ![](../assets/en/commands/pict579077.fr.png)
+![](../../assets/en/commands/pict579075.fr.png) ![](../../assets/en/commands/pict579077.fr.png)
 
 ## Exemple 2 
 

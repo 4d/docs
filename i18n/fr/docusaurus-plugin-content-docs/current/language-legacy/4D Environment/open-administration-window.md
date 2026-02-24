@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->La commande **OPEN ADMINISTRATION WINDOW** affiche la fenêtre d’administration du serveur sur le poste qui l’exécute.<!-- END REF--> La fenêtre d’administration de 4D Server permet de visualiser les paramètres courants et d’effectuer diverses opérations de maintenance (cf. Guide de référence de 4D Server). A compter de la version 11 de 4D Server, cette fenêtre peut être affichée depuis un poste client : 
 
-![](../assets/en/commands/pict12004.fr.png)
+![](../../assets/en/commands/pict12004.fr.png)
 
 Cette commande doit être appelée dans le contexte d’une application 4D connectée ou d'un 4D Server. Elle ne fait rien si :
 

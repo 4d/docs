@@ -59,7 +59,7 @@ Vous passez des valeurs de couleurs RVB dans les paramètres *couleurAvantPlan* 
 
 Voici un formulaire contenant deux variables non saisissables, *vsColorValue* et *vsColor* ainsi que trois thermomètres, *thRouge*, *thVert* et *thBleu* :
 
-![](../assets/en/commands/pict4278097.en.png)
+![](../../assets/en/commands/pict4278097.en.png)
 
 Les méthodes associées à ces objets sont les suivantes :
 
@@ -102,19 +102,19 @@ Notez l'utilisation des **[SET AUTOMATIC RELATIONS](set-automatic-relations.md)*
 
 En exécution, le formulaire a l'aspect suivant :
 
-![](../assets/en/commands/pict4278099.en.png)
+![](../../assets/en/commands/pict4278099.en.png)
 
 ## Exemple 2 
 
 Passage du fond en transparent avec couleur de police claire :
 
-![](../assets/en/commands/pict1210700.fr.png)
+![](../../assets/en/commands/pict1210700.fr.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"maVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.fr.png)
+![](../../assets/en/commands/pict1210702.fr.png)
 
 ## Voir aussi 
 

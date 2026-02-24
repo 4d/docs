@@ -27,7 +27,7 @@ Each returned object includes the following main properties:
 | ------------ | -------- | --------------------------------- |
 | objectName   | text     | Name of the object triggering the event - Not included if the event is triggered by the form |
 | code         | integer  | Numeric value of the form event.                    |
-| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../Events/overview.md) section.|
+| description  | text     | Name of the form event (*e.g.* "On After Edit"). See the [**Form Events**](../../Events/overview.md) section.|
 
 For example, in the case of a click on a button, the object contains the following properties:
 
@@ -37,8 +37,8 @@ For example, in the case of a click on a button, the object contains the followi
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
-* List box or list box column objects, see [this section](../FormObjects/listbox-object.md#supported-form-events).
-* 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
+* List box or list box column objects, see [this section](../../FormObjects/listbox-object.md#supported-form-events).
+* 4D View Pro areas, see [On VP Ready form event](../../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.
 
@@ -56,7 +56,7 @@ You want to handle the On Clicked event on a button:
 
 If you set the column object name with a real attribute name of a dataclass like this:
 
-![](../assets/en/commands/pict4843820.en.png)
+![](../../assets/en/commands/pict4843820.en.png)
 
 You can sort the column using the On Header Click event:
 
@@ -74,7 +74,7 @@ You can sort the column using the On Header Click event:
 
 You want to handle the On Display Details on a list box object with a method set in the *Meta info expression* property:
 
-![](../assets/en/commands/pict4843812.en.png)
+![](../../assets/en/commands/pict4843812.en.png)
 
 The *setColor* method:
 
@@ -94,11 +94,11 @@ The *setColor* method:
 
 The resulting list box when rows are selected:
 
-![](../assets/en/commands/pict4843808.en.png)
+![](../../assets/en/commands/pict4843808.en.png)
 
 ## See also 
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [Form event code](form-event-code.md)  
 
 ## Properties

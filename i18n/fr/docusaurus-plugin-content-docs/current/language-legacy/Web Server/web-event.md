@@ -38,19 +38,19 @@ L'objet retourné contient les propriétés suivantes :
 
 L'objectif est d'afficher/masquer un texte d'aide lorsque l'utilisateur survole le composant :
 
-![](../assets/en/commands/web-event1.png)
+![](../../assets/en/commands/web-event1.png)
 
 Pour ce faire, les événements `onmouseenter` et `onmouseleave` sont attachés à un composant **Text input** qui affiche les informations stockées dans un composant **Text** (en affichant "This is the help text").
 
-![](../assets/en/commands/web-event2.png)
+![](../../assets/en/commands/web-event2.png)
 
 Pour ce scénario :
 
 - Le composant Text input a pour référence serveur `orderNumber`.
-  ![](../assets/en/commands/web-event3.png)
+  ![](../../assets/en/commands/web-event3.png)
 - Le composant Text a pour référence serveur `helpOn_orderNumber`.
-  ![](../assets/en/commands/web-event4.png)
-- La fonction [exposée](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` est attachée aux événements `onmouseenter` et `onmouseleave` et contient le code suivant :
+  ![](../../assets/en/commands/web-event4.png)
+- La fonction [exposée](../../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` est attachée aux événements `onmouseenter` et `onmouseleave` et contient le code suivant :
 
 ```4d
 shared singleton Class constructor()
@@ -86,8 +86,8 @@ exposed function hideOnLoad()
 ## Voir également
 
 [Web Form](web-form.md)</br>
-[WebForm class](../API/WebFormClass.md)</br>
-[WebFormItem class](../API/WebFormItemClass.md)
+[WebForm class](../../API/WebFormClass.md)</br>
+[WebFormItem class](../../API/WebFormItemClass.md)
 
 ## Propriétés
 

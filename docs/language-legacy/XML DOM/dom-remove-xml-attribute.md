@@ -36,7 +36,7 @@ If the attribute has been correctly removed, the *OK* system variable is set to 
 
 Given the following structure:
 
-![](../assets/en/commands/pict204122.fr.png)
+![](../../assets/en/commands/pict204122.fr.png)
 
 The following code can be used to remove the first attribute "N=1": 
 

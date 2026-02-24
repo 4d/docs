@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 *aField*、 *\>* または *<*、 *\** 引数を指定しない場合、**ORDER BY** コマンドは*aTable*を対象とした並び替えエディタを表示します:
 
-![](../assets/en/commands/pict2286854.en.png)
+![](../../assets/en/commands/pict2286854.en.png)
 
 並び替えエディタの使用に関する詳細は、4D Design Referenceを参照してください。
 
@@ -170,7 +170,7 @@ displayed_sidebar: docs
 
 **Shift**キーを押しながら他の縦の列ヘッダをクリックすると、複数レベルでソートが実行されます:
 
-![](../assets/en/commands/pict16003.ja.png)
+![](../../assets/en/commands/pict16003.ja.png)
 
 各列ヘッダには、以下のオブジェクトメソッドが記述されたハイライトボタンが置かれています:
 

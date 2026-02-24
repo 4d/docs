@@ -120,10 +120,10 @@ Utilizando los comandos del tema portapapeles y de los BLOBs, puede construir es
 
 Al introducir el siguiente registro:
 
-![](../assets/en/commands/pict27501.es.png)
+![](../../assets/en/commands/pict27501.es.png)
 
 Si aplica el métodoENVIAR REGISTRO AL portapapeles a la tabla \[Empleados\], el portapapeles contendrá el texto del registro y la imagen completa del registro.  
-![](../assets/en/commands/pict27502.es.png)
+![](../../assets/en/commands/pict27502.es.png)
 
 Puede pegar esta imagen del registro en otro registro, utilizando el método GET RECORD FROM CLIPBOARD, como se muestra a continuación:
 

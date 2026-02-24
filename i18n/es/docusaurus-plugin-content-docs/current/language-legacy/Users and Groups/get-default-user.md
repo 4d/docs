@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get default user.Summary-->El comando Get default user devuelve el número de referencia único del usuario designado como “Usuario por defecto” en la caja de diálogo de Preferencias de la base<!-- END REF-->:
 
-![](../assets/en/commands/pict36789.es.png)
+![](../../assets/en/commands/pict36789.es.png)
 
 Si ningún usuario por defecto está definido, el comando devuelve 0.
 

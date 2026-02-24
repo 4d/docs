@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Before retrieving the values of elements in an array, you want to know the number of attributes in the following XML element:
 
-![](../assets/en/commands/pict39728.en.png)
+![](../../assets/en/commands/pict39728.en.png)
 
 ```4d
  var myBlobVar : Blob

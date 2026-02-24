@@ -92,7 +92,7 @@ In this case, the command will print the section included between the *areaStart
 
 **formData**
 
-Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../Events/onPrintingDetail.md).
+Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../../FormEditor/properties_FormProperties.md#form-class). Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. The form data object is available in the [`On Printing Detail` form event](../../Events/onPrintingDetail.md).
 
 For detailed information on the form data object, please refer to the [`DIALOG`](dialog.md) command.
 
@@ -114,7 +114,7 @@ This command prints external areas and objects (for example, 4D Write or 4D View
 
 **Warning:** Subforms are not printed with **Print form**. To print only one form with such objects, use [PRINT RECORD](../commands/print-record) instead.
 
-**Print form** generates only one [`On Printing Detail` event](../Events/onPrintingDetail.md) for the form method.
+**Print form** generates only one [`On Printing Detail` event](../../Events/onPrintingDetail.md) for the form method.
 
 **4D Server:** This command can be executed on 4D Server within the framework of a stored procedure. In this context:
 
@@ -154,7 +154,7 @@ Refer to the example of the [SET PRINT MARKER](../commands/set-print-marker) com
 
 This form is used as dialog, then printed with modifications:
 
-![](../assets/en/commands/pict6264975.en.png)
+![](../../assets/en/commands/pict6264975.en.png)
 
 The form method:
 

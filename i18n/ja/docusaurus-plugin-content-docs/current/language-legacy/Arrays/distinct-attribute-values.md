@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 データベースに、\[Customer\]full\_Data というオブジェクトフィールドがあり、レコードが15ある場合を考えます:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 以下のコードを実行した場合:
 

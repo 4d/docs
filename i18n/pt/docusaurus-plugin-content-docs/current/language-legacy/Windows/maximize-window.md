@@ -39,7 +39,7 @@ Se *janela* já está maximizada, o comando não faz nada.
 ### On Windows 
 
 A janela é aumentada e se adapta ao tamanho atual da janela da aplicação. A janela maximizada passa ao primeiro plano. Se não passar o parâmetro *janela*, o comando se aplica a todas as janelas da aplicação.  
-![](../assets/en/commands/pict39344.en.png) 
+![](../../assets/en/commands/pict39344.en.png) 
 
 Zoom (botão para aumentar) em Windows
 
@@ -52,7 +52,7 @@ Em casos em que se aplica o comando a uma janela cujo tamanho está sujeito a re
 
 A janela é aumentada de maneira que possa mostrar a totalidade de seu conteúdo. Se não passa o parâmetro *janela*, o comando se aplica a janela do primeiro plano do processo atual.
 
-![](../assets/en/commands/pict39345.en.png)
+![](../../assets/en/commands/pict39345.en.png)
 
  Zoom em Mac OS  
 * O zoom é baseado no conteúdo da janela; de maneira, que o comando deve ser chamado em um contexto onde o conteúdo da janela está definido, por exemplo em um método de formulário. Caso contrário, o comando não faz nada.
@@ -71,7 +71,7 @@ Imagine que deseja seu formulário se aberto em uma janela "aberta totalmente". 
 
 Este exemplo ilustra como as restrições de tamanho se manipulam em Windows. O seguinte formulário têm uma restrição de tamanho (largura máxima=400):
 
-![](../assets/en/commands/pict1476223.en.png)
+![](../../assets/en/commands/pict1476223.en.png)
 
 O método do botão contém unicamente:
 
@@ -81,11 +81,11 @@ O método do botão contém unicamente:
 
 Neste contexto, se o usuário fizer clique no botão:
 
-![](../assets/en/commands/pict1476225.en.png)
+![](../../assets/en/commands/pict1476225.en.png)
 
 ... a janela não se "maximiza"; só aumenta a altura:
 
-![](../assets/en/commands/pict1476363.en.png)
+![](../../assets/en/commands/pict1476363.en.png)
 
 ## Ver também 
 

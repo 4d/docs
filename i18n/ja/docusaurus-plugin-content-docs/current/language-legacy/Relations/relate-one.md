@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 以下の画像には、レコードが入力中で、選択リストが前面に表示されています。
 
-![](../assets/en/commands/pict2287719.en.png)
+![](../../assets/en/commands/pict2287719.en.png)
 
 選択リストを表示させるには以下のコマンドが使用されました: 
 
@@ -63,11 +63,11 @@ displayed_sidebar: docs
 
 ここに *\[Invoice\]* テーブルと*\[Customers\]* テーブルが２つのマニュアルリレートにより関連づけられています。ひとつは *\[Invoice\]Bill to* から*\[Customers\]Number* へ、もうひとつは*\[Invoice\]Ship to* から*\[Customers\]Number* にリレートされています。 
 
-![](../assets/en/commands/pict2287721.en.png)
+![](../../assets/en/commands/pict2287721.en.png)
 
 以下は、\[Invoice\] テーブルのフォームが"Bill to"と "Send to"の情報を表示している様子です:
 
-![](../assets/en/commands/pict2287723.en.png)
+![](../../assets/en/commands/pict2287723.en.png)
 
 両方のリレート先は同じ\[Customers\]テーブルになっており、同時に請求先と発送先の情報を得ることは出来ません。フォームに両方の住所を表示するためには、変数とRELATE ONEコマンドを使用します。 もし、\[Customers\]フィールドを表示に使用したなら、一方のリレートから得られたデータしか表示されません。
 

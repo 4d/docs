@@ -67,7 +67,7 @@ In this case, the *dataEntry* parameter contains the name of the data source as 
 Syntax: *""*  
 In this case, the command displays the connection dialog box so that the data source to be connected to can be entered manually:  
     
-![](../assets/en/commands/pict33536.en.png)  
+![](../../assets/en/commands/pict33536.en.png)  
     
 This dialog box includes several pages. The TCP/IP page includes the following elements:  
    * Target Name: This menu is built using two lists:  

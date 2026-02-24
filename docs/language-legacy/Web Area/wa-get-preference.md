@@ -48,7 +48,7 @@ In the *value* parameter, pass a variable that will receive the current value of
 
 :::note Compatibility
 
-Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. The `WA enable URL drop` selector value is always **False** in this context. 
+Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../../FormEditor/forms.md#fluent-ui-rendering) is used. The `WA enable URL drop` selector value is always **False** in this context. 
 
 :::
 

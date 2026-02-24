@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 4Dには*Form Events* テーマで定義された定数が用意されており、 **Form event code** コマンドから返される値と比較することができます。 イベントには、一般的なイベント(任意のタイプのオブジェクトに対して生成される)と、特定タイプのオブジェクトのみに発生するイベントがあります。
 
-イベントの詳細については[**Form Events**](../Events/overview.md) の章を参照してください。
+イベントの詳細については[**Form Events**](../../Events/overview.md) の章を参照してください。
 
 ## 例題 1
 
@@ -139,7 +139,7 @@ displayed_sidebar: docs
 
 ## 例題 5
 
-[`On Before Keystroke`](../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../Events/onAfterKeystroke.md) イベントを処理する方法は [Get edited text](../commands/get-edited-text)、[Keystroke](../commands/keystroke)、そして[FILTER KEYSTROKE](../commands/filter-keystroke) コマンドの説明を参照してください。
+[`On Before Keystroke`](../../Events/onBeforeKeystroke.md) と [`On After Keystroke`](../../Events/onAfterKeystroke.md) イベントを処理する方法は [Get edited text](../commands/get-edited-text)、[Keystroke](../commands/keystroke)、そして[FILTER KEYSTROKE](../commands/filter-keystroke) コマンドの説明を参照してください。
 
 ## 例題 6
 
@@ -194,7 +194,7 @@ displayed_sidebar: docs
 
 ## 例題 8
 
-この例題では、[`On Getting Focus`](../Events/onGettingFocus.md) と [`On Losing Focus`](../Events/onLosingFocus.md) を使用して、フォームメソッド内でステータス情報を管理します:
+この例題では、[`On Getting Focus`](../../Events/onGettingFocus.md) と [`On Losing Focus`](../../Events/onLosingFocus.md) を使用して、フォームメソッド内でステータス情報を管理します:
 
 ```4d
   //[Contacts];"Data Entry" フォームのフォームメソッド
@@ -288,7 +288,7 @@ displayed_sidebar: docs
 
 ## 例題 12
 
-この例題では [`On Scroll`](../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。  以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
+この例題では [`On Scroll`](../../Events/onScroll.md) フォームイベントを使用してフォーム中の２つのピクチャーを同期します。  以下のコードを"satellite" のオブジェクトメソッド(ピクチャーフィールドまたは変数)に記述します:
 
 ```4d
  Case of
@@ -335,11 +335,11 @@ displayed_sidebar: docs
 
 結果として、赤い長方形はリストボックスのスクロールに沿って移動します:
 
-![](../assets/en/commands/pict1900395.en.png)
+![](../../assets/en/commands/pict1900395.en.png)
 
 ## 参照
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands/call-subform-container)\
 [Current form table](../commands/current-form-table)\
 [FILTER KEYSTROKE](../commands/filter-keystroke)\

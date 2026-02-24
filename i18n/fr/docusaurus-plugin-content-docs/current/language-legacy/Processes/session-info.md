@@ -34,19 +34,19 @@ L'objet retourné contient les propriétés suivantes :
 | Propriété        | Type          | Description                                                                                                                                                                                                                    |
 | ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | type             | Text          | Type de session : "remote", "storedProcedure", "standalone"                                                                                                                                                    |
-| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`Session.userName`](../API/SessionClass.md#username))                                                                                                                |
+| userName         | Text          | Nom d'utilisateur 4D (même valeur que [`Session.userName`](../../API/SessionClass.md#username))                                                                                                                |
 | machineName      | Text          | Sessions distantes : nom de la machine distante. Session procédures stockées : nom de la machine serveur. Session autonome : nom de la machine |
 | systemUserName   | Text          | Sessions distantes : nom de la session système ouverte sur la machine distante.                                                                                                                |
 | IPAddress        | Text          | Adresse IP de la machine distante                                                                                                                                                                                              |
 | hostType         | Text          | Type d'hôte : "windows" ou "mac"                                                                                                                                                                               |
 | creationDateTime | Date ISO 8601 | Date et heure de création de la session. Session autonome : date et heure de démarrage de l'application                                                                                        |
 | state            | Text          | État de la session : "active", "postponed", "sleeping"                                                                                                                                                         |
-| ID               | Text          | UUID de la session (même valeur que [`Session.id`](../API/SessionClass.md#id))                                                                                                                              |
+| ID               | Text          | UUID de la session (même valeur que [`Session.id`](../../API/SessionClass.md#id))                                                                                                                              |
 | persistentID     | Text          | Sessions distantes : ID persistant de la session                                                                                                                                                               |
 
 :::note
 
-Cette commande renvoie la propriété [`.info`](../API/SessionClass.md#info) de la session *sessionID*. Pour obtenir des informations sur la session en cours, vous pouvez appeler directement `Session.info`.
+Cette commande renvoie la propriété [`.info`](../../API/SessionClass.md#info) de la session *sessionID*. Pour obtenir des informations sur la session en cours, vous pouvez appeler directement `Session.info`.
 
 :::
 
@@ -81,7 +81,7 @@ Voici un exemple d'objet retourné :
 
 ## Voir également
 
-[`Session` class](../API/SessionClass.md)
+[`Session` class](../../API/SessionClass.md)
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)

@@ -20,7 +20,7 @@ Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet les appels à la
 
 `Super` peut être utilisé de deux différentes manières :
 
-1. Dans une fonction constructor, la commande `Super` est utilisée seule et doit être appelée avant que le mot-clé `This` soit utilisé. A l'intérieur du code de la fonction [constructor](../Concepts/classes.md#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass.
+1. Dans une fonction constructor, la commande `Super` est utilisée seule et doit être appelée avant que le mot-clé `This` soit utilisé. A l'intérieur du code de la fonction [constructor](../../Concepts/classes.md#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass.
 
 - Si tous les class constructors dans l'arbre des héritages ne sont pas appelés correctement, l'erreur -10748 et générée. Il est de la responsabilité du développeur 4D de s'assurer que tous les appels sont valides.
 - Si la commande `This` est appelée sur un objet dont les superclasses n'ont pas été construites, l'erreur -10743 est générée.
@@ -33,7 +33,7 @@ Super($text1) //appel du constructeur de la superclasse avec un paramètre text
 This.param:=$text2 // utilisation d'un second param
 ```
 
-2. A l'intérieur d'une [fonction de classe](../Concepts/classes.md#function), `Super` désigne le prototype de la [`superclass`](../API/ClassClass.md#superclass) et permet d'appeler une fonction de la hiérarchie de la superclasse.
+2. A l'intérieur d'une [fonction de classe](../../Concepts/classes.md#function), `Super` désigne le prototype de la [`superclass`](../../API/ClassClass.md#superclass) et permet d'appeler une fonction de la hiérarchie de la superclasse.
 
 ```4d
 Super.doSomething(42) //appelle la fonction "doSomething"   
@@ -112,7 +112,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 ## Voir également
 
-[**Page de Concept pour les Classes**](../Concepts/classes.md).
+[**Page de Concept pour les Classes**](../../Concepts/classes.md).
 
 ## Propriétés
 

@@ -33,12 +33,12 @@ displayed_sidebar: docs
 
 以下の例は、3つのテーブルが自動リレートで関連付けられています。\[People\]テーブルと\[Parts\]テーブルは両方とも\[Companies\]テーブルに対してn対1のリレート関係にあります。
 
-![](../assets/en/commands/pict2286855.fr.png)
+![](../../assets/en/commands/pict2286855.fr.png)
 
   
 \[Companies\]テーブルのこのフォームは、\[People\]テーブルと\[Parts\]テーブル両方の関連するレコードを表示します。
 
-![](../assets/en/commands/pict2287703.fr.png)
+![](../../assets/en/commands/pict2287703.fr.png)
 
 このフォームを表示すると、\[People\]テーブルと\[Parts\]テーブルの関連するレコードがロードされ、それぞれのテーブルのカレントセレクションとなります。
 

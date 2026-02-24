@@ -64,7 +64,7 @@ displayed_sidebar: docs
  OBJECT SET LIST BY REFERENCE(*;"popup";Choice list;$myList)
 ```
 
-![](../assets/en/commands/pict3372004.en.png)
+![](../../assets/en/commands/pict3372004.en.png)
 
 ## 参照 
 

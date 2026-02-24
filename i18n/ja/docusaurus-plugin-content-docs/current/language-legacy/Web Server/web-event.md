@@ -38,19 +38,19 @@ displayed_sidebar: docs
 
 ここでの目的は、ユーザーがコンポーネント上をホバーした際にヘルプテキストを表示/非表示することです:
 
-![](../assets/en/commands/web-event1.png)
+![](../../assets/en/commands/web-event1.png)
 
 これは、("これはヘルプテキストです"というテキストを表示する)**Text** コンポーネントに保存された情報を表示する **Text input** コンポーネントに `onmouseenter` および `onmouseleave` イベントを割り当てることで可能になります。
 
-![](../assets/en/commands/web-event2.png)
+![](../../assets/en/commands/web-event2.png)
 
 このシナリオでは以下のような前提があります:
 
 - Text input コンポーネントは、 `orderNumber` というサーバー側参照を持ちます。
-  ![](../assets/en/commands/web-event3.png)
+  ![](../../assets/en/commands/web-event3.png)
 - Text コンポーネントは `helpOn_orderNumber` というサーバー側参照を持ちます。
-  ![](../assets/en/commands/web-event4.png)
-- `onmouseenter` および `onmouseleave` イベントの両方には[公開された](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` 関数が割り当てられており、そこには以下のようなコードが書かれています:
+  ![](../../assets/en/commands/web-event4.png)
+- `onmouseenter` および `onmouseleave` イベントの両方には[公開された](../../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` 関数が割り当てられており、そこには以下のようなコードが書かれています:
 
 ```4d
 shared singleton Class constructor()
@@ -86,8 +86,8 @@ exposed function hideOnLoad()
 ## 参照
 
 [Web Form](web-form.md)</br>
-[WebForm class](../API/WebFormClass.md)</br>
-[WebFormItem class](../API/WebFormItemClass.md)
+[WebForm class](../../API/WebFormClass.md)</br>
+[WebFormItem class](../../API/WebFormItemClass.md)
 
 ## プロパティ
 

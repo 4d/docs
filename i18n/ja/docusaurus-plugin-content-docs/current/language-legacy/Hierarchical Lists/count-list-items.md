@@ -47,21 +47,21 @@ displayed_sidebar: docs
 以下はアプリケーションモードで表示された、*hList*という名前の階層リストです:
 
   
-![](../assets/en/commands/pict22362.ja.png)
+![](../../assets/en/commands/pict22362.ja.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // この時点で$vlNbItems は8を得ます。
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItemsも8を得ます。
 ```
 
-![](../assets/en/commands/pict22363.ja.png)
+![](../../assets/en/commands/pict22363.ja.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // この時点で$vlNbItems は$vlNbItemsは2を得ます。
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItemsは8のままです。
 ```
 
-![](../assets/en/commands/pict22364.ja.png)
+![](../../assets/en/commands/pict22364.ja.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // この時点で$vlNbItems は$vlNbItemsは5を得ます。

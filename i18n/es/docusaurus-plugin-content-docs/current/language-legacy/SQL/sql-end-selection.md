@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 El código a continuación se conecta a una fuente de datos externos (Oracle) utilizando los siguientes parámetros:
 
-![](../assets/en/commands/pict33359.es.png)
+![](../../assets/en/commands/pict33359.es.png)
 
 ```4d
  var vNombre : Text

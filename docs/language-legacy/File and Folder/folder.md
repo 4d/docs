@@ -26,17 +26,17 @@ displayed_sidebar: docs
 |folderConstant|Integer|&#8594; |4D folder constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
 |*|Operator|&#8594; |* to return folder of host database|
-|Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
+|Result|[4D.Folder](../../API/FolderClass.md)|&#8592;|New folder object|
 </div>
 <!-- END REF -->
 
 ## Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; * } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
+In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
 > Only absolute pathnames are supported with the `Folder` command.
 
@@ -70,12 +70,12 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.  
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../../Desktop/building.md#buildapp4dsettings) is used.
 
 
 ## See also 
 
-[`4D.Folder` class](../API/FolderClass.md)
+[`4D.Folder` class](../../API/FolderClass.md)
 [File](file.md)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)  

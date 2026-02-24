@@ -44,7 +44,7 @@ Note que não é obrigatorio que a imagem em um formulário seja mostrada. Neste
 
 O ponto a ser considerado é o primeiro ponto alcançado. Por exemplo, no seguinte caso, o comando devolverá a identificação do círculo se as coordenadas do ponto A forem passadas, e a do retângulo se as coordenadas do ponto B forem passadas:
 
-![](../assets/en/commands/pict41094.en.png)
+![](../../assets/en/commands/pict41094.en.png)
 
 Quando as coordenadas corresponderem a um objeto superposto ou composto, o comando retorna a identificação do primeiro objeto com um identificador de atributo válido, se for necessário, entre os elementos pai.  
   

@@ -20,7 +20,7 @@ A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas à
 
 `Super` tem dois objectivos diferentes:
 
-1. Dentro de um [código construtor](../Concepts/classes.md#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. Quando usado em um construtor, o comando `Super` aparece sozinho e deve ser usado antes que a palavra-chave [`This`](this.md) seja usada.
+1. Dentro de um [código construtor](../../Concepts/classes.md#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. Quando usado em um construtor, o comando `Super` aparece sozinho e deve ser usado antes que a palavra-chave [`This`](this.md) seja usada.
 
 - Se todos os construtores de classe na árvore de herança não forem correctamente chamados, é gerado o erro -10748. É o programador 4D que se certifica de que as chamadas são válidas.
 - Se o comando `This` for chamado em um objeto cujas superclasses não foram construídas, o erro -10743 será gerado.
@@ -33,7 +33,7 @@ Super($text1) //chama o construtor da superclasse com um parâmetro de texto
 This.param:=$text2 // usa o segundo parâmetro
 ```
 
-2. Dentro de uma [função da classe](../Concepts/classes.md#function), `Super` designa o protótipo da [`superclass`](../API/ClassClass.md#superclass) e permite chamar uma função da hierarquia da superclasse.
+2. Dentro de uma [função da classe](../../Concepts/classes.md#function), `Super` designa o protótipo da [`superclass`](../../API/ClassClass.md#superclass) e permite chamar uma função da hierarquia da superclasse.
 
 ```4d
 Super.doSomething(42) //chamada a função "doSomething"  
@@ -109,7 +109,7 @@ Parâmetros
 
 ## Veja também
 
-[**Página conceito para classes**](../Concepts/classes.md).
+[**Página conceito para classes**](../../Concepts/classes.md).
 
 ## Propriedades
 

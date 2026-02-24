@@ -102,7 +102,7 @@ L'exemple suivant utilise un fichier .json de description de formulaire pour la 
 
 Résultat :  
 
-![](../assets/en/commands/pict3687432.en.png)
+![](../../assets/en/commands/pict3687432.en.png)
 
 ## Voir aussi 
 

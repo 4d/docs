@@ -76,11 +76,11 @@ displayed_sidebar: docs
 
 選択されたテキストは以下の通りです:
 
-![](../assets/en/commands/pict579068.en.png)
+![](../../assets/en/commands/pict579068.en.png)
 
 フィールドには以下のテキストが格納されています:
 
-![](../assets/en/commands/pict579073.en.png)
+![](../../assets/en/commands/pict579073.en.png)
 
 以下のコードを実行すると:
 
@@ -92,9 +92,9 @@ displayed_sidebar: docs
 
 フィールドの表示およびその内容は以下のようになります:
 
-![](../assets/en/commands/pict579075.en.png) 
+![](../../assets/en/commands/pict579075.en.png) 
 
-![](../assets/en/commands/pict579077.en.png)
+![](../../assets/en/commands/pict579077.en.png)
 
 ## 例題 2 
 

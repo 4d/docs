@@ -49,7 +49,7 @@ Este ejemplo muestra una caja de diálogo de alerta que muestra información sob
 
 Esta línea de código muestra la siguiente caja de diálogo de alerta (en Windows):
 
-![](../assets/en/commands/pict4224938.en.png)
+![](../../assets/en/commands/pict4224938.en.png)
 
 ## Ejemplo 2 
 
@@ -61,7 +61,7 @@ La línea :
 
 muestra la caja de diálogo de alerta (en Windows):
 
-![](../assets/en/commands/pict4224959.en.png)
+![](../../assets/en/commands/pict4224959.en.png)
 
 ## Ejemplo 3 
 
@@ -73,7 +73,7 @@ La línea:
 
 Muestra la siguiente caja de diálogo de alerta (en Windows):
 
-![](../assets/en/commands/pict4224968.en.png)
+![](../../assets/en/commands/pict4224968.en.png)
 
 ## Ver también 
 

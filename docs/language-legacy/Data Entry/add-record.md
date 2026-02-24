@@ -28,11 +28,11 @@ The **ADD RECORD** command lets the user add a new record to the database for th
 
 The following figure shows a typical data entry form. 
 
-![](../assets/en/commands/pict2804768.en.png)
+![](../../assets/en/commands/pict2804768.en.png)
 
 The form is displayed in the frontmost window of the process. The window has scroll bars and a size box. Specifying the optional *\** parameter causes the window to be drawn without scroll bars and the form window can no longer be reduced:
 
-![](../assets/en/commands/pict2804770.en.png)
+![](../../assets/en/commands/pict2804770.en.png)
 
 **ADD RECORD** displays the form until the user accepts or cancels the record. If the user is adding several records, the command must be executed once for each new record.
 

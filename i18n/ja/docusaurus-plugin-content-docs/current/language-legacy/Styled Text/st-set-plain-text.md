@@ -75,7 +75,7 @@ displayed_sidebar: docs
 
 リッチテキスト (マルチスタイル) 設定された以下のようなフォーム上の変数があります:
 
-![](../assets/en/commands/pict572269.en.png)
+![](../../assets/en/commands/pict572269.en.png)
 
 ここに、テキストフィールドに格納されている会社名を挿入したいとします。この名前には例えば"&"のような文字が含まれているかもしれません。この場合**ST SET PLAIN TEXT**コマンドを使用する必要があります:
 
@@ -85,11 +85,11 @@ displayed_sidebar: docs
 
 以下のような結果になります:
 
-![](../assets/en/commands/pict572271.en.png)
+![](../../assets/en/commands/pict572271.en.png)
 
 変数に格納されているプレーンテキストは以下のようになります:
 
-![](../assets/en/commands/pict572279.en.png)
+![](../../assets/en/commands/pict572279.en.png)
 
 挿入されたテキストは追加のスタイルタグ中にあることが分かります。このスタイルタグは挿入前の文字に設定されていたスタイルタグに対応します。このメカニズムにより、すべてのケースでリッチテキストエリアが正しく表示されるようになります。
 

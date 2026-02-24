@@ -58,7 +58,7 @@ The **String** function is not compatible with "Integer 64 bits" type fields in 
 
 If you do not pass the optional *format* parameter, the string is returned with the default number format.
 
-The format is specified in the same way as it would be for a [number input on a form](../FormObjects/properties_Display.md#number-format). You can also pass the name of a custom style in *format*. The custom style name must be preceded by the `|` character. Following are some examples:
+The format is specified in the same way as it would be for a [number input on a form](../../FormObjects/properties_Display.md#number-format). You can also pass the name of a custom style in *format*. The custom style name must be preceded by the `|` character. Following are some examples:
 
 | **Example**                        | **Result**           | **Comments**                    |
 | ---------------------------------- | -------------------- | ------------------------------- |
@@ -146,7 +146,7 @@ Examples:
  $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
-* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
+* or a [customized format built upon a pattern](../../Project/date-time-formats.md) (string value)  
 Examples:  
     
 ```4d  
@@ -229,7 +229,7 @@ Examples:
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
-* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
+* or a [customized format built upon a pattern](../../Project/date-time-formats.md) (string value)  
 Examples:  
     
 ```4d  

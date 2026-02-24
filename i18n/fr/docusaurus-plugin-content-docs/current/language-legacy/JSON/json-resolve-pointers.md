@@ -47,7 +47,7 @@ Optionnellement, vous pouvez passer dans *options* un objet contenant des propri
 | **Propriété** | **Type de valeur** | **Description**                                                                                                                                                          |
 | ------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | rootFolder    | Chaîne             | Chemin absolu (en syntaxe 4D standard) du dossier à utiliser pour résoudre les pointeurs relatifs dans *objet*. Par défaut, le dossier Resources de la base est utilisé. |
-| merge         | Booléen            | Fusionner les objets avec les objets pointeur (true) au lieu de les remplacer (false). Par défaut, l'option est à faux ![](../assets/en/commands/pict3516702.en.png)     |
+| merge         | Booléen            | Fusionner les objets avec les objets pointeur (true) au lieu de les remplacer (false). Par défaut, l'option est à faux ![](../../assets/en/commands/pict3516702.en.png)     |
 
 Après l'exécution de la commande : 
 
@@ -86,7 +86,7 @@ Un pointeur JSON est, à proprement parler, une chaîne composée de parties sé
 Les pointeurs JSON sont résolus récursivement, ce qui signifie que si un pointeur résolu contient lui-même des pointeurs, ils sont résolus et ainsi de suite jusqu'à ce que tous les pointeurs soient résolus. Dans ce contexte, tous les chemins de fichiers situés dans les URIs des pointeurs JSON peuvent être relatifs ou absolus. Ils doivent utiliser le "/" en tant que délimiteur de chemin et sont résolus selon les principes suivants :
 
 * Un chemin relatif ne doit pas débuter par '/'. Il est résolu relativement au document JSON contenant la chaîne du chemin.
-* Un chemin absolu débute par '/'. Seuls les [chemins des filesystem](../Concepts/paths.md#chemins-des-filesystem) sont acceptés comme chemins absolus. Par exemple, "/RESOURCES/templates/myfile.json" pointe vers le fichier "myfile.json" situé dans le dossier Resources de la base courante.
+* Un chemin absolu débute par '/'. Seuls les [chemins des filesystem](../../Concepts/paths.md#chemins-des-filesystem) sont acceptés comme chemins absolus. Par exemple, "/RESOURCES/templates/myfile.json" pointe vers le fichier "myfile.json" situé dans le dossier Resources de la base courante.
 
 **Notes :**
 

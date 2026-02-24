@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get default user.Summary-->La commande **Get default user** retourne le numéro de référence unique de l’utilisateur désigné comme “Utilisateur par défaut” dans la boîte de dialogue des Propriétés de la base<!-- END REF--> :
 
-![](../assets/en/commands/pict36789.fr.png)
+![](../../assets/en/commands/pict36789.fr.png)
 
 Si aucun utilisateur par défaut n’est défini, la commande retourne 0.
 

@@ -47,7 +47,7 @@ You can use the "length" virtual property with this command. It is automatically
 
 Your database contains a \[Customer\]full\_Data object field with 15 records:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 If you execute this code:
 

@@ -51,11 +51,11 @@ Vous pouvez passer dans le paramètre *valeur* l'une des constantes suivantes :
 
 Affichage des valeurs :
 
-![](../assets/en/commands/pict1216069.fr.png)
+![](../../assets/en/commands/pict1216069.fr.png)
 
 Affichage des expressions :
 
-![](../assets/en/commands/pict1216065.fr.png)
+![](../../assets/en/commands/pict1216065.fr.png)
 
 ## Exemple 
 

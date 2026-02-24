@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 La commande `SET WINDOW DOCUMENT ICON` <!--REF #_command_.SET WINDOW DOCUMENT ICON.Summary-->vous permet de définir une icône pour les fenêtres dans les applications multi-fenêtres en utilisant une *image* et/ou un *file* avec la référence de la fenêtre *winRef*<!-- END REF-->. L'icône sera visible dans la fenêtre elle-même et dans la barre des tâches pour aider les utilisateurs à identifier les différentes fenêtres et à naviguer parmi elles.
 
-Dans le cas d'une application MDI sous Windows, vous pouvez passer `-1` dans *winRef* pour définir l'icône de la fenêtre principale. Dans d'autres contextes (macOS ou [application SDI](../Menus/sdi.md) sous Windows), passer -1 ne fait rien.
+Dans le cas d'une application MDI sous Windows, vous pouvez passer `-1` dans *winRef* pour définir l'icône de la fenêtre principale. Dans d'autres contextes (macOS ou [application SDI](../../Menus/sdi.md) sous Windows), passer -1 ne fait rien.
 
 - Si seul *file* est passé, la fenêtre utilise l'icône correspondant au type de fichier et le chemin d'accès du fichier est affiché dans le menu de la fenêtre.
 - Si seul *image* est passé, 4D n'affiche pas le chemin et l'image passée est utilisée pour l'icône de la fenêtre.

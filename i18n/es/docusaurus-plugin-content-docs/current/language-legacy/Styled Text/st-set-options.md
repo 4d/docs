@@ -51,11 +51,11 @@ En el parámetro *valor*, puede pasar una de las siguientes constantes:
 
 Visualización de los valores:
 
-![](../assets/en/commands/pict1216069.es.png)
+![](../../assets/en/commands/pict1216069.es.png)
 
 Visualización de las expresiones:
 
-![](../assets/en/commands/pict1216065.es.png)
+![](../../assets/en/commands/pict1216065.es.png)
 
 ## Ejemplo 
 

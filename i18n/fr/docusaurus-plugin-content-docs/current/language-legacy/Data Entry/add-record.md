@@ -28,11 +28,11 @@ La commande **ADD RECORD** permet à l'utilisateur de créer un nouvel enregistr
 
 L'écran suivant présente un formulaire typiquement utilisé pour la saisie de données :
 
-![](../assets/en/commands/pict2804768.fr.png)
+![](../../assets/en/commands/pict2804768.fr.png)
 
 Le formulaire est affiché dans la fenêtre se trouvant au premier plan du process. Elle comporte des barres de défilement et une case de contrôle de taille. Si vous passez le paramètre optionnel astérisque (\*), les barres de défilement n'apparaissent pas et la fenêtre du formulaire ne peut être réduite :
 
-![](../assets/en/commands/pict2804770.fr.png)
+![](../../assets/en/commands/pict2804770.fr.png)
 
 **ADD RECORD** affiche le formulaire jusqu'à ce que l'utilisateur valide ou annule l'enregistrement. Si l'utilisateur ajoute plusieurs enregistrements, la commande doit être appelée pour chaque nouvel enregistrement. 
 

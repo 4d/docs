@@ -59,34 +59,34 @@ En todos los casos, si ningún elemento está seleccionado, la función devuelve
 Esta es una lista llamada *hList,* mostrada en el entorno Aplicación:
 
   
-![](../assets/en/commands/pict22822.es.png)
+![](../../assets/en/commands/pict22822.es.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // en este punto $vlItemPos vale 2
 ```
 
-![](../assets/en/commands/pict22823.es.png)
+![](../../assets/en/commands/pict22823.es.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // en este punto $vlItemPos vale 4
  $vlItemRef:=Selected list items(hList;*) // $vlItemRef vale 200 (por ejemplo)
 ```
 
-![](../assets/en/commands/pict22824.es.png)
+![](../../assets/en/commands/pict22824.es.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // en este punto $vlItemPos vale 8
  $vlItemRef:=Selected list items(hList;*) // $vlItemRef vale 203 (por ejemplo)
 ```
 
-![](../assets/en/commands/pict22825.es.png)
+![](../../assets/en/commands/pict22825.es.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList;$arrPos) // en este punto, $vlItemPos vale 3
   // $arrPos{1} vale 3, $arrPos{2} vale 4 y $arrPos{3} vale 5
 ```
 
-![](../assets/en/commands/pict22826.es.png)
+![](../../assets/en/commands/pict22826.es.png)
 
 ```4d
  $vlItemRef:=Selected list items(hList;$arrRefs;*) // $vlItemRef vale 101 (por ejemplo)

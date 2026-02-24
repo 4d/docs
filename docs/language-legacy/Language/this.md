@@ -27,7 +27,7 @@ In any other context, the command returns **Null**.
 
 ## Class function
 
-When a [class constructor](../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+When a [class constructor](../../Concepts/classes.md#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
@@ -96,7 +96,7 @@ With the *Greeting* project method:
 
 ## List box
 
-In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../Events/onDisplayDetail.md) or the [`On Data Change`](../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.  
+In the context of a list box associated to a collection or an entity selection, during the [`On Display Detail`](../../Events/onDisplayDetail.md) or the [`On Data Change`](../../Events/onDataChange.md) events, `This` returns a reference to the collection element or entity accessed by the list box to display the current row.  
 
 :::note
 
@@ -134,7 +134,7 @@ A collection of objects, each with this structure:
 
 In the list box, each column refers to one of the properties of the object, either directly (This.name), indirectly (This.employees.length), or through an expression (*getPicture*) in which can be used directly. The list box looks like:
 
-![](../assets/en/commands/pict3776706.en.png)
+![](../../assets/en/commands/pict3776706.en.png)
 
 The *GetPicture* project method is automatically executed during the **On display detail** event:
 
@@ -150,17 +150,17 @@ The *GetPicture* project method is automatically executed during the **On displa
 
 Once the form is executed, you can see the result:
 
-![](../assets/en/commands/pict3783169.en.png)
+![](../../assets/en/commands/pict3783169.en.png)
 
 ## Example 2 
 
 You want to display entities from the following structure in a list box:
 
-![](../assets/en/commands/pict3872836.en.png)
+![](../../assets/en/commands/pict3872836.en.png)
 
 You build a list box of the "Collection or entity selection" type with the following definition:
 
-![](../assets/en/commands/pict3872844.en.png)
+![](../../assets/en/commands/pict3872844.en.png)
 
 Note that:
 
@@ -177,7 +177,7 @@ Note that:
 
 Once the form is executed, the list box is automatically filled with the entity selection:
 
-![](../assets/en/commands/pict3872875.en.png)
+![](../../assets/en/commands/pict3872875.en.png)
 
 
 

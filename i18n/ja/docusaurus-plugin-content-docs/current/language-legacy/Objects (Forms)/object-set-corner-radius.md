@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 フォーム内に、以下の様に"Rect1" と "Rect2" と名付けられた長方形が入っています:
 
-![](../assets/en/commands/pict1629574.en.png)
+![](../../assets/en/commands/pict1629574.en.png)
 
 以下のコードを実行することによってその角の半径を変えることができます:
 
@@ -58,13 +58,13 @@ displayed_sidebar: docs
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/commands/pict1629576.en.png)
+![](../../assets/en/commands/pict1629576.en.png)
 
 ## 例題 2 
 
 フォーム内に、以下のような"required-label" と名前のついたテキスト入力エリアがある場合を考えます:
 
-![](../assets/en/commands/pict6074566.en.png)
+![](../../assets/en/commands/pict6074566.en.png)
 
 以下のコードを実行した場合:
 
@@ -72,7 +72,7 @@ displayed_sidebar: docs
  OBJECT SET CORNER RADIUS(*;"required-label";10)
 ```
 
-![](../assets/en/commands/pict6074568.en.png)
+![](../../assets/en/commands/pict6074568.en.png)
 
 テキストエリア(および入力)に対しては、四角形とは異なり、角の丸み部分は元々のオブジェクトエリアの外側に膨らんで描画されている点に注意してください。
 

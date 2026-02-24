@@ -52,16 +52,16 @@ displayed_sidebar: docs
 この引数を指定しない場合、“Scaled to fit prop centered” モード (6) がデフォルトで適用されます。モードごとの結果を以下に示します:
 
 ソースピクチャ   
-![](../assets/en/commands/pict27911.ja.png)
+![](../../assets/en/commands/pict27911.ja.png)
 
 結果のサムネイル (48x48)
 
 * Scaled to fit = 2  
-![](../assets/en/commands/pict27912.ja.png)
+![](../../assets/en/commands/pict27912.ja.png)
 * Scaled to fit proportional = 5  
-![](../assets/en/commands/pict27913.ja.png)
+![](../../assets/en/commands/pict27913.ja.png)
 * Scaled to fit prop centered = 6 (デフォルトモード)  
-![](../assets/en/commands/pict27914.ja.png)
+![](../../assets/en/commands/pict27914.ja.png)
 
 **注:** Scaled to fit proportional および Scaled to fit prop centeredを使用すると、空いたスペースが白く表示されます。しかし、これらのモードが4Dフォームのピクチャフィールドまたはピクチャ変数に適用されると、この空きスペースは透明になります。
 

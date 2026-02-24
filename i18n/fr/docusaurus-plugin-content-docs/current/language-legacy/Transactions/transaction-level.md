@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
-[Transactions](../Develop-legacy/transactions.md)
+[Transactions](../../Develop-legacy/transactions.md)
 
 
 ## Propriétés

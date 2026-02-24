@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 El resultado de una operación de unión se muestra a continuación. La parte de color es el conjunto resultante.
 
-![](../assets/en/commands/pict33125.es.png)
+![](../../assets/en/commands/pict33125.es.png)
 
 El conjunto *resultado* se crea por UNION. El conjunto *resultado* reemplaza todo conjunto existente que tenga el mismo nombre, incluyendo *conjunto1* y *conjunto2*. Los conjuntos *conjunto1* y *conjunto2* deben ser de la misma tabla. El conjunto *resultado* pertenece a la misma tabla que *conjunto1* y *conjunto2*. El registro actual de *resultado* es el registro actual de *conjunto1*.
 

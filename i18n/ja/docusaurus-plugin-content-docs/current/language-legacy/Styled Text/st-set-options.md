@@ -51,11 +51,11 @@ displayed_sidebar: docs
 
 値の表示:
 
-![](../assets/en/commands/pict1216069.en.png)
+![](../../assets/en/commands/pict1216069.en.png)
 
 ソースの表示:
 
-![](../assets/en/commands/pict1216065.en.png)
+![](../../assets/en/commands/pict1216065.en.png)
 
 ## 例題 
 

@@ -32,7 +32,7 @@ Quando o comando for executado a partir de um componente, ele carrega os formul�
 
 ### formData
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md).
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md).
 Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
 
 Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
@@ -43,7 +43,7 @@ Para poder executar este comando, uma tarefa de impressão deve ser aberta antes
 
 Se um formulário de impressão já tiver sido carregado anteriormente (por meio de uma chamada anterior ao comando **FORM LOAD**), ele será fechado e substituído por *form*. Você pode abrir e fechar vários formulários de projeto na mesma sessão de impressão. A alteração do formulário de impressão por meio do comando **FORM LOAD** não gera quebras de página. Cabe ao desenvolvedor gerenciar as quebras de página.
 
-Apenas o [evento `No carregamento`](../Events/onLoad.md) é executado durante a abertura do formulário de projeto, bem como quaisquer métodos de objeto da forma. Outros eventos de formulário são ignorados. O evento formulário [`On Unload`](../Events/onUnload.md) é executado no final da impressão.
+Apenas o [evento `No carregamento`](../../Events/onLoad.md) é executado durante a abertura do formulário de projeto, bem como quaisquer métodos de objeto da forma. Outros eventos de formulário são ignorados. O evento formulário [`On Unload`](../../Events/onUnload.md) é executado no final da impressão.
 
 Para preservar a consistência gráfica das formas, é recomendado aplicar a propriedade de aparência "Imprimindo" independentemente da plataforma.
 
@@ -112,7 +112,7 @@ ALERT("The form contains "+String(size of array(objectsArray))+" objects") //ret
 
 o resultado mostrado é:
 
-![](../assets/en/commands/pict3688480.en.png)
+![](../../assets/en/commands/pict3688480.en.png)
 
 ## Exemplo 2
 

@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->**OPEN ADMINISTRATION WINDOW**コマンドは、コマンドを実行したマシン上でサーバ管理ウィンドウを開きます。<!-- END REF-->4D Serverの管理ウィンドウで現在のパラメタを表示させたり、さまざまなメンテナンス操作を行ったりできます (4D Server Reference Guide参照)。4D Server のバージョン11から、このウィンドウをクライアントマシン上で表示できるようになりました: 
 
-![](../assets/en/commands/pict12004.ja.png)
+![](../../assets/en/commands/pict12004.ja.png)
 
 このコマンドは、4D Serverに接続した4Dアプリケーションまたは4D Serverから呼び出さなければなりません。以下の場合、コマンドは何も行いません: 
 

@@ -40,7 +40,7 @@ This command allows you, for example, to carry out queries in the body of reques
 
 In this example, a simple request is sent to the 4D Web server and the contents of the HTTP body are displayed in the debugger. Here is the form sent to the 4D Web server, as well as the corresponding HTML code:
 
-![](../assets/en/commands/pict38463.en.png)
+![](../../assets/en/commands/pict38463.en.png)
 
 Here is the Test4D2004 method:
 

@@ -77,7 +77,7 @@ QR GET TOTALS DATA コマンドを使用し、指定したセルの詳細を取�
 
 次の図は、クロステーブルモードでの*colNum*と*breakNum*の組み合わせ方について示しています:
 
-![](../assets/en/commands/pict30726.ja.png)
+![](../../assets/en/commands/pict30726.ja.png)
 
   
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  

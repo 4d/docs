@@ -74,7 +74,7 @@ SET PRINT MARKERは次の2つの状況において使用可能です:
 **警告:** このマーカより下側にあるエリア内のオブジェクトもすべて移動します。  
 引数 \* を使用すると、後続の各マーカの最初の位置より下側に*markNum*で指定したマーカを配置することができます。これら後続のマーカも同時に移動します。
 
-![](../assets/en/commands/pict28724.ja.png)
+![](../../assets/en/commands/pict28724.ja.png)
 
 **Notes:**
 
@@ -86,12 +86,12 @@ SET PRINT MARKERは次の2つの状況において使用可能です:
 この例は、3つのカラムがあるレポートを作成します。各行の高さは、フィールド内容に応じて実行中に計算されます。  
 印刷に使用する出力フォームは次の通りです:
 
-![](../assets/en/commands/pict28725.ja.png)
+![](../../assets/en/commands/pict28725.ja.png)
 
 このフォームに対してOn Printing Detailフォームイベントが選択されています（印刷されるエリアに関係なく、[Print form](../commands/print-form.md "Print form") コマンドはこのタイプのフォームイベントだけを生成する点に留意してください）。  
 レコードごとに、(多くの内容を保持する) “Actors”または“Summary”カラムの内容に応じて行の高さを調整しなくてはなりません。目的とする結果を次に示します:
 
-![](../assets/en/commands/pict28726.ja.png)
+![](../../assets/en/commands/pict28726.ja.png)
 
 印刷用のプロジェクトメソッドは次の通りです:
 

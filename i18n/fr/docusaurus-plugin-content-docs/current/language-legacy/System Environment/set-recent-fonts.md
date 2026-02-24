@@ -35,7 +35,7 @@ Ce menu contient les noms des dernières polices sélectionnées durant la sessi
 
 Vous souhaitez ajouter une police au menu des polices récentes :
 
-![](../assets/en/commands/pict1202029.fr.png)
+![](../../assets/en/commands/pict1202029.fr.png)
 
 Vous exécutez le code suivant :
 
@@ -48,7 +48,7 @@ Vous exécutez le code suivant :
 
 Le menu contient alors :
 
-![](../assets/en/commands/pict1202031.fr.png)
+![](../../assets/en/commands/pict1202031.fr.png)
 
 ## Voir aussi 
 

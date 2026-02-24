@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 \[Customer\]テーブル内に、以下のようなデータを含む"full\_Data"オブジェクトフィールドが格納されている場合を考えます:
 
-![](../assets/en/commands/pict2898119.en.png)
+![](../../assets/en/commands/pict2898119.en.png)
 
 以下の様な計算をする事ができます:
 

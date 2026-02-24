@@ -45,7 +45,7 @@ Las coordenadas pasadas en los parámetros *x* y *y* deben estar expresadas en p
 
 El punto que se tiene en cuenta es el primer punto alcanzado. Por ejemplo, en el siguiente caso, el comando devolverá la identificación del círculo si las coordenadas del punto A se pasan y la del rectángulo si las coordenadas del punto B se pasan:
 
-![](../assets/en/commands/pict41094.es.png)  
+![](../../assets/en/commands/pict41094.es.png)  
 Cuando las coordenadas corresponden a un objeto superpuesto o compuesto, el comando devuelve la identificación del primero objeto con un identificador de atributo válido, si es necesario, entre los elementos padre.
 
 El comando devuelve una cadena vacía si:

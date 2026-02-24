@@ -52,7 +52,7 @@ If *relativePath* is not found in any of these locations, the command returns an
 For the purpose of transforming an XML or HTML file, you want to use a "log.xsl" transformation file. This file differs depending on the current language. You therefore want to know which "log.xsl" file path to use.   
 Here are the contents of the Resources folder:
 
-![](../assets/en/commands/pict162129.en.png)
+![](../../assets/en/commands/pict162129.en.png)
 
 To use a .xsl file adapted to the current language, you simply need to pass:
 

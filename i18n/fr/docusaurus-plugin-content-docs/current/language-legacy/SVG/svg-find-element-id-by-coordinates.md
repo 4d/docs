@@ -45,7 +45,7 @@ Les coordonnées passées dans les paramètres *x* et *y* doivent être exprimé
 
 Le point pris en compte est le premier point atteint. Par exemple, dans le cas ci-dessous, la commande retournera l’ID du cercle si les coordonnées du point A sont passées et celui du rectangle si les coordonnées du point B sont passées :
 
-![](../assets/en/commands/pict41094.fr.png)
+![](../../assets/en/commands/pict41094.fr.png)
 
 Si les coordonnées correspondent à des objets superposés ou composites, la commande retourne l’ID du premier objet disposant d’un attribut ID valide en remontant si nécessaire parmi les éléments parents.
 

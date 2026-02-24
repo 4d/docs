@@ -37,7 +37,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 | Parâmetros                                   | 2     | Servidor Web do banco de dados de host de um componente                                            |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino)                     |
 
-O **objeto do servidor web retornado** contém os valores atuais das [propriedades do servidor web](../API/WebServerClass.md).
+O **objeto do servidor web retornado** contém os valores atuais das [propriedades do servidor web](../../API/WebServerClass.md).
 
 ## Exemplo
 
@@ -55,7 +55,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 ## Veja também
 
 [WEB Server list](web-server-list.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriedades
 

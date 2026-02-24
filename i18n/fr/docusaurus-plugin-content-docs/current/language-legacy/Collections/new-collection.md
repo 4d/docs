@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../../API/CollectionClass.md).
 
 Prise en charge des formules
 
@@ -80,7 +80,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 ## Voir également
 
 [New shared collection](new-shared-collection.md)\
-[Type](../commands-legacy/type)
+[Type](../../commands-legacy/type)
 
 ## Propriétés
 

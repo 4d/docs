@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 以下のフォームには*vsColorValue*と*vsColor*という2つの入力不可変数と*thRed*、*thGreen*、*thBlue*という3つのサーモメータが含まれます。
 
-![](../assets/en/commands/pict4278097.en.png)
+![](../../assets/en/commands/pict4278097.en.png)
 
 以下は、これらのオブジェクト用メソッドです:
 
@@ -101,19 +101,19 @@ displayed_sidebar: docs
 
 実行されるとフォームは以下のように表示されます:
 
-![](../assets/en/commands/pict4278099.en.png)
+![](../../assets/en/commands/pict4278099.en.png)
 
 ## 例題 2 
 
 背景色を透明に、フォントカラーを明るい色に設定する場合:
 
-![](../assets/en/commands/pict1210700.en.png)
+![](../../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.en.png)
+![](../../assets/en/commands/pict1210702.en.png)
 
 ## 参照 
 

@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->La commande **TRANSFORM PICTURE** permet d’appliquer une transformation de type *opérateur* à l’image passée dans le paramètre *image*.<!-- END REF-->Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->La commande **TRANSFORM PICTURE** permet d’appliquer une transformation de type *opérateur* à l’image passée dans le paramètre *image*.<!-- END REF-->Cette commande reprend et étend les fonctionnalités proposées par les opérateurs “classiques” de transformation d’images (+/, etc., cf. section [Picture](../../Concepts/dt_picture.md)). Ces opérateurs restent parfaitement utilisables dans 4D.
 
 L’*image* source est modifiée directement à l’issue de l’exécution de la commande. A noter cependant que certaines opérations ne sont pas destructives et peuvent être annulées via l’opération inverse ou l’opération “Réinitialisation”. Par exemple, une image réduite à 1 % retrouvera sa taille originale sans altération si elle est agrandie 100 fois par la suite. Les transformations ne modifient pas le type d’origine de l’image : par exemple, une image vectorielle restera vectorielle à l’issue de la transformation. 
 
@@ -69,7 +69,7 @@ Vous souhaitez transformer les parties blanches d'une image en parties transpare
 
 Vous obtenez le résultat suivant :
 
-![](../assets/en/commands/pict1359750.en.png)
+![](../../assets/en/commands/pict1359750.en.png)
 
 ## Exemple 2 
 
@@ -79,7 +79,7 @@ Voici un exemple de recadrage (l’image est affichée dans le formulaire avec l
  TRANSFORM PICTURE($vpRouages;Crop;50;50;100;100)
 ```
 
-![](../assets/en/commands/pict28288.fr.png)
+![](../../assets/en/commands/pict28288.fr.png)
 
 ## Voir aussi 
 

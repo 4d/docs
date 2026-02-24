@@ -90,7 +90,7 @@ If you pass the optional parameter *\**, the current position and size of the wi
 
 #### Controller form window {#controller-form-window}
 
-This type of window is similar to the `Palette form window` with the following specificity: on Windows, the floating window will be referenced by an icon in the task bar (on Windows, regular floating palettes are not displayed in the task bar). Este tipo de ventana es útil cuando el proyecto se ejecuta en [Modo SDI en Windows](../Menus/sdi.md). En este modo, las paletas flotantes se ocultan cuando su aplicación principal pasa a segundo plano. Thus, if your database interface is based upon a single floating window (for example to display a monitor view), you need to use a `Controller form window` to reference the application in the task bar and make sure it will remain reachable even if it has been moved to the background.
+This type of window is similar to the `Palette form window` with the following specificity: on Windows, the floating window will be referenced by an icon in the task bar (on Windows, regular floating palettes are not displayed in the task bar). Este tipo de ventana es útil cuando el proyecto se ejecuta en [Modo SDI en Windows](../../Menus/sdi.md). En este modo, las paletas flotantes se ocultan cuando su aplicación principal pasa a segundo plano. Thus, if your database interface is based upon a single floating window (for example to display a monitor view), you need to use a `Controller form window` to reference the application in the task bar and make sure it will remain reachable even if it has been moved to the background.
 
 Por ejemplo:
 
@@ -121,7 +121,7 @@ Under Windows, this option has no effect.
 
 #### El formulario no tiene barra de menú {#form-has-no-menu-bar}
 
-Esta opción está pensada para su uso cuando el proyecto se ejecuta en [Modo SDI en Windows](../Menus/sdi.md). In this context, all windows of your application display by default the current process menu bar. If you want to open a window without menu bar, you need to add the `Form has no menu bar` constant to the *type* parameter. Por ejemplo, este código crea una ventana de formulario simple sin barra de menú en una aplicación IDE en Windows:
+Esta opción está pensada para su uso cuando el proyecto se ejecuta en [Modo SDI en Windows](../../Menus/sdi.md). In this context, all windows of your application display by default the current process menu bar. If you want to open a window without menu bar, you need to add the `Form has no menu bar` constant to the *type* parameter. Por ejemplo, este código crea una ventana de formulario simple sin barra de menú en una aplicación IDE en Windows:
 
 ```4d
 var $win:=Open form window("myPanel";Plain form window+Form has no menu bar;Horizontally centered;At the top)
@@ -192,7 +192,7 @@ This type of window features the following advanced specifics:
   - It is not possible to display pop-up menu objects inside this type of window.
   - This type of window does not permit the display of help tips under macOS.
 
-**Usage**: This type of window is primarily used to generate pop-up menus related to buttons such as [toolbar buttons](../FormObjects/button_overview.md#toolbar).
+**Usage**: This type of window is primarily used to generate pop-up menus related to buttons such as [toolbar buttons](../../FormObjects/button_overview.md#toolbar).
 
 #### Sheet form window {#sheet-form-window}
 
@@ -202,7 +202,7 @@ Sheet windows are specific to macOS. These windows are displayed above the main 
 - The command opens a type `Modal form dialog box` window instead:
   - if the last opened window is not visible or is not a document type,
   - en Windows.
-- Since a sheet window must be drawn above a form, its display is pushed back in the [`On Load` event](../Events/onLoad.md) of the first form loaded in the window ([see example 3](#example-3)).
+- Since a sheet window must be drawn above a form, its display is pushed back in the [`On Load` event](../../Events/onLoad.md) of the first form loaded in the window ([see example 3](#example-3)).
 
 **Uso**: `DIALOG`, `ADD RECORD(...;...*)` o equivalente, en macOS (no estándar en Windows).
 
@@ -223,7 +223,7 @@ If your application displays both a toolbar window and standard windows that sup
 
 ### Close box
 
-Windows of the `Movable form dialog box`, `Plain form window`, and `Palette form window` types have a close box. No method is associated to the window's close box. Al hacer clic en esta caja de cierre se cancela y se cierra la ventana, excepto si el evento [`On Close Box`](../Events/onCloseBox.md) ha sido activado para el formulario. In this case, the code associated with this event will be executed.
+Windows of the `Movable form dialog box`, `Plain form window`, and `Palette form window` types have a close box. No method is associated to the window's close box. Al hacer clic en esta caja de cierre se cancela y se cierra la ventana, excepto si el evento [`On Close Box`](../../Events/onCloseBox.md) ha sido activado para el formulario. In this case, the code associated with this event will be executed.
 
 ### Size control
 
@@ -272,7 +272,7 @@ DIALOG("/RESOURCES/OutputPersonnel.json";*)
 
 que muestra:
 
-![](../assets/en/commands/pict3687439.en.png)
+![](../../assets/en/commands/pict3687439.en.png)
 
 ## Ver también
 

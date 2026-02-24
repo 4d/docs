@@ -73,21 +73,21 @@ displayed_sidebar: docs
 
 このステートメントが標準モードで表示されているリストボックスに適用されると:
 
-![](../assets/en/commands/pict197489.en.png)
+![](../../assets/en/commands/pict197489.en.png)
 
 リストボックスの行と列が実際にスクロールされます:
 
-![](../assets/en/commands/pict197491.en.png)
+![](../../assets/en/commands/pict197491.en.png)
 
 他方同じステートメントが階層モードのリストボックスに適用されると、行はスクロールされますが、2番目の列は階層の一部なので列はスクロールされません:
 
-![](../assets/en/commands/pict197493.en.png)
+![](../../assets/en/commands/pict197493.en.png)
 
 ## 例題 2 
 
 フォーム変数に格納されているピクチャーをスクロールしたい場合を考えます。このモンタージュ(合成画像)には、ピクチャーの表示されている部分と、表示すべき点(上から166ピクセル、左から200ピクセルの位置)が示されています:
 
-![](../assets/en/commands/pict1513843.fr.png)
+![](../../assets/en/commands/pict1513843.fr.png)
 
 表示されている部分をスクロールさせて、赤い点がピクチャー変数の原点に表示されるようにするためには、以下のように書きます:
 
@@ -97,7 +97,7 @@ displayed_sidebar: docs
 
 すると、以下のような表示になります:
 
-![](../assets/en/commands/pict1513846.fr.png)
+![](../../assets/en/commands/pict1513846.fr.png)
 
 この場合、2つ目の *\** 引数を省略しないように注意してください。省略してしまうと、定義された点は既に表示されているため、ピクチャーはスクロールされません。
 

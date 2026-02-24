@@ -74,7 +74,7 @@ En outre, les paramètres *titre*, *cachée* et *valeursRépétées* ne sont pas
 
 * Taille de la colonne  
 Il s'agit d'un attribut “visuel”, par conséquent les colonnes sont simplement numérotées de gauche à droite, comme illustré ci-dessous :  
-![](../assets/en/commands/pict31030.fr.png)
+![](../../assets/en/commands/pict31030.fr.png)
 La méthode suivante affecte une taille automatique à toutes les colonnes d'un état en tableau croisé et laisse les autres éléments inchangés :  
 
 ```4d
@@ -89,7 +89,7 @@ A noter que, comme vous voulez modifier uniquement la taille de la colonne, vous
 
 * Source de données (objet) et format d'affichage  
 Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :  
-![](../assets/en/commands/pict31031.fr.png)
+![](../../assets/en/commands/pict31031.fr.png)
 
 A noter qu'il n'est pas possible d'adresser toutes les cellules avec la commande **QR SET INFO COLUMN**, les cellules non numérotées dans le schéma ci-dessus doivent être gérées à l'aide de la commande [QR SET TOTALS DATA](qr-set-totals-data.md).
 
@@ -106,7 +106,7 @@ Le code suivant associe des sources de données aux trois cellules nécessaires 
 
 La zone d'état suivante est générée :
 
-![](../assets/en/commands/pict31032.fr.png)
+![](../../assets/en/commands/pict31032.fr.png)
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.

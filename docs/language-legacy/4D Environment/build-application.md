@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **Note:** This command can only work with 4D Developer (single-user). It cannot be called from 4D Server, 4D in remote mode, or a merged application. 
 
-A build application settings file is an XML file that contains all the parameters used to generate an application. Most parameters can be seen in the [Build Application dialog box](../Desktop/building.md).
+A build application settings file is an XML file that contains all the parameters used to generate an application. Most parameters can be seen in the [Build Application dialog box](../../Desktop/building.md).
 
 By default, 4D creates a build application settings file named “buildApp.4DSettings” for each database and places it in the Settings folder of the database.
 

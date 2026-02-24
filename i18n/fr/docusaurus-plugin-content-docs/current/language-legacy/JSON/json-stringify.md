@@ -99,9 +99,9 @@ Exemples de sérialisation d’un objet 4D avec et sans le paramètre *\** :
 L’intérêt de ce formatage apparaît clairement lorsque le JSON est représenté dans une zone Web :
 
 * Formatage standard :  
-![](../assets/en/commands/pict1205013.fr.png)
+![](../../assets/en/commands/pict1205013.fr.png)
 * Formatage amélioré :  
-![](../assets/en/commands/pict1205011.fr.png)
+![](../../assets/en/commands/pict1205011.fr.png)
 
 ## Exemple 4 
 

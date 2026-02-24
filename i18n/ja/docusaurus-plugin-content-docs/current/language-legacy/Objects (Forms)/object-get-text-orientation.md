@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 以下の様な、フォームエディターで"90°反時計回り"が適用されているオブジェクトがあるとき:
 
-![](../assets/en/commands/pict1209704.fr.png)
+![](../../assets/en/commands/pict1209704.fr.png)
 
 フォームを実行した際、以下のコマンドを実行すると:
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ... オブジェクトは以下のように表示されます。:
 
-![](../assets/en/commands/pict1209706.fr.png)
+![](../../assets/en/commands/pict1209706.fr.png)
 
 ```4d
  $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180

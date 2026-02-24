@@ -35,7 +35,7 @@ Este comando tiene el mismo efecto que un clic en la casilla de reducción de la
 
 La ventana vuelve a su tamaño inicial, es decir, su tamaño antes de ser maximizada. Si se omite el parámetro *ventana*, todas las ventanas de la aplicación son redimensionadas a su tamaño inicial. 
 
-![](../assets/en/commands/pict39369.es.png)
+![](../../assets/en/commands/pict39369.es.png)
 
   
 Casilla de reducción en Windows
@@ -44,7 +44,7 @@ Casilla de reducción en Windows
 
 El tamaño de la ventana se reduce a su tamaño inicial (su tamaño antes de ser maximizada). Si el parámetro ventana se omite, la ventana del primer plano del proceso actual retorna a su tamaño inicial. 
 
-![](../assets/en/commands/pict39370.es.png)
+![](../../assets/en/commands/pict39370.es.png)
 
   
 Casilla de zoom/reducción bajo Mac OS
@@ -53,10 +53,10 @@ Si las ventanas a las cuales se aplica este comando no fueron maximizadas previa
 
 **Nota:** esta función no debe confundirse con la reducción de una ventana a un botón (Windows) o en el Dock (macOS), la cual se genera por medio de un clic en el siguiente botón:
 
-![](../assets/en/commands/pict39371.es.png)  
+![](../../assets/en/commands/pict39371.es.png)  
 Windows
 
-![](../assets/en/commands/pict39372.es.png)  
+![](../../assets/en/commands/pict39372.es.png)  
 Mac OS
 
 ## Ver también 

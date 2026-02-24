@@ -55,7 +55,7 @@ El siguiente ejemplo:
 
 Muestra la siguiente ventana (en Macintosh) por 30 segundos:
 
-![](../assets/en/commands/pict25419.es.png)
+![](../../assets/en/commands/pict25419.es.png)
 
 ## Ver también 
 

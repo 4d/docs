@@ -45,7 +45,7 @@ A noter que le statut de la requête envoyée par cette commande est **302 : red
 
 Vous pouvez utiliser cet URL pour effectuer, à l’aide de pages statiques, des recherches personnalisées dans 4D. Imaginez que vous ayez placé dans une page HTML statique les éléments suivants :
 
-![](../assets/en/commands/pict38648.fr.png)
+![](../../assets/en/commands/pict38648.fr.png)
 
 L’action POST “/4dcgi/rech” a été associée à la zone de texte et aux boutons **OK** et **Annuler**.  
 Dans la [On Web Connection](./on-web-connection-database-method.md), placez les instructions suivantes :

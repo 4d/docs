@@ -38,7 +38,7 @@ Contém:
 * texto em markdown em banco de dados projeto
 * texto estilizado em bancos de dados binário
 
-![](../assets/en/commands/pict4968699.en.png)
+![](../../assets/en/commands/pict4968699.en.png)
 
 Esta documentação pode ser gerada para métodos de tipo triggers, métodos de projeto, métodos de formulário, métodos de banco de dados.
 

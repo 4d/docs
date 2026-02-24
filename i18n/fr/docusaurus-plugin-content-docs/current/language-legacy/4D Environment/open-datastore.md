@@ -40,7 +40,7 @@ Les échanges avec le datastore distant sont automatiquement gérés via des req
 
 :::note
 
-Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../REST/authUsers.md#force-login-mode) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
+Les requêtes `Open datastore` reposent sur l'API REST 4D et peuvent nécessiter une licence 4D Client pour ouvrir la connexion sur un 4D Server distant. Référez-vous à la section [User login mode](../../REST/authUsers.md#force-login-mode) pour savoir comment configurer l'authentification en fonction du mode de connexion utilisateur actuel sélectionné.
 
 :::
 

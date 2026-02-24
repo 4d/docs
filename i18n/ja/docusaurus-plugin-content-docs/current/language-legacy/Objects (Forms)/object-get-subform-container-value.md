@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 以下のようなメインフォームとサブフォームの両方に入力フォームオブエクトがある場合: 
 
-![](../assets/en/commands/pict5864479.en.png)
+![](../../assets/en/commands/pict5864479.en.png)
 
 メインフォーム内の入力オブジェクトとサブフォームオブジェクトは数値型の*Form.numeric* という式がバインドされています。
 

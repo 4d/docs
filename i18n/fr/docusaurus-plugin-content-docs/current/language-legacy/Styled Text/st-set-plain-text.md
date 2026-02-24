@@ -75,7 +75,7 @@ Si *débutSél* est supérieur à *finSél*, le texte n'est pas modifié et la v
 
 Soit la variable texte multistyle suivante :
 
-![](../assets/en/commands/pict572269.fr.png)
+![](../../assets/en/commands/pict572269.fr.png)
 
 Vous voulez insérer des noms de sociétés stockés dans un champ texte. Ces noms peuvent comporter par exemple le caractère "&". Dans ce cas, il est nécessaire d'utiliser la commande [ST SET PLAIN TEXT](st-set-plain-text.md) :
 
@@ -85,11 +85,11 @@ Vous voulez insérer des noms de sociétés stockés dans un champ texte. Ces no
 
 Le résultat est alors :
 
-![](../assets/en/commands/pict572271.fr.png)
+![](../../assets/en/commands/pict572271.fr.png)
 
 Voici le texte brut contenu dans la variable :
 
-![](../assets/en/commands/pict572279.fr.png)
+![](../../assets/en/commands/pict572279.fr.png)
 
 Vous pouvez constater que le texte inséré a été encapsulé au sein d'une paire de balises de style supplémentaires. Ces balises correspondent au style du caractère précédent l'insertion. Ce mécanisme permet de garantir un affichage correct des champs multistyles dans tous les cas de figure. 
 

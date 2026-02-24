@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
 
-**Note**: On Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows), this command always returns "light".
+**Note**: On Windows with [Classic theme](../../settings/interface.md#use-fluent-ui-on-windows), this command always returns "light".
 
 The actual color scheme of a form is defined by:
 
-* the ["Color Scheme" form property](../FormEditor/properties_FormProperties.md#color-scheme);
+* the ["Color Scheme" form property](../../FormEditor/properties_FormProperties.md#color-scheme);
 * if "Color Scheme" set to "inherited", a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
 * if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) not called or called with "inherited" parameter value, the Settings (host database Settings in case of a component);
 * if Settings set to "inherited", the OS user preferences.

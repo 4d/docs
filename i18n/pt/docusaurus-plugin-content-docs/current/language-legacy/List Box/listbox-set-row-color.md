@@ -68,7 +68,7 @@ Em um array de tipo list box, queremos estabelecer as cores de uma fila e para u
  LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
 ```
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ## Ver também 
 

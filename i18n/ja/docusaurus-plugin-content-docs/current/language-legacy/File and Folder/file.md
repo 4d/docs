@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | fileConstant | Integer                                        | &#8594; | 4Dファイル定数                                                          |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
 | \*           | 演算子                                            | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
-| 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
+| 戻り値          | [4D.File](../../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
 
 <!-- END REF -->
 
 ## 説明
 
-`File` コマンドは、<!-- REF #_command_.File.Summary -->[`4D.File`](../API/FileClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`File` コマンドは、<!-- REF #_command_.File.Summary -->[`4D.File`](../../API/FileClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **File ( path { ; pathType } { ; \* })**
 
-*path* には、ファイルパス文字列を渡します。 カスタムの文字列または[ファイルシステム](../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA/myfile.txt") を渡すことができます。
+*path* には、ファイルパス文字列を渡します。 カスタムの文字列または[ファイルシステム](../../Concepts/paths.md#ファイルシステムパス名) (例: "/DATA/myfile.txt") を渡すことができます。
 
 > `File` コマンドでは絶対パス名のみがサポートされます。
 
@@ -81,7 +81,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[`4D.File` class](../API/FileClass.md)  
+[`4D.File` class](../../API/FileClass.md)  
 [Folder](folder.md)  
 [Get 4D file](../commands/get-4d-file)  
 [Object to path](../commands/object-to-path)  

@@ -58,7 +58,7 @@ You want to load and convert a 4D View document stored on disk:
 
 For example, if you convert the following document: 
 
-![](../assets/en/commands/pict3631552.en.png)
+![](../../assets/en/commands/pict3631552.en.png)
 
 You will get the following result (stringified object):
 

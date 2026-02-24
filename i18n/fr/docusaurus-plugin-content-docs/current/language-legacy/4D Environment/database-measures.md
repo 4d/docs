@@ -69,7 +69,7 @@ Ces huit propriétés élémentaires ont toutes la même structure d'objet, par 
    Le tableau "history" ne contient pas séquentiellement toutes les secondes (-1650,-1651,-1652, etc.). La valeur précédente est -1665, ce qui signifie que rien n'a été lu sur le disque durant la période de 15 secondes entre 1650 et 1665.  
    Puisque la taille maximum du tableau est 200, si la base de données est sollicitée de manière intensive (quelque chose est lu chaque seconde sur le disque), la durée maximale de l'historique sera de 200 secondes. D'un autre côté, s'il ne se passe presque rien, par exemple uniquement toutes les 3 minutes, la durée de l'historique pourra atteindre 600 minutes (3\*200).  
    Cet exemple peut être représenté dans le schéma suivant :  
-   ![](../assets/en/commands/pict1510781.en.png)
+   ![](../../assets/en/commands/pict1510781.en.png)
 
 ### dataSegment1 et indexSegment 
 

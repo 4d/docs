@@ -56,7 +56,7 @@ Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 
 Dada la siguiente ventana:
 
-![](../assets/en/commands/pict39568.es.png)
+![](../../assets/en/commands/pict39568.es.png)
 
   
 Después de la ejecución de la siguiente línea:
@@ -67,7 +67,7 @@ Después de la ejecución de la siguiente línea:
 
 La ventana aparece de esta forma:
 
-![](../assets/en/commands/pict39569.es.png)
+![](../../assets/en/commands/pict39569.es.png)
 
 ## Ver también 
 

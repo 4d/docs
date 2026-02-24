@@ -50,7 +50,7 @@ It is possible to base the form printing carried out using the [Print form](../c
   
 **Dead margin**:this refers to the area located between the paper margin and the printer margin. 
 
-![](../assets/en/commands/pict28491.en.png)
+![](../../assets/en/commands/pict28491.en.png)
 
 ## See also 
 

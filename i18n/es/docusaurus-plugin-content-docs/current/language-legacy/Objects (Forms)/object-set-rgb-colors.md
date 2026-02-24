@@ -59,7 +59,7 @@ Los valores de los colores RGB se indican en los parámetros *colorPrimerPlano* 
 
 Este formulario contiene dos variables editables, *vsColorValor* y *vsColor* así como tres termómetros: *thRojo*, *thVerde*, y *thAzul*.
 
-![](../assets/en/commands/pict26192.es.png)
+![](../../assets/en/commands/pict26192.es.png)
 
 Estos son los métodos de estos objetos:
 
@@ -101,19 +101,19 @@ Note la utilización de los *Bitwise operators* para el calculo de los valores d
 
 En ejecución, el formulario se ve así:
 
-![](../assets/en/commands/pict26193.es.png)
+![](../../assets/en/commands/pict26193.es.png)
 
 ## Ejemplo 2 
 
 Cambia a fondo transparente con un color de fuente claro:
 
-![](../assets/en/commands/pict1210700.en.png)
+![](../../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.en.png)
+![](../../assets/en/commands/pict1210702.en.png)
 
 ## Ver también 
 

@@ -78,7 +78,7 @@ A noter également que cette commande ne modifie pas la taille de la fenêtre du
 
 Voici un exemple de mise en place d’une fenêtre de type Explorateur. Le formulaire suivant est défini en mode Développement :
 
-![](../assets/en/commands/pict21945.fr.png)
+![](../../assets/en/commands/pict21945.fr.png)
 
 La taille du formulaire est “automatique”.
 
@@ -92,7 +92,7 @@ La fenêtre est affichée via l’instruction suivante :
 
 La partie droite de la fenêtre peut être affichée ou masquée via un clic sur l’option d’agrandissement/réduction :
 
-![](../assets/en/commands/pict21946.fr.png)
+![](../../assets/en/commands/pict21946.fr.png)
 
 La méthode objet associée à ce bouton est la suivante :
 

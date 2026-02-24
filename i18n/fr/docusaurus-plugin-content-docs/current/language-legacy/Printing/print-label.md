@@ -36,7 +36,7 @@ Si vous ne spécifiez pas le paramètre *nomFichier*, **PRINT LABEL** imprime la
 
 Si vous spécifiez le paramètre *nomFichier*, **PRINT LABEL** vous permet d'imprimer un document d'étiquettes existant stocké sur disque ou d'ouvrir l'Assistant de création d'étiquettes (affiché ci-dessous). Pour plus d'informations sur ce point, reportez-vous à l'exemple plus bas.
 
-![](../assets/en/commands/pict2980390.fr.png)
+![](../../assets/en/commands/pict2980390.fr.png)
 
 Par défaut, **PRINT LABEL** affiche la boîte de dialogue d'impression. Si l'utilisateur annule cette boîte de dialogue, l'exécution de la commande est stoppée et l'état n'est pas imprimé. 
 

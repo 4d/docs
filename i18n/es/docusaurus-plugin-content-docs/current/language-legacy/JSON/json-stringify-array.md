@@ -83,7 +83,7 @@ Conversión de un array objeto:
  $JsonStringPretty :=JSON Stringify array($myArray;*)
 ```
 
-![](../assets/en/commands/pict1205072.fr.png)
+![](../../assets/en/commands/pict1205072.fr.png)
 
 ## Ejemplo 4 
 

@@ -51,7 +51,7 @@ You want to display "Search" as placeholder text in a combo box:
  OBJECT SET PLACEHOLDER(*;"search_combo";"Search")
 ```
 
-![](../assets/en/commands/pict1208449.en.png)
+![](../../assets/en/commands/pict1208449.en.png)
 
 ## See also 
 

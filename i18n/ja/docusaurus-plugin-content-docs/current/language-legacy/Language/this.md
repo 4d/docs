@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## クラス関数
 
-[クラスコンストラクター](../Concepts/classes.md#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
+[クラスコンストラクター](../../Concepts/classes.md#class-constructor) 関数が [`new()`](API/ClassClass.md#new) 関数により使用された場合、その内部の `This` はインスタンス化される新規オブジェクトを指します。
 
 ```4d
 //Class: ob
@@ -93,7 +93,7 @@ $val:=$o.f() //8
 
 ## リストボックス
 
-コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../Events/onDisplayDetail.md) あるいは [`On Data Change`](../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
+コレクションまたはエンティティセレクションに割り当てられたリストボックスのコンテキストにおいては、[`On Display Detail`](../../Events/onDisplayDetail.md) あるいは [`On Data Change`](../../Events/onDataChange.md) イベントの最中において、は現在の行を表示するためにリストボックス割り当てられたコレクション要素またはエンティティへの参照を返します。
 
 :::note
 
@@ -130,7 +130,7 @@ $val:=$o.f() //8
 
 リストボックス内では、各カラムはオブジェクトのプロパティいずれか一つを、直接的 (This.name) に、あるいは間接的 (This.employees.length) に、あるいは直接使用できる式(*getPicture*) を通して参照しています。 このリストボックスは、以下のようになります:
 
-![](../assets/en/commands/pict3776706.en.png)
+![](../../assets/en/commands/pict3776706.en.png)
 
 *GetPicture* プロジェクトメソッドは、**On display detail** イベント中に自動的に実行されます:
 
@@ -146,17 +146,17 @@ $val:=$o.f() //8
 
 フォームを実行すると、以下のような結果が表示されます:
 
-![](../assets/en/commands/pict3783169.en.png)
+![](../../assets/en/commands/pict3783169.en.png)
 
 ## 例題 2
 
 以下のようなストラクチャーからのエンティティをリストボックスに表示したい場合を考えます:
 
-![](../assets/en/commands/pict3872836.en.png)
+![](../../assets/en/commands/pict3872836.en.png)
 
 その場合、以下のような定義を持つ"コレクションまたはエンティティセレクション"型のリストボックスを作成します:
 
-![](../assets/en/commands/pict3872844.en.png)
+![](../../assets/en/commands/pict3872844.en.png)
 
 注:
 
@@ -173,7 +173,7 @@ $val:=$o.f() //8
 
 フォームが実行されると、リストボックスにはエンティティセレクションが入った状態で表示されます:
 
-![](../assets/en/commands/pict3872875.en.png)
+![](../../assets/en/commands/pict3872875.en.png)
 
 ## 参照
 

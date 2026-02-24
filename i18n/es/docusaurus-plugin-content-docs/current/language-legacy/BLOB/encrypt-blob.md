@@ -45,7 +45,7 @@ Además, si la llave pública opcional ha sido utilizada para cifrar la informac
 
 **Principio de cifrado con llaves públicas y privadas para el intercambio de mensajes entre dos personas, “Alicia” y “Juan”:** 
 
-![](../assets/en/commands/pict13081.es.png)
+![](../../assets/en/commands/pict13081.es.png)
 
 **Nota:** el algoritmo de cifrado contiene una función de verificación de integridad (checksum), con el fin de evitar toda modificación del contenido del BLOB (intencional o no). Por lo tanto, un BLOB cifrado no debe modificarse de lo contrario no podría descifrarse. 
 

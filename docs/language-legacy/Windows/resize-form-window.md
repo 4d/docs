@@ -40,7 +40,7 @@ Please note that this behavior is different than that of the [SET WINDOW RECT](s
 
 Given the following window (the fields and frame have the “Grow” property for horizontal resizing):
 
-![](../assets/en/commands/pict39548.en.png)
+![](../../assets/en/commands/pict39548.en.png)
 
 After execution of this line:
 
@@ -50,7 +50,7 @@ After execution of this line:
 
 ... the window appears as follows:
 
-![](../assets/en/commands/pict39549.en.png)
+![](../../assets/en/commands/pict39549.en.png)
 
 ## See also 
 

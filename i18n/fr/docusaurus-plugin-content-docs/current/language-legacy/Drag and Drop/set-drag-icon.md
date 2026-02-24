@@ -56,7 +56,7 @@ Dans un formulaire, l’utilisateur peut générer une étiquette par glisser-d�
 
 Lors du glisser d’une ligne, l’image apparaît :
 
-![](../assets/en/commands/pict1204050.fr.png)
+![](../../assets/en/commands/pict1204050.fr.png)
 
 A noter que vous pouvez modifier la position du curseur par rapport à l’image :
 
@@ -64,7 +64,7 @@ A noter que vous pouvez modifier la position du curseur par rapport à l’image
  SET DRAG ICON(vpict;0;0)
 ```
 
-![](../assets/en/commands/pict1204052.fr.png)
+![](../../assets/en/commands/pict1204052.fr.png)
 
 ## Voir aussi 
 

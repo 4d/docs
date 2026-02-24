@@ -36,7 +36,7 @@ Si omite el parámetro *tabla*, el comando se aplica a la tabla por defecto. Si 
 
 Si no especifica *criterioBusqueda* ni el parámetro *\**, QUERY muestra la caja de diálogo del editor de búsquedas para *tabla* (excepto cuando es la última fila de una búsqueda múltiple, ver ejemplo 2):
 
-![](../assets/en/commands/pict1581957.es.png)
+![](../../assets/en/commands/pict1581957.es.png)
 
 Para mayor información sobre la utilización de este editor, consulte el Manual de Diseño. 
 

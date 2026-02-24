@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
 | \*             | operator                                           | &#8594; | \* pour retourner le dossier de la base hôte                          |
-| Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
+| Résultat       | [4D.Folder](../../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
 
 ## Description
 
-La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et retourne un nouvel objet de type [`4D.Folder`](../../API/FolderClass.md)<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA").
+Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un [filesystem](../../Concepts/paths.md#filesystem-pathnames) (ex : "/DATA").
 
 > Seuls les noms de chemin absolus sont pris en charge par la commande `Folder`.
 
@@ -68,14 +68,14 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 
 Si la commande est appelée à partir d'un composant, passez le paramètre optionnel `*` pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre `*`, un objet null est systématiquement retourné.
 
-> Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
+> Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
 
 ## Voir également
 
-[classe `4D.Folder`](../API/FolderClass.md)
+[classe `4D.Folder`](../../API/FolderClass.md)
 [File](file.md)\
-[Object to path](../commands-legacy/object-to-path)\
-[Path to object](../commands-legacy/path-to-object)
+[Object to path](../../commands-legacy/object-to-path)\
+[Path to object](../../commands-legacy/path-to-object)
 
 ## Propriétés
 

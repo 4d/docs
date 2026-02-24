@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando `New collection` <!--REF #_command_.New collection.Summary-->crea una nueva colección vacía o prellenada y devuelve su referencia.<!-- END REF--> Las colecciones pueden manejarse utilizando propiedades y funciones de la [API de la clase Collection](../API/CollectionClass.md).
+El comando `New collection` <!--REF #_command_.New collection.Summary-->crea una nueva colección vacía o prellenada y devuelve su referencia.<!-- END REF--> Las colecciones pueden manejarse utilizando propiedades y funciones de la [API de la clase Collection](../../API/CollectionClass.md).
 
 Si no se pasa ningún parámetro, `New collection` crea una colección vacía y devuelve su referencia.
 

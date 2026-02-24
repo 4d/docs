@@ -74,7 +74,7 @@ El comando QR GET TOTALS DATA permite recuperar el contenido de una celda espec�
 
 La siguiente imagen muestra cómo los parámetros *numColumna* y *numRuptura* son combinados en una tabla cruzada:
 
-![](../assets/en/commands/pict30726.es.png)
+![](../../assets/en/commands/pict30726.es.png)
 
 Si pasa un número de *area* inválido, se genera el error -9850.  
 Si el parámetro *numColumna* es incorrecto, se genera el error -9852\.   

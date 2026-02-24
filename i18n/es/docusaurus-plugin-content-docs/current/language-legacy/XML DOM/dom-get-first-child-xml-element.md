@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Los parámetros *nomElementHijo* y *valorElemHijo*, si se pasan, reciben respectivamente el nombre y el valor del elemento hijo.  
 
-![](../assets/en/commands/pict39972.es.png)
+![](../../assets/en/commands/pict39972.es.png)
 
 ## Ejemplo 1 
 

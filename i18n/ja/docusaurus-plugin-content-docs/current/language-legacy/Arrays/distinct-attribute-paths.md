@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 データベースにはインデックスされた \[Customer\]full\_Data というオブジェクトフィールドがあり、15件のレコードが持つとします:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 次のコードを実行した場合:
 

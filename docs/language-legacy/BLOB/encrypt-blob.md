@@ -44,7 +44,7 @@ Moreover, if the optional recipient’s public key has been used to encrypt the 
 
 **Encryption principle with public and private keys for message exchange between two people, “Alice” and “Bob”:** 
   
-![](../assets/en/commands/pict13081.en.png)  
+![](../../assets/en/commands/pict13081.en.png)  
 
 **Note:** The cipher contains a checksum functionality in order to avoid any BLOB content modification (deliberately or not). Consequently, an encrypted BLOB should not be modified otherwise it might not be decrypted.
 

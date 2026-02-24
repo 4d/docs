@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->The **METHOD GET FOLDERS** command returns, in the *arrNames* array, the names of folders created on the Home page of the 4D Explorer<!-- END REF-->:
 
-![](../assets/en/commands/pict837666.en.png)
+![](../../assets/en/commands/pict837666.en.png)
 
 Since folder names must be unique, the hierarchy is not returned in this array. 
 

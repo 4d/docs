@@ -38,7 +38,7 @@ Passez dans le paramètre *propriété* le libellé de la propriété à lire. A
 
 Soit le tableau objet défini dans l’exemple de la commande [OB SET ARRAY](ob-set-array.md) :
 
-![](../assets/en/commands/pict1211436.fr.png)
+![](../../assets/en/commands/pict1211436.fr.png)
 
 On souhaite récupérer ces valeurs :
 
@@ -47,7 +47,7 @@ On souhaite récupérer ces valeurs :
  OB GET ARRAY($Enfants;"Enfants";$result)
 ```
 
-![](../assets/en/commands/pict1213151.fr.png)
+![](../../assets/en/commands/pict1213151.fr.png)
 
 ## Exemple 2 
 

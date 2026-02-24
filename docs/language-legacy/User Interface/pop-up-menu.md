@@ -109,7 +109,7 @@ The pop-up menu is displayed on Windows by pressing the right mouse button; it i
 
 The following is the pop-up menu as it appears on Windows (left) and Macintosh (right). Note the standard check mark for the Windows version.
 
-![](../assets/en/commands/pict36394.en.png)
+![](../../assets/en/commands/pict36394.en.png)
 
 ## See also 
 

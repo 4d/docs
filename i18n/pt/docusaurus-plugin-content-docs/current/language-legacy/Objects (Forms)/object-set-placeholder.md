@@ -51,7 +51,7 @@ Você quer mostrar o texto "Buscar" um combo box:
  OBJECT SET PLACEHOLDER(*;"search_combo";"Search")
 ```
 
-![](../assets/en/commands/pict1208449.en.png)
+![](../../assets/en/commands/pict1208449.en.png)
 
 ## Ver também 
 

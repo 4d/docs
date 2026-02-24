@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 The *childElemName* and *childElemValue* parameters, if they are passed, receive respectively the name and the value of the child element. 
 
-![](../assets/en/commands/pict39972.en.png)
+![](../../assets/en/commands/pict39972.en.png)
 
 ## Example 1 
 

@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 変換された以下のストラクチャーで例題を見てみましょう: 
 
-![](../assets/en/commands/pict473713.en.png)
+![](../../assets/en/commands/pict473713.en.png)
 
 4D では以下のコードが依然動作しますが、更新する必要があります:
 

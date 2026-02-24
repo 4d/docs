@@ -40,7 +40,7 @@ Exchanges with the remote datastore are automatically managed via REST requests.
 
 :::note
 
-`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Consulte a seção [user login mode](../REST/authUsers.md#force-login-mode) para saber como configurar a autenticação dependendo do modo de login do usuário atual selecionado.
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection on a remote 4D Server. Consulte a seção [user login mode](../../REST/authUsers.md#force-login-mode) para saber como configurar a autenticação dependendo do modo de login do usuário atual selecionado.
 
 :::
 

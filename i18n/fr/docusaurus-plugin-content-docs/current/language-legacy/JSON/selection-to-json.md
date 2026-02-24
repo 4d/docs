@@ -52,7 +52,7 @@ Cette commande prend en charge les champs de type objet : les données des champ
 
 Vous voulez créer une chaîne JSON représentant cette sélection :
 
-![](../assets/en/commands/pict1205203.fr.png)
+![](../../assets/en/commands/pict1205203.fr.png)
 
 1) Vous souhaitez inclure les valeurs de tous les champs de la table \[Adhérents\] :  
 

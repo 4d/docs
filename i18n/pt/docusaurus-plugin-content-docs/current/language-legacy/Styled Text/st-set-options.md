@@ -51,11 +51,11 @@ No parâmetro valor, pode passar uma das constantes abaixo:
 
 Visualização dos valores:
 
-![](../assets/en/commands/pict1216069.pt.png)
+![](../../assets/en/commands/pict1216069.pt.png)
 
 Visualização das expressões:
 
-![](../assets/en/commands/pict1216065.pt.png)
+![](../../assets/en/commands/pict1216065.pt.png)
 
 ## Exemplo 
 

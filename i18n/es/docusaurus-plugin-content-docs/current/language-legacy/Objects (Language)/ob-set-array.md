@@ -112,7 +112,7 @@ Uso de un array objeto:
 
 Así es como el objeto aparece en el depurador:
 
-![](../assets/en/commands/pict1211436.es.png)
+![](../../assets/en/commands/pict1211436.es.png)
 
 ## Ejemplo 5 
 
@@ -124,7 +124,7 @@ Así es como el objeto aparece en el depurador:
  OB SET ARRAY([People]Children;"Girls";$arrGirls)
 ```
 
-![](../assets/en/commands/pict1899097.en.png)
+![](../../assets/en/commands/pict1899097.en.png)
 
 ## Ejemplo 6 
 

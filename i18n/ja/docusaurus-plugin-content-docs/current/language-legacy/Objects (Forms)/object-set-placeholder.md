@@ -52,7 +52,7 @@ displayed_sidebar: docs
  OBJECT SET PLACEHOLDER(*;"search_combo";"Search")
 ```
 
-![](../assets/en/commands/pict1208449.en.png)
+![](../../assets/en/commands/pict1208449.en.png)
 
 ## 参照 
 

@@ -76,7 +76,7 @@ Igualmente note que este comando não muda o tamanho da janela do formulário (p
 
 O exemplo a seguir mostra como colocar uma janela de tipo Explorador. O formulário a seguir é criado no ambiente Desenho:
 
-![](../assets/en/commands/pict21945.pt.png)  
+![](../../assets/en/commands/pict21945.pt.png)  
 O tamanho do formulário é “automático”.
 
 A janela é visualizada utilizando o seguinte código:
@@ -89,7 +89,7 @@ A janela é visualizada utilizando o seguinte código:
 
 A parte da direita da janela pode ser mostrada ou ocultada clicando na opção aumentar/reduzir:
 
-![](../assets/en/commands/pict21946.en.png)
+![](../../assets/en/commands/pict21946.en.png)
 
 O método de objeto associado com este botão é o seguinte:
 

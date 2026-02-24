@@ -36,7 +36,7 @@ displayed_sidebar: docs
 カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
 - コマンドに引数として渡された*formData* オブジェクト(あれば)。
-- [フォームに割り当てられているユーザークラス](../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
+- [フォームに割り当てられているユーザークラス](../../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
 - または、空のオブジェクト。
 
 ### サブフォーム
@@ -66,13 +66,13 @@ displayed_sidebar: docs
 
 人物のレコードを表示しているフォームにおいて、"Check children" ボタンを押すとその人物の子供の名前と年齢を検証あるいは変更するダイアログが開く場合を考えます:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
 検証フォームでは、入力に対していくつかのフォームオブジェクトプロパティを割り当てているものとします:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 "Check children" ボタンの中身のコードは以下のようになります:
 
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 
 フォームはそれぞれの子供についての情報を表示します:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 値が変更されてOKボタンがクリックされた場合、フィールドは更新されます(その後、親のレコードも保存される必要があります)。
 

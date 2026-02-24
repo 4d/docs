@@ -40,7 +40,7 @@ Cette commande permet par exemple d’effectuer des recherches dans le corps des
 
 Dans cet exemple, une requête simple est envoyée au serveur Web de 4D et le contenu du champ HTTP corps est visualisé dans le débogueur. Voici le formulaire envoyé au serveur Web de 4D, ainsi que le code HTML correspondant :
 
-![](../assets/en/commands/pict38463.fr.png)
+![](../../assets/en/commands/pict38463.fr.png)
 
 Voici la méthode Test4D2004 :
 

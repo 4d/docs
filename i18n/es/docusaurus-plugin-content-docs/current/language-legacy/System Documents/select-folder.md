@@ -42,10 +42,10 @@ El parámetro opcional *mensaje* le permite mostrar un mensaje en la caja de di�
 
 **Windows**
 
-![](../assets/en/commands/pict3881936.en.png)
+![](../../assets/en/commands/pict3881936.en.png)
 
 **macOS** 
-![](../assets/en/commands/pict3881985.en.png)
+![](../../assets/en/commands/pict3881985.en.png)
 
  Puede utilizar el parámetro *rutaDefecto* para ofrecer una ubicación de carpeta por defecto en la caja de diálogo de selección de carpeta. Puede pasar en este parámetro tres tipos de valores: 
 * Una ruta de acceso de una carpeta válida utilizando la sintaxis de la plataforma actual.
@@ -73,7 +73,7 @@ El usuario selecciona una carpeta y luego hace clic en el botón **Seleccionar c
 
 **Nota:** bajo macOS, dependiendo de si el nombre de la carpeta se selecciona o no en la caja de diálogo, la ruta de acceso devuelta podría ser diferente.
 
-![](../assets/en/commands/pict34878.es.png)
+![](../../assets/en/commands/pict34878.es.png)
 
 **4D Server:** esta función permite visualizar los volúmenes conectados a las estaciones de trabajo de los clientes. No es posible llamar esta función desde un procedimiento almacenado.
 

@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../Project/compiler.md).
+**Compile project**<!--REF #_command_.Compile project.Summary--> allows you to compile the current host project or the project specified in the *projectFile* parameter.<!-- END REF--> For more information on compilation, check the [Compilation page](../../Project/compiler.md).
 
 By default, the command uses the compiler options defined in the Structure Settings. You can override them by passing an *options* parameter. The following syntaxes are supported:
 
@@ -41,7 +41,7 @@ By default, the command uses the compiler options defined in the Structure Setti
 
 Unlike the Compiler window, this command requires that you explicitly designate the component(s) to compile. When compiling a project with **Compile project**, you need to declare its components using the *components* property of the *options* parameter. Keep in mind that the components must already be compiled (binary components are supported).
 
-The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../Desktop/building.md) feature.
+The resulting compiled code will be stored in the DerivedData or Libraries folder of the project, depending on the *targets* property of the *options* parameter. If you want to create .4dz files, you still need to manually zip the compiled project or use the [build application](../../Desktop/building.md) feature.
 
 If you pass an empty collection in *targets*, **Compile project** will execute a syntax check without compiling.
 
@@ -59,11 +59,11 @@ The *options* parameter is an object. Here are the available compilation options
 | defaultTypeForButtons | Integer | Possible value: Is real or Is longint |
 | defaultTypeForNumerics | Integer | Possible value: Is real or Is longint |
 | generateSymbols | Boolean | True to generate symbol information in the .symbols returned object |
-| generateSyntaxFile |Boolean | True to generate a [syntax file for code completion](../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project |
+| generateSyntaxFile |Boolean | True to generate a [syntax file for code completion](../../settings/general.md).md#generate-syntax-file-for-code-completion-when-compiled) in the \\Resources\\en.lproj folder of the project |
 | generateTypingMethods | Text | "reset" or "append" to generate typing methods. If value is "append", existing variable declarations won't be modified (compiler window behavior). If value is "reset" existing variable declarations are removed beforehand. |
-| plugins | 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax. |
+| plugins | 4D.Folder object | Plug-ins folder to be used instead of the [Plugins folder of the current project](../../Project/architecture.md#plugins). This property is only available with the *projectFile* syntax. |
 | targets | Collection of strings | Possible values: "x86_64_generic", "arm64_macOS_lib". Pass an empty collection to execute syntax check only |
-| typeInference | Text | "all": The compiler deduces the types of all variables not explicitly declared, "locals": The compiler deduces the types of local variables not explicitly declared, "none": All variables must be explicitly declared in the code (legacy mode), "direct": All variables must be explicitly declared in the code ([direct typing](../Project/compiler.md#enabling-direct-typing)). |
+| typeInference | Text | "all": The compiler deduces the types of all variables not explicitly declared, "locals": The compiler deduces the types of local variables not explicitly declared, "none": All variables must be explicitly declared in the code (legacy mode), "direct": All variables must be explicitly declared in the code ([direct typing](../../Project/compiler.md#enabling-direct-typing)). |
 | warnings | Collection of objects | Defines the warnings state |
 | \[\].major | Number | Warning main number, before the dot |
 | \[\].minor | Number | Warning second number, after the dot |
@@ -100,7 +100,7 @@ The object returned by **Compile project** has up to three properties:
 |symbols.methods\[\].params | Collection | Collection of parameter types (Value type numerical codes) |
 |symbols.methods\[\]. threadSafe | Boolean | Indicates if this method is thread safe |
 
-For more information, see [Compilation tools](../Project/compiler.md#compilation-tools).
+For more information, see [Compilation tools](../../Project/compiler.md#compilation-tools).
 
 ## variable objects 
 

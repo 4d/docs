@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 次のコードは、外部データソース（Oracle）へ接続します:
 
-![](../assets/en/commands/pict33359.ja.png)
+![](../../assets/en/commands/pict33359.ja.png)
 
 ```4d
  var vName : Text

@@ -86,7 +86,7 @@ The **QR SET TOTALS DATA** command sets the details of a specific cell.
 
 Here is a depiction of how the parameters column and break have to be combined in cross-table mode:
 
-![](../assets/en/commands/pict31186.en.png)
+![](../../assets/en/commands/pict31186.en.png)
 
 ### Supported Types of Data 
 

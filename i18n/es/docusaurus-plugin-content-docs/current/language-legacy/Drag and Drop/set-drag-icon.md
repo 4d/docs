@@ -56,7 +56,7 @@ En un formulario, un usuario puede generar una etiqueta por arrastrar y soltar u
 
 Al arrastrar una fila, la imagen aparecerá como se muestra aquí:
 
-![](../assets/en/commands/pict1204050.en.png)
+![](../../assets/en/commands/pict1204050.en.png)
 
 Note que puede modificar la posición del cursor con respecto a la imagen:
 
@@ -64,7 +64,7 @@ Note que puede modificar la posición del cursor con respecto a la imagen:
  SET DRAG ICON(vpict;0;0)
 ```
 
-![](../assets/en/commands/pict1204052.fr.png)
+![](../../assets/en/commands/pict1204052.fr.png)
 
 ## Ver también 
 

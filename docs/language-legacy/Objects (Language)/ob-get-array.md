@@ -38,7 +38,7 @@ In the *property* parameter, pass the label of the property to be read. Note tha
 
 Given an object array defined in the example of the [OB SET ARRAY](ob-set-array.md) command:
 
-![](../assets/en/commands/pict1211436.en.png)
+![](../../assets/en/commands/pict1211436.en.png)
 
 We want to retrieve these values:
 
@@ -47,7 +47,7 @@ We want to retrieve these values:
  OB GET ARRAY($Children;"Children";$result)
 ```
 
-![](../assets/en/commands/pict1213151.en.png)
+![](../../assets/en/commands/pict1213151.en.png)
 
 ## Example 2 
 

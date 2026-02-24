@@ -50,7 +50,7 @@ Si se utilizan los parámetros opcionales *despHor* y *despVert*, una traducció
 
 Dadas las siguientes imágenes: 
 
-![](../assets/en/commands/pict27793.es.png)
+![](../../assets/en/commands/pict27793.es.png)
 
 ```4d
  COMBINE PICTURES(bandera;mifondo;Superimposition;micirculo;50;30)
@@ -58,7 +58,7 @@ Dadas las siguientes imágenes:
 
 Resultado:
 
-![](../assets/en/commands/pict27794.es.png)
+![](../../assets/en/commands/pict27794.es.png)
 
 ## Ver también 
 

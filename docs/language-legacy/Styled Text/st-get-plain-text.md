@@ -87,7 +87,7 @@ It is now   Go to the 4D site or Open a window
 
 This text is displayed:
 
-![](../assets/en/commands/pict1217332.en.png)
+![](../../assets/en/commands/pict1217332.en.png)
 
 If you execute the following code:
 

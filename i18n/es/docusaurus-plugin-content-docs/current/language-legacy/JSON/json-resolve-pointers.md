@@ -46,7 +46,7 @@ Opcionalmente, puede pasar en *opciones* un objeto que contenga propiedades espe
 | **Propiedad** | **Tipo de valor** | **Descripción**                                                                                                                                                                            |
 | ------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | rootFolder    | Cadena            | Ruta absoluta (utilizando la sintaxis 4D estándar) a la carpeta que se utilizará para resolver punteros relativos en el objeto. El valor predeterminado es la carpeta Recursos de la base. |
-| merge         | Booleano          | Fusiona objetos con objetos puntero (true) en lugar de reemplazarlos (false). El valor predeterminado es false ![](../assets/en/commands/pict3516702.es.png)                               |
+| merge         | Booleano          | Fusiona objetos con objetos puntero (true) en lugar de reemplazarlos (false). El valor predeterminado es false ![](../../assets/en/commands/pict3516702.es.png)                               |
 
 Después de ejecutar el comando:
 
@@ -84,7 +84,7 @@ Un puntero JSON es, estrictamente hablando, una cadena compuesta de partes separ
 Los punteros JSON se resuelven recursivamente, lo que significa que si un puntero resuelto también contiene punteros, se resuelven recursivamente y así sucesivamente, hasta que se resuelvan todos los punteros. En este contexto, todas las rutas de archivo encontradas en las URIs de puntero JSON pueden ser relativas o absolutas. Deben utilizar '/' como delimitador de ruta y se resuelven de la siguiente manera:
 
 * Una ruta relativa no debe comenzar con '/'. Se resuelve relativamente al documento JSON donde se ha encontrado la cadena de ruta de acceso,
-* Una ruta absoluta comienza con '/'. Solo las [rutas filesystem](../Concepts/paths.md#filesystem-pathnames) se aceptan como rutas absolutas. Por ejemplo, "/RESOURCES/templates/myfile.json" apunta al archivo "myfile.json" que se encuentra en la carpeta de recursos de la base de datos actual.
+* Una ruta absoluta comienza con '/'. Solo las [rutas filesystem](../../Concepts/paths.md#filesystem-pathnames) se aceptan como rutas absolutas. Por ejemplo, "/RESOURCES/templates/myfile.json" apunta al archivo "myfile.json" que se encuentra en la carpeta de recursos de la base de datos actual.
 
 **Notas:**
 

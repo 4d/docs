@@ -46,7 +46,7 @@ In the *property* parameter, pass the property whose value you want to modify an
 | -------------------------- | ------ | -------------------------------- | ------ |  
 | Access privileges          | Text | 4D\_access\_group                | Assign an access group to the command<br/>0 = All Groups<br/>>0 = Group ID |  
 | Associated standard action | Text | 4D\_standard\_action             | Associate a standard action with a menu item<br/>See the constants of the *Standard Action* theme.  |  
-| n/a                        | Text | 4D\_execute\_without\_validating | Enable the **[Execute without validating](../Menus/properties.md#execute-without-validating)** option (for menu items associated to standard actions). <br/>True=enable, False (default)=disable |  
+| n/a                        | Text | 4D\_execute\_without\_validating | Enable the **[Execute without validating](../../Menus/properties.md#execute-without-validating)** option (for menu items associated to standard actions). <br/>True=enable, False (default)=disable |  
 | Start a new process        | Text | 4D\_start\_new\_process          | Activate the "Start New Process" option<br/>0 = No, 1 = Yes  |  
     
 In the case of the Associated standard action property, you can pass in the *value* parameter a standard action name. For a comprehensive list of available actions, please refer to the *Standard actions* section in the *Design Reference* manual. Most common actions are also available as constants in the *Standard Action* theme.  

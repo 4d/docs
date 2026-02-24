@@ -36,7 +36,7 @@ displayed_sidebar: docs
 Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** renvoie soit :
 
 - l'objet *formData* passé en paramètre à cette commande, le cas échéant,
-- ou un objet instancié de la [classe utilisateur associée au formulaire](../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
+- ou un objet instancié de la [classe utilisateur associée au formulaire](../../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
 - ou un objet vide.
 
 ### Sous-formulaire
@@ -66,13 +66,13 @@ Pour plus d'informations, veuillez vous référer à la section *Sous-formulaire
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
 Dans le formulaire de vérification, vous avez attribué certaines propriétés de l'objet Form aux objets de saisie :
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Voici le code du bouton "Check Children" :
 
@@ -104,7 +104,7 @@ Voici le code du bouton "Check Children" :
 
 Le formulaire affiche des informations pour chaque enfant :
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 

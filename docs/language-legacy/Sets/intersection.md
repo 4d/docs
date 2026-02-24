@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 The graphical result of an Intersection operation is displayed here. The shaded area is the result set.
 
-![](../assets/en/commands/pict32963.en.png)
+![](../../assets/en/commands/pict32963.en.png)
 
 The *resultSet* is created by **INTERSECTION**. The *resultSet* replaces any existing set having the same name, including *set1* and *set2*. Both *set1* and *set2* must be from the same table. The *resultSet* belongs to the same table as *set1* and *set2*. If the same current record is set in both *set1* and *set2*, it remains memorized in the *resultSet*. Otherwise, *resultSet* does not have a current record. 
 

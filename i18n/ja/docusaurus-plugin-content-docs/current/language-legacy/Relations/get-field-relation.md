@@ -59,11 +59,11 @@ displayed_sidebar: docs
 
 以下のようなストラクチャがあります:
 
-![](../assets/en/commands/pict31607.en.png)
+![](../../assets/en/commands/pict31607.en.png)
 
 \[Employees\]Companyフィールドから\[Companies\]Nameフィールドへリンクするリレートのプロパティは次の通りです:
 
-![](../assets/en/commands/pict31608.en.png)
+![](../../assets/en/commands/pict31608.en.png)
 
 次のコードはGET FIELD RELATION、[GET AUTOMATIC RELATIONS](get-automatic-relations.md "GET AUTOMATIC RELATIONS")、[SET FIELD RELATION](set-field-relation.md "SET FIELD RELATION")、および[SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS")により提供されるさまざまな機能とともに、その効果を示します:
 

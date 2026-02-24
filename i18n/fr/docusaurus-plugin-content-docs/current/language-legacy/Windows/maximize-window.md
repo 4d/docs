@@ -40,7 +40,7 @@ Si *fenêtre* est déjà maximisée, la commande ne fait rien.
 
 La fenêtre est agrandie et s'adapte à la taille courante de la fenêtre de l'application (mode MDI) ou de l'écran (mode SDI). Si vous ne passez pas le paramètre *fenêtre*, toutes les fenêtres de l'application sont maximisées. La fenêtre maximisée est passée au premier plan. 
 
-![](../assets/en/commands/pict39344.fr.png)  
+![](../../assets/en/commands/pict39344.fr.png)  
 Case de zoom ("bouton d'agrandissement") sous Windows
 
 Dans le cas où la commande est appliquée à une fenêtre dont la taille est soumise à des contraintes (par exemple, une fenêtre formulaire) :
@@ -52,7 +52,7 @@ Dans le cas où la commande est appliquée à une fenêtre dont la taille est so
 
 La fenêtre est agrandie de manière à afficher la totalité de son contenu. Si vous ne passez pas le paramètre *fenêtre*, la fenêtre du premier plan du process courant est maximisée. 
 
-![](../assets/en/commands/pict39345.fr.png)  
+![](../../assets/en/commands/pict39345.fr.png)  
 Case de zoom sous Mac OS
 
 * Le zoom étant calculé par rapport au contenu de la fenêtre, cette commande doit être appelée dans un contexte où ce contenu est défini, par exemple une méthode formulaire. Sinon, la commande ne fait rien.
@@ -72,7 +72,7 @@ Vous souhaitez que votre formulaire s'ouvre sur une fenêtre "plein écran". Pou
 
 Cet exemple illustre la prise en charge des contraintes de taille sous Windows en mode MDI. Le formulaire suivant comporte une contrainte de taille (largeur maximale=400) :
 
-![](../assets/en/commands/pict1476223.fr.png)
+![](../../assets/en/commands/pict1476223.fr.png)
 
 La méthode du bouton contient uniquement :
 
@@ -82,11 +82,11 @@ La méthode du bouton contient uniquement :
 
 Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 
-![](../assets/en/commands/pict1476225.fr.png)
+![](../../assets/en/commands/pict1476225.fr.png)
 
 ... la fenêtre n'est pas placée dans son état "maximisé" ; seule sa hauteur est augmentée :
 
-![](../assets/en/commands/pict1476363.fr.png)
+![](../../assets/en/commands/pict1476363.fr.png)
 
 ## Voir aussi 
 

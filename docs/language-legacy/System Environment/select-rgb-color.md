@@ -35,7 +35,7 @@ The system color selection window appears as follows:
 
 | **Macintosh**                                | **Windows**                                 |
 | -------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43385.en.png) |
+| ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43385.en.png) |
 
 The optional *defaultColor* parameter preselects a color in the window. This parameter can be used, for example, to restore by default the last color set by the user. Pass an RGB-format color value in this parameter (for more information, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command). You can use one of the constants in the *SET RGB COLORS* theme. If the *defaultColor* parameter is omitted or if you pass 0, the color black is selected when the dialog box is opened. 
 

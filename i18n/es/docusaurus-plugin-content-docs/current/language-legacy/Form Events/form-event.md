@@ -27,7 +27,7 @@ Cada objeto devuelto incluye las siguientes propiedades principales:
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName    | text     | Nombre del objeto que desencadena el evento - No se incluye si el evento lo desencadena el formulario                                                                                     |
 | code          | integer  | Valor numérico del evento de formulario.                                                                                                                                  |
-| description   | text     | Nombre del evento de formulario (*por ejemplo*, "On After Edit"). Consulte la sección [**Eventos formulario**](../Events/overview.md). |
+| description   | text     | Nombre del evento de formulario (*por ejemplo*, "On After Edit"). Consulte la sección [**Eventos formulario**](../../Events/overview.md). |
 
 Por ejemplo, en el caso de un clic en un botón, el objeto contiene las siguientes propiedades:
 
@@ -37,8 +37,8 @@ Por ejemplo, en el caso de un clic en un botón, el objeto contiene las siguient
 
 El objeto evento puede contener propiedades adicionales, dependiendo del objeto para el que se produzca el evento. Para objetos *eventObj* generados en:
 
-- los objetos list box o columna de list box, ver [esta sección](../FormObjects/listbox_overview.md#supported-form-events).
-- áreas 4D View Pro, ver [On VP Ready form event](../Events/onVpReady.md).
+- los objetos list box o columna de list box, ver [esta sección](../../FormObjects/listbox_overview.md#supported-form-events).
+- áreas 4D View Pro, ver [On VP Ready form event](../../Events/onVpReady.md).
 
 **Nota:** si no hay ningún evento actual, **FORM Event** devuelve un objeto null.
 
@@ -56,7 +56,7 @@ Desea manejar el evento On Clicked en un botón:
 
 Si define el nombre del objeto columna con un nombre de atributo real de una dataclass como esta:
 
-![](../assets/en/commands/pict4843820.en.png)
+![](../../assets/en/commands/pict4843820.en.png)
 
 Puede ordenar la columna utilizando el evento On Header Click:
 
@@ -74,7 +74,7 @@ Puede ordenar la columna utilizando el evento On Header Click:
 
 Desea gestionar los detalles de visualización en un objeto list box con un método definido en la propiedad *Meta info expression*:
 
-![](../assets/en/commands/pict4843812.en.png)
+![](../../assets/en/commands/pict4843812.en.png)
 
 El método *setColor*:
 
@@ -94,11 +94,11 @@ El método *setColor*:
 
 El list box resultante cuando se seleccionan líneas:
 
-![](../assets/en/commands/pict4843808.en.png)
+![](../../assets/en/commands/pict4843808.en.png)
 
 ## Ver también
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [Form event code](form-event-code.md)
 
 ## Propiedades

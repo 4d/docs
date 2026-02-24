@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | fileConstant | Integer                                        | &#8594; | Constante del archivo 4D                                              |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
 | \*           | Operador                                       | &#8594; | \* para devolver el archivo de la base local                          |
-| Resultado    | [4D.File](../API/FileClass.md) | &#8592; | Nuevo objeto de archivo                                               |
+| Resultado    | [4D.File](../../API/FileClass.md) | &#8592; | Nuevo objeto de archivo                                               |
 
 <!-- END REF -->
 
 ## Descripción
 
-El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo [`4D.File`](../API/FileClass.md)<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo [`4D.File`](../../API/FileClass.md)<!-- END REF -->. El comando acepta dos sintaxis:
 
 **File ( path { ; pathType } { ; \* })**
 
-En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un [filesystem](../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA/myfile.txt").
+En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un [filesystem](../../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA/myfile.txt").
 
 > Sólo se soportan los nombres de ruta absolutos con el comando `File`.
 
@@ -81,7 +81,7 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 ## Ver también
 
-[`4D.File` class](../API/FileClass.md)  
+[`4D.File` class](../../API/FileClass.md)  
 [Folder](folder.md)  
 [Get 4D file](../commands/get-4d-file)  
 [Object to path](../commands/object-to-path)  

@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 [OB SET ARRAY](ob-set-array.md) コマンドの例示で定義された以下のオブジェクトにおいて:
 
-![](../assets/en/commands/pict1211436.en.png)
+![](../../assets/en/commands/pict1211436.en.png)
 
 以下の値を取得したい場合は以下の様になります:
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
  OB GET ARRAY($Children;"Children";$result)
 ```
 
-![](../assets/en/commands/pict1213151.en.png)
+![](../../assets/en/commands/pict1213151.en.png)
 
 ## 例題 2 
 

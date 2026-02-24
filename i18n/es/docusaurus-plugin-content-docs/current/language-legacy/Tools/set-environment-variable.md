@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 :::info Compatibilidad
 
-Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerClass.md).
+Se recomienda utilizar la clase [`4D.SystemWorker class`](../../API/SystemWorkerClass.md).
 
 :::
 

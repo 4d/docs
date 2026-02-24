@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
-> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../API/Document.md#copyto) or [folder.copyTo()](../API/Directory.md#copyto).
+> This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](../../API/Document.md#copyto) or [folder.copyTo()](../../API/Directory.md#copyto).
 
 Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
@@ -38,7 +38,7 @@ If the *zipFile* is password protected, you need to use the optional *password* 
 
 **Archive object**
 
-The returned `4D.ZipArchive` object contains a single [`root`](../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive.
+The returned `4D.ZipArchive` object contains a single [`root`](../../API/ZipArchiveClass.md#root) property whose value is a `4D.ZipFolder` object. This folder describes the whole contents of the ZIP archive.
 
 ## Example
 
@@ -82,9 +82,9 @@ To extract from the root folder:
 
 ## See also 
 
-[ZipArchive Class](../API/ZipArchiveClass.md)
-[ZipFile Class](../API/ZipFileClass.md)
-[ZipFolder Class](../API/ZipFolderClass.md)
+[ZipArchive Class](../../API/ZipArchiveClass.md)
+[ZipFile Class](../../API/ZipFileClass.md)
+[ZipFolder Class](../../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)  
 
 ## Properties

@@ -68,7 +68,7 @@ Dans une list box tableau, on souhaite définir des paramétrages de couleur pou
  LISTBOX SET ROW COLOR(*;"List Box";3;"blue")
 ```
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ## Voir aussi 
 

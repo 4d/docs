@@ -30,7 +30,7 @@ displayed_sidebar: docs
 ## Descrição 
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->O comando **METHOD GET FOLDERS** devolve no array *arrayNoms*, os nomes das pastas criadas na página Início do Explorador de 4D<!-- END REF-->:  
-![](../assets/en/commands/pict837666.en.png)  
+![](../../assets/en/commands/pict837666.en.png)  
   
 Como os nomes das pastas devem ser únicos, a hierarquia não é devolvida neste array.   
   

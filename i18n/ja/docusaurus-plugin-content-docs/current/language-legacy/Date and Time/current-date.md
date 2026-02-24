@@ -59,7 +59,7 @@ displayed_sidebar: docs
  Until(vOK=1)
  $format:="" // 関数の戻り値を初期化
  $vsDate:=String($vdDate)
- $vlPos:=Position("/";$vsDate) // 文字列../../..から最初のセパレータ / を探す
+ $vlPos:=Position("/";$vsDate) // 文字列../../../../..から最初のセパレータ / を探す
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // 日付から最初の桁を取り出す
  $vsDate:=Substring($vsDate;$vlPos+1) // 最初の区切り文字 / とともに最初の桁を取り除く
  Case of
@@ -71,7 +71,7 @@ displayed_sidebar: docs
        $format:="YYYY"
  End case
  $format:=$format+"/" // 関数の結果の組み立て開始
- $vlPos:=Position("/";$vsDate) // 文字列../..から2番目のセパレータを探す
+ $vlPos:=Position("/";$vsDate) // 文字列../../..から2番目のセパレータを探す
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // 日付から以下の桁を取り出す
  $vsDate:=Substring($vsDate;$vlPos+1) // 文字列を日付の最後の桁まで減らす
  Case of

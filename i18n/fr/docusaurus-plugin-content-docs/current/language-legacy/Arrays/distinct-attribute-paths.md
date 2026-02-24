@@ -47,7 +47,7 @@ La commande ne modifie pas la sélection courante ni l'enregistrement courant.
 
 Votre base de données comporte un champ objet \[Customer\]full\_Data avec 15 enregistrements. Le champ est indexé :
 
-![](../assets/en/commands/pict2994114.en.png) 
+![](../../assets/en/commands/pict2994114.en.png) 
 
 Si vous exécutez ce code :
 

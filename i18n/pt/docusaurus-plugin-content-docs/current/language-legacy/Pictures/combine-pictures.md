@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.COMBINE PICTURES.Summary-->O comando COMBINE PICTURES permite combinar as imagens *imagem1* e *imagem2* em modo *operador* para produzir uma terceira, *imagemResult*.<!-- END REF--> A imagem resultante é de tipo composto e conserva todas as características das imagens fonte. 
 
-**Nota:** este comando estende as funcionalidades oferecidas pelos operadores clássicos de transformação de imagens (+/, etc., ver a seção [Picture](../Concepts/dt_picture.md)). Estes operadores permanecem totalmente utilizáveis em 4D v11.
+**Nota:** este comando estende as funcionalidades oferecidas pelos operadores clássicos de transformação de imagens (+/, etc., ver a seção [Picture](../../Concepts/dt_picture.md)). Estes operadores permanecem totalmente utilizáveis em 4D v11.
 
 Em *operador*, passe o tipo de combinação a aplicar. Se propõe três tipos de combinações, acessíveis através das constantes do tema “*Transformação de imagens*”:
 
@@ -50,7 +50,7 @@ Se forem utilizados os parâmetros opcionais *desloHor* e *desloVert*, uma tradu
 
 Dadas as seguintes imagens: 
 
-![](../assets/en/commands/pict27793.pt.png)
+![](../../assets/en/commands/pict27793.pt.png)
 
 ```4d
  COMBINE PICTURES(bandeira;meufundo;Superimposição;meucirculo;50;30)
@@ -58,7 +58,7 @@ Dadas as seguintes imagens:
 
 Resultado:
 
-![](../assets/en/commands/pict27794.pt.png)
+![](../../assets/en/commands/pict27794.pt.png)
 
 ## Ver também 
 

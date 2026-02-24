@@ -51,7 +51,7 @@ Si le process n'a pas pu être créé, par exemple s'il n'y a pas assez de mémo
 
 Vous passez le nom de la méthode de gestion du nouveau process dans *méthode*. Une fois que 4D a défini le contexte pour le nouveau process, il démarre l'exécution de cette méthode qui devient alors la méthode du process.
 
-Si le contexte d'exécution prend en charge le mode préemptif, et si *méthode* est déclarée "thread-safe", le nouveau process 4D sera exécuté dans un *thread* préemptif lorsque l'application sera exécutée en mode compilé. Pour plus d'informations, veuillez consulter la page [Process 4D préemptifs](../Develop/preemptive.md). 
+Si le contexte d'exécution prend en charge le mode préemptif, et si *méthode* est déclarée "thread-safe", le nouveau process 4D sera exécuté dans un *thread* préemptif lorsque l'application sera exécutée en mode compilé. Pour plus d'informations, veuillez consulter la page [Process 4D préemptifs](../../Develop/preemptive.md). 
 
 ### Pile du process 
 
@@ -72,7 +72,7 @@ Vous pouvez passer des paramètres à la méthode process via un ou plusieurs pa
 
 * les pointeurs vers des tables ou des champs sont autorisés,
 * les pointeurs vers des variables, en particulier des variables process et locales, sont déconseillés car les variables peuvent être indéfinies au moment où la méthode process y accède.
-* les paramètres de type Objet ou Collection sont passés **par copie**, *i.e.* 4D créera une copie de l'objet ou de la collection dans le process de destination, et non une référence. Si vous souhaitez passer un paramètre de type objet ou collection **par référence**, vous devez utiliser un objet ou une collection partagé(e) (voir [Objets partagés et collections partagées](../Concepts/shared.md)).
+* les paramètres de type Objet ou Collection sont passés **par copie**, *i.e.* 4D créera une copie de l'objet ou de la collection dans le process de destination, et non une référence. Si vous souhaitez passer un paramètre de type objet ou collection **par référence**, vous devez utiliser un objet ou une collection partagé(e) (voir [Objets partagés et collections partagées](../../Concepts/shared.md)).
 
 **Note :** Si vous passez des paramètres à la méthode process, vous devez passer le paramètre *nom*, il ne peut être omis dans ce cas. 
 
@@ -125,8 +125,8 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 ## Voir aussi 
 
 [Execute on server](execute-on-server.md)  
-[Process et Workers](../Develop/processes.md)  
-[Process préemptifs](../Develop/preemptive.md) 
+[Process et Workers](../../Develop/processes.md)  
+[Process préemptifs](../../Develop/preemptive.md) 
 
 ## Propriétés
 

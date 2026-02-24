@@ -59,7 +59,7 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
  OBJECT SET COORDINATES(*;"button_1";10;20;30;40)
 ```
 
-![](../assets/en/commands/pict1207497.fr.png)
+![](../../assets/en/commands/pict1207497.fr.png)
 
 ## Ver también 
 

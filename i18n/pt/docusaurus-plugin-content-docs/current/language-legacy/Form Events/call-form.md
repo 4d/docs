@@ -99,7 +99,7 @@ O método *doAddMessage* só adiciona uma linha num list box no formulario "Form
 
 Em execução, obtém o seguinte resultado:
 
-![](../assets/en/commands/pict2896824.en.png)
+![](../../assets/en/commands/pict2896824.en.png)
 
 Depois pode adicionar outras mensagens executando o comando **CALL FORM** novamente:
 
@@ -108,7 +108,7 @@ Depois pode adicionar outras mensagens executando o comando **CALL FORM** novame
  CALL FORM(formRef2;"doAddMessage";Current process name;"Hello 2 Form 2")
 ```
 
-![](../assets/en/commands/pict2896833.en.png)
+![](../../assets/en/commands/pict2896833.en.png)
 
 ## Ver também 
 

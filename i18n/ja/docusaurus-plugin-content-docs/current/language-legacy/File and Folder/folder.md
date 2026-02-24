@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | folderConstant | Integer                                            | &#8594; | 4Dフォルダー定数                                                         |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
 | \*             | 演算子                                                | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
-| 戻り値            | [4D.Folder](../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
+| 戻り値            | [4D.Folder](../../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
 
 <!-- END REF -->
 
 ## 説明
 
-`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->[`4D.Folder`](../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
+`Folder` コマンドは、<!-- REF #_command_.Folder.Summary -->[`4D.Folder`](../../API/FolderClass.md) 型の新しいオブジェクトを作成して返します<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../Concepts/paths.md#ファイルシステムパス名)(例: "/DATA") を渡すことができます。
+*path* には、フォルダーパス文字列を渡します。 カスタムの文字列または [ファイルシステム](../../Concepts/paths.md#ファイルシステムパス名)(例: "/DATA") を渡すことができます。
 
 > `Folder` コマンドでは絶対パス名のみがサポートされます。
 
@@ -68,11 +68,11 @@ displayed_sidebar: docs
 
 コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
-> Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
+> Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
 
 ## 参照
 
-[`4D.Folder` class](../API/FolderClass.md)
+[`4D.Folder` class](../../API/FolderClass.md)
 [File](file.md)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)

@@ -55,7 +55,7 @@ O parâmetro *ação*, se for passada, pode definir a ação de seleção que de
 
 Dados os arrays a seguir representados num list box:
 
-![](../assets/en/commands/pict185052.en.png)
+![](../../assets/en/commands/pict185052.en.png)
 
 Queremos selecionar a linha de quebra "Normandy" na representação hierárquica destes arrays:
 
@@ -68,7 +68,7 @@ Queremos selecionar a linha de quebra "Normandy" na representação hierárquica
 
 Este é o resultado:
 
-![](../assets/en/commands/pict185059.en.png)
+![](../../assets/en/commands/pict185059.en.png)
 
 ## Ver também 
 

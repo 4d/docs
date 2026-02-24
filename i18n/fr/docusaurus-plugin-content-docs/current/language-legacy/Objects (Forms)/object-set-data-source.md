@@ -35,7 +35,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 La source de données est le champ ou la variable dont la valeur est représentée par l’objet lors de l’exécution du formulaire. En mode Développement, la source de données est définie dans la Liste de propriétés, généralement via les lignes Source et Champ source (champs) ou Nom de la variable (variables) : 
 
-![](../assets/en/commands/pict1208291.fr.png)
+![](../../assets/en/commands/pict1208291.fr.png)
 
 Hormis pour les list box (cf. ci-dessous), toutes les sources de données du formulaire peuvent être modifiées par cette commande. Il appartient au développeur de s’assurer de la cohérence des modifications effectuées. 
 

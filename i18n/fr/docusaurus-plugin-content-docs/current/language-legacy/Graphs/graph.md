@@ -145,21 +145,21 @@ Syntaxe avec *graphNum* : l'exemple suivant illustre les différents types de gr
 
 Les images suivantes représentent les graphes résultants :
 
-* Lorsque *vType* est égal à 1, vous obtenez un graphe en **Colonnes** :![](../assets/en/commands/pict847107.fr.png)
+* Lorsque *vType* est égal à 1, vous obtenez un graphe en **Colonnes** :![](../../assets/en/commands/pict847107.fr.png)
 * Lorsque *vType* est égal à 2, vous obtenez un graphe en **Colonnes proportionnelles** :  
-![](../assets/en/commands/pict847109.fr.png)
+![](../../assets/en/commands/pict847109.fr.png)
 * Lorsque *vType* est égal à 3, vous obtenez un graphe en **Colonnes empilées :**  
-![](../assets/en/commands/pict847111.fr.png)
+![](../../assets/en/commands/pict847111.fr.png)
 * Lorsque *vType* est égal à 4, vous obtenez un graphe en **Lignes :**  
-![](../assets/en/commands/pict847114.fr.png)
+![](../../assets/en/commands/pict847114.fr.png)
 * Lorsque *vType* est égal à 5, vous obtenez un graphe en **Aires :**  
-![](../assets/en/commands/pict847118.fr.png)
+![](../../assets/en/commands/pict847118.fr.png)
 * Lorsque *vType* est égal à 6, vous obtenez un graphe en **Points :**  
-![](../assets/en/commands/pict847120.fr.png)
+![](../../assets/en/commands/pict847120.fr.png)
 * Lorsque *vType* est égal à 7, vous obtenez un graphe en **Secteurs :**  
-![](../assets/en/commands/pict847122.fr.png)
+![](../../assets/en/commands/pict847122.fr.png)
 * Lorsque *vType* est égal à 8, vous obtenez un graphe en **Images :**  
-![](../assets/en/commands/pict847124.fr.png)
+![](../../assets/en/commands/pict847124.fr.png)
 
 ## Exemple 2 
 
@@ -194,7 +194,7 @@ Syntaxe avec *graphParams* : Avec l'exemple suivant, vous dessinez un simple gra
  GRAPH(vGraph;vSettings;X;A;B) //On dessine le graphe
 ```
 
-![](../assets/en/commands/pict2603210.en.png)
+![](../../assets/en/commands/pict2603210.en.png)
 
 ## Exemple 3 
 
@@ -235,7 +235,7 @@ Avec les mêmes valeurs, on ajoute des paramètres personnalisés pour obtenir u
  GRAPH(vGraph;vSettings;X;A;B) //On dessine le graphe
 ```
 
-![](../assets/en/commands/pict2603212.en.png)
+![](../../assets/en/commands/pict2603212.en.png)
 
 ## Exemple 4 
 
@@ -284,7 +284,7 @@ Dans cet exemple, on personnalise divers paramètres :
  GRAPH(vGraph;vSettings;X;A;B) //On dessine le graphe
 ```
 
-![](../assets/en/commands/pict2648517.en.png)
+![](../../assets/en/commands/pict2648517.en.png)
 
 ## Voir aussi 
 

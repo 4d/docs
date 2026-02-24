@@ -106,7 +106,7 @@ Vous souhaitez supprimer des associations de listes :
 
 Cet exemple illustre la différence de fonctionnement de la commande selon qu’elle est appliquée à un pop up menu associé à un tableau texte ou à une variable texte. Dans un formulaire se trouvent deux pop up menus :
 
-![](../assets/en/commands/pict1207955.fr.png)
+![](../../assets/en/commands/pict1207955.fr.png)
 
 Le contenu des pop up menus est défini par la liste *<>vColor* (contenant des valeurs de couleurs). Le code suivant est exécuté au chargement du formulaire :
 
@@ -119,7 +119,7 @@ Le contenu des pop up menus est défini par la liste *<>vColor* (contenant des v
 
 A l’exécution, les deux menus proposent alors les mêmes valeurs :
 
-![](../assets/en/commands/pict1207957.fr.png)  
+![](../../assets/en/commands/pict1207957.fr.png)  
 (*Montage montrant simultanément le contenu des menus*)
 
 Vous exécutez alors le code suivant, par exemple via un bouton :
@@ -131,7 +131,7 @@ Vous exécutez alors le code suivant, par exemple via un bouton :
 
 Seul le menu associé au champ texte est mis à jour (via la référence dynamique) :
 
-![](../assets/en/commands/pict1207959.fr.png)
+![](../../assets/en/commands/pict1207959.fr.png)
 
 Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il est nécessaire de rappeler la commande **OBJECT SET LIST BY REFERENCE** afin de recopier le contenu de la liste. 
 

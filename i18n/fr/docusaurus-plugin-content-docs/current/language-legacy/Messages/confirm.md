@@ -58,7 +58,7 @@ L'exemple ci-dessous :
 
 ... provoquera l'affichage de la boîte de dialogue de confirmation suivante (sous Windows) :
 
-![](../assets/en/commands/pict4225029.fr.png)
+![](../../assets/en/commands/pict4225029.fr.png)
 
 ## Exemple 2 
 
@@ -70,7 +70,7 @@ La ligne :
 
 ... provoquera l'affichage de la boîte de dialogue de confirmation suivante (sous Windows) :
 
-![](../assets/en/commands/pict4225038.fr.png)
+![](../../assets/en/commands/pict4225038.fr.png)
 
 ## Exemple 3 
 
@@ -86,7 +86,7 @@ Vous développez une application 4D pour le marché international. Vous avez éc
 
 ... pourrait afficher la boîte de dialogue de confirmation (sous Windows) suivante :
 
-![](../assets/en/commands/pict4225048.fr.png)
+![](../../assets/en/commands/pict4225048.fr.png)
 
 ## Exemple 4 
 
@@ -98,7 +98,7 @@ La ligne :
 
 ... provoque l'affichage de la boîte de dialogue de confirmation suivante (sous Mac OS) :
 
-![](../assets/en/commands/pict4225058.fr.png)
+![](../../assets/en/commands/pict4225058.fr.png)
 
 ## Voir aussi 
 

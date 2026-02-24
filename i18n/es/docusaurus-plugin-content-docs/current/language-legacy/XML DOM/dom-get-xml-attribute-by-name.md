@@ -52,7 +52,7 @@ Este método se utiliza para recuperar un valor de atributo XML utilizando su no
 
 Si este método se aplica al ejemplo a continuación, $NumLinea contiene el valor 1:
 
-![](../assets/en/commands/pict40184.es.png)
+![](../../assets/en/commands/pict40184.es.png)
 
 ## Variables y conjuntos del sistema 
 

@@ -92,7 +92,7 @@ displayed_sidebar: docs
 
 **formData**
 
-オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、 [フォームにユーザークラスを割り当てる](../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。  form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 formData オブジェクトは、[`On Printing Detail` form event](../Events/onPrintingDetail.md) フォームイベント内で利用可能です。
+オプションとして、*form* 引数のフォームに、*formData* オブジェクトを使用してパラメーターを渡すことができます。あるいは、 [フォームにユーザークラスを割り当てる](../../FormEditor/properties_FormProperties.md#form-class) ことをしていた場合に4D によって自動的にインスタンス化されるフォームクラスオブジェクトを使うこともできます。  form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 formData オブジェクトは、[`On Printing Detail` form event](../../Events/onPrintingDetail.md) フォームイベント内で利用可能です。
 
 form data オブジェクトについての詳細な情報については、[`DIALOG`](dialog.md) コマンドを参照してください。
 
@@ -113,7 +113,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **警告:** サブフォームは、 **Print form** では印刷はされません。 そのようなオブジェクトを含んだフォームを一つだけ印刷したい場合は、代わりに[PRINT RECORD](../commands/print-record) を使用して下さい。
 
-**Print form** は、1回だけフォームメソッドの[`On Printing Detail` event](../Events/onPrintingDetail.md) イベントを生成します。
+**Print form** は、1回だけフォームメソッドの[`On Printing Detail` event](../../Events/onPrintingDetail.md) イベントを生成します。
 
 **4D Server:** このコマンドは、ストアドプロシージャのフレームワークにおいて4D Server 上で実行することができます。  この状況では、次の制約があります:
 
@@ -153,7 +153,7 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 このフォームはダイアログとして使用され、変更されたあと印刷されます:
 
-![](../assets/en/commands/pict6264975.en.png)
+![](../../assets/en/commands/pict6264975.en.png)
 
 フォームメソッド:
 

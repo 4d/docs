@@ -34,7 +34,7 @@ A combined use of [SEND VARIABLE](send-variable.md), [SEND RECORD](send-record.m
 
 For instance, consider a documentation system based on 4D and 4D Write. Since several writers in different locations wordwide work on it, we need a simple way to exchange data between the different databases. Here is a simplified view of the database structure:
 
-![](../assets/en/commands/pict16652.en.png)
+![](../../assets/en/commands/pict16652.en.png)
 
 The table *\[Commands\]* contains the description of each command or topic. The tables *\[CM US Params\]* and *\[CM FR Params\]* respectivily contain the parameter list for each command in English and in French. The table *\[CM See Also\]* contains the commands listed as reference (See Also section) for each command. Exchanging documentation between databases therefore consists in sending the *\[Commands\]* records and their related records. To do so, we use [SEND RECORD](send-record.md) and RECEIVE RECORD. In addition, we use [SEND VARIABLE](send-variable.md) and [SEND RECORD](send-record.md) in order to mark the import/export document with tags.
 

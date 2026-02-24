@@ -66,7 +66,7 @@ You want to customize the **Help** menu for your application:
  SET ABOUT("About this application";"m_about") //to replace 'About 4D' on Windows
 ```
 
-![](../assets/en/commands/pict6260534.en.png)
+![](../../assets/en/commands/pict6260534.en.png)
 
 ## See also 
 

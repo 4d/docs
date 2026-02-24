@@ -72,21 +72,21 @@ Cet exemple illustre la différence de fonctionnement de la commande avec une li
 
 Si cette instruction est appliquée à une list box affichée en mode standard :
 
-![](../assets/en/commands/pict197489.fr.png)
+![](../../assets/en/commands/pict197489.fr.png)
 
 ... les lignes et les colonnes de la list box défilent effectivement :
 
-![](../assets/en/commands/pict197491.fr.png)
+![](../../assets/en/commands/pict197491.fr.png)
 
 En revanche, si la même instruction est appliquée à la list box affichée en mode hiérarchique, les lignes défilent mais pas les colonnes car la 2e colonne appartient à la hiérarchie :
 
-![](../assets/en/commands/pict197493.fr.png)
+![](../../assets/en/commands/pict197493.fr.png)
 
 ## Exemple 2 
 
 Vous souhaitez faire défiler une image incluse dans une variable de formulaire. Ce montage fait apparaître la partie visible de l'image ainsi que le point à afficher (166 pixels verticalement et 200 pixels horizontalement) :
 
-![](../assets/en/commands/pict1513843.fr.png)
+![](../../assets/en/commands/pict1513843.fr.png)
 
 Pour faire défiler la partie visible et afficher le point rouge à l'origine de la variable image, il vous suffit d'écrire :
 
@@ -96,7 +96,7 @@ Pour faire défiler la partie visible et afficher le point rouge à l'origine de
 
 Vous obtenez le résultat suivant :
 
-![](../assets/en/commands/pict1513846.fr.png)
+![](../../assets/en/commands/pict1513846.fr.png)
 
 Attention dans ce cas, si vous omettez le second paramètre \*, l'image ne défilera pas car le point défini est déjà visible. 
 

@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 例えば、4Dと4D Writeを使用して作成されたドキュメントシステムを考えてみます。別々の場所にいる複数の製作者が作業を実行するため、異なるデータベース間でデータをやり取りする簡単な方法が必 要となりました。以下の図はこのデータベースストラクチャを簡単に表わしたものです:
 
-![](../assets/en/commands/pict16652.en.png)
+![](../../assets/en/commands/pict16652.en.png)
 
 テーブル*\[Commands\]*には、各コマンドやトピックに関する説明が納められます。テーブル*\[CM US Params\]*および*\[CM FR Params\]*にはそれぞれ、英語版またはフランス語版の各コマンドに対する引数のリストが納められます。また、テーブル*\[CM See Also\]*には、各コマンドに対する参照としてリストされるコマンドが納められています。したがって、データベース間でドキュメントのやり取りを実行するには、*\[Commands\]*レコードとそれにリレートするレコードを送信しなければなりません。これを実行するには、[SEND RECORD](send-record.md "SEND RECORD")とRECEIVE RECORDコマンドを使用しています。さらに[SEND VARIABLE](send-variable.md "SEND VARIABLE")と[RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")コマンドを使い、読み込み／書き出しドキュメントにタグを付けています。
 

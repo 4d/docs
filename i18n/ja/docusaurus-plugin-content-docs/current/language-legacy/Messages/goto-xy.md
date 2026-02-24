@@ -55,7 +55,7 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 
 30秒間以下のようなダイアログを表示します:
 
-![](../assets/en/commands/pict25419.ja.png)
+![](../../assets/en/commands/pict25419.ja.png)
 
 ## 参照 
 

@@ -52,13 +52,13 @@ displayed_sidebar: docs
 
 以下は、データベースストラクチャの一部です:
 
-![](../assets/en/commands/pict334094.en.png)
+![](../../assets/en/commands/pict334094.en.png)
 
 \[Departments\] と \[Employees\] テーブルには以下のレコードが含まれています:
 
-![](../assets/en/commands/pict334096.en.png)
+![](../../assets/en/commands/pict334096.en.png)
 
-![](../assets/en/commands/pict334098.en.png)
+![](../../assets/en/commands/pict334098.en.png)
 
 ここで、*hlList*という名前の階層リストを表示します。この階層リストは、部門を表示するとともに、各部門についてその部門で働いている従業員のサブリストを表示します。*hlList*のオブジェクトメソッドは以下のようになります:
 
@@ -164,7 +164,7 @@ displayed_sidebar: docs
 
 フォームを実行すると、リストは以下のように表示されます:
 
-![](../assets/en/commands/pict334100.en.png)
+![](../../assets/en/commands/pict334100.en.png)
 
 **Note:** 上記の例は、比較的少ないレコードを扱う場合には、ユーザインターフェイスとして役立ちます。リストはメモリに置かれるので、何百万という項目を持つ階層リストでユーザインターフェイスを作成すべきではありません。
 

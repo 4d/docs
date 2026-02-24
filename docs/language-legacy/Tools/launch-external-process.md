@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 :::info Compatibility
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->Starting with 4D v19 R4, we recommend the use of the [`4D.SystemWorker class`](../API/SystemWorkerClass.md) to run and control external processes.<!-- END REF--> However, this command is still supported. 
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->Starting with 4D v19 R4, we recommend the use of the [`4D.SystemWorker class`](../../API/SystemWorkerClass.md) to run and control external processes.<!-- END REF--> However, this command is still supported. 
 
 :::
 

@@ -66,7 +66,7 @@ En este caso, el parámetro *entradaDatos* contiene el nombre de la fuente de da
 Sintaxis: *""*  
 En este caso, el comando muestra la caja de diálogo de conexión de manera que la fuente de datos a conectar pueda introducirse manualmente:  
     
-![](../assets/en/commands/pict33536.es.png)  
+![](../../assets/en/commands/pict33536.es.png)  
     
 Esta caja de diálogo incluye varias páginas. La página TCP/IP incluye los siguientes elementos:  
    * Nombre de objetivo: este menú se crea utilizando dos listas:  

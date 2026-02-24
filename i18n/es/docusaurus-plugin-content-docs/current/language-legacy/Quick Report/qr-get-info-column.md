@@ -78,7 +78,7 @@ El valor a pasar en el parámetro *numColumna* depende de la operación que quie
 
 Este es un atributo “visual”, por lo tanto las columnas son numeradas de izquierda a derecha, como se muestra en la siguiente imagen:
 
-![](../assets/en/commands/pict30562.es.png)
+![](../../assets/en/commands/pict30562.es.png)
 
   
 La siguiente instrucción define el tamaño automático para todas las columnas en un informe tabla cruzada y deja los otros elemento intactos:
@@ -96,7 +96,7 @@ Notará que como quiere alterar únicamente el tamaño de la columna, tiene que 
 
 En este caso, la numeración de las columnas opera como se muestra a continuación:
 
-![](../assets/en/commands/pict30563.es.png)
+![](../../assets/en/commands/pict30563.es.png)
 
   
 Si pasa un número de *area* inválido, se genera el error -9850.  
@@ -106,7 +106,7 @@ Si el parámetro *numColumna* es incorrecto se genera el error -9852.
 
 Usted ha diseñado el siguiente informe:
 
-![](../assets/en/commands/pict2569537.en.png)
+![](../../assets/en/commands/pict2569537.en.png)
 
 Puede escribir:
 

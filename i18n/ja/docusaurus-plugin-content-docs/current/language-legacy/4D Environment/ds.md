@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 *localID* に合致するデータストアが見つからない場合、コマンドは **Null** を返します。
 
-`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](../ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
+`cs.Datastore` が提供するオブジェクトは、[ORDAマッピングルール](../../ORDA/dsMapping.md#変換のルール) に基づいて、ターゲットデータベースからマッピングされます。
 
 ## 例題 1
 

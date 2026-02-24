@@ -62,7 +62,7 @@ El orden en el que se introducen los códigos y la información no importa, sin 
 
 Un formulario “Solicitud de certificado” contiene los seis campos necesarios para una solicitud de certificación estándar. El botón **Generar** crea un documento en disco que contiene la solicitud del certificado. El documento “Privatekey.txt” que contiene la llave privada (generada con el comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md "GENERATE ENCRYPTION KEYPAIR")) debe estar en el disco:
 
-![](../assets/en/commands/pict32461.es.png)  
+![](../../assets/en/commands/pict32461.es.png)  
   
 Este es el método del botón **Generar**
 

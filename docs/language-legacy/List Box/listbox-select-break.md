@@ -55,7 +55,7 @@ The *action* parameter, if it is passed, can set the selection action to be carr
 
 Given the following arrays shown in a list box:
 
-![](../assets/en/commands/pict185052.en.png)
+![](../../assets/en/commands/pict185052.en.png)
 
 We want to select the "Normandy" break row:
 
@@ -68,7 +68,7 @@ We want to select the "Normandy" break row:
 
 Here is the result:
 
-![](../assets/en/commands/pict185059.en.png)
+![](../../assets/en/commands/pict185059.en.png)
 
 ## See also 
 

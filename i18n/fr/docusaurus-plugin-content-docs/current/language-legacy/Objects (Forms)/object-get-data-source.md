@@ -39,7 +39,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Soit un objet combo box défini dans un formulaire :
 
-![](../assets/en/commands/pict1209738.fr.png)![](../assets/en/commands/pict1209740.fr.png)
+![](../../assets/en/commands/pict1209738.fr.png)![](../../assets/en/commands/pict1209740.fr.png)
 
 Vous exécutez le code suivant :
 

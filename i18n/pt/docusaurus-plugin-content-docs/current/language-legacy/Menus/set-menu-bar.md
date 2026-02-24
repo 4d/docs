@@ -81,7 +81,7 @@ O exemplo a seguir substitui a barra de menus atual pela barra de menus #3 enqua
 
 Neste exemplo, criaremos por programação, uma barra de menus incluindo os seguintes menus Arquivo e Edição: 
 
-![](../assets/en/commands/pict17860.en.png)
+![](../../assets/en/commands/pict17860.en.png)
 
 ```4d
   //Método de criação menu Arquivo

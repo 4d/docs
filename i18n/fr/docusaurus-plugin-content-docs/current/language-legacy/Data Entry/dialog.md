@@ -22,13 +22,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Summary-->La commande **DIALOG** présente le *formulaire* à l'utilisateur, en lui passant de(s) paramètre(s) *formData* (facultatif).<!-- END REF--> 
 
-Cette commande permet de concevoir des interfaces utilisateur personnalisées et sophistiquées, basées sur des formulaires. Vous pouvez l'utiliser pour afficher des informations provenant de la base ou d'autres sources, ou proposer des fonctions de saisie des données. Contrairement à [ADD RECORD](../commands-legacy/add-record) ou [MODIFY RECORD](../commands-legacy/modify-record), **DIALOG** vous donne un contrôle total sur le formulaire, son contenu et les boutons de navigation et de validation.
+Cette commande permet de concevoir des interfaces utilisateur personnalisées et sophistiquées, basées sur des formulaires. Vous pouvez l'utiliser pour afficher des informations provenant de la base ou d'autres sources, ou proposer des fonctions de saisie des données. Contrairement à [ADD RECORD](../../commands-legacy/add-record) ou [MODIFY RECORD](../../commands-legacy/modify-record), **DIALOG** vous donne un contrôle total sur le formulaire, son contenu et les boutons de navigation et de validation.
 
-Cette commande est généralement appelée avec la commande [Open form window](../commands-legacy/open-form-window) pour afficher des formulaires complexes, comme le montre l'exemple suivant :
+Cette commande est généralement appelée avec la commande [Open form window](../../commands-legacy/open-form-window) pour afficher des formulaires complexes, comme le montre l'exemple suivant :
 
-![](../assets/en/commands/pict3541609.en.png)
+![](../../assets/en/commands/pict3541609.en.png)
 
-La commande **DIALOG** peut également être utilisée à la place de [ALERT](../commands-legacy/alert), [CONFIRM](../commands-legacy/confirm) ou [Request](../commands-legacy/request) lorsque les informations à afficher ou à recueillir sont plus complexes que celles que peuvent gérer ces trois commandes.
+La commande **DIALOG** peut également être utilisée à la place de [ALERT](../../commands-legacy/alert), [CONFIRM](../../commands-legacy/confirm) ou [Request](../../commands-legacy/request) lorsque les informations à afficher ou à recueillir sont plus complexes que celles que peuvent gérer ces trois commandes.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
@@ -47,7 +47,7 @@ Pour remplir l'objet "form data", vous avez deux possibilités :
 
 - utiliser le paramètre *formData*. L'utilisation d'une variable locale pour *formData* vous permet de passer en toute sécurité des paramètres à vos formulaires, quel que soit le contexte d'appel. En particulier, si le même formulaire est appelé à différents endroits dans le même process, vous pourrez toujours accéder à ses valeurs spécifiques en appelant simplement [Form](form.md).myProperty. De plus, les objets étant transmis par référence, si l'utilisateur modifie la valeur d'une propriété dans le formulaire, celle-ci sera automatiquement sauvegardée dans l'objet lui-même.
 
-- [associer une classe utilisateur au formulaire](../FormEditor/properties_FormProperties.md#form-class), auquel cas 4D instanciera automatiquement un objet de cette classe lorsque le formulaire sera chargé. Les propriétés et les fonctions de l'objet seront automatiquement disponibles via l'objet renvoyé par [Form](form.md). Vous pouvez écrire par exemple `Form.myFunction()`.
+- [associer une classe utilisateur au formulaire](../../FormEditor/properties_FormProperties.md#form-class), auquel cas 4D instanciera automatiquement un objet de cette classe lorsque le formulaire sera chargé. Les propriétés et les fonctions de l'objet seront automatiquement disponibles via l'objet renvoyé par [Form](form.md). Vous pouvez écrire par exemple `Form.myFunction()`.
 
 :::note
 
@@ -56,19 +56,19 @@ Pour remplir l'objet "form data", vous avez deux possibilités :
 
 :::
 
-Le dialogue est refermé par l'utilisateur soit par une action "accepter" (déclenchée par l'action standard ak accept, la touche Entrée, ou la commande [ACCEPT](../commands-legacy/accept)), soit par une action "annuler" (déclenchée par l'action standard ak cancel, la touche Escape, ou la commande [CANCEL](../commands-legacy/cancel)). Une action d'acceptation mettra la variable système OK à 1, tandis qu'une action d'annulation mettra OK à 0.
+Le dialogue est refermé par l'utilisateur soit par une action "accepter" (déclenchée par l'action standard ak accept, la touche Entrée, ou la commande [ACCEPT](../../commands-legacy/accept)), soit par une action "annuler" (déclenchée par l'action standard ak cancel, la touche Escape, ou la commande [CANCEL](../../commands-legacy/cancel)). Une action d'acceptation mettra la variable système OK à 1, tandis qu'une action d'annulation mettra OK à 0.
 
-A noter que la validation n'équivaut pas à la sauvegarde : si le dialogue comprend des champs, vous devez appeler explicitement la commande [SAVE RECORD](../commands-legacy/save-record) pour sauvegarder toutes les données qui ont été modifiées.
+A noter que la validation n'équivaut pas à la sauvegarde : si le dialogue comprend des champs, vous devez appeler explicitement la commande [SAVE RECORD](../../commands-legacy/save-record) pour sauvegarder toutes les données qui ont été modifiées.
 
 Si vous passez le paramètre facultatif *\**, le formulaire est chargé et affiché dans la dernière fenêtre ouverte du process courant et la commande termine son exécution en laissant le formulaire actif à l'écran.  
 Si vous passez le paramètre facultatif *\**, le formulaire est chargé et affiché dans la dernière fenêtre ouverte du process courant et la commande termine son exécution en laissant le formulaire actif à l'écran.\
-Ce formulaire réagit alors "normalement" aux actions de l'utilisateur et est fermé par une action standard ou lorsque le code 4D lié au formulaire (méthode objet ou méthode formulaire) appelle la commande [CANCEL](../commands-legacy/cancel) ou [ACCEPT](../commands-legacy/accept). Si le process courant se termine, les formulaires créés de cette manière sont automatiquement fermés de la même manière que si une commande [CANCEL](../commands-legacy/cancel) avait été appelée. Ce mode d'ouverture est particulièrement utile pour afficher une palette flottante avec un document, sans avoir nécessairement besoin d'un autre process.
+Ce formulaire réagit alors "normalement" aux actions de l'utilisateur et est fermé par une action standard ou lorsque le code 4D lié au formulaire (méthode objet ou méthode formulaire) appelle la commande [CANCEL](../../commands-legacy/cancel) ou [ACCEPT](../../commands-legacy/accept). Si le process courant se termine, les formulaires créés de cette manière sont automatiquement fermés de la même manière que si une commande [CANCEL](../../commands-legacy/cancel) avait été appelée. Ce mode d'ouverture est particulièrement utile pour afficher une palette flottante avec un document, sans avoir nécessairement besoin d'un autre process.
 
 **Notes :**
 
-- Vous pouvez combiner l'utilisation de la syntaxe **DIALOG**(form;\*) avec la commande [CALL FORM](../commands-legacy/call-form) pour établir une communication entre les formulaires.
+- Vous pouvez combiner l'utilisation de la syntaxe **DIALOG**(form;\*) avec la commande [CALL FORM](../../commands-legacy/call-form) pour établir une communication entre les formulaires.
 - Vous devez créer une fenêtre avant d'appeler l'instruction **DIALOG**(form;\*). Il n'est pas possible d'utiliser la fenêtre de dialogue courante dans le process ni la fenêtre créée par défaut pour chaque process. Sinon, l'erreur -9909 est générée.
-- Lorsque le paramètre *\** est utilisé, la fenêtre est fermée automatiquement suite à une action standard ou un appel à la commande [CANCEL](../commands-legacy/cancel) ou [ACCEPT](../commands-legacy/accept). Vous n'avez pas à gérer la fermeture de la fenêtre elle-même.
+- Lorsque le paramètre *\** est utilisé, la fenêtre est fermée automatiquement suite à une action standard ou un appel à la commande [CANCEL](../../commands-legacy/cancel) ou [ACCEPT](../../commands-legacy/accept). Vous n'avez pas à gérer la fermeture de la fenêtre elle-même.
 
 ## Exemple 1
 
@@ -87,13 +87,13 @@ L'exemple suivant permet de créer une palette d'outils :
 
 Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un dialogue permettant de vérifier ou de modifier les noms et âges de ses enfants :
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
 Dans le formulaire de vérification, vous avez assigné des propriétés d'objet [Form](form.md) aux variables :
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Voici le code du bouton "Check Children" :
 
@@ -125,7 +125,7 @@ Voici le code du bouton "Check Children" :
 
 Le formulaire affiche des informations pour chaque enfant :
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le champ est mis à jour (bien entendu, l'enregistrement parent devra être sauvegardé par la suite).
 
@@ -141,7 +141,7 @@ L'exemple suivant utilise le chemin d'un fichier .json décrivant un formulaire 
 
 Résultat :
 
-![](../assets/en/commands/pict3687439.en.png)
+![](../../assets/en/commands/pict3687439.en.png)
 
 ## Exemple 4
 
@@ -159,7 +159,7 @@ L'exemple suivant crée un objet à partir d'un fichier .json décrivant un form
 
 Le formulaire est affiché avec la bordure, le logo et le titre modifiés :
 
-![](../assets/en/commands/pict3688356.en.png)
+![](../../assets/en/commands/pict3688356.en.png)
 
 ## Variables et ensembles système
 
@@ -167,12 +167,12 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 
 ## Voir également
 
-[ACCEPT](../commands-legacy/accept)\
-[ADD RECORD](../commands-legacy/add-record)\
-[CALL FORM](../commands-legacy/call-form)\
-[CANCEL](../commands-legacy/cancel)\
+[ACCEPT](../../commands-legacy/accept)\
+[ADD RECORD](../../commands-legacy/add-record)\
+[CALL FORM](../../commands-legacy/call-form)\
+[CANCEL](../../commands-legacy/cancel)\
 [Form](form.md)\
-[Open window](../commands-legacy/open-window)
+[Open window](../../commands-legacy/open-window)
 
 ## Propriétés
 

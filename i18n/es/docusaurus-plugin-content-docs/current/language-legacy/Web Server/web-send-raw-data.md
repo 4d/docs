@@ -72,7 +72,7 @@ Todas las instrucciones **WEB SEND RAW DATA** que sigan la ejecución de **WEB S
 
 Combinado con el comando [WEB GET HTTP BODY](web-get-http-body.md) y con los otros comandos del tema “Servidor web”, este comando completa el rango de herramientas disponibles para los desarrolladores 4D para tratar de manera completamente personalizada las conexiones HTTP entrantes y salientes. Estas herramientas se presentan en el siguiente diagrama: 
 
-![](../assets/en/commands/pict856016.es.png)
+![](../../assets/en/commands/pict856016.es.png)
 
 ## Ejemplo 
 

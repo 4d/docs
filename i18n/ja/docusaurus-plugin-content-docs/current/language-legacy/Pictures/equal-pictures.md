@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 この例題では2つのピクチャー (pict1 と pict2) を比較し、結果のマスクを取得します:
 
-![](../assets/en/commands/pict847365.fr.png)
+![](../../assets/en/commands/pict847365.fr.png)
 
 以下は比較を実行するコードです:
 

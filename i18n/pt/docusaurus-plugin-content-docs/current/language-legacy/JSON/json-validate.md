@@ -73,7 +73,7 @@ If you declare another schema version using the *$schema* key, an error is retur
 
 ### Validation result
 
-If the JSON schema is not valid, 4D returns a [Null](../commands/null) object and throws an error that can be caught by an [on error call method](../Concepts/error-handling.md#installing-an-error-handling-method).
+If the JSON schema is not valid, 4D returns a [Null](../commands/null) object and throws an error that can be caught by an [on error call method](../../Concepts/error-handling.md#installing-an-error-handling-method).
 
 The **JSON Validate** returns an object that provides the status of the validation. Este objeto pode conter as seguintes propriedades:
 

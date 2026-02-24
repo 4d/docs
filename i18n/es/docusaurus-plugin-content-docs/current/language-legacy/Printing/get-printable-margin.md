@@ -48,7 +48,7 @@ Es posible basar la impresión de los formularios efectuados utilizando los coma
 * **Margen de impresión**: la margen de impresión es la margen más allá de la cual la impresora no puede imprimir (por razones físicas: rodillos de impresión, fin del recorrido del cabezal de impresión...). Varía de una impresora a otra y de un formato a otro.
 * **Margen muerta:** esta es el área situada entre la margen del papel y el margen de la impresora.
 
-![](../assets/en/commands/pict28491.es.png)
+![](../../assets/en/commands/pict28491.es.png)
 
 ## Ver también 
 

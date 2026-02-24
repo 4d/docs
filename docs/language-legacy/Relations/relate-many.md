@@ -34,11 +34,11 @@ The second form, RELATE MANY(oneField), establishes the One-to-Many relation for
 
 In the following example, three tables are related with automatic relations. Both the \[People\] table and the \[Parts\] table have a Many-to-One relation to the \[Companies\] table.
 
-![](../assets/en/commands/pict2286855.fr.png)
+![](../../assets/en/commands/pict2286855.fr.png)
 
 This form for the \[Companies\] table will display related records from both the \[People\] and \[Parts\] tables.
 
-![](../assets/en/commands/pict2287703.fr.png)
+![](../../assets/en/commands/pict2287703.fr.png)
 
 When the People and Parts forms are displayed, the related records for both the \[People\] table and the \[Parts\] table are loaded and become the current selections in those tables. 
 

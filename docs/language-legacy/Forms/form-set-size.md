@@ -76,7 +76,7 @@ Also note that this command does not change the size of the form window (you can
 
 The following example shows how an Explorer type window is set up. The following form is created in the Design environment :
 
-![](../assets/en/commands/pict21945.en.png)
+![](../../assets/en/commands/pict21945.en.png)
 
 The size of the form is “automatic”.
 
@@ -90,7 +90,7 @@ The window is displayed using the following code:
 
 The right part of the window can be displayed or hidden by clicking on the increase/decrease option:
 
-![](../assets/en/commands/pict21946.en.png)
+![](../../assets/en/commands/pict21946.en.png)
 
 The object method associated with this button is as follows:
 

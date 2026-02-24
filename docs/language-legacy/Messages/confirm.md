@@ -36,7 +36,7 @@ You pass the message to be displayed in the *message* parameter.
 
 By default, the title of the OK button is “OK” and that of the Cancel button is “Cancel.” To change the titles of these buttons, pass the new custom titles into the optional parameters *okButtonTitle* and *cancelButtonTitle*. If necessary, the width of the buttons is resized toward the left, according to the width of the custom titles you pass.
 
-The OK button has the [default button](../FormObjects/properties_Appearance.md#default-button) property. If the user clicks the OK button or presses Enter to accept the dialog box, the OK system variable is set to 1\. If the user clicks the Cancel button to cancel the dialog box, the OK system variable is set to 0.
+The OK button has the [default button](../../FormObjects/properties_Appearance.md#default-button) property. If the user clicks the OK button or presses Enter to accept the dialog box, the OK system variable is set to 1\. If the user clicks the Cancel button to cancel the dialog box, the OK system variable is set to 0.
 
 **Tip:** Do not call the CONFIRM command from the section of a form or object method that handles the On Activate or On Deactivate form events; this will cause an endless loop.
 
@@ -56,7 +56,7 @@ The line:
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225029.en.png)
+![](../../assets/en/commands/pict4225029.en.png)
 
 ## Example 2 
 
@@ -68,7 +68,7 @@ The line:
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225038.en.png)
+![](../../assets/en/commands/pict4225038.en.png)
 
 ## Example 3 
 
@@ -84,7 +84,7 @@ You are writing a 4D application for the international market. You wrote your in
 
 could display the French confirm dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225048.en.png)
+![](../../assets/en/commands/pict4225048.en.png)
 
 **Note:** For more information on xliff database localization, please refer to the *Appendix B: XLIFF architecture* section. 
 
@@ -99,7 +99,7 @@ The line:
 
 will display the confirm dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225058.en.png)
+![](../../assets/en/commands/pict4225058.en.png)
 
 ## See also 
 

@@ -84,7 +84,7 @@ El comando QR SET TOTALS DATA permite definir el contenido de una celda específ
 
 La siguiente imagen muestra cómo los parámetros *numColumna* y *numRuptura* son combinados en modo tabla cruzada:
 
-![](../assets/en/commands/pict31186.es.png)
+![](../../assets/en/commands/pict31186.es.png)
 
 ### Tipos de datos soportados 
 

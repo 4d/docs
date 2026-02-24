@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-*[Web Area overview](../FormObjects/webArea_overview.md)*  
+*[Web Area overview](../../FormObjects/webArea_overview.md)*  
 [WA Run offscreen area](wa-run-offscreen-area.md)  
 
 ## Properties

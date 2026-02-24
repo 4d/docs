@@ -59,7 +59,7 @@ You want to draw a red rectangle around the selected cell of a list box:
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
 ```
 
-![](../assets/en/commands/pict1741070.en.png)
+![](../../assets/en/commands/pict1741070.en.png)
 
 ## See also 
 

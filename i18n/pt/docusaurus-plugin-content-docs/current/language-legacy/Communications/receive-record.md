@@ -34,7 +34,7 @@ O uso combinado de [SEND VARIABLE](send-variable.md "SEND VARIABLE"), [SEND RECO
 
 Por exemplo, considere um sistema de documentação baseado em 4D e 4D Write. Uma vez que vários escritores em diferentes locais de trabalho trabalhem sobre sobre ela, precisamos de uma maneira simples de troca de dados entre diferentes bases de dados. Aqui está uma visão simplificada da estrutura de banco de dados:
 
-![](../assets/en/commands/pict527208.pt.png) 
+![](../../assets/en/commands/pict527208.pt.png) 
 
 A tabela *\[Comandos\]* contém a descrição de cada comando ou tópico. As tabelas *\[CM EUA Params\]* e *\[CM FR Params\]* contem, respectivamente a lista de parâmetros para cada comando em Inglês e em Francês. A tabela *\[CM See Also\]* contém os comandos listados como referência (ver também seção) para cada comando. Troca de documentação entre bancos de dados, portanto, consiste em enviar os registros de *\[Comandos\]* e seus registros relacionados. Para isso, usamos [SEND RECORD](send-record.md "SEND RECORD") e RECEIVE RECORD. Além disso, usamos [SEND VARIABLE](send-variable.md "SEND VARIABLE") e [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE") de forma a marcar o documento de importação/exportação com tags.
 

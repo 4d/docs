@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | folderConstant | Integer                                            | &#8594; | Constante de la carpeta 4D                                            |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
 | \*             | Operador                                           | &#8594; | \* para devolver la carpeta de la base local                          |
-| Resultado      | [4D.Folder](../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
+| Resultado      | [4D.Folder](../../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->
 
 ## Descripción
 
-El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto del tipo [`4D.Folder`](../API/FolderClass.md) tipo<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto del tipo [`4D.Folder`](../../API/FolderClass.md) tipo<!-- END REF -->. El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-En el parámetro *path*, pase una ruta de carpeta. Puede utilizar una cadena personalizada o un [filesystem](../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA").
+En el parámetro *path*, pase una ruta de carpeta. Puede utilizar una cadena personalizada o un [filesystem](../../Concepts/paths.md#filesystem-pathnames) (por ejemplo, "/DATA").
 
 > Sólo se soportan los nombres de ruta absolutos con el comando `Folder`.
 
@@ -68,11 +68,11 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 
 Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. De lo contrario, si omite el parámetro `*`, siempre se devuelve un objeto null.
 
-> En Windows, en los clientes fusionados, la ubicación de las carpetas integradas se modifica si se utiliza `ShareLocalResourcesOnWindowsClient` [clave BuildApp](../Desktop/building.md#buildapp4dsettings).
+> En Windows, en los clientes fusionados, la ubicación de las carpetas integradas se modifica si se utiliza `ShareLocalResourcesOnWindowsClient` [clave BuildApp](../../Desktop/building.md#buildapp4dsettings).
 
 ## Ver también
 
-[`4D.Folder` class](../API/FolderClass.md)
+[`4D.Folder` class](../../API/FolderClass.md)
 [File](file.md)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)

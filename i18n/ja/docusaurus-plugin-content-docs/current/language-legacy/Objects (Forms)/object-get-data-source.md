@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 フォーム内に以下の様に定義されたコンボボックスがあるとします:
 
-![](../assets/en/commands/pict1209738.en.png)![](../assets/en/commands/pict1209740.en.png)
+![](../../assets/en/commands/pict1209738.en.png)![](../../assets/en/commands/pict1209740.en.png)
 
 以下のコードを実行すると:
 

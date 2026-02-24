@@ -57,7 +57,7 @@ El siguiente ejemplo procesa una selección de registros y llama MESSAGE para in
 
 La siguiente ventana aparece y desaparece cada vez que se llama MESSAGE:
 
-![](../assets/en/commands/pict25453.es.png)
+![](../../assets/en/commands/pict25453.es.png)
 
 ## Ejemplo 2 
 
@@ -75,7 +75,7 @@ Con el fin de evitar la ventana "titilante", puede mostrar los mensajes en una v
 
 El resultado es el siguiente (en Windows):
 
-![](../assets/en/commands/pict25454.es.png)
+![](../../assets/en/commands/pict25454.es.png)
 
 ## Ejemplo 3 
 
@@ -93,7 +93,7 @@ Añadiendo un retorno de carro mejora la presentación:
 
 Este es el resultado (en Windows):
 
-![](../assets/en/commands/pict25455.es.png)
+![](../../assets/en/commands/pict25455.es.png)
 
 ## Ejemplo 4 
 
@@ -117,7 +117,7 @@ Utilizando [GOTO XY](goto-xy.md "GOTO XY") y escribiendo algunas líneas adicion
 
 El resultado es el siguiente (en Windows):
 
-![](../assets/en/commands/pict25456.es.png)
+![](../../assets/en/commands/pict25456.es.png)
 
 ## Ver también 
 

@@ -75,7 +75,7 @@ A noter que les variables d'en-tête et de pied sont toujours créées avec un t
 
 Dans une list box de type tableau, on souhaite dupliquer la colonne "Prénom", prête pour la saisie :
 
-![](../assets/en/commands/pict1205357.fr.png)
+![](../../assets/en/commands/pict1205357.fr.png)
 
 Le code du bouton :
 
@@ -88,7 +88,7 @@ Le code du bouton :
 
 Lorsque vous cliquez sur le bouton, la list box apparaît ainsi :
 
-![](../assets/en/commands/pict1205359.fr.png)
+![](../../assets/en/commands/pict1205359.fr.png)
 
 ## Exemple 2 
 

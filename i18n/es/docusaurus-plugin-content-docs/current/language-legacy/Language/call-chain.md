@@ -39,7 +39,7 @@ El comando facilita la depuración al permitir la identificación del método o 
 
 :::note
 
-Para que este comando pueda operar en modo compilado, la [verificación de rango](../Project/compiler.md#range-checking) no debe estar deshabilitada.
+Para que este comando pueda operar en modo compilado, la [verificación de rango](../../Project/compiler.md#range-checking) no debe estar deshabilitada.
 
 :::
 

@@ -62,7 +62,7 @@ El siguiente código puede ser el método de un botón que le permite insertar u
  EDIT ITEM(*;"MiLista")
 ```
 
-![](../assets/en/commands/pict21419.es.png)
+![](../../assets/en/commands/pict21419.es.png)
 
 ## Ejemplo 2 
 
@@ -76,7 +76,7 @@ Dadas dos columnas de un list box donde los nombres de las variables asociadas s
  EDIT ITEM(Array2;$vlRowNum)
 ```
 
-![](../assets/en/commands/pict21420.es.png)
+![](../../assets/en/commands/pict21420.es.png)
 
 ## Ver también 
 

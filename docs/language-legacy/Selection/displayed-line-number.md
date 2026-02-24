@@ -51,7 +51,7 @@ This example lets you apply an alternating color to a list form displayed on scr
  End if
 ```
 
-![](../assets/en/commands/pict32598.en.png)
+![](../../assets/en/commands/pict32598.en.png)
 
 ## See also 
 

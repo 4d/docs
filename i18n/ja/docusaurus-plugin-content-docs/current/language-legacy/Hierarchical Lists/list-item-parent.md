@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 *hList*があるとき、アプリケーションモードで以下のように表示されます:
 
-![](../assets/en/commands/pict22613.en.png)
+![](../../assets/en/commands/pict22613.en.png)
 
 項目参照番号は以下のように設定されています:
 

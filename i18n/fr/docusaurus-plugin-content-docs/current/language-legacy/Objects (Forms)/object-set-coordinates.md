@@ -59,7 +59,7 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
  OBJECT SET COORDINATES(*;"bouton_1";10;20;30;40)
 ```
 
-![](../assets/en/commands/pict1207497.fr.png)
+![](../../assets/en/commands/pict1207497.fr.png)
 
 ## Voir aussi 
 

@@ -42,7 +42,7 @@ A noter que lorsque OK vaut 0, la transaction est automatiquement annulée en in
 [CANCEL TRANSACTION](cancel-transaction.md)  
 [In transaction](in-transaction.md)  
 [START TRANSACTION](start-transaction.md)  
-[Transactions](../Develop-legacy/transactions.md)
+[Transactions](../../Develop-legacy/transactions.md)
 
 
 ## Propriétés

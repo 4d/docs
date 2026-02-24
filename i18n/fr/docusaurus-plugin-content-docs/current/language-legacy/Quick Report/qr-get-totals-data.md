@@ -71,7 +71,7 @@ Le paramètre *texte* retourne le contenu de la cellule.
 
 L'illustration suivante précise la manière dont les paramètres *numColonne* et *numRupture* sont combinés dans un tableau croisé :
 
-![](../assets/en/commands/pict30726.fr.png)
+![](../../assets/en/commands/pict30726.fr.png)
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.  

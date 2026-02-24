@@ -50,7 +50,7 @@ Vous pouvez modifier cette valeur au niveau du formulaire à l'aide de la *propr
 
 Votre formulaire contient les rectangles suivants, nommés "Rect1" et "Rect2" :
 
-![](../assets/en/commands/pict1629574.en.png)
+![](../../assets/en/commands/pict1629574.en.png)
 
 Vous pouvez exécuter le code suivant afin de changer leurs angles arrondis :
 
@@ -58,13 +58,13 @@ Vous pouvez exécuter le code suivant afin de changer leurs angles arrondis :
  OBJECT SET CORNER RADIUS(*;"Rect@";20)
 ```
 
-![](../assets/en/commands/pict1629576.en.png)
+![](../../assets/en/commands/pict1629576.en.png)
 
 ## Exemple 2 
 
 Soit la zone de texte suivante dans votre formulaire, nommée "required-label":
 
-![](../assets/en/commands/pict6074566.en.png)
+![](../../assets/en/commands/pict6074566.en.png)
 
 Si vous exécutez le code suivant :
 
@@ -72,7 +72,7 @@ Si vous exécutez le code suivant :
  OBJECT SET CORNER RADIUS(*;"required-label";10)
 ```
 
-![](../assets/en/commands/pict6074568.en.png)
+![](../../assets/en/commands/pict6074568.en.png)
 
 Notez que pour les zones de texte (ainsi que pour les zones de saisie), contrairement aux rectangles, l'arrondi de l'angle est dessiné en dehors de la zone initiale de l'objet.
 

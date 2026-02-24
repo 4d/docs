@@ -56,7 +56,7 @@ The line:
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225119.en.png)
+![](../../assets/en/commands/pict4225119.en.png)
 
 ## Example 2 
 
@@ -73,7 +73,7 @@ The line:
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225137.en.png)
+![](../../assets/en/commands/pict4225137.en.png)
 
 ## Example 3 
 
@@ -85,7 +85,7 @@ The line:
 
 will display the request dialog box (on Windows) shown here:
 
-![](../assets/en/commands/pict4225146.en.png)
+![](../../assets/en/commands/pict4225146.en.png)
 
 ## See also 
 

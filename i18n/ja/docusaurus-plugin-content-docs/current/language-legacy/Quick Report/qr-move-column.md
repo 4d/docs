@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 以下のようなレポートをデザインした場合を考えます:
 
-![](../assets/en/commands/pict2569470.en.png)
+![](../../assets/en/commands/pict2569470.en.png)
 
 以下のコードを実行した場合:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 結果は以下のようになります:
 
-![](../assets/en/commands/pict2569472.en.png)
+![](../../assets/en/commands/pict2569472.en.png)
 
 
 ## プロパティ

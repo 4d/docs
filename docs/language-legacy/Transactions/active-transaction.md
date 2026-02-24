@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Since the command will also return **False** if the current process is not in transaction, you may need to check using the [In transaction](in-transaction.md) command to know whether the process is in transaction. 
 
-For more information, please refer to the [Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions) section. 
+For more information, please refer to the [Suspending transactions](../../Develop-legacy/transactions.md#suspending-transactions) section. 
 
 ## Description 
 
@@ -54,7 +54,7 @@ You want to know the current transaction status:
 [In transaction](in-transaction.md)  
 [RESUME TRANSACTION](resume-transaction.md)  
 [SUSPEND TRANSACTION](suspend-transaction.md)  
-[Suspending transactions](../Develop-legacy/transactions.md#suspending-transactions)
+[Suspending transactions](../../Develop-legacy/transactions.md#suspending-transactions)
 
 ## Properties
 

@@ -73,7 +73,7 @@ Given a hierarchical list created as follows:
 
 This list can be represented as:
 
-![](../assets/en/commands/pict1214045.en.png)
+![](../../assets/en/commands/pict1214045.en.png)
 
 If you execute the following statement:
 

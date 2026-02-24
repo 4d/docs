@@ -36,7 +36,7 @@ Depending on the process from which the command is called, the current session c
 - a stored procedures session,
 - a standalone session.
 
-Para obter mais informações, consulte [Tipos de sessão](../API/SessionClass.md#session-types).
+Para obter mais informações, consulte [Tipos de sessão](../../API/SessionClass.md#session-types).
 
 The command returns *Null* if:
 
@@ -51,20 +51,20 @@ O objeto `Session` das sessões web está disponível em qualquer processo web:
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
-- Funções ORDA [chamadas com solicitações REST](../REST/ClassFunctions.md).
+- Funções ORDA [chamadas com solicitações REST](../../REST/ClassFunctions.md).
 
-Para obter mais informações sobre as sessões dos usuários da web, consulte a seção [Sessões de Servidor Web](../WebServer/sessions.md).
+Para obter mais informações sobre as sessões dos usuários da web, consulte a seção [Sessões de Servidor Web](../../WebServer/sessions.md).
 
 ### Sessões de usuário remoto
 
 The `Session` object of remote user sessions is available from:
 
-- Métodos de projeto que têm o atributo [Execute on Server](../Project/project-method-properties.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
+- Métodos de projeto que têm o atributo [Execute on Server](../../Project/project-method-properties.md#execute-on-server) (são executados no processo "geminado" do processo do cliente),
 - Triggers,
-- ORDA [funções do modelo de dados](../ORDA/ordaClasses.md) (exceto aquelas declaradas com a palavra-chave [`local`](../ORDA/ordaClasses.md#local-functions),
+- ORDA [funções do modelo de dados](../../ORDA/ordaClasses.md) (exceto aquelas declaradas com a palavra-chave [`local`](../../ORDA/ordaClasses.md#local-functions),
 - 'Conexão aberta com o servidor' e 'Conexão com o servidor' métodos de banco de dados.
 
-For more information on remote user sessions, please refer to the [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions) paragraph.
+For more information on remote user sessions, please refer to the [**Remote user sessions**](../../Desktop/sessions.md#remote-user-sessions) paragraph.
 
 ### a sessão de procedimentos armazenados
 
@@ -73,17 +73,17 @@ Todos os processos de procedimento armazenado compartilham a mesma sessão de us
 - métodos chamados com o comando [`Execute on server`](../commands/execute-on-server),
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
+For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../../Desktop/sessions.md#stored-procedure-sessions) paragraph.
 
 ### Sessão autônoma
 
 The `Session` object is available from any process in standalone (single-user) applications so that you can write and test your client/server code using the `Session` object in your 4D development environment.
 
-For more information on standalone sessions, please refer to the [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions) paragraph.
+For more information on standalone sessions, please refer to the [**Standalone sessions**](../../Desktop/sessions.md#standalone-sessions) paragraph.
 
 ### `Session` and components
 
-When `Session` is called from the code of different [components loaded in the project](../Concepts/components.md), the command returns an object depending on the calling request and the context:
+When `Session` is called from the code of different [components loaded in the project](../../Concepts/components.md), the command returns an object depending on the calling request and the context:
 
 - in case of a web request, `Session` always returns the session attached to the target web server of the request (and not a session of the component's web server),
 - in case of a remote request executed on the server, `Session` always returns the session attached to the remote user,
@@ -131,9 +131,9 @@ IP:port/4DACTION/action_Session
 ## Veja também
 
 [Session storage](session-storage.md)  
-[Session API](../API/SessionClass.md)
-[Desktop sessions](../Desktop/sessions.md)
-[Web server user sessions](../WebServer/sessions.md)  
+[Session API](../../API/SessionClass.md)
+[Desktop sessions](../../Desktop/sessions.md)
+[Web server user sessions](../../WebServer/sessions.md)  
 [*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
 ## Propriedades

@@ -70,7 +70,7 @@ Sur le serveur, la commande `Process activity` renvoie une propriété "session"
 
 | Propriété supplémentaire | Type   | Description                                                                                                                                                                                                  |   |
 | ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| session                  | Object | La propriété [`.info`](../API/SessionClass.md#info) de la session dans laquelle le process est en cours d'exécution. *Undefined* si le paramètre `Processes only` est passé. |   |
+| session                  | Object | La propriété [`.info`](../../API/SessionClass.md#info) de la session dans laquelle le process est en cours d'exécution. *Undefined* si le paramètre `Processes only` est passé. |   |
 
 ## Exemple 1
 
@@ -111,4 +111,4 @@ Vous souhaitez obtenir tous les process liés à la session courante :
 [`Process info`](process-info.md)  
 [`Session info`](session-info.md)  
 [`Session storage`](session-storage.md)  
-[`WEB Get server info`](../commands-legacy/web-get-server-info)
+[`WEB Get server info`](../../commands-legacy/web-get-server-info)

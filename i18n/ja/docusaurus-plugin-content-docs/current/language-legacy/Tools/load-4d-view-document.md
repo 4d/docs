@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 例えば、以下のドキュメントを変換した場合:
 
-![](../assets/en/commands/pict3631552.en.png)
+![](../../assets/en/commands/pict3631552.en.png)
 
 以下の結果を取得します(文字列化されたオブジェクト):
 

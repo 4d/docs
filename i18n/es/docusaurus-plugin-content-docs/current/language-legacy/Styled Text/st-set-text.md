@@ -76,11 +76,11 @@ Si quiere reemplazar el texto con estilo seleccionado por el usuario con el cont
 
 Este es el texto seleccionado:
 
-![](../assets/en/commands/pict579068.es.png)
+![](../../assets/en/commands/pict579068.es.png)
 
 El contenido almacendo en el campo es el siguiente:
 
-![](../assets/en/commands/pict579073.es.png)
+![](../../assets/en/commands/pict579073.es.png)
 
 Después de la ejecución de este código:
 
@@ -92,7 +92,7 @@ Después de la ejecución de este código:
 
 El campo y su contenido son los siguientes:
 
-![](../assets/en/commands/pict579075.es.png) ![](../assets/en/commands/pict579077.es.png)
+![](../../assets/en/commands/pict579075.es.png) ![](../../assets/en/commands/pict579077.es.png)
 
 ## Ejemplo 2 
 

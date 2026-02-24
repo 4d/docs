@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 以下の階層リストにおいて:
 
-![](../assets/en/commands/pict22420.ja.png)
+![](../../assets/en/commands/pict22420.ja.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"P@";1;$arrPos)

@@ -41,7 +41,7 @@ Por favor tenga en cuenta que este comportamiento es diferente del comportamient
 
 Dada la siguiente ventana (los campos y el marco tienen la propiedad de dimensionamiento horizontal “Agrandar”):
 
-![](../assets/en/commands/pict39548.es.png)
+![](../../assets/en/commands/pict39548.es.png)
 
 Después de la ejecución de esta línea:
 
@@ -51,7 +51,7 @@ Después de la ejecución de esta línea:
 
 ... la ventana aparece así:
 
-![](../assets/en/commands/pict39549.es.png)
+![](../../assets/en/commands/pict39549.es.png)
 
 ## Ver también 
 

@@ -48,7 +48,7 @@ The *mimeType* and *name* parameters receive the Mime type and the name of the o
 
 In this example, a Web form downloads several pictures using a browser onto the HTTP server and displays them in the page. Here is the Web form:
 
-![](../assets/en/commands/pict864606.en.png)
+![](../../assets/en/commands/pict864606.en.png)
 
 Here is the code for the <body> part of the page:
 

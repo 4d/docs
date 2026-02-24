@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get default user.Summary-->Get default user コマンドは、データベース設定において "デフォルトユーザー" として定義されたユーザーのユニークなユーザーIDを返します。<!-- END REF-->
 
-![](../assets/en/commands/pict36789.en.png)
+![](../../assets/en/commands/pict36789.en.png)
 
 デフォルトユーザーが設定されていない場合、コマンドは0を返します。
 

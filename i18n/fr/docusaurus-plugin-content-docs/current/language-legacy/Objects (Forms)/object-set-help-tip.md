@@ -52,7 +52,7 @@ Lorsqu'un message d'aide est déjà affiché, l'utilisation de la commande **OBJ
 
 Dans ce formulaire, un message d'aide est affiché et change dynamiquement lorsque la souris survole des zones différentes du bouton-image :
 
-![](../assets/en/commands/pict3424849.fr.png)
+![](../../assets/en/commands/pict3424849.fr.png)
 
 ```4d
   //Méthode objet du bouton-image nommé "myFlag"
@@ -131,7 +131,7 @@ Vous avez défini une list box "liste de commandes" et vous souhaitez proposer d
 
 Résultat :
 
-![](../assets/en/commands/pict3529022.en.png)
+![](../../assets/en/commands/pict3529022.en.png)
 
 ## Voir aussi 
 

@@ -83,7 +83,7 @@ displayed_sidebar: docs
  $JsonStringPretty :=JSON Stringify array($myArray;*)
 ```
 
-![](../assets/en/commands/pict1205072.fr.png)
+![](../../assets/en/commands/pict1205072.fr.png)
 
 ## 例題 4 
 

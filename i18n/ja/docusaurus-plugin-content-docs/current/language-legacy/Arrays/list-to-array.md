@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 このリストは以下の様に表示されます:
 
-![](../assets/en/commands/pict1214045.en.png)
+![](../../assets/en/commands/pict1214045.en.png)
 
 これに対し以下の宣言を実行すると、:
 

@@ -44,7 +44,7 @@ More than one record may be found if *manyField* ends with the wildcard characte
 
 In the screen below, a record is being entered and a selection list is displayed in the foreground.
 
-![](../assets/en/commands/pict2287719.en.png)
+![](../../assets/en/commands/pict2287719.en.png)
 
 The following command is used to make the selection list appear: 
 
@@ -64,11 +64,11 @@ Specifying *choiceField* is the same as specifying a wildcard choice when establ
 
 Let’s say you have an *\[Invoice\]* table related to a *\[Customers\]* table with two non-automatic relations. One relation is from *\[Invoice\]Bill to* to *\[Customers\]Number*, and the other relation is from *\[Invoice\]Ship to* to *\[Customers\]Number*.
 
-![](../assets/en/commands/pict2287721.en.png)
+![](../../assets/en/commands/pict2287721.en.png)
 
 Here is the form for the \[Invoice\] table displaying the "Bill to" and "Send to" information:
 
-![](../assets/en/commands/pict2287723.en.png)
+![](../../assets/en/commands/pict2287723.en.png)
 
 Since both relations are to the same table, *\[Customers\]*, you cannot obtain the billing and shipment information at the same time. Therefore, displaying both addresses in a form should be performed using variables and calls to **RELATE ONE**. If the *\[Customers\]* fields were displayed instead, data from only one of the relations would be displayed.
 

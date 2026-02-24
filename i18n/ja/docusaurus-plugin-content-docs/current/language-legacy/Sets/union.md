@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 以下の図に、集合結合演算の処理結果を図で示します。塗りつぶした箇所が結果セットの部分です。
 
-![](../assets/en/commands/pict33125.ja.png)
+![](../../assets/en/commands/pict33125.ja.png)
 
 *resultSet*は、UNIONコマンドで作成されます。*resultSet*と同じ名前のセット (*set1*と*set2*も含めて) がすでに存在する場合には、*resultSet*に置き換えられます。*set1*と*set2*は同じテーブルに属していなければなりません。*resultSet*も*set1*、*set2*と同じテーブルに属します。*resultSet*のカレントレコ－ドは、Set1からのカレントレコ－ドです。
 

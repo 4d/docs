@@ -27,7 +27,7 @@ displayed_sidebar: docs
 | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
 | objectName  | text    | イベントをトリガーしているオブジェクト名。フォームによってトリガーされている場合には含まれていません。                                                                         |
 | code        | integer | フォームイベントの数値。                                                                                                                |
-| description | text    | フォームイベント名 (例: "On After Edit")。 詳細は[**Form Events**](../Events/overview.md) の章を参照してください。 |
+| description | text    | フォームイベント名 (例: "On After Edit")。 詳細は[**Form Events**](../../Events/overview.md) の章を参照してください。 |
 
 例えば、ボタンをクリックした場合、オブジェクトには以下のプロパティが格納されています:
 
@@ -37,8 +37,8 @@ displayed_sidebar: docs
 
 イベントオブジェクトには、イベントが発生したオブジェクト によっては追加のプロパティが含まれていることがあります。  これは以下のオブジェクトで生成された *eventObj* オブジェクトが対象です:
 
-- リストボックスまたはリストボックスカラムオブジェクト。詳細は[こちらの章](../FormObjects/listbox_overview.md#supported-form-events)を参照してください。
-- 4D View Pro エリア。詳細は[On VP Ready フォームイベント](../Events/onVpReady.md) を参照してください。
+- リストボックスまたはリストボックスカラムオブジェクト。詳細は[こちらの章](../../FormObjects/listbox_overview.md#supported-form-events)を参照してください。
+- 4D View Pro エリア。詳細は[On VP Ready フォームイベント](../../Events/onVpReady.md) を参照してください。
 
 ***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 カラムオブジェクト名に、実際のデータクラスの属性名を以下のように設定した場合:
 
-![](../assets/en/commands/pict4843820.en.png)
+![](../../assets/en/commands/pict4843820.en.png)
 
 On Header Click イベントを使用してカラムをソートすることができます:
 
@@ -74,7 +74,7 @@ On Header Click イベントを使用してカラムをソートすることが�
 
 リストボックスオブジェクトのOn Display Details イベントが発生したときに、*メタ情報式 プロパティ*に設定したメソッドを実行したい場合を考えます:
 
-![](../assets/en/commands/pict4843812.en.png)
+![](../../assets/en/commands/pict4843812.en.png)
 
 *setColor* メソッドの中身です:
 
@@ -94,11 +94,11 @@ On Header Click イベントを使用してカラムをソートすることが�
 
 その結果、行が選択された際のリストボックスは以下のようになります:
 
-![](../assets/en/commands/pict4843808.en.png)
+![](../../assets/en/commands/pict4843808.en.png)
 
 ## 参照
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [Form event code](form-event-code.md)
 
 ## プロパティ

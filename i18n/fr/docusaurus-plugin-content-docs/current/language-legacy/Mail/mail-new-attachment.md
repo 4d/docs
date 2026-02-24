@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->vous permet de créer un objet pièce jointe que vous pouvez ajouter à un [objet Email](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+La commande `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->vous permet de créer un objet pièce jointe que vous pouvez ajouter à un [objet Email](../../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Pour définir l'objet attachment, vous pouvez utiliser :
 

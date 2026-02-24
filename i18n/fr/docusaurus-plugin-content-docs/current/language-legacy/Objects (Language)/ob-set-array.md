@@ -111,7 +111,7 @@ Utilisation d’un tableau objet :
 
 L’objet est représenté ainsi dans le débogueur :
 
-![](../assets/en/commands/pict1211436.fr.png)
+![](../../assets/en/commands/pict1211436.fr.png)
 
 ## Exemple 5 
 
@@ -125,7 +125,7 @@ Utilisation d'un champ objet :
  OB SET ARRAY([Personnes]Enfants;"Girls";$arrGirls)
 ```
 
-![](../assets/en/commands/pict1899097.fr.png)
+![](../../assets/en/commands/pict1899097.fr.png)
 
 ## Exemple 6 
 

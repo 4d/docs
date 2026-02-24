@@ -26,7 +26,7 @@ This command is designed to work with customized and advanced user interfaces ba
 
 This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
 
-![](../assets/en/commands/pict3541609.en.png)
+![](../../assets/en/commands/pict3541609.en.png)
 
 The **DIALOG** command can also be used instead of [ALERT](../commands/alert), [CONFIRM](../commands/confirm) or [Request](../commands/request) when the information to be presented or gathered is more complex than those commands can manage.
 
@@ -47,7 +47,7 @@ To fill the "form data" object, you have two possibilities:
 
 - use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
-- [associate a user class to the form](../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.  
+- [associate a user class to the form](../../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.  
 
 :::note
 
@@ -86,13 +86,13 @@ The following example can be used to create a tool palette:
 
 In a form displaying the record of a person, a "Check children" button opens a dialog to verify/modify the names and ages of their children:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
 In the verification form, you have assigned some [Form](form.md) object properties to variables:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Here is the code for the "Check children" button:
 
@@ -124,7 +124,7 @@ Here is the code for the "Check children" button:
 
 The form displays information for each child:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 If values are edited and the OK button is clicked, the field is updated (the parent record must be saved afterwards). 
 
@@ -140,7 +140,7 @@ The following example uses the path to a .json form to display the records in an
 
 which displays:
 
-![](../assets/en/commands/pict3687439.en.png)
+![](../../assets/en/commands/pict3687439.en.png)
 
 ## Example 4 
 
@@ -158,7 +158,7 @@ The following example uses a .json file as an object and modifies a few properti
 
 The altered form is displayed with the title, logo and border modified:
 
-![](../assets/en/commands/pict3688356.en.png)
+![](../../assets/en/commands/pict3688356.en.png)
 
 ## System variables and sets 
 

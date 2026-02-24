@@ -26,7 +26,7 @@ Este comando está diseñado para trabajar con interfaces de usuario personaliza
 
 Este comando suele invocarse junto con el comando [Open form window](open-form-window.md) para mostrar formularios sofisticados, como se muestra en el siguiente ejemplo:
 
-![](../assets/en/commands/pict3541609.en.png)
+![](../../assets/en/commands/pict3541609.en.png)
 
 El comando **DIALOG** también puede utilizarse en lugar de [ALERT](../commands/alert), [CONFIRM](../commands/confirm) o [Request](../commands/request) cuando la información a presentar o recopilar es más compleja de lo que esos comandos pueden gestionar.
 
@@ -47,7 +47,7 @@ Para llenar el objeto "form data", tiene dos posibilidades:
 
 - usar el parámetro *formData*. Usar una variable local para *formData* le permite pasar con seguridad parámetros a sus formularios, sea cual sea el contexto de llamada. En particular, si el mismo formulario se llama desde diferentes lugares en el mismo proceso, siempre podrá acceder a sus valores específicos simplemente llamando a [Form](form.md).myProperty. Además, como los objetos se pasan por referencia, si el usuario modifica el valor de una propiedad en el formulario, se guardará automáticamente en el propio objeto.
 
-- [asociar una clase usuario al formulario](../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. Las propiedades y funciones del objeto estarán automáticamente disponibles a través del objeto devuelto por [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
+- [asociar una clase usuario al formulario](../../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. Las propiedades y funciones del objeto estarán automáticamente disponibles a través del objeto devuelto por [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
 
 :::note
 
@@ -86,13 +86,13 @@ El siguiente ejemplo permite crear una paleta de herramientas:
 
 En un formulario que muestra el registro de una persona, un botón "Check children" abre un cuadro de diálogo para verificar/modificar los nombres y edades de sus hijos:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
 En el formulario de verificación, ha asignado algunas propiedades del objeto [Form](form.md) a variables:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Este es el código del botón "Check children":
 
@@ -124,7 +124,7 @@ Este es el código del botón "Check children":
 
 El formulario muestra información sobre cada niño:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 Si se editan los valores y se presiona el botón OK, se actualiza el campo (después hay que guardar el registro principal).
 
@@ -140,7 +140,7 @@ El siguiente ejemplo utiliza la ruta a un formulario .json para mostrar los regi
 
 que muestra:
 
-![](../assets/en/commands/pict3687439.en.png)
+![](../../assets/en/commands/pict3687439.en.png)
 
 ## Ejemplo 4
 
@@ -158,7 +158,7 @@ El siguiente ejemplo utiliza un archivo .json como objeto y modifica algunas pro
 
 El formulario modificado se muestra con el título, el logotipo y el borde modificado:
 
-![](../assets/en/commands/pict3688356.en.png)
+![](../../assets/en/commands/pict3688356.en.png)
 
 ## Variables y conjuntos sistema
 

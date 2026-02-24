@@ -55,7 +55,7 @@ Le paramètre *action*, s’il est passé, permet de définir l’action de sél
 
 Soient les tableaux suivants représentés dans une list box :
 
-![](../assets/en/commands/pict185052.fr.png)
+![](../../assets/en/commands/pict185052.fr.png)
 
 Nous souhaitons sélectionner la ligne de rupture "Normandie" dans la représentation hiérarchique de ces tableaux :
 
@@ -68,7 +68,7 @@ Nous souhaitons sélectionner la ligne de rupture "Normandie" dans la représent
 
 Voici le résultat :
 
-![](../assets/en/commands/pict185059.fr.png)
+![](../../assets/en/commands/pict185059.fr.png)
 
 ## Voir aussi 
 

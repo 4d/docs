@@ -281,7 +281,7 @@ You want to search a field containing array attributes. With the following two r
 
 This example illustrates the use of the virtual "length" property. Your database has a \[Customer\]full\_Data object field with the following data:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 You want to get the records for any customers who have two or more children. To do this, you can write:
 

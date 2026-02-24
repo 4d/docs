@@ -71,21 +71,21 @@ Este ejemplo ilustra la diferencia de funcionamiento del comando con un list box
 
 Si esta instrucción se aplica a un list box mostrado en modo estándar:
 
-![](../assets/en/commands/pict197489.en.png)
+![](../../assets/en/commands/pict197489.en.png)
 
 ... las líneas y las columnas del list box se desplazan:
 
-![](../assets/en/commands/pict197491.en.png)
+![](../../assets/en/commands/pict197491.en.png)
 
 Por otra parte, si la misma instrucción se aplica al list box mostrado en modo jerárquico, las líneas se desplazn pero no las columnas porque la segunda columna hacer pate de la jerarquía:
 
-![](../assets/en/commands/pict197493.en.png)
+![](../../assets/en/commands/pict197493.en.png)
 
 ## Ejemplo 2 
 
 Usted quieres desplazarse por una imagen que se incluye en una variable de formulario. Este montaje muestra la parte visible de la imagen, así como el punto a mostrar (166 píxeles verticalmente y 200 píxeles horizontalmente):
 
-![](../assets/en/commands/pict1513843.fr.png)
+![](../../assets/en/commands/pict1513843.fr.png)
 
 Para desplazarse por la parte visible y mostrar el punto rojo al origen de la variable imagen, puede escribir: 
 
@@ -95,7 +95,7 @@ Para desplazarse por la parte visible y mostrar el punto rojo al origen de la va
 
 A continuación, se obtiene el siguiente resultado: 
 
-![](../assets/en/commands/pict1513846.fr.png)
+![](../../assets/en/commands/pict1513846.fr.png)
 
 Asegúrese de no omitir el segundo parámetro *\** en este caso, de lo contrario la imagen no se desplazará porque el punto definido ya se muestra.
 

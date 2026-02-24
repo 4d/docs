@@ -40,7 +40,7 @@ Los intercambios con el almacén de datos remoto se gestionan automáticamente m
 
 :::note
 
-Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la [sección de inicio de sesión de usuario](../REST/authUsers.md#force-login-mode) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión de usuario seleccionado.
+Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una licencia 4D Client para abrir la conexión en un 4D Server remoto. Consulte la [sección de inicio de sesión de usuario](../../REST/authUsers.md#force-login-mode) para saber cómo configurar la autenticación dependiendo del modo de inicio de sesión de usuario seleccionado.
 
 :::
 

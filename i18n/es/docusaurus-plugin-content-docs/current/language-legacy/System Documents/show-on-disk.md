@@ -42,19 +42,19 @@ Los siguientes ejemplos ilustran el funcionamiento del comando:
  SHOW ON DISK("c:\\MiCarpeta\\MiArchivo.txt") // Muestra el archivo designado
 ```
 
-![](../assets/en/commands/pict35007.es.png)
+![](../../assets/en/commands/pict35007.es.png)
 
 ```4d
  SHOW ON DISK("c:\\MiCarpeta\\Carpeta2") // Muestra la carpeta designada
 ```
 
-![](../assets/en/commands/pict35008.es.png)
+![](../../assets/en/commands/pict35008.es.png)
 
 ```4d
  SHOW ON DISK("c:\\MiCarpeta\\Carpeta2";*) // Muestra los contenidos de la carpeta designada
 ```
 
-![](../assets/en/commands/pict35009.es.png)
+![](../../assets/en/commands/pict35009.es.png)
 
 #### Variables y conjuntos del sistema 
 

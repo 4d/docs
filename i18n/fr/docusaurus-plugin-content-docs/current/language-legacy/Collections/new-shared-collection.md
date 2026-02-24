@@ -18,13 +18,13 @@ displayed_sidebar: docs
 
 ## Description
 
-nombres Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
+nombres Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../../API/CollectionClass.md).
 
-L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](../Concepts/shared.md#useend-use), sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](../API/CollectionClass.md#push) ou [`map()`](../API/CollectionClass.md#map) car elles utilisent automatiquement une structure interne *Use...End use*). Copie inversée de la collection
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](../../Concepts/shared.md#useend-use), sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](../../API/CollectionClass.md#push) ou [`map()`](../../API/CollectionClass.md#map) car elles utilisent automatiquement une structure interne *Use...End use*). Copie inversée de la collection
 
 :::info
 
-Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](../Concepts/shared.md).
+Pour plus d'informations sur les collections partagées, veuillez vous référer à la page [Objets et collections partagés](../../Concepts/shared.md).
 
 :::
 
@@ -67,7 +67,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 ## Voir également
 
 [New collection](new-collection.md)\
-[New shared object](../commands-legacy/new-shared-object)\
+[New shared object](../../commands-legacy/new-shared-object)\
 *Shared objects and shared collections*
 
 ## Propriétés

@@ -51,7 +51,7 @@ displayed_sidebar: docs
  End if
 ```
 
-![](../assets/en/commands/pict32598.ja.png)
+![](../../assets/en/commands/pict32598.ja.png)
 
 ## 参照 
 

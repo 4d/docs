@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 行をドラッグすると、以下のように画像が表示されます:
 
-![](../assets/en/commands/pict1204050.ja.png)
+![](../../assets/en/commands/pict1204050.ja.png)
 
 画像とカーソルの位置関係をずらすこともできます:
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  SET DRAG ICON(vpict;0;0)
 ```
 
-![](../assets/en/commands/pict1204052.fr.png)
+![](../../assets/en/commands/pict1204052.fr.png)
 
 ## 参照 
 

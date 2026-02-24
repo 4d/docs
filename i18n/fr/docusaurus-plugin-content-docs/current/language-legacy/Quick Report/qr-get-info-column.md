@@ -72,7 +72,7 @@ La valeur à passer dans le paramètre *numColonne* dépend de l'opération que 
 
 * Taille de la colonne  
 Il s'agit d'un attribut “visuel”, par conséquent les colonnes sont simplement numérotées de gauche à droite, comme illustré ci-dessous :  
-![](../assets/en/commands/pict30562.fr.png)
+![](../../assets/en/commands/pict30562.fr.png)
 
 La méthode suivante affecte une taille automatique à toutes les colonnes d'un état en tableau croisé et laisse les autres éléments inchangés :
 
@@ -85,7 +85,7 @@ La méthode suivante affecte une taille automatique à toutes les colonnes d'un 
 
 * Source de données (objet) et format d'affichage  
 Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :  
-![](../assets/en/commands/pict30563.fr.png)
+![](../../assets/en/commands/pict30563.fr.png)
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
@@ -94,7 +94,7 @@ Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
 Vous avez construit l'état suivant :
 
-![](../assets/en/commands/pict2569537.fr.png)
+![](../../assets/en/commands/pict2569537.fr.png)
 
 Vous pouvez écrire :
 

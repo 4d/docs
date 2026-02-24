@@ -109,7 +109,7 @@ El menú pop up se muestra en Windows al presionar el botón derecho del ratón,
 
 El siguiente es el menú pop-up tal como aparece en Windows (izquierda) y Macintosh (derecha). Note la marca de selección estándar para la versión Windows.
 
-![](../assets/en/commands/pict36394.es.png)
+![](../../assets/en/commands/pict36394.es.png)
 
 ## Ver también 
 

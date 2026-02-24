@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Le formulaire suivant, présenté ici dans l'éditeur de formulaires, contient un fond coloré au-dessus duquel quatre boutons invisibles ont été placés (un par côté) :
 
-![](../assets/en/commands/pict2762756.fr.png)
+![](../../assets/en/commands/pict2762756.fr.png)
 
 Chaque bouton est associé à la méthode suivante :
 
@@ -51,7 +51,7 @@ Après l'exécution de la méthode projet suivante :
 
 ... vous obtenez une fenêtre semblable à celle-ci :
 
-![](../assets/en/commands/pict2762759.fr.png)
+![](../../assets/en/commands/pict2762759.fr.png)
 
 Vous pouvez la déplacer en cliquant sur les bordures.
 

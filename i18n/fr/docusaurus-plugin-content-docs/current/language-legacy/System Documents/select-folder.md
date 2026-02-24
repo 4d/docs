@@ -41,11 +41,11 @@ Le paramètre optionnel *message* permet d’afficher une ligne d’information 
 
 **Windows :**  
 
-![](../assets/en/commands/pict3881936.fr.png)
+![](../../assets/en/commands/pict3881936.fr.png)
 
 **macOS :**  
 
-![](../assets/en/commands/pict3881985.fr.png)
+![](../../assets/en/commands/pict3881985.fr.png)
 
 Vous pouvez utiliser le paramètre *répertoire* pour proposer un emplacement de dossier par défaut dans la boîte de dialogue de sélection de dossier. Vous pouvez passer dans ce paramètre trois types de valeurs :
 
@@ -71,7 +71,7 @@ Vous pouvez passer une constante ou la combinaison des deux. Ces options sont pr
 
 **Note :** Sous macOS, selon que le nom du dossier est sélectionné ou non dans la boîte de dialogue, le chemin retourné est différent.
 
-![](../assets/en/commands/pict34878.fr.png)
+![](../../assets/en/commands/pict34878.fr.png)
 
 **4D Server :** Cette fonction permet de visualiser les volumes connectés aux postes clients. Il n’est pas possible de l’appeler depuis une procédure stockée.
 

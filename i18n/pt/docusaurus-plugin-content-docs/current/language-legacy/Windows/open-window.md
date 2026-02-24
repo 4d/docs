@@ -69,7 +69,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 - The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
-**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an [`On Close Box` event](../Events/onCloseBox.md) occurs.
+**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an [`On Close Box` event](../../Events/onCloseBox.md) occurs.
 
 If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
 
@@ -180,7 +180,7 @@ This type of window has the same basic characteristics as the [`Plain dialog box
   - the user hits the **Escape** key.
 - This window is displayed in front of its "parent" window (it must not be used as the main window of the process). The background window is not disabled. However, it no longer receives events.
 - You cannot resize or move the window using the mouse; however, when performing these actions programmatically, the redraw of background items is optimized.
-- Usage: This type of window is primarily used to generate pop-up menus related to buttons like [toolbars type buttons](../FormObjects/button_overview.md#toolbar).
+- Usage: This type of window is primarily used to generate pop-up menus related to buttons like [toolbars type buttons](../../FormObjects/button_overview.md#toolbar).
 - Limitations:
   - It is not possible to display pop-up menu objects inside this type of window.
   - It does not permit the display of help tips under macOS.
@@ -193,7 +193,7 @@ Sheet windows are specific to macOS. These windows “drop down” over the titl
 - The command opens a type 1 (Modal dialog box) window instead of a type 33 window or type 8 (Plain) window instead of type 34:
   - if the last opened window is not visible or is not a document type,
   - em Windows.
-- Since a sheet window must be drawn above a form, its display is pushed back in the [`On load` event](../Events/onLoad.md) of the first form loaded in the window.
+- Since a sheet window must be drawn above a form, its display is pushed back in the [`On load` event](../../Events/onLoad.md) of the first form loaded in the window.
 - Usage: `DIALOG` or equivalent, under macOS (not standard under Windows).
 
 #### Round corner window

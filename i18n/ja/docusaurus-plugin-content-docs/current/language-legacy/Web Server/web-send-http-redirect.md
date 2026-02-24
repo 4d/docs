@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 このコマンドを使用して、4D上でスタティックページを用いてカスタムリクエストを実行します。以下の要素をスタティックなHTMLページに設定するとします。
 
-![](../assets/en/commands/pict38648.ja.png)
+![](../../assets/en/commands/pict38648.ja.png)
 
 **注:** POSTアクション "/4DCGI/rech" は、テキストエリアと**OK**と**Cancel**ボタンに連携されています。
 

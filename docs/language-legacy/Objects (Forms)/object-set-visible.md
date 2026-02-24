@@ -40,7 +40,7 @@ If you pass *visible* equal to **TRUE**, the objects are shown. If you pass *vis
 
 Here is a typical form in the Design environment:
 
-![](../assets/en/commands/pict27188.en.png)
+![](../../assets/en/commands/pict27188.en.png)
 
 The objects in the **Employer Information** group box each have an object name that contains the expression “employer” (including the group box). When the **Currently Employed** check box is checked, the objects must be visible; when the check box is unchecked, the objects must be invisible.   
 Here is the object method of the check box:
@@ -61,11 +61,11 @@ Here is the object method of the check box:
 
 Therefore, when executed, the form looks like:
 
-![](../assets/en/commands/pict27189.en.png)
+![](../../assets/en/commands/pict27189.en.png)
 
 or:
 
-![](../assets/en/commands/pict27190.en.png)
+![](../../assets/en/commands/pict27190.en.png)
 
 ## See also 
 

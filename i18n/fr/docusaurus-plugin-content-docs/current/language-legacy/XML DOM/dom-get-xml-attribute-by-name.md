@@ -52,7 +52,7 @@ Cette méthode permet de récupérer une valeur d’attribut XML à l’aide de 
 
 Si cette méthode est appliquée à l’exemple ci-dessous, $NumLigne contient la valeur 1 :
 
-![](../assets/en/commands/pict40184.fr.png)
+![](../../assets/en/commands/pict40184.fr.png)
 
 ## Variables et ensembles système 
 

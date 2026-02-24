@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 以下のウィンドウがあるとき:
 
-![](../assets/en/commands/pict39568.ja.png)
+![](../../assets/en/commands/pict39568.ja.png)
 
 以下のコードを実行すると:
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
 
 以下のように表示されます:
 
-![](../assets/en/commands/pict39569.ja.png)
+![](../../assets/en/commands/pict39569.ja.png)
 
 ## 参照 
 

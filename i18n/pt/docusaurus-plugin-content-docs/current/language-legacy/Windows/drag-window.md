@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 O seguinte formulário, mostrado no editor de formulários, contém um fundo colorido, sobre a qual há quatro botões invisíveis para cada lado:  
   
-![](../assets/en/commands/pict2762756.en.png)
+![](../../assets/en/commands/pict2762756.en.png)
 
 Cada botão está associado ao seguinte método:  
   
@@ -58,7 +58,7 @@ CLOSE WINDOW
 Pode obter uma janela parecida a esta:
 
   
-![](../assets/en/commands/pict2762759.en.png)
+![](../../assets/en/commands/pict2762759.en.png)
 
 Depois pode arrastar a janela clicando em qualquer das margens.
 

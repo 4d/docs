@@ -106,7 +106,7 @@ Le pop up menu s'affiche sous Windows lorsque l'utilisateur appuie sur le **bout
 
 Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS (à droite). Notez la coche standard de la version Windows :
 
-![](../assets/en/commands/pict36394.fr.png)
+![](../../assets/en/commands/pict36394.fr.png)
 
 ## Voir aussi 
 

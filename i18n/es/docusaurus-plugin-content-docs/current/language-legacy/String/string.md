@@ -54,7 +54,7 @@ La función **String** no es compatible con campos de tipo "Integer 64 bits" en 
 
 Si no se pasa el parámetro opcional *format*, la cadena se devuelve con el formato numérico por defecto.
 
-El formato se especifica del mismo modo que se haría para una [entrada numérica en un formulario](../FormObjects/properties_Display.md#number-format). También puede pasar el nombre de un estilo personalizado en *format*. El nombre del estilo personalizado debe ir precedido del caracter `|`. He aquí algunos ejemplos:
+El formato se especifica del mismo modo que se haría para una [entrada numérica en un formulario](../../FormObjects/properties_Display.md#number-format). También puede pasar el nombre de un estilo personalizado en *format*. El nombre del estilo personalizado debe ir precedido del caracter `|`. He aquí algunos ejemplos:
 
 | **Ejemplo**                                                                         | **Resultado**                     | **Comentarios**                                    |
 | ----------------------------------------------------------------------------------- | --------------------------------- | -------------------------------------------------- |
@@ -138,7 +138,7 @@ Ejemplos:
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
-- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)  
+- o un [formato personalizado basado en un modelo](../../Project/date-time-formats.md) (valor cadena)  
   Ejemplos:
 
 ```4d
@@ -227,7 +227,7 @@ Ejemplos:
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 horas 30 minutos 45 segundos"  
 ```
 
-- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)  
+- o un [formato personalizado basado en un modelo](../../Project/date-time-formats.md) (valor cadena)  
   Ejemplos:
 
 ```4d

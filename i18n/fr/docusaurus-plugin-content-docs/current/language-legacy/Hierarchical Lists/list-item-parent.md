@@ -51,7 +51,7 @@ Si vous travaillez avec les numéros de référence des éléments, assurez-vous
 
 Voici une liste *hList* affichée en mode Application :
 
-![](../assets/en/commands/pict22613.fr.png)
+![](../../assets/en/commands/pict22613.fr.png)
 
 Voici les numéros de référence des éléments de cette liste :
 

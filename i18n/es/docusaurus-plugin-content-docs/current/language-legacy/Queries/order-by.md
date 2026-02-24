@@ -37,7 +37,7 @@ Si omite el parámetro *tabla*, el comando se aplica a la tabla por defecto, si 
 
 Si no especifica el parámetro *campo*, ni los parámetros *\> o <* o, ORDER BY muestra la caja de diálogo Ordenar de 4D para *tabla*. Esta es la caja de diálogo del editor:
 
-![](../assets/en/commands/pict2286854.es.png)
+![](../../assets/en/commands/pict2286854.es.png)
 
 Para mayor información sobre la utilización de este editor, consulte el Manual de diseño de 4D. 
 
@@ -169,7 +169,7 @@ El siguiente ejemplo realiza una ordenación indexada en dos niveles si un índi
 
 En un formulario de salida mostrado en modo Aplicación, usted le permite a los usuarios ordenar una columna en orden creciente simplemente haciendo clic en el encabezado de la columna. Si el usuario mantiene presionada la tecla **Mayús** mientras hace clic en otros encabezados de columnas, la ordenación se lleva a cabo en varios niveles: 
 
-![](../assets/en/commands/pict16003.es.png)
+![](../../assets/en/commands/pict16003.es.png)
 
 Cada encabezado de columna contiene un botón resaltado asociado con el siguiente método de objeto:
 

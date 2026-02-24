@@ -92,7 +92,7 @@ Nesse caso, o comando imprimirá a seção incluída entre os parâmetros *areaS
 
 **formData**
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). O objeto de dados do formulário está disponível no [evento de Detalhes de Impressão](../Events/onPrintingDetail.md).
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). O objeto de dados do formulário está disponível no [evento de Detalhes de Impressão](../../Events/onPrintingDetail.md).
 
 Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
 
@@ -113,7 +113,7 @@ Esse comando imprime áreas e objetos externos (por exemplo, áreas 4D Write ou 
 
 **Aviso:** Os subformulários não são impressos com **Imprimir formulário**. Para imprimir apenas um formulário com esses objetos, use [PRINT RECORD](../commands/print-record) em vez disso.
 
-**Print form** gera apenas um evento [`On Printing Detail`](../Events/onPrintingDetail.md) para o método formulário.
+**Print form** gera apenas um evento [`On Printing Detail`](../../Events/onPrintingDetail.md) para o método formulário.
 
 **4D Server:** Esse comando pode ser executado no 4D Server dentro da estrutura de um procedimento armazenado. Neste contexto:
 
@@ -153,7 +153,7 @@ Consulte o exemplo do comando [SET PRINT MARKER](../commands/set-print-marker).
 
 Esse formulário é usado como diálogo e depois impresso com modificações:
 
-![](../assets/en/commands/pict6264975.en.png)
+![](../../assets/en/commands/pict6264975.en.png)
 
 O método formulário:
 

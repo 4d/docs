@@ -35,9 +35,9 @@ displayed_sidebar: docs
 Ce type de message est généralement utilisé par le système ou les applications pour informer l’utilisateur d’un événement (déconnexion réseau, disponibilité de mises à jour, etc.)
 
 * Sous Windows, le message apparaît dans la zone de notification de la barre des tâches :  
-![](../assets/en/commands/pict1206085.fr.png)
+![](../../assets/en/commands/pict1206085.fr.png)
 * Sous macOS (version 10.8 minimum), le message apparaît dans une petite fenêtre glissant dans l’angle supérieur droit de l’écran.  
-![](../assets/en/commands/pict1206031.fr.png)  
+![](../../assets/en/commands/pict1206031.fr.png)  
 A noter que, conformément aux spécifications d’Apple, la notification n’est affichée que si l’application n’est pas au premier plan. Le message apparaît cependant toujours dans la liste du "notification center".
 
 Passez dans les paramètres *titre* et *contenu* le titre et le texte du message à afficher (dans notre exemple, le titre est "Exportation 4D"). Vous pouvez saisir jusqu’à 255 caractères. 

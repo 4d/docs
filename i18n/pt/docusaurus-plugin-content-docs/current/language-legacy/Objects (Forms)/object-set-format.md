@@ -88,7 +88,7 @@ Times:
 | System time long             | 11    |                                                                                                                                                                                                                        |  
 | System time long abbreviated | 10    |                                                                                                                                                                                                                        |  
 | System time short            | 9     |                                                                                                                                                                                                                        |
-* ou um [formato personalizado construido sobre um padrão](../Project/date-time-formats.md) (valor de string). Por exemplo:  
+* ou um [formato personalizado construido sobre um padrão](../../Project/date-time-formats.md) (valor de string). Por exemplo:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -306,7 +306,7 @@ A linha de código a seguir dá formato ao campo *\[Empregados\]Data Contratado*
 
 ## Exemplo 2 
 
-Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](../Project/date-time-formats.md): 
+Este exemplo formata uma variável data e uma variável hora utilizando [formatos personalizados](../../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -352,7 +352,7 @@ Se você armazenou um arquivo de imagen chamado "envelope\_open.png" na pasta Re
  OBJECT SET FORMAT(*;"Header1";vIcon+";"+vPos)
 ```
 
-![](../assets/en/commands/pict2878245.en.png)
+![](../../assets/en/commands/pict2878245.en.png)
 
 ## Exemplo 7 
 

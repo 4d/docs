@@ -54,7 +54,7 @@ No parâmetro *tipoCor*, pode passar a constante `lk background color`  ou `lk f
 
 Dado a list box abaixo:
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ```4d
  var $vtColor;$vtColor2;$vtColor3 : Text

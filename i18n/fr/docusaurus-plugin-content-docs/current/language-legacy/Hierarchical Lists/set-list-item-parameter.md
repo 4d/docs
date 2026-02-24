@@ -64,7 +64,7 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
  OBJECT SET LIST BY REFERENCE(*;"popup";Choice list;$myList)
 ```
 
-![](../assets/en/commands/pict3372004.en.png)
+![](../../assets/en/commands/pict3372004.en.png)
 
 ## Voir aussi 
 

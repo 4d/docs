@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 Cette commande prend en charge les objets de type:
 
-- [input](../FormObjects/input_overview.md) de type texte uniquement,
-- [zone 4D Write Pro](../FormObjects/writeProArea_overview.md).
+- [input](../../FormObjects/input_overview.md) de type texte uniquement,
+- [zone 4D Write Pro](../../FormObjects/writeProArea_overview.md).
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas un nom mais une référence.
 

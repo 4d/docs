@@ -36,7 +36,7 @@ displayed_sidebar: docs
 Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md), **Form** devuelve cualquiera de los dos:
 
 - el objeto *formData* pasado como parámetro a este comando, si existe,
-- o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
+- o, un objeto instanciado de la [clase de usuario asociada al formulario](../../FormEditor/properties_FormProperties.md#form-class), si existe,
 - o, un objeto vacío.
 
 ### Subformulario
@@ -66,13 +66,13 @@ Para más información, consulte la sección *Subformularios de página*.
 
 En un formulario que muestra el registro de una persona, un botón "Check children" abre un cuadro de diálogo para verificar/modificar los nombres y edades de sus hijos:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
 En el formulario de verificación, ha asignado algunas propiedades del objeto Form a las entradas:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Este es el código del botón "Check children":
 
@@ -104,7 +104,7 @@ Este es el código del botón "Check children":
 
 El formulario muestra información sobre cada niño:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 Si se editan los valores y se presiona el botón OK, se actualiza el campo (después hay que guardar el registro principal).
 

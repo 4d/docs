@@ -54,7 +54,7 @@ Dans le paramètre *typeCouleur*, vous pouvez passer la constante lk couleur de 
 
 Considérons la list box suivante :
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ```4d
  var $vtColor;$vtColor2;$vtColor3 : Text

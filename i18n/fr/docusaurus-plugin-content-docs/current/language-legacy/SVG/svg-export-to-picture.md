@@ -58,7 +58,7 @@ L’exemple suivant permet d’afficher “Hello World” dans une image 4D :
 ```
   
   
-![](../assets/en/commands/pict14520.fr.png)  
+![](../../assets/en/commands/pict14520.fr.png)  
 
 ## Voir aussi 
 

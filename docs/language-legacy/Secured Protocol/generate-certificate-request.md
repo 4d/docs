@@ -61,7 +61,7 @@ The code and information content entering order does not matter, however the two
 
 A “Certificate request” form contains the six fields necessary for a standard certificate request. The **Generate** button creates a document on disk containing the certificate request. The “Privatekey.txt” document containing the private key (generated with the [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) command) should be on the disk:
 
-![](../assets/en/commands/pict32461.en.png)  
+![](../../assets/en/commands/pict32461.en.png)  
   
 Here is the **Generate** button method:
 

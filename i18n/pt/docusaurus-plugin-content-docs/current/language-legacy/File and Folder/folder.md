@@ -24,17 +24,17 @@ displayed_sidebar: docs
 | folderConstant | Integer                                            | &#8594; | Constante Pasta 4D                                                |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
 | \*             | Operador                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | [4D.Folder](../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
+| Resultados     | [4D.Folder](../../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
 
 <!-- END REF -->
 
 ## Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo [`4D.Folder`](../API/FolderClass.md)<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e retorna um novo objeto do tipo [`4D.Folder`](../../API/FolderClass.md)<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-No parâmetro *path*, passe uma string de rotas de pasta. Você pode usar uma cadeia de caracteres personalizada ou um [sistema de arquivos](../Concepts/paths.md#filesystem-pathnames) (por exemplo, "/DATA").
+No parâmetro *path*, passe uma string de rotas de pasta. Você pode usar uma cadeia de caracteres personalizada ou um [sistema de arquivos](../../Concepts/paths.md#filesystem-pathnames) (por exemplo, "/DATA").
 
 > Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder`.
 
@@ -68,11 +68,11 @@ No parâmetro *folderConstant*, passe uma pasta 4D incorporada ou de sistema, ut
 
 If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Caso contrário, se omitir o parâmetro `*`, um objecto nulo é sempre devolvido.
 
-> No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) for usada.
+> No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../../Desktop/building.md#buildapp4dsettings) for usada.
 
 ## Veja também
 
-[`4D.Folder` class](../API/FolderClass.md)
+[`4D.Folder` class](../../API/FolderClass.md)
 [File](file.md)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)

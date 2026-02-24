@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **CALL SUBFORM CONTAINER** *コマンドの実行例:*
 
-![](../assets/en/commands/pict166755.en.png)
+![](../../assets/en/commands/pict166755.en.png)
 
 ## 参照 
 

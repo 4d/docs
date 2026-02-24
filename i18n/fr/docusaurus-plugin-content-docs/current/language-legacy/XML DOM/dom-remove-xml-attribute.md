@@ -36,7 +36,7 @@ Si l’attribut a été correctement supprimé, la variable système OK prend la
 
 Soit la structure suivante :
 
-![](../assets/en/commands/pict204122.fr.png)
+![](../../assets/en/commands/pict204122.fr.png)
 
 Le code suivant permet de supprimer le premier attribut "N=1" : 
 

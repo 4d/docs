@@ -55,7 +55,7 @@ Si ningún elemento corresponde al *valor* buscado, la función devuelve 0 y el 
 
 Dada la siguiente lista jerárquica:
 
-![](../assets/en/commands/pict22420.es.png)
+![](../../assets/en/commands/pict22420.es.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"I@";1;$arrPos)

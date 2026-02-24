@@ -84,7 +84,7 @@ It is now   Go to the 4D site or Open a window
 
 このテキストは以下の様に表示されます:
 
-![](../assets/en/commands/pict1217332.en.png)
+![](../../assets/en/commands/pict1217332.en.png)
 
 以下は、あるコードを実行した場合とそれぞれに対して返ってくる値です:
 

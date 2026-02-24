@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Summary-->**Last errors** コマンドは4D アプリケーションのカレントのスタックエラーをエラーオブジェクトのコレクションとして返すか、あるいはエラーが何も起きなかった場合には **null** を返します。<!-- END REF-->エラーのスタックには、 [throw](../commands/throw) コマンドで返されたオブジェクトも(あれば)含みます。
 
-このコマンドは[ON ERR CALL](../commands/on-err-call) コマンドで実装されたエラー処理メソッドから、あるいは[Try または Try/Catch](../Concepts/error-handling.md#tryexpression) コンテキスト内から呼び出す必要があります。
+このコマンドは[ON ERR CALL](../commands/on-err-call) コマンドで実装されたエラー処理メソッドから、あるいは[Try または Try/Catch](../../Concepts/error-handling.md#tryexpression) コンテキスト内から呼び出す必要があります。
 
 それぞれのエラーオブジェクトには、次のプロパティが格納されています:
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
 
 [ON ERR CALL](../commands/on-err-call)
 [throw](../commands/throw)  
-[Error handling](../Concepts/error-handling.md)
+[Error handling](../../Concepts/error-handling.md)
 
 ## プロパティ
 

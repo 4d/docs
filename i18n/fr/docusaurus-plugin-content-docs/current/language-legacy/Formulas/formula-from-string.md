@@ -56,16 +56,16 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
  End if
 ```
 
-![](../assets/en/API/formulaDialog.png)
+![](../../assets/en/API/formulaDialog.png)
 
 ... et exécute la formule :
 
-![](../assets/en/API/formulaAlert.png)
+![](../../assets/en/API/formulaAlert.png)
 
 ## Voir également
 
 [Formula](formula.md)\
-[Parse formula](../commands-legacy/parse-formula)
+[Parse formula](../../commands-legacy/parse-formula)
 
 ## Propriétés
 

@@ -75,7 +75,7 @@ QR SET INFO COLUMN コマンドを使用して同様のパラメタを設定で�
 * カラムサイズ  
 これは“視覚的”な属性であり、下図のようにカラムは左から右へと番号が付けられています。
 
-![](../assets/en/commands/pict31030.ja.png)
+![](../../assets/en/commands/pict31030.ja.png)
 
 次のコードは、クロステーブルレポートのすべてのカラムに対してサイズを自動に設定し、その他の要素は以前のまま変更しません:
 
@@ -91,7 +91,7 @@ QR SET INFO COLUMN コマンドを使用して同様のパラメタを設定で�
 * データソース (オブジェクト) と表示フォーマット  
 この場合、カラム番号は次の図のように作用します:
 
-![](../assets/en/commands/pict31031.ja.png)
+![](../../assets/en/commands/pict31031.ja.png)
 
 QR SET INFO COLUMNコマンドを使用しても、すべてのセルに対応できないことにお気付きでしょう。上図の中で番号が付けられていないセルに関しては、[QR SET TOTALS DATA](qr-set-totals-data.md "QR SET TOTALS DATA")コマンドを用いて対処します。
 
@@ -108,7 +108,7 @@ QR SET INFO COLUMNコマンドを使用しても、すべてのセルに対応�
 
 この結果、レポートエリアは次のようになります:
 
-![](../assets/en/commands/pict31032.ja.png)
+![](../../assets/en/commands/pict31032.ja.png)
 
   
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。  

@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 > デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 一方で、使用したいコンポーネントのWeb サーバーは、[`WEB Server`](web-server.md) コマンドによってそれぞれインスタンス化されている必要があります。
 
-Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
+Webサーバオブジェクトの [.name](../../API/WebServerClass.md#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
 
 ## 例題
 
@@ -54,7 +54,7 @@ Webサーバオブジェクトの [.name](../API/WebServerClass.md#name) プロ�
 ## 参照
 
 [WEB Server](web-server.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## プロパティ
 

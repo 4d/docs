@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 If you do not pass any parameters, **New object** creates an empty object and returns its reference. You must assign this reference to a 4D object variable or a 4D object field.
 
-**Note:** `var : Object` declares a variable of the [Object type](../Concepts/dt_object.md) but does not create any object.
+**Note:** `var : Object` declares a variable of the [Object type](../../Concepts/dt_object.md) but does not create any object.
 
 Optionnally, you can prefill the new object by passing one or several *property*/*value* pairs as parameters:
 

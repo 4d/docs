@@ -114,11 +114,11 @@ Se quiser anexar uma coluna a uma list box de tipo coleção :
 
 O conteúdo da coluna será avaliado para cada elemento da coleção e a a source da expressão*This.Employee* é usada :
 
-![](../assets/en/commands/pict3815223.en.png)
+![](../../assets/en/commands/pict3815223.en.png)
 
 A execução :
 
-![](../assets/en/commands/pict3814815.en.png)
+![](../../assets/en/commands/pict3814815.en.png)
 
 Para adicionar uma coluna mostrando os títulos dos cargos ocupados :
 
@@ -129,7 +129,7 @@ Para adicionar uma coluna mostrando os títulos dos cargos ocupados :
 
 A coluna é anexada à list box :
 
-![](../assets/en/commands/pict3814850.en.png)
+![](../../assets/en/commands/pict3814850.en.png)
 
 ## Ver também 
 

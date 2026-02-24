@@ -48,7 +48,7 @@ Les paramètres *typeMime* et *nomFichier* permettent de récupérer le type Mim
 
 Dans cet exemple, un formulaire Web permet de télécharger sur le serveur HTTP plusieurs images depuis un navigateur et de les afficher dans la page. Voici le formulaire Web :
 
-![](../assets/en/commands/pict864606.fr.png)
+![](../../assets/en/commands/pict864606.fr.png)
 
 Voici le code la partie <body> de la page :
 

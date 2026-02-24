@@ -35,7 +35,7 @@ La fenêtre système de sélection de couleur a l’apparence suivante :
 
 | **Macintosh**                                | **Windows**                                 |
 | -------------------------------------------- | ------------------------------------------- |
-| ![](../assets/en/commands/pict942577.fr.png) | ![](../assets/en/commands/pict43386.fr.png) |
+| ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43386.fr.png) |
 
 Le paramètre facultatif *coulDéfaut* vous permet de pré-sélectionner une couleur dans la fenêtre. Ce paramètre vous permet par exemple de restituer par défaut la dernière couleur définie par l’utilisateur. Passez dans ce paramètre une valeur de couleur au format RVB (pour plus d’informations, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md)). Vous pouvez utiliser l’une des constantes du thème *FIXER COULEUR RVB*. Si le paramètre *coulDéfaut* est omis ou si vous passez 0, la couleur noir est sélectionnée à l’ouverture de la boîte de dialogue.
 

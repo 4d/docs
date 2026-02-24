@@ -129,7 +129,7 @@ Une fois que vous avez ajouté cette méthode projet à votre application, vous 
 
 Examinons par exemple le formulaire suivant :
 
-![](../assets/en/commands/pict21523.fr.png)
+![](../../assets/en/commands/pict21523.fr.png)
 
 Il est composé des objets suivants : une zone saisissable *vaRecherche*, une zone non-saisissable *vaMessage* et une zone de défilement *taRecherche*. Lorsque l'utilisateur saisit des caractères dans *vaRecherche*, la méthode objet effectue une recherche sur la table \[Codes postaux\] permettant d'afficher des villes américaines en saisissant seulement les premiers caractères de leur nom. Voici la méthode objet de *vaRecherche* :
 
@@ -167,7 +167,7 @@ Il est composé des objets suivants : une zone saisissable *vaRecherche*, une zo
 
 Voici le formulaire en exécution :
 
-![](../assets/en/commands/pict21524.fr.png)
+![](../../assets/en/commands/pict21524.fr.png)
 
 A l'aide des possibilités de communication interprocess de 4D, vous pouvez construire une interface dans laquelle les recherches se construisent dans des palettes flottantes communiquant avec les process dans lesquels les enregistrements sont affichés ou modifiés.
 

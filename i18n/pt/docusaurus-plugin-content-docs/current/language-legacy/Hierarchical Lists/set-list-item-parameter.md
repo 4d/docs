@@ -67,7 +67,7 @@ APPEND TO LIST($myList;ak standard action title;1)
 
 ```
 
-![](../assets/en/commands/pict3372004.en.png)
+![](../../assets/en/commands/pict3372004.en.png)
 
 ## Ver também 
 

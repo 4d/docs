@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 :::info Compatibilidad
 
-Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
+Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomienda utilizar [`4D.HTTPRequest class`](../../API/HTTPRequestClass.md).
 
 :::
 

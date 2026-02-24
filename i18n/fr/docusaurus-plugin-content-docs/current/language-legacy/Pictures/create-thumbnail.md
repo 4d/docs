@@ -52,16 +52,16 @@ Le paramètre optionnel *mode* vous permet de définir le mode de création de l
 Si vous omettez le paramètre *mode*, le mode 6 (Proportionnelle centrée) est appliqué par défaut. Le résultat des différents modes est illustré ci-dessous : 
 
 Image source   
-![](../assets/en/commands/pict27911.fr.png)
+![](../../assets/en/commands/pict27911.fr.png)
 
 Imagettes résultantes (48x48)
 
 * Non tronquée = 2  
-![](../assets/en/commands/pict27912.fr.png)
+![](../../assets/en/commands/pict27912.fr.png)
 * Proportionnelle = 5  
-![](../assets/en/commands/pict27913.fr.png)
+![](../../assets/en/commands/pict27913.fr.png)
 * Proportionnelle centrée = 6 (mode par défaut)  
-![](../assets/en/commands/pict27914.fr.png)
+![](../../assets/en/commands/pict27914.fr.png)
 
 **Note :** Avec les modes “Proportionnelle” et “Proportionnelle centrée”, les espaces vides apparaîtront blancs dans les imagettes — lorsque ces modes sont appliqués aux champs ou variables images dans les formulaires 4D, les espaces vides sont transparents. 
 

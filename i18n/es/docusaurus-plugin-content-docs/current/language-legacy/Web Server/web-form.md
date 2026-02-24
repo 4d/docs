@@ -25,15 +25,15 @@ Tenga en cuenta que un objeto `4D.WebForm` es un **objeto proxy**, y no una refe
 
 :::
 
-Cada propiedad del objeto devuelto es un objeto de la clase [4D.WebFormItem](../API/WebFormItemClass.md).
+Cada propiedad del objeto devuelto es un objeto de la clase [4D.WebFormItem](../../API/WebFormItemClass.md).
 
 El comando devuelve `null` si es llamado en una petición que no se origina desde Qodly Studio.
 
 ## Ver también
 
 [Web Event](web-event.md)</br>
-[WebForm class](../API/WebFormClass.md)</br>
-[WebFormItem class](../API/WebFormItemClass.md)
+[WebForm class](../../API/WebFormClass.md)</br>
+[WebFormItem class](../../API/WebFormItemClass.md)
 
 ## Propiedades
 

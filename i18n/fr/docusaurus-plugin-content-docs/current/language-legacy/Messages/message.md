@@ -59,7 +59,7 @@ L'exemple suivant traite une sélection d'enregistrements et appelle la commande
 
 La fenêtre suivante s'affiche puis disparaît à chaque appel de **MESSAGE** :
 
-![](../assets/en/commands/pict25453.fr.png)
+![](../../assets/en/commands/pict25453.fr.png)
 
 ## Exemple 2 
 
@@ -77,7 +77,7 @@ Afin d'éliminer le "clignotement" de la fenêtre, il est préférable, comme da
 
 Le résultat est le suivant (sous Windows) : 
 
-![](../assets/en/commands/pict25454.fr.png)
+![](../../assets/en/commands/pict25454.fr.png)
 
 ## Exemple 3 
 
@@ -95,7 +95,7 @@ En ajoutant un retour chariot, vous améliorez la présentation :
 
 Voici le résultat (Sous Windows) :
 
-![](../assets/en/commands/pict25455.fr.png)
+![](../../assets/en/commands/pict25455.fr.png)
 
 ## Exemple 4 
 
@@ -119,7 +119,7 @@ A l'aide de la commande [GOTO XY](goto-xy.md) et de l'écriture de quelques lign
 
 Voici le résultat (sous Windows) :
 
-![](../assets/en/commands/pict25456.fr.png)
+![](../../assets/en/commands/pict25456.fr.png)
 
 ## Voir aussi 
 

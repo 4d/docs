@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET FOLDERS.Summary-->**METHOD GET FOLDERS**コマンドは4Dエクスプローラーのホームページに作成されたフォルダー名を*arrNames*配列に返します。<!-- END REF-->
 
-![](../assets/en/commands/pict837666.en.png)
+![](../../assets/en/commands/pict837666.en.png)
 
 フォルダー名はユニークでなければならないため、この配列に階層は返されません。 
 

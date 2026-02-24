@@ -52,7 +52,7 @@ Si *cheminRelatif* n’est trouvé à aucun de ces emplacements, la commande ret
 Dans le but de transformer un fichier xml en html, vous souhaitez utiliser un fichier de transformation "log.xsl". Ce fichier diffère suivant la langue courante. Vous souhaitez donc connaître le chemin du fichier "log.xsl" à utiliser.   
 Voici le contenu du dossier Resources :
 
-![](../assets/en/commands/pict162129.fr.png)
+![](../../assets/en/commands/pict162129.fr.png)
 
 Pour utiliser un fichier .xsl adapté à la langue courante, il vous suffit de passer :
 

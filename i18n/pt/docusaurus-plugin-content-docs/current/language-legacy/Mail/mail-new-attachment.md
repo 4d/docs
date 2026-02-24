@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-O comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->permite que você crie um objeto anexo que você pode adicionar a um [objeto de e-mail](../API/EmailObjectClass.md#email-object)<!-- END REF -->.
+O comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->permite que você crie um objeto anexo que você pode adicionar a um [objeto de e-mail](../../API/EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir o anexo, pode utilizar:
 

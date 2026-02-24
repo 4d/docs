@@ -63,7 +63,7 @@ displayed_sidebar: docs
  EDIT ITEM(*;"MyList")
 ```
 
-![](../assets/en/commands/pict21419.ja.png)
+![](../../assets/en/commands/pict21419.ja.png)
 
 ## 例題 2 
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
  EDIT ITEM(Array2;$vlRowNum)
 ```
 
-![](../assets/en/commands/pict21420.ja.png)
+![](../../assets/en/commands/pict21420.ja.png)
 
 ## 参照 
 

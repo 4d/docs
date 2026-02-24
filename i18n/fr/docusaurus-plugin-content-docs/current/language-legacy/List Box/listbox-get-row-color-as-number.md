@@ -53,7 +53,7 @@ Passez la constante `lk background color`  ou `lk font color`  (thème "*List bo
 
 Soit la list box suivante :
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ```4d
  vCoul:=LISTBOX Get row color(*;"Col5";3)

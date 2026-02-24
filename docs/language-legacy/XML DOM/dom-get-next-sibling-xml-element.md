@@ -48,7 +48,7 @@ Retrieval of the reference of the next sibling XML element following the element
  $next_XML_Ref:=DOM Get next sibling XML element($xml_Parent_Ref)
 ```
 
-![](../assets/en/commands/pict40038.en.png)
+![](../../assets/en/commands/pict40038.en.png)
 
 ## Example 2 
 
@@ -64,7 +64,7 @@ Retrieval in a reference loop of all the child XML elements following the parent
  End while
 ```
 
-![](../assets/en/commands/pict40039.en.png)
+![](../../assets/en/commands/pict40039.en.png)
 
 ## System variables and sets 
 

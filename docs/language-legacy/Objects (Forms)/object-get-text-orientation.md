@@ -48,7 +48,7 @@ The value returns corresponds to one of the following constants, found in the "*
 
 Given the following object (where a "90° left" orientation was applied in the Form editor):
 
-![](../assets/en/commands/pict1209704.fr.png)
+![](../../assets/en/commands/pict1209704.fr.png)
 
 When the form is executed, if you call the following statement:
 
@@ -58,7 +58,7 @@ When the form is executed, if you call the following statement:
 
 ... then the object appears as follows:
 
-![](../assets/en/commands/pict1209706.fr.png)
+![](../../assets/en/commands/pict1209706.fr.png)
 
 ```4d
  $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180

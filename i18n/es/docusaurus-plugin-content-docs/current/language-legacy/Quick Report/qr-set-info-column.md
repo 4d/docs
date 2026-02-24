@@ -76,7 +76,7 @@ Además, los parámetros *titulo*, *oculta*, y *valoresRepetidos* no se utilizan
 
 Este es un atributo “visual”, por lo tanto las columnas son numeradas de izquierda a derecha, como se muestra en la siguiente imagen:
 
-![](../assets/en/commands/pict31030.es.png)
+![](../../assets/en/commands/pict31030.es.png)
 
 El siguiente método define el tamaño automático para todas las columnas en informe tablas cruzadas y deja los otros elementos intactos:
 
@@ -93,7 +93,7 @@ Notará que como quiere modificar únicamente el tamaño de la columna, debe uti
 
 En este caso la numeración de las columnas se efectúa de la siguiente manera:
 
-![](../assets/en/commands/pict31031.es.png)
+![](../../assets/en/commands/pict31031.es.png)
 
 Notará que no es posible direccionar todas las celdas utilizando el comando QR SET INFO COLUMN, las celdas que no son numeradas arriba son direccionadas utilizando [QR SET TOTALS DATA](qr-set-totals-data.md "QR SET TOTALS DATA").
 
@@ -110,7 +110,7 @@ El siguiente código asigna las fuentes de datos a las tres celdas necesarias pa
 
 Se genera la siguiente área de informe:
 
-![](../assets/en/commands/pict31032.es.png)
+![](../../assets/en/commands/pict31032.es.png)
 
   
 Si pasa un número de *area* inválido, se genera el error -9850.  

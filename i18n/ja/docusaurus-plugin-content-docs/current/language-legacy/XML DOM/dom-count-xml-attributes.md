@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 要素の属性値を配列に受け取る前に、XML要素の属性数を取得します:
 
-![](../assets/en/commands/pict39728.ja.png)
+![](../../assets/en/commands/pict39728.ja.png)
 
 ```4d
  var myBlobVar : Blob

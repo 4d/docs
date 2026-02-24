@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve el nombre así como (opcionalmente) las propiedades del comando cuyo número de comando pasa en *command*.<!-- END REF--> El número de cada comando se indica en el Explorador así como en el área Propiedades de esta documentación.
 
-**Nota de compatibilidad:** el nombre de un comando puede variar de una versión 4D a la siguiente (comandos renombrados), este comando se utilizaba en versiones anteriores para designar un comando directamente mediante su número, especialmente en porciones de código no tokenizadas. Esta necesidad ha disminuido con el tiempo a medida que 4D sigue evolucionando porque, para las sentencias no tokenizadas (fórmulas), 4D ahora ofrece una sintaxis con tokens. Esta sintaxis le permite evitar posibles problemas debidos a las variaciones en los nombres de los comandos y otros elementos, como las tablas, sin dejar de poder escribir estos nombres de forma legible (para más información, consulte la sección *Utilización de tokens en las fórmulas*). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
+**Nota de compatibilidad:** el nombre de un comando puede variar de una versión 4D a la siguiente (comandos renombrados), este comando se utilizaba en versiones anteriores para designar un comando directamente mediante su número, especialmente en porciones de código no tokenizadas. Esta necesidad ha disminuido con el tiempo a medida que 4D sigue evolucionando porque, para las sentencias no tokenizadas (fórmulas), 4D ahora ofrece una sintaxis con tokens. Esta sintaxis le permite evitar posibles problemas debidos a las variaciones en los nombres de los comandos y otros elementos, como las tablas, sin dejar de poder escribir estos nombres de forma legible (para más información, consulte la sección *Utilización de tokens en las fórmulas*). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
 
 Hay dos parámetros opcionales:
 
 - *info*: propiedades del comando. El valor devuelto es un *campo de bits*, donde los siguientes bits son significativos:
-  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Solo se pueden usar comandos hilo seguro en [procesos preventivos](../Develop/preemptive.md).
-  - Segundo bit (bit 1): se define en 1 si el comando es **obsoleto**, y en 0 si no lo es. Un comando obsoleto seguirá funcionando normalmente mientras sea compatible, pero debe sustituirse siempre que sea posible y no debe utilizarse en código nuevo. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
+  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Solo se pueden usar comandos hilo seguro en [procesos preventivos](../../Develop/preemptive.md).
+  - Segundo bit (bit 1): se define en 1 si el comando es **obsoleto**, y en 0 si no lo es. Un comando obsoleto seguirá funcionando normalmente mientras sea compatible, pero debe sustituirse siempre que sea posible y no debe utilizarse en código nuevo. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: nombre del tema del lenguaje 4D para el comando.
 
@@ -131,7 +131,7 @@ Until(OK=0) //fin de los comandos existentes
 ## Ver también
 
 [EXECUTE FORMULA](../commands/execute-formula)  
-[Preemptive Processes](../Develop/preemptive.md)
+[Preemptive Processes](../../Develop/preemptive.md)
 
 ## Propiedades
 

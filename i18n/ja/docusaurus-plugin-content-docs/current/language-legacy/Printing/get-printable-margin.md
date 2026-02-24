@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **デッドマージン**: 用紙マージンとプリンタマージンとの間の領域のことです。
 
-![](../assets/en/commands/pict28491.ja.png)
+![](../../assets/en/commands/pict28491.ja.png)
 
 ## 参照 
 

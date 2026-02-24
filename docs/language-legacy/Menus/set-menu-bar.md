@@ -81,7 +81,7 @@ The following example sets the current menu bar to menu bar #3 while records are
 
 In this comprehensive example, we will create, by programming, a menu bar including the following File and Edit menus: 
 
-![](../assets/en/commands/pict17860.en.png)
+![](../../assets/en/commands/pict17860.en.png)
 
 ```4d
   //Method for creating File menu

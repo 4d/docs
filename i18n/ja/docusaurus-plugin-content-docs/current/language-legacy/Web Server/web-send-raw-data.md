@@ -71,7 +71,7 @@ Location: http://...
 
 新しい[WEB GET HTTP BODY](web-get-http-body.md)コマンド や "Webサーバ" テーマの他のコマンドと組み合わせると、このコマンドは4Dデベロッパが利用できるツールの範囲を完成させます。これは、新旧のHTTP接続の処理を全体的にカスタマイズするためのものです。これら異なるツールを以下の図に表します。
 
-![](../assets/en/commands/pict856016.en.png)
+![](../../assets/en/commands/pict856016.en.png)
 
 ## 例題 
 

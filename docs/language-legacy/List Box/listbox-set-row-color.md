@@ -68,7 +68,7 @@ In an array type list box, we want to set colors for a row and for one cell in t
  LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
 ```
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ## See also 
 

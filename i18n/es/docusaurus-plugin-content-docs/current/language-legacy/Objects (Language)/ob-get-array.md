@@ -38,7 +38,7 @@ En el parámetro *propiedad*, pase la etiqueta de la propiedad a leer. Tenga en 
 
 Dado un objeto array definido en el ejemplo del comando [OB SET ARRAY](ob-set-array.md):
 
-![](../assets/en/commands/pict1211436.es.png)  
+![](../../assets/en/commands/pict1211436.es.png)  
   
 Queremos recuperar estos valores:
 
@@ -47,7 +47,7 @@ Queremos recuperar estos valores:
  OB GET ARRAY($Children;"Children";$result)
 ```
 
-![](../assets/en/commands/pict1213151.es.png)
+![](../../assets/en/commands/pict1213151.es.png)
 
 ## Ejemplo 2 
 

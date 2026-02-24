@@ -45,7 +45,7 @@ Después de la llamada, el tamaño de *arrayRuta* es igual al número de rutas d
 
 Su base contiene un campo objeto \[Customer\]full\_Data (indexado) con 15 registros:
 
-![](../assets/en/commands/pict2994114.en.png) 
+![](../../assets/en/commands/pict2994114.en.png) 
 
 Si ejecuta este código:
 

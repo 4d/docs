@@ -74,14 +74,14 @@ Soit une list box tableau ayant les caractéristiques suivantes :
      // équivaut à ArrCol5Style{3}:=Gras
 ```
 
-![](../assets/en/commands/pict1205512.fr.png)
+![](../../assets/en/commands/pict1205512.fr.png)
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
      // équivaut à ArrGlobalStyle{3}:=Italique+Souligné
 ```
 
-![](../assets/en/commands/pict1205514.fr.png)
+![](../../assets/en/commands/pict1205514.fr.png)
 
 Après la deuxième instruction, toutes les cellules de la troisième ligne passent en italique et souligné sauf celle de la colonne 5, qui reste en gras uniquement (les tableaux de colonnes sont prioritaires sur les tableaux de list box). 
 

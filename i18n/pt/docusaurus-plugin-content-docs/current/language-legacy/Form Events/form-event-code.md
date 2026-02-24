@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
 
-Para obter uma descrição dos eventos, consulte a seção [**Eventos formulário**](../Events/overview.md).
+Para obter uma descrição dos eventos, consulte a seção [**Eventos formulário**](../../Events/overview.md).
 
 ## Exemplo 1
 
@@ -139,7 +139,7 @@ This example shows the template of a form method that handles the events that ca
 
 ## Exemplo 2
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands/get-edited-text), [Keystroke](../commands/keystroke) and [FILTER KEYSTROKE](../commands/filter-keystroke) commands.
+For examples on how to handle [`On Before Keystroke`](../../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands/get-edited-text), [Keystroke](../commands/keystroke) and [FILTER KEYSTROKE](../commands/filter-keystroke) commands.
 
 ## Exemplo 6
 
@@ -194,7 +194,7 @@ This example shows how to treat clicks and double clicks using a different respo
 
 ## Exemplo 8
 
-This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
+This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../../Events/onGettingFocus.md) and [`On Losing Focus`](../../Events/onLosingFocus.md) events:
 
 ```4d
   //[Contacts];"Data Entry" form method
@@ -288,7 +288,7 @@ The following example illustrates how to manage a deletion action in a hierarchi
 
 ## Exemplo 12
 
-Neste exemplo, o evento [`On Scroll`](../Events/onScroll.md) do formulário nos permite sincronizar a exibição de duas fotos em um formulário. The following code is added in the "satellite" object method (picture field or variable):
+Neste exemplo, o evento [`On Scroll`](../../Events/onScroll.md) do formulário nos permite sincronizar a exibição de duas fotos em um formulário. The following code is added in the "satellite" object method (picture field or variable):
 
 ```4d
  Case of
@@ -335,11 +335,11 @@ You want to draw a red rectangle around the selected cell of a list box, and you
 
 As a result, the red rectangle follows the scrolling of the list box:
 
-![](../assets/en/commands/pict1900395.en.png)
+![](../../assets/en/commands/pict1900395.en.png)
 
 ## Veja também
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [CALL SUBFORM CONTAINER](../commands/call-subform-container)\
 [Current form table](../commands/current-form-table)\
 [FILTER KEYSTROKE](../commands/filter-keystroke)\

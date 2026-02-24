@@ -43,7 +43,7 @@ Cette commande ne peut être utilisée que dans les **bases de données binaires
 
 Dans votre application, les feuilles de style suivantes sont définies :
 
-![](../assets/en/commands/pict1206954.fr.png)
+![](../../assets/en/commands/pict1206954.fr.png)
 
 Si vous exécutez le code suivant :
 

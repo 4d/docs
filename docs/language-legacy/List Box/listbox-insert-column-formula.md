@@ -114,11 +114,11 @@ You want to add column to a list box of collection type:
 
 The column contents are evaluated for each element of the collection and referenced with the data source expression, *This.Employee*, as shown below:
 
-![](../assets/en/commands/pict3815223.en.png)
+![](../../assets/en/commands/pict3815223.en.png)
 
 At execution:
 
-![](../assets/en/commands/pict3814815.en.png)
+![](../../assets/en/commands/pict3814815.en.png)
 
 To add a column showing the job titles:
 
@@ -129,7 +129,7 @@ To add a column showing the job titles:
 
 The column is added to the list box:
 
-![](../assets/en/commands/pict3814850.en.png)
+![](../../assets/en/commands/pict3814850.en.png)
 
 ## See also 
 

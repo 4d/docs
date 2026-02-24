@@ -43,7 +43,7 @@ Après l’exécution de la commande, le BLOB *aCrypter* contient les données c
 
 **Principe du cryptage à clés publiques/privées pour l’échange de messages entre deux individus, “Alice” et “Bob”** 
 
-![](../assets/en/commands/pict13081.fr.png)
+![](../../assets/en/commands/pict13081.fr.png)
 
 **Note :** L’algorithme de cryptage comporte une fonction de vérification d’intégrité (checksum), afin d’empêcher toute modification malveillante ou accidentelle du contenu du BLOB. Par conséquent, un BLOB crypté ne doit pas être modifié, sous peine de ne pas pouvoir être décrypté.
 

@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **“Alice”と“Bob”の間で行われるメッセージ交換のための、公開及び秘密鍵を使用した暗号化の原則**
 
-![](../assets/en/commands/pict13081.ja.png)
+![](../../assets/en/commands/pict13081.ja.png)
 
 **Note**: BLOB内容の変更（意図的かどうかに関わらず）を防ぐため、暗号にはチェックサム機能が含まれています。したがって、暗号化されたBLOBは変更しないでください。変更を行うと、解読できなくなるおそれがあります。 
 

@@ -106,7 +106,7 @@ displayed_sidebar: docs
 
 結果は以下のようになります:
 
-![](../assets/en/commands/pict3687432.en.png)
+![](../../assets/en/commands/pict3687432.en.png)
 
 ## 参照 
 

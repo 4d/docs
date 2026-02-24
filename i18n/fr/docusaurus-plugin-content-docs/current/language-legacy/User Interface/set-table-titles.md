@@ -63,7 +63,7 @@ La commande **SET TABLE TITLES** est utile dans les cas suivants :
 * Vous développez une application 4D destinée au marché international. Vous avez donc besoin de prendre en compte les nécessités de traduction et de localisation. Pour les éditeurs standard de 4D qui apparaissent en mode Application et vos formulaires utilisant des libellés dynamiques, vous pouvez traiter cette question en utilisant une table *\[Traductions\]* et quelques méthodes pour créer et utiliser les traductions pour chaque langue que vous voulez.
 * Dans votre base, vous créez la table suivante :
 
-![](../assets/en/commands/pict36594.fr.png)
+![](../../assets/en/commands/pict36594.fr.png)
 
 * Ensuite, créez la méthode projet *traduire\_TABLES\_ET\_CHAMPS* ci-dessous. Cette méthode analyse la structure de votre base dans la table *\[Traductions\]* et crée les enregistrements correspondant à la langue passée comme paramètre.
 

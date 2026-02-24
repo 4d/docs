@@ -57,14 +57,14 @@ Si la sélection ou la list box ne contient pas de ligne de rupture, ou si toute
 
 Cet exemple illustre différents modes d’utilisation de la commande. Soient les tableaux suivants représentés dans une list box :
 
-![](../assets/en/commands/pict175844.fr.png)
+![](../../assets/en/commands/pict175844.fr.png)
 
 ```4d
   //Déployer toutes les lignes et sous-lignes de rupture de la list box
  LISTBOX EXPAND(*;"MaListbox")
 ```
 
-![](../assets/en/commands/pict175849.fr.png)
+![](../../assets/en/commands/pict175849.fr.png)
 
 ```4d
   //Déployer le premier niveau de lignes de rupture de la sélection
@@ -72,21 +72,21 @@ Cet exemple illustre différents modes d’utilisation de la commande. Soient le
   //Si la ligne "Belgique" était sélectionnée
 ```
 
-![](../assets/en/commands/pict175851.fr.png)
+![](../../assets/en/commands/pict175851.fr.png)
 
 ```4d
   //Déployer la ligne de rupture Bretagne sans récursivité
  LISTBOX EXPAND(*;"MaListbox";False;lk break row;1;2)
 ```
 
-![](../assets/en/commands/pict175853.fr.png)
+![](../../assets/en/commands/pict175853.fr.png)
 
 ```4d
   //Déployer toutes les premières colonnes (pays) sans récursivité
  LISTBOX EXPAND(*;"MaListbox";False;lk level;1)
 ```
 
-![](../assets/en/commands/pict175855.fr.png)
+![](../../assets/en/commands/pict175855.fr.png)
 
 ## Voir aussi 
 

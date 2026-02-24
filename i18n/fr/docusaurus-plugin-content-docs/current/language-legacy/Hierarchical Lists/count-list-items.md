@@ -46,21 +46,21 @@ Cette fonction doit être appliquée à une liste affichée dans un formulaire.
 
 Voici la liste *hList* affichée en mode Application :
 
-![](../assets/en/commands/pict22362.fr.png)
+![](../../assets/en/commands/pict22362.fr.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // à ce stade, $vlNbItems vaut 8
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems vaut également 8
 ```
 
-![](../assets/en/commands/pict22363.fr.png)
+![](../../assets/en/commands/pict22363.fr.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) // à ce stade, $vlNbItems vaut 2
  $vlNbTItems:=Count list items(hList;*) //$vlNbTItems vaut toujours 8
 ```
 
-![](../assets/en/commands/pict22364.fr.png)
+![](../../assets/en/commands/pict22364.fr.png)
 
 ```4d
  $vlNbItems:=Count list items(hList) //$vlNbItems vaut 5

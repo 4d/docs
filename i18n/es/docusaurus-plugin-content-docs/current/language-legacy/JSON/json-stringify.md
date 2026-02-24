@@ -94,9 +94,9 @@ Ejemplos de serialización de un objeto 4D con y sin el parámetro *\**:
 La ventaja de este formato es clara cuando el JSON se muestra en un área web:
 
 * Formato estándar:  
-![](../assets/en/commands/pict1205013.fr.png)
+![](../../assets/en/commands/pict1205013.fr.png)
 * Formato mejorado:  
-![](../assets/en/commands/pict1205011.fr.png)
+![](../../assets/en/commands/pict1205011.fr.png)
 
 ## Ejemplo 4 
 

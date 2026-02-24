@@ -548,7 +548,7 @@ Este parámetro puede definirse del lado del cliente. Por lo general, no necesit
 
 **Descripción**: inicia o detiene la grabación de los intercambios entre 4D y el servidor IMAP, cuando se procesa un objeto transportador a través de *IMAP\_transporter.getMail( )* o *IMAP\_transporter.checkConnection( )*. Por defecto, el valor es 0 (intercambios no registrados). Cuando se activa este mecanismo, se crea un archivo de registro en la carpeta Logs de la base. Se llama 4DIMAPLog\_X.txt, donde X es el número secuencial del registro. Una vez que el archivo 4DIMAPLog ha alcanzado un tamaño de 10 MB, se cierra y se genera uno nuevo, con un número secuencial incrementado. Si ya existe un archivo con el mismo nombre, se sustituye directamente. Se puede definir el número inicial de la secuencia mediante el parámetro valor. Por defecto, se conservan todos los archivos, pero puede controlar el número de archivos a conservar utilizando el parámetro Circular log limitation.
 
-Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección [Descripción de archivos de historial](../Debugging/debugLogFiles.md).
+Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección [Descripción de archivos de historial](../../Debugging/debugLogFiles.md).
 
 
 

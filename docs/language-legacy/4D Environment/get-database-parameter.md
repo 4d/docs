@@ -212,7 +212,7 @@ This selector operates exactly the same way as selector 39; however, it applies 
 
 4D lets you record the log of requests carried out by the client machine. When this mechanism is activated, two files are created on the client machine, in the Logs subfolder of the local folder of the database. They are named 4DRequestsLog\_X.txt and 4DRequestsLog\_ProcessInfo\_X.txt, where X is the sequential number of the log. Once the file 4DRequestsLog has reached a size of 10 MB, it is closed and a new one is generated, with an incremented sequential number. If a file with the same name already exists, it is directly replaced. You can set the starting number for the sequence using the value parameter.
 
-These text files store various information concerning each request in a simple tabbed format: time, process number, size of request, processing duration, etc. For more information on the 4DRequestsLog files, please refer to  please refer to [*Description of log files*](../Debugging/debugLogFiles.md).
+These text files store various information concerning each request in a simple tabbed format: time, process number, size of request, processing duration, etc. For more information on the 4DRequestsLog files, please refer to  please refer to [*Description of log files*](../../Debugging/debugLogFiles.md).
 
 
 
@@ -285,7 +285,7 @@ The operation of this selector is identical to that of selector 29; however, it 
 
 **Description**: Starts or stops the sequential recording of programming events **for the current process** in a separated log file. This log is similar to the Debug log recording (selector 34) but focuses on the current process only. The log file name includes the letter "p" and the process number: 4DDebugLog\[\_p*N*_*n*].txt, where N is the process unique ID. 
 
-For more information about this format and on the use of the *4DDebugLog* file, please refer to  please refer to [*Description of log files*](../Debugging/debugLogFiles.md). 
+For more information about this format and on the use of the *4DDebugLog* file, please refer to  please refer to [*Description of log files*](../../Debugging/debugLogFiles.md). 
 
 **Notes:** This selector is provided solely for the purpose of debugging and should be used with care. In particular, it must not put into production since it can have an impact on the application performance. You can use both Debug log recording and Current process debug log recording selectors simultaneously, in which case the current process actions will not be logged in the main log file.
 
@@ -505,7 +505,7 @@ This parameter must be set on the client side. Usually, you do not need to chang
 
 **Description**: Starts or stops the recording of exchanges between 4D and the IMAP server, when a transporter object is processed through *IMAP\_transporter.getMail( )* or *IMAP\_transporter.checkConnection( )*. By default, the value is 0 (exchanges not recorded). When this mechanism is enabled, a log file is created in the Logs folder of the database. It is named 4DIMAPLog\_X.txt, where X is the sequential number of the log. Once the file 4DIMAPLog has reached a size of 10 MB, it is closed and a new one is generated, with an incremented sequential number. If a file of the same name already exists, it is replaced directly. You can set the starting number of the sequence using the value parameter. By default, all files are kept, but you can control the number of files to keep using the Circular log limitation parameter.
 
-For more information on the 4DIMAPLog\_X.txt files, please refer to [*Description of log files*](../Debugging/debugLogFiles.md).
+For more information on the 4DIMAPLog\_X.txt files, please refer to [*Description of log files*](../../Debugging/debugLogFiles.md).
 
 
 

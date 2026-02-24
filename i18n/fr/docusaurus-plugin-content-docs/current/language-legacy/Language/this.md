@@ -27,7 +27,7 @@ Dans tout autre contexte, la commande renvoie **Null**.
 
 ## Fonction de classe
 
-Quand un [constructeur de classe](../Concepts/classes.md#class-constructor) est utilisé (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` est lié au nouvel objet en cours de construction.
+Quand un [constructeur de classe](../../Concepts/classes.md#class-constructor) est utilisé (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` est lié au nouvel objet en cours de construction.
 
 ```4d
 //Class: ob
@@ -92,7 +92,7 @@ Avec la méthode projet *Greeting* :
 
 ## List box
 
-Dans le contexte d'une list box associée à une collection ou à une entity selection, pendant les événements [`On Display Detail`](../Events/onDisplayDetail.md) ou [`On Data Change`](../Events/onDataChange.md), `This` retourne une référence à l'élément de collection ou à l'entité auquel accède la list box pour afficher la ligne courante.
+Dans le contexte d'une list box associée à une collection ou à une entity selection, pendant les événements [`On Display Detail`](../../Events/onDisplayDetail.md) ou [`On Data Change`](../../Events/onDataChange.md), `This` retourne une référence à l'élément de collection ou à l'entité auquel accède la list box pour afficher la ligne courante.
 
 :::note
 
@@ -129,7 +129,7 @@ Une collection d'objets, chacun avec cette structure :
 
 Dans la list box, chaque colonne fait référence à l'une des propriétés de l'objet, soit directement (This.name), soit indirectement (This.employees.length), soit par le biais d'une expression (*getPicture*) qui peut être utilisée directement. La list box se présente ainsi :
 
-![](../assets/en/commands/pict3776706.en.png)
+![](../../assets/en/commands/pict3776706.en.png)
 
 La méthode projet *GetPicture* est automatiquement exécutée lors de l'événement **On display detail** :
 
@@ -145,17 +145,17 @@ La méthode projet *GetPicture* est automatiquement exécutée lors de l'événe
 
 Une fois le formulaire exécuté, vous pouvez voir le résultat :
 
-![](../assets/en/commands/pict3783169.en.png)
+![](../../assets/en/commands/pict3783169.en.png)
 
 ## Exemple 2
 
 Vous voulez afficher les entités de la structure suivante dans une list box :
 
-![](../assets/en/commands/pict3872836.fr.png)
+![](../../assets/en/commands/pict3872836.fr.png)
 
 Vous construisez une list box de type "Collection ou entity selection" avec la définition suivante :
 
-![](../assets/en/commands/pict3872844.en.png)
+![](../../assets/en/commands/pict3872844.en.png)
 
 A noter que :
 
@@ -172,11 +172,11 @@ A noter que :
 
 Une fois le formulaire exécuté, la list box est automatiquement remplie avec l'entity selection :
 
-![](../assets/en/commands/pict3872875.en.png)
+![](../../assets/en/commands/pict3872875.en.png)
 
 ## Voir également
 
-[Self](../commands-legacy/self)\
+[Self](../../commands-legacy/self)\
 [Super](super.md)
 
 ## Propriétés

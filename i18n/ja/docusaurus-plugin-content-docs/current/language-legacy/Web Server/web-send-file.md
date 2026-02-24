@@ -48,7 +48,7 @@ displayed_sidebar: docs
 データベースのHTMLルートフォルダはストラクチャーと同階層の**WebFolder**に設定されていて、以下のディレクトリにファイルが置かれています。 
 
 ```4d
- ../WebFolder/HTM\MyPage.HTM
+ ../../WebFolder/HTM\MyPage.HTM
 ```
 
 Webページ "MyPage.HTM"を送信するには以下のようにします。

@@ -106,7 +106,7 @@ Windowsでは、マウスの右ボタンを押すことによってポップア�
 
 Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニューは以下のとおりです。 Windowsバージョンの標準チェックマークに注目してください。
 
-![](../assets/en/commands/pict36394.ja.png)
+![](../../assets/en/commands/pict36394.ja.png)
 
 ## 参照 
 

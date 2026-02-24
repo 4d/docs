@@ -59,11 +59,11 @@ Vous pouvez comparer les valeurs reçues dans les paramètres *aller* et *retour
 
 Soit la structure suivante :
 
-![](../assets/en/commands/pict31607.fr.png)
+![](../../assets/en/commands/pict31607.fr.png)
 
 Les propriétés du lien reliant le champ \[Employés\]Société au champ \[Sociétés\]Nom sont les suivantes :
 
-![](../assets/en/commands/pict31608.fr.png)
+![](../../assets/en/commands/pict31608.fr.png)
 
 Le code ci-dessous illustre les différentes possibilités offertes par les commandes **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) et [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) ainsi que leurs effets :
 

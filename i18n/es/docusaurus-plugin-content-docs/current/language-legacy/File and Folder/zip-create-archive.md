@@ -160,9 +160,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 ## Ver también
 
-[ZipArchive Class](../API/ZipArchiveClass.md)
-[ZipFile Class](../API/ZipFileClass.md)
-[ZipFolder Class](../API/ZipFolderClass.md)
+[ZipArchive Class](../../API/ZipArchiveClass.md)
+[ZipFile Class](../../API/ZipFileClass.md)
+[ZipFolder Class](../../API/ZipFolderClass.md)
 [`ZIP Read archive`](zip-read-archive.md)
 
 ## Propiedades

@@ -70,7 +70,7 @@ The "getCustomerInfo" JavaScript function receive a number ID as parameter and r
 
 ## Example 3
 
-The `WA EXECUTE JAVASCRIPT FUNCTION` command can be used to update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from a [Qodly page embedded in a Web area](../FormObjects/webArea_overview.md#displaying-qodly-pages). 
+The `WA EXECUTE JAVASCRIPT FUNCTION` command can be used to update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from a [Qodly page embedded in a Web area](../../FormObjects/webArea_overview.md#displaying-qodly-pages). 
 
 
 ```4d

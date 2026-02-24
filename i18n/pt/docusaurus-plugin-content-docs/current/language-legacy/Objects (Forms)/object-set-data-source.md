@@ -35,7 +35,7 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
   
 A fonte de dados é o campo ou a variável cujo valor é representado pelo objeto quando se executa o formulário. Em modo Desenho, a fonte de dados se define na lista de propriedades, geralmente através das linhas Fonte e Campo fonte (campos) ou Nome de variável (variáveis):
 
-![](../assets/en/commands/pict1208291.pt.png)
+![](../../assets/en/commands/pict1208291.pt.png)
 
 A exceção dos list box (ver mais adiante), todas as fontes de dados do formulário podem ser modificadas por este comando. É responsabilidade do desenvolvedor assegurar a consistência das mudanças realizadas.  
   

@@ -49,7 +49,7 @@ This example displays an alert showing information about a company. Note that th
 
 This line of code displays the following alert box (on Windows):
 
-![](../assets/en/commands/pict4224938.en.png)
+![](../../assets/en/commands/pict4224938.en.png)
 
 ## Example 2 
 
@@ -61,7 +61,7 @@ The line:
 
 displays the alert dialog box (on Windows) shown:
 
-![](../assets/en/commands/pict4224959.en.png)
+![](../../assets/en/commands/pict4224959.en.png)
 
 ## Example 3 
 
@@ -73,7 +73,7 @@ The line:
 
 displays the alert dialog box (on Windows) shown:
 
-![](../assets/en/commands/pict4224968.en.png)
+![](../../assets/en/commands/pict4224968.en.png)
 
 ## See also 
 

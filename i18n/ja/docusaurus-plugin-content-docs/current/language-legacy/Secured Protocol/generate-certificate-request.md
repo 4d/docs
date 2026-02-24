@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 “Certificate request”フォームには、標準の証明書リクエストで必要となる6つのフィールドが含まれています。**Generate**ボタンは証明書リクエストを納めたドキュメントをディスク上に作成します。([GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) コマンドで作成された) 秘密鍵を納めた“Privatekey.txt”もディスク上に存在している必要があります:
 
-![](../assets/en/commands/pict32461.ja.png)  
+![](../../assets/en/commands/pict32461.ja.png)  
   
 以下は**Generate**ボタンのメソッドです:
 

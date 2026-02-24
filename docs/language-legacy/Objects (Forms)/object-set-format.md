@@ -88,7 +88,7 @@ Times:
 | System time long             | 11    | 1:02:03 AM HNEC (Mac only)                                                                                                                                                                                                            |  
 | System time long abbreviated | 10    | 1•02•03 AM (Mac only)                                                                                                                                                                                                                 |  
 | System time short            | 9     | 01:02:03                                                                                                                                                                                                                              |
-* or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value). For example:  
+* or a [customized format built upon a pattern](../../Project/date-time-formats.md) (string value). For example:  
     
 ```4d  
  OBJECT SET FORMAT(*;"myDate";"dd/MM/yyyy")  
@@ -125,7 +125,7 @@ To format Picture fields or variables, pass Char(n) in *displayFormat*, where *n
 
 To format fields or variables of the Alpha or Number type, pass the label of the format directly in the *displayFormat* parameter.
 
-For more information about display formats, see the [Number formats](../FormObjects/properties_Display.md#number-format) and [Alpha formats](../FormObjects/properties_Display.md#alpha-format) sections.
+For more information about display formats, see the [Number formats](../../FormObjects/properties_Display.md#number-format) and [Alpha formats](../../FormObjects/properties_Display.md#alpha-format) sections.
 
 **Note:** In *displayFormat*, to use custom display formats that you may have created in the tool box, prefix the name of the format with a vertical bar (|).
 
@@ -155,7 +155,7 @@ To format picture buttons, in the *displayFormat* parameter, pass a character st
    Used to make the background picture transparent.  
    * *flags* \= 128 (Use Last Frame as Disabled)  
    This mode allows you to set the last thumbnail as the thumbnail to display when the button is disabled. When this mode is selected, 4D displays the last thumbnail when the button is disabled. When this mode is used in addition to the modes 0, 1 and 2, the last thumbnail is not taken into account in the sequence of the other modes. It will appear only when the button is disabled.
-* *ticks* \= activates the “Switch every n Ticks” mode and sets the time interval between the display of each picture. When this optional parameter is passed, it allows you to cycle through the contents of the picture button at the specified speed. For example, if you enter "2;3;?16807;0;10", the picture button will display a different picture every 10 ticks. When this mode is active, only the Transparent mode can be used (64). **Warning:** In the Form editor, [this setting is expressed in *seconds*](../FormObjects/properties_Animation.md#switch-every-x-seconds). 
+* *ticks* \= activates the “Switch every n Ticks” mode and sets the time interval between the display of each picture. When this optional parameter is passed, it allows you to cycle through the contents of the picture button at the specified speed. For example, if you enter "2;3;?16807;0;10", the picture button will display a different picture every 10 ticks. When this mode is active, only the Transparent mode can be used (64). **Warning:** In the Form editor, [this setting is expressed in *seconds*](../../FormObjects/properties_Animation.md#switch-every-x-seconds). 
 
 ### Picture pop-up menus 
 
@@ -300,7 +300,7 @@ The following line of code formats the *\[Employee\]Date Hired* field to the fif
 
 ## Example 2 
 
-This example formats a date variable and a time variable using [customized formats](../Project/date-time-formats.md): 
+This example formats a date variable and a time variable using [customized formats](../../Project/date-time-formats.md): 
 
 ```4d
  OBJECT SET FORMAT(*;"mydate";"(yyyy) MMM dd") // (2023) Dec 12
@@ -345,7 +345,7 @@ Provided that you have stored a picture file named "envelope\_open.png" in the R
  OBJECT SET FORMAT(*;"Header1";vIcon+";"+vPos)
 ```
 
-![](../assets/en/commands/pict2878245.en.png)
+![](../../assets/en/commands/pict2878245.en.png)
 
 ## Example 7 
 

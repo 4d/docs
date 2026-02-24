@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PROCESS 4D TAGS.Summary-->La commande **PROCESS 4D TAGS** provoque le traitement des balises de transformation 4D contenues dans le paramètre *templateEntrée* en leur injectant optionnellement des valeurs via le(s) paramètre(s) *param* et retourne le résultat dans *résultatSortie*.<!-- END REF--> Pour une description complète de ces balises, veuillez vous reporter à la section [**Balises de transformation**](../Tags/transformation-tags.md).
+<!--REF #_command_.PROCESS 4D TAGS.Summary-->La commande **PROCESS 4D TAGS** provoque le traitement des balises de transformation 4D contenues dans le paramètre *templateEntrée* en leur injectant optionnellement des valeurs via le(s) paramètre(s) *param* et retourne le résultat dans *résultatSortie*.<!-- END REF--> Pour une description complète de ces balises, veuillez vous reporter à la section [**Balises de transformation**](../../Tags/transformation-tags.md).
 
 Cette commande permet d'exécuter un texte de type "template" contenant des balises et des références à des expressions ou des variables 4D et de produire un résultat dépendant du contexte d'exécution et/ou des valeurs passées en paramètre.   
 Par exemple, vous pouvez utiliser cette commande pour générer et stocker des pages HTML à partir de **pages semi-dynamiques** contenant des balises de transformation 4D (sans qu’il soit nécessaire que le serveur Web de 4D soit démarré). Vous pouvez l’employer pour envoyer via 4D Internet Commands des courriels au format HTML contenant des traitements et/ou des références à des données contenues dans la base. Il est possible de traiter tout type de données basées sur du texte, comme le XML, le SVG ou encore le texte multistyle.
@@ -89,7 +89,7 @@ PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 
 ## Voir aussi 
 
-[**Balises de transformation**](../Tags/transformation-tags.md)  
+[**Balises de transformation**](../../Tags/transformation-tags.md)  
 
 ## Propriétés
 

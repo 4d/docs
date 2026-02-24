@@ -106,7 +106,7 @@ This method, executed in a separate process on 4D or 4D Server, provides a snaps
 
 You get arrays such as:
 
-![](../assets/en/commands/pict1213741.en.png)
+![](../../assets/en/commands/pict1213741.en.png)
 
 
 ## Properties

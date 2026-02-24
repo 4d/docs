@@ -45,7 +45,7 @@ Note que o estado da petição enviada por este comando é **302: Moved Temporar
 
 Pode utilizar este comando para realizar, com a ajuda de páginas estáticas, pesquisas personalizadas em 4D. Imagine que coloca os elementos abaixo em uma página HTML estática: 
 
-![](../assets/en/commands/pict838167.pt.png)
+![](../../assets/en/commands/pict838167.pt.png)
 
 **Nota:** a ação POST “/4dcgi/rech” foi associada à área de texto e aos botões **Aceitar** e **Cancelar**.
 

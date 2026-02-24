@@ -57,7 +57,7 @@ The following example can be used to display “Hello World” in a 4D picture:
  DOM CLOSE XML($svg)
 ```
 
-![](../assets/en/commands/pict14520.en.png)
+![](../../assets/en/commands/pict14520.en.png)
 
 ## See also 
 

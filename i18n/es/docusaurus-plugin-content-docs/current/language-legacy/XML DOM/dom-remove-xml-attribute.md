@@ -36,7 +36,7 @@ Si atributo se suprime correctamente, la variable sistema *OK* toma el valor 1\.
 
 Dada la siguiente estructura:
 
-![](../assets/en/commands/pict204122.fr.png)
+![](../../assets/en/commands/pict204122.fr.png)
 
 El siguiente código permite remover el primer atributo "N=1": 
 

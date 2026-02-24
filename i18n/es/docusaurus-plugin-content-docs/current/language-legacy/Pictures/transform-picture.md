@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 #### Descripción 
 
-<!--REF #_command_.TRANSFORM PICTURE.Summary-->El comando TRANSFORM PICTURE permite aplicar una transformación de tipo *operador* a la imagen pasada en el parámetro *imagen*.<!-- END REF-->este comando extiende las funcionalidades ofrecidas por los operadores convencionales de transformación de imágenes (+/, etc., ver la sección [Picture](../Concepts/dt_picture.md)). Estos operadores permanecen totalmente utilizables en 4D.  
+<!--REF #_command_.TRANSFORM PICTURE.Summary-->El comando TRANSFORM PICTURE permite aplicar una transformación de tipo *operador* a la imagen pasada en el parámetro *imagen*.<!-- END REF-->este comando extiende las funcionalidades ofrecidas por los operadores convencionales de transformación de imágenes (+/, etc., ver la sección [Picture](../../Concepts/dt_picture.md)). Estos operadores permanecen totalmente utilizables en 4D.  
   
 La *imagen* fuente se modifica directamente después de la ejecución del comando. Tenga en cuenta que ciertas operaciones no son destructivas y pueden revertirse mediante la realización de la operación contraria o por medio de la operación "Reset". Por ejemplo, una imagen reducida a 1% retomará su tamaño original sin alteraciones si se agranda 100 veces. Las transformaciones no modifican el tipo original de la imagen: por ejemplo, una imagen vectorial permanecerá vectorial después de su transformación.
 
@@ -69,7 +69,7 @@ Quiere definir las partes blancas de una imagen como transparentes. Para ello, p
 
 Obtiene el siguiente resultado:
 
-![](../assets/en/commands/pict1359750.en.png)
+![](../../assets/en/commands/pict1359750.en.png)
 
 #### Ejemplo 2 
 
@@ -79,7 +79,7 @@ Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario
  TRANSFORM PICTURE($vpEngranaje;Crop;50;50;100;100)
 ```
 
-![](../assets/en/commands/pict28288.es.png)
+![](../../assets/en/commands/pict28288.es.png)
 
 #### Ver también 
 

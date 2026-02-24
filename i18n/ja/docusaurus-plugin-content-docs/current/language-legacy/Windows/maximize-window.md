@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ウィンドウサイズがアプリケーションウィンドウ (MDI モード) または画面 (SDI モード) と同じサイズまで最大化されます。最大化されたウィンドウは最前面ウィンドウになります。*window* 引数を渡さないと、コマンドはすべてのアプリケーションウィンドウに適用されます。 
 
-![](../assets/en/commands/pict39344.ja.png)
+![](../../assets/en/commands/pict39344.ja.png)
 
   
 Windowsのズームボックス
@@ -54,7 +54,7 @@ Windowsのズームボックス
 
 ウィンドウのサイズが、その内容に合わせて増やされます。*window* 引数を渡さないと、コマンドはカレントプロセスの最前面ウィンドウに適用されます。 
 
-![](../assets/en/commands/pict39345.ja.png)
+![](../../assets/en/commands/pict39345.ja.png)
 
   
 Mac OSのズームボックス
@@ -76,7 +76,7 @@ Mac OSのズームボックス
 
 ここでは、Windows (MDI モード) においてサイズ制約がどのように扱われるのかを見ていきます。以下のフォームにはサイズ制約(最大幅=400)があります:
 
-![](../assets/en/commands/pict1476223.en.png)
+![](../../assets/en/commands/pict1476223.en.png)
 
 ボタンのメソッドには、以下の様なコードがあります:
 
@@ -86,11 +86,11 @@ Mac OSのズームボックス
 
 この場合、以下の様なウィンドウにおいてユーザーがボタンをクリックした場合:
 
-![](../assets/en/commands/pict1476225.en.png)
+![](../../assets/en/commands/pict1476225.en.png)
 
 ... ウィンドウは"最大化"はされず、高さのみが伸びる結果となります:
 
-![](../assets/en/commands/pict1476363.en.png)
+![](../../assets/en/commands/pict1476363.en.png)
 
 ## 参照 
 

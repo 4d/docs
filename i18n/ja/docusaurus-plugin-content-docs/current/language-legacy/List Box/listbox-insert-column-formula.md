@@ -115,11 +115,11 @@ displayed_sidebar: docs
 
 カラムの中身はコレクションの各要素ごとに評価されており、*This.Employee* というデータソース式を通して以下のように参照されます:
 
-![](../assets/en/commands/pict3815223.en.png)
+![](../../assets/en/commands/pict3815223.en.png)
 
 実行時:
 
-![](../assets/en/commands/pict3814815.en.png)
+![](../../assets/en/commands/pict3814815.en.png)
 
 職務の肩書きを表示するカラム:
 
@@ -130,7 +130,7 @@ displayed_sidebar: docs
 
 リストボックスに追加されたカラム:
 
-![](../assets/en/commands/pict3814850.en.png)
+![](../../assets/en/commands/pict3814850.en.png)
 
 ## 参照 
 

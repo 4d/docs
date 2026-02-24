@@ -41,19 +41,19 @@ The following examples illustrate the operation of this command:
  SHOW ON DISK("c:\\MyFolder\\MyFile.txt") // Displays the designated file
 ```
 
-![](../assets/en/commands/pict35007.en.png)
+![](../../assets/en/commands/pict35007.en.png)
 
 ```4d
  SHOW ON DISK("c:\\MyFolder\\Folder2") // Displays the designated folder
 ```
 
-![](../assets/en/commands/pict35008.en.png)
+![](../../assets/en/commands/pict35008.en.png)
 
 ```4d
  SHOW ON DISK("c:\\MyFolder\\Folder2";*) // Displays the contents of the designated folder
 ```
 
-![](../assets/en/commands/pict35009.en.png)
+![](../../assets/en/commands/pict35009.en.png)
 
 ## System variables and sets 
 

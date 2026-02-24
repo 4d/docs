@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 La commande **Command name** <!--REF #_command_.Command name.Summary-->retourne le nom ainsi que (facultativement) les propriétés de la commande dont le numéro est indiqué dans *command*.<!-- END REF-->Le numéro de chaque commande est indiqué dans l'explorateur ainsi que dans la section Propriétés de cette documentation.
 
-**Note de compatibilité :** Le nom d'une commande pouvant varier d'une version à l'autre de 4D (commandes renommées), cette commande était utilisée dans les versions précédentes pour désigner une commande directement par son numéro, notamment dans les portions de code non tokenisées. Ce besoin a diminué au fil du temps alors que 4D continue d'évoluer parce que, pour les requêtes non tokenisées (formules), 4D fournit maintenant une syntaxe avec tokens. Cette syntaxe de s'affranchir des variations des noms de commandes mais aussi des autres éléments comme les tables, tout en permettant de les saisir de façon lisible (pour plus d'informations, se référer à la section *Utilisation des tokens dans les formules*). Notez également que l'option [*Utiliser les paramètres régionaux du système* des Préférences](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) vous permet de continuer à utiliser le langage en Français dans une version française de 4D.
+**Note de compatibilité :** Le nom d'une commande pouvant varier d'une version à l'autre de 4D (commandes renommées), cette commande était utilisée dans les versions précédentes pour désigner une commande directement par son numéro, notamment dans les portions de code non tokenisées. Ce besoin a diminué au fil du temps alors que 4D continue d'évoluer parce que, pour les requêtes non tokenisées (formules), 4D fournit maintenant une syntaxe avec tokens. Cette syntaxe de s'affranchir des variations des noms de commandes mais aussi des autres éléments comme les tables, tout en permettant de les saisir de façon lisible (pour plus d'informations, se référer à la section *Utilisation des tokens dans les formules*). Notez également que l'option [*Utiliser les paramètres régionaux du système* des Préférences](../../Preferences/methods.md#4d-programming-language-use-regional-system-settings) vous permet de continuer à utiliser le langage en Français dans une version française de 4D.
 
 Deux paramètres optionnels sont disponibles :
 
 - *info* : propriétés de la commande. La valeur renvoyée est un *champ de bits*, où les bits suivants sont significatifs :
-  - Premier bit (bit 0) : il vaut 1 si la commande est [**thread-safe**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (c'est-à-dire compatible avec une exécution dans un processus préemptif) et 0 si elle est **thread-unsafe**. Seules les commandes thread-safe peuvent être utilisées dans les [process préemptifs](../Develop/preemptive.md).
-  - Deuxième bit (bit 1) : mis à 1 si la commande est **obsolète**, et à 0 si elle ne l'est pas. Une commande obsolète (ou dépréciée) continuera à fonctionner normalement tant qu'elle sera prise en charge, mais elle doit être remplacée dans la mesure du possible et ne doit plus être utilisée dans le nouveau code. Les commandes obsolètes dans votre code génèrent des avertissements dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors).
+  - Premier bit (bit 0) : il vaut 1 si la commande est [**thread-safe**](../../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (c'est-à-dire compatible avec une exécution dans un processus préemptif) et 0 si elle est **thread-unsafe**. Seules les commandes thread-safe peuvent être utilisées dans les [process préemptifs](../../Develop/preemptive.md).
+  - Deuxième bit (bit 1) : mis à 1 si la commande est **obsolète**, et à 0 si elle ne l'est pas. Une commande obsolète (ou dépréciée) continuera à fonctionner normalement tant qu'elle sera prise en charge, mais elle doit être remplacée dans la mesure du possible et ne doit plus être utilisée dans le nouveau code. Les commandes obsolètes dans votre code génèrent des avertissements dans le [live checker et le compilateur](../../code-editor/write-class-method.md#warnings-and-errors).
 
 *thème* : nom du thème du langage 4D pour la commande.
 
@@ -130,8 +130,8 @@ Until(OK=0) //fin des commandes existantes
 
 ## Voir également
 
-[EXECUTE FORMULA](../commands-legacy/execute-formula)\
-[Preemptive Processes](../Develop/preemptive.md)
+[EXECUTE FORMULA](../../commands-legacy/execute-formula)\
+[Preemptive Processes](../../Develop/preemptive.md)
 
 ## Propriétés
 

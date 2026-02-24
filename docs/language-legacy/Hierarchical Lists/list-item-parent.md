@@ -51,7 +51,7 @@ If you work with item reference numbers, be sure to build a list in which the it
 
 Given the list named *hList* shown here in the Application environment:
 
-![](../assets/en/commands/pict22613.en.png)
+![](../../assets/en/commands/pict22613.en.png)
 
 The item reference numbers are set as follows:
 

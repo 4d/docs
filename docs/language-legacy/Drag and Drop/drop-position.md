@@ -49,7 +49,7 @@ If you call Drop position when handling an event that is not a drag-and-drop eve
 
 In the following example, a list of amounts paid must be broken down per month and per person. This is carried out by drag and drop between two list boxes:
 
-![](../assets/en/commands/pict4091260.en.png)
+![](../../assets/en/commands/pict4091260.en.png)
 
 The right (source) list box object method contains the following code:
 

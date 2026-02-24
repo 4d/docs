@@ -75,7 +75,7 @@ L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200
 [REAL TO BLOB](real-to-blob.md)  
 [TEXT TO BLOB](text-to-blob.md)  
 
-![](../assets/en/commands/comment.png)Ajouter un commentaire 
+![](../../assets/en/commands/comment.png)Ajouter un commentaire 
 
 [Page préc.](blob-to-document.md) 
 

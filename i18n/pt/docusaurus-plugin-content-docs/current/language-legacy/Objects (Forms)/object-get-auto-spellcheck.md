@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 Esse comando é compatível com objetos dos seguintes tipos:
 
-- Baseado em texto [inputs](../FormObjects/input_overview.md)
-- [Áreas do 4D Write Pro](.../FormObjects/writeProArea_overview.md).
+- Baseado em texto [inputs](../../FormObjects/input_overview.md)
+- [Áreas do 4D Write Pro](.../../FormObjects/writeProArea_overview.md).
   
 Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se este parâmetro não passar, indica que *objeto* é uma variável ou um campo. Neste caso, passe uma referencia no lugar de um nome.  
   

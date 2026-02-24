@@ -45,7 +45,7 @@ After the call, the size of *pathArray* is equal to the number of distinct paths
 
 Your database contains a \[Customer\]full\_Data (indexed) object field with 15 records:
 
-![](../assets/en/commands/pict2994114.en.png)
+![](../../assets/en/commands/pict2994114.en.png)
 
 If you execute this code:
 

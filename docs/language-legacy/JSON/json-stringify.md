@@ -98,9 +98,9 @@ Examples of serializing a 4D object with and without the *\** parameter:
 The advantage of this formatting is clear when the JSON is shown in a Web area:
 
 * Standard formatting:  
-![](../assets/en/commands/pict1205013.fr.png)
+![](../../assets/en/commands/pict1205013.fr.png)
 * Pretty formatting:  
-![](../assets/en/commands/pict1205011.fr.png)
+![](../../assets/en/commands/pict1205011.fr.png)
 
 ## Example 4 
 

@@ -27,7 +27,7 @@ Cada objeto retornado inclui as seguintes propriedades principais:
 | --------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName      | text     | Name of the object triggering the event - Not included if the event is triggered by the form                                                                                       |
 | code            | integer  | Valor numérico do evento de formulário.                                                                                                                            |
-| description     | text     | Nome do evento de formulário (\*por exemplo, \* "On After Edit"). Veja a seção [**Eventos Formulário**](../Events/overview.md). |
+| description     | text     | Nome do evento de formulário (\*por exemplo, \* "On After Edit"). Veja a seção [**Eventos Formulário**](../../Events/overview.md). |
 
 Por exemplo, no caso de um clique em um botão, o objeto contém as seguintes propriedades:
 
@@ -37,8 +37,8 @@ Por exemplo, no caso de um clique em um botão, o objeto contém as seguintes pr
 
 O objeto evento pode conter propriedades adicionais, dependendo do objeto para o qual o evento ocorre. Para os objetos *eventObj* gerados em:
 
-- dos objetos list box ou coluna de list box, consulte [esta seção](../FormObjects/listbox_overview.md#supported-form-events).
-- As areas 4D View Pro consulte no evento formulário [On VP Ready](../Events/onVpReady.md).
+- dos objetos list box ou coluna de list box, consulte [esta seção](../../FormObjects/listbox_overview.md#supported-form-events).
+- As areas 4D View Pro consulte no evento formulário [On VP Ready](../../Events/onVpReady.md).
 
 **Nota:** se não houver um evento atual, **FORM Event** retornará um objeto null.
 
@@ -56,7 +56,7 @@ Você deseja manipular o evento On Clicked em um botão:
 
 Se você definir o nome do objeto coluna com um nome de atributo real de uma dataclass como esta:
 
-![](../assets/en/commands/pict4843820.en.png)
+![](../../assets/en/commands/pict4843820.en.png)
 
 Você pode classificar a coluna usando o evento On Header Click:
 
@@ -74,7 +74,7 @@ Você pode classificar a coluna usando o evento On Header Click:
 
 Você deseja tratar On Display Details em um objeto list box com um método definido na propriedade *Meta info expression*:
 
-![](../assets/en/commands/pict4843812.en.png)
+![](../../assets/en/commands/pict4843812.en.png)
 
 O método *setColor*:
 
@@ -94,11 +94,11 @@ O método *setColor*:
 
 O list box resultante quando as linhas são selecionadas:
 
-![](../assets/en/commands/pict4843808.en.png)
+![](../../assets/en/commands/pict4843808.en.png)
 
 ## Veja também
 
-[Form Events](../Events/overview.md)
+[Form Events](../../Events/overview.md)
 [Form event code](form-event-code.md)
 
 ## Propriedades

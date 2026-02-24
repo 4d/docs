@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 4D fournit des constantes prédéfinies (placées dans le thème *Evénements formulaire*) permettant de comparer les valeurs retournées par la commande **Form event code**. Certains événements sont génériques (générés pour tout type d'objet), d'autres sont spécifiques à un type d'objet particulier.
 
-Pour une description des événements, veuillez vous référer à la section [**Evénements formulaire**](../Events/overview.md).
+Pour une description des événements, veuillez vous référer à la section [**Evénements formulaire**](../../Events/overview.md).
 
 ## Exemple 1
 
@@ -100,7 +100,7 @@ L'exemple suivant est une méthode formulaire générique. Elle fait apparaître
 
 ## Exemple 4
 
-L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](../commands-legacy/display-selection) ou [MODIFY SELECTION](../commands-legacy/modify-selection). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
+L'exemple suivant montre une méthode formulaire générique qui gère les événements pouvant survenir dans un formulaire sortie quand il s'affiche à l'aide de la commande [DISPLAY SELECTION](../../commands-legacy/display-selection) ou [MODIFY SELECTION](../../commands-legacy/modify-selection). Dans un but informatif, elle affiche l'événement dans la barre de titre de la fenêtre.
 
 ```4d
 // Une méthode formulaire exemple
@@ -139,7 +139,7 @@ L'exemple suivant montre une méthode formulaire générique qui gère les évé
 
 ## Exemple 5
 
-Pour des exemples de gestion des événements [`On Before Keystroke`](../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../commands-legacy/get-edited-text), [Keystroke](../commands-legacy/keystroke) et [FILTER KEYSTROKE](../commands-legacy/filter-keystroke).
+Pour des exemples de gestion des événements [`On Before Keystroke`](../../Events/onBeforeKeystroke.md) et [`On After Keystroke`](../../Events/onAfterKeystroke.md), voir les exemples des commandes [Get edited text](../../commands-legacy/get-edited-text), [Keystroke](../../commands-legacy/keystroke) et [FILTER KEYSTROKE](../../commands-legacy/filter-keystroke).
 
 ## Exemple 6
 
@@ -194,7 +194,7 @@ L'exemple suivant montre comment traiter les clics et double-clics de manière d
 
 ## Exemple 8
 
-L'exemple suivant montre comment maintenir une zone contenant du texte à partir d'une méthode formulaire à l'aide des événements [`On Getting Focus`](../Events/onGettingFocus.md) et [`On Losing Focus`](../Events/onLosingFocus.md) :
+L'exemple suivant montre comment maintenir une zone contenant du texte à partir d'une méthode formulaire à l'aide des événements [`On Getting Focus`](../../Events/onGettingFocus.md) et [`On Losing Focus`](../../Events/onLosingFocus.md) :
 
 ```4d
   //Méthode formulaire [Contacts];"Data Entry"
@@ -288,7 +288,7 @@ L'exemple suivant propose une manière de gérer une action de suppression dans 
 
 ## Exemple 12
 
-Dans cet exemple, l'événement formulaire [`On Scroll`](../Events/onScroll.md) permet de synchroniser l'affichage de deux images dans un formulaire. Le code suivant est ajouté dans la méthode de l'objet "satellite" (champ ou variable image) :
+Dans cet exemple, l'événement formulaire [`On Scroll`](../../Events/onScroll.md) permet de synchroniser l'affichage de deux images dans un formulaire. Le code suivant est ajouté dans la méthode de l'objet "satellite" (champ ou variable image) :
 
 ```4d
  Case of
@@ -336,19 +336,19 @@ Vous souhaitez dessiner un rectangle rouge autour de la cellule sélectionnée d
 
 En résultat, le rectangle rouge suit bien le défilement de la list box :
 
-![](../assets/en/commands/pict1900395.en.png)
+![](../../assets/en/commands/pict1900395.en.png)
 
 ## Voir également
 
-[Form Events](../Events/overview.md)
-[CALL SUBFORM CONTAINER](../commands-legacy/call-subform-container)\
-[Current form table](../commands-legacy/current-form-table)\
-[FILTER KEYSTROKE](../commands-legacy/filter-keystroke)\
+[Form Events](../../Events/overview.md)
+[CALL SUBFORM CONTAINER](../../commands-legacy/call-subform-container)\
+[Current form table](../../commands-legacy/current-form-table)\
+[FILTER KEYSTROKE](../../commands-legacy/filter-keystroke)\
 [FORM Event](form-event.md)\
-[Get edited text](../commands-legacy/get-edited-text)\
-[Keystroke](../commands-legacy/keystroke)\
-[POST OUTSIDE CALL](../commands-legacy/post-outside-call)\
-[SET TIMER](../commands-legacy/set-timer)
+[Get edited text](../../commands-legacy/get-edited-text)\
+[Keystroke](../../commands-legacy/keystroke)\
+[POST OUTSIDE CALL](../../commands-legacy/post-outside-call)\
+[SET TIMER](../../commands-legacy/set-timer)
 
 ## Propriétés
 

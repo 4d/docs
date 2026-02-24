@@ -35,7 +35,7 @@ This menu contains the names of the last fonts selected during the session. It i
 
 You want to add a font to the menu of recent fonts:
 
-![](../assets/en/commands/pict1202029.en.png)
+![](../../assets/en/commands/pict1202029.en.png)
 
 You execute the following code:
 
@@ -48,7 +48,7 @@ You execute the following code:
 
 Then the menu contains:
 
-![](../assets/en/commands/pict1202031.en.png)
+![](../../assets/en/commands/pict1202031.en.png)
 
 ## See also 
 

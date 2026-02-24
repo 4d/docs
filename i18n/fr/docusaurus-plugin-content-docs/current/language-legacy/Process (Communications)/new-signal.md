@@ -39,7 +39,7 @@ Comme l'objet signal est un objet partagé, il peut aussi être utilisé pour ma
 
 **Valeur retournée**
 
-Un nouvel objet [`4D.Signal`](../API/SignalClass.md#signal-object).
+Un nouvel objet [`4D.Signal`](../../API/SignalClass.md#signal-object).
 
 ## Exemple
 

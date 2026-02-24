@@ -36,11 +36,11 @@ La seconde syntaxe, **RELATE MANY**(champ1), active le lien 1 vers N pour *champ
 
 Dans l'exemple suivant, trois tables sont liées avec des liens automatiques. Les deux tables \[People\] et \[Parts\] ont un lien N vers 1 vers la table \[Companies\].
 
-![](../assets/en/commands/pict2286855.fr.png)
+![](../../assets/en/commands/pict2286855.fr.png)
 
 Voici le formulaire pour la table \[Companies\] qui affiche les enregistrements liés venant des tables \[People\] et \[Parts\].
 
-![](../assets/en/commands/pict2287703.fr.png)
+![](../../assets/en/commands/pict2287703.fr.png)
 
 Lorsque les formulaires pour People et Parts s'affichent, les enregistrements liés pour les tables \[People\] et \[Parts\] sont chargés et deviennent les sélections courantes de ces tables. 
 

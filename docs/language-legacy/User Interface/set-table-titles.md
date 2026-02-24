@@ -66,7 +66,7 @@ You are building a 4D application that you plan to sell internationally. Therefo
   
 In your database, add the following table:  
 
-![](../assets/en/commands/pict36594.en.png)
+![](../../assets/en/commands/pict36594.en.png)
 
  Then, create the TRANSLATE TABLES AND FIELDS project method listed below. This method browses the actual structure of your database and creates all the necessary *\[Translations\]* records for the localization corresponding to the language passed as parameter.  
 

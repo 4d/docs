@@ -59,7 +59,7 @@ displayed_sidebar: docs
  OBJECT SET COORDINATES(*;"button_1";10;20;30;40)
 ```
 
-![](../assets/en/commands/pict1207497.fr.png)
+![](../../assets/en/commands/pict1207497.fr.png)
 
 ## 参照 
 

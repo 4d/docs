@@ -47,7 +47,7 @@ Puede utilizar la propiedad virtual "longitud" con este comando. Está disponibl
 
 Su base contiene un campo objeto \[Customer\]full\_Data (indexado) con 12 registros:
 
-![](../assets/en/commands/pict2897927.en.png)
+![](../../assets/en/commands/pict2897927.en.png)
 
 Si ejecuta este código:
 

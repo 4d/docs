@@ -45,7 +45,7 @@ Passez dans le paramètre *propriété* la propriété dont vous souhaitez modif
 | -------------------------- | ------ | -------------------------------- | --- |
 | Access privileges          | Chaîne | 4D\_access\_group                | Affecter un groupe d’accès à la commande<br/>0 = Sans restriction<br/>>0 = Numéro de groupe  |
 | Associated standard action | Chaîne | 4D\_standard\_action             | Associer une action standard à la ligne de menu<br/>Voir les constantes du thème "*Action standard*"  |
-| n/a                        | Chaîne | 4D\_execute\_without\_validating | Activer l'option [**Exécuter sans valider**](../Menus/properties.md#exécuter-sans-valider) (pour les éléments de menu associés aux actions standard). <br/>True=activé, False (par défaut)=désactivé |
+| n/a                        | Chaîne | 4D\_execute\_without\_validating | Activer l'option [**Exécuter sans valider**](../../Menus/properties.md#exécuter-sans-valider) (pour les éléments de menu associés aux actions standard). <br/>True=activé, False (par défaut)=désactivé |
 | Start a new process        | Chaîne | 4D\_start\_new\_process          | Activer l’option "Démarrer un nouveau process"<br/>0 = Non, 1 = Oui  |
 
 Pour plus d’informations sur les propriétés standard des lignes de menus, reportez-vous au chapitre “Créer des menus personnalisés” dans le manuel Mode Développement.

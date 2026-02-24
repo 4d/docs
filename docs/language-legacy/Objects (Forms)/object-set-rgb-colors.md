@@ -59,7 +59,7 @@ You indicate RGB color values in *foregroundColor* and, optionally, *backgroundC
 
 This form contains the two non-enterable variables *vsColorValue* and *vsColor* as well as the three thermometers: *thRed*, *thGreen*, and *thBlue*.
 
-![](../assets/en/commands/pict4278097.en.png)
+![](../../assets/en/commands/pict4278097.en.png)
 
 Here are the methods for these objects:
 
@@ -97,23 +97,23 @@ The project method called by the three thermometers is:
  End if
 ```
 
-Note the use of the [bitwise operators](../Concepts/dt_number.md#bitwise-operators) for calculating the color value from the thermometer values.
+Note the use of the [bitwise operators](../../Concepts/dt_number.md#bitwise-operators) for calculating the color value from the thermometer values.
 
 When executed, the form looks like this:
 
-![](../assets/en/commands/pict4278099.en.png)
+![](../../assets/en/commands/pict4278099.en.png)
 
 ## Example 2 
 
 Changing to transparent background with a light font color:
 
-![](../assets/en/commands/pict1210700.en.png)
+![](../../assets/en/commands/pict1210700.en.png)
 
 ```4d
  OBJECT SET RGB COLORS(*;"myVar";Light shadow color;Background color none)
 ```
 
-![](../assets/en/commands/pict1210702.en.png)
+![](../../assets/en/commands/pict1210702.en.png)
 
 ## See also 
 

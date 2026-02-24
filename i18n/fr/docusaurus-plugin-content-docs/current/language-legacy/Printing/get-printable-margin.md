@@ -47,7 +47,7 @@ Il est possible de baser l’impression des formulaires effectuée à l’aide d
 * **Marge papier** : la marge papier correspond aux limites physiques de la feuille.
 * **Marge imprimante** : la marge imprimante est la marge au-dela de laquelle l’imprimante est incapable d’imprimer (pour des raisons physiques : galets d’impression, fin de course de la tête d’impression...). Elle varie d’une imprimante à l’autre et d’un format à l’autre.
 * **Marge morte** : c’est la zone située entre la marge papier et la marge imprimante.  
-![](../assets/en/commands/pict28491.fr.png)
+![](../../assets/en/commands/pict28491.fr.png)
 
 ## Voir aussi 
 

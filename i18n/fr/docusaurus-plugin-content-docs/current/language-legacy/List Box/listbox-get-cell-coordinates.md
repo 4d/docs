@@ -59,7 +59,7 @@ Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée d
  OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
 ```
 
-![](../assets/en/commands/pict1741070.en.png)
+![](../../assets/en/commands/pict1741070.en.png)
 
 ## Voir aussi 
 

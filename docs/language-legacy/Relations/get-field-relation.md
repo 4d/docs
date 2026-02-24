@@ -59,11 +59,11 @@ You can compare the values returned in the *one* and *many* parameters with the 
 
 Given the following structure:
 
-![](../assets/en/commands/pict31607.en.png)
+![](../../assets/en/commands/pict31607.en.png)
 
 The properties of the relation linking the \[Employees\]Company field to the \[Companies\]Name field are the following:
 
-![](../assets/en/commands/pict31608.en.png)
+![](../../assets/en/commands/pict31608.en.png)
 
 The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) commands along with their effects:
 

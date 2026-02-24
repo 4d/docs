@@ -52,13 +52,13 @@ La referencia de la lista que pasa en *sublista* debe hacer referencia a una lis
 
 Esta es una vista parcial de la estructura de una base:
 
-![](../assets/en/commands/pict334094.es.png)
+![](../../assets/en/commands/pict334094.es.png)
 
 Las tablas \[Departamentos\] y \[Empleados\] contienen los siguientes registros:
 
-![](../assets/en/commands/pict334096.es.png)
+![](../../assets/en/commands/pict334096.es.png)
 
-![](../assets/en/commands/pict334098.es.png)
+![](../../assets/en/commands/pict334098.es.png)
 
 Usted quiere mostrar una lista jerárquica, llamada *hlList*, que muestre los departamentos y para cada departamento, un lista hija que muestre los empleados que trabajan en ese departamento. El método de objeto de *hlList* es:
 
@@ -157,7 +157,7 @@ Por lo tanto, hemos hecho que los números de referencia de los elementos sean �
 
 Cuando el formulario se ejecuta, la lista se verá de esta forma:
 
-![](../assets/en/commands/pict334100.es.png)
+![](../../assets/en/commands/pict334100.es.png)
 
 **Nota:** este ejemplo es útil para propósitos de interfaz de usuario si trabaja con un número limitado de registros. Recuerde que las listas se conservan en memoria, no construya interfaces de usuario con listas jerárquicas que contengan millones de elementos. 
 

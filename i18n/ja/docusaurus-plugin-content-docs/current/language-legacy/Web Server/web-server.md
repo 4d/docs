@@ -37,7 +37,7 @@ displayed_sidebar: docs
 | `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                             |
 | `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー)  |
 
-**返されたWeb サーバーオブジェクト** には[Web server プロパティ](../API/WebServerClass.md) のカレントのプロパティが格納されています。
+**返されたWeb サーバーオブジェクト** には[Web server プロパティ](../../API/WebServerClass.md) のカレントのプロパティが格納されています。
 
 ## 例題
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 ## 参照
 
 [WEB Server list](web-server-list.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## プロパティ
 

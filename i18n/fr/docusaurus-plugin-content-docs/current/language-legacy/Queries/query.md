@@ -36,7 +36,7 @@ Si vous omettez le paramètre *laTable*, la commande s'applique à la table par 
 
 Si vous ne passez ni le paramètre *critère* ni le paramètre *\**, **QUERY** affiche la boîte de dialogue de l'Editeur de recherches de 4D pour *table* (sauf lorsqu'il s'agit de la dernière ligne d'une recherche complexe, cf. ci-dessous) :
 
-![](../assets/en/commands/pict1581957.fr.png)
+![](../../assets/en/commands/pict1581957.fr.png)
 
 Pour plus d'informations sur l'utilisation de cet éditeur, reportez-vous au manuel *Mode Développement*.  
 L'utilisateur construit la recherche puis clique sur le bouton **Chercher** ou **Chercher dans sélection**. Si la recherche est correctement effectuée et n'est pas interrompue, la variable système OK prend la valeur *1*. Si l'utilisateur clique sur **Annuler**, la commande **QUERY** est interrompue sans effectuer de recherche et la variable OK prend la valeur *0* (zéro).

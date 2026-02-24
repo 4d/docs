@@ -59,7 +59,7 @@ La méthode projet suivante vous permet de traiter cette question :
  Until(OK=1)
  $format:=""   // Initialisation du résultat de la fonction
  $vsDate:=String($vdDate)
- $vlPos:=Position("/";$vsDate)   // Trouver le premier séparateur / dans la chaîne ../../..
+ $vlPos:=Position("/";$vsDate)   // Trouver le premier séparateur / dans la chaîne ../../../../..
  $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les premiers chiffres de la date
  $vsDate:=Substring($vsDate;$vlPos+1)   // Eliminer les premiers chiffres et le premier séparateur /
  Case of
@@ -71,7 +71,7 @@ La méthode projet suivante vous permet de traiter cette question :
        $format:="AAAA"
  End case
  $format:=$format+"/"   // Commencer à construire le résultat de la fonction
- $vlPos:=Position("/";$vsDate)   // Trouver le deuxième séparateur dans la chaîne ../..
+ $vlPos:=Position("/";$vsDate)   // Trouver le deuxième séparateur dans la chaîne ../../..
  $vsMJA:=Substring($vsDate;1;$vlPos-1)   // Extraire les chiffres suivants de la date
  $vsDate:=Substring($vsDate;$vlPos+1)   // Réduire la chaîne aux derniers chiffres de la date
  Case of

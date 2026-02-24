@@ -51,7 +51,7 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
  End if
 ```
 
-![](../assets/en/commands/pict32598.es.png)
+![](../../assets/en/commands/pict32598.es.png)
 
 ## Ver también 
 

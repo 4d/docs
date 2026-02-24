@@ -41,19 +41,19 @@ Ces exemples illustrent le fonctionnement de la commande.
  SHOW ON DISK("c:\\MonDossier\\MonFichier.txt") //Affiche le fichier désigné
 ```
 
-![](../assets/en/commands/pict35007.fr.png)
+![](../../assets/en/commands/pict35007.fr.png)
 
 ```4d
  SHOW ON DISK("c:\\MonDossier\\Dossier2") //Affiche le dossier désigné
 ```
 
-![](../assets/en/commands/pict35008.fr.png)
+![](../../assets/en/commands/pict35008.fr.png)
 
 ```4d
  SHOW ON DISK("c:\\MonDossier\\Dossier2";*) //Affiche le contenu du dossier désigné
 ```
 
-![](../assets/en/commands/pict35009.fr.png)
+![](../../assets/en/commands/pict35009.fr.png)
 
 ## Variables et ensembles système 
 

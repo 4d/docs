@@ -131,7 +131,7 @@ Una vez este método de proyecto se añada a su aplicación, puede utilizarlo de
 
 Examinemos por ejemplo el siguiente formulario:
 
-![](../assets/en/commands/pict21523.es.png)
+![](../../assets/en/commands/pict21523.es.png)
 
 Esta compuesto de los siguientes objetos: un área editable *vsBusqueda*, un área no editable *vsMensaje*, y un área de desplazamiento *asBusqueda*. Durante la entrada de caracteres en *vsBusqueda*, el método para ese objeto efectúa una búsqueda en la tabla \[Codigos postales\], permitiendo al usuario encontrar ciudades solamente presionando los primeros caracteres de los nombres de la ciudades. 
 
@@ -171,7 +171,7 @@ Este es el método de objeto *vsBusqueda*:
 
 Este es el formulario en ejecución:
 
-![](../assets/en/commands/pict21524.es.png)
+![](../../assets/en/commands/pict21524.es.png)
 
 Utilizando las habilidades de la comunicación interproceso de 4D, puede construir interfaces de usuario en las cuales las características de búsqueda se ofrezcan en ventanas flotantes que se comuniquen con procesos en los cuales los registros son listados o editados. 
 

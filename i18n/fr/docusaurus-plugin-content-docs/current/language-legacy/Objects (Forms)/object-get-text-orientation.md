@@ -48,7 +48,7 @@ La valeur retournée correspond à l’une des constantes suivantes du thème "*
 
 Soit l’objet suivant (une orientation "90° gauche" lui a été appliquée dans l’éditeur de formulaires) :
 
-![](../assets/en/commands/pict1209704.fr.png)
+![](../../assets/en/commands/pict1209704.fr.png)
 
 Si, à l’exécution du formulaire, vous appelez l’instruction suivante :
 
@@ -58,7 +58,7 @@ Si, à l’exécution du formulaire, vous appelez l’instruction suivante :
 
 ... l’objet prend alors l’apparence suivante :
 
-![](../assets/en/commands/pict1209706.fr.png)
+![](../../assets/en/commands/pict1209706.fr.png)
 
 ```4d
  $vOrt:=OBJECT Get text orientation(*;"monTexte") //$vOrt=180

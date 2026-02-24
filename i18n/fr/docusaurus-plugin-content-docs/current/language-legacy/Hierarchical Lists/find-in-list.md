@@ -55,7 +55,7 @@ Si aucun élément ne correspond à la *valeur* recherchée, la fonction retourn
 
 Soit la liste hiérarchique suivante :
 
-![](../assets/en/commands/pict22420.fr.png)
+![](../../assets/en/commands/pict22420.fr.png)
 
 ```4d
  $vlItemPos:=Find in list(hList;"P@";1;$arrPos)

@@ -74,7 +74,7 @@ First of all, the *title*, *hide*, and *repeatedValue* parameters are not used w
 * Column size  
 This is a “visual” attribute, therefore columns are numbered from left to right, as depicted below.
 
-![](../assets/en/commands/pict31030.en.png)
+![](../../assets/en/commands/pict31030.en.png)
 
 The following statement will set the size to automatic for all the columns in a cross-table report and will leave other elements unchanged:
 
@@ -90,7 +90,7 @@ You will notice that since you want to alter only the column size, you have to u
 * Data source (object) and display format  
 In this case the numbering of columns operates as depicted below:
 
-![](../assets/en/commands/pict31031.en.png)
+![](../../assets/en/commands/pict31031.en.png)
 
 You will notice that not all cells can be addressed using the **QR SET INFO COLUMN** command, the cells that are not numbered above are addressed using [QR SET TOTALS DATA](qr-set-totals-data.md).
 
@@ -107,7 +107,7 @@ The following code assigns data sources to the three cells required for creating
 
 This would be the resulting report area:
 
-![](../assets/en/commands/pict31032.en.png)
+![](../../assets/en/commands/pict31032.en.png)
 
   
 If you pass an invalid *area* number, the error -9850 will be generated.  

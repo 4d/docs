@@ -34,19 +34,19 @@ El objeto devuelto contiene las siguientes propiedades:
 | Propiedad        | Tipo          | Descripción                                                                                                                                                                                                                            |
 | ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type             | Text          | Tipo de sesión: "remote", "storedProcedure", "standalone"                                                                                                                                                              |
-| userName         | Text          | Nombre de usuario 4D (mismo valor que [`Session.userName`](../API/SessionClass.md#username))                                                                                                                        |
+| userName         | Text          | Nombre de usuario 4D (mismo valor que [`Session.userName`](../../API/SessionClass.md#username))                                                                                                                        |
 | machineName      | Text          | Sesiones remotas: nombre de la máquina remota. Sesión de procedimientos almacenados: nombre del equipo servidor. Sesión autónoma: nombre de la máquina |
 | systemUserName   | Text          | Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.                                                                                                                        |
 | IPAddress        | Text          | Dirección IP de la máquina remota                                                                                                                                                                                                      |
 | hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                                                                                                                        |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión. Sesión autónoma: fecha y hora de inicio de la aplicación                                                                                                        |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                                 |
-| ID               | Text          | UUID de la sesión (mismo valor que [`Session.id`](../API/SessionClass.md#id))                                                                                                                                       |
+| ID               | Text          | UUID de la sesión (mismo valor que [`Session.id`](../../API/SessionClass.md#id))                                                                                                                                       |
 | persistentID     | Text          | Sesiones remotas: ID persistente de la sesión                                                                                                                                                                          |
 
 :::note
 
-Este comando devuelve la propiedad [`.info`](../API/SessionClass.md#info) de la sesión *sessionID*. Para obtener información sobre la sesión actual, puede llamar directamente a `Session.info`.
+Este comando devuelve la propiedad [`.info`](../../API/SessionClass.md#info) de la sesión *sessionID*. Para obtener información sobre la sesión actual, puede llamar directamente a `Session.info`.
 
 :::
 
@@ -81,7 +81,7 @@ He aquí un ejemplo de objeto de salida:
 
 ## Ver también
 
-[`Session` class](../API/SessionClass.md)
+[`Session` class](../../API/SessionClass.md)
 [Session](session.md)
 [Session storage](session-storage.md)\
 [Process info](process-info.md)

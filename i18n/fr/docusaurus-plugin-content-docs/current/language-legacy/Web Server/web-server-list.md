@@ -36,7 +36,7 @@ Tous les serveurs Web disponibles sont renvoyés par la commande `WEB Server lis
 
 > L'objet serveur Web par défaut est automatiquement chargé par 4D au démarrage. D'un autre côté, chaque serveur Web composant que vous voulez utiliser doit être instancié en utilisant la commande [`WEB Server`](web-server.md).
 
-Vous pouvez utiliser la propriété [.name](../API/WebServerClass.md#name) de l'objet serveur Web pour identifier le projet ou le composant auquel chaque objet serveur Web de la liste est attaché.
+Vous pouvez utiliser la propriété [.name](../../API/WebServerClass.md#name) de l'objet serveur Web pour identifier le projet ou le composant auquel chaque objet serveur Web de la liste est attaché.
 
 ## Exemple
 
@@ -54,7 +54,7 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 ## Voir également
 
 [WEB Server](web-server.md)\
-[webServer.stop()](../API/WebServerClass.md#stop)
+[webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriétés
 

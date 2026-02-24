@@ -113,11 +113,11 @@ Usted quiere añadir una columna a un list box de tipo colección:
 
 El contenido de la columna será evaluado para cada elemento de la colección y se utiliza la expresión fuente *This.Employee*:
 
-![](../assets/en/commands/pict3815223.en.png)
+![](../../assets/en/commands/pict3815223.en.png)
 
 Durante la ejecución:
 
-![](../assets/en/commands/pict3814815.en.png)
+![](../../assets/en/commands/pict3814815.en.png)
 
 Para añadir una columna mostrando los títulos de los cargos ocupados:
 
@@ -128,7 +128,7 @@ Para añadir una columna mostrando los títulos de los cargos ocupados:
 
 La columna se añade al list box:
 
-![](../assets/en/commands/pict3814850.en.png)
+![](../../assets/en/commands/pict3814850.en.png)
 
 ## Ver también 
 

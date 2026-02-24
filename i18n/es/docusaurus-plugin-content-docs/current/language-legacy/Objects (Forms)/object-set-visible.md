@@ -40,7 +40,7 @@ Si pasa *visible* igual a [TRUE](true.md "TRUE"), los objetos son mostrados. Si 
 
 Este es un formulario típico en el entorno Diseño:
 
-![](../assets/en/commands/pict27188.es.png)
+![](../../assets/en/commands/pict27188.es.png)
 
 Los objetos en el área de grupo **Información del empleador** cada uno tiene un nombre de objeto que contiene la expresión “empleador” (incluyendo el área de grupo). Cuando la casilla de selección **Empleado actualmente**  está seleccionada, los objetos deben ser visibles; cuando la casilla no está seleccionada, los objetos deben ser invisibles.   
 Este es el método de objeto de la casilla de selección:
@@ -61,11 +61,11 @@ Este es el método de objeto de la casilla de selección:
 
 Por lo tanto, en ejecución, el formulario se ve así:
 
-![](../assets/en/commands/pict27189.es.png)
+![](../../assets/en/commands/pict27189.es.png)
 
 o:
 
-![](../assets/en/commands/pict27190.es.png)
+![](../../assets/en/commands/pict27190.es.png)
 
 ## Ver también 
 

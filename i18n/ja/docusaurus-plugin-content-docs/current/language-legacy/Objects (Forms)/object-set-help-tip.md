@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 フォーム内に、ヘルプTipsが表示され、マウスがピクチャーボタンの異なる部分をホバーすると内容が動的に変わるようにしたい場合を考えます:
 
-![](../assets/en/commands/pict3351402.en.png)
+![](../../assets/en/commands/pict3351402.en.png)
 
 ```4d
   //"myFlag" オブジェクトメソッド
@@ -136,7 +136,7 @@ displayed_sidebar: docs
 
 結果は以下のようになります。
 
-![](../assets/en/commands/pict3529022.en.png)
+![](../../assets/en/commands/pict3529022.en.png)
 
 ## 参照 
 

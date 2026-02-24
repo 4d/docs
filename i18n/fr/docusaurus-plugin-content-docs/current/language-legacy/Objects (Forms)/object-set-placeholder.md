@@ -51,7 +51,7 @@ Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
  OBJECT SET PLACEHOLDER(*;"comb_rech";"Recherche")
 ```
 
-![](../assets/en/commands/pict1208449.fr.png)
+![](../../assets/en/commands/pict1208449.fr.png)
 
 ## Voir aussi 
 

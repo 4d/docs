@@ -49,7 +49,7 @@ Récupération de la référence de l’élément XML frère suivant l’éléme
  $ref_XML_Suivant:=DOM Get next sibling XML element($ref_XML_Parent)
 ```
 
-![](../assets/en/commands/pict40038.fr.png)
+![](../../assets/en/commands/pict40038.fr.png)
 
 ## Exemple 2 
 
@@ -65,7 +65,7 @@ Récupération dans une boucle des références de tous les éléments XML enfan
  End while
 ```
 
-![](../assets/en/commands/pict40039.fr.png)
+![](../../assets/en/commands/pict40039.fr.png)
 
 ## Variables et ensembles système 
 

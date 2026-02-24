@@ -149,21 +149,21 @@ O exemplo a seguir mostra os diferentes tipos de gráficos que você pode obter.
   
 As seguinte imagens mostram o gráfico resultante. 
 * Com *vType* igual a 1, obtém um gráfico em **Colunas**:  
-![](../assets/en/commands/pict847107.fr.png)
+![](../../assets/en/commands/pict847107.fr.png)
 * Com *vType* igual a 2, obtém um gráfico em **Colunas proporcionais**:  
-![](../assets/en/commands/pict847109.fr.png)
+![](../../assets/en/commands/pict847109.fr.png)
 * Com *vType* igual a 3, obtém um gráfico em **Colunas empilhadas**:  
-![](../assets/en/commands/pict847111.fr.png)
+![](../../assets/en/commands/pict847111.fr.png)
 * Com *vType* igual a 4, obtém um gráfico em **Linhas**:  
-![](../assets/en/commands/pict847114.fr.png)
+![](../../assets/en/commands/pict847114.fr.png)
 * Com *vType* igual a 5, obtém um gráfico em Áreas:  
-![](../assets/en/commands/pict847118.fr.png)
+![](../../assets/en/commands/pict847118.fr.png)
 * Com *vType* igual a 6, obtém um gráfico em **Pontos**:  
-![](../assets/en/commands/pict847120.fr.png)
+![](../../assets/en/commands/pict847120.fr.png)
 * Com *vType* igual a 7, obtém um gráfico em **Setores**:  
-![](../assets/en/commands/pict847122.fr.png)
+![](../../assets/en/commands/pict847122.fr.png)
 * Com *vType* igual a 8, obtém um gráfico em **Imagens**:  
-![](../assets/en/commands/pict847124.fr.png)
+![](../../assets/en/commands/pict847124.fr.png)
 
 ## Exemplo 2 
 
@@ -198,7 +198,7 @@ Sintaxe utilizando *grafParams*: no seguinte exemplo, um gráfico de linha simpl
  GRAPH(vGraph;vSettings;X;A;B) //Draw graph
 ```
 
-![](../assets/en/commands/pict2603210.en.png)
+![](../../assets/en/commands/pict2603210.en.png)
 
 ## Exemplo 3 
 
@@ -239,7 +239,7 @@ Com os mesmos valores, pode agregar uma configuração personalizada para obter 
  GRAPH(vGraph;vSettings;X;A;B) //Desenha o gráfico
 ```
 
-![](../assets/en/commands/pict2603212.en.png)
+![](../../assets/en/commands/pict2603212.en.png)
 
 ## Exemplo 4 
 
@@ -288,7 +288,7 @@ Neste exemplo, personalizamos alguns parâmetros:
  GRAPH(vGraph;vSettings;X;A;B) //Desenhar o gráfico
 ```
 
-![](../assets/en/commands/pict2648517.en.png)
+![](../../assets/en/commands/pict2648517.en.png)
 
 ## Ver também 
 

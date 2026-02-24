@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 このメソッドを以下の例題に適用すると、$LineNumには1が返されます:
 
-![](../assets/en/commands/pict40184.ja.png)
+![](../../assets/en/commands/pict40184.ja.png)
 
 ## システム変数およびセット 
 

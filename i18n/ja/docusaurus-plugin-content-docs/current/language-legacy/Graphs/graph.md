@@ -146,21 +146,21 @@ SVGグラフ中で見つけられる要素には自動で特定のIDが割り当
 以下の図はレンダリングエンジンごとのグラフの結果を示します。
 
 * vType=1: **棒グラフ**  
-![](../assets/en/commands/pict847107.fr.png)
+![](../../assets/en/commands/pict847107.fr.png)
 * vType=2: ****比率棒グラフ**  
-![](../assets/en/commands/pict847109.fr.png)
+![](../../assets/en/commands/pict847109.fr.png)
 * vType=3: ****積上げ棒グラフ**  
-![](../assets/en/commands/pict847111.fr.png)
+![](../../assets/en/commands/pict847111.fr.png)
 * vType=4: **線グラフ**  
-![](../assets/en/commands/pict847114.fr.png)
+![](../../assets/en/commands/pict847114.fr.png)
 * vType=5: **面グラフ**  
-![](../assets/en/commands/pict847118.fr.png)
+![](../../assets/en/commands/pict847118.fr.png)
 * vType=6: **点グラフ**  
-![](../assets/en/commands/pict847120.fr.png)
+![](../../assets/en/commands/pict847120.fr.png)
 * vType=7: **円グラフ**  
-![](../assets/en/commands/pict847122.fr.png)
+![](../../assets/en/commands/pict847122.fr.png)
 * vType=8: **ピクチャーグラフ**  
-![](../assets/en/commands/pict847124.fr.png)
+![](../../assets/en/commands/pict847124.fr.png)
 
 ## 例題 2 
 
@@ -195,7 +195,7 @@ SVGグラフ中で見つけられる要素には自動で特定のIDが割り当
  GRAPH(vGraph;vSettings;X;A;B) //グラフを描画
 ```
 
-![](../assets/en/commands/pict2603210.en.png)
+![](../../assets/en/commands/pict2603210.en.png)
 
 ## 例題 3 
 
@@ -236,7 +236,7 @@ SVGグラフ中で見つけられる要素には自動で特定のIDが割り当
  GRAPH(vGraph;vSettings;X;A;B) //グラフを描画
 ```
 
-![](../assets/en/commands/pict2603212.en.png)
+![](../../assets/en/commands/pict2603212.en.png)
 
 ## 例題 4 
 
@@ -285,7 +285,7 @@ SVGグラフ中で見つけられる要素には自動で特定のIDが割り当
  GRAPH(vGraph;vSettings;X;A;B) //グラフを描画
 ```
 
-![](../assets/en/commands/pict2648517.en.png)
+![](../../assets/en/commands/pict2648517.en.png)
 
 ## 参照 
 

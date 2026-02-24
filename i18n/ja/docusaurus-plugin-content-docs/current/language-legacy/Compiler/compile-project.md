@@ -28,7 +28,7 @@ displayed_sidebar: docs
 ## 説明
 
 **Compile project** は、<!--REF #_command_.Compile project.Summary-->
-カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、[コンパイルページ](../Project/compiler.md) を参照してください。
+カレントのホストプロジェクト、または*projectFile* 引数で指定したプロジェクトをコンパイルします。<!-- END REF-->コンパイルについてのより詳細な情報については、[コンパイルページ](../../Project/compiler.md) を参照してください。
 
 デフォルトでは、このコマンドはストラクチャー設定で定義されているコンパイラオプションを使用します。 任意の*options* 引数を渡すことで、それらを上書きすることができます。 以下のシンタックスがサポートされています: 任意の*options* 引数を渡すことで、それらを上書きすることができます。 以下のシンタックスがサポートされています:
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 コンパイラウィンドウとは異なり、このコマンドではコンパイルするコンポーネントを明示的に指定する必要があります。  **Compile project** でプロジェクトをコンパイルする場合、*options* 引数の*components* プロパティを使用してそのコンポーネントを宣言する必要があります。 なお、そのコンポーネントは既にコンパイルされている必要があるという点に注意してください(バイナリーコンポーネントはサポートされます)。
 
-コンパイルされたコードは、*options* 引数の*targets* プロパティでの指定によって、DerivedData または Libraries フォルダに格納されています。 .4dz ファイルを作成したい場合でも、コンパイルされたプロジェクトを手動でZIP圧縮するか、[ビルドアプリケーション](../Desktop/building.md) 機能を使用する必要があります。
+コンパイルされたコードは、*options* 引数の*targets* プロパティでの指定によって、DerivedData または Libraries フォルダに格納されています。 .4dz ファイルを作成したい場合でも、コンパイルされたプロジェクトを手動でZIP圧縮するか、[ビルドアプリケーション](../../Desktop/building.md) 機能を使用する必要があります。
 
 *targets* プロパティに空のコレクションを渡した場合、**Compile project** コマンドはコンパイルせずにシンタックスチェックを実行します。
 
@@ -59,11 +59,11 @@ displayed_sidebar: docs
 | defaultTypeForButtons                                                              | Integer                          | 取り得る値: Is real または Is longint                                                                                                                                                                                                                                                                                                                                        |
 | defaultTypeForNumerics                                                             | Integer                          | 取り得る値: Is real または Is longint                                                                                                                                                                                                                                                                                                                                        |
 | generateSymbols                                                                    | Boolean                          | 返された.symbol オブジェクト内にsymbol 情報を生成するためにはTrue                                                                                                                                                                                                                                                                                                                           |
-| generateSyntaxFile                                                                 | Boolean                          | プロジェクトの\\Resources\\en.lproj フォルダに [コード補完用のシンタックスファイルを生成する](../settings/general.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E6%99%82%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E8%A3%9C%E5%AE%8C%E7%94%A8%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B) ためにはTrue |
+| generateSyntaxFile                                                                 | Boolean                          | プロジェクトの\\Resources\\en.lproj フォルダに [コード補完用のシンタックスファイルを生成する](../../settings/general.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E6%99%82%E3%81%AB%E3%82%B3%E3%83%BC%E3%83%89%E8%A3%9C%E5%AE%8C%E7%94%A8%E3%81%AE%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B) ためにはTrue |
 | generateTypingMethods                                                              | Text                             | 型指定メソッドを生成する際にリセット("reset") するか追加("append") するかを選択します。 値が"append" だった場合、既存の変数宣言は変更されません(コンパイラウィンドウの振る舞い)。 値が"reset" だった場合、既存の変数宣言は事前に削除されます。                                                                                                                                                                                |
-| plugins                                                                            | 4D.Folder object | [カレントプロジェクトのPlugins フォルダ](../Project/architecture.md#plugins) ではなく、独自に使用したいプラグインのフォルダ。 このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。 このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。                                                                                                                                                                                                 |
+| plugins                                                                            | 4D.Folder object | [カレントプロジェクトのPlugins フォルダ](../../Project/architecture.md#plugins) ではなく、独自に使用したいプラグインのフォルダ。 このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。 このプロパティは、*projectFile* シンタックスを使用した場合にのみ利用可能です。                                                                                                                                                                                                 |
 | targets                                                                            | String の Collection              | 取り得る値: "x86_64_generic"、 "arm64_macOS_lib"。 また空のコレクションを渡すことでシンタックスチェックのみを実行させることもできます。                                                                                                                                                                                           |
-| typeInference                                                                      | Text                             | "all": コンパイラは、明示的に宣言されていない全ての変数の型を類推します。 "locals": コンパイラは、明示的に宣言されていないローカル変数の型を類推します。 "none": 自動変数定義は行いません。全ての変数はコード内で明示的に宣言されている必要があります(旧式モード)。"direct": 全ての変数はコード内で明示的に宣言されている必要があります([直接型指定](../Project/compiler.md#enabling-direct-typing))。                               |
+| typeInference                                                                      | Text                             | "all": コンパイラは、明示的に宣言されていない全ての変数の型を類推します。 "locals": コンパイラは、明示的に宣言されていないローカル変数の型を類推します。 "none": 自動変数定義は行いません。全ての変数はコード内で明示的に宣言されている必要があります(旧式モード)。"direct": 全ての変数はコード内で明示的に宣言されている必要があります([直接型指定](../../Project/compiler.md#enabling-direct-typing))。                               |
 | warnings                                                                           | Object の Collection              | 警告の有効化状態を定義します                                                                                                                                                                                                                                                                                                                                                                       |
 | \[\].major   | Number                           | 指定する警告のメインの番号、ドットの前                                                                                                                                                                                                                                                                                                                                                                  |
 | \[\].minor   | Number                           | 指定する警告の2つ目の番号、ドットの後                                                                                                                                                                                                                                                                                                                                                                  |
@@ -100,7 +100,7 @@ displayed_sidebar: docs
 | symbols.methods\[\].params       | Collection          | 引数タイプのコレクション(Value Type の数値コード)                                            |
 | symbols.methods\[\]. threadSafe  | Boolean             | このメソッドがスレッドセーフであるかを示します。                                                                      |
 
-より詳細な情報については、[コンパイルツール](../Project/compiler.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%83%84%E3%83%BC%E3%83%AB) を参照してください。
+より詳細な情報については、[コンパイルツール](../../Project/compiler.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB%E3%83%84%E3%83%BC%E3%83%AB) を参照してください。
 
 ## 変数オブジェクト
 

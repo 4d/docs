@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 El comando `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->recupera el contenido de *zipFile* y lo devuelve como un objeto `4D.ZipArchive`<!-- END REF -->.
 
-> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. Para extraer el contenido de un archivo, es necesario utilizar métodos como [file.copyTo()](../API/Document.md#copyto) o [folder.copyTo()](../API/Directory.md#copyto).
+> Este comando no descomprime el archivo ZIP, sólo ofrece una vista de su contenido. Para extraer el contenido de un archivo, es necesario utilizar métodos como [file.copyTo()](../../API/Document.md#copyto) o [folder.copyTo()](../../API/Directory.md#copyto).
 
 Pase un objeto `4D.File` que haga referencia al archivo ZIP comprimido en el parámetro *zipFile*. El archivo de destino se abrirá hasta que el `ZIP Read archive` haya terminado de ejecutarse y todos los contenidos/referencias hayan sido extraídos/liberados, entonces se cerrará automáticamente.
 
@@ -37,7 +37,7 @@ Si el *zipFile* está protegido por contraseña, es necesario utilizar el parám
 
 **Objeto archivo**
 
-El objeto `4D.ZipArchive` devuelto contiene una única propiedad [`root`](../API/ZipArchiveClass.md#root) cuyo valor es un objeto `4D.ZipFolder`. Esta carpeta describe todo el contenido del archivo ZIP.
+El objeto `4D.ZipArchive` devuelto contiene una única propiedad [`root`](../../API/ZipArchiveClass.md#root) cuyo valor es un objeto `4D.ZipFolder`. Esta carpeta describe todo el contenido del archivo ZIP.
 
 ## Ejemplo
 
@@ -81,9 +81,9 @@ Para extraer desde la carpeta root:
 
 ## Ver también
 
-[ZipArchive Class](../API/ZipArchiveClass.md)
-[ZipFile Class](../API/ZipFileClass.md)
-[ZipFolder Class](../API/ZipFolderClass.md)
+[ZipArchive Class](../../API/ZipArchiveClass.md)
+[ZipFile Class](../../API/ZipFileClass.md)
+[ZipFolder Class](../../API/ZipFolderClass.md)
 [`ZIP Create archive`](zip-create-archive.md)
 
 ## Propiedades

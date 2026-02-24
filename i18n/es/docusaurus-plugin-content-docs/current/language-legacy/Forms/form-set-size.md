@@ -76,7 +76,7 @@ Igualmente note que este comando no cambia el tamaño de la ventana del formular
 
 El siguiente ejemplo muestra cómo colocar una ventana de tipo Explorador. El siguiente formulario se crea en el entorno Diseño:
 
-![](../assets/en/commands/pict21945.es.png)  
+![](../../assets/en/commands/pict21945.es.png)  
 El tamaño del formulario es “automático”.
 
 La ventana se visualiza utilizando el siguiente código:
@@ -89,7 +89,7 @@ La ventana se visualiza utilizando el siguiente código:
 
 La parte de la derecha de la ventana puede mostrarse u ocultarse haciendo clic en la opción agrandar/reducir:
 
-![](../assets/en/commands/pict21946.es.png)
+![](../../assets/en/commands/pict21946.es.png)
 
 El método de objeto asociado con este botón es el siguiente:
 

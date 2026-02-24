@@ -59,7 +59,7 @@ O seguinte método de projeto permite fazer isso:
  Until(vOK=1)
  $format:="" // Inicialização do resultado da função
  $vsDate:=String($vdDate)
- $vlPos:=Position("/";$vsDate) // Procurar o primeiro separador / na string ../../..
+ $vlPos:=Position("/";$vsDate) // Procurar o primeiro separador / na string ../../../../..
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extrair os primeiros dígitos da data
  $vsDate:=Substring($vsDate;$vlPos+1) // Eliminar os primeiros dígitos e o primeiro separador /
  Case of
@@ -71,7 +71,7 @@ O seguinte método de projeto permite fazer isso:
        $format:="YYYY"
  End case
  $format:=$format+"/" //Iniciar a construção do resultado da função
- $vlPos:=Position("/";$vsDate) // Procurar o segundo separador na string ../..
+ $vlPos:=Position("/";$vsDate) // Procurar o segundo separador na string ../../..
  $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extrair os seguintes dígitos da data
  $vsDate:=Substring($vsDate;$vlPos+1) // Reduzir a string aos últimos dígitos da data
  Case of

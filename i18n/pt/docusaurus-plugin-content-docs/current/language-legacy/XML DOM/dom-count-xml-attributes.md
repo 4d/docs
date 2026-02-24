@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Antes de recuperar os valores dos elementos em um array, caso você queira conhecer o número de atributos no elemento abaixo: 
 
-![](../assets/en/commands/pict39728.en.png)
+![](../../assets/en/commands/pict39728.en.png)
 
 ```4d
  var minhaVarBlob : Blob

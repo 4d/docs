@@ -43,7 +43,7 @@ Esse comando pode ser usado somente em **bancos de dados binários**. Em **arqui
 
 Em sua aplicação, se definem as seguintes folhas de estilo:
 
-![](../assets/en/commands/pict1206954.pt.png)
+![](../../assets/en/commands/pict1206954.pt.png)
 
 Se executa o seguinte código:
 

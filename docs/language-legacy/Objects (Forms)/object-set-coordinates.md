@@ -59,7 +59,7 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
  OBJECT SET COORDINATES(*;"button_1";10;20;30;40)
 ```
 
-![](../assets/en/commands/pict1207497.fr.png)
+![](../../assets/en/commands/pict1207497.fr.png)
 
 ## See also 
 

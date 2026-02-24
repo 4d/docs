@@ -48,7 +48,7 @@ El valor que se devuelve corresponde a una de las siguientes constantes, que se 
 
 Dado el siguiente objeto (donde se aplicó una orientación "90 ° a la izquierda" en el editor de formularios):
 
-![](../assets/en/commands/pict1209704.fr.png)
+![](../../assets/en/commands/pict1209704.fr.png)
 
 Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
 
@@ -58,7 +58,7 @@ Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
 
 ... a continuación, el objeto aparece de la siguiente manera:
 
-![](../assets/en/commands/pict1209706.fr.png)
+![](../../assets/en/commands/pict1209706.fr.png)
 
 ```4d
  $vOrt:=OBJECT Get text orientation(*;"myText") //$vOrt=180

@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 El esquema a continuación representa gráficamente una operación de diferencia entre dos conjuntos. El área de color es el conjunto resultante.
 
-![](../assets/en/commands/pict32936.es.png)  
+![](../../assets/en/commands/pict32936.es.png)  
 El conjunto *resultado* se crea por DIFFERENCE. El conjunto *resultado* reemplaza todo conjunto que exista con el mismo nombre, incluyendo *conjunto1* y *conjunto2*. Los conjuntos *conjunto1* y *conjunto2* deben ser de la misma tabla. El conjunto *resultado* pertenece a la misma tabla que *conjunto1* y *conjunto2*.
 
 **4D Server:** en modo cliente/Servidor, los conjuntos interprocesos y procesos se conservan en el equipo servidor, mientras que los conjuntos locales se mantiene en los equipos cliente. DIFFERENCE requiere que los tres conjuntos estén en el mismo equipo. Por lo tanto, todos los conjuntos deben ser locales o ninguno de ellos debe ser local. Para mayor información consulte *4D Server and Sets* en el manual de referencia de 4D Server.

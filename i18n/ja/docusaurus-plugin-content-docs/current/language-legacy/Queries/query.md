@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 *queryArgument*または *\** を指定しない場合、**QUERY**は*aTable* 用のクエリエディタを表示します (複数クエリの最後の行である場合を除く、例題 2参照):
 
-![](../assets/en/commands/pict1581957.en.png)
+![](../../assets/en/commands/pict1581957.en.png)
 
 クエリエディタについての詳細は4D Design Referenceマニュアルを参照してください。
 

@@ -48,7 +48,7 @@ Por padrão, em 4D o cálculo das impressões é realizada baseada nas “margen
 * **Margem de impress**ão: a margem de impressão é a margem mais além da qual a impressora não pode imprimir (por razões físicas: rolos de impressão, final do percurso do cabeçalho de impressão...). Varia de uma impressora a outra e de um formato a outro.
 * **Margem morta:** esta é a área situada entre a margem do papel e a margem da impressora.
 
-![](../assets/en/commands/pict28491.pt.png)
+![](../../assets/en/commands/pict28491.pt.png)
 
 ## Ver também 
 

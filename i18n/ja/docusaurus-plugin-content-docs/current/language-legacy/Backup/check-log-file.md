@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->**CHECK LOG FILE** コマンドは、データベースのカレントログファイルの内容をブラウズできるダイアログを表示します。<!-- END REF-->このダイアログにはMaintenance & Security Centerからもアクセスできます:
 
-![](../assets/en/commands/pict4835044.en.png)
+![](../../assets/en/commands/pict4835044.en.png)
 
 このダイアログ画面では、データベースのデータに対して行われた操作を取り消すことのできる、**ロールバック**ボタンがあります。このダイアログボックスの詳細については、4DのDesign Referenceを参照してください。
 

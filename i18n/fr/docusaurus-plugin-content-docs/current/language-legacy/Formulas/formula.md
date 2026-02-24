@@ -33,7 +33,7 @@ Le fait d'avoir une formule en tant qu'objet permet de la passer en tant que par
 
 La formule retournée peut être appelée avec :
 
-- les méthodes [`call()`](../API/FunctionClass.md#call) ou [`apply()`](../API/FunctionClass.md#apply), ou
+- les méthodes [`call()`](../../API/FunctionClass.md#call) ou [`apply()`](../../API/FunctionClass.md#apply), ou
 - la syntaxe de la notation objet (voir [objet formula](../commands/formula.md-object)).
 
 ```4d
@@ -47,7 +47,7 @@ La formule retournée peut être appelée avec :
  $o.myFormula() //retourne 3
 ```
 
-Vous pouvez passer des [paramètres](../API/FunctionClass.md#passing-parameters) à `Formula`, comme le montre l'[exemple 4](#example-4) ci-dessous.
+Vous pouvez passer des [paramètres](../../API/FunctionClass.md#passing-parameters) à `Formula`, comme le montre l'[exemple 4](#example-4) ci-dessous.
 
 Vous pouvez indiquer l'objet sur lequel la formule est exécutée, comme le montre l'[exemple 5](#example-5). Les propriétés de l'objet sont alors accessibles via la commande `This`.
 

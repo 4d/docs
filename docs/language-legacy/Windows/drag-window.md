@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 The following form, shown here in the Form editor, contains a colored frame, above which are four invisible buttons for each side:
 
-![](../assets/en/commands/pict2762756.en.png)
+![](../../assets/en/commands/pict2762756.en.png)
 
 Each button has the following method:
 
@@ -51,7 +51,7 @@ After executing the following project method:
 
 You obtain a window similar to this:
 
-![](../assets/en/commands/pict2762759.en.png)
+![](../../assets/en/commands/pict2762759.en.png)
 
 Then you can drag the window by clicking anywhere on the borders.
 

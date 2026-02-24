@@ -57,7 +57,7 @@ El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imag
  DOM CLOSE XML($svg)
 ```
 
-![](../assets/en/commands/pict14520.es.png)
+![](../../assets/en/commands/pict14520.es.png)
 
 ## Ver también 
 

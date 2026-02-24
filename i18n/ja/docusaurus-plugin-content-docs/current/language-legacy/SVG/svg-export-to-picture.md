@@ -57,7 +57,7 @@ displayed_sidebar: docs
  DOM CLOSE XML($svg)
 ```
 
-![](../assets/en/commands/pict14520.ja.png)
+![](../../assets/en/commands/pict14520.ja.png)
 
 ## 参照 
 

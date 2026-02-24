@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window)<!-- END REF-->:
 
-![](../assets/en/commands/pict4835044.en.png)
+![](../../assets/en/commands/pict4835044.en.png)
 
 This dialog box includes the **Rollback** button that can be used to cancel operations carried out on the data of the database. For more information about this dialog box, please refer to the Design Reference manual of 4D.
 

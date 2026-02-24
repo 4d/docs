@@ -48,7 +48,7 @@ Se não houver um array de altura de fila associado ao list box, este comando cr
 
 Se quiser mudar a altura de umas poucas linhas no list box abaixo:
 
-![](../assets/en/commands/pict3071133.en.png)
+![](../../assets/en/commands/pict3071133.en.png)
 
 Se executar este código:
 
@@ -60,7 +60,7 @@ Se executar este código:
 
 ... obterá o seguinte resultado:
 
-![](../assets/en/commands/pict3071135.en.png)
+![](../../assets/en/commands/pict3071135.en.png)
 
 ## Exemplo 2 
 

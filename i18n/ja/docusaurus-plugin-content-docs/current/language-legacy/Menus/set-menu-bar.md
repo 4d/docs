@@ -81,7 +81,7 @@ SET MENU BAR**(1;\*)**を実行すると、メニューバーは前と同じ状�
 
 この包括的な例題では、以下のファイルメニューや編集メニューをプラグラムで作成します: 
 
-![](../assets/en/commands/pict17860.ja.png)
+![](../../assets/en/commands/pict17860.ja.png)
 
 ```4d
   //File メニューを作成するメソッド

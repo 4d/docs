@@ -124,7 +124,7 @@ O menu pop up é mostrado em Windows ao pressionar o botão direito do mouse, e 
   
 O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (direita). Note a marca de seleção padrão para a versão Windows.
 
-![](../assets/en/commands/pict36394.en.png)
+![](../../assets/en/commands/pict36394.en.png)
 
 ## Ver também 
 

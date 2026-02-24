@@ -40,7 +40,7 @@ Este comando permite por ejemplo efectuar las búsquedas en el cuerpo de las sol
 
 En este ejemplo, una solicitud simple se envía al servidor web de 4D y el contenido del campo HTTP cuerpo se visualiza en el depurador. Este es el formulario enviado al servidor web de 4D, así como también el código HTML correspondiente: 
 
-![](../assets/en/commands/pict38463.es.png)
+![](../../assets/en/commands/pict38463.es.png)
 
 Este es el método Test4D2004:
 

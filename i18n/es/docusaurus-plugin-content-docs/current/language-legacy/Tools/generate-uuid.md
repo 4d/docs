@@ -41,7 +41,7 @@ Para más información sobre UUID versión 7, lea [esta entrada de blog](https:/
 
 :::
 
-En 4D, los números UUID pueden almacenarse en campos (ver [Formato UUID](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106190). Una [opción de configuración 4D](../settings/database.md#auto-uuid-version) permite generar UUIDs de la versión 7 en campos automáticos.
+En 4D, los números UUID pueden almacenarse en campos (ver [Formato UUID](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106190). Una [opción de configuración 4D](../../settings/database.md#auto-uuid-version) permite generar UUIDs de la versión 7 en campos automáticos.
 
 ## Ejemplo
 

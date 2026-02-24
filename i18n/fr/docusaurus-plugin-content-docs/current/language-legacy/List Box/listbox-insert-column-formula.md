@@ -112,11 +112,11 @@ Vous voulez ajouter une colonne à une list box de type collection :
 
 Le contenu de la colonne sera évalué pour chaque élément de la collection et l'expression source *This.Employee* est utilisée :
 
-![](../assets/en/commands/pict3815223.en.png)
+![](../../assets/en/commands/pict3815223.en.png)
 
 A l'exécution :
 
-![](../assets/en/commands/pict3814815.en.png)
+![](../../assets/en/commands/pict3814815.en.png)
 
 Pour ajouter une colonne affichant les titres des postes occupés :
 
@@ -127,7 +127,7 @@ Pour ajouter une colonne affichant les titres des postes occupés :
 
 La colonne est ajoutée à la list box :
 
-![](../assets/en/commands/pict3814850.en.png)
+![](../../assets/en/commands/pict3814850.en.png)
 
 #### Voir aussi 
 

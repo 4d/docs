@@ -221,7 +221,7 @@ Este selector funciona exactamente igual que el selector 39; sin embargo, aplica
 
 4D le permite registrar el historial de peticiones realizadas por el equipo cliente. Cuando este mecanismo se activa, se crean dos archivos en el equipo cliente, en la subcarpeta Logs de la carpeta local de la base. Son llamados 4DRequestsLog\_X y 4DRequestsLog\_ProcessInfo\_X, donde X es el número secuencial del historial. Una vez el archivo 4DRequestsLog alcanza un tamaño de 10 MB, se cierra y se genera uno nuevo, con un número secuencial incrementado. Si ya existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio para la secuencia utilizando el parámetro *valor*.
 
-Estos archivos texto almacenan en formato tabulado simple diferente información relacionada con cada petición: hora, número de proceso, tamaño de la petición, duración del proceso, etc. Para obtener más información sobre los archivos 4DRequestsLog, consulte [*Descripción de archivos de historial*](../Debugging/debugLogFiles.md).
+Estos archivos texto almacenan en formato tabulado simple diferente información relacionada con cada petición: hora, número de proceso, tamaño de la petición, duración del proceso, etc. Para obtener más información sobre los archivos 4DRequestsLog, consulte [*Descripción de archivos de historial*](../../Debugging/debugLogFiles.md).
 
 
 
@@ -294,7 +294,7 @@ El funcionamiento de este selector es idéntico al del selector 29; sin embargo,
 
 **Descripción**: inicia o detiene el registro secuencial de eventos de programación **del proceso actual** en un archivo de historial separado. Este historial es similar al Debug log recording (selector 34) pero se enfoca solo en el proceso actual. El nombre del archivo de historial incluye la letra "p" y el número del proceso: 4DDebugLog\[\_p*N*_*n*].txt, donde N es el ID único del proceso. 
 
-Para más información sobre este formato y sobre el uso del archivo *4DDebugLog*, consulte [*Descripción de archivos de historial*](../Debugging/debugLogFiles.md). 
+Para más información sobre este formato y sobre el uso del archivo *4DDebugLog*, consulte [*Descripción de archivos de historial*](../../Debugging/debugLogFiles.md). 
 
 **Notas:** este selector se proporciona únicamente con el fin de depurar y debe utilizarse con cuidado. En particular, no debe ponerse en producción, ya que puede tener un impacto en el rendimiento de la aplicación. Puede utilizarar ambos selectores Debug log recording y Current process debug log recording simultáneamente, en cuyo caso las acciones del proceso actual no se registrarán en el archivo de historial principal.
 

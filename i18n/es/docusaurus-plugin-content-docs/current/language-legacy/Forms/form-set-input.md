@@ -106,7 +106,7 @@ Los siguientes ejemplos usan la ruta a un formulario .json para ingresar los reg
 
 que devuelve:
 
-![](../assets/en/commands/pict3687432.en.png)
+![](../../assets/en/commands/pict3687432.en.png)
 
 ## Ver también 
 

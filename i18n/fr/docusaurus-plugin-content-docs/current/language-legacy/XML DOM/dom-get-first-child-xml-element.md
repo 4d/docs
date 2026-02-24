@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Les paramètres *nomElémentEnf* et *valeurElémentEnf*, s’ils sont passés, reçoivent respectivement le nom et la valeur de l’élément enfant. 
 
-![](../assets/en/commands/pict39972.fr.png)
+![](../../assets/en/commands/pict39972.fr.png)
 
 ## Exemple 1 
 

@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.
 
-**Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the [WP GET ATTRIBUTES]((../WritePro/commands/wp-get-attributes.md) command (see example 9). 
+**Note:** This command supports attribute definitions in 4D Write Pro *objects*, like the [WP GET ATTRIBUTES]((../../WritePro/commands/wp-get-attributes.md) command (see example 9). 
 
 In the *property* parameter, pass the label of the property to be read. Note that the *property* parameter is case sensitive. 
 

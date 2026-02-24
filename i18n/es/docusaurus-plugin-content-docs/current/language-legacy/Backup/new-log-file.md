@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Summary-->El comando **New log file** cierra el archivo de registro actual, le cambia el nombre y crea uno nuevo con el mismo nombre en la misma ubicación que el anterior<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
-El comando devuelve el nombre completo de la ruta (ruta de acceso + nombre) del archivo de registro que se está cerrando (llamado “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). El comando no realiza ningún procesamiento (compresión, segmentación) en el archivo guardado. No aparece ninguna
+El comando devuelve el nombre completo de la ruta (ruta de acceso + nombre) del archivo de registro que se está cerrando (llamado “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). El comando no realiza ningún procesamiento (compresión, segmentación) en el archivo guardado. No aparece ninguna
 caja de diálogo.
 
 The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por ejemplo:
@@ -31,7 +31,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-Un archivo de registro siempre debe estar relacionado con un archivo de datos. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
+Un archivo de registro siempre debe estar relacionado con un archivo de datos. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
 
 :::
 

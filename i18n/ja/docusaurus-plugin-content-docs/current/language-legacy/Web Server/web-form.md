@@ -25,15 +25,15 @@ displayed_sidebar: docs
 
 :::
 
-返されたオブジェクトの各プロパティは、[4D.WebFormItem](../API/WebFormItemClass.md) クラスのオブジェクトです。
+返されたオブジェクトの各プロパティは、[4D.WebFormItem](../../API/WebFormItemClass.md) クラスのオブジェクトです。
 
 このコマンドは、Qodly Studio 以外のリクエストから呼び出された場合には、`null` を返します。
 
 ## 参照
 
 [Web Event](web-event.md)</br>
-[WebForm class](../API/WebFormClass.md)</br>
-[WebFormItem class](../API/WebFormItemClass.md)
+[WebForm class](../../API/WebFormClass.md)</br>
+[WebFormItem class](../../API/WebFormItemClass.md)
 
 ## プロパティ
 

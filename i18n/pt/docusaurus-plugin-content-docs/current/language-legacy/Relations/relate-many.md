@@ -33,11 +33,11 @@ A segunda sintaxe, RELATE MANY(campo1), estabelece a relação Um a Muitos para 
 
 No seguinte exemplo, três tabelas estão relacionadas com relações automáticas. As duas tabelas \[Pessoas\] e \[Partes\] tem uma relação Muitos a Um com a tabela \[Empresas\].  
   
-![](../assets/en/commands/pict2286855.fr.png)
+![](../../assets/en/commands/pict2286855.fr.png)
 
 Este é o formulário para a tabela \[Empresas\] que mostrará os registros relacionados das tabelas \[Pessoas\] e \[Partes\].  
   
-![](../assets/en/commands/pict2287703.fr.png)
+![](../../assets/en/commands/pict2287703.fr.png)
 
 Quando são mostrados os formulários para Pessoas e Partes, os registros relacionados para as tabelas \[Pessoas\] e \[Partes\] se carregam e se transformam as seleções atuais destas tabelas.  
   

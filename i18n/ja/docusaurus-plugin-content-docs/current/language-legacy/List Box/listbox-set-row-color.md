@@ -69,7 +69,7 @@ displayed_sidebar: docs
  LISTBOX SET ROW COLOR(*;"ListBox";3;"blue")
 ```
 
-![](../assets/en/commands/pict1205393.fr.png)
+![](../../assets/en/commands/pict1205393.fr.png)
 
 ## 参照 
 

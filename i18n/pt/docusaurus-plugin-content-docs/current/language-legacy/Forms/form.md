@@ -36,7 +36,7 @@ displayed_sidebar: docs
 Se o formulário atual estiver sendo exibido ou carregado por uma chamada aos comandos [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** retornará um dos dois:
 
 - o objeto *formData* passado como parâmetro para esse comando, se houver,
-- ou, um objeto instanciado da [classe de usuário associada ao formulário](../FormEditor/properties_FormProperties.md#form-class), se houver,
+- ou, um objeto instanciado da [classe de usuário associada ao formulário](../../FormEditor/properties_FormProperties.md#form-class), se houver,
 - ou um objeto vazio.
 
 ### Subformulário
@@ -70,13 +70,13 @@ In the context of an input form displayed from an output form (i.e. after a doub
 
 Em um formulário que exibe o registro de uma pessoa, o botão "Check children" (Verificar filhos) abre uma caixa de diálogo para verificar/modificar os nomes e as idades dos filhos:
 
-![](../assets/en/commands/pict3542015.en.png)
+![](../../assets/en/commands/pict3542015.en.png)
 
 **Nota:** O campo de objeto "Children" é representado apenas para mostrar sua estrutura neste exemplo.
 
 No formulário de verificação, você atribuiu algumas propriedades do objeto Form aos inputs:
 
-![](../assets/en/commands/pict3541682.en.png)
+![](../../assets/en/commands/pict3541682.en.png)
 
 Aqui está o código do botão "Check children":
 
@@ -108,7 +108,7 @@ Aqui está o código do botão "Check children":
 
 O formulário exibe informações de cada criança:
 
-![](../assets/en/commands/pict3515152.en.png)
+![](../../assets/en/commands/pict3515152.en.png)
 
 Se os valores forem editados e o botão OK for clicado, o campo será atualizado (o registro pai deverá ser salvo em seguida).
 

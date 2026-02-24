@@ -40,7 +40,7 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 
 リスト名を*hList*とし、アプリケーションモードで表示します（Windows形式）:
 
-![](../assets/en/commands/pict23037.en.png)
+![](../../assets/en/commands/pict23037.en.png)
 
  以下のコードを実行します:
 
@@ -51,7 +51,7 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 
 リストは以下のようになります:
 
-![](../assets/en/commands/pict23038.en.png)
+![](../../assets/en/commands/pict23038.en.png)
 
 このコードを実行すると:
 
@@ -62,7 +62,7 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 
 このようになります:
 
-![](../assets/en/commands/pict23039.en.png)
+![](../../assets/en/commands/pict23039.en.png)
 
 ## 参照 
 

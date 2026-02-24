@@ -52,7 +52,7 @@ This method is used to retrieve the value of an XML attribute using its name:
 
 If this method is applied to the example below, $LineNum contains the value 1:
 
-![](../assets/en/commands/pict40184.en.png)
+![](../../assets/en/commands/pict40184.en.png)
 
 ## System variables and sets 
 

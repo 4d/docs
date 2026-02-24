@@ -86,7 +86,7 @@ O comando QR SET TOTALS DATA permite definir o conteúdo de una célula específ
   
 A seguinte imagem mostra como os parâmetros *numColuna* e *numQuebra* são combinados em modo tabela cruzada:  
   
-![](../assets/en/commands/pict31186.en.png)
+![](../../assets/en/commands/pict31186.en.png)
 
 ### Tipos de Dados Compatíveis 
 

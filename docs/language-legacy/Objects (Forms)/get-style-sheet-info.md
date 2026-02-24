@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 On Windows, the style sheet configuration can be different depending if the **Fluent UI** or **Classic** interface is used:
 - if the command is executed in the context of a form, the returned configuration corresponds to the interface actually used for the form,
-- if the command is executed outside the context of a form, the returned configuration corresponds to the interface actually enabled for project (based on the **Fluent UI** setting value and the availability of the [required Windows library](../FormEditor/forms.md#requirements)).
+- if the command is executed outside the context of a form, the returned configuration corresponds to the interface actually enabled for project (based on the **Fluent UI** setting value and the availability of the [required Windows library](../../FormEditor/forms.md#requirements)).
 
 
 In *styleSheetName*, you pass the name of the style sheet as defined in the Design mode. To designate an automatic style sheet, you can use one of the following constants, found in the "*Font Styles*" theme: 

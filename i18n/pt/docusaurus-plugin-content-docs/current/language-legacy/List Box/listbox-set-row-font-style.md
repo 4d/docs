@@ -75,14 +75,14 @@ Dado um array de tipo list box com as seguintes características:
   // equivalente a ArrCol5Style{3}:=Bold
 ```
 
-![](../assets/en/commands/pict1205512.fr.png)
+![](../../assets/en/commands/pict1205512.fr.png)
 
 ```4d
  LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
   // equivalente a ArrGlobalStyle{3}:=Italic+Underline
 ```
 
-![](../assets/en/commands/pict1205514.fr.png)
+![](../../assets/en/commands/pict1205514.fr.png)
 
 Depois da segunda declaração, todas as células da terceira fila mudam de fila a sublinhadas em cursiva, a exceção da célula da quinta coluna que fica só em negrito (os arrays de estilo de coluna tem prioridade sobre os arrays de list box).
 

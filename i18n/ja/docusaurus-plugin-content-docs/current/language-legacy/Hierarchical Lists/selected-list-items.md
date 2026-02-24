@@ -60,34 +60,34 @@ displayed_sidebar: docs
 次は、アプリケーションモードで表示された*hList*という名前のリストです:
 
   
-![](../assets/en/commands/pict22822.ja.png)
+![](../../assets/en/commands/pict22822.ja.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // この時点で$vlItemPos は 2
 ```
 
-![](../assets/en/commands/pict22823.ja.png)
+![](../../assets/en/commands/pict22823.ja.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // この時点で$vlItemPos は4
  $vlItemRef:=Selected list items(hList;*) // $vlItemRef は200 (例えば)
 ```
 
-![](../assets/en/commands/pict22824.ja.png)
+![](../../assets/en/commands/pict22824.ja.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList) // この時点で$vlItemPos は8
  $vlItemRef:=Selected list items(hList;*) // $vlItemRef は203 (例えば)
 ```
 
-![](../assets/en/commands/pict22825.ja.png)
+![](../../assets/en/commands/pict22825.ja.png)
 
 ```4d
  $vlItemPos:=Selected list items(hList;$arrPos) // この時点で$vlItemPos は3
   // $arrPos{1} は3, $arrPos{2} は 4 そして $arrPos{3} は 5
 ```
 
-![](../assets/en/commands/pict22826.ja.png)
+![](../../assets/en/commands/pict22826.ja.png)
 
 ```4d
  $vlItemRef:=Selected list items(hList;$arrRefs;*) // $vlItemRef は 101 (例えば)

@@ -40,7 +40,7 @@ For more information on bound variables and form/subform interaction, see *Manag
 
 Given a main form and a subform that both have an Input form object: 
 
-![](../assets/en/commands/pict5864479.en.png)
+![](../../assets/en/commands/pict5864479.en.png)
 
 Inside the main form, the Input object and the Subform object are bound to the *Form.numeric* expression of type Numeric.
 

@@ -79,7 +79,7 @@ This example gets the average of the first 15 grades in the selection:
 
 Your \[Customer\] table contains a "full\_Data" object field with the following data:
 
-![](../assets/en/commands/pict2898119.en.png)
+![](../../assets/en/commands/pict2898119.en.png)
 
 You can perform the following computations:
 

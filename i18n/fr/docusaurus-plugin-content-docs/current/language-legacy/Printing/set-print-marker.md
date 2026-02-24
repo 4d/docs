@@ -72,7 +72,7 @@ Passez dans *position* la nouvelle position souhaitée du taquet, exprimée en p
 Si vous passez le paramètre optionnel *\**, tous les marqueurs situés au-dessous du marqueur désigné par *numTaquet* seront déplacés du même nombre de pixels et dans la même direction que lui lors de l’exécution de la commande. **Attention :** dans ce cas, les objets éventuellement présents dans les zones situées au-dessous du marqueur sont également déplacés.   
 Lorsque le paramètre \* est utilisé, il est donc possible de positionner le marqueur *numTaquet* au-delà de la position initiale des marqueurs qui le suivent — ces derniers étant déplacés simultanément.
 
-![](../assets/en/commands/pict28724.fr.png)
+![](../../assets/en/commands/pict28724.fr.png)
 
 **Notes :**
 
@@ -84,12 +84,12 @@ Lorsque le paramètre \* est utilisé, il est donc possible de positionner le ma
 Cet exemple complet permet de générer l’impression d’un état sur trois colonnes, la hauteur de chaque ligne étant calculée à la volée en fonction du contenu des champs.   
 Le formulaire de sortie utilisé pour l’impression est le suivant :
 
-![](../assets/en/commands/pict28725.fr.png)
+![](../../assets/en/commands/pict28725.fr.png)
 
 L’événement formulaire On Printing Detail a été sélectionné pour le formulaire (rappelons que la commande [Print form](../commands/print-form) ne génère que cet événement, quelle que soit la zone imprimée).   
 Pour chaque enregistrement, la hauteur de la ligne doit être adaptée en fonction du contenu de la colonne “Acteurs” ou “Résumé” (colonne ayant le plus de contenu). Voici le résultat souhaité :
 
-![](../assets/en/commands/pict28726.fr.png)
+![](../../assets/en/commands/pict28726.fr.png)
 
 La méthode projet d’impression est la suivante :
 

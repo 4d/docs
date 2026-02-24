@@ -49,7 +49,7 @@ Passez dans *ligne* le numéro de la ligne dont vous souhaitez obtenir le style.
 
 Soit la list box suivante : 
 
-![](../assets/en/commands/pict1205514.fr.png)
+![](../../assets/en/commands/pict1205514.fr.png)
 
 ```4d
  vStyl:=LISTBOX Get row font style(*;"Col5";3)

@@ -56,7 +56,7 @@ La ligne de code :
 
 ... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225119.fr.png)
+![](../../assets/en/commands/pict4225119.fr.png)
 
 ## Exemple 2 
 
@@ -73,7 +73,7 @@ Le code suivant :
 
 ... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225137.fr.png)
+![](../../assets/en/commands/pict4225137.fr.png)
 
 ## Exemple 3 
 
@@ -85,7 +85,7 @@ La ligne de code :
 
 ... provoquera l'affichage de la boîte de dialogue suivante :
 
-![](../assets/en/commands/pict4225146.fr.png)
+![](../../assets/en/commands/pict4225146.fr.png)
 
 ## Voir aussi 
 

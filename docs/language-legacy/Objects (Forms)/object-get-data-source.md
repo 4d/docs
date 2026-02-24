@@ -39,7 +39,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 Given a combo box object defined in a form:
 
-![](../assets/en/commands/pict1209738.en.png)![](../assets/en/commands/pict1209740.en.png)
+![](../../assets/en/commands/pict1209738.en.png)![](../../assets/en/commands/pict1209740.en.png)
 
 You execute the following code:
 

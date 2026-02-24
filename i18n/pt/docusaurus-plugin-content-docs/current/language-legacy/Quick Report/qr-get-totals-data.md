@@ -74,7 +74,7 @@ O comando QR GET TOTALS DATA permite recuperar o conteúdo de una célula espec�
   
 A seguinte imagem mostra como os parâmetros *numColuna* e *numQuebra* são combinados em uma tabela cruzada:  
   
-![](../assets/en/commands/pict30726.en.png)  
+![](../../assets/en/commands/pict30726.en.png)  
   
 Se passa um número de *area* inválido, se gera o erro -9850.  
 Se o parâmetro *numColuna* é incorreto, se gera o erro -9852.  

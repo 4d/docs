@@ -70,7 +70,7 @@ displayed_sidebar: docs
   
 データベースに以下のテーブルを追加します。  
 
-![](../assets/en/commands/pict36594.en.png)
+![](../../assets/en/commands/pict36594.en.png)
 
  次に、以下に示した TRANSLATE TABLES AND FIELDS プロジェクトメソッドを作成します。このメソッドはデータベースの実際のストラクチャをブラウズし、引数として渡される言語に対応するローカライズ版の作成に必要なすべての *\[Translations\]* レコードを作成します。  
 

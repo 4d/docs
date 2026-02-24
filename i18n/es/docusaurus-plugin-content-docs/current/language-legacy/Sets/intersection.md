@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 El resultado gráfico de una operación de intersección se muestra a continuación. El área de color el el conjunto resultante.
 
-![](../assets/en/commands/pict32963.es.png)
+![](../../assets/en/commands/pict32963.es.png)
 
 El conjunto *resultado* se crea por INTERSECTION. El conjunto *resultado* reemplaza todo conjunto que exista con el mismo nombre, incluyendo *conjunto1* y *conjunto2*. Los conjuntos *conjunto1* y *conjunto2* deben ser de la misma tabla. El conjunto *resultado* pertenece a la misma tabla que *conjunto1* y *conjunto2*. Si el mismo registro actual se define en *conjunto1* y *conjunto2*, permanece memorizado en *resultado*. De lo contrario, *resultado* no tiene un registro actual. 
 

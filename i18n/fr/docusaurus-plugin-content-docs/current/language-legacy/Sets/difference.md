@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 Le schéma ci-dessous est la représentation graphique d'une opération de différence entre deux ensembles. La zone colorée est l'ensemble résultant.
 
-![](../assets/en/commands/pict32936.fr.png)
+![](../../assets/en/commands/pict32936.fr.png)
 
 L'ensemble *résultat* est créé par **DIFFERENCE**. Il remplace tout ensemble du même nom existant déjà, y compris *ensemble1* et *ensemble2*. Les ensembles *ensemble1* et *ensemble2* doivent appartenir à la même table. L'ensemble *résultat* appartient à la même table que *ensemble1* et *ensemble2*.
 

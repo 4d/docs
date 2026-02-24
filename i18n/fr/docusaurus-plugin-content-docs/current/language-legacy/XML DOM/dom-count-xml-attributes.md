@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Avant de récupérer les valeurs des éléments dans un tableau, vous souhaitez connaître le nombre d’attributs dans l’élément XML suivant :
 
-![](../assets/en/commands/pict39728.fr.png)
+![](../../assets/en/commands/pict39728.fr.png)
 
 ```4d
  var maVarBlob : Blob

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
-The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). Este arquivo está armazenado no mesmo local que o arquivo de log atual (especificado na [página de configuração](../Backup/settings.md#configuration) no tema de Backup das Configurações). The command does not carry out any processing (compression, segmentation) on the saved file. Não aparece nenhuma caixa de diálogo.
+The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). Este arquivo está armazenado no mesmo local que o arquivo de log atual (especificado na [página de configuração](../../Backup/settings.md#configuration) no tema de Backup das Configurações). The command does not carry out any processing (compression, segmentation) on the saved file. Não aparece nenhuma caixa de diálogo.
 
 The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por exemplo:
 
@@ -30,7 +30,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated.
+A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated.
 
 :::
 

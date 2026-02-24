@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 このコマンドはテキスト・タイプのオブジェクトをサポートする：
 
-- [input](../FormObjects/input_overview.md)のテキスト・タイプのオブジェクトにのみ対応しています、
-- [4D Write Pro エリア](../FormObjects/writeProArea_overview.md)。
+- [input](../../FormObjects/input_overview.md)のテキスト・タイプのオブジェクトにのみ対応しています、
+- [4D Write Pro エリア](../../FormObjects/writeProArea_overview.md)。
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
