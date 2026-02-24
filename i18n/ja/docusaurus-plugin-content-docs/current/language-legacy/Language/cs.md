@@ -1,6 +1,8 @@
 ---
 id: cs
-title: csslug: /commands/csdisplayed_sidebar: docs
+title: cs
+slug: /commands/cs
+displayed_sidebar: docs
 ---
 
 | 引数         | 型      |                             | 説明                          |
