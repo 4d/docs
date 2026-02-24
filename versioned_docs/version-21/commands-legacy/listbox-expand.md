@@ -60,30 +60,30 @@ This example illustrates different ways of using the command. Given the followin
 ![](../assets/en/commands/pict175844.en.png)
 
 ```4d
-  //Expand all the break rows and subrows of the list box
- LISTBOX EXPAND(*;"MyListbox")
+  //Expand all the break rows and subrows of the list box
+ LISTBOX EXPAND(*;"MyListbox")
 ```
 
 ![](../assets/en/commands/pict175849.en.png)
 
 ```4d
-  //Expand the first level of break rows of the selection
- LISTBOX EXPAND(*;"MyListbox";False;lk selection)
-  //If the "Belgium" row was selected
+  //Expand the first level of break rows of the selection
+ LISTBOX EXPAND(*;"MyListbox";False;lk selection)
+  //If the "Belgium" row was selected
 ```
 
 ![](../assets/en/commands/pict175851.en.png)
 
 ```4d
-  //Expand the Brittany break row with recursion
- LISTBOX EXPAND(*;"MyListbox";False;lk break row;1;2)
+  //Expand the Brittany break row with recursion
+ LISTBOX EXPAND(*;"MyListbox";False;lk break row;1;2)
 ```
 
 ![](../assets/en/commands/pict175853.en.png)
 
 ```4d
-  //Expand all the first columns (countries) without recursion
- LISTBOX EXPAND(*;"MyListbox";False;lk level;1)
+  //Expand all the first columns (countries) without recursion
+ LISTBOX EXPAND(*;"MyListbox";False;lk level;1)
 ```
 
 ![](../assets/en/commands/pict175855.en.png)

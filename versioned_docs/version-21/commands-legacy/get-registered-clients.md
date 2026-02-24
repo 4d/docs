@@ -38,9 +38,9 @@ displayed_sidebar: docs
 Let’s assume that you want to obtain a list of all the registered clients and the methods that remain to be executed: 
 
 ```4d
- ARRAY TEXT($clients;0)
- ARRAY LONGINT($methods;0)
- GET REGISTERED CLIENTS($clients;$methods)
+ ARRAY TEXT($clients;0)
+ ARRAY LONGINT($methods;0)
+ GET REGISTERED CLIENTS($clients;$methods)
 ```
 
 ## Example 2 

@@ -47,15 +47,15 @@ Pass the variable intended to receive the metadata in the *metaContents* paramet
 Use of DOM tree structures
 
 ```4d
- $xml:=DOM Create XML Ref("Root") //Creation of an XML DOM tree
- 
-  //Reception of TIFF metadata
- $_Xml_TIFF:=DOM Create XML element($xml;"/Root/TIFF")
- GET PICTURE METADATA(vPicture;"TIFF";$_Xml_TIFF)
- 
-  //Reception of GPS metadata
- $_Xml_GPS:=DOM Create XML element($xml;"/Root/GPS")
- GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
+ $xml:=DOM Create XML Ref("Root") //Creation of an XML DOM tree
+ 
+  //Reception of TIFF metadata
+ $_Xml_TIFF:=DOM Create XML element($xml;"/Root/TIFF")
+ GET PICTURE METADATA(vPicture;"TIFF";$_Xml_TIFF)
+ 
+  //Reception of GPS metadata
+ $_Xml_GPS:=DOM Create XML element($xml;"/Root/GPS")
+ GET PICTURE METADATA(vPicture;"GPS";$_Xml_GPS)
 ```
 
 ## Example 2 
@@ -63,16 +63,16 @@ Use of DOM tree structures
 Use of variables
 
 ```4d
- var $dateAsDate : Date
- GET PICTURE METADATA(vPicture;TIFF date time;$dateAsDate)
-  //only returns the date since $dateAsDate is of the Date type
- 
- var $dateAsText : Text
- GET PICTURE METADATA(vPicture;TIFF date time;$dateAsText)
-  //only returns the date but in XML format
- 
- C_INTEGER($urgency)
- GET PICTURE METADATA(vPicture;IPTC urgency;$urgency)
+ var $dateAsDate : Date
+ GET PICTURE METADATA(vPicture;TIFF date time;$dateAsDate)
+  //only returns the date since $dateAsDate is of the Date type
+ 
+ var $dateAsText : Text
+ GET PICTURE METADATA(vPicture;TIFF date time;$dateAsText)
+  //only returns the date but in XML format
+ 
+ C_INTEGER($urgency)
+ GET PICTURE METADATA(vPicture;IPTC urgency;$urgency)
 ```
 
 ## Example 3 
@@ -80,15 +80,15 @@ Use of variables
 Reception of tags with multiple values in arrays
 
 ```4d
- ARRAY TEXT($tTkeywords;0)
- GET PICTURE METADATA(vPicture;IPTC keywords;$tTkeywords)
+ ARRAY TEXT($tTkeywords;0)
+ GET PICTURE METADATA(vPicture;IPTC keywords;$tTkeywords)
 ```
 
 After execution of the command, arrTkeywords contains for example:   
 
 ```4d
- $arrTkeywords{1}="France"
- $arrTkeywords{2}="Europe"
+ $arrTkeywords{1}="France"
+ $arrTkeywords{2}="Europe"
 ```
 
 ## Example 4 
@@ -96,8 +96,8 @@ After execution of the command, arrTkeywords contains for example:
 Reception of tags with multiple values in a Text variable
 
 ```4d
- var $vTwords;0 : Text
- GET PICTURE METADATA(vPicture;IPTC keywords;$vTwords)
+ var $vTwords;0 : Text
+ GET PICTURE METADATA(vPicture;IPTC keywords;$vTwords)
 ```
 
 After execution of the command, *vTwords* contains for example "France;Europe".

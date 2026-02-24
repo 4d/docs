@@ -56,7 +56,7 @@ If the selection or list box does not contain a break row or if all the break ro
 This example collapses the first level of the break rows of the selection in the list box:
 
 ```4d
- LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
+ LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
 ```
 
 ## See also 

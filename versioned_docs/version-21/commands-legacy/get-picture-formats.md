@@ -50,9 +50,9 @@ For more information about picture codec IDs, refer to the *Pictures* section.
 You want to know the picture formats stored in a field for the current record:
 
 ```4d
- ARRAY TEXT($aTPictureFormats;0)
-  //Get all the formats saved
- GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
+ ARRAY TEXT($aTPictureFormats;0)
+  //Get all the formats saved
+ GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
 ## See also 

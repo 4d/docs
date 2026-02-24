@@ -73,7 +73,7 @@ After the call:
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the third field of the first table:
 
 ```4d
- GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
+ GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
 ## Example 2 
@@ -81,7 +81,7 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the field named \[Table3\]Field2:
 
 ```4d
- GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
+ GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
 ## See also 

@@ -58,20 +58,20 @@ Given the following hierarchical list:
 ![](../assets/en/commands/pict22420.en.png)
 
 ```4d
- $vlItemPos:=Find in list(hList;"P@";1;$arrPos)
-  //$vlItemPos equals 6
-  //$arrPos{1} equals 6 and $arrPos{2} equals 11
- $vlItemRef:=Find in list(hList;"P@";1;$arrRefs;*)
-  //$vlItemRef equals 7
-  //$arrRefs{1} equals 7 and $arrRefs{2} equals 18
- $vlItemPos:=Find in list(hList;"Date";1;$arrPos)
-  //$vlItemPos equals 9
-  //$arrPos{1} equals 9 and $arrPos{2} equals 16
- $vlItemRefFind in list(hList;"Date";1;$arrRefs;*)
-  //$vlItemRef equals 11
-  //$arrRefs{1} equals 11 and $arrRefs{2} equals 23
- $vlItemPos:=(hList;"Date";0;*)
-  //$vlItemPos equals 0
+ $vlItemPos:=Find in list(hList;"P@";1;$arrPos)
+  //$vlItemPos equals 6
+  //$arrPos{1} equals 6 and $arrPos{2} equals 11
+ $vlItemRef:=Find in list(hList;"P@";1;$arrRefs;*)
+  //$vlItemRef equals 7
+  //$arrRefs{1} equals 7 and $arrRefs{2} equals 18
+ $vlItemPos:=Find in list(hList;"Date";1;$arrPos)
+  //$vlItemPos equals 9
+  //$arrPos{1} equals 9 and $arrPos{2} equals 16
+ $vlItemRefFind in list(hList;"Date";1;$arrRefs;*)
+  //$vlItemRef equals 11
+  //$arrRefs{1} equals 11 and $arrRefs{2} equals 23
+ $vlItemPos:=(hList;"Date";0;*)
+  //$vlItemPos equals 0
 ```
 
 

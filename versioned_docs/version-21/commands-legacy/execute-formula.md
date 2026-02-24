@@ -57,8 +57,8 @@ For optimization purposes, each formula executed by **EXECUTE FORMULA** in compi
 The cache size is zero by default (no cache); it needs to be created or adjusted using the [SET DATABASE PARAMETER](set-database-parameter.md) command. For example:
 
 ```4d
- SET DATABASE PARAMETER(Number of formulas in cache;0) //no cache for formulas
- SET DATABASE PARAMETER(Number of formulas in cache;3) //up to three formulas can be cached for each process
+ SET DATABASE PARAMETER(Number of formulas in cache;0) //no cache for formulas
+ SET DATABASE PARAMETER(Number of formulas in cache;3) //up to three formulas can be cached for each process
 ```
 
 The **EXECUTE FORMULA** command uses the cache only when called from a compiled database or component.
@@ -68,7 +68,7 @@ The **EXECUTE FORMULA** command uses the cache only when called from a compiled 
 You want to execute a formula including calls to 4D commands and tables. Since these elements could potentially be renamed, you can ensure correct execution in future versions of your application by using the token syntax as shown here:
 
 ```4d
- EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
+ EXECUTE FORMULA("Year of:C25 ([Products:5]Creation_Date:2])+$add")
 ```
 
 ## See also 

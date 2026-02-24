@@ -34,7 +34,7 @@ displayed_sidebar: docs
 The following example is a one-line method called from a menu command. It displays the last form page:
 
 ```4d
- FORM LAST PAGE
+ FORM LAST PAGE
 ```
 
 ## See also 

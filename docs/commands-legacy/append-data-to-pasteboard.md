@@ -55,18 +55,18 @@ Using Pasteboard commands and BLOBs, you can build sophisticated Cut/Copy/Paste 
   // SET RECORD TO PASTEBOARD project method
   // SET RECORD TO PASTEBOARD ( Number )
   // SET RECORD TO PASTEBOARD ( Table number )
- 
+ 
  #DECLARE ($tabNum : Integer)
  var $vlField;$vlFieldType : Integer
  var $vpTable;$vpField : Pointer
  var $vsDocName : Text
  var $vtRecordData;$vtFieldData : Text
  var $vxRecordData : Blob
- 
+ 
   // Clear the pasteboard (it will stay empty if there is no current record)
  CLEAR PASTEBOARD
   // Get a pointer to the table whose number is passed as parameter
- "Server Import Services";Table($tablePtr);$form;$vxData)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // If there is a current record for that table
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
   //Initialize the text variable that will hold the text image of the record
@@ -132,21 +132,21 @@ You can paste this image of the record to another record, using the method GET R
   // GET RECORD FROM PASTEBOARD method
   // GET RECORD FROM PASTEBOARD( Number )
   // GET RECORD FROM PASTEBOARD( Table number )
- #DECLARE ($tabNum : Integer)
+ #DECLARE ($tabNum : Integer)
  var $vlField;$vlFieldType;$vlPosCR;$vlPosColon : Integer
  var $vpTable;$vpField : Pointer
  var $vsDocName : Text
  var $vxPasteboardData : Blob
  var $vtPasteboardData;$vtFieldData : Text
- 
+ 
   // Get a pointer to the table whose number is passed as parameter
- "Server Import Services";Table($tablePtr);$form;$vxData)
+ "Server Import Services";Table($tablePtr);$form;$vxData)
   // If there is a current record
  If((Record number($vpTable->)>=0)|(Is new record($vpTable->)))
     Case of
   // Does the pasteboard contain a full image record?
        :(Pasteboard data size("4Drc")>0)
-  //  If so, extract the pasteboard contents
+  //  If so, extract the pasteboard contents
           GET PASTEBOARD DATA("4Drc";$vxPasteboardData)
   // Name for scrap file in Temporary folder
           $vsDocName:=Temporary folder+"Scrap"+String(1+(Random%99))  

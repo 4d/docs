@@ -30,8 +30,8 @@ In *targetObj*, you can pass:
 You want to change the border color of pictures only:
 
 ```4d
- $oPicts:=WP Picture range($oSelection)
- WP SET ATTRIBUTES($oPicts;wk border color;"blue")
+ $oPicts:=WP Picture range($oSelection)
+ WP SET ATTRIBUTES($oPicts;wk border color;"blue")
 ```
 
 ## See also 

@@ -57,8 +57,8 @@ Given the following XML structure:
 After executing these instructions:  
 
 ```4d
- elementRef:=DOM Find XML element($root;"myElement")
- DOM GET XML CHILD NODES(elementRef;$typeArr;$textArr)
+ elementRef:=DOM Find XML element($root;"myElement")
+ DOM GET XML CHILD NODES(elementRef;$typeArr;$textArr)
 ```
 
 ... the $typeArr and $textArr arrays will contain the following values:  

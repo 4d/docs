@@ -44,16 +44,16 @@ The command returns a row range representing inserted row(s), or Null if nothing
 You want to insert two rows at the end of the *Invoice* table: 
 
 ```4d
- var $row : Object
- var $table;$row : Object
- var $rowNum : Integer
- 
- $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
- 
- If($table#Null)
-    $rowNum:=$table.rowCount+1 //add 1 to last row to designate where to insert rows
-    $row:=WP Table insert rows($table;$rowNum;2)
- End if
+ var $row : Object
+ var $table;$row : Object
+ var $rowNum : Integer
+ 
+ $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
+ 
+ If($table#Null)
+    $rowNum:=$table.rowCount+1 //add 1 to last row to designate where to insert rows
+    $row:=WP Table insert rows($table;$rowNum;2)
+ End if
 ```
 
 will insert the two new rows at the correct location:

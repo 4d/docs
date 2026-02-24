@@ -57,15 +57,15 @@ The returned object contains all view properties of the 4D Write Pro area, along
 In the 4D Write Pro area, you want to display the rulers only in page mode:
 
 ```4d
- var $viewProps : Object
- $viewProps:=WP Get view properties(*;"4DWPArea")
- If($viewProps.pageMode="page")
-    $viewProps.visibleHorizontalRuler:=True
-    $viewProps.visibleVerticalRuler:=True
- Else
-    $viewProps.visibleHorizontalRuler:=False
- End if
- WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
+ var $viewProps : Object
+ $viewProps:=WP Get view properties(*;"4DWPArea")
+ If($viewProps.pageMode="page")
+    $viewProps.visibleHorizontalRuler:=True
+    $viewProps.visibleVerticalRuler:=True
+ Else
+    $viewProps.visibleHorizontalRuler:=False
+ End if
+ WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
 ## See also 

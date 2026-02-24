@@ -65,21 +65,21 @@ In the following XML source:
 
 ```XML
 <Book>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </Book>
 ```
 
 If the following code is executed, with *vElemRef* containing the reference to the “Title” element:
 
 ```4d
- DOM SET XML ELEMENT VALUE(vElemRef;"The Loser")
+ DOM SET XML ELEMENT VALUE(vElemRef;"The Loser")
 ```
 
 We get:
 
 ```XML
 <Book>
-   <Title>The Loser</Title>
+   <Title>The Loser</Title>
 </Book>
 ```
 
@@ -89,36 +89,36 @@ In the following XML source:
 
 ```XML
 <Maths>
-   <Postulate>1+2=3</Postulate>
+   <Postulate>1+2=3</Postulate>
 </Maths>
 ```
 
 We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “&lt;” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
 
 ```4d
-  // Normal form
- DOM SET XML ELEMENT VALUE(vElemRef;"12<18")
+  // Normal form
+ DOM SET XML ELEMENT VALUE(vElemRef;"12<18")
 ```
 
 We get:
 
 ```XML
 <Maths>
-   <Postulate>12 "&lt;" 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   
   
 ```4d
-  // CDATA form
- DOM SET XML ELEMENT VALUE(vElemRef;"12<18";*)
+  // CDATA form
+ DOM SET XML ELEMENT VALUE(vElemRef;"12<18";*)
 ```
 
 We get:
 
 ```XML
 <Maths>
-   <Postulate><![CDATA[12 < 18]]></Postulate>
+   <Postulate><![CDATA[12 < 18]]></Postulate>
 </Maths>
 ```
 

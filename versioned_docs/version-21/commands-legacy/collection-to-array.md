@@ -43,13 +43,13 @@ In all cases, 4D converts the collection elements or values according to the typ
 You want to copy a collection of strings in a text array:
 
 ```4d
- var $fruits : Collection
- $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
- ARRAY TEXT($artFruits;0)
- COLLECTION TO ARRAY($fruits;$artFruits)
-  //$artFruits{1}="Orange"
-  //$artFruits{2}="Banana"
-  //...
+ var $fruits : Collection
+ $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
+ ARRAY TEXT($artFruits;0)
+ COLLECTION TO ARRAY($fruits;$artFruits)
+  //$artFruits{1}="Orange"
+  //$artFruits{2}="Banana"
+  //...
 ```
 
 ## Example 2 
@@ -57,20 +57,20 @@ You want to copy a collection of strings in a text array:
 You want to copy different property values from a collection of objects in different arrays:
 
 ```4d
- var $col : Collection
- $col:=New collection
- ARRAY TEXT($city;0)
- ARRAY LONGINT($zipCode;0)
- $col.push(New object("name";"Cleveland";"zc";35049))
- $col.push(New object("name";"Blountsville";"zc";35031))
- $col.push(New object("name";"Adger";"zc";35006))
- $col.push(New object("name";"Clanton";"zc";35046))
- $col.push(New object("name";"Shelby";"zc";35143))
- 
- COLLECTION TO ARRAY($col;$city;"name";$zipCode;"zc")
-  //$city{1}="Cleveland", $zipCode{1}=35049
-  //$city{2}="Blountsville", $zipCode{2}=35031
-  //...
+ var $col : Collection
+ $col:=New collection
+ ARRAY TEXT($city;0)
+ ARRAY LONGINT($zipCode;0)
+ $col.push(New object("name";"Cleveland";"zc";35049))
+ $col.push(New object("name";"Blountsville";"zc";35031))
+ $col.push(New object("name";"Adger";"zc";35006))
+ $col.push(New object("name";"Clanton";"zc";35046))
+ $col.push(New object("name";"Shelby";"zc";35143))
+ 
+ COLLECTION TO ARRAY($col;$city;"name";$zipCode;"zc")
+  //$city{1}="Cleveland", $zipCode{1}=35049
+  //$city{2}="Blountsville", $zipCode{2}=35031
+  //...
 ```
 
 ## See also 

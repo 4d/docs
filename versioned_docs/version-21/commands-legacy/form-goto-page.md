@@ -53,7 +53,7 @@ Page commands can be used with input forms or with forms displayed in dialogs. O
 The following example is an object method for a button. It displays a specific page, page 3: 
 
 ```4d
- FORM GOTO PAGE(3)
+ FORM GOTO PAGE(3)
 ```
 
 ## See also 

@@ -40,9 +40,9 @@ On the other hand, the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) and [
 The following code clears and then appends data to the pasteboard:
 
 ```4d
- CLEAR PASTEBOARD // Make sure the pasteboard is emptied
- APPEND DATA TO PASTEBOARD("com.4d.private.picture.gif";$vxSomeData) // Add some gif pictures
- APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Add some RTF text
+ CLEAR PASTEBOARD // Make sure the pasteboard is emptied
+ APPEND DATA TO PASTEBOARD("com.4d.private.picture.gif";$vxSomeData) // Add some gif pictures
+ APPEND DATA TO PASTEBOARD("com.4d.private.text.rtf";$vxSylkData) // Add some RTF text
 ```
 
 ## Example 2 

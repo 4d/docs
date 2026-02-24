@@ -41,9 +41,9 @@ For more information about sections, please refer to the *Handling headers, foot
 You want to change an attribute for the last section of the 4D Write Pro area:
 
 ```4d
- var $colSections : Collection
- $colSections:=WP Get sections(wpDoc)
- WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
+ var $colSections : Collection
+ $colSections:=WP Get sections(wpDoc)
+ WP SET ATTRIBUTES($colSections[$colSections.length-1];wk column count;3)
 ```
 
 ## See also 

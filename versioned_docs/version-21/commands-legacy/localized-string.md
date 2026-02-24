@@ -35,16 +35,16 @@ Here is an extract from an .xlf file:
 ```XML
 <file source-language="en-US" target-language="fr-FR">
 [...]
-   <trans-unit resname="Show on disk">
-      <source>Show on disk</source>
-      <target>Montrer sur le disque</target>
-   </trans-unit>
+   <trans-unit resname="Show on disk">
+      <source>Show on disk</source>
+      <target>Montrer sur le disque</target>
+   </trans-unit>
 ```
 
 After executing the following statement:
 
 ```4d
- $FRvalue:=Localized string("Show on disk")
+ $FRvalue:=Localized string("Show on disk")
 ```
 
 ... if the current language is French, $FRvalue contains “Montrer sur le disque”.

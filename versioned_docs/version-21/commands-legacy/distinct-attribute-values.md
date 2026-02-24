@@ -52,16 +52,16 @@ Your database contains a \[Customer\]full\_Data object field with 15 records:
 If you execute this code:
 
 ```4d
- ARRAY LONGINT(aLAges;0)
- ARRAY LONGINT(aLAgesChild;0)
- ARRAY LONGINT(aLChildNum;0)
- ALL RECORDS([Customer])
-  //get the distinct values for the "age" attribute
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
-  //get the distinct values for the "age" attribute within the "Children" array
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
-  //get the distinct numbers of children by using the length virtual property
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
+ ARRAY LONGINT(aLAges;0)
+ ARRAY LONGINT(aLAgesChild;0)
+ ARRAY LONGINT(aLChildNum;0)
+ ALL RECORDS([Customer])
+  //get the distinct values for the "age" attribute
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
+  //get the distinct values for the "age" attribute within the "Children" array
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
+  //get the distinct numbers of children by using the length virtual property
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
 ```
 
 The *aLAges* array receives the following elements:

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 The returned object contains a "records" property which is a collection of objects:
 
 ```RAW
-{    "records": [        description object,        (…)    ]}
+{    "records": [        description object,        (…)    ]}
 ```
 
 Each "description object" collection element identifies a locked record in the specified table. It contains different properties depending on the origin of the lock (4D process or REST API).
@@ -54,8 +54,8 @@ The *contextAttributes* object is made up of the following properties:
 (\*) *Only returned in binary databases.* You can get the 4D user name from the value of *user4d\_id* by using the following code:  
 
 ```4d
- GET USER LIST($arrNames;$arrIDs)
- $User4DName:=Find in array($arrIDs;user4d_id)
+ GET USER LIST($arrNames;$arrIDs)
+ $User4DName:=Find in array($arrIDs;user4d_id)
 ```
 
 * If the record was locked by the *$lock REST request* (at session level):
@@ -72,19 +72,19 @@ The *contextAttributes* object is made up of the following properties:
 You execute the following code:
 
 ```4d
- $vOlocked :=Locked records info([Table])
+ $vOlocked :=Locked records info([Table])
 ```
 
 If two records were locked in the \[Table\] table, the following object is returned in $vOlocked:
 
 ```RAW
-{    "records": [        {            "contextID": "A9BB84C0E57349E089FA44E04C0F2F25",            "contextAttributes": {                "task_id": 8,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 1        },        {            "contextID": "8916338D1B8A4D86B857D92F593CCAC3",            "contextAttributes": {                "task_id": 9,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 2        }    ]}
+{    "records": [        {            "contextID": "A9BB84C0E57349E089FA44E04C0F2F25",            "contextAttributes": {                "task_id": 8,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 1        },        {            "contextID": "8916338D1B8A4D86B857D92F593CCAC3",            "contextAttributes": {                "task_id": 9,                "user_name": "roland",                "user4d_id": 1,                "host_name": "iMac de roland",                "task_name": "P_RandomLock",                "client_version": -1342106592            },            "recordNumber": 2        }    ]}
 ```
 
 If the code is executed on a 4D Server and the locking is caused by a remote client machine, the following object is returned in $vOlocked:
 
 ```json
-{    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
+{    "records": [        {            "contextID": "B0EC087DC2FA704496C0EA15DC011D1C",            "contextAttributes": {                "task_id": 2,                 "user_name": "achim",                 "user4d_id": 1,                "host_name": "achim-pcwin",                "task_name": "P_RandomLock",                 "is_remote_context": true,                "client_uid": "0696E66F6CD731468E6XXX581A87554A",                "client_version": -268364752            },            "recordNumber": 1        }    ]}
 ```
 
 ## See also 

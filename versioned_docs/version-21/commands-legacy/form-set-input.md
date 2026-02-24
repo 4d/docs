@@ -75,8 +75,8 @@ The optional *\** parameter is used in conjunction with the form properties you 
 The following example shows a typical use of FORM SET INPUT: 
 
 ```4d
- FORM SET INPUT([Companies];"New Comp") // Form for adding new companies
- ADD RECORD([Companies]) // Add a new company
+ FORM SET INPUT([Companies];"New Comp") // Form for adding new companies
+ ADD RECORD([Companies]) // Add a new company
 ```
 
 ## Example 2 
@@ -84,15 +84,15 @@ The following example shows a typical use of FORM SET INPUT:
 In an invoicing database managing several companies, the creation of an invoice must be carried out using the corresponding user form: 
 
 ```4d
- Case of
-    :(company="4D SAS")
-       FORM SET INPUT([Invoices];"Input";"4D_SAS")
-    :(company="4D Inc")
-       FORM SET INPUT([Invoices];"Input";"4D_Inc")
-    :(company="Acme")
-       FORM SET INPUT([Invoices];"Input";"ACME")
- End case
- ADD RECORD([Factures])
+ Case of
+    :(company="4D SAS")
+       FORM SET INPUT([Invoices];"Input";"4D_SAS")
+    :(company="4D Inc")
+       FORM SET INPUT([Invoices];"Input";"4D_Inc")
+    :(company="Acme")
+       FORM SET INPUT([Invoices];"Input";"ACME")
+ End case
+ ADD RECORD([Factures])
 ```
 
 ## Example 3 
@@ -100,8 +100,8 @@ In an invoicing database managing several companies, the creation of an invoice 
 The following example uses a .json file describing a form to enter the records in an employee list: 
 
 ```4d
- FORM SET INPUT([Personnel];"/RESOURCES/PersonnelForm.json")
- ADD RECORD([Personnel])
+ FORM SET INPUT([Personnel];"/RESOURCES/PersonnelForm.json")
+ ADD RECORD([Personnel])
 ```
 
 which displays:

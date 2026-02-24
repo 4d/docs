@@ -81,13 +81,13 @@ On the server, the `Process activity` command returns an additional "session" pr
 You want to get the collection of all user sessions:
 
 ```4d
-  //To be executed on the server
- 
- var $o : Object
- var $i : Integer
+  //To be executed on the server
+ 
+ var $o : Object
+ var $i : Integer
  var $processName;$userName : Text
 
- 
+ 
  $o:=Process activity //Get process & session info
  For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
     $processName:=$o.processes[$i].name

@@ -42,12 +42,12 @@ The optional *\** parameters can be used to indicate whether the *posixPath* par
 Examples under Mac OS:
 
 ```4d
- $path:=Convert path POSIX to system("/Volumes/machd/file 2.txt")
-  //returns "machd:file 2.txt"
- $path:=Convert path POSIX to system("/Volumes/machd/file%202.txt";*)
-  //returns "machd:file 2.txt"
- $path:=Convert path POSIX to system("/file 2.txt")
-  //returns "machd:file 2.txt" if machd is the startup disk
+ $path:=Convert path POSIX to system("/Volumes/machd/file 2.txt")
+  //returns "machd:file 2.txt"
+ $path:=Convert path POSIX to system("/Volumes/machd/file%202.txt";*)
+  //returns "machd:file 2.txt"
+ $path:=Convert path POSIX to system("/file 2.txt")
+  //returns "machd:file 2.txt" if machd is the startup disk
 ```
 
 ## Example 2 
@@ -55,10 +55,10 @@ Examples under Mac OS:
 Examples under Windows:
 
 ```4d
- $path:=Convert path POSIX to system("c:/docs/file 2.txt")
-  //returns "c:\\docs\\file 2.txt"
- $path:=Convert path POSIX to system("c:/docs/file%202.txt";*)
-  //returns "c:\\docs\\file 2.txt"
+ $path:=Convert path POSIX to system("c:/docs/file 2.txt")
+  //returns "c:\\docs\\file 2.txt"
+ $path:=Convert path POSIX to system("c:/docs/file%202.txt";*)
+  //returns "c:\\docs\\file 2.txt"
 ```
 
 ## See also 

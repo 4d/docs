@@ -36,18 +36,18 @@ These keywords work as follows:
 * You can write several SQL statements on the same line or on different lines by separating them with a semi-colon “;”. For example, you can write:
 
 ```4d
- Begin SQL
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
- End SQL
+ Begin SQL
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
+ End SQL
 ```
 
 or:
 
 ```4d
- Begin SQL
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
- End SQL
+ Begin SQL
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
+ End SQL
 ```
 
 Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain cases, it may be preferable to use more than one line.

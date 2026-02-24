@@ -45,8 +45,8 @@ You want to select a range of 12 characters starting from the beginning of the 4
 If you execute:
 
 ```4d
- $range2:=WP Text range([SAMPLE]WP;wk start text;12)
- WP SELECT(*;"WParea";$range2)
+ $range2:=WP Text range([SAMPLE]WP;wk start text;12)
+ WP SELECT(*;"WParea";$range2)
 ```
 
 ...the result is:
@@ -58,11 +58,11 @@ If you execute:
 You want to create a range from a section:
 
 ```4d
- var $wpRange : Object
- $wpRange:=WP Text range(wpSection;1;11) //return a range made of the first 10 characters of the section
-  //if section starts at 100 in the document:
-  //$wpRange.start = 100
-  //$wpRange.end = 111
+ var $wpRange : Object
+ $wpRange:=WP Text range(wpSection;1;11) //return a range made of the first 10 characters of the section
+  //if section starts at 100 in the document:
+  //$wpRange.start = 100
+  //$wpRange.end = 111
 ```
 
 ## See also 

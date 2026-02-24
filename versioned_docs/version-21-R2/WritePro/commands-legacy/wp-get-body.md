@@ -31,16 +31,16 @@ This element can be passed to the:
 You want to copy the body of a 4D Write Pro document to another 4D Write Pro document:
 
 ```4d
- var $bodySource;$rangeSource;$tempoc;$bodyTarget;$rangeTarget : Object
- 
- $bodySource:=WP Get body([TEMPLATES]WPtemplate)
- $rangeSource:=WP Text range($bodySource;wk start text;wk end text)
- $tempoc:=WP New($rangeSource)
- 
- $bodyTarget:=WP Get body([Docs]MyWPDoc)
- $rangeTarget:=WP Text range($bodyTarget;wk start text;wk end text)
- 
- WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
+ var $bodySource;$rangeSource;$tempoc;$bodyTarget;$rangeTarget : Object
+ 
+ $bodySource:=WP Get body([TEMPLATES]WPtemplate)
+ $rangeSource:=WP Text range($bodySource;wk start text;wk end text)
+ $tempoc:=WP New($rangeSource)
+ 
+ $bodyTarget:=WP Get body([Docs]MyWPDoc)
+ $rangeTarget:=WP Text range($bodyTarget;wk start text;wk end text)
+ 
+ WP INSERT DOCUMENT($rangeTarget;$tempoc;wk replace)
 ```
 
 ## See also 

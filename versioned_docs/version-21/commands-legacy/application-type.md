@@ -46,9 +46,9 @@ displayed_sidebar: docs
 Somewhere in your code, other than in the *On Server Startup Database Method*, you need to check if you are running 4D Server. You can write:
 
 ```4d
- If(Application type=4D Server)
-  //Perform appropriate actions
- End if
+ If(Application type=4D Server)
+  //Perform appropriate actions
+ End if
 ```
 
 ## See also 

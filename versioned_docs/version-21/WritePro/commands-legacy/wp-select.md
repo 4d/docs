@@ -54,14 +54,14 @@ In *startRange* and *endRange*, pass values corresponding to the position of the
 The following code:
 
 ```4d
- $range:=WP Text range([SAMPLE]WP;wk start text;12)
- WP SELECT(*;"WParea";$range)
+ $range:=WP Text range([SAMPLE]WP;wk start text;12)
+ WP SELECT(*;"WParea";$range)
 ```
 
 ... will have the same result as:
 
 ```4d
- WP SELECT(*;"WParea";wk start text;12)
+ WP SELECT(*;"WParea";wk start text;12)
 ```
 
 ## See also 

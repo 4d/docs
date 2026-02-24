@@ -73,9 +73,9 @@ The following table lists the commands that display the progress meter:
 The following example turns off the progress meter before doing a sort, and then turns it back on after completing the sort:
 
 ```4d
- MESSAGES OFF
- ORDER BY([Addresses];[Addresses]ZIP;>;[Addresses]Name2;>)
- MESSAGES ON
+ MESSAGES OFF
+ ORDER BY([Addresses];[Addresses]ZIP;>;[Addresses]Name2;>)
+ MESSAGES ON
 ```
 
 ## See also 

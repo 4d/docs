@@ -39,23 +39,23 @@ This command is useful under macOS, where the operating system dynamically alloc
 This project method can be used to address the same serial port (without protocol), regardless of the number that has been assigned to it: 
 
 ```4d
- ARRAY TEXT($arrPortNames;0)
- ARRAY LONGINT($arrPortNums;0)
- var $vPortNum;$vFinalPortNum : Integer
- 
-  //Find out the current numbers of the serial ports
- GET SERIAL PORT MAPPING($arrPortNums;$arrPortNames)
- $vPortNum:=Find in array($arrPortNames;vPortName)
-  // vPortName contains the name of the port to be used; it may come from a dialog box,
-  // a value stored in a field, etc.
- If(arrPortNums{$vPortNum}=0)
-    $vFinalPortNum:=0 //special case under macOS
- Else
-    $vFinalPortNum:=arrPortNums{$vPortNum}+100
- End if
- SET CHANNEL($vFinalPortNum;params) //params contains the communication parameters
- ... //Carry out the desired operations
- SET CHANNEL(11) //Closing of port
+ ARRAY TEXT($arrPortNames;0)
+ ARRAY LONGINT($arrPortNums;0)
+ var $vPortNum;$vFinalPortNum : Integer
+ 
+  //Find out the current numbers of the serial ports
+ GET SERIAL PORT MAPPING($arrPortNums;$arrPortNames)
+ $vPortNum:=Find in array($arrPortNames;vPortName)
+  // vPortName contains the name of the port to be used; it may come from a dialog box,
+  // a value stored in a field, etc.
+ If(arrPortNums{$vPortNum}=0)
+    $vFinalPortNum:=0 //special case under macOS
+ Else
+    $vFinalPortNum:=arrPortNums{$vPortNum}+100
+ End if
+ SET CHANNEL($vFinalPortNum;params) //params contains the communication parameters
+ ... //Carry out the desired operations
+ SET CHANNEL(11) //Closing of port
 ```
 
 ## See also 

@@ -45,8 +45,8 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 You want to load a picture depending on the form current scheme:
 
 ```4d
- $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
- READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
+ $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
+ READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
 ```
 
 **Note:** It is recommended to use *css* to adapt form objects design to the current scheme. 

@@ -45,13 +45,13 @@ The OK button has the [default button](../FormObjects/properties_Appearance.md#d
 The line:
 
 ```4d
- CONFIRM("WARNING: You will not be able to revert this operation.")
- If(OK=1)
-    ALL RECORDS([Old Stuff])
-    DELETE SELECTION([Old Stuff])
- Else
-    ALERT("Operation canceled.")
- End if
+ CONFIRM("WARNING: You will not be able to revert this operation.")
+ If(OK=1)
+    ALL RECORDS([Old Stuff])
+    DELETE SELECTION([Old Stuff])
+ Else
+    ALERT("Operation canceled.")
+ End if
 ```
 
 will display the confirm dialog box (on Windows) shown here:
@@ -63,7 +63,7 @@ will display the confirm dialog box (on Windows) shown here:
 The line:
 
 ```4d
- CONFIRM("Do you really want to close this account?";"Yes";"No")
+ CONFIRM("Do you really want to close this account?";"Yes";"No")
 ```
 
 will display the confirm dialog box (on Windows) shown here:
@@ -75,11 +75,11 @@ will display the confirm dialog box (on Windows) shown here:
 You are writing a 4D application for the international market. You wrote your interface strings along with their target language translations in XLIFF files. In doing so, the code:
 
 ```4d
- var $title;$yes;$no : Text
- $title:=Localized string("add_Memo")
- $yes:=Localized string("yes")
- $no:=Localized string("no")
- CONFIRM($title;$yes;$no)
+ var $title;$yes;$no : Text
+ $title:=Localized string("add_Memo")
+ $yes:=Localized string("yes")
+ $no:=Localized string("no")
+ CONFIRM($title;$yes;$no)
 ```
 
 could display the French confirm dialog box (on Windows) shown here:
@@ -93,8 +93,8 @@ could display the French confirm dialog box (on Windows) shown here:
 The line:
 
 ```4d
- CONFIRM("WARNING: If your pursue this operation, some records will be "+"irremediably affected."+\
- Char(13)+"What do you want to do?";"Do NOT continue";"Continue")
+ CONFIRM("WARNING: If your pursue this operation, some records will be "+"irremediably affected."+\
+ Char(13)+"What do you want to do?";"Do NOT continue";"Continue")
 ```
 
 will display the confirm dialog box (on Windows) shown here:

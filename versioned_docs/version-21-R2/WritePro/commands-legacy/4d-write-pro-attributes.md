@@ -17,12 +17,12 @@ You can also handle 4D Write Pro area attributes through 4D object notation or g
 
 * object notation - for example, the following statements are similar:  
 ```4d  
- $bcol:=$range[wk background color]  
- $bcol:=$range.backgroundColor //same results  
+ $bcol:=$range[wk background color]  
+ $bcol:=$range.backgroundColor //same results  
 ```
 * [OB SET](../../commands-legacy/ob-set.md) and [OB Get](../../commands-legacy/ob-get.md) commands, for example:  
 ```4d  
- $bcol:=OB Get($range;wk background color)  
+ $bcol:=OB Get($range;wk background color)  
 ```  
 :::
 

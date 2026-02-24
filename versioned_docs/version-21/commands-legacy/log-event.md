@@ -71,7 +71,7 @@ The *importance* parameter is only used with *outputType* `Into Windows log even
 If you want to have keep track of when your database is opened under Windows, you could write the following line of code in the [On Startup database method](on-startup-database-method.md):
 
 ```4d
- LOG EVENT(Into Windows log events;"The Invoice database was opened.")
+ LOG EVENT(Into Windows log events;"The Invoice database was opened.")
 ```
 
 Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.

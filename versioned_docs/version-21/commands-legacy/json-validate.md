@@ -94,19 +94,19 @@ The following errors may be returned :
 You want to validate a JSON object with a schema and get the list of validation errors, if any, and store error lines and messages in a text variable:
 
 ```4d
- var $oResult : Object
- $oResult:=JSON Validate(JSON Parse(myJson;*);mySchema)
- If($oResult.success) //validation successful
-    ...
- Else //validation failed
-    var $vLNbErr : Integer
-    var $vTerrLine : Text
-    $vLNbErr:=$oResult.errors.length ///get the number of error(s)
-    ALERT(String($vLNbErr)+" validation error(s) found.")
-    For($i;0;$vLNbErr)
-       $vTerrLine:=$vTerrLine+$oResult.errors[$i].message+" "+String($oResult.errors[$i].line)+Carriage return
-    End for
- End if
+ var $oResult : Object
+ $oResult:=JSON Validate(JSON Parse(myJson;*);mySchema)
+ If($oResult.success) //validation successful
+    ...
+ Else //validation failed
+    var $vLNbErr : Integer
+    var $vTerrLine : Text
+    $vLNbErr:=$oResult.errors.length ///get the number of error(s)
+    ALERT(String($vLNbErr)+" validation error(s) found.")
+    For($i;0;$vLNbErr)
+       $vTerrLine:=$vTerrLine+$oResult.errors[$i].message+" "+String($oResult.errors[$i].line)+Carriage return
+    End for
+ End if
 ```
 
 **Note:** This example requires that object notation is activated (see the *Compatibility page*). 

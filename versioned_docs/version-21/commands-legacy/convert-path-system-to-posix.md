@@ -42,18 +42,18 @@ The optional *\** parameter can be used to specify the encoding of the POSIX pat
 Examples under macOS
 
 ```4d
- $path:=Convert path system to POSIX("machd:file 2.txt")
-  //machd is the startup disk
-  //returns "/file 2.txt"
- $path:=Convert path system to POSIX("disk2:file 2.txt")
-  //disk2 is an additional disk (not the startup)
-  //returns "/Volumes/disk2/file 2.txt"
- $path:=Convert path system to POSIX("machd:file 2.txt";*)
-  //returns "/file%202.txt"
- $path:=Convert path system to POSIX(":resources:images") //relative path
-  //returns "/User/mark/Documents/videodatabase/resources/images"
- $path:=Convert path system to POSIX("resources:images") //absolute path
-  //returns "/resources/images"
+ $path:=Convert path system to POSIX("machd:file 2.txt")
+  //machd is the startup disk
+  //returns "/file 2.txt"
+ $path:=Convert path system to POSIX("disk2:file 2.txt")
+  //disk2 is an additional disk (not the startup)
+  //returns "/Volumes/disk2/file 2.txt"
+ $path:=Convert path system to POSIX("machd:file 2.txt";*)
+  //returns "/file%202.txt"
+ $path:=Convert path system to POSIX(":resources:images") //relative path
+  //returns "/User/mark/Documents/videodatabase/resources/images"
+ $path:=Convert path system to POSIX("resources:images") //absolute path
+  //returns "/resources/images"
 ```
 
 ## Example 2 
@@ -61,10 +61,10 @@ Examples under macOS
 Example under Windows
 
 ```4d
- $path:=Convert path system to POSIX("c:\docs\file 2.txt")
-  //returns "c:/docs/file 2.txt"
- $path:=Convert path system to POSIX("\\srv\tempo\file.txt")
-  //returns "//srv/tempo/file.txt"
+ $path:=Convert path system to POSIX("c:\docs\file 2.txt")
+  //returns "c:/docs/file 2.txt"
+ $path:=Convert path system to POSIX("\\srv\tempo\file.txt")
+  //returns "//srv/tempo/file.txt"
 ```
 
 ## See also 

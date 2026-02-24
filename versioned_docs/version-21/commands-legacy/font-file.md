@@ -46,15 +46,15 @@ The optional *fontStyle* parameter allows to define a style variation to get. Yo
 You want to make sure the font used in a text area is available on the user system for a correct display:
 
 ```4d
- var $fontName : Text
- var $fontStyle : Integer
- var $fontFile : Object
- $fontName:=OBJECT Get font(*;"vText")
- $fontStyle:=OBJECT Get font style(*;"vText")
- $fontFile:=Font file($fontName;$fontStyle)
- If($fontFile=Null)
-    ALERT("Defined font is not available, please install: "+$fontName)
- End if
+ var $fontName : Text
+ var $fontStyle : Integer
+ var $fontFile : Object
+ $fontName:=OBJECT Get font(*;"vText")
+ $fontStyle:=OBJECT Get font style(*;"vText")
+ $fontFile:=Font file($fontName;$fontStyle)
+ If($fontFile=Null)
+    ALERT("Defined font is not available, please install: "+$fontName)
+ End if
 ```
 
 ## See also 

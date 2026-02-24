@@ -48,15 +48,15 @@ It is fast and particularly useful to avoid creating double entries during data 
 In an audio CD database, during data entry let’s assume that you want to verify the singer’s name to see if it already exists in the database. Because homonyms can exist, you don’t want the \[Singer\]Name field to be unique. Therefore, in the input form, you can write the following code in the \[Singer\]Name field’s object method:
 
 ```4d
- If(FORM Event.code=On Data Change)
-    $RecNum:=Find in field([Singer]Name;[Singer]Name)
-    If($RecNum #-1) // If this name has already been entered
-       CONFIRM("A singer with the same already exists. Do you want to see the record?";"Yes";"No")
-       If(OK=1)
-          GOTO RECORD([Singer];$RecNum)
-       End if
-    End if
- End if
+ If(FORM Event.code=On Data Change)
+    $RecNum:=Find in field([Singer]Name;[Singer]Name)
+    If($RecNum #-1) // If this name has already been entered
+       CONFIRM("A singer with the same already exists. Do you want to see the record?";"Yes";"No")
+       If(OK=1)
+          GOTO RECORD([Singer];$RecNum)
+       End if
+    End if
+ End if
 ```
 
 ## Example 2 
@@ -64,13 +64,13 @@ In an audio CD database, during data entry let’s assume that you want to verif
 Here is an example that lets you verify the existence of a value:
 
 ```4d
- var $id;$1 : Integer
- $id:=$1
- If(Find in field([MyTable]MyID;$id)>=0)
-    $0:=True
- Else
-    $0:=False
- End if
+ var $id;$1 : Integer
+ $id:=$1
+ If(Find in field([MyTable]MyID;$id)>=0)
+    $0:=True
+ Else
+    $0:=False
+ End if
 ```
 
 Note the >= that lets you cover all cases. In fact, the function returns a record number and the first record is numbered 0.

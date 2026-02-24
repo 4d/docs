@@ -44,20 +44,20 @@ When called inside a formula, **Copy parameters** returns the parameters passed 
 Calling a different function depending on the first parameter and passing other parameters to this function:
 
 ```4d
- Function selectTask($task Text)
- Case of
-    :($task="Task1")
-       This.task1(Copy parameters(2))
-    :($task="Task2")
-       This.task2(Copy parameters(2))
- End case
+ Function selectTask($task Text)
+ Case of
+    :($task="Task1")
+       This.task1(Copy parameters(2))
+    :($task="Task2")
+       This.task2(Copy parameters(2))
+ End case
 ```
 
 Or, calling another function on another object with **apply()** and pass the parameters:
 
 ```4d
- Function doSomething($param Text;$extraParameters Variant)
- This.delegate.doSomething.apply(This.delegate;Copy parameters)
+ Function doSomething($param Text;$extraParameters Variant)
+ This.delegate.doSomething.apply(This.delegate;Copy parameters)
 ```
 
 ## Example 2 
@@ -65,24 +65,24 @@ Or, calling another function on another object with **apply()** and pass the par
 Since the command returns a collection, it can be used with **.join()** to build for example a html list:
 
 ```4d
-  // Class
- 
- Function list($typeText)->Text
-  //type of list is "u" or "o"
- var $value : Collection
- $value:=Copy parameters(2)
- $html:="<"+$type+"l>
+  // Class
+ 
+ Function list($typeText)->Text
+  //type of list is "u" or "o"
+ var $value : Collection
+ $value:=Copy parameters(2)
+ $html:="<"+$type+"l>
 * "  
- $html+=$value.join("
+ $html+=$value.join("
 * ")  
- $html+="
+ $html+="
 "
- return$html
- 
-  // Method
- 
- $htmlList:=$c.list("u";"Alpha";"Bravo";"Charlie")
-  // $htmlList = 
+ return$html
+ 
+  // Method
+ 
+ $htmlList:=$c.list("u";"Alpha";"Bravo";"Charlie")
+  // $htmlList = 
 * Alpha
 * Bravo
 * Charlie

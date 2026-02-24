@@ -66,32 +66,32 @@ A “Certificate request” form contains the six fields necessary for a standar
 Here is the **Generate** button method:
 
 ```4d
-  // bGenerate Object Method
- 
- var $vbprivateKey;$vbcertifRequest : Blob
- var $tableNum : Integer
- ARRAY LONGINT($tLCodes;6)
- ARRAY STRING(80;$tSInfos;6)
- 
- $tableNum:=Table(Current form table)
- For($i;1;6)
-    $tSInfos{$i}:=Field($tableNum;$i)->
-    $tLCodes{$i}:=$i+12
- End for
- If(Find in array($tSInfos;"")#-1)
-    ALERT("All fields should be filled.")
- Else
-    ALERT("Select your private key.")
-    $vhDocRef:=Open document("")
-    If(OK=1)
-       CLOSE DOCUMENT($vhDocRef)
-       DOCUMENT TO BLOB(Document;$vbprivateKey)
-       GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
-       BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
-    Else
-       ALERT("Invalid private key.")
-    End if
- End if
+  // bGenerate Object Method
+ 
+ var $vbprivateKey;$vbcertifRequest : Blob
+ var $tableNum : Integer
+ ARRAY LONGINT($tLCodes;6)
+ ARRAY STRING(80;$tSInfos;6)
+ 
+ $tableNum:=Table(Current form table)
+ For($i;1;6)
+    $tSInfos{$i}:=Field($tableNum;$i)->
+    $tLCodes{$i}:=$i+12
+ End for
+ If(Find in array($tSInfos;"")#-1)
+    ALERT("All fields should be filled.")
+ Else
+    ALERT("Select your private key.")
+    $vhDocRef:=Open document("")
+    If(OK=1)
+       CLOSE DOCUMENT($vhDocRef)
+       DOCUMENT TO BLOB(Document;$vbprivateKey)
+       GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
+       BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
+    Else
+       ALERT("Invalid private key.")
+    End if
+ End if
 ```
 
 ## See also 

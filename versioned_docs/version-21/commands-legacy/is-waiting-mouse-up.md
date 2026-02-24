@@ -36,27 +36,27 @@ displayed_sidebar: docs
 The following code can be used to manage a mouse tracking feature in a picture object:
 
 ```4d
-  //Object method of the picture object
- var vLtracking : Integer //flag for tracking mode
- Case of
-    :(Form event code=On Clicked)
-       If(Is waiting mouse up) //the mouse button is still not released
-          vLtracking:=1 //we are in tracking mode
-  //... Write here initialization code for the tracking feature
-       End if
-    :(Form event code=On Mouse Move)
-       If(vLtracking=1) //we are in tracking mode
-          If(Not(Is waiting mouse up)) //we'll never have the mouse up
-             vLtracking:=0 //stop the tracking mode
-  //... Write here the code for handling or canceling user tracking action
-          Else //the object is still waiting for a mouse up
-  //... Write here the code for the tracking
-          End if
-       End if
-    :(Form event code=On Mouse Up) //the mouse button was released
-  //... Write here the code to complete the tracking action
-       vLtracking:=0 //end of the tracking mode
- End case
+  //Object method of the picture object
+ var vLtracking : Integer //flag for tracking mode
+ Case of
+    :(Form event code=On Clicked)
+       If(Is waiting mouse up) //the mouse button is still not released
+          vLtracking:=1 //we are in tracking mode
+  //... Write here initialization code for the tracking feature
+       End if
+    :(Form event code=On Mouse Move)
+       If(vLtracking=1) //we are in tracking mode
+          If(Not(Is waiting mouse up)) //we'll never have the mouse up
+             vLtracking:=0 //stop the tracking mode
+  //... Write here the code for handling or canceling user tracking action
+          Else //the object is still waiting for a mouse up
+  //... Write here the code for the tracking
+          End if
+       End if
+    :(Form event code=On Mouse Up) //the mouse button was released
+  //... Write here the code to complete the tracking action
+       vLtracking:=0 //end of the tracking mode
+ End case
 ```
 
 ## See also 

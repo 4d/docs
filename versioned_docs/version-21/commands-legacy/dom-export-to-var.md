@@ -55,8 +55,8 @@ You can control the XML line ending and BOM management using the [XML SET OPTION
 This example stores the tree vElemRef in a text variable: 
 
 ```4d
- var vtMyText : Text
- DOM EXPORT TO VAR(vElemRef;vtMyText)
+ var vtMyText : Text
+ DOM EXPORT TO VAR(vElemRef;vtMyText)
 ```
 
 ## System variables and sets 

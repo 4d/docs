@@ -103,13 +103,13 @@ Possible errors include:
 You want to export the database structure file in an "Export" folder with the default settings:
 
 ```4d
- var $result : Object
- $result:=Export structure file("Export")
- If($result.success=True)
-    ALERT("Export successful")
- Else
-    ALERT("Error during export")
- End if
+ var $result : Object
+ $result:=Export structure file("Export")
+ If($result.success=True)
+    ALERT("Export successful")
+ Else
+    ALERT("Error during export")
+ End if
 ```
 
 ## Example 2 
@@ -117,12 +117,12 @@ You want to export the database structure file in an "Export" folder with the de
 You want to export only project and database methods, and a log file:
 
 ```4d
- var $option;$result : Object
- $option:=New object("filter";New object)
- $option.filter.projectMethods:=True
- $option.filter.databaseMethods:=True
- $option.withLog:="always"
- $result:=Export structure file("exportWithLog";$option)
+ var $option;$result : Object
+ $option:=New object("filter";New object)
+ $option.filter.projectMethods:=True
+ $option.filter.databaseMethods:=True
+ $option.withLog:="always"
+ $result:=Export structure file("exportWithLog";$option)
 ```
 
 ## See also 

@@ -56,19 +56,19 @@ Once view properties have been set for *wpArea* using this command, they are app
 You want to set some view properties for a 4D Write Pro area:
 
 ```4d
- var $viewProps : Object
- $viewProps:=New object
- 
- $viewProps[wk page view mode]:="page"
-  // or $viewProps.pageMode="page"
- 
- $viewProps[wk visible horizontal ruler]:=True
-  // or $viewProps.visibleHorizontalRuler:=True
- 
- $viewProps[wk visible vertical ruler]:=True
-  // or $viewProps.visibleVerticalRuler:=True
- 
- WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
+ var $viewProps : Object
+ $viewProps:=New object
+ 
+ $viewProps[wk page view mode]:="page"
+  // or $viewProps.pageMode="page"
+ 
+ $viewProps[wk visible horizontal ruler]:=True
+  // or $viewProps.visibleHorizontalRuler:=True
+ 
+ $viewProps[wk visible vertical ruler]:=True
+  // or $viewProps.visibleVerticalRuler:=True
+ 
+ WP SET VIEW PROPERTIES(*;"4DWPArea";$viewProps)
 ```
 
 ## See also 

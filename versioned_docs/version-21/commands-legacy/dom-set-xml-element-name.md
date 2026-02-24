@@ -38,21 +38,21 @@ In the following XML source:
 
 ```XML
 <Book>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </Book>
 ```
 
 If the following code is executed, with *vElemRef* containing the reference to the ‘Book’ element:
 
 ```4d
- DOM SET XML ELEMENT NAME(vElemRef;"BestSeller")
+ DOM SET XML ELEMENT NAME(vElemRef;"BestSeller")
 ```
 
 We get:
 
 ```XML
 <BestSeller>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </BestSeller>
 ```
 

@@ -53,18 +53,18 @@ This command is useful in the context of the parsing of a form using the [FORM L
 You want to load a form and get a list of all the objects of list boxes that it contains.
 
 ```4d
- FORM LOAD("MyForm")
- ARRAY TEXT(arrObjects;0)
- FORM GET OBJECTS(arrObjects)
- ARRAY LONGINT(ar_type;Size of array(arrObjects))
- For($i;1;Size of array(arrObjects))
-    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
-    If(ar_type{$i}=Object type listbox)
-       ARRAY TEXT(arrLBObjects;0)
-       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
-    End if
- End for
- FORM UNLOAD
+ FORM LOAD("MyForm")
+ ARRAY TEXT(arrObjects;0)
+ FORM GET OBJECTS(arrObjects)
+ ARRAY LONGINT(ar_type;Size of array(arrObjects))
+ For($i;1;Size of array(arrObjects))
+    ar_type{$i}:=OBJECT Get type(*;arrObjects{$i})
+    If(ar_type{$i}=Object type listbox)
+       ARRAY TEXT(arrLBObjects;0)
+       LISTBOX GET OBJECTS(*;arrObjects{$i};arrLBObjects)
+    End if
+ End for
+ FORM UNLOAD
 ```
 
 ## See also 

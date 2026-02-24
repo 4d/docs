@@ -75,7 +75,7 @@ A JSON pointer is, strictly speaking, a string composed of parts separated by '/
 
 ```json
 {
-   "$ref":<path>#<json_pointer>
+   "$ref":<path>#<json_pointer>
 }
 ```
 
@@ -98,27 +98,27 @@ JSON pointers are resolved recursively, which means that if a resolved pointer a
 This basic example illustrates how a JSON pointer can be set and replaced in an object:
 
 ```4d
-  // create an object with some value
- var $o : Object
- $o:=New object("value";42)
- 
-  // create the JSON pointer object
- var $ref : Object
- $ref:=New object("$ref";"#/value")
- 
-  // add the JSON pointer object as property
- $o.myJSONPointer:=$ref
- 
-  // resolve the whole and check that the pointer has been resolved
- var $result : Object
- $options:=New object("rootFolder";Get 4D folder(Current resources folder);"merge";True)
- $result:=JSON Resolve pointers($o;$options)
- If($result.success)
-    ALERT(JSON Stringify($result.value))
-  //{"value":42,"myJSONPointer":42}
- Else
-    ALERT(JSON Stringify($result.errors))
- End if
+  // create an object with some value
+ var $o : Object
+ $o:=New object("value";42)
+ 
+  // create the JSON pointer object
+ var $ref : Object
+ $ref:=New object("$ref";"#/value")
+ 
+  // add the JSON pointer object as property
+ $o.myJSONPointer:=$ref
+ 
+  // resolve the whole and check that the pointer has been resolved
+ var $result : Object
+ $options:=New object("rootFolder";Get 4D folder(Current resources folder);"merge";True)
+ $result:=JSON Resolve pointers($o;$options)
+ If($result.success)
+    ALERT(JSON Stringify($result.value))
+  //{"value":42,"myJSONPointer":42}
+ Else
+    ALERT(JSON Stringify($result.errors))
+ End if
 ```
 
 ## Example 2 
@@ -127,42 +127,42 @@ You want to reuse the "billingAddress" as the "shippingAddress" in the following
 
 ```json
 {
-    "lastname": "Doe",
-    "firstname": "John",
-    "billingAddress": { 
-        "street": "95 S. Market Street",
-        "city": "San Jose",
-        "state": "California" 
-    },
-    "shippingAddress": { "$ref": "#/billingAddress" }
+    "lastname": "Doe",
+    "firstname": "John",
+    "billingAddress": { 
+        "street": "95 S. Market Street",
+        "city": "San Jose",
+        "state": "California" 
+    },
+    "shippingAddress": { "$ref": "#/billingAddress" }
 }
 ```
 
 After executing this code:
 
 ```4d
- $oResult:=JSON Resolve pointers($oMyConfig)
+ $oResult:=JSON Resolve pointers($oMyConfig)
 ```
 
 ... the following object is returned:
 
 ```json
 {
-    "success": true,
-    "value": {
-        "lastname": "Doe",
-        "firstname": "John",
-        "billingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        },
-        "shippingAddress": {
-            "street": "95 S. Market Street",
-            "city": "San Jose",
-            "state": "California" 
-        }
-    }
+    "success": true,
+    "value": {
+        "lastname": "Doe",
+        "firstname": "John",
+        "billingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        },
+        "shippingAddress": {
+            "street": "95 S. Market Street",
+            "city": "San Jose",
+            "state": "California" 
+        }
+    }
 }
 ```
 
@@ -172,11 +172,11 @@ This example illustrates the effect of the "merge" option. You want to edit an u
 
 ```json
 {
-    "rights": { 
-        "$ref": "defaultSettings.json#/defaultRights",
-        "delete": true,
-        "id": 456
-    }
+    "rights": { 
+        "$ref": "defaultSettings.json#/defaultRights",
+        "delete": true,
+        "id": 456
+    }
 }
 ```
 
@@ -184,59 +184,59 @@ The *defaultSettings.json* file contains:
 
 ```json
 {
-    "defaultRights":
-    {
-        "edit": true,
-        "add": false,
-        "delete": false
-    }
+    "defaultRights":
+    {
+        "edit": true,
+        "add": false,
+        "delete": false
+    }
 }
 ```
 
 If you execute:
 
 ```4d
- var $options : Object
- $options:=New object("merge";False) //replace contents
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
+ var $options : Object
+ $options:=New object("merge";False) //replace contents
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
 ```
 
 ... the resulting value is exactly the *defaultSettings.json* file contents:
 
 ```json
 {
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": false
-        }
-    }
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": false
+        }
+    }
 }
 ```
 
 If you execute:
 
 ```4d
- var $options : Object
- $options:=New object("merge";True) //merge both contents
- $oResult:=JSON Resolve pointers($oMyConfig;$options)
+ var $options : Object
+ $options:=New object("merge";True) //merge both contents
+ $oResult:=JSON Resolve pointers($oMyConfig;$options)
 ```
 
 ... the resulting value is a modified version of the original object:
 
 ```json
 {
-    "success": true,
-    "value": {
-        "rights": {
-            "edit": true,
-            "add": false,
-            "delete": true,
-            "id": 456
-        }
-    }
+    "success": true,
+    "value": {
+        "rights": {
+            "edit": true,
+            "add": false,
+            "delete": true,
+            "id": 456
+        }
+    }
 }
 ```
 

@@ -30,8 +30,8 @@ In *targetObj*, you can pass:
 You want to define padding for the paragraphs only:
 
 ```4d
- $oParagraphs:=WP Paragraph range($oSelection)
- WP SET ATTRIBUTES($oParagraphs;wk padding;20)
+ $oParagraphs:=WP Paragraph range($oSelection)
+ WP SET ATTRIBUTES($oParagraphs;wk padding;20)
 ```
 
 ## See also 

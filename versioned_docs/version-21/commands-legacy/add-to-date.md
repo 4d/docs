@@ -38,14 +38,14 @@ Although you can use the [Self](self.md) to add days to a date, **Add to date** 
 ## Example 
 
 ```4d
-  // This line calculates the date in one year, same day
- $vdInOneYear:=Add to date(Current date;1;0;0)
- 
-  // This line calculates the date next month, same day
- $vdNextMonth:=Add to date(Current date;0;1;0)
- 
-  // This line does the same thing as $vdTomorrow:=Current date+1
- $vdTomorrow:=Add to date(Current date;0;0;1)
+  // This line calculates the date in one year, same day
+ $vdInOneYear:=Add to date(Current date;1;0;0)
+ 
+  // This line calculates the date next month, same day
+ $vdNextMonth:=Add to date(Current date;0;1;0)
+ 
+  // This line does the same thing as $vdTomorrow:=Current date+1
+ $vdTomorrow:=Add to date(Current date;0;0;1)
 ```
 
 

@@ -25,7 +25,7 @@ displayed_sidebar: docs
 The following example displays an alert box containing the current date:
 
 ```4d
- ALERT("The date is "+String(Current date)+".")
+ ALERT("The date is "+String(Current date)+".")
 ```
 
 ## Example 2 
@@ -35,63 +35,63 @@ If you write an application for the international market, you may need to know i
 The following project method allows you to do so:
 
 ```4d
-  // Sys date format global function
-  // Sys date format -> String
-  // Sys date format -> Default 4D data format
- 
+  // Sys date format global function
+  // Sys date format -> String
+  // Sys date format -> Default 4D data format
+ 
  #DECLARE -> $format : Text
  var $vsDate;$vsMDY;$vsMonth;$vsDay;$vsYear : Text
- var $vlPos : Integer
- var $vdDate : Date
- 
-  // Get a Date value where the month, day and year values are all different
- $vdDate:=Current date
- Repeat
-    $vsMonth:=String(Month of($vdDate))
-    $vsDay:=String(Day of($vdDate))
-    $vsYear:=String(Year of($vdDate)%100)
-    If(($vsMonth=$vsDay)|($vsMonth=$vsYear)|($vsDay=$vsYear))
-       vOK:=0
-       $vdDate:=$vdDate+1
-    Else
-       vOK:=1
-    End if
- Until(vOK=1)
- $format:="" // Initialize function result
- $vsDate:=String($vdDate)
- $vlPos:=Position("/";$vsDate) // Find the first / separator in the string ../../..
- $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the first digits from the date
- $vsDate:=Substring($vsDate;$vlPos+1) // Eliminate the first digits as well as the first / separator
- Case of
-    :($vsMDY=$vsMonth) // The digits express the month
-       $format:="MM"
-    :($vsMDY=$vsDay) // The digits express the day
-       $format:="DD"
-    :($vsMDY=$vsYear) // The digits express the year
-       $format:="YYYY"
- End case
- $format:=$format+"/" // Start building the function result
- $vlPos:=Position("/";$vsDate) // Find the second separator in the string ../..
- $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the next digits from the date
- $vsDate:=Substring($vsDate;$vlPos+1) // Reduce the string to the last digits from the date
- Case of
-    :($vsMDY=$vsMonth) // The digits express the month
-       $format:=$format+"MM"
-    :($vsMDY=$vsDay) // The digits express the day
-       $format:=$format+"DD"
-    :($vsMDY=$vsYear) // The digits express the year
-       $format:=$format+"YYYY"
- End case
- $format:=$format+"/" // Pursue building the function result
- Case of
-    :($vsDate=$vsMonth) // The digits express the month
-       $format:=$format+"MM"
-    :($vsDate=$vsDay) // The digits express the day
-       $format:=$format+"DD"
-    :($vsDate=$vsYear) // The digits express the year
-       $format:=$format+"YYYY"
- End case
-  // At this point $format is equal to MM/DD/YYYY or DD/MM/YYYY or...
+ var $vlPos : Integer
+ var $vdDate : Date
+ 
+  // Get a Date value where the month, day and year values are all different
+ $vdDate:=Current date
+ Repeat
+    $vsMonth:=String(Month of($vdDate))
+    $vsDay:=String(Day of($vdDate))
+    $vsYear:=String(Year of($vdDate)%100)
+    If(($vsMonth=$vsDay)|($vsMonth=$vsYear)|($vsDay=$vsYear))
+       vOK:=0
+       $vdDate:=$vdDate+1
+    Else
+       vOK:=1
+    End if
+ Until(vOK=1)
+ $format:="" // Initialize function result
+ $vsDate:=String($vdDate)
+ $vlPos:=Position("/";$vsDate) // Find the first / separator in the string ../../..
+ $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the first digits from the date
+ $vsDate:=Substring($vsDate;$vlPos+1) // Eliminate the first digits as well as the first / separator
+ Case of
+    :($vsMDY=$vsMonth) // The digits express the month
+       $format:="MM"
+    :($vsMDY=$vsDay) // The digits express the day
+       $format:="DD"
+    :($vsMDY=$vsYear) // The digits express the year
+       $format:="YYYY"
+ End case
+ $format:=$format+"/" // Start building the function result
+ $vlPos:=Position("/";$vsDate) // Find the second separator in the string ../..
+ $vsMDY:=Substring($vsDate;1;$vlPos-1) // Extract the next digits from the date
+ $vsDate:=Substring($vsDate;$vlPos+1) // Reduce the string to the last digits from the date
+ Case of
+    :($vsMDY=$vsMonth) // The digits express the month
+       $format:=$format+"MM"
+    :($vsMDY=$vsDay) // The digits express the day
+       $format:=$format+"DD"
+    :($vsMDY=$vsYear) // The digits express the year
+       $format:=$format+"YYYY"
+ End case
+ $format:=$format+"/" // Pursue building the function result
+ Case of
+    :($vsDate=$vsMonth) // The digits express the month
+       $format:=$format+"MM"
+    :($vsDate=$vsDay) // The digits express the day
+       $format:=$format+"DD"
+    :($vsDate=$vsYear) // The digits express the year
+       $format:=$format+"YYYY"
+ End case
+  // At this point $format is equal to MM/DD/YYYY or DD/MM/YYYY or...
 ```
 
 ## See also 

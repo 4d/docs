@@ -5,7 +5,7 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 <div class="no-index">
 
@@ -14,8 +14,8 @@ displayed_sidebar: docs
 | integer| Integer | &#8594;  | Integer value to write into the BLOB |
 | Blob | Blob | &#8594;  | BLOB to receive the Integer value |
 | byteOrder| Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
-| * | Operator | &#8594; | * to append the value |
+| offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
+| * | Operator | &#8594; | * to append the value |
 </div>
 <!-- END REF-->
 
@@ -60,9 +60,9 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 After executing this code:
 
 ```4d
- SET BLOB SIZE(vxBlob;100)
- vlOffset:=50
- INTEGER TO BLOB(518;vxBlob;Macintosh byte ordering;vlOffset)
+ SET BLOB SIZE(vxBlob;100)
+ vlOffset:=50
+ INTEGER TO BLOB(518;vxBlob;Macintosh byte ordering;vlOffset)
 ```
 
 * The size of *vxBlob* is 100 bytes
@@ -75,7 +75,7 @@ After executing this code:
 After executing this code:
 
 ```4d
- INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering)
+ INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering)
 ```
 
 * The size of *vxBlob* is 2 bytes
@@ -86,8 +86,8 @@ After executing this code:
 After executing this code:
 
 ```4d
- SET BLOB SIZE(vxBlob;100)
- INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering;*)
+ SET BLOB SIZE(vxBlob;100)
+ INTEGER TO BLOB(0x0206;vxBlob;PC byte ordering;*)
 ```
 
 * The size of *vxBlob* is 102 bytes
@@ -99,7 +99,7 @@ After executing this code:
 After executing this code:
 
 ```4d
- INTEGER TO BLOB(0x0206;vxBlob;Native byte ordering)
+ INTEGER TO BLOB(0x0206;vxBlob;Native byte ordering)
 ```
 
 * The size of *vxBlob* is 2 bytes
@@ -111,7 +111,7 @@ After executing this code:
 After executing this code:
 
 ```4d
- INTEGER TO BLOB(0x0206;vxBlob;Macintosh byte ordering)
+ INTEGER TO BLOB(0x0206;vxBlob;Macintosh byte ordering)
 ```
 
 * The size of *vxBlob* is 2 bytes

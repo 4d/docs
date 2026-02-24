@@ -41,11 +41,11 @@ Removing all rows of a table will remove the entire table.
 You want to delete two rows from the *Invoice* table. This code:
 
 ```4d
- var $table : Object
- 
- $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
- 
- WP TABLE DELETE ROWS($table;3;2) //remove 2 rows after 2nd row (3rd position)
+ var $table : Object
+ 
+ $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
+ 
+ WP TABLE DELETE ROWS($table;3;2) //remove 2 rows after 2nd row (3rd position)
 ```
 
 Will remove the two rows from the correct location:

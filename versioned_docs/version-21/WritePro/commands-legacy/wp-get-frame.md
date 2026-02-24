@@ -51,11 +51,11 @@ If the cursor is currently set in a text box element, the element **id** of the 
 You want to make sure the user has set the cursor in a header or a footer frame:
 
 ```4d
- var $frameGet : Integer
- $frameGet:=WP Get frame(*;"WParea")
- If($frameGet=wk body)|($frameGet=wk text box)
-    ALERT("Please select a footer or a header.")
- End if
+ var $frameGet : Integer
+ $frameGet:=WP Get frame(*;"WParea")
+ If($frameGet=wk body)|($frameGet=wk text box)
+    ALERT("Please select a footer or a header.")
+ End if
 ```
 
 ## See also 

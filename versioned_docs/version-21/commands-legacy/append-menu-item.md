@@ -73,19 +73,19 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 This example appends the names of the available fonts to the Font menu, which in this example is the sixth menu of the current menu bar:
 
 ```4d
-  // In the On Startup database method
-  // The font list is loaded and menu item text is built
- FONT LIST(◊asAvailableFont)
- ◊atFontMenuItems:=""
- For($vlFont;1;Size of array(◊asAvailableFont))
-    ◊atFontMenuItems:=◊atFontMenuItems+";"+◊asAvailableFont{$vlFont}
- End for
+  // In the On Startup database method
+  // The font list is loaded and menu item text is built
+ FONT LIST(◊asAvailableFont)
+ ◊atFontMenuItems:=""
+ For($vlFont;1;Size of array(◊asAvailableFont))
+    ◊atFontMenuItems:=◊atFontMenuItems+";"+◊asAvailableFont{$vlFont}
+ End for
 ```
 
 Then, in any form or project method, you can write:
 
 ```4d
- APPEND MENU ITEM(6;◊atFontMenuItems)
+ APPEND MENU ITEM(6;◊atFontMenuItems)
 ```
 
 ## See also 

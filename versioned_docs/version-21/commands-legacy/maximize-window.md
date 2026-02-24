@@ -65,9 +65,9 @@ Zoom box on Mac OS
 This example sets the window size of your form to full screen when it is opened. To achieve this, the following code is placed in the form method:
 
 ```4d
-  // In the Form method
- 
- MAXIMIZE WINDOW
+  // In the Form method
+ 
+ MAXIMIZE WINDOW
 ```
 
 ## Example 2 
@@ -79,7 +79,7 @@ This example illustrates how size constraints are handled on Windows (MDI mode).
 The method of the button contains simply:
 
 ```4d
- MAXIMIZE WINDOW(Current form window)
+ MAXIMIZE WINDOW(Current form window)
 ```
 
 In this context, when the user clicks on the button:

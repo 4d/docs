@@ -41,8 +41,8 @@ If you do not pass the *selection* parameter, the command will use the current s
 You want to retrieve the numbers of the records in the current selection:
 
 ```4d
- ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
- LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
+ ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
+ LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
 ```
 
 ## See also 

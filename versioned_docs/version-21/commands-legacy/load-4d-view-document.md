@@ -49,11 +49,11 @@ Using this command, you can recover any data stored in your 4D View documents an
 You want to load and convert a 4D View document stored on disk:
 
 ```4d
- var $blob : Blob
- var $object : Object
- DOCUMENT TO BLOB("document.4PV";$blob)
- $object:=Load 4D View document($blob)
- ALERT("Document title is "+$object.title)
+ var $blob : Blob
+ var $object : Object
+ DOCUMENT TO BLOB("document.4PV";$blob)
+ $object:=Load 4D View document($blob)
+ ALERT("Document title is "+$object.title)
 ```
 
 For example, if you convert the following document: 
@@ -64,82 +64,82 @@ You will get the following result (stringified object):
 
 ```json
 {
-    "version": 9,
-    "title": "4D View test",
-    "subject": "",
-    "author": "",
-    "company": "",
-    "note": "",
-    "creationDate": "2017-06-13",
-    "creationTime": 63230,
-    "modificationDate": "2017-06-13",
-    "modificationTime": 63295,
-    "columnCount": 2048,
-    "rowCount": 65535,
-    "columnHeaderHeight": 380,
-    "rowHeaderWidth": 1180,
-    "columnWidth": 2160,
-    "rowHeight": 320,
-    "noExternalCall": false,
-    "columns": [],
-    "rows": [],
-    "cells": [
-        {
-            "kind": "value",
-            "value": "hello world",
-            "valueType": "string",
-            "column": 1,
-            "row": 1
-        },
-        {
-            "kind": "value",
-            "value": 42,
-            "valueType": "real",
-            "column": 1,
-            "row": 3
-        },
-        {
-            "kind": "value",
-            "value": true,
-            "valueType": "bool",
-            "column": 1,
-            "row": 4
-        }
-    ],
-    "cellNames": [],
-    "customFormats": [],
-    "rowEdges": [
-        {
-            "style": 13,
-            "color": 15597568,
-            "left": 2,
-            "top": 6,
-            "right": 3,
-            "bottom": 6
-        },
-        {
-            "style": 13,
-            "color": 15597568,
-            "left": 2,
-            "top": 11,
-            "right": 3,
-            "bottom": 11
-        }
-    ],
-    "columnEdges": [
-        {
-            "style": 13,
-            "color": 15597568,
-            "left": 2,
-            "top": 6,
-            "right": 2,
-            "bottom": 10
-        },
-        {
-            "style": 13,
-            "color": 15597568,
-            "left": 4,
-            "top": 6,
+    "version": 9,
+    "title": "4D View test",
+    "subject": "",
+    "author": "",
+    "company": "",
+    "note": "",
+    "creationDate": "2017-06-13",
+    "creationTime": 63230,
+    "modificationDate": "2017-06-13",
+    "modificationTime": 63295,
+    "columnCount": 2048,
+    "rowCount": 65535,
+    "columnHeaderHeight": 380,
+    "rowHeaderWidth": 1180,
+    "columnWidth": 2160,
+    "rowHeight": 320,
+    "noExternalCall": false,
+    "columns": [],
+    "rows": [],
+    "cells": [
+        {
+            "kind": "value",
+            "value": "hello world",
+            "valueType": "string",
+            "column": 1,
+            "row": 1
+        },
+        {
+            "kind": "value",
+            "value": 42,
+            "valueType": "real",
+            "column": 1,
+            "row": 3
+        },
+        {
+            "kind": "value",
+            "value": true,
+            "valueType": "bool",
+            "column": 1,
+            "row": 4
+        }
+    ],
+    "cellNames": [],
+    "customFormats": [],
+    "rowEdges": [
+        {
+            "style": 13,
+            "color": 15597568,
+            "left": 2,
+            "top": 6,
+            "right": 3,
+            "bottom": 6
+        },
+        {
+            "style": 13,
+            "color": 15597568,
+            "left": 2,
+            "top": 11,
+            "right": 3,
+            "bottom": 11
+        }
+    ],
+    "columnEdges": [
+        {
+            "style": 13,
+            "color": 15597568,
+            "left": 2,
+            "top": 6,
+            "right": 2,
+            "bottom": 10
+        },
+        {
+            "style": 13,
+            "color": 15597568,
+            "left": 4,
+            "top": 6,
             "right": 4,
             "bottom": 10
         }

@@ -42,25 +42,25 @@ Let's look for example at the following converted structure:
 In 4D, the following code still works but it must be updated:
 
 ```4d
- ALL SUBRECORDS([Employees]Children)
- $total:=Records in subselection([Employees]Children)
- vFirstnames:=""
- For($i;1;$total)
-    vFirstnames:=vFirstnames+[Employees]Children'FirstName+" "
-    NEXT SUBRECORD([Employees]Children)
- End for
+ ALL SUBRECORDS([Employees]Children)
+ $total:=Records in subselection([Employees]Children)
+ vFirstnames:=""
+ For($i;1;$total)
+    vFirstnames:=vFirstnames+[Employees]Children'FirstName+" "
+    NEXT SUBRECORD([Employees]Children)
+ End for
 ```
 
 You can now replace this code with:
 
 ```4d
- QUERY([Employees_Children];[Employees_Children]id_added_by_converter=Get subrecord key([Employees]Children))
- $total:=Records in selection([Employees_Children])
- vFirstnames:=""
- For($i;1;$total)
-    vFirstnames:=vFirstnames+[Employees_Children]FirstName+" "
-    NEXT RECORD(Employees_Children)
- End for
+ QUERY([Employees_Children];[Employees_Children]id_added_by_converter=Get subrecord key([Employees]Children))
+ $total:=Records in selection([Employees_Children])
+ vFirstnames:=""
+ For($i;1;$total)
+    vFirstnames:=vFirstnames+[Employees_Children]FirstName+" "
+    NEXT RECORD(Employees_Children)
+ End for
 ```
 
 **Note:** Get subrecord key returns 0 if there is no current recorded loaded when it is executed.
@@ -80,14 +80,14 @@ Thanks to this possibility, you can convert former databases containing subtable
 For example, with the structure above you can write:
 
 ```4d
- CREATE RECORD([Employees])
- [Employees]LastName:="Jones"
- CREATE RECORD([Employees_Children])
- [Employees_Children]FirstName:="Natacha"
- [Employees_Children]BirthDate:=!12/24/2013!
- [Employees_Children]id_added_by_converter:=Get subrecord key([Employees]Children)
- SAVE RECORD([Employees_Children])
- SAVE RECORD([Employees]
+ CREATE RECORD([Employees])
+ [Employees]LastName:="Jones"
+ CREATE RECORD([Employees_Children])
+ [Employees_Children]FirstName:="Natacha"
+ [Employees_Children]BirthDate:=!12/24/2013!
+ [Employees_Children]id_added_by_converter:=Get subrecord key([Employees]Children)
+ SAVE RECORD([Employees_Children])
+ SAVE RECORD([Employees]
 ```
 
 This code will work with either a special relation or a standard one.

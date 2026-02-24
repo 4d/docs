@@ -27,16 +27,16 @@ If a header element is already defined for the section or subsection, an *undefi
 You want to create a header for the right pages of a section:
 
 ```4d
- var $section;$subsection;$header : Object
-  //Retrieve the first section
- $section:=WP Get section(wpDoc;1)
-  //Retrieve the right subsection of the first section
- $subsection:=WP Get subsection($section;wk right page)
- 
-  //If the subsection exists, set the header
- If($subsection#Null)
-    $header:=WP New header($subsection)
- End if
+ var $section;$subsection;$header : Object
+  //Retrieve the first section
+ $section:=WP Get section(wpDoc;1)
+  //Retrieve the right subsection of the first section
+ $subsection:=WP Get subsection($section;wk right page)
+ 
+  //If the subsection exists, set the header
+ If($subsection#Null)
+    $header:=WP New header($subsection)
+ End if
 ```
 
 ## See also 

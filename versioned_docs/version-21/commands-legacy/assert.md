@@ -41,10 +41,10 @@ An assertion is an instruction inserted in the code that is responsible for dete
 Before carrying out operations on a record, the developer wants to make sure that it is actually loaded in read/write mode:
 
 ```4d
- READ WRITE([Table 1])
- LOAD RECORD([Table 1])
- ASSERT(Not(Locked([Table 1])))
-  // triggers error -10518 if record is locked
+ READ WRITE([Table 1])
+ LOAD RECORD([Table 1])
+ ASSERT(Not(Locked([Table 1])))
+  // triggers error -10518 if record is locked
 ```
 
 ## Example 2 
@@ -52,12 +52,12 @@ Before carrying out operations on a record, the developer wants to make sure tha
 An assertion can allow parameters passed to a project method to be tested in order to detect aberrant values. In this example, a custom warning message is used.
 
 ```4d
-  // Method that returns the number of a client according to its name passed in $name
- var $name : Text // Name of client
- ASSERT($name#"";"Search for a blank client name")
-  // A blank name in this case is an aberrant value
-  // If the assertion is false, the following will be displayed in the error dialog box:
-  // "Assert failed: Search for a blank client name"
+  // Method that returns the number of a client according to its name passed in $name
+ var $name : Text // Name of client
+ ASSERT($name#"";"Search for a blank client name")
+  // A blank name in this case is an aberrant value
+  // If the assertion is false, the following will be displayed in the error dialog box:
+  // "Assert failed: Search for a blank client name"
 ```
 
 ## See also 

@@ -61,13 +61,13 @@ The command returns one of the following values:
 Typical examples of use:
 
 ```4d
- vPtr:=LISTBOX Get array(*;"MyLB";lk font color array)
-  // returns a pointer to the font color array
-  // associated with the "MyLB" list box
- 
- vPtr:=LISTBOX Get array(*;"Col4";lk style array)
-  // returns a pointer to the font style array
-  // associated with the columns of the "Col4" list box
+ vPtr:=LISTBOX Get array(*;"MyLB";lk font color array)
+  // returns a pointer to the font color array
+  // associated with the "MyLB" list box
+ 
+ vPtr:=LISTBOX Get array(*;"Col4";lk style array)
+  // returns a pointer to the font style array
+  // associated with the columns of the "Col4" list box
 ```
 
 ## See also 

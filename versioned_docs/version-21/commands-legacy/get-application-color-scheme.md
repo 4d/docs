@@ -45,10 +45,10 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 ## Example 
 
 ```4d
- var $colorScheme : Text
- 
-  // Retrieve the colorScheme of the host database
- $colorScheme:=Get Application color scheme(*)
+ var $colorScheme : Text
+ 
+  // Retrieve the colorScheme of the host database
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 ## See also 

@@ -84,12 +84,12 @@ Actual path of the destination folder of the original files.
 Encrypt a data file for the first time:
 
 ```4d
- var $folder;$passphrase : Text
- $passphrase:=Request("Enter the passphrase")
- If(OK=1)
-  //Because the data file is not encrypted, no current encryption key is provided
-    $folder:=Encrypt data file(Structure file;"myData.4DD";$passphrase)
- End if
+ var $folder;$passphrase : Text
+ $passphrase:=Request("Enter the passphrase")
+ If(OK=1)
+  //Because the data file is not encrypted, no current encryption key is provided
+    $folder:=Encrypt data file(Structure file;"myData.4DD";$passphrase)
+ End if
 ```
 
 ## Example 2 
@@ -97,16 +97,16 @@ Encrypt a data file for the first time:
 Re-encrypt an encrypted data file (change the passphrase):
 
 ```4d
- var $folder;$targetFolder;$passphrase;$newPassphrase : Text
- $passphrase:=Request("Enter the current passphrase")
- If(OK=1)
-    $newPassphrase:=Request("Enter the new passphrase")
-    If(OK=1)
-       $targetFolder:=Get 4D folder(Database folder)+"Save"+Folder separator
-  //As the data file is encrypted, the current encryption key must be provided
-       $folder:=Encrypt data file(Structure file;"myData.4DD";$newPassphrase;$targetFolder;$passphrase)
-    End if
- End if
+ var $folder;$targetFolder;$passphrase;$newPassphrase : Text
+ $passphrase:=Request("Enter the current passphrase")
+ If(OK=1)
+    $newPassphrase:=Request("Enter the new passphrase")
+    If(OK=1)
+       $targetFolder:=Get 4D folder(Database folder)+"Save"+Folder separator
+  //As the data file is encrypted, the current encryption key must be provided
+       $folder:=Encrypt data file(Structure file;"myData.4DD";$newPassphrase;$targetFolder;$passphrase)
+    End if
+ End if
 ```
 
 ## Example 3 
@@ -114,14 +114,14 @@ Re-encrypt an encrypted data file (change the passphrase):
 Remove encryption from an encrypted data file:
 
 ```4d
- var $folder;$targetFolder;$passphrase : Text
- $passphrase:=Request("Enter the passphrase")
- If(OK=1)
-    $targetFolder:=Get 4D folder(Database folder)+"DecryptedData"+Folder separator
-  //The new passphrase is set to an empty string to decrypt all data
-  //The current passphrase must be provided
-    $folder:=Encrypt data file(Structure file;"myData.4DD";"";$targetFolder;$passphrase)
- End if
+ var $folder;$targetFolder;$passphrase : Text
+ $passphrase:=Request("Enter the passphrase")
+ If(OK=1)
+    $targetFolder:=Get 4D folder(Database folder)+"DecryptedData"+Folder separator
+  //The new passphrase is set to an empty string to decrypt all data
+  //The current passphrase must be provided
+    $folder:=Encrypt data file(Structure file;"myData.4DD";"";$targetFolder;$passphrase)
+ End if
 ```
 
 ## Example 4 
@@ -129,14 +129,14 @@ Remove encryption from an encrypted data file:
 Re-encrypt an encrypted data file with the current key (for example, when the encryptable status has been changed for some tables).
 
 ```4d
- var $folder;$passPhrase : Text
- var $added : Boolean
- 
- $passphrase:=Request("Enter the passphrase")
- If(OK=1)
-    $added:=Register data key($passphrase) //The data key is now in the 4D keychain
-    $folder:=Encrypt data file(Structure file;"myData.4DD")
- End if
+ var $folder;$passPhrase : Text
+ var $added : Boolean
+ 
+ $passphrase:=Request("Enter the passphrase")
+ If(OK=1)
+    $added:=Register data key($passphrase) //The data key is now in the 4D keychain
+    $folder:=Encrypt data file(Structure file;"myData.4DD")
+ End if
 ```
 
 ## See also 

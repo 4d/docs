@@ -37,7 +37,7 @@ Each of these sets can be of the process, interprocess or local/client type. The
 The following example, in Client/Server, copies the local set "*$SetA",* maintained on the client machine, to the process set *"SetB",* maintained on the server machine:
 
 ```4d
- COPY SET("$SetA";"SetB")
+ COPY SET("$SetA";"SetB")
 ```
 
 ## Example 2 
@@ -45,7 +45,7 @@ The following example, in Client/Server, copies the local set "*$SetA",* maintai
 The following example, in Client/Server, copies the process set "*SetA*", maintained on the server machine, to the local process set *"$SetB",* maintained on the client machine: 
 
 ```4d
- COPY SET("SetA";"$SetB")
+ COPY SET("SetA";"$SetB")
 ```
 
 ## See also 

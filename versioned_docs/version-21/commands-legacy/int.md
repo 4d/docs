@@ -25,8 +25,8 @@ displayed_sidebar: docs
 The following example illustrates how Int works for both positive and negative numbers. Note that the decimal portion of the number is removed:
 
 ```4d
- vlResult:=Int(123.4) // vlResult gets 123
- vlResult:=Int(-123.4) // vlResult gets –124
+ vlResult:=Int(123.4) // vlResult gets 123
+ vlResult:=Int(-123.4) // vlResult gets –124
 ```
 
 ## See also 

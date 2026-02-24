@@ -56,8 +56,8 @@ If you want for the item to include subitems, pass a valid list reference number
 The following code inserts an item (with no attached sublist) just before the currently selected item in the *hList* list:
 
 ```4d
- vlUniqueRef:=vlUniqueRef+1
- INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
+ vlUniqueRef:=vlUniqueRef+1
+ INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
 ## See also 

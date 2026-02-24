@@ -46,7 +46,7 @@ If the menu item has no mark or if the *menuItem* parameter specifies a hierarch
 The following example toggles the check mark of a menu item:
 
 ```4d
- SET MENU ITEM MARK($vlMenu;$vlItem;Char(18)*Num(Character code(Get menu item mark($vlMenu;$vlItem))#18))
+ SET MENU ITEM MARK($vlMenu;$vlItem;Char(18)*Num(Character code(Get menu item mark($vlMenu;$vlItem))#18))
 ```
 
 ## See also 

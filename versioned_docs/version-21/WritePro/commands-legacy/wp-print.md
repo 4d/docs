@@ -43,12 +43,12 @@ If *printOptions* is omitted, by default the 4D Write Pro layout is used and exp
 You want to print a 4D Write Pro document in standard or HTML wysiwyg layout depending on the value of a variable:  
 
 ```4d
-  // print using a specific layout HTML wysiwyg or 4D Write Pro Layout
- If(rb_htmlwysiwyg=1)
-    WP PRINT(writeProDoc;wk html wysiwyg)
- Else
-    WP PRINT(writeProDoc;wk 4D Write Pro layout)
- End if
+  // print using a specific layout HTML wysiwyg or 4D Write Pro Layout
+ If(rb_htmlwysiwyg=1)
+    WP PRINT(writeProDoc;wk html wysiwyg)
+ Else
+    WP PRINT(writeProDoc;wk 4D Write Pro layout)
+ End if
 ```
 
 ## See also 

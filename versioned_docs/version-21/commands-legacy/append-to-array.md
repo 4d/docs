@@ -42,14 +42,14 @@ The type of *value* must match the array type, otherwise the syntax error 54 “
 The following code:
 
 ```4d
- INSERT IN ARRAY($myarray;Size of array($myarray)+1)
- $myarray{Size of array($myarray)}:=$myvalue
+ INSERT IN ARRAY($myarray;Size of array($myarray)+1)
+ $myarray{Size of array($myarray)}:=$myvalue
 ```
 
 ... can be replaced with:
 
 ```4d
- APPEND TO ARRAY($myarray;$myvalue)
+ APPEND TO ARRAY($myarray;$myvalue)
 ```
 
 ## See also 

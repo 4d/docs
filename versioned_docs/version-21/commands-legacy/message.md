@@ -48,11 +48,11 @@ If a window is opened with [Open window](open-window.md), all subsequent calls t
 The following example processes a selection of records and calls MESSAGE to inform the user about the progress of the operation:
 
 ```4d
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
- End for
+ For($vlRecord;1;Records in selection([anyTable]))
+    MESSAGE("Processing record #"+String($vlRecord))
+  // Do Something with the record
+    NEXT RECORD([anyTable])
+ End for
 ```
 
 The following window appears and disappears at each MESSAGE call:
@@ -64,13 +64,13 @@ The following window appears and disappears at each MESSAGE call:
 In order to avoid this "blinking" window, you can display the messages in a window opened using [Open window](open-window.md), as in this example:
 
 ```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
- End for
- CLOSE WINDOW
+ Open window(50;50;500;250;5;"Operation in Progress")
+ For($vlRecord;1;Records in selection([anyTable]))
+    MESSAGE("Processing record #"+String($vlRecord))
+  // Do Something with the record
+    NEXT RECORD([anyTable])
+ End for
+ CLOSE WINDOW
 ```
 
 This provides the following result (shown here on Windows):
@@ -82,13 +82,13 @@ This provides the following result (shown here on Windows):
 Adding a carriage return makes a better presentation:
 
 ```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- For($vlRecord;1;Records in selection([anyTable]))
-    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
- End for
- CLOSE WINDOW
+ Open window(50;50;500;250;5;"Operation in Progress")
+ For($vlRecord;1;Records in selection([anyTable]))
+    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
+  // Do Something with the record
+    NEXT RECORD([anyTable])
+ End for
+ CLOSE WINDOW
 ```
 
 This provides the following result (shown here on Windows):
@@ -100,19 +100,19 @@ This provides the following result (shown here on Windows):
 Using [GOTO XY](goto-xy.md) and writing some additional lines:
 
 ```4d
- Open window(50;50;500;250;5;"Operation in Progress")
- $vlNbRecords:=Records in selection([anyTable])
- $vhStartTime:=Current time
- For($vlRecord;1;$vlNbRecords)
-    GOTO XY(5;2)
-    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
-  // Do Something with the record
-    NEXT RECORD([anyTable])
-    GOTO XY(5;5)
-    $vlRemaining:=(($vlNbRecords/$vlRecord)-1)*(Current time-$vhStartTime)
-    MESSAGE("Estimated remaining time: "+Time string($vlRemaining))
- End for
- CLOSE WINDOW
+ Open window(50;50;500;250;5;"Operation in Progress")
+ $vlNbRecords:=Records in selection([anyTable])
+ $vhStartTime:=Current time
+ For($vlRecord;1;$vlNbRecords)
+    GOTO XY(5;2)
+    MESSAGE("Processing record #"+String($vlRecord)+Char(Carriage return))
+  // Do Something with the record
+    NEXT RECORD([anyTable])
+    GOTO XY(5;5)
+    $vlRemaining:=(($vlNbRecords/$vlRecord)-1)*(Current time-$vhStartTime)
+    MESSAGE("Estimated remaining time: "+Time string($vlRemaining))
+ End for
+ CLOSE WINDOW
 ```
 
 This provides the following result (shown here on Windows):

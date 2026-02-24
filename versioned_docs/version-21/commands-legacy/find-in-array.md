@@ -46,28 +46,28 @@ If *start* is specified, the command starts searching at the element number spec
 The following project method deletes all empty elements from the string or text array whose pointer is passed as parameter:
 
 ```4d
-  // CLEAN UP ARRAY project method
-  // CLEAN UP ARRAY ( Pointer )
-  // CLEAN UP ARRAY ( -> Text or String array )
- 
- #DECLARE ($arrPtr : Pointer) : Pointer
- Repeat
-    $vlElem:=Find in array($arrPtr->;"")
-    If($vlElem>0)
-       DELETE FROM ARRAY($arrPtr->;$vlElem)
-    End if
- Until($vlElem<0)
+  // CLEAN UP ARRAY project method
+  // CLEAN UP ARRAY ( Pointer )
+  // CLEAN UP ARRAY ( -> Text or String array )
+ 
+ #DECLARE ($arrPtr : Pointer) : Pointer
+ Repeat
+    $vlElem:=Find in array($arrPtr->;"")
+    If($vlElem>0)
+       DELETE FROM ARRAY($arrPtr->;$vlElem)
+    End if
+ Until($vlElem<0)
 ```
 
 After this project method is implemented in a database, you can write:
 
 ```4d
- ARRAY TEXT(atSomeValues;...)
-  // ...
-  // Do plenty of things with the array
-  // ...
-  // Eliminate empty string elements
- CLEAN UP ARRAY(->atSomeValues)
+ ARRAY TEXT(atSomeValues;...)
+  // ...
+  // Do plenty of things with the array
+  // ...
+  // Eliminate empty string elements
+ CLEAN UP ARRAY(->atSomeValues)
 ```
 
 ## Example 2 
@@ -75,26 +75,26 @@ After this project method is implemented in a database, you can write:
 The following project method selects the first element of an array whose pointer is passed as the first parameter that matches the value of the variable or field whose pointer is passed as parameter:
 
 ```4d
-  // SELECT ELEMENT project method
-  // SELECT ELEMENT ( Pointer ; Pointer)
-  // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
- 
- #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
+  // SELECT ELEMENT project method
+  // SELECT ELEMENT ( Pointer ; Pointer)
+  // SELECT ELEMENT ( -> Text or String array ; -> Text or String variable or field )
+ 
+ #DECLARE($arrPtr : Pointer ; $varPtr : Pointer)
 $arrPtr->:=Find in array($arrPtr->; $varPtr->)
- If($tabPtr->=-1)
-    $tabPtr->:=0 // If no element was found, set the array to no selected element
- End if
+ If($tabPtr->=-1)
+    $tabPtr->:=0 // If no element was found, set the array to no selected element
+ End if
 ```
 
 After this project method is implemented in a database, you can write:
 
 ```4d
-  // asGender pop-up menu object method
- Case of
-    :(Form event code=On Load)
-       SELECT ELEMENT(->asGender;->[People]Gender)
- 
- End case
+  // asGender pop-up menu object method
+ Case of
+    :(Form event code=On Load)
+       SELECT ELEMENT(->asGender;->[People]Gender)
+ 
+ End case
 ```
 
 **Note:** This example uses the **selected element** of the array. Keep in mind that the selected element is not meaningful if the array contains more than 32,767 elements (see *Arrays and Form Objects*). In this case, you need to use a longint variable to store the result of **Find in array**.
@@ -104,16 +104,16 @@ After this project method is implemented in a database, you can write:
 You want to find an object reference:
 
 ```4d
- ARRAY OBJECT($objects;100)
- $o1:={a10;b"xyz"}
- $o2:={a10;b"xyz"}
- 
- $objects{20}:=$o1
- var $p : Integer
- 
- $p:=Find in array($objects;$o1) //$p = 20 
- $p:=Find in array($objects;$o2) //$p = -1 
- $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
+ ARRAY OBJECT($objects;100)
+ $o1:={a10;b"xyz"}
+ $o2:={a10;b"xyz"}
+ 
+ $objects{20}:=$o1
+ var $p : Integer
+ 
+ $p:=Find in array($objects;$o1) //$p = 20 
+ $p:=Find in array($objects;$o2) //$p = -1 
+ $p:=Find in array($objects;{a10;b"xyz"}) //$p = -1
 ```
 
 ## See also 

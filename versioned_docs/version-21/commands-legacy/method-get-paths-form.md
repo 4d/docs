@@ -55,11 +55,11 @@ If the command detects a duplicated method name, the error -9802 is generated ("
 List of all objects of the "input" form for the \[Employees\] table. Note that table form methods (and project form methods) are processed as objects belonging to the form:
 
 ```4d
- METHOD GET PATHS FORM([Employees];arrPaths;"input")
-  // Contents of arrPaths (for example)
-  // [tableForm]/input/{formMethod} -> Form method
-  // [tableForm]/input/bOK -> Object method
-  // [tableForm]/input/bCancel -> Object method
+ METHOD GET PATHS FORM([Employees];arrPaths;"input")
+  // Contents of arrPaths (for example)
+  // [tableForm]/input/{formMethod} -> Form method
+  // [tableForm]/input/bOK -> Object method
+  // [tableForm]/input/bCancel -> Object method
 ```
 
 ## Example 2 
@@ -67,7 +67,7 @@ List of all objects of the "input" form for the \[Employees\] table. Note that t
 List of objects of the "dial" project form:
 
 ```4d
- METHOD GET PATHS FORM(arrPaths;"dial")
+ METHOD GET PATHS FORM(arrPaths;"dial")
 ```
 
 ## Example 3 
@@ -75,7 +75,7 @@ List of objects of the "dial" project form:
 List of all objects of the "input" form for the \[Employees\] table from a component:
 
 ```4d
- METHOD GET PATHS FORM(([Employees];arrPaths;"input@";*)
+ METHOD GET PATHS FORM(([Employees];arrPaths;"input@";*)
 ```
 
 ## See also 

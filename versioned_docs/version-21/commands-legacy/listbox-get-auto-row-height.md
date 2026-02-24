@@ -59,8 +59,8 @@ By default, the command returns the value in pixels. You can pass one of the fol
 You want to get the maximum number of lines for a list box row:
 
 ```4d
- var vhMaxInteger
- vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
+ var vhMaxInteger
+ vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 ```
 
 ## See also 

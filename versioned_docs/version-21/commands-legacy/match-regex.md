@@ -5,7 +5,7 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* ; *aString* ; *start* {; pos_found ; length_found}{; *} ) -> Function result <br/>
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* ; *aString* ; *start* {; pos_found ; length_found}{; *} ) -> Function result <br/>
 **Match regex** ( *pattern* ; *aString* ) -> Function result<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">
@@ -65,7 +65,7 @@ Search for complete equality (simple syntax):
 *vfound:=Match regex(pattern;mytext)*  
 
 ```4d
- QUERY BY FORMULA([Employees];Match regex(".*smith.*";[Employees]name))
+ QUERY BY FORMULA([Employees];Match regex(".*smith.*";[Employees]name))
 ```
 
 ## Example 2 
@@ -75,14 +75,14 @@ Search in text by position:
 Example to display all the $1 tags:   
 
 ```4d
- $start:=1
- Repeat
-    vfound:=Match regex("<.*>";$1;$start;pos_found;length_found)
-    If(vfound)
-       ALERT(Substring($1;pos_found;length_found))
-       $start:=pos_found+length_found
-    End if
- Until(Not(vfound))
+ $start:=1
+ Repeat
+    vfound:=Match regex("<.*>";$1;$start;pos_found;length_found)
+    If(vfound)
+       ALERT(Substring($1;pos_found;length_found))
+       $start:=pos_found+length_found
+    End if
+ Until(Not(vfound))
 ```
 
 ## Example 3 
@@ -91,13 +91,13 @@ Search with support of “capture groups” via parentheses. ( ) are used to spe
 *vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_array)*  
 
 ```4d
- ARRAY LONGINT(pos_found_array;0)
- ARRAY LONGINT(length_found_array;0)
- vfound:=Match regex("(.*)stuff(.*)";$1;1;pos_found_array;length_found_array)
- If(vfound)
-    $group1:=Substring($1;pos_found_array{1};length_found_array{1})
-    $group2:=Substring($1;pos_found_array{2};length_found_array{2})
- End if
+ ARRAY LONGINT(pos_found_array;0)
+ ARRAY LONGINT(length_found_array;0)
+ vfound:=Match regex("(.*)stuff(.*)";$1;1;pos_found_array;length_found_array)
+ If(vfound)
+    $group1:=Substring($1;pos_found_array{1};length_found_array{1})
+    $group2:=Substring($1;pos_found_array{2};length_found_array{2})
+ End if
 ```
 
 ## Example 4 
@@ -106,12 +106,12 @@ Search limiting the comparison of the pattern to the position indicated:
 Add a star to the end of one of the two previous syntaxes. 
 
 ```4d
- vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found)
-  //returns True
- vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found;*)
-  //returns False
- vfound:=Match regex("a.b";"---a-b---";4;$pos_found;$length_found;*)
-  //returns True
+ vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found)
+  //returns True
+ vfound:=Match regex("a.b";"---a-b---";1;$pos_found;$length_found;*)
+  //returns False
+ vfound:=Match regex("a.b";"---a-b---";4;$pos_found;$length_found;*)
+  //returns True
 ```
 
 **Note:** The positions and lengths returned are only meaningful in Unicode mode or if the text being worked with is of the 7-bit ASCII type.

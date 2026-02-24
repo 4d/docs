@@ -35,7 +35,7 @@ While applying ARRAY REAL to an existing array:
 This example creates a process array of 100 Real elements:
 
 ```4d
- ARRAY REAL(arValues;100)
+ ARRAY REAL(arValues;100)
 ```
 
 ## Example 2 
@@ -43,7 +43,7 @@ This example creates a process array of 100 Real elements:
 This example creates a local array of 100 rows of 50 Real elements:
 
 ```4d
- ARRAY REAL($arValues;100;50)
+ ARRAY REAL($arValues;100;50)
 ```
 
 ## Example 3 
@@ -51,10 +51,10 @@ This example creates a local array of 100 rows of 50 Real elements:
 This example creates an interprocess array of 50 Real elements and sets each element to its element number:
 
 ```4d
- ARRAY REAL(◊arValues;50)
- For($vlElem;1;50)
-    ◊arValues{$vlElem}:=$vlElem
- End for
+ ARRAY REAL(◊arValues;50)
+ For($vlElem;1;50)
+    ◊arValues{$vlElem}:=$vlElem
+ End for
 ```
 
 ## See also 

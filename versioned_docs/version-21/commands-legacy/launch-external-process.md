@@ -68,28 +68,28 @@ The following examples use the macOS Terminal available in the Application/Utili
 1\. To change permissions for a file (*chmod* is the macOS command used to modify file access):
 
 ```4d
- LAUNCH EXTERNAL PROCESS("chmod +x /folder/myfile.txt")
+ LAUNCH EXTERNAL PROCESS("chmod +x /folder/myfile.txt")
 ```
 
 2\. To edit a text file (*cat* is the macOS command used to edit files). In this example, the full access path of the command is passed:
 
 ```4d
- var input;output : Text
- input:=""
- LAUNCH EXTERNAL PROCESS("/bin/cat /folder/myfile.txt";input;output)
+ var input;output : Text
+ input:=""
+ LAUNCH EXTERNAL PROCESS("/bin/cat /folder/myfile.txt";input;output)
 ```
 
 3\. To get the contents of the "Users" folder (*ls -l* is the macOS equivalent of the *dir* command in DOS):
 
 ```4d
- var $In;$Out : Text
- LAUNCH EXTERNAL PROCESS("/bin/ls -l /Users";$In;$Out)
+ var $In;$Out : Text
+ LAUNCH EXTERNAL PROCESS("/bin/ls -l /Users";$In;$Out)
 ```
 
 4\. To launch an independent "graphic" application, it is preferable to use the *open* system command (in this case, the **LAUNCH EXTERNAL PROCESS** statement has the same effect as double-clicking the application): 
 
 ```4d
- LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
+ LAUNCH EXTERNAL PROCESS("open /Applications/Calculator.app")
 ```
 
 ## Examples under Windows 
@@ -97,57 +97,57 @@ The following examples use the macOS Terminal available in the Application/Utili
 5\. To open NotePad:
 
 ```4d
- LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe")
+ LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe")
 ```
 
 6\. To open Notepad and open a specific document: 
 
 ```4d
- LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt")
+ LAUNCH EXTERNAL PROCESS("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt")
 ```
 
 7\. To launch the Microsoft® Word® application and open a specific document (note the use of the two ""):
 
 ```4d
- $mydoc:="C:\\Program Files\\Microsoft Office\\Office10\\WINWORD.EXE \"C:\\Documents and
- Settings\\Mark\\Desktop\\MyDocs\\New folder\\test.xml\""
- LAUNCH EXTERNAL PROCESS($mydoc;$tIn;$tOut)
+ $mydoc:="C:\\Program Files\\Microsoft Office\\Office10\\WINWORD.EXE \"C:\\Documents and
+ Settings\\Mark\\Desktop\\MyDocs\\New folder\\test.xml\""
+ LAUNCH EXTERNAL PROCESS($mydoc;$tIn;$tOut)
 ```
 
 8\. To execute a Perl script (requires ActivePerl):
 
 ```4d
- var $input;$output : Text
- SET ENVIRONMENT VARIABLE("myvariable";"value")
- LAUNCH EXTERNAL PROCESS("D:\\Perl\\bin\\perl.exe D:\\Perl\\eg\\cgi\\env.pl";$input;$output)
+ var $input;$output : Text
+ SET ENVIRONMENT VARIABLE("myvariable";"value")
+ LAUNCH EXTERNAL PROCESS("D:\\Perl\\bin\\perl.exe D:\\Perl\\eg\\cgi\\env.pl";$input;$output)
 ```
 
 9\. To launch a command with the current directory and without displaying the console: 
 
 ```4d
- SET ENVIRONMENT VARIABLE("_4D_OPTION_CURRENT_DIRECTORY";"C:\\4D_VCS")
- SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
- LAUNCH EXTERNAL PROCESS("mycommand")
+ SET ENVIRONMENT VARIABLE("_4D_OPTION_CURRENT_DIRECTORY";"C:\\4D_VCS")
+ SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
+ LAUNCH EXTERNAL PROCESS("mycommand")
 ```
 
 10\. To allow the user to open an external document on Windows:
 
 ```4d
- $docname:=Select document("";"*.*";"Choose the file to open";0)
- If(OK=1)
-    SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
-    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
- End if
+ $docname:=Select document("";"*.*";"Choose the file to open";0)
+ If(OK=1)
+    SET ENVIRONMENT VARIABLE("_4D_OPTION_HIDE_CONSOLE";"true")
+    LAUNCH EXTERNAL PROCESS("cmd.exe /C start \"\" \""+document+"\"")
+ End if
 ```
 
 11\. The following examples request the process list on Windows:
 
 ```4d
- var $pid : Integer
- var $stdin;$stdout;$stderr : Text
- 
- LAUNCH EXTERNAL PROCESS("tasklist";$pid) //gets PID only
- LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //gets all information
+ var $pid : Integer
+ var $stdin;$stdout;$stderr : Text
+ 
+ LAUNCH EXTERNAL PROCESS("tasklist";$pid) //gets PID only
+ LAUNCH EXTERNAL PROCESS("tasklist";$stdin;$stdout;$stderr;$pid) //gets all information
 ```
 
 ## System variables and sets 

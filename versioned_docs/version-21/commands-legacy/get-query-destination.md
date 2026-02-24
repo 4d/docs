@@ -56,13 +56,13 @@ The value returned in the *destinationObject* parameter depends on the value of 
 We want to modify the query destination temporarily and then restore the previous parameters:
 
 ```4d
- GET QUERY DESTINATION($vType;$vName;$ptr)
-  //retrieval of current parameters
- SET QUERY DESTINATION(Into set;"$temp")
-  //temporary modification of destination
- QUERY(...) //query
- SET QUERY DESTINATION($vType;$vName;$ptr)
-  //restoring parameters
+ GET QUERY DESTINATION($vType;$vName;$ptr)
+  //retrieval of current parameters
+ SET QUERY DESTINATION(Into set;"$temp")
+  //temporary modification of destination
+ QUERY(...) //query
+ SET QUERY DESTINATION($vType;$vName;$ptr)
+  //restoring parameters
 ```
 
 ## See also 

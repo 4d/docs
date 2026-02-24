@@ -44,7 +44,7 @@ displayed_sidebar: docs
 The following example sets the encoding to use and the standalone option in the *elementRef* element: 
 
 ```4d
- DOM SET XML DECLARATION(elementRef;"UTF-16";True)
+ DOM SET XML DECLARATION(elementRef;"UTF-16";True)
 ```
 
 ## See also 

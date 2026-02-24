@@ -39,7 +39,7 @@ While applying ARRAY BOOLEAN to an existing array:
 This example creates a process array of 100 Boolean elements: 
 
 ```4d
- ARRAY BOOLEAN(abValues;100)
+ ARRAY BOOLEAN(abValues;100)
 ```
 
 ## Example 2 
@@ -47,7 +47,7 @@ This example creates a process array of 100 Boolean elements:
 This example creates a local array of 100 rows of 50 Boolean elements: 
 
 ```4d
- ARRAY BOOLEAN($abValues;100;50)
+ ARRAY BOOLEAN($abValues;100;50)
 ```
 
 ## Example 3 
@@ -55,10 +55,10 @@ This example creates a local array of 100 rows of 50 Boolean elements:
 This example creates an interprocess array of 50 Boolean elements and sets each even element to True: 
 
 ```4d
- ARRAY BOOLEAN(◊abValues;50)
- For($vlElem;1;50)
-    ◊abValues{$vlElem}:=(($vlElem%2)=0)
- End for
+ ARRAY BOOLEAN(◊abValues;50)
+ For($vlElem;1;50)
+    ◊abValues{$vlElem}:=(($vlElem%2)=0)
+ End for
 ```
 
 ## See also 

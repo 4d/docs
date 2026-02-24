@@ -36,20 +36,20 @@ Unlike the [Get print preview](get-print-preview.md) command, **Is in print prev
 This example takes all types of printing into account:
 
 ```4d
- SET PRINT PREVIEW(True) //Print preview by default
- PRINT SETTINGS
- If(OK=1)
-  //The user may have changed the print destination
-    If(Is in print preview) // True if preview
-       FORM SET OUTPUT([Invoices];"toScreen")
-    Else
-       FORM SET OUTPUT([Invoices];"toPrinter"
-    End if
-    OPEN PRINTING JOB
-    ALL RECORDS([Invoices])
-    PRINT SELECTION([Invoices];>)
-    CLOSE PRINTING JOB
- End if
+ SET PRINT PREVIEW(True) //Print preview by default
+ PRINT SETTINGS
+ If(OK=1)
+  //The user may have changed the print destination
+    If(Is in print preview) // True if preview
+       FORM SET OUTPUT([Invoices];"toScreen")
+    Else
+       FORM SET OUTPUT([Invoices];"toPrinter"
+    End if
+    OPEN PRINTING JOB
+    ALL RECORDS([Invoices])
+    PRINT SELECTION([Invoices];>)
+    CLOSE PRINTING JOB
+ End if
 ```
 
 ## See also 

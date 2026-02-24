@@ -51,10 +51,10 @@ After a call to **ADD RECORD**, OK is set to 1 if the record is accepted, to 0 i
 The following example is a loop commonly used to add new records to a database: 
 
 ```4d
- FORM SET INPUT([Customers];"Std Input") // Set input form for [Customers] table
- Repeat // Loop until the user cancels
-    ADD RECORD([Customers];*) // Add a record to the [Customers] table
- Until(OK=0) // Until the user cancels
+ FORM SET INPUT([Customers];"Std Input") // Set input form for [Customers] table
+ Repeat // Loop until the user cancels
+    ADD RECORD([Customers];*) // Add a record to the [Customers] table
+ Until(OK=0) // Until the user cancels
 ```
 
 ## Example 2 
@@ -62,22 +62,22 @@ The following example is a loop commonly used to add new records to a database:
 The following example queries the database for a customer. Depending on the results of the search, one of two things may happen. If no customer is found, then the user is allowed to add a new customer with **ADD RECORD**. If at least one customer is found, the user is presented with the first record found, which can be modified with [MODIFY RECORD](modify-record.md): 
 
 ```4d
- READ WRITE([Customers])
- FORM SET INPUT([Customers];"Input") // Set the input form
- vlCustNum:=Num(Request("Enter Customer Number:")) // Get the customer number
- If(OK=1)
-    QUERY([Customers];[Customers]CustNo=vlCustNum) // Look for the customer
-    If(Records in selection([Customers])=0) // If no customer is found…
-       ADD RECORD([Customers]) // Add a new customer
-    Else
-       If(Not(Locked([Customers])))
-          MODIFY RECORD([Customers]) // Modify the record
-          UNLOAD RECORD([Customers])
-       Else
-          ALERT("The record is currently being used.")
-       End if
-    End if
- End if
+ READ WRITE([Customers])
+ FORM SET INPUT([Customers];"Input") // Set the input form
+ vlCustNum:=Num(Request("Enter Customer Number:")) // Get the customer number
+ If(OK=1)
+    QUERY([Customers];[Customers]CustNo=vlCustNum) // Look for the customer
+    If(Records in selection([Customers])=0) // If no customer is found…
+       ADD RECORD([Customers]) // Add a new customer
+    Else
+       If(Not(Locked([Customers])))
+          MODIFY RECORD([Customers]) // Modify the record
+          UNLOAD RECORD([Customers])
+       Else
+          ALERT("The record is currently being used.")
+       End if
+    End if
+ End if
 ```
 
 ## System variables and sets 

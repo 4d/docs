@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| inputTemplate | Text | &#8594;  | Data containing tags to process |
+| inputTemplate | Text, Blob | &#8594;  | Data containing tags to process |
 | outputResult | Text | &#8592; | Result from template execution |
 | param | Expression | &#8594;  | Parameter(s) passed to template being executed |
 </div>

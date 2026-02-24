@@ -65,9 +65,9 @@ If you want for example to alternate background color for paragraphs in the body
 You want to return a collection of all the paragraphs in a document:
 
 ```4d
- var $docElements : Collection
- $docElements:=WP Get elements($myDoc;wk type paragraph)
-  //returns a collection containing only paragraph elements
+ var $docElements : Collection
+ $docElements:=WP Get elements($myDoc;wk type paragraph)
+  //returns a collection containing only paragraph elements
 ```
 
 ## Example 2 
@@ -75,34 +75,34 @@ You want to return a collection of all the paragraphs in a document:
  You want to alternate the alignment and color of the paragraphs in a document: 
 
 ```4d
- var $col : Collection
- var $obj : Object
- var $body : Object
- var $i;$n : Integer
- $col:=New collection
- $body:=WP Get body(myDoc)
- $col:=WP Get elements($body;wk type paragraph)
- $i:=0
- $n:=$col.length
- For($i;0;$n-1)
-    $obj:=$col[$i]
-    WP RESET ATTRIBUTES($obj)
-    WP SET ATTRIBUTES($obj;wk font bold;wk false)
-    WP SET ATTRIBUTES($obj;wk font italic;wk false)
-    If($i%2=0)
-       WP SET ATTRIBUTES($obj;wk text align;wk left)
-       WP SET ATTRIBUTES($obj;wk font bold;wk true)
-       WP SET ATTRIBUTES($obj;wk text color;"#804040")
-       WP SET ATTRIBUTES($obj;wk margin right;"5cm")
-       WP SET ATTRIBUTES($obj;wk margin left;"1cm")
-    Else
-       WP SET ATTRIBUTES($obj;wk text align;wk right)
-       WP SET ATTRIBUTES($obj;wk font italic;wk true)
-       WP SET ATTRIBUTES($obj;wk text color;"#404020")
-       WP SET ATTRIBUTES($obj;wk margin left;"5cm")
-       WP SET ATTRIBUTES($obj;wk margin right;"1cm")
-    End if
- End for
+ var $col : Collection
+ var $obj : Object
+ var $body : Object
+ var $i;$n : Integer
+ $col:=New collection
+ $body:=WP Get body(myDoc)
+ $col:=WP Get elements($body;wk type paragraph)
+ $i:=0
+ $n:=$col.length
+ For($i;0;$n-1)
+    $obj:=$col[$i]
+    WP RESET ATTRIBUTES($obj)
+    WP SET ATTRIBUTES($obj;wk font bold;wk false)
+    WP SET ATTRIBUTES($obj;wk font italic;wk false)
+    If($i%2=0)
+       WP SET ATTRIBUTES($obj;wk text align;wk left)
+       WP SET ATTRIBUTES($obj;wk font bold;wk true)
+       WP SET ATTRIBUTES($obj;wk text color;"#804040")
+       WP SET ATTRIBUTES($obj;wk margin right;"5cm")
+       WP SET ATTRIBUTES($obj;wk margin left;"1cm")
+    Else
+       WP SET ATTRIBUTES($obj;wk text align;wk right)
+       WP SET ATTRIBUTES($obj;wk font italic;wk true)
+       WP SET ATTRIBUTES($obj;wk text color;"#404020")
+       WP SET ATTRIBUTES($obj;wk margin left;"5cm")
+       WP SET ATTRIBUTES($obj;wk margin right;"1cm")
+    End if
+ End for
 ```
 
 ## See also 

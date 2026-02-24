@@ -34,7 +34,7 @@ If an anchored image (picture at a fixed location) is selected in *wpArea*, **WP
 You want to get the selected text from a 4D Write Pro area:
 
 ```4d
- $range:=WP Selection range(*;"WParea")
+ $range:=WP Selection range(*;"WParea")
 ```
 
 ## See also 

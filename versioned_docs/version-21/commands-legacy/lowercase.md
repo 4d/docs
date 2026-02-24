@@ -39,14 +39,14 @@ The optional *\** parameter, if passed, indicates that any accented characters p
 The following project method capitalizes the string or text received as parameter. For instance, Caps ("john") would return "John".
 
 ```4d
-  //Caps project method
-  //Caps ( String ) -> String
-  //Caps ( Any text or string ) -> Capitalized text
- 
- $0:=Lowercase($1)
- If(Length($0)>0)
-    $0[[1]]:=Uppercase($0[[1]])
- End if
+  //Caps project method
+  //Caps ( String ) -> String
+  //Caps ( Any text or string ) -> Capitalized text
+ 
+ $0:=Lowercase($1)
+ If(Length($0)>0)
+    $0[[1]]:=Uppercase($0[[1]])
+ End if
 ```
 
 ## Example 2 
@@ -54,8 +54,8 @@ The following project method capitalizes the string or text received as paramete
 This example compares the results obtained according to whether or not the *\** parameter has been passed:
 
 ```4d
- $thestring:=Lowercase("DÉJÀ VU") // $thestring is "deja vu"
- $thestring:=Lowercase("DÉJÀ VU";*) // $thestring is "déjà vu"
+ $thestring:=Lowercase("DÉJÀ VU") // $thestring is "deja vu"
+ $thestring:=Lowercase("DÉJÀ VU";*) // $thestring is "déjà vu"
 ```
 
 ## See also 

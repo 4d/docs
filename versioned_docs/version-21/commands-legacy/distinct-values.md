@@ -63,9 +63,9 @@ The command accepts a *countArray* array as an optional parameter. When it is pa
 The following example creates a list of cities from the current selection and tells the user the number of cities in which the firm has stores: 
 
 ```4d
- ALL RECORDS([Retail Outlets]) // Create a selection of records
- DISTINCT VALUES([Retail Outlets]City;asCities)
- ALERT("The firm has stores in "+String(Size of array(asCities))+" cities.")
+ ALL RECORDS([Retail Outlets]) // Create a selection of records
+ DISTINCT VALUES([Retail Outlets]City;asCities)
+ ALERT("The firm has stores in "+String(Size of array(asCities))+" cities.")
 ```
 
 ## Example 2 
@@ -73,9 +73,9 @@ The following example creates a list of cities from the current selection and te
 You want to get a complete list of keywords contained in the keyword index for the "Pictures" field: 
 
 ```4d
- ALL RECORDS([PICTURES])
- ARRAY TEXT(<>_MyKeywords;10)
- DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
+ ALL RECORDS([PICTURES])
+ ARRAY TEXT(<>_MyKeywords;10)
+ DISTINCT VALUES([PICTURES]Photos;<>_MyKeywords)
 ```
 
 ## Example 3 
@@ -83,10 +83,10 @@ You want to get a complete list of keywords contained in the keyword index for t
 To compute statistics, you want to sort the number of distinct values in a field in descending order:
 
 ```4d
- ARRAY TEXT($_issue_type;0)
- ARRAY LONGINT($_issue_type_instance;0)
- DISTINCT VALUES([Issue]iType;$_issue_type;$_issue_type_instances)
- SORT ARRAY($_issue_type_instances;$_issue_type;<)
+ ARRAY TEXT($_issue_type;0)
+ ARRAY LONGINT($_issue_type_instance;0)
+ DISTINCT VALUES([Issue]iType;$_issue_type;$_issue_type_instances)
+ SORT ARRAY($_issue_type_instances;$_issue_type;<)
 ```
 
 ## See also 

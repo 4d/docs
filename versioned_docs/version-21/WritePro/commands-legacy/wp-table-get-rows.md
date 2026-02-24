@@ -52,21 +52,21 @@ In that case, the command returns a row range containing the repeated header row
 You want to set a specific background color for the first two rows of a table, and modify the border of the third row:
 
 ```4d
- var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
- $wpRange:=WP Text range(WParea;wk start text;wk end text)
- 
- $wpTable:=WP Insert table($wpRange;wk append)
- $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
- $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
- $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
- $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
- $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
- 
- $rows:=WP Table get rows($wpTable;1;2)
- WP SET ATTRIBUTES($rows;wk background color;0x00E0F0FF)
- $rows2:=WP Table get rows($wpTable;3)
- WP SET ATTRIBUTES($rows2;wk border style;wk solid)
- WP SET ATTRIBUTES($rows2;wk border width;4)
+ var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$rows;$rows2 : Object
+ $wpRange:=WP Text range(WParea;wk start text;wk end text)
+ 
+ $wpTable:=WP Insert table($wpRange;wk append)
+ $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
+ $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
+ $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
+ $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
+ $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
+ 
+ $rows:=WP Table get rows($wpTable;1;2)
+ WP SET ATTRIBUTES($rows;wk background color;0x00E0F0FF)
+ $rows2:=WP Table get rows($wpTable;3)
+ WP SET ATTRIBUTES($rows2;wk border style;wk solid)
+ WP SET ATTRIBUTES($rows2;wk border width;4)
 ```
 
   
@@ -77,7 +77,7 @@ You want to set a specific background color for the first two rows of a table, a
 To get a range of rows starting from the 10th to the end:
 
 ```4d
- WP Table get rows(tableRef;10;MAXLONG)
+ WP Table get rows(tableRef;10;MAXLONG)
 ```
 
 ## Example 3 
@@ -85,11 +85,11 @@ To get a range of rows starting from the 10th to the end:
 You want to retrieve the rows a user has selected:
 
 ```4d
- var $userSelection;$rows : Object
- 
- $userSelection:=WP Selection range(myWPArea)
- 
- $rows:=WP Table get rows($userSelection)
+ var $userSelection;$rows : Object
+ 
+ $userSelection:=WP Selection range(myWPArea)
+ 
+ $rows:=WP Table get rows($userSelection)
 ```
 
 ## Example 4 
@@ -101,16 +101,16 @@ The following example:
 3. Sets their text color to white and their background color to black.
 
 ```4d
- var $table;$range : Object
- 
- $table:=WP Get elements(WParea;wk type table)[0]  // Select the first table in WParea
- 
- WP SET ATTRIBUTES($table;wk header row count;2) // Set the first two rows as header rows
- 
- $range:=WP Table get rows($table;wk header rows) // Get the header rows defined above
- 
- WP SET ATTRIBUTES($range;wk text color;"white";wk background color;"#000") // Set text and background color for the header rows
- 
+ var $table;$range : Object
+ 
+ $table:=WP Get elements(WParea;wk type table)[0]  // Select the first table in WParea
+ 
+ WP SET ATTRIBUTES($table;wk header row count;2) // Set the first two rows as header rows
+ 
+ $range:=WP Table get rows($table;wk header rows) // Get the header rows defined above
+ 
+ WP SET ATTRIBUTES($range;wk text color;"white";wk background color;"#000") // Set text and background color for the header rows
+ 
 ```
 
 ## See also 

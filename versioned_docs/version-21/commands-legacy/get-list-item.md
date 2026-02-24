@@ -57,13 +57,13 @@ If you passed the optional parameters *sublist* and *expanded*:
 *hList* is a list whose items have unique reference numbers. The following code programmatically toggles the expanded/collapsed state of the sublist, if any, attached to the current selected item:
 
 ```4d
- $vlItemPos:=Selected list items(hList)
- If($vlItemPos>0)
-    GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
-    If(Is a list($hSublist))
-       SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;Not($vbExpanded))
-    End if
- End if
+ $vlItemPos:=Selected list items(hList)
+ If($vlItemPos>0)
+    GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText;$hSublist;$vbExpanded)
+    If(Is a list($hSublist))
+       SET LIST ITEM(hList;$vlItemRef;$vsItemText;$vlItemRef;$hSublist;Not($vbExpanded))
+    End if
+ End if
 ```
 
 ## Example 2 

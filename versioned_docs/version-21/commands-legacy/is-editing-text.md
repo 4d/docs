@@ -44,25 +44,25 @@ With other objects, the command always returns **False**. In particular, it cann
 You want to allow the user to select a row beginning with the typed letter or number in an enterable listbox:
 
 ```4d
- Case of
-    :(FORM Event.code=On Before Keystroke) //a key is pressed
-       If(Is editing text) //text is entered
-  // you disallow some characters
-          If(Keystroke="+")|(Keystroke="-")|(Keystroke="/")|(Keystroke="*")
-             FILTER KEYSTROKE("")
-          End if
-       Else
-  //nothing is beeing entered, scrolling shortcut feature
-          $charCode:=Keystroke
-          $char:=Uppercase($charCode) // removes accents
-          Case of
-             :((($char>="A")&($char<="Z"))|(($char>="0")&($char<="9")))
-                ... //Select a row beginning with the typed letter or number
-             :($charCode>=Left arrow key)&($charCode<=Down arrow key) // left/right/up/down arrows
-                FILTER KEYSTROKE("") // disable actions of arrows
-          End case
-       End if
- End case
+ Case of
+    :(FORM Event.code=On Before Keystroke) //a key is pressed
+       If(Is editing text) //text is entered
+  // you disallow some characters
+          If(Keystroke="+")|(Keystroke="-")|(Keystroke="/")|(Keystroke="*")
+             FILTER KEYSTROKE("")
+          End if
+       Else
+  //nothing is beeing entered, scrolling shortcut feature
+          $charCode:=Keystroke
+          $char:=Uppercase($charCode) // removes accents
+          Case of
+             :((($char>="A")&($char<="Z"))|(($char>="0")&($char<="9")))
+                ... //Select a row beginning with the typed letter or number
+             :($charCode>=Left arrow key)&($charCode<=Down arrow key) // left/right/up/down arrows
+                FILTER KEYSTROKE("") // disable actions of arrows
+          End case
+       End if
+ End case
 ```
 
 ## See also 

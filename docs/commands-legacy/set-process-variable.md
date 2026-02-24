@@ -5,7 +5,7 @@ slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *expr* : Variable {; ...(*dstVar* : Variable ; *expr* : Variable)} )<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *expr* : Expression {; ...(*dstVar* : Variable ; *expr* : Expression)} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | process | Integer | &#8594;  | Destination process number |
 | dstVar | Variable | &#8594;  | Destination variable |
-| expr | Variable | &#8594;  | Source expression (or source variable) |
+| expr | Expression | &#8594;  | Source expression (or source variable) |
 </div>
 <!-- END REF-->
 

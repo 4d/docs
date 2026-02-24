@@ -25,9 +25,9 @@ displayed_sidebar: docs
 The following example creates a set after doing a search, in order to save the set to disk:
 
 ```4d
- QUERY([People]) // Let the user do a search
- CREATE SET([People];"SearchSet") // Create a new set
- SAVE SET("SearchSet";"MySearch") // Save the set on disk
+ QUERY([People]) // Let the user do a search
+ CREATE SET([People];"SearchSet") // Create a new set
+ SAVE SET("SearchSet";"MySearch") // Save the set on disk
 ```
 
 ## See also 

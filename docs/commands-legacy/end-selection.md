@@ -5,7 +5,7 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** ( {*aTable* : Table} ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 <div class="no-index">
 
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.End selection.Summary-->**End selection** returns TRUE when the current record pointer is beyond the last record of the current selection of *aTable*.<!-- END REF-->is commonly used to check whether or not [NEXT RECORD](next-record.md) has moved the current record pointer past the last record. If the current selection is empty, **End selection** returns TRUE.
+<!--REF #_command_.End selection.Summary-->**End selection** returns TRUE when the current record pointer is beyond the last record of the current selection of *aTable*.<!-- END REF-->**End selection** is commonly used to check whether or not [NEXT RECORD](next-record.md) has moved the current record pointer past the last record. If the current selection is empty, **End selection** returns TRUE.
 
 To move the current record pointer back into the selection, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) does not move the pointer back into the selection.
 

@@ -27,7 +27,7 @@ displayed_sidebar: docs
 The returned object contains a single property named "DB" that has the following basic structure:
 
 ```json
-{    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
+{    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
 ```
 
 This object is made up of eight properties that contain basic measures ("diskReadBytes", "cacheReadBytes", "cacheMissBytes", "diskWriteBytes", "diskReadCount", "cacheReadCount", "cacheMissCount", "diskWriteCount") and additional properties ("dataSegment1", "indexSegment", "tables", "index") that can also contain elementary properties but at a different level and with a different scope (see below).
@@ -53,12 +53,12 @@ The eight elementary properties all have the same object structure, for example:
 
 ```json
 "diskReadBytes": {
-    "value": 33486473620,
-    "history": [        // optional
-        {"value": 52564,"time": -1665},
-        {"value": 54202,"time": -1649},
-            …
-    ]
+    "value": 33486473620,
+    "history": [        // optional
+        {"value": 52564,"time": -1665},
+        {"value": 54202,"time": -1649},
+            …
+    ]
 }
 ```
 
@@ -77,7 +77,7 @@ The eight elementary properties all have the same object structure, for example:
 The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
 
 ```json
-"dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
+"dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
 ```
 
 These properties return the same information as the elementary properties, but detailed for each database file:
@@ -91,27 +91,27 @@ For example, you can get the following object:
 {
 "DB": {
 "diskReadBytes": {
-    "value": 718260
-    },
+    "value": 718260
+    },
 "diskReadCount": {
-    "value": 229
-    },
+    "value": 229
+    },
 
 "dataSegment1": {
-    "diskReadBytes": {
-    "value": 679092
-    },
-    "diskReadCount": {
-    "value": 212
-    }
-    },
+    "diskReadBytes": {
+    "value": 679092
+    },
+    "diskReadCount": {
+    "value": 212
+    }
+    },
 "indexSegment": {
-    "diskReadBytes": {
-    "value": 39168
-    },
-    "diskReadCount": {
-    "value": 17
-    }
+    "diskReadBytes": {
+    "value": 39168
+    },
+    "diskReadCount": {
+    "value": 17
+    }
 }
 ```
 
@@ -128,9 +128,9 @@ The "tables" property contains as many properties as there are tables that have 
 
 ```json
 "tables": {
-    "Employees": {…)
-    "Companies": {…)
-    }
+    "Employees": {…)
+    "Companies": {…)
+    }
 ```
 
 Each table objects contains up to 12 properties:
@@ -149,28 +149,28 @@ Each table objects contains up to 12 properties:
          
    ```json  
    {  
-       "DB": {  
-           "tables": {  
-               "Employees": {  
-                   "fields": {  
-                       "CompID": {  
-                           "queryCount": {  
-                               "value": 3  
-                           }  
-                       },  
-                       "Name": {  
-                           "queryCount": {  
-                               "value": 1  
-                           },  
-                           "sortCount": {  
-                               "value": 3  
-                           }  
-                       },  
-                       "FirstName": {  
-                           "sortCount": {  
-                               "value": 2  
-                           }  
-                       }  
+       "DB": {  
+           "tables": {  
+               "Employees": {  
+                   "fields": {  
+                       "CompID": {  
+                           "queryCount": {  
+                               "value": 3  
+                           }  
+                       },  
+                       "Name": {  
+                           "queryCount": {  
+                               "value": 1  
+                           },  
+                           "sortCount": {  
+                               "value": 3  
+                           }  
+                       },  
+                       "FirstName": {  
+                           "sortCount": {  
+                               "value": 2  
+                           }  
+                       }  
    (...)  
    ```  
          
@@ -187,31 +187,31 @@ Each table objects contains up to 12 properties:
 
    ```json  
    {  
-       "DB": {  
-           "tables": {  
-               "Employees": {  
-                   "queries": [  
-                       {  
-                           "queryStatement": "(Employees.Name == ?)",  
-                           "queryCount": {  
-                               "value": 1,  
-                               "history": [  
-                                   {  
-                                       "value": 1,  
-                                       "time": -2022  
-                                   }  
-                               ]  
-                           },  
-                           "duration": {  
-                               "value": 2,  
-                               "history": [  
-                                   {  
-                                       "value": 2,  
-                                       "time": -2022  
-                                   }  
-                               ]  
-                           }  
-                       },  
+       "DB": {  
+           "tables": {  
+               "Employees": {  
+                   "queries": [  
+                       {  
+                           "queryStatement": "(Employees.Name == ?)",  
+                           "queryCount": {  
+                               "value": 1,  
+                               "history": [  
+                                   {  
+                                       "value": 1,  
+                                       "time": -2022  
+                                   }  
+                               ]  
+                           },  
+                           "duration": {  
+                               "value": 2,  
+                               "history": [  
+                                   {  
+                                       "value": 2,  
+                                       "time": -2022  
+                                   }  
+                               ]  
+                           }  
+                       },  
    (...)  
    ```  
          
@@ -225,39 +225,39 @@ Example: Since the moment the database was launched, several indexes of the \[Em
 
 ```json
 "indexes": {
-    "Employees": {
-        "EmpLastName": {
-                    "diskReadBytes": {…},
-                    "cacheReadBytes": {…},
-                    "cacheMissBytes": {…},
-                    "diskWriteBytes": {…},
+    "Employees": {
+        "EmpLastName": {
+                    "diskReadBytes": {…},
+                    "cacheReadBytes": {…},
+                    "cacheMissBytes": {…},
+                    "diskWriteBytes": {…},
 
-                    "diskReadCount": {…},
-                    "cacheReadCount": {…},
-                    "cacheMissCount": {…},
-                    "diskWriteCount": {…}
-            }
-        "EmpLastName (Keyword)": {...},
-        "index3Name": {…},
-        "index4Name": {…},
-        …
-        }
-        "Companies": {
-            "Name": 
-            (...)
-                "queryCount": {
-                    "value": 41
-                },
-                "sortCount": {
-                    "value": 3
-                },
-                "insertKeyCount": {
-                    "value": 2
-                },
-                "deleteKeyCount": {
-                    "value": 16
-                }
-    table3Name: {…}
+                    "diskReadCount": {…},
+                    "cacheReadCount": {…},
+                    "cacheMissCount": {…},
+                    "diskWriteCount": {…}
+            }
+        "EmpLastName (Keyword)": {...},
+        "index3Name": {…},
+        "index4Name": {…},
+        …
+        }
+        "Companies": {
+            "Name": 
+            (...)
+                "queryCount": {
+                    "value": 41
+                },
+                "sortCount": {
+                    "value": 3
+                },
+                "insertKeyCount": {
+                    "value": 2
+                },
+                "deleteKeyCount": {
+                    "value": 16
+                }
+    table3Name: {…}
 }
 ```
 
@@ -291,10 +291,10 @@ This principle will also work for a component: if the component is used in a 4D 
 You want to have the history logged in the returned object:
 
 ```4d
- var $param : Object
- var $measures : Object
- OB SET($param;"withHistory";True)
- $measures:=Database measures($param)
+ var $param : Object
+ var $measures : Object
+ OB SET($param;"withHistory";True)
+ $measures:=Database measures($param)
 ```
 
 ## Example 2 
@@ -302,21 +302,21 @@ You want to have the history logged in the returned object:
 We only want to know the global number of bytes read in the cache ("cacheReadBytes"):
 
 ```4d
- var $oStats : Object
- var $oParams : Object
- OB SET($oParams;"path";"DB.cacheReadBytes")
- $oStats:=Database measures($oParams)
+ var $oStats : Object
+ var $oParams : Object
+ OB SET($oParams;"path";"DB.cacheReadBytes")
+ $oStats:=Database measures($oParams)
 ```
 
 The object returned contains, for example:
 
 ```json
 {
-    "DB": {
-        "cacheReadBytes": {
-            "value": 9516637
-        }
-    }
+    "DB": {
+        "cacheReadBytes": {
+            "value": 9516637
+        }
+    }
 }
 ```
 
@@ -325,12 +325,12 @@ The object returned contains, for example:
 We want to request measures for cache bytes read within the last two minutes:
 
 ```4d
- var $oParams : Object
- var $measures : Object
- OB SET($oParams;"path";"DB.cacheReadBytes")
- OB SET($oParams;"withHistory";True)
- OB SET($oParams;"historyLength";2*60)
- $measures:=Database measures($oParams)
+ var $oParams : Object
+ var $measures : Object
+ OB SET($oParams;"path";"DB.cacheReadBytes")
+ OB SET($oParams;"withHistory";True)
+ OB SET($oParams;"historyLength";2*60)
+ $measures:=Database measures($oParams)
 ```
 
 

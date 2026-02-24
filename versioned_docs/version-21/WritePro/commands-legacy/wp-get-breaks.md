@@ -71,12 +71,12 @@ An empty collection is returned if *targetObj* does not contain any break (or an
 You want to replace all line breaks with paragraph breaks in the document:
 
 ```4d
- var $_filteredBreaks : Collection
- var $break : Object
- $_filteredBreaks:=WP Get breaks(WParea;wk line break)
- For each($break;$_filteredBreaks)
-    WP INSERT BREAK($break;wk paragraph break;wk replace)
- End for each
+ var $_filteredBreaks : Collection
+ var $break : Object
+ $_filteredBreaks:=WP Get breaks(WParea;wk line break)
+ For each($break;$_filteredBreaks)
+    WP INSERT BREAK($break;wk paragraph break;wk replace)
+ End for each
 ```
 
 ## See also 

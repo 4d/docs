@@ -34,7 +34,7 @@ displayed_sidebar: docs
 The following example is a one-line method called from a menu command. It displays the form page that precedes the one currently displayed:
 
 ```4d
- FORM PREVIOUS PAGE
+ FORM PREVIOUS PAGE
 ```
 
 ## See also 

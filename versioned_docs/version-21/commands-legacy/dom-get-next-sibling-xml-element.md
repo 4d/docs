@@ -44,8 +44,8 @@ After the last “sibling,” the system variable OK is set to 0\.
 Retrieval of the reference of the next sibling XML element following the element passed as parameter:
 
 ```4d
- var $xml_Parent_Ref;$next_XML_Ref : Text
- $next_XML_Ref:=DOM Get next sibling XML element($xml_Parent_Ref)
+ var $xml_Parent_Ref;$next_XML_Ref : Text
+ $next_XML_Ref:=DOM Get next sibling XML element($xml_Parent_Ref)
 ```
 
 ![](../assets/en/commands/pict40038.en.png)
@@ -55,13 +55,13 @@ Retrieval of the reference of the next sibling XML element following the element
 Retrieval in a reference loop of all the child XML elements following the parent element passed as parameter, beginning with the first child:
 
 ```4d
- var $xml_Parent_Ref;$first_XML_Ref;$next_XML_Ref : Text
- 
- $first_XML_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- $next_XML_Ref:=$first_XML_Ref
- While(OK=1)
-    $next_XML_Ref:=DOM Get next sibling XML element($next_XML_Ref)
- End while
+ var $xml_Parent_Ref;$first_XML_Ref;$next_XML_Ref : Text
+ 
+ $first_XML_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ $next_XML_Ref:=$first_XML_Ref
+ While(OK=1)
+    $next_XML_Ref:=DOM Get next sibling XML element($next_XML_Ref)
+ End while
 ```
 
 ![](../assets/en/commands/pict40039.en.png)

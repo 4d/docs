@@ -25,7 +25,7 @@ displayed_sidebar: docs
 The following example shows the value of Pi:
 
 ```4d
- ALERT("Pi is equal to: "+String(Arctan(1)*4))
+ ALERT("Pi is equal to: "+String(Arctan(1)*4))
 ```
 
 ## See also 

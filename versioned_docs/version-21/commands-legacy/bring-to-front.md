@@ -28,9 +28,9 @@ The Main and Design processes can be brought to the front using this command.
 The following example is a method that can be executed from a menu. It checks to see if *◊vlAddCust\_PID* is the frontmost process. If not, the method brings it to the front:
 
 ```4d
- If(Frontmost process#◊vlAddCust_PID)
-    BRING TO FRONT(◊vlAddCust_PID)
- End if
+ If(Frontmost process#◊vlAddCust_PID)
+    BRING TO FRONT(◊vlAddCust_PID)
+ End if
 ```
 
 ## See also 

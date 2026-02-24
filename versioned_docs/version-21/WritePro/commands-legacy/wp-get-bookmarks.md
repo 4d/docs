@@ -27,9 +27,9 @@ After the command is executed, the *arrBKNames* is filled with all the bookmark 
 You want to know the number of bookmarks defined in your document:
 
 ```4d
- ARRAY TEXT($_bookmarks;0)
- WP GET BOOKMARKS(WParea;$_bookmarks)
- ALERT("The document contains "+Size of array($_bookmarks)+" bookmarks.")
+ ARRAY TEXT($_bookmarks;0)
+ WP GET BOOKMARKS(WParea;$_bookmarks)
+ ALERT("The document contains "+Size of array($_bookmarks)+" bookmarks.")
 ```
 
 ## See also 

@@ -36,9 +36,9 @@ If no section is defined for the specified *sectionIndex*, the command returns a
 You want to get the first section:
 
 ```4d
- var $section : Object
-  // get reference of the first section
- $section:=WP Get section(wpDoc;1)
+ var $section : Object
+  // get reference of the first section
+ $section:=WP Get section(wpDoc;1)
 ```
 
 ## See also 

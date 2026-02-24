@@ -35,11 +35,11 @@ displayed_sidebar: docs
 You want to switch between the maximized and previous states:
 
 ```4d
- If(Is window maximized($winRef))
-    MINIMIZE WINDOW($winRef)
- Else
-    MAXIMIZE WINDOW($winRef)
- End if
+ If(Is window maximized($winRef))
+    MINIMIZE WINDOW($winRef)
+ Else
+    MAXIMIZE WINDOW($winRef)
+ End if
 ```
 
 ## See also 

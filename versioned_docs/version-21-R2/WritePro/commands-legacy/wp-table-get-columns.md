@@ -45,17 +45,17 @@ If *startCol* plus *numCols* exceed the number of columns in *tableRef*, or if *
 You want to modify the attributes of the last two columns of a table:
 
 ```4d
- var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$cols : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
- $wpTable:=WP Insert table($wpRange;wk append)
- $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
- $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
- $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
- $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
- $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
- 
- $cols:=WP Table get columns($wpTable;2;2)
- WP SET ATTRIBUTES($cols;wk background color;0x00E0E0E0;wk text color;"red";wk height;"36pt";wk text align;wk center)
+ var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$cols : Object
+ $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ $wpTable:=WP Insert table($wpRange;wk append)
+ $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
+ $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
+ $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
+ $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
+ $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
+ 
+ $cols:=WP Table get columns($wpTable;2;2)
+ WP SET ATTRIBUTES($cols;wk background color;0x00E0E0E0;wk text color;"red";wk height;"36pt";wk text align;wk center)
 ```
 
   
@@ -68,7 +68,7 @@ Result:
 To get a range of columns starting from the 10th to the end:
 
 ```4d
- WP Table get columns(tableRef;10;MAXLONG)
+ WP Table get columns(tableRef;10;MAXLONG)
 ```
 
 ## Example 3 
@@ -76,11 +76,11 @@ To get a range of columns starting from the 10th to the end:
 You want to retrieve the columns a user has selected:
 
 ```4d
- var $userSelection;$columns : Object
- 
- $userSelection:=WP Selection range(myWPArea)
- 
- $columns:=WP Table get columns($userSelection)
+ var $userSelection;$columns : Object
+ 
+ $userSelection:=WP Selection range(myWPArea)
+ 
+ $columns:=WP Table get columns($userSelection)
 ```
 
 ## See also 

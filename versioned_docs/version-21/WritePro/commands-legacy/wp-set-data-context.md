@@ -48,21 +48,21 @@ In order to compute formulas with different data contexts in different processes
 Insert an object in the 4D Write Pro document's context and display its information on the page: 
 
 ```4d
- var $person;$info: Object
- 
-  // Create person object
- $person:=New object()
- $person.firstName:="John"
- $person.lastName:="Doe"
- 
-  // Set context using the person object
- WP SET DATA CONTEXT(WParea;$person)
- 
-  // Access context data with the "This" keyword
- $info:=Formula(This.data.firstName+" "+This.data.lastName)
- 
-  // Display context data on the page
- WP INSERT FORMULA(WParea;$info;wk replace) // displays "John Doe" on the page.
+ var $person;$info: Object
+ 
+  // Create person object
+ $person:=New object()
+ $person.firstName:="John"
+ $person.lastName:="Doe"
+ 
+  // Set context using the person object
+ WP SET DATA CONTEXT(WParea;$person)
+ 
+  // Access context data with the "This" keyword
+ $info:=Formula(This.data.firstName+" "+This.data.lastName)
+ 
+  // Display context data on the page
+ WP INSERT FORMULA(WParea;$info;wk replace) // displays "John Doe" on the page.
 ```
 
 Here's the result:
@@ -80,15 +80,15 @@ Once a template is loaded and the data context is set, a letter template might l
 The following example loops through an entity selection and creates a print preview for each entity:
 
 ```4d
- var $person: 4D.Entity
- var $people: 4D.EntitySelection
- 
- SET PRINT PREVIEW(True)
- $people:=ds.People.all()
- For each($person;$people)
-    WP SET DATA CONTEXT(WParea;$person)
-    WP PRINT(WParea)
- End for each
+ var $person: 4D.Entity
+ var $people: 4D.EntitySelection
+ 
+ SET PRINT PREVIEW(True)
+ $people:=ds.People.all()
+ For each($person;$people)
+    WP SET DATA CONTEXT(WParea;$person)
+    WP PRINT(WParea)
+ End for each
 ```
 
 ## See also 

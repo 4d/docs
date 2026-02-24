@@ -41,7 +41,7 @@ The *howMany* parameter is the number of elements to insert. If *howMany* is not
 The following example inserts five new elements, starting at element 10:
 
 ```4d
- INSERT IN ARRAY(anArray;10;5)
+ INSERT IN ARRAY(anArray;10;5)
 ```
 
 ## Example 2 
@@ -49,9 +49,9 @@ The following example inserts five new elements, starting at element 10:
 The following example appends an element to an array:
 
 ```4d
- $vlElem:=Size of array(anArray)+1
- INSERT IN ARRAY(anArray;$vlElem)
- anArray{$vlElem}:=...
+ $vlElem:=Size of array(anArray)+1
+ INSERT IN ARRAY(anArray;$vlElem)
+ anArray{$vlElem}:=...
 ```
 
 ## See also 

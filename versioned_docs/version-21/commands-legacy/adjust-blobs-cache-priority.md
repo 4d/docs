@@ -53,11 +53,11 @@ Pass one of the following constants from the "*Cache Management*" theme in the *
 You want to temporarily change the cache priority for the \[Docs\] table text fields stored in the data file when executing a sequential search:
 
 ```4d
- ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority very high)
- QUERY([Docs];[Docs]Author#"A@") // sequential search on a non indexed field
-  //... run several other queries or sorts on the same table
-  // when finished, set back to normal cache priority
- ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
+ ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority very high)
+ QUERY([Docs];[Docs]Author#"A@") // sequential search on a non indexed field
+  //... run several other queries or sorts on the same table
+  // when finished, set back to normal cache priority
+ ADJUST BLOBS CACHE PRIORITY([Docs];Cache priority normal)
 ```
 
 ## See also 

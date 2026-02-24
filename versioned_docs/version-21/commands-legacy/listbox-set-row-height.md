@@ -51,9 +51,9 @@ You want to change the height of a few rows in the following list box:
 If you execute this code:
 
 ```4d
-  //current unit is pixels
- LISTBOX SET ROW HEIGHT(*;"listboxname";3;40) //Kuwait
- LISTBOX SET ROW HEIGHT(*;"listboxname";7;14) //Serbia
+  //current unit is pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";3;40) //Kuwait
+ LISTBOX SET ROW HEIGHT(*;"listboxname";7;14) //Serbia
 ```
 
 ... you get the following result:
@@ -65,17 +65,17 @@ If you execute this code:
 You have set a default row height and then set several individual row height values using the **LISTBOX SET ROW HEIGHT** command:
 
 ```4d
- LISTBOX SET ROWS HEIGHT(*;"listboxname";25;lk pixels) // global height set in pixels
- 
- LISTBOX SET ROW HEIGHT(*;"listboxname";1;30) // row 1: 30 pixels
- LISTBOX SET ROW HEIGHT(*;"listboxname";5;40) // row 5: 40 pixels
- LISTBOX SET ROW HEIGHT(*;"listboxname";11;50) // row 11: 50 pixels
+ LISTBOX SET ROWS HEIGHT(*;"listboxname";25;lk pixels) // global height set in pixels
+ 
+ LISTBOX SET ROW HEIGHT(*;"listboxname";1;30) // row 1: 30 pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";5;40) // row 5: 40 pixels
+ LISTBOX SET ROW HEIGHT(*;"listboxname";11;50) // row 11: 50 pixels
 ```
 
 Later, if the following code is executed…
 
 ```4d
- LISTBOX SET ROWS HEIGHT(*;"listboxname";18;lk pixels)
+ LISTBOX SET ROWS HEIGHT(*;"listboxname";18;lk pixels)
 ```
 
 …then the global row height is set to 18 pixels; however, since the unit has not changed, rows 1, 5 and 11 will keep their specific height values, i.e., 30, 40 and 50 pixels as defined above by the **LISTBOX SET ROW HEIGHT** command.  
@@ -83,7 +83,7 @@ Later, if the following code is executed…
 On the other hand, if the code below is executed subsequently…
 
 ```4d
- LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
+ LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
 ```
 
 …then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.

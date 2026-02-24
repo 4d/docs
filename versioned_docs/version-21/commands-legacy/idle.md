@@ -23,30 +23,30 @@ displayed_sidebar: docs
 In the following example, the loop would never terminate in a compiled database without the call to IDLE:
 
 ```4d
-  // Do Something Project Method
- ON EVENT CALL("EVENT METHOD")
- ◊vbWeStop:=False
- MESSAGE("Processing..."+Char(13)+"Type any key to interrupt...")
- Repeat
-  // Do some processing that doesn’t involve a 4D command
-    IDLE
- Until(◊vbWeStop)
- ON EVENT CALL("")
+  // Do Something Project Method
+ ON EVENT CALL("EVENT METHOD")
+ ◊vbWeStop:=False
+ MESSAGE("Processing..."+Char(13)+"Type any key to interrupt...")
+ Repeat
+  // Do some processing that doesn’t involve a 4D command
+    IDLE
+ Until(◊vbWeStop)
+ ON EVENT CALL("")
 ```
 
 with:
 
 ```4d
-  // EVENT METHOD Project Method
- If(Undefined(KeyCode))
-    KeyCode:=0
- End if
- If(KeyCode#0)
-    CONFIRM("Do you really want to stop this operation?")
-    If(OK=1)
-       ◊vbWeStop:=True
-    End if
- End if
+  // EVENT METHOD Project Method
+ If(Undefined(KeyCode))
+    KeyCode:=0
+ End if
+ If(KeyCode#0)
+    CONFIRM("Do you really want to stop this operation?")
+    If(OK=1)
+       ◊vbWeStop:=True
+    End if
+ End if
 ```
 
 ## See also 

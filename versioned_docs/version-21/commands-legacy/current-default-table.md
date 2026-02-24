@@ -24,7 +24,7 @@ displayed_sidebar: docs
 Provided a default table has been set, the following line of code sets the window title to the name of the current default table:
 
 ```4d
- SET WINDOW TITLE(Table name(Current default table))
+ SET WINDOW TITLE(Table name(Current default table))
 ```
 
 ## See also 

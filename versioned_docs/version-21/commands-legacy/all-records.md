@@ -24,8 +24,8 @@ displayed_sidebar: docs
 The following example displays all the records from the \[People\] table:
 
 ```4d
- ALL RECORDS([People]) // Select all the records in the table
- DISPLAY SELECTION([People]) // Display records in output form
+ ALL RECORDS([People]) // Select all the records in the table
+ DISPLAY SELECTION([People]) // Display records in output form
 ```
 
 ## See also 

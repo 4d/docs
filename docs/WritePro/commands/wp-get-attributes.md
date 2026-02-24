@@ -4,7 +4,7 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...(attribName* : Text ; *attribValue* : Variable)) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 <!--REF #_command_.WP Get attributes.Params-->
 <div class="no-index">
 
@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | attribName | Text | &#8594;  | Name of attribute to get |
-| attribValue | any | &#8592; | Current value of attribute for the target |
+| attribValue | Variable | &#8592; | Current value of attribute for the target |
 | attribColl | Collection | &#8594; | Collection of attribute names to get |
 | Function result | Object | &#8592; | Attribute names and values |
 </div>

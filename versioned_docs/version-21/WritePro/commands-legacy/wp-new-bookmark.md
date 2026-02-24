@@ -44,9 +44,9 @@ Bookmarks can only be created from ranges within the **body** of the document, i
 You want to create a new bookmark referencing the currently selected text in the document. You can write:
 
 ```4d
- var $range : Object
- $range:=WP Selection range(*;"WPDocument")
- WP NEW BOOKMARK($range;"my_bookmark")
+ var $range : Object
+ $range:=WP Selection range(*;"WPDocument")
+ WP NEW BOOKMARK($range;"my_bookmark")
 ```
 
 ## Example 2 
@@ -54,23 +54,23 @@ You want to create a new bookmark referencing the currently selected text in the
 You want to rename an existing bookmark. To do this, you need to create a new bookmark with the same range, and then delete the old one:
 
 ```4d
- var $bookmarkOldName : Text
- var $bookmarkNewName : Text
- var $p : Integer
- var $wpRange : Object
- 
- $bookmarkOldName:="MyBookmark"
- $bookmarkNewName:="MyNewBookmark"
- 
- ARRAY TEXT($_bookmarks;0)
- WP GET BOOKMARKS(WParea;$_bookmarks)
- 
- $p:=Find in array($_bookmarks;$bookmarkOldName)
- If($p>0)
-    $wpRange:=WP Get bookmark range(WParea;$bookmarkOldName)
-    WP DELETE BOOKMARK(WParea;$bookmarkOldName)
-    WP NEW BOOKMARK($wpRange;$bookmarkNewName)
- End if
+ var $bookmarkOldName : Text
+ var $bookmarkNewName : Text
+ var $p : Integer
+ var $wpRange : Object
+ 
+ $bookmarkOldName:="MyBookmark"
+ $bookmarkNewName:="MyNewBookmark"
+ 
+ ARRAY TEXT($_bookmarks;0)
+ WP GET BOOKMARKS(WParea;$_bookmarks)
+ 
+ $p:=Find in array($_bookmarks;$bookmarkOldName)
+ If($p>0)
+    $wpRange:=WP Get bookmark range(WParea;$bookmarkOldName)
+    WP DELETE BOOKMARK(WParea;$bookmarkOldName)
+    WP NEW BOOKMARK($wpRange;$bookmarkNewName)
+ End if
 ```
 
 ## See also 

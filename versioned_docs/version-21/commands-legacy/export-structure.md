@@ -51,9 +51,9 @@ A structure definition exported in XML format can be imported in another databas
 You want to export the current database structure in a text file:
 
 ```4d
- var $vTStruc : Text
- EXPORT STRUCTURE($vTStruc)
- TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
+ var $vTStruc : Text
+ EXPORT STRUCTURE($vTStruc)
+ TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
 ## Example 2 
@@ -61,9 +61,9 @@ You want to export the current database structure in a text file:
 You want to export the current database structure in html format:
 
 ```4d
- var $vHtml : Text
- EXPORT STRUCTURE($vHtml;html format)
- File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
+ var $vHtml : Text
+ EXPORT STRUCTURE($vHtml;html format)
+ File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
 ## See also 

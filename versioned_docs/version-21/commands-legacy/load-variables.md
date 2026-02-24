@@ -33,7 +33,7 @@ In compiled databases, each variable must be of the same type as those loaded fr
 The following example loads three variables from a document named UserPrefs:
 
 ```4d
- LOAD VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
+ LOAD VARIABLES("User Prefs";vsName;vlCode;vgIconPicture)
 ```
 
 ## System variables and sets 

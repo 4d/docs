@@ -56,11 +56,11 @@ The original form:
 
   
 ```4d
- var $dynForm : Object
- $dynForm:=FORM Convert to dynamic("FormToConvert")
- $dynForm.pages[1].objects.TitleArea.stroke:="red"
- $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
- DIALOG($dynForm)
+ var $dynForm : Object
+ $dynForm:=FORM Convert to dynamic("FormToConvert")
+ $dynForm.pages[1].objects.TitleArea.stroke:="red"
+ $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
+ DIALOG($dynForm)
 ```
 
   

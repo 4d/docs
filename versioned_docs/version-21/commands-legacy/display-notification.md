@@ -47,7 +47,7 @@ Under Windows, the message window remains displayed as long as no activity has b
 ## Example 
 
 ```4d
- DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
+ DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
 ```
 
 ## See also 

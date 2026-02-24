@@ -50,18 +50,18 @@ If *toDecode* contains an invalid base64 contents, an empty text or blob value i
 This example lets you transfer a picture via a BLOB:
 
 ```4d
- var $sourceBlob : Blob
- var $mypicture : Picture
- $mypicture:=[people]photo
- PICTURE TO BLOB($mypicture;$sourceBlob;".JPG")
- var $base64Text : Text
- BASE64 ENCODE($sourceBlob;$base64Text) //Encoding of text
-  // the binary is now available as character strings in $base64Text
- 
- var $base64Text : Text
- var $targetBlob : Blob
- BASE64 DECODE($base64Text;$targetBlob) //Decoding of text
-  // the binary encoded in base 64 is now available as a BLOB in $blobTarget
+ var $sourceBlob : Blob
+ var $mypicture : Picture
+ $mypicture:=[people]photo
+ PICTURE TO BLOB($mypicture;$sourceBlob;".JPG")
+ var $base64Text : Text
+ BASE64 ENCODE($sourceBlob;$base64Text) //Encoding of text
+  // the binary is now available as character strings in $base64Text
+ 
+ var $base64Text : Text
+ var $targetBlob : Blob
+ BASE64 DECODE($base64Text;$targetBlob) //Decoding of text
+  // the binary encoded in base 64 is now available as a BLOB in $blobTarget
 ```
 
 ## See also 

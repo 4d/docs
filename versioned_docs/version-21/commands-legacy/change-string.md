@@ -31,8 +31,8 @@ Change string is different from [Insert string](insert-string.md) in that it ove
 The following example illustrates the use of **Change string**. The results are assigned to the variable *vtResult*.
 
 ```4d
- vtResult:=Change string("Acme";"CME";2) // vtResult gets "ACME"
- vtResult:=Change string("November";"Dec";1) // vtResult gets "December"
+ vtResult:=Change string("Acme";"CME";2) // vtResult gets "ACME"
+ vtResult:=Change string("November";"Dec";1) // vtResult gets "December"
 ```
 
 ## See also 
