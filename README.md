@@ -329,11 +329,11 @@ function sortRec(items, helpers) {
 }
 ```
 
-### In docs/ AND in i18n/<locale>/docusaurus-plugin-content-docs/current folders
+### In docs/ AND in i18n/\<locale>\/docusaurus-plugin-content-docs/current folders
 
 1. Add a "language-legacy/" folder
-2. Add "language-legacy/<theme>" subfolders
-3. "language-legacy/<theme>/_category_.json" files
+2. Add "language-legacy/\<theme\>" subfolders
+3. "language-legacy/\<theme>\/_category_.json" files
 contents of the_category_.json files:
 ```{
   "label": "Arrays",
