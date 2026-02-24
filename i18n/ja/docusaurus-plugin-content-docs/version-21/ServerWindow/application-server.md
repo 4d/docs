@@ -33,7 +33,7 @@ title: アプリケーションサーバーページ
 - 接続ダイアログにプロジェクト名が表示されなくなります。
 - すでに接続済みのクライアントは接続解除されず、通常通りに操作が可能です。
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections.md) command.
+> [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections.md) コマンドを使用することで同じアクションを実行することもできます。
 
 - **新規接続を許可** ボタンをクリックすると、アプリケーションサーバーはデフォルトに戻ります。
 
