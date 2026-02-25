@@ -55,7 +55,7 @@ Il existe trois caractères réservés que **Num** traite de manière particuli�
 - Le tiret définit un nombre ou un exposant négatif (signe moins). Le tiret doit être placé devant tout caractère numérique négatif ou derrière le "e" pour un exposant. Hormis le cas du caractère "e", si le tiret est inclus dans une chaîne numérique, la partie de la chaîne se trouvant après le tiret est ignorée. Par exemple, `Num("123-456")` renvoie 123, mais `Num("-9")` renvoie -9.
 - Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.  
   A noter que dans le cas où la chaîne comporte plus d'un caractère "e", la conversion pourra donner des résultats différents sous macOS et sous Windows.
-- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
+- L'algorithme de conversion du texte en [valeurs réelles] (../Concepts/dt_number.md) est basé sur 13 chiffres significatifs.
 
 #### Paramètre *séparator*
 

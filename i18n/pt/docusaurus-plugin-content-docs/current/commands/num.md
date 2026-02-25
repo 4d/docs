@@ -101,12 +101,12 @@ If *expression* evaluates to undefined, the command returns 0 (zero). This is us
 The following example illustrates how **Num** works when passed a single string argument:
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Exemplo 2
@@ -116,7 +116,7 @@ Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to thes
 ```4d
   // If client owes less than 1000, a good risk.
   // If client owes more than 1000, a bad risk.
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Exemplo 3
@@ -124,10 +124,10 @@ Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to thes
 This example compares the results obtained depending on the “current” separator:
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
   // by default, $thenum equals 33,33333 on a French system
- $thenum:=Num($thestring;".")
+ $thenum:=Num($thestring;".")
   // $thenum will be correctly evaluated regardless of the system;
   // for example, 33 333,33 on a French system
 ```

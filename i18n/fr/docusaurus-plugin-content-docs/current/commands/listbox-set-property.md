@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | Paramètres | Type           |                             | Description                                                                                                                                          |
 | ---------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                                           |
+| object     | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                                    |
 | property   | Integer        | &#8594; | Propriété de list box ou de colonne de list box                                                                                                      |
 | value      | Integer, Text  | &#8594; | Valeur de la propriété                                                                                                                               |
 

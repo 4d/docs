@@ -22,10 +22,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release | Modifications                                                                             |
-| ------- | ----------------------------------------------------------------------------------------- |
-| 21      | Prise en charge des sessions utilisateur web                                              |
-| 20 R7   | <ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul> |
+| Release | Modifications                                                                                     |
+| ------- | ------------------------------------------------------------------------------------------------- |
+| 21      | Prise en charge des sessions utilisateur web                                                      |
+| 20 R7   | <ul><li>Prise en charge du paramètre *sessionID*</li><li>Renommé (Get process activity)</li></ul> |
 
 </details>
 </div>

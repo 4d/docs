@@ -4,18 +4,21 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...(attribName* : Text ; *attribValue* : Variable)) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
+
+<div class="no-index">
 
 | 引数          | 型          |                             | 説明                             |
 | ----------- | ---------- | --------------------------- | ------------------------------ |
 | targetObj   | Object     | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
 | attribName  | Text       | &#8594; | 取得する属性の名前                      |
-| attribValue | any        | &#8592; | ターゲットの属性のカレントの値                |
+| attribValue | 変数         | &#8592; | ターゲットの属性のカレントの値                |
 | attribColl  | Collection | &#8594; | 取得する属性名のコレクション                 |
 | 戻り値         | Object     | &#8592; | 属性名と値                          |
 
+</div>
 <!-- END REF-->
 
 ## 説明

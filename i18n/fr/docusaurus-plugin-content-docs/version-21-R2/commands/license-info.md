@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 | Release | Modifications                                 |
 | ------- | --------------------------------------------- |
-| 20 R7   | Renamed (Get License info) |
+| 20 R7   | Renommé (Get License info) |
 | 16 R6   | Modifié                                       |
 | 16 R4   | Created                                       |
 
